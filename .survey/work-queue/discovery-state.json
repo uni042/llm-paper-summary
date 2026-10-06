@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-06T17:03:51+00:00",
-  "last_run_key": "library-import-6c9c7f060925",
-  "last_round": "libimp-6c9c7f06092597cf-pre01",
+  "updated_at": "2026-10-06T20:57:11+00:00",
+  "last_run_key": "library-import-1794026a0a34",
+  "last_round": "libimp-1794026a0a343538-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
-      "round": "adaptive-max-r24-aimer",
-      "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2310.01334",
-      "query_summary": "Merge Then Compress forward citationsからAIMERを選定。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "foundational adaptive routing",
-      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r24.json"
-    },
     {
       "run_key": "manual-user-forwardcite-adaptive-2026-09-20-r2",
       "round": "adaptive-max-r25-foundational-dynamic",
@@ -12438,6 +12420,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-1794026a0a343538-pre01",
+      "precheck_request_id": "libimp-1794026a0a343538-pre01",
+      "run_key": "library-import-1794026a0a34",
+      "round": "libimp-1794026a0a343538-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-1794026a0a343538-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-1794026a0a343538-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -20809,16 +20825,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-6c9c7f060925",
-      "rounds": 153,
-      "candidate_count": 423,
+      "last_run_key": "library-import-1794026a0a34",
+      "rounds": 154,
+      "candidate_count": 425,
       "duplicate_filtered_count": 105,
-      "novel_candidate_count": 318,
+      "novel_candidate_count": 320,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 315,
-      "accepted_count": 315,
-      "duplicate_ratio": 0.24822695035460993,
-      "final_duplicate_ratio": 0.009433962264150943,
+      "post_final_dedupe_count": 317,
+      "accepted_count": 317,
+      "duplicate_ratio": 0.24705882352941178,
+      "final_duplicate_ratio": 0.009375,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
