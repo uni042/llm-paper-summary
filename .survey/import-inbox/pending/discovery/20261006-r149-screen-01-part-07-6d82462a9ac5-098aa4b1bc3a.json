@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r149-screen-01-part-07-6d82462a9ac5",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3772318.3790421",
+      "identity_tokens": [
+        "DOI:10.1145/3772318.3790421"
+      ],
+      "title": "Zenergy: Designing Taoist-Inspired Transformative Nature Imagery for Everyday Empowerment",
+      "reason": "Direct ACM DOI page was inaccessible through available web access; the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.1145/3772318.3790421",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774904.3792642",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792642"
+      ],
+      "title": "IMPerSumm: Information-Modulated User Preference Modeling for Personalized Text Summarization",
+      "reason": "Direct ACM DOI page was inaccessible through available web access; the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.1145/3774904.3792642",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3800424.3800453",
+      "identity_tokens": [
+        "DOI:10.1145/3800424.3800453"
+      ],
+      "title": "A Multi-Agent Framework for Accessible Web Code Generation",
+      "reason": "Direct ACM DOI page was inaccessible through available web access; the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.1145/3800424.3800453",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/frai.2026.1788196",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1788196"
+      ],
+      "title": "Fine-tuned GPT-based foundation models effectively reconstruct bacterial transcriptional regulatory networks from literature",
+      "reason": "Direct DOI/publisher URL returned inaccessible URL or Internal Error, so the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.3389/frai.2026.1788196",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.10597",
+      "identity_tokens": [
+        "arXiv:2604.10597"
+      ],
+      "title": "COREY: Entropy-Guided Runtime Chunk Scheduling for Selective Scan Kernels",
+      "reason": "arXiv本文はMamba-1.x selective-scan inferenceでruntime entropyによるchunk scheduleを検討し、serving workloadを評価する。測定結果ではentropy-adaptive variantsはいずれも最良static chunkを上回らず、fallbackでもstatic oracleより遅いと明記される。直接のinference-systems関連はあるが、改善として残せる実証結果がなく、弱い有効性のためborderline。",
+      "source_url": "https://arxiv.org/abs/2604.10597",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
