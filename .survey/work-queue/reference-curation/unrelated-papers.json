@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T07:30:27+00:00",
-  "record_count": 7351,
+  "updated_at": "2026-10-06T07:40:29+00:00",
+  "record_count": 7375,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -105909,6 +105909,343 @@
         "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
       ],
       "title": "PICU Face and Thoracoabdominal Detection Using Self-Supervised Divided Space–Time Mamba"
+    },
+    "DOI:10.1016/j.asoc.2025.114328": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2025.114328",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2025.114328"
+      ],
+      "reason": "The primary-source abstract describes remote physiological signal extraction from facial video with a noise-modeling Mamba network; this is an rPPG application, not LLM inference.",
+      "first_checked_at": "2026-10-06T07:40:21+00:00",
+      "last_checked_at": "2026-10-06T07:40:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "DualPhysMamba: Efficient end-to-end network based on noise modeling for remote photoplethysmography measurement"
+    },
+    "DOI:10.1016/j.est.2025.120244": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.est.2025.120244",
+      "identity_tokens": [
+        "DOI:10.1016/j.est.2025.120244"
+      ],
+      "reason": "The title identifies battery state-of-charge forecasting with a BiLSTM; it is a domain forecasting application, not LLM inference or a transferable LLM efficiency method.",
+      "first_checked_at": "2026-10-06T07:40:22+00:00",
+      "last_checked_at": "2026-10-06T07:40:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "title": "A multi-step State of Charge prediction method for lithium-ion batteries based on a Dual-stage framework with modified Bidirectional Long Short-Term Memory"
+    },
+    "arXiv:2602.00904": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00904",
+      "identity_tokens": [
+        "arXiv:2602.00904"
+      ],
+      "reason": "The full paper’s multi-directional scan and traversal selection are for vision SSM image classification/segmentation; no textual SSM or LLM inference experiment is established.",
+      "first_checked_at": "2026-10-06T07:40:22+00:00",
+      "last_checked_at": "2026-10-06T07:40:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "OCTOPUS: Enhancing the Spatial-Awareness of Vision SSMs with Multi-Dimensional Scans and Traversal Selection"
+    },
+    "arXiv:2601.22095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22095",
+      "identity_tokens": [
+        "arXiv:2601.22095"
+      ],
+      "reason": "GeoNorm changes normalization/update geometry for Transformer training; the inspected work concerns optimization and model quality, with no concrete inference memory/latency/throughput improvement.",
+      "first_checked_at": "2026-10-06T07:40:22+00:00",
+      "last_checked_at": "2026-10-06T07:40:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "GeoNorm: Unify Pre-Norm and Post-Norm with Geodesic Optimization"
+    },
+    "DOI:10.1145/3793908": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3793908",
+      "identity_tokens": [
+        "DOI:10.1145/3793908"
+      ],
+      "reason": "This is a survey of video-captioning methods in the LLM era; it does not propose or evaluate a concrete inference-efficiency technique for LLMs.",
+      "first_checked_at": "2026-10-06T07:40:23+00:00",
+      "last_checked_at": "2026-10-06T07:40:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "A Survey on Video Captioning in the Era of Large Language Models"
+    },
+    "arXiv:2601.17977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17977",
+      "identity_tokens": [
+        "arXiv:2601.17977"
+      ],
+      "reason": "The primary paper applies domain-expert-guided MoE to medical AI with clinical priors and task-specific data; it does not address LLM inference or a transferable serving/compute improvement.",
+      "first_checked_at": "2026-10-06T07:40:23+00:00",
+      "last_checked_at": "2026-10-06T07:40:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Domain-Expert-Guided Hybrid Mixture-of-Experts for Medical AI: Integrating Data-Driven Learning With Clinical Priors"
+    },
+    "arXiv:2601.13768": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13768",
+      "identity_tokens": [
+        "arXiv:2601.13768"
+      ],
+      "reason": "vLinear is a linear model for multivariate time-series forecasting and does not study LLM inference or language-model efficiency.",
+      "first_checked_at": "2026-10-06T07:40:23+00:00",
+      "last_checked_at": "2026-10-06T07:40:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "vLinear: A Powerful Linear Model for Multivariate Time Series Forecasting"
+    },
+    "arXiv:2601.14140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14140",
+      "identity_tokens": [
+        "arXiv:2601.14140"
+      ],
+      "reason": "CREATE optimizes reliability/energy via cross-layer fault resilience and voltage scaling for embodied AI planner/controller systems; its stated objective is hardware fault tolerance, not an LLM serving method.",
+      "first_checked_at": "2026-10-06T07:40:23+00:00",
+      "last_checked_at": "2026-10-06T07:40:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ],
+      "title": "CREATE: Cross-Layer Resilience Characterization and Optimization for Efficient yet Reliable Embodied AI Systems"
+    },
+    "arXiv:2601.10944": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10944",
+      "identity_tokens": [
+        "arXiv:2601.10944"
+      ],
+      "reason": "PRISM is a personalized multimodal sequential-recommendation method; the full paper’s efficiency analysis reports recommendation-model training time and memory, not LLM inference.",
+      "first_checked_at": "2026-10-06T07:40:24+00:00",
+      "last_checked_at": "2026-10-06T07:40:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "PRISM: Personalized Recommendation via Information Synergy Module"
+    },
+    "arXiv:2601.05020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05020",
+      "identity_tokens": [
+        "arXiv:2601.05020"
+      ],
+      "reason": "The full text studies satellite hyperspectral-image denoising with line-wise Mamba inference, power scaling and fault tolerance; no language-model inference contribution is established.",
+      "first_checked_at": "2026-10-06T07:40:24+00:00",
+      "last_checked_at": "2026-10-06T07:40:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Scalable Neural Pushbroom Architectures for Real-Time Denoising of Hyperspectral Images Onboard Satellites"
+    },
+    "DOI:10.1016/j.knosys.2026.115301": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115301",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115301"
+      ],
+      "reason": "The title/source metadata identify Mamba-based SAR-optical image fusion/cloud removal, not LLM inference.",
+      "first_checked_at": "2026-10-06T07:40:24+00:00",
+      "last_checked_at": "2026-10-06T07:40:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Data-interactive mamba driven SAR-optical fusion cloud removal"
+    },
+    "arXiv:2602.07997": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07997",
+      "identity_tokens": [
+        "arXiv:2602.07997"
+      ],
+      "reason": "The primary abstract identifies batch statistical MoE model estimation/model selection for biological protein-interaction prediction; it does not describe neural LLM expert routing, LLM inference, or a serving-efficiency method. The broad survey lineage alone is not a technical connection.",
+      "first_checked_at": "2026-10-06T07:40:25+00:00",
+      "last_checked_at": "2026-10-06T07:40:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Fast Model Selection and Stable Optimization for Softmax-Gated Multinomial-Logistic Mixture of Experts Models"
+    },
+    "arXiv:2602.05393": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05393",
+      "identity_tokens": [
+        "arXiv:2602.05393"
+      ],
+      "reason": "The contribution accelerates LLM pretraining by transferring late-stage representations into earlier training/layers; its measured gains concern training time and training quality, not inference cost or deployment.",
+      "first_checked_at": "2026-10-06T07:40:25+00:00",
+      "last_checked_at": "2026-10-06T07:40:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Late-to-Early Training: LET LLMs Learn Earlier, So Faster and Better"
+    },
+    "arXiv:2602.04170": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04170",
+      "identity_tokens": [
+        "arXiv:2602.04170"
+      ],
+      "reason": "The primary method and evaluations address 2D vision SSM scan orders for image tasks; no language-model or LLM inference result is established.",
+      "first_checked_at": "2026-10-06T07:40:26+00:00",
+      "last_checked_at": "2026-10-06T07:40:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Partial Ring Scan: Revisiting Scan Order in Vision State Space Models"
+    },
+    "arXiv:2601.03270": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03270",
+      "identity_tokens": [
+        "arXiv:2601.03270"
+      ],
+      "reason": "This survey reviews semantic-textual-similarity tasks and methods; it does not present a concrete Transformer/LLM inference efficiency method despite its broad BERT lineage.",
+      "first_checked_at": "2026-10-06T07:40:26+00:00",
+      "last_checked_at": "2026-10-06T07:40:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Advances and Challenges in Semantic Textual Similarity: A Comprehensive Survey"
+    },
+    "arXiv:2512.16315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16315",
+      "identity_tokens": [
+        "arXiv:2512.16315"
+      ],
+      "reason": "CPMamba predicts MIMO wireless channels; it is a communications forecasting model, not language modeling or LLM inference.",
+      "first_checked_at": "2026-10-06T07:40:26+00:00",
+      "last_checked_at": "2026-10-06T07:40:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "CPMamba: Selective State Space Models for MIMO Channel Prediction in High-Mobility Environments"
+    },
+    "DOI:10.1109/ictbig68706.2025.11323935": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ictbig68706.2025.11323935",
+      "identity_tokens": [
+        "DOI:10.1109/ictbig68706.2025.11323935"
+      ],
+      "reason": "EdgeCNN-TrafficNet v2 is an edge CNN for traffic congestion detection with on-device adaptation/compression; it is a non-language vision task and has no transferable LLM inference mechanism established.",
+      "first_checked_at": "2026-10-06T07:40:27+00:00",
+      "last_checked_at": "2026-10-06T07:40:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "EdgeCNN-TrafficNet v2: Clip-Wise Spatio - Temporal Fusion and On-Device Adaptation for Energy-Efficient Real-Time Traffic Congestion Detection"
+    },
+    "arXiv:2512.09202": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.09202",
+      "identity_tokens": [
+        "arXiv:2512.09202"
+      ],
+      "reason": "The paper quantizes/tensor-compresses training of neural PDE solvers; it is scientific-computing model training, not LLM inference/deployment.",
+      "first_checked_at": "2026-10-06T07:40:27+00:00",
+      "last_checked_at": "2026-10-06T07:40:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "Tensor-Compressed and Fully-Quantized Training of Neural PDE Solvers"
+    },
+    "DOI:10.1016/j.knosys.2026.115337": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115337",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115337"
+      ],
+      "reason": "The title describes stability-aware initialization/filter decay for generic deep-network training; it provides no LLM-specific inference or deployment method.",
+      "first_checked_at": "2026-10-06T07:40:28+00:00",
+      "last_checked_at": "2026-10-06T07:40:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Accelerating deep neural networks through stability-aware initial training and density-guided asymptotic filter decay"
+    },
+    "DOI:10.1109/mits.2025.3614710": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mits.2025.3614710",
+      "identity_tokens": [
+        "DOI:10.1109/mits.2025.3614710"
+      ],
+      "reason": "The paper uses a spatiotemporal graph MoE for highway traffic forecasting; it is task-specific traffic prediction, not LLM inference routing or serving.",
+      "first_checked_at": "2026-10-06T07:40:28+00:00",
+      "last_checked_at": "2026-10-06T07:40:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Spatiotemporal Graph Mixture of Experts for Highway Traffic Flow Prediction"
+    },
+    "DOI:10.1177/01617346251399875": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/01617346251399875",
+      "identity_tokens": [
+        "DOI:10.1177/01617346251399875"
+      ],
+      "reason": "The primary publisher abstract concerns pruning/distillation of a CNN for ultrasound elastography; it is a medical imaging model, not LLM inference.",
+      "first_checked_at": "2026-10-06T07:40:29+00:00",
+      "last_checked_at": "2026-10-06T07:40:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "CDP-KDNet: Curriculum-Guided Dynamic Pruning and Knowledge Distillation for Resource-Efficient Ultrasound Elastography"
+    },
+    "arXiv:2512.21897": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21897",
+      "identity_tokens": [
+        "arXiv:2512.21897"
+      ],
+      "reason": "The paper applies sparse MoE to multimodal clinical-trial prediction using domain-specific biomedical inputs; it does not study LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T07:40:29+00:00",
+      "last_checked_at": "2026-10-06T07:40:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "MMCTOP: A Multimodal Textualization and Mixture-of-Experts Framework for Clinical Trial Outcome Prediction"
+    },
+    "arXiv:2512.21433": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21433",
+      "identity_tokens": [
+        "arXiv:2512.21433"
+      ],
+      "reason": "DeepCQ predicts lossy-compression quality for scientific simulation data; this is not compression of LLM parameters, activations or KV cache.",
+      "first_checked_at": "2026-10-06T07:40:29+00:00",
+      "last_checked_at": "2026-10-06T07:40:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "DeepCQ: General-Purpose Deep-Surrogate Framework for Lossy Compression Quality Prediction"
+    },
+    "arXiv:2512.20821": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20821",
+      "identity_tokens": [
+        "arXiv:2512.20821"
+      ],
+      "reason": "The work uses soft-gated fractional MoE for adversarial robustness in generic ML; its objective is defense accuracy, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T07:40:29+00:00",
+      "last_checked_at": "2026-10-06T07:40:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Divided We Fall: Defending against adversarial attacks via soft-gated fractional mixture-of-experts with randomized adversarial training"
     }
   }
 }
