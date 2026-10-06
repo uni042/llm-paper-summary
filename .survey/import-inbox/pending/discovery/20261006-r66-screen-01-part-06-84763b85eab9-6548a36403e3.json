@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r66-screen-01-part-06-84763b85eab9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36190",
+      "identity_tokens": [
+        "arXiv:2609.36190"
+      ],
+      "title": "FigAct: Turning Scientific Figures into Active Canvases for Explanation",
+      "reason": "Interactive scientific-figure explanation, no inference-resource method.",
+      "source_url": "https://arxiv.org/abs/2609.36190",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36219",
+      "identity_tokens": [
+        "arXiv:2609.36219"
+      ],
+      "title": "LeRF: Learning Reference Coordinate Frames for Perspective Taking Reasoning",
+      "reason": "Perspective-taking capability method, no model-cost optimization.",
+      "source_url": "https://arxiv.org/abs/2609.36219",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36385",
+      "identity_tokens": [
+        "arXiv:2609.36385"
+      ],
+      "title": "ALF: Spectrally Anchored Latent Flow Matching",
+      "reason": "Wireless time-series generation, outside LLM/VLM serving scope.",
+      "source_url": "https://arxiv.org/abs/2609.36385",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33134",
+      "identity_tokens": [
+        "arXiv:2609.33134"
+      ],
+      "title": "Ceiling of a Task: When Can a Transformer Succeed Without Its Chain of Thought?",
+      "reason": "The paper treats CoT as serial computation and tests when Transformers cannot solve tasks without it, including MATH-500/AIME; erasing chains hurts serial-task accuracy. Relevant to reasoning-token cost decisions, but establishes limits rather than a resource-reduction method.",
+      "source_url": "https://arxiv.org/abs/2609.33134",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33144",
+      "identity_tokens": [
+        "arXiv:2609.33144"
+      ],
+      "title": "Beyond the Training Horizon: Mechanisms and Limits of Length Generalization in Looped Transformers",
+      "reason": "Mechanistic study of two looped-Transformer variants on iteration, finite-state composition and graph traversal; it finds distinct recurrence algorithms and reliability degradation with depth. It informs looped reasoning but offers no compute/memory/latency optimization.",
+      "source_url": "https://arxiv.org/abs/2609.33144",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    }
+  ]
+}
