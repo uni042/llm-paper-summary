@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r68-screen-01-part-06-f840970c11ac",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19107",
+      "identity_tokens": [
+        "arXiv:2609.19107"
+      ],
+      "title": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents",
+      "reason": "This paper analyzes how model growth, recursion and boundary operators change pretraining scaling exponents. The text situates looping as inference-time compute scaling and parameter efficiency, but its experiments concern scaling behavior during training rather than a serving intervention or measured inference resource improvement. The relation to inference-scale surveys is indirect.",
+      "source_url": "https://arxiv.org/abs/2609.19107",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16665",
+      "identity_tokens": [
+        "arXiv:2609.16665"
+      ],
+      "title": "Right Direction, Wrong Step: Geometric Analysis of Finite-Step Failure in Looped Transformers",
+      "reason": "The study geometrically analyzes finite-step failures in looped Transformers and identifies recoverable utility losses within recurrent inference steps. The full text defines looping as an inference-time compute resource and tests interventions on path direction/step count, but reports no latency or serving-efficiency result and proposes no resource-saving deployment method; retain as adjacent analysis only.",
+      "source_url": "https://arxiv.org/abs/2609.16665",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.17414",
+      "identity_tokens": [
+        "arXiv:2609.17414"
+      ],
+      "title": "SlotDiT: Object-Centric Representations for Diffusion Transformers",
+      "reason": "Object-centric representation for diffusion transformers; generative image/video modeling, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.17414",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.17882",
+      "identity_tokens": [
+        "arXiv:2609.17882"
+      ],
+      "title": "Can VLMs Reliably Assess Sidewalk Accessibility Attributes from Pedestrian-Level Imagery?",
+      "reason": "Evaluates sidewalk-accessibility attribute recognition; no inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.17882",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26151",
+      "identity_tokens": [
+        "arXiv:2609.26151"
+      ],
+      "title": "TTTIR: Unlocking Instance-Specific State Evolution via Test-Time Training for Image Restoration",
+      "reason": "Test-time training for image restoration; vision restoration rather than LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.26151",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    }
+  ]
+}
