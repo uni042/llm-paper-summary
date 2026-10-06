@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r37-screen-01-part-02-6789284f49cb",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.08620",
+      "identity_tokens": [
+        "arXiv:2603.08620"
+      ],
+      "title": "StreamReady: Learning What to Answer and When in Long Streaming Videos",
+      "reason": "StreamReady adds readiness-aware answering for long streaming video. This may affect when an agent spends compute, but its evaluation is answer timing/correctness rather than inference cost or serving throughput.",
+      "source_url": "https://arxiv.org/abs/2603.08620",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05175",
+      "identity_tokens": [
+        "arXiv:2601.05175"
+      ],
+      "title": "VideoAuto-R1: Video Auto Reasoning via Thinking Once, Answering Twice",
+      "reason": "VideoAuto-R1 studies video reasoning task formulation and answer quality; its primary contribution is not an inference efficiency or serving method.",
+      "source_url": "https://arxiv.org/abs/2601.05175",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07594",
+      "identity_tokens": [
+        "arXiv:2602.07594"
+      ],
+      "title": "Learning to Self-Verify Makes Language Models Better Reasoners",
+      "reason": "The reported gains come from model training and task accuracy. No inference-time reduction in compute, memory, latency, or serving resource use is established.",
+      "source_url": "https://arxiv.org/abs/2602.07594",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10955",
+      "identity_tokens": [
+        "arXiv:2601.10955"
+      ],
+      "title": "Beyond Max Tokens: Stealthy Resource Amplification via Tool Calling Chains in LLM Agents",
+      "reason": "The paper demonstrates multi-turn tool-call chains as an economic denial-of-service/resource-amplification attack and evaluates resource impact and defenses. It is relevant to agentic serving risk, but not a serving optimization method.",
+      "source_url": "https://arxiv.org/abs/2601.10955",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07338",
+      "identity_tokens": [
+        "arXiv:2511.07338"
+      ],
+      "title": "DeepPersona: A Generative Engine for Scaling Deep Synthetic Personas",
+      "reason": "The contribution concerns scaling persona generation and synthetic data quality. The memory and infrastructure lineage labels do not match a tested inference-system method.",
+      "source_url": "https://arxiv.org/abs/2511.07338",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md"
+      ]
+    }
+  ]
+}
