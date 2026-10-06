@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T08:23:45+00:00",
-  "record_count": 2589,
+  "updated_at": "2026-10-06T08:41:01+00:00",
+  "record_count": 2623,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -39801,6 +39801,520 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Bilingual Synchronization: Restoring Translational Relationships with Editing Operations"
+    },
+    "arXiv:2305.13140": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.13140",
+      "identity_tokens": [
+        "arXiv:2305.13140"
+      ],
+      "reason": "The arXiv HTML was unavailable; the primary PDF was reviewed. The work adapts/extrapolates multilingual understanding models into multilingual generators and evaluates multilingual generation/transfer quality. It does not focus on compression, inference cost or faster decoding; relation to NAR sequence generation is weak and no concrete inference benefit is established.",
+      "first_checked_at": "2026-10-06T08:40:51+00:00",
+      "last_checked_at": "2026-10-06T08:40:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Extrapolating Multilingual Understanding Models as Multilingual Generators"
+    },
+    "arXiv:2210.14558": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.14558",
+      "identity_tokens": [
+        "arXiv:2210.14558"
+      ],
+      "reason": "The method compresses and debiases vision-language pretrained models for visual-question-answering and evaluates VQA accuracy/bias under compression. This is a transformer/VLM compression method, but the experiments are vision-language-specific and do not establish LLM generation-serving performance; linked low-bit transformer lineage is indirect.",
+      "first_checked_at": "2026-10-06T08:40:51+00:00",
+      "last_checked_at": "2026-10-06T08:40:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compressing And Debiasing Vision-Language Pre-Trained Models for Visual Question Answering"
+    },
+    "arXiv:2508.17209": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.17209",
+      "identity_tokens": [
+        "arXiv:2508.17209"
+      ],
+      "reason": "Layer pruning is applied to reduce memory for federated LLM fine-tuning, and experiments evaluate training memory/communication and task quality. The paper studies backpropagation/federated adaptation, not inference-time serving or generation latency. Its pruning mechanism could intersect model compression, but current evidence is training-only.",
+      "first_checked_at": "2026-10-06T08:40:51+00:00",
+      "last_checked_at": "2026-10-06T08:40:51+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory-Efficient Federated Fine-Tuning of Large Language Models via Layer Pruning"
+    },
+    "DOI:10.1109/tcad.2023.3347291": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2023.3347291",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2023.3347291"
+      ],
+      "reason": "Tried the publisher full-text URL and IEEE Xplore record; the accessible response exposed no article body/PDF. The title/metadata indicate mobile transformer acceleration with line sparsity and tile-based dynamic quantization, but primary method, evaluation and limitations could not be verified. Final borderline because full text was unavailable in this screening; retry from an institutional/author archive.",
+      "first_checked_at": "2026-10-06T08:40:52+00:00",
+      "last_checked_at": "2026-10-06T08:40:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mobile Transformer Accelerator Exploiting Various Line Sparsity and Tile-Based Dynamic Quantization"
+    },
+    "DOI:10.1109/iscas58744.2024.10558631": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas58744.2024.10558631",
+      "identity_tokens": [
+        "DOI:10.1109/iscas58744.2024.10558631"
+      ],
+      "reason": "Tried IEEE Xplore publisher full-text URL and record; it returned only an inaccessible shell, with no paper body. The title/metadata describe an energy-efficient FPGA binary-transformer accelerator, but full-text method, evaluation and limitations could not be verified. Final borderline pending an author/institutional copy.",
+      "first_checked_at": "2026-10-06T08:40:52+00:00",
+      "last_checked_at": "2026-10-06T08:40:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy Efficient FPGA-Based Binary Transformer Accelerator for Edge Devices"
+    },
+    "arXiv:2404.10921": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.10921",
+      "identity_tokens": [
+        "arXiv:2404.10921"
+      ],
+      "reason": "TAO replaces expensive simulation with a learned/deep-learning-based microarchitecture simulator and evaluates prediction fidelity/runtime on architecture-design benchmarks. It is a simulator rather than a model or LLM-serving optimization; linked FPGA inference is only a possible downstream use. Keep borderline because efficiency could be indirectly useful for accelerator exploration, but no direct connection is evidenced.",
+      "first_checked_at": "2026-10-06T08:40:52+00:00",
+      "last_checked_at": "2026-10-06T08:40:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TAO: Re-Thinking DL-based Microarchitecture Simulation"
+    },
+    "DOI:10.1109/fpl60245.2023.00048": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/fpl60245.2023.00048",
+      "identity_tokens": [
+        "DOI:10.1109/fpl60245.2023.00048"
+      ],
+      "reason": "Tried the IEEE publisher record and author publication index; no accessible primary full paper was available, only bibliographic/abstract-level material. LTrans-OPU is described as an FPGA overlay processor with hybrid pruning, custom instructions and latency gains, but full method/evaluation/limitations were not read here. Final borderline pending institutional/author full text.",
+      "first_checked_at": "2026-10-06T08:40:52+00:00",
+      "last_checked_at": "2026-10-06T08:40:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LTrans-OPU: A Low-Latency FPGA-Based Overlay Processor for Transformer Networks"
+    },
+    "arXiv:2510.03425": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03425",
+      "identity_tokens": [
+        "arXiv:2510.03425"
+      ],
+      "reason": "The method targets memory-efficient backpropagation for fine-tuning LLMs on mobile/resource-constrained devices and evaluates training memory/quality. It does not address inference generation or serving and has no inference-time latency/KV-cache result. The linked 1-bit LLM compression connection is not strong enough to convert a training-only method into a direct inference followup.",
+      "first_checked_at": "2026-10-06T08:40:52+00:00",
+      "last_checked_at": "2026-10-06T08:40:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory-Efficient Backpropagation for Fine-Tuning LLMs on Resource-Constrained Mobile Devices"
+    },
+    "DOI:10.1109/tcss.2024.3509399": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcss.2024.3509399",
+      "identity_tokens": [
+        "DOI:10.1109/tcss.2024.3509399"
+      ],
+      "reason": "Tried the IEEE DOI/publisher record; no primary full paper body was accessible. The title/metadata describe bidirectional spatiotemporal Mamba embeddings for temporal dynamic graph learning, but method/evaluation/limitations could not be checked. Since the linked SSM lineage could be relevant only indirectly, record borderline pending author/institutional full text.",
+      "first_checked_at": "2026-10-06T08:40:53+00:00",
+      "last_checked_at": "2026-10-06T08:40:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TDG-Mamba: Advanced Spatiotemporal Embedding for Temporal Dynamic Graph Learning via Bidirectional Information Propagation"
+    },
+    "DOI:10.1109/tcad.2024.3434447": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2024.3434447",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2024.3434447"
+      ],
+      "reason": "Tried the IEEE Xplore publisher full-text record; the response contained no article body/PDF. The title indicates co-operative systolic arrays for transformer attention, a potentially relevant hardware contribution, but method, evaluation and limitations were not verified from primary text. Final borderline pending full text.",
+      "first_checked_at": "2026-10-06T08:40:53+00:00",
+      "last_checked_at": "2026-10-06T08:40:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "COSA Plus: Enhanced Co-Operative Systolic Arrays for Attention Mechanism in Transformers"
+    },
+    "DOI:10.1007/s10489-024-05954-5": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10489-024-05954-5",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-024-05954-5"
+      ],
+      "reason": "The Springer record exposes an abstract but marks the full article as subscription content; no author/institutional full text was found in this pass. Abstract describes a fuzzy multimodal transformer using audio, video and text with temporal embeddings for emotion analysis, with baseline comparisons and ablations. No inference efficiency claim is apparent; full-text unavailability and weak lineage relation require borderline.",
+      "first_checked_at": "2026-10-06T08:40:53+00:00",
+      "last_checked_at": "2026-10-06T08:40:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Personalized emotion analysis based on fuzzy multi-modal transformer model"
+    },
+    "arXiv:2411.00412": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.00412",
+      "identity_tokens": [
+        "arXiv:2411.00412"
+      ],
+      "reason": "Adapting While Learning grounds LLM scientific problem solving through tool-use adaptation and evaluates reasoning/task success with tool feedback. The paper focuses on capability adaptation, not reducing inference compute, memory or latency; possible relation to test-time reasoning is indirect. Keep borderline for possible cross-reference rather than an efficiency followup.",
+      "first_checked_at": "2026-10-06T08:40:53+00:00",
+      "last_checked_at": "2026-10-06T08:40:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adapting While Learning: Grounding LLMs for Scientific Problems with Intelligent Tool Usage Adaptation"
+    },
+    "DOI:10.1109/tai.2024.3363686": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tai.2024.3363686",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2024.3363686"
+      ],
+      "reason": "Tried IEEE Xplore publisher record; the full paper was not accessible. The title/metadata indicate meta-learning-based explainable attention pruning, plausibly related to transformer block pruning, but primary methods, evaluations and limitations were not verified. Record borderline pending an author or institutional full text.",
+      "first_checked_at": "2026-10-06T08:40:53+00:00",
+      "last_checked_at": "2026-10-06T08:40:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Explainable Attention Pruning: A Metalearning-Based Approach"
+    },
+    "DOI:10.3389/fhpcp.2024.1301384": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/fhpcp.2024.1301384",
+      "identity_tokens": [
+        "DOI:10.3389/fhpcp.2024.1301384"
+      ],
+      "reason": "ANAS-P learns per-layer convolution width masks during adversarial training/pruning and fine-tunes sparse ResNet/VGG models. Evaluation uses CIFAR-10/100 and TinyImageNet with TRADES/MART across sparsity levels, measuring clean and robust accuracy. It is CNN robustness, not transformer/LLM inference; shared pruning/FPGA lineage is too broad.",
+      "first_checked_at": "2026-10-06T08:40:54+00:00",
+      "last_checked_at": "2026-10-06T08:40:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural architecture search for adversarial robustness via learnable pruning"
+    },
+    "arXiv:2407.11611": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.11611",
+      "identity_tokens": [
+        "arXiv:2407.11611"
+      ],
+      "reason": "This primer describes approaches and methodological pitfalls for estimating software energy, comparing measurement/estimation methods and reporting practical experiment considerations. It offers no new LLM inference optimization or LLM-specific empirical result. It could inform evaluation of the linked green-inference work, but is a generic measurement guide rather than a technical lineage contribution.",
+      "first_checked_at": "2026-10-06T08:40:54+00:00",
+      "last_checked_at": "2026-10-06T08:40:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Estimating the Energy Footprint of Software Systems: a Primer"
+    },
+    "DOI:10.1145/3581783.3612499": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3581783.3612499",
+      "identity_tokens": [
+        "DOI:10.1145/3581783.3612499"
+      ],
+      "reason": "Tried the ACM DOI/publisher record; the full paper body was not accessible, so method details, evaluation tables and limitations could not be verified. The abstract describes a line-aware semi-autoregressive decoder for handwritten multi-line math with claimed faster decoding and state-of-the-art recognition. Because primary full text was unavailable, retain as reasoned borderline pending an author or institutional copy.",
+      "first_checked_at": "2026-10-06T08:40:54+00:00",
+      "last_checked_at": "2026-10-06T08:40:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Read Ten Lines at One Glance: Line-Aware Semi-Autoregressive Transformer for Multi-Line Handwritten Mathematical Expression Recognition"
+    },
+    "DOI:10.23919/date56975.2023.10137099": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/date56975.2023.10137099",
+      "identity_tokens": [
+        "DOI:10.23919/date56975.2023.10137099"
+      ],
+      "reason": "The author-hosted DATE proceedings PDF timed out on retrieval. The paper abstract describes a mobile accelerator for vision transformers with head-wise, line-wise and block-wise sparsity, a head scheduler and sparse GEMM, reporting energy-efficiency improvements on DETR/ViT. Primary method/evaluation/limitations could not be reviewed; leave borderline until full text is available.",
+      "first_checked_at": "2026-10-06T08:40:54+00:00",
+      "last_checked_at": "2026-10-06T08:40:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mobile Accelerator Exploiting Sparsity of Multi-Heads, Lines, and Blocks in Transformers in Computer Vision"
+    },
+    "arXiv:2504.20314": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.20314",
+      "identity_tokens": [
+        "arXiv:2504.20314"
+      ],
+      "reason": "PeZO reduces random-perturbation generation resources for zeroth-order on-device model training using an efficient perturbation scheme; evaluation reports lower hardware resource/power costs for training. It is explicitly training-time optimization and does not address inference/serving. The link to an FPGA inference paper is insufficient for a direct lineage connection.",
+      "first_checked_at": "2026-10-06T08:40:55+00:00",
+      "last_checked_at": "2026-10-06T08:40:55+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Perturbation-efficient Zeroth-order Optimization for Hardware-friendly On-device Training"
+    },
+    "arXiv:2504.19323": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.19323",
+      "identity_tokens": [
+        "arXiv:2504.19323"
+      ],
+      "reason": "NSFlow maps neuro-symbolic workloads to a scalable FPGA dataflow architecture and evaluates end-to-end framework performance on neuro-symbolic AI tasks. Its hardware flow is not evaluated on transformer/LLM inference and does not provide an LLM-specific operator or serving result. FPGA is shared with linked works, but relation remains broad architectural adjacency.",
+      "first_checked_at": "2026-10-06T08:40:55+00:00",
+      "last_checked_at": "2026-10-06T08:40:55+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NSFlow: An End-to-End FPGA Framework with Scalable Dataflow Architecture for Neuro-Symbolic AI"
+    },
+    "DOI:10.1016/j.jpdc.2025.105042": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jpdc.2025.105042",
+      "identity_tokens": [
+        "DOI:10.1016/j.jpdc.2025.105042"
+      ],
+      "reason": "DRViT co-designs token merging/pruning and INT8 with an FPGA ViT accelerator; reported evaluation runs ViT-Tiny on ImageNet and compares FPGA resources/performance. Limitations note hardware/model differences require adaptation. The contribution is specifically vision-transformer acceleration, with no language model or LLM inference experiment; FTRANS connection is hardware-family-level only.",
+      "first_checked_at": "2026-10-06T08:40:55+00:00",
+      "last_checked_at": "2026-10-06T08:40:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DRViT: A dynamic redundancy-aware vision transformer accelerator via algorithm and architecture co-design on FPGA"
+    },
+    "arXiv:2408.10746": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.10746",
+      "identity_tokens": [
+        "arXiv:2408.10746"
+      ],
+      "reason": "This work partitions personal LLM fine-tuning across collaborative edge devices to reduce fine-tuning resource burden, with experiments on edge collaboration and model quality/communication. Its objective is training, not generation/inference serving, and it does not establish inference-time memory/latency improvement. Linked 4-bit inference work is only adjacent.",
+      "first_checked_at": "2026-10-06T08:40:55+00:00",
+      "last_checked_at": "2026-10-06T08:40:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Resource-Efficient Personal Large Language Models Fine-Tuning With Collaborative Edge Computing"
+    },
+    "arXiv:2506.22049": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.22049",
+      "identity_tokens": [
+        "arXiv:2506.22049"
+      ],
+      "reason": "GPAS rescales activations while preserving gradients to accelerate LLM pretraining convergence; evaluations concern training stability/convergence and model quality. No inference latency, memory, throughput or serving optimization is demonstrated. Relatedness to a general transformer-training lineage is plausible, but it is outside the requested inference-efficiency focus.",
+      "first_checked_at": "2026-10-06T08:40:56+00:00",
+      "last_checked_at": "2026-10-06T08:40:56+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GPAS: Accelerating Convergence of LLM Pretraining via Gradient-Preserving Activation Scaling"
+    },
+    "arXiv:2504.19024": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.19024",
+      "identity_tokens": [
+        "arXiv:2504.19024"
+      ],
+      "reason": "KETCHUP changes sequential knowledge-distillation target estimation using k-step returns and evaluates student task quality/training behavior. It may improve the training process but does not establish smaller deployed model or inference resource savings. Relation to MiniLM distillation is real at the training-method level but weak for inference systems.",
+      "first_checked_at": "2026-10-06T08:40:56+00:00",
+      "last_checked_at": "2026-10-06T08:40:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KETCHUP: K-Step Return Estimation for Sequential Knowledge Distillation"
+    },
+    "DOI:10.1145/3776574.3831176": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3776574.3831176",
+      "identity_tokens": [
+        "DOI:10.1145/3776574.3831176"
+      ],
+      "reason": "Tried the ACM publisher record; no primary full text was available. The title concerns event-boundary detection inspired by event-stream sensors, not language-model inference. Because the linked Nyströmformer relation is not clear and the body could not be checked, retain as borderline pending source access.",
+      "first_checked_at": "2026-10-06T08:40:57+00:00",
+      "last_checked_at": "2026-10-06T08:40:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EST-inspired computational approaches to event boundary detection"
+    },
+    "arXiv:2610.03320": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.03320",
+      "identity_tokens": [
+        "arXiv:2610.03320"
+      ],
+      "reason": "The paper studies inference-time refinement steps and best-of-K search in masked-diffusion text-to-speech, evaluating intelligibility and speaker identity over model sizes and step budgets. It finds the two compute sources help different capabilities. This is speech synthesis rather than LLM/VLM inference, and the linked reasoning-compute family is only an analogy; retain borderline.",
+      "first_checked_at": "2026-10-06T08:40:57+00:00",
+      "last_checked_at": "2026-10-06T08:40:57+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Refinement Buys Intelligibility, Search Buys Identity: What Test-Time Compute Buys in Masked-Diffusion TTS"
+    },
+    "DOI:10.63317/2okcr93ev6bw": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.63317/2okcr93ev6bw",
+      "identity_tokens": [
+        "DOI:10.63317/2okcr93ev6bw"
+      ],
+      "reason": "Tried the DOI landing page; it did not resolve to an accessible primary paper. The input metadata/abstract describe low-resource machine translation using synthetic pivoting, but the body and evaluation cannot be checked. The topic is translation quality rather than inference efficiency, and unavailable primary text requires a reasoned borderline.",
+      "first_checked_at": "2026-10-06T08:40:59+00:00",
+      "last_checked_at": "2026-10-06T08:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural Machine Translation between Low-Resource Languages with Synthetic Pivoting"
+    },
+    "arXiv:2404.00672": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.00672",
+      "identity_tokens": [
+        "arXiv:2404.00672"
+      ],
+      "reason": "Token Expansion introduces a transformer training strategy that expands token representations to improve training efficiency and convergence, evaluating language-model quality and training costs. It does not demonstrate reduced deployment memory/latency or serving cost. The linked pruning paper is only a training-efficiency adjacency.",
+      "first_checked_at": "2026-10-06T08:40:59+00:00",
+      "last_checked_at": "2026-10-06T08:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A General and Efficient Training for Transformer via Token Expansion"
+    },
+    "DOI:10.1109/fpl60245.2023.00041": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/fpl60245.2023.00041",
+      "identity_tokens": [
+        "DOI:10.1109/fpl60245.2023.00041"
+      ],
+      "reason": "Tried the DOI/IEEE publisher record and search for an author full-text copy; no accessible primary paper body was obtained. Calabash is described bibliographically as an FPGA systolic-array chain for attention acceleration, but its method, evaluation and limitations remain unverified. Record borderline until the actual publisher record or author copy is available.",
+      "first_checked_at": "2026-10-06T08:40:59+00:00",
+      "last_checked_at": "2026-10-06T08:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Calabash: Accelerating Attention Using a Systolic Array Chain on FPGAs"
+    },
+    "DOI:10.1109/globecom48099.2022.10001518": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/globecom48099.2022.10001518",
+      "identity_tokens": [
+        "DOI:10.1109/globecom48099.2022.10001518"
+      ],
+      "reason": "Tried the IEEE publisher record; the full paper body was not accessible. The title indicates FPGA implementation of self-attention for deep joint source-channel coding, an application-specific communications model rather than LLM serving; without full text, its relation to the linked FPGA transformer work is uncertain. Final borderline.",
+      "first_checked_at": "2026-10-06T08:40:59+00:00",
+      "last_checked_at": "2026-10-06T08:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Self-Attention Network for Deep JSCCM: The Design and FPGA Implementation"
+    },
+    "arXiv:2110.11115": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.11115",
+      "identity_tokens": [
+        "arXiv:2110.11115"
+      ],
+      "reason": "Mixup training creates synthetic examples for non-autoregressive generation and evaluates translation quality versus NAR baselines. It aims to improve model quality, not reduce inference steps or hardware cost; no direct efficiency gain is established. Its training method is adjacent to the linked iterative-refinement NAR lineage, so retain as borderline.",
+      "first_checked_at": "2026-10-06T08:40:59+00:00",
+      "last_checked_at": "2026-10-06T08:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Non-autoregressive Generation with Mixup Training"
+    },
+    "arXiv:2303.02284": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.02284",
+      "identity_tokens": [
+        "arXiv:2303.02284"
+      ],
+      "reason": "Fixed-point QAT combines squashed weight distributions and cosine regularization and quantizes transient variables for keyword-spotting models. Google Speech Commands and an in-house KWS set report 4-bit accuracy retention and 68% shorter execution time with fixed-point inference. This is a concrete embedded quantization method but for convolutional audio KWS, not transformer/LLM inference; linked low-bit relation is weak.",
+      "first_checked_at": "2026-10-06T08:41:00+00:00",
+      "last_checked_at": "2026-10-06T08:41:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fixed-Point Quantization Aware Training for on-Device Keyword-Spotting"
+    },
+    "arXiv:2502.00047": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00047",
+      "identity_tokens": [
+        "arXiv:2502.00047"
+      ],
+      "reason": "HadamRNN parameterizes orthogonal recurrent matrices with binary or sparse-ternary weights and evaluates copy, MNIST, IMDB, GLUE and IoT tasks. It reports near full-precision task quality with compact low-bit recurrent weights. The approach is RNN-specific and not transformer/LLM inference; BERT quantization linkage is a weak low-bit analogy.",
+      "first_checked_at": "2026-10-06T08:41:00+00:00",
+      "last_checked_at": "2026-10-06T08:41:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HadamRNN: Binary and Sparse Ternary Orthogonal RNNs"
+    },
+    "DOI:10.1145/3725843.3756068": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3725843.3756068",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756068"
+      ],
+      "reason": "LEGOSim runs heterogeneous chiplet simulators as parallel simlets, with on-demand synchronization and decoupled communication modeling. Validation against SIMBA and a CiM accelerator reports simulation error below 10%; case studies explore interconnect, buffer, topology and memory design. It is a general architecture simulation framework, not an LLM inference optimization or LLM-specific evaluation; linked NPU/PIM lineage is indirect.",
+      "first_checked_at": "2026-10-06T08:41:01+00:00",
+      "last_checked_at": "2026-10-06T08:41:01+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LEGOSim: A Unified Parallel Simulation Framework for Multi-chiplet Heterogeneous Integration"
+    },
+    "arXiv:2509.06794": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.06794",
+      "identity_tokens": [
+        "arXiv:2509.06794"
+      ],
+      "reason": "Dato presents a task-based programming model/runtime for dataflow accelerators, with programming abstractions and evaluation on accelerator workloads. Its contribution is general programmability and execution of dataflow tasks; no LLM/transformer inference optimization is established in the paper. Link to FPGA spatial LLM inference is an architectural adjacency, but too indirect for a concrete paper followup.",
+      "first_checked_at": "2026-10-06T08:41:01+00:00",
+      "last_checked_at": "2026-10-06T08:41:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dato: A Task-Based Programming Model for Dataflow Accelerators"
     }
   }
 }

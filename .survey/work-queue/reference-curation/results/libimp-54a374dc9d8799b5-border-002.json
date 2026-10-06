@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a374dc9d8799b5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.22049",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.22049",
+    "identity_tokens": [
+      "arXiv:2506.22049"
+    ],
+    "reason": "GPAS rescales activations while preserving gradients to accelerate LLM pretraining convergence; evaluations concern training stability/convergence and model quality. No inference latency, memory, throughput or serving optimization is demonstrated. Relatedness to a general transformer-training lineage is plausible, but it is outside the requested inference-efficiency focus.",
+    "first_checked_at": "2026-10-06T08:40:56+00:00",
+    "last_checked_at": "2026-10-06T08:40:56+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "GPAS: Accelerating Convergence of LLM Pretraining via Gradient-Preserving Activation Scaling"
+  },
+  "processed_at": "2026-10-06T08:40:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a374dc9d87",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

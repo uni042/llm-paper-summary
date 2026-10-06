@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fae9122283f1f182-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.13155",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.13155",
+    "identity_tokens": [
+      "arXiv:2412.13155"
+    ],
+    "reason": "FaceQ/F-Bench collects human preference ratings for generated, customized and restored faces; F-Eval is a multimodal evaluator. Evaluation compares 29 face models and image-quality metrics. Its contribution is face-quality measurement, not model inference efficiency; the linked KV-cache lineage does not establish a technical connection.",
+    "first_checked_at": "2026-10-06T08:41:01+00:00",
+    "last_checked_at": "2026-10-06T08:41:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.30295-catekv-on-sequential-consistency-for-long-context-llm-inference-acceleration.md"
+    ],
+    "title": "F-Bench: Rethinking Human Preference Evaluation Metrics for Benchmarking Face Generation, Customization, and Restoration"
+  },
+  "processed_at": "2026-10-06T08:41:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fae9122283f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

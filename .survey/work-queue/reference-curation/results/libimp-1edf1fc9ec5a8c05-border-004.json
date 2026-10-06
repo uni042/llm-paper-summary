@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1edf1fc9ec5a8c05-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.00412",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.00412",
+    "identity_tokens": [
+      "arXiv:2411.00412"
+    ],
+    "reason": "Adapting While Learning grounds LLM scientific problem solving through tool-use adaptation and evaluates reasoning/task success with tool feedback. The paper focuses on capability adaptation, not reducing inference compute, memory or latency; possible relation to test-time reasoning is indirect. Keep borderline for possible cross-reference rather than an efficiency followup.",
+    "first_checked_at": "2026-10-06T08:40:53+00:00",
+    "last_checked_at": "2026-10-06T08:40:53+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adapting While Learning: Grounding LLMs for Scientific Problems with Intelligent Tool Usage Adaptation"
+  },
+  "processed_at": "2026-10-06T08:40:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1edf1fc9ec5a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

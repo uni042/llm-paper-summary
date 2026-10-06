@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-167d1ba2f1a9b280-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/iscas58744.2024.10558631",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/iscas58744.2024.10558631",
+    "identity_tokens": [
+      "DOI:10.1109/iscas58744.2024.10558631"
+    ],
+    "reason": "Tried IEEE Xplore publisher full-text URL and record; it returned only an inaccessible shell, with no paper body. The title/metadata describe an energy-efficient FPGA binary-transformer accelerator, but full-text method, evaluation and limitations could not be verified. Final borderline pending an author/institutional copy.",
+    "first_checked_at": "2026-10-06T08:40:52+00:00",
+    "last_checked_at": "2026-10-06T08:40:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Energy Efficient FPGA-Based Binary Transformer Accelerator for Edge Devices"
+  },
+  "processed_at": "2026-10-06T08:40:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-167d1ba2f1a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

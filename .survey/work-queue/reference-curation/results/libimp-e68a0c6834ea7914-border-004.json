@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e68a0c6834ea7914-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.00047",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.00047",
+    "identity_tokens": [
+      "arXiv:2502.00047"
+    ],
+    "reason": "HadamRNN parameterizes orthogonal recurrent matrices with binary or sparse-ternary weights and evaluates copy, MNIST, IMDB, GLUE and IoT tasks. It reports near full-precision task quality with compact low-bit recurrent weights. The approach is RNN-specific and not transformer/LLM inference; BERT quantization linkage is a weak low-bit analogy.",
+    "first_checked_at": "2026-10-06T08:41:00+00:00",
+    "last_checked_at": "2026-10-06T08:41:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HadamRNN: Binary and Sparse Ternary Orthogonal RNNs"
+  },
+  "processed_at": "2026-10-06T08:41:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e68a0c6834ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

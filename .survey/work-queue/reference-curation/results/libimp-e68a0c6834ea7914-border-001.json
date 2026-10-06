@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e68a0c6834ea7914-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.02284",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.02284",
+    "identity_tokens": [
+      "arXiv:2303.02284"
+    ],
+    "reason": "Fixed-point QAT combines squashed weight distributions and cosine regularization and quantizes transient variables for keyword-spotting models. Google Speech Commands and an in-house KWS set report 4-bit accuracy retention and 68% shorter execution time with fixed-point inference. This is a concrete embedded quantization method but for convolutional audio KWS, not transformer/LLM inference; linked low-bit relation is weak.",
+    "first_checked_at": "2026-10-06T08:41:00+00:00",
+    "last_checked_at": "2026-10-06T08:41:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fixed-Point Quantization Aware Training for on-Device Keyword-Spotting"
+  },
+  "processed_at": "2026-10-06T08:41:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e68a0c6834ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
