@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r140-screen-01-part-05-51e04d34ce36",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20824",
+      "identity_tokens": [
+        "arXiv:2609.20824"
+      ],
+      "title": "Do small language models know what they don't know?",
+      "reason": "Uncertainty routing explicitly spends more tokens on hard cases to improve accuracy, rather than reducing inference compute.",
+      "source_url": "https://arxiv.org/abs/2609.20824",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44217-026-01846-7",
+      "identity_tokens": [
+        "DOI:10.1007/s44217-026-01846-7"
+      ],
+      "title": "Effects of the 80-10-10 CTCA-Harlybot model on university students’ achievement and critical thinking in mobile and adaptive systems course",
+      "reason": "Springer source is inaccessible; the title suggests course pedagogy but the linked quantization relation cannot be checked in full text.",
+      "source_url": "https://doi.org/10.1007/s44217-026-01846-7",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3822594",
+      "identity_tokens": [
+        "DOI:10.1145/3822594"
+      ],
+      "title": "P4Q: Learning to Prompt for Quantization in Low-Bit CLIP",
+      "reason": "ACM source is inaccessible; the title suggests CLIP low-bit prompting, but the linked quantization lineage warrants primary-text retrieval.",
+      "source_url": "https://doi.org/10.1145/3822594",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17660",
+      "identity_tokens": [
+        "arXiv:2607.17660"
+      ],
+      "title": "RayOcc: Occlusion-Aware Ray Occupancy Estimation via Gaussian Mixture Intensity",
+      "reason": "RayOcc is a 3D occupancy vision model; its latency/memory results do not concern LLM generation or inference.",
+      "source_url": "https://arxiv.org/abs/2607.17660",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17696",
+      "identity_tokens": [
+        "arXiv:2607.17696"
+      ],
+      "title": "An Adjoint-Sensitivity Framework for Lost-in-the-Middle Phenomena in Causal Residual Transformers",
+      "reason": "The paper analyzes Transformer positional influence but disclaims production-LLM benchmark transfer and reports no serving-efficiency result.",
+      "source_url": "https://arxiv.org/abs/2607.17696",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    }
+  ]
+}
