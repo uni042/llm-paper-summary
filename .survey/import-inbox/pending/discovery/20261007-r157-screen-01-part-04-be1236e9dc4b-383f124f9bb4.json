@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r157-screen-01-part-04-be1236e9dc4b",
+  "reference_main_sha": "85ffc4e77bc345a0b91450e6a364175124d877b3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.08059",
+      "identity_tokens": [
+        "arXiv:2212.08059"
+      ],
+      "title": "Rethinking Vision Transformers for MobileNet Size and Speed",
+      "reason": "EfficientFormerV2 has latency-driven mobile ViT design, but no LLM decoder or serving evidence; architecture transfer remains speculative.",
+      "source_url": "https://arxiv.org/abs/2212.08059",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10629",
+      "identity_tokens": [
+        "arXiv:2410.10629"
+      ],
+      "title": "SANA: Efficient High-Resolution Image Synthesis with Linear Diffusion Transformers",
+      "reason": "Although linked to inference systems, SANA optimizes text-to-image diffusion inference, not LLM decoding/serving.",
+      "source_url": "https://arxiv.org/abs/2410.10629",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.07992",
+      "identity_tokens": [
+        "arXiv:2405.07992"
+      ],
+      "title": "MambaOut: Do We Really Need Mamba for Vision?*",
+      "reason": "MambaOut investigates Mamba for visual recognition; no LLM inference optimization is described.",
+      "source_url": "https://arxiv.org/abs/2405.07992",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.05709",
+      "identity_tokens": [
+        "arXiv:1905.05709"
+      ],
+      "title": "Challenges in Building Intelligent Open-domain Dialog Systems",
+      "reason": "This paper surveys open-domain dialogue-system challenges and does not propose concrete LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/1905.05709",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.06522",
+      "identity_tokens": [
+        "arXiv:2206.06522"
+      ],
+      "title": "LST: Ladder Side-Tuning for Parameter and Memory Efficient Transfer Learning",
+      "reason": "Ladder Side-Tuning reduces parameter/memory costs for transfer learning, a training/adaptation task rather than inference.",
+      "source_url": "https://arxiv.org/abs/2206.06522",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    }
+  ]
+}
