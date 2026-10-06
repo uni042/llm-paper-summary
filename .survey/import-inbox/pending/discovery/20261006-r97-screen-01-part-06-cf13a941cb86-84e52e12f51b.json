@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r97-screen-01-part-06-cf13a941cb86",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01540",
+      "identity_tokens": [
+        "arXiv:2512.01540"
+      ],
+      "title": "FlashVGGT: Efficient and Scalable Visual Geometry Transformers with Compressed Descriptor Attention",
+      "reason": "FlashVGGT compresses descriptors for visual geometry attention and reports 10.1x speedup and 15.8x fewer FLOPs on 1,000 images, with lower memory. The result is 3D vision-specific and does not evaluate LLM inference.",
+      "source_url": "https://arxiv.org/abs/2512.01540",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.20123",
+      "identity_tokens": [
+        "arXiv:2511.20123"
+      ],
+      "title": "UltraViCo: Breaking Extrapolation Limits in Video Diffusion Transformers",
+      "reason": "UltraViCo targets longer video-diffusion sequences through model extrapolation/training, which the authors distinguish from inference-time modifications. It has a long-sequence connection but no direct LLM inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2511.20123",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20886",
+      "identity_tokens": [
+        "arXiv:2511.20886"
+      ],
+      "title": "V2-SAM: Marrying SAM2 with Multi-Prompt Experts for Cross-View Object Correspondence",
+      "reason": "V2-SAM combines SAM2 with multi-prompt experts for cross-view object correspondence. The MoE wording is an application architecture for segmentation, not LLM MoE serving or inference optimization.",
+      "source_url": "https://arxiv.org/abs/2511.20886",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22567",
+      "identity_tokens": [
+        "arXiv:2605.22567"
+      ],
+      "title": "LANG: Reinforcement Learning for Multilingual Reasoning with Language-Adaptive Hint Guidance",
+      "reason": "Primary arXiv HTML retrieval timed out (HTTP 400 timeout); no readable full text was obtained.",
+      "source_url": "https://arxiv.org/abs/2605.22567",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.00768",
+      "identity_tokens": [
+        "arXiv:2605.00768"
+      ],
+      "title": "Characterizing the Expressivity of Local Attention in Transformers",
+      "reason": "Theoretical analysis characterizes local-attention expressivity and long-range reasoning limits. It connects to sparse attention, but supplies no system-level latency/memory/throughput evaluation or deployable optimization.",
+      "source_url": "https://arxiv.org/abs/2605.00768",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    }
+  ]
+}
