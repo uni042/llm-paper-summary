@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6d5d5971d5d057a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.01787",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.01787",
+    "identity_tokens": [
+      "arXiv:1906.01787"
+    ],
+    "reason": "深いTransformerを安定に学習するlayer normalizationとlayer combinationを提案し、WMT/NIST翻訳品質とtraining speedを評価する学習アーキテクチャ研究。推論システム効率を最終目的としない。",
+    "first_checked_at": "2026-10-06T13:52:11+00:00",
+    "last_checked_at": "2026-10-06T13:52:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+    ],
+    "title": "Learning Deep Transformer Models for Machine Translation"
+  },
+  "processed_at": "2026-10-06T13:52:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6d5d5971d5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

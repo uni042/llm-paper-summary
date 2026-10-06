@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T13:41:11+00:00",
-  "record_count": 3152,
+  "updated_at": "2026-10-06T13:52:09+00:00",
+  "record_count": 3163,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -48314,6 +48314,173 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Bending the Scaling Law Curve in Large-Scale Recommendation Systems"
+    },
+    "arXiv:2511.02748": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02748",
+      "identity_tokens": [
+        "arXiv:2511.02748"
+      ],
+      "reason": "O-RAN causal state-space world model; reports 2.3–4.1x faster inference vs attention/hybrid baselines, but is network telemetry prediction rather than LLM generation; RWKV/RetNet relation is indirect.",
+      "first_checked_at": "2026-10-06T13:52:01+00:00",
+      "last_checked_at": "2026-10-06T13:52:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic World Modeling for 6G: Near-Real-Time Generative State-Space Reasoning"
+    },
+    "arXiv:2308.08239": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.08239",
+      "identity_tokens": [
+        "arXiv:2308.08239"
+      ],
+      "reason": "Memo write/retrieve tuning improves long-range conversation consistency; no inference cost/cache/latency evaluation. LongNet relation is only long-context adjacency.",
+      "first_checked_at": "2026-10-06T13:52:01+00:00",
+      "last_checked_at": "2026-10-06T13:52:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemoChat: Tuning LLMs to Use Memos for Consistent Long-Range Open-Domain Conversation"
+    },
+    "arXiv:2607.04422": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.04422",
+      "identity_tokens": [
+        "arXiv:2607.04422"
+      ],
+      "reason": "NVFP4 quantization recipes are evaluated for LLM pretraining; paper distinguishes its objective from inference-focused attention and reports limited block-level efficiency, not end-to-end inference.",
+      "first_checked_at": "2026-10-06T13:52:01+00:00",
+      "last_checked_at": "2026-10-06T13:52:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Full-Stack FP4: Stable LLM Pretraining with Quantized Projections, Optimizers, and Attention"
+    },
+    "arXiv:2605.21842": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21842",
+      "identity_tokens": [
+        "arXiv:2605.21842"
+      ],
+      "reason": "Spectral-energy attention gate; paper explicitly says it does not impose sparsity for compute efficiency. KV-cache compression is a proposed implication only; small character-level results, no LLM validation.",
+      "first_checked_at": "2026-10-06T13:52:02+00:00",
+      "last_checked_at": "2026-10-06T13:52:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy-Gated Attention: Spectral Salience as an Inductive Bias for Transformer Attention"
+    },
+    "arXiv:2601.07462": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.07462",
+      "identity_tokens": [
+        "arXiv:2601.07462"
+      ],
+      "reason": "Progressive-resolution diffusion transformer targets image-generation sampling cost; relation to sparse/long-context transformer lineage is architectural only, no LLM inference results.",
+      "first_checked_at": "2026-10-06T13:52:03+00:00",
+      "last_checked_at": "2026-10-06T13:52:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Sketch to Fresco: Efficient Diffusion Transformer with Progressive Resolution"
+    },
+    "arXiv:2512.16891": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.16891",
+      "identity_tokens": [
+        "arXiv:2512.16891"
+      ],
+      "reason": "VLLM-derived video knowledge tokens are cached into compact representations for fast recommendation serving; reduces online video-model processing but is not direct LLM inference optimization.",
+      "first_checked_at": "2026-10-06T13:52:03+00:00",
+      "last_checked_at": "2026-10-06T13:52:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LinkedOut: Linking World Knowledge Representation Out of Video LLM for Next-Generation Video Recommendation"
+    },
+    "arXiv:2606.01476": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01476",
+      "identity_tokens": [
+        "arXiv:2606.01476"
+      ],
+      "reason": "Speculative-verification-inspired chunking reduces teacher queries O(T) to O(T/C) for on-policy distillation; this is training cost, not faster decoding.",
+      "first_checked_at": "2026-10-06T13:52:04+00:00",
+      "last_checked_at": "2026-10-06T13:52:04+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OmniOPD: Logit-Free On-Policy Distillation via Speculative Verification"
+    },
+    "arXiv:2603.09573": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.09573",
+      "identity_tokens": [
+        "arXiv:2603.09573"
+      ],
+      "reason": "Panoramic VLM for adverse driving scenes with sparse-attention component; accuracy-oriented evaluation and no measured inference latency/memory/throughput, leaving only a weak long-context attention link.",
+      "first_checked_at": "2026-10-06T13:52:06+00:00",
+      "last_checked_at": "2026-10-06T13:52:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "More than the Sum: Panorama-Language Models for Adverse Omni-Scenes"
+    },
+    "DOI:10.1007/s11263-025-02702-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11263-025-02702-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-025-02702-1"
+      ],
+      "reason": "Abstract signals potentially relevant inference cost/latency optimization, but primary full text could not be obtained; no method/effectiveness is inferred from abstract or secondary excerpts.",
+      "first_checked_at": "2026-10-06T13:52:07+00:00",
+      "last_checked_at": "2026-10-06T13:52:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Not All Attention is Needed: Parameter and Computation Efficient Tuning for Multi-modal Large Language Models via Effective Attention Skipping"
+    },
+    "DOI:10.1109/eitce70137.2026.11634430": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eitce70137.2026.11634430",
+      "identity_tokens": [
+        "DOI:10.1109/eitce70137.2026.11634430"
+      ],
+      "reason": "Abstract signals potentially relevant inference cost/latency optimization, but primary full text could not be obtained; no method/effectiveness is inferred from abstract or secondary excerpts.",
+      "first_checked_at": "2026-10-06T13:52:08+00:00",
+      "last_checked_at": "2026-10-06T13:52:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cost-Constrained Automatic Workflow Search for Small LLM Agents"
+    },
+    "arXiv:2604.12163": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.12163",
+      "identity_tokens": [
+        "arXiv:2604.12163"
+      ],
+      "reason": "Sparse MoE diffusion image model activates ~2B/17B params and includes inference optimizations, but not an LLM; adjacent MoE conditional-compute relevance only.",
+      "first_checked_at": "2026-10-06T13:52:09+00:00",
+      "last_checked_at": "2026-10-06T13:52:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Nucleus-Image: Sparse MoE for Image Generation"
     }
   }
 }
