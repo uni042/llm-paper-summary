@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-05bcad2c45211e2b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/southeastcon63549.2026.11475984",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/southeastcon63549.2026.11475984",
+    "identity_tokens": [
+      "DOI:10.1109/southeastcon63549.2026.11475984"
+    ],
+    "reason": "COTS fog device上のmodel-agnostic serverless LLM inference frameworkという内容は対象に直接関連するが、IEEE一次資料を取得できず、設計/性能結果が確認できない。",
+    "first_checked_at": "2026-10-06T21:07:23+00:00",
+    "last_checked_at": "2026-10-06T21:07:23+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Serverless, Model-Agnostic Fog-Based Inference Framework for COTS Devices"
+  },
+  "processed_at": "2026-10-06T21:07:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-05bcad2c4521",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

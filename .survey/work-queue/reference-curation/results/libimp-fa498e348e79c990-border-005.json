@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa498e348e79c990-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tpami.2026.3673273",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tpami.2026.3673273",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2026.3673273"
+    ],
+    "reason": "visual question answeringで人間型認知能力を扱う題名は大規模モデルに隣接するが、IEEE TPAMI一次資料を取得できず、LLM利用や推論計算への寄与を直接確認できない。",
+    "first_checked_at": "2026-10-06T21:07:34+00:00",
+    "last_checked_at": "2026-10-06T21:07:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SHC: Deeply Activating Human-Like Cognitive Ability for Visual Question Answering"
+  },
+  "processed_at": "2026-10-06T21:07:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa498e348e79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

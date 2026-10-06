@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T21:01:00+00:00",
-  "record_count": 9702,
+  "updated_at": "2026-10-06T21:07:36+00:00",
+  "record_count": 9716,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -138956,6 +138956,203 @@
         "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
       ],
       "title": "Darkness Visible: Reading the Exception Handler of a Language Model"
+    },
+    "arXiv:2602.18900": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18900",
+      "identity_tokens": [
+        "arXiv:2602.18900"
+      ],
+      "reason": "一次資料の要旨を確認。Privacy preserving machine learning deployments in sensitive deep learning applications; from medical imaging to autonomous systems; increasingly require combining multiple techniques. Yet, practitioners lack systematic guidance to assess the synergistic and non-additive interactions of these hybrid configurations, relying instead on isolated technique analy",
+      "first_checked_at": "2026-10-06T21:07:23+00:00",
+      "last_checked_at": "2026-10-06T21:07:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "PrivacyBench: Privacy Isn't Free in Hybrid Privacy-Preserving Vision Systems"
+    },
+    "arXiv:2602.17658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17658",
+      "identity_tokens": [
+        "arXiv:2602.17658"
+      ],
+      "reason": "一次資料の要旨を確認。Reward modeling is central to RLHF, RLAIF, and PPO-based alignment, but its reliability is often limited by scarce and heterogeneous human preference data. In this paper, we introduce MARS (Margin and Semantic-Aware Data Augmentation for Reward Modeling), an adaptive augmentation framework for controlled low-resource reward modeling. MARS allocates more augm",
+      "first_checked_at": "2026-10-06T21:07:23+00:00",
+      "last_checked_at": "2026-10-06T21:07:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "MARS: Margin and Semantic-Aware Data Augmentation for Reward Modeling"
+    },
+    "arXiv:2603.01565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01565",
+      "identity_tokens": [
+        "arXiv:2603.01565"
+      ],
+      "reason": "一次資料の要旨を確認。Text-to-audio (T2A) generation has advanced considerably in recent years, yet existing methods continue to face challenges in accurately rendering complex text prompts, particularly those involving intricate audio effects, and achieving precise text-audio alignment. While prior approaches have explored data augmentation, explicit timing conditioning, and rei",
+      "first_checked_at": "2026-10-06T21:07:29+00:00",
+      "last_checked_at": "2026-10-06T21:07:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Investigating Group Relative Policy Optimization for Diffusion Transformer based Text-to-Audio Generation"
+    },
+    "arXiv:2602.21765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21765",
+      "identity_tokens": [
+        "arXiv:2602.21765"
+      ],
+      "reason": "一次資料の要旨を確認。Alignment and adaptation in large language models heavily rely on reinforcement learning from human feedback (RLHF); yet, theoretical understanding of its generalisability remains premature, especially when the learned reward could shift, and the KL control is estimated and clipped. To address this issue, we develop generalisation theory for RLHF that explic",
+      "first_checked_at": "2026-10-06T21:07:30+00:00",
+      "last_checked_at": "2026-10-06T21:07:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Generalisation of RLHF under Reward Shift and Clipped KL Regularisation"
+    },
+    "arXiv:2603.08736": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08736",
+      "identity_tokens": [
+        "arXiv:2603.08736"
+      ],
+      "reason": "一次資料の要旨を確認。Public EV charging infrastructure suffers from significant failure rates -- with field studies reporting up to 27.5% of DC fast chargers non-functional -- and multi-day mean time to resolution, imposing billions in annual economic burden. Cloud-centric architectures cannot achieve the latency, reliability, and bandwidth characteristics required for autonomou",
+      "first_checked_at": "2026-10-06T21:07:31+00:00",
+      "last_checked_at": "2026-10-06T21:07:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Autonomous Edge-Deployed AI Agents for Electric Vehicle Charging Infrastructure Management"
+    },
+    "arXiv:2602.19536": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19536",
+      "identity_tokens": [
+        "arXiv:2602.19536"
+      ],
+      "reason": "一次資料の要旨を確認。Linear modeling methods like Mamba have been merged as the effective backbone for the 3D object detection task. However, previous Mamba-based methods utilize the bidirectional encoding for the whole non-empty voxel sequence, which contains abundant useless background information in the scenes. Though directly encoding foreground voxels appears to be a plausi",
+      "first_checked_at": "2026-10-06T21:07:31+00:00",
+      "last_checked_at": "2026-10-06T21:07:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Fore-Mamba3D: Mamba-based Foreground-Enhanced Encoding for 3D Object Detection"
+    },
+    "arXiv:2602.19764": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19764",
+      "identity_tokens": [
+        "arXiv:2602.19764"
+      ],
+      "reason": "一次資料の要旨を確認。Realizing dexterous embodied manipulation necessitates the deep integration of heterogeneous multimodal sensory inputs. However, current vision-centric paradigms often overlook the critical force and geometric feedback essential for complex tasks. This paper presents DeMUSE, a Deep Multimodal Unified Sparse Experts framework leveraging a Diffusion Transforme",
+      "first_checked_at": "2026-10-06T21:07:32+00:00",
+      "last_checked_at": "2026-10-06T21:07:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Towards Dexterous Embodied Manipulation via Deep Multi-Sensory Fusion and Sparse Expert Scaling"
+    },
+    "arXiv:2602.19017": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19017",
+      "identity_tokens": [
+        "arXiv:2602.19017"
+      ],
+      "reason": "一次資料の要旨を確認。Theoretical analyses of Empirical Risk Minimization (ERM) are standardly framed within the Real-RAM model of computation. In this setting, training even simple neural networks is known to be $\\exists \\mathbb{R}$-complete -- a complexity class believed to be harder than NP, that characterizes the difficulty of solving systems of polynomial inequalities over t",
+      "first_checked_at": "2026-10-06T21:07:32+00:00",
+      "last_checked_at": "2026-10-06T21:07:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "title": "Why ReLU? A Bit-Model Dichotomy for Deep Network Training"
+    },
+    "arXiv:2602.14024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14024",
+      "identity_tokens": [
+        "arXiv:2602.14024"
+      ],
+      "reason": "一次資料の要旨を確認。Most time series foundation models are pretrained by directly predicting future observations, which often yields weakly structured latent representations that capture surface noise rather than coherent and predictable temporal dynamics. In this work, we introduce EIDOS, a foundation model family that shifts pretraining from future value prediction to latent-",
+      "first_checked_at": "2026-10-06T21:07:33+00:00",
+      "last_checked_at": "2026-10-06T21:07:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "EIDOS: Latent-Space Predictive Learning for Time Series Foundation Models"
+    },
+    "arXiv:2603.12073": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12073",
+      "identity_tokens": [
+        "arXiv:2603.12073"
+      ],
+      "reason": "一次資料の要旨を確認。Transcription factors (TFs) regulate gene expression through complex and co-operative mechanisms. While many TFs act together, the logic underlying TFs binding and their interactions is not fully understood yet. Most current approaches for TF binding site prediction focus on individual TFs and binary classification tasks, without a full analysis of the possi",
+      "first_checked_at": "2026-10-06T21:07:35+00:00",
+      "last_checked_at": "2026-10-06T21:07:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "A Multi-Label Temporal Convolutional Framework for Transcription Factor Binding Characterization"
+    },
+    "arXiv:2603.16936": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16936",
+      "identity_tokens": [
+        "arXiv:2603.16936"
+      ],
+      "reason": "一次資料の要旨を確認。Text-guided human body animation has advanced rapidly, yet facial animation lags due to the scarcity of well-annotated, text-paired facial corpora. To close this gap, we leverage foundation generative models to synthesize a large, balanced corpus of facial behavior. We design prompts suite covering emotions and head motions, generate about 80 hours of facial",
+      "first_checked_at": "2026-10-06T21:07:35+00:00",
+      "last_checked_at": "2026-10-06T21:07:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "TDMM-LM: Bridging Facial Understanding and Animation via Language Models"
+    },
+    "DOI:10.1007/s44443-026-00587-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-00587-9",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00587-9"
+      ],
+      "reason": "出版社本文は音声・映像が雑音を含むmultimodal sentiment analysis向けMI-guided MoE denoisingであり、LLM serving性能の改善や推論コスト削減を扱わない。",
+      "first_checked_at": "2026-10-06T21:07:36+00:00",
+      "last_checked_at": "2026-10-06T21:07:36+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "MIME: Mutual information-guided mixture of experts for robust multimodal sentiment analysis"
+    },
+    "arXiv:2603.12577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12577",
+      "identity_tokens": [
+        "arXiv:2603.12577"
+      ],
+      "reason": "本文はLLM向けMoE-LoRAのparameter-efficient fine-tuningを提案し、測定している改善は主にtrainable parameter数とmulti-task性能である。推論時のcompute/memory/latency削減は示されない。",
+      "first_checked_at": "2026-10-06T21:07:36+00:00",
+      "last_checked_at": "2026-10-06T21:07:36+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Expert Pyramid Tuning: Efficient Parameter Fine-Tuning for Expertise-Driven Task Allocation"
+    },
+    "arXiv:2603.12846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12846",
+      "identity_tokens": [
+        "arXiv:2603.12846"
+      ],
+      "reason": "一次資料の要旨を確認。The realization of a scalable quantum internet requires efficient light-matter interfaces that map stationary qubits onto photonic carriers for long-distance transmission. A central challenge is the generation of entangled photons simultaneously compatible with single-emitter transitions and low-loss telecom fiber infrastructure. Spontaneous parametric down-",
+      "first_checked_at": "2026-10-06T21:07:36+00:00",
+      "last_checked_at": "2026-10-06T21:07:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Deep-Learning-Designed AlGaAs Interface Linking Trapped Ions to Telecom Quantum Networks"
     }
   }
 }
