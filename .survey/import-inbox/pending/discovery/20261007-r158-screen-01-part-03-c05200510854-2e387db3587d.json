@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r158-screen-01-part-03-c05200510854",
+  "reference_main_sha": "1686a29f5b7311a6ba3e45b3cac3459e72f4eedc",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.00713",
+      "identity_tokens": [
+        "arXiv:2009.00713"
+      ],
+      "title": "WaveGrad: Estimating Gradients for Waveform Generation",
+      "reason": "The abstract identifies waveform generation as the target model; it does not propose an LLM serving optimization.",
+      "source_url": "https://arxiv.org/abs/2009.00713",
+      "first_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "last_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15648",
+      "identity_tokens": [
+        "arXiv:2402.15648"
+      ],
+      "title": "MambaIR: A Simple Baseline for Image Restoration with State-Space Model",
+      "reason": "The primary abstract describes image restoration and image restoration benchmarks; no LLM inference improvement is claimed.",
+      "source_url": "https://arxiv.org/abs/2402.15648",
+      "first_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "last_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2024.3365742",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2024.3365742"
+      ],
+      "title": "A Review on Large Language Models: Architectures, Applications, Taxonomies, Open Issues and Challenges",
+      "reason": "This is a broad LLM survey and may help trace relevant deployment work, but the publisher-version review offers no original method or measured inference improvement. Keep borderline as background discovery only, not as an optimization result.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2024.3365742",
+      "first_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "last_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.10518",
+      "identity_tokens": [
+        "arXiv:2404.10518"
+      ],
+      "title": "MobileNetV4 - Universal Models for the Mobile Ecosystem",
+      "reason": "Treat as borderline transfer candidate: its mobile attention kernel may inspire efficient LLM attention, but the full text benchmarks MobileNet/image workloads only; no evidence establishes compatibility with causal attention, KV cache, or language quality.",
+      "source_url": "https://arxiv.org/abs/2404.10518",
+      "first_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "last_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11838",
+      "identity_tokens": [
+        "arXiv:2406.11838"
+      ],
+      "title": "Autoregressive Image Generation without Vector Quantization",
+      "reason": "Its parallel token prediction is for image-generation latents, with visual sample quality results; the autoregressive term does not make this a language-model inference method.",
+      "source_url": "https://arxiv.org/abs/2406.11838",
+      "first_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "last_checked_at": "2026-10-06T23:34:04.113179+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ]
+    }
+  ]
+}
