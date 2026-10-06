@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r33-screen-01-part-08-da5fccb83b5b",
+  "reference_main_sha": "66f6b4a22138ddb5a743e0f79ce8916ca41c111d",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.02872",
+      "identity_tokens": [
+        "arXiv:2601.02872"
+      ],
+      "title": "LongBench Pro: A More Realistic and Comprehensive Bilingual Long-Context Evaluation Benchmark",
+      "reason": "LongBench Pro introduces bilingual long-context evaluation with more realistic/extreme-length tasks. It does not propose KV compression, but can evaluate retention and retrieval quality of KV selection/compression methods.",
+      "source_url": "https://arxiv.org/abs/2601.02872",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+        "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1455770.1455831",
+      "identity_tokens": [
+        "DOI:10.1145/1455770.1455831"
+      ],
+      "title": "RFIDs and secret handshakes: defending against ghost-and-leech attacks and unauthorized reads with context-aware communications",
+      "reason": "RFID security protocol paper, unrelated to LLM inference systems.",
+      "source_url": "https://doi.org/10.1145/1455770.1455831",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.02189",
+      "identity_tokens": [
+        "arXiv:2512.02189"
+      ],
+      "title": "Microbenchmarking NVIDIA’s Blackwell Architecture: An in-depth Architectural Analysis",
+      "reason": "The paper supplies microbenchmarks and architectural analysis for NVIDIA Blackwell, including tensor-core/memory features and ML workloads. This is hardware characterization, not an LLM serving technique; relevance is as measurement context.",
+      "source_url": "https://arxiv.org/abs/2512.02189",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
