@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r72-screen-01-part-04-8086483b5585",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.19523",
+      "identity_tokens": [
+        "arXiv:2608.19523"
+      ],
+      "title": "DAVSS: Distilled Audio-Visual State Space Models",
+      "reason": "DAVSS distills a transformer audio-visual classifier into a 14M-parameter SSM; the primary text reports faster inference (up to about 2x at a larger patch size) while retaining or improving AudioSet classification results. This is an audio-visual classifier rather than a generative LLM, so transfer to LLM inference is unresolved.",
+      "source_url": "https://arxiv.org/abs/2608.19523",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1361-665X/ae9c7b",
+      "identity_tokens": [
+        "DOI:10.1088/1361-665X/ae9c7b"
+      ],
+      "title": "A smart structural health diagnosis system for few-shot bearing fault detection using Mamba and edge-attention GNN",
+      "reason": "Abstract in the exact input packet.",
+      "source_url": "https://doi.org/10.1088/1361-665X/ae9c7b",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0354921",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0354921"
+      ],
+      "title": "MambaGCN-SMI: Protocol state machine inference framework based on Mamba and GCN",
+      "reason": "Abstract in the exact input packet.",
+      "source_url": "https://doi.org/10.1371/journal.pone.0354921",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.18592",
+      "identity_tokens": [
+        "arXiv:2608.18592"
+      ],
+      "title": "Infrared Universality of Collective Dynamics across Transformer and State-Space Architectures",
+      "reason": "The paper analyzes slow-mode dynamics in Mamba and Transformer blocks and reports similar long-memory spectra. It is an architecture-dynamics analysis, not an inference optimization or cost/quality method; relevance is limited to the SSM/Transformer lineage.",
+      "source_url": "https://arxiv.org/abs/2608.18592",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18710",
+      "identity_tokens": [
+        "arXiv:2608.18710"
+      ],
+      "title": "CamWorldQA: Perceptual Quality Assessment of Camera-Controlled World Video Generation",
+      "reason": "Abstract in the exact input packet.",
+      "source_url": "https://arxiv.org/abs/2608.18710",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
