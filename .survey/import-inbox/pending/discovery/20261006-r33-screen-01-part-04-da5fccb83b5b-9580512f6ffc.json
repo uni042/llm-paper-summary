@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r33-screen-01-part-04-da5fccb83b5b",
+  "reference_main_sha": "66f6b4a22138ddb5a743e0f79ce8916ca41c111d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.10858",
+      "identity_tokens": [
+        "arXiv:2512.10858"
+      ],
+      "title": "Scaling Behavior of Discrete Diffusion Language Models",
+      "reason": "The work studies training scaling laws across noise types and hyperparameters for DLMs, comparing data/compute scaling to autoregressive models. It is linked to diffusion serving but chiefly concerns pretraining efficiency, not decode-time serving or KV-cache design.",
+      "source_url": "https://arxiv.org/abs/2512.10858",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04206-sangam-diffusion-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05172",
+      "identity_tokens": [
+        "arXiv:2604.05172"
+      ],
+      "title": "ClawsBench: Evaluating Capability and Safety of LLM Productivity Agents in Simulated Workspaces",
+      "reason": "ClawsBench is a simulated-workspace capability and safety benchmark; it analyzes model/scaffold/harness effects, not inference optimization. The link to unified-memory desktop inference supplies only deployment context.",
+      "source_url": "https://arxiv.org/abs/2604.05172",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16093",
+      "identity_tokens": [
+        "arXiv:2512.16093"
+      ],
+      "title": "TurboDiffusion: Accelerating Video Diffusion Models by 100-200 Times",
+      "reason": "Video diffusion generation acceleration, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2512.16093",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11086",
+      "identity_tokens": [
+        "arXiv:2605.11086"
+      ],
+      "title": "ExploitGym: Can AI Agents Turn Security Vulnerabilities into Real Attacks?",
+      "reason": "Security-agent attack benchmark, not LLM serving or inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.11086",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.00540",
+      "identity_tokens": [
+        "arXiv:2503.00540"
+      ],
+      "title": "Streaming Video Question-Answering with In-context Video KV-Cache Retrieval",
+      "reason": "The system retrieves cached video-context representations for streaming VideoQA and reports improved efficiency against VideoQA baselines. It is a modality-specific KV retrieval method; evidence does not establish applicability to text-only LLM KV caches.",
+      "source_url": "https://arxiv.org/abs/2503.00540",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    }
+  ]
+}
