@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r48-screen-01-part-02-529473a53be9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07579",
+      "identity_tokens": [
+        "arXiv:2605.07579"
+      ],
+      "title": "Your Language Model is Its Own Critic: Reinforcement Learning with Value Estimation from Actor's Internal States",
+      "reason": "RLVR critic/value estimation method for training; not an inference-time resource improvement.",
+      "source_url": "https://arxiv.org/abs/2605.07579",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07039",
+      "identity_tokens": [
+        "arXiv:2605.07039"
+      ],
+      "title": "PACEvolve++: Improving Test-time Learning for Evolutionary Search Agents",
+      "reason": "Test-time learning for evolutionary search agents, not an inference-cost reduction method.",
+      "source_url": "https://arxiv.org/abs/2605.07039",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20368",
+      "identity_tokens": [
+        "arXiv:2604.20368"
+      ],
+      "title": "LaplacianFormer:Rethinking Linear Attention with Laplacian Kernel",
+      "reason": "Attention-approximation lineage is relevant, but primary experiments are computer vision only; transfer to LLM/VLM inference is unverified.",
+      "source_url": "https://arxiv.org/abs/2604.20368",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12820",
+      "identity_tokens": [
+        "arXiv:2604.12820"
+      ],
+      "title": "RePAIR: Interactive Machine Unlearning through Prompt-Aware Model Repair",
+      "reason": "Interactive machine unlearning at inference time; objective is knowledge removal, not efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.12820",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.intonc.2026.100057",
+      "identity_tokens": [
+        "DOI:10.1016/j.intonc.2026.100057"
+      ],
+      "title": "TSMIL: Transformer-Based Structured Low-Rank End-to-End Multi-Instance Learning Network for Renal Cell Carcinoma Classification in Whole-Slide Images",
+      "reason": "Whole-slide renal-cell image classification, outside language-model inference.",
+      "source_url": "https://doi.org/10.1016/j.intonc.2026.100057",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
