@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T19:12:41+00:00",
-  "record_count": 9360,
+  "updated_at": "2026-10-06T19:17:26+00:00",
+  "record_count": 9388,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -134148,6 +134148,398 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "Multistage advanced persistent threat detection and malware attribution using Mamba state space models with Kolmogorov Arnold networks"
+    },
+    "arXiv:2609.30688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30688",
+      "identity_tokens": [
+        "arXiv:2609.30688"
+      ],
+      "reason": "本文は単変量波高予測の複数architecture/horizon比較で、主結論はdataset varianceがmodel class差を上回ること。LLM推論効率手法はない。",
+      "first_checked_at": "2026-10-06T19:17:13+00:00",
+      "last_checked_at": "2026-10-06T19:17:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "On the limits of univariate deep learning for significant wave height forecasting"
+    },
+    "arXiv:2609.06869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06869",
+      "identity_tokens": [
+        "arXiv:2609.06869"
+      ],
+      "reason": "本文はMambaを使った熱源条件付き3D bioheat simulationであり、物理場の温度予測が目的である。LLM推論効率との技術的接点はない。",
+      "first_checked_at": "2026-10-06T19:17:14+00:00",
+      "last_checked_at": "2026-10-06T19:17:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PPIM: Pennes Physics-Informed Mamba for Heat-Source-Conditioned 3D Bioheat Simulation"
+    },
+    "arXiv:2609.05382": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05382",
+      "identity_tokens": [
+        "arXiv:2609.05382"
+      ],
+      "reason": "本文は鏡面反射を扱うdiffusion-based novel-view synthesisであり、視覚生成品質・ビュー再構成を評価する。LLM推論計算やservingを改善するものではない。",
+      "first_checked_at": "2026-10-06T19:17:14+00:00",
+      "last_checked_at": "2026-10-06T19:17:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Reflection-aware Generative Novel View Synthesis"
+    },
+    "arXiv:2609.08041": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08041",
+      "identity_tokens": [
+        "arXiv:2609.08041"
+      ],
+      "reason": "本文は占有地図と歩行者状態を用いるpedestrian trajectory predictionである。Mamba利用は視覚/時系列タスクの構成であり、LLM推論効率とは直接関係しない。",
+      "first_checked_at": "2026-10-06T19:17:16+00:00",
+      "last_checked_at": "2026-10-06T19:17:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MamMA: A Mamba-Based Pedestrian Trajectory Prediction Algorithm Considering Occupancy Map and Pedestrian Awareness States"
+    },
+    "arXiv:2609.06578": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06578",
+      "identity_tokens": [
+        "arXiv:2609.06578"
+      ],
+      "reason": "本文はworld action modelが予測した未来を進捗に応じてロボット行動へ使う方法である。本文上、LLM推論のtoken/cache/latencyを削減する主張・実測は確認できない。",
+      "first_checked_at": "2026-10-06T19:17:16+00:00",
+      "last_checked_at": "2026-10-06T19:17:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Learning to Use Imagination: Progress-Conditioned Future Utilization for World Action Models"
+    },
+    "arXiv:2609.06645": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06645",
+      "identity_tokens": [
+        "arXiv:2609.06645"
+      ],
+      "reason": "本文は医用画像復元のpolicy/execution/calibrationを分ける画像処理手法である。LLM推論またはserving効率に結び付く機構がない。",
+      "first_checked_at": "2026-10-06T19:17:16+00:00",
+      "last_checked_at": "2026-10-06T19:17:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MARR: Decoupling Policy, Execution, and Calibration for All-in-One Medical Image Restoration"
+    },
+    "arXiv:2609.08692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08692",
+      "identity_tokens": [
+        "arXiv:2609.08692"
+      ],
+      "reason": "本文はSSMとTransformerの表現幾何を比較・分析するもので、新しいLLM推論最適化や資源削減法を提案していない。既存SSM lineageとの関係は分析対象の一致に留まる。",
+      "first_checked_at": "2026-10-06T19:17:17+00:00",
+      "last_checked_at": "2026-10-06T19:17:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Global Divergence, Local Convergence: Representation Geometry in SSMs and Transformers"
+    },
+    "arXiv:2609.06984": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06984",
+      "identity_tokens": [
+        "arXiv:2609.06984"
+      ],
+      "reason": "本文はRRI心電信号から心房細動発症を早期予測するTCN/Mamba医療時系列モデルである。効率的なsignal modelingという記述はあるが、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-06T19:17:17+00:00",
+      "last_checked_at": "2026-10-06T19:17:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "AF-Mamba: Efficient Long-Term Signal Modeling for Early Prediction of Atrial Fibrillation Onset"
+    },
+    "arXiv:2609.07096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07096",
+      "identity_tokens": [
+        "arXiv:2609.07096"
+      ],
+      "reason": "本文は予測状態空間world modelをhumanoid locomotionへ使うロボット制御研究である。LLMの推論速度・メモリ・servingを改善する手法ではない。",
+      "first_checked_at": "2026-10-06T19:17:17+00:00",
+      "last_checked_at": "2026-10-06T19:17:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "RoboDreamer: Anticipatory Humanoid Locomotion with Predictive State-Space Models"
+    },
+    "arXiv:2609.07122": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07122",
+      "identity_tokens": [
+        "arXiv:2609.07122"
+      ],
+      "reason": "本文は金融cross-sectional return predictionにおける価格offset normalizationの効果を扱う。SSM/予測モデル評価であって、LLM推論やserving効率改善とは技術的接続がない。",
+      "first_checked_at": "2026-10-06T19:17:18+00:00",
+      "last_checked_at": "2026-10-06T19:17:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Centering Drives Normalization Gains: Price-Offset Nuisances in Cross-Sectional Return Prediction"
+    },
+    "arXiv:2609.07986": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07986",
+      "identity_tokens": [
+        "arXiv:2609.07986"
+      ],
+      "reason": "本文は画像依頼文からLLM由来embeddingを抽出し、胸部CT protocolを分類する医療workflowである。LLMはfeature sourceとして使われるだけで、LLM推論効率の手法・評価はない。",
+      "first_checked_at": "2026-10-06T19:17:18+00:00",
+      "last_checked_at": "2026-10-06T19:17:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Automated Chest CT Protocol Selection via Large Language Model Derived Text Embeddings from Imaging Request Text"
+    },
+    "arXiv:2609.05755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05755",
+      "identity_tokens": [
+        "arXiv:2609.05755"
+      ],
+      "reason": "本文は音声・映像から感情分布を推定する認識モデルで、Mamba利用はタスク固有encoderに限られる。LLM inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-06T19:17:19+00:00",
+      "last_checked_at": "2026-10-06T19:17:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Emotion as a Distribution: Joint Valence-Arousal Probability Learning for Speaker-Independent Multimodal Emotion Recognition"
+    },
+    "arXiv:2609.03527": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03527",
+      "identity_tokens": [
+        "arXiv:2609.03527"
+      ],
+      "reason": "一次arXiv abstractは新生児疾患診断向けmultimodal LLMの知識・論理alignmentと診断性能を扱う。LLMを含むが推論効率、KV、latency、memory等を改善・測定する手法は見えず対象外。",
+      "first_checked_at": "2026-10-06T19:17:19+00:00",
+      "last_checked_at": "2026-10-06T19:17:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "NeoRed: A Knowledge-Logic-Alignment Multimodal Large Language Model for Neonatal Respiratory Disease Diagnosis"
+    },
+    "arXiv:2609.04280": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04280",
+      "identity_tokens": [
+        "arXiv:2609.04280"
+      ],
+      "reason": "一次arXiv abstractは変化するagent harnessに対するbenchmarkを提示する評価研究であり、LLM推論最適化手法ではない。",
+      "first_checked_at": "2026-10-06T19:17:19+00:00",
+      "last_checked_at": "2026-10-06T19:17:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "EvoHarnessBench: Can Your Agents Keep Pace with an Evolving Harness?"
+    },
+    "arXiv:2609.04476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04476",
+      "identity_tokens": [
+        "arXiv:2609.04476"
+      ],
+      "reason": "一次arXiv abstractはhardware-performance reasoning能力を測るLLM benchmarkであり、モデルの推論実装/効率を改善するものではない。",
+      "first_checked_at": "2026-10-06T19:17:20+00:00",
+      "last_checked_at": "2026-10-06T19:17:20+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "PerfReasoning: How Well Do LLMs Reason on Hardware Performance?"
+    },
+    "arXiv:2609.05550": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05550",
+      "identity_tokens": [
+        "arXiv:2609.05550"
+      ],
+      "reason": "本文は近赤外動画を用いた睡眠段階分類で、subject-relative motion特徴による認識性能を扱う。LLM推論の効率改善ではない。",
+      "first_checked_at": "2026-10-06T19:17:20+00:00",
+      "last_checked_at": "2026-10-06T19:17:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Subject-Relative Micro-Motion and Sleep Dynamics for Near-Infrared Video Sleep Staging"
+    },
+    "arXiv:2609.02344": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02344",
+      "identity_tokens": [
+        "arXiv:2609.02344"
+      ],
+      "reason": "本文はtranscriptomic・protein structure・localization情報を統合するsingle-cell embedding学習である。クロスattention/embeddingの用途は生物学的細胞型分類で、LLM inference効率の手法ではない。",
+      "first_checked_at": "2026-10-06T19:17:21+00:00",
+      "last_checked_at": "2026-10-06T19:17:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Subcellularly Resolved Single-Cell Embedding Learning with Transcriptomic data, Protein Structure and Localization Information"
+    },
+    "arXiv:2609.02387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02387",
+      "identity_tokens": [
+        "arXiv:2609.02387"
+      ],
+      "reason": "一次arXiv abstractはmultiobjective evolutionary algorithms向けautomatic tensorization agent frameworkを評価する。LLM/LLM-serving推論効率との直接関係は示されない。",
+      "first_checked_at": "2026-10-06T19:17:22+00:00",
+      "last_checked_at": "2026-10-06T19:17:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Semantics-Guided Automatic Tensorization for Multiobjective Evolutionary Algorithms: A Multi-Agent Framework"
+    },
+    "DOI:10.3389/fenrg.2026.1888547": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fenrg.2026.1888547",
+      "identity_tokens": [
+        "DOI:10.3389/fenrg.2026.1888547"
+      ],
+      "reason": "一次出版社本文でMAFD-NETの対象が送電鉄塔検出であり、YOLO11の検出精度・特徴融合を評価していると確認した。Mamba/attentionは視覚検出器の構成要素で、LLMの推論計算・メモリ・serving改善を扱わない。",
+      "first_checked_at": "2026-10-06T19:17:22+00:00",
+      "last_checked_at": "2026-10-06T19:17:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MAFD-NET: multi-head attention dynamic sampling fusion network for power tower detection in high-resolution remote sensing images"
+    },
+    "arXiv:2609.10934": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10934",
+      "identity_tokens": [
+        "arXiv:2609.10934"
+      ],
+      "reason": "一次arXiv abstractは対話turn-takingのsemantic uncertaintyを用いたTRP推定と認識精度比較を説明する。LLMはuncertainty score sourceであり、LLM自体の推論compute/memory/latency/serving改善は提案・評価しない。",
+      "first_checked_at": "2026-10-06T19:17:23+00:00",
+      "last_checked_at": "2026-10-06T19:17:23+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Using Semantic Uncertainty to Estimate Transition Relevance in Turn-taking"
+    },
+    "arXiv:2609.11372": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11372",
+      "identity_tokens": [
+        "arXiv:2609.11372"
+      ],
+      "reason": "本文の対象はEEG/EOGから注意中の音声話者を推定する生体信号分類である。Mambaは時系列encoderに使われるが、LLM推論や言語servingの効率改善は提案・評価されない。",
+      "first_checked_at": "2026-10-06T19:17:23+00:00",
+      "last_checked_at": "2026-10-06T19:17:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "RAMamba-Net: A Reliability-Aware and Mamba-Based Multimodal Fusion Network for Auditory Attention Detection"
+    },
+    "arXiv:2609.09783": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09783",
+      "identity_tokens": [
+        "arXiv:2609.09783"
+      ],
+      "reason": "本文の効率向上はLLM推論ではなく、非同期RL学習でstale criticを補正してtraining stepを速める効果である。既存の推論効率/serving系統とは工程が異なるため対象外とする。",
+      "first_checked_at": "2026-10-06T19:17:24+00:00",
+      "last_checked_at": "2026-10-06T19:17:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "BRACE: Anchored Bellman-Residual Correction for Stale Critics in Asynchronous RL"
+    },
+    "arXiv:2609.11997": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11997",
+      "identity_tokens": [
+        "arXiv:2609.11997"
+      ],
+      "reason": "本文はdiffusion-conditioned alignmentで一般時系列表現の頑健性を上げるtraining手法である。LLM推論またはservingのcompute/memory/latencyを直接改善せず、Mamba系統との名称/表現上の接点だけでは対象外。",
+      "first_checked_at": "2026-10-06T19:17:24+00:00",
+      "last_checked_at": "2026-10-06T19:17:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "DCRA: Diffusion-Conditioned Representation Alignment for Robust Time-Series Learning"
+    },
+    "arXiv:2609.08276": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08276",
+      "identity_tokens": [
+        "arXiv:2609.08276"
+      ],
+      "reason": "本文のT-Mambaはオンライン署名の時空間特徴・認証精度を対象にする。LLM推論の資源効率を改善する機構や評価がないため対象外。",
+      "first_checked_at": "2026-10-06T19:17:24+00:00",
+      "last_checked_at": "2026-10-06T19:17:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Online Signature Verification Using Augmented Path Signature and T-Mamba"
+    },
+    "arXiv:2609.08404": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08404",
+      "identity_tokens": [
+        "arXiv:2609.08404"
+      ],
+      "reason": "一次arXiv abstractはlong-horizon agentの環境feedbackを用いるself-evolution/RLの学習手法を扱う。LLM推論資源やmodel-serving efficiencyの改善ではない。",
+      "first_checked_at": "2026-10-06T19:17:24+00:00",
+      "last_checked_at": "2026-10-06T19:17:24+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks"
+    },
+    "arXiv:2609.11553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11553",
+      "identity_tokens": [
+        "arXiv:2609.11553"
+      ],
+      "reason": "本文は壊れた深度観測を補うhumanoid locomotion policyの学習・制御を扱う。状態空間モデルを使うが、LLM推論・servingの計算、メモリ、遅延を改善する研究ではない。",
+      "first_checked_at": "2026-10-06T19:17:25+00:00",
+      "last_checked_at": "2026-10-06T19:17:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "CAP: Continuously Adaptive Perception-Blind Humanoid Locomotion via Learned Denoising"
+    },
+    "arXiv:2609.11580": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11580",
+      "identity_tokens": [
+        "arXiv:2609.11580"
+      ],
+      "reason": "本文は河川水位の疎な時空間graphを補完するデータセットとモデルであり、Mamba/graph modelingをLLM推論へ適用する手法ではない。対象効率指標との技術的接続がない。",
+      "first_checked_at": "2026-10-06T19:17:25+00:00",
+      "last_checked_at": "2026-10-06T19:17:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A Dataset and Model for Imputing Water Surface Elevation on a Large and Extremely Sparse Spatiotemporal Graph"
+    },
+    "DOI:10.1002/advs.77238": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/advs.77238",
+      "identity_tokens": [
+        "DOI:10.1002/advs.77238"
+      ],
+      "reason": "一次出版社ページのabstract/titleは分子相互作用モデリングと生成設計を示し、候補にLLM推論の計算・メモリ・遅延・serving最適化を示す記述がない。既存LLM推論系統とも結び付かない。",
+      "first_checked_at": "2026-10-06T19:17:26+00:00",
+      "last_checked_at": "2026-10-06T19:17:26+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "A Site‐Aware Representation Learning Framework For Unified Molecular Interaction Modeling and Generative Design"
     }
   }
 }

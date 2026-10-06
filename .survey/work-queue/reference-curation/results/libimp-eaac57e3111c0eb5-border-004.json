@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eaac57e3111c0eb5-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.11081",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.11081",
+    "identity_tokens": [
+      "arXiv:2609.11081"
+    ],
+    "reason": "本文のO(N^1.5)は画像特徴map上のTail Propagation Operatorの計算であり、LLMや言語sequence推論の改善を示さない。視覚sequence operatorとしての接点はあるが、LLM/multimodal encoderへの移植と推論効果は未検証なのでborderline。",
+    "first_checked_at": "2026-10-06T19:17:22+00:00",
+    "last_checked_at": "2026-10-06T19:17:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TailProp: content-adaptive light- and heavy-tailed propagation for vision"
+  },
+  "processed_at": "2026-10-06T19:17:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eaac57e3111c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

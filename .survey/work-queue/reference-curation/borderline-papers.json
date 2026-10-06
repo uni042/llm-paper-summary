@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T19:12:40+00:00",
-  "record_count": 3727,
+  "updated_at": "2026-10-06T19:17:25+00:00",
+  "record_count": 3745,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -56998,6 +56998,276 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FAMoE-ST: Hierarchically Frozen Attention with Hybrid-Memory Experts for Traffic-Flow Forecasting"
+    },
+    "DOI:10.1007/s00371-026-04737-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00371-026-04737-y",
+      "identity_tokens": [
+        "DOI:10.1007/s00371-026-04737-y"
+      ],
+      "reason": "一次DOI/Springer全文を取得できなかった。題名はunderwater image quality assessment向けstate-space modelで視覚SSMの接点はあるが、LLM効率への技術的転用は本文未確認のためborderline。",
+      "first_checked_at": "2026-10-06T19:17:12+00:00",
+      "last_checked_at": "2026-10-06T19:17:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mamba-UIQA: physics-guided state-space modeling for no-reference underwater image quality assessment"
+    },
+    "DOI:10.1007/s11760-026-05661-3": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05661-3",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05661-3"
+      ],
+      "reason": "一次DOI/Springer全文を取得できなかった。題名はsemi-supervised medical image segmentationであり、LLM inference optimizationの有無を一次資料で確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:12+00:00",
+      "last_checked_at": "2026-10-06T19:17:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MCSD-net: a heterogeneous dual-student network for semi-supervised medical image segmentation"
+    },
+    "DOI:10.1007/s11760-026-05673-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05673-z",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05673-z"
+      ],
+      "reason": "一次DOI/Springer全文を取得できなかった。題名はselective state-space gait recognitionで既存SSM系統に接続するが、対象推論効率の関連性を一次本文で確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:13+00:00",
+      "last_checked_at": "2026-10-06T19:17:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SSM-Gait: multi-modal gait recognition via selective state space fusion and noise isolation"
+    },
+    "DOI:10.1007/s11760-026-05687-7": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05687-7",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05687-7"
+      ],
+      "reason": "一次DOI/Springer全文を取得できなかった。題名はshadow removal向けefficient visual SSMで対象LLM推論との接点は視覚encoderへの可能性に留まり、一次本文未確認のためborderline。",
+      "first_checked_at": "2026-10-06T19:17:13+00:00",
+      "last_checked_at": "2026-10-06T19:17:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retinex-informed efficient visual state space networks for shadow removal"
+    },
+    "arXiv:2609.06729": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06729",
+      "identity_tokens": [
+        "arXiv:2609.06729"
+      ],
+      "reason": "本文でBrain Tumour Segmentation向けencoder/decoder distillationによりparameter・FLOP・推論memoryを大きく減らすが、対象は3D医用vision segmentationでLLMやlanguage servingは未評価。効率化技術としての接点はあるものの直接転用性が不明なのでborderline。",
+      "first_checked_at": "2026-10-06T19:17:13+00:00",
+      "last_checked_at": "2026-10-06T19:17:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Uni-Light: An Ultra-Lightweight Framework via Uncertainty-Aware Knowledge Distillation for Brain Tumour Segmentation"
+    },
+    "DOI:10.1088/1361-665x/aea30f": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/1361-665x/aea30f",
+      "identity_tokens": [
+        "DOI:10.1088/1361-665x/aea30f"
+      ],
+      "reason": "一次DOI/publisher全文を取得できなかった。題名はMambaを用いたpiezoelectric steering-mirror controlで既存SSM lineageの接点はあるものの、制御応答以外のLLM推論効率改善を本文確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:14+00:00",
+      "last_checked_at": "2026-10-06T19:17:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Composite control of a piezoelectric fast steering mirror using a mamba-based dual-axis inverse model"
+    },
+    "DOI:10.1145/3800935.3830860": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3800935.3830860",
+      "identity_tokens": [
+        "DOI:10.1145/3800935.3830860"
+      ],
+      "reason": "一次DOI/ACM本文を取得できなかった。題名はworld-model概念taxonomyであり効率手法とは限らないが、SSM系統からの候補で一次資料を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:14+00:00",
+      "last_checked_at": "2026-10-06T19:17:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Navigating Latent Worlds: A Hypertextual Taxonomy of World Models as Nonlinear Knowledge Structures"
+    },
+    "DOI:10.1093/nar/gkag887": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1093/nar/gkag887",
+      "identity_tokens": [
+        "DOI:10.1093/nar/gkag887"
+      ],
+      "reason": "一次DOI/publisher全文を取得できなかった。題名はlong-range RNA secondary-structure prediction向けDual/Dynamic U-MambaでSSM系統に接続するが、LLM inference resource improvementの有無を一次本文で確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:15+00:00",
+      "last_checked_at": "2026-10-06T19:17:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UFold-X: an enhanced Dual & Dynamic U-Mamba model for long-range RNA secondary structure prediction"
+    },
+    "DOI:10.17531/ein/231129": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.17531/ein/231129",
+      "identity_tokens": [
+        "DOI:10.17531/ein/231129"
+      ],
+      "reason": "一次DOI/publisher全文を取得できなかった。ローカルpacket abstractはsmall Mamba+fine-tuned LLM協調診断とLLM latency削減を示唆し、対象に強く関連し得るが、primary full textと実験条件を検証できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:16+00:00",
+      "last_checked_at": "2026-10-06T19:17:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Interpretable Fault Diagnosis Framework via Dual-Mamba Driven Small Model and Fine-Tuned LLM Collaboration"
+    },
+    "DOI:10.1016/j.aei.2026.105310": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2026.105310",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2026.105310"
+      ],
+      "reason": "一次DOI/Elsevier全文を取得できなかった。題名はrenewable-energy forecasting向けhybrid-attention time-series transformerで、attention lineageに関連付くがLLM inference/servingとの接続を本文確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:20+00:00",
+      "last_checked_at": "2026-10-06T19:17:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An improved patch time series transformer with physics-inspired hybrid attention and multi-scale decomposition for long-term renewable energy forecasting"
+    },
+    "DOI:10.1109/tip.2026.3728620": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tip.2026.3728620",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3728620"
+      ],
+      "reason": "一次DOI/publisher全文を取得できなかった。題名はprostate MRI segmentationのsemantic ambiguity対処で、LLM推論効率の具体的接点を一次本文で確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:21+00:00",
+      "last_checked_at": "2026-10-06T19:17:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EScAPe: Eliminate Semantic Ambiguity in Prostate MRI Segmentation in Benign Prostatic Hyperplasia"
+    },
+    "DOI:10.64898/2026.08.20.746066": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.08.20.746066",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.20.746066"
+      ],
+      "reason": "一次DOI/preprint全文を取得できなかった。題名はrecombination mappingのneural methodで、SSM関連candidateとして抽出されているがLLM inferenceとの接続を一次本文で判断できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:21+00:00",
+      "last_checked_at": "2026-10-06T19:17:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A reusable neural approach to recombination mapping for model and non-model species"
+    },
+    "DOI:10.3390/jmse14171625": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/jmse14171625",
+      "identity_tokens": [
+        "DOI:10.3390/jmse14171625"
+      ],
+      "reason": "一次DOI/MDPI本文を取得できなかった。題名はunderwater fish tracking向けMamba ReIDであり、対象LLM serving効率との接続は不明。primary full text未確認なのでborderline。",
+      "first_checked_at": "2026-10-06T19:17:21+00:00",
+      "last_checked_at": "2026-10-06T19:17:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AquaMambaTrack: Reliability-First Mamba ReID for Underwater Fish Multi-Object Tracking"
+    },
+    "arXiv:2609.11040": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11040",
+      "identity_tokens": [
+        "arXiv:2609.11040"
+      ],
+      "reason": "本文はHSI-LiDAR分類向けのheat-conduction型sub-quadratic視覚融合で、LLM推論は評価していない。既存SSM系統との演算構造上の類似だけではLLMへの有効性が確定しないため、マルチモーダルLLM視覚encoderへの移植可能性は弱い接点としてborderlineに留める。",
+      "first_checked_at": "2026-10-06T19:17:22+00:00",
+      "last_checked_at": "2026-10-06T19:17:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward Interpretable Multimodal Fusion: Heat Conduction Modeling for Hyperspectral and LiDAR Joint Classification"
+    },
+    "arXiv:2609.11081": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11081",
+      "identity_tokens": [
+        "arXiv:2609.11081"
+      ],
+      "reason": "本文のO(N^1.5)は画像特徴map上のTail Propagation Operatorの計算であり、LLMや言語sequence推論の改善を示さない。視覚sequence operatorとしての接点はあるが、LLM/multimodal encoderへの移植と推論効果は未検証なのでborderline。",
+      "first_checked_at": "2026-10-06T19:17:22+00:00",
+      "last_checked_at": "2026-10-06T19:17:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TailProp: content-adaptive light- and heavy-tailed propagation for vision"
+    },
+    "DOI:10.64898/2026.09.09.750410": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.09.09.750410",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.09.750410"
+      ],
+      "reason": "一次DOI/preprint全文を取得できなかった。題名はprotein transformerのself-architecting studyでLLM推論効率との直接接続を示さないが、abstractの一次確認も完了していないため、推測でunrelatedにせずborderline。",
+      "first_checked_at": "2026-10-06T19:17:23+00:00",
+      "last_checked_at": "2026-10-06T19:17:23+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Architecting Protein Transformers: An Empirical Study"
+    },
+    "DOI:10.1016/j.isci.2026.116669": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.isci.2026.116669",
+      "identity_tokens": [
+        "DOI:10.1016/j.isci.2026.116669"
+      ],
+      "reason": "一次DOI/publisher全文をこの実行で取得できなかった。題名はrare-wildlife monitoringのdeep-learning reviewで、SSM系統から関連付けられているが、対象LLM推論効率への具体的接続は一次本文で確認できず、結論を保留せずborderlineに置く。",
+      "first_checked_at": "2026-10-06T19:17:25+00:00",
+      "last_checked_at": "2026-10-06T19:17:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From pixels to conservation: Deep learning for automated monitoring of rare and endangered wildlife"
+    },
+    "DOI:10.1088/1741-2552/aea59e": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/1741-2552/aea59e",
+      "identity_tokens": [
+        "DOI:10.1088/1741-2552/aea59e"
+      ],
+      "reason": "一次DOI/publisher全文を取得できなかった。題名上はEEG sleep-stage classificationのopen-set frameworkでありSSM系統に関連づけられるが、LLM推論/serving効率の内容は一次本文で確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:17:25+00:00",
+      "last_checked_at": "2026-10-06T19:17:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An open-set learning framework for EEG-based sleep stage classification"
     }
   }
 }

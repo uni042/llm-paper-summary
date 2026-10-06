@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bf2bf996ccf981f5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05550",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05550",
+    "identity_tokens": [
+      "arXiv:2609.05550"
+    ],
+    "reason": "本文は近赤外動画を用いた睡眠段階分類で、subject-relative motion特徴による認識性能を扱う。LLM推論の効率改善ではない。",
+    "first_checked_at": "2026-10-06T19:17:20+00:00",
+    "last_checked_at": "2026-10-06T19:17:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Subject-Relative Micro-Motion and Sleep Dynamics for Near-Infrared Video Sleep Staging"
+  },
+  "processed_at": "2026-10-06T19:17:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bf2bf996ccf9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

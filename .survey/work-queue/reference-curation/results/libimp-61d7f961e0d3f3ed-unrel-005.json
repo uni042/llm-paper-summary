@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61d7f961e0d3f3ed-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.06645",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.06645",
+    "identity_tokens": [
+      "arXiv:2609.06645"
+    ],
+    "reason": "本文は医用画像復元のpolicy/execution/calibrationを分ける画像処理手法である。LLM推論またはserving効率に結び付く機構がない。",
+    "first_checked_at": "2026-10-06T19:17:16+00:00",
+    "last_checked_at": "2026-10-06T19:17:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "MARR: Decoupling Policy, Execution, and Calibration for All-in-One Medical Image Restoration"
+  },
+  "processed_at": "2026-10-06T19:17:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61d7f961e0d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
