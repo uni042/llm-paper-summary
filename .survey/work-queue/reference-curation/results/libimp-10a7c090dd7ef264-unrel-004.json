@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10a7c090dd7ef264-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.08059",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.08059",
+    "identity_tokens": [
+      "arXiv:2609.08059"
+    ],
+    "reason": "要旨はprotein language model fine-tuning/classificationを扱うと記述する（Acidophilic proteins that remain stable and functional under highly acidic conditions, are important for industrial biocatalysis, acid-related bioprocessing, and the discovery of acid-stable enzymes. However, their identification relies hea）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+    "first_checked_at": "2026-10-06T00:17:35+00:00",
+    "last_checked_at": "2026-10-06T00:17:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "MI-PEFT: Mixture-of-Experts Integrated Parameter-Efficient Fine-Tuning Protein Language Models Improves Acidophilic Proteins Classification"
+  },
+  "processed_at": "2026-10-06T00:17:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10a7c090dd7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
