@@ -1,0 +1,118 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0603-scheduled-chat-00/r03-partial",
+  "reference_main_sha": "61a9ad7140fdcbd034a9a06855d8efbd8fa7cc2a",
+  "record_count": 6,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.03895",
+      "identity_tokens": [
+        "arXiv:2501.03895"
+      ],
+      "title": "LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token",
+      "reason": "MLLMのvisual token数を576から1へ圧縮するmodality pre-fusionでLLM backboneの計算を直接削減する。FLOPs 77%削減、40ms未満latency、24GB GPUで10,000+ video frames処理を報告し、マルチモーダルLLM推論効率の直接対象。",
+      "source_url": "https://arxiv.org/abs/2501.03895",
+      "body_check": "fulltext_relevance_review: arXiv一次abstract/本文相当を確認。vision情報をtext tokenへ事前融合してLLMへ渡すvision tokenを1個まで圧縮。11 image/7 video benchmarkでLLaVA-v1.5を上回りつつ576→1 token、FLOPs -77%、response latency <40msを報告。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.02367",
+      "identity_tokens": [
+        "arXiv:2410.02367"
+      ],
+      "title": "SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration",
+      "reason": "attention演算を8-bit量子化して長系列Transformer推論を高速化する専用kernel/quantization方式。FlashAttention2比約2.1x、xformers比約2.7x OPSで、LLMを含むend-to-end metric損失ほぼなしのため直接対象。",
+      "source_url": "https://arxiv.org/abs/2410.02367",
+      "body_check": "fulltext_relevance_review: arXiv一次abstractを確認。O(N^2) attentionが長系列の主要時間要因になる点を問題化し、attention quantizationをplug-and-play inference accelerationとして実装。FlashAttention2/xformers比OPS約2.1x/2.7x、LLM/image/video各modelでほぼ品質損失なし。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.10424-quantspec-self-speculative-decoding-with-hierarchical-quantized-kv-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md"
+      ],
+      "worklist_rank": 87
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.09601",
+      "identity_tokens": [
+        "arXiv:2502.09601"
+      ],
+      "title": "CoT-Valve: Length-Compressible Chain-of-Thought Tuning",
+      "reason": "推論時Chain-of-Thought長を可変圧縮しreasoning token数・推論コストを下げるLLM reasoning efficiency研究で、既存efficient reasoning系統へ直接接続するため対象。",
+      "source_url": "https://arxiv.org/abs/2502.09601",
+      "body_check": "fulltext_relevance_review: 一次資料の方式・目的を確認。tuning時にCoT lengthを制御可能にし、推論時のreasoning trajectoryを短縮してaccuracy-efficiency trade-offを調整する。最終適用がLLM inference-time reasoning cost削減のためaccept。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2309.15789",
+      "identity_tokens": [
+        "arXiv:2309.15789"
+      ],
+      "title": "Large Language Model Routing with Benchmark Datasets",
+      "reason": "複数LLMから入力/taskに適したmodelをrouterで選び、全候補を実行せず適切なLLMへroutingする方式。model selectionによりcost/latencyを抑え得るinference routingとして対象。",
+      "source_url": "https://arxiv.org/abs/2309.15789",
+      "body_check": "fulltext_relevance_review: arXiv一次abstractを確認。benchmark dataから各LLMのcorrectness predictor/routerを学習し、新taskで単一model固定より性能を改善。候補全modelのforwardを要求しないmodel-selection routingであり、multi-model LLM inference routing系統に直接関連。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3754448",
+      "identity_tokens": [
+        "DOI:10.1145/3754448",
+        "arXiv:2312.15234"
+      ],
+      "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+      "reason": "低latency・高throughputのgenerative LLM servingをMLSys視点でalgorithmからsystem designまで体系化するsurvey。計算・memory consumptionとdeployment efficiencyが中心課題で、サーベイ本体の直接対象。",
+      "source_url": "https://arxiv.org/abs/2312.15234",
+      "body_check": "fulltext_relevance_review: arXiv一次abstract/本文概要を確認。efficient LLM servingを明示的中心課題とし、scheduling、batching、prefill/decode、kernel、attention、quantization、parallelism等をalgorithm-to-systemで整理。低latency/high-throughput deploymentを主目的とする。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.03094",
+      "identity_tokens": [
+        "arXiv:2310.03094"
+      ],
+      "title": "Large Language Model Cascades with Mixture of Thoughts Representations for Cost-efficient Reasoning",
+      "reason": "弱い安価LLMで簡単なqueryを処理し、難問だけ強い高価LLMへ送るcascadeで推論API costを削減する。GPT-3.5/GPT-4 reasoningで強model単独に近い性能を40% costで達成するためinference routing/cascade対象。",
+      "source_url": "https://arxiv.org/abs/2310.03094",
+      "body_check": "fulltext_relevance_review: arXiv一次abstractを確認。weak LLMのanswer consistencyをdifficulty signalとしてCoT/PoT mixtureも用い、難問のみstrong LLMへescalate。6 reasoning benchmarkでstrong LLM単独相当の性能を40% costで達成。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md"
+      ],
+      "worklist_rank": 83
+    }
+  ]
+}
