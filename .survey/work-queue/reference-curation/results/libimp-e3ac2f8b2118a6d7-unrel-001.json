@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3ac2f8b2118a6d7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.08426",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.08426",
+    "identity_tokens": [
+      "arXiv:2403.08426"
+    ],
+    "reason": "一次要旨のLDVCはCLIP系vision-language特徴を用いたzero-shot semantic segmentationで、クラス一般化とmIoUを改善する。推論システム効率や言語モデルservingではなく視覚タスクの精度手法である。",
+    "first_checked_at": "2026-10-06T17:55:10+00:00",
+    "last_checked_at": "2026-10-06T17:55:10+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "title": "Language-Driven Visual Consensus for Zero-Shot Semantic Segmentation"
+  },
+  "processed_at": "2026-10-06T17:55:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3ac2f8b2118",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8386c6d6bc6b0c54-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.18051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.18051",
+    "identity_tokens": [
+      "arXiv:2406.18051"
+    ],
+    "reason": "一次本文の手法はBitLinear系ternary 1.58-bit weightと8-bit activationをViT画像分類へ適用する。量子化自体はLLMへ移転し得るが、この論文は画像patch encoderでの検証のみで、LLM重み・生成品質・推論servingを評価しないため直接候補としては弱い。",
+    "first_checked_at": "2026-10-06T17:55:04+00:00",
+    "last_checked_at": "2026-10-06T17:55:04+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ViT-1.58b: Mobile Vision Transformers in the 1-bit Era"
+  },
+  "processed_at": "2026-10-06T17:55:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8386c6d6bc6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8386c6d6bc6b0c54-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.01087",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.01087",
+    "identity_tokens": [
+      "arXiv:2409.01087"
+    ],
+    "reason": "一次要旨は事前学習言語モデルを用いたkeyphrase extraction/generationの分類とsurvey。タスク別予測モデルの整理が目的で、LLM decoding/servingの計算・記憶量改善を扱わない。",
+    "first_checked_at": "2026-10-06T17:55:05+00:00",
+    "last_checked_at": "2026-10-06T17:55:05+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "title": "Pre-trained language models for keyphrase prediction: A review"
+  },
+  "processed_at": "2026-10-06T17:55:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8386c6d6bc6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T17:50:23+00:00",
-  "record_count": 3586,
+  "updated_at": "2026-10-06T17:55:10+00:00",
+  "record_count": 3608,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -54875,6 +54875,337 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Speech-Mamba: Long-Context Speech Recognition with Selective State Spaces Models"
+    },
+    "DOI:10.1109/micro61859.2024.00038": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/micro61859.2024.00038",
+      "identity_tokens": [
+        "DOI:10.1109/micro61859.2024.00038"
+      ],
+      "reason": "IEEE Xplore DOI endpoint did not return an accessible publisher record; title identifies sparse/dense spatial accelerator design, which could relate to attention hardware, so retain as borderline pending primary abstract/full-text verification.",
+      "first_checked_at": "2026-10-06T17:54:58+00:00",
+      "last_checked_at": "2026-10-06T17:54:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stellar: An Automated Design Framework for Dense and Sparse Spatial Accelerators"
+    },
+    "arXiv:2410.09343": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.09343",
+      "identity_tokens": [
+        "arXiv:2410.09343"
+      ],
+      "reason": "一次本文では既存LLMの能力をtask vectorで外部から引き出し性能を変えるが、推論時の計算効率向上が主な成果ではない。実験に追加計算コストの検証はあるものの、inference latency/throughputの改善が確認できず、推論効率候補として弱い。",
+      "first_checked_at": "2026-10-06T17:54:58+00:00",
+      "last_checked_at": "2026-10-06T17:54:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ELICIT: LLM Augmentation via External In-Context Capability"
+    },
+    "arXiv:2408.17163": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.17163",
+      "identity_tokens": [
+        "arXiv:2408.17163"
+      ],
+      "reason": "一次本文のI-OBSは一般のsparse linear regressionに対する二次情報付きoptimization algorithmであり、LLMの重みpruning/量子化適用や言語モデル実測がない。数値最適化として遠い関連可能性はあるが、現在のLLM compression系統に直接結び付ける根拠は弱い。",
+      "first_checked_at": "2026-10-06T17:54:58+00:00",
+      "last_checked_at": "2026-10-06T17:54:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Iterative Optimal Brain Surgeon: Faster Sparse Recovery by Leveraging Second-Order Information"
+    },
+    "arXiv:2504.15208": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.15208",
+      "identity_tokens": [
+        "arXiv:2504.15208"
+      ],
+      "reason": "一次本文はcompute-optimal pretrainingの一般化境界を説明し、量子化誤差のscale依存も解析するが、著者自身が高水準理解を目的としalgorithmic interventionを目的としないと記す。既存quantization系統への理論的背景にはなるものの、具体的LLM推論最適化としては弱い。",
+      "first_checked_at": "2026-10-06T17:54:59+00:00",
+      "last_checked_at": "2026-10-06T17:54:59+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compute-Optimal LLMs Provably Generalize Better with Scale"
+    },
+    "DOI:10.1145/3613424.3614248": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3613424.3614248",
+      "identity_tokens": [
+        "DOI:10.1145/3613424.3614248"
+      ],
+      "reason": "ACM DOI page was inaccessible. The title suggests graph-based GPU execution for dynamic DNNs and the linked lineage is training/offload; serving relevance cannot be established without publisher abstract/body, so retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:01+00:00",
+      "last_checked_at": "2026-10-06T17:55:01+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Grape: Practical and Efficient Graph-based Executions for Dynamic Deep Neural Networks on GPUs"
+    },
+    "DOI:10.1109/tcpmt.2024.3492189": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcpmt.2024.3492189",
+      "identity_tokens": [
+        "DOI:10.1109/tcpmt.2024.3492189"
+      ],
+      "reason": "IEEE DOI record was inaccessible. The title points to energy-efficient silicon-photonic chip I/O connectivity, but the primary abstract needed to determine whether it addresses LLM-scale model serving was unavailable; retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:01+00:00",
+      "last_checked_at": "2026-10-06T17:55:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Co-Designed Silicon Photonics Chip I/O for Energy-Efficient Petascale Connectivity"
+    },
+    "arXiv:2408.08586": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.08586",
+      "identity_tokens": [
+        "arXiv:2408.08586"
+      ],
+      "reason": "一次本文のRubickは深層学習clusterのjob schedulingを改善するが、学習jobの並列化構成・GPU資源再配分が対象で、LLM inference servingは扱わない。Training Offload/Memory系統への隣接はあるため記録を残すが、推論運用候補としては弱い。",
+      "first_checked_at": "2026-10-06T17:55:02+00:00",
+      "last_checked_at": "2026-10-06T17:55:02+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rubick: Exploiting Job Reconfigurability for Deep Learning Cluster Scheduling"
+    },
+    "DOI:10.1145/3642970.3655828": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3642970.3655828",
+      "identity_tokens": [
+        "DOI:10.1145/3642970.3655828"
+      ],
+      "reason": "ACM DOI page could not be retrieved by the primary-source browser. The mapping-study title concerns ML system environmental cost, but without publisher abstract/full text its inference-system scope and findings cannot be checked; retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:02+00:00",
+      "last_checked_at": "2026-10-06T17:55:02+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Environmental Cost of Engineering Machine Learning-Enabled Systems: A Mapping Study"
+    },
+    "DOI:10.3390/wevj15070323": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/wevj15070323",
+      "identity_tokens": [
+        "DOI:10.3390/wevj15070323"
+      ],
+      "reason": "MDPI primary page returned HTTP 429. The title identifies a lightweight traffic-sign detector; without publisher abstract/body the model and efficiency evidence cannot be checked, so retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:04+00:00",
+      "last_checked_at": "2026-10-06T17:55:04+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "YOLO-ADual: A Lightweight Traffic Sign Detection Model for a Mobile Driving System"
+    },
+    "arXiv:2406.18051": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.18051",
+      "identity_tokens": [
+        "arXiv:2406.18051"
+      ],
+      "reason": "一次本文の手法はBitLinear系ternary 1.58-bit weightと8-bit activationをViT画像分類へ適用する。量子化自体はLLMへ移転し得るが、この論文は画像patch encoderでの検証のみで、LLM重み・生成品質・推論servingを評価しないため直接候補としては弱い。",
+      "first_checked_at": "2026-10-06T17:55:04+00:00",
+      "last_checked_at": "2026-10-06T17:55:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ViT-1.58b: Mobile Vision Transformers in the 1-bit Era"
+    },
+    "DOI:10.1145/3674500": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3674500",
+      "identity_tokens": [
+        "DOI:10.1145/3674500"
+      ],
+      "reason": "ACM DOI page could not be retrieved. The title indicates a capsule-network survey; without primary abstract/body its actual treatment of Transformer attention or inference efficiency cannot be verified, so retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:04+00:00",
+      "last_checked_at": "2026-10-06T17:55:04+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Object-centric Learning with Capsule Networks: A Survey"
+    },
+    "arXiv:2404.13238": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.13238",
+      "identity_tokens": [
+        "arXiv:2404.13238"
+      ],
+      "reason": "一次本文はLLMを用いるが、主な貢献はwireless federated fine-tuningのLoRA/adapter・partial aggregationであり、通信遅延や学習energyを減らす学習手法である。inference-time memory/latency/throughputの改善を検証していない。",
+      "first_checked_at": "2026-10-06T17:55:05+00:00",
+      "last_checked_at": "2026-10-06T17:55:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Personalized Wireless Federated Learning for Large Language Models"
+    },
+    "arXiv:2507.00425": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00425",
+      "identity_tokens": [
+        "arXiv:2507.00425"
+      ],
+      "reason": "一次本文では新しい連続潜在空間の言語モデルとblock-wise生成を構成するが、主張・比較は尤度と生成の柔軟性で、既存LLMの推論速度、メモリ、serving改善を実証していない。アーキテクチャ研究として距離があり、効率系統への直接登録は保留相当のborderlineが妥当。",
+      "first_checked_at": "2026-10-06T17:55:05+00:00",
+      "last_checked_at": "2026-10-06T17:55:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Flexible Language Modeling in Continuous Space with Transformer-based Autoregressive Flows"
+    },
+    "arXiv:2503.23934": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.23934",
+      "identity_tokens": [
+        "arXiv:2503.23934"
+      ],
+      "reason": "一次本文はLLM requestのenergy-per-sample、RPS、cache hitを計測しserving運用との接点がある。一方でモデル/運用を改善する新しい推論手法ではなく、単一の測定研究で一般化も限定されるため、system efficiency evidenceとしてborderlineに留める。",
+      "first_checked_at": "2026-10-06T17:55:07+00:00",
+      "last_checked_at": "2026-10-06T17:55:07+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Green MLOps to Green GenOps: An Empirical Study of Energy Consumption in Discriminative and Generative AI Operations"
+    },
+    "DOI:10.1016/j.eswa.2025.127347": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2025.127347",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2025.127347"
+      ],
+      "reason": "Elsevier DOI record was inaccessible. The title identifies remote-sensing semantic segmentation, whose relation to inference systems is unclear without primary abstract details; do not exclude from title alone, retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:07+00:00",
+      "last_checked_at": "2026-10-06T17:55:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive sparse lightweight multi-scale hybrid network for remote sensing image semantic segmentation"
+    },
+    "DOI:10.1109/tc.2024.3504263": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.2024.3504263",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2024.3504263"
+      ],
+      "reason": "IEEE DOI record was inaccessible. The title indicates a semantic-aware Vision Transformer accelerator and its linked lineage is sparse attention; without primary abstract/body the attention mechanism and LLM transfer cannot be verified, so retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:07+00:00",
+      "last_checked_at": "2026-10-06T17:55:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReViT: Vision Transformer Accelerator With Reconfigurable Semantic-Aware Differential Attention"
+    },
+    "arXiv:2502.19587": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.19587",
+      "identity_tokens": [
+        "arXiv:2502.19587"
+      ],
+      "reason": "一次本文にはencoder-only NeoBERTの効率・sequence length分析があるが、目的は小型BERT事前学習/embedding性能であり、decoder-only LLMのautoregressive inferenceやserving改善ではない。Transformer設計上の参考性は残るが、直接対象としては弱い。",
+      "first_checked_at": "2026-10-06T17:55:08+00:00",
+      "last_checked_at": "2026-10-06T17:55:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NeoBERT: A Next-Generation BERT"
+    },
+    "DOI:10.1109/tgrs.2025.3544736": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tgrs.2025.3544736",
+      "identity_tokens": [
+        "DOI:10.1109/tgrs.2025.3544736"
+      ],
+      "reason": "IEEE DOI record was inaccessible. The title indicates a state-space network for remote-sensing segmentation; primary evidence is needed to decide whether there is any transferable inference-system method, so retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:08+00:00",
+      "last_checked_at": "2026-10-06T17:55:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dual-Branch Network for Spatial–Channel Stream Modeling Based on the State-Space Model for Remote Sensing Image Segmentation"
+    },
+    "DOI:10.1109/tkde.2024.3381125": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tkde.2024.3381125",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2024.3381125"
+      ],
+      "reason": "IEEE DOI record was inaccessible. The title suggests a two-view Transformer/GNN architecture for large graphs and the abstract cache mentions runtime/memory, but the primary source could not be reviewed to establish scope; retain as borderline.",
+      "first_checked_at": "2026-10-06T17:55:08+00:00",
+      "last_checked_at": "2026-10-06T17:55:08+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Transformer Meets Large Graphs: An Expressive and Efficient Two-View Architecture"
+    },
+    "DOI:10.1515/revneuro-2024-0088": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1515/revneuro-2024-0088",
+      "identity_tokens": [
+        "DOI:10.1515/revneuro-2024-0088"
+      ],
+      "reason": "De Gruyter primary page returned no readable abstract/body. The title identifies a neuroimaging Transformer survey, but its coverage and any systems-related content cannot be checked; retain as borderline rather than infer from title.",
+      "first_checked_at": "2026-10-06T17:55:09+00:00",
+      "last_checked_at": "2026-10-06T17:55:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transformer-based approaches for neuroimaging: an in-depth review of their role in classification and regression tasks"
+    },
+    "arXiv:2312.14647": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.14647",
+      "identity_tokens": [
+        "arXiv:2312.14647"
+      ],
+      "reason": "一次要旨ではmessage brokerのscalabilityとdistributed inferenceがGenAI通信基盤として検討され、serving系統との接点はある。ただし一次全文HTMLを取得できず、個別方式・実測・制約を確認できなかったため、surveyの記述だけで採用へ進めずborderlineとする。",
+      "first_checked_at": "2026-10-06T17:55:10+00:00",
+      "last_checked_at": "2026-10-06T17:55:10+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Message Brokers for Generative AI: Survey, Challenges, and Opportunities"
+    },
+    "arXiv:2308.10515": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.10515",
+      "identity_tokens": [
+        "arXiv:2308.10515"
+      ],
+      "reason": "一次本文は量子化aware distillationをBEV画像系へ専用設計し、LLM量子化ではない。Weight Quantization系統に手法上の近さはあり比較対象として残すが、view/BEV特徴を使う設計が自然言語decoderにそのまま適用できる根拠はない。",
+      "first_checked_at": "2026-10-06T17:55:10+00:00",
+      "last_checked_at": "2026-10-06T17:55:10+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QD-BEV : Quantization-aware View-guided Distillation for Multi-view 3D Object Detection"
     }
   }
 }

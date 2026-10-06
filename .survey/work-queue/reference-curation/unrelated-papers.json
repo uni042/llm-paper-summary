@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T17:50:23+00:00",
-  "record_count": 9100,
+  "updated_at": "2026-10-06T17:55:10+00:00",
+  "record_count": 9121,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -130501,6 +130501,302 @@
         "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
       ],
       "title": "Embedding Self-Correction as an Inherent Ability in Large Language Models for Enhanced Mathematical Reasoning"
+    },
+    "arXiv:2411.15671": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15671",
+      "identity_tokens": [
+        "arXiv:2411.15671"
+      ],
+      "reason": "一次要旨のGSM/GSM++はグラフ構造データのtokenization・local/global encodingを理論化し、グラフベンチマークを評価する。記載された効率はグラフ学習器同士の比較であり、LLM推論・attention servingの課題とは対象が異なる。",
+      "first_checked_at": "2026-10-06T17:54:59+00:00",
+      "last_checked_at": "2026-10-06T17:54:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Best of Both Worlds: Advantages of Hybrid Graph Sequence Models"
+    },
+    "arXiv:2408.12022": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12022",
+      "identity_tokens": [
+        "arXiv:2408.12022"
+      ],
+      "reason": "一次要旨は言語表現に対するBayesian theory-of-mindの認知モデルで、言語解釈・心的状態推定を対象とする。LLMのモデル圧縮、生成時の推論計算、serving性能への寄与はない。",
+      "first_checked_at": "2026-10-06T17:54:59+00:00",
+      "last_checked_at": "2026-10-06T17:54:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Understanding Epistemic Language with a Language-augmented Bayesian Theory of Mind"
+    },
+    "arXiv:2505.17134": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17134",
+      "identity_tokens": [
+        "arXiv:2505.17134"
+      ],
+      "reason": "LongMagpieは長文脈instructionと応答の合成データ生成を行い、長文脈ベンチマークのタスク性能を評価する。文脈を圧縮して推論tokenやKVメモリを減らす方法ではなく、推論効率を対象としない。",
+      "first_checked_at": "2026-10-06T17:54:59+00:00",
+      "last_checked_at": "2026-10-06T17:54:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "LongMagpie: A Self-synthesis Method for Generating Large-scale Long-context Instructions"
+    },
+    "arXiv:2505.17257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17257",
+      "identity_tokens": [
+        "arXiv:2505.17257"
+      ],
+      "reason": "JanusDNAはDNA塩基列の双方向理解を目的とするゲノム基盤モデルで、長塩基列処理のためのMamba/MoE構成を評価する。自然言語LLMの推論・serving改善や既存言語モデルへの適用を示す論文ではない。",
+      "first_checked_at": "2026-10-06T17:55:00+00:00",
+      "last_checked_at": "2026-10-06T17:55:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "JanusDNA: A Powerful Bi-directional Hybrid DNA Foundation Model"
+    },
+    "DOI:10.18653/v1/2025.acl-srw.17": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-srw.17",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-srw.17"
+      ],
+      "reason": "ACL一次要旨で比較されているのは翻訳タスクにおけるzero/few-shot、CoT、ToTの翻訳品質であり、特定方向の品質差を報告する。speculative decodingとの比較・デコード遅延やスループットの改善は評価していない。",
+      "first_checked_at": "2026-10-06T17:55:00+00:00",
+      "last_checked_at": "2026-10-06T17:55:00+00:00",
+      "linked_from": [
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "Reasoning for Translation: Comparative Analysis of Chain-of-Thought and Tree-of-Thought Prompting for LLM Translation"
+    },
+    "arXiv:2412.11608": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.11608",
+      "identity_tokens": [
+        "arXiv:2412.11608"
+      ],
+      "reason": "一次要旨の実験は道路シーンのsemantic segmentation向けmodel-level MoEの敵対的頑健性評価。頑健性と攻撃成功を主題とし、MoE推論の効率・expert parallelism・LLM圧縮は検討しない。",
+      "first_checked_at": "2026-10-06T17:55:00+00:00",
+      "last_checked_at": "2026-10-06T17:55:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "title": "Towards Adversarial Robustness of Model-Level Mixture-of-Experts Architectures for Semantic Segmentation"
+    },
+    "arXiv:2510.09741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.09741",
+      "identity_tokens": [
+        "arXiv:2510.09741"
+      ],
+      "reason": "一次要旨のConstructive Distortionは画像のattention誘導warpingでMLLMの視覚入力を改善する研究。入力画質・認識品質の課題を扱い、推論計算・モデル記憶量・serving遅延の改善を報告していない。",
+      "first_checked_at": "2026-10-06T17:55:01+00:00",
+      "last_checked_at": "2026-10-06T17:55:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "Constructive Distortion: Improving MLLMs with Attention-Guided Image Warping"
+    },
+    "arXiv:2510.06826": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.06826",
+      "identity_tokens": [
+        "arXiv:2510.06826"
+      ],
+      "reason": "一次要旨はfoundation modelのmid-training、継続事前学習、fine-tuning、compositionalityを論じる調査論文。長いcontextが計算コストを要するという周辺論点はあるが、推論時の具体的最適化方法や評価結果を提示しない。",
+      "first_checked_at": "2026-10-06T17:55:01+00:00",
+      "last_checked_at": "2026-10-06T17:55:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Mid-Training of Large Language Models: A Survey"
+    },
+    "arXiv:2506.03320": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03320",
+      "identity_tokens": [
+        "arXiv:2506.03320"
+      ],
+      "reason": "一次要旨はfoundation model時代のcontinual learningの必要性と知識更新・適応・モデル組成を議論する方向性論文。inference compute/memory/latency/throughputやservingの改善手法を扱わない。",
+      "first_checked_at": "2026-10-06T17:55:02+00:00",
+      "last_checked_at": "2026-10-06T17:55:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "The Future of Continual Learning in the Era of Foundation Models: Three Key Directions"
+    },
+    "arXiv:2405.17509": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.17509",
+      "identity_tokens": [
+        "arXiv:2405.17509"
+      ],
+      "reason": "一次要旨のReference Neural Operatorsは幾何変形に対する偏微分方程式解の滑らかな依存性を学習する数値解析研究。言語モデルや推論システムの計算最適化を対象としない。",
+      "first_checked_at": "2026-10-06T17:55:03+00:00",
+      "last_checked_at": "2026-10-06T17:55:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Reference Neural Operators: Learning the Smooth Dependence of Solutions of PDEs on Geometric Deformations"
+    },
+    "arXiv:2405.15756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15756",
+      "identity_tokens": [
+        "arXiv:2405.15756"
+      ],
+      "reason": "一次要旨・題名が扱うのはWasserstein距離、神経活動のentanglementとsparsityの数学的関係で、LLMの重み量子化・疎量子化手法や言語モデル評価を示さない。量子化系統との語彙上の近さだけでは直接候補にならない。",
+      "first_checked_at": "2026-10-06T17:55:03+00:00",
+      "last_checked_at": "2026-10-06T17:55:03+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "title": "Wasserstein Distances, Neuronal Entanglement, and Sparsity"
+    },
+    "arXiv:2404.01568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.01568",
+      "identity_tokens": [
+        "arXiv:2404.01568"
+      ],
+      "reason": "一次要旨は点群の局所幾何を表すVecKM encoderの計算量を線形化する3D点群認識研究。言語モデルに関する機構やLLM推論へ移転できる根拠は示されない。",
+      "first_checked_at": "2026-10-06T17:55:03+00:00",
+      "last_checked_at": "2026-10-06T17:55:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "A Linear Time and Space Local Point Cloud Geometry Encoder via Vectorized Kernel Mixture (VecKM)"
+    },
+    "arXiv:2409.01087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01087",
+      "identity_tokens": [
+        "arXiv:2409.01087"
+      ],
+      "reason": "一次要旨は事前学習言語モデルを用いたkeyphrase extraction/generationの分類とsurvey。タスク別予測モデルの整理が目的で、LLM decoding/servingの計算・記憶量改善を扱わない。",
+      "first_checked_at": "2026-10-06T17:55:05+00:00",
+      "last_checked_at": "2026-10-06T17:55:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Pre-trained language models for keyphrase prediction: A review"
+    },
+    "arXiv:2402.11143": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.11143",
+      "identity_tokens": [
+        "arXiv:2402.11143"
+      ],
+      "reason": "一次要旨と題名は推薦システム向け基盤モデル研究の分類調査を対象としている。推薦タスクと下流応用の整理が主題で、LLM推論のメモリ・遅延・量子化・servingやGist prompt圧縮の実装課題を扱わないため、系統リンクは主題上の直接性を示さない。",
+      "first_checked_at": "2026-10-06T17:55:05+00:00",
+      "last_checked_at": "2026-10-06T17:55:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Foundation Models for Recommender Systems: A Survey and New Perspectives"
+    },
+    "arXiv:2402.00776": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00776",
+      "identity_tokens": [
+        "arXiv:2402.00776"
+      ],
+      "reason": "一次要旨が扱うのは高エネルギー物理の画像分類向けハイブリッド量子Vision Transformerであり、比較対象も古典ViTである。LLMの重み圧縮・推論システムや実用GPU servingとは対象タスクと計算基盤が異なる。",
+      "first_checked_at": "2026-10-06T17:55:06+00:00",
+      "last_checked_at": "2026-10-06T17:55:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Hybrid Quantum Vision Transformers for Event Classification in High Energy Physics"
+    },
+    "arXiv:2401.10910": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.10910",
+      "identity_tokens": [
+        "arXiv:2401.10910"
+      ],
+      "reason": "一次要旨の貢献は生成エージェントに内省的な戦略変更モジュールを加えて行動成功を上げること。CPU/GPU offload、活性化疎性、階層メモリの配置・性能機構は扱わず、リンク先のシステム系統とは主題が異なる。",
+      "first_checked_at": "2026-10-06T17:55:06+00:00",
+      "last_checked_at": "2026-10-06T17:55:06+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+      ],
+      "title": "Metacognition is all you need? Using Introspection in Generative Agents to Improve Goal-directed Behavior"
+    },
+    "arXiv:2207.06968": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.06968",
+      "identity_tokens": [
+        "arXiv:2207.06968"
+      ],
+      "reason": "一次要旨のDASSはSparseConv/SparseLinearを使った微分可能なCNNアーキテクチャ探索で、CIFAR-10とImageNetの画像分類が評価対象。疎LLM重み・attentionカーネル・言語モデルservingへの適用は示されず、一般CNN探索の報告に留まる。",
+      "first_checked_at": "2026-10-06T17:55:06+00:00",
+      "last_checked_at": "2026-10-06T17:55:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "DASS: Differentiable Architecture Search for Sparse Neural Networks"
+    },
+    "DOI:10.1038/s42005-025-01987-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s42005-025-01987-5",
+      "identity_tokens": [
+        "DOI:10.1038/s42005-025-01987-5"
+      ],
+      "reason": "Nature一次要旨で対象はspatial-photonic Ising machineによる組合せ最適化で、低ランク・circulant結合行列と光学ハードウェア精度を扱う。LLM推論アクセラレータではなく別の物理計算モデルである。",
+      "first_checked_at": "2026-10-06T17:55:08+00:00",
+      "last_checked_at": "2026-10-06T17:55:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Efficient computation using spatial-photonic Ising machines with low-rank and circulant matrix constraints"
+    },
+    "arXiv:2412.14708": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.14708",
+      "identity_tokens": [
+        "arXiv:2412.14708"
+      ],
+      "reason": "一次要旨はセンサー、通信、室内自動化を統合するAI-driven smart spacesのsurvey。LLMは応用例の一つで、LLMモデル推論やservingの具体的効率改善は本題でない。",
+      "first_checked_at": "2026-10-06T17:55:09+00:00",
+      "last_checked_at": "2026-10-06T17:55:09+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Creation of AI-driven smart spaces for enhanced indoor environments - A survey"
+    },
+    "arXiv:2410.22884": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.22884",
+      "identity_tokens": [
+        "arXiv:2410.22884"
+      ],
+      "reason": "一次要旨はexpert-choice MoEにおけるユーザープロンプト窃取攻撃と脆弱性の実証。セキュリティ攻撃が主題であり、expert parallelismや推論効率を改善する手法ではない。",
+      "first_checked_at": "2026-10-06T17:55:09+00:00",
+      "last_checked_at": "2026-10-06T17:55:09+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Stealing User Prompts from Mixture of Experts"
+    },
+    "arXiv:2403.08426": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.08426",
+      "identity_tokens": [
+        "arXiv:2403.08426"
+      ],
+      "reason": "一次要旨のLDVCはCLIP系vision-language特徴を用いたzero-shot semantic segmentationで、クラス一般化とmIoUを改善する。推論システム効率や言語モデルservingではなく視覚タスクの精度手法である。",
+      "first_checked_at": "2026-10-06T17:55:10+00:00",
+      "last_checked_at": "2026-10-06T17:55:10+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Language-Driven Visual Consensus for Zero-Shot Semantic Segmentation"
     }
   }
 }
