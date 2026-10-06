@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8d275f24e46f317-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.01212",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.01212",
+    "identity_tokens": [
+      "arXiv:2609.01212"
+    ],
+    "reason": "This primary source is a systematic survey of Transformer inference deployment on FPGAs, organizing model/compiler/architecture/runtime trade-offs. It is useful serving background but reports no new method or original deployment result.",
+    "first_checked_at": "2026-10-06T09:45:34+00:00",
+    "last_checked_at": "2026-10-06T09:45:34+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Recent developments in Transformer inference deployment on FPGA platforms: A survey"
+  },
+  "processed_at": "2026-10-06T09:45:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8d275f24e46",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

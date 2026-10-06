@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T09:41:54+00:00",
-  "record_count": 2715,
+  "updated_at": "2026-10-06T09:45:34+00:00",
+  "record_count": 2728,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -41704,6 +41704,201 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Beyond Attention Masks: Instruction Anchoring for Efficient In-Context Diffusion Generation"
+    },
+    "arXiv:2608.11342": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11342",
+      "identity_tokens": [
+        "arXiv:2608.11342"
+      ],
+      "reason": "Weightless Fine-Tuning estimates cross-prefix logit transport and applies residual corrections at decoding time; budget-controlled personalization approaches SFT with under 7% effective computation. This chiefly reduces adaptation/training cost; inference transport overhead and serving latency are not established.",
+      "first_checked_at": "2026-10-06T09:45:24+00:00",
+      "last_checked_at": "2026-10-06T09:45:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Weightless Fine-Tuning: Personalizing LLMs via Logit-Space Transport"
+    },
+    "arXiv:2608.09898": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.09898",
+      "identity_tokens": [
+        "arXiv:2608.09898"
+      ],
+      "reason": "Consilience selects verifier-free reasoning rollouts by penalizing high initial confidence and requiring high final confidence; math/code tasks show quality gains over confidence-only baselines. The method performs test-time branching/selection and does not claim lower total inference compute.",
+      "first_checked_at": "2026-10-06T09:45:27+00:00",
+      "last_checked_at": "2026-10-06T09:45:27+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Consilience for Verifier-Free Test-Time Scaling"
+    },
+    "arXiv:2608.07959": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07959",
+      "identity_tokens": [
+        "arXiv:2608.07959"
+      ],
+      "reason": "SCOUT combines recovery-aware tool selection with uncertainty-prioritized policy optimization for ultra-long egocentric video. It reports benchmark quality gains but adds iterative tool interactions and supplies no latency/token/compute saving; efficiency trade-offs remain unmeasured.",
+      "first_checked_at": "2026-10-06T09:45:27+00:00",
+      "last_checked_at": "2026-10-06T09:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SCOUT: Self-Checking and Recovery-Aware Tool-Thought Agents for Ultra-Long Egocentric Video Reasoning"
+    },
+    "arXiv:2608.08075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08075",
+      "identity_tokens": [
+        "arXiv:2608.08075"
+      ],
+      "reason": "The paper defines persistent visual memory, context selection, layered indexes, and source-grounded evidence for continuously arriving video. Retrieval results are strong, but the contribution is an infrastructure/system model rather than a measured LLM inference-cost optimization.",
+      "first_checked_at": "2026-10-06T09:45:27+00:00",
+      "last_checked_at": "2026-10-06T09:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Search over the Visual World: Persistent Visual Memory, Layered Indexes, and Source-Grounded Evidence"
+    },
+    "arXiv:2608.04928": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.04928",
+      "identity_tokens": [
+        "arXiv:2608.04928"
+      ],
+      "reason": "This is a monitorability study comparing explicit and latent CoT on math/QA hint-reliance tasks. It discusses lower inference cost as motivation for latent CoT but introduces or measures no new efficiency method; its evidence concerns interpretability limits.",
+      "first_checked_at": "2026-10-06T09:45:29+00:00",
+      "last_checked_at": "2026-10-06T09:45:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Does Out-of-Sight Equal Out-of-Mind in CoT Monitorability?"
+    },
+    "arXiv:2608.03141": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03141",
+      "identity_tokens": [
+        "arXiv:2608.03141"
+      ],
+      "reason": "IBS/R-IBS select cross-modal tokens under latency constraints and report simulated VQA/AVQA accuracy gains. The primary setting is token communication with erasure channels, not LLM/VLM decoder inference, so serving applicability is unresolved.",
+      "first_checked_at": "2026-10-06T09:45:29+00:00",
+      "last_checked_at": "2026-10-06T09:45:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Geometric Cross-Modal Token Selection for Latency-Constrained Multimodal Token Communication"
+    },
+    "arXiv:2608.02585": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02585",
+      "identity_tokens": [
+        "arXiv:2608.02585"
+      ],
+      "reason": "GradCuit optimizes latent states at test time through gradients from generated continuation tokens and improves reasoning accuracy across five backbones. It is test-time scaling and likely adds optimization compute; no latency or cost reduction is established.",
+      "first_checked_at": "2026-10-06T09:45:30+00:00",
+      "last_checked_at": "2026-10-06T09:45:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GradCuit: Credit-Assigned Gradient Flow Enables Robust and Interpretable Test-Time Latent Reasoning"
+    },
+    "DOI:10.1007/s44163-026-01947-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44163-026-01947-0",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-01947-0"
+      ],
+      "reason": "Publisher DOI page https://doi.org/10.1007/s44163-026-01947-0 failed to open in the available reader (Internal Error). Input abstract claims lower computation for a cultural-heritage VLM, so retain as borderline pending primary-text verification.",
+      "first_checked_at": "2026-10-06T09:45:30+00:00",
+      "last_checked_at": "2026-10-06T09:45:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evidence driven dual granularity cross modal reasoning for cultural heritage visual language understanding"
+    },
+    "arXiv:2608.11655": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11655",
+      "identity_tokens": [
+        "arXiv:2608.11655"
+      ],
+      "reason": "Motion-as-Prompt selects motion-informative video frames and overlays trajectories for frozen MLLMs; it reports +4.2% and +8.9% motion reasoning on two datasets. The paper focuses on capability and does not show lower input-token count, latency, or compute versus sparse sampling.",
+      "first_checked_at": "2026-10-06T09:45:32+00:00",
+      "last_checked_at": "2026-10-06T09:45:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Motion-as-Prompt: Enhancing Motion Reasoning in Multimodal Large Language Models via Motion-Guided Cross-Frame Visual Prompting"
+    },
+    "arXiv:2608.14664": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.14664",
+      "identity_tokens": [
+        "arXiv:2608.14664"
+      ],
+      "reason": "The paper proposes a first-order criterion for whether residual depth growth could improve a network, evaluated on ResNets and GPT-style checkpoints. It is a training-time diagnostic, not demonstrated layer pruning or LLM inference optimization.",
+      "first_checked_at": "2026-10-06T09:45:33+00:00",
+      "last_checked_at": "2026-10-06T09:45:33+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantifying Depth Sufficiency in Residual Neural Networks: A First-Order Criterion"
+    },
+    "arXiv:2609.01212": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01212",
+      "identity_tokens": [
+        "arXiv:2609.01212"
+      ],
+      "reason": "This primary source is a systematic survey of Transformer inference deployment on FPGAs, organizing model/compiler/architecture/runtime trade-offs. It is useful serving background but reports no new method or original deployment result.",
+      "first_checked_at": "2026-10-06T09:45:34+00:00",
+      "last_checked_at": "2026-10-06T09:45:34+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recent developments in Transformer inference deployment on FPGA platforms: A survey"
+    },
+    "DOI:10.1016/j.asoc.2026.116183": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.116183",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.116183"
+      ],
+      "reason": "Input has no abstract. Publisher DOI https://doi.org/10.1016/j.asoc.2026.116183 returned Internal Error; relevance cannot be verified.",
+      "first_checked_at": "2026-10-06T09:45:34+00:00",
+      "last_checked_at": "2026-10-06T09:45:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PhysCISC: A process-credibility weighted self-consistency voting framework for physics reasoning with large language models"
+    },
+    "DOI:10.1016/j.eswa.2026.134149": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.134149",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.134149"
+      ],
+      "reason": "Input has no abstract. DOI https://doi.org/10.1016/j.eswa.2026.134149 was inaccessible; direct ScienceDirect fetch returned Cache miss. Title suggests LLM test-time training for location prediction, but relevance is unverified.",
+      "first_checked_at": "2026-10-06T09:45:34+00:00",
+      "last_checked_at": "2026-10-06T09:45:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM-Driven Location Completion and Test-Time Training for Next Location Prediction"
     }
   }
 }
