@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r112-screen-01-part-02-7a32c43cc2a5",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774904.3792817",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792817"
+      ],
+      "title": "ARADD: An Automatic Real-World API Discovery and Deployment Framework for AI Guide Service in Baidu Map",
+      "reason": "Map-service API discovery/deployment is an application integration paper, not model inference efficiency.",
+      "source_url": "https://doi.org/10.1145/3774904.3792817",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09425",
+      "identity_tokens": [
+        "arXiv:2604.09425"
+      ],
+      "title": "Do Vision Language Models Need to Process Image Tokens?",
+      "reason": "Analyzes visual-token stabilization and task-dependent depth truncation in VLMs; short-answer cases may tolerate depth reduction while multi-token reasoning needs sustained visual grounding. This is a diagnostic study, not an end-to-end serving/latency implementation.",
+      "source_url": "https://arxiv.org/abs/2604.09425",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/DCAS69364.2026.11544419",
+      "identity_tokens": [
+        "DOI:10.1109/DCAS69364.2026.11544419"
+      ],
+      "title": "Regularization-Enhanced Hybrid Quantum-Classical Neural Network for Smart Grid Stability Classification",
+      "reason": "Hybrid quantum-classical network for smart-grid classification, outside LLM inference.",
+      "source_url": "https://doi.org/10.1109/DCAS69364.2026.11544419",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07069",
+      "identity_tokens": [
+        "arXiv:2604.07069"
+      ],
+      "title": "Controller Design for Structured State-space Models via Contraction Theory",
+      "reason": "Controller synthesis for nonlinear dynamical systems, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2604.07069",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07492",
+      "identity_tokens": [
+        "arXiv:2604.07492"
+      ],
+      "title": "Cluster Attention for Graph Machine Learning",
+      "reason": "Cluster attention is for graph machine learning, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2604.07492",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
