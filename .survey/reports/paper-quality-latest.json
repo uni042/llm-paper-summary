@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "audit_kind": "publication_integrity",
-  "generated_at": "2026-10-05T22:38:50+00:00",
+  "generated_at": "2026-10-06T14:55:32+00:00",
   "criteria": {
     "utf8": true,
     "parseable_frontmatter": true,
@@ -96,6 +96,22 @@
       "japanese_ratio": 0.9052464228934817,
       "japanese_chars": 2847,
       "latin_chars": 298,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+      "status": "PASS",
+      "file_bytes": 11667,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8671268334771355,
+      "japanese_chars": 2010,
+      "latin_chars": 308,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -2627,6 +2643,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md",
+      "status": "WARN",
+      "file_bytes": 7473,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7575757575757576,
+      "japanese_chars": 1000,
+      "latin_chars": 320,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 75.8% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
       "status": "PASS",
       "file_bytes": 24855,
@@ -5151,6 +5185,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2512.18337-towards-efficient-agents-a-co-design-of-inference-architecture-and-syste.md",
+      "status": "WARN",
+      "file_bytes": 8856,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7163854109961895,
+      "japanese_chars": 1316,
+      "latin_chars": 521,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.6% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md",
       "status": "PASS",
       "file_bytes": 17245,
@@ -5278,6 +5330,22 @@
       "japanese_ratio": 0.9492691315563199,
       "japanese_chars": 4416,
       "latin_chars": 236,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2602.13836-speculative-decoding-with-a-speculative-vocabulary.md",
+      "status": "PASS",
+      "file_bytes": 7490,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8939114391143912,
+      "japanese_chars": 969,
+      "latin_chars": 115,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -5589,6 +5657,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2606.03819-treeflash-parallel-ar-approximation-for-faster-speculative-decoding.md",
+      "status": "WARN",
+      "file_bytes": 5215,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.723433242506812,
+      "japanese_chars": 531,
+      "latin_chars": 203,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.3% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2606.18394-jetspec-breaking-the-scaling-ceiling-of-speculative-decoding-with-parall.md",
       "status": "PASS",
       "file_bytes": 24368,
@@ -5749,6 +5835,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-p.md",
+      "status": "WARN",
+      "file_bytes": 5805,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7026793431287813,
+      "japanese_chars": 813,
+      "latin_chars": 344,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.3% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2608.20530-lilicorr-lightweight-likelihood-correlation-of-parallel-drafts-for-specu.md",
@@ -6429,6 +6533,40 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md",
+      "status": "WARN",
+      "file_bytes": 10417,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7761601455868972,
+      "japanese_chars": 1706,
+      "latin_chars": 492,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.6% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md",
+      "status": "PASS",
+      "file_bytes": 6881,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8089430894308943,
+      "japanese_chars": 995,
+      "latin_chars": 235,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md",
       "status": "PASS",
       "file_bytes": 8207,
@@ -6962,6 +7100,22 @@
       "japanese_ratio": 0.9823825503355704,
       "japanese_chars": 2342,
       "latin_chars": 42,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md",
+      "status": "PASS",
+      "file_bytes": 9871,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8161978661493695,
+      "japanese_chars": 1683,
+      "latin_chars": 379,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -7649,6 +7803,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.07891-kvzap-fast-adaptive-and-faithful-kv-cache-pruning.md",
+      "status": "WARN",
+      "file_bytes": 5870,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7756756756756756,
+      "japanese_chars": 574,
+      "latin_chars": 166,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.6% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
       "status": "PASS",
       "file_bytes": 15390,
@@ -7713,6 +7885,42 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.02579-prophetkv-user-query-driven-selective-recomputation-for-efficient-kv-cac.md",
+      "status": "WARN",
+      "file_bytes": 5478,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7586980920314254,
+      "japanese_chars": 676,
+      "latin_chars": 215,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 75.9% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.23200-innerq-hardware-aware-tuning-free-quantization-of-kv-cache-for-large-lan.md",
+      "status": "WARN",
+      "file_bytes": 7926,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7601499063085572,
+      "japanese_chars": 1217,
+      "latin_chars": 384,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 76.0% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.11504-longflow-efficient-kv-cache-compression-for-reasoning-models.md",
       "status": "PASS",
       "file_bytes": 11464,
@@ -7763,6 +7971,24 @@
       ]
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.04722-don-t-waste-bits-adaptive-kv-cache-quantization-for-lightweight-on-devic.md",
+      "status": "WARN",
+      "file_bytes": 5325,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7481162540365985,
+      "japanese_chars": 695,
+      "latin_chars": 234,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 74.8% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.04921-triattention-efficient-long-reasoning-with-trigonometric-kv-compression.md",
       "status": "PASS",
       "file_bytes": 14163,
@@ -7793,6 +8019,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md",
+      "status": "WARN",
+      "file_bytes": 5475,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7155009451795841,
+      "japanese_chars": 757,
+      "latin_chars": 301,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.6% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.19351-dash-kv-asymmetric-hashing-long-context.md",
@@ -7859,6 +8103,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md",
+      "status": "WARN",
+      "file_bytes": 5852,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7439916405433646,
+      "japanese_chars": 712,
+      "latin_chars": 245,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 74.4% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
       "status": "PASS",
       "file_bytes": 20753,
@@ -7873,6 +8135,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.19775-understanding-inference-scaling-for-llms-bottlenecks-trade-offs-and-perf.md",
+      "status": "WARN",
+      "file_bytes": 5838,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.70931326434619,
+      "japanese_chars": 754,
+      "latin_chars": 309,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.9% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.22106-arborkv-structure-aware-kv-cache-management.md",
@@ -8016,6 +8296,22 @@
       "japanese_ratio": 0.9755925008843297,
       "japanese_chars": 2758,
       "latin_chars": 69,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.00760-mosaickv-serving-long-context-llm-with-dynamic-two-d-kv-cache-compressio.md",
+      "status": "PASS",
+      "file_bytes": 7173,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8446969696969697,
+      "japanese_chars": 669,
+      "latin_chars": 123,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -9613,6 +9909,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "status": "WARN",
+      "file_bytes": 5438,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7107142857142857,
+      "japanese_chars": 796,
+      "latin_chars": 324,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.1% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
       "status": "PASS",
       "file_bytes": 8749,
@@ -9693,6 +10007,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+      "status": "WARN",
+      "file_bytes": 11812,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7277167277167277,
+      "japanese_chars": 1788,
+      "latin_chars": 669,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.8% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
       "status": "PASS",
       "file_bytes": 8573,
@@ -9723,6 +10055,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md",
+      "status": "WARN",
+      "file_bytes": 6748,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.721058434399118,
+      "japanese_chars": 654,
+      "latin_chars": 253,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.1% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
@@ -9967,6 +10317,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md",
+      "status": "WARN",
+      "file_bytes": 9322,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7132542547705003,
+      "japanese_chars": 1383,
+      "latin_chars": 556,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.3% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
@@ -10341,6 +10709,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md",
+      "status": "WARN",
+      "file_bytes": 9138,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7763023493360572,
+      "japanese_chars": 1520,
+      "latin_chars": 438,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.6% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.25624-accelerating-the-mitigation-of-llm-inference-nondeterminism-across-gpu-a.md",
@@ -12417,6 +12803,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md",
+      "status": "PASS",
+      "file_bytes": 6711,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8871906841339156,
+      "japanese_chars": 1219,
+      "latin_chars": 155,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md",
       "status": "PASS",
       "file_bytes": 20300,
@@ -13841,6 +14243,22 @@
       ]
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+      "status": "PASS",
+      "file_bytes": 12081,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8442622950819673,
+      "japanese_chars": 618,
+      "latin_chars": 114,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serv.md",
       "status": "PASS",
       "file_bytes": 11095,
@@ -14096,6 +14514,22 @@
       "japanese_ratio": 0.9367231638418079,
       "japanese_chars": 7461,
       "latin_chars": 504,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md",
+      "status": "PASS",
+      "file_bytes": 11388,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9886299033541786,
+      "japanese_chars": 1739,
+      "latin_chars": 20,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -14587,6 +15021,42 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md",
+      "status": "WARN",
+      "file_bytes": 9534,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7077205882352942,
+      "japanese_chars": 1540,
+      "latin_chars": 636,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.8% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.09721-revealing-the-challenges-of-attention-ffn-disaggregation-for-modern-moe-.md",
+      "status": "WARN",
+      "file_bytes": 5505,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7229946524064171,
+      "japanese_chars": 676,
+      "latin_chars": 259,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.3% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md",
       "status": "PASS",
       "file_bytes": 23315,
@@ -14619,6 +15089,22 @@
       "warnings": [
         "日本語比率 76.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md",
+      "status": "PASS",
+      "file_bytes": 14153,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9528960223307746,
+      "japanese_chars": 2731,
+      "latin_chars": 135,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-shared-prefill-multi-llm.md",
@@ -15119,6 +15605,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11035-introspective-diffusion-language-models.md",
+      "status": "WARN",
+      "file_bytes": 7342,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7357512953367875,
+      "japanese_chars": 852,
+      "latin_chars": 306,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 73.6% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.12171-pipelive.md",
@@ -17081,6 +17585,22 @@
       ]
     },
     {
+      "path": "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "status": "PASS",
+      "file_bytes": 7585,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8904923599320883,
+      "japanese_chars": 1049,
+      "latin_chars": 129,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
       "status": "WARN",
       "file_bytes": 7096,
@@ -18179,6 +18699,40 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md",
+      "status": "WARN",
+      "file_bytes": 8578,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.736209721463681,
+      "japanese_chars": 1348,
+      "latin_chars": 483,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 73.6% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md",
+      "status": "PASS",
+      "file_bytes": 10834,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8254335260115607,
+      "japanese_chars": 1428,
+      "latin_chars": 302,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
       "status": "PASS",
       "file_bytes": 10717,
@@ -18227,6 +18781,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md",
+      "status": "WARN",
+      "file_bytes": 6727,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7816455696202531,
+      "japanese_chars": 988,
+      "latin_chars": 276,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 78.2% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2026-2604.16864-hierasparse.md",
       "status": "PASS",
       "file_bytes": 20558,
@@ -18241,6 +18813,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md",
+      "status": "WARN",
+      "file_bytes": 7048,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7186440677966102,
+      "japanese_chars": 1060,
+      "latin_chars": 415,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.9% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/13-sparse-attention/2026-2606.04511-sparda.md",
@@ -18318,6 +18908,22 @@
       "japanese_ratio": 0.9201716738197425,
       "japanese_chars": 1072,
       "latin_chars": 93,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2608.01662-longcat-sparse-attention-taming-the-lightning-via-streaming-aware-hierar.md",
+      "status": "PASS",
+      "file_bytes": 7881,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.816,
+      "japanese_chars": 1632,
+      "latin_chars": 368,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -19477,6 +20083,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
+      "status": "WARN",
+      "file_bytes": 7814,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7753067484662577,
+      "japanese_chars": 1011,
+      "latin_chars": 293,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.5% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md",
       "status": "PASS",
       "file_bytes": 16962,
@@ -19899,6 +20523,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md",
+      "status": "WARN",
+      "file_bytes": 10355,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7528490028490028,
+      "japanese_chars": 1057,
+      "latin_chars": 347,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 75.3% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
       "status": "WARN",
       "file_bytes": 22748,
@@ -20010,6 +20652,22 @@
       "japanese_ratio": 0.9788424124513618,
       "japanese_chars": 4025,
       "latin_chars": 87,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/17-pim-near-data-acceleration/2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md",
+      "status": "PASS",
+      "file_bytes": 8446,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8239644970414202,
+      "japanese_chars": 1114,
+      "latin_chars": 238,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -20193,6 +20851,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "status": "PASS",
+      "file_bytes": 8300,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8723975822699799,
+      "japanese_chars": 1299,
+      "latin_chars": 190,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
       "status": "PASS",
       "file_bytes": 7511,
@@ -20209,6 +20883,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
+      "status": "WARN",
+      "file_bytes": 7148,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7012987012987013,
+      "japanese_chars": 972,
+      "latin_chars": 414,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.1% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
       "status": "PASS",
       "file_bytes": 16815,
@@ -20220,6 +20912,22 @@
       "japanese_ratio": 0.9695085849615157,
       "japanese_chars": 3275,
       "latin_chars": 103,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
+      "status": "PASS",
+      "file_bytes": 6147,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8892215568862275,
+      "japanese_chars": 1188,
+      "latin_chars": 148,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -20275,7 +20983,7 @@
     {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
       "status": "WARN",
-      "file_bytes": 16012,
+      "file_bytes": 16014,
       "prose_chars": 0,
       "paragraphs": 0,
       "method_paragraphs": 0,
@@ -20288,6 +20996,40 @@
       "failures": [],
       "warnings": [
         "日本語比率 70.5% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md",
+      "status": "PASS",
+      "file_bytes": 7672,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8027048528241846,
+      "japanese_chars": 1009,
+      "latin_chars": 248,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "status": "WARN",
+      "file_bytes": 9423,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.766743648960739,
+      "japanese_chars": 996,
+      "latin_chars": 303,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 76.7% < 警告基準 80%"
       ]
     },
     {
@@ -20437,6 +21179,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md",
+      "status": "WARN",
+      "file_bytes": 8056,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7619439868204283,
+      "japanese_chars": 925,
+      "latin_chars": 289,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 76.2% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.19657-prefixbench-h100-prefix-reuse-ttft.md",
       "status": "PASS",
       "file_bytes": 15456,
@@ -20483,6 +21243,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+      "status": "WARN",
+      "file_bytes": 8907,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7893504973668812,
+      "japanese_chars": 1349,
+      "latin_chars": 360,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 78.9% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
@@ -20605,6 +21383,24 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "status": "WARN",
+      "file_bytes": 5783,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7074981440237565,
+      "japanese_chars": 953,
+      "latin_chars": 394,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.7% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
       "status": "WARN",
       "file_bytes": 7947,
@@ -20655,6 +21451,42 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md",
+      "status": "WARN",
+      "file_bytes": 7577,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.763448275862069,
+      "japanese_chars": 1107,
+      "latin_chars": 343,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 76.3% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md",
+      "status": "WARN",
+      "file_bytes": 5468,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7040923399790137,
+      "japanese_chars": 671,
+      "latin_chars": 282,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.4% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
@@ -20743,6 +21575,58 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+      "status": "PASS",
+      "file_bytes": 10805,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8303782505910166,
+      "japanese_chars": 1405,
+      "latin_chars": 287,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+      "status": "WARN",
+      "file_bytes": 6070,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7162162162162162,
+      "japanese_chars": 901,
+      "latin_chars": 357,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.6% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+      "status": "WARN",
+      "file_bytes": 6300,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7106537530266344,
+      "japanese_chars": 587,
+      "latin_chars": 239,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.1% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
       "status": "PASS",
       "file_bytes": 5798,
@@ -20775,6 +21659,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
+      "status": "WARN",
+      "file_bytes": 7092,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7076788830715532,
+      "japanese_chars": 811,
+      "latin_chars": 335,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.8% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
       "status": "PASS",
       "file_bytes": 20721,
@@ -20789,6 +21691,40 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+      "status": "PASS",
+      "file_bytes": 6881,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8847184986595175,
+      "japanese_chars": 660,
+      "latin_chars": 86,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+      "status": "WARN",
+      "file_bytes": 8353,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.771213073538655,
+      "japanese_chars": 1227,
+      "latin_chars": 364,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.1% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
@@ -20859,6 +21795,90 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+      "status": "WARN",
+      "file_bytes": 7940,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7551470588235294,
+      "japanese_chars": 1027,
+      "latin_chars": 333,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 75.5% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "status": "PASS",
+      "file_bytes": 6393,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8050209205020921,
+      "japanese_chars": 962,
+      "latin_chars": 233,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "status": "PASS",
+      "file_bytes": 5613,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9148936170212766,
+      "japanese_chars": 1118,
+      "latin_chars": 104,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md",
+      "status": "WARN",
+      "file_bytes": 8683,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7262265293761356,
+      "japanese_chars": 1199,
+      "latin_chars": 452,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.6% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+      "status": "PASS",
+      "file_bytes": 10409,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8985959438377535,
+      "japanese_chars": 1728,
+      "latin_chars": 195,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md",
       "status": "PASS",
       "file_bytes": 7487,
@@ -20889,6 +21909,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
+      "status": "WARN",
+      "file_bytes": 10842,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7016509433962265,
+      "japanese_chars": 1190,
+      "latin_chars": 506,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.2% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
@@ -21003,6 +22041,40 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+      "status": "PASS",
+      "file_bytes": 6593,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.873358348968105,
+      "japanese_chars": 931,
+      "latin_chars": 135,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
+      "status": "WARN",
+      "file_bytes": 5871,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7804878048780488,
+      "japanese_chars": 704,
+      "latin_chars": 198,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 78.0% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
@@ -21251,6 +22323,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md",
+      "status": "WARN",
+      "file_bytes": 6814,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7185185185185186,
+      "japanese_chars": 582,
+      "latin_chars": 228,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 71.9% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md",
       "status": "WARN",
       "file_bytes": 5212,
@@ -21284,6 +22374,24 @@
       "failures": [],
       "warnings": [
         "日本語比率 77.9% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+      "status": "WARN",
+      "file_bytes": 8337,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7274143302180686,
+      "japanese_chars": 934,
+      "latin_chars": 350,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.7% < 警告基準 80%"
       ]
     },
     {
@@ -21369,6 +22477,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+      "status": "PASS",
+      "file_bytes": 6193,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.995249406175772,
+      "japanese_chars": 838,
+      "latin_chars": 4,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
       "status": "PASS",
       "file_bytes": 23133,
@@ -21435,6 +22559,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md",
+      "status": "WARN",
+      "file_bytes": 6881,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7302284710017575,
+      "japanese_chars": 831,
+      "latin_chars": 307,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 73.0% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
@@ -21569,6 +22711,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
+      "status": "WARN",
+      "file_bytes": 7829,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7348484848484849,
+      "japanese_chars": 582,
+      "latin_chars": 210,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 73.5% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md",
       "status": "PASS",
       "file_bytes": 9213,
@@ -21632,6 +22792,24 @@
       "failures": [],
       "warnings": [
         "日本語比率 76.0% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md",
+      "status": "WARN",
+      "file_bytes": 6651,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7833333333333333,
+      "japanese_chars": 1175,
+      "latin_chars": 325,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 78.3% < 警告基準 80%"
       ]
     },
     {
@@ -21746,6 +22924,22 @@
       "japanese_ratio": 0.9765499518149695,
       "japanese_chars": 3040,
       "latin_chars": 73,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
+      "status": "PASS",
+      "file_bytes": 7536,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9074475777295734,
+      "japanese_chars": 1255,
+      "latin_chars": 128,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -21895,6 +23089,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md",
+      "status": "PASS",
+      "file_bytes": 8648,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8480697384806973,
+      "japanese_chars": 1362,
+      "latin_chars": 244,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
       "status": "PASS",
       "file_bytes": 7407,
@@ -21956,6 +23166,22 @@
       "japanese_ratio": 0.8472821397756687,
       "japanese_chars": 982,
       "latin_chars": 177,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+      "status": "PASS",
+      "file_bytes": 5993,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8697001034126164,
+      "japanese_chars": 841,
+      "latin_chars": 126,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -22025,6 +23251,42 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+      "status": "WARN",
+      "file_bytes": 6379,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7090739008419084,
+      "japanese_chars": 758,
+      "latin_chars": 311,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.9% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md",
+      "status": "WARN",
+      "file_bytes": 11673,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7461240310077519,
+      "japanese_chars": 770,
+      "latin_chars": 262,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 74.6% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
       "status": "PASS",
       "file_bytes": 7613,
@@ -22071,6 +23333,42 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+      "status": "WARN",
+      "file_bytes": 21636,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7973773265651438,
+      "japanese_chars": 1885,
+      "latin_chars": 479,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 79.7% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+      "status": "WARN",
+      "file_bytes": 5668,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7069444444444445,
+      "japanese_chars": 509,
+      "latin_chars": 211,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 70.7% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md",
@@ -22137,6 +23435,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+      "status": "PASS",
+      "file_bytes": 5715,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8224799286351472,
+      "japanese_chars": 922,
+      "latin_chars": 199,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md",
       "status": "PASS",
       "file_bytes": 10136,
@@ -22164,6 +23478,22 @@
       "japanese_ratio": 0.8269927536231884,
       "japanese_chars": 913,
       "latin_chars": 191,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+      "status": "PASS",
+      "file_bytes": 8820,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8792480115690527,
+      "japanese_chars": 1216,
+      "latin_chars": 167,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -22199,6 +23529,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+      "status": "WARN",
+      "file_bytes": 6385,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7927601809954751,
+      "japanese_chars": 876,
+      "latin_chars": 229,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 79.3% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md",
@@ -22385,6 +23733,22 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+      "status": "PASS",
+      "file_bytes": 8787,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9543889845094664,
+      "japanese_chars": 1109,
+      "latin_chars": 53,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md",
       "status": "PASS",
       "file_bytes": 10546,
@@ -22399,6 +23763,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+      "status": "WARN",
+      "file_bytes": 3587922,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7463026166097838,
+      "japanese_chars": 656,
+      "latin_chars": 223,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 74.6% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md",
@@ -22576,6 +23958,22 @@
       "japanese_ratio": 0.9612299465240641,
       "japanese_chars": 5033,
       "latin_chars": 203,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md",
+      "status": "PASS",
+      "file_bytes": 10277,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8983890954151177,
+      "japanese_chars": 1450,
+      "latin_chars": 164,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -23101,6 +24499,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md",
+      "status": "WARN",
+      "file_bytes": 7056,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7874293785310734,
+      "japanese_chars": 1115,
+      "latin_chars": 301,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 78.7% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md",
       "status": "PASS",
       "file_bytes": 8044,
@@ -23160,6 +24576,22 @@
       "japanese_ratio": 0.8518859245630175,
       "japanese_chars": 926,
       "latin_chars": 161,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md",
+      "status": "PASS",
+      "file_bytes": 12195,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9314173742651861,
+      "japanese_chars": 1426,
+      "latin_chars": 105,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -23267,6 +24699,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.01469-p-eagle-parallel-drafting-eagle-with-scalable-training.md",
+      "status": "WARN",
+      "file_bytes": 8718,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7209302325581395,
+      "japanese_chars": 1240,
+      "latin_chars": 480,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.1% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md",
       "status": "WARN",
       "file_bytes": 23644,
@@ -23282,6 +24732,56 @@
       "failures": [],
       "warnings": [
         "日本語比率 74.2% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.09316-effective-moe-based-llm-compression-by-exploiting-heterogeneous-inter-gr.md",
+      "status": "PASS",
+      "file_bytes": 4439,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.9012345679012346,
+      "japanese_chars": 803,
+      "latin_chars": 88,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.11192-melinoe-fine-tuning-enables-memory-efficient-inference-for-mixture-of-ex.md",
+      "status": "PASS",
+      "file_bytes": 6576,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8361809045226131,
+      "japanese_chars": 832,
+      "latin_chars": 163,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.16284-fast-kv-compaction-via-attention-matching.md",
+      "status": "WARN",
+      "file_bytes": 8821,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7507471607890018,
+      "japanese_chars": 1256,
+      "latin_chars": 417,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 75.1% < 警告基準 80%"
       ]
     },
     {
@@ -23346,6 +24846,22 @@
       "japanese_ratio": 0.9727047146401985,
       "japanese_chars": 5096,
       "latin_chars": 143,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md",
+      "status": "PASS",
+      "file_bytes": 9070,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.8419851682829436,
+      "japanese_chars": 1476,
+      "latin_chars": 277,
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
@@ -23591,6 +25107,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md",
+      "status": "WARN",
+      "file_bytes": 9500,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7878787878787878,
+      "japanese_chars": 1664,
+      "latin_chars": 448,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 78.8% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2606.11916-characterizing-software-aging-in-gpu-based-llm-serving-systems.md",
@@ -24151,6 +25685,24 @@
       "bare_english_terms": [],
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md",
+      "status": "WARN",
+      "file_bytes": 8030,
+      "prose_chars": 0,
+      "paragraphs": 0,
+      "method_paragraphs": 0,
+      "method_components": 0,
+      "method_detection": "not-evaluated",
+      "japanese_ratio": 0.7279812938425565,
+      "japanese_chars": 934,
+      "latin_chars": 349,
+      "bare_english_terms": [],
+      "failures": [],
+      "warnings": [
+        "日本語比率 72.8% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md",
