@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r99-screen-01-part-01-d382f8c771be",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01194",
+      "identity_tokens": [
+        "arXiv:2604.01194"
+      ],
+      "title": "AgentWatcher: A Rule-based Prompt Injection Monitor",
+      "reason": "AgentWatcher attributes output-relevant context spans and applies a rule-based monitor; restricting the monitor to a small context is intended to scale detection to long contexts and cut monitor computation. The paper is a prompt-injection defense, not an inference-system optimization, and does not quantify general serving savings.",
+      "source_url": "https://arxiv.org/abs/2604.01194",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10586-026-05939-8",
+      "identity_tokens": [
+        "DOI:10.1007/s10586-026-05939-8"
+      ],
+      "title": "Lightweight large language model based hierarchical federated learning for B5G enabled IoT intrusion detection networks",
+      "reason": "Publisher title and abstract identify hierarchical federated learning for IoT intrusion detection. The LLM is used in a cyber-detection application; no inference optimization or serving method is indicated.",
+      "source_url": "https://doi.org/10.1007/s10586-026-05939-8",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15644",
+      "identity_tokens": [
+        "arXiv:2603.15644"
+      ],
+      "title": "Tokenization Tradeoffs in Structured EHR Foundation Models",
+      "reason": "The paper compares tokenization strategies for structured EHR foundation models and evaluates downstream task performance. Tokenization/context representation may affect sequence size, but the study does not establish a direct inference-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2603.15644",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15030",
+      "identity_tokens": [
+        "arXiv:2602.15030"
+      ],
+      "title": "Image Generation with a Sphere Encoder",
+      "reason": "Sphere Encoder addresses image-generation representation/quality. The method and evaluation do not involve LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2602.15030",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22950",
+      "identity_tokens": [
+        "arXiv:2601.22950"
+      ],
+      "title": "Perplexity Cannot Always Tell Right from Wrong",
+      "reason": "This paper studies whether perplexity can identify correctness; its experiments assess model evaluation signals, not inference compute or runtime optimization.",
+      "source_url": "https://arxiv.org/abs/2601.22950",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    }
+  ]
+}
