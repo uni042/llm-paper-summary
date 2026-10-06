@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dfa04452a3e319bf-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.18194",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.18194",
+    "identity_tokens": [
+      "arXiv:2412.18194"
+    ],
+    "reason": "It contributes evaluation tasks/data for robotics, not an inference-efficiency method.",
+    "first_checked_at": "2026-10-06T23:50:34+00:00",
+    "last_checked_at": "2026-10-06T23:50:34+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks"
+  },
+  "processed_at": "2026-10-06T23:50:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dfa04452a3e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

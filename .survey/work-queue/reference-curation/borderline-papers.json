@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T23:37:21+00:00",
-  "record_count": 4256,
+  "updated_at": "2026-10-06T23:50:35+00:00",
+  "record_count": 4269,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -64966,6 +64966,202 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Language Model Beats Diffusion -- Tokenizer is Key to Visual Generation"
+    },
+    "arXiv:2106.12620": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.12620",
+      "identity_tokens": [
+        "arXiv:2106.12620"
+      ],
+      "reason": "The candidate is linked to the inference-systems lineage and its abstract suggests visual-token compute/memory savings; keep borderline until the primary method/results can be inspected.",
+      "first_checked_at": "2026-10-06T23:50:28+00:00",
+      "last_checked_at": "2026-10-06T23:50:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "IA-RED2: Interpretability-Aware Redundancy Reduction for Vision Transformers"
+    },
+    "arXiv:2501.01957": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.01957",
+      "identity_tokens": [
+        "arXiv:2501.01957"
+      ],
+      "reason": "The architecture addresses the latency overhead of separate ASR/TTS components, so it is plausibly related to multimodal serving; however, the paper does not quantify comparative latency or isolate an inference optimization. Retain as borderline pending a reproducible end-to-end latency benchmark.",
+      "first_checked_at": "2026-10-06T23:50:29+00:00",
+      "last_checked_at": "2026-10-06T23:50:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VITA-1.5: Towards GPT-4o Level Real-Time Vision and Speech Interaction"
+    },
+    "arXiv:2110.11945": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.11945",
+      "identity_tokens": [
+        "arXiv:2110.11945"
+      ],
+      "reason": "This is a plausible transferable attention design, but the source does not test language modeling, causal attention, or LLM serving. Retain as borderline pending a decoder-only long-context benchmark and quality comparison.",
+      "first_checked_at": "2026-10-06T23:50:29+00:00",
+      "last_checked_at": "2026-10-06T23:50:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SOFT: Softmax-free Transformer with Linear Complexity"
+    },
+    "DOI:10.1109/comst.2024.3393230": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/comst.2024.3393230",
+      "identity_tokens": [
+        "DOI:10.1109/comst.2024.3393230"
+      ],
+      "reason": "Borderline as deployment/offload background: it reviews inference partitioning and compression that could transfer to LLMs, but the paper is a general DL survey and presents no LLM-specific deployment evidence or original method.",
+      "first_checked_at": "2026-10-06T23:50:30+00:00",
+      "last_checked_at": "2026-10-06T23:50:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "End-Edge-Cloud Collaborative Computing for Deep Learning: A Comprehensive Survey"
+    },
+    "arXiv:2511.20857": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.20857",
+      "identity_tokens": [
+        "arXiv:2511.20857"
+      ],
+      "reason": "This is relevant to the persistent-memory lineage, but the source is an evaluation benchmark rather than a proposed efficiency method. It fixes API budgets and measures memory/agent performance, without establishing lower tokens, calls, latency, or compute; retain as borderline background.",
+      "first_checked_at": "2026-10-06T23:50:30+00:00",
+      "last_checked_at": "2026-10-06T23:50:30+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evo-Memory: Benchmarking LLM Agent Test-time Learning with Self-Evolving Memory"
+    },
+    "DOI:10.1145/3398209": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3398209",
+      "identity_tokens": [
+        "DOI:10.1145/3398209"
+      ],
+      "reason": "Retain as borderline only because on-device compression, quantization, and inference frameworks could inform edge LLM deployment. Official ACM full-text/PDF retrieval failed, so its exact treatment of language models and relevance could not be confirmed.",
+      "first_checked_at": "2026-10-06T23:50:31+00:00",
+      "last_checked_at": "2026-10-06T23:50:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deep Learning on Mobile and Embedded Devices"
+    },
+    "arXiv:2402.05930": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.05930",
+      "identity_tokens": [
+        "arXiv:2402.05930"
+      ],
+      "reason": "Borderline because browser-agent contexts can affect LLM serving cost, and the paper quantifies large HTML/token burdens. However, the contribution is a dataset/benchmark, not an inference optimization; keep only as context for future agent-serving comparisons.",
+      "first_checked_at": "2026-10-06T23:50:31+00:00",
+      "last_checked_at": "2026-10-06T23:50:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "WebLINX: Real-World Website Navigation with Multi-Turn Dialogue"
+    },
+    "arXiv:2508.07917": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.07917",
+      "identity_tokens": [
+        "arXiv:2508.07917"
+      ],
+      "reason": "The full text identifies latency and reasoning-token overhead in VLA control but does not provide a concrete reduction method or measured serving improvement. Keep borderline as a problem statement/application only.",
+      "first_checked_at": "2026-10-06T23:50:31+00:00",
+      "last_checked_at": "2026-10-06T23:50:31+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MolmoAct: Action Reasoning Models that can Reason in Space"
+    },
+    "arXiv:2408.12637": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.12637",
+      "identity_tokens": [
+        "arXiv:2408.12637"
+      ],
+      "reason": "Retain borderline because visual tokens directly affect multimodal LLM inference prefill work, but the source synthesizes design choices and tradeoffs without a new method or controlled serving-cost result.",
+      "first_checked_at": "2026-10-06T23:50:31+00:00",
+      "last_checked_at": "2026-10-06T23:50:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Building and better understanding vision-language models: insights and future directions"
+    },
+    "arXiv:2212.08013": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.08013",
+      "identity_tokens": [
+        "arXiv:2212.08013"
+      ],
+      "reason": "Borderline transfer candidate: larger image patches shorten visual sequences and can reduce vision-side work in a VLM, but the source evaluates image classification/detection, not end-to-end multimodal LLM inference or response quality.",
+      "first_checked_at": "2026-10-06T23:50:33+00:00",
+      "last_checked_at": "2026-10-06T23:50:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlexiViT: One Model for All Patch Sizes"
+    },
+    "arXiv:2507.04447": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.04447",
+      "identity_tokens": [
+        "arXiv:2507.04447"
+      ],
+      "reason": "Keep borderline: the full text reports a 91 ms VLA inference path and omits prediction heads at inference, but does not compare an inference optimization or measure language-model resource savings. The method could matter to VLA deployment, yet efficiency is not its demonstrated contribution.",
+      "first_checked_at": "2026-10-06T23:50:34+00:00",
+      "last_checked_at": "2026-10-06T23:50:34+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DreamVLA: A Vision-Language-Action Model Dreamed with Comprehensive World Knowledge"
+    },
+    "arXiv:2207.01405": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2207.01405",
+      "identity_tokens": [
+        "arXiv:2207.01405"
+      ],
+      "reason": "Borderline transfer candidate: low-bit integer quantization is relevant to LLM inference, but the method is validated on ViT image classification/Turing Tensor Cores and may not preserve decoder language quality or map to LLM kernels. Follow up only with an LLM quantization/quality benchmark.",
+      "first_checked_at": "2026-10-06T23:50:35+00:00",
+      "last_checked_at": "2026-10-06T23:50:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "I-ViT: Integer-only Quantization for Efficient Vision Transformer Inference"
+    },
+    "arXiv:2603.01145": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.01145",
+      "identity_tokens": [
+        "arXiv:2603.01145"
+      ],
+      "reason": "The existing persistent-memory lineage makes this worth retaining as borderline, but its stated objective is personalized capability accumulation. It adds query rewriting, retrieval, extraction/management, and skill injection; without a cost/quality comparison it cannot be treated as an inference-efficiency improvement.",
+      "first_checked_at": "2026-10-06T23:50:35+00:00",
+      "last_checked_at": "2026-10-06T23:50:35+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution"
     }
   }
 }
