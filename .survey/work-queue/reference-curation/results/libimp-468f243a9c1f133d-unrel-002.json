@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-468f243a9c1f133d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1902.03249",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1902.03249",
+    "identity_tokens": [
+      "arXiv:1902.03249"
+    ],
+    "reason": "挿入操作による部分自己回帰sequence generationで翻訳時の並列性を高めるが、主評価はWMT14翻訳品質とdecode orderingであり、LLM推論サービング・資源管理を最終対象としない。",
+    "first_checked_at": "2026-10-06T21:42:46+00:00",
+    "last_checked_at": "2026-10-06T21:42:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+    ],
+    "title": "Insertion Transformer: Flexible Sequence Generation via Insertion Operations"
+  },
+  "processed_at": "2026-10-06T21:42:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-468f243a9c1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

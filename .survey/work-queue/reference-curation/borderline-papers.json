@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T21:34:54+00:00",
-  "record_count": 4234,
+  "updated_at": "2026-10-06T21:42:58+00:00",
+  "record_count": 4233,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -9224,20 +9224,6 @@
         "papers/inference/05-speculative-decoding-moe/2026-2605.13319-pipesd.md"
       ],
       "title": "Measuring energy consumption for short code paths using RAPL"
-    },
-    "arXiv:2304.03271": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2304.03271",
-      "identity_tokens": [
-        "arXiv:2304.03271"
-      ],
-      "reason": "Quantifies impact but does not reduce inference compute/latency/cost or serving resources.",
-      "first_checked_at": "2026-10-05T02:12:08+00:00",
-      "last_checked_at": "2026-10-05T02:12:08+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07472-fast-heterogeneous-serving-allocation.md"
-      ],
-      "title": "Making AI Less 'Thirsty'"
     },
     "DOI:10.1145/93597.98720": {
       "classification": "borderline",
@@ -46698,9 +46684,9 @@
         "DOI:10.48550/arxiv.2012.03112",
         "arXiv:2012.03112"
       ],
-      "reason": "PIM/near-memory computingのmemory wall、device/architecture/system/compiler設計を体系化する基礎surveyで、LLM推論専用ではない一方、LLM向けPIM推論研究の直接的な基盤技術として関連するためborderline。",
+      "reason": "processing-in-memory (PIM)のprocessing-using-memory/processing-near-memory、3D-stacked memory、compiler/programming modelまでを整理する基盤surveyで、LLM推論のmemory bandwidth問題と強く関係する。一方、LLM/Transformer推論を最終適用先として評価する論文ではないため現行サーベイへの直接収録は境界的。",
       "first_checked_at": "2026-10-06T13:04:52+00:00",
-      "last_checked_at": "2026-10-06T13:04:52+00:00",
+      "last_checked_at": "2026-10-06T21:42:43+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
       ],

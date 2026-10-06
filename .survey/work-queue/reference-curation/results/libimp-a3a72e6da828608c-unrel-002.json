@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3a72e6da828608c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2208.11625",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2208.11625",
+    "identity_tokens": [
+      "arXiv:2208.11625"
+    ],
+    "reason": "federated learningでfull modelではなくsoft promptだけを共同学習して通信・local trainingを高速化する研究。効率化対象は分散学習/aggregationで、推論systemsではない。",
+    "first_checked_at": "2026-10-06T21:42:51+00:00",
+    "last_checked_at": "2026-10-06T21:42:51+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "PromptFL: Let Federated Participants Cooperatively Learn Prompts Instead of Models – Federated Learning in Age of Foundation Model"
+  },
+  "processed_at": "2026-10-06T21:42:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3a72e6da828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

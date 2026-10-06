@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b710ac51ae10fe4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2012.03112",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2012.03112",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2012.03112",
+      "arXiv:2012.03112"
+    ],
+    "reason": "processing-in-memory (PIM)のprocessing-using-memory/processing-near-memory、3D-stacked memory、compiler/programming modelまでを整理する基盤surveyで、LLM推論のmemory bandwidth問題と強く関係する。一方、LLM/Transformer推論を最終適用先として評価する論文ではないため現行サーベイへの直接収録は境界的。",
+    "first_checked_at": "2026-10-06T13:04:52+00:00",
+    "last_checked_at": "2026-10-06T21:42:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Modern Primer on Processing in Memory"
+  },
+  "processed_at": "2026-10-06T21:42:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b710ac51ae1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

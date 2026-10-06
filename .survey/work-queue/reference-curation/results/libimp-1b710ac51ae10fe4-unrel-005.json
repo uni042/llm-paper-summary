@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b710ac51ae10fe4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/1508244.1508270",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/1508244.1508270",
+    "identity_tokens": [
+      "DOI:10.1145/1508244.1508270"
+    ],
+    "reason": "low-power processorとflash memoryを組み合わせた2009年のdata-centric cluster architectureで、disk cluster比の性能/電力効率を評価する。階層memory研究の背景としては関連するが、LLM/Transformerのtrainingまたはinferenceへ適用・評価していない。",
+    "first_checked_at": "2026-10-06T21:42:45+00:00",
+    "last_checked_at": "2026-10-06T21:42:45+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+    ],
+    "title": "Gordon: using flash memory to build fast, power-efficient clusters for data-intensive applications"
+  },
+  "processed_at": "2026-10-06T21:42:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b710ac51ae1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

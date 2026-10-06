@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cc9441123f98dcbd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.10204",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.10204",
+    "identity_tokens": [
+      "DOI:10.1109/tcad.2024.3383347",
+      "arXiv:2308.10204"
+    ],
+    "reason": "LLM agentでEDAのtask decomposition・script generation・tool executionを自動化する応用研究。評価の中心はEDA task遂行能力で、LLM推論runtime・memory・serving効率の改善ではない。",
+    "first_checked_at": "2026-10-06T21:42:56+00:00",
+    "last_checked_at": "2026-10-06T21:42:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+    ],
+    "title": "ChatEDA: A Large Language Model Powered Autonomous Agent for EDA"
+  },
+  "processed_at": "2026-10-06T21:42:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc9441123f98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
