@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T08:10:23+00:00",
-  "record_count": 7424,
+  "updated_at": "2026-10-06T08:20:41+00:00",
+  "record_count": 7446,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -106933,6 +106933,314 @@
         "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
       ],
       "title": "The Mystery of the Pathological Path-star Task for Language Models"
+    },
+    "arXiv:2505.17646": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17646",
+      "identity_tokens": [
+        "arXiv:2505.17646"
+      ],
+      "reason": "Studies basin-like loss landscapes and robustness of LLM performance to parameter perturbations. It is an optimization/representation analysis, not a resource-efficiency method.",
+      "first_checked_at": "2026-10-06T08:20:30+00:00",
+      "last_checked_at": "2026-10-06T08:20:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Unveiling the Basin-Like Loss Landscape in Large Language Models"
+    },
+    "arXiv:2504.01278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.01278",
+      "identity_tokens": [
+        "arXiv:2504.01278"
+      ],
+      "reason": "Develops a multi-turn red-teaming agent with dual-level learning for adversarial testing. It concerns security evaluation/attacks rather than model inference efficiency.",
+      "first_checked_at": "2026-10-06T08:20:30+00:00",
+      "last_checked_at": "2026-10-06T08:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Strategize Globally, Adapt Locally: A Multi-Turn Red Teaming Agent with Dual-Level Learning"
+    },
+    "arXiv:2502.20204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.20204",
+      "identity_tokens": [
+        "arXiv:2502.20204"
+      ],
+      "reason": "Introduces Granite dense and sparse embedding models for retrieval, emphasizing representation and retrieval quality. It does not present an inference-compression or serving optimization relevant to the linked MiniLM compression work.",
+      "first_checked_at": "2026-10-06T08:20:30+00:00",
+      "last_checked_at": "2026-10-06T08:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Granite Embedding Models"
+    },
+    "arXiv:2211.04256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.04256",
+      "identity_tokens": [
+        "arXiv:2211.04256"
+      ],
+      "reason": "The paper studies the relationship between fairness and environmental sustainability in NLP systems. It analyzes trade-offs in social/environmental outcomes rather than proposing an inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-06T08:20:31+00:00",
+      "last_checked_at": "2026-10-06T08:20:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "Bridging Fairness and Environmental Sustainability in Natural Language Processing"
+    },
+    "arXiv:2502.11477": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11477",
+      "identity_tokens": [
+        "arXiv:2502.11477"
+      ],
+      "reason": "The paper learns diverse prompts for text-to-image reward optimization. It changes prompt selection for image quality, not inference compute or memory.",
+      "first_checked_at": "2026-10-06T08:20:31+00:00",
+      "last_checked_at": "2026-10-06T08:20:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Learning to Sample Effective and Diverse Prompts for Text-to-Image Generation"
+    },
+    "arXiv:2510.19791": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19791",
+      "identity_tokens": [
+        "arXiv:2510.19791"
+      ],
+      "reason": "ToolDreamer improves tool retrieval by reasoning over user requests and tool descriptions. It addresses agent tool-selection quality, not transformer inference efficiency.",
+      "first_checked_at": "2026-10-06T08:20:32+00:00",
+      "last_checked_at": "2026-10-06T08:20:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "ToolDreamer: Instilling LLM Reasoning Into Tool Retrievers"
+    },
+    "arXiv:2407.12665": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.12665",
+      "identity_tokens": [
+        "arXiv:2407.12665"
+      ],
+      "reason": "Patch-level training aggregates multiple tokens to cut LLM pretraining cost to about half, then uses token-level training to align inference behavior. It is explicitly a training-cost method and introduces no inference-time efficiency improvement.",
+      "first_checked_at": "2026-10-06T08:20:32+00:00",
+      "last_checked_at": "2026-10-06T08:20:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Beyond Next Token Prediction: Patch-Level Training for Large Language Models"
+    },
+    "arXiv:2410.14184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14184",
+      "identity_tokens": [
+        "arXiv:2410.14184"
+      ],
+      "reason": "MetaAlign performs inference-time preference alignment using additional optimization/generation to improve preference satisfaction. Its experiments focus on helpfulness and diverse opinions, not reducing compute, memory, latency, or serving cost.",
+      "first_checked_at": "2026-10-06T08:20:33+00:00",
+      "last_checked_at": "2026-10-06T08:20:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ],
+      "title": "MetaAlign: Align Large Language Models with Diverse Preferences during Inference Time"
+    },
+    "DOI:10.1038/s43246-025-00820-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s43246-025-00820-4",
+      "identity_tokens": [
+        "DOI:10.1038/s43246-025-00820-4"
+      ],
+      "reason": "The paper applies LLM-based extraction to screen cementitious material compositions and studies materials properties/decarbonization. LLMs are an enabling analysis tool; no inference efficiency contribution is made.",
+      "first_checked_at": "2026-10-06T08:20:33+00:00",
+      "last_checked_at": "2026-10-06T08:20:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Data-driven material screening of secondary and natural cementitious precursors"
+    },
+    "DOI:10.1109/vts65138.2025.11022936": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/vts65138.2025.11022936",
+      "identity_tokens": [
+        "DOI:10.1109/vts65138.2025.11022936"
+      ],
+      "reason": "ChipMnd applies LLMs to automate semiconductor/chip design tasks. Its target is using LLMs as EDA agents, not optimizing LLM inference, despite adjacency to accelerator papers.",
+      "first_checked_at": "2026-10-06T08:20:35+00:00",
+      "last_checked_at": "2026-10-06T08:20:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "ChipMnd: LLMs for Agile Chip Design"
+    },
+    "arXiv:2409.18454": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18454",
+      "identity_tokens": [
+        "arXiv:2409.18454"
+      ],
+      "reason": "The paper evaluates long-context LLMs for enterprise multi-document understanding and summarization. It presents an application/integration study without a concrete inference-efficiency method.",
+      "first_checked_at": "2026-10-06T08:20:35+00:00",
+      "last_checked_at": "2026-10-06T08:20:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Leveraging Long-Context Large Language Models for Multi-Document Understanding and Summarization in Enterprise Applications"
+    },
+    "arXiv:2506.15981": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15981",
+      "identity_tokens": [
+        "arXiv:2506.15981"
+      ],
+      "reason": "Double Entendre evaluates audio/lyrics fusion for detecting AI-generated lyrics. It is an application-specific detection model and does not investigate inference efficiency.",
+      "first_checked_at": "2026-10-06T08:20:36+00:00",
+      "last_checked_at": "2026-10-06T08:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Double Entendre: Robust Audio-Based AI-Generated Lyrics Detection via Multi-View Fusion"
+    },
+    "arXiv:2502.10433": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10433",
+      "identity_tokens": [
+        "arXiv:2502.10433"
+      ],
+      "reason": "Neural Genetic Search develops optimization/search algorithms in discrete spaces; the studied contribution is generic search methodology without a demonstrated LLM inference-efficiency application.",
+      "first_checked_at": "2026-10-06T08:20:36+00:00",
+      "last_checked_at": "2026-10-06T08:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Neural Genetic Search in Discrete Spaces"
+    },
+    "DOI:10.1117/1.jmm.25.1.013201": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/1.jmm.25.1.013201",
+      "identity_tokens": [
+        "DOI:10.1117/1.jmm.25.1.013201"
+      ],
+      "reason": "HeteroM-ILT uses a hybrid CNN/Mamba-style model to optimize semiconductor lithography masks; it discusses faster inference for the lithography task, not language-model inference or serving.",
+      "first_checked_at": "2026-10-06T08:20:37+00:00",
+      "last_checked_at": "2026-10-06T08:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "HeteroM-ILT: hybrid CNN and state space model for high-fidelity mask optimization"
+    },
+    "DOI:10.1007/s41060-025-00777-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s41060-025-00777-0",
+      "identity_tokens": [
+        "DOI:10.1007/s41060-025-00777-0"
+      ],
+      "reason": "The open-access Springer article evaluates active-learning classifier and feature-extractor combinations over more than 29,000 systematic-review screening simulations. It finds no universally best model and studies screening efficiency; it does not optimize LLM inference, compression, or serving. The MiniLMv2 linkage is contextual to screening models rather than a compression contribution.",
+      "first_checked_at": "2026-10-06T08:20:37+00:00",
+      "last_checked_at": "2026-10-06T08:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Large-scale simulation study of active learning models for systematic reviews"
+    },
+    "arXiv:2504.18598": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.18598",
+      "identity_tokens": [
+        "arXiv:2504.18598"
+      ],
+      "reason": "BadMoE studies backdoor attacks on MoE LLMs by routing-trigger optimization and dormant-expert infection. It is a security/vulnerability study, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-06T08:20:38+00:00",
+      "last_checked_at": "2026-10-06T08:20:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "BadMoE: Backdooring Mixture-of-Experts LLMs via Optimizing Routing Triggers and Infecting Dormant Experts"
+    },
+    "arXiv:2410.17785": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17785",
+      "identity_tokens": [
+        "arXiv:2410.17785"
+      ],
+      "reason": "TranSPORTmer is a task-specific transformer for multi-agent sports trajectory understanding. It unifies several prediction/classification tasks but does not study inference efficiency.",
+      "first_checked_at": "2026-10-06T08:20:38+00:00",
+      "last_checked_at": "2026-10-06T08:20:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "TranSPORTmer: A Holistic Approach to Trajectory Understanding in Multi-Agent Sports"
+    },
+    "arXiv:2407.04272": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04272",
+      "identity_tokens": [
+        "arXiv:2407.04272"
+      ],
+      "reason": "Dual-level lossy compression reduces all-to-all communication for distributed recommendation-model training. It targets training communication, not transformer/LLM inference or serving.",
+      "first_checked_at": "2026-10-06T08:20:38+00:00",
+      "last_checked_at": "2026-10-06T08:20:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "Accelerating Communication in Deep Learning Recommendation Model Training with Dual-Level Adaptive Lossy Compression"
+    },
+    "arXiv:2405.20032": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.20032",
+      "identity_tokens": [
+        "arXiv:2405.20032"
+      ],
+      "reason": "Promptus proposes transmitting prompts to regenerate video with Stable Diffusion as an alternative to streaming video. The efficiency is in communication/video delivery, not transformer/LLM inference.",
+      "first_checked_at": "2026-10-06T08:20:39+00:00",
+      "last_checked_at": "2026-10-06T08:20:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Promptus: Can Prompts Streaming Replace Video Streaming with Stable Diffusion"
+    },
+    "arXiv:2509.22506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.22506",
+      "identity_tokens": [
+        "arXiv:2509.22506"
+      ],
+      "reason": "This paper represents LLMs in a semantic task space to characterize model capabilities and task fit. It is a model-selection/analysis representation, not an inference efficiency improvement.",
+      "first_checked_at": "2026-10-06T08:20:40+00:00",
+      "last_checked_at": "2026-10-06T08:20:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Representing LLMs in Prompt Semantic Task Space"
+    },
+    "arXiv:2404.04846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04846",
+      "identity_tokens": [
+        "arXiv:2404.04846"
+      ],
+      "reason": "F-MALLOC allocates feed-forward neural memory for continual-learning machine translation to mitigate catastrophic forgetting. Its memory refers to task-specific continual-learning allocation, not inference memory/KV cache.",
+      "first_checked_at": "2026-10-06T08:20:40+00:00",
+      "last_checked_at": "2026-10-06T08:20:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "F-MALLOC: Feed-forward Memory Allocation for Continual Learning in Neural Machine Translation"
+    },
+    "arXiv:2502.15051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.15051",
+      "identity_tokens": [
+        "arXiv:2502.15051"
+      ],
+      "reason": "The paper studies algebraic approximation of latent manifolds in neural networks using vanishing ideals. It is theoretical representation analysis and reports no inference efficiency or model compression contribution.",
+      "first_checked_at": "2026-10-06T08:20:41+00:00",
+      "last_checked_at": "2026-10-06T08:20:41+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Approximating Latent Manifolds in Neural Networks via Vanishing Ideals"
     }
   }
 }

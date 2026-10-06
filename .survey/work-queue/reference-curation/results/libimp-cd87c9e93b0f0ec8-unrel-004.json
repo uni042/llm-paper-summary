@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd87c9e93b0f0ec8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.20032",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.20032",
+    "identity_tokens": [
+      "arXiv:2405.20032"
+    ],
+    "reason": "Promptus proposes transmitting prompts to regenerate video with Stable Diffusion as an alternative to streaming video. The efficiency is in communication/video delivery, not transformer/LLM inference.",
+    "first_checked_at": "2026-10-06T08:20:39+00:00",
+    "last_checked_at": "2026-10-06T08:20:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+    ],
+    "title": "Promptus: Can Prompts Streaming Replace Video Streaming with Stable Diffusion"
+  },
+  "processed_at": "2026-10-06T08:20:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd87c9e93b0f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

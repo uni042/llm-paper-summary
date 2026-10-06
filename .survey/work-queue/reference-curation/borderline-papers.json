@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T08:10:23+00:00",
-  "record_count": 2545,
+  "updated_at": "2026-10-06T08:20:41+00:00",
+  "record_count": 2581,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -39141,6 +39141,546 @@
       ],
       "borderline_recheck_count": 0,
       "title": "PreQuant: A Task-agnostic Quantization Approach for Pre-trained Language Models"
+    },
+    "arXiv:2205.09273": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.09273",
+      "identity_tokens": [
+        "arXiv:2205.09273"
+      ],
+      "reason": "Twist Decoding coordinates diverse generators during inference for text generation. It proposes a decoding/ensemble strategy and evaluates generation diversity/quality, but uses multiple generators and does not establish an efficiency improvement; retain for decoding-lineage review.",
+      "first_checked_at": "2026-10-06T08:20:29+00:00",
+      "last_checked_at": "2026-10-06T08:20:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Twist Decoding: Diverse Generators Guide Each Other"
+    },
+    "arXiv:2510.05197": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.05197",
+      "identity_tokens": [
+        "arXiv:2510.05197"
+      ],
+      "reason": "The work improves statistical estimation of pass@k and allocates samples dynamically to harder problems, reducing the cost of capability/risk forecasting. It optimizes evaluation/sampling for measurement, not production inference; useful as a measurement reference for k-bit/inference scaling.",
+      "first_checked_at": "2026-10-06T08:20:30+00:00",
+      "last_checked_at": "2026-10-06T08:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Prediction of Pass@k Scaling in Large Language Models"
+    },
+    "arXiv:2405.03882": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.03882",
+      "identity_tokens": [
+        "arXiv:2405.03882"
+      ],
+      "reason": "Trio-ViT combines post-training quantization and a dedicated accelerator for softmax-free vision transformers, reporting up to 3.6x–7.3x FPS gains at comparable accuracy. It is a concrete transformer quantization/accelerator result, but experiments are ViT-only and transfer to NLP is unestablished.",
+      "first_checked_at": "2026-10-06T08:20:30+00:00",
+      "last_checked_at": "2026-10-06T08:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Trio-ViT: Post-Training Quantization and Acceleration for Softmax-Free Efficient Vision Transformer"
+    },
+    "arXiv:2312.05417": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.05417",
+      "identity_tokens": [
+        "arXiv:2312.05417"
+      ],
+      "reason": "ESPN compresses multi-vector neural retrieval indexes to reduce memory/storage while preserving retrieval, including a memory-efficient partial re-ranking design. This is IR index efficiency rather than generation/inference of an LLM; the microexponent lineage connection is weak but plausible for retrieval systems.",
+      "first_checked_at": "2026-10-06T08:20:31+00:00",
+      "last_checked_at": "2026-10-06T08:20:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ESPN: Memory-Efficient Multi-vector Information Retrieval"
+    },
+    "DOI:10.1109/iccad57390.2023.10323752": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccad57390.2023.10323752",
+      "identity_tokens": [
+        "DOI:10.1109/iccad57390.2023.10323752"
+      ],
+      "reason": "IEEE publisher full text was not available. The abstract describes a flexible FPGA overlay processor for transformer workloads and reports speed/energy improvements, but implementation and evaluated model/task details could not be verified from primary full text.",
+      "first_checked_at": "2026-10-06T08:20:31+00:00",
+      "last_checked_at": "2026-10-06T08:20:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FET-OPU: A Flexible and Efficient FPGA-Based Overlay Processor for Transformer Networks"
+    },
+    "DOI:10.1145/3695053.3731100": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3695053.3731100",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731100"
+      ],
+      "reason": "ACM publisher full text was not accessible in this session. Metadata describes GPU support for scaled numeric formats (FP8/MX) and performance-density costs, directly adjacent to shared-microexponent hardware, but primary methods and inference evaluation could not be checked.",
+      "first_checked_at": "2026-10-06T08:20:32+00:00",
+      "last_checked_at": "2026-10-06T08:20:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Avant-Garde: Empowering GPUs with Scaled Numeric Formats"
+    },
+    "arXiv:2503.15748": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.15748",
+      "identity_tokens": [
+        "arXiv:2503.15748"
+      ],
+      "reason": "PARQ develops a piecewise-affine regularizer and aggregate proximal optimizer for quantization-aware training; experiments cover convolutional and transformer vision tasks. It is a general quantization algorithm but tested only in vision/QAT, not LLM inference.",
+      "first_checked_at": "2026-10-06T08:20:32+00:00",
+      "last_checked_at": "2026-10-06T08:20:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PARQ: Piecewise-Affine Regularized Quantization"
+    },
+    "arXiv:2502.08690": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.08690",
+      "identity_tokens": [
+        "arXiv:2502.08690"
+      ],
+      "reason": "Skrr skips and reuses text-encoder layers to reduce memory/computation in text-to-image diffusion. Its full text measures T2I quality and compute, but the target is diffusion text encoders rather than language-model serving; keep as a cross-domain memory-efficient encoder method.",
+      "first_checked_at": "2026-10-06T08:20:32+00:00",
+      "last_checked_at": "2026-10-06T08:20:32+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Skrr: Skip and Re-use Text Encoder Layers for Memory Efficient Text-to-Image Generation"
+    },
+    "SemanticScholar:a3f92751a612775b9b1638f01bd7ce79f58af7f8": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a3f92751a612775b9b1638f01bd7ce79f58af7f8",
+      "identity_tokens": [
+        "SemanticScholar:a3f92751a612775b9b1638f01bd7ce79f58af7f8"
+      ],
+      "reason": "The primary paper proposes training-time adaptation that teaches an LLM to answer easy scientific questions directly and invoke tools for harder ones, reducing unnecessary tool use while improving accuracy across six scientific benchmarks. It does not report inference latency, token, or compute savings, so its link to efficient reasoning is plausible but not established.",
+      "first_checked_at": "2026-10-06T08:20:33+00:00",
+      "last_checked_at": "2026-10-06T08:20:33+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adapting While Learning: Grounding LLMs for Scientific Problems with Tool Usage Adaptation"
+    },
+    "arXiv:2407.21046": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.21046",
+      "identity_tokens": [
+        "arXiv:2407.21046"
+      ],
+      "reason": "This paper gives a theoretical and practical review of generative masked language models, their capabilities and limitations. Non-autoregressive generation is relevant to the linked sequence-modeling family, but the paper is not itself an efficiency method or a demonstrated inference accelerator.",
+      "first_checked_at": "2026-10-06T08:20:33+00:00",
+      "last_checked_at": "2026-10-06T08:20:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Promises and Pitfalls of Generative Masked Language Modeling: Theoretical Framework and Practical Guidelines"
+    },
+    "arXiv:2311.08191": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.08191",
+      "identity_tokens": [
+        "arXiv:2311.08191"
+      ],
+      "reason": "GEC-DePenD proposes non-autoregressive grammatical-error correction with decoupled permutation and decoding, addressing sequential decoding for one correction task. Full-text evidence is task-specific and does not establish general LLM inference gains; keep as a weak NAR lineage connection.",
+      "first_checked_at": "2026-10-06T08:20:33+00:00",
+      "last_checked_at": "2026-10-06T08:20:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GEC-DePenD: Non-Autoregressive Grammatical Error Correction with Decoupled Permutation and Decoding"
+    },
+    "DOI:10.1007/s00521-023-08925-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00521-023-08925-y",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-023-08925-y"
+      ],
+      "reason": "Springer primary full text was not available in this session. The title indicates transfer learning and quantized deep-learning models for nail-melanoma classification; this is vision/application-specific and the linked Q8BERT relation cannot be assessed in detail.",
+      "first_checked_at": "2026-10-06T08:20:34+00:00",
+      "last_checked_at": "2026-10-06T08:20:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transfer learning-based quantized deep learning models for nail melanoma classification"
+    },
+    "arXiv:2207.09150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2207.09150",
+      "identity_tokens": [
+        "arXiv:2207.09150"
+      ],
+      "reason": "The study evaluates transformer usability for French QA and discusses resource demands/language coverage, but does not introduce or benchmark a concrete inference optimization. The relation to multilingual/quantized BERT is weak and application-specific.",
+      "first_checked_at": "2026-10-06T08:20:34+00:00",
+      "last_checked_at": "2026-10-06T08:20:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Usability of Transformers-based Models for a French Question-Answering Task"
+    },
+    "arXiv:2206.03318": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.03318",
+      "identity_tokens": [
+        "arXiv:2206.03318"
+      ],
+      "reason": "LegoNN modularizes encoder-decoder models so components can be reused across tasks without fine-tuning. The work concerns architecture reuse for MT/ASR rather than serving latency or inference-memory reduction; preserve as a weak sequence-model lineage connection.",
+      "first_checked_at": "2026-10-06T08:20:34+00:00",
+      "last_checked_at": "2026-10-06T08:20:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LegoNN: Building Modular Encoder-Decoder Models"
+    },
+    "DOI:10.1145/3687480": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3687480",
+      "identity_tokens": [
+        "DOI:10.1145/3687480"
+      ],
+      "reason": "ACM publisher full text was not accessible in this session. Available metadata identifies a survey of FPGA sparse-matrix multiplication, related to the FlightLLM accelerator hardware family, but its transformer/LLM applicability could not be checked in the primary text.",
+      "first_checked_at": "2026-10-06T08:20:35+00:00",
+      "last_checked_at": "2026-10-06T08:20:35+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FPGA-Based Sparse Matrix Multiplication Accelerators: From State-of-the-Art to Future Opportunities"
+    },
+    "DOI:10.21437/interspeech.2022-10169": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.21437/interspeech.2022-10169",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2022-10169"
+      ],
+      "reason": "The paper proposes iterative refinement of non-autoregressive attention-based attractors for end-to-end speaker diarization. It is a task-specific speech system; the body presents diarization quality rather than a general language-model inference optimization, so retain only as a weak NAR lineage connection.",
+      "first_checked_at": "2026-10-06T08:20:35+00:00",
+      "last_checked_at": "2026-10-06T08:20:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "End-to-End Neural Speaker Diarization with an Iterative Refinement of Non-Autoregressive Attention-based Attractors"
+    },
+    "arXiv:2505.19293": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.19293",
+      "identity_tokens": [
+        "arXiv:2505.19293"
+      ],
+      "reason": "100-LongBench proposes a length-controllable benchmark/metric that separates base model ability from long-context ability. It evaluates long-context enhancement methods, including memory-oriented work, but contributes evaluation rather than an inference optimization; useful as a measurement source, not direct method.",
+      "first_checked_at": "2026-10-06T08:20:35+00:00",
+      "last_checked_at": "2026-10-06T08:20:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "100-LongBench: Are de facto Long-Context Benchmarks Literally Evaluating Long-Context Ability?"
+    },
+    "arXiv:2403.14047": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.14047",
+      "identity_tokens": [
+        "arXiv:2403.14047"
+      ],
+      "reason": "Combines structured weight pruning and dynamic token pruning with an FPGA accelerator for DeiT-Small; reports up to 3.4x lower computation, 1.6x compression, and 12.8x latency reduction vs CPU with about 3% accuracy drop. Concrete transformer inference acceleration, but vision-only rather than LLM.",
+      "first_checked_at": "2026-10-06T08:20:36+00:00",
+      "last_checked_at": "2026-10-06T08:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerating ViT Inference on FPGA through Static and Dynamic Pruning"
+    },
+    "DOI:10.1109/iccv51070.2023.00009": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccv51070.2023.00009",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51070.2023.00009"
+      ],
+      "reason": "IEEE/CVF publisher full text was unavailable in this session. The title and abstract describe non-autoregressive image-to-road-network sequence generation, a task-specific vision method; the relationship to general NAR language modeling cannot be confirmed from primary body.",
+      "first_checked_at": "2026-10-06T08:20:36+00:00",
+      "last_checked_at": "2026-10-06T08:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Translating Images to Road Network: A Non-Autoregressive Sequence-to-Sequence Approach"
+    },
+    "arXiv:2308.13922": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.13922",
+      "identity_tokens": [
+        "arXiv:2308.13922"
+      ],
+      "reason": "Presents an FPGA accelerator for Swin Transformer, optimizing the architecture/dataflow for vision inference. It is a concrete transformer accelerator but focuses on image classification and does not show transfer to language models.",
+      "first_checked_at": "2026-10-06T08:20:36+00:00",
+      "last_checked_at": "2026-10-06T08:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Efficient FPGA-Based Accelerator for Swin Transformer"
+    },
+    "DOI:10.1145/3591302": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3591302",
+      "identity_tokens": [
+        "DOI:10.1145/3591302"
+      ],
+      "reason": "ACM publisher full text could not be accessed. Abstract describes register tiling to speed unstructured sparse neural-network inference, relevant to sparse-kernel execution but not specifically transformers/LLMs; retain as an indirect pruning-lineage candidate.",
+      "first_checked_at": "2026-10-06T08:20:36+00:00",
+      "last_checked_at": "2026-10-06T08:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Register Tiling for Unstructured Sparsity in Neural Network Inference"
+    },
+    "arXiv:2209.07617": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.07617",
+      "identity_tokens": [
+        "arXiv:2209.07617"
+      ],
+      "reason": "The paper develops a pruning schedule for N:M structured sparsity with a decaying mask during training. This supports hardware-friendly sparse models but is a training recipe, and the evaluated inference gains/LLM scope are limited.",
+      "first_checked_at": "2026-10-06T08:20:37+00:00",
+      "last_checked_at": "2026-10-06T08:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Training Recipe for N: M Structured Sparsity with Decaying Pruning Mask"
+    },
+    "DOI:10.1007/s00521-025-11218-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00521-025-11218-1",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-025-11218-1"
+      ],
+      "reason": "Springer publisher full text was unavailable in this session. The title/abstract describe a survey of vision-transformer video-anomaly detection, and the linked Q-BERT family makes quantization adjacency plausible, but no primary-body methods/evaluation could be checked.",
+      "first_checked_at": "2026-10-06T08:20:37+00:00",
+      "last_checked_at": "2026-10-06T08:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An overview of transformers for video anomaly detection"
+    },
+    "DOI:10.1109/tdsc.2024.3428538": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tdsc.2024.3428538",
+      "identity_tokens": [
+        "DOI:10.1109/tdsc.2024.3428538"
+      ],
+      "reason": "IEEE publisher page did not provide the paper body. The abstract describes BERT-based log anomaly detection and parsing for an application task; linked MiniLM compression is only indirect and cannot be checked against full text.",
+      "first_checked_at": "2026-10-06T08:20:37+00:00",
+      "last_checked_at": "2026-10-06T08:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Log Sequence Anomaly Detection Based on Template and Parameter Parsing via BERT"
+    },
+    "DOI:10.1145/3649476.3658810": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3649476.3658810",
+      "identity_tokens": [
+        "DOI:10.1145/3649476.3658810"
+      ],
+      "reason": "ACM publisher full text could not be accessed in this session. Abstract-level metadata describes FPGA attention fusion with tiled softmax for long transformer inputs and BERT-Base evaluation, which is plausibly linked to FTRANS, but full methods/results and limitations remain unverified.",
+      "first_checked_at": "2026-10-06T08:20:38+00:00",
+      "last_checked_at": "2026-10-06T08:20:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Long Sequence Input Processing in FPGA-Based Transformer Accelerators through Attention Fusion"
+    },
+    "DOI:10.1016/j.knosys.2025.113280": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2025.113280",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2025.113280"
+      ],
+      "reason": "The primary full text was unavailable, so despite the title/abstract indicating a weak or unrelated application, the lineage connection cannot be ruled out on primary-body evidence.",
+      "first_checked_at": "2026-10-06T08:20:38+00:00",
+      "last_checked_at": "2026-10-06T08:20:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Research hypothesis generation over scientific knowledge graphs"
+    },
+    "arXiv:2501.06357": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.06357",
+      "identity_tokens": [
+        "arXiv:2501.06357"
+      ],
+      "reason": "Mix-QViT assigns mixed precision using layer importance and quantization sensitivity for vision transformers. It studies quantized ViT accuracy and deployment, but does not evaluate language-model inference.",
+      "first_checked_at": "2026-10-06T08:20:39+00:00",
+      "last_checked_at": "2026-10-06T08:20:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mix-QViT: Mixed-Precision Vision Transformer Quantization Driven by Layer Importance and Quantization Sensitivity"
+    },
+    "DOI:10.1145/3649329.3656497": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3649329.3656497",
+      "identity_tokens": [
+        "DOI:10.1145/3649329.3656497"
+      ],
+      "reason": "ACM publisher full text was inaccessible. Abstract describes an FPGA transformer architecture supporting full N:M sparsity, directly adjacent to the linked FTRANS accelerator family, but full design, evaluation, and limitations need primary-body review.",
+      "first_checked_at": "2026-10-06T08:20:39+00:00",
+      "last_checked_at": "2026-10-06T08:20:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FNM-Trans: Efficient FPGA-based Transformer Architecture with Full N:M Sparsity"
+    },
+    "arXiv:2401.02721": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.02721",
+      "identity_tokens": [
+        "arXiv:2401.02721"
+      ],
+      "reason": "The paper combines CNN, Transformer, and Neural ODE components in an FPGA image-recognition accelerator. It reports cost/efficiency motivations but is vision hardware, not LLM inference.",
+      "first_checked_at": "2026-10-06T08:20:39+00:00",
+      "last_checked_at": "2026-10-06T08:20:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Cost-Efficient FPGA-Based CNN-Transformer Using Neural ODE"
+    },
+    "DOI:10.1145/3559009.3569691": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3559009.3569691",
+      "identity_tokens": [
+        "DOI:10.1145/3559009.3569691"
+      ],
+      "reason": "ACM full text was not accessible. The paper examines hardware-aware pruning to optimize sparse matrix multiplication on Ampere GPUs; useful to block-pruning/kernel execution lineage, but transformer-specific impact is not confirmed from primary text.",
+      "first_checked_at": "2026-10-06T08:20:39+00:00",
+      "last_checked_at": "2026-10-06T08:20:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM Routine on Ampere GPUs"
+    },
+    "arXiv:2112.11640": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.11640",
+      "identity_tokens": [
+        "arXiv:2112.11640"
+      ],
+      "reason": "Self-distillation mixup is a training method for non-autoregressive translation intended to improve NAR quality. It leaves the inference paradigm unchanged and does not establish a new compute/latency reduction beyond parallel decoding.",
+      "first_checked_at": "2026-10-06T08:20:40+00:00",
+      "last_checked_at": "2026-10-06T08:20:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Distillation Mixup Training for Non-autoregressive Neural Machine Translation"
+    },
+    "DOI:10.1145/3474085.3475545": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3474085.3475545",
+      "identity_tokens": [
+        "DOI:10.1145/3474085.3475545"
+      ],
+      "reason": "ACM primary full text was unavailable, so the scene-graph reasoning method cannot be conclusively checked against the linked non-autoregressive sequence-model lineage.",
+      "first_checked_at": "2026-10-06T08:20:40+00:00",
+      "last_checked_at": "2026-10-06T08:20:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mask and Predict: Multi-step Reasoning for Scene Graph Generation"
+    },
+    "DOI:10.1201/9781003162810": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1201/9781003162810",
+      "identity_tokens": [
+        "DOI:10.1201/9781003162810"
+      ],
+      "reason": "The primary full text was unavailable, so despite the title/abstract indicating a weak or unrelated application, the lineage connection cannot be ruled out on primary-body evidence.",
+      "first_checked_at": "2026-10-06T08:20:40+00:00",
+      "last_checked_at": "2026-10-06T08:20:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Low-Power Computer Vision"
+    },
+    "DOI:10.1145/3721145.3735111": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3721145.3735111",
+      "identity_tokens": [
+        "DOI:10.1145/3721145.3735111"
+      ],
+      "reason": "ACM full paper was not accessible. The abstract describes HBM-based processing-in-memory for sparse matrix-vector multiplication, a possible hardware primitive for the linked NPU-PIM LLM inference line; method and evaluated workloads cannot be verified from the primary body.",
+      "first_checked_at": "2026-10-06T08:20:41+00:00",
+      "last_checked_at": "2026-10-06T08:20:41+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications"
+    },
+    "arXiv:2211.06075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.06075",
+      "identity_tokens": [
+        "arXiv:2211.06075"
+      ],
+      "reason": "The work uses multi-task learning to strengthen non-autoregressive translation systems and improve generation quality. It inherits parallel decoding’s speed characteristics, but the contribution is training/quality rather than a direct inference-cost method.",
+      "first_checked_at": "2026-10-06T08:20:41+00:00",
+      "last_checked_at": "2026-10-06T08:20:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Helping the Weak Makes You Strong: Simple Multi-Task Learning Improves Non-Autoregressive Translators"
+    },
+    "DOI:10.1109/tcsvt.2025.3550901": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3550901",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3550901"
+      ],
+      "reason": "IEEE publisher full text was unavailable. The article concerns event-based video reconstruction using spiking neural networks; its linked 1-bit LLM topic does not establish a transformer inference connection.",
+      "first_checked_at": "2026-10-06T08:20:41+00:00",
+      "last_checked_at": "2026-10-06T08:20:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e787a2907434ffce-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.11640",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.11640",
+    "identity_tokens": [
+      "arXiv:2112.11640"
+    ],
+    "reason": "Self-distillation mixup is a training method for non-autoregressive translation intended to improve NAR quality. It leaves the inference paradigm unchanged and does not establish a new compute/latency reduction beyond parallel decoding.",
+    "first_checked_at": "2026-10-06T08:20:40+00:00",
+    "last_checked_at": "2026-10-06T08:20:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Self-Distillation Mixup Training for Non-autoregressive Neural Machine Translation"
+  },
+  "processed_at": "2026-10-06T08:20:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e787a2907434",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
