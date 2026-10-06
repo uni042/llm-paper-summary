@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r48-screen-01-part-07-529473a53be9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3680207.3723481",
+      "identity_tokens": [
+        "DOI:10.1145/3680207.3723481"
+      ],
+      "title": "When Device Delays Meet Data Heterogeneity in Federated AIoT Applications",
+      "reason": "Federated AIoT training under device delay/data heterogeneity, not LLM serving.",
+      "source_url": "https://doi.org/10.1145/3680207.3723481",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TFUZZ.2025.3609687",
+      "identity_tokens": [
+        "DOI:10.1109/TFUZZ.2025.3609687"
+      ],
+      "title": "An Efficient Survival Prediction Framework Based on Multimodal Multi-Instance Fuzzy Optimal Transport",
+      "reason": "Multimodal survival prediction, outside language-model inference.",
+      "source_url": "https://doi.org/10.1109/TFUZZ.2025.3609687",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.06.20.660799",
+      "identity_tokens": [
+        "DOI:10.1101/2025.06.20.660799"
+      ],
+      "title": "Scalable single-cell metagenomic analysis with Bascet and Zorn",
+      "reason": "Single-cell metagenomic analysis toolkit, outside language-model inference.",
+      "source_url": "https://doi.org/10.1101/2025.06.20.660799",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13814",
+      "identity_tokens": [
+        "arXiv:2609.13814"
+      ],
+      "title": "Realtime-Venus: A full-duplex interaction system with asynchronous delegation",
+      "reason": "System design is relevant to serving, but no verified end-to-end latency/throughput savings are reported.",
+      "source_url": "https://arxiv.org/abs/2609.13814",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11638",
+      "identity_tokens": [
+        "arXiv:2609.11638"
+      ],
+      "title": "Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation",
+      "reason": "Potentially adjacent to the linked generic sparse-attention lineage, but the primary work targets generative video rather than language models.",
+      "source_url": "https://arxiv.org/abs/2609.11638",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ]
+    }
+  ]
+}
