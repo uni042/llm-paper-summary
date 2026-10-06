@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r88-screen-01-part-02-8093ef7072b5",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.15542",
+      "identity_tokens": [
+        "arXiv:2510.15542"
+      ],
+      "title": "SpikeFit: Towards Optimal Deployment of Spiking Networks on Neuromorphic Hardware",
+      "reason": "Spiking-network deployment on neuromorphic hardware is a different model family and is not an LLM/Transformer inference contribution.",
+      "source_url": "https://arxiv.org/abs/2510.15542",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14826",
+      "identity_tokens": [
+        "arXiv:2510.14826"
+      ],
+      "title": "To Infinity and Beyond: Tool-Use Unlocks Length Generalization in State Space Models",
+      "reason": "Tool use for state-space-model length generalization addresses capability/sequence generalization, not inference efficiency or serving.",
+      "source_url": "https://arxiv.org/abs/2510.14826",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23963",
+      "identity_tokens": [
+        "arXiv:2509.23963"
+      ],
+      "title": "Evaluating the Robustness of Chinchilla Compute-Optimal Scaling",
+      "reason": "Compute-optimal scaling robustness concerns scaling/training laws rather than inference-time systems or model efficiency.",
+      "source_url": "https://arxiv.org/abs/2509.23963",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21487",
+      "identity_tokens": [
+        "arXiv:2509.21487"
+      ],
+      "title": "Dual-Head Reasoning Distillation: Improving Classifier Accuracy with Train-Time-Only Reasoning",
+      "reason": "Dual-head reasoning distillation is described as train-time-only classifier accuracy improvement; no inference cost reduction is indicated.",
+      "source_url": "https://arxiv.org/abs/2509.21487",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.08897",
+      "identity_tokens": [
+        "arXiv:2509.08897"
+      ],
+      "title": "Recurrence Meets Transformers for Universal Multimodal Retrieval",
+      "reason": "A plausible inference-efficiency, quantization, transformer-accelerator, or existing-lineage connection remains, but the primary full text could not be verified to assess method, evidence, and transferability.",
+      "source_url": "https://arxiv.org/abs/2509.08897",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    }
+  ]
+}
