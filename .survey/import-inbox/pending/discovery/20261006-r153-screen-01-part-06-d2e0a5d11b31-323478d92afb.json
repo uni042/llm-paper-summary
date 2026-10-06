@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r153-screen-01-part-06-d2e0a5d11b31",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02236",
+      "identity_tokens": [
+        "arXiv:2602.02236"
+      ],
+      "title": "Adaptive Control in Autonomous Driving via Real-Time Recurrent RL",
+      "reason": "一次資料の要旨を確認。We study online fine-tuning of pretrained control policies for autonomous driving using Real-Time Recurrent Reinforcement Learning (RTRRL), a memory-efficient algorithm that updates policy parameters at every time step without backpropagation through time. We extend RTRRL to support LrcSSM, a recently proposed nonlinear diagonal state-space model, and combine offline behavioral cloning with online",
+      "source_url": "https://arxiv.org/abs/2602.02236",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/BigComp68355.2026.00027",
+      "identity_tokens": [
+        "DOI:10.1109/BigComp68355.2026.00027"
+      ],
+      "title": "Linear Separability and Feature Importance Analysis in Large Language Model Representation Spaces",
+      "reason": "指定publisher/DOIの一次ページを取得できず、入力キャッシュ要旨を一次根拠として採用していない。",
+      "source_url": "https://doi.org/10.1109/BigComp68355.2026.00027",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00960",
+      "identity_tokens": [
+        "arXiv:2602.00960"
+      ],
+      "title": "Multimodal Scientific Learning Beyond Diffusions and Flows",
+      "reason": "一次資料の要旨を確認。Scientific machine learning (SciML) increasingly requires models that capture multimodal conditional uncertainty arising from ill-posed inverse problems, multistability, and chaotic dynamics. While recent work has favored highly expressive implicit generative models such as diffusion and flow-based methods, these approaches are often data-hungry, computationally costly, and misaligned with the str",
+      "source_url": "https://arxiv.org/abs/2602.00960",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08957",
+      "identity_tokens": [
+        "arXiv:2603.08957"
+      ],
+      "title": "Automated Tensor-Relational Decomposition for Large-Scale Sparse Tensor Computation",
+      "reason": "一次資料の要旨を確認。A  tensor-relational  computation is a relational computation where individual tuples carry vectors, matrices, or higher-dimensional arrays. An advantage of tensor-relational computation is that the overall computation can be executed on top of a relational system, inheriting the system's ability to automatically handle very large inputs with high levels of sparsity while high-performance kernels ",
+      "source_url": "https://arxiv.org/abs/2603.08957",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.apacoust.2025.111118",
+      "identity_tokens": [
+        "DOI:10.1016/j.apacoust.2025.111118"
+      ],
+      "title": "Hyper-MoA: Achieving high quality and parameter efficiency in few-shot multi-speaker TTS",
+      "reason": "few-shot multi-speaker text-to-speech向けMoE/parameter efficiencyは関連隣接領域だが、Elsevier一次本文を取得できず推論時のparameter/latency利得を確認できない。",
+      "source_url": "https://doi.org/10.1016/j.apacoust.2025.111118",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    }
+  ]
+}
