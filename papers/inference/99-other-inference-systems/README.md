@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（364本）
+## 自動生成の論文一覧（367本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -33,6 +33,10 @@
 - **2026-01 · [Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction](2026-2601.17668-fast-kvzip-efficient-and-accurate-llm-inference-with-gated-kv-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KVキャッシュ圧縮は長文脈LLMのGPUメモリを減らせるが、トークン重要度を毎回重く計算すると圧縮自体が遅延を増やす。Qwen2.5-1M、Qwen3、Gemma3系列で、最大70%のKV削除でもほぼ損失なしの品質を報告する。
+
+- **2025-12 · [Janus: Disaggregating Attention and Experts for Scalable MoE Inference](2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  混合専門家モデル（Mixture-of-Experts; MoE）は各トークンで一部専門家だけを実行するが、注意層と専門家層では資源特性が異なる。Janusは注意と専門家を別GPUサブクラスタへ分離し、それぞれを独立に拡縮する。
 
 - **2026-06 · [TWLA: Achieving Ternary Weights and Low-Bit Activations for LLMs via Post-Training Quantization](2026-2606.13054-twla-achieving-ternary-weights-and-low-bit-activations-for-llms-via-post.md)**  
   実装：[✓](https://github.com/Kishon-zzx/TWLA) ・ リポジトリ内被引用：3  
@@ -928,6 +932,10 @@
   実装：✓ ・ リポジトリ内被引用：30  
   統一最大値による非同期ソフトマックス、細長いGEMMの二重バッファ、ハードウェア適応データフローでLLM推論を最適化し、既存推論エンジン比平均1.37倍を報告する。
 
+- **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：29  
+  通常のTransformerは、各層で全トークンへ同じ注意機構とMLP計算を行う。論文では同等FLOPs・学習時間の比較対象と同等以上の性能を示し、post-学習 samplingでは段階時間を最大50%以上短縮する。
+
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
   実装：✓ ・ リポジトリ内被引用：28  
   RetrievalAttentionは、注意重みが少数トークンへ集中する動的疎性を利用し、全KVをGPUで走査する代わりに、CPU上の近似最近傍探索（Approximate Nearest Neighbor Search; ANNS）から現在の問い合わせに重要なKVだけを取得する学習不要方式である。
@@ -935,6 +943,10 @@
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
   複数の将来トークンを同時予測する補助ヘッドを学習し、推論時にそのヘッドを自己投機的復号へ再利用して別ドラフトモデルなしで生成を高速化する。
+
+- **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
+  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：27  
+  QuaRotはLLMの量子化を難しくする少数の大きな外れ値を、高精度チャネルとして残すのではなく、モデル出力を変えない直交回転で多数次元へ分散する。
 
 - **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：25  

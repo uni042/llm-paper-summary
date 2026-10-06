@@ -32,10 +32,15 @@
   "selection_reason": "各layerで処理token数を固定budgetに抑えつつtop-k routingでtoken単位に計算を動的配分する。条件付き計算・adaptive computation系統に直接接続し、post-training samplingで最大50%以上高速化を報告する。",
   "semantic_scholar_id": "a1f23f04421cdc62e80fe9f04c1ce60f4a6af9f0",
   "source_url": "https://arxiv.org/abs/2404.02258",
-  "status": "ready",
+  "status": "superseded",
   "title": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-06T15:55:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md",
+  "represented_canonical_id": "arXiv:2404.02258",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
