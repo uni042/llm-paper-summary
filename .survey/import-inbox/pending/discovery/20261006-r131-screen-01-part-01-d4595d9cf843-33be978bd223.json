@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r131-screen-01-part-01-d4595d9cf843",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JIOT.2024.3510712",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2024.3510712"
+      ],
+      "title": "Fall-Mamba: A Multimodal Fusion and Masked Mamba-Based Approach for Fall Detection",
+      "reason": "IEEE primary article/abstract could not be retrieved through the available source reader; cached candidate metadata alone cannot establish primary-source evidence.",
+      "source_url": "https://doi.org/10.1109/JIOT.2024.3510712",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10489-025-06516-z",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-025-06516-z"
+      ],
+      "title": "Adaptive patch selection to improve Vision Transformers through Reinforcement Learning",
+      "reason": "The primary abstract centers on vision-transformer image-patch classification; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "source_url": "https://doi.org/10.1007/s10489-025-06516-z",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/biosci/biaf021",
+      "identity_tokens": [
+        "DOI:10.1093/biosci/biaf021"
+      ],
+      "title": "A vision of human–AI collaboration for enhanced biological collection curation and research",
+      "reason": "The primary abstract centers on biological collection curation and human-AI collaboration; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "source_url": "https://doi.org/10.1093/biosci/biaf021",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.21801",
+      "identity_tokens": [
+        "arXiv:2503.21801"
+      ],
+      "title": "Efficient Joint Prediction of Multiple Future Tokens",
+      "reason": "JTP is a light auxiliary joint-future-token training objective with claimed negligible added training cost. It mainly tests synthetic star graphs; GPT-2 162M is only a language-model sanity check and has slightly worse next-token loss. It is not speculative decoding or a measured serving-speed technique.",
+      "source_url": "https://arxiv.org/abs/2503.21801",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15461",
+      "identity_tokens": [
+        "arXiv:2501.15461"
+      ],
+      "title": "Mamba-Based Graph Convolutional Networks: Tackling Over-smoothing with Selective State Space",
+      "reason": "The primary abstract centers on graph convolution and graph-node over-smoothing; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "source_url": "https://arxiv.org/abs/2501.15461",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    }
+  ]
+}
