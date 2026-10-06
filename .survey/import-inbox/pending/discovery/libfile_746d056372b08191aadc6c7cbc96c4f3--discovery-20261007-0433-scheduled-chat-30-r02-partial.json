@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-0433-scheduled-chat-30/r02",
+  "reference_main_sha": "f21c5cd0e3eeffefb0a51c33ecfde957ecceb050",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.04129",
+      "identity_tokens": [
+        "arXiv:2303.04129"
+      ],
+      "title": "Foundation Models for Decision Making: Problems, Methods, and Opportunities",
+      "reason": "foundation modelを意思決定・計画・制御・強化学習へ統合する方法論surveyで、推論サービングやメモリ・カーネル等の実行効率化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2303.04129",
+      "body_check": "abstract_screen_only: abstractでdecision making、planning、optimal control、reinforcement learningと実世界agent応用の整理が主題と明確なため本文未読で対象外確定。",
+      "first_checked_at": "2026-10-07T04:49:00+09:00",
+      "last_checked_at": "2026-10-07T04:49:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10342-agentserve-consumer-gpu-agentic-serving.md"
+      ],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sp.2008.21",
+      "identity_tokens": [
+        "DOI:10.1109/sp.2008.21"
+      ],
+      "title": "Spot Me if You Can: Uncovering Spoken Phrases in Encrypted VoIP Conversations",
+      "reason": "暗号化VoIPのpacket lengthから発話phraseを推定するtraffic-analysis攻撃と緩和策のセキュリティ研究で、LLM推論システムとは対象が異なる。",
+      "source_url": "https://doi.org/10.1109/SP.2008.21",
+      "body_check": "abstract_screen_only: abstractでvariable-bit-rate codecの暗号化packet lengthからphraseを識別する攻撃とVoIP encryptionの安全性評価が主題と明確なため本文未読で対象外確定。",
+      "first_checked_at": "2026-10-07T04:50:00+09:00",
+      "last_checked_at": "2026-10-07T04:50:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md"
+      ],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-49478-2_1",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-49478-2_1"
+      ],
+      "title": "A Statistical View on Bilingual Lexicon Extraction: From Parallel Corpora to Non-parallel Corpora",
+      "reason": "parallel/non-parallel corporaからのbilingual lexicon extractionを扱う統計的自然言語処理研究で、LLM推論runtimeやserving効率化を扱わない。",
+      "source_url": "https://doi.org/10.1007/3-540-49478-2_1",
+      "body_check": "abstract_screen_only: 題名・書誌・要旨上の研究対象がbilingual lexicon extractionとcorpus statisticsであり、LLM inference systems対象外であることが明白なため本文未読で確定。",
+      "first_checked_at": "2026-10-07T04:51:00+09:00",
+      "last_checked_at": "2026-10-07T04:51:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.06619",
+      "identity_tokens": [
+        "arXiv:2402.06619"
+      ],
+      "title": "Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning",
+      "reason": "65言語のhuman-curated instruction datasetと114言語・5.13億instanceのmultilingual collectionを構築するデータセット研究で、推論効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2402.06619",
+      "body_check": "abstract_screen_only: abstractでinstruction fine-tuning用Aya Dataset/Collection/Evaluation Suiteの構築と多言語resource gap解消が主題と明確なため本文未読で対象外確定。",
+      "first_checked_at": "2026-10-07T04:52:00+09:00",
+      "last_checked_at": "2026-10-07T04:52:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "worklist_rank": 57
+    }
+  ]
+}
