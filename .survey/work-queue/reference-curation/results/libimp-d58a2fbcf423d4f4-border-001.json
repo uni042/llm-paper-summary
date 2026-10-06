@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d58a2fbcf423d4f4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/southeastcon56624.2025.10971638",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/southeastcon56624.2025.10971638",
+    "identity_tokens": [
+      "DOI:10.1109/southeastcon56624.2025.10971638"
+    ],
+    "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+    "first_checked_at": "2026-10-06T12:07:33+00:00",
+    "last_checked_at": "2026-10-06T12:07:33+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Large Language Models on Small Resource-Constrained Systems: Performance Analysis and Trade-Offs"
+  },
+  "processed_at": "2026-10-06T12:07:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d58a2fbcf423",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

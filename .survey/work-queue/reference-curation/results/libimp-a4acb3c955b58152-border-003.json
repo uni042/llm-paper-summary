@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4acb3c955b58152-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.15423",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.15423",
+    "identity_tokens": [
+      "arXiv:2508.15423"
+    ],
+    "reason": "本文はcode understanding向けencoder PLMのKDを調査し、decoder-only LLMは明示的にscope外とする。 小型encoder code-PLM中心で、著者自身がLLMを対象外とし一般LLM inferenceへの外挿に注意。",
+    "first_checked_at": "2026-10-06T12:07:31+00:00",
+    "last_checked_at": "2026-10-06T12:07:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Empirical Study of Knowledge Distillation for Code Understanding Tasks"
+  },
+  "processed_at": "2026-10-06T12:07:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4acb3c955b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

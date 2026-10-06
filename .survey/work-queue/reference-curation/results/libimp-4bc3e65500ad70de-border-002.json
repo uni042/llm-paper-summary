@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4bc3e65500ad70de-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3665314.3670806",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3665314.3670806",
+    "identity_tokens": [
+      "DOI:10.1145/3665314.3670806"
+    ],
+    "reason": "ACM DOI本文を開こうとしたがHTTP 403。書誌/要旨はHessian-based row-wise mixed-precision quantizationとFPGA accelerationを示す。 一次本文取得不能のため最終的にborderlineへ記録。",
+    "first_checked_at": "2026-10-06T12:07:28+00:00",
+    "last_checked_at": "2026-10-06T12:07:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hardware-friendly Hessian-driven Row-wise Quantization and FPGA Acceleration for Transformer-based Models"
+  },
+  "processed_at": "2026-10-06T12:07:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4bc3e65500ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

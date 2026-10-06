@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-25bbc62ed54ee837-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3580305.3599416",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3580305.3599416",
+    "identity_tokens": [
+      "DOI:10.1145/3580305.3599416"
+    ],
+    "reason": "著者/公的機関の公開先とAmazon Science PDFを試したが、本文を取得できず、要旨からtoken embedding圧縮の可能性のみ確認。 一次本文取得不能のため最終的にborderlineへ記録。",
+    "first_checked_at": "2026-10-06T12:07:24+00:00",
+    "last_checked_at": "2026-10-06T12:07:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LightToken: A Task and Model-agnostic Lightweight Token Embedding Framework for Pre-trained Language Models"
+  },
+  "processed_at": "2026-10-06T12:07:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-25bbc62ed54e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

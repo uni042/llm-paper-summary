@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T11:42:59+00:00",
-  "record_count": 8093,
+  "updated_at": "2026-10-06T12:07:34+00:00",
+  "record_count": 8114,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -116308,6 +116308,300 @@
         "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
       ],
       "title": "IPdb: A High-Precision IP Level Industry Categorization of Web Services"
+    },
+    "DOI:10.1109/fccm62733.2025.00041": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/fccm62733.2025.00041",
+      "identity_tokens": [
+        "DOI:10.1109/fccm62733.2025.00041"
+      ],
+      "reason": "FPGA wave simulation for scientific computing, unrelated to language-model inference.",
+      "first_checked_at": "2026-10-06T12:07:21+00:00",
+      "last_checked_at": "2026-10-06T12:07:21+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "title": "HighWave: Large-Scale High-Bandwidth Wave Simulations on FPGAs"
+    },
+    "arXiv:2504.21239": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21239",
+      "identity_tokens": [
+        "arXiv:2504.21239"
+      ],
+      "reason": "Memorization/knowledge injection analysis in gated LLMs, not an inference optimization method.",
+      "first_checked_at": "2026-10-06T12:07:21+00:00",
+      "last_checked_at": "2026-10-06T12:07:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "title": "Memorization and Knowledge Injection in Gated LLMs"
+    },
+    "arXiv:2504.17070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.17070",
+      "identity_tokens": [
+        "arXiv:2504.17070"
+      ],
+      "reason": "Trojan attacks on robot task-planning systems, unrelated to inference efficiency.",
+      "first_checked_at": "2026-10-06T12:07:21+00:00",
+      "last_checked_at": "2026-10-06T12:07:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems"
+    },
+    "DOI:10.3390/journalmedia6020085": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/journalmedia6020085",
+      "identity_tokens": [
+        "DOI:10.3390/journalmedia6020085"
+      ],
+      "reason": "WhatsApp/Telegramのpolitical narrativeを分析する社会科学研究で、model inference efficiencyの手法を含まない。",
+      "first_checked_at": "2026-10-06T12:07:22+00:00",
+      "last_checked_at": "2026-10-06T12:07:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Anti-Sustainability Narratives in Chat Apps: What Shapes the Brazilian Far-Right Discussion About Socio-Environmental Issues on WhatsApp and Telegram"
+    },
+    "arXiv:2504.15120": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.15120",
+      "identity_tokens": [
+        "arXiv:2504.15120"
+      ],
+      "reason": "Arabic SLMへlanguage knowledgeを注入する研究で、推論resource optimizationではない。",
+      "first_checked_at": "2026-10-06T12:07:22+00:00",
+      "last_checked_at": "2026-10-06T12:07:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Kuwain 1.5B: An Arabic SLM via Language Injection"
+    },
+    "arXiv:2504.13535": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.13535",
+      "identity_tokens": [
+        "arXiv:2504.13535"
+      ],
+      "reason": "条件付きflow matchingによるmusic generationで、LLM inference/resource optimizationの対象外。",
+      "first_checked_at": "2026-10-06T12:07:22+00:00",
+      "last_checked_at": "2026-10-06T12:07:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "MusFlow: Multimodal Music Generation via Conditional Flow Matching"
+    },
+    "arXiv:2302.11187": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.11187",
+      "identity_tokens": [
+        "arXiv:2302.11187"
+      ],
+      "reason": "本文はdistillation時のbiasを最終層移植で補正する研究で、推論コスト/メモリ/速度の削減を目的・評価していない。",
+      "first_checked_at": "2026-10-06T12:07:25+00:00",
+      "last_checked_at": "2026-10-06T12:07:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "Debiased Distillation by Transplanting the Last Layer"
+    },
+    "arXiv:2205.04259": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.04259",
+      "identity_tokens": [
+        "arXiv:2205.04259"
+      ],
+      "reason": "Deep manifold sampling for sampling methodology; no language model, transformer inference, model compression, or serving contribution is indicated.",
+      "first_checked_at": "2026-10-06T12:07:26+00:00",
+      "last_checked_at": "2026-10-06T12:07:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Multi-segment preserving sampling for deep manifold sampler"
+    },
+    "arXiv:2510.18728": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.18728",
+      "identity_tokens": [
+        "arXiv:2510.18728"
+      ],
+      "reason": "Adaptive multi-turn jailbreak attack evaluation; security attack generation, not inference efficiency or model-system optimization.",
+      "first_checked_at": "2026-10-06T12:07:26+00:00",
+      "last_checked_at": "2026-10-06T12:07:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "HarmNet: A Framework for Adaptive Multi-Turn Jailbreak Attacks on Large Language Models"
+    },
+    "DOI:10.1109/iccv51701.2025.00503": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51701.2025.00503",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51701.2025.00503"
+      ],
+      "reason": "3D visual groundingの視覚推論タスクで、LLM inference/resource optimizationの手法ではない。",
+      "first_checked_at": "2026-10-06T12:07:27+00:00",
+      "last_checked_at": "2026-10-06T12:07:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "VGMamba: Attribute-to-Location Clue Reasoning for Quantity-Agnostic 3D Visual Grounding"
+    },
+    "arXiv:2406.05364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05364",
+      "identity_tokens": [
+        "arXiv:2406.05364"
+      ],
+      "reason": "要旨と題名はon-device SLMのtrust/ethics評価であり、推論計算・メモリ・レイテンシを改善する手法を提示しない。",
+      "first_checked_at": "2026-10-06T12:07:28+00:00",
+      "last_checked_at": "2026-10-06T12:07:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Is On-Device AI Broken and Exploitable? Assessing the Trust and Ethics in Small Language Models"
+    },
+    "arXiv:2503.08051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08051",
+      "identity_tokens": [
+        "arXiv:2503.08051"
+      ],
+      "reason": "LLM recommendationのpopularity biasを是正する研究で、system/inference efficiency改善を扱わない。",
+      "first_checked_at": "2026-10-06T12:07:30+00:00",
+      "last_checked_at": "2026-10-06T12:07:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Neutralizing Popularity Bias in LLM-based Recommendation via Counterfactual Reasoning Guidelines"
+    },
+    "DOI:10.1101/2024.11.18.24317510": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2024.11.18.24317510",
+      "identity_tokens": [
+        "DOI:10.1101/2024.11.18.24317510"
+      ],
+      "reason": "眼科問診のRAG品質benchmarkで、推論資源を改善する方法を提示しない。",
+      "first_checked_at": "2026-10-06T12:07:30+00:00",
+      "last_checked_at": "2026-10-06T12:07:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Advancing Question-Answering in Ophthalmology with Retrieval Augmented Generations (RAG): Benchmarking Open-source and Proprietary Large Language Models"
+    },
+    "DOI:10.15625/1813-9663/22770": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.15625/1813-9663/22770",
+      "identity_tokens": [
+        "DOI:10.15625/1813-9663/22770"
+      ],
+      "reason": "人間行動認識のmultimodal Mamba分類モデルで、LLM推論系統との具体的な技術接続がない。",
+      "first_checked_at": "2026-10-06T12:07:31+00:00",
+      "last_checked_at": "2026-10-06T12:07:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Mamba-MHAR: An efficient multimodal framework for human action recognition"
+    },
+    "DOI:10.3390/e27090959": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/e27090959",
+      "identity_tokens": [
+        "DOI:10.3390/e27090959"
+      ],
+      "reason": "RGBからhyperspectral imageを再構成するvision taskで、LLM推論効率の対象外。",
+      "first_checked_at": "2026-10-06T12:07:31+00:00",
+      "last_checked_at": "2026-10-06T12:07:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Reconstructing Hyperspectral Images from RGB Images by Multi-Scale Spectral–Spatial Sequence Learning"
+    },
+    "DOI:10.3390/ai6060127": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ai6060127",
+      "identity_tokens": [
+        "DOI:10.3390/ai6060127"
+      ],
+      "reason": "トンネル掘削機の地質条件/parameter予測を対象にし、language model inferenceではない。",
+      "first_checked_at": "2026-10-06T12:07:32+00:00",
+      "last_checked_at": "2026-10-06T12:07:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ],
+      "title": "NSA-CHG: An Intelligent Prediction Framework for Real-Time TBM Parameter Optimization in Complex Geological Conditions"
+    },
+    "arXiv:2510.17947": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.17947",
+      "identity_tokens": [
+        "arXiv:2510.17947"
+      ],
+      "reason": "Multi-turn exploit generation framework; security attack generation, not inference efficiency or model-system optimization.",
+      "first_checked_at": "2026-10-06T12:07:32+00:00",
+      "last_checked_at": "2026-10-06T12:07:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "PLAGUE: Plug-and-play framework for Lifelong Adaptive Generation of Multi-turn Exploits"
+    },
+    "arXiv:2510.07718": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.07718",
+      "identity_tokens": [
+        "arXiv:2510.07718"
+      ],
+      "reason": "Sub-question-driven graph RAG framework; retrieval/reasoning architecture rather than a concrete inference compute, memory, latency, quantization, or serving optimization.",
+      "first_checked_at": "2026-10-06T12:07:32+00:00",
+      "last_checked_at": "2026-10-06T12:07:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "SUBQRAG: Sub-Question Driven Dynamic Graph RAG"
+    },
+    "DOI:10.1007/s11554-025-01764-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11554-025-01764-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11554-025-01764-1"
+      ],
+      "reason": "Mamba-based miner unsafe-behavior recognition is a domain-specific perception task; no LLM inference/efficiency contribution is indicated.",
+      "first_checked_at": "2026-10-06T12:07:33+00:00",
+      "last_checked_at": "2026-10-06T12:07:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Real-time recognition of miner unsafe behaviors via skeleton-based spatiotemporal modeling with Mamba"
+    },
+    "arXiv:2507.05674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.05674",
+      "identity_tokens": [
+        "arXiv:2507.05674"
+      ],
+      "reason": "Diffusion/RL quadruped robot control; no LLM inference efficiency contribution is indicated.",
+      "first_checked_at": "2026-10-06T12:07:33+00:00",
+      "last_checked_at": "2026-10-06T12:07:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Integrating Diffusion-based Multi-task Learning with Online Reinforcement Learning for Robust Quadruped Robot Control"
+    },
+    "arXiv:2502.10896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10896",
+      "identity_tokens": [
+        "arXiv:2502.10896"
+      ],
+      "reason": "Conversational speech biomarkers for dementia detection is an application/system study, not an inference efficiency contribution in this candidate context.",
+      "first_checked_at": "2026-10-06T12:07:34+00:00",
+      "last_checked_at": "2026-10-06T12:07:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Developing Conversational Speech Systems for Robots to Detect Speech Biomarkers of Cognition in People Living with Dementia"
     }
   }
 }

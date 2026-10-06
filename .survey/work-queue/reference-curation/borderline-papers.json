@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T11:42:58+00:00",
-  "record_count": 2881,
+  "updated_at": "2026-10-06T12:07:34+00:00",
+  "record_count": 2917,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -44209,6 +44209,550 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Benchmarking the Responsiveness of Open-Source Text-to-Speech Systems"
+    },
+    "DOI:10.1109/dsp65409.2025.11075195": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dsp65409.2025.11075195",
+      "identity_tokens": [
+        "DOI:10.1109/dsp65409.2025.11075195"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:20+00:00",
+      "last_checked_at": "2026-10-06T12:07:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LRP-QViT: Mixed-Precision Vision Transformer Quantization Using Layer Importance Score"
+    },
+    "DOI:10.1109/tc.2024.3517751": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.2024.3517751",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2024.3517751"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:21+00:00",
+      "last_checked_at": "2026-10-06T12:07:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware Accelerated Vision Transformer via Heterogeneous Architecture Design and Adaptive Dataflow Mapping"
+    },
+    "DOI:10.1109/iscas56072.2025.11044063": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas56072.2025.11044063",
+      "identity_tokens": [
+        "DOI:10.1109/iscas56072.2025.11044063"
+      ],
+      "reason": "一次出版社本文を試したが取得できず、IEEEの書誌・要旨はSMX量子化形式とhardware engineを述べる。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:22+00:00",
+      "last_checked_at": "2026-10-06T12:07:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Super Microscaling: Enhancing Precision and Hardware Efficiency in Deep Learning Quantization"
+    },
+    "DOI:10.1016/j.engappai.2025.110371": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.110371",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.110371"
+      ],
+      "reason": "出版社の本文にアクセスしたところHTTP 403。検索可能な出版社記事本文抜粋はECG分類専用の3-bit重み/activation量子化を示す。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:22+00:00",
+      "last_checked_at": "2026-10-06T12:07:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient quantized transformer for atrial fibrillation detection in cross-domain datasets"
+    },
+    "DOI:10.1145/3635157": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3635157",
+      "identity_tokens": [
+        "DOI:10.1145/3635157"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:23+00:00",
+      "last_checked_at": "2026-10-06T12:07:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Hardware Design Framework for Computer Vision Models Based on Reconfigurable Devices"
+    },
+    "DOI:10.1145/3583781.3590232": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3583781.3590232",
+      "identity_tokens": [
+        "DOI:10.1145/3583781.3590232"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:23+00:00",
+      "last_checked_at": "2026-10-06T12:07:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stochastically Pruning Large Language Models Using Sparsity Regularization and Compressive Sensing"
+    },
+    "DOI:10.1109/ipdpsw59300.2023.00027": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ipdpsw59300.2023.00027",
+      "identity_tokens": [
+        "DOI:10.1109/ipdpsw59300.2023.00027"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:23+00:00",
+      "last_checked_at": "2026-10-06T12:07:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware Accelerator for Transformer based End-to-End Automatic Speech Recognition System"
+    },
+    "arXiv:2210.10416": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.10416",
+      "identity_tokens": [
+        "arXiv:2210.10416"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:23+00:00",
+      "last_checked_at": "2026-10-06T12:07:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hybrid-Regressive Neural Machine Translation"
+    },
+    "DOI:10.1109/aicas54282.2022.9869965": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aicas54282.2022.9869965",
+      "identity_tokens": [
+        "DOI:10.1109/aicas54282.2022.9869965"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:24+00:00",
+      "last_checked_at": "2026-10-06T12:07:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing Exponent Bias for Sub-8bit Floating-Point Inference of Fine-tuned Transformers"
+    },
+    "arXiv:2310.00574": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.00574",
+      "identity_tokens": [
+        "arXiv:2310.00574"
+      ],
+      "reason": "本文はCPU SIMD向けのdataflow/code-generationを検討し、主評価は畳み込み系ニューラルネットであることを確認。 実験は主にCNN convolutionであり、Transformer/LLM推論への直接適用評価がない。",
+      "first_checked_at": "2026-10-06T12:07:24+00:00",
+      "last_checked_at": "2026-10-06T12:07:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "YFlows: Systematic Dataflow Exploration and Code Generation for Efficient Neural Network Inference using SIMD Architectures on CPUs"
+    },
+    "DOI:10.1145/3580305.3599416": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3580305.3599416",
+      "identity_tokens": [
+        "DOI:10.1145/3580305.3599416"
+      ],
+      "reason": "著者/公的機関の公開先とAmazon Science PDFを試したが、本文を取得できず、要旨からtoken embedding圧縮の可能性のみ確認。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:24+00:00",
+      "last_checked_at": "2026-10-06T12:07:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LightToken: A Task and Model-agnostic Lightweight Token Embedding Framework for Pre-trained Language Models"
+    },
+    "arXiv:2304.02319": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2304.02319",
+      "identity_tokens": [
+        "arXiv:2304.02319"
+      ],
+      "reason": "本文はCNN filter pruningの評価であり、LLM/Transformerへの実証はない。 pruning lineageの方法類似性はあるが接続は間接的。 LLM/Transformer性能、推論実装、転用可能性の評価がない。",
+      "first_checked_at": "2026-10-06T12:07:24+00:00",
+      "last_checked_at": "2026-10-06T12:07:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient CNNs via Passive Filter Pruning"
+    },
+    "arXiv:2303.17910": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.17910",
+      "identity_tokens": [
+        "arXiv:2303.17910"
+      ],
+      "reason": "本文はNAT機械翻訳のための選択的distillationで、NATの並列推論という効率上の背景はあるが手法自体は学習data selection。 翻訳NAT専用の学習手法で、LLM inference latencyやserving改善を測定していない。",
+      "first_checked_at": "2026-10-06T12:07:24+00:00",
+      "last_checked_at": "2026-10-06T12:07:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Selective Knowledge Distillation for Non-Autoregressive Neural Machine Translation"
+    },
+    "arXiv:2112.11632": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.11632",
+      "identity_tokens": [
+        "arXiv:2112.11632"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:25+00:00",
+      "last_checked_at": "2026-10-06T12:07:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Diformer: Directional Transformer for Neural Machine Translation"
+    },
+    "arXiv:2112.08670": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.08670",
+      "identity_tokens": [
+        "arXiv:2112.08670"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:25+00:00",
+      "last_checked_at": "2026-10-06T12:07:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Amortized Noisy Channel Neural Machine Translation"
+    },
+    "arXiv:2510.21879": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.21879",
+      "identity_tokens": [
+        "arXiv:2510.21879"
+      ],
+      "reason": "Primary text confirms a related technical idea, but its task/model scope or evidence does not yet establish a transferable improvement for the target LLM inference lineage; retain for focused Research comparison.",
+      "first_checked_at": "2026-10-06T12:07:25+00:00",
+      "last_checked_at": "2026-10-06T12:07:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TernaryCLIP: Efficiently Compressing Vision-Language Models with Ternary Weights and Distilled Knowledge"
+    },
+    "arXiv:2302.05138": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.05138",
+      "identity_tokens": [
+        "arXiv:2302.05138"
+      ],
+      "reason": "本文はtable-to-text生成をcontent planningとsurface generationに分解する手法で、著者は従来の二つのAR networkの費用を問題視。 タスク固有の生成pipelineであり、LLM servingやハードウェア効率を示す測定は限定的。",
+      "first_checked_at": "2026-10-06T12:07:26+00:00",
+      "last_checked_at": "2026-10-06T12:07:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Plan-then-Seam: Towards Efficient Table-to-Text Generation"
+    },
+    "arXiv:2210.13086": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.13086",
+      "identity_tokens": [
+        "arXiv:2210.13086"
+      ],
+      "reason": "本文は法務テックにおける軽量モデルの開発・配置経験を報告。既存小型モデルの展開実務には接点があるが、一般化可能な推論最適化法の検証は限定的。 制御された速度/メモリ比較や一般的な推論最適化手法ではない。",
+      "first_checked_at": "2026-10-06T12:07:26+00:00",
+      "last_checked_at": "2026-10-06T12:07:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Legal-Tech Open Diaries: Lesson learned on how to develop and deploy light-weight models in the era of humongous Language Models"
+    },
+    "arXiv:2204.11806": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.11806",
+      "identity_tokens": [
+        "arXiv:2204.11806"
+      ],
+      "reason": "本文はautoregressive speech vocoderの逐次生成latencyを扱いparallel synthesisを提案。 音声波形/vocoder特化で、text LLM decodingへの直接検証がない。",
+      "first_checked_at": "2026-10-06T12:07:27+00:00",
+      "last_checked_at": "2026-10-06T12:07:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parallel Synthesis for Autoregressive Speech Generation"
+    },
+    "DOI:10.1109/tpami.2021.3085738": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpami.2021.3085738",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2021.3085738"
+      ],
+      "reason": "本文取得を試みたがIEEE本文に到達できず、要旨からBERT encoder/decoderを使うsentence-ordering architectureと確認。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:27+00:00",
+      "last_checked_at": "2026-10-06T12:07:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Relational Sentence Ordering Network"
+    },
+    "arXiv:2410.13079": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.13079",
+      "identity_tokens": [
+        "arXiv:2410.13079"
+      ],
+      "reason": "本文はFPGA high-level physical synthesisのIR/infrastructureで、placement/routing qualityとdesign productivityに焦点。 LLM inference algorithm/service optimizationそのものではなく、接続はFPGA build infrastructure経由。",
+      "first_checked_at": "2026-10-06T12:07:27+00:00",
+      "last_checked_at": "2026-10-06T12:07:27+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RapidStream IR: Infrastructure for FPGA High-Level Physical Synthesis"
+    },
+    "DOI:10.1145/3665314.3670806": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3665314.3670806",
+      "identity_tokens": [
+        "DOI:10.1145/3665314.3670806"
+      ],
+      "reason": "ACM DOI本文を開こうとしたがHTTP 403。書誌/要旨はHessian-based row-wise mixed-precision quantizationとFPGA accelerationを示す。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:28+00:00",
+      "last_checked_at": "2026-10-06T12:07:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware-friendly Hessian-driven Row-wise Quantization and FPGA Acceleration for Transformer-based Models"
+    },
+    "DOI:10.1109/cvprw63382.2024.00368": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cvprw63382.2024.00368",
+      "identity_tokens": [
+        "DOI:10.1109/cvprw63382.2024.00368"
+      ],
+      "reason": "CVF公式Open Access一次ページを試したがHTTP 403。公式要旨はViT/Segment Anything向けmixed-precision GPU kernelsで、LLM実験はない。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:28+00:00",
+      "last_checked_at": "2026-10-06T12:07:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QAttn: Efficient GPU Kernels for mixed-precision Vision Transformers"
+    },
+    "DOI:10.1109/iseda62518.2024.10617729": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iseda62518.2024.10617729",
+      "identity_tokens": [
+        "DOI:10.1109/iseda62518.2024.10617729"
+      ],
+      "reason": "指定IEEE DOI本文へアクセスできず。要旨はTransformer inferenceのmulti-core FPGA overlayとthroughput改善を示す。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:28+00:00",
+      "last_checked_at": "2026-10-06T12:07:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An FPGA-based Multi-Core Overlay Processor for Transformer-based Models"
+    },
+    "DOI:10.1016/j.ipm.2023.103602": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ipm.2023.103602",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2023.103602"
+      ],
+      "reason": "出版社一次本文DOIがアクセス不可。要旨/書誌からlexically constrained text generationのcandidate pool diversity手法であり、推論効率改善は確認できない。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:29+00:00",
+      "last_checked_at": "2026-10-06T12:07:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Screening through a broad pool: Towards better diversity for lexically constrained text generation"
+    },
+    "arXiv:2402.00395": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.00395",
+      "identity_tokens": [
+        "arXiv:2402.00395"
+      ],
+      "reason": "本文はsystolic array内にnonlinear operationsを含めたASIC/FPGA-compatible DNN inference architecture。関連するhardware inference系統への接点はある。 評価は一般DNN中心でLLM/Transformer servingへの適用は直接測定されていない。",
+      "first_checked_at": "2026-10-06T12:07:29+00:00",
+      "last_checked_at": "2026-10-06T12:07:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ONE-SA: Enabling Nonlinear Operations in Systolic Arrays For Efficient and Flexible Neural Network Inference"
+    },
+    "arXiv:2504.03349": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.03349",
+      "identity_tokens": [
+        "arXiv:2504.03349"
+      ],
+      "reason": "本文はページ画像のhandwritten-text recognitionでautoregressive character decodingが遅い問題を対象にする。 画像文字認識の専用モデルで、LLM text generationへの直接適用は示していない。",
+      "first_checked_at": "2026-10-06T12:07:29+00:00",
+      "last_checked_at": "2026-10-06T12:07:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Meta-DAN: towards an efficient prediction strategy for page-level handwritten text recognition"
+    },
+    "DOI:10.1016/j.eswa.2024.126356": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2024.126356",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2024.126356"
+      ],
+      "reason": "出版社一次本文へのアクセスはHTTP 403。要旨は中国語Braille翻訳向けnon-autoregressive CTC-loss調整であり、対象タスク固有。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:29+00:00",
+      "last_checked_at": "2026-10-06T12:07:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A non-autoregressive Chinese-Braille translation approach with CTC loss optimization"
+    },
+    "DOI:10.1109/tcad.2024.3446718": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2024.3446718",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2024.3446718"
+      ],
+      "reason": "IEEE本文へアクセスできず。要旨からSpMM compiler plug-inとsparsity propagationの一般的DNN/HPC最適化と確認したが、Transformer/LLMの直接評価は不明。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "first_checked_at": "2026-10-06T12:07:30+00:00",
+      "last_checked_at": "2026-10-06T12:07:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SpMMPlu-Pro: An Enhanced Compiler Plug-In for Efficient SpMM and Sparsity Propagation Algorithm"
+    },
+    "arXiv:2508.15423": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.15423",
+      "identity_tokens": [
+        "arXiv:2508.15423"
+      ],
+      "reason": "本文はcode understanding向けencoder PLMのKDを調査し、decoder-only LLMは明示的にscope外とする。 小型encoder code-PLM中心で、著者自身がLLMを対象外とし一般LLM inferenceへの外挿に注意。",
+      "first_checked_at": "2026-10-06T12:07:31+00:00",
+      "last_checked_at": "2026-10-06T12:07:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Empirical Study of Knowledge Distillation for Code Understanding Tasks"
+    },
+    "arXiv:2506.20752": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.20752",
+      "identity_tokens": [
+        "arXiv:2506.20752"
+      ],
+      "reason": "本文はLLM trainingにおけるmicroscaling formatの不安定性と緩和を扱う。量子化形式の既存系統とは接点があるが、主対象はtraining stability。 direct inference/serving latency・memory改善の検証ではない。",
+      "first_checked_at": "2026-10-06T12:07:31+00:00",
+      "last_checked_at": "2026-10-06T12:07:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Characterization and Mitigation of Training Instabilities in Microscaling Formats"
+    },
+    "arXiv:2508.07431": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.07431",
+      "identity_tokens": [
+        "arXiv:2508.07431"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:32+00:00",
+      "last_checked_at": "2026-10-06T12:07:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Investigating 1-bit quantization in transformer-based top tagging"
+    },
+    "DOI:10.1109/southeastcon56624.2025.10971638": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/southeastcon56624.2025.10971638",
+      "identity_tokens": [
+        "DOI:10.1109/southeastcon56624.2025.10971638"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:33+00:00",
+      "last_checked_at": "2026-10-06T12:07:33+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Language Models on Small Resource-Constrained Systems: Performance Analysis and Trade-Offs"
+    },
+    "arXiv:2503.16731": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.16731",
+      "identity_tokens": [
+        "arXiv:2503.16731"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:33+00:00",
+      "last_checked_at": "2026-10-06T12:07:33+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Design and Implementation of an FPGA-Based Tiled Matrix Multiplication Accelerator for Transformer Self-Attention on the Xilinx KV260 SoM"
+    },
+    "DOI:10.1145/3746709.3746843": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746709.3746843",
+      "identity_tokens": [
+        "DOI:10.1145/3746709.3746843"
+      ],
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "first_checked_at": "2026-10-06T12:07:34+00:00",
+      "last_checked_at": "2026-10-06T12:07:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FPGA-Based Acceleration of Deep Learning Networks: Techniques and Applications"
+    },
+    "arXiv:2502.15796": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.15796",
+      "identity_tokens": [
+        "arXiv:2502.15796"
+      ],
+      "reason": "Possible transformer/LLM compression, inference hardware, or established-lineage connection remains, but primary text could not be checked to determine transferability.",
+      "first_checked_at": "2026-10-06T12:07:34+00:00",
+      "last_checked_at": "2026-10-06T12:07:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pruning as a Defense: Reducing Memorization in Large Language Models"
     }
   }
 }
