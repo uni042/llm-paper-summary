@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ed1cec8058f6536-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.11883",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.11883",
+    "identity_tokens": [
+      "arXiv:2607.11883"
+    ],
+    "reason": "Authors state it currently measures compressed model size rather than transmitting/deploying a model; encoder runtime can scale exponentially in KL divergence. No smaller inference weights or serving cost are demonstrated.",
+    "first_checked_at": "2026-10-06T10:01:28+00:00",
+    "last_checked_at": "2026-10-06T10:01:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data"
+  },
+  "processed_at": "2026-10-06T10:01:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ed1cec8058f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-154fb07b96de41d5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11219-026-09776-1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11219-026-09776-1",
+    "identity_tokens": [
+      "DOI:10.1007/s11219-026-09776-1"
+    ],
+    "reason": "Attention-guided code simplification is for vulnerability assessment; no direct LLM runtime improvement.",
+    "first_checked_at": "2026-10-06T10:01:24+00:00",
+    "last_checked_at": "2026-10-06T10:01:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+    ],
+    "title": "Improving security vulnerability assessment with attention-guided hierarchical code simplification"
+  },
+  "processed_at": "2026-10-06T10:01:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-154fb07b96de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

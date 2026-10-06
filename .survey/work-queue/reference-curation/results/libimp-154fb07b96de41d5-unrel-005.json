@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-154fb07b96de41d5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1186/s40708-026-00322-0",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1186/s40708-026-00322-0",
+    "identity_tokens": [
+      "DOI:10.1186/s40708-026-00322-0"
+    ],
+    "reason": "EEG emotion representation; only superficial recurrence similarity to LLM lineage.",
+    "first_checked_at": "2026-10-06T10:01:24+00:00",
+    "last_checked_at": "2026-10-06T10:01:24+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "title": "Hybrid self-supervised EEG emotion representation: masked reconstruction joint with mutual information bounds"
+  },
+  "processed_at": "2026-10-06T10:01:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-154fb07b96de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
