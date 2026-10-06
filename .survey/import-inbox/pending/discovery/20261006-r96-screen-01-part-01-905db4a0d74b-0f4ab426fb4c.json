@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r96-screen-01-part-01-905db4a0d74b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07430",
+      "identity_tokens": [
+        "arXiv:2309.07430"
+      ],
+      "title": "Adapted large language models can outperform medical experts in clinical text summarization",
+      "reason": "Analyzing vast textual data and summarizing key information from electronic health records imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown promise in natural language processing (NLP) tasks, their effectiveness on a diverse range of clinical summarization tasks remains unproven. Here we applied adaptation methods to eight LLMs, spanning four distinct clinical summarization tasks: radiology reports, patient questions, progress notes and doctor–patient dialogue. Quantitative assessments with syntactic, semantic and conceptual NLP metrics reveal trade-offs between models and adaptation methods. A clinical reader study with 10 physicians evaluated summary completeness, correctness and conciseness; in most cases, summaries from our best-adapted LLMs were deemed either equivalent (45%) or superior (36%) compared with summaries from medical experts. The ensuing safety analysis highlights challenges faced by both LLMs and medical experts, as we connect errors to potential medical harm and categorize types of fabricated information. Our research provides evidence of LLMs outperforming medical experts in clinical text summa",
+      "source_url": "https://arxiv.org/abs/2309.07430",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41467-024-45187-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-024-45187-1"
+      ],
+      "title": "Emerging opportunities and challenges for the future of reservoir computing",
+      "reason": "Perspective reviews reservoir-computing theory, compact designs, fast training and hardware applications including real-time speech; it reports no LLM/Transformer inference method and notes lack of convincing broad industrial adoption.",
+      "source_url": "https://doi.org/10.1038/s41467-024-45187-1",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.05564",
+      "identity_tokens": [
+        "arXiv:2502.05564"
+      ],
+      "title": "TabICL: A Tabular Foundation Model for In-Context Learning on Large Data",
+      "reason": "TabICL uses column-then-row embeddings plus a Transformer for tabular ICL; TALENT/scale evaluations show faster tabular prediction and datasets up to 100K rows. Its limitations explicitly include slow inference and classification-only scope; no LLM inference/offload is tested.",
+      "source_url": "https://arxiv.org/abs/2502.05564",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.07236",
+      "identity_tokens": [
+        "arXiv:2404.07236"
+      ],
+      "title": "Lightweight Deep Learning for Resource-Constrained Environments: A Survey",
+      "reason": "Survey covers lightweight Transformers, token sparsification, pruning, quantization and deployment, with an LLM future-work section. It is mostly general DL/vision and proposes no evaluated LLM inference system; link to SpAtten is taxonomic.",
+      "source_url": "https://arxiv.org/abs/2404.07236",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07579",
+      "identity_tokens": [
+        "arXiv:2310.07579"
+      ],
+      "title": "In-Context Unlearning: Language Models as Few Shot Unlearners",
+      "reason": "Machine unlearning, the study of efficiently removing the impact of specific training instances on a model, has garnered increased attention in recent years due to regulatory guidelines such as the \\emph{Right to be Forgotten}. Achieving precise unlearning typically involves fully retraining the model and is computationally infeasible in case of very large models such as Large Language Models (LLMs). To this end, recent work has proposed several algorithms which approximate the removal of training data without retraining the model. These algorithms crucially rely on access to the model parameters in order to update them, an assumption that may not hold in practice due to computational constraints or having only query access to the LLMs. In this work, we propose a new class of unlearning methods for LLMs called ``In-Context Unlearning.'' This method unlearns instances from the model by simply providing specific kinds of inputs in context, without the need to update model parameters. To unlearn specific training instances, we present these instances to the LLMs at inference time along with labels that differ from their ground truth. Our experimental results demonstrate that in-contex",
+      "source_url": "https://arxiv.org/abs/2310.07579",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    }
+  ]
+}
