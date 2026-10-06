@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r117-screen-01-part-04-f89458f82d70",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20360",
+      "identity_tokens": [
+        "arXiv:2509.20360"
+      ],
+      "title": "EditVerse: Unifying Image and Video Editing and Generation with In-Context Learning",
+      "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。",
+      "source_url": "https://arxiv.org/abs/2509.20360",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.17795",
+      "identity_tokens": [
+        "arXiv:2405.17795"
+      ],
+      "title": "Dataset Regeneration for Sequential Recommendation",
+      "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。",
+      "source_url": "https://arxiv.org/abs/2405.17795",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCA59077.2024.00072",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA59077.2024.00072"
+      ],
+      "title": "Trapezoid: A Versatile Accelerator for Dense and Sparse Matrix Multiplications",
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。Primary DOI page was inaccessible and the author-hosted PDF URL returned 404; only the primary abstract was available.",
+      "source_url": "https://doi.org/10.1109/ISCA59077.2024.00072",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.04442",
+      "identity_tokens": [
+        "arXiv:2404.04442"
+      ],
+      "title": "Exploring Autonomous Agents through the Lens of Large Language Models: A Review",
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。This survey covers memory systems for agents and discusses memory organization/retrieval, but does not establish a concrete LLM inference-serving optimization with controlled latency/throughput results. Keep as weak lineage background.",
+      "source_url": "https://arxiv.org/abs/2404.04442",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.lanepe.2024.101064",
+      "identity_tokens": [
+        "DOI:10.1016/j.lanepe.2024.101064"
+      ],
+      "title": "Artificial intelligence in oncology: ensuring safe and effective integration of language models in clinical practice",
+      "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。",
+      "source_url": "https://doi.org/10.1016/j.lanepe.2024.101064",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    }
+  ]
+}
