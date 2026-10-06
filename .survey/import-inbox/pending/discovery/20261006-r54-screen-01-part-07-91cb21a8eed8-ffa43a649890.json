@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r54-screen-01-part-07-91cb21a8eed8",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21307",
+      "identity_tokens": [
+        "arXiv:2602.21307"
+      ],
+      "title": "SymTorch: Symbolic Distillation of Neural Networks",
+      "reason": "Title and abstract identify a task/domain-specific model, training-only technique, or general analysis without a concrete LLM/VLM inference-efficiency method or actionable connection to the linked inference lineage.",
+      "source_url": "https://arxiv.org/abs/2602.21307",
+      "first_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "last_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.21340",
+      "identity_tokens": [
+        "arXiv:2602.21340"
+      ],
+      "title": "HiPPO Zoo: Explicit Memory Mechanisms for Interpretable State Space Models",
+      "reason": "Potentially connected to efficient sequence memory and Mamba lineage, but application to LLM inference and cost-quality evidence need confirmation.",
+      "source_url": "https://arxiv.org/abs/2602.21340",
+      "first_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "last_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18721",
+      "identity_tokens": [
+        "arXiv:2602.18721"
+      ],
+      "title": "ReHear: Iterative Pseudo-Label Refinement for Semi-Supervised Speech Recognition via Audio Large Language Models",
+      "reason": "Title and abstract identify a task/domain-specific model, training-only technique, or general analysis without a concrete LLM/VLM inference-efficiency method or actionable connection to the linked inference lineage.",
+      "source_url": "https://arxiv.org/abs/2602.18721",
+      "first_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "last_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12021",
+      "identity_tokens": [
+        "arXiv:2602.12021"
+      ],
+      "title": "Improved state mixing in higher-order and block diagonal linear recurrent networks",
+      "reason": "The recurrent-network lineage is relevant to efficient long-sequence modeling; LLM applicability and comparative serving evidence remain open.",
+      "source_url": "https://arxiv.org/abs/2602.12021",
+      "first_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "last_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.10625",
+      "identity_tokens": [
+        "arXiv:2602.10625"
+      ],
+      "title": "To Think or Not To Think, That is The Question for Large Reasoning Models in Theory of Mind Tasks",
+      "reason": "Could inform task-adaptive decisions on whether to invoke long reasoning, but no such dispatch/early-stop method is implemented or evaluated.",
+      "source_url": "https://arxiv.org/abs/2602.10625",
+      "first_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "last_checked_at": "2026-10-06T07:14:54.092723+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    }
+  ]
+}
