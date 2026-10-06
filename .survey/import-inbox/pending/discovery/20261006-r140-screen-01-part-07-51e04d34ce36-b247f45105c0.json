@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r140-screen-01-part-07-51e04d34ce36",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.16824",
+      "identity_tokens": [
+        "arXiv:2607.16824"
+      ],
+      "title": "Test-Time Registers as Global Priors for Tokenized Image Generation",
+      "reason": "Although the paper is linked to attention-sink work, its full-text method and evaluation target autoregressive image-token generation and image quality, not language decoding or KV-cache serving; retain as borderline because the lineage connection is real but indirect.",
+      "source_url": "https://arxiv.org/abs/2607.16824",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.15849",
+      "identity_tokens": [
+        "arXiv:2607.15849"
+      ],
+      "title": "Test-Time Noise Guided Adaptation for Realistic Autoregressive Video Generation",
+      "reason": "TANGO improves autoregressive video quality with extra test-time compute/energy; it is adjacent to sequence inference but not an efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2607.15849",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/technologies14070438",
+      "identity_tokens": [
+        "DOI:10.3390/technologies14070438"
+      ],
+      "title": "Comparative Analysis of Local Large Language Models for Ranking Higher Education Programmes Based on Applicant Digital Profiles",
+      "reason": "The official MDPI page is inaccessible; the title concerns local LLM ranking and could contain deployment measures, but the quantization relation/full methods cannot be verified.",
+      "source_url": "https://doi.org/10.3390/technologies14070438",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/advs.202524179",
+      "identity_tokens": [
+        "DOI:10.1002/advs.202524179"
+      ],
+      "title": "Performance–Complexity Trade‐Offs in Battery Lifetime Prediction with Task‐Aware Transformers",
+      "reason": "Wiley source is inaccessible; its abstract describes a battery Transformer, not LLM inference, but the FlashAttention lineage and missing full text leave only weak relation evidence.",
+      "source_url": "https://doi.org/10.1002/advs.202524179",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.13395",
+      "identity_tokens": [
+        "arXiv:2607.13395"
+      ],
+      "title": "Self-Improving is Often Sudden: Enlightenment-style Finetuning for Large-Scale Models",
+      "reason": "Enlightenment changes attention/residual paths to improve capability without reporting latency, memory, token, or throughput savings.",
+      "source_url": "https://arxiv.org/abs/2607.13395",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    }
+  ]
+}
