@@ -1353,15 +1353,15 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
+  実装：✓ ・ リポジトリ内被引用：46  
   標準Transformerのself-注意機構は系列長Lに対してL×Lのスコア matrixを作るため、計算量・メモリがO(L²)で増える。
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
-  実装：✓ ・ リポジトリ内被引用：28  
+  実装：✓ ・ リポジトリ内被引用：29  
   正の直交ランダム特徴FAVOR+でソフトマックス注意を線形時間・線形空間へ近似し、疎性や低ランク仮定なしに長系列Transformerを実行可能にする。
 
 - **2020-09 · [TernaryBERT: Distillation-aware Ultra-low Bit BERT](2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   GLUEとSQuADで既存BERT量子化方式を上回り、全体-precisionに近い品質を維持しながらモデル容量を14.9倍縮小した。
 
 - **2020-04 · [FastBERT: a Self-distilling BERT with Adaptive Inference Time](2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md)**  
@@ -1377,7 +1377,7 @@
   Transformerは大規模な全結合行列を多数持ち、組込み・エッジ向けFPGAでは重み容量と外部メモリ転送がボトルネックになる。同時にBCMの規則構造へ合わせたFPGAデータパスを設計することで、圧縮後の表現を展開せず直接計算する。
 
 - **2020-05 · [GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference](2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   BERT系モデルは重みが大きく、推論では演算能力よりDRAMから重みを読む帯域・energyが律速になりやすい。単純な低bit一様量子化は、分布のごく少数の大きな外れ値へ量子化範囲を合わせるため、多数の通常値へ使える分解能を失う。
 
 ### 8年前（2018-11〜2019-10）
@@ -1391,19 +1391,19 @@
   Transformerの多頭自己注意は同じ層に複数の注意ヘッドを置くが、全ヘッドが同じ程度に必要とは限らない。本論文はニューラル機械翻訳を対象に、各ヘッドが最終予測へどれだけ寄与するか、どのような言語的役割を持つか、そしてヘッド単位で削除しても品質を維持できるかを一つの実験系で調べる。
 
 - **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   LayerDropはTransformerの層全体を学習中に確率的に落とす構造化dropoutである。通常のdropoutが要素単位の正則化なのに対し、LayerDropは「ある層が存在しない」経路を学習中から経験させる。その結果、学習後に層を間引いてもモデルが破綻しにくく、1個の大モデルから推論時の計算予算に応じた複数深度を取り出せる。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   Q-BERTはBERTの推論時メモリ容量と遅延を減らすため、重みを一律bit幅で量子化するのではなく、層・groupごとの感度に応じて精度を配分する方式である。group-wise量子化とHessianに基づく混合精度割当を組み合わせ、2bit級の重みまで下げても4つのNLPタスクで最大性能低下を2.3%以内に抑えた。
 
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   本論文は、多頭注意（multi-head 注意機構）の全ヘッドが推論時にも必要なのかを実験的に検証し、かなりの割合が冗長であることを示す。
 
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   Q8BERTは、BERTをproductionへ配置するときのパラメータ メモリ、メモリ 帯域、整数演算利用を改善するため、重みと活性値を8bitへ量子化する研究である。論文はBERTの下流 accuracyをほぼ維持しながら約4倍圧縮できることを示し、INT8演算を高速に実行できるハードウェアでは推論速度改善につながるとする。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  

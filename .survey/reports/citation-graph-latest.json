@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T13:50:03+00:00",
-  "paper_count": 1682,
-  "edge_count": 18898,
+  "generated_at": "2026-10-06T13:55:35+00:00",
+  "paper_count": 1684,
+  "edge_count": 18913,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 19,
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 326,
@@ -1123,7 +1123,7 @@
     "papers/inference/12-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md": 0,
     "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md": 18,
-    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md": 53,
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md": 54,
     "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md": 23,
     "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md": 10,
     "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md": 11,
@@ -1279,7 +1279,7 @@
     "papers/inference/17-pim-near-data-acceleration/2026-2609.16161-llm-inference-in-a-flash.md": 0,
     "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md": 0,
     "papers/inference/18-pipeline-native-cpu-inference/2026-2608.23841-pipeline-native-transformers.md": 0,
-    "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md": 10,
+    "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md": 11,
     "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md": 2,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md": 1,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md": 30,
@@ -1306,19 +1306,20 @@
     "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md": 6,
     "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md": 93,
     "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md": 14,
-    "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md": 11,
-    "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md": 12,
-    "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md": 12,
-    "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md": 6,
-    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md": 45,
+    "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md": 12,
+    "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md": 13,
+    "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md": 13,
+    "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md": 7,
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md": 46,
     "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md": 8,
     "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md": 6,
-    "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md": 1,
+    "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md": 2,
     "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md": 3,
-    "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md": 9,
-    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md": 28,
+    "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md": 10,
+    "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md": 29,
     "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md": 2,
     "papers/inference/99-other-inference-systems/2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md": 0,
+    "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md": 2,
     "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md": 1,
     "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md": 5,
     "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md": 19,
@@ -1326,6 +1327,7 @@
     "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md": 2,
     "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md": 264,
     "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md": 29,
+    "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md": 2,
     "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md": 77,
     "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md": 2,
     "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md": 115,
@@ -1675,7 +1677,7 @@
     "papers/training/01-training-offload-memory-systems/2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md": 0,
     "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md": 0,
     "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md": 0,
-    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md": 179,
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md": 180,
     "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md": 21,
     "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md": 20,
     "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md": 6,
@@ -4787,6 +4789,7 @@
       "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
       "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
       "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
       "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
       "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
     ],
@@ -18882,6 +18885,7 @@
       "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
       "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
       "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
+      "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
       "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
       "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
       "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
@@ -19770,6 +19774,15 @@
     ],
     "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md": [],
     "papers/inference/99-other-inference-systems/2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md": [],
+    "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
     "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md": [
       "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
       "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
@@ -19814,6 +19827,12 @@
       "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
       "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
     ],
+    "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
     "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md": [
       "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
       "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
@@ -19856,7 +19875,8 @@
       "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
       "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
       "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
-      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
     ],
     "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md": [
       "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
@@ -19868,6 +19888,7 @@
     "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md": [
       "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
       "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
     ],
     "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md": [
