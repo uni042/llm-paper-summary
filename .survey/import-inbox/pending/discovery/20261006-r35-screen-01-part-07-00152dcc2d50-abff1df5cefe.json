@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r35-screen-01-part-07-00152dcc2d50",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09113",
+      "identity_tokens": [
+        "arXiv:2506.09113"
+      ],
+      "title": "Seedance 1.0: Exploring the Boundaries of Video Generation Models",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/2506.09113",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2026-2604.01621-dwdp-distributed-weight-data-parallelism.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.15583",
+      "identity_tokens": [
+        "arXiv:2211.15583"
+      ],
+      "title": "On the Effectiveness of Parameter-Efficient Fine-Tuning",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/2211.15583",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.13890",
+      "identity_tokens": [
+        "arXiv:2112.13890"
+      ],
+      "title": "SPViT: Enabling Faster Vision Transformers via Latency-Aware Soft Token Pruning",
+      "reason": "SPViT uses latency-aware soft token pruning and measures hardware latency, but specifically for image-classification Vision Transformers. The transfer to token pruning in language-model inference is unestablished.",
+      "source_url": "https://arxiv.org/abs/2112.13890",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.11473",
+      "identity_tokens": [
+        "arXiv:2507.11473"
+      ],
+      "title": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/2507.11473",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.11468",
+      "identity_tokens": [
+        "arXiv:2504.11468"
+      ],
+      "title": "SFT or RL? An Early Investigation into Training R1-Like Reasoning Large Vision-Language Models",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/2504.11468",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md"
+      ]
+    }
+  ]
+}
