@@ -1,0 +1,184 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0603-scheduled-chat-00/r01",
+  "reference_main_sha": "61a9ad7140fdcbd034a9a06855d8efbd8fa7cc2a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.18425",
+      "identity_tokens": [
+        "arXiv:2504.18425"
+      ],
+      "title": "Kimi-Audio Technical Report",
+      "reason": "LLM-based音声基盤モデルでchunk-wise streaming detokenizerや推論deploymentを扱うが、主貢献・評価は音声理解/生成/会話品質で、LLM推論runtime・serving最適化を独立のsystems貢献として評価していない。",
+      "source_url": "https://arxiv.org/abs/2504.18425",
+      "body_check": "abstract_screen_only: arXiv一次abstractで12.5Hz audio tokenizer、LLM-based architecture、chunk-wise streaming detokenizer、13M+ hoursのaudio data、speech/audio benchmark品質が主題と確認。推論効率systemsが主目的ではないため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.05382",
+      "identity_tokens": [
+        "arXiv:1712.05382"
+      ],
+      "title": "Monotonic Chunkwise Attention",
+      "reason": "soft attentionの二次時間・空間コストをlinear-time online decodingへ改善するが、最終適用・主要評価はonline speech recognitionとdocument summarizationであり、LLM/大規模言語モデル推論システムではない。",
+      "source_url": "https://arxiv.org/abs/1712.05382",
+      "body_check": "abstract_screen_only: 一次abstractでadaptive chunks、online linear-time decoding、speech recognition/summarizationが主題と明確なため本文未読で対象外確定。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.11665",
+      "identity_tokens": [
+        "arXiv:2302.11665",
+        "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d"
+      ],
+      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+      "reason": "BERT/GPT-3等のlarge pretrained model servingを対象に、model parallelismを単なるcapacity拡張ではなくbursty multi-model workloadのstatistical multiplexingへ使うserving system。配置・parallelization・SLO最適化と64-GPU production workload評価を持つため直接対象。",
+      "source_url": "https://arxiv.org/abs/2302.11665",
+      "body_check": "fulltext_relevance_review: arXiv一次本文Introduction/Background/§3を確認。cluster resource、model集合、workload profileからmodel partition/placementとrequest schedulingを決め、SLO attainmentを最適化。64-GPU評価でrequest rate最大10x、deadline 2.5x厳格化、burstiness 6xを許容し、2×V100の6.7B Transformer例でも平均latency 0.70s→0.55s、high-CV時1.9x改善。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2004.07320",
+      "identity_tokens": [
+        "arXiv:2004.07320"
+      ],
+      "title": "Training with Quantization Noise for Extreme Model Compression",
+      "reason": "学習方式自体はquantization-aware trainingだが、最終成果はRoBERTa/Transformerの極端な圧縮とdeployment memory削減であり、推論向けweight compressionの対象範囲に入る。RoBERTaを14MBまで圧縮しMNLI 82.5%を維持する実証を持つ。",
+      "source_url": "https://arxiv.org/abs/2004.07320",
+      "body_check": "fulltext_relevance_review: arXiv一次本文/abstractを確認。各forwardで異なるweight subsetだけを量子化してunbiased gradient経路を残すQuant-Noiseを提案し、int8を超えるproduct quantization等へ対応。RoBERTaを14MBまで圧縮しMNLI 82.5%、Transformer language modelでも極端圧縮を評価しており、推論時model footprint削減へ直結する。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+      ],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2006.03236",
+      "identity_tokens": [
+        "arXiv:2006.03236"
+      ],
+      "title": "Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing",
+      "reason": "token-level hidden sequenceを層間で段階的に短縮し、後段Transformerの計算量を削減するlanguage-model architecture。sequence-level NLPで同等以下FLOPsで標準Transformerを上回り、推論時にも短い内部sequenceを使うため対象。",
+      "source_url": "https://arxiv.org/abs/2006.03236",
+      "body_check": "fulltext_relevance_review: arXiv一次本文/abstractを確認。full-length token representationの冗長性を問題化し、encoder内でhidden sequenceをpoolして短縮、必要なtoken-level predictionはdecoderで復元する。削減FLOPsをdepth/widthへ再投資可能で、標準Transformerよりcomparable/fewer FLOPsでclassification、NLU、reading comprehensionを改善。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.14658",
+      "identity_tokens": [
+        "arXiv:2402.14658"
+      ],
+      "title": "OpenCodeInterpreter: Integrating Code Generation with Execution and Refinement",
+      "reason": "コード生成・実行・反復修正を統合するLLM application/agent研究で、Code-Feedback 68KとHumanEval/MBPPの生成正解率が主評価。推論runtime・serving効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2402.14658",
+      "body_check": "abstract_screen_only: 一次abstract相当の書誌情報でcode generation/execution/refinementとHumanEval/MBPP accuracyが主題と確認。systems efficiencyが主貢献ではないため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.21074",
+      "identity_tokens": [
+        "arXiv:2502.21074"
+      ],
+      "title": "CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation",
+      "reason": "明示的CoTを連続潜在空間へ圧縮して推論時のreasoning token列を短縮するLLM reasoning efficiency研究。GSM8kで明示CoT性能を維持しつつ3.1x圧縮を報告し、生成token削減が推論計算へ直接効くため対象。",
+      "source_url": "https://arxiv.org/abs/2502.21074",
+      "body_check": "fulltext_relevance_review: arXiv一次本文/abstractを確認。teacher explicit-CoTとstudent implicit-CoTを同一modelでjoint trainingし、最終回答tokenのhidden stateをalignしてcontinuous thoughtへ蒸留。GPT-2 scaleのGSM8kでexplicit CoTに匹敵し3.1x compression、論文の効率分析では短いcontinuous thoughtにより推論生成を削減。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.16725",
+      "identity_tokens": [
+        "arXiv:2408.16725"
+      ],
+      "title": "Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming",
+      "reason": "end-to-end audio LLMのreal-time speech interactionを目的に、外部TTS依存によるlatencyを避け、推論時batch-parallel strategyでstreaming生成性能を改善する。リアルタイムLLM推論が明示的最終目的なので対象。",
+      "source_url": "https://arxiv.org/abs/2408.16725",
+      "body_check": "fulltext_relevance_review: arXiv一次abstractを精査。外部TTSがundesirable latencyを生むことを問題化し、audio-based end-to-end conversational LM、text-instructed speech generation、inference時batch-parallel strategyを導入してreal-time speech interactionを実現する。推論latencyが方式設計の直接動機。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02640-metronome.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.09782",
+      "identity_tokens": [
+        "arXiv:2306.09782"
+      ],
+      "title": "Full Parameter Fine-tuning for Large Language Models with Limited Resources",
+      "reason": "LOMOでgradient計算とparameter updateを融合し、65B LLMのfull-parameter fine-tuning memoryを削減するtraining専用研究。推論への最終適用を持たないため凍結範囲。",
+      "source_url": "https://arxiv.org/abs/2306.09782",
+      "body_check": "abstract_screen_only: arXiv一次abstractでLLM training resource削減、LOMO optimizer、DeepSpeed比10.8% memory、8×RTX3090で65B full fine-tuningが主題と確認。推論用途なしのため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.16084",
+      "identity_tokens": [
+        "arXiv:2504.16084"
+      ],
+      "title": "TTRL: Test-Time Reinforcement Learning",
+      "reason": "test data上で多数sampleのmajority voteをpseudo-rewardにしてRLでmodel parameterを更新するtest-time training研究。推論時samplingを使うが最終目的はmodel learning/accuracy向上で、inference systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2504.16084",
+      "body_check": "abstract_screen_only: arXiv一次abstractでunlabeled test data、majority voting reward、RL training、Qwen-2.5-Math-7BのAIME性能向上が主題と確認。推論runtime削減方式ではないため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "worklist_rank": 52
+    }
+  ]
+}
