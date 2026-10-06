@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r77-screen-01-part-05-8ea9c05013e9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05424",
+      "identity_tokens": [
+        "arXiv:2609.05424"
+      ],
+      "title": "Research on Intra-Chip Fusion Deployment and Optimization of Embodied Intelligence Business Operator NPU",
+      "reason": "一次arXiv本文はPhytium/Cambricon MLU370上でViT推論のhead sparsification、embedding圧縮、INT8/mixed precision、operator fusionとsingle-card pipelineを評価し、全処理latency 18.7ms・Jetson AGX Xavier比2.89xを報告する。一方、対象modelはViTとrobotics operatorでLLM実験はなく、NeuPIMs系統へのhardware接続は間接的。",
+      "source_url": "https://arxiv.org/abs/2609.05424",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26019",
+      "identity_tokens": [
+        "arXiv:2605.26019"
+      ],
+      "title": "Retrieval-Augmented Detection of Potentially Abusive Clauses in Chilean Terms of Service",
+      "reason": "チリ消費者契約条項のabusive clause detectionをRAGで支援する法務応用で、inference efficiency方式ではない。",
+      "source_url": "https://arxiv.org/abs/2605.26019",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26111",
+      "identity_tokens": [
+        "arXiv:2605.26111"
+      ],
+      "title": "Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation",
+      "reason": "subject-driven image generationでmultimodal capacityを高める研究で、token/computation削減の方式ではない。",
+      "source_url": "https://arxiv.org/abs/2605.26111",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.25134",
+      "identity_tokens": [
+        "arXiv:2605.25134"
+      ],
+      "title": "Theoretical Analysis of Sparse Optimization with Reparameterization, Weight Decay, and Adaptive Learning Rate",
+      "reason": "sparse optimizationのreparameterization/weight decay/learning-rate理論が対象で、LLM推論ではなく最適化・学習理論。",
+      "source_url": "https://arxiv.org/abs/2605.25134",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25166",
+      "identity_tokens": [
+        "arXiv:2605.25166"
+      ],
+      "title": "AME-TS: Anchored Mixture-of-Experts for Time Series Forecasting",
+      "reason": "一次本文は時系列foundation modelのstructure-guided sparse MoE routingを扱い、regime priorでexpert selectionを促す。MoE/conditional compute系譜との接点はあるが、時系列予測向けでLLMの推論FLOPs/latency削減の直接評価はなく、LLM serving転用は未確認。",
+      "source_url": "https://arxiv.org/abs/2605.25166",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    }
+  ]
+}
