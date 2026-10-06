@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T12:23:10+00:00",
-  "record_count": 8176,
+  "updated_at": "2026-10-06T12:27:12+00:00",
+  "record_count": 8204,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -117463,6 +117463,398 @@
         "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
       ],
       "title": "PTQAT: A Hybrid Parameter-Efficient Quantization Algorithm for 3D Perception Tasks"
+    },
+    "arXiv:2508.09231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.09231",
+      "identity_tokens": [
+        "arXiv:2508.09231"
+      ],
+      "reason": "XAI explanation design and ethics framework; no LLM inference efficiency method.",
+      "first_checked_at": "2026-10-06T12:27:06+00:00",
+      "last_checked_at": "2026-10-06T12:27:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Beyond Technocratic XAI: The Who, What & How in Explanation Design"
+    },
+    "arXiv:2507.18179": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18179",
+      "identity_tokens": [
+        "arXiv:2507.18179"
+      ],
+      "reason": "Low-power fixed-point multiplier microarchitecture; no LLM-specific or model-inference evaluation, and no demonstrated connection beyond generic arithmetic.",
+      "first_checked_at": "2026-10-06T12:27:06+00:00",
+      "last_checked_at": "2026-10-06T12:27:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Explicit Sign-Magnitude Encoders Enable Power-Efficient Multipliers"
+    },
+    "DOI:10.1007/s42452-025-07388-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s42452-025-07388-1",
+      "identity_tokens": [
+        "DOI:10.1007/s42452-025-07388-1"
+      ],
+      "reason": "Accelerator pooling evaluated for vRAN resource use; the described evidence is not LLM serving or inference optimization.",
+      "first_checked_at": "2026-10-06T12:27:06+00:00",
+      "last_checked_at": "2026-10-06T12:27:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Accelerator pool: accelerator sharing architecture for energy efficiency"
+    },
+    "arXiv:2411.12767": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.12767",
+      "identity_tokens": [
+        "arXiv:2411.12767"
+      ],
+      "reason": "Semi-supervised RoBERTa application for suicide-risk assessment improves task learning; it does not address inference efficiency.",
+      "first_checked_at": "2026-10-06T12:27:07+00:00",
+      "last_checked_at": "2026-10-06T12:27:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Suicide Risk Assessment on Social Media with Semi-Supervised Learning"
+    },
+    "DOI:10.18535/ijsrm/v12i11.ec04": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18535/ijsrm/v12i11.ec04",
+      "identity_tokens": [
+        "DOI:10.18535/ijsrm/v12i11.ec04"
+      ],
+      "reason": "Conceptual discussion of persistent conversational memory and ethics; no concrete systems measurement or inference optimization.",
+      "first_checked_at": "2026-10-06T12:27:07+00:00",
+      "last_checked_at": "2026-10-06T12:27:07+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "The Role of Memory in LLMs: Persistent Context for Smarter Conversations"
+    },
+    "arXiv:2504.12436": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.12436",
+      "identity_tokens": [
+        "arXiv:2504.12436"
+      ],
+      "reason": "Sparse optimization is for few-shot vision-language adaptation and gradient updates; the reported gains concern adaptation/training rather than inference.",
+      "first_checked_at": "2026-10-06T12:27:07+00:00",
+      "last_checked_at": "2026-10-06T12:27:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Sparsity Outperforms Low-Rank Projections in Few-Shot Adaptation"
+    },
+    "DOI:10.1109/icassp49660.2025.10890844": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp49660.2025.10890844",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49660.2025.10890844"
+      ],
+      "reason": "Red-team diversity technique evaluates attack generation, not inference efficiency.",
+      "first_checked_at": "2026-10-06T12:27:08+00:00",
+      "last_checked_at": "2026-10-06T12:27:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Diversity Seeking Techniques for Red-Teaming Large Language Models"
+    },
+    "arXiv:2504.01806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.01806",
+      "identity_tokens": [
+        "arXiv:2504.01806"
+      ],
+      "reason": "Transformer accelerator is for iterative linear-quadratic control/trajectory optimization, not language-model inference.",
+      "first_checked_at": "2026-10-06T12:27:08+00:00",
+      "last_checked_at": "2026-10-06T12:27:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Quattro: Transformer-Accelerated Iterative Linear Quadratic Regulator Framework for Fast Trajectory Optimization"
+    },
+    "DOI:10.15575/join.v10i1.1486": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.15575/join.v10i1.1486",
+      "identity_tokens": [
+        "DOI:10.15575/join.v10i1.1486"
+      ],
+      "reason": "LLM is used for disease-information retrieval; the contribution is task accuracy/semantic matching rather than model inference efficiency.",
+      "first_checked_at": "2026-10-06T12:27:08+00:00",
+      "last_checked_at": "2026-10-06T12:27:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "LLM-Based Information Retrieval for Disease Detection Using Semantic Similarity"
+    },
+    "arXiv:2410.22911": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.22911",
+      "identity_tokens": [
+        "arXiv:2410.22911"
+      ],
+      "reason": "Progressive LoRA strategy targets fine-tuning, merging, and pruning training dynamics, not inference-time LLM efficiency.",
+      "first_checked_at": "2026-10-06T12:27:08+00:00",
+      "last_checked_at": "2026-10-06T12:27:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "CopRA: A Progressive LoRA Training Strategy"
+    },
+    "DOI:10.1109/icsp62129.2024.10846666": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icsp62129.2024.10846666",
+      "identity_tokens": [
+        "DOI:10.1109/icsp62129.2024.10846666"
+      ],
+      "reason": "Hardware architecture targets visual-transformer residual and GELU operations; vision-only evaluation and no LLM inference result.",
+      "first_checked_at": "2026-10-06T12:27:09+00:00",
+      "last_checked_at": "2026-10-06T12:27:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "A Hardware Architecture for Shared Residuals and Simplified Symmetric-PWL-Based GELU"
+    },
+    "DOI:10.1186/s13636-024-00375-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s13636-024-00375-1",
+      "identity_tokens": [
+        "DOI:10.1186/s13636-024-00375-1"
+      ],
+      "reason": "Speech representation framework reduces self-supervised pretraining resources; it is a training contribution, not LLM inference.",
+      "first_checked_at": "2026-10-06T12:27:09+00:00",
+      "last_checked_at": "2026-10-06T12:27:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "SVQ-MAE: an efficient speech pre-training framework with constrained computational resources"
+    },
+    "arXiv:2506.19563": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19563",
+      "identity_tokens": [
+        "arXiv:2506.19563"
+      ],
+      "reason": "LLM privacy-breach detection adds a security classifier over model internals; it does not reduce inference compute, memory, latency, or serving cost.",
+      "first_checked_at": "2026-10-06T12:27:09+00:00",
+      "last_checked_at": "2026-10-06T12:27:09+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "PrivacyXray: Detecting Privacy Breaches in LLMs through Semantic Consistency and Probability Certainty"
+    },
+    "arXiv:2506.17768": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17768",
+      "identity_tokens": [
+        "arXiv:2506.17768"
+      ],
+      "reason": "Low-precision method is for training-from-scratch; speculative future inference benefit is not evaluated.",
+      "first_checked_at": "2026-10-06T12:27:09+00:00",
+      "last_checked_at": "2026-10-06T12:27:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "Log-Normal Multiplicative Dynamics for Stable Low-Precision Training of Large Networks"
+    },
+    "arXiv:2506.13180": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13180",
+      "identity_tokens": [
+        "arXiv:2506.13180"
+      ],
+      "reason": "Architecture optimization is explicitly for ASR training, outside LLM inference.",
+      "first_checked_at": "2026-10-06T12:27:10+00:00",
+      "last_checked_at": "2026-10-06T12:27:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Dynamic Acoustic Model Architecture Optimization in Training for ASR"
+    },
+    "DOI:10.1109/tcasai.2025.3532254": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcasai.2025.3532254",
+      "identity_tokens": [
+        "DOI:10.1109/tcasai.2025.3532254"
+      ],
+      "reason": "Block floating point is evaluated for model training, not inference.",
+      "first_checked_at": "2026-10-06T12:27:10+00:00",
+      "last_checked_at": "2026-10-06T12:27:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "Efficient Deep Neural Network Training With a Novel 5.3-Bit Block Floating Point Data Format"
+    },
+    "DOI:10.1109/vlsi-soc62099.2024.10767806": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/vlsi-soc62099.2024.10767806",
+      "identity_tokens": [
+        "DOI:10.1109/vlsi-soc62099.2024.10767806"
+      ],
+      "reason": "Block-scaled GEMM is explicitly optimized for DNN training on ARM vector processors.",
+      "first_checked_at": "2026-10-06T12:27:10+00:00",
+      "last_checked_at": "2026-10-06T12:27:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "Adaptive Block-Scaled GeMMs on Vector Processors for DNN Training at the Edge"
+    },
+    "arXiv:2409.07577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.07577",
+      "identity_tokens": [
+        "arXiv:2409.07577"
+      ],
+      "reason": "Self-masking method is for self-supervised computer-vision adaptation/fine-tuning, not LLM inference.",
+      "first_checked_at": "2026-10-06T12:27:10+00:00",
+      "last_checked_at": "2026-10-06T12:27:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Self-Masking Networks for Unsupervised Adaptation"
+    },
+    "DOI:10.1109/indicon63790.2024.10958313": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/indicon63790.2024.10958313",
+      "identity_tokens": [
+        "DOI:10.1109/indicon63790.2024.10958313"
+      ],
+      "reason": "TinyDNABERT is a domain-specific DNA sequence model whose reported work centers on pretraining/fine-tuning; no general LLM inference method is validated.",
+      "first_checked_at": "2026-10-06T12:27:10+00:00",
+      "last_checked_at": "2026-10-06T12:27:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "TinyDNABERT: An Efficient and Optimized BERT Model for DNA-Language in Genome"
+    },
+    "arXiv:2412.06534": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06534",
+      "identity_tokens": [
+        "arXiv:2412.06534"
+      ],
+      "reason": "Feature inversion interprets vision-transformer representations; it is not an inference-efficiency method.",
+      "first_checked_at": "2026-10-06T12:27:10+00:00",
+      "last_checked_at": "2026-10-06T12:27:10+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "Understanding Transformer-based Vision Models through Inversion"
+    },
+    "DOI:10.1145/3707209": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3707209",
+      "identity_tokens": [
+        "DOI:10.1145/3707209"
+      ],
+      "reason": "FPGA accelerator is for training a time-series prediction network, not LLM inference.",
+      "first_checked_at": "2026-10-06T12:27:11+00:00",
+      "last_checked_at": "2026-10-06T12:27:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "FPGA-based Block Minifloat Training Accelerator for a Time Series Prediction Network"
+    },
+    "arXiv:2501.07747": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.07747",
+      "identity_tokens": [
+        "arXiv:2501.07747"
+      ],
+      "reason": "Long-sequence ESM2 study concerns protein modeling and quantized biomedical model analysis, not LLM serving/inference.",
+      "first_checked_at": "2026-10-06T12:27:11+00:00",
+      "last_checked_at": "2026-10-06T12:27:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Scaling Up ESM2 Architectures for Long Protein Sequences Analysis: Long and Quantized Approaches"
+    },
+    "DOI:10.3390/s24248190": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s24248190",
+      "identity_tokens": [
+        "DOI:10.3390/s24248190"
+      ],
+      "reason": "Binary transformer is evaluated on image-classification datasets and targets embedded vision models, not LLM inference.",
+      "first_checked_at": "2026-10-06T12:27:11+00:00",
+      "last_checked_at": "2026-10-06T12:27:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "Binary Transformer Based on the Alignment and Correction of Distribution"
+    },
+    "arXiv:2505.22664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22664",
+      "identity_tokens": [
+        "arXiv:2505.22664"
+      ],
+      "reason": "Zero-shot vision encoder composition; no LLM inference efficiency evaluation.",
+      "first_checked_at": "2026-10-06T12:27:11+00:00",
+      "last_checked_at": "2026-10-06T12:27:11+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Zero-Shot Vision Encoder Grafting via LLM Surrogates"
+    },
+    "arXiv:2505.14723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14723",
+      "identity_tokens": [
+        "arXiv:2505.14723"
+      ],
+      "reason": "Task/model family is speech intent understanding and the method is training/distillation oriented; no general LLM serving evidence.",
+      "first_checked_at": "2026-10-06T12:27:11+00:00",
+      "last_checked_at": "2026-10-06T12:27:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "QUADS: QUAntized Distillation Framework for Efficient Speech Language Understanding"
+    },
+    "DOI:10.1145/3735653": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3735653",
+      "identity_tokens": [
+        "DOI:10.1145/3735653"
+      ],
+      "reason": "Dimensionality reduction is proposed for training large language models; workflow scope is inference-time efficiency.",
+      "first_checked_at": "2026-10-06T12:27:12+00:00",
+      "last_checked_at": "2026-10-06T12:27:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "U-Net Encapsulated Transformer for Reducing Dimensionality in Training Large Language Models"
+    },
+    "DOI:10.3390/electronics14091767": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics14091767",
+      "identity_tokens": [
+        "DOI:10.3390/electronics14091767"
+      ],
+      "reason": "Mixed-precision quantization targets image deblurring and edge detection, with no language-model connection.",
+      "first_checked_at": "2026-10-06T12:27:12+00:00",
+      "last_checked_at": "2026-10-06T12:27:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "An Effective Mixed-Precision Quantization Method for Joint Image Deblurring and Edge Detection"
+    },
+    "DOI:10.1002/prot.26782": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/prot.26782",
+      "identity_tokens": [
+        "DOI:10.1002/prot.26782"
+      ],
+      "reason": "Protein-function prediction uses pretrained protein embeddings and downstream classification; no LLM inference improvement is presented.",
+      "first_checked_at": "2026-10-06T12:27:12+00:00",
+      "last_checked_at": "2026-10-06T12:27:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "SUPERMAGO: Protein Function Prediction Based on Transformer Embeddings"
     }
   }
 }

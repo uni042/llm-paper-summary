@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T12:23:09+00:00",
-  "record_count": 2962,
+  "updated_at": "2026-10-06T12:27:12+00:00",
+  "record_count": 2977,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -45447,6 +45447,233 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Transformer-Based Nonautoregressive Image Captioning via Guided Keyword Generation and Learnable Positional Encoding for IoT Devices"
+    },
+    "arXiv:2508.05234": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.05234",
+      "identity_tokens": [
+        "arXiv:2508.05234"
+      ],
+      "reason": "The full text confirms a 3B task-specific multimodal sentiment student, but provides no general inference-cost measurements; relation to broad LLM inference efficiency is weak and requires transfer evidence.",
+      "first_checked_at": "2026-10-06T12:27:06+00:00",
+      "last_checked_at": "2026-10-06T12:27:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Resource-Limited Joint Multimodal Sentiment Reasoning and Classification via Chain-of-Thought Enhancement and Distillation"
+    },
+    "DOI:10.1109/taffc.2025.3578574": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/taffc.2025.3578574",
+      "identity_tokens": [
+        "DOI:10.1109/taffc.2025.3578574"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. Publisher DOI page was not accessible through the available web reader; no author/institutional full-text copy was located. Only the packet abstract was available.",
+      "first_checked_at": "2026-10-06T12:27:06+00:00",
+      "last_checked_at": "2026-10-06T12:27:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SentireCache: Accelerate Sentiment Classification With Saliency-Based Caching"
+    },
+    "DOI:10.1109/concapan63470.2024.10933896": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/concapan63470.2024.10933896",
+      "identity_tokens": [
+        "DOI:10.1109/concapan63470.2024.10933896"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; no publisher/author full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:07+00:00",
+      "last_checked_at": "2026-10-06T12:27:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM Acceleration on FPGAs: A Comparative Study of Layer and Spatial Accelerators"
+    },
+    "DOI:10.1109/iccd63220.2024.00101": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccd63220.2024.00101",
+      "identity_tokens": [
+        "DOI:10.1109/iccd63220.2024.00101"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; no author/institutional full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:07+00:00",
+      "last_checked_at": "2026-10-06T12:27:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vision Transformer Inference on a CNN Accelerator"
+    },
+    "DOI:10.1016/j.is.2024.102490": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.is.2024.102490",
+      "identity_tokens": [
+        "DOI:10.1016/j.is.2024.102490"
+      ],
+      "reason": "No abstract in packet; publisher/link resolver returned an access/redirect error and no author/institutional full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:07+00:00",
+      "last_checked_at": "2026-10-06T12:27:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Two-level massive string dictionaries"
+    },
+    "DOI:10.1109/icassp49660.2025.10887670": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp49660.2025.10887670",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49660.2025.10887670"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; search located bibliographic records but no publisher/author full-text copy.",
+      "first_checked_at": "2026-10-06T12:27:07+00:00",
+      "last_checked_at": "2026-10-06T12:27:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MPNAS: Multimodal Sentiment Analysis Pruning via Neural Architecture Search"
+    },
+    "DOI:10.1109/ispa63168.2024.00176": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ispa63168.2024.00176",
+      "identity_tokens": [
+        "DOI:10.1109/ispa63168.2024.00176"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; no publisher/author full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:08+00:00",
+      "last_checked_at": "2026-10-06T12:27:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Funnel: An Efficient Sparse Attention Accelerator with Multi-Dataflow Fusion"
+    },
+    "DOI:10.1145/3676536.3676667": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676536.3676667",
+      "identity_tokens": [
+        "DOI:10.1145/3676536.3676667"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. ACM DOI page returned 403 Forbidden and no author/institutional full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:08+00:00",
+      "last_checked_at": "2026-10-06T12:27:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge-BiT: Software-Hardware Co-Design for Optimizing Binarized Transformer Networks Inference on Edge FPGA"
+    },
+    "DOI:10.1145/3731715.3733341": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3731715.3733341",
+      "identity_tokens": [
+        "DOI:10.1145/3731715.3733341"
+      ],
+      "reason": "No abstract in packet; ACM primary page could not be retrieved and no author/institutional full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:09+00:00",
+      "last_checked_at": "2026-10-06T12:27:09+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fine-grained Block Pruning with Tiny Sets for Vision Transformers"
+    },
+    "arXiv:2409.14168": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.14168",
+      "identity_tokens": [
+        "arXiv:2409.14168"
+      ],
+      "reason": "The full text concerns pruned SBERT sentence-embedding encoders and NLI/STS fine-tuning; applicability to autoregressive LLM inference is not established.",
+      "first_checked_at": "2026-10-06T12:27:10+00:00",
+      "last_checked_at": "2026-10-06T12:27:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Building Efficient Sentence BERT Models using Layer Pruning"
+    },
+    "DOI:10.1016/j.neucom.2025.130517": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.130517",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.130517"
+      ],
+      "reason": "No abstract in packet; publisher primary page could not be retrieved and no author/institutional full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:11+00:00",
+      "last_checked_at": "2026-10-06T12:27:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Attaining hardware-efficient inference in memristor-based transformer accelerator via network redesign"
+    },
+    "DOI:10.1109/wacv61041.2025.00517": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/wacv61041.2025.00517",
+      "identity_tokens": [
+        "DOI:10.1109/wacv61041.2025.00517"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. Primary CVF HTML and PDF returned 403 Forbidden. Search result exposed only the abstract, not full text.",
+      "first_checked_at": "2026-10-06T12:27:12+00:00",
+      "last_checked_at": "2026-10-06T12:27:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Importance-Guided Interpretability and Pruning for Video Transformers in Driver Action Recognition"
+    },
+    "DOI:10.1109/tetci.2024.3418837": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tetci.2024.3418837",
+      "identity_tokens": [
+        "DOI:10.1109/tetci.2024.3418837"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; no publisher/author full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:12+00:00",
+      "last_checked_at": "2026-10-06T12:27:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ARC: A Layer Replacement Compression Method Based on Fine-Grained Self-Attention Distillation for Compressing Pre-Trained Language Models"
+    },
+    "DOI:10.1109/icce63647.2025.10930004": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icce63647.2025.10930004",
+      "identity_tokens": [
+        "DOI:10.1109/icce63647.2025.10930004"
+      ],
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; no publisher/author full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:12+00:00",
+      "last_checked_at": "2026-10-06T12:27:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GOLD: Green Optimization of Language Models Serving on Devices"
+    },
+    "DOI:10.1016/j.sysarc.2025.103336": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2025.103336",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2025.103336"
+      ],
+      "reason": "No abstract in packet; publisher primary page could not be retrieved and no author/institutional full-text copy was located.",
+      "first_checked_at": "2026-10-06T12:27:12+00:00",
+      "last_checked_at": "2026-10-06T12:27:12+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LE-GEMM: A lightweight emulation-based GEMM with precision refinement on GPU"
     }
   }
 }
