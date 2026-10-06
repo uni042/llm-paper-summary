@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9deb8f4e90a7345-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/aide69088.2026.11545154",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/aide69088.2026.11545154",
+    "identity_tokens": [
+      "DOI:10.1109/aide69088.2026.11545154"
+    ],
+    "reason": "AutoContextの題名はLLM context managementに直接関わるが、指定IEEE一次資料へアクセスできず、KV/context memory削減やruntime効果の根拠を確認できない。",
+    "first_checked_at": "2026-10-06T21:12:53+00:00",
+    "last_checked_at": "2026-10-06T21:12:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AutoContext: An Adaptive Framework for Intelligent Context Management in Large Language Models"
+  },
+  "processed_at": "2026-10-06T21:12:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9deb8f4e90a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9deb8f4e90a7345-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icasst68917.2026.11484283",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icasst68917.2026.11484283",
+    "identity_tokens": [
+      "DOI:10.1109/icasst68917.2026.11484283"
+    ],
+    "reason": "cloud-optimized transformer NLPの効率化を扱う題名は推論系統に関連するが、IEEE一次資料に接続できず手法・serving測定を検証できない。",
+    "first_checked_at": "2026-10-06T21:12:53+00:00",
+    "last_checked_at": "2026-10-06T21:12:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cloud Transformer: A Cloud-Optimized Transformer-Based Approach for Scalable and Efficient Natural Language Processing"
+  },
+  "processed_at": "2026-10-06T21:12:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9deb8f4e90a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

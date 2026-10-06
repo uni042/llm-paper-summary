@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58612a04b67e365c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.09030",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.09030",
+    "identity_tokens": [
+      "arXiv:2602.09030"
+    ],
+    "reason": "一次資料の要旨を確認。While data-driven weather models have achieved remarkable deterministic accuracy, they fundamentally rely on discrete-time mappings and closed-system assumptions, failing to capture the multi-scale continuous dynamics and thermodynamic openness of the atmosphere. To address these limitations, we propose UniPhy, a continuous-time non-Hermitian neural stochastic partial differential equation (SPDE)",
+    "first_checked_at": "2026-10-06T21:12:49+00:00",
+    "last_checked_at": "2026-10-06T21:12:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling"
+  },
+  "processed_at": "2026-10-06T21:12:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58612a04b67e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

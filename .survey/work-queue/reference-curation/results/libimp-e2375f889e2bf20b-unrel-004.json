@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2375f889e2bf20b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.11882",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.11882",
+    "identity_tokens": [
+      "arXiv:2602.11882"
+    ],
+    "reason": "一次資料の要旨を確認。Efficient spatial reasoning requires world models that remain reliable under tight precision budgets. We study whether low-bit planning behavior is determined mostly by total bitwidth or by where bits are allocated across modules. Using DINO-WM on the Wall planning task, we run a paired-goal mixed-bit evaluation across uniform, mixed, asymmetric, and layerwise variants under two planner budgets. W",
+    "first_checked_at": "2026-10-06T21:12:57+00:00",
+    "last_checked_at": "2026-10-06T21:12:57+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Where Bits Matter in World Model Planning: A Paired Mixed-Bit Study for Efficient Spatial Reasoning"
+  },
+  "processed_at": "2026-10-06T21:12:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2375f889e2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

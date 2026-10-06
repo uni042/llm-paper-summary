@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T21:07:36+00:00",
-  "record_count": 9716,
+  "updated_at": "2026-10-06T21:13:00+00:00",
+  "record_count": 9740,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -139153,6 +139153,344 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Deep-Learning-Designed AlGaAs Interface Linking Trapped Ions to Telecom Quantum Networks"
+    },
+    "arXiv:2602.02236": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02236",
+      "identity_tokens": [
+        "arXiv:2602.02236"
+      ],
+      "reason": "一次資料の要旨を確認。We study online fine-tuning of pretrained control policies for autonomous driving using Real-Time Recurrent Reinforcement Learning (RTRRL), a memory-efficient algorithm that updates policy parameters at every time step without backpropagation through time. We extend RTRRL to support LrcSSM, a recently proposed nonlinear diagonal state-space model, and combine offline behavioral cloning with online",
+      "first_checked_at": "2026-10-06T21:12:47+00:00",
+      "last_checked_at": "2026-10-06T21:12:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Adaptive Control in Autonomous Driving via Real-Time Recurrent RL"
+    },
+    "DOI:10.1109/bigcomp68355.2026.00027": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bigcomp68355.2026.00027",
+      "identity_tokens": [
+        "DOI:10.1109/bigcomp68355.2026.00027"
+      ],
+      "reason": "指定publisher/DOIの一次ページを取得できず、入力キャッシュ要旨を一次根拠として採用していない。",
+      "first_checked_at": "2026-10-06T21:12:47+00:00",
+      "last_checked_at": "2026-10-06T21:12:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Linear Separability and Feature Importance Analysis in Large Language Model Representation Spaces"
+    },
+    "arXiv:2602.00960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00960",
+      "identity_tokens": [
+        "arXiv:2602.00960"
+      ],
+      "reason": "一次資料の要旨を確認。Scientific machine learning (SciML) increasingly requires models that capture multimodal conditional uncertainty arising from ill-posed inverse problems, multistability, and chaotic dynamics. While recent work has favored highly expressive implicit generative models such as diffusion and flow-based methods, these approaches are often data-hungry, computationally costly, and misaligned with the str",
+      "first_checked_at": "2026-10-06T21:12:48+00:00",
+      "last_checked_at": "2026-10-06T21:12:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Multimodal Scientific Learning Beyond Diffusions and Flows"
+    },
+    "arXiv:2603.08957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08957",
+      "identity_tokens": [
+        "arXiv:2603.08957"
+      ],
+      "reason": "一次資料の要旨を確認。A  tensor-relational  computation is a relational computation where individual tuples carry vectors, matrices, or higher-dimensional arrays. An advantage of tensor-relational computation is that the overall computation can be executed on top of a relational system, inheriting the system's ability to automatically handle very large inputs with high levels of sparsity while high-performance kernels",
+      "first_checked_at": "2026-10-06T21:12:48+00:00",
+      "last_checked_at": "2026-10-06T21:12:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Automated Tensor-Relational Decomposition for Large-Scale Sparse Tensor Computation"
+    },
+    "arXiv:2601.21407": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21407",
+      "identity_tokens": [
+        "arXiv:2601.21407"
+      ],
+      "reason": "一次資料の要旨を確認。Neuroscience and artificial intelligence represent distinct yet complementary pathways to general intelligence. However, amid the ongoing boom in AI research and applications, the translational synergy between these two fields has grown increasingly elusive-hampered by a widening infrastructural incompatibility: modern AI frameworks lack native support for biophysical realism, while neural simulat",
+      "first_checked_at": "2026-10-06T21:12:49+00:00",
+      "last_checked_at": "2026-10-06T21:12:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "BrainFuse: a unified infrastructure integrating realistic biological modeling and core AI methodology"
+    },
+    "arXiv:2601.22296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22296",
+      "identity_tokens": [
+        "arXiv:2601.22296"
+      ],
+      "reason": "一次資料の要旨を確認。Reservoir Computing (RC) has established itself as an efficient paradigm for temporal processing. However, its scalability remains severely constrained by the need to process temporal data sequentially and the prohibitive memory footprint of high-dimensional reservoirs. To address these limitations, we revisit RC through the lens of structured operators and state space modeling, introducing Parall",
+      "first_checked_at": "2026-10-06T21:12:49+00:00",
+      "last_checked_at": "2026-10-06T21:12:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "ParalESN: Enabling parallel information processing in Reservoir Computing"
+    },
+    "arXiv:2602.09030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09030",
+      "identity_tokens": [
+        "arXiv:2602.09030"
+      ],
+      "reason": "一次資料の要旨を確認。While data-driven weather models have achieved remarkable deterministic accuracy, they fundamentally rely on discrete-time mappings and closed-system assumptions, failing to capture the multi-scale continuous dynamics and thermodynamic openness of the atmosphere. To address these limitations, we propose UniPhy, a continuous-time non-Hermitian neural stochastic partial differential equation (SPDE)",
+      "first_checked_at": "2026-10-06T21:12:49+00:00",
+      "last_checked_at": "2026-10-06T21:12:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling"
+    },
+    "DOI:10.3390/su18031677": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/su18031677",
+      "identity_tokens": [
+        "DOI:10.3390/su18031677"
+      ],
+      "reason": "一次資料の要旨を確認。Short-Term Residential Load Forecasting (STRLF) is a core task in smart grid dispatching and energy management, and its accuracy directly affects the economy and stability of power systems. Current mainstream methods still have limitations in addressing issues such as complex temporal patterns, strong stochasticity of load data, and insufficient model interpretability. To this end, this paper prop",
+      "first_checked_at": "2026-10-06T21:12:51+00:00",
+      "last_checked_at": "2026-10-06T21:12:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "KAN+Transformer: An Explainable and Efficient Approach for Electric Load Forecasting"
+    },
+    "arXiv:2602.17686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17686",
+      "identity_tokens": [
+        "arXiv:2602.17686"
+      ],
+      "reason": "一次資料の要旨を確認。Chain-of-Thought (CoT) reasoning has significantly improved LLMs'mathematical problem-solving capabilities, but distilling such capabilities into smaller models remains challenging due to the capacity mismatch between verbose teachers and compact students. Directly copying teachers'lengthy reasoning chains causes capacity overload, resulting in truncated outputs or repetitive failure. Existing rem",
+      "first_checked_at": "2026-10-06T21:12:51+00:00",
+      "last_checked_at": "2026-10-06T21:12:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "BRIDGE: Bridging Reasoning In Distillation Gap Elimination via Structure-Aware Masking"
+    },
+    "arXiv:2602.13290": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13290",
+      "identity_tokens": [
+        "arXiv:2602.13290"
+      ],
+      "reason": "一次資料の要旨を確認。Effective management and operational decision-making for complex mobile network systems present significant challenges, particularly when addressing conflicting requirements such as efficiency, user satisfaction, and energy-efficient traffic steering. The literature presents various approaches aimed at enhancing network management, including the Zero-Touch Network (ZTN) and Self-Organizing Network",
+      "first_checked_at": "2026-10-06T21:12:52+00:00",
+      "last_checked_at": "2026-10-06T21:12:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "AGORA: Agentic Green Orchestration Architecture for Beyond 5G Networks"
+    },
+    "arXiv:2602.07547": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07547",
+      "identity_tokens": [
+        "arXiv:2602.07547"
+      ],
+      "reason": "一次資料の要旨を確認。Recent work has shown that scaling large language models (LLMs) improves their alignment with human brain activity, yet it remains unclear what drives these gains and which representational properties are responsible. Although larger models often yield better task performance and brain alignment, they are increasingly difficult to analyze mechanistically. This raises a fundamental question: what i",
+      "first_checked_at": "2026-10-06T21:12:53+00:00",
+      "last_checked_at": "2026-10-06T21:12:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md"
+      ],
+      "title": "Linguistic properties and model scale in brain encoding: from small to compressed language models"
+    },
+    "arXiv:2602.03893": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03893",
+      "identity_tokens": [
+        "arXiv:2602.03893"
+      ],
+      "reason": "一次資料の要旨を確認。Although the iterative reconstruction (IR) algorithm can substantially correct reconstruction artifacts in photoacoustic (PA) computed tomography (PACT), it suffers from long reconstruction times, especially for large-scale three-dimensional (3D) imaging in which IR takes hundreds of seconds to hours. The computing burden severely limits the practical applicability of IR algorithms. In this work,",
+      "first_checked_at": "2026-10-06T21:12:54+00:00",
+      "last_checked_at": "2026-10-06T21:12:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "GPAIR: Gaussian-Kernel-Based Ultrafast 3D Photoacoustic Iterative Reconstruction"
+    },
+    "arXiv:2602.01533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01533",
+      "identity_tokens": [
+        "arXiv:2602.01533"
+      ],
+      "reason": "一次資料の要旨を確認。Online handwritten character recognition leverages stroke order and dynamic features, which generally provide higher accuracy and robustness compared with offline recognition. However, in practical applications, rotational deformations can disrupt the spatial layout of strokes, substantially reducing recognition accuracy. Extracting rotation-invariant features therefore remains a challenging open",
+      "first_checked_at": "2026-10-06T21:12:54+00:00",
+      "last_checked_at": "2026-10-06T21:12:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Rotation-free Online Handwritten Character Recognition Using Linear Recurrent Units"
+    },
+    "arXiv:2601.19221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19221",
+      "identity_tokens": [
+        "arXiv:2601.19221"
+      ],
+      "reason": "一次資料の要旨を確認。Modern Recurrent Neural Networks (RNNs), such as RWKV, are distinguished by their powerful short-range modeling capabilities and efficient fixed-size states, which constitute a core advantage over standard Transformers. However, there is a significant lack of research into their internal state as an editable knowledge representation. To fill this gap, we first explore the representational properti",
+      "first_checked_at": "2026-10-06T21:12:55+00:00",
+      "last_checked_at": "2026-10-06T21:12:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "DREAMSTATE: Diffusing States and Parameters for Recurrent Large Language Models"
+    },
+    "arXiv:2604.02337": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.02337",
+      "identity_tokens": [
+        "arXiv:2604.02337"
+      ],
+      "reason": "一次資料の要旨を確認。Counterfactual simulation-exploring hypothetical consequences under alternative clinical scenarios-holds promise for transformative applications such as personalized medicine and in-silico trials. However, it remains challenging due to methodological limitations. Here, we show that an autoregressive generative model, trained on real-world data from over 300,000 patients and 400 million patient tim",
+      "first_checked_at": "2026-10-06T21:12:55+00:00",
+      "last_checked_at": "2026-10-06T21:12:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Generating Counterfactual Patient Timelines from Real-World Data"
+    },
+    "arXiv:2602.12613": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12613",
+      "identity_tokens": [
+        "arXiv:2602.12613"
+      ],
+      "reason": "一次資料の要旨を確認。Temporal Graph Neural Networks (TGNNs) are pivotal in processing dynamic graphs. However, existing TGNNs primarily target one-time predictions for a given temporal span, whereas many practical applications require continuous predictions, that predictions are issued frequently over time. Directly adapting existing TGNNs to continuous-prediction scenarios introduces either significant computational",
+      "first_checked_at": "2026-10-06T21:12:56+00:00",
+      "last_checked_at": "2026-10-06T21:12:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction"
+    },
+    "arXiv:2602.11863": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11863",
+      "identity_tokens": [
+        "arXiv:2602.11863"
+      ],
+      "reason": "一次資料の要旨を確認。Large language models (LLMs) can learn from a few demonstrations provided at inference time. We study this in-context learning phenomenon through the lens of Gaussian Processes (GPs). We build controlled experiments where models observe sequences of multivariate scalar-valued function samples drawn from known GP priors. We evaluate prediction error in relation to the number of demonstrations and c",
+      "first_checked_at": "2026-10-06T21:12:56+00:00",
+      "last_checked_at": "2026-10-06T21:12:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "In-Context Function Learning in Large Language Models"
+    },
+    "arXiv:2602.11882": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11882",
+      "identity_tokens": [
+        "arXiv:2602.11882"
+      ],
+      "reason": "一次資料の要旨を確認。Efficient spatial reasoning requires world models that remain reliable under tight precision budgets. We study whether low-bit planning behavior is determined mostly by total bitwidth or by where bits are allocated across modules. Using DINO-WM on the Wall planning task, we run a paired-goal mixed-bit evaluation across uniform, mixed, asymmetric, and layerwise variants under two planner budgets. W",
+      "first_checked_at": "2026-10-06T21:12:57+00:00",
+      "last_checked_at": "2026-10-06T21:12:57+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Where Bits Matter in World Model Planning: A Paired Mixed-Bit Study for Efficient Spatial Reasoning"
+    },
+    "arXiv:2602.12049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12049",
+      "identity_tokens": [
+        "arXiv:2602.12049"
+      ],
+      "reason": "一次資料の要旨を確認。Large language models (LLMs) have demonstrated strong code generation capabilities, yet the runtime performance of generated code is not guaranteed, and there have been few attempts to train LLMs using runtime performance as a reward in the HPC domain. We propose an online reinforcement learning approach that executes LLM-generated code on a supercomputer and directly feeds back the measured runti",
+      "first_checked_at": "2026-10-06T21:12:57+00:00",
+      "last_checked_at": "2026-10-06T21:12:57+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Improving HPC Code Generation Capability of LLMs via Online Reinforcement Learning with Real-Machine Benchmark Rewards"
+    },
+    "DOI:10.1109/tkde.2025.3621493": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tkde.2025.3621493",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2025.3621493"
+      ],
+      "reason": "指定publisher/DOIの一次ページを取得できず、入力キャッシュ要旨を一次根拠として採用していない。",
+      "first_checked_at": "2026-10-06T21:12:58+00:00",
+      "last_checked_at": "2026-10-06T21:12:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "TowerDNA: Fast and Accurate Graph Retrieval With Dividing, Contrasting and Alignment"
+    },
+    "arXiv:2602.10387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10387",
+      "identity_tokens": [
+        "arXiv:2602.10387"
+      ],
+      "reason": "一次資料の要旨を確認。Traditional query optimization relies on cost-based optimizers that estimate execution cost (e.g., runtime, memory, and I/O) using predefined heuristics and statistical models. Improving these requires substantial engineering effort, yet they often cannot exploit semantic correlations in queries and schemas that could enable better physical plans. Large language models (LLMs), however, can reason",
+      "first_checked_at": "2026-10-06T21:12:59+00:00",
+      "last_checked_at": "2026-10-06T21:12:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Test-Time Optimization of Physical Query Plans with LLMs"
+    },
+    "arXiv:2602.10491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10491",
+      "identity_tokens": [
+        "arXiv:2602.10491"
+      ],
+      "reason": "一次資料の要旨を確認。Remote sensing change detection is essential for environmental monitoring, urban planning, and related applications. However, current methods often struggle to capture long-range dependencies while maintaining computational efficiency. Although Transformers can effectively model global context, their quadratic complexity poses scalability challenges, and existing linear attention approaches freque",
+      "first_checked_at": "2026-10-06T21:13:00+00:00",
+      "last_checked_at": "2026-10-06T21:13:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Towards Remote Sensing Change Detection with Neural Memory"
+    },
+    "arXiv:2602.10585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10585",
+      "identity_tokens": [
+        "arXiv:2602.10585"
+      ],
+      "reason": "一次資料の要旨を確認。The trade-off between interpretability and accuracy remains a core challenge in machine learning. Standard Generalized Additive Models (GAMs) offer clear feature attributions but are often constrained by their strictly additive nature, which can limit predictive performance. Introducing feature interactions can boost accuracy yet may obscure individual feature contributions. To address these issue",
+      "first_checked_at": "2026-10-06T21:13:00+00:00",
+      "last_checked_at": "2026-10-06T21:13:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Neural Additive Experts: Context-Gated Experts for Controllable Model Additivity"
+    },
+    "arXiv:2602.09869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09869",
+      "identity_tokens": [
+        "arXiv:2602.09869"
+      ],
+      "reason": "一次資料の要旨を確認。We study the performance of transformer architectures for multivariate time-series forecasting in low-data regimes consisting of only a few years of daily observations. Using synthetically generated processes with known temporal and cross-sectional dependency structures and varying signal-to-noise ratios, we conduct bootstrapped experiments that enable direct evaluation via out-of-sample correlati",
+      "first_checked_at": "2026-10-06T21:13:00+00:00",
+      "last_checked_at": "2026-10-06T21:13:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Statistical benchmarking of transformer models in low signal-to-noise time-series forecasting"
     }
   }
 }

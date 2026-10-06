@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff99daeb8f76b4c7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.10491",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.10491",
+    "identity_tokens": [
+      "arXiv:2602.10491"
+    ],
+    "reason": "一次資料の要旨を確認。Remote sensing change detection is essential for environmental monitoring, urban planning, and related applications. However, current methods often struggle to capture long-range dependencies while maintaining computational efficiency. Although Transformers can effectively model global context, their quadratic complexity poses scalability challenges, and existing linear attention approaches freque",
+    "first_checked_at": "2026-10-06T21:13:00+00:00",
+    "last_checked_at": "2026-10-06T21:13:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "Towards Remote Sensing Change Detection with Neural Memory"
+  },
+  "processed_at": "2026-10-06T21:13:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff99daeb8f76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

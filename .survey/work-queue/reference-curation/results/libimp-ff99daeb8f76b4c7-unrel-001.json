@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff99daeb8f76b4c7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.10387",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.10387",
+    "identity_tokens": [
+      "arXiv:2602.10387"
+    ],
+    "reason": "一次資料の要旨を確認。Traditional query optimization relies on cost-based optimizers that estimate execution cost (e.g., runtime, memory, and I/O) using predefined heuristics and statistical models. Improving these requires substantial engineering effort, yet they often cannot exploit semantic correlations in queries and schemas that could enable better physical plans. Large language models (LLMs), however, can reason",
+    "first_checked_at": "2026-10-06T21:12:59+00:00",
+    "last_checked_at": "2026-10-06T21:12:59+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+    ],
+    "title": "Test-Time Optimization of Physical Query Plans with LLMs"
+  },
+  "processed_at": "2026-10-06T21:12:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff99daeb8f76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

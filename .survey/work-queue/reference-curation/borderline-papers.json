@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T21:07:35+00:00",
-  "record_count": 4141,
+  "updated_at": "2026-10-06T21:12:59+00:00",
+  "record_count": 4160,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -63228,6 +63228,291 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Scales of Attention: A Hierarchical InLegalBERT Framework for Legal Judgment Prediction"
+    },
+    "DOI:10.1016/j.apacoust.2025.111118": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.apacoust.2025.111118",
+      "identity_tokens": [
+        "DOI:10.1016/j.apacoust.2025.111118"
+      ],
+      "reason": "few-shot multi-speaker text-to-speech向けMoE/parameter efficiencyは関連隣接領域だが、Elsevier一次本文を取得できず推論時のparameter/latency利得を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:47+00:00",
+      "last_checked_at": "2026-10-06T21:12:47+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hyper-MoA: Achieving high quality and parameter efficiency in few-shot multi-speaker TTS"
+    },
+    "DOI:10.1109/tmc.2025.3611135": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2025.3611135",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2025.3611135"
+      ],
+      "reason": "RF fingerprint identification向けhybrid Bayesian modelでLLM inferenceとの関連は薄いが、IEEE一次資料を取得できず要旨を直接確認できない。",
+      "first_checked_at": "2026-10-06T21:12:48+00:00",
+      "last_checked_at": "2026-10-06T21:12:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Hybrid Model With Bayesian Nonparametric Inference for RF Fingerprint Identification"
+    },
+    "arXiv:2601.19085": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.19085",
+      "identity_tokens": [
+        "arXiv:2601.19085"
+      ],
+      "reason": "本文はTiny Recursive Model ensembles向けhalt-first adaptive test-time computeとspeed/accuracy tradeoffを測定するが、LLM token inferenceではなくpuzzle reasoningモデルであり転用の実証が残る。",
+      "first_checked_at": "2026-10-06T21:12:49+00:00",
+      "last_checked_at": "2026-10-06T21:12:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speed is Confidence"
+    },
+    "DOI:10.1109/ccic68129.2026.11485947": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ccic68129.2026.11485947",
+      "identity_tokens": [
+        "DOI:10.1109/ccic68129.2026.11485947"
+      ],
+      "reason": "cloud上の低resource環境でLLMをPEFTする話はparameter/resource効率に隣接するが、指定IEEE一次資料を取得できず学習コストと推論時利得を区別できない。",
+      "first_checked_at": "2026-10-06T21:12:50+00:00",
+      "last_checked_at": "2026-10-06T21:12:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parameter Efficient Fine Tuning of Large Language Models for Cloud Based Data in Low Resource Environments"
+    },
+    "arXiv:2602.05269": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05269",
+      "identity_tokens": [
+        "arXiv:2602.05269"
+      ],
+      "reason": "本文は1.58-bit ternary LLM backboneとgated low-rank correctionを組み合わせ、memory footprint/throughputを評価するが、主結果はTinyStoriesの小規模trainingであり1.2B/3B評価は未確定と明記。大規模LLM推論の再現性が未解決。",
+      "first_checked_at": "2026-10-06T21:12:50+00:00",
+      "last_checked_at": "2026-10-06T21:12:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hybrid Gated Flow (HGF): Stabilizing 1.58-bit LLMs via Selective Low-Rank Correction"
+    },
+    "DOI:10.1109/aide69088.2026.11544370": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aide69088.2026.11544370",
+      "identity_tokens": [
+        "DOI:10.1109/aide69088.2026.11544370"
+      ],
+      "reason": "LLaMA/Gemmaを使うIndia向けlegal-support RAG appは対象LLMを含むが、IEEE一次資料を取得できずmodel size, latency, serving costの評価を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:50+00:00",
+      "last_checked_at": "2026-10-06T21:12:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval-Augmented AI Platform for Accessible Legal Support in India"
+    },
+    "DOI:10.1109/jbhi.2026.3662787": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jbhi.2026.3662787",
+      "identity_tokens": [
+        "DOI:10.1109/jbhi.2026.3662787"
+      ],
+      "reason": "EEG tokenを使う睡眠ステージ予測でsequence modelに隣接するが、IEEE JBHI一次資料を取得できず、言語モデルとの関係/効率を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:51+00:00",
+      "last_checked_at": "2026-10-06T21:12:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SSF-SET: A Discrete EEG Token-Based Framework for Sleep Stage Forecasting"
+    },
+    "DOI:10.48084/etasr.15977": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48084/etasr.15977",
+      "identity_tokens": [
+        "DOI:10.48084/etasr.15977"
+      ],
+      "reason": "DETRのattention efficiencyを道路異常検出で改善する内容は一般attention lineageに隣接するが、指定ETASR一次資料を取得できず、実際の効率効果とLLM移転可能性を確かめられない。",
+      "first_checked_at": "2026-10-06T21:12:52+00:00",
+      "last_checked_at": "2026-10-06T21:12:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Differentiable Gating Mechanism for DETR: Improving Attention Efficiency in Real-Time Road Anomaly Detection"
+    },
+    "arXiv:2603.03310": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.03310",
+      "identity_tokens": [
+        "arXiv:2603.03310"
+      ],
+      "reason": "本文はuncertainty flowに基づくLLM decoding scheduling/attention pruningを提案する一方、実証はablation/design寄りで推論gainと品質tradeoffの強い検証が不足しているため、追加再現が必要。",
+      "first_checked_at": "2026-10-06T21:12:52+00:00",
+      "last_checked_at": "2026-10-06T21:12:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Entropic-Time Inference: Self-Organizing Large Language Model Decoding Beyond Attention"
+    },
+    "DOI:10.1109/aide69088.2026.11545154": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aide69088.2026.11545154",
+      "identity_tokens": [
+        "DOI:10.1109/aide69088.2026.11545154"
+      ],
+      "reason": "AutoContextの題名はLLM context managementに直接関わるが、指定IEEE一次資料へアクセスできず、KV/context memory削減やruntime効果の根拠を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:53+00:00",
+      "last_checked_at": "2026-10-06T21:12:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AutoContext: An Adaptive Framework for Intelligent Context Management in Large Language Models"
+    },
+    "DOI:10.1109/icasst68917.2026.11484283": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icasst68917.2026.11484283",
+      "identity_tokens": [
+        "DOI:10.1109/icasst68917.2026.11484283"
+      ],
+      "reason": "cloud-optimized transformer NLPの効率化を扱う題名は推論系統に関連するが、IEEE一次資料に接続できず手法・serving測定を検証できない。",
+      "first_checked_at": "2026-10-06T21:12:53+00:00",
+      "last_checked_at": "2026-10-06T21:12:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cloud Transformer: A Cloud-Optimized Transformer-Based Approach for Scalable and Efficient Natural Language Processing"
+    },
+    "DOI:10.1109/iisec69317.2026.11418430": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iisec69317.2026.11418430",
+      "identity_tokens": [
+        "DOI:10.1109/iisec69317.2026.11418430"
+      ],
+      "reason": "heterogeneous GenAI workload向け residual-aware resource packingはserving schedulerに近いが、IEEE一次資料を取得できずGPU/HBM utilizationやLLM latencyの結果を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:54+00:00",
+      "last_checked_at": "2026-10-06T21:12:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fitting the Void: Residual-Aware Geometric Packing for GenAI Workloads"
+    },
+    "DOI:10.71465/fias635": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.71465/fias635",
+      "identity_tokens": [
+        "DOI:10.71465/fias635"
+      ],
+      "reason": "selective state propagationによるreal-time cryptocurrency forecastingはrecurrent/linear-attention系統に隣接するが、指定primary sourceを取得できず言語モデルへの転用性を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:54+00:00",
+      "last_checked_at": "2026-10-06T21:12:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Selective State Propagation for Real-Time Crypto Asset Forecasting with Subquadratic Attention Alternatives"
+    },
+    "DOI:10.1093/bioinformatics/btag080": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag080",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btag080"
+      ],
+      "reason": "不規則時系列下のgene-expression dynamics学習でLLM推論との関係は薄そうだが、指定Oxford一次資料を取得できず要旨と手法を直接検証できない。",
+      "first_checked_at": "2026-10-06T21:12:56+00:00",
+      "last_checked_at": "2026-10-06T21:12:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "scMix: learning temporal dynamics of gene expression under irregular time intervals"
+    },
+    "DOI:10.1016/j.asoc.2026.114804": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.114804",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.114804"
+      ],
+      "reason": "hate detection/explanation向けLLM appで対象modelは関連するが、Elsevier一次資料を取得できず推論最適化の有無を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:57+00:00",
+      "last_checked_at": "2026-10-06T21:12:57+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dethate-LLM: Large language model for unified implicit hate detection and explanation"
+    },
+    "DOI:10.1051/wujns/2026311001": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1051/wujns/2026311001",
+      "identity_tokens": [
+        "DOI:10.1051/wujns/2026311001"
+      ],
+      "reason": "medical segmentation向けRWKV-UNetでlinear-time architectureに隣接するが、指定出版社一次資料を取得できずLLM向け適用やserving結果を確かめられない。",
+      "first_checked_at": "2026-10-06T21:12:58+00:00",
+      "last_checked_at": "2026-10-06T21:12:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MS-RWKV-UNet: Multi-Head Scan Receptance Weighted Key Value UNet for Medical Image Segmentation"
+    },
+    "DOI:10.1109/jsen.2025.3640827": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jsen.2025.3640827",
+      "identity_tokens": [
+        "DOI:10.1109/jsen.2025.3640827"
+      ],
+      "reason": "sensor-generated multimodal workload classificationのMoE gatingで対象は異なるが、IEEE一次資料を取得できずLLM inference lineageとの重複を確認できない。",
+      "first_checked_at": "2026-10-06T21:12:58+00:00",
+      "last_checked_at": "2026-10-06T21:12:58+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CogniMoE: End-to-End Multimodal Mental Workload Classification via On-the-Fly Scalogram Generation and MoE Gating"
+    },
+    "DOI:10.1109/tii.2025.3627691": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tii.2025.3627691",
+      "identity_tokens": [
+        "DOI:10.1109/tii.2025.3627691"
+      ],
+      "reason": "battery manufacturing equipment向けdynamic dilated Transformerは産業時系列用途であるが、IEEE一次資料を取得できず推論効率やLLMとの関係を直接確認できない。",
+      "first_checked_at": "2026-10-06T21:12:58+00:00",
+      "last_checked_at": "2026-10-06T21:12:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Intelligent Condition Monitoring for Battery Cell Manufacturing Equipment: A Dynamic Dilated Transformer Approach"
+    },
+    "DOI:10.3390/land15020305": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/land15020305",
+      "identity_tokens": [
+        "DOI:10.3390/land15020305"
+      ],
+      "reason": "Egypt cropland extraction向けU-Net/axial-attention visionで対象は異なるが、指定MDPI primary articleへ接続できず内容確認未了。",
+      "first_checked_at": "2026-10-06T21:12:59+00:00",
+      "last_checked_at": "2026-10-06T21:12:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Precise Extraction of Croplands from Remote Sensing Images in Egypt by a Dual-Encoder U-Net with Multi-Scale Axial Attention and Boundary Constraints"
     }
   }
 }

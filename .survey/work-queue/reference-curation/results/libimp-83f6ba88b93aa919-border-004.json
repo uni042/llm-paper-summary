@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83f6ba88b93aa919-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.03310",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.03310",
+    "identity_tokens": [
+      "arXiv:2603.03310"
+    ],
+    "reason": "本文はuncertainty flowに基づくLLM decoding scheduling/attention pruningを提案する一方、実証はablation/design寄りで推論gainと品質tradeoffの強い検証が不足しているため、追加再現が必要。",
+    "first_checked_at": "2026-10-06T21:12:52+00:00",
+    "last_checked_at": "2026-10-06T21:12:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Entropic-Time Inference: Self-Organizing Large Language Model Decoding Beyond Attention"
+  },
+  "processed_at": "2026-10-06T21:12:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83f6ba88b93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
