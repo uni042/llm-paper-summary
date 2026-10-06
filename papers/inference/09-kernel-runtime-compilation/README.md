@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（52本）
+## 自動生成の論文一覧（53本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -233,6 +233,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
   実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：4  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
+
+- **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
+  実装：[✓](https://github.com/haopeng-nlp/transformer-rfa) ・ リポジトリ内被引用：3  
+  Random Feature 注意機構（RFA）は、softmax注意をrandom feature法で近似し、系列長nに対する時間・空間の二次増加を線形へ変える。言語モデリングと機械翻訳で強いTransformer基準と同等以上の品質を示し、機械翻訳デコードではvanilla Transformerの約2倍高速だった。
 
 ### 7年前（2019-11〜2020-10）
 

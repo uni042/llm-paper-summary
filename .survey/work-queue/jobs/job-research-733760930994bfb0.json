@@ -35,10 +35,15 @@
   "selection_reason": "RFAはsoftmax attentionをrandom feature mapで近似し、causal attentionをrecurrent stateとして更新して時間・空間計算量を系列長に対して線形化する。machine translationで約2倍decode高速化、2048-token出力で12倍decode高速化かつsoftmax attentionの10%未満のmemoryを報告し、autoregressive推論の速度・memoryを直接改善するため対象内。",
   "semantic_scholar_id": "9ed25f101f19ea735ca300848948ed64064b97ca",
   "source_url": "https://arxiv.org/abs/2103.02143",
-  "status": "ready",
+  "status": "superseded",
   "title": "Random Feature Attention",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-06T12:11:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+  "represented_canonical_id": "arXiv:2103.02143",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
