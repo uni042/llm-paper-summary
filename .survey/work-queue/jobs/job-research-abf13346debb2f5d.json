@@ -35,10 +35,15 @@
   "selection_reason": "Intel AI PC群で単体機のメモリに収まらないLLMを推論するため、層単位に分割したOpenVINO shardを複数ノードで実行し、推論時投機的デコードと複数利用者のmicro-batchingを組み合わせる研究である。Llama 3.1 8Bの同一ハードウェア比較で単体baselineを上回る複数利用者throughputを示し、70Bの4ノード推論も評価しているため、LLM serving・推論効率化に該当する。評価は主にIntel統合GPUとOpenVINOに限られ、他社GPU環境との比較は行っていない。",
   "semantic_scholar_id": "dd2a0fe5c9eaf9fe9e8c04f4ffb480bb49f71f8a",
   "source_url": "https://arxiv.org/abs/2608.19147",
-  "status": "ready",
+  "status": "superseded",
   "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T12:17:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-p.md",
+  "represented_canonical_id": "arXiv:2608.19147",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

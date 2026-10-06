@@ -35,10 +35,15 @@
   "selection_reason": "activation outlierのchannel-wise asymmetry/concentrationを等価なshift/scaleとして後続moduleへ移し、post-training quantizationの誤差を抑えるOS+を提案する。OPT/BLOOM/BLOOMZ/LLaMA等で8/6-bitをほぼ浮動小数点品質に保ち、LLMの低bit推論を直接可能にするため対象内。",
   "semantic_scholar_id": "f3275146eb973c9726dc550a88cc552f0dfa5ea7",
   "source_url": "https://arxiv.org/abs/2304.09145",
-  "status": "ready",
+  "status": "superseded",
   "title": "Outlier Suppression+: Accurate quantization of large language models by equivalent and effective shifting and scaling",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-06T12:17:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
+  "represented_canonical_id": "arXiv:2304.09145",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
