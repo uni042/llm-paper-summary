@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r151-screen-01-part-04-9eab99a323a5",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.2196/95883",
+      "identity_tokens": [
+        "DOI:10.2196/95883"
+      ],
+      "title": "Large Language Models for Patient Education in Cardiovascular Imaging: Prospective Observational Comparative Study",
+      "reason": "患者教育におけるLLM利用評価であり関連領域だが、指定JMIR DOIの一次本文を取得できず、推論効率を扱うか検証できない。",
+      "source_url": "https://doi.org/10.2196/95883",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20654",
+      "identity_tokens": [
+        "arXiv:2603.20654"
+      ],
+      "title": "Modernizing Amdahl's Law: How AI Scaling Laws Shape Computer Architecture",
+      "reason": "一次資料の要旨を確認。Classical Amdahl's Law conceptualized the limit of speedup for an era of fixed serial-parallel decomposition and homogeneous replication. Modern heterogeneous systems need a different conceptual framework: constrained resources must be allocated across heterogeneous hardware while workloads themselves change, with some stages becoming effectively bounded and others continuing to absorb additional effective compute. T",
+      "source_url": "https://arxiv.org/abs/2603.20654",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19637",
+      "identity_tokens": [
+        "arXiv:2603.19637"
+      ],
+      "title": "UniBioTransfer: A Unified Framework for Multiple Biometrics Transfer",
+      "reason": "一次資料の要旨を確認。Deepface generation has traditionally followed a task-driven paradigm, where distinct tasks (e.g., face transfer and hair transfer) are addressed by task-specific models. Nevertheless, this single-task setting severely limits model generalization and scalability. A unified model capable of solving multiple deepface generation tasks in a single pass represents a promising and practical direction, yet remains challengi",
+      "source_url": "https://arxiv.org/abs/2603.19637",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19899",
+      "identity_tokens": [
+        "arXiv:2603.19899"
+      ],
+      "title": "Deep Autocorrelation Modeling for Time-Series Forecasting: Progress and Prospects",
+      "reason": "一次資料の要旨を確認。Autocorrelation is a defining characteristic of time-series data, where each observation is statistically dependent on its predecessors. In the context of deep time-series forecasting, autocorrelation arises in both the input history and the label sequences, presenting two central research challenges: (1) designing neural architectures that model autocorrelation in history sequences, and (2) devising learning objecti",
+      "source_url": "https://arxiv.org/abs/2603.19899",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AETCSE69203.2026.11503963",
+      "identity_tokens": [
+        "DOI:10.1109/AETCSE69203.2026.11503963"
+      ],
+      "title": "Shared Memory Optimization of the Triton Compiler for Domestic NPU",
+      "reason": "要旨キャッシュ上はTriton compilerのNPU shared-memory最適化を扱い、compiler lineageとの関連が強いが、指定IEEE DOI一次資料を取得できず実装/性能根拠を確認できない。",
+      "source_url": "https://doi.org/10.1109/AETCSE69203.2026.11503963",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
