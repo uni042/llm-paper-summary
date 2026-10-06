@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r92-screen-01-part-08-26693879268c",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23133",
+      "identity_tokens": [
+        "arXiv:2506.23133"
+      ],
+      "title": "Format-Adapter: Improving Reasoning Capability of LLMs by Adapting Suitable Format",
+      "reason": "Reasoning-format voting targets reasoning quality; no compute/latency reduction method is described.",
+      "source_url": "https://arxiv.org/abs/2506.23133",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13965",
+      "identity_tokens": [
+        "arXiv:2506.13965"
+      ],
+      "title": "Are manual annotations necessary for statutory interpretations retrieval?",
+      "reason": "Legal statutory-interpretation retrieval, with no inference-system efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2506.13965",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.11469",
+      "identity_tokens": [
+        "arXiv:2506.11469"
+      ],
+      "title": "Structure-Aware Automatic Channel Pruning by Searching with Graph Embedding",
+      "reason": "CNN image-classification evaluation; no Transformer/BERT/LLM or serving-latency result. Search includes substantial candidate evaluation and fine-tuning.",
+      "source_url": "https://arxiv.org/abs/2506.11469",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.10831",
+      "identity_tokens": [
+        "arXiv:2506.10831"
+      ],
+      "title": "Efficiency Robustness of Dynamic Deep Learning Systems",
+      "reason": "Primary text confirms this is not an inference improvement.",
+      "source_url": "https://arxiv.org/abs/2506.10831",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.07248",
+      "identity_tokens": [
+        "arXiv:2506.07248"
+      ],
+      "title": "Improving the Efficiency of Long Document Classification using Sentence Ranking Approach",
+      "reason": "Single encoder classification dataset, not generative LLM or serving; transfer is uncertain.",
+      "source_url": "https://arxiv.org/abs/2506.07248",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    }
+  ]
+}
