@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r133-screen-01-part-04-2d5a1d4ba74e",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04711",
+      "identity_tokens": [
+        "arXiv:2407.04711"
+      ],
+      "title": "MetaFruit Meets Foundation Models: Leveraging a Comprehensive Multi-Fruit Dataset for Advancing Agricultural Foundation Models",
+      "reason": "農業向け果実検出データセット/視覚基盤モデルが対象で、LLM重み圧縮系統とのつながりを示す推論手法はない。",
+      "source_url": "https://arxiv.org/abs/2407.04711",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.09356",
+      "identity_tokens": [
+        "arXiv:2404.09356"
+      ],
+      "title": "LLeMpower: Understanding Disparities in the Control and Access of Large Language Models",
+      "reason": "LLMの制御・利用格差とアクセスを分析する研究で、serving効率を改善する手法や評価ではない。",
+      "source_url": "https://arxiv.org/abs/2404.09356",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08811",
+      "identity_tokens": [
+        "arXiv:2404.08811"
+      ],
+      "title": "Reducing the Barriers to Entry for Foundation Model Training",
+      "reason": "タイトルと一次要旨の対象はfoundation modelの学習インフラ・学習参入障壁であり、推論改善ではない。inference-systems系統に直接つながる手法はない。",
+      "source_url": "https://arxiv.org/abs/2404.08811",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00861",
+      "identity_tokens": [
+        "arXiv:2402.00861"
+      ],
+      "title": "Evaluating Large Language Models for Generalization and Robustness via Data Compression",
+      "reason": "データ圧縮をLLMの汚染耐性・汎化評価に使うベンチマーク方法で、モデル推論の圧縮や効率改善を提案する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2402.00861",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1364/JOCN.511696",
+      "identity_tokens": [
+        "DOI:10.1364/JOCN.511696"
+      ],
+      "title": "Fast and scalable all-optical network architecture for distributed deep learning",
+      "reason": "全光ネットワークを使う分散深層学習の通信アーキテクチャで、要旨は学習通信が対象。LLM推論/serving最適化とは異なる。",
+      "source_url": "https://doi.org/10.1364/JOCN.511696",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ]
+    }
+  ]
+}
