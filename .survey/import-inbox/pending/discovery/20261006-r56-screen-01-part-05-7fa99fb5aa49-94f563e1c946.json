@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r56-screen-01-part-05-7fa99fb5aa49",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115318",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115318"
+      ],
+      "title": "MeLoRA : Probability measures-based low-rank adaptation with Gaussian variational inference",
+      "reason": "The publisher abstract identifies MeLoRA as a probabilistic PEFT method specifically applied to LLMs, with memory-efficient covariance and nearly negligible added inference latency; full-text method/evaluation could not be accessed through the primary ScienceDirect page, so its adaptation-memory and training-cost claims remain unverified.",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.115318",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115337",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115337"
+      ],
+      "title": "Accelerating deep neural networks through stability-aware initial training and density-guided asymptotic filter decay",
+      "reason": "The title describes stability-aware initialization/filter decay for generic deep-network training; it provides no LLM-specific inference or deployment method.",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.115337",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103686",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103686"
+      ],
+      "title": "FP8ApproxLib: An FPGA-based approximate multiplier library for 8-bit floating point",
+      "reason": "FP8ApproxLib’s publisher abstract reports FPGA approximate FP8 multipliers, neural-network inference case studies including LLMs, and lower resource/energy cost; full-text method, numerical tradeoffs and LLM case-study details could not be accessed from the primary ScienceDirect page.",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103686",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/LCA.2025.3646170",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2025.3646170"
+      ],
+      "title": "Exploring KV Cache Quantization in Multimodal Large Language Model Inference",
+      "reason": "This is directly about KV-cache quantization for MLLM inference and is linked to a KV-cache compression paper. The publisher full text was inaccessible; only primary bibliographic/abstract material was available, so method, evaluation setup and limitations were not checked.",
+      "source_url": "https://doi.org/10.1109/LCA.2025.3646170",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/MITS.2025.3614710",
+      "identity_tokens": [
+        "DOI:10.1109/MITS.2025.3614710"
+      ],
+      "title": "Spatiotemporal Graph Mixture of Experts for Highway Traffic Flow Prediction",
+      "reason": "The paper uses a spatiotemporal graph MoE for highway traffic forecasting; it is task-specific traffic prediction, not LLM inference routing or serving.",
+      "source_url": "https://doi.org/10.1109/MITS.2025.3614710",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    }
+  ]
+}
