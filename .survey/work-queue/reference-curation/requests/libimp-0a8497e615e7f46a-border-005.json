@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0a8497e615e7f46a-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.01926",
+  "reason": "LAST reuses Transformer blocks to update only the audio class token after processing input tokens, reducing additional layer computation for audio recognition. The primary text evaluates AudioSet and reports accuracy/compute trade-offs, but this is an audio spectrogram classifier rather than an LLM/VLM inference method; relation to generative serving is weak.",
+  "title": "LAST: Looped Audio Spectrogram Transformer",
+  "identity_tokens": [
+    "arXiv:2610.01926"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a8497e615e7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
