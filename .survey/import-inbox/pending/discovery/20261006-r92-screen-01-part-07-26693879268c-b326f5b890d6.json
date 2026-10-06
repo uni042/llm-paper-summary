@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r92-screen-01-part-07-26693879268c",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.01504",
+      "identity_tokens": [
+        "arXiv:2507.01504"
+      ],
+      "title": "Following the Clues: Experiments on Person Re-ID Using Cross-Modal Intelligence",
+      "reason": "Cross-modal person re-identification, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2507.01504",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143488",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS65803.2025.11143488"
+      ],
+      "title": "Malva: A Jitter-Aware Online Pruning Framework for DNN Inference Tasks",
+      "reason": "No abstract in packet; IEEE DOI request blocked by robots.txt. Title and DeeBERT link make inference pruning plausible, but no body is available.",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143488",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.107794",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2025.107794"
+      ],
+      "title": "Embeddings hidden layers learning for neural network compression",
+      "reason": "Abstract or lineage indicates a plausible inference-efficiency connection, but primary full text could not be reviewed; relevance remains unresolved.",
+      "source_url": "https://doi.org/10.1016/j.neunet.2025.107794",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSI.2024.3488119",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2024.3488119"
+      ],
+      "title": "Logic Neural Networks for Efficient FPGA Implementation",
+      "reason": "Logic neural-network FPGA implementation, not Transformer/LLM inference.",
+      "source_url": "https://doi.org/10.1109/TCSI.2024.3488119",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11227797",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11227797"
+      ],
+      "title": "2025: A GPT Odyssey. Deconstructing Intelligence by Gradual Dissolution of a Transformer",
+      "reason": "Conceptual GPT/Transformer analysis without a concrete serving or inference-cost improvement.",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11227797",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    }
+  ]
+}
