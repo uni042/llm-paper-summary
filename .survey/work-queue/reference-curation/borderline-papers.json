@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T09:30:56+00:00",
-  "record_count": 2700,
+  "updated_at": "2026-10-06T09:33:50+00:00",
+  "record_count": 2706,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -41477,6 +41477,96 @@
       ],
       "borderline_recheck_count": 0,
       "title": "ISAR-Mamba: A Dual-Stream Gated Mamba with Hierarchical Spatial Summaries for ISAR Image Captioning"
+    },
+    "arXiv:2608.28316": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28316",
+      "identity_tokens": [
+        "arXiv:2608.28316"
+      ],
+      "reason": "The work demonstrates rank reversals in frozen vision encoders for compositional evidence, but does not show reduced VLM inference, retrieval cost, or a measurable serving improvement.",
+      "first_checked_at": "2026-10-06T09:33:46+00:00",
+      "last_checked_at": "2026-10-06T09:33:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Conditional Visual Evidence Utility: State-Dependent Rank Reversals in Frozen Vision-Language Encoders"
+    },
+    "arXiv:2608.24136": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24136",
+      "identity_tokens": [
+        "arXiv:2608.24136"
+      ],
+      "reason": "RoFB steers recurrent latent reasoning at test time without retraining and reports gains at comparable or lower FLOPs, but experiments cover AKOrN/ItrSA++/TRM on Sudoku and Maze rather than decoder LLMs; transfer to LLM inference is unresolved.",
+      "first_checked_at": "2026-10-06T09:33:47+00:00",
+      "last_checked_at": "2026-10-06T09:33:47+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Steering Recurrent Reasoners at Inference Time with Readout Feedback"
+    },
+    "arXiv:2608.25088": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25088",
+      "identity_tokens": [
+        "arXiv:2608.25088"
+      ],
+      "reason": "VN-SST reports parameter efficiency on two small language-modeling benchmarks, while its primary evaluation centers on neural decoding and does not establish inference latency, compute, or memory savings for LLMs.",
+      "first_checked_at": "2026-10-06T09:33:48+00:00",
+      "last_checked_at": "2026-10-06T09:33:48+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Von-Neumann State-Space Transformer for neural decoding"
+    },
+    "arXiv:2608.25190": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25190",
+      "identity_tokens": [
+        "arXiv:2608.25190"
+      ],
+      "reason": "BanglaMamba reports 2.2x throughput and 49% lower peak GPU memory for Bangla fake-news classification, but has lower Macro-F1 than BanglaBERT and weaker cross-dataset generalization; this is task-specific classification, not generative LLM serving.",
+      "first_checked_at": "2026-10-06T09:33:48+00:00",
+      "last_checked_at": "2026-10-06T09:33:48+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BanglaMamba: Exploring State Space Models for Bangla Fake News Detection"
+    },
+    "arXiv:2608.28699": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28699",
+      "identity_tokens": [
+        "arXiv:2608.28699"
+      ],
+      "reason": "Movie RAG scene segmentation improves retrieval quality under the evaluated oracle/annotation-defined segmentation pipeline, but the paper reports no inference-cost reduction and leaves automatic scalable segmentation as future work.",
+      "first_checked_at": "2026-10-06T09:33:50+00:00",
+      "last_checked_at": "2026-10-06T09:33:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Visual Boundaries: Rethinking Scene Segmentation for Movie RAG"
+    },
+    "DOI:10.1007/s11263-026-02981-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11263-026-02981-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-026-02981-2"
+      ],
+      "reason": "Candidate packet has no abstract; direct primary DOI page could not be accessed in the available reader during screening.",
+      "first_checked_at": "2026-10-06T09:33:50+00:00",
+      "last_checked_at": "2026-10-06T09:33:50+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Wavelet-Based Adaptive Vision State Space Network for Image Harmonization"
     }
   }
 }
