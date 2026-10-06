@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories",
+      "source_url": "https://arxiv.org/abs/2212.10511",
+      "year": 2022,
+      "published": "2022-12-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1515,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite their impressive performance on diverse tasks, large language models (LMs) still struggle with tasks requiring rich world knowledge, implying the difficulty of encoding a wealth of world knowledge in their parameters. This paper aims to understand LMs’ strengths and limitations in memorizing factual knowledge, by conducting large-scale knowledge probing experiments on two open-domain entity-centric QA datasets: PopQA, our new dataset with 14k questions about long-tail entities, and EntityQuestions, a widely used open-domain QA dataset. We find that LMs struggle with less popular factual knowledge, and that retrieval augmentation helps significantly in these cases. Scaling, on the other hand, mainly improves memorization of popular knowledge, and fails to appreciably improve memorization of factual knowledge in the tail. Based on those findings, we devise a new method for retrieval-augmentation that improves performance and reduces inference costs by only retrieving non-parametric memories when necessary.",
+      "identifiers": [
+        "SemanticScholar:c6ee979c2da4b55a8486abae4cd720422ab09b26"
+      ],
+      "semantic_scholar_id": "c6ee979c2da4b55a8486abae4cd720422ab09b26",
+      "canonical_id": "arXiv:2212.10511",
+      "arxiv_id": "2212.10511",
+      "doi": "10.18653/v1/2023.acl-long.546",
+      "authors": [
+        "Alex Troy Mallen",
+        "Akari Asai",
+        "Victor Zhong",
+        "Rajarshi Das",
+        "Daniel Khashabi",
+        "Hannaneh Hajishirzi"
+      ],
+      "priority": 1525,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1515,
+        "citation_count": 1515,
+        "total": 1525,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1386,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Adaptive Retrievalがsubject entity popularityに基づき必要なqueryだけ外部検索し、parametric/non-parametric memoryを動的に切り替える。本文でPopQA性能を最大10%改善しつつGPT-3 API costを約半減する推論時conditional retrievalを評価しており、RAG推論コスト最適化として直接対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv本文Introduction/§6を確認。10 LM・PopQA/EntityQuestionsでlong-tail factual knowledgeを分析し、Adaptive Retrievalはentity popularity thresholdでretrieval実行をquery単位に選択する。本文はPopQAで最大10%改善、特に大規模LMでinference costを大幅削減しGPT-3 API costを約1/2にする結果を報告。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a8d20a76ac8b",
+    "round": "libimp-a8d20a76ac8bc7e7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a8d20a76ac8bc7e7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a8d20a76ac8bc7e7-pre01.json",
+    "receipt": "sha256:3979af21530a88f8f2b56a1b98cdca673c816b99c7cf3a136dadefbece383b42"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a8d20a76ac8b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

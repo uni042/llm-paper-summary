@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning",
+      "source_url": "https://arxiv.org/abs/2002.08307",
+      "year": 2020,
+      "published": "2020-02-19",
+      "venue": "Workshop on Representation Learning for NLP",
+      "citation_count": 379,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained universal feature extractors, such as BERT for natural language processing and VGG for computer vision, have become effective methods for improving deep learning models without requiring more labeled data. While effective, feature extractors like BERT may be prohibitively large for some deployment scenarios. We explore weight pruning for BERT and ask: how does compression during pre-training affect transfer learning? We find that pruning affects transfer learning in three broad regimes. Low levels of pruning (30-40%) do not affect pre-training loss or transfer to downstream tasks at all. Medium levels of pruning increase the pre-training loss and prevent useful pre-training information from being transferred to downstream tasks. High levels of pruning additionally prevent models from fitting downstream datasets, leading to further degradation. Finally, we observe that fine-tuning BERT on a specific task does not improve its prunability. We conclude that BERT can be pruned once during pre-training rather than separately for each task without affecting performance.",
+      "identifiers": [
+        "SemanticScholar:d9b824dbecbe3a1f0b1489f9e4521a532a63818d"
+      ],
+      "semantic_scholar_id": "d9b824dbecbe3a1f0b1489f9e4521a532a63818d",
+      "canonical_id": "arXiv:2002.08307",
+      "arxiv_id": "2002.08307",
+      "doi": "10.18653/v1/2020.repl4nlp-1.18",
+      "authors": [
+        "Mitchell A. Gordon",
+        "Kevin Duh",
+        "Nicholas Andrews"
+      ],
+      "priority": 379,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 379,
+        "citation_count": 379,
+        "total": 379,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2421,
+        "matched_prestigious_venue": null
+      },
+      "reason": "deployment時に大きすぎるBERTをweight pruningで圧縮し、どのpruning率までdownstream性能を保てるかを体系評価する。30–40% pruningではpre-training lossとtransfer性能を維持でき、taskごとの再pruning不要というdeployment向け圧縮知見を与えるため対象。",
+      "library_body_check": "fulltext_relevance_review: ACL一次資料本文/authoritative PDF metadataを確認。BERTをpre-training中にpruneし、低pruning 30–40%はtransfer性能を維持、中程度以上で劣化する3 regimeを評価。fine-tuning後のtask-specific pruningでprunabilityは改善せず、単一圧縮modelをdownstreamへ展開可能と結論。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a02ad01cd357",
+    "round": "libimp-a02ad01cd357b7cb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a02ad01cd357b7cb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a02ad01cd357b7cb-pre01.json",
+    "receipt": "sha256:360ea9aeb7718f7be5c7b0e5ca79c4bba14e948ebab2e5f10b39210a0d10038c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a02ad01cd357",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
