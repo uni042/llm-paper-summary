@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation",
+      "source_url": "https://arxiv.org/abs/2310.04408",
+      "year": 2023,
+      "published": "2023-10-06",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 326,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieving documents and prepending them in-context at inference time improves performance of language model (LMs) on a wide range of tasks. However, these documents, often spanning hundreds of words, make inference substantially more expensive. We propose compressing the retrieved documents into textual summaries prior to in-context integration. This not only reduces the computational costs but also relieves the burden of LMs to identify relevant information in long retrieved documents. We present two compressors -- an extractive compressor which selects useful sentences from retrieved documents and an abstractive compressor which generates summaries by synthesizing information from multiple documents. Both compressors are trained to improve LMs' performance on end tasks when the generated summaries are prepended to the LMs' input, while keeping the summary concise.If the retrieved documents are irrelevant to the input or offer no additional information to LM, our compressor can return an empty string, implementing selective augmentation.We evaluate our approach on language modeling task and open domain question answering task. We achieve a compression rate of as low as 6% with minimal loss in performance for both tasks, significantly outperforming the off-the-shelf summarization models. We show that our compressors trained for one LM can transfer to other LMs on the language modeling task and provide summaries largely faithful to the retrieved documents.",
+      "identifiers": [
+        "SemanticScholar:23af54b82c951317f1fc1841164d8a441a2d8120"
+      ],
+      "semantic_scholar_id": "23af54b82c951317f1fc1841164d8a441a2d8120",
+      "canonical_id": "arXiv:2310.04408",
+      "arxiv_id": "2310.04408",
+      "doi": "10.48550/arXiv.2310.04408",
+      "authors": [
+        "Fangyuan Xu",
+        "Wei-Jia Shi",
+        "Eunsol Choi"
+      ],
+      "priority": 336,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 326,
+        "citation_count": 326,
+        "total": 336,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1096,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "RAGで取得文書をLM入力前に圧縮し、入力token数とencoding計算量を直接削減する。本文で圧縮率6%まで、学習済みcompressorではLMで25%、QAで5–10%まで圧縮しつつ性能低下を抑えるため、推論時context圧縮として直接対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv一次本文§1–3を確認。retrieved documentsをextractive/abstractive compressorで短いsummaryへ変換し、不要時はempty summaryにするselective augmentationを採用。本文は長いretrieved contextがinference computeを増やす問題を明示し、圧縮後tokenをfrozen LMへprependして計算量を削減する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems",
+      "source_url": "https://arxiv.org/abs/2205.08084",
+      "year": 2022,
+      "published": "2022-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 313,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Industrial recommender systems have been growing increasingly complex, may involve \\emph{diverse domains} such as e-commerce products and user-generated contents, and can comprise \\emph{a myriad of tasks} such as retrieval, ranking, explanation generation, and even AI-assisted content production. The mainstream approach so far is to develop individual algorithms for each domain and each task. In this paper, we explore the possibility of developing a unified foundation model to support \\emph{open-ended domains and tasks} in an industrial recommender system, which may reduce the demand on downstream settings' data and can minimize the carbon footprint by avoiding training a separate model from scratch for every task. Deriving a unified foundation is challenging due to (i) the potentially unlimited set of downstream domains and tasks, and (ii) the real-world systems' emphasis on computational efficiency. We thus build our foundation upon M6, an existing large-scale industrial pretrained language model similar to GPT-3 and T5, and leverage M6's pretrained ability for sample-efficient downstream adaptation, by representing user behavior data as plain texts and converting the tasks to either language understanding or generation. To deal with a tight hardware budget, we propose an improved version of prompt tuning that outperforms fine-tuning with negligible 1\\% task-specific parameters, and employ techniques such as late interaction, early exiting, parameter sharing, and pruning to further reduce the inference time and the model size. We demonstrate the foundation model's versatility on a wide range of tasks such as retrieval, ranking, zero-shot recommendation, explanation generation, personalized content creation, and conversational recommendation, and manage to deploy it on both cloud servers and mobile devices.",
+      "identifiers": [
+        "SemanticScholar:cbf3bf8f541f5b446c59c8deacbcc18527768c75"
+      ],
+      "semantic_scholar_id": "cbf3bf8f541f5b446c59c8deacbcc18527768c75",
+      "canonical_id": "arXiv:2205.08084",
+      "arxiv_id": "2205.08084",
+      "doi": "10.48550/arXiv.2205.08084",
+      "authors": [
+        "Zeyu Cui",
+        "Jian-Xin Ma",
+        "Chang Zhou",
+        "Jing-Ren Zhou",
+        "Hong-Xia Yang"
+      ],
+      "priority": 313,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 313,
+        "citation_count": 313,
+        "total": 313,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1603,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPT/T5類似の300M Transformer言語モデルM6を実運用へ展開し、late interaction、early exiting、parameter sharing、pruning、quantizationで推論時間・model sizeを直接削減する。cloud/mobile双方へのdeploymentを含む言語モデル推論効率の実装知見として対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv一次本文§1–3を確認。低latency用途では前段L'層をsegment単位でoffline precompute/cacheし、request時は後段のみ計算するmulti-segment late interactionを実装。edge向けにはparameter sharing、80% pruning、8-bit quantization、early exiting等を組み合わせ、GPT-like autoregressive LMにもearly exitを適用する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1794026a0a34",
+    "round": "libimp-1794026a0a343538-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1794026a0a343538-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1794026a0a343538-pre01.json",
+    "receipt": "sha256:dcee269eaa010621d665c1216cdd8b37dbad7b8fdf92bb182c6ae551f08bbf3b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1794026a0a34",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
