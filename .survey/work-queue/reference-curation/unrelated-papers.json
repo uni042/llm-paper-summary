@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T18:06:55+00:00",
-  "record_count": 9149,
+  "updated_at": "2026-10-06T18:11:28+00:00",
+  "record_count": 9160,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -131189,6 +131189,160 @@
         "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
       ],
       "title": "Quantile Reward Policy Optimization: Alignment with Pointwise Regression and Exact Partition Functions"
+    },
+    "arXiv:2503.04113": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.04113",
+      "identity_tokens": [
+        "arXiv:2503.04113"
+      ],
+      "reason": "一次要旨は主観的な指示文を人間とLLMがどう解釈するかのalignment/behavior分析であり、inference runtimeの最適化ではない。",
+      "first_checked_at": "2026-10-06T18:11:24+00:00",
+      "last_checked_at": "2026-10-06T18:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Uncovering Gaps in How Humans and LLMs Interpret Subjective Language"
+    },
+    "arXiv:2502.07064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07064",
+      "identity_tokens": [
+        "arXiv:2502.07064"
+      ],
+      "reason": "一次要旨は生成モデルを用いるcontextual Thompson samplingの一般bandit frameworkで、LLM inference system、cache、serving性能の具体的評価は記載されていない。",
+      "first_checked_at": "2026-10-06T18:11:24+00:00",
+      "last_checked_at": "2026-10-06T18:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Contextual Thompson Sampling via Generation of Missing Data"
+    },
+    "arXiv:2510.21805": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21805",
+      "identity_tokens": [
+        "arXiv:2510.21805"
+      ],
+      "reason": "一次要旨はsemantic IDを使う商品推薦をARからdiffusion generationへ置換するrecommendation modelで、LLMではない。",
+      "first_checked_at": "2026-10-06T18:11:25+00:00",
+      "last_checked_at": "2026-10-06T18:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "DiffGRM: Diffusion-based Generative Recommendation Model"
+    },
+    "arXiv:2410.15748": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15748",
+      "identity_tokens": [
+        "arXiv:2410.15748"
+      ],
+      "reason": "一次要旨は定理証明データをsymbolic mutationで合成してneural theorem proving能力を高める研究で、推論効率より学習データ/問題解決能力が対象。",
+      "first_checked_at": "2026-10-06T18:11:26+00:00",
+      "last_checked_at": "2026-10-06T18:11:26+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Alchemy: Amplifying Theorem-Proving Capability through Symbolic Mutation"
+    },
+    "arXiv:2408.14470": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.14470",
+      "identity_tokens": [
+        "arXiv:2408.14470"
+      ],
+      "reason": "一次要旨および本文は選択的PEFTによるLLM fine-tuningのparameter/update効率とunmasking scheduleを扱う。学習対象parameter削減であり、inference-time compute/memory/servingの改善ではない。",
+      "first_checked_at": "2026-10-06T18:11:26+00:00",
+      "last_checked_at": "2026-10-06T18:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "title": "Step-by-Step Unmasking for Parameter-Efficient Fine-tuning of Large Language Models"
+    },
+    "arXiv:2505.18663": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18663",
+      "identity_tokens": [
+        "arXiv:2505.18663"
+      ],
+      "reason": "一次要旨はvideo diffusion transformerのpost-training quantizationで、画像/動画生成modelが対象であり、LLM推論への直接的な改善を示していない。",
+      "first_checked_at": "2026-10-06T18:11:26+00:00",
+      "last_checked_at": "2026-10-06T18:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "DVD-Quant: Data-free Video Diffusion Transformers Quantization"
+    },
+    "arXiv:2504.00999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.00999",
+      "identity_tokens": [
+        "arXiv:2504.00999"
+      ],
+      "reason": "一次要旨はvisual generation/representationのVQモデルにtoken merge/quantizationを適用する研究であり、LLMの推論/servingは対象外。",
+      "first_checked_at": "2026-10-06T18:11:26+00:00",
+      "last_checked_at": "2026-10-06T18:11:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "MergeVQ: A Unified Framework for Visual Generation and Representation with Disentangled Token Merging and Quantization"
+    },
+    "arXiv:2503.08295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08295",
+      "identity_tokens": [
+        "arXiv:2503.08295"
+      ],
+      "reason": "一次要旨のD3POはdiscrete diffusion modelのpreference alignment学習objectiveを提案する。推論時の実行量・memory・latency改善が研究の主題ではない。",
+      "first_checked_at": "2026-10-06T18:11:27+00:00",
+      "last_checked_at": "2026-10-06T18:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "D3PO: Preference-Based Alignment of Discrete Diffusion Models"
+    },
+    "arXiv:2506.10915": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.10915",
+      "identity_tokens": [
+        "arXiv:2506.10915"
+      ],
+      "reason": "一次要旨はMambaを使うtext-to-video生成の高速化研究で、対象はvideo synthesisの状態空間モデルでありLLM inferenceではない。",
+      "first_checked_at": "2026-10-06T18:11:27+00:00",
+      "last_checked_at": "2026-10-06T18:11:27+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "M4V: Multimodal Mamba for Efficient Text-to-Video Generation"
+    },
+    "arXiv:2506.06854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06854",
+      "identity_tokens": [
+        "arXiv:2506.06854"
+      ],
+      "reason": "一次要旨は自動運転向けtrajectory predictionのdecoder-only modelで、言語モデルではなく移動軌跡予測を扱う。",
+      "first_checked_at": "2026-10-06T18:11:27+00:00",
+      "last_checked_at": "2026-10-06T18:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "DONUT: A Decoder-Only Model for Trajectory Prediction"
+    },
+    "arXiv:2506.05709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05709",
+      "identity_tokens": [
+        "arXiv:2506.05709"
+      ],
+      "reason": "一次要旨のtoken matrix transformationはVision Transformerのvisual token数を削る画像認識高速化で、LLM/VLM servingや言語モデル推論は評価対象外。",
+      "first_checked_at": "2026-10-06T18:11:28+00:00",
+      "last_checked_at": "2026-10-06T18:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Token Transforming: A Unified and Training-Free Token Compression Framework for Vision Transformer Acceleration"
     }
   }
 }
