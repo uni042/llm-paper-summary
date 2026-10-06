@@ -28,10 +28,15 @@
   "selection_reason": "RAG文書のKVを事前計算してflash SSDへmaterializeし、prefill再計算をstorage readへ置換するLLM inference system。GPU計算とflash容量・帯域を明示的に交換し、KV loadとdecodeのoverlap、低性能GPU活用まで評価しており、SSDを単なるspill先ではなく再利用可能な計算状態層として使う点が既存offload系と差別化される。",
   "semantic_scholar_id": "12a747c5ebd22557fcb5e05bb7f507f245a470c2",
   "source_url": "https://arxiv.org/abs/2512.22195",
-  "status": "ready",
+  "status": "superseded",
   "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
   "type": "research",
   "venue": "IEEE International Conference on Data Engineering",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-06T21:22:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md",
+  "represented_canonical_id": "arXiv:2512.22195",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
