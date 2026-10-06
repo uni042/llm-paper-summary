@@ -1270,6 +1270,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   状態空間モデル（State Space モデル; SSM）のS4系は、長い系列でTransformerより低い計算量を持ち、学習時には畳み込みや並列走査で並列化でき、推論時には再帰として定数状態を更新できる。本論文は「S4の性能は連続時間状態空間、HiPPO初期化、離散化といった固有構造が不可欠なのか」を、通常RNNから一要素ずつ変更する実験で分解する。
 
+- **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
+  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：3  
+  自己整合性（自己整合性）は、同じ問題へ複数の推論経路を生成し、最終回答の多数決で精度を上げる。しかし従来は簡単な問題にも難しい問題にも同じ本数を生成するため、すでに回答がほぼ確定した問題へ余分なLLM呼び出しを続ける。適応的-Consistencyは生成途中の回答一致度を観測し、十分な確信に達した問題だけ早期停止する。
+
 - **2023-09 · [Pruning Large Language Models via Accuracy Predictor](2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   枝刈り構成と精度の対応を非ニューラル予測器で学び、探索空間を段階的に絞って手設計より良いLLM圧縮構成を自動選択する。
@@ -1277,10 +1281,6 @@
 - **2023-05 · [LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning](2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md)**  
   実装：[✓](https://github.com/aim-uofa/LoRAPrune) ・ リポジトリ内被引用：2  
   LoRAPruneは、低ランク適応（Low-Rank Adaptation; LoRA）による省メモリ微調整と、推論時に実際の計算量を減らしやすい構造化枝刈りを一体化する。
-
-- **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
-  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：2  
-  自己整合性（自己整合性）は、同じ問題へ複数の推論経路を生成し、最終回答の多数決で精度を上げる。しかし従来は簡単な問題にも難しい問題にも同じ本数を生成するため、すでに回答がほぼ確定した問題へ余分なLLM呼び出しを続ける。適応的-Consistencyは生成途中の回答一致度を観測し、十分な確信に達した問題だけ早期停止する。
 
 - **2023-10 · [Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM](2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1349,7 +1349,7 @@
   標準Transformerのself-注意機構は系列長Lに対してL×Lのスコア matrixを作るため、計算量・メモリがO(L²)で増える。
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
+  実装：✓ ・ リポジトリ内被引用：28  
   正の直交ランダム特徴FAVOR+でソフトマックス注意を線形時間・線形空間へ近似し、疎性や低ランク仮定なしに長系列Transformerを実行可能にする。
 
 - **2020-09 · [TernaryBERT: Distillation-aware Ultra-low Bit BERT](2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md)**  
