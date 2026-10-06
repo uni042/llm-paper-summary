@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0803-scheduled-chat-00/r01",
+  "reference_main_sha": "577ca7e32409a43c764d25ad0398ff3b414d0d25",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.00364",
+      "identity_tokens": [
+        "arXiv:2008.00364"
+      ],
+      "title": "A Survey on Text Classification: From Traditional to Deep Learning",
+      "reason": "text classificationの手法・dataset・評価を1961–2021年まで整理する一般NLP surveyで、LLM推論runtime・memory・serving最適化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2008.00364",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21776",
+      "identity_tokens": [
+        "arXiv:2503.21776"
+      ],
+      "title": "Video-R1: Reinforcing Video Reasoning in MLLMs",
+      "reason": "T-GRPO、SFT/RL用video reasoning dataset、MLLMのvideo reasoning精度向上が主目的の学習・能力研究。推論systems効率化を主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2503.21776",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.14995",
+      "identity_tokens": [
+        "arXiv:2105.14995"
+      ],
+      "title": "Choose a Transformer: Fourier or Galerkin",
+      "reason": "softmax-free linearized attentionをPDE operator learningへ適用する研究で、最終workloadはBurgers/Darcy等のoperator learning。LLM推論が最終適用先ではない。",
+      "source_url": "https://arxiv.org/abs/2105.14995",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.14376",
+      "identity_tokens": [
+        "arXiv:2302.14376"
+      ],
+      "title": "GNOT: A General Neural Operator Transformer for Operator Learning",
+      "reason": "heterogeneous normalized attentionとgeometric gatingでPDE solution operatorを学習するneural operator研究。最終適用先がPDE/operator learningでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2302.14376",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09338",
+      "identity_tokens": [
+        "arXiv:2403.09338"
+      ],
+      "title": "LocalMamba: Visual State Space Model with Windowed Selective Scan",
+      "reason": "Mamba型selective scanを画像認識へ適用するvision architecture研究で、最終適用先がvisual recognitionでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2403.09338",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.243",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.243"
+      ],
+      "title": "How Good is Your Tokenizer? On the Monolingual Performance of Multilingual Language Models",
+      "reason": "多言語LMと単言語LMのdownstream性能差をtokenizerとpretraining dataの観点から分析する品質研究。推論runtime・memory・serving効率を改善する方式ではない。",
+      "source_url": "https://arxiv.org/abs/2012.15613",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.09049",
+      "identity_tokens": [
+        "arXiv:2311.09049"
+      ],
+      "title": "Adapting Large Language Models by Integrating Collaborative Semantics for Recommendation",
+      "reason": "LLMへcollaborative semanticsを統合してrecommendation品質を改善するLC-Recのモデル適応研究。最終目的は推薦精度で推論systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2311.09049",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-demo.9",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-demo.9"
+      ],
+      "title": "PromptSource: An Integrated Development Environment and Repository for Natural Language Prompts",
+      "reason": "自然言語promptの作成・共有・datasetへの適用を支援するIDE/repository研究で、LLM推論runtime・serving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2202.01279",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00088",
+      "identity_tokens": [
+        "arXiv:2308.00088"
+      ],
+      "title": "The physics of optical computing",
+      "reason": "optical computingがelectronicsに対して速度・energy効率上の優位を得る物理的条件を整理する一般optical-computing Perspectiveで、LLM推論を最終workloadとしない。",
+      "source_url": "https://arxiv.org/abs/2308.00088",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.13587",
+      "identity_tokens": [
+        "arXiv:2111.13587"
+      ],
+      "title": "Adaptive Fourier Neural Operators: Efficient Token Mixers for Transformers",
+      "reason": "Fourier-domain token mixerで高解像度vision Transformerを効率化するが、最終評価はfew-shot segmentation等のvisual representation learning。LLM推論対象外。",
+      "source_url": "https://arxiv.org/abs/2111.13587",
+      "body_check": "abstract_screen_only: 一次abstract/書誌情報で上記の最終適用先・主評価を確認し、LLM推論systemsの対象外であることが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T08:03:18+09:00",
+      "last_checked_at": "2026-10-07T08:03:18+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "worklist_rank": 30
+    }
+  ]
+}
