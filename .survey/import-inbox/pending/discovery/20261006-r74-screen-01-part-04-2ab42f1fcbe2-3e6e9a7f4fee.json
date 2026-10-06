@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r74-screen-01-part-04-2ab42f1fcbe2",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20792",
+      "identity_tokens": [
+        "arXiv:2607.20792"
+      ],
+      "title": "Memoir: Should a Model Write to Its Memory While It Thinks?",
+      "reason": "Not an LLM inference system: synthetic recall task. Kernel improvement 2.59x narrows to 1.55x pondering and 1.05x full step; authors flag a confounded write-volume ablation and ceiling-limited longer control.",
+      "source_url": "https://arxiv.org/abs/2607.20792",
+      "first_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "last_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18899",
+      "identity_tokens": [
+        "arXiv:2607.18899"
+      ],
+      "title": "Black-Mamba: Biologically-Inspired Leaky Accumulation for Conceptual Knowledge under Distribution Drift",
+      "reason": "Test-time adaptation targets forecasting, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2607.18899",
+      "first_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "last_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18553",
+      "identity_tokens": [
+        "arXiv:2607.18553"
+      ],
+      "title": "Operational Proto-Introspection in Looped Language Models: Process-Quality Taps, Executable Branching, and the Readout-Control Boundary",
+      "reason": "Primary paper finds decision-level readout gains but no generative-control gain; branch machinery is an evaluation protocol and no end-to-end serving/token reduction is measured.",
+      "source_url": "https://arxiv.org/abs/2607.18553",
+      "first_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "last_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11219-026-09776-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11219-026-09776-1"
+      ],
+      "title": "Improving security vulnerability assessment with attention-guided hierarchical code simplification",
+      "reason": "Attention-guided code simplification is for vulnerability assessment; no direct LLM runtime improvement.",
+      "source_url": "https://doi.org/10.1007/s11219-026-09776-1",
+      "first_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "last_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40708-026-00322-0",
+      "identity_tokens": [
+        "DOI:10.1186/s40708-026-00322-0"
+      ],
+      "title": "Hybrid self-supervised EEG emotion representation: masked reconstruction joint with mutual information bounds",
+      "reason": "EEG emotion representation; only superficial recurrence similarity to LLM lineage.",
+      "source_url": "https://doi.org/10.1186/s40708-026-00322-0",
+      "first_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "last_checked_at": "2026-10-06T09:54:09.788681+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    }
+  ]
+}
