@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r128-screen-01-part-09-1beb66d9d436",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18663",
+      "identity_tokens": [
+        "arXiv:2505.18663"
+      ],
+      "title": "DVD-Quant: Data-free Video Diffusion Transformers Quantization",
+      "reason": "一次要旨はvideo diffusion transformerのpost-training quantizationで、画像/動画生成modelが対象であり、LLM推論への直接的な改善を示していない。",
+      "source_url": "https://arxiv.org/abs/2505.18663",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.00999",
+      "identity_tokens": [
+        "arXiv:2504.00999"
+      ],
+      "title": "MergeVQ: A Unified Framework for Visual Generation and Representation with Disentangled Token Merging and Quantization",
+      "reason": "一次要旨はvisual generation/representationのVQモデルにtoken merge/quantizationを適用する研究であり、LLMの推論/servingは対象外。",
+      "source_url": "https://arxiv.org/abs/2504.00999",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08295",
+      "identity_tokens": [
+        "arXiv:2503.08295"
+      ],
+      "title": "D3PO: Preference-Based Alignment of Discrete Diffusion Models",
+      "reason": "一次要旨のD3POはdiscrete diffusion modelのpreference alignment学習objectiveを提案する。推論時の実行量・memory・latency改善が研究の主題ではない。",
+      "source_url": "https://arxiv.org/abs/2503.08295",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
