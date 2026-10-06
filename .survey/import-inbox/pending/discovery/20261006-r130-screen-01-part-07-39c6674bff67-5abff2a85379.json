@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r130-screen-01-part-07-39c6674bff67",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01939",
+      "identity_tokens": [
+        "arXiv:2406.01939"
+      ],
+      "title": "Speeding up Policy Simulation in Supply Chain RL",
+      "reason": "The method speeds policy simulation in supply-chain RL; it does not address LLM generation or serving.",
+      "source_url": "https://arxiv.org/abs/2406.01939",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-024-05890-8",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-024-05890-8"
+      ],
+      "title": "SWattention: designing fast and memory-efficient attention for a new Sunway Supercomputer",
+      "reason": "SWattention is exact tiled attention specialized for Sunway SW26010. It reports 2.0x FP32/2.5x mixed-precision attention speedups and up to 1.26x GPT end-to-end training speedup; evaluation is training-focused/hardware-specific, without LLM serving inference.",
+      "source_url": "https://doi.org/10.1007/s11227-024-05890-8",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3605181.3626287",
+      "identity_tokens": [
+        "DOI:10.1145/3605181.3626287"
+      ],
+      "title": "Aurelia: CXL Fabric with Tentacle",
+      "reason": "ACM primary abstract describes a CXL memory-fabric system but supplies no LLM serving workload or inference memory/latency result. Full text was not retrievable, leaving relevance unresolved.",
+      "source_url": "https://doi.org/10.1145/3605181.3626287",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.24717",
+      "identity_tokens": [
+        "arXiv:2510.24717"
+      ],
+      "title": "Uniform Discrete Diffusion with Metric Path for Video Generation",
+      "reason": "Uniform discrete diffusion for video generation is a video diffusion method, outside LLM inference.",
+      "source_url": "https://arxiv.org/abs/2510.24717",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info16100914",
+      "identity_tokens": [
+        "DOI:10.3390/info16100914"
+      ],
+      "title": "Convolutional Neural Network Acceleration Techniques Based on FPGA Platforms: Principles, Methods, and Challenges",
+      "reason": "This survey covers CNN acceleration on FPGA; its model family and serving target are vision CNNs, not LLMs.",
+      "source_url": "https://doi.org/10.3390/info16100914",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ]
+    }
+  ]
+}
