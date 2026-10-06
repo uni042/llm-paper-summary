@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a75773b9f12ffffd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/fi17060252",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/fi17060252",
+    "identity_tokens": [
+      "DOI:10.3390/fi17060252"
+    ],
+    "reason": "一次資料abstractおよび本文を確認。LLM4Rec surveys LLM integration in recommendation systems, including routing/hybrid inference themes. It is a broad domain survey and does not itself contribute a specific efficiency method or validated systems result.",
+    "first_checked_at": "2026-10-06T16:48:01+00:00",
+    "last_checked_at": "2026-10-06T16:48:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "LLM4Rec: A Comprehensive Survey on the Integration of Large Language Models in Recommender Systems - Approaches, Applications and Challenges"
+  },
+  "processed_at": "2026-10-06T16:48:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a75773b9f12f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

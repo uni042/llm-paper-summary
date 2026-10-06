@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa795016fce1f307-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.02001",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.02001",
+    "identity_tokens": [
+      "arXiv:2507.02001"
+    ],
+    "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 Temporal CoT repeatedly selects relevant video frames with a VLM and uses more inference-time compute to improve QA; a 32K-context run beats a 700K standard run by 2.8 points on long LVBench videos. It trades additional selection compute for context/quality in video QA, not a demonstrated serving-cost reduction.",
+    "first_checked_at": "2026-10-06T16:48:04+00:00",
+    "last_checked_at": "2026-10-06T16:48:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Temporal Chain of Thought: Long-Video Understanding by Thinking in Frames"
+  },
+  "processed_at": "2026-10-06T16:48:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa795016fce1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
