@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r127-screen-01-part-05-d1d1f4d208d8",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.10402",
+      "identity_tokens": [
+        "arXiv:2501.10402"
+      ],
+      "title": "SSM2Mel: State Space Model to Reconstruct Mel Spectrogram from the EEG",
+      "reason": "一次要旨はEEGから音声のmelスペクトログラムを再構成する課題とSSMモデルである。LLM推論の対象・処理系・性能改善ではない。",
+      "source_url": "https://arxiv.org/abs/2501.10402",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17178",
+      "identity_tokens": [
+        "arXiv:2411.17178"
+      ],
+      "title": "LiteVAR: Compressing Visual Autoregressive Modelling with Efficient Attention and Quantization",
+      "reason": "本文のLiteVARは視覚autoregressive画像生成モデルをattention computationとweight quantizationで圧縮する。量子化/attentionの技術的類似性はあるが、LLMではなくimage-generation token処理が対象で、言語推論性能は確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2411.17178",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.06217",
+      "identity_tokens": [
+        "arXiv:2411.06217"
+      ],
+      "title": "Selective State Space Model for Monaural Speech Enhancement",
+      "reason": "一次要旨の対象は単一チャネル音声の雑音除去で、Mamba/SSMを使った音声強調モデルの品質比較である。LLM推論の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2411.06217",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.13839",
+      "identity_tokens": [
+        "arXiv:2410.13839"
+      ],
+      "title": "Accelerating Codec-based Speech Synthesis with Multi-Token Prediction and Speculative Decoding",
+      "reason": "本文はcodec tokenのspeech synthesisを対象にmulti-token predictionとspeculative decodingで生成を加速する。LLM speculative decodingに近い概念的関連はあるが、検証は音声codec AR model/音質なのでLLM性能改善の根拠にはならない。",
+      "source_url": "https://arxiv.org/abs/2410.13839",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05034",
+      "identity_tokens": [
+        "arXiv:2409.05034"
+      ],
+      "title": "TF-Mamba: A Time-Frequency Network for Sound Source Localization",
+      "reason": "一次要旨は時間周波数特徴から音源位置を推定する音響タスクである。LLM/生成推論の最適化とは問題設定が異なる。",
+      "source_url": "https://arxiv.org/abs/2409.05034",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    }
+  ]
+}
