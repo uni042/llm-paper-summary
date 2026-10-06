@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r110-screen-01-part-04-dc78e85372af",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.29507",
+      "identity_tokens": [
+        "arXiv:2605.29507"
+      ],
+      "title": "Xetrieval: Mechanistically Explaining Dense Retrieval",
+      "reason": "Mechanistic explanation of dense retrieval, without a concrete inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2605.29507",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29664",
+      "identity_tokens": [
+        "arXiv:2605.29664"
+      ],
+      "title": "AMDP: Asynchronous Multi-Directional Pipeline Parallelism for Large-Scale Models Training",
+      "reason": "Asynchronous multidirectional pipeline parallelism targets large-scale model training throughput/stragglers, not inference serving. Related distributed-training lineage exists, but direct inference transfer is not demonstrated.",
+      "source_url": "https://arxiv.org/abs/2605.29664",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29714",
+      "identity_tokens": [
+        "arXiv:2605.29714"
+      ],
+      "title": "Leveraging Routing Dynamics in Mixture-of-Experts Models for Efficient Language Adaptation",
+      "reason": "Routing-aware MoE method improves multilingual adaptation/finetuning; evaluation focuses on translation quality and adaptation rather than serving cost or inference throughput.",
+      "source_url": "https://arxiv.org/abs/2605.29714",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30213",
+      "identity_tokens": [
+        "arXiv:2605.30213"
+      ],
+      "title": "Faithful Embeddings of Irregular and Asynchronous Data for Online Log-NCDEs",
+      "reason": "Irregular-data time-series embedding method, outside LLM inference.",
+      "source_url": "https://arxiv.org/abs/2605.30213",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30274",
+      "identity_tokens": [
+        "arXiv:2605.30274"
+      ],
+      "title": "Loong: A Human-Like Long Document Translation Agent with Observe-and-Act Adaptive Context Selection",
+      "reason": "Loong uses a 3E summary/exemplar/entity memory and observe-and-act retrieval to choose translation context, improving context utilization for long documents. However, it adds reasoning overhead and is evaluated for translation quality, not latency/memory savings.",
+      "source_url": "https://arxiv.org/abs/2605.30274",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
