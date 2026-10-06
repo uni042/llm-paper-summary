@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r126-screen-01-part-03-ef9bd550ebdf",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15671",
+      "identity_tokens": [
+        "arXiv:2411.15671"
+      ],
+      "title": "Best of Both Worlds: Advantages of Hybrid Graph Sequence Models",
+      "reason": "一次要旨のGSM/GSM++はグラフ構造データのtokenization・local/global encodingを理論化し、グラフベンチマークを評価する。記載された効率はグラフ学習器同士の比較であり、LLM推論・attention servingの課題とは対象が異なる。",
+      "source_url": "https://arxiv.org/abs/2411.15671",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MICRO61859.2024.00038",
+      "identity_tokens": [
+        "DOI:10.1109/MICRO61859.2024.00038"
+      ],
+      "title": "Stellar: An Automated Design Framework for Dense and Sparse Spatial Accelerators",
+      "reason": "IEEE Xplore DOI endpoint did not return an accessible publisher record; title identifies sparse/dense spatial accelerator design, which could relate to attention hardware, so retain as borderline pending primary abstract/full-text verification.",
+      "source_url": "https://doi.org/10.1109/MICRO61859.2024.00038",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.09343",
+      "identity_tokens": [
+        "arXiv:2410.09343"
+      ],
+      "title": "ELICIT: LLM Augmentation via External In-Context Capability",
+      "reason": "一次本文では既存LLMの能力をtask vectorで外部から引き出し性能を変えるが、推論時の計算効率向上が主な成果ではない。実験に追加計算コストの検証はあるものの、inference latency/throughputの改善が確認できず、推論効率候補として弱い。",
+      "source_url": "https://arxiv.org/abs/2410.09343",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.17163",
+      "identity_tokens": [
+        "arXiv:2408.17163"
+      ],
+      "title": "The Iterative Optimal Brain Surgeon: Faster Sparse Recovery by Leveraging Second-Order Information",
+      "reason": "一次本文のI-OBSは一般のsparse linear regressionに対する二次情報付きoptimization algorithmであり、LLMの重みpruning/量子化適用や言語モデル実測がない。数値最適化として遠い関連可能性はあるが、現在のLLM compression系統に直接結び付ける根拠は弱い。",
+      "source_url": "https://arxiv.org/abs/2408.17163",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12022",
+      "identity_tokens": [
+        "arXiv:2408.12022"
+      ],
+      "title": "Understanding Epistemic Language with a Language-augmented Bayesian Theory of Mind",
+      "reason": "一次要旨は言語表現に対するBayesian theory-of-mindの認知モデルで、言語解釈・心的状態推定を対象とする。LLMのモデル圧縮、生成時の推論計算、serving性能への寄与はない。",
+      "source_url": "https://arxiv.org/abs/2408.12022",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    }
+  ]
+}
