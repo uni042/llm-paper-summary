@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T15:57:11+00:00",
-  "record_count": 3323,
+  "updated_at": "2026-10-06T16:04:43+00:00",
+  "record_count": 3343,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -50902,6 +50902,308 @@
       ],
       "borderline_recheck_count": 0,
       "title": "RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation"
+    },
+    "arXiv:2605.17879": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17879",
+      "identity_tokens": [
+        "arXiv:2605.17879"
+      ],
+      "reason": "Guard detects slow/failing nodes during large-scale foundation-model pretraining and improves training FLOPs utilization; linked ZeRO lineage is plausible at training systems level but the work does not address inference serving.",
+      "first_checked_at": "2026-10-06T16:04:27+00:00",
+      "last_checked_at": "2026-10-06T16:04:27+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Guard: Scalable Straggler Detection and Node Health Management for Large-Scale Training"
+    },
+    "arXiv:2605.18346": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18346",
+      "identity_tokens": [
+        "arXiv:2605.18346"
+      ],
+      "reason": "Focused Forcing is training-free per-frame/head KV compression for autoregressive video diffusion, reporting up to 1.48x acceleration and quality gains. It is strongly adjacent to KV-cache eviction, but evidence is video diffusion only and limitations request validation across other architectures/deployments.",
+      "first_checked_at": "2026-10-06T16:04:28+00:00",
+      "last_checked_at": "2026-10-06T16:04:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Focused Forcing: Content-Aware Per-Frame KV Selection for Efficient Autoregressive Video Diffusion"
+    },
+    "DOI:10.1109/infocom59046.2026.11571461": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/infocom59046.2026.11571461",
+      "identity_tokens": [
+        "DOI:10.1109/infocom59046.2026.11571461"
+      ],
+      "reason": "The abstract describes resource-adaptive edge/cloud routing and claims up to 62% lower latency and 29% lower peak memory for LLM tool calling, linked to FrugalGPT; IEEE DOI primary text could not be retrieved.",
+      "first_checked_at": "2026-10-06T16:04:28+00:00",
+      "last_checked_at": "2026-10-06T16:04:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RAP: Resource-Adaptive Planning for Efficient LLM Tool Calling in Edge Computing"
+    },
+    "arXiv:2605.07247": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07247",
+      "identity_tokens": [
+        "arXiv:2605.07247"
+      ],
+      "reason": "EnvSimBench evaluates LLM-based environment simulation and proposes a constrained 4B simulator that cuts environment-synthesis cost by over 90% while improving yield; this is cost efficiency for a specialized agent-training simulator, not a general inference/serving optimization.",
+      "first_checked_at": "2026-10-06T16:04:28+00:00",
+      "last_checked_at": "2026-10-06T16:04:28+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation"
+    },
+    "arXiv:2605.05657": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05657",
+      "identity_tokens": [
+        "arXiv:2605.05657"
+      ],
+      "reason": "RGAO routes multi-agent code tasks to topologies using a retrieval-derived complexity vector and enforces budget conservation; it reports proxy misrouting reduction from 30.1% to 8.2% and sub-millisecond DAG construction, but end-to-end inference cost/latency savings are not established in the reviewed evaluation.",
+      "first_checked_at": "2026-10-06T16:04:29+00:00",
+      "last_checked_at": "2026-10-06T16:04:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval-Conditioned Topology Selection with Provable Budget Conservation for Multi-Agent Code Generation"
+    },
+    "DOI:10.1109/iicc69623.2026.11581993": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iicc69623.2026.11581993",
+      "identity_tokens": [
+        "DOI:10.1109/iicc69623.2026.11581993"
+      ],
+      "reason": "The abstract describes Qwen3-0.6B DPO summarization with edge/mobile deployment motivation and quality gains, but the publisher DOI primary article was inaccessible, so inference resource claims could not be verified in full text.",
+      "first_checked_at": "2026-10-06T16:04:30+00:00",
+      "last_checked_at": "2026-10-06T16:04:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Summarization with Small Language Models via Direct Preference Optimization"
+    },
+    "arXiv:2605.14889": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14889",
+      "identity_tokens": [
+        "arXiv:2605.14889"
+      ],
+      "reason": "SurgicalMamba reprograms recurrent state for online surgical phase recognition with per-frame cost not growing over sequence length; the paper’s recurrent sequence-model connection is real, but evaluation/domain are surgical video and it does not demonstrate LLM inference-serving transfer.",
+      "first_checked_at": "2026-10-06T16:04:31+00:00",
+      "last_checked_at": "2026-10-06T16:04:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SurgicalMamba: Dual-Path SSD with State Regramming for Online Surgical Phase Recognition"
+    },
+    "arXiv:2605.15290": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15290",
+      "identity_tokens": [
+        "arXiv:2605.15290"
+      ],
+      "reason": "Derives maximal-update parameterization/scalings for grouped-query attention and tests learning-rate/weight-decay transfer across GQA settings. This is training hyperparameter theory, not an inference efficiency improvement; connection to GQA is adjacent only.",
+      "first_checked_at": "2026-10-06T16:04:31+00:00",
+      "last_checked_at": "2026-10-06T16:04:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GQA-μP: The maximal parameterization update for grouped query attention"
+    },
+    "arXiv:2605.05802": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05802",
+      "identity_tokens": [
+        "arXiv:2605.05802"
+      ],
+      "reason": "Selective Rollout stops converged multi-sample agent trajectories during GRPO training; its Qwen2.5-7B/ALFWorld run reports 10.7% lower training wall-clock and a directional +2.5 pp held-out shift, but transfer and significance are limited (four seeds, one model/environment). It reduces training-rollout work rather than deployed inference cost.",
+      "first_checked_at": "2026-10-06T16:04:32+00:00",
+      "last_checked_at": "2026-10-06T16:04:32+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Selective Rollout: Mid-Trajectory Termination for Multi-Sample Agent RL"
+    },
+    "arXiv:2605.08221": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08221",
+      "identity_tokens": [
+        "arXiv:2605.08221"
+      ],
+      "reason": "NoisyCoconut injects latent noise and compares multiple reasoning paths for selective abstention, improving reliability but requiring multiple inference trajectories; no latency, memory or compute-saving result is reported, so its speculative-decoding lineage is weak.",
+      "first_checked_at": "2026-10-06T16:04:33+00:00",
+      "last_checked_at": "2026-10-06T16:04:33+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NoisyCoconut: Counterfactual Consensus via Latent Space Reasoning"
+    },
+    "DOI:10.1109/icassp55912.2026.11464292": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464292",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11464292"
+      ],
+      "reason": "The title indicates layout-aware pruning for multimodal LLM efficiency, but the IEEE DOI primary article was inaccessible and full-text evidence is unavailable.",
+      "first_checked_at": "2026-10-06T16:04:34+00:00",
+      "last_checked_at": "2026-10-06T16:04:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LaPrune: Layout-Aware Pruning for Efficient Multimodal Large Language Models"
+    },
+    "arXiv:2605.27003": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27003",
+      "identity_tokens": [
+        "arXiv:2605.27003"
+      ],
+      "reason": "W4A4 quantization targets Wan2.2 image-to-video diffusion; SmoothQuant lineage is a quantization-method connection, but no LLM evaluation or transfer is shown.",
+      "first_checked_at": "2026-10-06T16:04:37+00:00",
+      "last_checked_at": "2026-10-06T16:04:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Timestep-Aware SVDQuant-GPTQ for W4A4 Quantization of Wan2.2-I2V"
+    },
+    "DOI:10.1007/s11042-026-21697-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11042-026-21697-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-026-21697-6"
+      ],
+      "reason": "The title/abstract concern image-quality assessment, quantum-assisted RF fingerprint training, or peptide design and the linked lineage is contextual, but publisher DOI primary full text could not be retrieved; cannot rule out a concrete systems tie from abstract alone.",
+      "first_checked_at": "2026-10-06T16:04:37+00:00",
+      "last_checked_at": "2026-10-06T16:04:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deep self-supervised learning algorithm applied to tone-mapped image quality assessment"
+    },
+    "DOI:10.1109/icassp55912.2026.11463074": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463074",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463074"
+      ],
+      "reason": "The title/lineage indicate an LLM quantization method (learnable Kronecker rotation decomposition), but the IEEE DOI primary article could not be retrieved, so method, evaluation and limitations could not be verified.",
+      "first_checked_at": "2026-10-06T16:04:38+00:00",
+      "last_checked_at": "2026-10-06T16:04:38+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RDQ: Learnable Kronecker Rotation Matrix Decomposition for Efficient Large Language Model Quantization"
+    },
+    "arXiv:2605.22870": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22870",
+      "identity_tokens": [
+        "arXiv:2605.22870"
+      ],
+      "reason": "Studies positional-number copying as an arithmetic readout shortcut in small language models, adjacent to reasoning compute, but does not report a method to reduce inference compute/latency or serving cost.",
+      "first_checked_at": "2026-10-06T16:04:40+00:00",
+      "last_checked_at": "2026-10-06T16:04:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Readout Shortcut: Positional Number Copying Dominates Arithmetic CoT Readout in Small Language Models"
+    },
+    "DOI:10.1038/s44259-026-00218-3": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s44259-026-00218-3",
+      "identity_tokens": [
+        "DOI:10.1038/s44259-026-00218-3"
+      ],
+      "reason": "The title/abstract concern image-quality assessment, quantum-assisted RF fingerprint training, or peptide design and the linked lineage is contextual, but publisher DOI primary full text could not be retrieved; cannot rule out a concrete systems tie from abstract alone.",
+      "first_checked_at": "2026-10-06T16:04:41+00:00",
+      "last_checked_at": "2026-10-06T16:04:41+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Harnessing generative AI for predicting and optimizing antimicrobial peptides against drug-resistant infections"
+    },
+    "arXiv:2605.22949": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22949",
+      "identity_tokens": [
+        "arXiv:2605.22949"
+      ],
+      "reason": "MARGIN calibrates confidence online with EWMA bands, no retraining/model access and negligible (~100 FLOP/update) overhead. It could affect agent coordination/routing decisions but the paper does not establish lower inference calls, latency, or resource use.",
+      "first_checked_at": "2026-10-06T16:04:41+00:00",
+      "last_checked_at": "2026-10-06T16:04:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MARGIN: Runtime Confidence Calibration for Multi-Agent Foundation Model Coordination"
+    },
+    "arXiv:2605.20799": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20799",
+      "identity_tokens": [
+        "arXiv:2605.20799"
+      ],
+      "reason": "Provides fleet-scale GPU efficiency monitoring/visibility for AI workloads, with system-level efficiency relevance, but the reviewed work is centered on monitoring/training workloads rather than a concrete LLM inference-serving optimization.",
+      "first_checked_at": "2026-10-06T16:04:41+00:00",
+      "last_checked_at": "2026-10-06T16:04:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Instant GPU Efficiency Visibility at Fleet Scale"
+    },
+    "DOI:10.1109/iccworkshops63917.2026.11586252": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccworkshops63917.2026.11586252",
+      "identity_tokens": [
+        "DOI:10.1109/iccworkshops63917.2026.11586252"
+      ],
+      "reason": "The title/abstract concern image-quality assessment, quantum-assisted RF fingerprint training, or peptide design and the linked lineage is contextual, but publisher DOI primary full text could not be retrieved; cannot rule out a concrete systems tie from abstract alone.",
+      "first_checked_at": "2026-10-06T16:04:43+00:00",
+      "last_checked_at": "2026-10-06T16:04:43+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Quantum Efficient Training for Radio Frequency Fingerprint Identification"
+    },
+    "arXiv:2605.24681": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.24681",
+      "identity_tokens": [
+        "arXiv:2605.24681"
+      ],
+      "reason": "Mixed MoE experts/routing improve multilingual translation fine-tuning quality; no inference compute, memory, latency, or serving evaluation is established.",
+      "first_checked_at": "2026-10-06T16:04:43+00:00",
+      "last_checked_at": "2026-10-06T16:04:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mix-MoE: Improving Multilingual Machine Translation of Large Language Models Through Mixed MoEs"
     }
   }
 }
