@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r140-screen-01-part-02-51e04d34ce36",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29568",
+      "identity_tokens": [
+        "arXiv:2607.29568"
+      ],
+      "title": "DynoDINO: Harnessing Dynamic Latent Information from DINO Features for Multi-Phase Medical Image Segmentation",
+      "reason": "The primary paper applies attention/memory techniques to CECT lesion segmentation and measures segmentation quality, not LLM generation or serving.",
+      "source_url": "https://arxiv.org/abs/2607.29568",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28292",
+      "identity_tokens": [
+        "arXiv:2607.28292"
+      ],
+      "title": "CACHE-UK: A Stability-Aware Memory Editor for Sequentially Updated Quantized LLMs in Finance",
+      "reason": "The primary paper reports sequential-edit stability on a 4-bit OpenLLaMA, but its 28% generalization success and lack of inference-cost measurements make its relevance to quantized serving uncertain.",
+      "source_url": "https://arxiv.org/abs/2607.28292",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28529",
+      "identity_tokens": [
+        "arXiv:2607.28529"
+      ],
+      "title": "CoGate: Confidence-Gated Co-Decoding for Secure Code Generation",
+      "reason": "The paper improves secure-code metrics through expert co-decoding but reports no serving speedup; the added expert’s decode cost is unmeasured.",
+      "source_url": "https://arxiv.org/abs/2607.28529",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28841",
+      "identity_tokens": [
+        "arXiv:2607.28841"
+      ],
+      "title": "CyberNeuro: A Privacy-Preserving Agentic Workbench for Cohort-Scale Neuroimage and Clinical Data Analysis",
+      "reason": "The paper’s token reduction is an aggregate agent-workflow/provider comparison without isolated model/runtime controls, so it does not establish a general inference optimization.",
+      "source_url": "https://arxiv.org/abs/2607.28841",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07627",
+      "identity_tokens": [
+        "arXiv:2608.07627"
+      ],
+      "title": "From Single Chatbots to Governed Agent Ecosystems: An Agentic AI Pattern Catalogue and Orchestration Framework for Mission-Critical Hospital Information Management Systems",
+      "reason": "The abstract mentions vLLM and optimized paging in a hospital orchestration framework, but full text is unavailable to verify implementation or serving measurements.",
+      "source_url": "https://arxiv.org/abs/2608.07627",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    }
+  ]
+}
