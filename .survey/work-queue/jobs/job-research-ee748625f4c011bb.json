@@ -45,10 +45,15 @@
   "selection_reason": "低bit attentionのValue外れ値と高精度softmax律速を同時に扱い、V-SmoothとFP8 probability castを融合。B200/B300/H200等でFlashAttention-4比1.46–1.59倍、workstationで2.3–3.6倍のkernel高速化を報告し、量子化kernel系統への直接性が高い。",
   "semantic_scholar_id": "d26fb643c9c194cb4d34bd660b031a61d5f72f5d",
   "source_url": "https://www.semanticscholar.org/paper/d26fb643c9c194cb4d34bd660b031a61d5f72f5d",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-60dd204b55168985dd756768.json",
   "title": "VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T14:20:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md",
+  "represented_canonical_id": "arXiv:2609.15810",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

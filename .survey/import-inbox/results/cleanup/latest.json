@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T14:00:16+00:00",
+  "updated_at": "2026-10-06T14:19:56+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3302,6 +3302,13 @@
       "processed_at": "2026-10-06T14:00:16+00:00",
       "canonical_id": "arXiv:2602.22603",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-00dda5d36d91--libfile_0dca008279cc819185c8fbbcf094a81b--2602.22603-sidequest.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-f3b145c1aa40--libfile_0c6b73674e4c8191a4e7fcdd3fb07d7a--2604.16957-open-tq-metal.md",
+      "processed_at": "2026-10-06T14:19:56+00:00",
+      "canonical_id": "arXiv:2604.16957",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-f3b145c1aa40--libfile_0c6b73674e4c8191a4e7fcdd3fb07d7a--2604.16957-open-tq-metal.md"
     }
   ]
 }
