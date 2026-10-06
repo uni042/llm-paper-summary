@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r52-screen-01-part-04-c11939cf26e6",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29184",
+      "identity_tokens": [
+        "arXiv:2606.29184"
+      ],
+      "title": "BaRA: Bayesian Adaptive Rank Allocation for Parameter-Efficient Fine-Tuning",
+      "reason": "Bayesian adaptive rank allocation concerns parameter-efficient fine-tuning, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.29184",
+      "first_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "last_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21972",
+      "identity_tokens": [
+        "arXiv:2606.21972"
+      ],
+      "title": "Human vs Machine Mathematical Difficulty on Project Euler: An Experimental Analysis",
+      "reason": "Project Euler study analyzes mathematical difficulty and model performance, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2606.21972",
+      "first_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "last_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.19706",
+      "identity_tokens": [
+        "arXiv:2606.19706"
+      ],
+      "title": "NEST: Narrative Event Structures in Time for Long Video Understanding",
+      "reason": "NEST evaluates narrative event structure in long video; it is benchmark work, not a memory/compression or serving improvement.",
+      "source_url": "https://arxiv.org/abs/2606.19706",
+      "first_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "last_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20711",
+      "identity_tokens": [
+        "arXiv:2606.20711"
+      ],
+      "title": "Video2Code: Generating Interactive Webpages from UI Videos via Action-Aware Revisit",
+      "reason": "Video2Code generates webpages from UI videos; no LLM inference-cost improvement is claimed.",
+      "source_url": "https://arxiv.org/abs/2606.20711",
+      "first_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "last_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10401",
+      "identity_tokens": [
+        "arXiv:2606.10401"
+      ],
+      "title": "CoCoSI: Collaborative Cognitive Map Construction for Spatial Intelligence",
+      "reason": "Collaborative cognitive maps support MLLM spatial reasoning but do not clearly reduce inference cost or memory.",
+      "source_url": "https://arxiv.org/abs/2606.10401",
+      "first_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "last_checked_at": "2026-10-06T07:01:46.009372+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    }
+  ]
+}
