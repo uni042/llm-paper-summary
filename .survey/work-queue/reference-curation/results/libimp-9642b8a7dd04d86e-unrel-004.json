@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9642b8a7dd04d86e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12769",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12769",
+    "identity_tokens": [
+      "arXiv:2609.12769"
+    ],
+    "reason": "一次要旨はagentic video editingの一貫した編集手法を提案する応用で、LLM推論効率の指標や改善主張は確認できない。",
+    "first_checked_at": "2026-10-06T19:12:40+00:00",
+    "last_checked_at": "2026-10-06T19:12:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+    ],
+    "title": "Unified Agentic Video Editing Across Levels of Complexity and Creativity"
+  },
+  "processed_at": "2026-10-06T19:12:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9642b8a7dd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

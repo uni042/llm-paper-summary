@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-60a8fbac7d04ef34-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21208",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21208",
+    "identity_tokens": [
+      "arXiv:2609.21208"
+    ],
+    "reason": "一次要旨はコード生成のverifier co-training/RL報酬設計を扱う学習時品質改善であり、servingや推論時資源削減を測定していない。",
+    "first_checked_at": "2026-10-06T19:12:37+00:00",
+    "last_checked_at": "2026-10-06T19:12:37+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Information-Gain Rewards over Diversity-Pruned Tests: GT-Anchored Verifier Co-Training for Reliable Code Generation"
+  },
+  "processed_at": "2026-10-06T19:12:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-60a8fbac7d04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

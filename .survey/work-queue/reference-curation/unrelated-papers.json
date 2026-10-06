@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T19:08:00+00:00",
-  "record_count": 9343,
+  "updated_at": "2026-10-06T19:12:41+00:00",
+  "record_count": 9360,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -133910,6 +133910,244 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
       "title": "Reasoning Concentrates Errors, and Self-Consistency Never Notices"
+    },
+    "arXiv:2609.22977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22977",
+      "identity_tokens": [
+        "arXiv:2609.22977"
+      ],
+      "reason": "一次要旨は時系列予測LLM向けのprompt選択・多様性正則化を扱い、候補モデルの推論時間・memory・servingを改善する検証ではない。",
+      "first_checked_at": "2026-10-06T19:12:36+00:00",
+      "last_checked_at": "2026-10-06T19:12:36+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Beyond Similarity: Coverage-Aware Prompt Selection for Time Series Forecasting with LLMs"
+    },
+    "arXiv:2609.23073": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23073",
+      "identity_tokens": [
+        "arXiv:2609.23073"
+      ],
+      "reason": "一次要旨は化学分子表現理解のためのfine-tuning/data方法が中心であり、推論実行の資源効率は評価していない。",
+      "first_checked_at": "2026-10-06T19:12:36+00:00",
+      "last_checked_at": "2026-10-06T19:12:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "MolSC: Leveraging Substituent Contributions to Enhance Fine-grained Molecular Understanding in LLMs"
+    },
+    "arXiv:2609.21208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21208",
+      "identity_tokens": [
+        "arXiv:2609.21208"
+      ],
+      "reason": "一次要旨はコード生成のverifier co-training/RL報酬設計を扱う学習時品質改善であり、servingや推論時資源削減を測定していない。",
+      "first_checked_at": "2026-10-06T19:12:37+00:00",
+      "last_checked_at": "2026-10-06T19:12:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Information-Gain Rewards over Diversity-Pruned Tests: GT-Anchored Verifier Co-Training for Reliable Code Generation"
+    },
+    "arXiv:2609.21879": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21879",
+      "identity_tokens": [
+        "arXiv:2609.21879"
+      ],
+      "reason": "一次要旨は顔認識VLMの説明品質ベンチマークを構築するもので、推論効率や serving 改善の主張がない。",
+      "first_checked_at": "2026-10-06T19:12:37+00:00",
+      "last_checked_at": "2026-10-06T19:12:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Benchmarking the Explanatory Quality of Open-Weight Vision-Language Models in Face Recognition"
+    },
+    "arXiv:2609.19555": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19555",
+      "identity_tokens": [
+        "arXiv:2609.19555"
+      ],
+      "reason": "一次要旨はトマト病害葉理解のマルチモーダル生成モデルと分類精度を扱い、LLM推論システム効率を扱わない。",
+      "first_checked_at": "2026-10-06T19:12:37+00:00",
+      "last_checked_at": "2026-10-06T19:12:37+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "A Multi-Modal Generative Model for Tomato Disease Leaves Understanding"
+    },
+    "arXiv:2609.12890": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12890",
+      "identity_tokens": [
+        "arXiv:2609.12890"
+      ],
+      "reason": "一次要旨はautoregressive forecastingで長距離gradient信頼性に基づく学習時credit assignmentを扱い、LLMではなくtraining optimizationが対象。",
+      "first_checked_at": "2026-10-06T19:12:38+00:00",
+      "last_checked_at": "2026-10-06T19:12:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Large Distant Gradients Need Not Be Reliable: reliability-weighted credit assignment for long-horizon autoregressive forecasting"
+    },
+    "arXiv:2609.16031": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16031",
+      "identity_tokens": [
+        "arXiv:2609.16031"
+      ],
+      "reason": "一次要旨はCT画像denoising向けdeep dictionary foundation modelのpretraining/fine-tuningと画像品質を扱い、LLM inference efficiencyではない。",
+      "first_checked_at": "2026-10-06T19:12:38+00:00",
+      "last_checked_at": "2026-10-06T19:12:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A deep dictionary network-based foundation model for ultra-low-dose CT denoising"
+    },
+    "arXiv:2609.16036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16036",
+      "identity_tokens": [
+        "arXiv:2609.16036"
+      ],
+      "reason": "一次要旨は放射線治療auto-contouring用selective state-space modelと臨床時間短縮を扱う医用画像応用で、LLM推論システム効率の成果ではない。",
+      "first_checked_at": "2026-10-06T19:12:39+00:00",
+      "last_checked_at": "2026-10-06T19:12:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Anatomy-Change-Aware Bidirectional Selective State-Space Memory for Clinically Deployed Thoracic Radiotherapy Auto-Contouring"
+    },
+    "arXiv:2609.12435": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12435",
+      "identity_tokens": [
+        "arXiv:2609.12435"
+      ],
+      "reason": "一次要旨は治療後glioma腫瘍状態のlongitudinal forecastingで選択的データ同化を行う臨床予測研究であり、LLM inference効率ではない。",
+      "first_checked_at": "2026-10-06T19:12:39+00:00",
+      "last_checked_at": "2026-10-06T19:12:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Observation-Anchored Selective Assimilation for Longitudinal Tumor-State Proxy Forecasting in Post-Treatment Glioma"
+    },
+    "arXiv:2609.12574": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12574",
+      "identity_tokens": [
+        "arXiv:2609.12574"
+      ],
+      "reason": "一次要旨は眼底血管segmentation用のOCTA datasetとMamba networkを扱い、LLM推論効率を対象としない。",
+      "first_checked_at": "2026-10-06T19:12:39+00:00",
+      "last_checked_at": "2026-10-06T19:12:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "An Ultra-Widefield Swept-Source OCTA Dataset and a Polar-Gated Mamba Network for Retinal Vessel Segmentation"
+    },
+    "arXiv:2609.12575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12575",
+      "identity_tokens": [
+        "arXiv:2609.12575"
+      ],
+      "reason": "一次要旨は人間とmultimodal language modelの文化的曖昧さ解釈を比較する評価研究で、推論資源を改善しない。",
+      "first_checked_at": "2026-10-06T19:12:39+00:00",
+      "last_checked_at": "2026-10-06T19:12:39+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Calibrated Ambiguity in Multimodal Language Models: Humans reach for cultural references, while models describe the picture"
+    },
+    "arXiv:2609.12769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12769",
+      "identity_tokens": [
+        "arXiv:2609.12769"
+      ],
+      "reason": "一次要旨はagentic video editingの一貫した編集手法を提案する応用で、LLM推論効率の指標や改善主張は確認できない。",
+      "first_checked_at": "2026-10-06T19:12:40+00:00",
+      "last_checked_at": "2026-10-06T19:12:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "Unified Agentic Video Editing Across Levels of Complexity and Creativity"
+    },
+    "arXiv:2609.12803": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12803",
+      "identity_tokens": [
+        "arXiv:2609.12803"
+      ],
+      "reason": "一次要旨はECG分類におけるdeep learning architecture比較であり、LLM推論/serving効率と関係しない。",
+      "first_checked_at": "2026-10-06T19:12:40+00:00",
+      "last_checked_at": "2026-10-06T19:12:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Multi-Label 12-Lead ECG Classification on the PTB-XL Dataset: A Comparative Evaluation of Deep Learning Architectures and Heterogeneous Ensemble Approaches"
+    },
+    "arXiv:2609.15676": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15676",
+      "identity_tokens": [
+        "arXiv:2609.15676"
+      ],
+      "reason": "一次要旨はリモートセンシング海洋汚染セグメンテーションでMambaベースのvision modelを提案する応用研究であり、LLM inference/serving効率を扱わない。",
+      "first_checked_at": "2026-10-06T19:12:41+00:00",
+      "last_checked_at": "2026-10-06T19:12:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MambaMPD: a mamba-driven segmentation framework for marine pollution detection from remote sensing imagery"
+    },
+    "arXiv:2609.15683": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15683",
+      "identity_tokens": [
+        "arXiv:2609.15683"
+      ],
+      "reason": "一次要旨は動画in-context learningを評価するmultimodal agent benchmarkで、推論効率化手法を提案・実証していない。",
+      "first_checked_at": "2026-10-06T19:12:41+00:00",
+      "last_checked_at": "2026-10-06T19:12:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "V-ICAL Bench: Evaluating Video In-Context Learning for Multimodal Agents in Interactive Environments"
+    },
+    "DOI:10.3389/fpls.2026.1872119": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpls.2026.1872119",
+      "identity_tokens": [
+        "DOI:10.3389/fpls.2026.1872119"
+      ],
+      "reason": "一次出版社本文で確認したSPINetはイネ点群インスタンス分割・収量形質抽出用の3D vision networkで、LLM推論やLLM servingの改善ではない。",
+      "first_checked_at": "2026-10-06T19:12:41+00:00",
+      "last_checked_at": "2026-10-06T19:12:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SPINet: structure-enhanced point cloud instance segmentation network for multi-plant rice phenotyping"
+    },
+    "DOI:10.1038/s41598-026-71232-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-71232-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-71232-8"
+      ],
+      "reason": "一次出版社ページの要旨はMamba/Kolmogorov-Arnold malware detection分類性能の改善で、LLMを使った推論やserving効率ではない。",
+      "first_checked_at": "2026-10-06T19:12:41+00:00",
+      "last_checked_at": "2026-10-06T19:12:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Multistage advanced persistent threat detection and malware attribution using Mamba state space models with Kolmogorov Arnold networks"
     }
   }
 }
