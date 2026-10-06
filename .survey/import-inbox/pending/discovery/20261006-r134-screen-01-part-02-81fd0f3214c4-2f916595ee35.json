@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r134-screen-01-part-02-81fd0f3214c4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00394",
+      "identity_tokens": [
+        "arXiv:2610.00394"
+      ],
+      "title": "Forking: Sudden Overfitting Under Replay",
+      "reason": "データ反復学習時のn-gram記憶枝の過学習分析で、推論時KV/メモリ削減を示さない。",
+      "source_url": "https://arxiv.org/abs/2610.00394",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00487",
+      "identity_tokens": [
+        "arXiv:2610.00487"
+      ],
+      "title": "ScaffoldM3C: A Multimodal Sequential Monte Carlo Framework for Generative Stable Construction Planning",
+      "reason": "物理組立計画向けマルチモーダル逐次モンテカルロで、LLM serving効率が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2610.00487",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00636",
+      "identity_tokens": [
+        "arXiv:2610.00636"
+      ],
+      "title": "CompMat-Bench: Benchmarking AI Agents for Computational Materials Science",
+      "reason": "計算材料科学agentのベンチマークで、推論コストや効率改善を提案しない。",
+      "source_url": "https://arxiv.org/abs/2610.00636",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36777",
+      "identity_tokens": [
+        "arXiv:2609.36777"
+      ],
+      "title": "Code4Scene: Benchmarking Coding Agents for Constructing and Editing 3D Scenes",
+      "reason": "3D scene coding agentの評価ベンチマークで、推論実行最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.36777",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37172",
+      "identity_tokens": [
+        "arXiv:2609.37172"
+      ],
+      "title": "SimpleEvol: An Agent-Loop Framework for LLM-Driven Automated Heuristic Design with Minimal Human Priors",
+      "reason": "LLMによるヒューリスティック設計の自動化で、効率化対象は生成ヒューリスティックでありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2609.37172",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    }
+  ]
+}
