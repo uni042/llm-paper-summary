@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T11:00:38+00:00",
+  "updated_at": "2026-10-06T12:04:19+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3062,6 +3062,13 @@
         "list_summary",
         "summary"
       ]
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-ac864e749f20--libfile_6ca3db0888c481919ecf70d0d77e751b--2606.13126-minipic.md",
+      "processed_at": "2026-10-06T12:04:19+00:00",
+      "canonical_id": "arXiv:2606.13126",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-ac864e749f20--libfile_6ca3db0888c481919ecf70d0d77e751b--2606.13126-minipic.md"
     }
   ]
 }

@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（38本）
+## 自動生成の論文一覧（39本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -192,4 +192,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   A100実機評価では、既存システムに対し95パーセンタイル推論時間を平均1.63倍改善する。
+
+### 6年前（2020-11〜2021-10）
+
+- **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
+  実装：✓ ・ リポジトリ内被引用：45  
+  Switch Transformerは、通常のTransformerのフィードフォワードネットワーク（FFN）を多数の専門家FFNへ置き換え、各トークンについてルータが1つの専門家だけを選ぶ疎な混合専門家モデルである。従来MoEのtop-kルーティングは複数専門家を同時に活性化するため、専門家間通信と各専門家のバッチ容量が増えやすい。
 <!-- survey:auto:end -->

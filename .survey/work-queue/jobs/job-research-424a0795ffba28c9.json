@@ -35,10 +35,15 @@
   "selection_reason": "MosaicKV targets long-context LLM inference serving by compressing both the sequence and channel dimensions of the KV cache throughout decode. Its per-vector element selection and segment-specific compression strategies address the accuracy loss from uniform two-dimensional compression, while packed sparse attention and asynchronous CPU/GPU cache management translate compression into serving gains. This is directly in scope for LLM inference and KV-cache optimization.",
   "semantic_scholar_id": "ebab52e0cc0798f6e372a8fe5d844b191da54e79",
   "source_url": "https://arxiv.org/abs/2607.00760",
-  "status": "ready",
+  "status": "superseded",
   "title": "MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T12:06:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.00760-mosaickv-serving-long-context-llm-with-dynamic-two-d-kv-cache-compressio.md",
+  "represented_canonical_id": "arXiv:2607.00760",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

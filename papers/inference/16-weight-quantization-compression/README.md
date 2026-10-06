@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（39本）
+## 自動生成の論文一覧（40本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -149,6 +149,10 @@
 - **2024-06 · [LLMEasyQuant: Scalable Quantization for Parallel and Distributed LLM Inference](2024-2406.19657-llmeasyquant-scalable-quantization-for-parallel-and-distributed-llm-inference.md)**  
   実装：[✓](https://github.com/NoakLiu/LLMEasyQuant) ・ リポジトリ内被引用：4  
   量子化アルゴリズムだけでなく、尺度推定、CUDA融合、実行時再校正、GPU間同期、書出しまでを同じ実行系にまとめる。現行arXiv v6ではLLaMA-7Bで2,156 トークン/sを報告する。
+
+- **2024-02 · [BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation](2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md)**  
+  実装：[✓](https://github.com/DD-DuDa/BitDistiller) ・ リポジトリ内被引用：2  
+  4bit未満のLLM量子化では、重みの離散化段階が粗くなり、少数の大値へrangeを合わせると多数の通常重みの表現誤差が急増する。
 
 ### 4年前（2022-11〜2023-10）
 
