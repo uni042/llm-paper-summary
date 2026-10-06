@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r85-screen-01-part-03-ab1888dcb5e4",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.16269",
+      "identity_tokens": [
+        "arXiv:2504.16269"
+      ],
+      "title": "COBRA: Algorithm-Architecture Co-optimized Binary Transformer Accelerator for Edge Inference",
+      "reason": "Relevant low-bit Transformer hardware lineage, but actual evaluation is encoder/vision-scale rather than autoregressive LLM serving.",
+      "source_url": "https://arxiv.org/abs/2504.16269",
+      "first_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "last_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3696443.3708953",
+      "identity_tokens": [
+        "DOI:10.1145/3696443.3708953"
+      ],
+      "title": "Accelerating LLMs using an Efficient GEMM Library and Target-Aware Optimizations on Real-World PIM Devices",
+      "reason": "Strong direct LLM/PIM relevance, but required primary method/evaluation/limitations could not be verified from full text; record as borderline.",
+      "source_url": "https://doi.org/10.1145/3696443.3708953",
+      "first_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "last_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/WACV61041.2025.00664",
+      "identity_tokens": [
+        "DOI:10.1109/WACV61041.2025.00664"
+      ],
+      "title": "AMP-ViT: Optimizing Vision Transformer Efficiency with Adaptive Mixed-Precision Post-Training Quantization",
+      "reason": "Quantization method may transfer from ViT to language models, but evidence is image-classification accuracy rather than LLM inference.",
+      "source_url": "https://doi.org/10.1109/WACV61041.2025.00664",
+      "first_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "last_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2025.103339",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2025.103339"
+      ],
+      "title": "REC: Enhancing fine-grained cache coherence protocol in multi-GPU systems",
+      "reason": "REC changes fine-grained cache coherence in multi-GPU systems; the abstract does not describe model KV-cache or LLM-serving optimization.",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2025.103339",
+      "first_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "last_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/FLLM63129.2024.10852473",
+      "identity_tokens": [
+        "DOI:10.1109/FLLM63129.2024.10852473"
+      ],
+      "title": "Language Models at the Edge: A Survey on Techniques, Challenges, and Applications",
+      "reason": "A directly related survey may help map techniques but the required primary full-text review could not be completed; retain borderline.",
+      "source_url": "https://doi.org/10.1109/FLLM63129.2024.10852473",
+      "first_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "last_checked_at": "2026-10-06T11:39:55.096940+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    }
+  ]
+}
