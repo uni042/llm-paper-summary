@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r157-screen-01-part-08-be1236e9dc4b",
+  "reference_main_sha": "85ffc4e77bc345a0b91450e6a364175124d877b3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.19417",
+      "identity_tokens": [
+        "arXiv:2502.19417"
+      ],
+      "title": "Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models",
+      "reason": "Hi Robot measures VLM latency in a hierarchical robot policy, but hierarchy serves action/control capability and lacks an isolated inference-efficiency comparison.",
+      "source_url": "https://arxiv.org/abs/2502.19417",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.11491",
+      "identity_tokens": [
+        "arXiv:2205.11491"
+      ],
+      "title": "HyperTree Proof Search for Neural Theorem Proving",
+      "reason": "HyperTree concerns neural theorem-proving search, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2205.11491",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.14692",
+      "identity_tokens": [
+        "arXiv:2512.14692"
+      ],
+      "title": "Native and Compact Structured Latents for 3D Generation",
+      "reason": "Linked to inference systems, but the primary paper optimizes 3D-generation structured latents and test-time compute, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2512.14692",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.06949",
+      "identity_tokens": [
+        "arXiv:2307.06949"
+      ],
+      "title": "HyperDreamBooth: HyperNetworks for Fast Personalization of Text-to-Image Models",
+      "reason": "The linked paper’s speed/memory gains are for text-to-image model personalization and fine-tuning, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2307.06949",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-023-06004-9",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-023-06004-9"
+      ],
+      "title": "Faster sorting algorithms discovered using deep reinforcement learning",
+      "reason": "Nature full text confirms AlphaDev optimizes CPU sorting algorithms, not transformer/LLM inference despite the linked KV-cache lineage.",
+      "source_url": "https://doi.org/10.1038/s41586-023-06004-9",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ]
+    }
+  ]
+}
