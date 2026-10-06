@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r37-screen-01-part-05-6789284f49cb",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09821",
+      "identity_tokens": [
+        "arXiv:2602.09821"
+      ],
+      "title": "Text summarization via global structure awareness",
+      "reason": "GloSA-sum is an efficient summarization method for long documents, but the evidence is task-specific and does not establish a general LLM serving, KV-cache, or inference-system improvement.",
+      "source_url": "https://arxiv.org/abs/2602.09821",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.19351-dash-kv-asymmetric-hashing-long-context.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21963",
+      "identity_tokens": [
+        "arXiv:2601.21963"
+      ],
+      "title": "Industrialized Deception: The Collateral Effects of LLM-Generated Misinformation on Digital Ecosystems",
+      "reason": "The work studies LLM-generated misinformation and digital-ecosystem effects, outside inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.21963",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13029",
+      "identity_tokens": [
+        "arXiv:2511.13029"
+      ],
+      "title": "AA-Omniscience: Evaluating Cross-Domain Knowledge Reliability in Large Language Models",
+      "reason": "The work defines reliability metrics and evaluates model knowledge. The parallel-decoding lineage association is unsupported by its method or measurements.",
+      "source_url": "https://arxiv.org/abs/2511.13029",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18568",
+      "identity_tokens": [
+        "arXiv:2602.18568"
+      ],
+      "title": "RPU – A Reasoning Processing Unit",
+      "reason": "RPU describes a decode-oriented memory-bandwidth architecture for reasoning inference, but the primary text is explicitly marked “Confidential Draft / Do NOT Distribute”; its publication and reproducibility status need resolution before advancing.",
+      "source_url": "https://arxiv.org/abs/2602.18568",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06305",
+      "identity_tokens": [
+        "arXiv:2601.06305"
+      ],
+      "title": "Why LoRA Fails to Forget: Regularized Low-Rank Adaptation Against Backdoors in Language Models",
+      "reason": "The experiments concern security/backdoor robustness during adaptation, not concurrent adapter serving or cache reuse; the serving lineage link is not technically supported.",
+      "source_url": "https://arxiv.org/abs/2601.06305",
+      "first_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "last_checked_at": "2026-10-06T04:19:42.125544+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md"
+      ]
+    }
+  ]
+}
