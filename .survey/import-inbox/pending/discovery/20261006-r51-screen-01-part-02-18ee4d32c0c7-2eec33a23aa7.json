@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r51-screen-01-part-02-18ee4d32c0c7",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3571314",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2025.3571314"
+      ],
+      "title": "LiTformer: Efficient Signal Integrity Analysis for High-Speed Link Transmitters Using Non-Autoregressive Transformer",
+      "reason": "Non-autoregressive Transformer for signal-integrity analysis is an application model, not LLM inference optimization.",
+      "source_url": "https://doi.org/10.1109/TCAD.2025.3571314",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIP.2025.3633561",
+      "identity_tokens": [
+        "DOI:10.1109/TIP.2025.3633561"
+      ],
+      "title": "NDMamba: Dual-Prior State-Space Model for Nighttime Deraining",
+      "reason": "Nighttime image deraining with a state-space model is not LLM/VLM inference.",
+      "source_url": "https://doi.org/10.1109/TIP.2025.3633561",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.07237",
+      "identity_tokens": [
+        "arXiv:2511.07237"
+      ],
+      "title": "The Few Govern the Many:Unveiling Few-Layer Dominance for Time Series Models",
+      "reason": "Few-layer dominance concerns time-series forecasting models, including LLM4TS, but does not establish a general LLM inference reduction.",
+      "source_url": "https://arxiv.org/abs/2511.07237",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics14214331",
+      "identity_tokens": [
+        "DOI:10.3390/electronics14214331"
+      ],
+      "title": "PhishGraph: A Disk-Aware Approximate Nearest Neighbor Index for Billion-Scale Semantic URL Search",
+      "reason": "PhishGraph optimizes a URL-semantic ANN index, not LLM inference or its serving stack; retrieval is only an indirect connection.",
+      "source_url": "https://doi.org/10.3390/electronics14214331",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patcog.2025.112713",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2025.112713"
+      ],
+      "title": "Enhancing local attention with global information interaction via progressive cluster propagation",
+      "reason": "Progressive cluster propagation for local attention is potentially relevant to efficient attention, but the primary publisher text could not be retrieved.",
+      "source_url": "https://doi.org/10.1016/j.patcog.2025.112713",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
