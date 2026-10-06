@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r95-screen-01-part-09-bda9f2ab959f",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11227682",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11227682"
+      ],
+      "title": "ST-QAT: Leveraging Self-Training to Enhance Quantization-Aware Training",
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11227682",
+      "first_checked_at": "2026-10-06T12:59:32.957058+00:00",
+      "last_checked_at": "2026-10-06T12:59:32.957058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11227876",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11227876"
+      ],
+      "title": "FedSIT: Efficient Federated Fine-Tuning with Model Splitting and Importance-Based Tuning",
+      "reason": "The rapid scalability of large language models (LLMs) has driven significant advancements across various natural language processing tasks. However, the immense size of LLMs and the growing demand for large-scale datasets present challenges in fine-tuning these models in resource-constrained environments. Federated learning (FL) has emerged as a promising solution, enabling collaborative model fine-tuning on distributed private data without requiring data sharing. Despite its potential, the heavy computational and communication burdens imposed by LLMs hinder the widespread adoption of FL-based",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11227876",
+      "first_checked_at": "2026-10-06T12:59:32.957058+00:00",
+      "last_checked_at": "2026-10-06T12:59:32.957058+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11228318",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11228318"
+      ],
+      "title": "Exploring the Trade-Off between Model Complexity and Numerical Precision for Efficient Edge AI Inference",
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11228318",
+      "first_checked_at": "2026-10-06T12:59:32.957058+00:00",
+      "last_checked_at": "2026-10-06T12:59:32.957058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
