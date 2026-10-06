@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6dd2c40592ffd08f-unrel-006",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.18653/v1/2020.bea-1.16",
+  "reason": "文法誤り訂正をsequence taggingとして解くNLP task modelで、生成型訂正より高速という特性はあるが最終適用先はGECであり、LLM推論システム効率化を扱わない。",
+  "title": "GECToR – Grammatical Error Correction: Tag, Not Rewrite",
+  "identity_tokens": [
+    "DOI:10.18653/v1/2020.bea-1.16",
+    "arXiv:2005.12592"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6dd2c40592ff",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
