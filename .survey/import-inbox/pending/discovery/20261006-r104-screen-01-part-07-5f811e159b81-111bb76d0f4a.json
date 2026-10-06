@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r104-screen-01-part-07-5f811e159b81",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22631",
+      "identity_tokens": [
+        "arXiv:2608.22631"
+      ],
+      "title": "Learning Generalizable Behaviors for Terminal Agents",
+      "reason": "River filters low-quality terminal-agent RL environments and regularizes high-level behaviors; experiments report improved generalization with fewer training environments across agent families. It concerns agent training, not serving/scheduling efficiency; gains depend on environment verifier quality.",
+      "source_url": "https://arxiv.org/abs/2608.22631",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.00808",
+      "identity_tokens": [
+        "arXiv:2608.00808"
+      ],
+      "title": "Turning Interaction History into Execution State: A Runtime Layer for Long-Horizon Coding Agents",
+      "reason": "Runtime state may reduce coding-agent context, but general serving gain is unproven.",
+      "source_url": "https://arxiv.org/abs/2608.00808",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27110",
+      "identity_tokens": [
+        "arXiv:2607.27110"
+      ],
+      "title": "FreqForcing: Autoregressive Long Video Generation via Spectral Self-Anchoring",
+      "reason": "Video diffusion anchoring differs from LLM KV caching.",
+      "source_url": "https://arxiv.org/abs/2607.27110",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25090",
+      "identity_tokens": [
+        "arXiv:2607.25090"
+      ],
+      "title": "Matryoshka Agent: Unfolding Sub-Agents for Long-Horizon Machine Learning Engineering",
+      "reason": "要旨からLLM推論の計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与が確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.25090",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22043",
+      "identity_tokens": [
+        "arXiv:2607.22043"
+      ],
+      "title": "Scaling Native Multimodal Pre-Training From Scratch",
+      "reason": "要旨からLLM推論の計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与が確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.22043",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    }
+  ]
+}
