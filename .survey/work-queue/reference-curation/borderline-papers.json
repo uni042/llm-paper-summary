@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T11:14:15+00:00",
-  "record_count": 2836,
+  "updated_at": "2026-10-06T11:21:53+00:00",
+  "record_count": 2848,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -43527,6 +43527,187 @@
       ],
       "borderline_recheck_count": 0,
       "title": "High-Reliability Network-Distributed MoE-LLM System"
+    },
+    "DOI:10.1109/mcsoc67473.2025.00018": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mcsoc67473.2025.00018",
+      "identity_tokens": [
+        "DOI:10.1109/mcsoc67473.2025.00018"
+      ],
+      "reason": "The abstract directly surveys FPGA acceleration for LLMs, but the publisher full text was inaccessible, so methods, coverage, and limitations could not be checked.",
+      "first_checked_at": "2026-10-06T11:21:43+00:00",
+      "last_checked_at": "2026-10-06T11:21:43+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review of FPGA-Driven LLM Acceleration"
+    },
+    "DOI:10.1109/sci68648.2025.11333852": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/sci68648.2025.11333852",
+      "identity_tokens": [
+        "DOI:10.1109/sci68648.2025.11333852"
+      ],
+      "reason": "The abstract reports CPU-cluster GPT-2/DistilGPT latency and throughput with LLM-on-Ray/Locust, but the conference full text was inaccessible; experimental setup and reproducibility remain unknown.",
+      "first_checked_at": "2026-10-06T11:21:43+00:00",
+      "last_checked_at": "2026-10-06T11:21:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating Performance and Scalability of GPT-2 and DistilGPT on CPU-Based Clusters using Intel’s LLM-on-Ray and Locust"
+    },
+    "DOI:10.35889/jutisi.v14i3.3327": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.35889/jutisi.v14i3.3327",
+      "identity_tokens": [
+        "DOI:10.35889/jutisi.v14i3.3327"
+      ],
+      "reason": "The title/abstract describe TinyBERT/Vosk speech control on a Raspberry Pi and the citation lineage is TinyBERT/Q-BERT; this could provide deployment evidence, but the publisher full text could not be retrieved.",
+      "first_checked_at": "2026-10-06T11:21:44+00:00",
+      "last_checked_at": "2026-10-06T11:21:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimalisasi TinyBERT-Vosk Untuk Kontrol Suara Real-Time Robot Mecanum Raspberry Pi"
+    },
+    "DOI:10.1109/icitisee68184.2025.11355009": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icitisee68184.2025.11355009",
+      "identity_tokens": [
+        "DOI:10.1109/icitisee68184.2025.11355009"
+      ],
+      "reason": "MiniLM is compared with IndoBERT for job recommendation and described as more computationally efficient; the linked MiniLM compression lineage makes transfer plausible, but the publisher full text could not be retrieved.",
+      "first_checked_at": "2026-10-06T11:21:44+00:00",
+      "last_checked_at": "2026-10-06T11:21:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Comparative Analysis of MiniLM and IndoBERT Models for Implementation Job Recommendation"
+    },
+    "arXiv:2511.03293": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.03293",
+      "identity_tokens": [
+        "arXiv:2511.03293"
+      ],
+      "reason": "The abstract directly claims NPU-PIM data-layout/mapping gains for LLM decode, but both the arXiv PDF and HTML primary full text retrieval failed, preventing verification of the reported TTFT/TTLT results.",
+      "first_checked_at": "2026-10-06T11:21:46+00:00",
+      "last_checked_at": "2026-10-06T11:21:46+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UMDAM: A Unified Data Layout and DRAM Address Mapping for Heterogeneous NPU-PIM"
+    },
+    "DOI:10.1109/spicscon69221.2025.11503972": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/spicscon69221.2025.11503972",
+      "identity_tokens": [
+        "DOI:10.1109/spicscon69221.2025.11503972"
+      ],
+      "reason": "Sparse Transformer variants may relate to reducing attention cost, but primary conference text was inaccessible and the title/abstract do not establish direct LLM inference or measured serving benefits.",
+      "first_checked_at": "2026-10-06T11:21:47+00:00",
+      "last_checked_at": "2026-10-06T11:21:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sparse Transformer Variants with Provable Expressivity: Theoretical Limits and Scalable Architectures"
+    },
+    "DOI:10.1145/3776746": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3776746",
+      "identity_tokens": [
+        "DOI:10.1145/3776746"
+      ],
+      "reason": "The abstract describes faster non-autoregressive image captioning and hallucination reduction, an adjacent generative-latency topic, but the primary ACM text was inaccessible and transfer to LLM/VLLM inference is unclear.",
+      "first_checked_at": "2026-10-06T11:21:47+00:00",
+      "last_checked_at": "2026-10-06T11:21:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Image Captioning through Bridging Image-Text Gap and Reducing Hallucinations"
+    },
+    "DOI:10.1109/candarw68385.2025.00016": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/candarw68385.2025.00016",
+      "identity_tokens": [
+        "DOI:10.1109/candarw68385.2025.00016"
+      ],
+      "reason": "A compressed-ternary matrix multiplier could relate to low-bit inference hardware, but the publisher full text is inaccessible and the abstract does not establish an LLM workload or deployment result.",
+      "first_checked_at": "2026-10-06T11:21:50+00:00",
+      "last_checked_at": "2026-10-06T11:21:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Design of a Matrix Multiplier using a Compressed Ternary Format"
+    },
+    "DOI:10.1109/asru65441.2025.11434744": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/asru65441.2025.11434744",
+      "identity_tokens": [
+        "DOI:10.1109/asru65441.2025.11434744"
+      ],
+      "reason": "The abstract describes a bidirectional SSM replacing Transformer components for controllable TTS and claims linear-time processing; this is adjacent sequence-model efficiency but not LLM inference, and the primary publisher text was inaccessible.",
+      "first_checked_at": "2026-10-06T11:21:51+00:00",
+      "last_checked_at": "2026-10-06T11:21:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EmoBiMamba-TTS: Bidirectional State Space Model for Emotion-Intensity Controllable Text-to-Speech"
+    },
+    "DOI:10.1109/iciiet65921.2025.11377539": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iciiet65921.2025.11377539",
+      "identity_tokens": [
+        "DOI:10.1109/iciiet65921.2025.11377539"
+      ],
+      "reason": "The abstract concerns LLM distillation for edge text classification, but appears task-specific and the publisher full text was inaccessible; the scope and inference measurements cannot be assessed.",
+      "first_checked_at": "2026-10-06T11:21:51+00:00",
+      "last_checked_at": "2026-10-06T11:21:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing Large Language Model for Edge Devices Using Knowledge Distillation"
+    },
+    "DOI:10.1109/iccd65941.2025.00020": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccd65941.2025.00020",
+      "identity_tokens": [
+        "DOI:10.1109/iccd65941.2025.00020"
+      ],
+      "reason": "The abstract describes fused FPGA Transformer inference plus integer-only quantization and reports BERT throughput, but the IEEE primary paper was inaccessible, preventing review of its method and evaluation details.",
+      "first_checked_at": "2026-10-06T11:21:52+00:00",
+      "last_checked_at": "2026-10-06T11:21:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Transformer Inference Efficiency on FPGA Through Fully Fusion and Integer-Only Quantization Techniques"
+    },
+    "DOI:10.1109/icaice68195.2025.11382356": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icaice68195.2025.11382356",
+      "identity_tokens": [
+        "DOI:10.1109/icaice68195.2025.11382356"
+      ],
+      "reason": "The abstract directly proposes SmoothQuant/Softmax quantization improvements for OPT/Llama, but the IEEE primary text was inaccessible, so its methodology and reported accuracy claims could not be verified.",
+      "first_checked_at": "2026-10-06T11:21:53+00:00",
+      "last_checked_at": "2026-10-06T11:21:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimization of SmoothQuant Methods for Large Language Models"
     }
   }
 }
