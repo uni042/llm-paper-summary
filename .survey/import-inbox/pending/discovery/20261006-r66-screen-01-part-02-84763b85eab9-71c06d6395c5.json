@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r66-screen-01-part-02-84763b85eab9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37601",
+      "identity_tokens": [
+        "arXiv:2609.37601"
+      ],
+      "title": "SENSE: Semantic Neural Speech Synthesis from Brain Dynamics via Spatial Graph Encoding",
+      "reason": "Brain-signal speech reconstruction, outside LLM/VLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.37601",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37712",
+      "identity_tokens": [
+        "arXiv:2609.37712"
+      ],
+      "title": "PolyOCR-Venus: Unified OCR Foundation Models for Text-Centric Visual Intelligence",
+      "reason": "PolyOCR-Venus unifies OCR foundation-model tasks and discusses compact OCR systems/distillation. Packet links to multimodal expert-compute/compression lineages, so the primary text was checked. It focuses on OCR capability/training recipes, not measured inference-cost reduction; lineage connection remains indirect.",
+      "source_url": "https://arxiv.org/abs/2609.37712",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37773",
+      "identity_tokens": [
+        "arXiv:2609.37773"
+      ],
+      "title": "OmniVCBench: Benchmarking Evidence-Grounded Multimodal Reasoning Towards AI Virtual Cells",
+      "reason": "Virtual-cell multimodal reasoning benchmark, no resource optimization.",
+      "source_url": "https://arxiv.org/abs/2609.37773",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37863",
+      "identity_tokens": [
+        "arXiv:2609.37863"
+      ],
+      "title": "It's Not What the Image Shows: Irrelevant Context Destabilises VLM Judges Without Informing Them",
+      "reason": "VLM-judge robustness study, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.37863",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37918",
+      "identity_tokens": [
+        "arXiv:2609.37918"
+      ],
+      "title": "SYNCR: Diagnosing and Learning Cross-Video Reasoning from Simulation",
+      "reason": "Cross-video reasoning benchmark/diagnosis, no serving improvement.",
+      "source_url": "https://arxiv.org/abs/2609.37918",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
