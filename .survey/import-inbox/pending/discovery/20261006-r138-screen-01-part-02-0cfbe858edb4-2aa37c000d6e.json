@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r138-screen-01-part-02-0cfbe858edb4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26185882",
+      "identity_tokens": [
+        "DOI:10.3390/s26185882"
+      ],
+      "title": "IRA-YOLO: Inter-Class Relation Attention for PPE Detection in Industrial Scenes",
+      "reason": "YOLOによる産業用PPE検出のクラス関係attention。対象は視覚検出で、LLM推論の計算効率改善ではない。",
+      "source_url": "https://doi.org/10.3390/s26185882",
+      "first_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "last_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26185926",
+      "identity_tokens": [
+        "DOI:10.3390/s26185926"
+      ],
+      "title": "RCN-MAMBA: Research on Pedestrian-Future-Trajectory-Prediction Methods for Occlusion Scenarios",
+      "reason": "歩行者軌跡予測/遮蔽補完のMamba応用で、LLM推論・メモリ・serving改善を扱わない。",
+      "source_url": "https://doi.org/10.3390/s26185926",
+      "first_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "last_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30248",
+      "identity_tokens": [
+        "arXiv:2608.30248"
+      ],
+      "title": "DSEffi-Bench: Demystifying Large Language Models'Capability in Efficient Data Science Code Generation",
+      "reason": "LLMが出力するデータ分析コードの実行効率評価であり、モデル自体の推論compute/memory/latencyやservingを最適化する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2608.30248",
+      "first_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "last_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30817",
+      "identity_tokens": [
+        "arXiv:2608.30817"
+      ],
+      "title": "A Composition-Aware Pretraining Framework for Geospatial Foundation Models",
+      "reason": "地理空間foundation modelの組成認識pretrainingであり、LLM推論システム最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2608.30817",
+      "first_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "last_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10921-026-01415-w",
+      "identity_tokens": [
+        "DOI:10.1007/s10921-026-01415-w"
+      ],
+      "title": "DLE-UNet: Cross-Group Enhanced Channel Attention and Dual-Path Collaborative Encoding for Defect Detection in Aluminum Castings",
+      "reason": "DLE-UNetはアルミ鋳物X線の微小欠陥segmentation向けU-Netであり、LLM/推論runtime最適化ではない。",
+      "source_url": "https://doi.org/10.1007/s10921-026-01415-w",
+      "first_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "last_checked_at": "2026-10-06T19:30:23.466921+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
