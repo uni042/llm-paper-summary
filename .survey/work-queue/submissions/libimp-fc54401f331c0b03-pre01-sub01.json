@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token",
+      "source_url": "https://arxiv.org/abs/2405.13792",
+      "year": 2024,
+      "published": "2024-05-22",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 156,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces xRAG, an innovative context compression method tailored for retrieval-augmented generation. xRAG reinterprets document embeddings in dense retrieval--traditionally used solely for retrieval--as features from the retrieval modality. By employing a modality fusion methodology, xRAG seamlessly integrates these embeddings into the language model representation space, effectively eliminating the need for their textual counterparts and achieving an extreme compression rate. In xRAG, the only trainable component is the modality bridge, while both the retriever and the language model remain frozen. This design choice allows for the reuse of offline-constructed document embeddings and preserves the plug-and-play nature of retrieval augmentation. Experimental results demonstrate that xRAG achieves an average improvement of over 10% across six knowledge-intensive tasks, adaptable to various language model backbones, ranging from a dense 7B model to an 8x7B Mixture of Experts configuration. xRAG not only significantly outperforms previous context compression methods but also matches the performance of uncompressed models on several datasets, while reducing overall FLOPs by a factor of 3.53. Our work pioneers new directions in retrieval-augmented generation from the perspective of multimodality fusion, and we hope it lays the foundation for future efficient and scalable retrieval-augmented systems",
+      "identifiers": [
+        "SemanticScholar:38fcc3667a907d6c94267c674aad114aae68441e"
+      ],
+      "semantic_scholar_id": "38fcc3667a907d6c94267c674aad114aae68441e",
+      "canonical_id": "arXiv:2405.13792",
+      "arxiv_id": "2405.13792",
+      "doi": "10.48550/arXiv.2405.13792",
+      "authors": [
+        "Xin Cheng",
+        "Xun Wang",
+        "Xingxing Zhang",
+        "Tao Ge",
+        "Si-Qing Chen",
+        "Furu Wei",
+        "Huishuai Zhang",
+        "Dongyan Zhao"
+      ],
+      "priority": 166,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 156,
+        "citation_count": 156,
+        "total": 166,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 867,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "retrieved document全文の代わりに既存dense retrieval embeddingを1 tokenへprojectしてLLMへ入力し、RAGのcontext長・FLOPs・CUDA timeを直接削減する推論効率化なので対象。",
+      "library_body_check": "fulltext_review: arXiv本文§1–5を確認。retriever document embeddingを2-layer modality projectorでLLM representationへ写像し、通常約175 tokenのretrieved documentを1 tokenへ圧縮。Mistral-7B/Mixtral-8x7Bと6 knowledge-intensive tasksで評価し、uncompressed RAG比で平均FLOPs 3.53x削減、CUDA time平均1.64x高速化。retriever/LLMは凍結しprojectorのみ学習。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fc54401f331c",
+    "round": "libimp-fc54401f331c0b03-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fc54401f331c0b03-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fc54401f331c0b03-pre01.json",
+    "receipt": "sha256:abcb448045d50de6a461fd1378b2184a3254d905c3933675b942d135abb792bc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fc54401f331c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BERxiT: Early Exiting for BERT with Better Fine-Tuning and Extension to Regression",
+      "source_url": "https://doi.org/10.18653/v1/2021.eacl-main.8",
+      "year": 2021,
+      "published": null,
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 169,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The slow speed of BERT has motivated much research on accelerating its inference, and the early exiting idea has been proposed to make trade-offs between model quality and efficiency. This paper aims to address two weaknesses of previous work: (1) existing fine-tuning strategies for early exiting models fail to take full advantage of BERT; (2) methods to make exiting decisions are limited to classification tasks. We propose a more advanced fine-tuning strategy and a learning-to-exit module that extends early exiting to tasks other than classification. Experiments demonstrate improved early exiting for BERT, with better trade-offs obtained by the proposed fine-tuning strategy, successful application to regression tasks, and the possibility to combine it with other acceleration methods. Source code can be found at https://github.com/castorini/berxit.",
+      "identifiers": [
+        "SemanticScholar:7b37c0a4976c4d2a5a440d494fbb0f3daede2a00"
+      ],
+      "semantic_scholar_id": "7b37c0a4976c4d2a5a440d494fbb0f3daede2a00",
+      "doi": "10.18653/v1/2021.eacl-main.8",
+      "canonical_id": "DOI:10.18653/v1/2021.eacl-main.8",
+      "authors": [
+        "Ji Xin",
+        "Raphael Tang",
+        "Yaoliang Yu",
+        "Jimmy Lin"
+      ],
+      "priority": 179,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 169,
+        "citation_count": 169,
+        "total": 179,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1923,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "BERTの各層にexit判断を設け、容易な入力は後段層を実行せず推論計算を削減するearly-exit方式。classificationだけでなくregressionへLearning-to-Exitを拡張し、実推論時間削減を評価するため直接対象。",
+      "library_body_check": "fulltext_relevance_review: ACL一次論文と本文結果を確認。Alternating fine-tuningでfinal classifierとintermediate exitsの干渉を抑え、LTE moduleがclassification/regression双方のexitを学習。GLUE/STSB等で品質を維持しつつ大幅なinference computation/time削減を示し、他のcompressionとも累積可能。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-16c1752439ef",
+    "round": "libimp-16c1752439ef736a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-16c1752439ef736a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-16c1752439ef736a-pre01.json",
+    "receipt": "sha256:cdc8e22a07481da4f1166f5e706ddc35088f7585497cdf077111ed8230d91cab"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-16c1752439ef",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
