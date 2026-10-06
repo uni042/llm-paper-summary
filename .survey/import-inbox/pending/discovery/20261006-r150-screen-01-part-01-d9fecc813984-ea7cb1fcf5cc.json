@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r150-screen-01-part-01-d9fecc813984",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3798244",
+      "identity_tokens": [
+        "DOI:10.1145/3798244"
+      ],
+      "title": "Designing GPU Data Structures for Efficient Memory Oversubscription",
+      "reason": "GPU memory managementとKernelBench系統には技術的近接性がある一方、LLM推論の具体評価やserving機構は示さず、適用可能性が未確定。",
+      "source_url": "https://doi.org/10.1145/3798244",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.34133/csbj.0076",
+      "identity_tokens": [
+        "DOI:10.34133/csbj.0076"
+      ],
+      "title": "SpheronizaTor: Spherical Voxelization for Interpretable Protein Microenvironment Modeling",
+      "reason": "本文のMethods/Resultsを確認。残基中心の球面voxel表現をタンパク質構造分類へ適用し、化学/幾何特徴と可視化を扱う。",
+      "source_url": "https://doi.org/10.34133/csbj.0076",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08720",
+      "identity_tokens": [
+        "arXiv:2604.08720"
+      ],
+      "title": "Demystifying the Silence of Correctness Bugs in PyTorch Compiler",
+      "reason": "本文のstudy/evaluationを確認。torch.compileのcorrectness bugsを分類し、fuzz testing/LLM-based test mutationで不具合検出する研究。",
+      "source_url": "https://arxiv.org/abs/2604.08720",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06723",
+      "identity_tokens": [
+        "arXiv:2604.06723"
+      ],
+      "title": "Fine-grained Approaches for Confidence Calibration of LLMs in Automated Code Revision",
+      "reason": "arXiv abstract describes fine-grained calibration of LLM confidence for automated code revision; contribution is prediction confidence calibration, not inference compute/memory/latency/serving.",
+      "source_url": "https://arxiv.org/abs/2604.06723",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07298",
+      "identity_tokens": [
+        "arXiv:2604.07298"
+      ],
+      "title": "Region-Graph Optimal Transport Routing for Mixture-of-Experts Whole-Slide Image Classification",
+      "reason": "本文のMethods/Experimentsを確認。病理whole-slide画像のMILでregion-to-expert optimal-transport routingを用い、WSI分類AUCを評価。",
+      "source_url": "https://arxiv.org/abs/2604.07298",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    }
+  ]
+}
