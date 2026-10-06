@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T16:04:43+00:00",
-  "record_count": 3343,
+  "updated_at": "2026-10-06T16:10:02+00:00",
+  "record_count": 3354,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -51204,6 +51204,174 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Mix-MoE: Improving Multilingual Machine Translation of Large Language Models Through Mixed MoEs"
+    },
+    "DOI:10.1016/j.displa.2026.103360": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.displa.2026.103360",
+      "identity_tokens": [
+        "DOI:10.1016/j.displa.2026.103360"
+      ],
+      "reason": "Title describes LVLM inference acceleration by token pruning/clustering, but direct publisher DOI access did not yield primary article/full text; method, evaluation and limitations remain unverified.",
+      "first_checked_at": "2026-10-06T16:09:47+00:00",
+      "last_checked_at": "2026-10-06T16:09:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ctp2Fic: From coarse-grained token pruning to fine-grained token clustering for LVLM inference acceleration"
+    },
+    "arXiv:2603.17433": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.17433",
+      "identity_tokens": [
+        "arXiv:2603.17433"
+      ],
+      "reason": "Phasor Transformer replaces dot-product attention with phase shifts and DFT coupling for O(N log N) time-series mixing; synthetic forecasting shows an efficiency/accuracy frontier but not superiority to attention. No language-model or deployment inference evaluation.",
+      "first_checked_at": "2026-10-06T16:09:50+00:00",
+      "last_checked_at": "2026-10-06T16:09:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Phasor Transformer: Resolving Attention Bottlenecks on the Unit Circle"
+    },
+    "arXiv:2603.25027": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25027",
+      "identity_tokens": [
+        "arXiv:2603.25027"
+      ],
+      "reason": "HyenaRec uses polynomial-parameterized gated convolutions for linear scaling in sequential recommendation and reports faster training with strong ranking results; a non-language recommender application with unverified transfer to long-context LLM inference.",
+      "first_checked_at": "2026-10-06T16:09:52+00:00",
+      "last_checked_at": "2026-10-06T16:09:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hyena Operator for Fast Sequential Recommendation"
+    },
+    "DOI:10.1145/3767295.3769392": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3767295.3769392",
+      "identity_tokens": [
+        "DOI:10.1145/3767295.3769392"
+      ],
+      "reason": "The abstract describes Infera cooperative compilation and runtime scheduling for model serving and claims at least 1.6x throughput over baselines, but the ACM DOI primary text was inaccessible; the claim cannot be verified from full text.",
+      "first_checked_at": "2026-10-06T16:09:53+00:00",
+      "last_checked_at": "2026-10-06T16:09:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Automated End-to-End Model Serving with Cooperative Compilation and Scheduling"
+    },
+    "arXiv:2604.20470": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20470",
+      "identity_tokens": [
+        "arXiv:2604.20470"
+      ],
+      "reason": "DynamicRad uses static-ratio/dynamic-threshold sparse attention and an offline semantic-motion router for video diffusion; HunyuanVideo/Wan2.1 results claim 1.7–2.5x inference speedup and >80% sparsity. This is adjacent long-context/sparse-attention evidence but limited to video diffusion and specific block sizes/hardware.",
+      "first_checked_at": "2026-10-06T16:09:54+00:00",
+      "last_checked_at": "2026-10-06T16:09:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DynamicRad: Content-Adaptive Sparse Attention for Long Video Diffusion"
+    },
+    "DOI:10.1016/j.sysarc.2026.103721": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103721",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103721"
+      ],
+      "reason": "Title/lineage indicate tensor-program optimization cost modeling for compiler scheduling and inference systems, but direct publisher DOI access did not yield primary full text; method and relevance could not be verified.",
+      "first_checked_at": "2026-10-06T16:09:55+00:00",
+      "last_checked_at": "2026-10-06T16:09:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GAS: A scheduling primitive dependency analysis-based cost model for tensor program optimization"
+    },
+    "arXiv:2604.09425": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09425",
+      "identity_tokens": [
+        "arXiv:2604.09425"
+      ],
+      "reason": "Analyzes visual-token stabilization and task-dependent depth truncation in VLMs; short-answer cases may tolerate depth reduction while multi-token reasoning needs sustained visual grounding. This is a diagnostic study, not an end-to-end serving/latency implementation.",
+      "first_checked_at": "2026-10-06T16:09:58+00:00",
+      "last_checked_at": "2026-10-06T16:09:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Do Vision Language Models Need to Process Image Tokens?"
+    },
+    "arXiv:2604.11109": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11109",
+      "identity_tokens": [
+        "arXiv:2604.11109"
+      ],
+      "reason": "Record-Remix-Replay combines LLM-guided source rewrites, record-replay and Bayesian optimization across GPU kernel/compiler/launch spaces. Scientific applications report faster search and up to 1.33x kernel speedup / 28.4% compute-time reduction, but target is HPC scientific code rather than LLM inference kernels; transfer is plausible but unverified.",
+      "first_checked_at": "2026-10-06T16:09:59+00:00",
+      "last_checked_at": "2026-10-06T16:09:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Record-Remix-Replay: Hierarchical GPU Kernel Optimization using Evolutionary Search"
+    },
+    "arXiv:2603.10985": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10985",
+      "identity_tokens": [
+        "arXiv:2603.10985"
+      ],
+      "reason": "The paper analyzes binary routing behavior in GPT-2 MLP activations and validates functional importance via ablations/perplexity. It proposes a characterization, not a routing optimization or measured serving/compute savings; it is only an indirect possible connection to conditional compute.",
+      "first_checked_at": "2026-10-06T16:10:00+00:00",
+      "last_checked_at": "2026-10-06T16:10:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Discrete Charm of the MLP: Binary Routing of Continuous Signals in Transformer Feed-Forward Layers"
+    },
+    "arXiv:2603.11114": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.11114",
+      "identity_tokens": [
+        "arXiv:2603.11114"
+      ],
+      "reason": "The work introduces prompt-level MoE routing signatures and evaluates task-category separability/classification on OLMoE. It studies routing telemetry rather than changing routing or demonstrating inference cost gains, so the MoE serving connection is weak.",
+      "first_checked_at": "2026-10-06T16:10:01+00:00",
+      "last_checked_at": "2026-10-06T16:10:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Task-Conditioned Routing Signatures in Sparse Mixture-of-Experts Transformers"
+    },
+    "arXiv:2604.04236": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.04236",
+      "identity_tokens": [
+        "arXiv:2604.04236"
+      ],
+      "reason": "NEURA defines a predicated dataflow IR for control-flow compilation to CGRA, reporting 2.20x geomean kernel and up to 2.71x application speedup on target architecture; specialized reconfigurable hardware, not a demonstrated LLM inference stack.",
+      "first_checked_at": "2026-10-06T16:10:02+00:00",
+      "last_checked_at": "2026-10-06T16:10:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NEURA: A Unified and Retargetable Compilation Framework for Coarse-Grained Reconfigurable Architectures"
     }
   }
 }

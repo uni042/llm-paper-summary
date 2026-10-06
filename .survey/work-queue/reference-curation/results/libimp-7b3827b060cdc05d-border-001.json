@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b3827b060cdc05d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.25027",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.25027",
+    "identity_tokens": [
+      "arXiv:2603.25027"
+    ],
+    "reason": "HyenaRec uses polynomial-parameterized gated convolutions for linear scaling in sequential recommendation and reports faster training with strong ranking results; a non-language recommender application with unverified transfer to long-context LLM inference.",
+    "first_checked_at": "2026-10-06T16:09:52+00:00",
+    "last_checked_at": "2026-10-06T16:09:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hyena Operator for Fast Sequential Recommendation"
+  },
+  "processed_at": "2026-10-06T16:09:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b3827b060cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

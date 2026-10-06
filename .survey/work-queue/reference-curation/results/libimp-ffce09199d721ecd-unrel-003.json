@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffce09199d721ecd-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.21437",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.21437",
+    "identity_tokens": [
+      "arXiv:2603.21437"
+    ],
+    "reason": "Long-text embedding analysis explains pooling/semantic shift without an efficiency mechanism.",
+    "first_checked_at": "2026-10-06T16:10:03+00:00",
+    "last_checked_at": "2026-10-06T16:10:03+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Pooling and Semantic Shift: The Fundamental Challenges in Long Text Embedding and Retrieval"
+  },
+  "processed_at": "2026-10-06T16:10:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffce09199d72",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

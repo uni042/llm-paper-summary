@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-acbbd2e797c491bb-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.patcog.2026.113660",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.patcog.2026.113660",
+    "identity_tokens": [
+      "DOI:10.1016/j.patcog.2026.113660"
+    ],
+    "reason": "Sparse attention for portfolio recognition is finance-specific; no LLM transfer shown.",
+    "first_checked_at": "2026-10-06T16:09:56+00:00",
+    "last_checked_at": "2026-10-06T16:09:56+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "SAPP: Sparse attention transformers for pattern recognition in portfolio management"
+  },
+  "processed_at": "2026-10-06T16:09:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-acbbd2e797c4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
