@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r111-screen-01-part-01-d3a4e4ed62a1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14889",
+      "identity_tokens": [
+        "arXiv:2605.14889"
+      ],
+      "title": "SurgicalMamba: Dual-Path SSD with State Regramming for Online Surgical Phase Recognition",
+      "reason": "SurgicalMamba reprograms recurrent state for online surgical phase recognition with per-frame cost not growing over sequence length; the paper’s recurrent sequence-model connection is real, but evaluation/domain are surgical video and it does not demonstrate LLM inference-serving transfer.",
+      "source_url": "https://arxiv.org/abs/2605.14889",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15290",
+      "identity_tokens": [
+        "arXiv:2605.15290"
+      ],
+      "title": "GQA-μP: The maximal parameterization update for grouped query attention",
+      "reason": "Derives maximal-update parameterization/scalings for grouped-query attention and tests learning-rate/weight-decay transfer across GQA settings. This is training hyperparameter theory, not an inference efficiency improvement; connection to GQA is adjacent only.",
+      "source_url": "https://arxiv.org/abs/2605.15290",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12966",
+      "identity_tokens": [
+        "arXiv:2605.12966"
+      ],
+      "title": "Position: Agentic AI System Is a Foreseeable Pathway to AGI",
+      "reason": "Position/opinion paper arguing for agentic systems as an AGI pathway; no concrete evaluated compute, memory, latency or serving mechanism.",
+      "source_url": "https://arxiv.org/abs/2605.12966",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3816024",
+      "identity_tokens": [
+        "DOI:10.1145/3816024"
+      ],
+      "title": "How Do Large Language Models Perform in Deep Learning Code Generation? An Empirical Study",
+      "reason": "Title and abstract describe a non-target application, theory, or model-quality/training study without a plausible direct LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving contribution.",
+      "source_url": "https://doi.org/10.1145/3816024",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12683",
+      "identity_tokens": [
+        "arXiv:2605.12683"
+      ],
+      "title": "Parallel-in-Time Training of Recurrent Neural Networks for Dynamical Systems Reconstruction",
+      "reason": "Parallel-in-time recurrent-network training for dynamical-system reconstruction; the recurrent long-sequence link is training-algorithm context and not inference serving.",
+      "source_url": "https://arxiv.org/abs/2605.12683",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    }
+  ]
+}
