@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T11:31:28+00:00",
-  "record_count": 8073,
+  "updated_at": "2026-10-06T11:42:59+00:00",
+  "record_count": 8093,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -116028,6 +116028,286 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
       ],
       "title": "Successor-Generator Planning with LLM-generated Heuristics"
+    },
+    "DOI:10.1016/j.sysarc.2025.103339": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2025.103339",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2025.103339"
+      ],
+      "reason": "REC changes fine-grained cache coherence in multi-GPU systems; the abstract does not describe model KV-cache or LLM-serving optimization.",
+      "first_checked_at": "2026-10-06T11:42:50+00:00",
+      "last_checked_at": "2026-10-06T11:42:50+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "REC: Enhancing fine-grained cache coherence protocol in multi-GPU systems"
+    },
+    "DOI:10.1145/3699731": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3699731",
+      "identity_tokens": [
+        "DOI:10.1145/3699731"
+      ],
+      "reason": "ChatCam is an LLM-assisted camera/video application and reports task accuracy; it does not optimize LLM inference compute, memory, or serving.",
+      "first_checked_at": "2026-10-06T11:42:51+00:00",
+      "last_checked_at": "2026-10-06T11:42:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "ChatCam: Embracing LLMs for Contextual Chatting-to-Camera with Interest-Oriented Video Summarization"
+    },
+    "arXiv:2412.13757": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.13757",
+      "identity_tokens": [
+        "arXiv:2412.13757"
+      ],
+      "reason": "This is federated source-free domain adaptation for classification, focused on privacy-preserving training/adaptation rather than inference efficiency.",
+      "first_checked_at": "2026-10-06T11:42:51+00:00",
+      "last_checked_at": "2026-10-06T11:42:51+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Federated Source-Free Domain Adaptation for Classification: Weighted Cluster Aggregation for Unlabeled Data"
+    },
+    "DOI:10.1109/dasa63652.2024.10836639": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/dasa63652.2024.10836639",
+      "identity_tokens": [
+        "DOI:10.1109/dasa63652.2024.10836639"
+      ],
+      "reason": "The work builds a sustainable-energy RAG-LLM decision-support application; it does not report an LLM inference optimization.",
+      "first_checked_at": "2026-10-06T11:42:52+00:00",
+      "last_checked_at": "2026-10-06T11:42:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Sustainable Energy Decision-Making with an RAG-LLM System"
+    },
+    "arXiv:2510.12789": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12789",
+      "identity_tokens": [
+        "arXiv:2510.12789"
+      ],
+      "reason": "UniFusion uses a frozen vision-language encoder to condition image diffusion; it does not optimize LLM inference compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T11:42:53+00:00",
+      "last_checked_at": "2026-10-06T11:42:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "UniFusion: Vision-Language Model as Unified Encoder in Image Generation"
+    },
+    "arXiv:2510.00345": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.00345",
+      "identity_tokens": [
+        "arXiv:2510.00345"
+      ],
+      "reason": "The paper studies initialization for training residual-free vision Transformers; its reported objective is training stability/representation learning, not inference efficiency.",
+      "first_checked_at": "2026-10-06T11:42:53+00:00",
+      "last_checked_at": "2026-10-06T11:42:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Cutting the Skip: Training Residual-Free Transformers"
+    },
+    "arXiv:2509.21936": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21936",
+      "identity_tokens": [
+        "arXiv:2509.21936"
+      ],
+      "reason": "This is a statistical theory of softmax attention on a single-location regression task; it presents no inference optimization method or deployment measurement.",
+      "first_checked_at": "2026-10-06T11:42:53+00:00",
+      "last_checked_at": "2026-10-06T11:42:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Statistical Advantage of Softmax Attention: Insights from Single-Location Regression"
+    },
+    "arXiv:2508.13390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.13390",
+      "identity_tokens": [
+        "arXiv:2508.13390"
+      ],
+      "reason": "The work is adaptive information retrieval/feedback learning, not a method to reduce LLM inference cost or improve LLM serving.",
+      "first_checked_at": "2026-10-06T11:42:54+00:00",
+      "last_checked_at": "2026-10-06T11:42:54+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "FLAIR: Feedback Learning for Adaptive Information Retrieval"
+    },
+    "DOI:10.1016/j.seta.2025.104362": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.seta.2025.104362",
+      "identity_tokens": [
+        "DOI:10.1016/j.seta.2025.104362"
+      ],
+      "reason": "The paper applies BERTopic text mining to green-methanol decision-making; it does not study LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T11:42:54+00:00",
+      "last_checked_at": "2026-10-06T11:42:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Research on data-driven group consensus decision-making of green methanol vehicle evaluation based on BERTopic text mining"
+    },
+    "DOI:10.1145/3728470": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3728470",
+      "identity_tokens": [
+        "DOI:10.1145/3728470"
+      ],
+      "reason": "Diff-Acc accelerates unconditional image diffusion models; this is a different generative workload from LLM inference despite the broad FPGA accelerator lineage.",
+      "first_checked_at": "2026-10-06T11:42:54+00:00",
+      "last_checked_at": "2026-10-06T11:42:54+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "title": "Diff-Acc: An Efficient FPGA Accelerator for Unconditional Diffusion Models"
+    },
+    "arXiv:2505.06330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.06330",
+      "identity_tokens": [
+        "arXiv:2505.06330"
+      ],
+      "reason": "The work applies prompting to a non-intrusive load-monitoring task; it does not present an LLM inference-efficiency technique.",
+      "first_checked_at": "2026-10-06T11:42:54+00:00",
+      "last_checked_at": "2026-10-06T11:42:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Prompting Large Language Models for Training-Free Non-Intrusive Load Monitoring"
+    },
+    "DOI:10.1109/wacv61041.2025.00536": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wacv61041.2025.00536",
+      "identity_tokens": [
+        "DOI:10.1109/wacv61041.2025.00536"
+      ],
+      "reason": "Q-TempFusion quantizes a temporal multi-sensor BEV perception model for vehicle detection; its target is a vision sensor-fusion pipeline, not LLM serving.",
+      "first_checked_at": "2026-10-06T11:42:55+00:00",
+      "last_checked_at": "2026-10-06T11:42:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Q-TempFusion: Quantization-Aware Temporal Multi-Sensor Fusion on Bird's-Eye View Representation"
+    },
+    "arXiv:2501.09253": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.09253",
+      "identity_tokens": [
+        "arXiv:2501.09253"
+      ],
+      "reason": "PatchedServe optimizes text-to-image diffusion serving; its cache/scheduling results concern diffusion image patches, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:42:55+00:00",
+      "last_checked_at": "2026-10-06T11:42:55+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "title": "PATCHEDSERVE: A Patch Management Framework for SLO-Optimized Hybrid Resolution Diffusion Serving"
+    },
+    "DOI:10.1016/j.patcog.2024.110893": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patcog.2024.110893",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2024.110893"
+      ],
+      "reason": "The paper distills a lightweight vision Transformer for a small image dataset; no language-model inference result is described.",
+      "first_checked_at": "2026-10-06T11:42:55+00:00",
+      "last_checked_at": "2026-10-06T11:42:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Patient teacher can impart locality to improve lightweight vision transformer on small dataset"
+    },
+    "arXiv:2204.00176": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.00176",
+      "identity_tokens": [
+        "arXiv:2204.00176"
+      ],
+      "reason": "The method improves CTC speech-recognition output quality with searched intermediates and multi-pass conditioning; it does not claim reduced inference latency or resource use.",
+      "first_checked_at": "2026-10-06T11:42:57+00:00",
+      "last_checked_at": "2026-10-06T11:42:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Better Intermediates Improve CTC Inference"
+    },
+    "DOI:10.1109/iccv51701.2025.00451": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51701.2025.00451",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51701.2025.00451"
+      ],
+      "reason": "MambaML applies an SSM to multi-label image classification; it does not evaluate language-model inference.",
+      "first_checked_at": "2026-10-06T11:42:57+00:00",
+      "last_checked_at": "2026-10-06T11:42:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "MambaMl: Exploring State Space Models for Multi-Label Image Classification"
+    },
+    "DOI:10.1109/iccv51701.2025.01280": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51701.2025.01280",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51701.2025.01280"
+      ],
+      "reason": "EVDM applies Mamba to event-based video deblurring, a vision restoration task rather than LLM inference.",
+      "first_checked_at": "2026-10-06T11:42:58+00:00",
+      "last_checked_at": "2026-10-06T11:42:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "EVDM: Event-based Real-World Video Deblurring with Mamba"
+    },
+    "arXiv:2510.12077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12077",
+      "identity_tokens": [
+        "arXiv:2510.12077"
+      ],
+      "reason": "This is general theory connecting description length and singular learning; the abstract presents no LLM compression or inference method.",
+      "first_checked_at": "2026-10-06T11:42:58+00:00",
+      "last_checked_at": "2026-10-06T11:42:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Compressibility Measures Complexity: Minimum Description Length Meets Singular Learning Theory"
+    },
+    "arXiv:2504.18080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.18080",
+      "identity_tokens": [
+        "arXiv:2504.18080"
+      ],
+      "reason": "The work improves medical LLM reasoning through continued pretraining and preference optimization; its contribution is training/answer quality, not inference efficiency.",
+      "first_checked_at": "2026-10-06T11:42:58+00:00",
+      "last_checked_at": "2026-10-06T11:42:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Stabilizing Reasoning in Medical LLMs with Continued Pretraining and Reasoning Preference Optimization"
+    },
+    "DOI:10.1145/3696410.3714669": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3696410.3714669",
+      "identity_tokens": [
+        "DOI:10.1145/3696410.3714669"
+      ],
+      "reason": "IPdb/LLMIC uses an LLM for IP-industry classification; the contribution is a dataset/classification framework, not LLM inference optimization.",
+      "first_checked_at": "2026-10-06T11:42:59+00:00",
+      "last_checked_at": "2026-10-06T11:42:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "IPdb: A High-Precision IP Level Industry Categorization of Web Services"
     }
   }
 }

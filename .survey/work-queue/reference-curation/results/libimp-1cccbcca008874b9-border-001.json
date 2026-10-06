@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cccbcca008874b9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.16269",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.16269",
+    "identity_tokens": [
+      "arXiv:2504.16269"
+    ],
+    "reason": "Relevant low-bit Transformer hardware lineage, but actual evaluation is encoder/vision-scale rather than autoregressive LLM serving.",
+    "first_checked_at": "2026-10-06T11:42:49+00:00",
+    "last_checked_at": "2026-10-06T11:42:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "COBRA: Algorithm-Architecture Co-optimized Binary Transformer Accelerator for Edge Inference"
+  },
+  "processed_at": "2026-10-06T11:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cccbcca0088",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

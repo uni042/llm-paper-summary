@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2690519519eb463f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s44295-024-00040-5",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s44295-024-00040-5",
+    "identity_tokens": [
+      "DOI:10.1007/s44295-024-00040-5"
+    ],
+    "reason": "Energy-efficient Transformer hardware is adjacent to TernaryBERT/FTRANS, but the spiking model and evaluated workloads are not LLMs.",
+    "first_checked_at": "2026-10-06T11:42:50+00:00",
+    "last_checked_at": "2026-10-06T11:42:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Energy efficient spike transformer accelerator at the edge"
+  },
+  "processed_at": "2026-10-06T11:42:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2690519519eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
