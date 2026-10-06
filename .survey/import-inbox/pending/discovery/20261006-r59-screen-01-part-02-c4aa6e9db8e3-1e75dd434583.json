@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r59-screen-01-part-02-c4aa6e9db8e3",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.19915",
+      "identity_tokens": [
+        "arXiv:2405.19915"
+      ],
+      "title": "P2-ViT: Power-of-Two Post-Training Quantization and Acceleration for Fully Quantized Vision Transformer",
+      "reason": "P2-ViT applies power-of-two post-training quantization to fully quantized vision transformers and evaluates accuracy/acceleration; the method is vision-specific, so transfer to the linked language quantization lineage is unclear.",
+      "source_url": "https://arxiv.org/abs/2405.19915",
+      "first_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "last_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3711896.3737226",
+      "identity_tokens": [
+        "DOI:10.1145/3711896.3737226"
+      ],
+      "title": "LLM4HAR: Generalizable On-device Human Activity Recognition with Pretrained LLMs",
+      "reason": "The ACM primary article endpoint returned HTTP 403 and no author/institution full text was accessible; the title/abstract indicates on-device HAR with pretrained LLMs, but efficiency mechanisms and evaluation could not be verified from full text.",
+      "source_url": "https://doi.org/10.1145/3711896.3737226",
+      "first_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "last_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s40558-024-00309-9",
+      "identity_tokens": [
+        "DOI:10.1007/s40558-024-00309-9"
+      ],
+      "title": "Discovering sentiment insights: streamlining tourism review analysis with Large Language Models",
+      "reason": "The full open-access study compares zero-shot and fine-tuned models for tourism-review sentiment and keyword extraction; it is an application evaluation and does not introduce an inference optimization.",
+      "source_url": "https://doi.org/10.1007/s40558-024-00309-9",
+      "first_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "last_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3373592",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2024.3373592"
+      ],
+      "title": "Hardware–Software Co-Design Enabling Static and Dynamic Sparse Attention Mechanisms",
+      "reason": "The IEEE publisher endpoint was inaccessible and no primary full-text copy was retrieved; the record describes hardware/software co-design for sparse attention, but hardware assumptions and measured results could not be checked.",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3373592",
+      "first_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "last_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15629",
+      "identity_tokens": [
+        "arXiv:2506.15629"
+      ],
+      "title": "Revisiting Compositional Generalization Capability of Large Language Models Considering Instruction Following Ability",
+      "reason": "The paper evaluates compositional generalization and instruction-following ability of LLMs; its experiments concern task generalization rather than compute, memory, latency, or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2506.15629",
+      "first_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "last_checked_at": "2026-10-06T07:57:29.284156+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
