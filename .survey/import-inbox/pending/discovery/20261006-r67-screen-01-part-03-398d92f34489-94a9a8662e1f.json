@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r67-screen-01-part-03-398d92f34489",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32489",
+      "identity_tokens": [
+        "arXiv:2609.32489"
+      ],
+      "title": "When Helpful Text Hurts: Option-Redirecting Bias in Vision-Language Models",
+      "reason": "Analyzes option-redirecting bias in VLMs; no inference/serving resource optimization.",
+      "source_url": "https://arxiv.org/abs/2609.32489",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32492",
+      "identity_tokens": [
+        "arXiv:2609.32492"
+      ],
+      "title": "Beyond Prompt or Skill? Attribution-Guided Optimization of Modular LLM Programs",
+      "reason": "Attribution-guided optimization adjusts modular LLM programs using module-level attribution and memory selection. The full text evaluates task performance and parameter sensitivity, but does not establish a direct model-inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving improvement. Runtime-cost comparison against closest inference optimization work is a concrete follow-up if retained.",
+      "source_url": "https://arxiv.org/abs/2609.32492",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32734",
+      "identity_tokens": [
+        "arXiv:2609.32734"
+      ],
+      "title": "REALIS: A Curated Dataset for Studying the Challenges of AI Image Detection",
+      "reason": "AI-image-detection dataset and evaluation; outside LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.32734",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32740",
+      "identity_tokens": [
+        "arXiv:2609.32740"
+      ],
+      "title": "AnesTRACE: Benchmarking Intraoperative Anesthesia from Multimodal Perception to Multi-step Decision-Making",
+      "reason": "Intraoperative anesthesia benchmark; outside LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2609.32740",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32794",
+      "identity_tokens": [
+        "arXiv:2609.32794"
+      ],
+      "title": "Latent Space Is Not Flat: Rethinking Latent Structure for 3D Medical Image Synthesis",
+      "reason": "3D medical-image synthesis latent-space analysis; outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.32794",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    }
+  ]
+}
