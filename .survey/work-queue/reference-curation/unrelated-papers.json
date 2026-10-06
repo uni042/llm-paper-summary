@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T11:01:33+00:00",
-  "record_count": 7947,
+  "updated_at": "2026-10-06T11:11:34+00:00",
+  "record_count": 7992,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -114263,6 +114263,636 @@
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
       "title": "Adaptive Momentum Mixture-of-Experts for Continual Visual Question Answering"
+    },
+    "DOI:10.54963/dtra.v5i1.1932": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54963/dtra.v5i1.1932",
+      "identity_tokens": [
+        "DOI:10.54963/dtra.v5i1.1932"
+      ],
+      "reason": "Vision Transformer PTQ method is limited to image classification; no plausible LLM lineage is identified.",
+      "first_checked_at": "2026-10-06T11:11:22+00:00",
+      "last_checked_at": "2026-10-06T11:11:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "DHE: A Semantic-Preserving Framework for Robust Post-Training Quantization of Vision Transformers"
+    },
+    "DOI:10.1016/j.asoc.2026.114944": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.114944",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.114944"
+      ],
+      "reason": "Multivariate time-series forecasting architecture; no LLM inference/serving relevance.",
+      "first_checked_at": "2026-10-06T11:11:22+00:00",
+      "last_checked_at": "2026-10-06T11:11:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "title": "TSCM: Enhancing multivariate time series forecasting with dual-stream temporal-spatial correlation modeling"
+    },
+    "DOI:10.1109/tmi.2026.3668909": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmi.2026.3668909",
+      "identity_tokens": [
+        "DOI:10.1109/tmi.2026.3668909"
+      ],
+      "reason": "Computational pathology Mamba/MIL classification; not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T11:11:22+00:00",
+      "last_checked_at": "2026-10-06T11:11:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Scan-Invariant Mamba With Differentiated Sequence Contrastive Learning in Computational Pathology"
+    },
+    "arXiv:2602.22988": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.22988",
+      "identity_tokens": [
+        "arXiv:2602.22988"
+      ],
+      "reason": "Transformer training-instability profiling/prevention, not inference compute or serving.",
+      "first_checked_at": "2026-10-06T11:11:23+00:00",
+      "last_checked_at": "2026-10-06T11:11:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Residual Koopman Spectral Profiling for Predicting and Preventing Transformer Training Instability"
+    },
+    "arXiv:2602.07679": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07679",
+      "identity_tokens": [
+        "arXiv:2602.07679"
+      ],
+      "reason": "Spectral gating is evaluated against spline KAN variants across general MLP/vision/NLP tasks; no direct LLM inference-serving gain is established.",
+      "first_checked_at": "2026-10-06T11:11:23+00:00",
+      "last_checked_at": "2026-10-06T11:11:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Spectral Gating Networks"
+    },
+    "DOI:10.3390/a19020132": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/a19020132",
+      "identity_tokens": [
+        "DOI:10.3390/a19020132"
+      ],
+      "reason": "MoE multi-view clustering embedding method, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T11:11:23+00:00",
+      "last_checked_at": "2026-10-06T11:11:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "MoE Based Consistency and Complementarity Mining for Multi-View Clustering"
+    },
+    "arXiv:2602.06183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06183",
+      "identity_tokens": [
+        "arXiv:2602.06183"
+      ],
+      "reason": "Primary text is specifically an LLM pretraining acceleration recipe; it evaluates sparse training, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-06T11:11:23+00:00",
+      "last_checked_at": "2026-10-06T11:11:23+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "To 2:4 Sparsity and Beyond: Neuron-level Activation Function to Accelerate LLM Pre-Training"
+    },
+    "arXiv:2602.05100": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05100",
+      "identity_tokens": [
+        "arXiv:2602.05100"
+      ],
+      "reason": "Explainable U-Net edge detection is a computer-vision application, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:24+00:00",
+      "last_checked_at": "2026-10-06T11:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Rule-Based Spatial Mixture-of-Experts U-Net for Explainable Edge Detection"
+    },
+    "arXiv:2601.17987": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17987",
+      "identity_tokens": [
+        "arXiv:2601.17987"
+      ],
+      "reason": "Architecture characterization uses image-classification models and generic pruning/quantization sweeps, without LLM or serving evidence.",
+      "first_checked_at": "2026-10-06T11:11:24+00:00",
+      "last_checked_at": "2026-10-06T11:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Systematic Characterization of Minimal Deep Learning Architectures: A Unified Analysis of Convergence, Pruning, and Quantization"
+    },
+    "DOI:10.1109/iscait69154.2026.11477185": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iscait69154.2026.11477185",
+      "identity_tokens": [
+        "DOI:10.1109/iscait69154.2026.11477185"
+      ],
+      "reason": "Dynamic gradient recurrence concerns symbolic neural graph database query answering, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T11:11:24+00:00",
+      "last_checked_at": "2026-10-06T11:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Complex Query Answering for Neural Graph Databases with Dynamic Gradient Recurrence"
+    },
+    "DOI:10.1109/iscait69154.2026.11477335": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iscait69154.2026.11477335",
+      "identity_tokens": [
+        "DOI:10.1109/iscait69154.2026.11477335"
+      ],
+      "reason": "Bibliometric topic analysis of education AI research; unrelated to inference efficiency.",
+      "first_checked_at": "2026-10-06T11:11:25+00:00",
+      "last_checked_at": "2026-10-06T11:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Mapping the Evolution of Educational AI Research: A BERTopic-Driven Analysis of Emerging Themes"
+    },
+    "arXiv:2601.14568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14568",
+      "identity_tokens": [
+        "arXiv:2601.14568"
+      ],
+      "reason": "Adaptive video inference enhancement is a video-vision task; abstract gives no LLM/VLM or generative inference connection.",
+      "first_checked_at": "2026-10-06T11:11:25+00:00",
+      "last_checked_at": "2026-10-06T11:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Breaking the accuracy-resource dilemma: a lightweight adaptive video inference enhancement"
+    },
+    "arXiv:2602.18016": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18016",
+      "identity_tokens": [
+        "arXiv:2602.18016"
+      ],
+      "reason": "LLM-centric visual emotion customization is an application/model-quality topic; abstract does not claim inference-resource gains.",
+      "first_checked_at": "2026-10-06T11:11:25+00:00",
+      "last_checked_at": "2026-10-06T11:11:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "Towards LLM-centric Affective Visual Customization via Efficient and Precise Emotion Manipulating"
+    },
+    "arXiv:2602.16299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16299",
+      "identity_tokens": [
+        "arXiv:2602.16299"
+      ],
+      "reason": "Efficient cross-encoder reranking targets encoder-only information retrieval rather than LLM generation/inference serving.",
+      "first_checked_at": "2026-10-06T11:11:26+00:00",
+      "last_checked_at": "2026-10-06T11:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "MICE: Minimal Interaction Cross-Encoders for efficient Re-ranking"
+    },
+    "arXiv:2602.15783": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15783",
+      "identity_tokens": [
+        "arXiv:2602.15783"
+      ],
+      "reason": "Skin-cancer cell classification with graph transformers is a medical vision application, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:26+00:00",
+      "last_checked_at": "2026-10-06T11:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Context-aware Skin Cancer Epithelial Cell Classification with Scalable Graph Transformers"
+    },
+    "arXiv:2603.06746": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06746",
+      "identity_tokens": [
+        "arXiv:2603.06746"
+      ],
+      "reason": "Vision Transformer expert compression (CIFAR-100) only; no language model or LLM inference evidence.",
+      "first_checked_at": "2026-10-06T11:11:26+00:00",
+      "last_checked_at": "2026-10-06T11:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "ButterflyViT: 354⨉ Expert Compression for Edge Vision Transformers"
+    },
+    "DOI:10.1007/s12539-026-00816-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s12539-026-00816-9",
+      "identity_tokens": [
+        "DOI:10.1007/s12539-026-00816-9"
+      ],
+      "reason": "Computational pathology survival prediction; no LLM inference method or existing-lineage link.",
+      "first_checked_at": "2026-10-06T11:11:27+00:00",
+      "last_checked_at": "2026-10-06T11:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Multi-scale Multimodal Representation for Enhanced Survival Prediction in Computational Pathology."
+    },
+    "DOI:10.1109/etai68332.2026.11485049": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/etai68332.2026.11485049",
+      "identity_tokens": [
+        "DOI:10.1109/etai68332.2026.11485049"
+      ],
+      "reason": "Sparse MoE YOLO object detection is vision-task specialization, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:27+00:00",
+      "last_checked_at": "2026-10-06T11:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Adaptive Sparse Mixture-of-Experts YOLO for Multi-Type Object Detection"
+    },
+    "arXiv:2603.05343": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05343",
+      "identity_tokens": [
+        "arXiv:2603.05343"
+      ],
+      "reason": "SO(3)-equivariant molecular GNN quantization is outside LLM inference/serving scope.",
+      "first_checked_at": "2026-10-06T11:11:27+00:00",
+      "last_checked_at": "2026-10-06T11:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "Preserving Continuous Symmetry in Discrete Spaces: Geometric-Aware Quantization for SO(3)-Equivariant GNNs"
+    },
+    "arXiv:2602.15814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15814",
+      "identity_tokens": [
+        "arXiv:2602.15814"
+      ],
+      "reason": "Title/abstract identify a non-LLM topic with no concrete inference/serving efficiency connection.",
+      "first_checked_at": "2026-10-06T11:11:27+00:00",
+      "last_checked_at": "2026-10-06T11:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Avey-B"
+    },
+    "arXiv:2602.15820": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15820",
+      "identity_tokens": [
+        "arXiv:2602.15820"
+      ],
+      "reason": "Simulation-surrogate test-time adaptation focuses on scientific model adaptation, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T11:11:28+00:00",
+      "last_checked_at": "2026-10-06T11:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Stabilizing Test-Time Adaptation of High-Dimensional Simulation Surrogates via D-Optimal Statistics"
+    },
+    "arXiv:2602.15967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15967",
+      "identity_tokens": [
+        "arXiv:2602.15967"
+      ],
+      "reason": "Pediatric physiological monitoring application; no LLM inference optimization is claimed.",
+      "first_checked_at": "2026-10-06T11:11:28+00:00",
+      "last_checked_at": "2026-10-06T11:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Non-Contact Physiological Monitoring in Pediatric Intensive Care Units via Adaptive Masking and Self-Supervised Learning"
+    },
+    "DOI:10.3103/s0005105526700196": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3103/s0005105526700196",
+      "identity_tokens": [
+        "DOI:10.3103/s0005105526700196"
+      ],
+      "reason": "CPU-centric ViT quantization concerns vision inference and does not establish LLM inference or lineage relevance.",
+      "first_checked_at": "2026-10-06T11:11:28+00:00",
+      "last_checked_at": "2026-10-06T11:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "VIT Quantization: CPU-Centric Analysis of the Trade-off between Size and Speed"
+    },
+    "arXiv:2602.14635": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14635",
+      "identity_tokens": [
+        "arXiv:2602.14635"
+      ],
+      "reason": "Primary text studies generic compressed deep-learning models and alignment adapters without establishing LLM-specific inference or a related paper lineage.",
+      "first_checked_at": "2026-10-06T11:11:28+00:00",
+      "last_checked_at": "2026-10-06T11:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "Alignment Adapter to Improve the Performance of Compressed Deep Learning Models"
+    },
+    "arXiv:2602.03043": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03043",
+      "identity_tokens": [
+        "arXiv:2602.03043"
+      ],
+      "reason": "Conformal early-exit distillation is for vision backbones and evaluated on vision datasets, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:29+00:00",
+      "last_checked_at": "2026-10-06T11:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "SAFE-KD: Risk-Controlled Early-Exit Distillation for Vision Backbones"
+    },
+    "DOI:10.1007/s00530-025-02179-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-025-02179-5",
+      "identity_tokens": [
+        "DOI:10.1007/s00530-025-02179-5"
+      ],
+      "reason": "Automatic image-captioning edit framework does not claim direct LLM inference compute, memory, latency, or serving optimization.",
+      "first_checked_at": "2026-10-06T11:11:29+00:00",
+      "last_checked_at": "2026-10-06T11:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Towards balancing the efficiency and effectiveness: a unified edit-based framework for automatic image captioning"
+    },
+    "DOI:10.21595/jve.2026.25354": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21595/jve.2026.25354",
+      "identity_tokens": [
+        "DOI:10.21595/jve.2026.25354"
+      ],
+      "reason": "Mixture-of-experts bearing-fault diagnosis/domain generalization, no LLM inference efficiency connection.",
+      "first_checked_at": "2026-10-06T11:11:29+00:00",
+      "last_checked_at": "2026-10-06T11:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Cyclostationarity-enhanced multi-source domain generalization with mixture-of-experts for rolling bearing fault diagnosis"
+    },
+    "DOI:10.1088/1361-6501/ae45c1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1361-6501/ae45c1",
+      "identity_tokens": [
+        "DOI:10.1088/1361-6501/ae45c1"
+      ],
+      "reason": "Real-time semantic segmentation network is a vision task, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:29+00:00",
+      "last_checked_at": "2026-10-06T11:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "GEDFNet: a bilateral network with global enhancement and detail fusion for real-time semantic segmentation"
+    },
+    "arXiv:2602.08755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08755",
+      "identity_tokens": [
+        "arXiv:2602.08755"
+      ],
+      "reason": "Multiview human activity recognition; no LLM inference optimization.",
+      "first_checked_at": "2026-10-06T11:11:30+00:00",
+      "last_checked_at": "2026-10-06T11:11:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Align and Adapt: Multimodal Multiview Human Activity Recognition Under Arbitrary View Combinations"
+    },
+    "arXiv:2602.07562": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07562",
+      "identity_tokens": [
+        "arXiv:2602.07562"
+      ],
+      "reason": "The paper studies an induction/retrieval benchmark and optimization theory, not resource-efficient LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:30+00:00",
+      "last_checked_at": "2026-10-06T11:11:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Gaussian Match-and-Copy: A Minimalist Benchmark for Studying Transformer Induction"
+    },
+    "arXiv:2604.02338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.02338",
+      "identity_tokens": [
+        "arXiv:2604.02338"
+      ],
+      "reason": "LiME optimizes multimodal PEFT/adaptation parameter count; abstract does not claim inference compute, latency, serving, or base-model memory gains.",
+      "first_checked_at": "2026-10-06T11:11:30+00:00",
+      "last_checked_at": "2026-10-06T11:11:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning"
+    },
+    "DOI:10.1016/j.ins.2026.123223": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123223",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123223"
+      ],
+      "reason": "Adaptive downsampling convolution for low-resolution images is a computer-vision method, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:31+00:00",
+      "last_checked_at": "2026-10-06T11:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "A novel multi-granularity context-adaptive downsampling convolution for low-resolution images"
+    },
+    "DOI:10.1016/j.knosys.2026.115577": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115577",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115577"
+      ],
+      "reason": "Post-image fusion/boosting paradigm; no LLM inference or serving connection.",
+      "first_checked_at": "2026-10-06T11:11:31+00:00",
+      "last_checked_at": "2026-10-06T11:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "PFDBooster: A unified post-image fusion dual-domain boosting paradigm"
+    },
+    "DOI:10.1109/tce.2025.3644940": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tce.2025.3644940",
+      "identity_tokens": [
+        "DOI:10.1109/tce.2025.3644940"
+      ],
+      "reason": "RO-SVD+ protects AI-generated image copyright with hardware randomness; not an LLM inference optimization.",
+      "first_checked_at": "2026-10-06T11:11:31+00:00",
+      "last_checked_at": "2026-10-06T11:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "RO-SVD+: A Hardware-Based Framework Against AI Attacks for Cost-Effective GenAI Copyright Protection in Consumer Electronics"
+    },
+    "DOI:10.1007/s00530-026-02213-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-026-02213-0",
+      "identity_tokens": [
+        "DOI:10.1007/s00530-026-02213-0"
+      ],
+      "reason": "Multimodal sentiment modeling; no LLM inference efficiency technique.",
+      "first_checked_at": "2026-10-06T11:11:32+00:00",
+      "last_checked_at": "2026-10-06T11:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Multimodal sentiment analysis based on dual perspective modeling"
+    },
+    "arXiv:2603.03010": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03010",
+      "identity_tokens": [
+        "arXiv:2603.03010"
+      ],
+      "reason": "Controlled study of encoder-only reranker training objectives; no inference-resource improvement is claimed.",
+      "first_checked_at": "2026-10-06T11:11:32+00:00",
+      "last_checked_at": "2026-10-06T11:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Building Better Encoder-only Cross-Encoders: A Controlled Study of Training Strategies for Neural Re-ranking"
+    },
+    "arXiv:2603.03101": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03101",
+      "identity_tokens": [
+        "arXiv:2603.03101"
+      ],
+      "reason": "MoECLIP specializes vision patches for anomaly detection; no LLM inference efficiency connection.",
+      "first_checked_at": "2026-10-06T11:11:32+00:00",
+      "last_checked_at": "2026-10-06T11:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "MoECLIP: Patch-Specialized Experts for Zero-shot Anomaly Detection"
+    },
+    "arXiv:2602.02573": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02573",
+      "identity_tokens": [
+        "arXiv:2602.02573"
+      ],
+      "reason": "General algebraic formalism for deep learning architectures; no concrete LLM inference resource improvement is identified.",
+      "first_checked_at": "2026-10-06T11:11:33+00:00",
+      "last_checked_at": "2026-10-06T11:11:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Product Interaction: An Algebraic Formalism for Deep Learning Architectures"
+    },
+    "arXiv:2601.22786": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22786",
+      "identity_tokens": [
+        "arXiv:2601.22786"
+      ],
+      "reason": "Reward-based learning about IIT-inspired consciousness in LLMs is not an inference efficiency method.",
+      "first_checked_at": "2026-10-06T11:11:33+00:00",
+      "last_checked_at": "2026-10-06T11:11:33+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "Toward IIT-Inspired Consciousness in LLMs: A Reward-Based Learning Framework"
+    },
+    "arXiv:2601.18115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18115",
+      "identity_tokens": [
+        "arXiv:2601.18115"
+      ],
+      "reason": "Group distributionally robust single-neuron learning theory; no LLM inference resource optimization.",
+      "first_checked_at": "2026-10-06T11:11:33+00:00",
+      "last_checked_at": "2026-10-06T11:11:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Robust Learning of a Group DRO Neuron"
+    },
+    "arXiv:2602.21798": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21798",
+      "identity_tokens": [
+        "arXiv:2602.21798"
+      ],
+      "reason": "MoE expert momentum/optimization is not an LLM inference-time resource method.",
+      "first_checked_at": "2026-10-06T11:11:33+00:00",
+      "last_checked_at": "2026-10-06T11:11:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Excitation: Momentum For Experts"
+    },
+    "arXiv:2602.20730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20730",
+      "identity_tokens": [
+        "arXiv:2602.20730"
+      ],
+      "reason": "Mamba-based neural combinatorial optimization training/solver focus, not LLM inference.",
+      "first_checked_at": "2026-10-06T11:11:34+00:00",
+      "last_checked_at": "2026-10-06T11:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Rethinking Efficiency in Neural Combinatorial Optimization: Batched Preference Optimization with Mamba"
+    },
+    "DOI:10.1145/3799240": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3799240",
+      "identity_tokens": [
+        "DOI:10.1145/3799240"
+      ],
+      "reason": "RISC-V accelerator sparsity co-design for general threshold activation; abstract gives no LLM-specific inference or serving evidence.",
+      "first_checked_at": "2026-10-06T11:11:34+00:00",
+      "last_checked_at": "2026-10-06T11:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "title": "S-TRAC: An Algorithm–Hardware Co-design of Sparsity-aware Threshold Adjustment for Accelerator-based RISC-V ISA Extensions"
+    },
+    "arXiv:2602.19580": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19580",
+      "identity_tokens": [
+        "arXiv:2602.19580"
+      ],
+      "reason": "Speculative weight prediction accelerates neural-network training, not inference.",
+      "first_checked_at": "2026-10-06T11:11:34+00:00",
+      "last_checked_at": "2026-10-06T11:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "title": "Leap+Verify: Regime-Adaptive Speculative Weight Prediction for Accelerating Neural Network Training"
+    },
+    "arXiv:2602.20083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20083",
+      "identity_tokens": [
+        "arXiv:2602.20083"
+      ],
+      "reason": "Compute-in-memory embedding shaping for retrieval; no LLM generation or inference-stack connection is established.",
+      "first_checked_at": "2026-10-06T11:11:34+00:00",
+      "last_checked_at": "2026-10-06T11:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "CQ-CiM: Hardware-Aware Embedding Shaping for Robust CiM-Based Retrieval"
     }
   }
 }

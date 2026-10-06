@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T11:01:32+00:00",
-  "record_count": 2822,
+  "updated_at": "2026-10-06T11:11:32+00:00",
+  "record_count": 2834,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -43316,6 +43316,187 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Zero-Shot Fused Attention-Based GPT-2 Accelerator for Resource-Constrained Embedded Platform"
+    },
+    "arXiv:2603.00175": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00175",
+      "identity_tokens": [
+        "arXiv:2603.00175"
+      ],
+      "reason": "Primary text proposes linear attention, but its method and reported efficiency evaluation are explicitly for Vision Transformers/high-resolution vision; transfer to LLM inference is unestablished.",
+      "first_checked_at": "2026-10-06T11:11:22+00:00",
+      "last_checked_at": "2026-10-06T11:11:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Attention And Beyond the Infinite: Towards Linear Transformers with Infinite Self-Attention"
+    },
+    "DOI:10.1109/iementech202669403.2026.11434122": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iementech202669403.2026.11434122",
+      "identity_tokens": [
+        "DOI:10.1109/iementech202669403.2026.11434122"
+      ],
+      "reason": "Survey abstract spans on-device SLM compression and inference-time optimization, but DOI primary full text could not be retrieved to verify scope, coverage, or evidence quality.",
+      "first_checked_at": "2026-10-06T11:11:23+00:00",
+      "last_checked_at": "2026-10-06T11:11:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on On-Device Small Language Models: Architectures, Compression, Applications, and Open Challenges"
+    },
+    "DOI:10.1109/asp-dac66049.2026.11420538": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/asp-dac66049.2026.11420538",
+      "identity_tokens": [
+        "DOI:10.1109/asp-dac66049.2026.11420538"
+      ],
+      "reason": "Abstract targets a compute-in-memory Transformer accelerator with outlier-aware quantization/sparsity, a plausible inference-hardware relation, but primary DOI text was unavailable.",
+      "first_checked_at": "2026-10-06T11:11:24+00:00",
+      "last_checked_at": "2026-10-06T11:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OAH-CIM: Outlier-Aware Hybrid RRAM-SRAM CIM Accelerator with Variation-Robust Sparsity"
+    },
+    "arXiv:2602.18434": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18434",
+      "identity_tokens": [
+        "arXiv:2602.18434"
+      ],
+      "reason": "Abstract describes dynamic KV-cache memory for video-stream understanding, plausibly related to KV-cache inference, but the primary PDF is too large for the retrieval tool and full text remains unavailable.",
+      "first_checked_at": "2026-10-06T11:11:25+00:00",
+      "last_checked_at": "2026-10-06T11:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Going Down Memory Lane: Scaling Tokens for Video Stream Understanding with Dynamic KV-Cache Memory"
+    },
+    "DOI:10.1109/icarc68737.2026.11453647": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icarc68737.2026.11453647",
+      "identity_tokens": [
+        "DOI:10.1109/icarc68737.2026.11453647"
+      ],
+      "reason": "Abstract indicates DistilBERT pruning and accuracy/efficiency tradeoffs, but primary DOI full text could not be retrieved to verify latency, method, and limitations.",
+      "first_checked_at": "2026-10-06T11:11:25+00:00",
+      "last_checked_at": "2026-10-06T11:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing DistilBERT for Low-Resource Sentiment Analysis: A Study on Global Unstructured L1-Norm Pruning and Accuracy-Efficiency Trade-Offs"
+    },
+    "DOI:10.1145/3805862.3805868": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805862.3805868",
+      "identity_tokens": [
+        "DOI:10.1145/3805862.3805868"
+      ],
+      "reason": "The abstract describes adaptive early-exit/pruning with BERT latency gains, but DOI primary full text could not be retrieved; cannot verify method, evaluation, or limits.",
+      "first_checked_at": "2026-10-06T11:11:26+00:00",
+      "last_checked_at": "2026-10-06T11:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RL-based Policy for Joint Optimization of Early-Exit and Pruning in Transformer Models"
+    },
+    "DOI:10.1109/isscc49663.2026.11408987": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isscc49663.2026.11408987",
+      "identity_tokens": [
+        "DOI:10.1109/isscc49663.2026.11408987"
+      ],
+      "reason": "The title/abstract indicate a VLM inference accelerator and energy/token metric, but DOI primary full text was not accessible; implementation, baselines, and limitations remain unverified.",
+      "first_checked_at": "2026-10-06T11:11:29+00:00",
+      "last_checked_at": "2026-10-06T11:11:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tri-Oracle: A 17.78μJ/Token Vision-Language Model Accelerator with Token-Attention-Weight Redundancy Prediction"
+    },
+    "arXiv:2602.00440": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00440",
+      "identity_tokens": [
+        "arXiv:2602.00440"
+      ],
+      "reason": "Abstract proposes dynamic inference skipping for autoregressive diffusion world models, but primary full text could not be retrieved and application is not LLM/VLM serving.",
+      "first_checked_at": "2026-10-06T11:11:30+00:00",
+      "last_checked_at": "2026-10-06T11:11:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DISK: Dynamic Inference SKipping for World Models"
+    },
+    "arXiv:2603.04127": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04127",
+      "identity_tokens": [
+        "arXiv:2603.04127"
+      ],
+      "reason": "Primary text addresses linear random-feature attention, but the available experiments do not establish direct decoder-LLM inference/serving gains; relation is plausible but weak for this corpus.",
+      "first_checked_at": "2026-10-06T11:11:31+00:00",
+      "last_checked_at": "2026-10-06T11:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Data-Aware Random Feature Kernel for Transformers"
+    },
+    "arXiv:2603.04308": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04308",
+      "identity_tokens": [
+        "arXiv:2603.04308"
+      ],
+      "reason": "Primary text is a BERT-base QNLI quantization reproduction/profiling study, and finds essentially no deployment latency or VRAM gain; it adds context but no demonstrated inference improvement.",
+      "first_checked_at": "2026-10-06T11:11:31+00:00",
+      "last_checked_at": "2026-10-06T11:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Activation Outliers in Transformer Quantization: Reproduction, Statistical Analysis, and Deployment Tradeoffs"
+    },
+    "DOI:10.1109/cgo68049.2026.11395231": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cgo68049.2026.11395231",
+      "identity_tokens": [
+        "DOI:10.1109/cgo68049.2026.11395231"
+      ],
+      "reason": "QIGen is directly about kernels for nonuniformly quantized LLM inference, but primary DOI text was inaccessible, so implementation, benchmark, and limitations could not be checked.",
+      "first_checked_at": "2026-10-06T11:11:32+00:00",
+      "last_checked_at": "2026-10-06T11:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QIGen: A Kernel Generator for Inference on Nonuniformly Quantized Large Language Models"
+    },
+    "DOI:10.1145/3793928.3793945": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3793928.3793945",
+      "identity_tokens": [
+        "DOI:10.1145/3793928.3793945"
+      ],
+      "reason": "Abstract describes distillation/quantization deployment of Qwen2.5 for a constrained engineering environment, but primary ACM full text is inaccessible and results/limits remain unverified.",
+      "first_checked_at": "2026-10-06T11:11:32+00:00",
+      "last_checked_at": "2026-10-06T11:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Systematic Study of Lightweight Deployment Strategies for Large LanguageModels in Aero-Engine Maintenance"
     }
   }
 }

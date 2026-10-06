@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f9dfa5125dfe6a3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.06746",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.06746",
+    "identity_tokens": [
+      "arXiv:2603.06746"
+    ],
+    "reason": "Vision Transformer expert compression (CIFAR-100) only; no language model or LLM inference evidence.",
+    "first_checked_at": "2026-10-06T11:11:26+00:00",
+    "last_checked_at": "2026-10-06T11:11:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "title": "ButterflyViT: 354⨉ Expert Compression for Edge Vision Transformers"
+  },
+  "processed_at": "2026-10-06T11:11:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f9dfa5125df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
