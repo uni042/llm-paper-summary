@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r154-screen-01-part-08-4ed0718203a6",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23073",
+      "identity_tokens": [
+        "arXiv:2512.23073"
+      ],
+      "title": "Rethinking Fine-Tuning: Unlocking Hidden Capabilities in Vision-Language Models",
+      "reason": "arXiv一次要旨はVLM mask fine-tuning/adaptation法。推論時resourceやservingを改善する方法ではない。",
+      "source_url": "https://arxiv.org/abs/2512.23073",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.29121/shodhkosh.v6.i5s.2025.6908",
+      "identity_tokens": [
+        "DOI:10.29121/shodhkosh.v6.i5s.2025.6908"
+      ],
+      "title": "DEEP LEARNING MODELS FOR CHOREOGRAPHY GENERATION",
+      "reason": "ShodhKosh DOI取得がInternal Errorとなり、一次abstract/full textを確認できない。候補packetの要旨だけでscope確定しない。",
+      "source_url": "https://doi.org/10.29121/shodhkosh.v6.i5s.2025.6908",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22702",
+      "identity_tokens": [
+        "arXiv:2512.22702"
+      ],
+      "title": "Position: Current Benchmarking Hinders Real Progress in Deep Learning for Time Series Forecasting",
+      "reason": "arXiv一次要旨は時系列予測benchmarkのposition paperで、LLM推論・配備効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2512.22702",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    }
+  ]
+}
