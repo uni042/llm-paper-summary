@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r28-screen-01-part-01-f62171e5b95e",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25259/jksus_1438_2025",
+      "identity_tokens": [
+        "DOI:10.25259/jksus_1438_2025"
+      ],
+      "title": "CodeVulReason: Incentivizing reasoning for code vulnerability detection",
+      "reason": "Code vulnerability detection向けreasoning data構築/LLM tuningで、推論serving資源削減ではない。",
+      "source_url": "https://doi.org/10.25259/jksus_1438_2025",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09548",
+      "identity_tokens": [
+        "arXiv:2608.09548"
+      ],
+      "title": "ELBench: A Multi-Dimensional Benchmark for Education-Facing Large Language Models",
+      "reason": "教育用LLMの評価benchmarkであり、model servingやinference efficiency手法を提案しない。",
+      "source_url": "https://arxiv.org/abs/2608.09548",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25018",
+      "identity_tokens": [
+        "arXiv:2609.25018"
+      ],
+      "title": "OSFoundry: Building and Evolving Operating Systems with Specification-Guided Agents",
+      "reason": "OS development agent workflowとserving lineageの接続は弱く、LLM推論資源の計測/削減を示さない。",
+      "source_url": "https://arxiv.org/abs/2609.25018",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AANN71145.2026.11709365",
+      "identity_tokens": [
+        "DOI:10.1109/AANN71145.2026.11709365"
+      ],
+      "title": "SkipFold: Test-Time Dynamic Depth for Scalable Biomolecular Inference",
+      "reason": "空のpacket abstractのためpublisher DOI/IEEE primary pageを試したが、本文/author full-textに到達できなかった。題名だけではSkipFoldの手法・測定範囲を確定できない。",
+      "source_url": "https://doi.org/10.1109/AANN71145.2026.11709365",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.30871/jaic.v10i4.13255",
+      "identity_tokens": [
+        "DOI:10.30871/jaic.v10i4.13255"
+      ],
+      "title": "PerceptionGuard: Privacy-Aware Split Inference for Multimodal Mobile Applications",
+      "reason": "publisher primary pageではabstract/summaryを取得したが、掲載本文/PDFに到達できず全文確認不可。split inference/60% cloud-token reductionの要旨記述は有望だが本文と限界を検証できない。",
+      "source_url": "https://doi.org/10.30871/jaic.v10i4.13255",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md"
+      ]
+    }
+  ]
+}
