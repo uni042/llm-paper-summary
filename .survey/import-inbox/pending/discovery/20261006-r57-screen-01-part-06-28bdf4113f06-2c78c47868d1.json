@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r57-screen-01-part-06-28bdf4113f06",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2024.125514",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2024.125514"
+      ],
+      "title": "Exploring large language models for the generation of synthetic training samples for aspect-based sentiment analysis in low resource settings",
+      "reason": "LLM-generated synthetic training data for sentiment analysis, not inference optimization.",
+      "source_url": "https://doi.org/10.1016/j.eswa.2024.125514",
+      "first_checked_at": "2026-10-06T07:43:11.353216+00:00",
+      "last_checked_at": "2026-10-06T07:43:11.353216+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.08598",
+      "identity_tokens": [
+        "arXiv:2501.08598"
+      ],
+      "title": "LlamaRestTest: Effective REST API Testing with Small Language Models",
+      "reason": "Small LMs test REST APIs; this is an application/testing paper, not model inference optimization.",
+      "source_url": "https://arxiv.org/abs/2501.08598",
+      "first_checked_at": "2026-10-06T07:43:11.353216+00:00",
+      "last_checked_at": "2026-10-06T07:43:11.353216+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
