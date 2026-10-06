@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r36-screen-01-part-05-7d72fd721ab8",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04879",
+      "identity_tokens": [
+        "arXiv:2602.04879"
+      ],
+      "title": "Rethinking the Trust Region in LLM Reinforcement Learning",
+      "reason": "The contribution concerns RL optimization/training dynamics and trust regions; evaluated metrics are training/reward behavior, not inference resource use.",
+      "source_url": "https://arxiv.org/abs/2602.04879",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.15607/rss.2025.xxi.010",
+      "identity_tokens": [
+        "DOI:10.15607/rss.2025.xxi.010"
+      ],
+      "title": "π₀: A Vision-Language-Action Flow Model for General Robot Control",
+      "reason": "π₀ is a vision-language-action robot-control flow model. Its action-generation architecture is adjacent to model inference, but it does not study LLM serving/quantization or general inference efficiency.",
+      "source_url": "https://doi.org/10.15607/rss.2025.xxi.010",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12812",
+      "identity_tokens": [
+        "arXiv:2512.12812"
+      ],
+      "title": "Does Tone Change the Answer? Evaluating Prompt Politeness Effects on Modern LLMs: GPT, Gemini, and LLaMA",
+      "reason": "The study changes prompt wording and measures response outcomes; no cache/runtime technique or resource efficiency measurement is proposed.",
+      "source_url": "https://arxiv.org/abs/2512.12812",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.21318",
+      "identity_tokens": [
+        "arXiv:2504.21318"
+      ],
+      "title": "Phi-4-reasoning Technical Report",
+      "reason": "The technical report focuses on reasoning-model post-training and reasoning performance; although output length and serving lineages are relevant, the full text does not introduce a distinct inference optimization.",
+      "source_url": "https://arxiv.org/abs/2504.21318",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.02691-output-aware-rotation-int2-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21334",
+      "identity_tokens": [
+        "arXiv:2512.21334"
+      ],
+      "title": "Streaming Video Instruction Tuning",
+      "reason": "Streaming video instruction tuning is a training/data method and does not contribute inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.21334",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    }
+  ]
+}
