@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r117-screen-01-part-03-f89458f82d70",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.10433",
+      "identity_tokens": [
+        "arXiv:2408.10433"
+      ],
+      "title": "CLIP-DPO: Vision-Language Models as a Source of Preference for Fixing Hallucinations in LVLMs",
+      "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。CLIP-DPO applies preference optimization to improve visual-language model hallucination behavior. The contribution is training-time alignment and evaluation on hallucination benchmarks; no inference efficiency or offload method is presented.",
+      "source_url": "https://arxiv.org/abs/2408.10433",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3663529.3663849",
+      "identity_tokens": [
+        "DOI:10.1145/3663529.3663849"
+      ],
+      "title": "Rethinking Software Engineering in the Era of Foundation Models: A Curated Catalogue of Challenges in the Development of Trustworthy FMware",
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。ACM DOI page returned HTTP 403/internal error; no primary full text could be retrieved.",
+      "source_url": "https://doi.org/10.1145/3663529.3663849",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.01322",
+      "identity_tokens": [
+        "arXiv:2404.01322"
+      ],
+      "title": "A Review of Multi-Modal Large Language and Vision Models",
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The survey reviews multimodal LLM and vision models, including broad architecture/application coverage. It does not give a focused inference optimization method or controlled systems evaluation; retain only as weak background for the linked deployment/efficiency topic.",
+      "source_url": "https://arxiv.org/abs/2404.01322",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.20083",
+      "identity_tokens": [
+        "arXiv:2503.20083"
+      ],
+      "title": "Universal Cross-Tokenizer Distillation via Approximate Likelihood Matching",
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。Universal Cross-Tokenizer Distillation transfers across tokenizer vocabularies and evaluates downstream transfer quality. It does not measure decode throughput, latency, or serving memory, so only a weak tokenization/efficiency connection remains.",
+      "source_url": "https://arxiv.org/abs/2503.20083",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.19115",
+      "identity_tokens": [
+        "arXiv:2407.19115"
+      ],
+      "title": "Towards Scalable and Stable Parallelization of Nonlinear RNNs",
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The paper parallelizes nonlinear RNN evaluation using quasi-Newton methods. Sequence experiments include a case where quasi-ELK takes 221 ms versus 96 ms sequentially; this is architecture-specific and does not show a speedup for transformer/LLM inference.",
+      "source_url": "https://arxiv.org/abs/2407.19115",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ]
+    }
+  ]
+}
