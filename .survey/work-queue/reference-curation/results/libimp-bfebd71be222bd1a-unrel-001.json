@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfebd71be222bd1a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tcad.2025.3618934",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tcad.2025.3618934",
+    "identity_tokens": [
+      "DOI:10.1109/tcad.2025.3618934"
+    ],
+    "reason": "Fault-aware sparse matrix multiplication is an accelerator reliability primitive with no identified LLM deployment relation.",
+    "first_checked_at": "2026-10-06T10:45:46+00:00",
+    "last_checked_at": "2026-10-06T10:45:46+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+    ],
+    "title": "A Fault-Aware Architecture for Reliable Sparse Matrix Multiplication"
+  },
+  "processed_at": "2026-10-06T10:45:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfebd71be222",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

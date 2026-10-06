@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T10:35:16+00:00",
-  "record_count": 2794,
+  "updated_at": "2026-10-06T10:45:46+00:00",
+  "record_count": 2812,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -42893,6 +42893,276 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Uncertainty-Aware Sequence Classification with Probabilistic Selective State-Space Models"
+    },
+    "DOI:10.1007/s00138-026-01813-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00138-026-01813-0",
+      "identity_tokens": [
+        "DOI:10.1007/s00138-026-01813-0"
+      ],
+      "reason": "Primary Springer DOI page returned inaccessible error. Empty abstract; VMamba scope/results unverified.",
+      "first_checked_at": "2026-10-06T10:45:41+00:00",
+      "last_checked_at": "2026-10-06T10:45:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Star-vmamba: VMamba-based spatiotemporal adaptive refinement network for remote sensing image change detection"
+    },
+    "DOI:10.67119/1107ve04": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.67119/1107ve04",
+      "identity_tokens": [
+        "DOI:10.67119/1107ve04"
+      ],
+      "reason": "Primary DOI page inaccessible. Title/abstract identify sparse-MoE limits for small character LMs, but method/efficiency measurements unverified.",
+      "first_checked_at": "2026-10-06T10:45:41+00:00",
+      "last_checked_at": "2026-10-06T10:45:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Empirical Investigation into the Limitations of Sparse Mixture of Experts for Small Scale Character Level Modeling"
+    },
+    "arXiv:2604.26505": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26505",
+      "identity_tokens": [
+        "arXiv:2604.26505"
+      ],
+      "reason": "Quantamination exploits shared batch min/max scales in per-tensor dynamic activation quantization; experiments report 99.6–100% LLM token recovery in studied settings. Per-token quantization avoids the side channel and can be faster. This is a security analysis of an existing serving optimization, not an inference-improvement method.",
+      "first_checked_at": "2026-10-06T10:45:41+00:00",
+      "last_checked_at": "2026-10-06T10:45:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantamination: Dynamic Quantization Leaks Your Data Across the Batch"
+    },
+    "DOI:10.1007/s11760-026-05260-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05260-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05260-2"
+      ],
+      "reason": "Primary Springer DOI page returned inaccessible error. Empty abstract; title does not establish an LLM efficiency connection.",
+      "first_checked_at": "2026-10-06T10:45:41+00:00",
+      "last_checked_at": "2026-10-06T10:45:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hybrid Mamba-attention encoder for text-to-time 3D human motion grounding"
+    },
+    "DOI:10.1109/eeiss69782.2026.11584595": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eeiss69782.2026.11584595",
+      "identity_tokens": [
+        "DOI:10.1109/eeiss69782.2026.11584595"
+      ],
+      "reason": "Primary IEEE DOI page inaccessible. Abstract describes Qwen3 PEFT/MoE for XSS detection but primary evaluation and efficiency overhead could not be checked.",
+      "first_checked_at": "2026-10-06T10:45:41+00:00",
+      "last_checked_at": "2026-10-06T10:45:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parameter-Efficient Mixture-of-Experts Adaptation of Qwen3 for Cross-Site Scripting Detection"
+    },
+    "DOI:10.1109/icaiset66439.2026.11541520": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icaiset66439.2026.11541520",
+      "identity_tokens": [
+        "DOI:10.1109/icaiset66439.2026.11541520"
+      ],
+      "reason": "Primary IEEE DOI page inaccessible. Abstract suggests a specialized-LLM production taxonomy; concrete serving effects unverified.",
+      "first_checked_at": "2026-10-06T10:45:42+00:00",
+      "last_checked_at": "2026-10-06T10:45:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Architecting Multi-Model Agentic AI Systems: A Taxonomy and Reference Architecture for Specialized LLMs in Production Agents"
+    },
+    "arXiv:2604.03336": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.03336",
+      "identity_tokens": [
+        "arXiv:2604.03336"
+      ],
+      "reason": "NativeTernary encodes ternary weights and structure; a BitNet b1.58 2B example estimates 91-byte boundary metadata vs about 42KB GGUF headers. Benchmarks are assumption-based/single-core synthetic, with checkpoint validation planned. It reduces format/header overhead, not inference compute/runtime memory; weak serving relation.",
+      "first_checked_at": "2026-10-06T10:45:43+00:00",
+      "last_checked_at": "2026-10-06T10:45:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary Neural Network Weights, Structured Data, and General Computing Infrastructure"
+    },
+    "arXiv:2604.26954": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26954",
+      "identity_tokens": [
+        "arXiv:2604.26954"
+      ],
+      "reason": "Study compares self-consistency and reasoning effort for high-school math conversational scoring. Estimated per-1,000-call API cost shows higher reasoning does not consistently improve accuracy but increases cost; lower-cost/no-reasoning models are near-frontier. This is a narrow application cost/configuration study, not a new inference technique; pricing/results are cross-sectional.",
+      "first_checked_at": "2026-10-06T10:45:43+00:00",
+      "last_checked_at": "2026-10-06T10:45:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Impact of LLM Self-Consistency and Reasoning Effort on Automated Scoring Accuracy and Cost"
+    },
+    "arXiv:2604.22820": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.22820",
+      "identity_tokens": [
+        "arXiv:2604.22820"
+      ],
+      "reason": "Complete cyclic subtask graphs are tested for tool-using LLM agents across ALFWorld, Finance-Agent and TextCraft with token/tool-call cost and revisitation analyses. Cyclic control can aid recovery but is mixed or less efficient elsewhere and can thrash. Limitations: compute proxies rather than wall-clock latency, narrow case-study benchmarks. Workflow cost is adjacent to, not a direct model-inference optimization.",
+      "first_checked_at": "2026-10-06T10:45:43+00:00",
+      "last_checked_at": "2026-10-06T10:45:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Complete Cyclic Subtask Graphs for Tool-Using LLM Agents: Flexibility, Cost, and Bottlenecks in Long-Horizon Workflows"
+    },
+    "arXiv:2604.12365": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.12365",
+      "identity_tokens": [
+        "arXiv:2604.12365"
+      ],
+      "reason": "Adaptive Spiking Neurons add learnable layer-wise membrane thresholds; 19 vision/language datasets are evaluated. Energy estimates are theoretical, not measured on neuromorphic hardware, with DVS validation left open. General SNNs do not establish generative LLM inference performance; weak architecture adjacency only.",
+      "first_checked_at": "2026-10-06T10:45:44+00:00",
+      "last_checked_at": "2026-10-06T10:45:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Spiking Neurons for Vision and Language Modeling"
+    },
+    "arXiv:2604.12426": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.12426",
+      "identity_tokens": [
+        "arXiv:2604.12426"
+      ],
+      "reason": "The study probes adaptive transformer depth on synthetic CLUTRR family-relation chains (2–10 hops) using single-token answers. It analyzes layer use rather than proposing an early-exit/dynamic-depth method; no latency/compute savings are measured. The adaptive-inference connection is weak.",
+      "first_checked_at": "2026-10-06T10:45:44+00:00",
+      "last_checked_at": "2026-10-06T10:45:44+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Do Transformers Use their Depth Adaptively? Evidence from a Relational Reasoning Task"
+    },
+    "DOI:10.1109/icassp55912.2026.11463128": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463128",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463128"
+      ],
+      "reason": "Primary IEEE DOI page was attempted but inaccessible; conference listing exposes metadata only. Empty abstract prevents a reliable title-only scope judgment.",
+      "first_checked_at": "2026-10-06T10:45:45+00:00",
+      "last_checked_at": "2026-10-06T10:45:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Explainable Recommendation with Multi-Feature and Personalized Test-Time Inference"
+    },
+    "DOI:10.1016/j.infsof.2026.108181": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.infsof.2026.108181",
+      "identity_tokens": [
+        "DOI:10.1016/j.infsof.2026.108181"
+      ],
+      "reason": "Primary ScienceDirect DOI page was attempted but inaccessible. Publisher-indexed snippets exposed QLoRA memory/repair experiments, but not the full manuscript; inference-speed versus training-memory conclusions and limitations remain unverified.",
+      "first_checked_at": "2026-10-06T10:45:45+00:00",
+      "last_checked_at": "2026-10-06T10:45:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Automated Program Repair using Quantized Language Models and Parameter-Efficient Fine-Tuning"
+    },
+    "DOI:10.1109/ais69919.2026.11621708": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ais69919.2026.11621708",
+      "identity_tokens": [
+        "DOI:10.1109/ais69919.2026.11621708"
+      ],
+      "reason": "Primary IEEE DOI page inaccessible; conference program exposes metadata only. Abstract suggests FPGA optimization of transformer LLMs but method/evaluation/limitations are unverified.",
+      "first_checked_at": "2026-10-06T10:45:45+00:00",
+      "last_checked_at": "2026-10-06T10:45:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI/ML System Design: Feedback-Driven Optimization of Transformer Neural Networks for FPGA Acceleration"
+    },
+    "DOI:10.1145/3774904.3792733": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774904.3792733",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792733"
+      ],
+      "reason": "Primary ACM DOI page inaccessible. Abstract describes scalable multilingual LLM content analysis, but inference-cost evidence is unavailable.",
+      "first_checked_at": "2026-10-06T10:45:45+00:00",
+      "last_checked_at": "2026-10-06T10:45:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unlocking the Multilingual Long-Tail Web: A Fused Macro-Micro Framework for Scalable Content Analysis"
+    },
+    "DOI:10.1007/s13755-026-00453-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s13755-026-00453-y",
+      "identity_tokens": [
+        "DOI:10.1007/s13755-026-00453-y"
+      ],
+      "reason": "Primary Springer DOI page returned inaccessible error. Empty abstract; pruning and inference effects unverified.",
+      "first_checked_at": "2026-10-06T10:45:45+00:00",
+      "last_checked_at": "2026-10-06T10:45:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parameter-efficient fine-tuning with layer pruning on medical sequence-to-sequence modeling"
+    },
+    "DOI:10.1109/tsc.2026.3687026": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tsc.2026.3687026",
+      "identity_tokens": [
+        "DOI:10.1109/tsc.2026.3687026"
+      ],
+      "reason": "Primary IEEE DOI page inaccessible. Search indexing exposed abstract-level token-budgeted MLLM optimization only; no primary full text.",
+      "first_checked_at": "2026-10-06T10:45:46+00:00",
+      "last_checked_at": "2026-10-06T10:45:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing MLLMs for Online Understanding in Video Services via Preference Optimization"
+    },
+    "arXiv:2605.00206": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.00206",
+      "identity_tokens": [
+        "arXiv:2605.00206"
+      ],
+      "reason": "SST V2 adds per-layer latent state streams and extra forward passes per token; the 27B setup stores about 651 KB of state and uses two-pass parallel training. Co-training Gemma 3 27B on a small GSM8K-derived set reports +15.15 points on GPQA-Diamond vs matched fine-tuning; staged compute reaches 61.11% vs 51.01% at one iteration. Flat extra iterations regress accuracy, native halting is absent, and each iteration adds full-stack FLOPs; it targets reasoning quality, not lower inference cost.",
+      "first_checked_at": "2026-10-06T10:45:46+00:00",
+      "last_checked_at": "2026-10-06T10:45:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "State Stream Transformer (SST) V2: Parallel Training of Nonlinear Recurrence for Latent Space Reasoning"
     }
   }
 }

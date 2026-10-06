@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b68d538091bc7e7d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.10075",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.10075",
+    "identity_tokens": [
+      "arXiv:2604.10075"
+    ],
+    "reason": "Text-to-CAD addresses CAD modeling, not a concrete inference-cost improvement.",
+    "first_checked_at": "2026-10-06T10:45:46+00:00",
+    "last_checked_at": "2026-10-06T10:45:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+    ],
+    "title": "Learning Hierarchical and Geometry-Aware Graph Representations for Text-to-CAD"
+  },
+  "processed_at": "2026-10-06T10:45:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b68d538091bc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
