@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r129-screen-01-part-08-3d9958ac6563",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00439",
+      "identity_tokens": [
+        "arXiv:2603.00439"
+      ],
+      "title": "Mamba-CAD: State Space Model for 3D Computer-Aided Design Generative Modeling",
+      "reason": "Primary abstract is Mamba-based CAD sequence generation, not language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2603.00439",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.05220",
+      "identity_tokens": [
+        "arXiv:2502.05220"
+      ],
+      "title": "Aero-LLM: A Distributed Framework for Secure UAV Communication and Intelligent Decision-Making",
+      "reason": "A security/UAV application architecture, not a general serving optimization; reported time/memory comparisons establish no baseline speedup.",
+      "source_url": "https://arxiv.org/abs/2502.05220",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    }
+  ]
+}
