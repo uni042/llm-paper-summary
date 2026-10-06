@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T08:20:41+00:00",
-  "record_count": 7446,
+  "updated_at": "2026-10-06T08:23:45+00:00",
+  "record_count": 7452,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -107241,6 +107241,90 @@
         "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
       ],
       "title": "Approximating Latent Manifolds in Neural Networks via Vanishing Ideals"
+    },
+    "arXiv:2501.10421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.10421",
+      "identity_tokens": [
+        "arXiv:2501.10421"
+      ],
+      "reason": "CodEv applies LLMs to grading programming assignments using constructive feedback and reasoning prompts. The contribution is an application framework, not efficiency.",
+      "first_checked_at": "2026-10-06T08:23:43+00:00",
+      "last_checked_at": "2026-10-06T08:23:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "CodEv: An Automated Grading Framework Leveraging Large Language Models for Consistent and Constructive Feedback"
+    },
+    "arXiv:2412.06484": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06484",
+      "identity_tokens": [
+        "arXiv:2412.06484"
+      ],
+      "reason": "Studies continual training and language coverage for Norwegian and Northern Sámi. Its focus is low-resource-language capability and training data, not inference-cost reduction.",
+      "first_checked_at": "2026-10-06T08:23:43+00:00",
+      "last_checked_at": "2026-10-06T08:23:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Small Languages, Big Models: A Study of Continual Training on Languages of Norway"
+    },
+    "arXiv:2408.12263": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12263",
+      "identity_tokens": [
+        "arXiv:2408.12263"
+      ],
+      "reason": "Evaluates how instruction-template variation affects LLM benchmark scores. It is a measurement protocol for evaluation robustness, not inference efficiency.",
+      "first_checked_at": "2026-10-06T08:23:43+00:00",
+      "last_checked_at": "2026-10-06T08:23:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Toward the Evaluation of Large Language Models Considering Score Variance across Instruction Templates"
+    },
+    "arXiv:2502.16086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.16086",
+      "identity_tokens": [
+        "arXiv:2502.16086"
+      ],
+      "reason": "Studies activation-inversion attacks to recover training data from decentralized LLM training. It is a privacy/security attack against training, not inference efficiency.",
+      "first_checked_at": "2026-10-06T08:23:45+00:00",
+      "last_checked_at": "2026-10-06T08:23:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Stealing Training Data from Large Language Models in Decentralized Training through Activation Inversion Attack"
+    },
+    "arXiv:2411.04530": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04530",
+      "identity_tokens": [
+        "arXiv:2411.04530"
+      ],
+      "reason": "Analyzes whether multilingual language models represent semantic concepts at the subword level. It is a capability/representation study, not a compression or serving method.",
+      "first_checked_at": "2026-10-06T08:23:45+00:00",
+      "last_checked_at": "2026-10-06T08:23:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Tomato, Tomahto, Tomate: Do Multilingual Language Models Understand Based on Subword-Level Semantic Concepts?"
+    },
+    "arXiv:2506.09420": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09420",
+      "identity_tokens": [
+        "arXiv:2506.09420"
+      ],
+      "reason": "This position paper argues for collaborative human-agent systems before full autonomy. It discusses deployment roles and risks, not model inference optimization.",
+      "first_checked_at": "2026-10-06T08:23:45+00:00",
+      "last_checked_at": "2026-10-06T08:23:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "title": "A Call for Collaborative Intelligence: Why Human-Agent Systems Should Precede AI Autonomy"
     }
   }
 }

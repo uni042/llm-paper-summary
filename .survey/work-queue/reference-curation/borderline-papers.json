@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T08:20:41+00:00",
-  "record_count": 2581,
+  "updated_at": "2026-10-06T08:23:45+00:00",
+  "record_count": 2589,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -39681,6 +39681,126 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network"
+    },
+    "DOI:10.1016/j.eswa.2023.121211": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2023.121211",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2023.121211"
+      ],
+      "reason": "The primary full text was unavailable, so despite the title/abstract indicating a weak or unrelated application, the lineage connection cannot be ruled out on primary-body evidence.",
+      "first_checked_at": "2026-10-06T08:23:41+00:00",
+      "last_checked_at": "2026-10-06T08:23:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-information interaction graph neural network for joint entity and relation extraction"
+    },
+    "DOI:10.1109/pacet56979.2022.9976354": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/pacet56979.2022.9976354",
+      "identity_tokens": [
+        "DOI:10.1109/pacet56979.2022.9976354"
+      ],
+      "reason": "IEEE publisher full text could not be accessed. The abstract describes FPGA acceleration for transformer networks and is directly adjacent to FTRANS, but it lacks enough primary-body detail to confirm workload, evaluation, and limitations.",
+      "first_checked_at": "2026-10-06T08:23:41+00:00",
+      "last_checked_at": "2026-10-06T08:23:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware Acceleration of Transformer Networks using FPGAs"
+    },
+    "DOI:10.1145/3489517.3530618": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3489517.3530618",
+      "identity_tokens": [
+        "DOI:10.1145/3489517.3530618"
+      ],
+      "reason": "ACM full text was unavailable. The record describes an FPGA-aware mixed-scheme quantization/acceleration framework for vision transformers, which is a plausible low-bit transformer hardware connection but vision-only and unverified in primary text.",
+      "first_checked_at": "2026-10-06T08:23:42+00:00",
+      "last_checked_at": "2026-10-06T08:23:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Late Breaking Results: FPGA-Aware Automatic Acceleration Framework for Vision Transformer with Mixed-Scheme Quantization"
+    },
+    "arXiv:2506.09714": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.09714",
+      "identity_tokens": [
+        "arXiv:2506.09714"
+      ],
+      "reason": "Auto-Compressing Networks studies removing computational redundancy in deep networks through automatic compression. The general mechanism may apply to transformers, but available paper evaluations do not establish direct LLM inference or serving gains.",
+      "first_checked_at": "2026-10-06T08:23:42+00:00",
+      "last_checked_at": "2026-10-06T08:23:42+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Auto-Compressing Networks"
+    },
+    "arXiv:2506.02973": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.02973",
+      "identity_tokens": [
+        "arXiv:2506.02973"
+      ],
+      "reason": "The paper uses premature-layer interpolation to improve LLM factuality during inference. It targets factual correctness rather than reducing computation or latency; no efficiency gain is established.",
+      "first_checked_at": "2026-10-06T08:23:42+00:00",
+      "last_checked_at": "2026-10-06T08:23:42+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Expanding before Inferring: Enhancing Factuality in Large Language Models through Premature Layers Interpolation"
+    },
+    "arXiv:2405.12630": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.12630",
+      "identity_tokens": [
+        "arXiv:2405.12630"
+      ],
+      "reason": "Compares masked and causal language modeling for text generation, including quality and generation behavior. It explores generation paradigms but does not establish a concrete inference-cost improvement; retain as adjacent to NAR decoding research.",
+      "first_checked_at": "2026-10-06T08:23:43+00:00",
+      "last_checked_at": "2026-10-06T08:23:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploration of Masked and Causal Language Modelling for Text Generation"
+    },
+    "DOI:10.32397/tesea.vol5.n1.542": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.32397/tesea.vol5.n1.542",
+      "identity_tokens": [
+        "DOI:10.32397/tesea.vol5.n1.542"
+      ],
+      "reason": "Publisher primary full text was not accessible. The title and abstract identify a transformer for WiFi indoor localization, a task-specific sensing application; linked TernaryBERT does not substantiate a compression connection.",
+      "first_checked_at": "2026-10-06T08:23:43+00:00",
+      "last_checked_at": "2026-10-06T08:23:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HyTra: Hyperclass Transformer for WiFi Fingerprinting-based Indoor Localization"
+    },
+    "arXiv:2210.13163": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.13163",
+      "identity_tokens": [
+        "arXiv:2210.13163"
+      ],
+      "reason": "Bilingual Synchronization uses editing operations to restore translation relations in bilingual sequence generation. It is an NAR/translation decoding approach, but the paper’s contribution is translation quality rather than a demonstrated inference-efficiency gain.",
+      "first_checked_at": "2026-10-06T08:23:45+00:00",
+      "last_checked_at": "2026-10-06T08:23:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bilingual Synchronization: Restoring Translational Relationships with Editing Operations"
     }
   }
 }
