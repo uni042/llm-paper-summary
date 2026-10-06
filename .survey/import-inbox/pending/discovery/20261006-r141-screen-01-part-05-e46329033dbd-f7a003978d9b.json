@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r141-screen-01-part-05-e46329033dbd",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06413",
+      "identity_tokens": [
+        "arXiv:2607.06413"
+      ],
+      "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery",
+      "reason": "Primary text is an experimental-design framework for agentic model-discovery evaluation, not inference-resource optimization or serving.",
+      "source_url": "https://arxiv.org/abs/2607.06413",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06620",
+      "identity_tokens": [
+        "arXiv:2607.06620"
+      ],
+      "title": "SpaR3D-MoE: Adaptive 3D Spatial Reasoning from Sparse Views Meets Geometry-Inductive Mixture-of-Experts",
+      "reason": "Sparse-view 3D spatial-reasoning MoE targets task quality; no LLM inference-resource or serving improvement is established.",
+      "source_url": "https://arxiv.org/abs/2607.06620",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09765",
+      "identity_tokens": [
+        "arXiv:2607.09765"
+      ],
+      "title": "How Much Does Correctness Cost? Budgeted Placement of Strong Correctors in a Weak Multi-Agent Swarm",
+      "reason": "Budgeted strong-corrector placement is adjacent to allocating expensive agent calls, but modeled cost is not serving resources or latency.",
+      "source_url": "https://arxiv.org/abs/2607.09765",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05615",
+      "identity_tokens": [
+        "arXiv:2607.05615"
+      ],
+      "title": "A Coin Flip Per Token: Bernoulli Sparse Steering of Large Language Models",
+      "reason": "Sparse LLM activation steering claims negligible overhead without decode-speed measurements; efficiency relevance is plausible but unverified.",
+      "source_url": "https://arxiv.org/abs/2607.05615",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05659",
+      "identity_tokens": [
+        "arXiv:2607.05659"
+      ],
+      "title": "Agents with Feelings? Personality and Emotion in Multi-Agent Software Teams",
+      "reason": "Personality/emotion assignment affects software-agent team quality, not weight quantization or inference kernels.",
+      "source_url": "https://arxiv.org/abs/2607.05659",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    }
+  ]
+}
