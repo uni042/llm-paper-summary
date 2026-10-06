@@ -35,10 +35,15 @@
   "selection_reason": "The report describes several concrete inference optimizations: local/global attention and KV sharing reduce global KV-cache footprint by up to 37.5%; an autoregressive multi-token-prediction head is released for speculative decoding; quantized checkpoints reduce parameter memory; and the 150M image encoder's W8A8 quantization halves forward-pass memory and reduces on-device latency by 44%. These are direct LLM/multimodal inference efficiency contributions, rather than only a model-capability report.",
   "semantic_scholar_id": "bae8d2f66cd289f690db7d3f89e2951e34229d8e",
   "source_url": "https://arxiv.org/abs/2607.02770",
-  "status": "ready",
+  "status": "superseded",
   "title": "Gemma 4 Technical Report",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T16:02:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md",
+  "represented_canonical_id": "arXiv:2607.02770",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

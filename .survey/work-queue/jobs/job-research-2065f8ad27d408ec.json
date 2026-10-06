@@ -35,10 +35,15 @@
   "selection_reason": "柔軟なtoken-set factorizationとset-causal architectureにより任意順序decodingと推論stepごとのKV cache更新を両立し、block diffusionよりspeed-quality tradeoffを改善する言語モデル推論研究。",
   "semantic_scholar_id": "53fa41b47480e7a56cbf9d15bb1087b0ebeb136d",
   "source_url": "https://arxiv.org/abs/2607.01775",
-  "status": "ready",
+  "status": "superseded",
   "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T16:02:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md",
+  "represented_canonical_id": "arXiv:2607.01775",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
