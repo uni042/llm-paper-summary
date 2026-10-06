@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-07 07:52:22 JST**
+> 自動生成: **2026-10-07 07:55:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **579** |
 | 未claim Research job | **579** |
-| 直近24hのResearch処理完了 | **73** |
+| 直近24hのResearch処理完了 | **72** |
 | 最終Research処理完了 | **10-06 20:58:00 JST** |
 | 最終Discovery探索完了 | **10-07 07:30:00 JST** |
 | 整合性異常 | **0** |
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-07 00:00:11 JST（7時間52分前）** |
+| 最終maintenance完了 | **10-07 00:00:11 JST（7時間55分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -103,7 +103,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/libfile_da345c5035f88191be33022d361fd0f0--2604.11035-idlm.json
 - Discovery: **10-07 07:30:00 JST** / worker scheduled-chat-30 / run 20261007-0730-scheduled-chat-30/r03-partial
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_281610dd68108191a078439a93308560--discovery-20261007-0730-scheduled-chat-30-r03-partial.json
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_281610dd68108191a078439a93308560--discovery-20261007-0730-scheduled-chat-30-r03-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
