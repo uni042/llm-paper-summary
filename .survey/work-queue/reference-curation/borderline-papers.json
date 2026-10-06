@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T23:27:32+00:00",
-  "record_count": 4247,
+  "updated_at": "2026-10-06T23:37:21+00:00",
+  "record_count": 4256,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -64830,6 +64830,142 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Rethinking Vision Transformers for MobileNet Size and Speed"
+    },
+    "arXiv:2001.00281": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2001.00281",
+      "identity_tokens": [
+        "arXiv:2001.00281"
+      ],
+      "reason": "Retain borderline because zero-shot quantization is a potentially transferable inference-memory technique; the paper validates CNN-style vision models rather than LLMs, so a language-model reproduction is required before relevance is established.",
+      "first_checked_at": "2026-10-06T23:37:10+00:00",
+      "last_checked_at": "2026-10-06T23:37:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ZeroQ: A Novel Zero Shot Quantization Framework"
+    },
+    "arXiv:2103.12731": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2103.12731",
+      "identity_tokens": [
+        "arXiv:2103.12731"
+      ],
+      "reason": "Borderline transfer candidate: local attention could inform long-context causal attention, but the source’s image-specific positional/window setup and visual-only benchmarks do not show language-model quality or serving gains.",
+      "first_checked_at": "2026-10-06T23:37:10+00:00",
+      "last_checked_at": "2026-10-06T23:37:10+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Local Self-Attention for Parameter Efficient Visual Backbones"
+    },
+    "arXiv:2411.19650": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.19650",
+      "identity_tokens": [
+        "arXiv:2411.19650"
+      ],
+      "reason": "Borderline only: this is a VLA application using a language module, but its contribution is model architecture/action quality and no latency, throughput, memory, or inference optimization is measured.",
+      "first_checked_at": "2026-10-06T23:37:10+00:00",
+      "last_checked_at": "2026-10-06T23:37:10+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CogACT: A Foundational Vision-Language-Action Model for Synergizing Cognition and Action in Robotic Manipulation"
+    },
+    "arXiv:2004.12832": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2004.12832",
+      "identity_tokens": [
+        "arXiv:2004.12832"
+      ],
+      "reason": "The full text (§§2–3 and experiments) evaluates query-document passage ranking, offline document representations, and retrieval FLOPs/latency. Its gains concern search/ranking, not autoregressive generation or model-serving cost; retain as borderline for possible RAG retrieval-pipeline relevance.",
+      "first_checked_at": "2026-10-06T23:37:14+00:00",
+      "last_checked_at": "2026-10-06T23:37:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT"
+    },
+    "arXiv:1911.03852": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.03852",
+      "identity_tokens": [
+        "arXiv:1911.03852"
+      ],
+      "reason": "Borderline because mixed-precision quantization is a direct potential inference-memory/latency technique, but no LLM/transformer evaluation in this source demonstrates transfer or serving benefit.",
+      "first_checked_at": "2026-10-06T23:37:16+00:00",
+      "last_checked_at": "2026-10-06T23:37:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HAWQ-V2: Hessian Aware trace-Weighted Quantization of Neural Networks"
+    },
+    "arXiv:2007.12223": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2007.12223",
+      "identity_tokens": [
+        "arXiv:2007.12223"
+      ],
+      "reason": "Borderline: the source concerns BERT pruning/sparsity, but says hardware speedup for training/inference remains future work. Require a sparse runtime benchmark with end-task quality before treating it as an inference optimization.",
+      "first_checked_at": "2026-10-06T23:37:16+00:00",
+      "last_checked_at": "2026-10-06T23:37:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Lottery Ticket Hypothesis for Pre-trained BERT Networks"
+    },
+    "DOI:10.1109/access.2024.3365742": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2024.3365742",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3365742"
+      ],
+      "reason": "This is a broad LLM survey and may help trace relevant deployment work, but the publisher-version review offers no original method or measured inference improvement. Keep borderline as background discovery only, not as an optimization result.",
+      "first_checked_at": "2026-10-06T23:37:17+00:00",
+      "last_checked_at": "2026-10-06T23:37:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review on Large Language Models: Architectures, Applications, Taxonomies, Open Issues and Challenges"
+    },
+    "arXiv:2404.10518": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.10518",
+      "identity_tokens": [
+        "arXiv:2404.10518"
+      ],
+      "reason": "Treat as borderline transfer candidate: its mobile attention kernel may inspire efficient LLM attention, but the full text benchmarks MobileNet/image workloads only; no evidence establishes compatibility with causal attention, KV cache, or language quality.",
+      "first_checked_at": "2026-10-06T23:37:17+00:00",
+      "last_checked_at": "2026-10-06T23:37:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MobileNetV4 - Universal Models for the Mobile Ecosystem"
+    },
+    "arXiv:2310.05737": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.05737",
+      "identity_tokens": [
+        "arXiv:2310.05737"
+      ],
+      "reason": "Borderline because compact visual token sequences could reduce multimodal prompt cost, but the paper’s experiments and claims concern image/video generation tokenizers; no language-model prompt, KV-cache, or serving benchmark demonstrates transfer.",
+      "first_checked_at": "2026-10-06T23:37:21+00:00",
+      "last_checked_at": "2026-10-06T23:37:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Language Model Beats Diffusion -- Tokenizer is Key to Visual Generation"
     }
   }
 }

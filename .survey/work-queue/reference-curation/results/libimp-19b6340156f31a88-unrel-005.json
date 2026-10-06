@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-19b6340156f31a88-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2112.04482",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2112.04482",
+    "identity_tokens": [
+      "arXiv:2112.04482"
+    ],
+    "reason": "The relevant implementation passage explicitly applies sharding/FP16 for pretraining memory consumption. Evaluation centers on multimodal representation tasks; no serving-time memory/latency optimization is proposed.",
+    "first_checked_at": "2026-10-06T23:37:12+00:00",
+    "last_checked_at": "2026-10-06T23:37:12+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "FLAVA: A Foundational Language And Vision Alignment Model"
+  },
+  "processed_at": "2026-10-06T23:37:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-19b6340156f3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

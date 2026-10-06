@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8373fa2dcc9069e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.21776",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.21776",
+    "identity_tokens": [
+      "arXiv:2503.21776"
+    ],
+    "reason": "The abstract claims video-reasoning improvements and gives no inference compute, memory, latency, throughput, or serving intervention.",
+    "first_checked_at": "2026-10-06T23:37:20+00:00",
+    "last_checked_at": "2026-10-06T23:37:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+    ],
+    "title": "Video-R1: Reinforcing Video Reasoning in MLLMs"
+  },
+  "processed_at": "2026-10-06T23:37:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8373fa2dcc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

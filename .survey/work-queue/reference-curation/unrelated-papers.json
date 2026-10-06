@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T23:27:33+00:00",
-  "record_count": 9887,
+  "updated_at": "2026-10-06T23:37:22+00:00",
+  "record_count": 9922,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -141566,6 +141566,503 @@
         "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
       ],
       "title": "LST: Ladder Side-Tuning for Parameter and Memory Efficient Transfer Learning"
+    },
+    "arXiv:2403.09338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09338",
+      "identity_tokens": [
+        "arXiv:2403.09338"
+      ],
+      "reason": "The primary abstract focuses on visual recognition and does not evaluate language-model inference.",
+      "first_checked_at": "2026-10-06T23:37:11+00:00",
+      "last_checked_at": "2026-10-06T23:37:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "LocalMamba: Visual State Space Model with Windowed Selective Scan"
+    },
+    "arXiv:2309.03883": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.03883",
+      "identity_tokens": [
+        "arXiv:2309.03883"
+      ],
+      "reason": "Although it modifies LLM inference, the stated goal and experiments are factuality. Appendix F reports 1.8–3.0% extra peak GPU-memory overhead; it does not improve compute, memory, latency, or throughput.",
+      "first_checked_at": "2026-10-06T23:37:11+00:00",
+      "last_checked_at": "2026-10-06T23:37:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models"
+    },
+    "arXiv:2503.11651": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.11651",
+      "identity_tokens": [
+        "arXiv:2503.11651"
+      ],
+      "reason": "Its efficiency claim is sub-second 3D image reconstruction versus geometry optimization, not language-model inference.",
+      "first_checked_at": "2026-10-06T23:37:11+00:00",
+      "last_checked_at": "2026-10-06T23:37:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "VGGT: Visual Geometry Grounded Transformer"
+    },
+    "arXiv:2202.07125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.07125",
+      "identity_tokens": [
+        "arXiv:2202.07125"
+      ],
+      "reason": "The abstract scopes the survey to time-series tasks and does not address LLM serving or inference efficiency.",
+      "first_checked_at": "2026-10-06T23:37:12+00:00",
+      "last_checked_at": "2026-10-06T23:37:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Transformers in Time Series: A Survey"
+    },
+    "arXiv:2107.00630": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.00630",
+      "identity_tokens": [
+        "arXiv:2107.00630"
+      ],
+      "reason": "The primary text evaluates diffusion image generation and likelihood bounds. No language model, decoder serving, or inference resource-reduction mechanism is tested.",
+      "first_checked_at": "2026-10-06T23:37:12+00:00",
+      "last_checked_at": "2026-10-06T23:37:12+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Variational Diffusion Models"
+    },
+    "arXiv:2201.09873": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.09873",
+      "identity_tokens": [
+        "arXiv:2201.09873"
+      ],
+      "reason": "The abstract limits the contribution to medical imaging tasks and models; it gives no language-model serving or inference-efficiency result.",
+      "first_checked_at": "2026-10-06T23:37:12+00:00",
+      "last_checked_at": "2026-10-06T23:37:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Transformers in Medical Imaging: A Survey"
+    },
+    "arXiv:2112.04482": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.04482",
+      "identity_tokens": [
+        "arXiv:2112.04482"
+      ],
+      "reason": "The relevant implementation passage explicitly applies sharding/FP16 for pretraining memory consumption. Evaluation centers on multimodal representation tasks; no serving-time memory/latency optimization is proposed.",
+      "first_checked_at": "2026-10-06T23:37:12+00:00",
+      "last_checked_at": "2026-10-06T23:37:12+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "FLAVA: A Foundational Language And Vision Alignment Model"
+    },
+    "arXiv:2403.06977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.06977",
+      "identity_tokens": [
+        "arXiv:2403.06977"
+      ],
+      "reason": "The work targets video representation/understanding, not language-model inference systems.",
+      "first_checked_at": "2026-10-06T23:37:13+00:00",
+      "last_checked_at": "2026-10-06T23:37:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "VideoMamba: State Space Model for Efficient Video Understanding"
+    },
+    "SemanticScholar:70fe1f854bc59092ded4bf2939a6624a80e5e4c3": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:70fe1f854bc59092ded4bf2939a6624a80e5e4c3",
+      "identity_tokens": [
+        "SemanticScholar:70fe1f854bc59092ded4bf2939a6624a80e5e4c3"
+      ],
+      "reason": "The paper’s stated goal is training memory for large distributed models. The assigned target is inference/serving efficiency, and no inference method or measurement is claimed.",
+      "first_checked_at": "2026-10-06T23:37:13+00:00",
+      "last_checked_at": "2026-10-06T23:37:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ],
+      "title": "ZeRO: Memory Optimization Towards Training A Trillion Parameter Models"
+    },
+    "arXiv:2503.22020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.22020",
+      "identity_tokens": [
+        "arXiv:2503.22020"
+      ],
+      "reason": "The abstract describes VLA reasoning and task effectiveness, without a concrete LLM inference compute/memory/latency intervention.",
+      "first_checked_at": "2026-10-06T23:37:13+00:00",
+      "last_checked_at": "2026-10-06T23:37:13+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models"
+    },
+    "DOI:10.1016/j.tics.2024.01.011": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.tics.2024.01.011",
+      "identity_tokens": [
+        "DOI:10.1016/j.tics.2024.01.011"
+      ],
+      "reason": "Although the topic is LLM capability, the primary review is about language/thought cognition and task competence; no conditional-compute, latency, memory, or serving optimization is presented.",
+      "first_checked_at": "2026-10-06T23:37:13+00:00",
+      "last_checked_at": "2026-10-06T23:37:13+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Dissociating language and thought in large language models"
+    },
+    "arXiv:2404.05961": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.05961",
+      "identity_tokens": [
+        "arXiv:2404.05961"
+      ],
+      "reason": "The abstract proposes adaptation for text representation and retrieval quality, without a runtime or resource-reduction method.",
+      "first_checked_at": "2026-10-06T23:37:14+00:00",
+      "last_checked_at": "2026-10-06T23:37:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "LLM2Vec: Large Language Models Are Secretly Powerful Text Encoders"
+    },
+    "arXiv:2010.04159": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.04159",
+      "identity_tokens": [
+        "arXiv:2010.04159"
+      ],
+      "reason": "Full text §§4–5.1 and Table 1 describe image detection and report FPS for DETR variants; the speed/accuracy results are for COCO visual detection, with no LLM inference evaluation.",
+      "first_checked_at": "2026-10-06T23:37:15+00:00",
+      "last_checked_at": "2026-10-06T23:37:15+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Deformable DETR: Deformable Transformers for End-to-End Object Detection"
+    },
+    "arXiv:2110.13900": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.13900",
+      "identity_tokens": [
+        "arXiv:2110.13900"
+      ],
+      "reason": "WavLM is speech-processing pretraining/representation work; its abstract reports downstream speech benchmark performance and no language-model inference resource optimization.",
+      "first_checked_at": "2026-10-06T23:37:15+00:00",
+      "last_checked_at": "2026-10-06T23:37:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing"
+    },
+    "arXiv:2401.10166": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.10166",
+      "identity_tokens": [
+        "arXiv:2401.10166"
+      ],
+      "reason": "The stated task is visual perception with a 2D scan architecture and image scaling efficiency; no language-model serving or inference-memory result is proposed.",
+      "first_checked_at": "2026-10-06T23:37:15+00:00",
+      "last_checked_at": "2026-10-06T23:37:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "VMamba: Visual State Space Model"
+    },
+    "arXiv:1905.10083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.10083",
+      "identity_tokens": [
+        "arXiv:1905.10083"
+      ],
+      "reason": "The abstract surveys edge intelligence across general AI applications; it does not present or evaluate a specific LLM inference improvement.",
+      "first_checked_at": "2026-10-06T23:37:15+00:00",
+      "last_checked_at": "2026-10-06T23:37:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ],
+      "title": "Edge Intelligence: Paving the Last Mile of Artificial Intelligence With Edge Computing"
+    },
+    "arXiv:2311.09049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.09049",
+      "identity_tokens": [
+        "arXiv:2311.09049"
+      ],
+      "reason": "The paper’s contribution is collaborative-semantic adaptation and item generation for recommendation. Its “inference” sections are task-prompt/user-preference inference, not runtime optimization.",
+      "first_checked_at": "2026-10-06T23:37:16+00:00",
+      "last_checked_at": "2026-10-06T23:37:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Adapting Large Language Models by Integrating Collaborative Semantics for Recommendation"
+    },
+    "arXiv:1912.02047": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1912.02047",
+      "identity_tokens": [
+        "arXiv:1912.02047"
+      ],
+      "reason": "Its abstract describes a review of NMT model families and trends and does not propose or evaluate an LLM inference technique.",
+      "first_checked_at": "2026-10-06T23:37:16+00:00",
+      "last_checked_at": "2026-10-06T23:37:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "title": "Neural Machine Translation: A Review"
+    },
+    "arXiv:2009.00713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.00713",
+      "identity_tokens": [
+        "arXiv:2009.00713"
+      ],
+      "reason": "The abstract identifies waveform generation as the target model; it does not propose an LLM serving optimization.",
+      "first_checked_at": "2026-10-06T23:37:17+00:00",
+      "last_checked_at": "2026-10-06T23:37:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "WaveGrad: Estimating Gradients for Waveform Generation"
+    },
+    "arXiv:2402.15648": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15648",
+      "identity_tokens": [
+        "arXiv:2402.15648"
+      ],
+      "reason": "The primary abstract describes image restoration and image restoration benchmarks; no LLM inference improvement is claimed.",
+      "first_checked_at": "2026-10-06T23:37:17+00:00",
+      "last_checked_at": "2026-10-06T23:37:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
+      ],
+      "title": "MambaIR: A Simple Baseline for Image Restoration with State-Space Model"
+    },
+    "arXiv:2406.11838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11838",
+      "identity_tokens": [
+        "arXiv:2406.11838"
+      ],
+      "reason": "Its parallel token prediction is for image-generation latents, with visual sample quality results; the autoregressive term does not make this a language-model inference method.",
+      "first_checked_at": "2026-10-06T23:37:18+00:00",
+      "last_checked_at": "2026-10-06T23:37:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "Autoregressive Image Generation without Vector Quantization"
+    },
+    "arXiv:2105.14995": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.14995",
+      "identity_tokens": [
+        "arXiv:2105.14995"
+      ],
+      "reason": "The abstract frames the method as operator learning for PDE problems; no LLM serving application or inference gain is claimed.",
+      "first_checked_at": "2026-10-06T23:37:18+00:00",
+      "last_checked_at": "2026-10-06T23:37:18+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Choose a Transformer: Fourier or Galerkin"
+    },
+    "arXiv:2202.13556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.13556",
+      "identity_tokens": [
+        "arXiv:2202.13556"
+      ],
+      "reason": "Its benchmark and objective are sequential recommender performance; no LLM inference system is studied.",
+      "first_checked_at": "2026-10-06T23:37:18+00:00",
+      "last_checked_at": "2026-10-06T23:37:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Filter-enhanced MLP is All You Need for Sequential Recommendation"
+    },
+    "arXiv:2404.03425": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03425",
+      "identity_tokens": [
+        "arXiv:2404.03425"
+      ],
+      "reason": "The paper’s domain is visual remote sensing; its state-space architecture is not evaluated for LLM inference.",
+      "first_checked_at": "2026-10-06T23:37:19+00:00",
+      "last_checked_at": "2026-10-06T23:37:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "ChangeMamba: Remote Sensing Change Detection With Spatiotemporal State Space Model"
+    },
+    "arXiv:2302.14376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.14376",
+      "identity_tokens": [
+        "arXiv:2302.14376"
+      ],
+      "reason": "The target is scientific operator learning, not language-model serving or inference efficiency.",
+      "first_checked_at": "2026-10-06T23:37:19+00:00",
+      "last_checked_at": "2026-10-06T23:37:19+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "GNOT: A General Neural Operator Transformer for Operator Learning"
+    },
+    "arXiv:2401.14887": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.14887",
+      "identity_tokens": [
+        "arXiv:2401.14887"
+      ],
+      "reason": "The paper evaluates which retrieved documents best help an LLM answer and studies answer quality under retrieval noise. It neither changes the LLM execution path nor reduces inference resources.",
+      "first_checked_at": "2026-10-06T23:37:19+00:00",
+      "last_checked_at": "2026-10-06T23:37:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "The Power of Noise: Redefining Retrieval for RAG Systems"
+    },
+    "arXiv:2008.00364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.00364",
+      "identity_tokens": [
+        "arXiv:2008.00364"
+      ],
+      "reason": "The survey scope is classification methodology and does not present a concrete LLM serving improvement.",
+      "first_checked_at": "2026-10-06T23:37:19+00:00",
+      "last_checked_at": "2026-10-06T23:37:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "A Survey on Text Classification: From Traditional to Deep Learning"
+    },
+    "arXiv:2312.11970": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.11970",
+      "identity_tokens": [
+        "arXiv:2312.11970"
+      ],
+      "reason": "The abstract concerns simulation applications and agent capabilities, not model inference efficiency or deployment systems.",
+      "first_checked_at": "2026-10-06T23:37:20+00:00",
+      "last_checked_at": "2026-10-06T23:37:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Large language models empowered agent-based modeling and simulation: a survey and perspectives"
+    },
+    "arXiv:2404.14082": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.14082",
+      "identity_tokens": [
+        "arXiv:2404.14082"
+      ],
+      "reason": "Its stated focus is understanding model internals and safety, not reducing LLM inference compute, memory, latency, or serving cost.",
+      "first_checked_at": "2026-10-06T23:37:20+00:00",
+      "last_checked_at": "2026-10-06T23:37:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Mechanistic Interpretability for AI Safety - A Review"
+    },
+    "arXiv:2503.21776": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21776",
+      "identity_tokens": [
+        "arXiv:2503.21776"
+      ],
+      "reason": "The abstract claims video-reasoning improvements and gives no inference compute, memory, latency, throughput, or serving intervention.",
+      "first_checked_at": "2026-10-06T23:37:20+00:00",
+      "last_checked_at": "2026-10-06T23:37:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "Video-R1: Reinforcing Video Reasoning in MLLMs"
+    },
+    "arXiv:2201.02184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.02184",
+      "identity_tokens": [
+        "arXiv:2201.02184"
+      ],
+      "reason": "Its task is speech representation learning, not LLM inference.",
+      "first_checked_at": "2026-10-06T23:37:20+00:00",
+      "last_checked_at": "2026-10-06T23:37:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction"
+    },
+    "arXiv:2207.07115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.07115",
+      "identity_tokens": [
+        "arXiv:2207.07115"
+      ],
+      "reason": "The abstract targets video segmentation and visual memory; it does not concern LLM context memory or inference.",
+      "first_checked_at": "2026-10-06T23:37:21+00:00",
+      "last_checked_at": "2026-10-06T23:37:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "XMem: Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model"
+    },
+    "arXiv:2402.05672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05672",
+      "identity_tokens": [
+        "arXiv:2402.05672"
+      ],
+      "reason": "The abstract describes embedding training and retrieval/representation quality, not reducing LLM decoding or serving resources.",
+      "first_checked_at": "2026-10-06T23:37:22+00:00",
+      "last_checked_at": "2026-10-06T23:37:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Multilingual E5 Text Embeddings: A Technical Report"
+    },
+    "arXiv:2303.08112": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.08112",
+      "identity_tokens": [
+        "arXiv:2303.08112"
+      ],
+      "reason": "Its contribution is analysis/interpretability of hidden states, with no inference compute, memory, latency, throughput, or serving improvement.",
+      "first_checked_at": "2026-10-06T23:37:22+00:00",
+      "last_checked_at": "2026-10-06T23:37:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Eliciting Latent Predictions from Transformers with the Tuned Lens"
+    },
+    "arXiv:2406.02918": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02918",
+      "identity_tokens": [
+        "arXiv:2406.02918"
+      ],
+      "reason": "Its stated task is medical image processing; no LLM inference workload or system improvement is addressed.",
+      "first_checked_at": "2026-10-06T23:37:22+00:00",
+      "last_checked_at": "2026-10-06T23:37:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "U-KAN Makes Strong Backbone for Medical Image Segmentation and Generation"
     }
   }
 }
