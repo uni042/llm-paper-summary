@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4b2cbcb0585dfec-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.05253",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.05253",
+    "identity_tokens": [
+      "arXiv:2608.05253"
+    ],
+    "reason": "一次要旨はquantized orthogonal fine-tuningで、モデル適応・訓練時parameter updateを効率化する。配備推論コストの評価ではない。",
+    "first_checked_at": "2026-10-06T19:55:16+00:00",
+    "last_checked_at": "2026-10-06T19:55:16+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+    ],
+    "title": "Beyond Rotations: AuroOFT for Expressive Quantized Orthogonal Fine-Tuning"
+  },
+  "processed_at": "2026-10-06T19:55:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4b2cbcb0585",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T19:45:13+00:00",
-  "record_count": 3809,
+  "updated_at": "2026-10-06T19:55:14+00:00",
+  "record_count": 3833,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -58230,6 +58230,367 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MetaMamba: Meta-learning with mamba for few-shot vegetation species classification using UAV-based hyperspectral imagery in desert rangeland"
+    },
+    "DOI:10.1109/tbdata.2026.3689009": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tbdata.2026.3689009",
+      "identity_tokens": [
+        "DOI:10.1109/tbdata.2026.3689009"
+      ],
+      "reason": "IEEE DOI source and abstract are inaccessible; the FlashAttention-2 relation is only lineage metadata, so cross-domain forecasting relevance remains unresolved.",
+      "first_checked_at": "2026-10-06T19:55:09+00:00",
+      "last_checked_at": "2026-10-06T19:55:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GeMeR-TS: Generative Memory-Based Retrieval and Mixture-of-Experts for Cross-Domain Time-Series Forecasting"
+    },
+    "DOI:10.1109/tvlsi.2026.3692428": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tvlsi.2026.3692428",
+      "identity_tokens": [
+        "DOI:10.1109/tvlsi.2026.3692428"
+      ],
+      "reason": "The publisher/author repository abstract describes NAND PIM retrieval gains but no LLM inference workload; missing full text leaves the linked SSD-offload connection unverified.",
+      "first_checked_at": "2026-10-06T19:55:09+00:00",
+      "last_checked_at": "2026-10-06T19:55:09+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Processing-in-Memory Architecture for In-Storage Information Retrieval on 3-D NAND Flash Solid-State Drives"
+    },
+    "DOI:10.3390/s26165228": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/s26165228",
+      "identity_tokens": [
+        "DOI:10.3390/s26165228"
+      ],
+      "reason": "The available publisher-level abstract evaluates an LLM driving interface for human outcomes, not inference efficiency; full article is unavailable and speculative-decoding lineage keeps a weak possibility open.",
+      "first_checked_at": "2026-10-06T19:55:09+00:00",
+      "last_checked_at": "2026-10-06T19:55:09+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ELI: A Conversational LLM-Based Interface for Human–AI Driving Teams and Its Impact on Performance and Driver Status"
+    },
+    "DOI:10.3844/jcssp.2026.2617.2632": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3844/jcssp.2026.2617.2632",
+      "identity_tokens": [
+        "DOI:10.3844/jcssp.2026.2617.2632"
+      ],
+      "reason": "The publisher abstract reports CoT/LoRA reasoning accuracy, not inference cost; full paper is unavailable and quantization/kernel linkage cannot be checked further.",
+      "first_checked_at": "2026-10-06T19:55:09+00:00",
+      "last_checked_at": "2026-10-06T19:55:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Empowering Small Language Models With Chain of Thought and Parameter Efficient Fine Tuning for Efficient Deep Reasoning"
+    },
+    "DOI:10.1007/s11263-026-02945-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11263-026-02945-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-026-02945-6"
+      ],
+      "reason": "公式Springer DOI landing pageを取得できず、一次要旨・本文のinstruction-tuning設定と推論効率への効果を確認できなかった。題名上はVLM hallucination mitigationで効率改善が不明なためborderline。",
+      "first_checked_at": "2026-10-06T19:55:10+00:00",
+      "last_checked_at": "2026-10-06T19:55:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "REVERIE+: Generalized Reflective Instruction Tuning for Hallucination Mitigation in Advanced VLMs"
+    },
+    "DOI:10.1016/j.neunet.2026.109537": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109537",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.109537"
+      ],
+      "reason": "公式Elsevier DOI landing pageを取得できず一次本文を確認できない。入力のabstract記載ではfractional recurrent sequence modelingは長期history convolution O(N^2d)で、LLM推論効率改善の根拠もないが、primary retrieval failureのためborderline。",
+      "first_checked_at": "2026-10-06T19:55:10+00:00",
+      "last_checked_at": "2026-10-06T19:55:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learnable-order fractional recurrent networks: Structured identification of memory in non-stationary sequences."
+    },
+    "DOI:10.1109/icamechs71619.2026.11663323": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icamechs71619.2026.11663323",
+      "identity_tokens": [
+        "DOI:10.1109/icamechs71619.2026.11663323"
+      ],
+      "reason": "公式IEEE DOI landing pageを取得できず一次full textを確認できない。入力abstractはMambaVision vision backboneのPTQ/model size削減であり、LLMへの転用可能性と実測推論効果を一次資料から確認できないためborderline。",
+      "first_checked_at": "2026-10-06T19:55:10+00:00",
+      "last_checked_at": "2026-10-06T19:55:10+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sensitivity-Guided Mixed-Precision Post-Training Quantization for MambaVision"
+    },
+    "arXiv:2607.16824": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.16824",
+      "identity_tokens": [
+        "arXiv:2607.16824"
+      ],
+      "reason": "Although the paper is linked to attention-sink work, its full-text method and evaluation target autoregressive image-token generation and image quality, not language decoding or KV-cache serving; retain as borderline because the lineage connection is real but indirect.",
+      "first_checked_at": "2026-10-06T19:55:11+00:00",
+      "last_checked_at": "2026-10-06T19:55:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Test-Time Registers as Global Priors for Tokenized Image Generation"
+    },
+    "arXiv:2607.15849": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.15849",
+      "identity_tokens": [
+        "arXiv:2607.15849"
+      ],
+      "reason": "TANGO improves autoregressive video quality with extra test-time compute/energy; it is adjacent to sequence inference but not an efficiency improvement.",
+      "first_checked_at": "2026-10-06T19:55:11+00:00",
+      "last_checked_at": "2026-10-06T19:55:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Test-Time Noise Guided Adaptation for Realistic Autoregressive Video Generation"
+    },
+    "DOI:10.3390/technologies14070438": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/technologies14070438",
+      "identity_tokens": [
+        "DOI:10.3390/technologies14070438"
+      ],
+      "reason": "The official MDPI page is inaccessible; the title concerns local LLM ranking and could contain deployment measures, but the quantization relation/full methods cannot be verified.",
+      "first_checked_at": "2026-10-06T19:55:11+00:00",
+      "last_checked_at": "2026-10-06T19:55:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Comparative Analysis of Local Large Language Models for Ranking Higher Education Programmes Based on Applicant Digital Profiles"
+    },
+    "DOI:10.1002/advs.202524179": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/advs.202524179",
+      "identity_tokens": [
+        "DOI:10.1002/advs.202524179"
+      ],
+      "reason": "Wiley source is inaccessible; its abstract describes a battery Transformer, not LLM inference, but the FlashAttention lineage and missing full text leave only weak relation evidence.",
+      "first_checked_at": "2026-10-06T19:55:11+00:00",
+      "last_checked_at": "2026-10-06T19:55:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Performance–Complexity Trade‐Offs in Battery Lifetime Prediction with Task‐Aware Transformers"
+    },
+    "arXiv:2607.13395": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.13395",
+      "identity_tokens": [
+        "arXiv:2607.13395"
+      ],
+      "reason": "Enlightenment changes attention/residual paths to improve capability without reporting latency, memory, token, or throughput savings.",
+      "first_checked_at": "2026-10-06T19:55:11+00:00",
+      "last_checked_at": "2026-10-06T19:55:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Improving is Often Sudden: Enlightenment-style Finetuning for Large-Scale Models"
+    },
+    "DOI:10.1007/s44217-026-01846-7": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44217-026-01846-7",
+      "identity_tokens": [
+        "DOI:10.1007/s44217-026-01846-7"
+      ],
+      "reason": "Springer source is inaccessible; the title suggests course pedagogy but the linked quantization relation cannot be checked in full text.",
+      "first_checked_at": "2026-10-06T19:55:11+00:00",
+      "last_checked_at": "2026-10-06T19:55:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Effects of the 80-10-10 CTCA-Harlybot model on university students’ achievement and critical thinking in mobile and adaptive systems course"
+    },
+    "DOI:10.1145/3822594": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3822594",
+      "identity_tokens": [
+        "DOI:10.1145/3822594"
+      ],
+      "reason": "ACM source is inaccessible; the title suggests CLIP low-bit prompting, but the linked quantization lineage warrants primary-text retrieval.",
+      "first_checked_at": "2026-10-06T19:55:11+00:00",
+      "last_checked_at": "2026-10-06T19:55:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "P4Q: Learning to Prompt for Quantization in Low-Bit CLIP"
+    },
+    "arXiv:2607.17696": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17696",
+      "identity_tokens": [
+        "arXiv:2607.17696"
+      ],
+      "reason": "The paper analyzes Transformer positional influence but disclaims production-LLM benchmark transfer and reports no serving-efficiency result.",
+      "first_checked_at": "2026-10-06T19:55:12+00:00",
+      "last_checked_at": "2026-10-06T19:55:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Adjoint-Sensitivity Framework for Lost-in-the-Middle Phenomena in Causal Residual Transformers"
+    },
+    "DOI:10.1145/3799902.3811128": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3799902.3811128",
+      "identity_tokens": [
+        "DOI:10.1145/3799902.3811128"
+      ],
+      "reason": "The ACM source is inaccessible; the title concerns spatiotemporal rendering rather than language inference, but the FlashAttention relation is unresolved.",
+      "first_checked_at": "2026-10-06T19:55:12+00:00",
+      "last_checked_at": "2026-10-06T19:55:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ragged Neighborhood Attention for Spatiotemporal Neural Denoising of Deep Monte Carlo Renderings"
+    },
+    "DOI:10.1145/3805712.3809738": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805712.3809738",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3809738"
+      ],
+      "reason": "The ACM source is inaccessible; recommender mid-sequence degradation may differ from attention-sink work, but lineage cannot be checked.",
+      "first_checked_at": "2026-10-06T19:55:12+00:00",
+      "last_checked_at": "2026-10-06T19:55:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Diagnosing and Mitigating Mid-Sequence Degradation in Recommender Systems"
+    },
+    "DOI:10.1145/3805712.3809957": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805712.3809957",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3809957"
+      ],
+      "reason": "The ACM source is inaccessible; edge-LLM recommendation could involve serving/resource decisions, so the primary evidence is needed.",
+      "first_checked_at": "2026-10-06T19:55:13+00:00",
+      "last_checked_at": "2026-10-06T19:55:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PEARL: Profile-based Explainable Agent for Edge LLM Recommendation via Latent Decomposition"
+    },
+    "arXiv:2607.28292": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28292",
+      "identity_tokens": [
+        "arXiv:2607.28292"
+      ],
+      "reason": "The primary paper reports sequential-edit stability on a 4-bit OpenLLaMA, but its 28% generalization success and lack of inference-cost measurements make its relevance to quantized serving uncertain.",
+      "first_checked_at": "2026-10-06T19:55:13+00:00",
+      "last_checked_at": "2026-10-06T19:55:13+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CACHE-UK: A Stability-Aware Memory Editor for Sequentially Updated Quantized LLMs in Finance"
+    },
+    "arXiv:2607.28529": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28529",
+      "identity_tokens": [
+        "arXiv:2607.28529"
+      ],
+      "reason": "The paper improves secure-code metrics through expert co-decoding but reports no serving speedup; the added expert’s decode cost is unmeasured.",
+      "first_checked_at": "2026-10-06T19:55:13+00:00",
+      "last_checked_at": "2026-10-06T19:55:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoGate: Confidence-Gated Co-Decoding for Secure Code Generation"
+    },
+    "arXiv:2607.28841": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28841",
+      "identity_tokens": [
+        "arXiv:2607.28841"
+      ],
+      "reason": "The paper’s token reduction is an aggregate agent-workflow/provider comparison without isolated model/runtime controls, so it does not establish a general inference optimization.",
+      "first_checked_at": "2026-10-06T19:55:13+00:00",
+      "last_checked_at": "2026-10-06T19:55:13+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CyberNeuro: A Privacy-Preserving Agentic Workbench for Cohort-Scale Neuroimage and Clinical Data Analysis"
+    },
+    "arXiv:2608.07627": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07627",
+      "identity_tokens": [
+        "arXiv:2608.07627"
+      ],
+      "reason": "The abstract mentions vLLM and optimized paging in a hospital orchestration framework, but full text is unavailable to verify implementation or serving measurements.",
+      "first_checked_at": "2026-10-06T19:55:14+00:00",
+      "last_checked_at": "2026-10-06T19:55:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Single Chatbots to Governed Agent Ecosystems: An Agentic AI Pattern Catalogue and Orchestration Framework for Mission-Critical Hospital Information Management Systems"
+    },
+    "arXiv:2607.12341": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.12341",
+      "identity_tokens": [
+        "arXiv:2607.12341"
+      ],
+      "reason": "PCC-SQL improves deterministic policy enforcement but spends up to 10% more tokens and does not claim speed or compute savings.",
+      "first_checked_at": "2026-10-06T19:55:14+00:00",
+      "last_checked_at": "2026-10-06T19:55:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Policy-Conditioned Constrained Decoding for Column-Level Access Control in Text-to-SQL"
+    },
+    "arXiv:2607.24814": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.24814",
+      "identity_tokens": [
+        "arXiv:2607.24814"
+      ],
+      "reason": "Aletheia fits QLoRA inference within a low-resource memory budget, but its ten-case evaluation is small and lacks baseline latency/throughput.",
+      "first_checked_at": "2026-10-06T19:55:14+00:00",
+      "last_checked_at": "2026-10-06T19:55:14+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Aletheia: An Offline-First Clinical Decision Support System for Differential Diagnosis in Low-Resource Healthcare Settings"
     }
   }
 }

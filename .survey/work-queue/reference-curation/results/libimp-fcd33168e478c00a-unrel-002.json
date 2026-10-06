@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fcd33168e478c00a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24833",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24833",
+    "identity_tokens": [
+      "arXiv:2607.24833"
+    ],
+    "reason": "AdaKP reduces knowledge-point selection overhead during RL training; its main trained-model comparison uses no hints at inference, outside this inference-efficiency target.",
+    "first_checked_at": "2026-10-06T19:55:18+00:00",
+    "last_checked_at": "2026-10-06T19:55:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "AdaKP: Online Adaptive Knowledge-Point Selection for Reasoning-Oriented Reinforcement Learning"
+  },
+  "processed_at": "2026-10-06T19:55:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fcd33168e478",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

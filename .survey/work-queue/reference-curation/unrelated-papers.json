@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T19:45:14+00:00",
-  "record_count": 9442,
+  "updated_at": "2026-10-06T19:55:19+00:00",
+  "record_count": 9475,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -135300,6 +135300,468 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "PMAVP: A Mamba-Inspired Deep Learning Framework for Antiviral Peptide Identification and Functional Activity Prediction"
+    },
+    "DOI:10.7467/ksae.2026.34.8.865": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.7467/ksae.2026.34.8.865",
+      "identity_tokens": [
+        "DOI:10.7467/ksae.2026.34.8.865"
+      ],
+      "reason": "The primary publisher record describes YOLO11 detection and PoseNet on an Arm Ethos-N NPU, with no language generation or LLM serving component.",
+      "first_checked_at": "2026-10-06T19:55:10+00:00",
+      "last_checked_at": "2026-10-06T19:55:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "title": "Implementation of Optimization and Quantization Pipeline for Vision AI Model on Arm NPU Based Edge Devices"
+    },
+    "arXiv:2608.02672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02672",
+      "identity_tokens": [
+        "arXiv:2608.02672"
+      ],
+      "reason": "一次要旨はTerraform生成モデルのsecurity benchmark。prompting/scannerによる安全評価で、LLM推論効率を扱わない。",
+      "first_checked_at": "2026-10-06T19:55:10+00:00",
+      "last_checked_at": "2026-10-06T19:55:10+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Security-First Evaluation of Text-to-Terraform: Benchmarking LLMs and SLMs for Secure IaC Generation"
+    },
+    "arXiv:2609.20824": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20824",
+      "identity_tokens": [
+        "arXiv:2609.20824"
+      ],
+      "reason": "Uncertainty routing explicitly spends more tokens on hard cases to improve accuracy, rather than reducing inference compute.",
+      "first_checked_at": "2026-10-06T19:55:12+00:00",
+      "last_checked_at": "2026-10-06T19:55:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Do small language models know what they don't know?"
+    },
+    "arXiv:2607.17660": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17660",
+      "identity_tokens": [
+        "arXiv:2607.17660"
+      ],
+      "reason": "RayOcc is a 3D occupancy vision model; its latency/memory results do not concern LLM generation or inference.",
+      "first_checked_at": "2026-10-06T19:55:12+00:00",
+      "last_checked_at": "2026-10-06T19:55:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "RayOcc: Occlusion-Aware Ray Occupancy Estimation via Gaussian Mixture Intensity"
+    },
+    "arXiv:2607.18358": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18358",
+      "identity_tokens": [
+        "arXiv:2607.18358"
+      ],
+      "reason": "The primary abstract describes SPLADE/LightGBM document classification with selective LLM judging; it does not optimize LLM inference.",
+      "first_checked_at": "2026-10-06T19:55:13+00:00",
+      "last_checked_at": "2026-10-06T19:55:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "A Classifier That Teaches Itself: Self-Improving, Frozen-gate Training (SIFT) for Dynamic Document Classification"
+    },
+    "DOI:10.3390/math14142642": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/math14142642",
+      "identity_tokens": [
+        "DOI:10.3390/math14142642"
+      ],
+      "reason": "EpiSTLLM evaluates infectious-disease forecast quality using a graph-enhanced LLM, without inference cost or serving measurements.",
+      "first_checked_at": "2026-10-06T19:55:13+00:00",
+      "last_checked_at": "2026-10-06T19:55:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Multi-Regional Infectious Disease Transmission Forecasting Based on Graph-Structure-Enhanced Large Language Model"
+    },
+    "arXiv:2607.29568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29568",
+      "identity_tokens": [
+        "arXiv:2607.29568"
+      ],
+      "reason": "The primary paper applies attention/memory techniques to CECT lesion segmentation and measures segmentation quality, not LLM generation or serving.",
+      "first_checked_at": "2026-10-06T19:55:14+00:00",
+      "last_checked_at": "2026-10-06T19:55:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "DynoDINO: Harnessing Dynamic Latent Information from DINO Features for Multi-Phase Medical Image Segmentation"
+    },
+    "arXiv:2607.14334": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14334",
+      "identity_tokens": [
+        "arXiv:2607.14334"
+      ],
+      "reason": "MixCompress is a learned image-compression model; MoE is used for rate-distortion coding rather than LLM inference.",
+      "first_checked_at": "2026-10-06T19:55:14+00:00",
+      "last_checked_at": "2026-10-06T19:55:14+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MixCompress: Mixture of Experts for Variable Rate Learned Image Compression"
+    },
+    "arXiv:2608.01804": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01804",
+      "identity_tokens": [
+        "arXiv:2608.01804"
+      ],
+      "reason": "一次要旨はGPU kernel generationのcode RLにおけるtraining-time environment feedback/rollout pruningを効率化する。LLM推論servingではない。",
+      "first_checked_at": "2026-10-06T19:55:15+00:00",
+      "last_checked_at": "2026-10-06T19:55:15+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "LEAP: Lean Environment-Feedback via Adaptive Pruning for Code RL in GPU Kernel Generation"
+    },
+    "arXiv:2608.02486": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02486",
+      "identity_tokens": [
+        "arXiv:2608.02486"
+      ],
+      "reason": "一次要旨はLLMの文化的知識の内部表現とreadoutを分析する。精度・表現解釈が対象で、推論効率の改善なし。",
+      "first_checked_at": "2026-10-06T19:55:15+00:00",
+      "last_checked_at": "2026-10-06T19:55:15+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Cultural Awareness is Represented but Not Decoded: Tracing Mythological Knowledge across 18 Open-Source LLMs"
+    },
+    "arXiv:2608.02681": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02681",
+      "identity_tokens": [
+        "arXiv:2608.02681"
+      ],
+      "reason": "一次要旨はbatch promptingにおける安全失敗とbatch-aware preference optimizationを扱う。batch promptingはserving文脈だが、安全性改善でありthroughput/latency効率向上を示さない。",
+      "first_checked_at": "2026-10-06T19:55:15+00:00",
+      "last_checked_at": "2026-10-06T19:55:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Safety in Batches? Understanding and Mitigating Safety Failures in Batch Prompting"
+    },
+    "arXiv:2608.02709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02709",
+      "identity_tokens": [
+        "arXiv:2608.02709"
+      ],
+      "reason": "一次要旨はmessage-passing graph networkのoversquashing向けaddressable global memory。LLM KV cacheやserving memoryとは対象アーキテクチャ/課題が異なる。",
+      "first_checked_at": "2026-10-06T19:55:15+00:00",
+      "last_checked_at": "2026-10-06T19:55:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Escaping Oversquashing: Addressable and Support-Aware Global Memory for Message Passing Networks"
+    },
+    "arXiv:2608.02668": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02668",
+      "identity_tokens": [
+        "arXiv:2608.02668"
+      ],
+      "reason": "一次要旨はTransformer residual normalizationの幾何学的定式化とnanoGPT validation lossを比較する。学習安定性/表現法であり推論効率改善を測らない。",
+      "first_checked_at": "2026-10-06T19:55:15+00:00",
+      "last_checked_at": "2026-10-06T19:55:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Sphere Retraction Normalizations"
+    },
+    "arXiv:2608.07066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07066",
+      "identity_tokens": [
+        "arXiv:2608.07066"
+      ],
+      "reason": "一次要旨はspiking neural networkのmembrane-aware PTQで、一般SNNの量子化品質を扱う。LLM推論対象ではない。",
+      "first_checked_at": "2026-10-06T19:55:16+00:00",
+      "last_checked_at": "2026-10-06T19:55:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "PTQ4SNN: Membrane-Aware Post-Training Quantization for Spiking Neural Networks"
+    },
+    "arXiv:2608.04423": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04423",
+      "identity_tokens": [
+        "arXiv:2608.04423"
+      ],
+      "reason": "一次要旨は葉化石画像のamodal reconstructionを行うvision task。LLM推論効率への方法・評価はない。",
+      "first_checked_at": "2026-10-06T19:55:16+00:00",
+      "last_checked_at": "2026-10-06T19:55:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Foreseeing the Invisible: Amodal Reconstruction of Leaf Fossil Images"
+    },
+    "arXiv:2608.04557": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04557",
+      "identity_tokens": [
+        "arXiv:2608.04557"
+      ],
+      "reason": "一次要旨はvoxel-space 3D MRI synthesis向けflow matchingであり、医用画像生成タスク。LLM serving効率ではない。",
+      "first_checked_at": "2026-10-06T19:55:16+00:00",
+      "last_checked_at": "2026-10-06T19:55:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "VoxStruct3D: Structure-Leading Flow Matching for Voxel-Space 3D MRI Synthesis"
+    },
+    "arXiv:2608.05033": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05033",
+      "identity_tokens": [
+        "arXiv:2608.05033"
+      ],
+      "reason": "一次本文は疎行列演算向けCUDA kernelをLLM agentで合成するGPU compilation framework。LLM推論が重いoffline code-generation工程で、LLM本体の推論高速化ではない。",
+      "first_checked_at": "2026-10-06T19:55:16+00:00",
+      "last_checked_at": "2026-10-06T19:55:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "SparseDitto: An Agentic Sparse Compilation Framework through Architecture-Aware Synthesis on GPUs"
+    },
+    "arXiv:2608.05253": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05253",
+      "identity_tokens": [
+        "arXiv:2608.05253"
+      ],
+      "reason": "一次要旨はquantized orthogonal fine-tuningで、モデル適応・訓練時parameter updateを効率化する。配備推論コストの評価ではない。",
+      "first_checked_at": "2026-10-06T19:55:16+00:00",
+      "last_checked_at": "2026-10-06T19:55:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Beyond Rotations: AuroOFT for Expressive Quantized Orthogonal Fine-Tuning"
+    },
+    "arXiv:2607.27271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27271",
+      "identity_tokens": [
+        "arXiv:2607.27271"
+      ],
+      "reason": "The measured speed is execution time of generated algorithms; the paper optimizes code output, not LLM decoding.",
+      "first_checked_at": "2026-10-06T19:55:16+00:00",
+      "last_checked_at": "2026-10-06T19:55:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "RLPF: Reinforcement Learning from Performance Feedback for Code Generation"
+    },
+    "arXiv:2607.27518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27518",
+      "identity_tokens": [
+        "arXiv:2607.27518"
+      ],
+      "reason": "The paper detects defects in agent-benchmark transcripts and has no inference-serving or model-cost intervention.",
+      "first_checked_at": "2026-10-06T19:55:17+00:00",
+      "last_checked_at": "2026-10-06T19:55:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Automated Transcript Analysis for Detecting Flaws in Agentic Benchmarks"
+    },
+    "arXiv:2607.24647": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24647",
+      "identity_tokens": [
+        "arXiv:2607.24647"
+      ],
+      "reason": "Efficiency is allocated to autonomous research search/evaluation rather than model inference or serving.",
+      "first_checked_at": "2026-10-06T19:55:17+00:00",
+      "last_checked_at": "2026-10-06T19:55:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Efficiency Matters in Autonomous Research"
+    },
+    "arXiv:2607.26083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26083",
+      "identity_tokens": [
+        "arXiv:2607.26083"
+      ],
+      "reason": "The study benchmarks parallel coding agents and generated algorithms; its runtime metric is the output program, not token generation.",
+      "first_checked_at": "2026-10-06T19:55:17+00:00",
+      "last_checked_at": "2026-10-06T19:55:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Cross-Model Cross-Language AI Coding Agent Performance: Accuracy and Speed of Parallel CLRS Algorithms"
+    },
+    "arXiv:2609.19156": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19156",
+      "identity_tokens": [
+        "arXiv:2609.19156"
+      ],
+      "reason": "Reflective Recovery improves reasoning through training-data curation; FlashAttention is only a training implementation detail and no inference efficiency is claimed.",
+      "first_checked_at": "2026-10-06T19:55:17+00:00",
+      "last_checked_at": "2026-10-06T19:55:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Reflective Recovery: A Self-Supervised Method for Reasoning by Learning from Mistakes"
+    },
+    "arXiv:2608.05416": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05416",
+      "identity_tokens": [
+        "arXiv:2608.05416"
+      ],
+      "reason": "一次本文はMuJoCoのSAC policyをlinear state-space studentへdistillする研究。LLMではなく連続制御の小型policyで、LLM推論対象ラインとの接続がない。",
+      "first_checked_at": "2026-10-06T19:55:17+00:00",
+      "last_checked_at": "2026-10-06T19:55:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Spectral Distillation: From Nonlinear Dynamics to Linear State-Space Models"
+    },
+    "arXiv:2608.03028": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03028",
+      "identity_tokens": [
+        "arXiv:2608.03028"
+      ],
+      "reason": "一次要旨は医薬品安全性reasoningに対するcounterfactual sensitivity評価で、患者情報による回答変化を測る。inference costを改善しない。",
+      "first_checked_at": "2026-10-06T19:55:18+00:00",
+      "last_checked_at": "2026-10-06T19:55:18+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Evaluating Counterfactual Sensitivity to Patient Information in Medication-Safety Reasoning"
+    },
+    "arXiv:2608.03138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03138",
+      "identity_tokens": [
+        "arXiv:2608.03138"
+      ],
+      "reason": "一次要旨は学術intro生成のworkflowをpolicy learningでinternalizeする研究。目的は生成品質/手順学習で、serving compute効率ではない。",
+      "first_checked_at": "2026-10-06T19:55:18+00:00",
+      "last_checked_at": "2026-10-06T19:55:18+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Internalizing Academic Writing Workflows for Introduction Generation via Struct-Aware Policy Learning"
+    },
+    "arXiv:2608.03983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03983",
+      "identity_tokens": [
+        "arXiv:2608.03983"
+      ],
+      "reason": "一次要旨はLLMがcompiler missed semantic optimizationを提案できるかを測る。最適化対象は生成プログラムの実行であり、LLM inference自体ではない。",
+      "first_checked_at": "2026-10-06T19:55:18+00:00",
+      "last_checked_at": "2026-10-06T19:55:18+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Can Large Language Models Recover Semantic Optimization Opportunities That Compilers Miss?"
+    },
+    "arXiv:2608.03994": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03994",
+      "identity_tokens": [
+        "arXiv:2608.03994"
+      ],
+      "reason": "一次要旨はALiBi positional encodingの数値的失敗とtraining-time mitigationを分析する。長文脈表現の問題だが、推論システムの効率化ではない。",
+      "first_checked_at": "2026-10-06T19:55:18+00:00",
+      "last_checked_at": "2026-10-06T19:55:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "When Attention Goes Blind: Numerical Failure in ALiBi Positional Encodings"
+    },
+    "arXiv:2607.20995": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20995",
+      "identity_tokens": [
+        "arXiv:2607.20995"
+      ],
+      "reason": "The paper analyzes animacy circuits with controlled prompts and ablations; its findings concern interpretability/generalization, not serving cost.",
+      "first_checked_at": "2026-10-06T19:55:18+00:00",
+      "last_checked_at": "2026-10-06T19:55:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Where Animacy Lives in Large Language Models: Tracing the Circuits of the Animacy Concept"
+    },
+    "arXiv:2607.24833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24833",
+      "identity_tokens": [
+        "arXiv:2607.24833"
+      ],
+      "reason": "AdaKP reduces knowledge-point selection overhead during RL training; its main trained-model comparison uses no hints at inference, outside this inference-efficiency target.",
+      "first_checked_at": "2026-10-06T19:55:18+00:00",
+      "last_checked_at": "2026-10-06T19:55:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "AdaKP: Online Adaptive Knowledge-Point Selection for Reasoning-Oriented Reinforcement Learning"
+    },
+    "arXiv:2607.18958": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18958",
+      "identity_tokens": [
+        "arXiv:2607.18958"
+      ],
+      "reason": "The method is adversarial robustness fine-tuning for LVLMs; tested improvements are robustness/accuracy, not inference cost.",
+      "first_checked_at": "2026-10-06T19:55:19+00:00",
+      "last_checked_at": "2026-10-06T19:55:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Dual Adversarial Fine-tuning for Enhancing Robustness of Large Vision Language Model"
+    },
+    "arXiv:2607.19321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19321",
+      "identity_tokens": [
+        "arXiv:2607.19321"
+      ],
+      "reason": "Inference-server optimization appears as a safety-benchmark task; the paper evaluates sabotage/monitor detection, not a serving optimization.",
+      "first_checked_at": "2026-10-06T19:55:19+00:00",
+      "last_checked_at": "2026-10-06T19:55:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D"
+    },
+    "arXiv:2608.28612": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28612",
+      "identity_tokens": [
+        "arXiv:2608.28612"
+      ],
+      "reason": "The paper’s infrastructure gains serve peer-review agent training/evaluation rollouts, not LLM decoding or inference serving.",
+      "first_checked_at": "2026-10-06T19:55:19+00:00",
+      "last_checked_at": "2026-10-06T19:55:19+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "InternReviewer&InternAdvocate: Objective Reward and Evaluation for Agentic Reinforcement Learning in Peer Review and Rebuttal"
     }
   }
 }
