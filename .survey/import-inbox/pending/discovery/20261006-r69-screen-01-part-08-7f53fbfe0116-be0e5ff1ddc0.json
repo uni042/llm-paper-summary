@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r69-screen-01-part-08-7f53fbfe0116",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03797",
+      "identity_tokens": [
+        "arXiv:2609.03797"
+      ],
+      "title": "Transfiver: Human-AI Co-Inference through a Shared Editable State",
+      "reason": "Human-AI shared-state interaction concept; no direct model inference resource reduction.",
+      "source_url": "https://arxiv.org/abs/2609.03797",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04134",
+      "identity_tokens": [
+        "arXiv:2609.04134"
+      ],
+      "title": "Prospective Coding Improves Learning in Deep Continuous-Time Recurrent Networks",
+      "reason": "Prospective coding algorithm for continuous-time recurrent networks; not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2609.04134",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22228",
+      "identity_tokens": [
+        "arXiv:2609.22228"
+      ],
+      "title": "Assessing Adversarial Robustness of Latent Reasoning Models",
+      "reason": "This is a robustness study of latent-reasoning models under adversarial perturbations, rather than a new inference optimization. It discusses how latent vectors can shorten explicit reasoning trajectories and reduce memory/latency, but its experiments assess attack robustness across a limited set of models; the primary text explicitly frames results as robustness-risk evidence, not a complete LRM characterization. Its latent-inference connection is plausible but indirect.",
+      "source_url": "https://arxiv.org/abs/2609.22228",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02068",
+      "identity_tokens": [
+        "arXiv:2609.02068"
+      ],
+      "title": "DynG-Diff: A State-Aware Dynamic Guidance Diffusion Framework for Probabilistic Time Series Forecasting",
+      "reason": "Diffusion framework for time-series forecasting, outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.02068",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02097",
+      "identity_tokens": [
+        "arXiv:2609.02097"
+      ],
+      "title": "Evidence-Guided Detection, Localization and Explanation for Text-Centric Image Forensics",
+      "reason": "Text-centric image-forensics method, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2609.02097",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
