@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r154-screen-01-part-03-4ed0718203a6",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386168",
+      "identity_tokens": [
+        "DOI:10.1109/ICEIC69189.2026.11386168"
+      ],
+      "title": "MDLA: Multi-Head Latent Linear Attention for Low-Complexity and Memory-Efficient KV Cache",
+      "reason": "KV-cache attention手法は関連が強いが、指定IEEE DOIの一次ページ取得がInternal Errorとなり出版社本文を確認できない。",
+      "source_url": "https://doi.org/10.1109/ICEIC69189.2026.11386168",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386186",
+      "identity_tokens": [
+        "DOI:10.1109/ICEIC69189.2026.11386186"
+      ],
+      "title": "EAGLIZE: Improving Stability of Knowledge Distillation",
+      "reason": "speculative decoding stabilityは直接関連し得るが、指定IEEE DOIの一次ページ取得がInternal Errorとなり本文を確認できない。",
+      "source_url": "https://doi.org/10.1109/ICEIC69189.2026.11386186",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.11951",
+      "identity_tokens": [
+        "arXiv:2601.11951"
+      ],
+      "title": "A Method for Detecting Spatio-temporal Correlation Anomalies of WSN Nodes Based on Topological Information Enhancement and Time-frequency Feature Extraction",
+      "reason": "一次要旨の主題はWSN異常検知。RWKVを特徴抽出に使うだけで、LLM推論効率やservingの貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2601.11951",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12095",
+      "identity_tokens": [
+        "arXiv:2601.12095"
+      ],
+      "title": "Neural Isomorphic Fields: A Transformer-based Algebraic Numerical Embedding",
+      "reason": "本文は数値を代数構造を保つembeddingへ写す手法と演算テスト。sparse attention/長文処理のlinked lineageまたはLLM inference resource改善との接続を確認できない。",
+      "source_url": "https://arxiv.org/abs/2601.12095",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s40494-025-02294-6",
+      "identity_tokens": [
+        "DOI:10.1038/s40494-025-02294-6"
+      ],
+      "title": "Ladder-side mixture of experts adapters for bronze inscription recognition",
+      "reason": "Nature出版社DOI取得がInternal Error。bronze-inscription認識用MoE adapterが推論効率系統に接続するか本文で確認できずborderline。",
+      "source_url": "https://doi.org/10.1038/s40494-025-02294-6",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    }
+  ]
+}
