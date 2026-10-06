@@ -720,24 +720,24 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：248  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：249  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：227  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：228  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  
-  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：103  
   FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。
 
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  
-  実装：✓ ・ リポジトリ内被引用：65  
+  実装：✓ ・ リポジトリ内被引用：66  
   代表結果として、OPT系列の言語モデル評価と少数例学習評価で品質を大きく損なわずKVキャッシュを最大5倍圧縮した。
 
 ### 7年前（2019-11〜2020-10）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：116  
+  実装：✓ ・ リポジトリ内被引用：117  
   複数クエリ注意（Multi-Query 注意機構; MQA）は、通常の複数ヘッド注意（Multi-Head 注意機構; MHA）が各ヘッドごとに持つキー（Key; K）とバリュー（Value; V）を1組だけに共有し、クエリ（Query; Q）は複数ヘッドのまま残す。
 <!-- survey:auto:end -->
