@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d0fc08fe71e8882a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.11333",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.11333",
+    "identity_tokens": [
+      "arXiv:2605.11333"
+    ],
+    "reason": "Standardized traces support performance co-design but the paper does not introduce a serving optimization; relevance is infrastructure-level.",
+    "first_checked_at": "2026-10-06T14:09:46+00:00",
+    "last_checked_at": "2026-10-06T14:09:46+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MLCommons Chakra: Advancing Performance Benchmarking and Co-design using Standardized Execution Traces"
+  },
+  "processed_at": "2026-10-06T14:09:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d0fc08fe71e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

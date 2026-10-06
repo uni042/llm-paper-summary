@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a969097bfb31731-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.18463",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.18463",
+    "identity_tokens": [
+      "arXiv:2604.18463"
+    ],
+    "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+    "first_checked_at": "2026-10-06T14:09:37+00:00",
+    "last_checked_at": "2026-10-06T14:09:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "Using large language models for embodied planning introduces systematic safety risks"
+  },
+  "processed_at": "2026-10-06T14:09:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a969097bfb3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

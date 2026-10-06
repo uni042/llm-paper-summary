@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f038682340a6e60-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03120",
+    "identity_tokens": [
+      "arXiv:2602.03120"
+    ],
+    "reason": "Technique reduces fine-tuning optimizer memory, not inference cost; keep borderline because low-precision model adaptation may inform deployment quantization.",
+    "first_checked_at": "2026-10-06T14:09:41+00:00",
+    "last_checked_at": "2026-10-06T14:09:41+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Quantized Evolution Strategies: High-precision Fine-tuning of Quantized LLMs at Low-precision Cost"
+  },
+  "processed_at": "2026-10-06T14:09:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f038682340a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

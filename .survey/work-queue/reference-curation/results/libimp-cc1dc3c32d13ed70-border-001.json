@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cc1dc3c32d13ed70-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.17343",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.17343",
+    "identity_tokens": [
+      "arXiv:2406.17343"
+    ],
+    "reason": "Post-training quantization is a useful adjacent technique, but the target is diffusion transformers rather than LLM serving.",
+    "first_checked_at": "2026-10-06T14:09:45+00:00",
+    "last_checked_at": "2026-10-06T14:09:45+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Q-DiT: Accurate Post-Training Quantization for Diffusion Transformers"
+  },
+  "processed_at": "2026-10-06T14:09:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc1dc3c32d13",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

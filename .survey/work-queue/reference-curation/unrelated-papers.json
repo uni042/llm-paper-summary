@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T13:57:55+00:00",
-  "record_count": 8466,
+  "updated_at": "2026-10-06T14:09:48+00:00",
+  "record_count": 8495,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -121546,6 +121546,416 @@
         "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md"
       ],
       "title": "Paraformer: Fast and Accurate Parallel Transformer for Non-autoregressive End-to-End Speech Recognition"
+    },
+    "arXiv:2605.08876": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08876",
+      "identity_tokens": [
+        "arXiv:2605.08876"
+      ],
+      "reason": "OTora constructs reasoning-level denial-of-service attacks against LLM agents and measures attack effectiveness/cost. It studies adversarial degradation, not an efficiency improvement; operational implications are security-focused.",
+      "first_checked_at": "2026-10-06T14:09:37+00:00",
+      "last_checked_at": "2026-10-06T14:09:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "OTora: A Unified Red Teaming Framework for Reasoning-Level Denial-of-Service in LLM Agents"
+    },
+    "arXiv:2605.06076": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06076",
+      "identity_tokens": [
+        "arXiv:2605.06076"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:37+00:00",
+      "last_checked_at": "2026-10-06T14:09:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Navigating by Old Maps: The Pitfalls of Static Mechanistic Localization in LLM Post-Training"
+    },
+    "arXiv:2604.18463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18463",
+      "identity_tokens": [
+        "arXiv:2604.18463"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:37+00:00",
+      "last_checked_at": "2026-10-06T14:09:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Using large language models for embodied planning introduces systematic safety risks"
+    },
+    "arXiv:2606.02643": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02643",
+      "identity_tokens": [
+        "arXiv:2606.02643"
+      ],
+      "reason": "The paper develops adversarial retrieval inputs that inflate RAG inference cost and evaluates token/compute amplification. It is an attack analysis rather than a cost-reduction or serving optimization; defenses are the relevant future work.",
+      "first_checked_at": "2026-10-06T14:09:38+00:00",
+      "last_checked_at": "2026-10-06T14:09:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "title": "Inference Cost Attacks for Retrieval-Augmented Large Language Models"
+    },
+    "arXiv:2604.06339": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06339",
+      "identity_tokens": [
+        "arXiv:2604.06339"
+      ],
+      "reason": "This is a review of video-generation foundation models and discusses diffusion/flow methods and inference challenges. It synthesizes prior methods rather than introducing or evaluating a direct LLM serving improvement; scope is video generation.",
+      "first_checked_at": "2026-10-06T14:09:38+00:00",
+      "last_checked_at": "2026-10-06T14:09:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Evolution of Video Generative Foundations"
+    },
+    "arXiv:2603.01414": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01414",
+      "identity_tokens": [
+        "arXiv:2603.01414"
+      ],
+      "reason": "Blindfold uses an adversarial proxy planner to alter actions, hide malicious steps with noise, and verify executable plans. It reports up to 53% higher attack success than baselines in simulation and on a robot arm. This is an embodied-agent jailbreak/security attack; it contributes no inference compute, memory, latency, throughput, quantization, or serving optimization.",
+      "first_checked_at": "2026-10-06T14:09:39+00:00",
+      "last_checked_at": "2026-10-06T14:09:39+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Jailbreaking Embodied LLMs via Action-Level Manipulation"
+    },
+    "arXiv:2603.01051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01051",
+      "identity_tokens": [
+        "arXiv:2603.01051"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:39+00:00",
+      "last_checked_at": "2026-10-06T14:09:39+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "CelloAI Benchmarks: Toward Repeatable Evaluation of AI Assistants"
+    },
+    "arXiv:2602.16819": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16819",
+      "identity_tokens": [
+        "arXiv:2602.16819"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:39+00:00",
+      "last_checked_at": "2026-10-06T14:09:39+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Hybrid-Gym: Training Coding Agents to Generalize Across Tasks"
+    },
+    "arXiv:2602.07672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07672",
+      "identity_tokens": [
+        "arXiv:2602.07672"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:40+00:00",
+      "last_checked_at": "2026-10-06T14:09:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Debugging code world models"
+    },
+    "DOI:10.11591/ijai.v15.i2.pp1804-1813": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.11591/ijai.v15.i2.pp1804-1813",
+      "identity_tokens": [
+        "DOI:10.11591/ijai.v15.i2.pp1804-1813"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:40+00:00",
+      "last_checked_at": "2026-10-06T14:09:40+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "IndoBERT for educational assessment: comparative analysis of transformer models in Indonesian question generation"
+    },
+    "arXiv:2603.26661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26661",
+      "identity_tokens": [
+        "arXiv:2603.26661"
+      ],
+      "reason": "GaussianGPT autoregressively generates 3D Gaussian scene tokens using a transformer and evaluates scene generation. It is a 3D generative application, not LLM decoding acceleration or speculative decoding; no serving-efficiency result transfers to language models.",
+      "first_checked_at": "2026-10-06T14:09:40+00:00",
+      "last_checked_at": "2026-10-06T14:09:40+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ],
+      "title": "GaussianGPT: Towards Autoregressive 3D Gaussian Scene Generation"
+    },
+    "arXiv:2603.28804": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28804",
+      "identity_tokens": [
+        "arXiv:2603.28804"
+      ],
+      "reason": "The work trains a next-token mixture-of-experts foundation model for calorimeter simulation and reports extensibility/quality and computational comparisons for that scientific workload. It is domain-specific scientific modeling and parameter-efficient adaptation, not LLM inference serving.",
+      "first_checked_at": "2026-10-06T14:09:41+00:00",
+      "last_checked_at": "2026-10-06T14:09:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Generalizable foundation models for calorimetry via mixtures-of-experts and parameter efficient fine tuning"
+    },
+    "arXiv:2602.02472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02472",
+      "identity_tokens": [
+        "arXiv:2602.02472"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:42+00:00",
+      "last_checked_at": "2026-10-06T14:09:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "SPARKLING: Balancing Signal Preservation and Symmetry Breaking for Width-Progressive Learning"
+    },
+    "arXiv:2601.04823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04823",
+      "identity_tokens": [
+        "arXiv:2601.04823"
+      ],
+      "reason": "DR-LoRA dynamically allocates LoRA ranks to experts during MoE fine-tuning and evaluates training/adaptation quality. The intervention is a parameter-efficient training method; it does not change inference execution, memory, or serving latency.",
+      "first_checked_at": "2026-10-06T14:09:42+00:00",
+      "last_checked_at": "2026-10-06T14:09:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "DR-LoRA: Dynamic Rank LoRA for Fine-Tuning Mixture-of-Experts Models"
+    },
+    "arXiv:2512.22867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22867",
+      "identity_tokens": [
+        "arXiv:2512.22867"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:42+00:00",
+      "last_checked_at": "2026-10-06T14:09:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "MUSON: A Reasoning-oriented Multimodal Dataset for Socially Compliant Navigation in Urban Environments"
+    },
+    "arXiv:2606.25971": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25971",
+      "identity_tokens": [
+        "arXiv:2606.25971"
+      ],
+      "reason": "This work decouples neural-network weight magnitude and direction during optimization and evaluates training convergence/quality. It is an optimizer/training intervention; it does not demonstrate inference memory, latency, throughput, quantization, or serving changes.",
+      "first_checked_at": "2026-10-06T14:09:43+00:00",
+      "last_checked_at": "2026-10-06T14:09:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Improving Neural Network Training by Decoupling the Magnitude and Direction of Weight Vectors"
+    },
+    "arXiv:2606.19899": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19899",
+      "identity_tokens": [
+        "arXiv:2606.19899"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:43+00:00",
+      "last_checked_at": "2026-10-06T14:09:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Measuring Biological Capabilities and Risks of AI Agents"
+    },
+    "arXiv:2606.13662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13662",
+      "identity_tokens": [
+        "arXiv:2606.13662"
+      ],
+      "reason": "EurekAgent engineers scientific-discovery environments and evaluates autonomous discovery task outcomes. The contribution is agent environment/research workflow design, not LLM inference systems or a concrete resource/serving optimization.",
+      "first_checked_at": "2026-10-06T14:09:43+00:00",
+      "last_checked_at": "2026-10-06T14:09:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery"
+    },
+    "arXiv:2606.15470": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15470",
+      "identity_tokens": [
+        "arXiv:2606.15470"
+      ],
+      "reason": "The paper experimentally evaluates simultaneous multi-row DRAM activation for signature generation on off-the-shelf chips. Its measured latency/energy concern a physical-security primitive and DRAM behavior, not in-memory LLM inference or the linked SSD/offload lineage.",
+      "first_checked_at": "2026-10-06T14:09:43+00:00",
+      "last_checked_at": "2026-10-06T14:09:43+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md"
+      ],
+      "title": "In-DRAM Signature Generation Using Simultaneous Multiple-Row Activation: An Experimental Study of Off-The-Shelf DRAM Chips"
+    },
+    "arXiv:2605.30002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30002",
+      "identity_tokens": [
+        "arXiv:2605.30002"
+      ],
+      "reason": "KairosAgent combines semantic reasoning and time-series forecasters with tool calls; experiments report forecast quality and end-to-end agent timing. The measured runtime includes task/tool interaction and does not optimize LLM serving; the application is time-series forecasting.",
+      "first_checked_at": "2026-10-06T14:09:44+00:00",
+      "last_checked_at": "2026-10-06T14:09:44+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "KairosAgent: Agentic Time Series Forecasting with Fused Semantic Reasoning"
+    },
+    "arXiv:2603.22125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22125",
+      "identity_tokens": [
+        "arXiv:2603.22125"
+      ],
+      "reason": "DA-VAE expands a pretrained diffusion VAE latent while preserving detail structure, enabling high-resolution image generation with fewer tokens; experiments report up to 6x speedup for SD3.5 generation. It is diffusion image generation, not LLM inference; the PyTorch compile lineage is incidental.",
+      "first_checked_at": "2026-10-06T14:09:44+00:00",
+      "last_checked_at": "2026-10-06T14:09:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "DA-VAE: Plug-in Latent Compression for Diffusion via Detail Alignment"
+    },
+    "arXiv:2603.20075": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20075",
+      "identity_tokens": [
+        "arXiv:2603.20075"
+      ],
+      "reason": "llvm-harness supplies a compiler-bug benchmark/tools for LLM agents and reports improved bug-fixing success. It measures agent software-engineering capability rather than model inference efficiency or serving.",
+      "first_checked_at": "2026-10-06T14:09:44+00:00",
+      "last_checked_at": "2026-10-06T14:09:44+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Agentic Harness for Real-World Compilers"
+    },
+    "arXiv:2603.14916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14916",
+      "identity_tokens": [
+        "arXiv:2603.14916"
+      ],
+      "reason": "EditHF-1M provides human preference data and an MLLM evaluator/reward model for image editing. Evaluation focuses on preference alignment and edited-image quality, not inference efficiency; its use of an MLLM is incidental.",
+      "first_checked_at": "2026-10-06T14:09:44+00:00",
+      "last_checked_at": "2026-10-06T14:09:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "EditHF-1M: A Million-Scale Rich Human Preference Feedback for Image Editing"
+    },
+    "arXiv:2607.18722": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18722",
+      "identity_tokens": [
+        "arXiv:2607.18722"
+      ],
+      "reason": "The method adjusts trust regions using policy staleness to stabilize asynchronous reinforcement-learning updates and reports training stability/throughput in RL experiments. It changes training synchronization, not LLM serving/scheduling; no inference latency, memory, or throughput result applies to the lineage.",
+      "first_checked_at": "2026-10-06T14:09:45+00:00",
+      "last_checked_at": "2026-10-06T14:09:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning"
+    },
+    "arXiv:2606.29082": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29082",
+      "identity_tokens": [
+        "arXiv:2606.29082"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:45+00:00",
+      "last_checked_at": "2026-10-06T14:09:45+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks"
+    },
+    "arXiv:2606.27350": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27350",
+      "identity_tokens": [
+        "arXiv:2606.27350"
+      ],
+      "reason": "CHIA is an open-source agentic hardware/software co-design research framework with workflows and case studies. Evaluation demonstrates the framework on co-design tasks, not a specific LLM serving optimization or measured inference improvement; findings depend on the selected design space/toolchain.",
+      "first_checked_at": "2026-10-06T14:09:46+00:00",
+      "last_checked_at": "2026-10-06T14:09:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "CHIA: An open-source framework for principled, agentic AI-driven hardware/software co-design research"
+    },
+    "arXiv:2605.23061": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23061",
+      "identity_tokens": [
+        "arXiv:2605.23061"
+      ],
+      "reason": "The method combines schedule-free optimization with spectral preconditioning and evaluates training convergence/quality. It is a training optimizer and does not report inference execution, serving memory, or latency improvements.",
+      "first_checked_at": "2026-10-06T14:09:47+00:00",
+      "last_checked_at": "2026-10-06T14:09:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Anytime Training with Schedule-Free Spectral Optimization"
+    },
+    "arXiv:2605.13989": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13989",
+      "identity_tokens": [
+        "arXiv:2605.13989"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:47+00:00",
+      "last_checked_at": "2026-10-06T14:09:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "VectraYX-Nano: A 42M-Parameter Spanish Cybersecurity Language Model with Curriculum Learning and Native Tool Use"
+    },
+    "arXiv:2512.21336": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21336",
+      "identity_tokens": [
+        "arXiv:2512.21336"
+      ],
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "first_checked_at": "2026-10-06T14:09:48+00:00",
+      "last_checked_at": "2026-10-06T14:09:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Optimizing Decoding Paths in Masked Diffusion Models by Quantifying Uncertainty"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T13:57:52+00:00",
-  "record_count": 3164,
+  "updated_at": "2026-10-06T14:09:48+00:00",
+  "record_count": 3178,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -48496,6 +48496,217 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Adaptively Sparse Transformers"
+    },
+    "arXiv:2602.19594": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.19594",
+      "identity_tokens": [
+        "arXiv:2602.19594"
+      ],
+      "reason": "Useful benchmark for agents optimizing vLLM/SGLang, but it measures agent patching rather than introducing a serving method; retain as adjacent evaluation work.",
+      "first_checked_at": "2026-10-06T14:09:38+00:00",
+      "last_checked_at": "2026-10-06T14:09:38+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ISO-Bench: Can Coding Agents Optimize Real-World Inference Workloads?"
+    },
+    "arXiv:2603.27577": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.27577",
+      "identity_tokens": [
+        "arXiv:2603.27577"
+      ],
+      "reason": "Reports concrete latency/memory improvements for vision-language navigation, but the target is a specialized VLN pipeline rather than LLM serving.",
+      "first_checked_at": "2026-10-06T14:09:40+00:00",
+      "last_checked_at": "2026-10-06T14:09:40+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Structured Observation Language for Efficient and Generalizable Vision-Language Navigation"
+    },
+    "DOI:10.1007/s44443-026-00599-5": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44443-026-00599-5",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00599-5"
+      ],
+      "reason": "Autoregressive transformer architecture is plausible lineage-related work, but experiments report perplexity rather than serving latency/memory and FFT may add cost.",
+      "first_checked_at": "2026-10-06T14:09:40+00:00",
+      "last_checked_at": "2026-10-06T14:09:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spectral attention for transformers: frequency-domain filtering of attention maps"
+    },
+    "arXiv:2602.03120": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.03120",
+      "identity_tokens": [
+        "arXiv:2602.03120"
+      ],
+      "reason": "Technique reduces fine-tuning optimizer memory, not inference cost; keep borderline because low-precision model adaptation may inform deployment quantization.",
+      "first_checked_at": "2026-10-06T14:09:41+00:00",
+      "last_checked_at": "2026-10-06T14:09:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantized Evolution Strategies: High-precision Fine-tuning of Quantized LLMs at Low-precision Cost"
+    },
+    "arXiv:2601.21641": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21641",
+      "identity_tokens": [
+        "arXiv:2601.21641"
+      ],
+      "reason": "MoE routing is for time-series forecasting and has no LLM serving evaluation; retain only as a weak routing analogy.",
+      "first_checked_at": "2026-10-06T14:09:41+00:00",
+      "last_checked_at": "2026-10-06T14:09:41+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Seg-MoE: Multi-Resolution Segment-wise Mixture-of-Experts for Time Series Forecasting Transformers"
+    },
+    "arXiv:2406.17343": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.17343",
+      "identity_tokens": [
+        "arXiv:2406.17343"
+      ],
+      "reason": "Post-training quantization is a useful adjacent technique, but the target is diffusion transformers rather than LLM serving.",
+      "first_checked_at": "2026-10-06T14:09:45+00:00",
+      "last_checked_at": "2026-10-06T14:09:45+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Q-DiT: Accurate Post-Training Quantization for Diffusion Transformers"
+    },
+    "arXiv:2608.13391": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13391",
+      "identity_tokens": [
+        "arXiv:2608.13391"
+      ],
+      "reason": "Low-latency video diffusion distillation is adjacent to model inference efficiency but not direct LLM serving.",
+      "first_checked_at": "2026-10-06T14:09:45+00:00",
+      "last_checked_at": "2026-10-06T14:09:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Context-Matched Distillation: Teacher Causality for Autoregressive Video Distillation"
+    },
+    "arXiv:2605.30011": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30011",
+      "identity_tokens": [
+        "arXiv:2605.30011"
+      ],
+      "reason": "Large measured speedup is for embodied VLA policies, not general-purpose LLM inference; retain as adjacent multimodal policy evidence.",
+      "first_checked_at": "2026-10-06T14:09:46+00:00",
+      "last_checked_at": "2026-10-06T14:09:46+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VisualThink-VLA: Visual Intermediate Reasoning for Effective and Low-Latency Vision-Language-Action Policies"
+    },
+    "DOI:10.1145/3802119": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3802119",
+      "identity_tokens": [
+        "DOI:10.1145/3802119"
+      ],
+      "reason": "ACM full text could not be retrieved; available metadata is predictive-maintenance anomaly detection and cannot substantiate the linked compiler/inference relationship.",
+      "first_checked_at": "2026-10-06T14:09:46+00:00",
+      "last_checked_at": "2026-10-06T14:09:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Power of Anomaly Detection in Predictive Maintenance: [Experiments & Analysis]"
+    },
+    "arXiv:2605.11333": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11333",
+      "identity_tokens": [
+        "arXiv:2605.11333"
+      ],
+      "reason": "Standardized traces support performance co-design but the paper does not introduce a serving optimization; relevance is infrastructure-level.",
+      "first_checked_at": "2026-10-06T14:09:46+00:00",
+      "last_checked_at": "2026-10-06T14:09:46+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MLCommons Chakra: Advancing Performance Benchmarking and Co-design using Standardized Execution Traces"
+    },
+    "arXiv:2512.07805": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.07805",
+      "identity_tokens": [
+        "arXiv:2512.07805"
+      ],
+      "reason": "A transformer positional-encoding design with streaming/cache rules is relevant to long-context architecture, but no measured serving-efficiency gain is reported.",
+      "first_checked_at": "2026-10-06T14:09:47+00:00",
+      "last_checked_at": "2026-10-06T14:09:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Group Representational Position Encoding"
+    },
+    "arXiv:2511.23225": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.23225",
+      "identity_tokens": [
+        "arXiv:2511.23225"
+      ],
+      "reason": "Low-precision quantization is adjacent to LLM deployment, but this paper evaluates training/quantization behavior without a concrete LLM serving gain.",
+      "first_checked_at": "2026-10-06T14:09:47+00:00",
+      "last_checked_at": "2026-10-06T14:09:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TWEO: Transformers Without Extreme Outliers Enables FP8 Training And Quantization For Dummies"
+    },
+    "DOI:10.1109/tnnls.2025.3633075": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnnls.2025.3633075",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2025.3633075"
+      ],
+      "reason": "Primary publisher full text could not be retrieved; available metadata concerns sketch-less facial retrieval, so relevance to MoE/LLM inference remains unresolved.",
+      "first_checked_at": "2026-10-06T14:09:48+00:00",
+      "last_checked_at": "2026-10-06T14:09:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FDSRM: A Feature-Driven Style-Agnostic Foundation Model for Sketch-Less Facial Image Retrieval"
+    },
+    "DOI:10.1007/s10489-025-06965-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10489-025-06965-6",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-025-06965-6"
+      ],
+      "reason": "Publisher page exposed abstract only; it claims faster long-sequence transformer inference but full text and reproducible evidence were unavailable.",
+      "first_checked_at": "2026-10-06T14:09:48+00:00",
+      "last_checked_at": "2026-10-06T14:09:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transformer++: a long sequence modeling method based on direction-aware dual attention and multi-head sampling"
     }
   }
 }
