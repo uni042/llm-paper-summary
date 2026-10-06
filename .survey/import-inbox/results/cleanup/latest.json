@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T21:33:46+00:00",
+  "updated_at": "2026-10-06T23:52:56+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3630,6 +3630,12 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-9dc49aa4fecd--libfile_161d5f95f5608191bc8e6e67ce0eaf93--energy-efficiency-llm-inference.md",
       "processed_at": "2026-10-06T21:33:46+00:00",
       "canonical_id": "DOI:10.1109/ACCESS.2024.3409745"
+    },
+    {
+      "status": "discarded_blocked_discovery_invalid",
+      "source_path": ".survey/import-inbox/blocked/discovery/libfile_5c1a06d041f48191bde11ddffc2fac7e--discovery-20261007-0803-scheduled-chat-00-r01.json",
+      "processed_at": "2026-10-06T23:52:56+00:00",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     }
   ]
 }
