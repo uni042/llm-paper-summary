@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T03:38:41+00:00",
-  "record_count": 2181,
+  "updated_at": "2026-10-06T03:49:13+00:00",
+  "record_count": 2204,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -33639,6 +33639,352 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Streaming Video Question-Answering with In-context Video KV-Cache Retrieval"
+    },
+    "arXiv:2512.21708": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.21708",
+      "identity_tokens": [
+        "arXiv:2512.21708"
+      ],
+      "reason": "MoRAgent studies parameter-efficient agent tuning; adaptive-expert link is indirect and no inference serving gain is measured.",
+      "first_checked_at": "2026-10-06T03:49:07+00:00",
+      "last_checked_at": "2026-10-06T03:49:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoRAgent: Parameter Efficient Agent Tuning with Mixture-of-Roles"
+    },
+    "DOI:10.1109/hpca68181.2026.11408525": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca68181.2026.11408525",
+      "identity_tokens": [
+        "DOI:10.1109/hpca68181.2026.11408525"
+      ],
+      "reason": "Focus targets streaming VLM inference; transfer to general LLM serving is uncertain.",
+      "first_checked_at": "2026-10-06T03:49:07+00:00",
+      "last_checked_at": "2026-10-06T03:49:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Focus: A Streaming Concentration Architecture for Efficient Vision-Language Models"
+    },
+    "DOI:10.1145/3712285.3759803": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3712285.3759803",
+      "identity_tokens": [
+        "DOI:10.1145/3712285.3759803"
+      ],
+      "reason": "LLM inference resilience is adjacent to serving, but the DOI source returned 403.",
+      "first_checked_at": "2026-10-06T03:49:08+00:00",
+      "last_checked_at": "2026-10-06T03:49:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Demystifying the Resilience of Large Language Model Inference: An End-to-End Perspective"
+    },
+    "arXiv:2511.00489": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00489",
+      "identity_tokens": [
+        "arXiv:2511.00489"
+      ],
+      "reason": "ToM improves long-context reasoning but DocTree construction adds compute and compression may omit information; serving savings are unproven.",
+      "first_checked_at": "2026-10-06T03:49:08+00:00",
+      "last_checked_at": "2026-10-06T03:49:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ToM: Leveraging Tree-oriented MapReduce for Long-Context Reasoning in Large Language Models"
+    },
+    "arXiv:2506.07398": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.07398",
+      "identity_tokens": [
+        "arXiv:2506.07398"
+      ],
+      "reason": "G-Memory improves multi-agent task outcomes and analyzes token cost but reports no latency/KV/serving gain.",
+      "first_checked_at": "2026-10-06T03:49:08+00:00",
+      "last_checked_at": "2026-10-06T03:49:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems"
+    },
+    "arXiv:2512.01644": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01644",
+      "identity_tokens": [
+        "arXiv:2512.01644"
+      ],
+      "reason": "Broad GPU inference characterization and guidelines, not a single new serving method; conclusions depend on evaluated hardware/workloads.",
+      "first_checked_at": "2026-10-06T03:49:08+00:00",
+      "last_checked_at": "2026-10-06T03:49:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Systematic Characterization of LLM Inference on GPUs"
+    },
+    "arXiv:2605.09681": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09681",
+      "identity_tokens": [
+        "arXiv:2605.09681"
+      ],
+      "reason": "Forcing-KV compresses video-diffusion caches; transfer to LLM KV-cache serving is uncertain.",
+      "first_checked_at": "2026-10-06T03:49:09+00:00",
+      "last_checked_at": "2026-10-06T03:49:09+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Forcing-KV: Hybrid KV Cache Compression for Efficient Autoregressive Video Diffusion Models"
+    },
+    "arXiv:2603.05806": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05806",
+      "identity_tokens": [
+        "arXiv:2603.05806"
+      ],
+      "reason": "MoE Lens studies expert specialization/selective deployment, but does not directly evaluate inference acceleration.",
+      "first_checked_at": "2026-10-06T03:49:09+00:00",
+      "last_checked_at": "2026-10-06T03:49:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.06663-emo-emergent-modularity.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoE Lens - An Expert Is All You Need"
+    },
+    "arXiv:2601.15727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.15727",
+      "identity_tokens": [
+        "arXiv:2601.15727"
+      ],
+      "reason": "Survey of LLM-assisted kernel generation is adjacent to compilation research but not a measured inference optimization.",
+      "first_checked_at": "2026-10-06T03:49:10+00:00",
+      "last_checked_at": "2026-10-06T03:49:10+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Automated Kernel Generation in the Era of LLMs"
+    },
+    "arXiv:2601.15703": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.15703",
+      "identity_tokens": [
+        "arXiv:2601.15703"
+      ],
+      "reason": "Agentic uncertainty quantification may inform prediction-aware scheduling, but the primary work does not measure inference efficiency.",
+      "first_checked_at": "2026-10-06T03:49:10+00:00",
+      "last_checked_at": "2026-10-06T03:49:10+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Uncertainty Quantification"
+    },
+    "arXiv:2507.16806": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.16806",
+      "identity_tokens": [
+        "arXiv:2507.16806"
+      ],
+      "reason": "Uncertainty-aware LM training has only indirect relation to the linked kernel-forecast lineage and no serving evaluation.",
+      "first_checked_at": "2026-10-06T03:49:10+00:00",
+      "last_checked_at": "2026-10-06T03:49:10+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty"
+    },
+    "DOI:10.1145/3774904.3792599": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774904.3792599",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792599"
+      ],
+      "reason": "Doc-Researcher concerns document parsing/deep research; speculative-decoding linkage is weak and DOI content was unavailable.",
+      "first_checked_at": "2026-10-06T03:49:10+00:00",
+      "last_checked_at": "2026-10-06T03:49:10+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Doc-Researcher: A Unified System for Multimodal Document Parsing and Deep Research"
+    },
+    "arXiv:2512.22560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22560",
+      "identity_tokens": [
+        "arXiv:2512.22560"
+      ],
+      "reason": "RollArt is a disaggregated agentic RL training system; connection to online inference is indirect.",
+      "first_checked_at": "2026-10-06T03:49:11+00:00",
+      "last_checked_at": "2026-10-06T03:49:11+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RollArt: Disaggregated Multi-Task Agentic RL Training at Scale"
+    },
+    "arXiv:2512.21002": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.21002",
+      "identity_tokens": [
+        "arXiv:2512.21002"
+      ],
+      "reason": "Reasoning sequence-truncation distillation could affect output length, but the primary contribution is model training.",
+      "first_checked_at": "2026-10-06T03:49:11+00:00",
+      "last_checked_at": "2026-10-06T03:49:11+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distilling the Essence: Efficient Reasoning Distillation via Sequence Truncation"
+    },
+    "DOI:10.1145/3190508.3190551": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3190508.3190551",
+      "identity_tokens": [
+        "DOI:10.1145/3190508.3190551"
+      ],
+      "reason": "Dynamic control flow is a general ML compiler/runtime paper; direct modern LLM serving transfer is unverified.",
+      "first_checked_at": "2026-10-06T03:49:11+00:00",
+      "last_checked_at": "2026-10-06T03:49:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic control flow in large-scale machine learning"
+    },
+    "arXiv:2603.01990": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.01990",
+      "identity_tokens": [
+        "arXiv:2603.01990"
+      ],
+      "reason": "Personalized referential memory QA does not establish KV, prefill latency or serving-efficiency benefits.",
+      "first_checked_at": "2026-10-06T03:49:12+00:00",
+      "last_checked_at": "2026-10-06T03:49:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "According to Me: Long-Term Personalized Referential Memory QA"
+    },
+    "arXiv:2511.17448": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17448",
+      "identity_tokens": [
+        "arXiv:2511.17448"
+      ],
+      "reason": "Multimodal VLM distillation is weakly linked to KV-cache systems and does not establish inference-system efficiency.",
+      "first_checked_at": "2026-10-06T03:49:12+00:00",
+      "last_checked_at": "2026-10-06T03:49:12+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MMT-ARD: Multimodal Multi-Teacher Adversarial Distillation for Robust Vision-Language Models"
+    },
+    "DOI:10.1109/isca66397.2026.00183": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00183",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00183"
+      ],
+      "reason": "Raptor directly concerns generative-inference hardware, but the primary IEEE text could not be retrieved.",
+      "first_checked_at": "2026-10-06T03:49:12+00:00",
+      "last_checked_at": "2026-10-06T03:49:12+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Early Silicon of Raptor: The First 3D-DRAM Accelerator for Generative Inference"
+    },
+    "DOI:10.1109/isca66397.2026.00041": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00041",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00041"
+      ],
+      "reason": "Meridian's in-memory RAG acceleration is adjacent to inference systems, but its primary source was inaccessible.",
+      "first_checked_at": "2026-10-06T03:49:12+00:00",
+      "last_checked_at": "2026-10-06T03:49:12+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Meridian: In-Memory Acceleration for RAG with Document Attention Decomposition"
+    },
+    "arXiv:2603.07078": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.07078",
+      "identity_tokens": [
+        "arXiv:2603.07078"
+      ],
+      "reason": "CoTJudger evaluates reasoning efficiency/redundancy; it does not itself reduce inference cost.",
+      "first_checked_at": "2026-10-06T03:49:12+00:00",
+      "last_checked_at": "2026-10-06T03:49:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoTJudger: A Graph-Driven Framework for Automatic Evaluation of Chain-of-Thought Efficiency and Redundancy in LRMs"
+    },
+    "DOI:10.1109/hpca68181.2026.11408561": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca68181.2026.11408561",
+      "identity_tokens": [
+        "DOI:10.1109/hpca68181.2026.11408561"
+      ],
+      "reason": "GPU kernel co-location could affect inference sharing, but primary page required robot verification.",
+      "first_checked_at": "2026-10-06T03:49:12+00:00",
+      "last_checked_at": "2026-10-06T03:49:12+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.13592-boost-concurrent-host-hbm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "µShare: Non-Intrusive Kernel Co-Locating on NVIDIA GPUs"
+    },
+    "arXiv:2602.09794": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09794",
+      "identity_tokens": [
+        "arXiv:2602.09794"
+      ],
+      "reason": "Reasoning-chain hypothesis construction is linked to KV-cache research but demonstrates no memory, latency or serving improvement.",
+      "first_checked_at": "2026-10-06T03:49:13+00:00",
+      "last_checked_at": "2026-10-06T03:49:13+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.19351-dash-kv-asymmetric-hashing-long-context.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning Global Hypothesis Space for Enhancing Synergistic Reasoning Chain"
+    },
+    "arXiv:2512.24077": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24077",
+      "identity_tokens": [
+        "arXiv:2512.24077"
+      ],
+      "reason": "LoongFlow uses agentic evolutionary search; kernel-generation linkage is plausible but an LLM inference-kernel gain is not established.",
+      "first_checked_at": "2026-10-06T03:49:13+00:00",
+      "last_checked_at": "2026-10-06T03:49:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LoongFlow: Directed Evolutionary Search via a Cognitive Plan-Execute-Summarize Paradigm"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c8eb1bd761972c99-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.24077",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.24077",
+    "identity_tokens": [
+      "arXiv:2512.24077"
+    ],
+    "reason": "LoongFlow uses agentic evolutionary search; kernel-generation linkage is plausible but an LLM inference-kernel gain is not established.",
+    "first_checked_at": "2026-10-06T03:49:13+00:00",
+    "last_checked_at": "2026-10-06T03:49:13+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LoongFlow: Directed Evolutionary Search via a Cognitive Plan-Execute-Summarize Paradigm"
+  },
+  "processed_at": "2026-10-06T03:49:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c8eb1bd76197",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

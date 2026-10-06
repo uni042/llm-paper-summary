@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T03:38:41+00:00",
-  "record_count": 6880,
+  "updated_at": "2026-10-06T03:49:14+00:00",
+  "record_count": 6890,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -99298,6 +99298,146 @@
         "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
       ],
       "title": "ExploitGym: Can AI Agents Turn Security Vulnerabilities into Real Attacks?"
+    },
+    "arXiv:2604.15065": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15065",
+      "identity_tokens": [
+        "arXiv:2604.15065"
+      ],
+      "reason": "Small-object detection positional embeddings, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-06T03:49:08+00:00",
+      "last_checked_at": "2026-10-06T03:49:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection"
+    },
+    "arXiv:2404.07973": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.07973",
+      "identity_tokens": [
+        "arXiv:2404.07973"
+      ],
+      "reason": "Visual referring/grounding capability, not inference systems.",
+      "first_checked_at": "2026-10-06T03:49:09+00:00",
+      "last_checked_at": "2026-10-06T03:49:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Ferret-v2: An Improved Baseline for Referring and Grounding with Large Language Models"
+    },
+    "arXiv:2603.02604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02604",
+      "identity_tokens": [
+        "arXiv:2603.02604"
+      ],
+      "reason": "Collaborative agent RL training, not inference serving.",
+      "first_checked_at": "2026-10-06T03:49:09+00:00",
+      "last_checked_at": "2026-10-06T03:49:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Heterogeneous Agent Collaborative Reinforcement Learning"
+    },
+    "arXiv:2512.21008": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21008",
+      "identity_tokens": [
+        "arXiv:2512.21008"
+      ],
+      "reason": "Security attack study on MoE gates, not serving efficiency.",
+      "first_checked_at": "2026-10-06T03:49:09+00:00",
+      "last_checked_at": "2026-10-06T03:49:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "GateBreaker: Gate-Guided Attacks on Mixture-of-Expert LLMs"
+    },
+    "arXiv:2512.02541": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.02541",
+      "identity_tokens": [
+        "arXiv:2512.02541"
+      ],
+      "reason": "VGGT vision-model acceleration, not language-model inference.",
+      "first_checked_at": "2026-10-06T03:49:11+00:00",
+      "last_checked_at": "2026-10-06T03:49:11+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "title": "AVGGT: Rethinking Global Attention for Accelerating VGGT"
+    },
+    "arXiv:2602.24289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.24289",
+      "identity_tokens": [
+        "arXiv:2602.24289"
+      ],
+      "reason": "Long-video generation method, not LLM inference.",
+      "first_checked_at": "2026-10-06T03:49:13+00:00",
+      "last_checked_at": "2026-10-06T03:49:13+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation"
+    },
+    "arXiv:2511.17938": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17938",
+      "identity_tokens": [
+        "arXiv:2511.17938"
+      ],
+      "reason": "Test-time RL adaptation/training, not inference runtime optimization.",
+      "first_checked_at": "2026-10-06T03:49:13+00:00",
+      "last_checked_at": "2026-10-06T03:49:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "SPINE: Token-Selective Test-Time Reinforcement Learning with Entropy-Band Regularization"
+    },
+    "arXiv:2512.25070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.25070",
+      "identity_tokens": [
+        "arXiv:2512.25070"
+      ],
+      "reason": "Future-event forecasting training/retrieval, not inference optimization.",
+      "first_checked_at": "2026-10-06T03:49:13+00:00",
+      "last_checked_at": "2026-10-06T03:49:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ],
+      "title": "Scaling Open-Ended Reasoning to Predict the Future"
+    },
+    "arXiv:2604.10693": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10693",
+      "identity_tokens": [
+        "arXiv:2604.10693"
+      ],
+      "reason": "CoT faithfulness evaluation and exemplar selection, not inference efficiency.",
+      "first_checked_at": "2026-10-06T03:49:14+00:00",
+      "last_checked_at": "2026-10-06T03:49:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md"
+      ],
+      "title": "FACT-E: Causality-Inspired Evaluation for Trustworthy Chain-of-Thought Reasoning"
+    },
+    "arXiv:2511.00833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00833",
+      "identity_tokens": [
+        "arXiv:2511.00833"
+      ],
+      "reason": "Vision Transformer visual-task architecture, not LLM inference.",
+      "first_checked_at": "2026-10-06T03:49:14+00:00",
+      "last_checked_at": "2026-10-06T03:49:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Linear Differential Vision Transformer: Learning Visual Contrasts via Pairwise Differentials"
     }
   }
 }
