@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r146-screen-01-part-04-8afa4dddf3a4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21130",
+      "identity_tokens": [
+        "arXiv:2605.21130"
+      ],
+      "title": "VersusQ: Pairwise Margin Reasoning for Generalizable Video Quality Assessment",
+      "reason": "VersusQ evaluates video quality with multimodal models and pairwise reasoning. The paper targets assessment accuracy/generalization and presents no inference efficiency or serving technique.",
+      "source_url": "https://arxiv.org/abs/2605.21130",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21177",
+      "identity_tokens": [
+        "arXiv:2605.21177"
+      ],
+      "title": "ChunkFT: Byte-Streamed Optimization for Memory-Efficient Full Fine-Tuning",
+      "reason": "ChunkFT reduces memory and gradient work during full fine-tuning by byte-streamed/chunked optimization. Its studied savings occur during training, not LLM inference or serving, so the linked inference scope is not technically supported.",
+      "source_url": "https://arxiv.org/abs/2605.21177",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/pro.70625",
+      "identity_tokens": [
+        "DOI:10.1002/pro.70625"
+      ],
+      "title": "Omega‐3 DHA as a blank canvas: A molecular approximation to how lipid mediators modulate LGR6 in inflammation resolution",
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "source_url": "https://doi.org/10.1002/pro.70625",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19385",
+      "identity_tokens": [
+        "arXiv:2605.19385"
+      ],
+      "title": "LatentBox: Storing AI-Generated Images at Scale via a Latent-First Design",
+      "reason": "LatentBox is an image-generation storage system that stores compressed image latents and decodes on demand to reduce persistent storage. The optimization is image-data storage/decoding, not LLM model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2605.19385",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20285",
+      "identity_tokens": [
+        "arXiv:2605.20285"
+      ],
+      "title": "Introspective X Training: Feedback Conditioning Improves Scaling Across all LLM Training Stages",
+      "reason": "Introspective X Training conditions model training on rubric-derived feedback across pretraining and supervised fine-tuning. The contribution and evaluations concern training outcomes rather than inference-time efficiency or serving.",
+      "source_url": "https://arxiv.org/abs/2605.20285",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    }
+  ]
+}
