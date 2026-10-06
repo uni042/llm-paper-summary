@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T19:17:26+00:00",
-  "record_count": 9388,
+  "updated_at": "2026-10-06T19:39:47+00:00",
+  "record_count": 9404,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -134540,6 +134540,230 @@
         "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
       ],
       "title": "A Site‐Aware Representation Learning Framework For Unified Molecular Interaction Modeling and Generative Design"
+    },
+    "DOI:10.1016/j.neucom.2026.133853": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133853",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133853"
+      ],
+      "reason": "Primary publisher full-text extract describes MELA for remote-sensing image super-resolution, combining a Mamba cross-scan layer and local window attention. It evaluates image reconstruction on four remote-sensing datasets and states efficiency as a vision-model design goal; no language model or LLM-serving workload is evaluated. The claimed efficiency is specific to image restoration, so this is unrelated to LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T19:39:33+00:00",
+      "last_checked_at": "2026-10-06T19:39:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Mamba-enhanced local attention network for remote sensing image super-resolution"
+    },
+    "DOI:10.3390/s26185882": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26185882",
+      "identity_tokens": [
+        "DOI:10.3390/s26185882"
+      ],
+      "reason": "YOLOによる産業用PPE検出のクラス関係attention。対象は視覚検出で、LLM推論の計算効率改善ではない。",
+      "first_checked_at": "2026-10-06T19:39:34+00:00",
+      "last_checked_at": "2026-10-06T19:39:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "IRA-YOLO: Inter-Class Relation Attention for PPE Detection in Industrial Scenes"
+    },
+    "DOI:10.3390/s26185926": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26185926",
+      "identity_tokens": [
+        "DOI:10.3390/s26185926"
+      ],
+      "reason": "歩行者軌跡予測/遮蔽補完のMamba応用で、LLM推論・メモリ・serving改善を扱わない。",
+      "first_checked_at": "2026-10-06T19:39:34+00:00",
+      "last_checked_at": "2026-10-06T19:39:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "RCN-MAMBA: Research on Pedestrian-Future-Trajectory-Prediction Methods for Occlusion Scenarios"
+    },
+    "arXiv:2608.30248": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30248",
+      "identity_tokens": [
+        "arXiv:2608.30248"
+      ],
+      "reason": "LLMが出力するデータ分析コードの実行効率評価であり、モデル自体の推論compute/memory/latencyやservingを最適化する研究ではない。",
+      "first_checked_at": "2026-10-06T19:39:34+00:00",
+      "last_checked_at": "2026-10-06T19:39:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "DSEffi-Bench: Demystifying Large Language Models'Capability in Efficient Data Science Code Generation"
+    },
+    "arXiv:2608.30817": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30817",
+      "identity_tokens": [
+        "arXiv:2608.30817"
+      ],
+      "reason": "地理空間foundation modelの組成認識pretrainingであり、LLM推論システム最適化を扱わない。",
+      "first_checked_at": "2026-10-06T19:39:34+00:00",
+      "last_checked_at": "2026-10-06T19:39:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A Composition-Aware Pretraining Framework for Geospatial Foundation Models"
+    },
+    "DOI:10.1007/s10921-026-01415-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10921-026-01415-w",
+      "identity_tokens": [
+        "DOI:10.1007/s10921-026-01415-w"
+      ],
+      "reason": "DLE-UNetはアルミ鋳物X線の微小欠陥segmentation向けU-Netであり、LLM/推論runtime最適化ではない。",
+      "first_checked_at": "2026-10-06T19:39:35+00:00",
+      "last_checked_at": "2026-10-06T19:39:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "DLE-UNet: Cross-Group Enhanced Channel Attention and Dual-Path Collaborative Encoding for Defect Detection in Aluminum Castings"
+    },
+    "DOI:10.3390/insects17090928": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/insects17090928",
+      "identity_tokens": [
+        "DOI:10.3390/insects17090928"
+      ],
+      "reason": "対象は昆虫嗅覚遺伝子の注釈と配列foundation model評価。LLMの推論・servingではなく、生物配列注釈の証拠基準とベンチマーク提案である。",
+      "first_checked_at": "2026-10-06T19:39:35+00:00",
+      "last_checked_at": "2026-10-06T19:39:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Evaluating Sequence Foundation Models for Insect Olfactory Gene Discovery: Failure Modes, Evidence Standards, and a Benchmark Agenda"
+    },
+    "DOI:10.3390/jimaging12090419": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/jimaging12090419",
+      "identity_tokens": [
+        "DOI:10.3390/jimaging12090419"
+      ],
+      "reason": "ビデオ物体検出transformerの系統レビューで、LLM推論/servingの計算・メモリ改善を扱わない。",
+      "first_checked_at": "2026-10-06T19:39:35+00:00",
+      "last_checked_at": "2026-10-06T19:39:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Efficiency and Temporal Reasoning in Transformer-Based Video Object Detection: A Systematic Review"
+    },
+    "DOI:10.3390/ma19173727": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ma19173727",
+      "identity_tokens": [
+        "DOI:10.3390/ma19173727"
+      ],
+      "reason": "小標本のゴム改質アスファルト特性予測・評価設計が対象で、LLMや推論ランタイムを扱わない。",
+      "first_checked_at": "2026-10-06T19:39:36+00:00",
+      "last_checked_at": "2026-10-06T19:39:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Leakage-Controlled and Information-Bounded Evaluation of Multi-Task Learning for Crumb–Rubber Modified Asphalt: What Twenty Mix Designs Can and Cannot Support"
+    },
+    "DOI:10.3390/s26185836": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26185836",
+      "identity_tokens": [
+        "DOI:10.3390/s26185836"
+      ],
+      "reason": "Mamba-2を用いるが、鋼管の超音波欠陥分類モデルであり、LLM推論システムの改善を示していない。",
+      "first_checked_at": "2026-10-06T19:39:36+00:00",
+      "last_checked_at": "2026-10-06T19:39:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MCA-Mamba-2: A Multi-Channel Attention State-Space Network for Ultrasonic Guided Wave Damage Detection in Small-Diameter Pipes"
+    },
+    "DOI:10.24963/ijcai.2026/123": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/123",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/123"
+      ],
+      "reason": "The IJCAI primary PDF describes G-SalAlignMamba for RGB-D/RGB-T salient-object detection. It reports 30.41 FPS and 83.80M parameters and addresses geometric alignment, sparse foreground salience, and image decoder boundaries. These are visual segmentation/detection mechanisms; there is no LLM or language-serving evaluation.",
+      "first_checked_at": "2026-10-06T19:39:38+00:00",
+      "last_checked_at": "2026-10-06T19:39:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "G-SalAlignMamba: Geometry-Aware Vision Mamba for Dual-Modal Salient Object Detection"
+    },
+    "DOI:10.24963/ijcai.2026/164": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/164",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/164"
+      ],
+      "reason": "The IJCAI primary PDF describes FMDiff for diffusion-based image compression, with Fourier/Mamba branches for local/global image-frequency dependencies. Ablations compare magnitude/phase and Mamba variants; conclusion reports image distortion/perceptual tradeoffs. It addresses image compression and reconstruction, not LLM inference or KV/serving efficiency.",
+      "first_checked_at": "2026-10-06T19:39:38+00:00",
+      "last_checked_at": "2026-10-06T19:39:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Learning Heterogeneous Global Local Frequency Dependencies in Diffusion-Based Image Compression"
+    },
+    "DOI:10.24963/ijcai.2026/276": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/276",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/276"
+      ],
+      "reason": "The IJCAI primary PDF describes AnoMamba for univariate and multivariate time-series anomaly detection. It uses patch embedding and global step-size reweighting; experiments use eight anomaly-detection benchmarks and report detection metrics plus efficiency. The inference operation is task-specific reconstruction scoring, with no language/LLM inference or serving evaluation.",
+      "first_checked_at": "2026-10-06T19:39:38+00:00",
+      "last_checked_at": "2026-10-06T19:39:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "AnoMamba: Aligning Reconstruction with Time Series Anomaly Detection via Selective Global Dependency Modeling"
+    },
+    "DOI:10.24963/ijcai.2026/294": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/294",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/294"
+      ],
+      "reason": "The IJCAI primary PDF describes SimTRL, a bidirectional Mamba trajectory encoder for road-network trajectory representation. Experiments report 11.2x pre-training speedup against multimodal comparison and lower training time, while the efficiency table measures epochs and seconds per epoch. The claimed gain is trajectory-model pre-training, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T19:39:39+00:00",
+      "last_checked_at": "2026-10-06T19:39:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Towards Efficient and Effective Unimodal Trajectory Representation Learning: A Simple Yet Powerful Approach"
+    },
+    "DOI:10.24963/ijcai.2026/333": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/333",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/333"
+      ],
+      "reason": "The official IJCAI proceedings abstract identifies RMCD as relation-aware graph learning plus mixture-of-experts for student cognitive diagnosis from exercise responses; it reports education benchmark performance and no LLM inference/serving efficiency method. No linked paper lineage is present, so abstract-level scope exclusion is sufficient.",
+      "first_checked_at": "2026-10-06T19:39:47+00:00",
+      "last_checked_at": "2026-10-06T19:39:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Relation-Aware Graph Learning with Mixture-of-Experts Prediction for Cognitive Diagnosis"
+    },
+    "DOI:10.3389/fpls.2026.1935930": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpls.2026.1935930",
+      "identity_tokens": [
+        "DOI:10.3389/fpls.2026.1935930"
+      ],
+      "reason": "The Frontiers primary full text describes WPMamba for rice-disease image classification, with wavelet features, Mamba fusion, and lesion-aware attention. It reports 95.72% accuracy, 1.21M parameters, and 0.49 GFLOPs on a rice-disease dataset. The efficiency figures are for an agricultural vision classifier, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T19:39:47+00:00",
+      "last_checked_at": "2026-10-06T19:39:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Wavelet-prior-guided mamba network for accurate and efficient rice disease recognition"
     }
   }
 }

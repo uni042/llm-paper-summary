@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3934040f38031ba2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/insects17090928",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/insects17090928",
+    "identity_tokens": [
+      "DOI:10.3390/insects17090928"
+    ],
+    "reason": "対象は昆虫嗅覚遺伝子の注釈と配列foundation model評価。LLMの推論・servingではなく、生物配列注釈の証拠基準とベンチマーク提案である。",
+    "first_checked_at": "2026-10-06T19:39:35+00:00",
+    "last_checked_at": "2026-10-06T19:39:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Evaluating Sequence Foundation Models for Insect Olfactory Gene Discovery: Failure Modes, Evidence Standards, and a Benchmark Agenda"
+  },
+  "processed_at": "2026-10-06T19:39:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3934040f3803",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
