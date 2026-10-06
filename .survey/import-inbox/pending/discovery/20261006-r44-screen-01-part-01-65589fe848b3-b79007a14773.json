@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r44-screen-01-part-01-65589fe848b3",
+  "reference_main_sha": "b9f5ba2efd293e62612217d6834a4475daa40ec2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.15682",
+      "identity_tokens": [
+        "arXiv:2602.15682"
+      ],
+      "title": "The Next Paradigm Is User-Centric Agent, Not Platform-Centric Service",
+      "reason": "Conceptual user-centric agent architecture; no concrete measured compute, memory, latency, or throughput improvement is established.",
+      "source_url": "https://arxiv.org/abs/2602.15682",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00286",
+      "identity_tokens": [
+        "arXiv:2602.00286"
+      ],
+      "title": "Generation Order and Parallel Decoding in Masked Diffusion Models: An Information-Theoretic Perspective",
+      "reason": "Information-theoretic analysis of generation order and parallel diffusion decoding; no new concrete serving optimization or direct measured efficiency gain.",
+      "source_url": "https://arxiv.org/abs/2602.00286",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2025.3646452",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2025.3646452"
+      ],
+      "title": "The CUR Decomposition of Self-Attention Matrices in Vision Transformers",
+      "reason": "Full text studies CUR decomposition of self-attention in vision transformers; its target is ViT attention analysis, not LLM serving/inference optimization.",
+      "source_url": "https://doi.org/10.1109/TPAMI.2025.3646452",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20613",
+      "identity_tokens": [
+        "arXiv:2605.20613"
+      ],
+      "title": "HRM-Text: Efficient Pretraining Beyond Scaling",
+      "reason": "Efficient pretraining and training-compute scaling, not inference-time/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.20613",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01489",
+      "identity_tokens": [
+        "arXiv:2604.01489"
+      ],
+      "title": "CuTeGen: An LLM-Based Agentic Framework for Generation and Optimization of High-Performance GPU Kernels using CuTe",
+      "reason": "LLM-based GPU kernel generation/optimization is general kernel programming, not a demonstrated LLM inference-serving optimization.",
+      "source_url": "https://arxiv.org/abs/2604.01489",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ]
+    }
+  ]
+}
