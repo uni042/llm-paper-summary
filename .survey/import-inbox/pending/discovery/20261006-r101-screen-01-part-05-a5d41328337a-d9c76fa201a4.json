@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r101-screen-01-part-05-a5d41328337a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25971",
+      "identity_tokens": [
+        "arXiv:2606.25971"
+      ],
+      "title": "Improving Neural Network Training by Decoupling the Magnitude and Direction of Weight Vectors",
+      "reason": "This work decouples neural-network weight magnitude and direction during optimization and evaluates training convergence/quality. It is an optimizer/training intervention; it does not demonstrate inference memory, latency, throughput, quantization, or serving changes.",
+      "source_url": "https://arxiv.org/abs/2606.25971",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19899",
+      "identity_tokens": [
+        "arXiv:2606.19899"
+      ],
+      "title": "Measuring Biological Capabilities and Risks of AI Agents",
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "source_url": "https://arxiv.org/abs/2606.19899",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13662",
+      "identity_tokens": [
+        "arXiv:2606.13662"
+      ],
+      "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+      "reason": "EurekAgent engineers scientific-discovery environments and evaluates autonomous discovery task outcomes. The contribution is agent environment/research workflow design, not LLM inference systems or a concrete resource/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2606.13662",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15470",
+      "identity_tokens": [
+        "arXiv:2606.15470"
+      ],
+      "title": "In-DRAM Signature Generation Using Simultaneous Multiple-Row Activation: An Experimental Study of Off-The-Shelf DRAM Chips",
+      "reason": "The paper experimentally evaluates simultaneous multi-row DRAM activation for signature generation on off-the-shelf chips. Its measured latency/energy concern a physical-security primitive and DRAM behavior, not in-memory LLM inference or the linked SSD/offload lineage.",
+      "source_url": "https://arxiv.org/abs/2606.15470",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30002",
+      "identity_tokens": [
+        "arXiv:2605.30002"
+      ],
+      "title": "KairosAgent: Agentic Time Series Forecasting with Fused Semantic Reasoning",
+      "reason": "KairosAgent combines semantic reasoning and time-series forecasters with tool calls; experiments report forecast quality and end-to-end agent timing. The measured runtime includes task/tool interaction and does not optimize LLM serving; the application is time-series forecasting.",
+      "source_url": "https://arxiv.org/abs/2605.30002",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
