@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-88d780278388f07f-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2409.18654",
+  "reason": "本文のSpeech-MambaはTransformerとselective SSMを組み合わせ長い音声列を扱い、near-linear sequence scalingを狙う。Jamba系統に使うMamba/long-context architectureとの接点はあるが対象はspeech recognitionで、LLM servingの性能測定はないためborderline。",
+  "title": "Speech-Mamba: Long-Context Speech Recognition with Selective State Spaces Models",
+  "identity_tokens": [
+    "arXiv:2409.18654"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88d780278388",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
