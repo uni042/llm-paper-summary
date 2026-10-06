@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Iron: Private Inference on Transformers",
+      "source_url": "https://doi.org/10.52202/068431-1143",
+      "year": 2022,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 209,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We initiate the study of private inference on Transformer-based models in the client-server setting, where clients have private inputs and servers hold proprietary models. Our main contribution is to provide several new secure protocols for matrix multiplication and complex non-linear functions like Softmax, GELU activations, and LayerNorm, which are critical components of Transformers. Specifically, we first propose a customized homomorphic encryption-based protocol for matrix multiplication that crucially relies on a novel compact packing technique. This design achieves √ m × less communication ( m is the number of rows of the output matrix) over the most efficient work. Second, we design efficient protocols for three non-linear functions via integrating advanced underlying protocols and specialized optimizations. Compared to the state-of-the-art protocols, our recipes reduce about half of the communication and computation overhead. Furthermore, all protocols are numerically precise, which preserve the model accuracy of plaintext. These techniques together allow us to implement Iron , an efficient Transformer-based private inference framework. Experiments conducted on several real-world datasets and models demonstrate that Iron achieves 3 ∼ 14 × less communication and 3 ∼ 11 × less runtime compared to the prior art.",
+      "identifiers": [
+        "SemanticScholar:37a860cbc0a3334d446d72cab166a9c63e489442"
+      ],
+      "semantic_scholar_id": "37a860cbc0a3334d446d72cab166a9c63e489442",
+      "doi": "10.52202/068431-1143",
+      "canonical_id": "DOI:10.52202/068431-1143",
+      "authors": [
+        "Meng Hao",
+        "Hong-Wei Li",
+        "Hanxiao Chen",
+        "Pengzhi Xing",
+        "Guowen Xu",
+        "Tian-Wei Zhang"
+      ],
+      "priority": 219,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 209,
+        "citation_count": 209,
+        "total": 219,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1558,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Transformerのprivate inferenceをclient-serverで実行する際の通信・計算オーバーヘッドを、homomorphic encryption向けcompact packingとSoftmax/GELU/LayerNorm用secure protocolで直接削減する推論フレームワークであり対象。",
+      "library_body_check": "fulltext_review: NeurIPS本文でcompact packingを用いるmatrix multiplication protocol、非線形関数向けsecure protocol、BERT系を含む評価を確認。既存手法比で通信3–14x削減、runtime 3–11x短縮を報告し、Transformer private inferenceの実行効率を直接評価している。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cc2afe396dc5",
+    "round": "libimp-cc2afe396dc5653d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cc2afe396dc5653d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cc2afe396dc5653d-pre01.json",
+    "receipt": "sha256:886eb2385a8a224b463240447a1f832a5fe3c93cb9a699663095e046ebde3f69"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cc2afe396dc5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

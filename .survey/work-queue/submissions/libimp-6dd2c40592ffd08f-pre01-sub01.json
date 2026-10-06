@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Mobile Edge Intelligence for Large Language Models: A Contemporary Survey",
+      "source_url": "https://arxiv.org/abs/2407.18921",
+      "year": 2024,
+      "published": "2024-07-09",
+      "venue": "IEEE Communications Surveys and Tutorials",
+      "citation_count": 364,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device large language models (LLMs), referring to running LLMs on edge devices, have raised considerable interest since they are more cost-effective, latency-efficient, and privacy-preserving compared with the cloud LLM paradigm. Nonetheless unlike cloud LLMs, the performance of on-device LLMs is intrinsically constrained by resource limitations on edge devices. Sitting between cloud and on-device AI, mobile edge intelligence (MEI) may address this dilemma by provisioning AI capabilities at the edge of mobile networks, e.g., on base stations. This article provides a contemporary survey on harnessing MEI for LLM deployment. We begin by illustrating several killer applications to demonstrate the urgent need for deploying LLMs at the network edge. Next, we present the preliminaries of LLMs, MEI, and resource-efficient LLM techniques. We then provide an architectural overview of MEI for LLMs (MEI4LLM), outlining its core components and how it supports LLM deployment. Subsequently, we delve into various aspects of MEI4LLM, extensively covering edge LLM caching and delivery, edge LLM training, and edge LLM inference. Finally, we identify future research opportunities. We hope this article inspires researchers in the field to leverage mobile edge computing to facilitate LLM deployment, thereby unleashing the potential of LLMs across various privacy- and delay-sensitive applications.",
+      "identifiers": [
+        "SemanticScholar:92e3b209fe9cad9078810e225f6b6b8b391f304b"
+      ],
+      "semantic_scholar_id": "92e3b209fe9cad9078810e225f6b6b8b391f304b",
+      "canonical_id": "arXiv:2407.18921",
+      "arxiv_id": "2407.18921",
+      "doi": "10.1109/COMST.2025.3527641",
+      "authors": [
+        "Guan-Qiao Qu",
+        "Qi-Yuan Chen",
+        "Wei Wei",
+        "Zheng-Yi Lin",
+        "Xian-Hao Chen",
+        "Kaibin Huang"
+      ],
+      "priority": 364,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 364,
+        "citation_count": 364,
+        "total": 364,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 819,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMをmobile edgeへ配置するためのresource-efficient deploymentを中心に、edge LLM caching/delivery、split・collaborative inference、resource managementをstorage・compute・communication効率の観点から体系化する。LLM推論サービングの最終適用先が明確であり対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv本文§I-Cおよび構成を確認。MEI4LLMとしてparameter-sharing caching/delivery、distributed inferenceを扱い、§VIIIをcentralized edge inference、split inference、collaborative inferenceへ分け、storage/computing/communication efficiencyとresource managementを主眼に整理している。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6dd2c40592ff",
+    "round": "libimp-6dd2c40592ffd08f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6dd2c40592ffd08f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6dd2c40592ffd08f-pre01.json",
+    "receipt": "sha256:ca25dac4d8950bbd0a56e7896da747cb05f9bb6e34b13359d7744693a3993807"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6dd2c40592ff",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
