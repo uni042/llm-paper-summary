@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T15:50:59+00:00",
-  "record_count": 8683,
+  "updated_at": "2026-10-06T15:57:11+00:00",
+  "record_count": 8713,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -124601,6 +124601,427 @@
         "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
       ],
       "title": "Long-Horizon Model-Based Offline Reinforcement Learning Without Explicit Conservatism"
+    },
+    "arXiv:2607.07632": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07632",
+      "identity_tokens": [
+        "arXiv:2607.07632"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:00+00:00",
+      "last_checked_at": "2026-10-06T15:57:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "From Custom-Fit to Portable: Bridging the Gap Between Synthesized and Engineered GPU Query Execution"
+    },
+    "arXiv:2607.06807": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06807",
+      "identity_tokens": [
+        "arXiv:2607.06807"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:00+00:00",
+      "last_checked_at": "2026-10-06T15:57:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "When Agents Go Rogue: Activation-Based Detection of Malicious Behaviors in Multi-Agent Systems"
+    },
+    "arXiv:2607.03528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03528",
+      "identity_tokens": [
+        "arXiv:2607.03528"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:01+00:00",
+      "last_checked_at": "2026-10-06T15:57:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Aligning Language Models with Selective Prediction"
+    },
+    "arXiv:2606.11049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11049",
+      "identity_tokens": [
+        "arXiv:2606.11049"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:01+00:00",
+      "last_checked_at": "2026-10-06T15:57:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Free Parametrization of L_2-Bounded Structured State-Space Controllers for Nonlinear Control with Stability Guarantees"
+    },
+    "arXiv:2606.04737": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04737",
+      "identity_tokens": [
+        "arXiv:2606.04737"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:02+00:00",
+      "last_checked_at": "2026-10-06T15:57:02+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Physics-Informed Video Generation via Mixture-of-Experts Latent Alignment"
+    },
+    "arXiv:2608.12957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12957",
+      "identity_tokens": [
+        "arXiv:2608.12957"
+      ],
+      "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:03+00:00",
+      "last_checked_at": "2026-10-06T15:57:03+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md"
+      ],
+      "title": "I-SDPO: Instance-Level Adaptive Self-Distillation Policy Optimization"
+    },
+    "arXiv:2608.00181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00181",
+      "identity_tokens": [
+        "arXiv:2608.00181"
+      ],
+      "reason": "一次本文はagentの学習・benchmark間行動転移を評価しており、LLM推論性能や計算・メモリ・serving効率を改善する技法を示していない。",
+      "first_checked_at": "2026-10-06T15:57:03+00:00",
+      "last_checked_at": "2026-10-06T15:57:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Cross-Benchmark Generalization in Long-Horizon Agents"
+    },
+    "DOI:10.64898/2026.07.28.739874": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.07.28.739874",
+      "identity_tokens": [
+        "DOI:10.64898/2026.07.28.739874"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:04+00:00",
+      "last_checked_at": "2026-10-06T15:57:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "pLM representations unlock metagenomic space beyond homology"
+    },
+    "arXiv:2607.22917": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22917",
+      "identity_tokens": [
+        "arXiv:2607.22917"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:04+00:00",
+      "last_checked_at": "2026-10-06T15:57:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Agent Team Work Zone: An Automated, Persistent Workspace for Long-Lived Claude Code Agent Teams"
+    },
+    "arXiv:2607.19987": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19987",
+      "identity_tokens": [
+        "arXiv:2607.19987"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:04+00:00",
+      "last_checked_at": "2026-10-06T15:57:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "UniRank: Benchmarking Ranking Models for Unified Sequential Modeling and Feature Interaction"
+    },
+    "arXiv:2606.01985": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01985",
+      "identity_tokens": [
+        "arXiv:2606.01985"
+      ],
+      "reason": "Multi-turn image-editing flow-matching RL optimizes image-editing reward/training, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T15:57:05+00:00",
+      "last_checked_at": "2026-10-06T15:57:05+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "MT-EditFlow: Reinforcement Learning for Multi-Turn Image Editing with Flow Matching"
+    },
+    "arXiv:2606.02001": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02001",
+      "identity_tokens": [
+        "arXiv:2606.02001"
+      ],
+      "reason": "Synthesizes grounded interaction data to improve agent capabilities; the cited ZeRO lineage does not reflect a memory/offload optimization in this work.",
+      "first_checked_at": "2026-10-06T15:57:05+00:00",
+      "last_checked_at": "2026-10-06T15:57:05+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Scaling Agentic Capabilities via Grounded Interaction Synthesis"
+    },
+    "arXiv:2606.19163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19163",
+      "identity_tokens": [
+        "arXiv:2606.19163"
+      ],
+      "reason": "Automatic pipeline parallelism accelerates training of large diffusion models; ZeRO lineage is training-only and this does not concern language-model inference.",
+      "first_checked_at": "2026-10-06T15:57:05+00:00",
+      "last_checked_at": "2026-10-06T15:57:05+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Pulse: Training Acceleration for Large Diffusion Models with Automatic Pipeline Parallelism"
+    },
+    "arXiv:2608.06834": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06834",
+      "identity_tokens": [
+        "arXiv:2608.06834"
+      ],
+      "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:05+00:00",
+      "last_checked_at": "2026-10-06T15:57:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Graph Machine: Exploring Edge Mechanisms as an Inductive Bias"
+    },
+    "arXiv:2606.03376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03376",
+      "identity_tokens": [
+        "arXiv:2606.03376"
+      ],
+      "reason": "VLM preference optimization for hallucination/perception quality; no inference-efficiency method.",
+      "first_checked_at": "2026-10-06T15:57:06+00:00",
+      "last_checked_at": "2026-10-06T15:57:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "P2-DPO: Grounding Hallucination in Perceptual Processing via Calibration Direct Preference Optimization"
+    },
+    "arXiv:2606.03584": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03584",
+      "identity_tokens": [
+        "arXiv:2606.03584"
+      ],
+      "reason": "Predictive-coding network trained on ImageNet via equilibrium propagation; no LLM inference/compiler optimization contribution despite torch.compile lineage.",
+      "first_checked_at": "2026-10-06T15:57:06+00:00",
+      "last_checked_at": "2026-10-06T15:57:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Training a Predictive Coding Network on ImageNet using Equilibrium Propagation"
+    },
+    "arXiv:2606.01950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01950",
+      "identity_tokens": [
+        "arXiv:2606.01950"
+      ],
+      "reason": "Object-centric Gaussian world-model dynamics for robot manipulation; PyTorch graph compiler citation is incidental, no LLM inference contribution.",
+      "first_checked_at": "2026-10-06T15:57:06+00:00",
+      "last_checked_at": "2026-10-06T15:57:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Learning Action-Conditional and Object-Centric Gaussian Splatting World Models for Rigid Objects"
+    },
+    "arXiv:2606.01967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01967",
+      "identity_tokens": [
+        "arXiv:2606.01967"
+      ],
+      "reason": "State-adaptive prompts improve fine-tuning robustness/forgetting; ZeRO lineage is unrelated to the paper’s training-prompt objective and it does not optimize inference.",
+      "first_checked_at": "2026-10-06T15:57:06+00:00",
+      "last_checked_at": "2026-10-06T15:57:06+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Training Prompt Matters: State-Adaptive Optimization for Robust Fine-Tuning"
+    },
+    "arXiv:2607.18074": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18074",
+      "identity_tokens": [
+        "arXiv:2607.18074"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:07+00:00",
+      "last_checked_at": "2026-10-06T15:57:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Sobek: Streaming Equivariant Tensor Product Convolutions"
+    },
+    "DOI:10.1145/3805712.3808599": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805712.3808599",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3808599"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:07+00:00",
+      "last_checked_at": "2026-10-06T15:57:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Sim.API: A Middleware to Simplify the Use of User Simulators for Shared Tasks in Conversational Search"
+    },
+    "arXiv:2605.31153": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31153",
+      "identity_tokens": [
+        "arXiv:2605.31153"
+      ],
+      "reason": "Analyzes transformation biases in image detectors; no LLM inference efficiency contribution, despite a compiler paper being linked.",
+      "first_checked_at": "2026-10-06T15:57:08+00:00",
+      "last_checked_at": "2026-10-06T15:57:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "BIAS-ID: A Framework for Analyzing Transformation Biases in AI-Generated Image Detectors"
+    },
+    "arXiv:2605.31481": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31481",
+      "identity_tokens": [
+        "arXiv:2605.31481"
+      ],
+      "reason": "GPU-accelerated batched rigid-body simulation for robot learning; Triton is a tooling citation, with no LLM serving/inference contribution.",
+      "first_checked_at": "2026-10-06T15:57:08+00:00",
+      "last_checked_at": "2026-10-06T15:57:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Batched Differentiable Rigid Body Dynamics in PyTorch for GPU-Accelerated Robot Learning"
+    },
+    "arXiv:2607.03601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03601",
+      "identity_tokens": [
+        "arXiv:2607.03601"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:09+00:00",
+      "last_checked_at": "2026-10-06T15:57:09+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "ArchEval: Measuring AI Agents as Computer Architects"
+    },
+    "arXiv:2607.01211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01211",
+      "identity_tokens": [
+        "arXiv:2607.01211"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:09+00:00",
+      "last_checked_at": "2026-10-06T15:57:09+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Are Performance-Optimization Benchmarks Reliably Measuring Coding Agents?"
+    },
+    "arXiv:2606.31813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31813",
+      "identity_tokens": [
+        "arXiv:2606.31813"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:09+00:00",
+      "last_checked_at": "2026-10-06T15:57:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR"
+    },
+    "arXiv:2606.25329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25329",
+      "identity_tokens": [
+        "arXiv:2606.25329"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:09+00:00",
+      "last_checked_at": "2026-10-06T15:57:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "State Space Models Meet Remote Sensing: A Survey"
+    },
+    "arXiv:2605.29507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.29507",
+      "identity_tokens": [
+        "arXiv:2605.29507"
+      ],
+      "reason": "Mechanistic explanation of dense retrieval, without a concrete inference efficiency method.",
+      "first_checked_at": "2026-10-06T15:57:10+00:00",
+      "last_checked_at": "2026-10-06T15:57:10+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Xetrieval: Mechanistically Explaining Dense Retrieval"
+    },
+    "arXiv:2605.30213": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30213",
+      "identity_tokens": [
+        "arXiv:2605.30213"
+      ],
+      "reason": "Irregular-data time-series embedding method, outside LLM inference.",
+      "first_checked_at": "2026-10-06T15:57:10+00:00",
+      "last_checked_at": "2026-10-06T15:57:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Faithful Embeddings of Irregular and Asynchronous Data for Online Log-NCDEs"
+    },
+    "arXiv:2607.11875": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11875",
+      "identity_tokens": [
+        "arXiv:2607.11875"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:11+00:00",
+      "last_checked_at": "2026-10-06T15:57:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks"
+    },
+    "arXiv:2607.11944": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11944",
+      "identity_tokens": [
+        "arXiv:2607.11944"
+      ],
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "first_checked_at": "2026-10-06T15:57:11+00:00",
+      "last_checked_at": "2026-10-06T15:57:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "MAGE: Understanding Stability-Performance Trade-offs in Multi-component Prompt Optimization"
     }
   }
 }

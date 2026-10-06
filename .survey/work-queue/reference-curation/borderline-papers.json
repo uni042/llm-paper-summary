@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T15:50:59+00:00",
-  "record_count": 3297,
+  "updated_at": "2026-10-06T15:57:11+00:00",
+  "record_count": 3323,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -50510,6 +50510,398 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A modular deep learning methodology for multi-fault machine health diagnostics from sparse and imbalanced multimodal data"
+    },
+    "arXiv:2607.20518": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20518",
+      "identity_tokens": [
+        "arXiv:2607.20518"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:00+00:00",
+      "last_checked_at": "2026-10-06T15:57:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CANN Bench: Benchmarking Agent Generated Kernels against Real NPU and Algorithmic Limits"
+    },
+    "arXiv:2607.05196": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05196",
+      "identity_tokens": [
+        "arXiv:2607.05196"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:00+00:00",
+      "last_checked_at": "2026-10-06T15:57:00+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unified Audio Intelligence Without Regressing on Text Intelligence"
+    },
+    "arXiv:2606.26383": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26383",
+      "identity_tokens": [
+        "arXiv:2606.26383"
+      ],
+      "reason": "関連するコスト・推論効率課題を扱うが、対象が特定アプリケーション/分析または効果が限定的で、一般LLM servingへの具体的な移行先がまだ弱い。",
+      "first_checked_at": "2026-10-06T15:57:01+00:00",
+      "last_checked_at": "2026-10-06T15:57:01+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SOLAR: AI-Powered Speed-of-Light Performance Analysis"
+    },
+    "arXiv:2606.23687": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.23687",
+      "identity_tokens": [
+        "arXiv:2606.23687"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:01+00:00",
+      "last_checked_at": "2026-10-06T15:57:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning"
+    },
+    "arXiv:2606.15841": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.15841",
+      "identity_tokens": [
+        "arXiv:2606.15841"
+      ],
+      "reason": "関連するコスト・推論効率課題を扱うが、対象が特定アプリケーション/分析または効果が限定的で、一般LLM servingへの具体的な移行先がまだ弱い。",
+      "first_checked_at": "2026-10-06T15:57:01+00:00",
+      "last_checked_at": "2026-10-06T15:57:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Heteroskedastic Signals in Budgeted LLM Verification: Structural Heterogeneity Limits Optimization Gains"
+    },
+    "DOI:10.1145/3789240.3829161": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829161",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829161"
+      ],
+      "reason": "題名・要旨または既存系統リンクには関連可能性が残るが、一次本文の手法・評価・限界を確認できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:57:02+00:00",
+      "last_checked_at": "2026-10-06T15:57:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DistDPU: A Disaggregated DPU Architecture for High-Performance and Cost-Efficient AI Clouds"
+    },
+    "arXiv:2608.11745": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11745",
+      "identity_tokens": [
+        "arXiv:2608.11745"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:02+00:00",
+      "last_checked_at": "2026-10-06T15:57:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time"
+    },
+    "arXiv:2608.12564": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12564",
+      "identity_tokens": [
+        "arXiv:2608.12564"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:02+00:00",
+      "last_checked_at": "2026-10-06T15:57:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Automatic Research Agents via World Models"
+    },
+    "arXiv:2608.09217": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.09217",
+      "identity_tokens": [
+        "arXiv:2608.09217"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:02+00:00",
+      "last_checked_at": "2026-10-06T15:57:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Solvability: Task Learnability as a Static Prior for LLM RL Post-Training"
+    },
+    "arXiv:2607.22807": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.22807",
+      "identity_tokens": [
+        "arXiv:2607.22807"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:03+00:00",
+      "last_checked_at": "2026-10-06T15:57:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Best Programming Language for Tokenmaxxing: An Investigation of Coding Agent Behavior Across Programming Languages"
+    },
+    "arXiv:2606.02378": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.02378",
+      "identity_tokens": [
+        "arXiv:2606.02378"
+      ],
+      "reason": "Studies emergence of attention circuits and attention sinks across 1B language models; potentially adjacent to attention/KV behavior but does not propose or evaluate an inference optimization.",
+      "first_checked_at": "2026-10-06T15:57:04+00:00",
+      "last_checked_at": "2026-10-06T15:57:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Do Attention Circuits Form? Developmental Trajectories of Capability and Attention-Sink Emergence Across Three 1B-ClassArchitectures"
+    },
+    "DOI:10.1109/iccbi68589.2026.11619898": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccbi68589.2026.11619898",
+      "identity_tokens": [
+        "DOI:10.1109/iccbi68589.2026.11619898"
+      ],
+      "reason": "The title/abstract indicate learned orchestration for cost-efficient agentic RAG and a FrugalGPT relation, but publisher DOI source could not be retrieved for primary-text confirmation.",
+      "first_checked_at": "2026-10-06T15:57:04+00:00",
+      "last_checked_at": "2026-10-06T15:57:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PEARL: Performance-Efficient Agentic Retrieval-Augmented Generation Through Learned Orchestration"
+    },
+    "arXiv:2606.05516": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.05516",
+      "identity_tokens": [
+        "arXiv:2606.05516"
+      ],
+      "reason": "ZO fine-tunes only a selected decoder layer using forward-only updates; reports up to 4.52x training speedup, but this is training efficiency rather than inference quantization. SmoothQuant lineage is only adjacent.",
+      "first_checked_at": "2026-10-06T15:57:06+00:00",
+      "last_checked_at": "2026-10-06T15:57:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dominant-Layer ZO: A Single Layer Dominates Zeroth-Order Fine-Tuning of LLMs"
+    },
+    "arXiv:2607.21653": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.21653",
+      "identity_tokens": [
+        "arXiv:2607.21653"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:07+00:00",
+      "last_checked_at": "2026-10-06T15:57:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning"
+    },
+    "DOI:10.1145/3805712.3809712": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805712.3809712",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3809712"
+      ],
+      "reason": "大規模学習/agent execution系統への接続可能性があるが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:57:07+00:00",
+      "last_checked_at": "2026-10-06T15:57:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tool-Star: Empowering Multi-Tool Collaborative Web Agent via Reinforcement Learning"
+    },
+    "arXiv:2607.15278": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.15278",
+      "identity_tokens": [
+        "arXiv:2607.15278"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:07+00:00",
+      "last_checked_at": "2026-10-06T15:57:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hierarchical Denoising For Multi-Step Visual Reasoning"
+    },
+    "DOI:10.1109/icdca69396.2026.11620090": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icdca69396.2026.11620090",
+      "identity_tokens": [
+        "DOI:10.1109/icdca69396.2026.11620090"
+      ],
+      "reason": "The title/abstract indicate cost-aware enterprise LLM workflows and a FrugalGPT relation, but publisher DOI source could not be retrieved for primary-text confirmation.",
+      "first_checked_at": "2026-10-06T15:57:08+00:00",
+      "last_checked_at": "2026-10-06T15:57:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CostGuard: A Cost-Aware Agentic AI Framework for Efficient Enterprise LLM Workflows"
+    },
+    "DOI:10.1109/icetis70504.2026.11633419": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icetis70504.2026.11633419",
+      "identity_tokens": [
+        "DOI:10.1109/icetis70504.2026.11633419"
+      ],
+      "reason": "The title/abstract indicate routing among parametric memory, RAG, and long-context LLMs, but publisher DOI source could not be retrieved for primary-text confirmation.",
+      "first_checked_at": "2026-10-06T15:57:08+00:00",
+      "last_checked_at": "2026-10-06T15:57:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Confidence-Conflict Routing Between Parametric Memory, RAG, and Long-Context LLMs"
+    },
+    "arXiv:2606.00957": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00957",
+      "identity_tokens": [
+        "arXiv:2606.00957"
+      ],
+      "reason": "Boundary-protected W8A8 quantization is evaluated for Wan text-to-video diffusion transformers, not LLM inference; its quantization lineage is methodologically adjacent but cross-domain.",
+      "first_checked_at": "2026-10-06T15:57:08+00:00",
+      "last_checked_at": "2026-10-06T15:57:08+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Boundary-Protection W8A8 HiFloat8 Quantization for Large-Scale Text-to-Video Diffusion Transformers"
+    },
+    "DOI:10.1145/3815572.3815765": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3815572.3815765",
+      "identity_tokens": [
+        "DOI:10.1145/3815572.3815765"
+      ],
+      "reason": "大規模学習/agent execution系統への接続可能性があるが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:57:09+00:00",
+      "last_checked_at": "2026-10-06T15:57:09+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Combining Domain and Tensor Parallelism to Train Multi-billion-parameter AI Weather Models"
+    },
+    "arXiv:2605.29664": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29664",
+      "identity_tokens": [
+        "arXiv:2605.29664"
+      ],
+      "reason": "Asynchronous multidirectional pipeline parallelism targets large-scale model training throughput/stragglers, not inference serving. Related distributed-training lineage exists, but direct inference transfer is not demonstrated.",
+      "first_checked_at": "2026-10-06T15:57:10+00:00",
+      "last_checked_at": "2026-10-06T15:57:10+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AMDP: Asynchronous Multi-Directional Pipeline Parallelism for Large-Scale Models Training"
+    },
+    "arXiv:2605.29714": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29714",
+      "identity_tokens": [
+        "arXiv:2605.29714"
+      ],
+      "reason": "Routing-aware MoE method improves multilingual adaptation/finetuning; evaluation focuses on translation quality and adaptation rather than serving cost or inference throughput.",
+      "first_checked_at": "2026-10-06T15:57:10+00:00",
+      "last_checked_at": "2026-10-06T15:57:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Leveraging Routing Dynamics in Mixture-of-Experts Models for Efficient Language Adaptation"
+    },
+    "arXiv:2605.30274": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30274",
+      "identity_tokens": [
+        "arXiv:2605.30274"
+      ],
+      "reason": "Loong uses a 3E summary/exemplar/entity memory and observe-and-act retrieval to choose translation context, improving context utilization for long documents. However, it adds reasoning overhead and is evaluated for translation quality, not latency/memory savings.",
+      "first_checked_at": "2026-10-06T15:57:10+00:00",
+      "last_checked_at": "2026-10-06T15:57:10+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Loong: A Human-Like Long Document Translation Agent with Observe-and-Act Adaptive Context Selection"
+    },
+    "arXiv:2607.14005": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.14005",
+      "identity_tokens": [
+        "arXiv:2607.14005"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:11+00:00",
+      "last_checked_at": "2026-10-06T15:57:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "M4World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming"
+    },
+    "arXiv:2607.09279": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09279",
+      "identity_tokens": [
+        "arXiv:2607.09279"
+      ],
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:57:11+00:00",
+      "last_checked_at": "2026-10-06T15:57:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transient Reserves, Sink Dampers, and the Failure of Eigenvalue Reasoning in the Attention Propagator"
+    },
+    "arXiv:2607.09908": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09908",
+      "identity_tokens": [
+        "arXiv:2607.09908"
+      ],
+      "reason": "関連するコスト・推論効率課題を扱うが、対象が特定アプリケーション/分析または効果が限定的で、一般LLM servingへの具体的な移行先がまだ弱い。",
+      "first_checked_at": "2026-10-06T15:57:11+00:00",
+      "last_checked_at": "2026-10-06T15:57:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation"
     }
   }
 }

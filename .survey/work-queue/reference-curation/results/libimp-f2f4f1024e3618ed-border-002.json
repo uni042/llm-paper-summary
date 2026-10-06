@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2f4f1024e3618ed-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.29664",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.29664",
+    "identity_tokens": [
+      "arXiv:2605.29664"
+    ],
+    "reason": "Asynchronous multidirectional pipeline parallelism targets large-scale model training throughput/stragglers, not inference serving. Related distributed-training lineage exists, but direct inference transfer is not demonstrated.",
+    "first_checked_at": "2026-10-06T15:57:10+00:00",
+    "last_checked_at": "2026-10-06T15:57:10+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AMDP: Asynchronous Multi-Directional Pipeline Parallelism for Large-Scale Models Training"
+  },
+  "processed_at": "2026-10-06T15:57:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2f4f1024e36",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

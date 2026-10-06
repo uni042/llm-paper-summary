@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-002ecf964db0f32e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.03528",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.03528",
+    "identity_tokens": [
+      "arXiv:2607.03528"
+    ],
+    "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+    "first_checked_at": "2026-10-06T15:57:01+00:00",
+    "last_checked_at": "2026-10-06T15:57:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Aligning Language Models with Selective Prediction"
+  },
+  "processed_at": "2026-10-06T15:57:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-002ecf964db0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
