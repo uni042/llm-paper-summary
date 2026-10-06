@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-06 21:50:39 JST**
+> 自動生成: **2026-10-06 21:51:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **579** |
 | 直近24hのResearch処理完了 | **89** |
 | 最終Research処理完了 | **10-06 20:18:00 JST** |
-| 最終Discovery探索完了 | **10-06 19:45:00 JST** |
+| 最終Discovery探索完了 | **10-06 21:34:00 JST** |
 | 整合性異常 | **0** |
 
 ## 現在の収録候補
@@ -35,16 +35,16 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **35118** |
-| 処理済み | **13284** |
-| 未処理Discovery候補 | **21834** |
+| 処理済み | **13290** |
+| 未処理Discovery候補 | **21828** |
 | 収録済み | **1677** |
 | Research / Audit候補へ昇格済み | **431** |
-| 無関係として除外 | **8209** |
-| 微妙として除外 | **2967** |
+| 無関係として除外 | **8210** |
+| 微妙として除外 | **2972** |
 
 - 消化率: **37.8%**
 - 現在の生在庫: 後方references **6359件** / 前方引用 **16484件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **22489件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **22483件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-06 07:41:12 JST（14時間9分前）** |
+| 最終maintenance完了 | **10-06 07:41:12 JST（14時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -92,18 +92,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **1** |
-| 直近6hのDiscovery run | **2** |
-| 直近6hのDiscovery本文確認・分類 | **4** |
+| 直近6hのDiscovery run | **7** |
+| 直近6hのDiscovery本文確認・分類 | **42** |
 | 最終Research完了 | **10-06 20:18:00 JST** |
-| 最終Discovery完了 | **10-06 19:45:00 JST** |
+| 最終Discovery完了 | **10-06 21:34:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-06 20:18:00 JST** / worker — / run 20261006-2000-scheduled-chat-00/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_b74d4b39df188191bcda4fd972c6d57e--2602.23200-innerq.json
-- Discovery: **10-06 19:45:00 JST** / worker scheduled-chat-45 / run 20261006-1945-scheduled-chat-45/r01-partial
-  - 本文確認・分類 **3件** / accept **0件** / unrelated+borderline **3件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_705b08122ec081918b687fa25bd53487--discovery-20261006-1945-scheduled-chat-45-research-prescreen-r01-partial.json
+- Discovery: **10-06 21:34:00 JST** / worker scheduled-chat-30 / run 20261006-2134-scheduled-chat-30/r03-partial
+  - 本文確認・分類 **4件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_6a1a604114b88191b330d7de8058270d--discovery-20261006-2134-scheduled-chat-30-r03-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
