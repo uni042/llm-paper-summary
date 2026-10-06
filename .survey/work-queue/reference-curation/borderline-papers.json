@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T18:24:31+00:00",
-  "record_count": 3662,
+  "updated_at": "2026-10-06T18:35:26+00:00",
+  "record_count": 3676,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -56020,6 +56020,217 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Adyna: Accelerating Dynamic Neural Networks with Adaptive Scheduling"
+    },
+    "arXiv:2507.09252": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09252",
+      "identity_tokens": [
+        "arXiv:2507.09252"
+      ],
+      "reason": "TPP-SD applies speculative decoding to temporal point-process event sampling and reports 1.5–5.8x sampling speedups. It targets event-process sampling, not LLM token decoding.",
+      "first_checked_at": "2026-10-06T18:35:14+00:00",
+      "last_checked_at": "2026-10-06T18:35:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TPP-SD: Accelerating Transformer Point Process Sampling with Speculative Decoding"
+    },
+    "arXiv:2505.08651": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.08651",
+      "identity_tokens": [
+        "arXiv:2505.08651"
+      ],
+      "reason": "MegaBeam-Mistral-7B studies long-context training/quality up to 512K on HELMET/RULER/BABILong. The reviewed text reports no inference latency, throughput, or memory gains.",
+      "first_checked_at": "2026-10-06T18:35:14+00:00",
+      "last_checked_at": "2026-10-06T18:35:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Context, Not Parameters: Training a Compact 7B Language Model for Efficient Long-Context Processing"
+    },
+    "DOI:10.1145/3649329.3655936": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3649329.3655936",
+      "identity_tokens": [
+        "DOI:10.1145/3649329.3655936"
+      ],
+      "reason": "Author-institution record describes SpARC row-wise clustering for sparse transformer attention, reporting 85–90% sparsity, negligible accuracy loss, up to 4x attention speed and 6x energy gains vs sparse-attention accelerators. ACM full text returned 403; the available primary abstract does not confirm LLM decoder results.",
+      "first_checked_at": "2026-10-06T18:35:15+00:00",
+      "last_checked_at": "2026-10-06T18:35:15+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SpARC: Token Similarity-Aware Sparse Attention Transformer Accelerator via Row-wise Clustering"
+    },
+    "DOI:10.1109/jiot.2024.3510712": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jiot.2024.3510712",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2024.3510712"
+      ],
+      "reason": "IEEE primary article/abstract could not be retrieved through the available source reader; cached candidate metadata alone cannot establish primary-source evidence.",
+      "first_checked_at": "2026-10-06T18:35:16+00:00",
+      "last_checked_at": "2026-10-06T18:35:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fall-Mamba: A Multimodal Fusion and Masked Mamba-Based Approach for Fall Detection"
+    },
+    "arXiv:2503.21801": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.21801",
+      "identity_tokens": [
+        "arXiv:2503.21801"
+      ],
+      "reason": "JTP is a light auxiliary joint-future-token training objective with claimed negligible added training cost. It mainly tests synthetic star graphs; GPT-2 162M is only a language-model sanity check and has slightly worse next-token loss. It is not speculative decoding or a measured serving-speed technique.",
+      "first_checked_at": "2026-10-06T18:35:16+00:00",
+      "last_checked_at": "2026-10-06T18:35:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Joint Prediction of Multiple Future Tokens"
+    },
+    "DOI:10.1016/j.ijmedinf.2024.105764": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ijmedinf.2024.105764",
+      "identity_tokens": [
+        "DOI:10.1016/j.ijmedinf.2024.105764"
+      ],
+      "reason": "The primary abstract describes clinical BERT models using distillation, pruning, and 8-bit quantization with up to 28.7x inference speedup. The publisher full-text request failed, preventing inspection of methods, baseline, and evaluation details.",
+      "first_checked_at": "2026-10-06T18:35:17+00:00",
+      "last_checked_at": "2026-10-06T18:35:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OptimCLM: Optimizing clinical language models for predicting patient outcomes via knowledge distillation, pruning and quantization"
+    },
+    "arXiv:2409.13385": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.13385",
+      "identity_tokens": [
+        "arXiv:2409.13385"
+      ],
+      "reason": "This is a survey, not a new evaluated method. It catalogs context compression, efficient attention and long-context approaches but provides no original controlled LLM-serving result; cited techniques must be screened individually.",
+      "first_checked_at": "2026-10-06T18:35:18+00:00",
+      "last_checked_at": "2026-10-06T18:35:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Contextual Compression in Retrieval-Augmented Generation for Large Language Models: A Survey"
+    },
+    "DOI:10.1145/3655038.3665953": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3655038.3665953",
+      "identity_tokens": [
+        "DOI:10.1145/3655038.3665953"
+      ],
+      "reason": "Author-affiliated KAIST record describes a CXL GPU-memory controller with two-digit-nanosecond round-trip latency and speculative-read/deterministic-store mechanisms. Full ACM text was inaccessible and the abstract gives no LLM/KV-cache workload.",
+      "first_checked_at": "2026-10-06T18:35:18+00:00",
+      "last_checked_at": "2026-10-06T18:35:18+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Breaking Barriers: Expanding GPU Memory with Sub-Two Digit Nanosecond Latency CXL Controller"
+    },
+    "DOI:10.1145/3766882.3767187": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3766882.3767187",
+      "identity_tokens": [
+        "DOI:10.1145/3766882.3767187"
+      ],
+      "reason": "Piper evaluates flexible PyTorch pipeline parallelism using Llama-3B/CLIP and reports training throughput. It gives no LLM inference-serving evaluation, leaving relevance indirect.",
+      "first_checked_at": "2026-10-06T18:35:19+00:00",
+      "last_checked_at": "2026-10-06T18:35:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Piper: Towards Flexible Pipeline Parallelism for PyTorch"
+    },
+    "DOI:10.1007/s11227-024-05890-8": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-024-05890-8",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-024-05890-8"
+      ],
+      "reason": "SWattention is exact tiled attention specialized for Sunway SW26010. It reports 2.0x FP32/2.5x mixed-precision attention speedups and up to 1.26x GPT end-to-end training speedup; evaluation is training-focused/hardware-specific, without LLM serving inference.",
+      "first_checked_at": "2026-10-06T18:35:22+00:00",
+      "last_checked_at": "2026-10-06T18:35:22+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SWattention: designing fast and memory-efficient attention for a new Sunway Supercomputer"
+    },
+    "DOI:10.1145/3605181.3626287": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3605181.3626287",
+      "identity_tokens": [
+        "DOI:10.1145/3605181.3626287"
+      ],
+      "reason": "ACM primary abstract describes a CXL memory-fabric system but supplies no LLM serving workload or inference memory/latency result. Full text was not retrievable, leaving relevance unresolved.",
+      "first_checked_at": "2026-10-06T18:35:22+00:00",
+      "last_checked_at": "2026-10-06T18:35:22+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Aurelia: CXL Fabric with Tentacle"
+    },
+    "DOI:10.1145/3776759.3776826": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3776759.3776826",
+      "identity_tokens": [
+        "DOI:10.1145/3776759.3776826"
+      ],
+      "reason": "Primary publisher abstract could not be retrieved (publisher page returned 403); relevance cannot be resolved from primary abstract evidence.",
+      "first_checked_at": "2026-10-06T18:35:26+00:00",
+      "last_checked_at": "2026-10-06T18:35:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Survey of Quantization-Aware Training (QAT) Applications in Deep Learning Quantization"
+    },
+    "DOI:10.1145/3718958.3750503": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3718958.3750503",
+      "identity_tokens": [
+        "DOI:10.1145/3718958.3750503"
+      ],
+      "reason": "Primary publisher abstract could not be retrieved (publisher page returned 403); relevance cannot be resolved from primary abstract evidence.",
+      "first_checked_at": "2026-10-06T18:35:26+00:00",
+      "last_checked_at": "2026-10-06T18:35:26+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From ATOP to ZCube: Automated Topology Optimization Pipeline and A Highly Cost-Effective Network Topology for Large Model Training"
+    },
+    "arXiv:2507.18013": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.18013",
+      "identity_tokens": [
+        "arXiv:2507.18013"
+      ],
+      "reason": "TeleChat2/2.5 report says fast inference is a priority but gives quality/training optimization descriptions without controlled serving latency or throughput measurements.",
+      "first_checked_at": "2026-10-06T18:35:26+00:00",
+      "last_checked_at": "2026-10-06T18:35:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Technical Report of TeleChat2, TeleChat2.5 and T1"
     }
   }
 }
