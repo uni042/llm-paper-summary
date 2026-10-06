@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r115-screen-01-part-07-d93cb069e691",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.10858",
+      "identity_tokens": [
+        "arXiv:2406.10858"
+      ],
+      "title": "Step-level Value Preference Optimization for Mathematical Reasoning",
+      "reason": "Step-level value preference optimization trains reasoning models from step feedback and evaluates mathematical reasoning outcomes. It is a training/objective contribution, not a training-memory system or inference optimization; the ZeRO-Infinity linkage is not a technical connection.",
+      "source_url": "https://arxiv.org/abs/2406.10858",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.11451",
+      "identity_tokens": [
+        "arXiv:2402.11451"
+      ],
+      "title": "SciAgent: Tool-augmented Language Models for Scientific Reasoning",
+      "reason": "SciAgent augments language models with tools for scientific reasoning and evaluates task-solving benchmarks. It does not introduce a training offload, memory, or serving optimization; the ZeRO-Infinity relationship is not substantive.",
+      "source_url": "https://arxiv.org/abs/2402.11451",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.09655",
+      "identity_tokens": [
+        "arXiv:2501.09655"
+      ],
+      "title": "A Survey of Research in Large Language Models for Electronic Design Automation",
+      "reason": "This survey reviews LLM use and research in electronic design automation, including system/inference context, but proposes no concrete inference optimization. It can support domain scouting but its relation to prompt-compression systems is indirect.",
+      "source_url": "https://arxiv.org/abs/2501.09655",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.08734",
+      "identity_tokens": [
+        "arXiv:2311.08734"
+      ],
+      "title": "Thread of Thought Unraveling Chaotic Contexts",
+      "reason": "Thread of Thought is a prompting strategy for reasoning over complex contexts and evaluates answer quality; it does not reduce computational cost, memory, latency, or serving load. A LongNet citation does not establish an efficiency connection.",
+      "source_url": "https://arxiv.org/abs/2311.08734",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15943",
+      "identity_tokens": [
+        "arXiv:2405.15943"
+      ],
+      "title": "Transformers represent belief state geometry in their residual stream",
+      "reason": "The paper analyzes transformer residual-stream representations of belief-state geometry and evaluates interpretability/prediction tasks. It does not present an inference optimization; the multi-token-prediction relation is not a technical efficiency link.",
+      "source_url": "https://arxiv.org/abs/2405.15943",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    }
+  ]
+}
