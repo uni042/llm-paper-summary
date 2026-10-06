@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r93-screen-01-part-05-b79127565e9f",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icip51287.2024.10647855",
+      "identity_tokens": [
+        "DOI:10.1109/icip51287.2024.10647855"
+      ],
+      "title": "Empirical Research On Quantization For 3D Multi-Modal Vit Models",
+      "reason": "Primary IEEE paper could not be retrieved beyond citation metadata. Abstract is absent and the title indicates quantization for 3D multimodal ViT models; this could be relevant to Transformer quantization but the method, evaluation, and task scope are unverified.",
+      "source_url": "https://doi.org/10.1109/icip51287.2024.10647855",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676536.3676663",
+      "identity_tokens": [
+        "DOI:10.1145/3676536.3676663"
+      ],
+      "title": "FSMM: An Efficient Matrix Multiplication Accelerator Supporting Flexible Sparsity",
+      "reason": "ACM DOI page was inaccessible; author-side search found bibliography/metadata but no primary full text. The abstract describes flexible-sparsity matrix multiplication hardware for deep learning, plausibly transferable to sparse Transformer workloads, but actual supported operators, evaluation, and limitations are not confirmed.",
+      "source_url": "https://doi.org/10.1145/3676536.3676663",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676536.3676749",
+      "identity_tokens": [
+        "DOI:10.1145/3676536.3676749"
+      ],
+      "title": "TransLib: An Extensible Graph-Aware Library Framework for Automated Generation of Transformer Operators on FPGA",
+      "reason": "ACM DOI page was inaccessible and author-site search yielded only a citation entry. The abstract describes graph-aware automated generation of Transformer operators on FPGA, so it is plausibly related, but primary design, benchmarks, and limitations could not be read.",
+      "source_url": "https://doi.org/10.1145/3676536.3676749",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.11434",
+      "identity_tokens": [
+        "arXiv:2410.11434"
+      ],
+      "title": "Titanic Calling: Low Bandwidth Video Conference from the Titanic Wreck",
+      "reason": "The article reports a low-bandwidth communication experiment from the Titanic wreck and text-to-lipsynchronous-video reconstruction; it is not an ML model-efficiency paper.",
+      "source_url": "https://arxiv.org/abs/2410.11434",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDLE63439.2024.00009",
+      "identity_tokens": [
+        "DOI:10.1109/ICDLE63439.2024.00009"
+      ],
+      "title": "The Evolution of AI and its Role in Remote Education",
+      "reason": "The article is a general discussion of AI in remote education, without a concrete inference-efficiency method.",
+      "source_url": "https://doi.org/10.1109/ICDLE63439.2024.00009",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    }
+  ]
+}
