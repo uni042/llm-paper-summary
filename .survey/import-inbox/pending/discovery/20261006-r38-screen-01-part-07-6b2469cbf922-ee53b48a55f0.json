@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r38-screen-01-part-07-6b2469cbf922",
+  "reference_main_sha": "b05a032087f45ed87d2608bca644099ed8cb0933",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.04881",
+      "identity_tokens": [
+        "arXiv:2209.04881"
+      ],
+      "title": "On The Computational Complexity of Self-Attention",
+      "reason": "This is a theoretical self-attention complexity analysis, not a concrete inference method or serving evaluation.",
+      "source_url": "https://arxiv.org/abs/2209.04881",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.09729",
+      "identity_tokens": [
+        "arXiv:2202.09729"
+      ],
+      "title": "It's Raw! Audio Generation with State-Space Models",
+      "reason": "SaShiMi uses state-space models for autoregressive audio generation and reports faster inference than WaveNet, but transfer from audio generation to LLM serving is uncertain.",
+      "source_url": "https://arxiv.org/abs/2202.09729",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3318464.3380579",
+      "identity_tokens": [
+        "DOI:10.1145/3318464.3380579"
+      ],
+      "title": "Learning Multi-Dimensional Indexes",
+      "reason": "Learning multi-dimensional indexes concerns database indexing, not LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/1912.01668",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.02329",
+      "identity_tokens": [
+        "arXiv:1803.02329"
+      ],
+      "title": "Learning Memory Access Patterns",
+      "reason": "Learning memory access patterns is a general systems topic without a demonstrated LLM inference connection.",
+      "source_url": "https://arxiv.org/abs/1803.02329",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.findings-emnlp.210",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.findings-emnlp.210"
+      ],
+      "title": "Challenges in Detoxifying Language Models",
+      "reason": "Challenges in detoxifying language models concerns safety/alignment, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2109.07445",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
+
