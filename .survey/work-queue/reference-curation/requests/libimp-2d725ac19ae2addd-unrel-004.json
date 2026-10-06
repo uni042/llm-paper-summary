@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2d725ac19ae2addd-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.32780",
+  "reason": "疎MoE VLMは28B総/9B活性だが、実測でQwen3-VL-8Bよりdecode 11.1%遅く、VRAM 52GB対11GB。活性parameter数だけでは推論効率改善を立証しない。",
+  "title": "OmniMoE-VL: A Sparse Vision-Language Model with Coupled Visual-Depth Routing",
+  "identity_tokens": [
+    "arXiv:2609.32780"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d725ac19ae2",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
