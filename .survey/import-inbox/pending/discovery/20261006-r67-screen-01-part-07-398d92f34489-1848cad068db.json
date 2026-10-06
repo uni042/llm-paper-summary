@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r67-screen-01-part-07-398d92f34489",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28250",
+      "identity_tokens": [
+        "arXiv:2609.28250"
+      ],
+      "title": "Complementary Roles of Activation and Parametric Memory in Few-Shot Learning",
+      "reason": "This study compares activation memory (KV cache) with parametric memory in few-shot learning and tests when information stored in either form is effective. It is directly related to memory representation but does not propose a runtime memory/KV-cache reduction or serving optimization; evidence is explanatory and the practical inference-efficiency connection remains weak.",
+      "source_url": "https://arxiv.org/abs/2609.28250",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28262",
+      "identity_tokens": [
+        "arXiv:2609.28262"
+      ],
+      "title": "RAMP: Robust Adaptive Mixed-Precision Quantization for Edge CPU Vision Models",
+      "reason": "Mixed-precision quantization evaluates vision models on edge CPUs, not LLM/VLM inference; no in-scope lineage link is recorded.",
+      "source_url": "https://arxiv.org/abs/2609.28262",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28554",
+      "identity_tokens": [
+        "arXiv:2609.28554"
+      ],
+      "title": "Pistis Technical Report",
+      "reason": "Multimodal model-family post-training report; model sizes alone do not constitute a direct inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.28554",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28813",
+      "identity_tokens": [
+        "arXiv:2609.28813"
+      ],
+      "title": "CinematicVQA: Benchmarking Film-Grammar Reasoning in Large Vision-Language Models",
+      "reason": "Film-grammar VLM benchmark; no inference optimization method.",
+      "source_url": "https://arxiv.org/abs/2609.28813",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25738",
+      "identity_tokens": [
+        "arXiv:2609.25738"
+      ],
+      "title": "OmniFysics-Nano-V2 Technical Report: Understanding the Physical World Across Modalities",
+      "reason": "Omni-modal physical-world understanding model report; abstract describes capabilities/training rather than inference-resource reduction.",
+      "source_url": "https://arxiv.org/abs/2609.25738",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
