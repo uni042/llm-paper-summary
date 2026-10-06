@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T03:18:37+00:00",
-  "record_count": 2164,
+  "updated_at": "2026-10-06T03:38:41+00:00",
+  "record_count": 2181,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -33378,6 +33378,267 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Learning Intrinsic Sparse Structures within Long Short-term Memory"
+    },
+    "arXiv:2506.19143": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.19143",
+      "identity_tokens": [
+        "arXiv:2506.19143"
+      ],
+      "reason": "The paper measures reasoning-sentence importance using perturbation, resampling and causal/attention analyses. It identifies influential 'thought anchors' and relationships, but does not itself implement token/step pruning or demonstrate serving savings; causal estimates and model/task coverage constrain deployment claims.",
+      "first_checked_at": "2026-10-06T03:38:34+00:00",
+      "last_checked_at": "2026-10-06T03:38:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Thought Anchors: Which LLM Reasoning Steps Matter?"
+    },
+    "arXiv:2512.12818": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.12818",
+      "identity_tokens": [
+        "arXiv:2512.12818"
+      ],
+      "reason": "Hindsight combines memory retention, multi-channel retrieval/reranking and token-budget filtering with adaptive reasoning agents; experiments use long-term dialogue benchmarks. This may reduce prompt growth but the paper evaluates memory/agent quality rather than production inference serving latency or KV reuse.",
+      "first_checked_at": "2026-10-06T03:38:34+00:00",
+      "last_checked_at": "2026-10-06T03:38:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hindsight is 20/20: Building Agent Memory that Retains, Recalls, and Reflects"
+    },
+    "arXiv:2602.06563": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.06563",
+      "identity_tokens": [
+        "arXiv:2602.06563"
+      ],
+      "reason": "TokenMixer-Large is an industrial recommendation ranking model with sparse-per-token experts, custom operators, FP8 and token-parallel serving. The engineering is inference-relevant but its architecture, workload and quality metrics are recommender-specific, so LLM transfer remains uncertain.",
+      "first_checked_at": "2026-10-06T03:38:35+00:00",
+      "last_checked_at": "2026-10-06T03:38:35+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TokenMixer-Large: Scaling Up Large Ranking Models in Industrial Recommenders"
+    },
+    "arXiv:2604.05546": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05546",
+      "identity_tokens": [
+        "arXiv:2604.05546"
+      ],
+      "reason": "This survey systematically organizes LVLM inference bottlenecks and techniques across encoding, prefill, decode and system levels. It is a useful systems taxonomy but is a survey rather than a novel LLM serving method and focuses on multimodal vision-language workloads.",
+      "first_checked_at": "2026-10-06T03:38:35+00:00",
+      "last_checked_at": "2026-10-06T03:38:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2605.20104-draft-less-retrieve-more-hybrid-tree-construction-for-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+        "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Inference for Large Vision-Language Models: Bottlenecks, Techniques, and Prospects"
+    },
+    "arXiv:2503.24047": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.24047",
+      "identity_tokens": [
+        "arXiv:2503.24047"
+      ],
+      "reason": "This survey reviews scientific-agent architectures, benchmarks and applications. Its subject is agent capability/workflows rather than serving, KV management or inference optimization; relevance through agent scheduling is indirect.",
+      "first_checked_at": "2026-10-06T03:38:36+00:00",
+      "last_checked_at": "2026-10-06T03:38:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-5c9bc68e3beb-towards-efficient-serving-of-network-intensive-llm-inferences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Scientific Intelligence: A Survey of LLM-based Scientific Agents"
+    },
+    "arXiv:2511.21772": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21772",
+      "identity_tokens": [
+        "arXiv:2511.21772"
+      ],
+      "reason": "The primary arXiv HTML endpoint returned Internal Error during retrieval; cannot review methods, evaluation, and limitations from primary text.",
+      "first_checked_at": "2026-10-06T03:38:36+00:00",
+      "last_checked_at": "2026-10-06T03:38:36+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Unified Metric Architecture for AI Infrastructure: A Cross-Layer Taxonomy Integrating Performance, Efficiency, and Cost"
+    },
+    "arXiv:2601.02872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.02872",
+      "identity_tokens": [
+        "arXiv:2601.02872"
+      ],
+      "reason": "LongBench Pro introduces bilingual long-context evaluation with more realistic/extreme-length tasks. It does not propose KV compression, but can evaluate retention and retrieval quality of KV selection/compression methods.",
+      "first_checked_at": "2026-10-06T03:38:37+00:00",
+      "last_checked_at": "2026-10-06T03:38:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+        "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LongBench Pro: A More Realistic and Comprehensive Bilingual Long-Context Evaluation Benchmark"
+    },
+    "arXiv:2512.02189": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.02189",
+      "identity_tokens": [
+        "arXiv:2512.02189"
+      ],
+      "reason": "The paper supplies microbenchmarks and architectural analysis for NVIDIA Blackwell, including tensor-core/memory features and ML workloads. This is hardware characterization, not an LLM serving technique; relevance is as measurement context.",
+      "first_checked_at": "2026-10-06T03:38:37+00:00",
+      "last_checked_at": "2026-10-06T03:38:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Microbenchmarking NVIDIA’s Blackwell Architecture: An in-depth Architectural Analysis"
+    },
+    "arXiv:2511.01448": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.01448",
+      "identity_tokens": [
+        "arXiv:2511.01448"
+      ],
+      "reason": "CogniGraph hierarchically indexes session summaries, triples and source chunks, with time-aware retrieval/reranking and incremental updates. LoCoMo and LongMemEval report accuracy, prompt tokens and retrieval latency gains; evidence is specifically dialogue memory, so validate on inference serving/KV workflows before treating as a runtime optimization.",
+      "first_checked_at": "2026-10-06T03:38:38+00:00",
+      "last_checked_at": "2026-10-06T03:38:38+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LiCoMemory: Lightweight and Cognitive Agentic Memory for Efficient Long-Term Reasoning"
+    },
+    "arXiv:2511.03690": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.03690",
+      "identity_tokens": [
+        "arXiv:2511.03690"
+      ],
+      "reason": "SDK architecture is production-agent infrastructure with context-window management and multi-LLM routing, but the paper evaluates reliability/architecture rather than concrete inference compute or serving-efficiency improvements.",
+      "first_checked_at": "2026-10-06T03:38:38+00:00",
+      "last_checked_at": "2026-10-06T03:38:38+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents"
+    },
+    "arXiv:2511.09149": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.09149",
+      "identity_tokens": [
+        "arXiv:2511.09149"
+      ],
+      "reason": "Interlat trains agents to exchange latent representations rather than natural-language text and evaluates task performance, compression and generalization across communication topologies. This reduces message length but does not directly establish LLM serving throughput or model KV-cache savings; decoder/interface costs and transferability are open.",
+      "first_checked_at": "2026-10-06T03:38:38+00:00",
+      "last_checked_at": "2026-10-06T03:38:38+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2606.14672-towards-direct-latent-space-synthesis-for-parallel-branches-in-llm-agent-workflows.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enabling Agents to Communicate Entirely in Latent Space"
+    },
+    "arXiv:2512.24873": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24873",
+      "identity_tokens": [
+        "arXiv:2512.24873"
+      ],
+      "reason": "ROME presents an open agentic learning ecosystem and a model/tool workflow; evaluation centers on agent-learning capability rather than inference-serving systems metrics. Runtime applicability to agent serving is plausible but indirect.",
+      "first_checked_at": "2026-10-06T03:38:39+00:00",
+      "last_checked_at": "2026-10-06T03:38:39+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem"
+    },
+    "arXiv:2601.10088": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10088",
+      "identity_tokens": [
+        "arXiv:2601.10088"
+      ],
+      "reason": "The study analyzes a large OpenRouter token dataset and empirical model usage patterns, with results about workload/model mix. It provides context for memory-aware placement and scheduling but does not propose or evaluate a serving optimization itself; request population and telemetry coverage bound generalization.",
+      "first_checked_at": "2026-10-06T03:38:39+00:00",
+      "last_checked_at": "2026-10-06T03:38:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md",
+        "papers/inference/99-other-inference-systems/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "State of AI: An Empirical 100 Trillion Token Study with OpenRouter"
+    },
+    "arXiv:2601.16725": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.16725",
+      "identity_tokens": [
+        "arXiv:2601.16725"
+      ],
+      "reason": "LongCat-Flash-Thinking is a technical report on a model and training/inference design, including a Zig-Zag attention design and context-management components. The report ties these to model capability; system-level serving benefits need controlled component attribution and independent replication.",
+      "first_checked_at": "2026-10-06T03:38:40+00:00",
+      "last_checked_at": "2026-10-06T03:38:40+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2603.12201-indexcache-cross-layer-index-reuse.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LongCat-Flash-Thinking-2601 Technical Report"
+    },
+    "arXiv:2512.10858": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.10858",
+      "identity_tokens": [
+        "arXiv:2512.10858"
+      ],
+      "reason": "The work studies training scaling laws across noise types and hyperparameters for DLMs, comparing data/compute scaling to autoregressive models. It is linked to diffusion serving but chiefly concerns pretraining efficiency, not decode-time serving or KV-cache design.",
+      "first_checked_at": "2026-10-06T03:38:40+00:00",
+      "last_checked_at": "2026-10-06T03:38:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04206-sangam-diffusion-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Behavior of Discrete Diffusion Language Models"
+    },
+    "arXiv:2604.05172": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05172",
+      "identity_tokens": [
+        "arXiv:2604.05172"
+      ],
+      "reason": "ClawsBench is a simulated-workspace capability and safety benchmark; it analyzes model/scaffold/harness effects, not inference optimization. The link to unified-memory desktop inference supplies only deployment context.",
+      "first_checked_at": "2026-10-06T03:38:40+00:00",
+      "last_checked_at": "2026-10-06T03:38:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ClawsBench: Evaluating Capability and Safety of LLM Productivity Agents in Simulated Workspaces"
+    },
+    "arXiv:2503.00540": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.00540",
+      "identity_tokens": [
+        "arXiv:2503.00540"
+      ],
+      "reason": "The system retrieves cached video-context representations for streaming VideoQA and reports improved efficiency against VideoQA baselines. It is a modality-specific KV retrieval method; evidence does not establish applicability to text-only LLM KV caches.",
+      "first_checked_at": "2026-10-06T03:38:41+00:00",
+      "last_checked_at": "2026-10-06T03:38:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Streaming Video Question-Answering with In-context Video KV-Cache Retrieval"
     }
   }
 }

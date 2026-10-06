@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c90d85b1c88cbaa8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.10088",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.10088",
+    "identity_tokens": [
+      "arXiv:2601.10088"
+    ],
+    "reason": "The study analyzes a large OpenRouter token dataset and empirical model usage patterns, with results about workload/model mix. It provides context for memory-aware placement and scheduling but does not propose or evaluate a serving optimization itself; request population and telemetry coverage bound generalization.",
+    "first_checked_at": "2026-10-06T03:38:39+00:00",
+    "last_checked_at": "2026-10-06T03:38:39+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15359-maps-memory-aware-predictive-scheduling.md",
+      "papers/inference/99-other-inference-systems/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "State of AI: An Empirical 100 Trillion Token Study with OpenRouter"
+  },
+  "processed_at": "2026-10-06T03:38:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c90d85b1c88c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

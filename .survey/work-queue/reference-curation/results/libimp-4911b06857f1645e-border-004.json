@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4911b06857f1645e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.24047",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.24047",
+    "identity_tokens": [
+      "arXiv:2503.24047"
+    ],
+    "reason": "This survey reviews scientific-agent architectures, benchmarks and applications. Its subject is agent capability/workflows rather than serving, KV management or inference optimization; relevance through agent scheduling is indirect.",
+    "first_checked_at": "2026-10-06T03:38:36+00:00",
+    "last_checked_at": "2026-10-06T03:38:36+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-5c9bc68e3beb-towards-efficient-serving-of-network-intensive-llm-inferences.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Scientific Intelligence: A Survey of LLM-based Scientific Agents"
+  },
+  "processed_at": "2026-10-06T03:38:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4911b06857f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

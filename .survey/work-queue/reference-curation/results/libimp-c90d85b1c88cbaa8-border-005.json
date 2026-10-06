@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c90d85b1c88cbaa8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.16725",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.16725",
+    "identity_tokens": [
+      "arXiv:2601.16725"
+    ],
+    "reason": "LongCat-Flash-Thinking is a technical report on a model and training/inference design, including a Zig-Zag attention design and context-management components. The report ties these to model capability; system-level serving benefits need controlled component attribution and independent replication.",
+    "first_checked_at": "2026-10-06T03:38:40+00:00",
+    "last_checked_at": "2026-10-06T03:38:40+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2603.12201-indexcache-cross-layer-index-reuse.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LongCat-Flash-Thinking-2601 Technical Report"
+  },
+  "processed_at": "2026-10-06T03:38:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c90d85b1c88c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
