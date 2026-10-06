@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r34-screen-01-part-05-59b1e399e41a",
+  "reference_main_sha": "66f6b4a22138ddb5a743e0f79ce8916ca41c111d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.21708",
+      "identity_tokens": [
+        "arXiv:2512.21708"
+      ],
+      "title": "MoRAgent: Parameter Efficient Agent Tuning with Mixture-of-Roles",
+      "reason": "MoRAgent studies parameter-efficient agent tuning; adaptive-expert link is indirect and no inference serving gain is measured.",
+      "source_url": "https://arxiv.org/abs/2512.21708",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca68181.2026.11408525",
+      "identity_tokens": [
+        "DOI:10.1109/hpca68181.2026.11408525"
+      ],
+      "title": "Focus: A Streaming Concentration Architecture for Efficient Vision-Language Models",
+      "reason": "Focus targets streaming VLM inference; transfer to general LLM serving is uncertain.",
+      "source_url": "https://arxiv.org/abs/2512.14661",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15065",
+      "identity_tokens": [
+        "arXiv:2604.15065"
+      ],
+      "title": "Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection",
+      "reason": "Small-object detection positional embeddings, unrelated to LLM inference.",
+      "source_url": "https://arxiv.org/abs/2604.15065",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3712285.3759803",
+      "identity_tokens": [
+        "DOI:10.1145/3712285.3759803"
+      ],
+      "title": "Demystifying the Resilience of Large Language Model Inference: An End-to-End Perspective",
+      "reason": "LLM inference resilience is adjacent to serving, but the DOI source returned 403.",
+      "source_url": "https://doi.org/10.1145/3712285.3759803",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00489",
+      "identity_tokens": [
+        "arXiv:2511.00489"
+      ],
+      "title": "ToM: Leveraging Tree-oriented MapReduce for Long-Context Reasoning in Large Language Models",
+      "reason": "ToM improves long-context reasoning but DocTree construction adds compute and compression may omit information; serving savings are unproven.",
+      "source_url": "https://arxiv.org/abs/2511.00489",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    }
+  ]
+}
