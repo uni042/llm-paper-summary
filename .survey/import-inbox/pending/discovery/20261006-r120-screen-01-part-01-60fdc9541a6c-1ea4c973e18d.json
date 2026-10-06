@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r120-screen-01-part-01-60fdc9541a6c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JSSC.2024.3397189",
+      "identity_tokens": [
+        "DOI:10.1109/JSSC.2024.3397189"
+      ],
+      "title": "Ayaka: A Versatile Transformer Accelerator With Low-Rank Estimation and Heterogeneous Dataflow",
+      "reason": "一次資料の全文取得に失敗しmethod/evaluation/limitationsを検証できないためborderlineに残す。 The IEEE JSSC DOI page only presented an anti-bot JavaScript interstitial; the publisher full text and abstract could not be read. The available abstract from an alternate bibliographic copy describes sparse Transformer attention and heterogeneous dataflow hardware, but that is insufficient for method/evaluation/limitations review.",
+      "source_url": "https://doi.org/10.1109/JSSC.2024.3397189",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2408.17355",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2408.17355"
+      ],
+      "title": "Bidirectional Decoding: Improving Action Chunking via Closed-Loop Resampling",
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 BID is a robot-policy test-time sampling method: it selects action chunks using backward coherence and forward likelihood, evaluated on simulation and real robot tasks. It is not speculative decoding of LLM tokens and does not evaluate language-model inference efficiency.",
+      "source_url": "https://doi.org/10.48550/arXiv.2408.17355",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10684",
+      "identity_tokens": [
+        "arXiv:2508.10684"
+      ],
+      "title": "MDNS: Masked Diffusion Neural Sampler via Stochastic Optimal Control",
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 ",
+      "source_url": "https://arxiv.org/abs/2508.10684",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.05332",
+      "identity_tokens": [
+        "arXiv:2506.05332"
+      ],
+      "title": "Unleashing Hour-Scale Video Training for Long Video-Language Understanding",
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 Hour-LLaVA uses a question-conditioned memory augmentation module to integrate semantics from cached full-video context and enable hour-scale video training/inference at 1-FPS sampling. It reports video understanding benchmark gains but no measured inference memory/latency/throughput advantage in the reviewed results; its relevance to distributed attention is plausible but indirect.",
+      "source_url": "https://arxiv.org/abs/2506.05332",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22510",
+      "identity_tokens": [
+        "arXiv:2510.22510"
+      ],
+      "title": "CANDI: Hybrid Discrete-Continuous Diffusion Models",
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 ",
+      "source_url": "https://arxiv.org/abs/2510.22510",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
