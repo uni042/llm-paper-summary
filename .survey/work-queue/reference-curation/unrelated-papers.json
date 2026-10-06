@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T19:55:19+00:00",
-  "record_count": 9475,
+  "updated_at": "2026-10-06T20:06:19+00:00",
+  "record_count": 9492,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -135762,6 +135762,244 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
       ],
       "title": "InternReviewer&InternAdvocate: Objective Reward and Evaluation for Agentic Reinforcement Learning in Peer Review and Rebuttal"
+    },
+    "arXiv:2607.08714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.08714",
+      "identity_tokens": [
+        "arXiv:2607.08714"
+      ],
+      "reason": "Primary abstract/full page identifies a voice/clinical MoE for asthma classification; no LLM or inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T20:06:07+00:00",
+      "last_checked_at": "2026-10-06T20:06:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors"
+    },
+    "arXiv:2607.10796": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10796",
+      "identity_tokens": [
+        "arXiv:2607.10796"
+      ],
+      "reason": "LVLM cognitive/vision experts are added for reasoning quality; no inference compute, memory or latency improvement is measured.",
+      "first_checked_at": "2026-10-06T20:06:10+00:00",
+      "last_checked_at": "2026-10-06T20:06:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Mixture of Cognitive Experts in Large Vision-Language Models"
+    },
+    "arXiv:2607.11030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11030",
+      "identity_tokens": [
+        "arXiv:2607.11030"
+      ],
+      "reason": "MLLM-derived product representations improve e-commerce ranking, but ranking quality rather than LLM runtime is evaluated; FlashAttention is only a lineage label.",
+      "first_checked_at": "2026-10-06T20:06:13+00:00",
+      "last_checked_at": "2026-10-06T20:06:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "MMRM: A Multiplex Multimodal Representation Model for Product Ranking in E-commerce Search"
+    },
+    "arXiv:2607.11288": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11288",
+      "identity_tokens": [
+        "arXiv:2607.11288"
+      ],
+      "reason": "Autonomous web-exploitation agent OS reports cybersecurity-task success and API/token cost, not an LLM inference optimization.",
+      "first_checked_at": "2026-10-06T20:06:13+00:00",
+      "last_checked_at": "2026-10-06T20:06:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Mako: A Self-Evolving Agentic Operating System (SE-AOS) for Autonomous Web Exploitation"
+    },
+    "arXiv:2609.00385": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00385",
+      "identity_tokens": [
+        "arXiv:2609.00385"
+      ],
+      "reason": "Highway overtaking world-model/RL with driving-policy experts; generic GShard/MoE linkage is not a technical connection to LLM inference.",
+      "first_checked_at": "2026-10-06T20:06:14+00:00",
+      "last_checked_at": "2026-10-06T20:06:14+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Risk-Aware Decision-Making for Autonomous Overtaking: A World Model-Based Mixture-of-Experts Framework"
+    },
+    "arXiv:2607.10985": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10985",
+      "identity_tokens": [
+        "arXiv:2607.10985"
+      ],
+      "reason": "CLIP image-domain LoRA expert routing/calibration targets visual classification; generic MoE linkage does not connect it to LLM inference.",
+      "first_checked_at": "2026-10-06T20:06:14+00:00",
+      "last_checked_at": "2026-10-06T20:06:14+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MED-DSLC: Multi-Expert-Domain Classification via Domain Supervision and Logit Calibration"
+    },
+    "arXiv:2607.10995": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10995",
+      "identity_tokens": [
+        "arXiv:2607.10995"
+      ],
+      "reason": "Asymmetric 3D Gaussian Splatting reduces scene-reconstruction cost; linked FlashAttention lineage is unrelated to its graphics contribution.",
+      "first_checked_at": "2026-10-06T20:06:14+00:00",
+      "last_checked_at": "2026-10-06T20:06:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "AsySplat: Efficient Asymmetric 3D Gaussian Splatting for Long-Sequence Scene Modeling"
+    },
+    "arXiv:2607.04306": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04306",
+      "identity_tokens": [
+        "arXiv:2607.04306"
+      ],
+      "reason": "Low-rank distillation quality-per-rank on encoder RoBERTa is neither low-bit quantization nor decoder LLM inference; LLM generation is future work.",
+      "first_checked_at": "2026-10-06T20:06:15+00:00",
+      "last_checked_at": "2026-10-06T20:06:15+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "SAD-LoRA: Spectral Alignment for Low-Rank Knowledge Distillation"
+    },
+    "arXiv:2607.03094": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03094",
+      "identity_tokens": [
+        "arXiv:2607.03094"
+      ],
+      "reason": "Stacked LoRA adapts EEG models for motor imagery; compact adapters are not LLM inference optimization despite FlashAttention lineage.",
+      "first_checked_at": "2026-10-06T20:06:15+00:00",
+      "last_checked_at": "2026-10-06T20:06:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Stacked LoRA for Subject-Adaptive EEG Foundation Models in Motor Imagery Decoding"
+    },
+    "arXiv:2607.09749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09749",
+      "identity_tokens": [
+        "arXiv:2607.09749"
+      ],
+      "reason": "MorphologyFM represents ECG/oximetry waveforms, not language inference; FlashAttention lineage is not its technical contribution.",
+      "first_checked_at": "2026-10-06T20:06:16+00:00",
+      "last_checked_at": "2026-10-06T20:06:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "MorphologyFM: A Foundation Model for Morphology-Aware Representation Learning from ECG and Pulse Oximetry Waveforms"
+    },
+    "DOI:10.64898/2026.06.29.735389": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.29.735389",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.29.735389"
+      ],
+      "reason": "Single-cell transformer preprocessing concerns genomic representation quality, not LLM attention or inference.",
+      "first_checked_at": "2026-10-06T20:06:16+00:00",
+      "last_checked_at": "2026-10-06T20:06:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Raw-count embeddings improve single-cell foundation models"
+    },
+    "arXiv:2607.06413": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06413",
+      "identity_tokens": [
+        "arXiv:2607.06413"
+      ],
+      "reason": "Primary text is an experimental-design framework for agentic model-discovery evaluation, not inference-resource optimization or serving.",
+      "first_checked_at": "2026-10-06T20:06:17+00:00",
+      "last_checked_at": "2026-10-06T20:06:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "An Experimental Design Approach to Evaluating Agentic AI's Autonomous Model Discovery"
+    },
+    "arXiv:2607.06620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06620",
+      "identity_tokens": [
+        "arXiv:2607.06620"
+      ],
+      "reason": "Sparse-view 3D spatial-reasoning MoE targets task quality; no LLM inference-resource or serving improvement is established.",
+      "first_checked_at": "2026-10-06T20:06:17+00:00",
+      "last_checked_at": "2026-10-06T20:06:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "SpaR3D-MoE: Adaptive 3D Spatial Reasoning from Sparse Views Meets Geometry-Inductive Mixture-of-Experts"
+    },
+    "arXiv:2607.05659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05659",
+      "identity_tokens": [
+        "arXiv:2607.05659"
+      ],
+      "reason": "Personality/emotion assignment affects software-agent team quality, not weight quantization or inference kernels.",
+      "first_checked_at": "2026-10-06T20:06:18+00:00",
+      "last_checked_at": "2026-10-06T20:06:18+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Agents with Feelings? Personality and Emotion in Multi-Agent Software Teams"
+    },
+    "arXiv:2607.00358": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00358",
+      "identity_tokens": [
+        "arXiv:2607.00358"
+      ],
+      "reason": "PRISM routes EEG signal experts for emotion classification; generic MoE lineage is not an LLM-serving link.",
+      "first_checked_at": "2026-10-06T20:06:18+00:00",
+      "last_checked_at": "2026-10-06T20:06:18+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "PRISM: Prioritized Channel Importance with Semi-supervised Domain Adaptation for Cross-Subject EEG Emotion Recognition"
+    },
+    "arXiv:2607.00434": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00434",
+      "identity_tokens": [
+        "arXiv:2607.00434"
+      ],
+      "reason": "Information-regularized visual attention improves grounding/robustness; no sparse/IO-aware compute or serving outcome.",
+      "first_checked_at": "2026-10-06T20:06:19+00:00",
+      "last_checked_at": "2026-10-06T20:06:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Information-Regularized Attention for Visual-Centric Reasoning"
+    },
+    "arXiv:2607.00687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00687",
+      "identity_tokens": [
+        "arXiv:2607.00687"
+      ],
+      "reason": "LUMA is a vision-segmentation head/backbone benchmark; its FLOPs/memory trade-offs are not LLM attention optimization.",
+      "first_checked_at": "2026-10-06T20:06:19+00:00",
+      "last_checked_at": "2026-10-06T20:06:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "LUMA: Benchmarking Segmentation via a Lightweight Universal Mask Adapter"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b0c4d3481709df51-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11030",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11030",
+    "identity_tokens": [
+      "arXiv:2607.11030"
+    ],
+    "reason": "MLLM-derived product representations improve e-commerce ranking, but ranking quality rather than LLM runtime is evaluated; FlashAttention is only a lineage label.",
+    "first_checked_at": "2026-10-06T20:06:13+00:00",
+    "last_checked_at": "2026-10-06T20:06:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "MMRM: A Multiplex Multimodal Representation Model for Product Ranking in E-commerce Search"
+  },
+  "processed_at": "2026-10-06T20:06:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b0c4d3481709",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
