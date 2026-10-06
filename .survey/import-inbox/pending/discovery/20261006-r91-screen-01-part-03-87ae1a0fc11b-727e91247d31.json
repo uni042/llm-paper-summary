@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r91-screen-01-part-03-87ae1a0fc11b",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SoutheastCon52093.2024.10500284",
+      "identity_tokens": [
+        "DOI:10.1109/SoutheastCon52093.2024.10500284"
+      ],
+      "title": "Spiking-Transformer Optimization on FPGA for Image Classification and Captioning",
+      "reason": "Abstract/metadata leaves a plausible connection to inference efficiency or a cited lineage, but primary full text could not be reviewed; relevance remains unresolved.",
+      "source_url": "https://doi.org/10.1109/SoutheastCon52093.2024.10500284",
+      "first_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "last_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18428",
+      "identity_tokens": [
+        "arXiv:2402.18428"
+      ],
+      "title": "Leveraging Diverse Modeling Contexts With Collaborating Learning for Neural Machine Translation",
+      "reason": "Collaborative learning for neural MT is a training method, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2402.18428",
+      "first_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "last_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2405.19213",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2405.19213"
+      ],
+      "title": "HawkVision: Low-Latency Modeless Edge AI Serving",
+      "reason": "Vision-only; LLM FPGA serving appears as future possibility, not an evaluated workload.",
+      "source_url": "https://doi.org/10.48550/arXiv.2405.19213",
+      "first_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "last_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.19207",
+      "identity_tokens": [
+        "arXiv:2403.19207"
+      ],
+      "title": "LV-CTC: Non-Autoregressive ASR With CTC and Latent Variable Models",
+      "reason": "Speech recognition and CTC specific; no general LLM serving evidence.",
+      "source_url": "https://arxiv.org/abs/2403.19207",
+      "first_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "last_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CANDAR60563.2023.00020",
+      "identity_tokens": [
+        "DOI:10.1109/CANDAR60563.2023.00020"
+      ],
+      "title": "Parallel Implementation of Vision Transformer on a Multi-FPGA Cluster",
+      "reason": "Multi-FPGA vision Transformer implementation; no language model or text-generation inference.",
+      "source_url": "https://doi.org/10.1109/CANDAR60563.2023.00020",
+      "first_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "last_checked_at": "2026-10-06T12:32:32.753104+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    }
+  ]
+}
