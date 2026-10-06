@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r66-screen-01-part-03-84763b85eab9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37938",
+      "identity_tokens": [
+        "arXiv:2609.37938"
+      ],
+      "title": "Does Local Video Understanding Transfer Across Encounters? The EgoGears Benchmark",
+      "reason": "Ego-centric transfer benchmark, no inference optimization.",
+      "source_url": "https://arxiv.org/abs/2609.37938",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38057",
+      "identity_tokens": [
+        "arXiv:2609.38057"
+      ],
+      "title": "EVO-WAM: Evolving World Action Models through Video-Action Verification",
+      "reason": "EVO-WAM filters generated video/action/state rollouts using VLM completion and inverse-dynamics consistency checks, then self-trains; full text reports unseen-task simulation and real-robot gains. The linked Qwen3.8 model is a verifier, not optimized. This is robotics adaptation/training, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38057",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34148",
+      "identity_tokens": [
+        "arXiv:2609.34148"
+      ],
+      "title": "Geometric Encoding for Spatial Reasoning in Vision-Language Models",
+      "reason": "Spatial reasoning method, no inference-cost evidence.",
+      "source_url": "https://arxiv.org/abs/2609.34148",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34547",
+      "identity_tokens": [
+        "arXiv:2609.34547"
+      ],
+      "title": "ActionLens: Diagnosing Spatial-Temporal Binding Failures in Vision-Language Models",
+      "reason": "VLM spatiotemporal binding diagnostic, no resource improvement.",
+      "source_url": "https://arxiv.org/abs/2609.34547",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34630",
+      "identity_tokens": [
+        "arXiv:2609.34630"
+      ],
+      "title": "Long Time No See: Benchmarking VLMs for Out-of-Sight Spatiotemporal Reasoning in Egocentric Videos",
+      "reason": "Out-of-sight video reasoning benchmark, no inference optimization.",
+      "source_url": "https://arxiv.org/abs/2609.34630",
+      "first_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "last_checked_at": "2026-10-06T08:53:08.166188+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
