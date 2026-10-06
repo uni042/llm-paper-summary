@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T16:56:14+00:00",
-  "record_count": 8990,
+  "updated_at": "2026-10-06T17:15:20+00:00",
+  "record_count": 9022,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -128958,6 +128958,454 @@
         "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
       ],
       "title": "Translate-Distill: Learning Cross-Language Dense Retrieval by Translation and Distillation"
+    },
+    "arXiv:2510.25817": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25817",
+      "identity_tokens": [
+        "arXiv:2510.25817"
+      ],
+      "reason": "The review concerns training data efficiency rather than inference, serving, or runtime resource improvements.",
+      "first_checked_at": "2026-10-06T17:15:09+00:00",
+      "last_checked_at": "2026-10-06T17:15:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md"
+      ],
+      "title": "A Survey on Efficient Large Language Model Training: From Data-centric Perspectives"
+    },
+    "arXiv:2506.09990": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09990",
+      "identity_tokens": [
+        "arXiv:2506.09990"
+      ],
+      "reason": "Efficiency refers to robot action generation/execution, not LLM inference serving.",
+      "first_checked_at": "2026-10-06T17:15:09+00:00",
+      "last_checked_at": "2026-10-06T17:15:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Chain-of-Action: Trajectory Autoregressive Modeling for Robotic Manipulation"
+    },
+    "arXiv:2506.05584": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05584",
+      "identity_tokens": [
+        "arXiv:2506.05584"
+      ],
+      "reason": "Its attention efficiency is for tabular classification models and dataset scaling, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T17:15:09+00:00",
+      "last_checked_at": "2026-10-06T17:15:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "TabFlex: Scaling Tabular Learning to Millions with Linear Attention"
+    },
+    "arXiv:2408.11813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.11813",
+      "identity_tokens": [
+        "arXiv:2408.11813"
+      ],
+      "reason": "The contribution is representation alignment/training for multimodal understanding, not inference compute or serving efficiency.",
+      "first_checked_at": "2026-10-06T17:15:09+00:00",
+      "last_checked_at": "2026-10-06T17:15:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "SEA: Supervised Embedding Alignment for Token-Level Visual-Textual Integration in MLLMs"
+    },
+    "arXiv:2409.14866": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14866",
+      "identity_tokens": [
+        "arXiv:2409.14866"
+      ],
+      "reason": "Full text confirms prompt economy is for attack/query payloads, not inference-system efficiency.",
+      "first_checked_at": "2026-10-06T17:15:10+00:00",
+      "last_checked_at": "2026-10-06T17:15:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "PAPILLON: Efficient and Stealthy Fuzz Testing-Powered Jailbreaks for LLMs"
+    },
+    "arXiv:2408.14211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.14211",
+      "identity_tokens": [
+        "arXiv:2408.14211"
+      ],
+      "reason": "The contribution is human-view synthesis and reconstruction quality; no target LLM inference or serving efficiency is addressed.",
+      "first_checked_at": "2026-10-06T17:15:10+00:00",
+      "last_checked_at": "2026-10-06T17:15:10+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "MagicMan: Generative Novel View Synthesis of Humans with 3D-Aware Diffusion and Iterative Refinement"
+    },
+    "arXiv:2406.06556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.06556",
+      "identity_tokens": [
+        "arXiv:2406.06556"
+      ],
+      "reason": "Full text confirms a presentation-generation task without measured or proposed LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T17:15:10+00:00",
+      "last_checked_at": "2026-10-06T17:15:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Enhancing Presentation Slide Generation by LLMs with a Multi-Staged End-to-End Approach"
+    },
+    "arXiv:2502.11401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11401",
+      "identity_tokens": [
+        "arXiv:2502.11401"
+      ],
+      "reason": "Full text confines the efficiency claim to embedding learning and training samples, outside the target inference scope.",
+      "first_checked_at": "2026-10-06T17:15:10+00:00",
+      "last_checked_at": "2026-10-06T17:15:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Following the Autoregressive Nature of LLM Embeddings via Compression and Alignment"
+    },
+    "arXiv:2412.15118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15118",
+      "identity_tokens": [
+        "arXiv:2412.15118"
+      ],
+      "reason": "Full text separates generated-program runtime from model inference performance.",
+      "first_checked_at": "2026-10-06T17:15:11+00:00",
+      "last_checked_at": "2026-10-06T17:15:11+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Reasoning Through Execution: Unifying Process and Outcome Rewards for Code Generation"
+    },
+    "arXiv:2405.18295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18295",
+      "identity_tokens": [
+        "arXiv:2405.18295"
+      ],
+      "reason": "Full text confirms a vision grounding task rather than the targeted inference-system contribution.",
+      "first_checked_at": "2026-10-06T17:15:12+00:00",
+      "last_checked_at": "2026-10-06T17:15:12+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "Intent3D: 3D Object Detection in RGB-D Scans Based on Human Intention"
+    },
+    "arXiv:2509.23745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23745",
+      "identity_tokens": [
+        "arXiv:2509.23745"
+      ],
+      "reason": "The contribution is robot control and morphology adaptation; no LLM inference efficiency is described.",
+      "first_checked_at": "2026-10-06T17:15:12+00:00",
+      "last_checked_at": "2026-10-06T17:15:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "LocoFormer: Generalist Locomotion via Long-context Adaptation"
+    },
+    "arXiv:2508.08134": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.08134",
+      "identity_tokens": [
+        "arXiv:2508.08134"
+      ],
+      "reason": "Full text confirms the lineage overlap is topical rather than an LLM inference contribution.",
+      "first_checked_at": "2026-10-06T17:15:13+00:00",
+      "last_checked_at": "2026-10-06T17:15:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Follow-Your-Shape: Shape-Aware Image Editing via Trajectory-Guided Region Control"
+    },
+    "arXiv:2408.04820": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.04820",
+      "identity_tokens": [
+        "arXiv:2408.04820"
+      ],
+      "reason": "This concerns programming methodology and code documentation, not model inference efficiency.",
+      "first_checked_at": "2026-10-06T17:15:13+00:00",
+      "last_checked_at": "2026-10-06T17:15:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Natural Language Outlines for Code: Literate Programming in the LLM Era"
+    },
+    "arXiv:2505.22246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22246",
+      "identity_tokens": [
+        "arXiv:2505.22246"
+      ],
+      "reason": "This is diffusion-based world modeling, not language-model inference or serving.",
+      "first_checked_at": "2026-10-06T17:15:14+00:00",
+      "last_checked_at": "2026-10-06T17:15:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "StateSpaceDiffuser: Bringing Long Context to Diffusion World Models"
+    },
+    "arXiv:2501.05680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.05680",
+      "identity_tokens": [
+        "arXiv:2501.05680"
+      ],
+      "reason": "The linked sparse-attention theme does not translate into an LLM inference result in this paper.",
+      "first_checked_at": "2026-10-06T17:15:15+00:00",
+      "last_checked_at": "2026-10-06T17:15:15+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "EXION: Exploiting Inter-and Intra-Iteration Output Sparsity for Diffusion Models"
+    },
+    "arXiv:2412.14368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.14368",
+      "identity_tokens": [
+        "arXiv:2412.14368"
+      ],
+      "reason": "Full text confirms the apparent memory wording is about memorization, not model runtime memory/cache.",
+      "first_checked_at": "2026-10-06T17:15:15+00:00",
+      "last_checked_at": "2026-10-06T17:15:15+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "title": "Beyond Math: Stories as a Testbed for Memorization-Constrained Reasoning in LLMs"
+    },
+    "arXiv:2406.11118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11118",
+      "identity_tokens": [
+        "arXiv:2406.11118"
+      ],
+      "reason": "The contribution concerns text-quality incentives, not inference efficiency.",
+      "first_checked_at": "2026-10-06T17:15:15+00:00",
+      "last_checked_at": "2026-10-06T17:15:15+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Incentivizing Quality Text Generation via Statistical Contracts"
+    },
+    "arXiv:2401.00529": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.00529",
+      "identity_tokens": [
+        "arXiv:2401.00529"
+      ],
+      "reason": "The model targets graph data/tasks rather than LLM inference systems.",
+      "first_checked_at": "2026-10-06T17:15:16+00:00",
+      "last_checked_at": "2026-10-06T17:15:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "GraphGPT: Generative Pre-trained Graph Eulerian Transformer"
+    },
+    "arXiv:2305.17235": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17235",
+      "identity_tokens": [
+        "arXiv:2305.17235"
+      ],
+      "reason": "Full text confirms the application remains vision-model compression and training.",
+      "first_checked_at": "2026-10-06T17:15:16+00:00",
+      "last_checked_at": "2026-10-06T17:15:16+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "COMCAT: Towards Efficient Compression and Customization of Attention-Based Vision Models"
+    },
+    "arXiv:2510.19363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19363",
+      "identity_tokens": [
+        "arXiv:2510.19363"
+      ],
+      "reason": "The efficiency claim is about RL training, not inference-time execution or serving.",
+      "first_checked_at": "2026-10-06T17:15:16+00:00",
+      "last_checked_at": "2026-10-06T17:15:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts"
+    },
+    "arXiv:2508.02190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02190",
+      "identity_tokens": [
+        "arXiv:2508.02190"
+      ],
+      "reason": "The task is federated robotics/VLA training; no direct LLM serving improvement is established.",
+      "first_checked_at": "2026-10-06T17:15:17+00:00",
+      "last_checked_at": "2026-10-06T17:15:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "FedVLA: Federated Vision-Language-Action Learning with Dual Gating Mixture-of-Experts for Robotic Manipulation"
+    },
+    "arXiv:2501.04004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.04004",
+      "identity_tokens": [
+        "arXiv:2501.04004"
+      ],
+      "reason": "This is a LiDAR perception model, not an LLM inference contribution.",
+      "first_checked_at": "2026-10-06T17:15:17+00:00",
+      "last_checked_at": "2026-10-06T17:15:17+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "LiMoE: Mixture of LiDAR Representation Learners from Automotive Scenes"
+    },
+    "arXiv:2409.12181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12181",
+      "identity_tokens": [
+        "arXiv:2409.12181"
+      ],
+      "reason": "The paper is an evaluation of context-extension methods, not a concrete inference cost, memory, or serving improvement.",
+      "first_checked_at": "2026-10-06T17:15:17+00:00",
+      "last_checked_at": "2026-10-06T17:15:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "A Controlled Study on Long Context Extension and Generalization in LLMs"
+    },
+    "DOI:10.1007/s10489-024-05796-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10489-024-05796-1",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-024-05796-1"
+      ],
+      "reason": "Full text confirms the LLM is an application component, not the optimized system.",
+      "first_checked_at": "2026-10-06T17:15:17+00:00",
+      "last_checked_at": "2026-10-06T17:15:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "ERG-AI: enhancing occupational ergonomics with uncertainty-aware ML and LLM feedback"
+    },
+    "arXiv:2401.03476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.03476",
+      "identity_tokens": [
+        "arXiv:2401.03476"
+      ],
+      "reason": "Full text confirms a speech-animation generation task rather than inference efficiency.",
+      "first_checked_at": "2026-10-06T17:15:18+00:00",
+      "last_checked_at": "2026-10-06T17:15:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "FreeTalker: Controllable Speech and Text-Driven Gesture Generation Based on Diffusion Models for Enhanced Speaker Naturalness"
+    },
+    "arXiv:2409.08530": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.08530",
+      "identity_tokens": [
+        "arXiv:2409.08530"
+      ],
+      "reason": "The task is time-series forecasting, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T17:15:18+00:00",
+      "last_checked_at": "2026-10-06T17:15:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Integration of Mamba and Transformer - MAT for Long-Short Range Time Series Forecasting with Application to Weather Dynamics"
+    },
+    "arXiv:2407.03200": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.03200",
+      "identity_tokens": [
+        "arXiv:2407.03200"
+      ],
+      "reason": "This is a computer-vision segmentation method, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T17:15:18+00:00",
+      "last_checked_at": "2026-10-06T17:15:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "SegVG: Transferring Object Bounding Box to Segmentation for Visual Grounding"
+    },
+    "arXiv:2406.11151": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11151",
+      "identity_tokens": [
+        "arXiv:2406.11151"
+      ],
+      "reason": "The survey is broad mathematical background and does not present a concrete LLM inference or serving contribution.",
+      "first_checked_at": "2026-10-06T17:15:19+00:00",
+      "last_checked_at": "2026-10-06T17:15:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Recent and Upcoming Developments in Randomized Numerical Linear Algebra for Machine Learning"
+    },
+    "arXiv:2403.07872": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.07872",
+      "identity_tokens": [
+        "arXiv:2403.07872"
+      ],
+      "reason": "The work is an evaluation methodology, not an inference optimization.",
+      "first_checked_at": "2026-10-06T17:15:19+00:00",
+      "last_checked_at": "2026-10-06T17:15:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Rethinking Generative Large Language Model Evaluation for Semantic Comprehension"
+    },
+    "arXiv:2506.17774": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17774",
+      "identity_tokens": [
+        "arXiv:2506.17774"
+      ],
+      "reason": "The target is physical simulation, not language-model inference.",
+      "first_checked_at": "2026-10-06T17:15:19+00:00",
+      "last_checked_at": "2026-10-06T17:15:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "PhysiX: A Foundation Model for Physics Simulations"
+    },
+    "arXiv:2504.05303": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.05303",
+      "identity_tokens": [
+        "arXiv:2504.05303"
+      ],
+      "reason": "The contribution concerns 3D interaction reasoning and does not claim inference efficiency.",
+      "first_checked_at": "2026-10-06T17:15:20+00:00",
+      "last_checked_at": "2026-10-06T17:15:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "InteractVLM: 3D Interaction Reasoning from 2D Foundational Models"
+    },
+    "DOI:10.1016/j.drudis.2024.104272": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.drudis.2024.104272",
+      "identity_tokens": [
+        "DOI:10.1016/j.drudis.2024.104272"
+      ],
+      "reason": "This is a domain-application overview rather than an inference efficiency method.",
+      "first_checked_at": "2026-10-06T17:15:20+00:00",
+      "last_checked_at": "2026-10-06T17:15:20+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Generative AI: driving productivity and scientific breakthroughs in pharmaceutical R&D."
     }
   }
 }

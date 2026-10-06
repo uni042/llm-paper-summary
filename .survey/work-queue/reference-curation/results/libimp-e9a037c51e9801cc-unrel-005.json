@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9a037c51e9801cc-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.03476",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.03476",
+    "identity_tokens": [
+      "arXiv:2401.03476"
+    ],
+    "reason": "Full text confirms a speech-animation generation task rather than inference efficiency.",
+    "first_checked_at": "2026-10-06T17:15:18+00:00",
+    "last_checked_at": "2026-10-06T17:15:18+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "title": "FreeTalker: Controllable Speech and Text-Driven Gesture Generation Based on Diffusion Models for Enhanced Speaker Naturalness"
+  },
+  "processed_at": "2026-10-06T17:15:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9a037c51e98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e1c1ea10f00fa499-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.19363",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.19363",
+    "identity_tokens": [
+      "arXiv:2510.19363"
+    ],
+    "reason": "The efficiency claim is about RL training, not inference-time execution or serving.",
+    "first_checked_at": "2026-10-06T17:15:16+00:00",
+    "last_checked_at": "2026-10-06T17:15:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts"
+  },
+  "processed_at": "2026-10-06T17:15:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e1c1ea10f00f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
