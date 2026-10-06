@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r29-screen-01-part-05-121245d765f0",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463208",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463208"
+      ],
+      "title": "Mongoose: do we Need a Scanner for Vision Mamba?",
+      "reason": "Vision Mamba画像modelのscanner研究で、LLM inferenceとは無関係。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463208",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464371",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11464371"
+      ],
+      "title": "GaRA: Gated Low-Rank Adaptation for Fine-Tuning Time-Series Foundation Models",
+      "reason": "時系列foundation modelのfine-tuning/LoRAで、推論効率ではない。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11464371",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ces.2026.124268",
+      "identity_tokens": [
+        "DOI:10.1016/j.ces.2026.124268"
+      ],
+      "title": "Optimizing Nonintrusive Reduced-Order Surrogate Models for Transport in Deformable Porous Media",
+      "reason": "porous media transport向けreduced-order physical surrogateで、LLM対象外。",
+      "source_url": "https://doi.org/10.1016/j.ces.2026.124268",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123591",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123591"
+      ],
+      "title": "WAVe: Word-aligned verification of synthetic speech for ASR",
+      "reason": "ASR用合成speechのword-aligned verificationで、LLM servingではない。",
+      "source_url": "https://doi.org/10.1016/j.ins.2026.123591",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICAIBD69640.2026.11637231",
+      "identity_tokens": [
+        "DOI:10.1109/ICAIBD69640.2026.11637231"
+      ],
+      "title": "Domain-Adaptive Semantic Modeling for Document Segmentation and Complex Table Parsing in Oilfield Scenarios",
+      "reason": "oilfield document segmentation/table parsingのdomain-specific corpus構築で、推論効率の提案ではない。",
+      "source_url": "https://doi.org/10.1109/ICAIBD69640.2026.11637231",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
