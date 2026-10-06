@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r159-screen-01-part-01-2d71bbe2f640",
+  "reference_main_sha": "9851be8d4f698de397ea71ee818efa1c6f5dc5a3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.08313",
+      "identity_tokens": [
+        "arXiv:1810.08313"
+      ],
+      "title": "Adaptive Communication Strategies to Achieve the Best Error-Runtime Trade-off in Local-Update SGD",
+      "reason": "Its primary abstract explicitly concerns distributed stochastic-gradient training and communication/runtime tradeoffs during training, with no LLM inference improvement.",
+      "source_url": "https://arxiv.org/abs/1810.08313",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15738",
+      "identity_tokens": [
+        "arXiv:2411.15738"
+      ],
+      "title": "AnyEdit: Mastering Unified High-Quality Image Editing for Any Idea",
+      "reason": "The relevant method and experiments concern image-editing data and diffusion-model task routing. LLM use is instruction classification; the source does not propose or measure LLM inference compute/memory/latency savings.",
+      "source_url": "https://arxiv.org/abs/2411.15738",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.11584",
+      "identity_tokens": [
+        "arXiv:2404.11584"
+      ],
+      "title": "The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling: A Survey",
+      "reason": "The primary abstract surveys capabilities and limitations of agent designs; it does not identify an LLM compute, memory, latency, or serving intervention.",
+      "source_url": "https://arxiv.org/abs/2404.11584",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.06564",
+      "identity_tokens": [
+        "arXiv:2404.06564"
+      ],
+      "title": "MambaAD: Exploring State Space Models for Multi-class Unsupervised Anomaly Detection",
+      "reason": "The method is evaluated on image anomaly-detection tasks, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2404.06564",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.06954",
+      "identity_tokens": [
+        "arXiv:2402.06954"
+      ],
+      "title": "OpenFedLLM: Training Large Language Models on Decentralized Private Data via Federated Learning",
+      "reason": "Its title and abstract state a distributed training objective; no inference resource reduction is proposed or evaluated.",
+      "source_url": "https://arxiv.org/abs/2402.06954",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ]
+    }
+  ]
+}
