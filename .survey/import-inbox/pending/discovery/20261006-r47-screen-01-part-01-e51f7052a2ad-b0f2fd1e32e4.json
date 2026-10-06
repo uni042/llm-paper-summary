@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r47-screen-01-part-01-e51f7052a2ad",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05134",
+      "identity_tokens": [
+        "arXiv:2603.05134"
+      ],
+      "title": "LBM: Hierarchical Large Auto-Bidding Model via Reasoning and Acting",
+      "reason": "Auto-bidding strategy training and decision quality; no LLM inference resource optimization.",
+      "source_url": "https://arxiv.org/abs/2603.05134",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01685",
+      "identity_tokens": [
+        "arXiv:2603.01685"
+      ],
+      "title": "FastLightGen: Fast and Light Video Generation with Fewer Steps and Parameters",
+      "reason": "Video-diffusion generation acceleration/pruning, outside LLM/VLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2603.01685",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSVT.2025.3625191",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2025.3625191"
+      ],
+      "title": "An MoE-Driven Unified Image Restoration Framework for Adverse Weather Conditions",
+      "reason": "MoE image restoration for adverse weather; not LLM/VLM inference.",
+      "source_url": "https://doi.org/10.1109/TCSVT.2025.3625191",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JIOT.2025.3639422",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2025.3639422"
+      ],
+      "title": "Machar: A Frequency-Aware Mamba–Convolution Hybrid Architecture for Sensor-Based Human Activity Recognition",
+      "reason": "Sensor-based human activity classification, not language-model inference.",
+      "source_url": "https://doi.org/10.1109/JIOT.2025.3639422",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08214",
+      "identity_tokens": [
+        "arXiv:2602.08214"
+      ],
+      "title": "RECUR: Resource Exhaustion Attack via Recursive-Entropy Guided Counterfactual Utilization and Reflection",
+      "reason": "RECUR addresses adversarial resource exhaustion rather than an inference-efficiency improvement; relevance is limited to robustness and overthinking risk.",
+      "source_url": "https://arxiv.org/abs/2602.08214",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    }
+  ]
+}
