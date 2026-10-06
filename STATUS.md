@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-06 22:12:36 JST**
+> 自動生成: **2026-10-06 22:13:41 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **577** |
-| 未claim Research job | **577** |
+| 収録候補論文数 | **579** |
+| 未claim Research job | **579** |
 | 直近24hのResearch処理完了 | **93** |
 | 最終Research処理完了 | **10-06 20:58:00 JST** |
 | 最終Discovery探索完了 | **10-06 21:34:00 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **577** |
+| canonical_id確認済みの一意な候補論文 | **579** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **577** |
+| 非終端Research job合計 | **579** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,10 +35,10 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **35174** |
-| 処理済み | **13397** |
-| 未処理Discovery候補 | **21777** |
+| 処理済み | **13398** |
+| 未処理Discovery候補 | **21776** |
 | 収録済み | **1681** |
-| Research / Audit候補へ昇格済み | **431** |
+| Research / Audit候補へ昇格済み | **432** |
 | 無関係として除外 | **8270** |
 | 微妙として除外 | **3015** |
 
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-06 07:41:12 JST（14時間31分前）** |
+| 最終maintenance完了 | **10-06 07:41:12 JST（14時間32分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -101,9 +101,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - Research: **10-06 20:58:00 JST** / worker — / run 20261006-2030-scheduled-chat-30/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_da345c5035f88191be33022d361fd0f0--2604.11035-idlm.json
-- Discovery: **10-06 21:34:00 JST** / worker scheduled-chat-30 / run 20261006-2134-scheduled-chat-30/r02
-  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_dd570886aa808191ab41acfbadb9a9b0--discovery-20261006-2134-scheduled-chat-30-r02.json
+- Discovery: **10-06 21:34:00 JST** / worker scheduled-chat-30 / run 20261006-2134-scheduled-chat-30/r03-partial
+  - 本文確認・分類 **4件** / accept **1件** / unrelated+borderline **3件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_6a1a604114b88191b330d7de8058270d--discovery-20261006-2134-scheduled-chat-30-r03-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
@@ -212,7 +212,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **577** |
+| ready | **579** |
 
 ### 候補の重複・識別情報欠損
 
