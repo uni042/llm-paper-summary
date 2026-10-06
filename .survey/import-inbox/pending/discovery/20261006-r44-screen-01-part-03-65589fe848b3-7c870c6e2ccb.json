@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r44-screen-01-part-03-65589fe848b3",
+  "reference_main_sha": "b9f5ba2efd293e62612217d6834a4475daa40ec2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.11332",
+      "identity_tokens": [
+        "arXiv:2511.11332"
+      ],
+      "title": "UFO3: Weaving the Digital Agent Galaxy",
+      "reason": "UFO3 measures digital-agent workflow behavior with orchestration/tool time; it does not isolate LLM inference serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.11332",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01966",
+      "identity_tokens": [
+        "arXiv:2604.01966"
+      ],
+      "title": "Ego-Grounding for Personalized Question-Answering in Egocentric Videos",
+      "reason": "Egocentric-video grounding and personalized QA capability, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.01966",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779212.3790187",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790187"
+      ],
+      "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading",
+      "reason": "The ACM primary full-text PDF endpoint was inaccessible; only institutional primary abstract/metadata were available, so method and evaluation could not be reviewed.",
+      "source_url": "https://doi.org/10.1145/3779212.3790187",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md",
+        "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md",
+        "papers/inference/99-other-inference-systems/2026-2609.14507-physically-partitioned-kvcache-format-for-cpu-gpu-load-balancing-in-moe-inference.md",
+        "papers/inference/99-other-inference-systems/2609.14643.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv.2015.425",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2015.425"
+      ],
+      "title": "Deep Learning Face Attributes in the Wild",
+      "reason": "Image-based face-attribute recognition, outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/1411.7766",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1507.02672",
+      "identity_tokens": [
+        "arXiv:1507.02672"
+      ],
+      "title": "Semi-supervised Learning with Ladder Networks",
+      "reason": "Semi-supervised ladder-network learning, outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/1507.02672",
+      "first_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "last_checked_at": "2026-10-06T05:43:00.548993+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    }
+  ]
+}
