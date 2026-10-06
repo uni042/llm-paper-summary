@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5068f8c72bf81f8d-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tevc.2025.3606613",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tevc.2025.3606613",
+    "identity_tokens": [
+      "DOI:10.1109/tevc.2025.3606613"
+    ],
+    "reason": "The IEEE publisher abstract describes a spiking, quantized lightweight language model for edge deployment, but full text was not accessible; implementation and inference measurements therefore could not be checked.",
+    "first_checked_at": "2026-10-06T04:29:58+00:00",
+    "last_checked_at": "2026-10-06T04:29:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
+      "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Spike-Driven Lightweight Large Language Model With Evolutionary Computation"
+  },
+  "processed_at": "2026-10-06T04:29:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5068f8c72bf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

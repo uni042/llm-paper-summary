@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T04:09:05+00:00",
-  "record_count": 2224,
+  "updated_at": "2026-10-06T04:30:00+00:00",
+  "record_count": 2238,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -34292,6 +34292,219 @@
       ],
       "borderline_recheck_count": 0,
       "title": "OmniGAIA: Towards Native Omni-Modal AI Agents"
+    },
+    "arXiv:2602.09821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09821",
+      "identity_tokens": [
+        "arXiv:2602.09821"
+      ],
+      "reason": "GloSA-sum is an efficient summarization method for long documents, but the evidence is task-specific and does not establish a general LLM serving, KV-cache, or inference-system improvement.",
+      "first_checked_at": "2026-10-06T04:29:56+00:00",
+      "last_checked_at": "2026-10-06T04:29:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.19351-dash-kv-asymmetric-hashing-long-context.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Text summarization via global structure awareness"
+    },
+    "arXiv:2602.18568": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18568",
+      "identity_tokens": [
+        "arXiv:2602.18568"
+      ],
+      "reason": "RPU describes a decode-oriented memory-bandwidth architecture for reasoning inference, but the primary text is explicitly marked “Confidential Draft / Do NOT Distribute”; its publication and reproducibility status need resolution before advancing.",
+      "first_checked_at": "2026-10-06T04:29:56+00:00",
+      "last_checked_at": "2026-10-06T04:29:56+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RPU – A Reasoning Processing Unit"
+    },
+    "arXiv:2605.26733": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26733",
+      "identity_tokens": [
+        "arXiv:2605.26733"
+      ],
+      "reason": "STARS stabilizes recurrent latent reasoning so performance remains reliable at greater test-time depth, but it does not show inference compute/memory savings; the method may enable more scaling rather than reduce cost.",
+      "first_checked_at": "2026-10-06T04:29:57+00:00",
+      "last_checked_at": "2026-10-06T04:29:57+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stabilizing Recurrent Dynamics for Test-Time Scalable Latent Reasoning in Looped Language Models"
+    },
+    "arXiv:2603.20185": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20185",
+      "identity_tokens": [
+        "arXiv:2603.20185"
+      ],
+      "reason": "VideoSeek uses tool-guided temporal search for long-video agents, but the primary text emphasizes task solving and does not establish a net reduction in inference cost after search/tool overhead.",
+      "first_checked_at": "2026-10-06T04:29:57+00:00",
+      "last_checked_at": "2026-10-06T04:29:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VideoSeek: Long-Horizon Video Agent with Tool-Guided Seeking"
+    },
+    "DOI:10.1109/tsg.2025.3623107": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tsg.2025.3623107",
+      "identity_tokens": [
+        "DOI:10.1109/tsg.2025.3623107"
+      ],
+      "reason": "The cited power-systems article concerns dispatchable capacity of cross-regional data-center clusters, but its primary full text was inaccessible; the LLM-serving lineage connection cannot be verified from the title alone.",
+      "first_checked_at": "2026-10-06T04:29:57+00:00",
+      "last_checked_at": "2026-10-06T04:29:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating the Dispatchable Capacity of Cross-Regional Data Center Clusters Toward Power System Operation"
+    },
+    "DOI:10.1109/tevc.2025.3606613": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tevc.2025.3606613",
+      "identity_tokens": [
+        "DOI:10.1109/tevc.2025.3606613"
+      ],
+      "reason": "The IEEE publisher abstract describes a spiking, quantized lightweight language model for edge deployment, but full text was not accessible; implementation and inference measurements therefore could not be checked.",
+      "first_checked_at": "2026-10-06T04:29:58+00:00",
+      "last_checked_at": "2026-10-06T04:29:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spike-Driven Lightweight Large Language Model With Evolutionary Computation"
+    },
+    "arXiv:2603.08620": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.08620",
+      "identity_tokens": [
+        "arXiv:2603.08620"
+      ],
+      "reason": "StreamReady adds readiness-aware answering for long streaming video. This may affect when an agent spends compute, but its evaluation is answer timing/correctness rather than inference cost or serving throughput.",
+      "first_checked_at": "2026-10-06T04:29:58+00:00",
+      "last_checked_at": "2026-10-06T04:29:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StreamReady: Learning What to Answer and When in Long Streaming Videos"
+    },
+    "arXiv:2601.10955": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10955",
+      "identity_tokens": [
+        "arXiv:2601.10955"
+      ],
+      "reason": "The paper demonstrates multi-turn tool-call chains as an economic denial-of-service/resource-amplification attack and evaluates resource impact and defenses. It is relevant to agentic serving risk, but not a serving optimization method.",
+      "first_checked_at": "2026-10-06T04:29:58+00:00",
+      "last_checked_at": "2026-10-06T04:29:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Max Tokens: Stealthy Resource Amplification via Tool Calling Chains in LLM Agents"
+    },
+    "arXiv:2512.12895": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.12895",
+      "identity_tokens": [
+        "arXiv:2512.12895"
+      ],
+      "reason": "The paper explains why reasoning models loop and discusses temperature as a partial stopgap, but does not present a robust inference-time optimization method; synthetic-to-real transfer remains limited.",
+      "first_checked_at": "2026-10-06T04:29:59+00:00",
+      "last_checked_at": "2026-10-06T04:29:59+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Wait, Wait, Wait... Why Do Reasoning Models Loop?"
+    },
+    "arXiv:2604.06185": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.06185",
+      "identity_tokens": [
+        "arXiv:2604.06185"
+      ],
+      "reason": "This is a benchmark of real-world tool-use behavior. Its relationship to KV/cache and serving efficiency is indirect, and the paper does not establish a cache or runtime optimization.",
+      "first_checked_at": "2026-10-06T04:29:59+00:00",
+      "last_checked_at": "2026-10-06T04:29:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2608.19662.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Benchmarking LLM Tool-Use in the Wild"
+    },
+    "arXiv:2512.16676": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.16676",
+      "identity_tokens": [
+        "arXiv:2512.16676"
+      ],
+      "reason": "DataFlow is an LLM-driven data-preparation and workflow-automation framework, but the primary text does not establish model-serving efficiency or KV reuse.",
+      "first_checked_at": "2026-10-06T04:29:59+00:00",
+      "last_checked_at": "2026-10-06T04:29:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI"
+    },
+    "arXiv:2604.26283": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26283",
+      "identity_tokens": [
+        "arXiv:2604.26283"
+      ],
+      "reason": "MedSynapse-V uses latent-memory evolution for clinical video understanding, but the full text does not establish KV-cache compression or general inference serving savings.",
+      "first_checked_at": "2026-10-06T04:30:00+00:00",
+      "last_checked_at": "2026-10-06T04:30:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.06161-all-for-1-bit.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MedSynapse-V: Bridging Visual Perception and Clinical Intuition via Latent Memory Evolution"
+    },
+    "arXiv:2601.15778": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.15778",
+      "identity_tokens": [
+        "arXiv:2601.15778"
+      ],
+      "reason": "Holistic Trajectory Calibration diagnoses agent confidence across multi-step trajectories, but the primary goal is calibration and failure prediction rather than reduced tool/model compute.",
+      "first_checked_at": "2026-10-06T04:30:00+00:00",
+      "last_checked_at": "2026-10-06T04:30:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Confidence Calibration"
+    },
+    "DOI:10.1109/tnnls.2025.3628671": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnnls.2025.3628671",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2025.3628671"
+      ],
+      "reason": "The publisher record confirms a directly relevant survey of LLM inference acceleration, but the full text was not accessible from the primary publisher page during this screen; per the packet, unavailable full text remains borderline.",
+      "first_checked_at": "2026-10-06T04:30:00+00:00",
+      "last_checked_at": "2026-10-06T04:30:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Survey on Efficient Large Language Models: Principles, Algorithms, Applications, and Open Issues"
     }
   }
 }

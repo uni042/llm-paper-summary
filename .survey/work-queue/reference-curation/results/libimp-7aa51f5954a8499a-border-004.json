@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7aa51f5954a8499a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.16676",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.16676",
+    "identity_tokens": [
+      "arXiv:2512.16676"
+    ],
+    "reason": "DataFlow is an LLM-driven data-preparation and workflow-automation framework, but the primary text does not establish model-serving efficiency or KV reuse.",
+    "first_checked_at": "2026-10-06T04:29:59+00:00",
+    "last_checked_at": "2026-10-06T04:29:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI"
+  },
+  "processed_at": "2026-10-06T04:30:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7aa51f5954a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
