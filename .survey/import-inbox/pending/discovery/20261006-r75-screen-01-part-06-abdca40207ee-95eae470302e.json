@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r75-screen-01-part-06-abdca40207ee",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29575",
+      "identity_tokens": [
+        "arXiv:2606.29575"
+      ],
+      "title": "TF-MoE: Time-Frequency Mixture-of-Experts for Efficient Speech Separation",
+      "reason": "Title/abstract: efficient speech separation, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2606.29575",
+      "first_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "last_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29613",
+      "identity_tokens": [
+        "arXiv:2606.29613"
+      ],
+      "title": "Does Role Specialization Matter for Explanation Faithfulness in Mixture-of-Experts?",
+      "reason": "Title/abstract: role specialization and explanation quality.",
+      "source_url": "https://arxiv.org/abs/2606.29613",
+      "first_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "last_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s40494-026-02777-0",
+      "identity_tokens": [
+        "DOI:10.1038/s40494-026-02777-0"
+      ],
+      "title": "MMED: a Mamba-enhanced multi-scale diffusion model for efficient thangka image generation",
+      "reason": "Title/abstract: multi-scale diffusion image-generation model.",
+      "source_url": "https://doi.org/10.1038/s40494-026-02777-0",
+      "first_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "last_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28623",
+      "identity_tokens": [
+        "arXiv:2606.28623"
+      ],
+      "title": "Improving Patient Subtyping on Longitudinal Data using Representations from Mamba-based Architecture",
+      "reason": "Title/abstract: longitudinal patient data and clinical subtype prediction.",
+      "source_url": "https://arxiv.org/abs/2606.28623",
+      "first_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "last_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26515",
+      "identity_tokens": [
+        "arXiv:2606.26515"
+      ],
+      "title": "Forget, Anticipate and Adapt: Test Time Training for Long Videos",
+      "reason": "The paper reduces the cost of test-time adaptation for video perception, but evaluations are vision segmentation/depth/action tasks rather than LLMs; transfer to the linked TTT lineage is uncertain.",
+      "source_url": "https://arxiv.org/abs/2606.26515",
+      "first_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "last_checked_at": "2026-10-06T10:03:49.156920+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    }
+  ]
+}
