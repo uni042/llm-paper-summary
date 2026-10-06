@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T12:51:41+00:00",
-  "record_count": 3039,
+  "updated_at": "2026-10-06T13:04:58+00:00",
+  "record_count": 3062,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -46610,6 +46610,353 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Compression of end-to-end non-autoregressive image-to-speech system for low-resourced devices"
+    },
+    "DOI:10.1007/s00371-025-04178-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00371-025-04178-z",
+      "identity_tokens": [
+        "DOI:10.1007/s00371-025-04178-z"
+      ],
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "first_checked_at": "2026-10-06T13:04:45+00:00",
+      "last_checked_at": "2026-10-06T13:04:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing light field image super-resolution through Mamba-based spatial–angular correlation learning"
+    },
+    "DOI:10.3390/electronics14183715": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics14183715",
+      "identity_tokens": [
+        "DOI:10.3390/electronics14183715"
+      ],
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "first_checked_at": "2026-10-06T13:04:46+00:00",
+      "last_checked_at": "2026-10-06T13:04:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Differentiable Selection of Bit-Width and Numeric Format for FPGA-Efficient Deep Networks"
+    },
+    "arXiv:2510.24793": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.24793",
+      "identity_tokens": [
+        "arXiv:2510.24793"
+      ],
+      "reason": "Static lookup embeddings may reduce text-vector serving cost, but this is not Transformer/LLM inference and does not substantiate a direct Q-BERT quantization connection.",
+      "first_checked_at": "2026-10-06T13:04:47+00:00",
+      "last_checked_at": "2026-10-06T13:04:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SwiftEmbed: Ultra-Fast Text Embeddings via Static Token Lookup for Real-Time Applications"
+    },
+    "arXiv:2510.23665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.23665",
+      "identity_tokens": [
+        "arXiv:2510.23665"
+      ],
+      "reason": "The method reduces tokens/compute for audio and image input to Transformers, but no language/LLM task or serving result is evaluated; transfer to the linked efficient-Transformer line is uncertain.",
+      "first_checked_at": "2026-10-06T13:04:47+00:00",
+      "last_checked_at": "2026-10-06T13:04:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transformers from Compressed Representations"
+    },
+    "DOI:10.1109/iccad66269.2025.11240983": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccad66269.2025.11240983",
+      "identity_tokens": [
+        "DOI:10.1109/iccad66269.2025.11240983"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:47+00:00",
+      "last_checked_at": "2026-10-06T13:04:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SiST: Token Similarity and Sparsity Aware Optimization for Transformers on FPGA"
+    },
+    "arXiv:2509.18150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.18150",
+      "identity_tokens": [
+        "arXiv:2509.18150"
+      ],
+      "reason": "Concrete related MLLM sparsity method, but primary evaluation is training-focused and does not resolve inference relevance.",
+      "first_checked_at": "2026-10-06T13:04:50+00:00",
+      "last_checked_at": "2026-10-06T13:04:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving MLLM Training Efficiency via Stage-Aware Sparsity"
+    },
+    "DOI:10.62465/riif.v4n2.2025.177": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.62465/riif.v4n2.2025.177",
+      "identity_tokens": [
+        "DOI:10.62465/riif.v4n2.2025.177"
+      ],
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "first_checked_at": "2026-10-06T13:04:50+00:00",
+      "last_checked_at": "2026-10-06T13:04:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimización de Modelos de Lenguaje Grande: Una aproximación con Quantization, ONNX y Pruning para aplicaciones en tiempo real"
+    },
+    "DOI:10.1109/acait67930.2025.11521976": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/acait67930.2025.11521976",
+      "identity_tokens": [
+        "DOI:10.1109/acait67930.2025.11521976"
+      ],
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "first_checked_at": "2026-10-06T13:04:50+00:00",
+      "last_checked_at": "2026-10-06T13:04:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SA-Vim: A Hybrid State-Attention Backbone for Referring Image Segmentation"
+    },
+    "DOI:10.48550/arxiv.2012.03112": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2012.03112",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2012.03112",
+        "arXiv:2012.03112"
+      ],
+      "reason": "PIM/near-memory computingのmemory wall、device/architecture/system/compiler設計を体系化する基礎surveyで、LLM推論専用ではない一方、LLM向けPIM推論研究の直接的な基盤技術として関連するためborderline。",
+      "first_checked_at": "2026-10-06T13:04:52+00:00",
+      "last_checked_at": "2026-10-06T13:04:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Modern Primer on Processing in Memory"
+    },
+    "DOI:10.1109/picc67314.2025.11291503": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/picc67314.2025.11291503",
+      "identity_tokens": [
+        "DOI:10.1109/picc67314.2025.11291503"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:53+00:00",
+      "last_checked_at": "2026-10-06T13:04:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Design and Deployment of an On-Premise Multimodal AI Chat System Using Quantized LLMs for CPU and GPU Architectures"
+    },
+    "DOI:10.1109/smc58881.2025.11343487": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/smc58881.2025.11343487",
+      "identity_tokens": [
+        "DOI:10.1109/smc58881.2025.11343487"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:53+00:00",
+      "last_checked_at": "2026-10-06T13:04:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "High-Performance FPGA-Based System for Diabetic Retinopathy Classification"
+    },
+    "DOI:10.1007/s00500-025-10899-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00500-025-10899-z",
+      "identity_tokens": [
+        "DOI:10.1007/s00500-025-10899-z"
+      ],
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "first_checked_at": "2026-10-06T13:04:54+00:00",
+      "last_checked_at": "2026-10-06T13:04:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing low-light images with performer attention: a retinex-based approach"
+    },
+    "DOI:10.1109/cac67268.2025.11486944": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cac67268.2025.11486944",
+      "identity_tokens": [
+        "DOI:10.1109/cac67268.2025.11486944"
+      ],
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "first_checked_at": "2026-10-06T13:04:54+00:00",
+      "last_checked_at": "2026-10-06T13:04:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Seasonal-Trend Decomposition Enhanced Selective State Space Model for Fermentation Process Factor Forecasting"
+    },
+    "DOI:10.1109/cac67268.2025.11487107": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cac67268.2025.11487107",
+      "identity_tokens": [
+        "DOI:10.1109/cac67268.2025.11487107"
+      ],
+      "reason": "Primary method, evaluation, limitations, and transfer remain uncertain because full text was unavailable; retained as reasoned borderline.",
+      "first_checked_at": "2026-10-06T13:04:55+00:00",
+      "last_checked_at": "2026-10-06T13:04:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HBi-Mamba: Hybrid bidirectional Mamba for accurate and efficient ASR via SE-Conv module"
+    },
+    "DOI:10.1145/3704413.3764468": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3704413.3764468",
+      "identity_tokens": [
+        "DOI:10.1145/3704413.3764468"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:55+00:00",
+      "last_checked_at": "2026-10-06T13:04:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AODPart: Accuracy-Optimal Online Partitioning for Edge Inference with Delay Constraint"
+    },
+    "DOI:10.1109/asicon66040.2025.11326104": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/asicon66040.2025.11326104",
+      "identity_tokens": [
+        "DOI:10.1109/asicon66040.2025.11326104"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:56+00:00",
+      "last_checked_at": "2026-10-06T13:04:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CDCC: A High-Efficiency SRAM-Based Charge-Domain Compute-in-Memory Macro with Complement Compensation Design for AI Applications"
+    },
+    "DOI:10.1109/iccvw69036.2025.00421": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccvw69036.2025.00421",
+      "identity_tokens": [
+        "DOI:10.1109/iccvw69036.2025.00421"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:57+00:00",
+      "last_checked_at": "2026-10-06T13:04:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HC-PTQ: Poincaré-Based Hyperbolic Clustering for Data-Free Quantization of Vision Transformers"
+    },
+    "DOI:10.1109/icicm66614.2025.11316085": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icicm66614.2025.11316085",
+      "identity_tokens": [
+        "DOI:10.1109/icicm66614.2025.11316085"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:57+00:00",
+      "last_checked_at": "2026-10-06T13:04:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware Implementation and Side-Channel Security Analysis for High-Precision AI Tansformer Encoder"
+    },
+    "DOI:10.1109/ictc66702.2025.11388015": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ictc66702.2025.11388015",
+      "identity_tokens": [
+        "DOI:10.1109/ictc66702.2025.11388015"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:57+00:00",
+      "last_checked_at": "2026-10-06T13:04:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward Energy-Efficient Transformers: Recent Trends in Optimization Techniques"
+    },
+    "DOI:10.3390/s22249606": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/s22249606",
+      "identity_tokens": [
+        "DOI:10.3390/s22249606"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:58+00:00",
+      "last_checked_at": "2026-10-06T13:04:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Pyramid Semi-Autoregressive Transformer with Rich Semantics for Sign Language Production"
+    },
+    "DOI:10.3390/app12105003": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/app12105003",
+      "identity_tokens": [
+        "DOI:10.3390/app12105003"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:58+00:00",
+      "last_checked_at": "2026-10-06T13:04:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Non-Autoregressive Machine Translation Using Sentence-Level Semantic Agreement"
+    },
+    "arXiv:2112.08570": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.08570",
+      "identity_tokens": [
+        "arXiv:2112.08570"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:58+00:00",
+      "last_checked_at": "2026-10-06T13:04:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Can Multilinguality benefit Non-autoregressive Machine Translation?"
+    },
+    "DOI:10.1007/s10590-021-09285-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10590-021-09285-x",
+      "identity_tokens": [
+        "DOI:10.1007/s10590-021-09285-x"
+      ],
+      "reason": "The primary full text was unavailable, so method/evaluation/limitations and the potential lineage transfer cannot be verified. The abstract gives enough plausible relationship to retain as borderline, but not enough evidence for a concrete Research follow-up.",
+      "first_checked_at": "2026-10-06T13:04:58+00:00",
+      "last_checked_at": "2026-10-06T13:04:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhanced encoder for non-autoregressive machine translation"
     }
   }
 }

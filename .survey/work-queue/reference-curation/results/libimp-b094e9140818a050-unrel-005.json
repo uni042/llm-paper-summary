@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b094e9140818a050-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.18846",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.18846",
+    "identity_tokens": [
+      "arXiv:2509.18846"
+    ],
+    "reason": "Accurate International Classification of Diseases (ICD) coding is critical for clinical documentation, billing, and healthcare analytics, yet it remains a labour-intensive and error-prone task. Although large language models (LLMs) show promise in automating ICD coding, their challenges in base model selection, input contextualization, and training data redundancy limit their effectiveness. We propose a modular framework for ICD-10 Clinical Modification (ICD-10-CM) code prediction that addresses these challenges through principled model selection, redundancy-aware data sampling, and structured",
+    "first_checked_at": "2026-10-06T13:04:55+00:00",
+    "last_checked_at": "2026-10-06T13:04:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "Model selection meets clinical semantics: Optimizing ICD-10-CM prediction via LLM-as-Judge evaluation, redundancy-aware sampling, and section-aware fine-tuning"
+  },
+  "processed_at": "2026-10-06T13:04:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b094e9140818",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

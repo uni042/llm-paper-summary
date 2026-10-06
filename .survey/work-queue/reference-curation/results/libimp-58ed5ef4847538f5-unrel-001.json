@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58ed5ef4847538f5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.05694",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.05694",
+    "identity_tokens": [
+      "arXiv:2310.05694"
+    ],
+    "reason": "医療LLMのデータ、学習、応用、評価、公平性・説明責任・倫理を整理するdomain surveyで、推論サービングや推論効率化を主題としない。",
+    "first_checked_at": "2026-10-06T13:04:51+00:00",
+    "last_checked_at": "2026-10-06T13:04:51+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "title": "A Survey of Large Language Models for Healthcare: from Data, Technology, and Applications to Accountability and Ethics"
+  },
+  "processed_at": "2026-10-06T13:04:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58ed5ef48475",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

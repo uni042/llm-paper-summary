@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27c9182db8409aad-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.17452",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.17452",
+    "identity_tokens": [
+      "arXiv:2309.17452"
+    ],
+    "reason": "数学問題でLLMと外部toolを統合してreasoning accuracyを高めるagent学習・推論方式で、推論servingやresource efficiencyの最適化を主題としない。",
+    "first_checked_at": "2026-10-06T13:04:48+00:00",
+    "last_checked_at": "2026-10-06T13:04:48+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+    ],
+    "title": "ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving"
+  },
+  "processed_at": "2026-10-06T13:04:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27c9182db840",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

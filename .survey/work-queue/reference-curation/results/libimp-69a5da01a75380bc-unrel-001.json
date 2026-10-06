@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69a5da01a75380bc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.10127",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.10127",
+    "identity_tokens": [
+      "arXiv:2510.10127"
+    ],
+    "reason": "Reranking, as the final stage of recommender systems, plays a crucial role in determining the final exposure, directly influencing user experience. Recently, generative reranking has gained increasing attention for formulating reranking as a holistic sequence generation task, implicitly modeling complex dependencies among items. However, most existing methods suffer from the likelihood trap, where high-likelihood sequences are often repetitive and perceived as low-quality by humans, thereby limiting user engagement. In this work, we propose Consistent Graph-structured Generative Recommendation",
+    "first_checked_at": "2026-10-06T13:04:53+00:00",
+    "last_checked_at": "2026-10-06T13:04:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "title": "Breaking the Likelihood Trap: Consistent Generative Recommendation with Graph-structured Model"
+  },
+  "processed_at": "2026-10-06T13:04:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69a5da01a753",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

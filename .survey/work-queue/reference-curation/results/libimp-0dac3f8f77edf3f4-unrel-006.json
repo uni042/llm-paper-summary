@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0dac3f8f77edf3f4-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3437801.3441593",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3437801.3441593",
+    "identity_tokens": [
+      "DOI:10.1145/3437801.3441593",
+      "arXiv:2007.01045"
+    ],
+    "reason": "大規模DNNのtrainingを対象としたpipeline/data parallel schedulingとdevice placement研究で、推論servingを最終適用先としない。",
+    "first_checked_at": "2026-10-05T02:04:35+00:00",
+    "last_checked_at": "2026-10-06T13:04:45+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+      "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md"
+    ],
+    "title": "DAPPLE: A Pipelined Data Parallel Approach for Training Large Models"
+  },
+  "processed_at": "2026-10-06T13:04:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0dac3f8f77ed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

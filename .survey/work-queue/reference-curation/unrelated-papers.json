@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T12:51:39+00:00",
-  "record_count": 8262,
+  "updated_at": "2026-10-06T13:04:59+00:00",
+  "record_count": 8297,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -8521,21 +8521,6 @@
         "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
       ],
       "title": "The pitfalls of next-token prediction"
-    },
-    "arXiv:1711.05073": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1711.05073",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.1711.05073",
-        "arXiv:1711.05073"
-      ],
-      "reason": "中国語の実世界機械読解データセットと基準モデルを構築する研究で、LLM推論サービング、メモリ階層、推論カーネル等の効率化を扱わない。",
-      "first_checked_at": "2026-10-03T13:20:50+00:00",
-      "last_checked_at": "2026-10-03T13:20:50+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md"
-      ],
-      "title": "DuReader: a Chinese Machine Reading Comprehension Dataset from Real-world Applications"
     },
     "arXiv:1711.02782": {
       "classification": "unrelated",
@@ -25456,20 +25441,6 @@
         "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
       ],
       "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments via Large Language Models with Text-based Knowledge and Memory"
-    },
-    "arXiv:2007.01045": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2007.01045",
-      "identity_tokens": [
-        "arXiv:2007.01045"
-      ],
-      "reason": "data parallelismとpipeline parallelismを組み合わせる大規模DNN training frameworkで、planner/runtimeによりtraining throughputとtraining memoryを改善する。最終適用先が学習専用。",
-      "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T15:55:22+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md"
-      ],
-      "title": "DAPPLE: A Pipelined Data Parallel Approach for Training Large Models"
     },
     "arXiv:2411.04468": {
       "classification": "unrelated",
@@ -118669,6 +118640,534 @@
         "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
       ],
       "title": "Backdoor Attacks on Transformers for Tabular Data: An Empirical Study"
+    },
+    "arXiv:1908.08530": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1908.08530",
+      "identity_tokens": [
+        "arXiv:1908.08530"
+      ],
+      "reason": "画像領域と自然言語を統合したvisual-linguistic表現のpre-trainingと下流タスク適応が主題で、推論サービング、メモリ、カーネル、推論効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-06T13:04:44+00:00",
+      "last_checked_at": "2026-10-06T13:04:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "VL-BERT: Pre-training of Generic Visual-Linguistic Representations"
+    },
+    "arXiv:2405.09818": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.09818",
+      "identity_tokens": [
+        "arXiv:2405.09818"
+      ],
+      "reason": "text/imageを同一token空間で生成・理解するmixed-modal foundation modelのarchitecture、training、能力評価が中心で、推論runtimeやserving効率化を研究目的としない。",
+      "first_checked_at": "2026-10-06T13:04:44+00:00",
+      "last_checked_at": "2026-10-06T13:04:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "Chameleon: Mixed-Modal Early-Fusion Foundation Models"
+    },
+    "arXiv:2104.08773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.08773",
+      "identity_tokens": [
+        "arXiv:2104.08773"
+      ],
+      "reason": "自然言語instructionを用いたcross-task generalizationと学習データ構築・評価が主題で、LLM推論基盤の速度、メモリ、serving最適化を扱わない。",
+      "first_checked_at": "2026-10-06T13:04:45+00:00",
+      "last_checked_at": "2026-10-06T13:04:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "Cross-Task Generalization via Natural Language Crowdsourcing Instructions"
+    },
+    "arXiv:2311.08046": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.08046",
+      "identity_tokens": [
+        "arXiv:2311.08046"
+      ],
+      "reason": "画像・動画を統一的に扱うmultimodal LLMのvisual representation、training data、理解性能が主題で、推論効率化を最終目的としない。",
+      "first_checked_at": "2026-10-06T13:04:45+00:00",
+      "last_checked_at": "2026-10-06T13:04:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding"
+    },
+    "arXiv:2205.08897": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.08897",
+      "identity_tokens": [
+        "arXiv:2205.08897"
+      ],
+      "reason": "Legendre memoryとfrequency-domain処理を用いた長期時系列予測モデルであり、LLM/Transformer推論基盤の効率化を対象としない。",
+      "first_checked_at": "2026-10-06T13:04:45+00:00",
+      "last_checked_at": "2026-10-06T13:04:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "FiLM: Frequency improved Legendre Memory Model for Long-term Time Series Forecasting"
+    },
+    "DOI:10.1145/3437801.3441593": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3437801.3441593",
+      "identity_tokens": [
+        "DOI:10.1145/3437801.3441593",
+        "arXiv:2007.01045"
+      ],
+      "reason": "大規模DNNのtrainingを対象としたpipeline/data parallel schedulingとdevice placement研究で、推論servingを最終適用先としない。",
+      "first_checked_at": "2026-10-05T02:04:35+00:00",
+      "last_checked_at": "2026-10-06T13:04:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+        "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md"
+      ],
+      "title": "DAPPLE: A Pipelined Data Parallel Approach for Training Large Models"
+    },
+    "DOI:10.1109/tbme.2025.3612381": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tbme.2025.3612381",
+      "identity_tokens": [
+        "DOI:10.1109/tbme.2025.3612381"
+      ],
+      "reason": "Automated analysis of neonatal fundus images presents a uniquely intricate challenge in medical imaging. Existing methodologies predominantly focus on diagnosing abnormalities from individual images, often leading to inaccuracies due to the diverse and subtle nature of neonatal retinal features. Consequently, clinical standards frequently mandate the acquisition of retinal images from multiple angles to ensure the detection of minute lesions. To accommodate this, we propose leveraging multiple fundus images captured from various regions of the retina to comprehensively screen for a wide range",
+      "first_checked_at": "2026-10-06T13:04:46+00:00",
+      "last_checked_at": "2026-10-06T13:04:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Enhancing Instance Feature Representation: A Foundation Model-Based Multi-Instance Approach for Neonatal Retinal Screening"
+    },
+    "arXiv:2509.18216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18216",
+      "identity_tokens": [
+        "arXiv:2509.18216"
+      ],
+      "reason": "The primary text is a conceptual representation proposal without an inference-efficiency method or relevant evaluation.",
+      "first_checked_at": "2026-10-06T13:04:46+00:00",
+      "last_checked_at": "2026-10-06T13:04:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "nDNA -- the Semantic Helix of Artificial Cognition"
+    },
+    "arXiv:2509.18165": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18165",
+      "identity_tokens": [
+        "arXiv:2509.18165"
+      ],
+      "reason": "The primary text addresses training-time regularization and representation quality, not the linked inference-efficiency scope.",
+      "first_checked_at": "2026-10-06T13:04:46+00:00",
+      "last_checked_at": "2026-10-06T13:04:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Self Identity Mapping"
+    },
+    "DOI:10.1109/tencon66050.2025.11374916": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tencon66050.2025.11374916",
+      "identity_tokens": [
+        "DOI:10.1109/tencon66050.2025.11374916"
+      ],
+      "reason": "Indoor navigation systems play a crucial role in guiding users through complex environments such as airports, shopping malls, hospitals, and university campuses. With the advancement of Artificial Intelligence (AI), researchers have explored dialogue-based approaches to enhance user interaction within these systems. However, existing models face limitations in accurately processing diverse user inputs, which poses challenges in efficiency and usability. To address this, the researchers developed a virtual assistant using a Large Language Model (LLM) to facilitate a dialogue-driven navigation e",
+      "first_checked_at": "2026-10-06T13:04:47+00:00",
+      "last_checked_at": "2026-10-06T13:04:47+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "TigerNav: Development of a Virtual Assistant Using an Autoregressive Model for Indoor Navigation"
+    },
+    "DOI:10.1145/3746027.3755223": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746027.3755223",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3755223"
+      ],
+      "reason": "Automatic segmentation of echocardiography videos is crucial for computer-aided cardiovascular function assessment in clinical practice. However, it is a challenging task owing to the existence of massive speckle noise, the large shape variations of heart structures between frames, and limited annotations. In this paper, we propose a novel semi-supervised video segmentation model to comprehensively meet these challenges. The proposed approach has two key techniques. First, we propose a dual-stream architecture that processes spatial and temporal features through separate pathways to capture st",
+      "first_checked_at": "2026-10-06T13:04:48+00:00",
+      "last_checked_at": "2026-10-06T13:04:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Hierarchical Spatiotemporal Context Aggregation and Speckle-aware Deformable Convolution for Echocardiography Video Segmentation"
+    },
+    "arXiv:2312.06662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.06662",
+      "identity_tokens": [
+        "arXiv:2312.06662"
+      ],
+      "reason": "W.A.L.T.によるphotorealistic video generationのモデル設計・学習が主題。window attentionは主に生成モデルのmemory/training efficiencyのためで、LLM推論システムを最終適用先としない。",
+      "first_checked_at": "2026-10-06T13:04:48+00:00",
+      "last_checked_at": "2026-10-06T13:04:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Photorealistic Video Generation with Diffusion Models"
+    },
+    "arXiv:2310.02226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.02226",
+      "identity_tokens": [
+        "arXiv:2310.02226"
+      ],
+      "reason": "pause tokenを学習・推論時に挿入してモデル品質を改善するtraining/representation研究で、推論速度・memory・serving効率化を目的としない。",
+      "first_checked_at": "2026-10-06T13:04:48+00:00",
+      "last_checked_at": "2026-10-06T13:04:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md",
+        "papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md"
+      ],
+      "title": "Think before you speak: Training Language Models With Pause Tokens"
+    },
+    "arXiv:2309.17452": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.17452",
+      "identity_tokens": [
+        "arXiv:2309.17452"
+      ],
+      "reason": "数学問題でLLMと外部toolを統合してreasoning accuracyを高めるagent学習・推論方式で、推論servingやresource efficiencyの最適化を主題としない。",
+      "first_checked_at": "2026-10-06T13:04:48+00:00",
+      "last_checked_at": "2026-10-06T13:04:48+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+      ],
+      "title": "ToRA: A Tool-Integrated Reasoning Agent for Mathematical Problem Solving"
+    },
+    "arXiv:1909.00015": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.00015",
+      "identity_tokens": [
+        "arXiv:1909.00015"
+      ],
+      "reason": "α-entmaxでattention分布を疎にしinterpretabilityとhead diversityを改善するモデル研究だが、計算量・memory・wall-clock推論の削減を実装・評価する推論効率研究ではない。",
+      "first_checked_at": "2026-10-06T13:04:49+00:00",
+      "last_checked_at": "2026-10-06T13:04:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Adaptively Sparse Transformers"
+    },
+    "DOI:10.18653/v1/w18-2605": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w18-2605",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w18-2605",
+        "DOI:10.48550/arxiv.1711.05073",
+        "arXiv:1711.05073"
+      ],
+      "reason": "中国語machine reading comprehension datasetとbenchmark構築が主題で、推論システム最適化を扱わない。",
+      "first_checked_at": "2026-10-03T13:20:50+00:00",
+      "last_checked_at": "2026-10-06T13:04:49+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md"
+      ],
+      "title": "DuReader: a Chinese Machine Reading Comprehension Dataset from Real-world Applications"
+    },
+    "arXiv:2306.05443": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.05443",
+      "identity_tokens": [
+        "arXiv:2306.05443"
+      ],
+      "reason": "金融LLM、instruction data、finance benchmarkの構築・評価が主題で、推論速度・memory・serving最適化を扱わない。",
+      "first_checked_at": "2026-10-06T13:04:49+00:00",
+      "last_checked_at": "2026-10-06T13:04:49+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md"
+      ],
+      "title": "PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance"
+    },
+    "arXiv:2409.04429": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.04429",
+      "identity_tokens": [
+        "arXiv:2409.04429"
+      ],
+      "reason": "visual understandingとimage generationを統合するmultimodal foundation modelの表現・学習方式が主題で、推論runtime効率化を目的としない。",
+      "first_checked_at": "2026-10-06T13:04:49+00:00",
+      "last_checked_at": "2026-10-06T13:04:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+      ],
+      "title": "VILA-U: a Unified Foundation Model Integrating Visual Understanding and Generation"
+    },
+    "DOI:10.1371/journal.pgen.0030160": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pgen.0030160",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pgen.0030160"
+      ],
+      "reason": "人類集団構造をPCAとSNPで解析するpopulation genetics研究で、LLM/Transformer推論とは無関係。",
+      "first_checked_at": "2026-10-06T13:04:50+00:00",
+      "last_checked_at": "2026-10-06T13:04:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md"
+      ],
+      "title": "PCA-Correlated SNPs for Structure Identification in Worldwide Human Populations"
+    },
+    "DOI:10.1007/s10586-025-05482-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10586-025-05482-y",
+      "identity_tokens": [
+        "DOI:10.1007/s10586-025-05482-y"
+      ],
+      "reason": "AI technology’s rapid advancements have led to its widespread adoption in diverse industries, such as support agents, healthcare, education, software development and finance because such AI technologies has the ability to generated human-like text to solve a complex user’s problem. Nevertheless, the effectiveness and success of AI models greatly depends on large language model that contain extensive, varied, and top-notch datasets and social network platforms for both training and evaluation purposes that is sourced from web and directly form user interaction that will also contain sensitive i",
+      "first_checked_at": "2026-10-06T13:04:51+00:00",
+      "last_checked_at": "2026-10-06T13:04:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "Securing social network user data in large language model deployments: challenges and best practices"
+    },
+    "arXiv:2509.07361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.07361",
+      "identity_tokens": [
+        "arXiv:2509.07361"
+      ],
+      "reason": "Spiking neural networks offer a promising path toward energy-efficient, brain-like associative memory. This paper introduces Word2Spike, a novel rate coding mechanism that combines continuous word embeddings and neuromorphic architectures. We develop a one-to-one mapping that converts multi-dimensional word vectors into spike-based attractor states using Poisson processes. Using BitNet b1.58 quantization, we maintain 97% semantic similarity of continuous embeddings on SimLex-999 while achieving 100% reconstruction accuracy on 10,000 words from OpenAI's text-embedding-3-large. We preserve analo",
+      "first_checked_at": "2026-10-06T13:04:51+00:00",
+      "last_checked_at": "2026-10-06T13:04:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Word2Spike: Poisson Rate Coding for Associative Memories and Neuromorphic Algorithms"
+    },
+    "arXiv:2310.05694": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.05694",
+      "identity_tokens": [
+        "arXiv:2310.05694"
+      ],
+      "reason": "医療LLMのデータ、学習、応用、評価、公平性・説明責任・倫理を整理するdomain surveyで、推論サービングや推論効率化を主題としない。",
+      "first_checked_at": "2026-10-06T13:04:51+00:00",
+      "last_checked_at": "2026-10-06T13:04:51+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "A Survey of Large Language Models for Healthcare: from Data, Technology, and Applications to Accountability and Ethics"
+    },
+    "arXiv:2004.03497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.03497",
+      "identity_tokens": [
+        "arXiv:2004.03497"
+      ],
+      "reason": "1.2B language modelを約280M protein sequenceで学習してprotein engineeringを行う生命科学向け生成モデル研究で、LLM推論基盤を対象としない。",
+      "first_checked_at": "2026-10-06T13:04:51+00:00",
+      "last_checked_at": "2026-10-06T13:04:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "ProGen: Language Modeling for Protein Generation"
+    },
+    "DOI:10.1145/3597503.3639219": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3597503.3639219",
+      "identity_tokens": [
+        "DOI:10.1145/3597503.3639219",
+        "arXiv:2308.01861"
+      ],
+      "reason": "ClassEvalを構築して11 LLMのclass-level code generation能力を比較するソフトウェア工学benchmark研究で、推論効率・サービング・メモリ最適化を扱わない。",
+      "first_checked_at": "2026-10-06T13:04:52+00:00",
+      "last_checked_at": "2026-10-06T13:04:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md"
+      ],
+      "title": "Evaluating Large Language Models in Class-Level Code Generation"
+    },
+    "arXiv:2306.04528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.04528",
+      "identity_tokens": [
+        "arXiv:2306.04528"
+      ],
+      "reason": "文字・単語・文・意味レベルのadversarial promptに対するLLM頑健性benchmarkであり、推論システム性能最適化を対象としない。",
+      "first_checked_at": "2026-10-06T13:04:52+00:00",
+      "last_checked_at": "2026-10-06T13:04:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "PromptRobust: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts"
+    },
+    "arXiv:2405.07863": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.07863",
+      "identity_tokens": [
+        "arXiv:2405.07863"
+      ],
+      "reason": "reward model構築からonline iterative RLHFまでの訓練recipeとalignment性能が主題で、推論runtime/serving効率化を扱わない。",
+      "first_checked_at": "2026-10-06T13:04:52+00:00",
+      "last_checked_at": "2026-10-06T13:04:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md"
+      ],
+      "title": "RLHF Workflow: From Reward Modeling to Online RLHF"
+    },
+    "arXiv:1809.00732": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.00732",
+      "identity_tokens": [
+        "arXiv:1809.00732"
+      ],
+      "reason": "電子医療記録から大規模QA corpusを構築するdataset/benchmark研究で、LLM推論システム最適化を扱わない。",
+      "first_checked_at": "2026-10-06T13:04:53+00:00",
+      "last_checked_at": "2026-10-06T13:04:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md"
+      ],
+      "title": "emrQA: A Large Corpus for Question Answering on Electronic Medical Records"
+    },
+    "arXiv:2510.10127": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.10127",
+      "identity_tokens": [
+        "arXiv:2510.10127"
+      ],
+      "reason": "Reranking, as the final stage of recommender systems, plays a crucial role in determining the final exposure, directly influencing user experience. Recently, generative reranking has gained increasing attention for formulating reranking as a holistic sequence generation task, implicitly modeling complex dependencies among items. However, most existing methods suffer from the likelihood trap, where high-likelihood sequences are often repetitive and perceived as low-quality by humans, thereby limiting user engagement. In this work, we propose Consistent Graph-structured Generative Recommendation",
+      "first_checked_at": "2026-10-06T13:04:53+00:00",
+      "last_checked_at": "2026-10-06T13:04:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Breaking the Likelihood Trap: Consistent Generative Recommendation with Graph-structured Model"
+    },
+    "arXiv:2510.09435": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.09435",
+      "identity_tokens": [
+        "arXiv:2510.09435"
+      ],
+      "reason": "Cross-domain sequential recommendation (CDSR) aims to align heterogeneous user behavior sequences collected from different domains. While cross-attention is widely used to enhance alignment and improve recommendation performance, its underlying mechanism is not fully understood. Most researchers interpret cross-attention as residual alignment, where the output is generated by removing redundant and preserving non-redundant information from the query input by referencing another domain data which is input key and value. Beyond the prevailing view, we introduce Orthogonal Alignment, a phenomenon",
+      "first_checked_at": "2026-10-06T13:04:54+00:00",
+      "last_checked_at": "2026-10-06T13:04:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Cross-attention Secretly Performs Orthogonal Alignment in Recommendation Models"
+    },
+    "arXiv:2510.03272": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.03272",
+      "identity_tokens": [
+        "arXiv:2510.03272"
+      ],
+      "reason": "The primary text is a theoretical/locality architecture study, not an inference-efficiency method; the attention lineage link is too indirect.",
+      "first_checked_at": "2026-10-06T13:04:55+00:00",
+      "last_checked_at": "2026-10-06T13:04:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Where to Add PDE Diffusion in Transformers"
+    },
+    "arXiv:2509.18846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18846",
+      "identity_tokens": [
+        "arXiv:2509.18846"
+      ],
+      "reason": "Accurate International Classification of Diseases (ICD) coding is critical for clinical documentation, billing, and healthcare analytics, yet it remains a labour-intensive and error-prone task. Although large language models (LLMs) show promise in automating ICD coding, their challenges in base model selection, input contextualization, and training data redundancy limit their effectiveness. We propose a modular framework for ICD-10 Clinical Modification (ICD-10-CM) code prediction that addresses these challenges through principled model selection, redundancy-aware data sampling, and structured",
+      "first_checked_at": "2026-10-06T13:04:55+00:00",
+      "last_checked_at": "2026-10-06T13:04:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Model selection meets clinical semantics: Optimizing ICD-10-CM prediction via LLM-as-Judge evaluation, redundancy-aware sampling, and section-aware fine-tuning"
+    },
+    "DOI:10.3390/mi16111215": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/mi16111215",
+      "identity_tokens": [
+        "DOI:10.3390/mi16111215"
+      ],
+      "reason": "The gravity forward modeling algorithm is a compute-intensive method and is widely used in scientific computing, particularly in geophysics, to predict the impact of subsurface structures on surface gravity fields. Traditional implementations rely on CPUs, where performance gains are mainly achieved through algorithmic optimization. With the rise of domain-specific architectures, FPGA offers a promising platform for acceleration, but faces challenges such as limited programmability and the high cost of nonlinear function implementation. This work proposes an FPGA-based co-processor to accelera",
+      "first_checked_at": "2026-10-06T13:04:56+00:00",
+      "last_checked_at": "2026-10-06T13:04:56+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "title": "Domain-Specific Acceleration of Gravity Forward Modeling via Hardware–Software Co-Design"
+    },
+    "arXiv:2510.18691": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.18691",
+      "identity_tokens": [
+        "arXiv:2510.18691"
+      ],
+      "reason": "Primary text confirms that the work is about training precision, static embeddings, or non-language modality/benchmarking rather than the target Transformer/LLM inference mechanism; no sufficiently direct existing-lineage connection remains.",
+      "first_checked_at": "2026-10-06T13:04:56+00:00",
+      "last_checked_at": "2026-10-06T13:04:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "title": "Investigating LLM Capabilities on Long Context Comprehension for Medical Question Answering"
+    },
+    "DOI:10.1145/3772082": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3772082",
+      "identity_tokens": [
+        "DOI:10.1145/3772082"
+      ],
+      "reason": "Sparse Matrix–Vector Multiplication (SpMV) is fundamental in numerous applications such as scientific computing, Machine Learning (ML), and graph analytics. While recent studies have made tremendous progress in accelerating SpMV on HBM-equipped FPGAs, there are still multiple remaining challenges to accelerate imbalanced SpMV where the distribution of nonzeros in the sparse matrix is imbalanced across different rows. These include (1) imbalanced workload distribution among the parallel Processing Elements (PEs), (2) long-distance dependency for floating-point accumulation on the output vector,",
+      "first_checked_at": "2026-10-06T13:04:56+00:00",
+      "last_checked_at": "2026-10-06T13:04:56+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "title": "MAD-HiSpMV: Matrix Adaptive Design with Hybrid Row Distribution for Imbalanced SpMV Acceleration on FPGAs"
+    },
+    "arXiv:2510.16736": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16736",
+      "identity_tokens": [
+        "arXiv:2510.16736"
+      ],
+      "reason": "This paper investigates the usage of FPGA devices for energy-efficient exact kNN search in high-dimension latent spaces. This work intercepts a relevant trend that tries to support the increasing popularity of learned representations based on neural encoder models by making their large-scale adoption greener and more inclusive. The paper proposes two different energy-efficient solutions adopting the same FPGA low-level configuration. The first solution maximizes system throughput by processing the queries of a batch in parallel over a streamed dataset not fitting into the FPGA memory. The seco",
+      "first_checked_at": "2026-10-06T13:04:57+00:00",
+      "last_checked_at": "2026-10-06T13:04:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Exact Nearest-Neighbor Search on Energy-Efficient FPGA Devices"
+    },
+    "DOI:10.1109/icceic67916.2025.11309166": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icceic67916.2025.11309166",
+      "identity_tokens": [
+        "DOI:10.1109/icceic67916.2025.11309166"
+      ],
+      "reason": "Tobacco is an important economic crop in China, and the tobacco industry plays a crucial role in the country’s socio-economic development. However, the soil composition significantly affects the yield and quality of tobacco, which in turn impacts the economic development of the tobacco industry and the income of tobacco farmers. Therefore, detecting soil nutrient deficiencies based on tobacco leaf images is of great importance for ensuring the physiological health of tobacco leaves, improving yield and quality. In tobacco leaf detection tasks, detecting and recognizing tobacco leaves presents",
+      "first_checked_at": "2026-10-06T13:04:57+00:00",
+      "last_checked_at": "2026-10-06T13:04:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Detection of Tobacco Soil Composition"
+    },
+    "DOI:10.1145/3570991.3571044": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3570991.3571044",
+      "identity_tokens": [
+        "DOI:10.1145/3570991.3571044"
+      ],
+      "reason": "Sparse neural networks have been proven to generate efficient and better runtimes when compared to dense neural networks. Acceleration in runtime is better achieved with structured sparsity. However, generating an efficient sparsity structure to maintain both runtime and accuracy is a challenging task. In this paper, we implement the RBGP4 sparsity pattern derived from the Ramanujan Bipartite Graph Product (RBGP) framework on various Computer Vision tasks and test how well it performs w.r.t accuracy and runtime. Using this approach, we generate structured sparse neural networks which has multi",
+      "first_checked_at": "2026-10-06T13:04:59+00:00",
+      "last_checked_at": "2026-10-06T13:04:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Accelerating Computer Vision Tasks on GPUs using Ramanujan Graph Product Framework"
     }
   }
 }

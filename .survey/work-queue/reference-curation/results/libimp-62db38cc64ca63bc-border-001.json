@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-62db38cc64ca63bc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2012.03112",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2012.03112",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2012.03112",
+      "arXiv:2012.03112"
+    ],
+    "reason": "PIM/near-memory computingのmemory wall、device/architecture/system/compiler設計を体系化する基礎surveyで、LLM推論専用ではない一方、LLM向けPIM推論研究の直接的な基盤技術として関連するためborderline。",
+    "first_checked_at": "2026-10-06T13:04:52+00:00",
+    "last_checked_at": "2026-10-06T13:04:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Modern Primer on Processing in Memory"
+  },
+  "processed_at": "2026-10-06T13:04:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62db38cc64ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
