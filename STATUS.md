@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-07 05:55:19 JST**
+> 自動生成: **2026-10-07 05:57:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,8 +11,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **557** |
-| 未claim Research job | **557** |
+| 収録候補論文数 | **559** |
+| 未claim Research job | **559** |
 | 直近24hのResearch処理完了 | **80** |
 | 最終Research処理完了 | **10-06 20:58:00 JST** |
 | 最終Discovery探索完了 | **10-07 05:34:00 JST** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **557** |
+| canonical_id確認済みの一意な候補論文 | **559** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **557** |
+| 非終端Research job合計 | **559** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,16 +35,16 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **89326** |
-| 処理済み | **15695** |
-| 未処理Discovery候補 | **73631** |
+| 処理済み | **15756** |
+| 未処理Discovery候補 | **73570** |
 | 収録済み | **1715** |
-| Research / Audit候補へ昇格済み | **413** |
-| 無関係として除外 | **9585** |
-| 微妙として除外 | **3982** |
+| Research / Audit候補へ昇格済み | **415** |
+| 無関係として除外 | **9620** |
+| 微妙として除外 | **4006** |
 
 - 消化率: **17.6%**
-- 現在の生在庫: 後方references **50130件** / 前方引用 **24685件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **74378件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **50120件** / 前方引用 **24685件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **74319件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-07 00:00:11 JST（5時間55分前）** |
+| 最終maintenance完了 | **10-07 00:00:11 JST（5時間57分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -212,7 +212,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **557** |
+| ready | **559** |
 
 ### 候補の重複・識別情報欠損
 
@@ -240,11 +240,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **313** |
+| 成功result未照合のimmutable submission | **314** |
 | └ Research | **121** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **47** |
+| └ Other/Unknown | **48** |
 
 ### 厳格検証が未成立のcompleted job
 

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SimpleMem: Efficient Lifelong Memory for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2601.02553",
+      "year": 2026,
+      "published": "2026-01-05",
+      "venue": "arXiv.org",
+      "citation_count": 141,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To support long-term interaction in complex environments, LLM agents require memory systems that manage historical experiences. Existing approaches either retain full interaction histories via passive context extension, leading to substantial redundancy, or rely on iterative reasoning to filter noise, incurring high token costs. To address this challenge, we introduce SimpleMem, an efficient memory framework based on semantic lossless compression. We propose a three-stage pipeline designed to maximize information density and token utilization: (1) Semantic Structured Compression, which distills unstructured interactions into compact, multi-view indexed memory units; (2) Online Semantic Synthesis, an intra-session process that instantly integrates related context into unified abstract representations to eliminate redundancy; and (3) Intent-Aware Retrieval Planning, which infers search intent to dynamically determine retrieval scope and construct precise context efficiently. Experiments on benchmark datasets show that our method consistently outperforms baseline approaches in accuracy, retrieval efficiency, and inference cost, achieving an average F1 improvement of 26.4% in LoCoMo while reducing inference-time token consumption by up to 30-fold, demonstrating a superior balance between performance and efficiency. Code is available at https://github.com/aiming-lab/SimpleMem.",
+      "identifiers": [
+        "SemanticScholar:473edf1acf5e21b7c3ccca548de1c0b860c54ba3"
+      ],
+      "semantic_scholar_id": "473edf1acf5e21b7c3ccca548de1c0b860c54ba3",
+      "canonical_id": "arXiv:2601.02553",
+      "arxiv_id": "2601.02553",
+      "doi": "10.48550/arXiv.2601.02553",
+      "authors": [
+        "Jia-Qi Liu",
+        "Yaofeng Su",
+        "Peng Xia",
+        "Siwei Han",
+        "Ze-Yu Zheng",
+        "Ci-Hang Xie",
+        "Ming-Yu Ding",
+        "Hua-Xiu Yao"
+      ],
+      "priority": 241,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 141,
+        "citation_count": 141,
+        "total": 241,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 274,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMエージェントの長期記憶を意味圧縮・再帰統合・問い合わせ適応検索で効率化し、推論時トークン消費を最大30倍削減するため、agentic inferenceのmemory/runtime効率化として対象。",
+      "library_body_check": "fulltext_review: 一次資料でSemantic Structured Compression、Recursive Memory Consolidation、Adaptive Query-Aware Retrievalの3段階構成と、長期履歴の冗長性・反復reasoningのtoken costを削減する問題設定、複数benchmarkで平均F1 +26.4%、推論時token最大30x削減という評価を確認した。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-60c82a077d2b",
+    "round": "libimp-60c82a077d2b5b9a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-60c82a077d2b5b9a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-60c82a077d2b5b9a-pre01.json",
+    "receipt": "sha256:1bff5b8925b7f210532c1202d1b3b0cdf0223ca0fdeb6b8c3534999a7f067b8d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-60c82a077d2b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
