@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r96-screen-01-part-08-905db4a0d74b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.20853",
+      "identity_tokens": [
+        "arXiv:2405.20853"
+      ],
+      "title": "MeshXL: Neural Coordinate Field for Generative 3D Foundation Models",
+      "reason": "The polygon mesh representation of 3D data exhibits great flexibility, fast rendering speed, and storage efficiency, which is widely preferred in various applications. However, given its unstructured graph representation, the direct generation of high-fidelity 3D meshes is challenging. Fortunately, with a pre-defined ordering strategy, 3D meshes can be represented as sequences, and the generation process can be seamlessly treated as an auto-regressive problem. In this paper, we validate the Neural Coordinate Field (NeurCF), an explicit coordinate representation with implicit neural embeddings, is a simple-yet-effective representation for large-scale sequential mesh modeling. After that, we present MeshXL, a family of generative pre-trained auto-regressive models, which addresses the process of 3D mesh generation with modern large language model approaches. Extensive experiments show that MeshXL is able to generate high-quality 3D meshes, and can also serve as foundation models for various down-stream applications.",
+      "source_url": "https://arxiv.org/abs/2405.20853",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.7717/peerj-cs.1755",
+      "identity_tokens": [
+        "DOI:10.7717/peerj-cs.1755"
+      ],
+      "title": "Lightweight transformer image feature extraction network",
+      "reason": "PeerJ publisher PDF returned HTTP 403 and the author-manuscript mirror returned reCAPTCHA. Abstract indicates visual-token pruning, but full text could not be reviewed.",
+      "source_url": "https://doi.org/10.7717/peerj-cs.1755",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.24527",
+      "identity_tokens": [
+        "arXiv:2509.24527"
+      ],
+      "title": "Training Agents Inside of Scalable World Models",
+      "reason": "Dreamer 4 uses shortcut forcing and an efficient Transformer for a flow-based world model; reports real-time single-GPU interactive inference and Minecraft control results. It does not measure language-model serving, KV cache, quantization or token throughput.",
+      "source_url": "https://arxiv.org/abs/2509.24527",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    }
+  ]
+}
