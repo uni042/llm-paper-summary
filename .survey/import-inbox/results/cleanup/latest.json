@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T13:07:14+00:00",
+  "updated_at": "2026-10-06T13:12:35+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3236,6 +3236,31 @@
       "processed_at": "2026-10-06T13:07:14+00:00",
       "canonical_id": "arXiv:2603.24517",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-db5ca9f425c1--libfile_9780444fdf908191ba8eed1e897b311b--2603.24517-avo.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-c9a039bf83cc--libfile_d8565d30be908191aaa8f9722342d73b--1911.02972-blockbert.md",
+      "processed_at": "2026-10-06T13:12:35+00:00",
+      "canonical_id": "arXiv:1911.02972",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-c9a039bf83cc--libfile_d8565d30be908191aaa8f9722342d73b--1911.02972-blockbert.md"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-44cf86c7d00a--libfile_32e5ebcf1c7c819192fc5c32429bd8e8--2202.08791-cosformer.md",
+      "processed_at": "2026-10-06T13:12:35+00:00",
+      "canonical_id": "arXiv:2202.08791"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-db5ca9f425c1--libfile_9780444fdf908191ba8eed1e897b311b--2603.24517-avo.md",
+      "processed_at": "2026-10-06T13:12:35+00:00",
+      "canonical_id": "arXiv:2603.24517"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-f0ee8acbf6a2--libfile_bc31b5347d00819183ef7a39c174fbcf--2608.14191-aatc.md",
+      "processed_at": "2026-10-06T13:12:35+00:00",
+      "canonical_id": "arXiv:2608.14191"
     }
   ]
 }
