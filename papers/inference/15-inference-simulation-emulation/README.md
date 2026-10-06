@@ -89,7 +89,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：11  
   演算子別プロファイルと階層スケジューラでLLMサービングを高忠実度に模擬し、LLaMA2-70Bの配置探索を42K GPU時間相当からCPU約1時間へ縮小する。
 
 - **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  

@@ -674,13 +674,13 @@
   実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：18  
   外れ値が低ビット量子化の誤差を大きくする問題に対して、全精度の機能を保つ旋回行列を学習し、重み・活性値・KVキャッシュの量子化に合わせる。
 
+- **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  vLLMやSGLangなどの一般的サーバは、要求が逐次到着するオンライン環境で低遅延と高スループットを両立するよう設計される。最新版は異なるハードウェアのmicrobenchmarkと実業務でvLLM/SGLang比1.3〜10.8倍を報告する。
+
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
   ブロックサイズ1なら自己回帰に近づき、系列全体を1ブロックにすれば拡散に近づく連続的な設計空間を作る。
-
-- **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  vLLMやSGLangなどの一般的サーバは、要求が逐次到着するオンライン環境で低遅延と高スループットを両立するよう設計される。最新版は異なるハードウェアのmicrobenchmarkと実業務でvLLM/SGLang比1.3〜10.8倍を報告する。
 
 - **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
@@ -714,13 +714,13 @@
   実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：6  
   GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
 
+- **2025-02 · [Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation](2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  通常の接頭辞 キャッシュは先頭から同一な接頭辞しか再利用できず、chunkだけ同じでも再計算が必要になる。一方、過去のKVを無条件に使うと注意機構文脈が欠落して生成品質が落ちる。
+
 - **2025-10 · [dInfer: An Efficient Inference Framework for Diffusion Language Models](2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/inclusionAI/dInfer) ・ リポジトリ内被引用：5  
   dLLMの反復denoise・並列トークン確定・更新され続けるKVをモジュール化し、decoder/KV管理とGPU実行系を同時最適化するdInfer。
-
-- **2025-02 · [Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation](2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  通常の接頭辞 キャッシュは先頭から同一な接頭辞しか再利用できず、chunkだけ同じでも再計算が必要になる。一方、過去のKVを無条件に使うと注意機構文脈が欠落して生成品質が落ちる。
 
 - **2024-11 · [Context Parallelism for Scalable Million-Token Inference](2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -885,7 +885,7 @@
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
+  実装：✓ ・ リポジトリ内被引用：46  
   H100でFlashAttention-2がピーク性能の約35%しか使えない問題に対し、TMAロードとテンソル Core計算のワープ特化、GEMMとsoftmaxの非同期パイプライン、FP8向けブロック量子化と非コヒーレント変換を導入する。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -921,7 +921,7 @@
   投機的復号では安価なドラフトが複数トークンを提案し、base モデルがまとめて検証する。Medusaはbase モデルの隠れ 状態へ複数の軽量ヘッドを付けるため別下書きモデルを持たなくてよいが、各ヘッドが「何トークン先か」だけを担当し、同じドラフト内で既に提案されたトークンを条件にしない。
 
 - **2024-07 · [PQCache: Product Quantization-based KVCache for Long Context LLM Inference](2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
+  実装：✓ ・ リポジトリ内被引用：20  
   PQCacheはこの処理を「問い合わせに対する埋め込み検索」と見なし、データベース分野の積量子化（Product Quantization; PQ）でkeyを小さなコードへ圧縮し、現在問い合わせとの最大内積探索（Maximum Inner-Product Search; MIPS）で重要トークンだけを選ぶ。
 
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
@@ -936,6 +936,10 @@
   実装：✓ ・ リポジトリ内被引用：16  
   350件超の投機的デコード実験からドラフト遅延と層深度を主要因と特定し、浅く広いドラフトモデルへ再設計して最大111%のスループット向上を示す。
 
+- **2024-03 · [DéjàVu：KVキャッシュ・ストリーミングによる高速・耐障害LLM配信](2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md)**  
+  実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：15  
+  また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
+
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   BitNet b1.58は、LLMの主要な線形層の重みを-1、0、+1の三値に制約する。三値はlog2(3)≈1.58 bitの情報量で表現でき、通常のFP16/BF16重みよりモデル格納とメモリ転送を大幅に減らせる。さらに行列積では重み側の一般的な浮動小数点乗算を単純化できる。
@@ -943,10 +947,6 @@
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
   実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：15  
   2bit級の重み量子化では、各重みを単一の低bit格子へ丸めるだけでは外れ値や層ごとの重要方向を表現しにくく、同じモデル byte数なら小さいモデルを3–4bitで量子化した方が高精度になる場合があった。Llama 2 7B/13B/70Bで2–4 bit/パラメータを評価し、特に2bit域で既存PTQを大きく改善する。
-
-- **2024-03 · [DéjàVu：KVキャッシュ・ストリーミングによる高速・耐障害LLM配信](2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md)**  
-  実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：14  
-  また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
 
 - **2024-02 · [WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More](2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
@@ -1016,6 +1016,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   Transformerの自己注意は長い系列でKVキャッシュが増える。一方RWKVは過去を再帰状態へ畳み込み、デコード時には固定サイズ状態を更新するため、系列長に比例したKV保存を必要としない。本論文はRWKV-4からEagle（RWKV-5）とFinch（RWKV-6）へ進め、再帰状態の表現力を高める。
 
+- **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  大規模視覚言語モデルでは画像が数百個の視覚トークンへ展開され、これらが全Transformer層の自己注意とフィードフォワードネットワーク（FFN）を通るため、深層まで同じトークン数を維持すると推論計算が大きい。FastVは、視覚情報の利用が層間で一様ではなく、初期層で一部の視覚トークンへ注意が集中するという観測を利用する。
+
 - **2024-10 · [Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution](2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   複数小型モデルの重み付き多数決、オンライン投機長調整、SSM/LLM非同期パイプラインを統合した投機的復号サービング。
@@ -1023,10 +1027,6 @@
 - **2024-06 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
   実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：5  
   LLM推論アクセラレータを設計するとき、演算器数、メモリ種類・帯域、チップ面積、並列配置を変えるたびにRTL実装や実機評価を行うのは現実的でない。実機との比較では各種演算子・入力 サイズの遅延誤差が平均10.9%、LLM推論全体では平均4.1%。
-
-- **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  大規模視覚言語モデルでは画像が数百個の視覚トークンへ展開され、これらが全Transformer層の自己注意とフィードフォワードネットワーク（FFN）を通るため、深層まで同じトークン数を維持すると推論計算が大きい。FastVは、視覚情報の利用が層間で一様ではなく、初期層で一部の視覚トークンへ注意が集中するという観測を利用する。
 
 - **2024-01 · [CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference](2024-2401.11240-caraserve-cpu-assisted-lora-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1047,6 +1047,10 @@
 - **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   生成途中の検索を先行してLLM生成とパイプライン化し、検索間隔と探索量を性能モデルで調整してRAGの品質を保ちながら最大2.6倍低遅延化する。
+
+- **2024-03 · [LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md)**  
+  実装：[✓](https://llava-prumerge.github.io/) ・ リポジトリ内被引用：4  
+  平均では元の5.5%程度、約32トークンまで圧縮しながら、多様な視覚質問応答・推論ベンチマークで元モデルに近い性能を保つ。
 
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1071,10 +1075,6 @@
 - **2024-04 · [FFN-SkipLLM: A Hidden Gem for Autoregressive Decoding with Adaptive Feed Forward Skipping](2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   自己回帰LLMの各Transformer層は自己注意とフィードフォワードネットワーク（FFN）を持ち、各生成トークンで全層を通る。既存の早期退出・層スキップは計算を大きく減らせるが、自己注意層まで飛ばすと、その位置で本来作るべきkey/value状態が欠ける。約25〜30%のFFNを省略しても知識集約型タスクの性能変化を小さく抑えることを示す。
-
-- **2024-03 · [LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md)**  
-  実装：[✓](https://llava-prumerge.github.io/) ・ リポジトリ内被引用：3  
-  平均では元の5.5%程度、約32トークンまで圧縮しながら、多様な視覚質問応答・推論ベンチマークで元モデルに近い性能を保つ。
 
 - **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1135,23 +1135,23 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：198  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：200  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：144  
+  実装：✓ ・ リポジトリ内被引用：145  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：129  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：131  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：113  
+  実装：✓ ・ リポジトリ内被引用：115  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：59  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：60  
   Wanda（重み and 活性値）は、LLMを再学習せず一回の校正だけで疎化する枝刈り法である。LLaMA-7Bの50%非構造疎化では、WikiText-2のPPLが単純大きさ枝刈り17.29に対してWanda 7.26となり、重い二次情報更新を使うSparseGPTに競争的な品質を示す。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
@@ -1159,7 +1159,7 @@
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
 - **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
+  実装：✓ ・ リポジトリ内被引用：46  
   依存する重み群をcoupled structureとして勾配重要度で構造枝刈りし、50K例・約3時間のLoRA回復調整だけで汎用LLMを小型化する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
@@ -1179,7 +1179,7 @@
   Retentive Network（RetNet）は、注意と再帰の関係から導いた保持機構（retention）を中心に、同じモデルを三つの計算形式で実行する。
 
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
-  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：27  
   RWKVは、Transformerの並列学習とRNNの軽量な逐次推論を同じモデルで両立させる言語モデルアーキテクチャである。標準自己注意は系列長が伸びると全トークン対の相互作用を扱い、推論では過去の鍵・値を保持する必要がある。論文は最大14Bパラメータまでモデルを拡張し、同規模Transformerと競争力のある言語モデル性能を示す。
 
 - **2023-08 · [LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models](2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md)**  
@@ -1195,7 +1195,7 @@
   Gistingは、毎要求で長い指示文を再エンコードする代わりに、その指示を少数の「gistトークン」へ圧縮し、後続入力がその圧縮表現だけを参照するよう学習する。モデルごとの新しいアダプタを保存するのではなく、タスク指示を通常のキー・値キャッシュ（Key-Value Cache; KVキャッシュ）として再利用可能な短い状態へ変換する。
 
 - **2023-10 · [Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning](2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md)**  
-  実装：[✓](https://github.com/princeton-nlp/LLM-Shearing) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/princeton-nlp/LLM-Shearing) ・ リポジトリ内被引用：20  
   Sheared LLaMAは、大型モデルを単に疎にするのではなく、既存ランタイムで扱いやすい指定済みの小型密形状へ切り出し、その後の継続事前学習を効率化する方式である。50B追加トークンで同規模open モデルを上回り、OpenLLaMA-3B-v2相当水準をscratch学習比約3%のcomputeで達成する結果を示す。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
@@ -1293,7 +1293,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：260  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：263  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -1301,7 +1301,7 @@
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
-  実装：✓ ・ リポジトリ内被引用：28  
+  実装：✓ ・ リポジトリ内被引用：29  
   重み・活性化を細粒度に量子化する方式、層単位知識蒸留（層-by-層 knowledge distillation; LKD）、量子化と逆量子化のオーバーヘッドを消す最適化バックエンドを一体化している。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
@@ -1341,7 +1341,7 @@
   正の直交ランダム特徴FAVOR+でソフトマックス注意を線形時間・線形空間へ近似し、疎性や低ランク仮定なしに長系列Transformerを実行可能にする。
 
 - **2020-09 · [TernaryBERT: Distillation-aware Ultra-low Bit BERT](2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   GLUEとSQuADで既存BERT量子化方式を上回り、全体-precisionに近い品質を維持しながらモデル容量を14.9倍縮小した。
 
 - **2020-04 · [FastBERT: a Self-distilling BERT with Adaptive Inference Time](2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md)**  
@@ -1370,13 +1370,13 @@
   実装：✓ ・ リポジトリ内被引用：11  
   LayerDropはTransformerの層全体を学習中に確率的に落とす構造化dropoutである。通常のdropoutが要素単位の正則化なのに対し、LayerDropは「ある層が存在しない」経路を学習中から経験させる。その結果、学習後に層を間引いてもモデルが破綻しにくく、1個の大モデルから推論時の計算予算に応じた複数深度を取り出せる。
 
+- **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  Q-BERTはBERTの推論時メモリ容量と遅延を減らすため、重みを一律bit幅で量子化するのではなく、層・groupごとの感度に応じて精度を配分する方式である。group-wise量子化とHessianに基づく混合精度割当を組み合わせ、2bit級の重みまで下げても4つのNLPタスクで最大性能低下を2.3%以内に抑えた。
+
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   本論文は、多頭注意（multi-head 注意機構）の全ヘッドが推論時にも必要なのかを実験的に検証し、かなりの割合が冗長であることを示す。
-
-- **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
-  Q-BERTはBERTの推論時メモリ容量と遅延を減らすため、重みを一律bit幅で量子化するのではなく、層・groupごとの感度に応じて精度を配分する方式である。group-wise量子化とHessianに基づく混合精度割当を組み合わせ、2bit級の重みまで下げても4つのNLPタスクで最大性能低下を2.3%以内に抑えた。
 
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
