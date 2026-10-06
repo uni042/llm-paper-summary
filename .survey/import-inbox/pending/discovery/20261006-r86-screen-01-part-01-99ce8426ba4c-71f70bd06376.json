@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r86-screen-01-part-01-99ce8426ba4c",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.00574",
+      "identity_tokens": [
+        "arXiv:2310.00574"
+      ],
+      "title": "YFlows: Systematic Dataflow Exploration and Code Generation for Efficient Neural Network Inference using SIMD Architectures on CPUs",
+      "reason": "本文はCPU SIMD向けのdataflow/code-generationを検討し、主評価は畳み込み系ニューラルネットであることを確認。 実験は主にCNN convolutionであり、Transformer/LLM推論への直接適用評価がない。",
+      "source_url": "https://arxiv.org/abs/2310.00574",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3580305.3599416",
+      "identity_tokens": [
+        "DOI:10.1145/3580305.3599416"
+      ],
+      "title": "LightToken: A Task and Model-agnostic Lightweight Token Embedding Framework for Pre-trained Language Models",
+      "reason": "著者/公的機関の公開先とAmazon Science PDFを試したが、本文を取得できず、要旨からtoken embedding圧縮の可能性のみ確認。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "source_url": "https://doi.org/10.1145/3580305.3599416",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2304.02319",
+      "identity_tokens": [
+        "arXiv:2304.02319"
+      ],
+      "title": "Efficient CNNs via Passive Filter Pruning",
+      "reason": "本文はCNN filter pruningの評価であり、LLM/Transformerへの実証はない。 pruning lineageの方法類似性はあるが接続は間接的。 LLM/Transformer性能、推論実装、転用可能性の評価がない。",
+      "source_url": "https://arxiv.org/abs/2304.02319",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.17910",
+      "identity_tokens": [
+        "arXiv:2303.17910"
+      ],
+      "title": "Selective Knowledge Distillation for Non-Autoregressive Neural Machine Translation",
+      "reason": "本文はNAT機械翻訳のための選択的distillationで、NATの並列推論という効率上の背景はあるが手法自体は学習data selection。 翻訳NAT専用の学習手法で、LLM inference latencyやserving改善を測定していない。",
+      "source_url": "https://arxiv.org/abs/2303.17910",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.11187",
+      "identity_tokens": [
+        "arXiv:2302.11187"
+      ],
+      "title": "Debiased Distillation by Transplanting the Last Layer",
+      "reason": "本文はdistillation時のbiasを最終層移植で補正する研究で、推論コスト/メモリ/速度の削減を目的・評価していない。",
+      "source_url": "https://arxiv.org/abs/2302.11187",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    }
+  ]
+}
