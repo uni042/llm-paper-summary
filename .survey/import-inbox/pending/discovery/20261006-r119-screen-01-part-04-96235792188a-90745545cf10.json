@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r119-screen-01-part-04-96235792188a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25040",
+      "identity_tokens": [
+        "arXiv:2509.25040"
+      ],
+      "title": "A multiscale analysis of mean-field transformers in the moderate interaction regime",
+      "reason": "一次資料abstractを確認。対象はLLM inferenceのcompute/memory/latency/throughput/KV cache/quantization/offload/servingと接続せず、対象外。",
+      "source_url": "https://arxiv.org/abs/2509.25040",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:a0e26aa5000bdbb2027bcaf3f8c7021344093a4a",
+      "identity_tokens": [
+        "SemanticScholar:a0e26aa5000bdbb2027bcaf3f8c7021344093a4a"
+      ],
+      "title": "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
+      "reason": "一次資料abstractおよび本文を確認。USENIX paper uses proactive agent defenses (cloak/honey/trap mechanisms) to detect or redirect malicious LLM-agent behavior. Its techniques concern security controls, not serving scheduling/disaggregation or inference throughput/latency optimization.",
+      "source_url": "https://www.semanticscholar.org/paper/a0e26aa5000bdbb2027bcaf3f8c7021344093a4a",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.02913",
+      "identity_tokens": [
+        "arXiv:2406.02913"
+      ],
+      "title": "Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity",
+      "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 The zeroth-order extreme-sparsity method reduces trainable parameters/optimizer memory for LLM fine-tuning. Evaluation is training-focused; it does not demonstrate sparse inference kernels or serving gains, so the quantization/compression lineage fit is weak.",
+      "source_url": "https://arxiv.org/abs/2406.02913",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09827",
+      "identity_tokens": [
+        "arXiv:2403.09827"
+      ],
+      "title": "FastSAM3D: An Efficient Segment Anything Model for 3D Volumetric Medical Images",
+      "reason": "一次資料abstractを確認。対象はLLM inferenceのcompute/memory/latency/throughput/KV cache/quantization/offload/servingと接続せず、対象外。",
+      "source_url": "https://arxiv.org/abs/2403.09827",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.04858",
+      "identity_tokens": [
+        "arXiv:2401.04858"
+      ],
+      "title": "User Embedding Model for Personalized Language Prompting",
+      "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 The paper uses user embeddings to personalize language prompts and evaluates prompt/task performance. It does not establish a routing, model-selection or inference-cost optimization despite the broad inference-systems lineage.",
+      "source_url": "https://arxiv.org/abs/2401.04858",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    }
+  ]
+}
