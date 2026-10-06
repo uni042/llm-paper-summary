@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r93-screen-01-part-01-b79127565e9f",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043724",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS56072.2025.11043724"
+      ],
+      "title": "A Layer-wise N:M Sparsity Aware Transformer Accelerator leveraging Temporal Locality with Butterfly Network",
+      "reason": "IEEE Xplore DOI page inaccessible through the available reader; search returned only publisher abstract/metadata. The abstract describes a DeiT-S accelerator, sparse temporal-locality mapping and butterfly scatter, which plausibly relates to Transformer acceleration, but primary method/evaluation limitations could not be independently checked.",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043724",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043931",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS56072.2025.11043931"
+      ],
+      "title": "An Accurate and Compact Design Integrating Seven Common Nonlinear Functions in Deep Learning",
+      "reason": "IEEE Xplore DOI page inaccessible through the available reader; search returned only abstract/metadata. Topic is hardware implementation of Softmax/LayerNorm and related activations for Transformer/LLM inference, but primary circuit/evaluation details were unavailable.",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043931",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/EEISS65394.2025.11086014",
+      "identity_tokens": [
+        "DOI:10.1109/EEISS65394.2025.11086014"
+      ],
+      "title": "Efficient Language Models through Static Vocabulary Pruning of Low-Impact Tokens",
+      "reason": "Primary IEEE full text could not be retrieved; publisher-linked search exposed metadata/abstract only. Vocabulary pruning may reduce language-model parameters and inference cost, but actual architecture, evaluation, and limitations remain unverified.",
+      "source_url": "https://doi.org/10.1109/EEISS65394.2025.11086014",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDSIS65355.2025.11070875",
+      "identity_tokens": [
+        "DOI:10.1109/ICDSIS65355.2025.11070875"
+      ],
+      "title": "Contextual Compression of Unstructured Resumes using VectorStore-Based Retrieval Augmented Generation",
+      "reason": "Abstract identifies a resume/CV extraction RAG system evaluated on 100 resumes; its target is recruitment information extraction, not model inference efficiency or a plausible transformer-efficiency lineage.",
+      "source_url": "https://doi.org/10.1109/ICDSIS65355.2025.11070875",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICSP65755.2025.11087185",
+      "identity_tokens": [
+        "DOI:10.1109/ICSP65755.2025.11087185"
+      ],
+      "title": "A Method to Improve the Energy Efficiency Ratio of FPGA Convolutional Operations through Memory Access Optimization",
+      "reason": "Abstract is specifically a CNN convolution accelerator and memory-access optimization; it does not involve transformer/LLM inference, and the claimed transfer from a Transformer FPGA seed is too weak to retain.",
+      "source_url": "https://doi.org/10.1109/ICSP65755.2025.11087185",
+      "first_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "last_checked_at": "2026-10-06T12:46:03.057892+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    }
+  ]
+}
