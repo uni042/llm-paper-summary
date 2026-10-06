@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r153-screen-01-part-01-d2e0a5d11b31",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag080",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btag080"
+      ],
+      "title": "scMix: learning temporal dynamics of gene expression under irregular time intervals",
+      "reason": "不規則時系列下のgene-expression dynamics学習でLLM推論との関係は薄そうだが、指定Oxford一次資料を取得できず要旨と手法を直接検証できない。",
+      "source_url": "https://doi.org/10.1093/bioinformatics/btag080",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12613",
+      "identity_tokens": [
+        "arXiv:2602.12613"
+      ],
+      "title": "Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction",
+      "reason": "一次資料の要旨を確認。Temporal Graph Neural Networks (TGNNs) are pivotal in processing dynamic graphs. However, existing TGNNs primarily target one-time predictions for a given temporal span, whereas many practical applications require continuous predictions, that predictions are issued frequently over time. Directly adapting existing TGNNs to continuous-prediction scenarios introduces either significant computational ",
+      "source_url": "https://arxiv.org/abs/2602.12613",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11863",
+      "identity_tokens": [
+        "arXiv:2602.11863"
+      ],
+      "title": "In-Context Function Learning in Large Language Models",
+      "reason": "一次資料の要旨を確認。Large language models (LLMs) can learn from a few demonstrations provided at inference time. We study this in-context learning phenomenon through the lens of Gaussian Processes (GPs). We build controlled experiments where models observe sequences of multivariate scalar-valued function samples drawn from known GP priors. We evaluate prediction error in relation to the number of demonstrations and c",
+      "source_url": "https://arxiv.org/abs/2602.11863",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11882",
+      "identity_tokens": [
+        "arXiv:2602.11882"
+      ],
+      "title": "Where Bits Matter in World Model Planning: A Paired Mixed-Bit Study for Efficient Spatial Reasoning",
+      "reason": "一次資料の要旨を確認。Efficient spatial reasoning requires world models that remain reliable under tight precision budgets. We study whether low-bit planning behavior is determined mostly by total bitwidth or by where bits are allocated across modules. Using DINO-WM on the Wall planning task, we run a paired-goal mixed-bit evaluation across uniform, mixed, asymmetric, and layerwise variants under two planner budgets. W",
+      "source_url": "https://arxiv.org/abs/2602.11882",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12049",
+      "identity_tokens": [
+        "arXiv:2602.12049"
+      ],
+      "title": "Improving HPC Code Generation Capability of LLMs via Online Reinforcement Learning with Real-Machine Benchmark Rewards",
+      "reason": "一次資料の要旨を確認。Large language models (LLMs) have demonstrated strong code generation capabilities, yet the runtime performance of generated code is not guaranteed, and there have been few attempts to train LLMs using runtime performance as a reward in the HPC domain. We propose an online reinforcement learning approach that executes LLM-generated code on a supercomputer and directly feeds back the measured runti",
+      "source_url": "https://arxiv.org/abs/2602.12049",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    }
+  ]
+}
