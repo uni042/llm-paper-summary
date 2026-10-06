@@ -35,10 +35,15 @@
   "selection_reason": "Transformer推論全体をinteger-only化し、GELU・Softmax・LayerNormも整数近似kernelで処理する量子化方式。T4上のINT8 BERTでFP32比2.4–4.0倍高速化を示し、推論latency・memory・hardware utilizationを直接改善するため対象内。",
   "semantic_scholar_id": "d06bda5e759c8e8569754d8f7235cf1a9a1e9985",
   "source_url": "https://arxiv.org/abs/2101.01321",
-  "status": "ready",
+  "status": "superseded",
   "title": "I-BERT: Integer-only BERT Quantization",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-06T13:51:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+  "represented_canonical_id": "arXiv:2101.01321",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
