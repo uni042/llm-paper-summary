@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r62-screen-01-part-08-88d91db99bb8",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.16086",
+      "identity_tokens": [
+        "arXiv:2502.16086"
+      ],
+      "title": "Stealing Training Data from Large Language Models in Decentralized Training through Activation Inversion Attack",
+      "reason": "Studies activation-inversion attacks to recover training data from decentralized LLM training. It is a privacy/security attack against training, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2502.16086",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04530",
+      "identity_tokens": [
+        "arXiv:2411.04530"
+      ],
+      "title": "Tomato, Tomahto, Tomate: Do Multilingual Language Models Understand Based on Subword-Level Semantic Concepts?",
+      "reason": "Analyzes whether multilingual language models represent semantic concepts at the subword level. It is a capability/representation study, not a compression or serving method.",
+      "source_url": "https://arxiv.org/abs/2411.04530",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.13163",
+      "identity_tokens": [
+        "arXiv:2210.13163"
+      ],
+      "title": "Bilingual Synchronization: Restoring Translational Relationships with Editing Operations",
+      "reason": "Bilingual Synchronization uses editing operations to restore translation relations in bilingual sequence generation. It is an NAR/translation decoding approach, but the paper’s contribution is translation quality rather than a demonstrated inference-efficiency gain.",
+      "source_url": "https://arxiv.org/abs/2210.13163",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09420",
+      "identity_tokens": [
+        "arXiv:2506.09420"
+      ],
+      "title": "A Call for Collaborative Intelligence: Why Human-Agent Systems Should Precede AI Autonomy",
+      "reason": "This position paper argues for collaborative human-agent systems before full autonomy. It discusses deployment roles and risks, not model inference optimization.",
+      "source_url": "https://arxiv.org/abs/2506.09420",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    }
+  ]
+}
