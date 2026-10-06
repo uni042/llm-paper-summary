@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e1bc2afdf62f85cd-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2310.10505",
+  "reason": "Reinforcement Learning from Human Feedback (RLHF) is key to aligning Large Language Models (LLMs), typically paired with the Proximal Policy Optimization (PPO) algorithm. While PPO is a powerful method designed for general reinforcement learning tasks, it is overly sophisticated for LLMs, leading to laborious hyper-parameter tuning and significant computation burdens. To make RLHF efficient, we present ReMax, which leverages 3 properties of RLHF: fast simulation, deterministic transitions, and trajectory-level rewards. These properties are not exploited in PPO, making it less suitable for RLHF. Building on the renowned REINFORCE algorithm, ReMax does not require training an additional value model as in PPO and is further enhanced with a new variance reduction technique. ReMax offers several benefits over PPO: it is simpler to implement, eliminates more than 4 hyper-parameters in PPO, reduces GPU memory usage, and shortens training time. ReMax can save about 46% GPU memory than PPO when training a 7B model and enables training on A800-80GB GPUs without the memory-saving offloading technique needed by PPO. Applying ReMax to a Mistral-7B model resulted in a 94.78% win rate on the Alpa",
+  "title": "ReMax: A Simple, Effective, and Efficient Reinforcement Learning Method for Aligning Large Language Models",
+  "identity_tokens": [
+    "arXiv:2310.10505"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e1bc2afdf62f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
