@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T06:58:56+00:00",
+  "updated_at": "2026-10-06T07:09:14+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -2988,6 +2988,18 @@
       "processed_at": "2026-10-06T06:58:56+00:00",
       "canonical_id": "arXiv:2408.10188",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-cd2a0c817a3f--libfile_d2556087f8ec819189c8b4d13ef7aa64--2408.10188-longvila.md"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-3bd9c15809c5--libfile_223bf4fb39ac81919a6863674cd916f6--2004.11886-lite-transformer.md",
+      "processed_at": "2026-10-06T07:09:14+00:00",
+      "canonical_id": "arXiv:2004.11886"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-cd2a0c817a3f--libfile_d2556087f8ec819189c8b4d13ef7aa64--2408.10188-longvila.md",
+      "processed_at": "2026-10-06T07:09:14+00:00",
+      "canonical_id": "arXiv:2408.10188"
     }
   ]
 }
