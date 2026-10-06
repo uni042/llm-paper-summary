@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r134-screen-01-part-01-81fd0f3214c4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMC.2026.3688699",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3688699"
+      ],
+      "title": "Generalized Category Discovery in Radio Frequency Fingerprint Identification: An End-to-End Approach With Signal-Augmented Entropy Regularization",
+      "reason": "IEEE DOI一次landingを直接開いたがbrowser取得不能。書誌題名からRF fingerprint identification研究で関連は弱そうだが、primary abstract未確認のためborderlineに保持。",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3688699",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1140/epjb/s10051-026-01263-7",
+      "identity_tokens": [
+        "DOI:10.1140/epjb/s10051-026-01263-7"
+      ],
+      "title": "Effective-time bilinear neural construction of lump-stripe and lump solutions for a variable-coefficient ANNV equation",
+      "reason": "要旨は非線形AN(N)V方程式の厳密波解を構成する数理物理で、LLM推論や計算効率化ではない。",
+      "source_url": "https://doi.org/10.1140/epjb/s10051-026-01263-7",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.09.30.755565",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.30.755565"
+      ],
+      "title": "Attractor dynamics underlie sequence working memory in data-constrained recurrent neural networks",
+      "reason": "提示bioRxiv DOIとcandidate abstract/full URLを直接取得できなかった。cache要旨は神経集団系列working memoryを示すが一次現行確認不能のためborderline。",
+      "source_url": "https://doi.org/10.64898/2026.09.30.755565",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38911",
+      "identity_tokens": [
+        "arXiv:2609.38911"
+      ],
+      "title": "Generalized Residual Closure: General Learning Dynamics for Stability-Plasticity Compatibility",
+      "reason": "安定性と可塑性を扱う一般学習理論で、LLM推論の計算・メモリ・レイテンシ改善を提案しない。",
+      "source_url": "https://arxiv.org/abs/2609.38911",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39507",
+      "identity_tokens": [
+        "arXiv:2609.39507"
+      ],
+      "title": "LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation",
+      "reason": "具身ロボット操作agentの能力ベンチマークで、LLM推論実行の効率化手法はない。",
+      "source_url": "https://arxiv.org/abs/2609.39507",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    }
+  ]
+}
