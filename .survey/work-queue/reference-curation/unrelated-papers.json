@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T05:30:56+00:00",
-  "record_count": 7102,
+  "updated_at": "2026-10-06T05:54:04+00:00",
+  "record_count": 7124,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -102421,6 +102421,314 @@
         "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
       ],
       "title": "LongVPO: From Anchored Cues to Self-Reasoning for Long-Form Video Preference Optimization"
+    },
+    "DOI:10.18653/v1/2020.acl-main.487": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.487",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.487"
+      ],
+      "reason": "Social bias in NLP models, no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T05:53:57+00:00",
+      "last_checked_at": "2026-10-06T05:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Social Biases in NLP Models as Barriers for Persons with Disabilities"
+    },
+    "arXiv:2404.16994": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.16994",
+      "identity_tokens": [
+        "arXiv:2404.16994"
+      ],
+      "reason": "Video dense-captioning capability extension, not an inference optimization.",
+      "first_checked_at": "2026-10-06T05:53:57+00:00",
+      "last_checked_at": "2026-10-06T05:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "title": "PLLaVA : Parameter-free LLaVA Extension from Images to Videos for Video Dense Captioning"
+    },
+    "arXiv:2310.06816": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06816",
+      "identity_tokens": [
+        "arXiv:2310.06816"
+      ],
+      "reason": "Privacy leakage from text embeddings, not inference efficiency.",
+      "first_checked_at": "2026-10-06T05:53:57+00:00",
+      "last_checked_at": "2026-10-06T05:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Text Embeddings Reveal (Almost) As Much As Text"
+    },
+    "arXiv:2506.10947": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.10947",
+      "identity_tokens": [
+        "arXiv:2506.10947"
+      ],
+      "reason": "RLVR training-signal analysis, not LLM inference/serving optimization.",
+      "first_checked_at": "2026-10-06T05:53:58+00:00",
+      "last_checked_at": "2026-10-06T05:53:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Spurious Rewards: Rethinking Training Signals in RLVR"
+    },
+    "arXiv:2508.19236": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19236",
+      "identity_tokens": [
+        "arXiv:2508.19236"
+      ],
+      "reason": "Full text evaluates VLA perceptual-cognitive memory; measured resource results show slightly higher latency and memory than baseline, with the contribution targeting robot-task memory/capability rather than serving efficiency.",
+      "first_checked_at": "2026-10-06T05:53:58+00:00",
+      "last_checked_at": "2026-10-06T05:53:58+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md"
+      ],
+      "title": "MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation"
+    },
+    "DOI:10.1016/j.media.2026.104033": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.media.2026.104033",
+      "identity_tokens": [
+        "DOI:10.1016/j.media.2026.104033"
+      ],
+      "reason": "MRI prostate-cancer detection model, unrelated to LLM inference serving.",
+      "first_checked_at": "2026-10-06T05:53:58+00:00",
+      "last_checked_at": "2026-10-06T05:53:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "PCa-Mamba: Spatiotemporal State Space Models for Prostate Cancer Detection in Multi-Parametric MRI"
+    },
+    "arXiv:2603.05637": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05637",
+      "identity_tokens": [
+        "arXiv:2603.05637"
+      ],
+      "reason": "Full text is a taxonomy of MCP software faults and reliability/security issues, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-06T05:53:59+00:00",
+      "last_checked_at": "2026-10-06T05:53:59+00:00",
+      "linked_from": [
+        "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md"
+      ],
+      "title": "Real Faults in Model Context Protocol (MCP) Software: a Comprehensive Taxonomy"
+    },
+    "arXiv:2601.13836": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13836",
+      "identity_tokens": [
+        "arXiv:2601.13836"
+      ],
+      "reason": "Future-forecasting evaluation benchmark, not an inference optimization.",
+      "first_checked_at": "2026-10-06T05:53:59+00:00",
+      "last_checked_at": "2026-10-06T05:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "FutureOmni: Evaluating Future Forecasting from Omni-Modal Context for Multimodal LLMs"
+    },
+    "DOI:10.1145/3777552": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3777552",
+      "identity_tokens": [
+        "DOI:10.1145/3777552"
+      ],
+      "reason": "Reporting guidelines for LLM human-robot interaction studies; no inference optimization method.",
+      "first_checked_at": "2026-10-06T05:53:59+00:00",
+      "last_checked_at": "2026-10-06T05:53:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Reporting Guidelines for Large Language Models in Human–Robot Interaction"
+    },
+    "DOI:10.1016/j.neucom.2025.132030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.132030",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.132030"
+      ],
+      "reason": "Uses LLMs to create/evaluate simulation models rather than optimizing LLM inference.",
+      "first_checked_at": "2026-10-06T05:53:59+00:00",
+      "last_checked_at": "2026-10-06T05:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Creation, evaluation and self-validation of simulation models with large language models"
+    },
+    "arXiv:2403.20330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.20330",
+      "identity_tokens": [
+        "arXiv:2403.20330"
+      ],
+      "reason": "Evaluates VLM benchmarks, not inference efficiency.",
+      "first_checked_at": "2026-10-06T05:54:00+00:00",
+      "last_checked_at": "2026-10-06T05:54:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Are We on the Right Way for Evaluating Large Vision-Language Models?"
+    },
+    "arXiv:2412.14171": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.14171",
+      "identity_tokens": [
+        "arXiv:2412.14171"
+      ],
+      "reason": "Studies spatial understanding/memory capability, without a serving optimization.",
+      "first_checked_at": "2026-10-06T05:54:00+00:00",
+      "last_checked_at": "2026-10-06T05:54:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces"
+    },
+    "arXiv:2311.04257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.04257",
+      "identity_tokens": [
+        "arXiv:2311.04257"
+      ],
+      "reason": "Multimodal model architecture/capability, no direct inference-efficiency method.",
+      "first_checked_at": "2026-10-06T05:54:00+00:00",
+      "last_checked_at": "2026-10-06T05:54:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "mPLUG-OwI2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration"
+    },
+    "DOI:10.1145/3442188.3445901": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3442188.3445901",
+      "identity_tokens": [
+        "DOI:10.1145/3442188.3445901"
+      ],
+      "reason": "Measurement and fairness, unrelated to LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T05:54:00+00:00",
+      "last_checked_at": "2026-10-06T05:54:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Measurement and Fairness"
+    },
+    "arXiv:1511.06067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.06067",
+      "identity_tokens": [
+        "arXiv:1511.06067"
+      ],
+      "reason": "Low-rank regularization for CNNs, outside LLM inference serving.",
+      "first_checked_at": "2026-10-06T05:54:01+00:00",
+      "last_checked_at": "2026-10-06T05:54:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Convolutional neural networks with low-rank regularization"
+    },
+    "DOI:10.1109/tpami.2025.3646452": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2025.3646452",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2025.3646452"
+      ],
+      "reason": "Full text studies CUR decomposition of self-attention in vision transformers; its target is ViT attention analysis, not LLM serving/inference optimization.",
+      "first_checked_at": "2026-10-06T05:54:02+00:00",
+      "last_checked_at": "2026-10-06T05:54:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "The CUR Decomposition of Self-Attention Matrices in Vision Transformers"
+    },
+    "arXiv:2605.20613": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20613",
+      "identity_tokens": [
+        "arXiv:2605.20613"
+      ],
+      "reason": "Efficient pretraining and training-compute scaling, not inference-time/serving efficiency.",
+      "first_checked_at": "2026-10-06T05:54:02+00:00",
+      "last_checked_at": "2026-10-06T05:54:02+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "HRM-Text: Efficient Pretraining Beyond Scaling"
+    },
+    "arXiv:2512.23914": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23914",
+      "identity_tokens": [
+        "arXiv:2512.23914"
+      ],
+      "reason": "Broad neural-network hardware-acceleration survey, no specific new LLM inference result for this scope.",
+      "first_checked_at": "2026-10-06T05:54:03+00:00",
+      "last_checked_at": "2026-10-06T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.06940-unified-ai-gateway-a-framework-for-joint-model-routing-and-kv-cache-mana.md"
+      ],
+      "title": "Hardware Acceleration for Neural Networks: A Comprehensive Survey"
+    },
+    "arXiv:2511.20223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20223",
+      "identity_tokens": [
+        "arXiv:2511.20223"
+      ],
+      "reason": "Adversarial attack study on LVLMs, outside inference-efficiency scope.",
+      "first_checked_at": "2026-10-06T05:54:03+00:00",
+      "last_checked_at": "2026-10-06T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "V-Attack: Targeting Disentangled Value Features for Controllable Adversarial Attacks on LVLMs"
+    },
+    "arXiv:2604.01966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01966",
+      "identity_tokens": [
+        "arXiv:2604.01966"
+      ],
+      "reason": "Egocentric-video grounding and personalized QA capability, not inference efficiency.",
+      "first_checked_at": "2026-10-06T05:54:04+00:00",
+      "last_checked_at": "2026-10-06T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "Ego-Grounding for Personalized Question-Answering in Egocentric Videos"
+    },
+    "DOI:10.1109/iccv.2015.425": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv.2015.425",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2015.425"
+      ],
+      "reason": "Image-based face-attribute recognition, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-06T05:54:04+00:00",
+      "last_checked_at": "2026-10-06T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Deep Learning Face Attributes in the Wild"
+    },
+    "arXiv:1507.02672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1507.02672",
+      "identity_tokens": [
+        "arXiv:1507.02672"
+      ],
+      "reason": "Semi-supervised ladder-network learning, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-06T05:54:04+00:00",
+      "last_checked_at": "2026-10-06T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Semi-supervised Learning with Ladder Networks"
     }
   }
 }

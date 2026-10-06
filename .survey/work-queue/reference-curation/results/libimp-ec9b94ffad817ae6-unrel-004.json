@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec9b94ffad817ae6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/iccv.2015.425",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/iccv.2015.425",
+    "identity_tokens": [
+      "DOI:10.1109/iccv.2015.425"
+    ],
+    "reason": "Image-based face-attribute recognition, outside LLM inference/serving.",
+    "first_checked_at": "2026-10-06T05:54:04+00:00",
+    "last_checked_at": "2026-10-06T05:54:04+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "title": "Deep Learning Face Attributes in the Wild"
+  },
+  "processed_at": "2026-10-06T05:54:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec9b94ffad81",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

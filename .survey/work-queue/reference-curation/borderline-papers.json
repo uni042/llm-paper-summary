@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T05:30:55+00:00",
-  "record_count": 2305,
+  "updated_at": "2026-10-06T05:54:04+00:00",
+  "record_count": 2314,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -35518,6 +35518,144 @@
       ],
       "borderline_recheck_count": 0,
       "title": "WebGLM: Towards An Efficient Web-Enhanced Question Answering System with Human Preferences"
+    },
+    "arXiv:2603.01801": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.01801",
+      "identity_tokens": [
+        "arXiv:2603.01801"
+      ],
+      "reason": "Primary arXiv PDF retrieval returned an 11,801,939-byte document beyond the available fetch limit and the arXiv HTML route was inaccessible; only abstract/metadata could be checked.",
+      "first_checked_at": "2026-10-06T05:53:58+00:00",
+      "last_checked_at": "2026-10-06T05:53:58+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Papers Don't Tell You: Recovering Tacit Knowledge for Automated Paper Reproduction"
+    },
+    "arXiv:2602.15682": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.15682",
+      "identity_tokens": [
+        "arXiv:2602.15682"
+      ],
+      "reason": "Conceptual user-centric agent architecture; no concrete measured compute, memory, latency, or throughput improvement is established.",
+      "first_checked_at": "2026-10-06T05:54:01+00:00",
+      "last_checked_at": "2026-10-06T05:54:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Next Paradigm Is User-Centric Agent, Not Platform-Centric Service"
+    },
+    "arXiv:2602.00286": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00286",
+      "identity_tokens": [
+        "arXiv:2602.00286"
+      ],
+      "reason": "Information-theoretic analysis of generation order and parallel diffusion decoding; no new concrete serving optimization or direct measured efficiency gain.",
+      "first_checked_at": "2026-10-06T05:54:01+00:00",
+      "last_checked_at": "2026-10-06T05:54:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Generation Order and Parallel Decoding in Masked Diffusion Models: An Information-Theoretic Perspective"
+    },
+    "arXiv:2604.01489": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01489",
+      "identity_tokens": [
+        "arXiv:2604.01489"
+      ],
+      "reason": "LLM-based GPU kernel generation/optimization is general kernel programming, not a demonstrated LLM inference-serving optimization.",
+      "first_checked_at": "2026-10-06T05:54:01+00:00",
+      "last_checked_at": "2026-10-06T05:54:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CuTeGen: An LLM-Based Agentic Framework for Generation and Optimization of High-Performance GPU Kernels using CuTe"
+    },
+    "arXiv:2602.20867": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.20867",
+      "identity_tokens": [
+        "arXiv:2602.20867"
+      ],
+      "reason": "Survey discusses possible token/context savings from agent skills but provides no direct measured serving improvement or validated optimization.",
+      "first_checked_at": "2026-10-06T05:54:02+00:00",
+      "last_checked_at": "2026-10-06T05:54:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2608.19662.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SoK: Agentic Skills - Beyond Tool Use in LLM Agents"
+    },
+    "arXiv:2604.09780": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09780",
+      "identity_tokens": [
+        "arXiv:2604.09780"
+      ],
+      "reason": "Analyzes MoE routing geometry and expert specialization; no concrete inference-time routing, memory, or throughput optimization is provided.",
+      "first_checked_at": "2026-10-06T05:54:02+00:00",
+      "last_checked_at": "2026-10-06T05:54:02+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.06663-emo-emergent-modularity.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Myth of Expert Specialization in MoEs: Why Routing Reflects Geometry, Not Necessarily Domain Expertise"
+    },
+    "arXiv:2511.07585": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.07585",
+      "identity_tokens": [
+        "arXiv:2511.07585"
+      ],
+      "reason": "Cross-provider output drift validation addresses reliability/consistency, not reduction in LLM inference compute, memory, latency, or serving cost.",
+      "first_checked_at": "2026-10-06T05:54:03+00:00",
+      "last_checked_at": "2026-10-06T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM Output Drift: Cross-Provider Validation & Mitigation for Financial Workflows"
+    },
+    "arXiv:2511.11332": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.11332",
+      "identity_tokens": [
+        "arXiv:2511.11332"
+      ],
+      "reason": "UFO3 measures digital-agent workflow behavior with orchestration/tool time; it does not isolate LLM inference serving efficiency.",
+      "first_checked_at": "2026-10-06T05:54:03+00:00",
+      "last_checked_at": "2026-10-06T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UFO3: Weaving the Digital Agent Galaxy"
+    },
+    "DOI:10.1145/3779212.3790187": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779212.3790187",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790187"
+      ],
+      "reason": "The ACM primary full-text PDF endpoint was inaccessible; only institutional primary abstract/metadata were available, so method and evaluation could not be reviewed.",
+      "first_checked_at": "2026-10-06T05:54:04+00:00",
+      "last_checked_at": "2026-10-06T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md",
+        "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md",
+        "papers/inference/99-other-inference-systems/2026-2609.14507-physically-partitioned-kvcache-format-for-cpu-gpu-load-balancing-in-moe-inference.md",
+        "papers/inference/99-other-inference-systems/2609.14643.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading"
     }
   }
 }

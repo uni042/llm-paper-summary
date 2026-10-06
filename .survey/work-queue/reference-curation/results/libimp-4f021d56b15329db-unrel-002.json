@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f021d56b15329db-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.05637",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.05637",
+    "identity_tokens": [
+      "arXiv:2603.05637"
+    ],
+    "reason": "Full text is a taxonomy of MCP software faults and reliability/security issues, not an inference-efficiency method.",
+    "first_checked_at": "2026-10-06T05:53:59+00:00",
+    "last_checked_at": "2026-10-06T05:53:59+00:00",
+    "linked_from": [
+      "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md"
+    ],
+    "title": "Real Faults in Model Context Protocol (MCP) Software: a Comprehensive Taxonomy"
+  },
+  "processed_at": "2026-10-06T05:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f021d56b153",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

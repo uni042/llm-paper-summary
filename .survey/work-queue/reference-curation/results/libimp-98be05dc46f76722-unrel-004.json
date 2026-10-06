@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98be05dc46f76722-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.20613",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.20613",
+    "identity_tokens": [
+      "arXiv:2605.20613"
+    ],
+    "reason": "Efficient pretraining and training-compute scaling, not inference-time/serving efficiency.",
+    "first_checked_at": "2026-10-06T05:54:02+00:00",
+    "last_checked_at": "2026-10-06T05:54:02+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "title": "HRM-Text: Efficient Pretraining Beyond Scaling"
+  },
+  "processed_at": "2026-10-06T05:54:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98be05dc46f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
