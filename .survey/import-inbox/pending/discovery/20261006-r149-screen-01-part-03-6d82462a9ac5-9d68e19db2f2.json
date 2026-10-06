@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r149-screen-01-part-03-6d82462a9ac5",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.19494",
+      "identity_tokens": [
+        "arXiv:2604.19494"
+      ],
+      "title": "DPC: A Distributed Page Cache over CXL",
+      "reason": "arXiv要旨はCXL上のdistributed file-system page cacheとdata-sharing workloadを対象とするOS/cache設計。LLM inferenceとの具体的接続やmodel-serving手法は示されない。",
+      "source_url": "https://arxiv.org/abs/2604.19494",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.18120",
+      "identity_tokens": [
+        "arXiv:2604.18120"
+      ],
+      "title": "Proxics: an efficient programming model for far memory accelerators",
+      "reason": "arXiv本文はCXL far-memoryのnear-data processing向けprocess/pipe抽象を提案し、bulk memory、database、graph/PageRank workloadで評価する。LLMでこのprogramming modelを使えるかの議論はあるが、LLM inference workloadやLLM serving評価はなく、既存memory/offload lineageとの接続は間接的に留まる。",
+      "source_url": "https://arxiv.org/abs/2604.18120",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.21769/BioProtoc.5676",
+      "identity_tokens": [
+        "DOI:10.21769/BioProtoc.5676"
+      ],
+      "title": "Workflow for Fine-Tuning and Evaluating DNA Language Models for Specific Genomics Issues",
+      "reason": "Direct DOI/publisher URL returned inaccessible URL or Internal Error, so the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.21769/BioProtoc.5676",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17064",
+      "identity_tokens": [
+        "arXiv:2604.17064"
+      ],
+      "title": "Sarus Suite: Cloud-native Containers for HPC",
+      "reason": "arXiv本文はHPC用container/launch environmentとsoftware stack lifecycleを扱い、AI/ML workloadを含むportable deploymentを支援するが、model inference compute/memory/latency/throughputを改善する仕組みではない。",
+      "source_url": "https://arxiv.org/abs/2604.17064",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.04.15.718687",
+      "identity_tokens": [
+        "DOI:10.64898/2026.04.15.718687"
+      ],
+      "title": "Attentive-SPIDNA: Attention-based neural networks for population genetics",
+      "reason": "Direct DOI/publisher URL returned inaccessible URL or Internal Error, so the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.64898/2026.04.15.718687",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    }
+  ]
+}
