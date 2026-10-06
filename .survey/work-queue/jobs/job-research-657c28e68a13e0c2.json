@@ -35,10 +35,15 @@
   "selection_reason": "可変深度looped LMで標準batchingが破綻する問題に対し、loop step単位のcontinuous depth batching、KV-cache管理、非同期exit予測を導入し、理論上限の最大99%のspeedupを実現するLLM serving研究。",
   "semantic_scholar_id": "d2583ba90f41cf3b8efc8ab7008eb81fba3639b9",
   "source_url": "https://arxiv.org/abs/2608.09444",
-  "status": "ready",
+  "status": "superseded",
   "title": "Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T05:53:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md",
+  "represented_canonical_id": "arXiv:2608.09444",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
