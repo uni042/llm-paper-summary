@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r82-screen-01-part-01-94789269befd",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.02338",
+      "identity_tokens": [
+        "arXiv:2604.02338"
+      ],
+      "title": "LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning",
+      "reason": "LiME optimizes multimodal PEFT/adaptation parameter count; abstract does not claim inference compute, latency, serving, or base-model memory gains.",
+      "source_url": "https://arxiv.org/abs/2604.02338",
+      "first_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "last_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123223",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123223"
+      ],
+      "title": "A novel multi-granularity context-adaptive downsampling convolution for low-resolution images",
+      "reason": "Adaptive downsampling convolution for low-resolution images is a computer-vision method, not LLM inference.",
+      "source_url": "https://doi.org/10.1016/j.ins.2026.123223",
+      "first_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "last_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115577",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115577"
+      ],
+      "title": "PFDBooster: A unified post-image fusion dual-domain boosting paradigm",
+      "reason": "Post-image fusion/boosting paradigm; no LLM inference or serving connection.",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.115577",
+      "first_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "last_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCE.2025.3644940",
+      "identity_tokens": [
+        "DOI:10.1109/TCE.2025.3644940"
+      ],
+      "title": "RO-SVD+: A Hardware-Based Framework Against AI Attacks for Cost-Effective GenAI Copyright Protection in Consumer Electronics",
+      "reason": "RO-SVD+ protects AI-generated image copyright with hardware randomness; not an LLM inference optimization.",
+      "source_url": "https://doi.org/10.1109/TCE.2025.3644940",
+      "first_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "last_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00440",
+      "identity_tokens": [
+        "arXiv:2602.00440"
+      ],
+      "title": "DISK: Dynamic Inference SKipping for World Models",
+      "reason": "Abstract proposes dynamic inference skipping for autoregressive diffusion world models, but primary full text could not be retrieved and application is not LLM/VLM serving.",
+      "source_url": "https://arxiv.org/abs/2602.00440",
+      "first_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "last_checked_at": "2026-10-06T11:08:21.565405+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ]
+    }
+  ]
+}
