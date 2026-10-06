@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T08:41:01+00:00",
-  "record_count": 7468,
+  "updated_at": "2026-10-06T08:50:32+00:00",
+  "record_count": 7494,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -107549,6 +107549,371 @@
         "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
       ],
       "title": "IDFace: Face Template Protection for Efficient and Secure Identification"
+    },
+    "DOI:10.1016/j.bspc.2026.110734": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.bspc.2026.110734",
+      "identity_tokens": [
+        "DOI:10.1016/j.bspc.2026.110734"
+      ],
+      "reason": "Publisher abstract identifies clinical prognosis from CT and whole-slide images for kidney cancer; outside LLM/VLM inference scope.",
+      "first_checked_at": "2026-10-06T08:50:26+00:00",
+      "last_checked_at": "2026-10-06T08:50:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Hierarchically guided multimodal knowledge decomposition and adaptive fusion for prognosis prediction in ccRCC based on CT and whole-slide images"
+    },
+    "DOI:10.1016/j.dsp.2026.106526": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.dsp.2026.106526",
+      "identity_tokens": [
+        "DOI:10.1016/j.dsp.2026.106526"
+      ],
+      "reason": "The publisher full text describes MTRSNet for suppressing specular glare in endoscopic images using a Laplacian prior, Swin blocks, and a Mamba module, evaluated on endoscopy image datasets. Its target is medical image enhancement, not language-model inference or a relevant model-serving lineage.",
+      "first_checked_at": "2026-10-06T08:50:26+00:00",
+      "last_checked_at": "2026-10-06T08:50:26+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Specular Saturation Artifact Suppression in Endoscopic Imaging via a Hybrid State-Space Model and Transformer Network"
+    },
+    "DOI:10.1145/3832097": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832097",
+      "identity_tokens": [
+        "DOI:10.1145/3832097"
+      ],
+      "reason": "LLM-assisted root-cause analysis of mobile application test failures; applies LLMs as software engineering tools but does not improve LLM inference/serving.",
+      "first_checked_at": "2026-10-06T08:50:26+00:00",
+      "last_checked_at": "2026-10-06T08:50:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "title": "Automated Classification, Root Cause Analysis, and Repair Recommendations for Failed Mobile Testing by Specialized LLM"
+    },
+    "arXiv:2610.03617": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03617",
+      "identity_tokens": [
+        "arXiv:2610.03617"
+      ],
+      "reason": "Text-to-image alignment scoring and benchmark evaluation; no LLM/VLM inference-resource improvement.",
+      "first_checked_at": "2026-10-06T08:50:26+00:00",
+      "last_checked_at": "2026-10-06T08:50:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "DEPICT: Scoring Text-to-Image Alignment by Answer Agreement"
+    },
+    "DOI:10.3390/rs18193393": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/rs18193393",
+      "identity_tokens": [
+        "DOI:10.3390/rs18193393"
+      ],
+      "reason": "Remote-sensing classification with multimodal Mamba fusion; the application is geospatial image classification, not model inference/serving.",
+      "first_checked_at": "2026-10-06T08:50:26+00:00",
+      "last_checked_at": "2026-10-06T08:50:26+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "CM-S6: Cross-Modal Selective Scan via Parameter-Level Modulation for Multisource Remote Sensing"
+    },
+    "arXiv:2610.01165": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01165",
+      "identity_tokens": [
+        "arXiv:2610.01165"
+      ],
+      "reason": "Longitudinal analysis of language-model layer interventions during pretraining; descriptive representation study, not an inference improvement.",
+      "first_checked_at": "2026-10-06T08:50:27+00:00",
+      "last_checked_at": "2026-10-06T08:50:27+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Persistent Depth Ordering amid Shifting Block-Bypass Responses in Language Model Pretraining"
+    },
+    "arXiv:2610.01352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01352",
+      "identity_tokens": [
+        "arXiv:2610.01352"
+      ],
+      "reason": "Open multimodal reasoning data construction and post-training recipe; quality/data contribution, no direct inference-resource method.",
+      "first_checked_at": "2026-10-06T08:50:27+00:00",
+      "last_checked_at": "2026-10-06T08:50:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "MMVistaReason: Toward Open-Data and Post-Training Recipes for Multimodal Reasoning"
+    },
+    "arXiv:2609.39363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39363",
+      "identity_tokens": [
+        "arXiv:2609.39363"
+      ],
+      "reason": "Multi-image reasoning harness/re-representation; no direct compute, memory, latency, or serving optimization.",
+      "first_checked_at": "2026-10-06T08:50:28+00:00",
+      "last_checked_at": "2026-10-06T08:50:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Rethinking Multi-Image Re-Representation in Multi-Image Understanding"
+    },
+    "arXiv:2609.39579": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39579",
+      "identity_tokens": [
+        "arXiv:2609.39579"
+      ],
+      "reason": "Vision-language navigation error recovery and abstention training; robotics task behavior, no model inference-resource improvement.",
+      "first_checked_at": "2026-10-06T08:50:28+00:00",
+      "last_checked_at": "2026-10-06T08:50:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "AVERT-VLN: Abstention-aware Visual Error Recovery and Training for Vision-and-Language Navigation"
+    },
+    "arXiv:2609.39739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39739",
+      "identity_tokens": [
+        "arXiv:2609.39739"
+      ],
+      "reason": "Graph Transformer stability for graph generation; outside language-model/VLM serving and inference optimization.",
+      "first_checked_at": "2026-10-06T08:50:29+00:00",
+      "last_checked_at": "2026-10-06T08:50:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Stable Transformers for Graph Generation"
+    },
+    "arXiv:2610.00515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00515",
+      "identity_tokens": [
+        "arXiv:2610.00515"
+      ],
+      "reason": "Fractional neural operators for memory-driven network dynamics; mathematical architecture analysis outside LLM/VLM inference.",
+      "first_checked_at": "2026-10-06T08:50:29+00:00",
+      "last_checked_at": "2026-10-06T08:50:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Fractional Laplace Neural Operators: Exact Architectures, an Expressivity Frontier at Criticality, and Certified Stability for Memory-Driven Network Dynamics"
+    },
+    "arXiv:2610.00559": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00559",
+      "identity_tokens": [
+        "arXiv:2610.00559"
+      ],
+      "reason": "Physical-intelligence VLM benchmark; evaluation rather than inference-resource improvement.",
+      "first_checked_at": "2026-10-06T08:50:29+00:00",
+      "last_checked_at": "2026-10-06T08:50:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "PhysVista: Benchmarking Physical Intelligence in VLMs via a Perception-Reasoning-Assessment Loop"
+    },
+    "arXiv:2610.00722": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00722",
+      "identity_tokens": [
+        "arXiv:2610.00722"
+      ],
+      "reason": "Test-time adaptation of a world-model policy under dynamics shift; robotics planning, no LLM inference/serving efficiency evidence.",
+      "first_checked_at": "2026-10-06T08:50:29+00:00",
+      "last_checked_at": "2026-10-06T08:50:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "JEPA-TTT: Persistent Test-Time Training of Latent World Models for Planning under Dynamics Shifts"
+    },
+    "arXiv:2610.02248": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02248",
+      "identity_tokens": [
+        "arXiv:2610.02248"
+      ],
+      "reason": "State-space unlearning for land-surface forecasting; geoscience model maintenance, not LLM/VLM inference optimization.",
+      "first_checked_at": "2026-10-06T08:50:30+00:00",
+      "last_checked_at": "2026-10-06T08:50:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "State-Space Unlearning for Non-Stationary Bias in Land Surface Forecasting"
+    },
+    "DOI:10.1007/s44443-026-01311-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01311-3",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01311-3"
+      ],
+      "reason": "Mamba tracking architecture for object tracking; application is visual tracking rather than LLM/VLM inference or serving.",
+      "first_checked_at": "2026-10-06T08:50:30+00:00",
+      "last_checked_at": "2026-10-06T08:50:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "STCTrack: bidirectional Mamba with dynamic attention for spatiotemporal-contextual tracking"
+    },
+    "DOI:10.3390/sym18101644": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/sym18101644",
+      "identity_tokens": [
+        "DOI:10.3390/sym18101644"
+      ],
+      "reason": "Audit protocol for hidden-state safety probes; measurement methodology, not inference resource improvement.",
+      "first_checked_at": "2026-10-06T08:50:30+00:00",
+      "last_checked_at": "2026-10-06T08:50:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "TriSAIL: A Source-Sensitive Audit Protocol for Symmetric and Asymmetric Transfer in Hidden-State Safety Probes"
+    },
+    "arXiv:2609.36609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36609",
+      "identity_tokens": [
+        "arXiv:2609.36609"
+      ],
+      "reason": "EEG analysis/practices review; no relevant model-inference improvement.",
+      "first_checked_at": "2026-10-06T08:50:30+00:00",
+      "last_checked_at": "2026-10-06T08:50:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Best Practices in EEG Analysis: Preprocessing, Modeling, and Machine Learning"
+    },
+    "arXiv:2610.01927": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01927",
+      "identity_tokens": [
+        "arXiv:2610.01927"
+      ],
+      "reason": "Streaming 3D reconstruction and loop closure, not LLM/VLM inference or serving.",
+      "first_checked_at": "2026-10-06T08:50:31+00:00",
+      "last_checked_at": "2026-10-06T08:50:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "CLoSeR: Closing the Loop for Long-Context Streaming Reconstruction"
+    },
+    "arXiv:2610.02091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02091",
+      "identity_tokens": [
+        "arXiv:2610.02091"
+      ],
+      "reason": "3D spatial latent reasoning architecture; no inference efficiency method for language or vision-language model deployment.",
+      "first_checked_at": "2026-10-06T08:50:31+00:00",
+      "last_checked_at": "2026-10-06T08:50:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "GeoLatent: Geometry-Guided Latent Structuring with Routed Optimization for 3D Reasoning"
+    },
+    "arXiv:2610.02418": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02418",
+      "identity_tokens": [
+        "arXiv:2610.02418"
+      ],
+      "reason": "Privacy leakage mitigation/unlearning; no inference-cost or serving improvement.",
+      "first_checked_at": "2026-10-06T08:50:31+00:00",
+      "last_checked_at": "2026-10-06T08:50:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Mitigating Private Data Leakage in LLMs with Whiteout"
+    },
+    "arXiv:2610.02525": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02525",
+      "identity_tokens": [
+        "arXiv:2610.02525"
+      ],
+      "reason": "Meta-reasoning architecture for research agents; agent planning/workflow contribution, not direct model inference-resource optimization.",
+      "first_checked_at": "2026-10-06T08:50:31+00:00",
+      "last_checked_at": "2026-10-06T08:50:31+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Learning What to Investigate Next: Meta-Reasoning for Long-Horizon Research Agents"
+    },
+    "DOI:10.1145/3832160": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832160",
+      "identity_tokens": [
+        "DOI:10.1145/3832160"
+      ],
+      "reason": "LLM-generated HDL fuzzing for FPGA synthesis/simulation tools; hardware compiler testing, outside inference-resource scope.",
+      "first_checked_at": "2026-10-06T08:50:31+00:00",
+      "last_checked_at": "2026-10-06T08:50:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "title": "Fuzzing FPGA Synthesis and Simulation Tools via LLM-Generated Syntax-Valid HDL Codes"
+    },
+    "arXiv:2609.38716": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38716",
+      "identity_tokens": [
+        "arXiv:2609.38716"
+      ],
+      "reason": "Spatial reasoning/grounding quality in vision-language models, without an inference-resource optimization mechanism.",
+      "first_checked_at": "2026-10-06T08:50:31+00:00",
+      "last_checked_at": "2026-10-06T08:50:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "SpatialCORE: Confidence-Aware Grounded Spatial Reasoning in Large Vision--Language Models"
+    },
+    "arXiv:2609.38717": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38717",
+      "identity_tokens": [
+        "arXiv:2609.38717"
+      ],
+      "reason": "Soft-token spatial reasoning method targets reasoning accuracy, with no inference cost improvement.",
+      "first_checked_at": "2026-10-06T08:50:32+00:00",
+      "last_checked_at": "2026-10-06T08:50:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Soft Spatial Reasoning"
+    },
+    "arXiv:2609.38781": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38781",
+      "identity_tokens": [
+        "arXiv:2609.38781"
+      ],
+      "reason": "Benchmark for chart-data reconstruction by MLLMs; evaluation contribution only.",
+      "first_checked_at": "2026-10-06T08:50:32+00:00",
+      "last_checked_at": "2026-10-06T08:50:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "title": "ChartDensity-Bench: Benchmarking MLLMs for Numerical Data Reconstruction under Visual Density"
+    },
+    "arXiv:2609.38810": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38810",
+      "identity_tokens": [
+        "arXiv:2609.38810"
+      ],
+      "reason": "Causal/mechanistic safety analysis of medical VLM failures; no inference efficiency mechanism.",
+      "first_checked_at": "2026-10-06T08:50:32+00:00",
+      "last_checked_at": "2026-10-06T08:50:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "CRAFT: Causal Responsibility and Failure Tracing in Medical Vision Language Models"
     }
   }
 }

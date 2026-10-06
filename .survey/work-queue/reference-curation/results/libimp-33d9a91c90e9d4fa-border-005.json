@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33d9a91c90e9d4fa-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.39704",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.39704",
+    "identity_tokens": [
+      "arXiv:2609.39704"
+    ],
+    "reason": "The paper studies when masking/pruning in compressed CLIP helps worst-group robustness and proposes a pre-deployment diagnostic, not a new LLM inference accelerator. It reports unstable robustness effects across datasets and measures the diagnostic’s own cost (about 27.5 ms/image after implementation correction); spatially coherent, separable backgrounds are the stated reliability boundary. Keep as adjacent token-pruning/robustness evidence, not a direct serving improvement.",
+    "first_checked_at": "2026-10-06T08:50:28+00:00",
+    "last_checked_at": "2026-10-06T08:50:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Masking Helps or Hurts Robustness in Compressed CLIP: A Pre-Deployment Diagnostic"
+  },
+  "processed_at": "2026-10-06T08:50:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33d9a91c90e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

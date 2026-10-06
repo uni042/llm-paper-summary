@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33d9a91c90e9d4fa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.39151",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.39151",
+    "identity_tokens": [
+      "arXiv:2609.39151"
+    ],
+    "reason": "The paper distills a simulated air-hockey world-model policy into a 64-state diagonal linear recurrence, finding similar control performance to GRU with 88% fewer recurrent-core parameters and lower computation across five seeds. The authors limit conclusions to one simulated task, teacher, state size, and blackout horizon. This is robotics control, not LLM inference; only a weak recurrence-efficiency analogy remains.",
+    "first_checked_at": "2026-10-06T08:50:27+00:00",
+    "last_checked_at": "2026-10-06T08:50:27+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey"
+  },
+  "processed_at": "2026-10-06T08:50:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33d9a91c90e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

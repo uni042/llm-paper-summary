@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T08:41:01+00:00",
-  "record_count": 2623,
+  "updated_at": "2026-10-06T08:50:30+00:00",
+  "record_count": 2635,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -40315,6 +40315,186 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Dato: A Task-Based Programming Model for Dataflow Accelerators"
+    },
+    "DOI:10.1016/j.chaos.2026.118796": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.chaos.2026.118796",
+      "identity_tokens": [
+        "DOI:10.1016/j.chaos.2026.118796"
+      ],
+      "reason": "The packet has no abstract. Direct DOI open was inaccessible and exact-title search returned only a secondary catalog summary, not publisher/author/institutional full text. Could not verify method/evaluation/limitations; title suggests echo-state reservoirs on delay manifolds, but insufficient primary evidence, so retain as borderline.",
+      "first_checked_at": "2026-10-06T08:50:25+00:00",
+      "last_checked_at": "2026-10-06T08:50:25+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Curvature-controlled reservoirs: Echo-state networks modulated by discrete holonomy on delay manifolds"
+    },
+    "DOI:10.1016/j.neucom.2026.135180": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.135180",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.135180"
+      ],
+      "reason": "The packet has no abstract. Direct DOI open was inaccessible and no accessible primary full text was obtained during screening. Title indicates cross-user Wi-Fi sensing rather than model serving, but without primary evidence the candidate remains borderline instead of being excluded from title alone.",
+      "first_checked_at": "2026-10-06T08:50:25+00:00",
+      "last_checked_at": "2026-10-06T08:50:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CLIFE: Gating-weighted expert alignment for cross-user wi-fi sensing"
+    },
+    "arXiv:2610.01926": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01926",
+      "identity_tokens": [
+        "arXiv:2610.01926"
+      ],
+      "reason": "LAST reuses Transformer blocks to update only the audio class token after processing input tokens, reducing additional layer computation for audio recognition. The primary text evaluates AudioSet and reports accuracy/compute trade-offs, but this is an audio spectrogram classifier rather than an LLM/VLM inference method; relation to generative serving is weak.",
+      "first_checked_at": "2026-10-06T08:50:26+00:00",
+      "last_checked_at": "2026-10-06T08:50:26+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LAST: Looped Audio Spectrogram Transformer"
+    },
+    "arXiv:2609.36628": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36628",
+      "identity_tokens": [
+        "arXiv:2609.36628"
+      ],
+      "reason": "The full paper proposes a graded preference objective and benchmark for person/limb-motion video captioning and evaluates three VLM backbones, including Qwen3-8B; it improves GPA 2.02–3.40 points over DPO and lowers weighted hallucination 21.3% on Qwen3-8B. This is task-quality post-training, not an inference-efficiency method; linked Qwen architecture lineage is only indirect, so retain as borderline pending a concrete technical connection.",
+      "first_checked_at": "2026-10-06T08:50:27+00:00",
+      "last_checked_at": "2026-10-06T08:50:27+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Binary Preferences: Graded Preference Optimization for Limb-Motion Captioning"
+    },
+    "arXiv:2609.36782": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36782",
+      "identity_tokens": [
+        "arXiv:2609.36782"
+      ],
+      "reason": "Tried the arXiv HTML primary page and PDF for arXiv:2609.36782; HTML returned an internal error and PDF was a cache miss. The abstract describes a plausible inference-time visual-token pruning method, but method, benchmark results, and limitations could not be verified from primary full text; retain as borderline.",
+      "first_checked_at": "2026-10-06T08:50:27+00:00",
+      "last_checked_at": "2026-10-06T08:50:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Decoding Affective Nuances: Enhancing MLLMs via Hierarchical Emotion Reasoning and Contrastive Discriminative Pruning"
+    },
+    "arXiv:2609.37035": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37035",
+      "identity_tokens": [
+        "arXiv:2609.37035"
+      ],
+      "reason": "WTI trains a streaming video model to answer when evidence is sufficient, continue watching, or selectively recall prior intervals using compact timestamped memory. It evaluates streaming QA benchmarks, but its central contribution is response timing and reasoning behavior rather than a measured reduction in inference resources; retain as a weak long-context video-LLM connection.",
+      "first_checked_at": "2026-10-06T08:50:27+00:00",
+      "last_checked_at": "2026-10-06T08:50:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Watch-Think-Interact: Bootstrapping Long-Horizon Multi-Turn Streaming Video Reasoning with Reinforcement Learning"
+    },
+    "arXiv:2609.39151": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39151",
+      "identity_tokens": [
+        "arXiv:2609.39151"
+      ],
+      "reason": "The paper distills a simulated air-hockey world-model policy into a 64-state diagonal linear recurrence, finding similar control performance to GRU with 88% fewer recurrent-core parameters and lower computation across five seeds. The authors limit conclusions to one simulated task, teacher, state size, and blackout horizon. This is robotics control, not LLM inference; only a weak recurrence-efficiency analogy remains.",
+      "first_checked_at": "2026-10-06T08:50:27+00:00",
+      "last_checked_at": "2026-10-06T08:50:27+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Linear Recurrent Memory Suffices to Distil a World-Model Policy for Robot Air Hockey"
+    },
+    "arXiv:2609.39237": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39237",
+      "identity_tokens": [
+        "arXiv:2609.39237"
+      ],
+      "reason": "DuSpaR uses a dual-state recurrent unit and ReLU-induced activation sparsity to skip matrix-vector operations for edge speech processing. The primary text evaluates speech recognition/processing efficiency, but the model/task is specialized audio processing and the evidence does not establish direct generative LLM/VLM serving gains; retain only as a weak SSM/efficient-recurrence connection.",
+      "first_checked_at": "2026-10-06T08:50:28+00:00",
+      "last_checked_at": "2026-10-06T08:50:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DuSpaR: Dual-State Sparsifying Recurrent Unit with Feedback Modulation for Compute-Efficient Speech Processing"
+    },
+    "arXiv:2609.39704": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39704",
+      "identity_tokens": [
+        "arXiv:2609.39704"
+      ],
+      "reason": "The paper studies when masking/pruning in compressed CLIP helps worst-group robustness and proposes a pre-deployment diagnostic, not a new LLM inference accelerator. It reports unstable robustness effects across datasets and measures the diagnostic’s own cost (about 27.5 ms/image after implementation correction); spatially coherent, separable backgrounds are the stated reliability boundary. Keep as adjacent token-pruning/robustness evidence, not a direct serving improvement.",
+      "first_checked_at": "2026-10-06T08:50:28+00:00",
+      "last_checked_at": "2026-10-06T08:50:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Masking Helps or Hurts Robustness in Compressed CLIP: A Pre-Deployment Diagnostic"
+    },
+    "arXiv:2609.39892": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39892",
+      "identity_tokens": [
+        "arXiv:2609.39892"
+      ],
+      "reason": "The primary text studies how looped Transformers route different computations across recurrent steps using synthetic graph/parity/rule tasks, interventions, and small frozen per-token maps. It analyzes recurrent computation and steering rather than offering an inference-speed or memory reduction; deployment safety is not evaluated. Weak adjacency to looped-model lineage merits borderline.",
+      "first_checked_at": "2026-10-06T08:50:28+00:00",
+      "last_checked_at": "2026-10-06T08:50:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Shared Weights, Selected Computations: How Looped Transformers Route What Each Loop Does"
+    },
+    "arXiv:2609.40063": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.40063",
+      "identity_tokens": [
+        "arXiv:2609.40063"
+      ],
+      "reason": "LARC adds a low-rank adaptive residual state to frozen models for learning from feedback. The primary technical report examines compact state and online adaptation, but its contribution is learning/adaptation rather than measured inference latency, throughput, KV memory, quantization, or serving. Retain as a weak compact-state relation only.",
+      "first_checked_at": "2026-10-06T08:50:29+00:00",
+      "last_checked_at": "2026-10-06T08:50:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LARC: Low-Rank Adaptive Residual Connections for Learning in Frozen Models"
+    },
+    "arXiv:2610.02181": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02181",
+      "identity_tokens": [
+        "arXiv:2610.02181"
+      ],
+      "reason": "OmniSeek uses selective temporal audio/video evidence retrieval with native tools rather than processing an entire sequence at once. The primary text evaluates long-video/audio-visual reasoning and documents a 32K-token context bottleneck for long raw audio (roughly 90K tokens for two hours). It is an agent/tool integration recipe with no demonstrated direct reduction in LLM inference cost; keep as a weak long-context adjacent item.",
+      "first_checked_at": "2026-10-06T08:50:30+00:00",
+      "last_checked_at": "2026-10-06T08:50:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OmniSeek: Native Tool Integration for Multi-turn Audio-Visual Reasoning"
     }
   }
 }
