@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9ec2e34d063dbe00-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2312.13547",
+  "reason": "The paper re-examines BERT/RoBERTa pruning on SMC-Benchmark. On BERT encoder CPU inference with DeepSparse, pruning embeddings/classification head gave negligible speedups even at 98% sparsity and could damage accuracy; it recommends pruning the encoder. It also finds large initial pruning steps (50–70%) and adjusted schedules improve recovery at 90–97% sparsity. Scope is encoder classification/fine-tuning rather than generative LLM serving, so this is reasoned borderline.",
+  "title": "How to Prune Your Language Model: Recovering Accuracy on the \"Sparsity May Cry\" Benchmark",
+  "identity_tokens": [
+    "arXiv:2312.13547"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ec2e34d063d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
