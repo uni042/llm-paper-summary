@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r58-screen-01-part-03-fcd3bffba90a",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.00928",
+      "identity_tokens": [
+        "arXiv:2404.00928"
+      ],
+      "title": "Instance-Aware Group Quantization for Vision Transformers",
+      "reason": "Post-training quantization is evaluated for vision transformers, with no LLM evidence.",
+      "source_url": "https://arxiv.org/abs/2404.00928",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2021.12.22.473759",
+      "identity_tokens": [
+        "DOI:10.1101/2021.12.22.473759"
+      ],
+      "title": "Function-guided protein design by deep manifold sampling",
+      "reason": "Protein sequence design/denoising autoencoder, outside language-model inference scope.",
+      "source_url": "https://doi.org/10.1101/2021.12.22.473759",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fnut.2025.1635682",
+      "identity_tokens": [
+        "DOI:10.3389/fnut.2025.1635682"
+      ],
+      "title": "Large language models in clinical nutrition: an overview of its applications, capabilities, limitations, and potential future prospects",
+      "reason": "Primary-text findings do not support a concrete inference-efficiency connection to the target family.",
+      "source_url": "https://doi.org/10.3389/fnut.2025.1635682",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.04560",
+      "identity_tokens": [
+        "arXiv:2505.04560"
+      ],
+      "title": "ABKD: Pursuing a Proper Allocation of the Probability Mass in Knowledge Distillation via α-β-Divergence",
+      "reason": "Distillation divergence analysis is a training objective and reports no deployment/runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.04560",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.14353",
+      "identity_tokens": [
+        "arXiv:2403.14353"
+      ],
+      "title": "DACAPO: Accelerating Continuous Learning in Autonomous Systems for Video Analytics",
+      "reason": "Continuous-learning video analytics focuses teacher labeling and student retraining/adaptation, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2403.14353",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ]
+    }
+  ]
+}
