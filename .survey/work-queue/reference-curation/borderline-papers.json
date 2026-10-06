@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T06:53:59+00:00",
-  "record_count": 2396,
+  "updated_at": "2026-10-06T06:59:32+00:00",
+  "record_count": 2405,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -36889,6 +36889,146 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Reducing Energy Footprint of LLM Inference Through FPGA-Based Heterogeneous Computing Platforms"
+    },
+    "arXiv:2609.15810": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.15810",
+      "identity_tokens": [
+        "arXiv:2609.15810"
+      ],
+      "reason": "Low-bit attention is a direct compute/precision topic, but VC-Attention targets diffusion-transformer video generation rather than LLM inference.",
+      "first_checked_at": "2026-10-06T06:59:28+00:00",
+      "last_checked_at": "2026-10-06T06:59:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention"
+    },
+    "arXiv:2608.30129": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30129",
+      "identity_tokens": [
+        "arXiv:2608.30129"
+      ],
+      "reason": "Linear attention and one-step diffusion reduce cost for depth estimation, but the system is a vision-specific depth model with no LLM inference result.",
+      "first_checked_at": "2026-10-06T06:59:29+00:00",
+      "last_checked_at": "2026-10-06T06:59:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient and High-Quality Depth Estimation via Pixel-Space Diffusion with Linear Attention"
+    },
+    "arXiv:2609.29601": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29601",
+      "identity_tokens": [
+        "arXiv:2609.29601"
+      ],
+      "reason": "Semantic serialization lets a small language model consume structured perception, but primary results show the perception stack still dominates and total compute is not lower.",
+      "first_checked_at": "2026-10-06T06:59:30+00:00",
+      "last_checked_at": "2026-10-06T06:59:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Free the Language Model From the Vision Encoder: Semantic Serialization as a Perception Interface for Small Language Models"
+    },
+    "arXiv:2608.27882": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27882",
+      "identity_tokens": [
+        "arXiv:2608.27882"
+      ],
+      "reason": "SOMTab is efficient tabular in-context learning, not a language model, though its selective Mamba/attention design is architecturally adjacent to efficient long-context inference.",
+      "first_checked_at": "2026-10-06T06:59:30+00:00",
+      "last_checked_at": "2026-10-06T06:59:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SOMTab: Set-Order Mamba for Efficient Tabular In-Context Learning"
+    },
+    "arXiv:2512.03538": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.03538",
+      "identity_tokens": [
+        "arXiv:2512.03538"
+      ],
+      "reason": "AdaPower uses test-time adaptation and memory in diffusion world models for robotic control, not LLM inference; the TTT lineage connection is adjacent but indirect.",
+      "first_checked_at": "2026-10-06T06:59:31+00:00",
+      "last_checked_at": "2026-10-06T06:59:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AdaPower: Specializing World Foundation Models for Predictive Manipulation"
+    },
+    "arXiv:2608.20492": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.20492",
+      "identity_tokens": [
+        "arXiv:2608.20492"
+      ],
+      "reason": "OraRL reduces RL training rollout cost, but primary results show similar single-request inference latency and more reasoning tokens; inference savings are not established.",
+      "first_checked_at": "2026-10-06T06:59:31+00:00",
+      "last_checked_at": "2026-10-06T06:59:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Annotations as Rollouts: Efficient and Scalable Reinforcement Learning for Video MLLMs"
+    },
+    "arXiv:2511.07237": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.07237",
+      "identity_tokens": [
+        "arXiv:2511.07237"
+      ],
+      "reason": "Few-layer dominance concerns time-series forecasting models, including LLM4TS, but does not establish a general LLM inference reduction.",
+      "first_checked_at": "2026-10-06T06:59:32+00:00",
+      "last_checked_at": "2026-10-06T06:59:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Few Govern the Many:Unveiling Few-Layer Dominance for Time Series Models"
+    },
+    "DOI:10.3390/electronics14214331": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics14214331",
+      "identity_tokens": [
+        "DOI:10.3390/electronics14214331"
+      ],
+      "reason": "PhishGraph optimizes a URL-semantic ANN index, not LLM inference or its serving stack; retrieval is only an indirect connection.",
+      "first_checked_at": "2026-10-06T06:59:32+00:00",
+      "last_checked_at": "2026-10-06T06:59:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PhishGraph: A Disk-Aware Approximate Nearest Neighbor Index for Billion-Scale Semantic URL Search"
+    },
+    "DOI:10.1016/j.patcog.2025.112713": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patcog.2025.112713",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2025.112713"
+      ],
+      "reason": "Progressive cluster propagation for local attention is potentially relevant to efficient attention, but the primary publisher text could not be retrieved.",
+      "first_checked_at": "2026-10-06T06:59:32+00:00",
+      "last_checked_at": "2026-10-06T06:59:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing local attention with global information interaction via progressive cluster propagation"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92ba218a20910f15-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.30129",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.30129",
+    "identity_tokens": [
+      "arXiv:2608.30129"
+    ],
+    "reason": "Linear attention and one-step diffusion reduce cost for depth estimation, but the system is a vision-specific depth model with no LLM inference result.",
+    "first_checked_at": "2026-10-06T06:59:29+00:00",
+    "last_checked_at": "2026-10-06T06:59:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient and High-Quality Depth Estimation via Pixel-Space Diffusion with Linear Attention"
+  },
+  "processed_at": "2026-10-06T06:59:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92ba218a2091",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
