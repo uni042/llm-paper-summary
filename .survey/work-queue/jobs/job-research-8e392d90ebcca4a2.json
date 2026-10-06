@@ -35,10 +35,15 @@
   "selection_reason": "長いCoTがautoregressive decoding latencyを線形に増やす問題に対し、重要度の低いreasoning tokenを選択的にskipして推論長を制御する。Qwen2.5-14B-InstructのGSM8Kでreasoning tokenを313から181へ40%削減し性能低下0.4%未満で、test-time compute/latency削減を直接扱うためaccept。",
   "semantic_scholar_id": "79be1c87f3b9e047e10912c5a707c87a69c5dc05",
   "source_url": "https://arxiv.org/abs/2502.12067",
-  "status": "ready",
+  "status": "superseded",
   "title": "TokenSkip: Controllable Chain-of-Thought Compression in LLMs",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-06T14:02:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+  "represented_canonical_id": "arXiv:2502.12067",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
