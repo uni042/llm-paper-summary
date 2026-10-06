@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r132-screen-01-part-06-8fa268e2d00a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15940",
+      "identity_tokens": [
+        "arXiv:2506.15940"
+      ],
+      "title": "Polyline Path Masked Attention for Vision Transformer",
+      "reason": "Polyline Path Masked Attention is a Vision Transformer attention design for image processing; no LLM/language-model inference evaluation is described.",
+      "source_url": "https://arxiv.org/abs/2506.15940",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.06215",
+      "identity_tokens": [
+        "arXiv:2506.06215"
+      ],
+      "title": "Corrector Sampling in Language Models",
+      "reason": "RPT revisits previously sampled tokens to reduce generation errors and improve quality; the paper describes it as often a better yet more expensive procedure than next-token sampling, so it does not establish an efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2506.06215",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MM.2025.3540663",
+      "identity_tokens": [
+        "DOI:10.1109/MM.2025.3540663"
+      ],
+      "title": "Spine-Free Networks for Large Language Model Training",
+      "reason": "一次出版社ページ https://doi.org/10.1109/MM.2025.3540663 を開いたが、読める要旨/本文を取得できず、入力要旨だけで対象外とは判定しない。一次証拠を照合できないためborderline。",
+      "source_url": "https://doi.org/10.1109/MM.2025.3540663",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.1441",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.1441"
+      ],
+      "title": "Unveiling the Potential of BERT-family: A New Recipe for Building Scalable, General and Competitive Large Language Models",
+      "reason": "BiGLM introduces a bidirectional masked pretraining recipe for general language models. Full text evaluates capability and training/scaling choices rather than serving efficiency; connection to speculative decoding is indirect.",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.1441",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-demos.8",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-demos.8"
+      ],
+      "title": "LAD: LoRA-Adapted Diffusion",
+      "reason": "LAD adapts LLaMA with LoRA for masked diffusion generation, but the full paper is a demo and does not directly evaluate inference latency, throughput or memory; its efficiency claim is principally avoiding training from scratch.",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-demos.8",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
