@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r62-screen-01-part-04-88d91db99bb8",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3559009.3569691",
+      "identity_tokens": [
+        "DOI:10.1145/3559009.3569691"
+      ],
+      "title": "Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM Routine on Ampere GPUs",
+      "reason": "ACM full text was not accessible. The paper examines hardware-aware pruning to optimize sparse matrix multiplication on Ampere GPUs; useful to block-pruning/kernel execution lineage, but transformer-specific impact is not confirmed from primary text.",
+      "source_url": "https://doi.org/10.1145/3559009.3569691",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.11640",
+      "identity_tokens": [
+        "arXiv:2112.11640"
+      ],
+      "title": "Self-Distillation Mixup Training for Non-autoregressive Neural Machine Translation",
+      "reason": "Self-distillation mixup is a training method for non-autoregressive translation intended to improve NAR quality. It leaves the inference paradigm unchanged and does not establish a new compute/latency reduction beyond parallel decoding.",
+      "source_url": "https://arxiv.org/abs/2112.11640",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3474085.3475545",
+      "identity_tokens": [
+        "DOI:10.1145/3474085.3475545"
+      ],
+      "title": "Mask and Predict: Multi-step Reasoning for Scene Graph Generation",
+      "reason": "ACM primary full text was unavailable, so the scene-graph reasoning method cannot be conclusively checked against the linked non-autoregressive sequence-model lineage.",
+      "source_url": "https://doi.org/10.1145/3474085.3475545",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.22506",
+      "identity_tokens": [
+        "arXiv:2509.22506"
+      ],
+      "title": "Representing LLMs in Prompt Semantic Task Space",
+      "reason": "This paper represents LLMs in a semantic task space to characterize model capabilities and task fit. It is a model-selection/analysis representation, not an inference efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2509.22506",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04846",
+      "identity_tokens": [
+        "arXiv:2404.04846"
+      ],
+      "title": "F-MALLOC: Feed-forward Memory Allocation for Continual Learning in Neural Machine Translation",
+      "reason": "F-MALLOC allocates feed-forward neural memory for continual-learning machine translation to mitigate catastrophic forgetting. Its memory refers to task-specific continual-learning allocation, not inference memory/KV cache.",
+      "source_url": "https://arxiv.org/abs/2404.04846",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    }
+  ]
+}
