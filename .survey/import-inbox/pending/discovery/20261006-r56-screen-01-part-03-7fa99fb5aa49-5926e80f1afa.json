@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r56-screen-01-part-03-7fa99fb5aa49",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3793908",
+      "identity_tokens": [
+        "DOI:10.1145/3793908"
+      ],
+      "title": "A Survey on Video Captioning in the Era of Large Language Models",
+      "reason": "This is a survey of video-captioning methods in the LLM era; it does not propose or evaluate a concrete inference-efficiency technique for LLMs.",
+      "source_url": "https://doi.org/10.1145/3793908",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17977",
+      "identity_tokens": [
+        "arXiv:2601.17977"
+      ],
+      "title": "Domain-Expert-Guided Hybrid Mixture-of-Experts for Medical AI: Integrating Data-Driven Learning With Clinical Priors",
+      "reason": "The primary paper applies domain-expert-guided MoE to medical AI with clinical priors and task-specific data; it does not address LLM inference or a transferable serving/compute improvement.",
+      "source_url": "https://arxiv.org/abs/2601.17977",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13768",
+      "identity_tokens": [
+        "arXiv:2601.13768"
+      ],
+      "title": "vLinear: A Powerful Linear Model for Multivariate Time Series Forecasting",
+      "reason": "vLinear is a linear model for multivariate time-series forecasting and does not study LLM inference or language-model efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.13768",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14140",
+      "identity_tokens": [
+        "arXiv:2601.14140"
+      ],
+      "title": "CREATE: Cross-Layer Resilience Characterization and Optimization for Efficient yet Reliable Embodied AI Systems",
+      "reason": "CREATE optimizes reliability/energy via cross-layer fault resilience and voltage scaling for embodied AI planner/controller systems; its stated objective is hardware fault tolerance, not an LLM serving method.",
+      "source_url": "https://arxiv.org/abs/2601.14140",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ASP-DAC66049.2026.11420389",
+      "identity_tokens": [
+        "DOI:10.1109/ASP-DAC66049.2026.11420389"
+      ],
+      "title": "FESTAL: Dataflow Accelerator Synthesis Framework with Graph-Based Fusion for FPGA",
+      "reason": "FESTAL is a general graph-fused dataflow HLS accelerator synthesis framework linked to FPGA Transformer acceleration. Its abstract suggests useful compiler/accelerator connections, but no LLM-specific workload evidence was available and the primary IEEE full text could not be retrieved.",
+      "source_url": "https://doi.org/10.1109/ASP-DAC66049.2026.11420389",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    }
+  ]
+}
