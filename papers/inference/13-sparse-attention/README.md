@@ -54,6 +54,10 @@
   実装：[✓](https://github.com/hoenza/DELTA) ・ リポジトリ内被引用：3  
   少数の更新層で重要KVページを動的に選び、後続層がその集合を再利用することで、完全なKV保持と推論精度を維持しつつ長文デコードを高速化する疎注意方式。
 
+- **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  索引分岐でGQAグループ別にKVブロックを選び、専用GPUカーネルと組み合わせて1M文脈の注意計算28.4倍削減、H800でプリフィル14.2倍・デコード7.6倍高速化。
+
 - **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   長文脈の疎注意では、注意機構本体が読むKVをK件へ減らしても、N件のindexer スコアから正確なTop-Kを毎デコード 段階選ぶ必要がある。
@@ -65,10 +69,6 @@
 - **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
   実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：2  
   この並列性は逐次復号の制約を弱めるが、各反復で多数位置のlogitを同時に持つため、一時活性値のピークが大きい。また推論は、状態を大きく再計算する計算律速のRefresh 局面と、既存状態を再利用する帯域律速のReuse 局面を行き来し、複数要求を単純に同じ方式でbatchingするとGPU資源利用が振動する。
-
-- **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  索引分岐でGQAグループ別にKVブロックを選び、専用GPUカーネルと組み合わせて1M文脈の注意計算28.4倍削減、H800でプリフィル14.2倍・デコード7.6倍高速化。
 
 - **2026-03 · [FlashPrefill: Instantaneous Pattern Discovery and Thresholding for Ultra-Fast Long-Context Prefilling](2026-2603.06199-flashprefill-instantaneous-pattern-discovery-and-thresholding-for-ultra-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
