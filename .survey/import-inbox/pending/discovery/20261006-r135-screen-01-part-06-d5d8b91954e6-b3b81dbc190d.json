@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r135-screen-01-part-06-d5d8b91954e6",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/app16189140",
+      "identity_tokens": [
+        "DOI:10.3390/app16189140"
+      ],
+      "title": "FAMoE-ST: Hierarchically Frozen Attention with Hybrid-Memory Experts for Traffic-Flow Forecasting",
+      "reason": "一次出版社要旨を取得できず、題名は交通流予測向けMoE forecasting architectureでLLM servingの根拠を確認できないためborderlineにする。",
+      "source_url": "https://doi.org/10.3390/app16189140",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15676",
+      "identity_tokens": [
+        "arXiv:2609.15676"
+      ],
+      "title": "MambaMPD: a mamba-driven segmentation framework for marine pollution detection from remote sensing imagery",
+      "reason": "一次要旨はリモートセンシング海洋汚染セグメンテーションでMambaベースのvision modelを提案する応用研究であり、LLM inference/serving効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.15676",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15683",
+      "identity_tokens": [
+        "arXiv:2609.15683"
+      ],
+      "title": "V-ICAL Bench: Evaluating Video In-Context Learning for Multimodal Agents in Interactive Environments",
+      "reason": "一次要旨は動画in-context learningを評価するmultimodal agent benchmarkで、推論効率化手法を提案・実証していない。",
+      "source_url": "https://arxiv.org/abs/2609.15683",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpls.2026.1872119",
+      "identity_tokens": [
+        "DOI:10.3389/fpls.2026.1872119"
+      ],
+      "title": "SPINet: structure-enhanced point cloud instance segmentation network for multi-plant rice phenotyping",
+      "reason": "一次出版社本文で確認したSPINetはイネ点群インスタンス分割・収量形質抽出用の3D vision networkで、LLM推論やLLM servingの改善ではない。",
+      "source_url": "https://doi.org/10.3389/fpls.2026.1872119",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-71232-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-71232-8"
+      ],
+      "title": "Multistage advanced persistent threat detection and malware attribution using Mamba state space models with Kolmogorov Arnold networks",
+      "reason": "一次出版社ページの要旨はMamba/Kolmogorov-Arnold malware detection分類性能の改善で、LLMを使った推論やserving効率ではない。",
+      "source_url": "https://doi.org/10.1038/s41598-026-71232-8",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
