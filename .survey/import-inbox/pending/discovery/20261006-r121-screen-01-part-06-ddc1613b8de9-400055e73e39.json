@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r121-screen-01-part-06-ddc1613b8de9",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22246",
+      "identity_tokens": [
+        "arXiv:2505.22246"
+      ],
+      "title": "StateSpaceDiffuser: Bringing Long Context to Diffusion World Models",
+      "reason": "This is diffusion-based world modeling, not language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2505.22246",
+      "first_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "last_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.05680",
+      "identity_tokens": [
+        "arXiv:2501.05680"
+      ],
+      "title": "EXION: Exploiting Inter-and Intra-Iteration Output Sparsity for Diffusion Models",
+      "reason": "The linked sparse-attention theme does not translate into an LLM inference result in this paper.",
+      "source_url": "https://arxiv.org/abs/2501.05680",
+      "first_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "last_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.989",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.989"
+      ],
+      "title": "VocalNet: Speech LLMs with Multi-Token Prediction for Faster and High-Quality Generation",
+      "reason": "This is directly promising speech-LLM inference work, but the authoritative ACL PDF timed out during retrieval, preventing method, speedup, and limitations verification. Retain as borderline pending primary full text.",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.989",
+      "first_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "last_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.14368",
+      "identity_tokens": [
+        "arXiv:2412.14368"
+      ],
+      "title": "Beyond Math: Stories as a Testbed for Memorization-Constrained Reasoning in LLMs",
+      "reason": "Full text confirms the apparent memory wording is about memorization, not model runtime memory/cache.",
+      "source_url": "https://arxiv.org/abs/2412.14368",
+      "first_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "last_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11118",
+      "identity_tokens": [
+        "arXiv:2406.11118"
+      ],
+      "title": "Incentivizing Quality Text Generation via Statistical Contracts",
+      "reason": "The contribution concerns text-quality incentives, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2406.11118",
+      "first_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "last_checked_at": "2026-10-06T17:06:16.806857+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    }
+  ]
+}
