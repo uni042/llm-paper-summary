@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r129-screen-01-part-07-3d9958ac6563",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.11119",
+      "identity_tokens": [
+        "arXiv:2410.11119"
+      ],
+      "title": "ChuLo: Chunk-Level Key Information Representation for Long Document Understanding",
+      "reason": "Classification/tagging, not autoregressive prompt shortening or measured LLM serving savings; retain as adjacent long-context work.",
+      "source_url": "https://arxiv.org/abs/2410.11119",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24368",
+      "identity_tokens": [
+        "arXiv:2509.24368"
+      ],
+      "title": "Watermarking Diffusion Language Models",
+      "reason": "Primary abstract is watermarking for diffusion language models, a provenance/robustness method rather than inference-cost optimization.",
+      "source_url": "https://arxiv.org/abs/2509.24368",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24088",
+      "identity_tokens": [
+        "arXiv:2509.24088"
+      ],
+      "title": "CORRECT: COndensed eRror RECognition via knowledge Transfer in multi-agent systems",
+      "reason": "Primary abstract studies multi-agent error recognition and knowledge transfer; no LLM runtime, memory or serving improvement is proposed.",
+      "source_url": "https://arxiv.org/abs/2509.24088",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.02616",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52734.2025.02616"
+      ],
+      "title": "VolFormer: Explore More Comprehensive Cube Interaction for Hyperspectral Image Restoration and Beyond",
+      "reason": "CVF primary abstract is a volumetric-attention method for hyperspectral restoration/denoising/classification, not an LLM or LLM-serving technique.",
+      "source_url": "https://doi.org/10.1109/CVPR52734.2025.02616",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/17588928.2025.2484485",
+      "identity_tokens": [
+        "DOI:10.1080/17588928.2025.2484485"
+      ],
+      "title": "Beyond Markov: Transformers, memory, and attention",
+      "reason": "Taylor & Francis DOI page retrieval failed; primary abstract/full text could not be verified. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "source_url": "https://doi.org/10.1080/17588928.2025.2484485",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    }
+  ]
+}
