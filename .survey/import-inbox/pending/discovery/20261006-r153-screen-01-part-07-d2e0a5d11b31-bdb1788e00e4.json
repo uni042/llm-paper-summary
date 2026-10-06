@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r153-screen-01-part-07-d2e0a5d11b31",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.114804",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.114804"
+      ],
+      "title": "Dethate-LLM: Large language model for unified implicit hate detection and explanation",
+      "reason": "hate detection/explanation向けLLM appで対象modelは関連するが、Elsevier一次資料を取得できず推論最適化の有無を確認できない。",
+      "source_url": "https://doi.org/10.1016/j.asoc.2026.114804",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1051/wujns/2026311001",
+      "identity_tokens": [
+        "DOI:10.1051/wujns/2026311001"
+      ],
+      "title": "MS-RWKV-UNet: Multi-Head Scan Receptance Weighted Key Value UNet for Medical Image Segmentation",
+      "reason": "medical segmentation向けRWKV-UNetでlinear-time architectureに隣接するが、指定出版社一次資料を取得できずLLM向け適用やserving結果を確かめられない。",
+      "source_url": "https://doi.org/10.1051/wujns/2026311001",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JSEN.2025.3640827",
+      "identity_tokens": [
+        "DOI:10.1109/JSEN.2025.3640827"
+      ],
+      "title": "CogniMoE: End-to-End Multimodal Mental Workload Classification via On-the-Fly Scalogram Generation and MoE Gating",
+      "reason": "sensor-generated multimodal workload classificationのMoE gatingで対象は異なるが、IEEE一次資料を取得できずLLM inference lineageとの重複を確認できない。",
+      "source_url": "https://doi.org/10.1109/JSEN.2025.3640827",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TII.2025.3627691",
+      "identity_tokens": [
+        "DOI:10.1109/TII.2025.3627691"
+      ],
+      "title": "Intelligent Condition Monitoring for Battery Cell Manufacturing Equipment: A Dynamic Dilated Transformer Approach",
+      "reason": "battery manufacturing equipment向けdynamic dilated Transformerは産業時系列用途であるが、IEEE一次資料を取得できず推論効率やLLMとの関係を直接確認できない。",
+      "source_url": "https://doi.org/10.1109/TII.2025.3627691",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TKDE.2025.3621493",
+      "identity_tokens": [
+        "DOI:10.1109/TKDE.2025.3621493"
+      ],
+      "title": "TowerDNA: Fast and Accurate Graph Retrieval With Dividing, Contrasting and Alignment",
+      "reason": "指定publisher/DOIの一次ページを取得できず、入力キャッシュ要旨を一次根拠として採用していない。",
+      "source_url": "https://doi.org/10.1109/TKDE.2025.3621493",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
