@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r98-screen-01-part-02-41ecb8d8162b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02650",
+      "identity_tokens": [
+        "arXiv:2511.02650"
+      ],
+      "title": "Can Visual Input Be Compressed? A Visual Token Compression Benchmark for Large Multimodal Models",
+      "reason": "UniPruneBench compares ten visual-token compression methods across ten datasets and five LMMs. It is a benchmark rather than a new inference optimization, but can support validation of visual-token-pruning work.",
+      "source_url": "https://arxiv.org/abs/2511.02650",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.01517",
+      "identity_tokens": [
+        "arXiv:2605.01517"
+      ],
+      "title": "VAnim: Rendering-Aware Sparse State Modeling for Structure-Preserving Vector Animation",
+      "reason": "VAnim is a rendering-aware sparse-state method for structure-preserving vector animation. Its sparse representation is animation-specific and does not concern LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2605.01517",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.13476",
+      "identity_tokens": [
+        "arXiv:2602.13476"
+      ],
+      "title": "AsyncVLA: An Asynchronous VLA for Fast and Robust Navigation on the Edge",
+      "reason": "AsyncVLA separates edge execution from workstation VLA inference and tests action robustness under artificial 0.2/2/5-second workstation delay. It targets robot navigation and delay tolerance, not LLM inference throughput; system decomposition may merit a transfer check.",
+      "source_url": "https://arxiv.org/abs/2602.13476",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02236",
+      "identity_tokens": [
+        "arXiv:2603.02236"
+      ],
+      "title": "CUDABench: Benchmarking LLMs for Text-to-CUDA Generation",
+      "reason": "CUDABench benchmarks text-to-CUDA code generation models. Its contribution is capability evaluation, not GPU kernel optimization or LLM inference acceleration.",
+      "source_url": "https://arxiv.org/abs/2603.02236",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.10016",
+      "identity_tokens": [
+        "arXiv:2602.10016"
+      ],
+      "title": "Kunlun: Establishing Scaling Laws for Massive-Scale Recommendation Systems through Unified Architecture Design",
+      "reason": "Kunlun studies unified scaling laws/architecture for massive recommendation systems, with system efficiency concerns but no directly measured LLM serving improvement. The connection through compiler lineage is weak.",
+      "source_url": "https://arxiv.org/abs/2602.10016",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
