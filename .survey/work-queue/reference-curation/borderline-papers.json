@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T01:38:39+00:00",
-  "record_count": 2135,
+  "updated_at": "2026-10-06T02:28:58+00:00",
+  "record_count": 2142,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -32937,6 +32937,111 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Sparse by Command: Task-Conditional Compute Skipping for Multi-Task Inference Accelerators"
+    },
+    "DOI:10.23919/date69613.2026.11539142": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/date69613.2026.11539142",
+      "identity_tokens": [
+        "DOI:10.23919/date69613.2026.11539142"
+      ],
+      "reason": "IEEE Xplore returned JS/bot-check and official DATE proceedings PDF retrieval failed; publisher abstract only, so hardware architecture comparisons and limitations are unverified.",
+      "first_checked_at": "2026-10-06T02:28:49+00:00",
+      "last_checked_at": "2026-10-06T02:28:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MONET: A Mixture-of-Experts Accelerator with a Multicast-Optimized Two-Tier Network-on-Chip"
+    },
+    "DOI:10.1109/icdcsw72724.2026.00050": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icdcsw72724.2026.00050",
+      "identity_tokens": [
+        "DOI:10.1109/icdcsw72724.2026.00050"
+      ],
+      "reason": "IEEE DOI/page could not be retrieved by available reader; only secondary abstract was accessible, so methods, experiment protocol and limitations remain unverified.",
+      "first_checked_at": "2026-10-06T02:28:55+00:00",
+      "last_checked_at": "2026-10-06T02:28:55+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Continuum-Aware End-Cloud Offloading for Collaborative Inference"
+    },
+    "DOI:10.7717/peerj-cs.3814": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.7717/peerj-cs.3814",
+      "identity_tokens": [
+        "DOI:10.7717/peerj-cs.3814"
+      ],
+      "reason": "PeerJ publisher full-text request failed with HTTP 403; secondary abstracts suggest online neuron-level conditional computation, but primary method/evaluation/limitations and reported large-model applicability cannot be verified.",
+      "first_checked_at": "2026-10-06T02:28:57+00:00",
+      "last_checked_at": "2026-10-06T02:28:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ExNAS: Experiential neural architecture selection for real-time inference optimization"
+    },
+    "DOI:10.1109/most69733.2026.00044": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/most69733.2026.00044",
+      "identity_tokens": [
+        "DOI:10.1109/most69733.2026.00044"
+      ],
+      "reason": "IEEE primary DOI/page could not be accessed; secondary abstract describes four robot-computing layers including foundation models, but no concrete LLM-serving method could be checked.",
+      "first_checked_at": "2026-10-06T02:28:57+00:00",
+      "last_checked_at": "2026-10-06T02:28:57+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The On-Robot Computing Needs of Embodied AI"
+    },
+    "DOI:10.1109/icassp55912.2026.11460668": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460668",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460668"
+      ],
+      "reason": "IEEE primary full text could not be accessed; packet abstract is empty, so title alone cannot establish pruning details, evaluation or LLM connection.",
+      "first_checked_at": "2026-10-06T02:28:57+00:00",
+      "last_checked_at": "2026-10-06T02:28:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Iterative Redundancy-Based Head Pruning for Efficient Self-Supervised Speech Recognition Models"
+    },
+    "DOI:10.1109/aiiot68874.2026.11569550": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aiiot68874.2026.11569550",
+      "identity_tokens": [
+        "DOI:10.1109/aiiot68874.2026.11569550"
+      ],
+      "reason": "IEEE primary paper inaccessible; only abstract and secondary summary available, so MPS method, benchmarks, comparison conditions and limitations could not be verified.",
+      "first_checked_at": "2026-10-06T02:28:58+00:00",
+      "last_checked_at": "2026-10-06T02:28:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MPS Tensor Compression for Foundation Model Deployment on TinyIoT Edge Devices"
+    },
+    "DOI:10.1007/s11235-026-01454-8": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11235-026-01454-8",
+      "identity_tokens": [
+        "DOI:10.1007/s11235-026-01454-8"
+      ],
+      "reason": "Springer primary full text could not be fetched and packet abstract is empty; secondary preview cannot verify method/evaluation or an LLM connection.",
+      "first_checked_at": "2026-10-06T02:28:58+00:00",
+      "last_checked_at": "2026-10-06T02:28:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy efficiency improvement method for multi-hop semantic communication based on quality threshold mechanism"
     }
   }
 }

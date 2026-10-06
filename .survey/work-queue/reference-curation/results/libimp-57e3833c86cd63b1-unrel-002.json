@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-57e3833c86cd63b1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.14433",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.14433",
+    "identity_tokens": [
+      "arXiv:2604.14433"
+    ],
+    "reason": "DINO vision transformerのregister解釈性分析で、推論効率の方法ではない。",
+    "first_checked_at": "2026-10-06T02:28:53+00:00",
+    "last_checked_at": "2026-10-06T02:28:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+    ],
+    "title": "Zero-Ablation Overstates Register Content Dependence in DINO Vision Transformers"
+  },
+  "processed_at": "2026-10-06T02:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-57e3833c86cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
