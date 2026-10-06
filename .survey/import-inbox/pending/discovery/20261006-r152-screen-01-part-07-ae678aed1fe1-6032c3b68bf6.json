@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r152-screen-01-part-07-ae678aed1fe1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08736",
+      "identity_tokens": [
+        "arXiv:2603.08736"
+      ],
+      "title": "Autonomous Edge-Deployed AI Agents for Electric Vehicle Charging Infrastructure Management",
+      "reason": "一次資料の要旨を確認。Public EV charging infrastructure suffers from significant failure rates -- with field studies reporting up to 27.5% of DC fast chargers non-functional -- and multi-day mean time to resolution, imposing billions in annual economic burden. Cloud-centric architectures cannot achieve the latency, reliability, and bandwidth characteristics required for autonomou",
+      "source_url": "https://arxiv.org/abs/2603.08736",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19536",
+      "identity_tokens": [
+        "arXiv:2602.19536"
+      ],
+      "title": "Fore-Mamba3D: Mamba-based Foreground-Enhanced Encoding for 3D Object Detection",
+      "reason": "一次資料の要旨を確認。Linear modeling methods like Mamba have been merged as the effective backbone for the 3D object detection task. However, previous Mamba-based methods utilize the bidirectional encoding for the whole non-empty voxel sequence, which contains abundant useless background information in the scenes. Though directly encoding foreground voxels appears to be a plausi",
+      "source_url": "https://arxiv.org/abs/2602.19536",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19764",
+      "identity_tokens": [
+        "arXiv:2602.19764"
+      ],
+      "title": "Towards Dexterous Embodied Manipulation via Deep Multi-Sensory Fusion and Sparse Expert Scaling",
+      "reason": "一次資料の要旨を確認。Realizing dexterous embodied manipulation necessitates the deep integration of heterogeneous multimodal sensory inputs. However, current vision-centric paradigms often overlook the critical force and geometric feedback essential for complex tasks. This paper presents DeMUSE, a Deep Multimodal Unified Sparse Experts framework leveraging a Diffusion Transforme",
+      "source_url": "https://arxiv.org/abs/2602.19764",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-026-41091-4",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-41091-4"
+      ],
+      "title": "Pre-trained multi-scale RWKV-GCN for multivariate time series forecasting",
+      "reason": "RWKV-GCNを用いる時系列forecastingでlinear attention lineageに隣接するが、Nature出版社一次資料が取得できずLLM推論への具体的関係を確かめられない。",
+      "source_url": "https://doi.org/10.1038/s41598-026-41091-4",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19017",
+      "identity_tokens": [
+        "arXiv:2602.19017"
+      ],
+      "title": "Why ReLU? A Bit-Model Dichotomy for Deep Network Training",
+      "reason": "一次資料の要旨を確認。Theoretical analyses of Empirical Risk Minimization (ERM) are standardly framed within the Real-RAM model of computation. In this setting, training even simple neural networks is known to be $\\exists \\mathbb{R}$-complete -- a complexity class believed to be harder than NP, that characterizes the difficulty of solving systems of polynomial inequalities over t",
+      "source_url": "https://arxiv.org/abs/2602.19017",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ]
+    }
+  ]
+}
