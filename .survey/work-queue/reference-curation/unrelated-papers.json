@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T18:35:27+00:00",
-  "record_count": 9225,
+  "updated_at": "2026-10-06T18:40:21+00:00",
+  "record_count": 9244,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -132254,6 +132254,272 @@
         "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
       ],
       "title": "Privacy-Preserving LLM Interaction with Socratic Chain-of-Thought Reasoning and Homomorphically Encrypted Vector Databases"
+    },
+    "arXiv:2509.10534": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.10534",
+      "identity_tokens": [
+        "arXiv:2509.10534"
+      ],
+      "reason": "The primary abstract centers on positional embeddings for transformer representation; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:14+00:00",
+      "last_checked_at": "2026-10-06T18:40:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Decoupling the \"What\" and \"Where\" With Polar Coordinate Positional Embeddings"
+    },
+    "arXiv:2508.12398": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.12398",
+      "identity_tokens": [
+        "arXiv:2508.12398"
+      ],
+      "reason": "The primary abstract centers on diffusion-LLM safety alignment; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:14+00:00",
+      "last_checked_at": "2026-10-06T18:40:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Where to Start Alignment? Diffusion Large Language Model May Demand a Distinct Position"
+    },
+    "DOI:10.1109/hpca61900.2025.00065": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00065",
+      "identity_tokens": [
+        "DOI:10.1109/hpca61900.2025.00065"
+      ],
+      "reason": "The primary abstract centers on neural vector search hardware; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:14+00:00",
+      "last_checked_at": "2026-10-06T18:40:14+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "NeuVSA: A Unified and Efficient Accelerator for Neural Vector Search"
+    },
+    "arXiv:2501.02979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.02979",
+      "identity_tokens": [
+        "arXiv:2501.02979"
+      ],
+      "reason": "The primary abstract centers on specialized multilingual neural machine translation; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:15+00:00",
+      "last_checked_at": "2026-10-06T18:40:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Registering Source Tokens to Target Language Spaces in Multilingual Neural Machine Translation"
+    },
+    "DOI:10.52202/085713-0192": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-0192",
+      "identity_tokens": [
+        "DOI:10.52202/085713-0192"
+      ],
+      "reason": "The primary abstract centers on two-stage feature-based classifiers; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:15+00:00",
+      "last_checked_at": "2026-10-06T18:40:15+00:00",
+      "linked_from": [
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "Is the acquisition worth the cost? Surrogate losses for Consistent Two-stage Classifiers"
+    },
+    "arXiv:2303.18120": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.18120",
+      "identity_tokens": [
+        "arXiv:2303.18120"
+      ],
+      "reason": "The primary abstract centers on multi-agent QA research platform; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:15+00:00",
+      "last_checked_at": "2026-10-06T18:40:15+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "UKP-SQuARE v3: A Platform for Multi-Agent QA Research"
+    },
+    "arXiv:2510.25220": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25220",
+      "identity_tokens": [
+        "arXiv:2510.25220"
+      ],
+      "reason": "GReF is an autoregressive generative reranker for recommendation sequences on Avito/KuaiShou. Ordered multi-item prediction speeds recommender reranking; its target is item ranking and recommender vocabulary, not LLM inference/serving.",
+      "first_checked_at": "2026-10-06T18:40:15+00:00",
+      "last_checked_at": "2026-10-06T18:40:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "GReF: A Unified Generative Framework for Efficient Reranking via Ordered Multi-token Prediction"
+    },
+    "arXiv:2508.01483": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.01483",
+      "identity_tokens": [
+        "arXiv:2508.01483"
+      ],
+      "reason": "The primary abstract centers on transformer learning-rate training dynamics; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:17+00:00",
+      "last_checked_at": "2026-10-06T18:40:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md"
+      ],
+      "title": "Training Dynamics of the Cooldown Stage in Warmup-Stable-Decay Learning Rate Scheduler"
+    },
+    "arXiv:2507.19766": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.19766",
+      "identity_tokens": [
+        "arXiv:2507.19766"
+      ],
+      "reason": "The primary abstract centers on long-output reinforcement-learning training; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:17+00:00",
+      "last_checked_at": "2026-10-06T18:40:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "UloRL:An Ultra-Long Output Reinforcement Learning Approach for Advancing Large Language Models' Reasoning Abilities"
+    },
+    "arXiv:2507.18452": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18452",
+      "identity_tokens": [
+        "arXiv:2507.18452"
+      ],
+      "reason": "The primary abstract centers on audio understanding with diffusion language models; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:17+00:00",
+      "last_checked_at": "2026-10-06T18:40:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "DIFFA: Large Language Diffusion Models Can Listen and Understand"
+    },
+    "arXiv:2507.10540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.10540",
+      "identity_tokens": [
+        "arXiv:2507.10540"
+      ],
+      "reason": "The primary abstract centers on LLM capability fusion from model logs; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:17+00:00",
+      "last_checked_at": "2026-10-06T18:40:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "FusionFactory: Fusing LLM Capabilities with Multi-LLM Log Data"
+    },
+    "arXiv:2507.08965": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.08965",
+      "identity_tokens": [
+        "arXiv:2507.08965"
+      ],
+      "reason": "The primary abstract centers on classifier-free guidance for masked diffusion; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:18+00:00",
+      "last_checked_at": "2026-10-06T18:40:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Improving Classifier-Free Guidance in Masked Diffusion: Low-Dim Theoretical Insights with High-Dim Impact"
+    },
+    "arXiv:2510.22673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22673",
+      "identity_tokens": [
+        "arXiv:2510.22673"
+      ],
+      "reason": "The primary abstract centers on vision-transformer shift invariance; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:18+00:00",
+      "last_checked_at": "2026-10-06T18:40:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Alias-Free ViT: Fractional Shift Invariance via Linear Attention"
+    },
+    "arXiv:2510.15366": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.15366",
+      "identity_tokens": [
+        "arXiv:2510.15366"
+      ],
+      "reason": "The primary abstract centers on spectral mean-flow sequence modeling; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:19+00:00",
+      "last_checked_at": "2026-10-06T18:40:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Sequence Modeling with Spectral Mean Flows"
+    },
+    "DOI:10.1145/3721145.3725772": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3721145.3725772",
+      "identity_tokens": [
+        "DOI:10.1145/3721145.3725772"
+      ],
+      "reason": "The primary abstract centers on LLM pre-training network load balancing; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:19+00:00",
+      "last_checked_at": "2026-10-06T18:40:19+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "title": "CTCCL: Cost-Efficient Joint Device-Network Load Balancing for LLM Training in RoCE-based Intelligent Computing Network"
+    },
+    "arXiv:2505.14419": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14419",
+      "identity_tokens": [
+        "arXiv:2505.14419"
+      ],
+      "reason": "The primary abstract centers on process-reward annotation cost; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:19+00:00",
+      "last_checked_at": "2026-10-06T18:40:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "SCOPE: Compress Mathematical Reasoning Steps for Efficient Automated Process Annotation"
+    },
+    "arXiv:2402.19080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19080",
+      "identity_tokens": [
+        "arXiv:2402.19080"
+      ],
+      "reason": "The primary abstract centers on general-purpose processing-using-DRAM SIMD workloads; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:20+00:00",
+      "last_checked_at": "2026-10-06T18:40:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "MIMDRAM: An End-to-End Processing-Using-DRAM System for High-Throughput, Energy-Efficient and Programmer-Transparent Multiple-Instruction Multiple-Data Processing"
+    },
+    "arXiv:2310.13540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.13540",
+      "identity_tokens": [
+        "arXiv:2310.13540"
+      ],
+      "reason": "The primary abstract centers on multi-domain recommendation modeling; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:20+00:00",
+      "last_checked_at": "2026-10-06T18:40:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Thoroughly Modeling Multi-domain Pre-trained Recommendation as Language"
+    },
+    "arXiv:2510.26799": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.26799",
+      "identity_tokens": [
+        "arXiv:2510.26799"
+      ],
+      "reason": "The primary abstract centers on image captioning and visual feature learning; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "first_checked_at": "2026-10-06T18:40:21+00:00",
+      "last_checked_at": "2026-10-06T18:40:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Masked Diffusion Captioning for Visual Feature Learning"
     }
   }
 }
