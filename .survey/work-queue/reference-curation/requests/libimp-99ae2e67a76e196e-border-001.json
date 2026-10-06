@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-99ae2e67a76e196e-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2502.14445",
+  "reason": "本文はLLM score predictorが誤答を予測できるかを測るbenchmarkで、routing時の選択器評価に隣接する。しかし提案自体はassessorのbenchmarkで、推論経路を選択してcost/latencyを下げるシステムや測定ではない。quality-aware routingとの接点を残しborderlineとする。",
+  "title": "PredictaBoard: Benchmarking LLM Score Predictability",
+  "identity_tokens": [
+    "arXiv:2502.14445"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99ae2e67a76e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

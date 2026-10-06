@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-95512e550738c4e8-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2605.09922",
+  "reason": "本文のTPAWはself-playによるLLM alignment fine-tuningで、過去policy checkpointやresponse weightsを訓練最適化に用いる。分散学習/memory lineageに近い語はあるが、推論時のcostやservingを評価しないため対象外。",
+  "title": "Team-Based Self-Play With Dual Adaptive Weighting for Fine-Tuning LLMs",
+  "identity_tokens": [
+    "arXiv:2605.09922"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95512e550738",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

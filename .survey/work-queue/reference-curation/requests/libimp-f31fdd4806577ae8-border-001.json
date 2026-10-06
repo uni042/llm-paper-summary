@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f31fdd4806577ae8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2409.11143",
+  "reason": "本文のSemformerはsemantic planning tokensをLMに加え、グラフ経路/要約等のaccuracyを評価するが、inference latency, token count, memory savingを実証しない。inference-systems lineageとの関連は弱く、本文でefficiency improvementが確認できないためborderline。",
+  "title": "Semformer: Transformer Language Models with Semantic Planning",
+  "identity_tokens": [
+    "arXiv:2409.11143"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+    "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f31fdd480657",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-99ae2e67a76e196e-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2311.00591",
+  "reason": "一次要旨のCoopはtensor rematerializationを用いたDNN訓練のmemory fragmentation対策であり、forward/backward訓練時の再計算・allocationが対象。推論時のLLM KV cacheやservingを扱わない。",
+  "title": "Coop: Memory is not a Commodity",
+  "identity_tokens": [
+    "arXiv:2311.00591"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99ae2e67a76e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

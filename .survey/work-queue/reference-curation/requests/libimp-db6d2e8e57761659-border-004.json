@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-db6d2e8e57761659-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2508.15253",
+  "reason": "本文のCAREはRAG中の矛盾するcontextを識別するsoft-prompting手法で、QA品質を改善する。固定memory token budgetの下で単一段の評価が中心で、A100上の単一構成ではRAGより遅く、推論効率の改善は示さないため、prompt compression系統との接点は残しつつborderlineとする。",
+  "title": "Conflict-Aware Soft Prompting for Retrieval-Augmented Generation",
+  "identity_tokens": [
+    "arXiv:2508.15253"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db6d2e8e5776",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
