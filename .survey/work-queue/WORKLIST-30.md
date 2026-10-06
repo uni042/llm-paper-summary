@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-06T06:47:45+00:00`
+Generated: `2026-10-06T07:24:15+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,7 +220,7 @@ ready総数: **603** / 未claim総数: **601** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **19641** / このworker向け: **500**
+未判定総数: **19438** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
@@ -619,37 +619,37 @@ ready総数: **603** / 未claim総数: **601** / このworker向け: **200**
 | 393 | 109 | arXiv:2601.22347 | MixQuant: Pushing the Limits of Block Rotations in Post-Training Quantization | 2026-01-29 | arXiv.org | 9 | 3 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2601.22347) |
 | 394 | 109 | arXiv:2601.10242 | Loop as a Bridge: Can Looped Transformers Truly Link Representation Space and Natural Language Outputs? | 2026-01-15 | arXiv.org | 9 | 1 |  | [source](https://arxiv.org/abs/2601.10242) |
 | 395 | 109 | arXiv:2601.00671 | Fast-weight Product Key Memory | 2026-01-02 | arXiv.org | 9 | 1 |  | [source](https://arxiv.org/abs/2601.00671) |
-| 396 | 109 | arXiv:2512.18196 | LogicReward: Incentivizing LLM Reasoning via Step-Wise Logical Supervision | 2025-12-20 |  | 9 | 1 |  | [source](https://arxiv.org/abs/2512.18196) |
-| 397 | 109 | arXiv:2512.08829 | InfiniteVL: Synergizing Linear and Sparse Attention for Highly-Efficient, Unlimited-Input Vision-Language Models | 2025-12-09 | arXiv.org | 9 | 5 | inference-systems | [source](https://arxiv.org/abs/2512.08829) |
-| 398 | 109 | arXiv:2512.02044 | Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models | 2025-11-26 | arXiv.org | 9 | 4 | Speculative Decoding, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2512.02044) |
-| 399 | 109 | arXiv:2511.13061 | MACKO: Sparse Matrix-Vector Multiplication for Low Sparsity | 2025-11-17 | arXiv.org | 9 | 1 | GPU疎行列カーネル／二重疎LLM推論／SIMTマイクロアーキテクチャ | [source](https://arxiv.org/abs/2511.13061) |
-| 400 | 109 | arXiv:2511.11346 | Fast and Expressive Multi-Byte Prediction with Probabilistic Circuits | 2025-11-14 |  | 9 | 5 | inference-systems, survey-speculative-decoding | [source](https://arxiv.org/abs/2511.11346) |
-| 401 | 109 | arXiv:2511.00739 | Towards Understanding, Analyzing, and Optimizing Agentic AI Execution: A CPU-Centric Perspective | 2025-11-01 |  | 9 | 4 | LLM Serving / Scheduling / Disaggregation, LLM serving resource provisioning / CPU-GPU orchestration / multi-GPU inference, agentic serving workload characterization / KV-cache / inference benchmarking, inference-systems | [source](https://arxiv.org/abs/2511.00739) |
-| 402 | 108 | arXiv:2607.07386 | Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity | 2026-07-08 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2607.07386) |
-| 403 | 108 | arXiv:2606.06240 | TOKI: A Bitemporal Operator Algebra for Contradiction Resolution in LLM-Agent Persistent Memory | 2026-06-04 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2606.06240) |
-| 404 | 108 | DOI:10.1109/EITCE70137.2026.11634378 | CacheRoute: KV-Cache-Aware Routing for LLM Backend Services on Kubernetes | 2026-06-01 | 2026 10th International Conference on Electronic Information Technology and Computer Engineering (EITCE) | 8 | 2 | KVキャッシュ再利用／圧縮／ネットワーク転送, inference-systems | [source](https://doi.org/10.1109/EITCE70137.2026.11634378) |
-| 405 | 108 | arXiv:2605.19376 | Generative Recursive Reasoning | 2026-05-19 | arXiv.org | 8 | 2 |  | [source](https://arxiv.org/abs/2605.19376) |
-| 406 | 108 | arXiv:2605.06534 | ROSE: Rollout On Serving GPUs via Cooperative Elasticity for Agentic RL | 2026-05-07 | arXiv.org | 8 | 1 | agentic LLM serving / pipeline parallelism / serving scheduling / speculative decoding | [source](https://arxiv.org/abs/2605.06534) |
-| 407 | 108 | arXiv:2604.23950 | LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models | 2026-04-27 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2604.23950) |
-| 408 | 108 | arXiv:2604.12358 | Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding | 2026-04-14 | arXiv.org | 8 | 5 | LLM inference surveys、roofline performance analysis | [source](https://arxiv.org/abs/2604.12358) |
-| 409 | 108 | DOI:10.1109/TFUZZ.2025.3594229 | CoLLM: Industrial Large–Small Model Collaboration With Fuzzy Decision-Making Agent and Self-Reflection | 2026-04-01 | IEEE transactions on fuzzy systems | 8 | 1 | LLM routing、hybrid inference、quality-aware model selection | [source](https://doi.org/10.1109/TFUZZ.2025.3594229) |
-| 410 | 108 | arXiv:2603.25661 | Fast-dVLA: Accelerating Discrete Diffusion VLA to Real-Time Performance | 2026-03-26 | arXiv.org | 8 | 4 | Diffusion LLM Inference, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2603.25661) |
-| 411 | 108 | arXiv:2603.20155 | Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD | 2026-03-20 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2603.20155) |
-| 412 | 108 | arXiv:2603.14360 | M2RNN: Non-Linear RNNs with Matrix-Valued States for Scalable Language Modeling | 2026-03-15 | arXiv.org | 8 | 6 |  | [source](https://arxiv.org/abs/2603.14360) |
-| 413 | 108 | arXiv:2603.07915 | Ares: Adaptive Reasoning Effort Selection for Efficient LLM Agents | 2026-03-09 | arXiv.org | 8 | 1 | inference-systems | [source](https://arxiv.org/abs/2603.07915) |
-| 414 | 108 | arXiv:2603.10062 | Multi-Agent Memory from a Computer Architecture Perspective: Visions and Challenges Ahead | 2026-03-09 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2603.10062) |
-| 415 | 108 | DOI:10.1145/3811839.3811859 | Structured State Representation and Constraint-Guided Policy Learning for Intelligent Business Decision Systems | 2026-03-06 | Proceedings of the 2026 International Conference on AI Decision-Making and Management | 8 | 1 | llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1145/3811839.3811859) |
-| 416 | 108 | arXiv:2603.01581 | KERV: Kinematic-Rectified Speculative Decoding for Embodied VLA Models | 2026-03-02 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2603.01581) |
-| 417 | 108 | DOI:10.1109/TED.2026.3659106 | Monolithically Stackable 1T1C 3-D DRAM: A Technical Survey | 2026-03-01 | IEEE Transactions on Electron Devices | 8 | 1 | inference-systems | [source](https://doi.org/10.1109/TED.2026.3659106) |
-| 418 | 108 | DOI:10.1145/3748173.3779191 | TeLLMe: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs | 2026-02-21 | Symposium on Field Programmable Gate Arrays | 8 | 2 |  | [source](https://doi.org/10.1145/3748173.3779191) |
-| 419 | 108 | arXiv:2602.12153 | dVoting: Fast Voting for dLLMs | 2026-02-12 | arXiv.org | 8 | 1 | diffusion LLM / mixture-of-experts / adaptive expert routing / memory-bound inference | [source](https://arxiv.org/abs/2602.12153) |
-| 420 | 108 | arXiv:2602.08404 | TEAM: Temporal-Spatial Consistency Guided Expert Activation for MoE Diffusion Language Model Acceleration | 2026-02-09 | arXiv.org | 8 | 2 | diffusion LLM / mixture-of-experts / adaptive expert routing / memory-bound inference | [source](https://arxiv.org/abs/2602.08404) |
-| 421 | 108 | arXiv:2602.05695 | SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference | 2026-02-05 | International Conference on Performance Engineering | 8 | 2 |  | [source](https://arxiv.org/abs/2602.05695) |
-| 422 | 108 | arXiv:2602.03769 | Reasoning with Latent Tokens in Diffusion Language Models | 2026-02-03 | arXiv.org | 8 | 2 | diffusion language model inference / KV cache / training-free acceleration | [source](https://arxiv.org/abs/2602.03769) |
-| 423 | 108 | DOI:10.1016/j.adhoc.2025.104080 | Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference | 2026-02-01 | Ad hoc networks | 8 | 1 |  | [source](https://doi.org/10.1016/j.adhoc.2025.104080) |
-| 424 | 108 | arXiv:2601.20730 | AgentLongBench: A Controllable Long Benchmark For Long-Contexts Agents via Environment Rollouts | 2026-01-28 | arXiv.org | 8 | 2 | Long-context serving / KV cache benchmark | [source](https://arxiv.org/abs/2601.20730) |
-| 425 | 108 | arXiv:2601.12784 | StaleFlow:  Staleness-Aware Data Management for Mitigating Data Skewness in Fully Disaggregated RL Post-Training | 2026-01-19 | Proceedings of the ACM on Management of Data | 8 | 1 | Reasoning-model post-training / RLVR systems / distributed RL / parallel LLM training and inference | [source](https://arxiv.org/abs/2601.12784) |
-| 426 | 108 | arXiv:2601.05503 | Over-Searching in Search-Augmented Large Language Models | 2026-01-09 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2601.05503) |
+| 396 | 109 | DOI:10.1038/s41598-025-29370-y | AI-embedded IoT healthcare optimization with trust-aware mobile edge computing | 2025-12-15 | Scientific Reports | 9 | 1 | survey-edge-llm | [source](https://doi.org/10.1038/s41598-025-29370-y) |
+| 397 | 109 | DOI:10.1145/3769799 | High-Throughput, Cost-Effective Billion-Scale Vector Search with a Single GPU | 2025-12-04 | Proc. ACM Manag. Data | 9 | 1 | KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://doi.org/10.1145/3769799) |
+| 398 | 109 | arXiv:2511.14650 | AutoTool: Efficient Tool Selection for Large Language Model Agents | 2025-11-18 | AAAI Conference on Artificial Intelligence | 9 | 1 | 14-agentic-inference-serving-runtime | [source](https://arxiv.org/abs/2511.14650) |
+| 399 | 109 | arXiv:2511.13912 | Compute-in-memory implementation of state space models for event sequence processing | 2025-11-17 | Nature Communications | 9 | 2 |  | [source](https://arxiv.org/abs/2511.13912) |
+| 400 | 109 | arXiv:2511.11571 | Optimizing Mixture of Block Attention | 2025-11-14 | arXiv.org | 9 | 3 |  | [source](https://arxiv.org/abs/2511.11571) |
+| 401 | 108 | arXiv:2607.24904 | Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model | 2026-07-27 | arXiv.org | 8 | 3 |  | [source](https://arxiv.org/abs/2607.24904) |
+| 402 | 108 | arXiv:2606.16353 | What Should a Streaming Video Model Remember? | 2026-06-15 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2606.16353) |
+| 403 | 108 | arXiv:2606.05152 | Reinforcement Learning from Rich Feedback with Distributional DAgger | 2026-06-03 | arXiv.org | 8 | 1 | Conditional Computation | [source](https://arxiv.org/abs/2606.05152) |
+| 404 | 108 | arXiv:2606.00487 | TAPS: Target-Aware Prefix Tree Selection for Diffusion-Drafted Speculative Decoding | 2026-05-30 | arXiv.org | 8 | 1 | speculative-decoding | [source](https://arxiv.org/abs/2606.00487) |
+| 405 | 108 | arXiv:2605.11817 | See What Matters: Differentiable Grid Sample Pruning for Generalizable Vision-Language-Action Model | 2026-05-12 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2605.11817) |
+| 406 | 108 | arXiv:2605.05126 | ConsisVLA-4D: Advancing Spatiotemporal Consistency in Efficient 3D-Perception and 4D-Reasoning for Robotic Manipulation | 2026-05-06 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2605.05126) |
+| 407 | 108 | arXiv:2604.24447 | Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment | 2026-04-27 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2604.24447) |
+| 408 | 108 | arXiv:2604.06832 | Fast-dVLM: Efficient Block-Diffusion VLM via Direct Conversion from Autoregressive VLM | 2026-04-08 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2604.06832) |
+| 409 | 108 | arXiv:2603.29252 | Scaling the Long Video Understanding of Multimodal Large Language Models via Visual Memory Mechanism | 2026-03-31 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2603.29252) |
+| 410 | 108 | arXiv:2603.22458 | MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding | 2026-03-23 | arXiv.org | 8 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, inference-systems | [source](https://arxiv.org/abs/2603.22458) |
+| 411 | 108 | DOI:10.1109/ISDFS69419.2026.11458958 | Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems | 2026-03-19 | International Symposium on Digital Forensics and Security (ISDFS) | 8 | 2 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/isdfs69419.2026.11458958) |
+| 412 | 108 | DOI:10.1609/aaai.v40i38.40535 | TokenPowerBench: Benchmarking the Power Consumption of LLM Inference | 2026-03-14 | Proceedings of the AAAI Conference on Artificial Intelligence | 8 | 1 | inference-systems | [source](https://doi.org/10.1609/aaai.v40i38.40535) |
+| 413 | 108 | arXiv:2603.08055 | Speed3R: Sparse Feed-forward 3D Reconstruction Models | 2026-03-09 | arXiv.org | 8 | 3 | 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2603.08055) |
+| 414 | 108 | arXiv:2603.06228 | Low-latency Event-based Object Detection with Spatially-Sparse Linear Attention | 2026-03-06 | arXiv.org | 8 | 2 |  | [source](https://arxiv.org/abs/2603.06228) |
+| 415 | 108 | arXiv:2603.05078 | MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer | 2026-03-05 | arXiv.org | 8 | 1 | inference-systems | [source](https://arxiv.org/abs/2603.05078) |
+| 416 | 108 | arXiv:2603.01236 | AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models | 2026-03-01 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2603.01236) |
+| 417 | 108 | arXiv:2602.23671 | FuXi-Linear: Unleashing the Power of Linear Attention in Long-term Time-aware Sequential Recommendation | 2026-02-27 | Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 | 8 | 1 | speculative decoding / context compression / agentic LLM inference | [source](https://arxiv.org/abs/2602.23671) |
+| 418 | 108 | arXiv:2602.16698 | Causality is Key for Interpretability Claims to Generalise | 2026-02-18 | arXiv.org | 8 | 1 | MoE expert pruning / causal interpretability / expert importance metrics | [source](https://arxiv.org/abs/2602.16698) |
+| 419 | 108 | arXiv:2602.10743 | Kalman Linear Attention: Parallel Bayesian Filtering For Efficient Language Modelling and State Tracking | 2026-02-11 | arXiv.org | 8 | 1 | linear attention / delta-rule associative memory / state-space models / Bayesian filtering | [source](https://arxiv.org/abs/2602.10743) |
+| 420 | 108 | arXiv:2602.08984 | Next Concept Prediction in Discrete Latent Space Leads to Stronger Language Models | 2026-02-09 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2602.08984) |
+| 421 | 108 | arXiv:2602.06039 | DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching | 2026-02-05 | arXiv.org | 8 | 1 | inference-systems | [source](https://arxiv.org/abs/2602.06039) |
+| 422 | 108 | arXiv:2602.07035 | DLLM-Searcher: Adapting Diffusion Large Language Model for Search Agents | 2026-02-03 | arXiv.org | 8 | 3 |  | [source](https://arxiv.org/abs/2602.07035) |
+| 423 | 108 | arXiv:2602.00471 | Dual Latent Memory for Visual Multi-agent System | 2026-01-31 | arXiv.org | 8 | 2 | multi-LLM communication / KV-cache semantic transfer | [source](https://arxiv.org/abs/2602.00471) |
+| 424 | 108 | arXiv:2601.19026 | Is Finer Better? The Limits of Microscaling Formats in Large Language Models | 2026-01-26 | arXiv.org | 8 | 4 |  | [source](https://arxiv.org/abs/2601.19026) |
+| 425 | 108 | arXiv:2601.11641 | Mixture of Distributions Matters: Dynamic Sparse Attention for Efficient Video Diffusion Transformers | 2026-01-14 | arXiv.org | 8 | 2 | inference-systems | [source](https://arxiv.org/abs/2601.11641) |
+| 426 | 108 | arXiv:2601.04359 | PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache | 2026-01-07 | arXiv.org | 8 | 11 | KV Cache Optimization / Compression, KVキャッシュ・注意アーキテクチャ, KVキャッシュ最適化／適応圧縮, Offload / Hierarchical Memory, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2601.04359) |
 | 427 | 108 | DOI:10.1145/3787470.3787478 | Unifying Knowledge in Agentic LLMs: Concepts, Methods, and Recent Advancements | 2025-12-30 | SIGKDD Explorations | 8 | 1 |  | [source](https://doi.org/10.1145/3787470.3787478) |
 | 428 | 108 | arXiv:2512.17011 | Economical Jet Taggers -- Equivariant, Slim, and Quantized | 2025-12-18 |  | 8 | 2 | inference-systems | [source](https://arxiv.org/abs/2512.17011) |
 | 429 | 108 | arXiv:2512.02337 | SpecPV: Improving Self-Speculative Decoding for Long-Context Generation via Partial Verification | 2025-12-02 | arXiv.org | 8 | 1 |  | [source](https://arxiv.org/abs/2512.02337) |
