@@ -26,6 +26,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
+- **2026-03 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  吸収型離散拡散では、トークンを段階的にマスク状態へ移し、逆過程でクリーンな系列を復元する。従来は各時刻で状態間の周辺確率比であるconcrete scoreを時刻条件付きネットワークで推定するため、入力系列が変わらないサンプリング区間でも時刻が変わるだけでネットワークを再評価する。学習ネットワークは前者だけを出力すればよく、時刻tを入力する必要がない。
+
 - **2026-03 · [PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System](2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   長文脈のLLMがトークンを一つずつ生成するとき、注意機構はこれまでの各トークンに対応する鍵・値キャッシュ（KV キャッシュ）を読み返す。動的PIMアクセス（動的 PIM Access; DPA）は生成中のトークン数に応じたループとアドレス変換を使い、KVキャッシュを実行時に1MB単位で追加する。
@@ -45,10 +49,6 @@
 - **2026-06 · [CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs](2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md)**  
   実装：[✓](https://github.com/IntelChina-AI/BitTern) ・ リポジトリ内被引用：3  
   CAT-Q（コスト-efficient and Accurate Ternary Quantization）は、既存の高精度LLMを三値重み {−1, 0, +1}、すなわち約1.58-bitへ変換する学習後量子化（Post-学習 量子化; PTQ）方式である。三値化はFP16重みに比べて理論上10倍超の重みメモリ削減を可能にし、0状態による疎性も持つ。
-
-- **2026-03 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  吸収型離散拡散では、トークンを段階的にマスク状態へ移し、逆過程でクリーンな系列を復元する。従来は各時刻で状態間の周辺確率比であるconcrete scoreを時刻条件付きネットワークで推定するため、入力系列が変わらないサンプリング区間でも時刻が変わるだけでネットワークを再評価する。学習ネットワークは前者だけを出力すればよく、時刻tを入力する必要がない。
 
 - **2026-02 · [Fast KV Compaction via Attention Matching](2026-2602.16284-fast-kv-compaction-via-attention-matching.md)**  
   実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：3  
@@ -690,13 +690,13 @@
   実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：23  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
+- **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
+  実装：✓ ・ リポジトリ内被引用：19  
+  ブロックサイズ1なら自己回帰に近づき、系列全体を1ブロックにすれば拡散に近づく連続的な設計空間を作る。
+
 - **2025-04 · [SpinQuant: LLM quantization with learned rotations](2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md)**  
   実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：18  
   外れ値が低ビット量子化の誤差を大きくする問題に対して、全精度の機能を保つ旋回行列を学習し、重み・活性値・KVキャッシュの量子化に合わせる。
-
-- **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  ブロックサイズ1なら自己回帰に近づき、系列全体を1ブロックにすれば拡散に近づく連続的な設計空間を作る。
 
 - **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
@@ -917,7 +917,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：72  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：73  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
@@ -1032,13 +1032,13 @@
   実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：12  
   MoE-LLaVAはTransformerの一部FFNを混合専門家（Mixture-of-Experts; MoE）へ置換し、各トークンではルータが選んだ少数専門家だけを計算することで、総パラメータ容量と活性 computeを分離する。
 
+- **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  Jacobi復号は複数の未来位置を仮置きし、対象モデルで全位置を並列更新して固定点まで反復することでこの依存を緩める。論文はドメイン固有・一般ベンチマークで生成品質を保ちながら2.4〜3.4倍の生成高速化を報告する。
+
 - **2024-04 · [Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing](2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   要求ごとの品質差を予測して小型LLMへの振り分け率を調整し、推論費を削減する。モデル間の品質差が大きいときは無品質低下での削減幅が限られる。
-
-- **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
-  Jacobi復号は複数の未来位置を仮置きし、対象モデルで全位置を並列更新して固定点まで反復することでこの依存を緩める。論文はドメイン固有・一般ベンチマークで生成品質を保ちながら2.4〜3.4倍の生成高速化を報告する。
 
 - **2024-01 · [Long Context Compression with Activation Beacon](2024-2401.03462-long-context-compression-with-activation-beacon.md)**  
   実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：10  
@@ -1199,7 +1199,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：207  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：208  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1365,7 +1365,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：270  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：271  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -1470,13 +1470,13 @@
   実装：✓ ・ リポジトリ内被引用：13  
   本論文は、多頭注意（multi-head 注意機構）の全ヘッドが推論時にも必要なのかを実験的に検証し、かなりの割合が冗長であることを示す。
 
+- **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  推論時には最初にtarget長を予測し、全位置をmaskした状態から全トークンを同時に生成する。
+
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   Q8BERTは、BERTをproductionへ配置するときのパラメータ メモリ、メモリ 帯域、整数演算利用を改善するため、重みと活性値を8bitへ量子化する研究である。論文はBERTの下流 accuracyをほぼ維持しながら約4倍圧縮できることを示し、INT8演算を高速に実行できるハードウェアでは推論速度改善につながるとする。
-
-- **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  推論時には最初にtarget長を予測し、全位置をmaskした状態から全トークンを同時に生成する。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1489,7 +1489,7 @@
   データ並列（data 並列化）は各GPUへモデル全体を複製し、mini-バッチを分けて勾配を同期する。モデルが大きい、あるいはネットワークが遅いと勾配同期が計算時間を上回り、GPUが通信待ちになる。PipeDreamはモデルの層を複数段へ分け、異なるmini-バッチの順伝播と逆伝播をパイプラインとして重ねることで、モデルを分割しながらGPUを連続稼働させる。
 
 - **2018-02 · [Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement](2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   通常の自己回帰系列モデルは、位置 t の出力を確定してから位置 t+1 を計算するため、GPU内の行列演算を並列化しても生成系列方向の逐次クリティカルパスが残る。方式は条件付き潜在変数モデルとノイズ除去自己符号化器の考え方を組み合わせる。
 
 ### 10年前（2016-11〜2017-10）
