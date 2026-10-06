@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r33-screen-01-part-07-da5fccb83b5b",
+  "reference_main_sha": "66f6b4a22138ddb5a743e0f79ce8916ca41c111d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14777",
+      "identity_tokens": [
+        "arXiv:2607.14777"
+      ],
+      "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
+      "reason": "On-policy agentic RL distillation method focuses on training, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2607.14777",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.06563",
+      "identity_tokens": [
+        "arXiv:2602.06563"
+      ],
+      "title": "TokenMixer-Large: Scaling Up Large Ranking Models in Industrial Recommenders",
+      "reason": "TokenMixer-Large is an industrial recommendation ranking model with sparse-per-token experts, custom operators, FP8 and token-parallel serving. The engineering is inference-relevant but its architecture, workload and quality metrics are recommender-specific, so LLM transfer remains uncertain.",
+      "source_url": "https://arxiv.org/abs/2602.06563",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05546",
+      "identity_tokens": [
+        "arXiv:2604.05546"
+      ],
+      "title": "Efficient Inference for Large Vision-Language Models: Bottlenecks, Techniques, and Prospects",
+      "reason": "This survey systematically organizes LVLM inference bottlenecks and techniques across encoding, prefill, decode and system levels. It is a useful systems taxonomy but is a survey rather than a novel LLM serving method and focuses on multimodal vision-language workloads.",
+      "source_url": "https://arxiv.org/abs/2604.05546",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2605.20104-draft-less-retrieve-more-hybrid-tree-construction-for-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+        "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.24047",
+      "identity_tokens": [
+        "arXiv:2503.24047"
+      ],
+      "title": "Towards Scientific Intelligence: A Survey of LLM-based Scientific Agents",
+      "reason": "This survey reviews scientific-agent architectures, benchmarks and applications. Its subject is agent capability/workflows rather than serving, KV management or inference optimization; relevance through agent scheduling is indirect.",
+      "source_url": "https://arxiv.org/abs/2503.24047",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-5c9bc68e3beb-towards-efficient-serving-of-network-intensive-llm-inferences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/92.953496",
+      "identity_tokens": [
+        "DOI:10.1109/92.953496"
+      ],
+      "title": "On gate level power optimization using dual-supply voltages",
+      "reason": "Dual-supply gate-level power optimization predates and is unrelated to LLM inference systems.",
+      "source_url": "https://doi.org/10.1109/92.953496",
+      "first_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "last_checked_at": "2026-10-06T03:34:24.045006+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    }
+  ]
+}
