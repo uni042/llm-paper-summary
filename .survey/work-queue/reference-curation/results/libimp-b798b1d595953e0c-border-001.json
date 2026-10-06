@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b798b1d595953e0c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3390/electronics13173558",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3390/electronics13173558",
+    "identity_tokens": [
+      "DOI:10.3390/electronics13173558"
+    ],
+    "reason": "Abstract/metadata leaves a plausible connection to inference efficiency or a cited lineage, but primary full text could not be reviewed; relevance remains unresolved.",
+    "first_checked_at": "2026-10-06T12:43:52+00:00",
+    "last_checked_at": "2026-10-06T12:43:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Headline Generation with Hybrid Attention for Long Texts"
+  },
+  "processed_at": "2026-10-06T12:43:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b798b1d59595",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

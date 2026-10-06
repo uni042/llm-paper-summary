@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T12:27:12+00:00",
-  "record_count": 8204,
+  "updated_at": "2026-10-06T12:43:56+00:00",
+  "record_count": 8229,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -117855,6 +117855,357 @@
         "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
       ],
       "title": "SUPERMAGO: Protein Function Prediction Based on Transformer Embeddings"
+    },
+    "arXiv:2508.13598": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.13598",
+      "identity_tokens": [
+        "arXiv:2508.13598"
+      ],
+      "reason": "Approximate Bayesian inference in quantized parameter space, not quantized LLM inference/serving.",
+      "first_checked_at": "2026-10-06T12:43:42+00:00",
+      "last_checked_at": "2026-10-06T12:43:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Approximate Bayesian Inference via Bitstring Representations"
+    },
+    "DOI:10.3390/logics3030009": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/logics3030009",
+      "identity_tokens": [
+        "DOI:10.3390/logics3030009"
+      ],
+      "reason": "Explainable-AI benchmark/conceptual analysis, not inference optimization.",
+      "first_checked_at": "2026-10-06T12:43:42+00:00",
+      "last_checked_at": "2026-10-06T12:43:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "How Explainable Really Is AI? Benchmarking Explainable AI"
+    },
+    "arXiv:2508.03254": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03254",
+      "identity_tokens": [
+        "arXiv:2508.03254"
+      ],
+      "reason": "Preference distillation for video diffusion models, a different model family from LLM inference.",
+      "first_checked_at": "2026-10-06T12:43:42+00:00",
+      "last_checked_at": "2026-10-06T12:43:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "V.I.P.: Iterative Online Preference Distillation for Efficient Video Diffusion Models"
+    },
+    "arXiv:2508.16976": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.16976",
+      "identity_tokens": [
+        "arXiv:2508.16976"
+      ],
+      "reason": "Domain-generalization fine-tuning of vision models, a training contribution.",
+      "first_checked_at": "2026-10-06T12:43:43+00:00",
+      "last_checked_at": "2026-10-06T12:43:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Preserving Domain Generalization in Fine-Tuning via Joint Parameter Selection"
+    },
+    "DOI:10.3390/app15169205": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app15169205",
+      "identity_tokens": [
+        "DOI:10.3390/app15169205"
+      ],
+      "reason": "Legal hearing ASR/LLM text-video linkage tool; no LLM inference optimization.",
+      "first_checked_at": "2026-10-06T12:43:43+00:00",
+      "last_checked_at": "2026-10-06T12:43:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Employing AI for Better Access to Justice: An Automatic Text-to-Video Linking Tool for UK Supreme Court Hearings"
+    },
+    "arXiv:2510.11390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.11390",
+      "identity_tokens": [
+        "arXiv:2510.11390"
+      ],
+      "reason": "LLM interpretability/knowledge mapping; no compute, memory, latency, throughput or serving optimization.",
+      "first_checked_at": "2026-10-06T12:43:45+00:00",
+      "last_checked_at": "2026-10-06T12:43:45+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Medical Interpretability and Knowledge Maps of Large Language Models"
+    },
+    "DOI:10.3390/foods14203581": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/foods14203581",
+      "identity_tokens": [
+        "DOI:10.3390/foods14203581"
+      ],
+      "reason": "Vision detection Transformer for mushroom grading; no language model or transferable inference system method.",
+      "first_checked_at": "2026-10-06T12:43:45+00:00",
+      "last_checked_at": "2026-10-06T12:43:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Improved Real-Time Detection Transformer with Low-Frequency Feature Integrator and Token Statistics Self-Attention for Automated Grading of Stropharia rugoso-annulata Mushroom"
+    },
+    "DOI:10.29304/jqcsm.2025.17.32381": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.29304/jqcsm.2025.17.32381",
+      "identity_tokens": [
+        "DOI:10.29304/jqcsm.2025.17.32381"
+      ],
+      "reason": "General ML/DL survey, not an inference optimization.",
+      "first_checked_at": "2026-10-06T12:43:46+00:00",
+      "last_checked_at": "2026-10-06T12:43:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "A Deep Dive into Deep Learning and Machine Learning: A Review Study"
+    },
+    "arXiv:2509.24413": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24413",
+      "identity_tokens": [
+        "arXiv:2509.24413"
+      ],
+      "reason": "Embodied-robot multimodal learning focuses on task capability, not compute or serving efficiency.",
+      "first_checked_at": "2026-10-06T12:43:46+00:00",
+      "last_checked_at": "2026-10-06T12:43:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "DynaMIC: Dynamic Multimodal In-Context Learning Enabled Embodied Robot Counterfactual Resistance Ability"
+    },
+    "arXiv:2406.04516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04516",
+      "identity_tokens": [
+        "arXiv:2406.04516"
+      ],
+      "reason": "Multi-agent flow fine-tuning concerns training, not language-model inference efficiency.",
+      "first_checked_at": "2026-10-06T12:43:47+00:00",
+      "last_checked_at": "2026-10-06T12:43:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Online Joint Fine-tuning of Multi-Agent Flows"
+    },
+    "arXiv:2404.19214": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.19214",
+      "identity_tokens": [
+        "arXiv:2404.19214"
+      ],
+      "reason": "ASR network compression is specific to speech recognition; packet identifies no language-model inference method.",
+      "first_checked_at": "2026-10-06T12:43:47+00:00",
+      "last_checked_at": "2026-10-06T12:43:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "EfficientASR: Speech Recognition Network Compression via Attention Redundancy and Chunk-Level FFN Optimization"
+    },
+    "DOI:10.1145/3511808.3557074": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3511808.3557074",
+      "identity_tokens": [
+        "DOI:10.1145/3511808.3557074"
+      ],
+      "reason": "Narrow Chinese abbreviation prediction; no general LLM serving or inference-efficiency result.",
+      "first_checked_at": "2026-10-06T12:43:49+00:00",
+      "last_checked_at": "2026-10-06T12:43:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "A Context-Enhanced Transformer with Abbr-Recover Policy for Chinese Abbreviation Prediction"
+    },
+    "SemanticScholar:d32e71b9712cec30e23d86b4c8681b3d506223bd": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:d32e71b9712cec30e23d86b4c8681b3d506223bd",
+      "identity_tokens": [
+        "SemanticScholar:d32e71b9712cec30e23d86b4c8681b3d506223bd"
+      ],
+      "reason": "Primary report contains no inference compute/memory/latency/throughput improvement.",
+      "first_checked_at": "2026-10-06T12:43:50+00:00",
+      "last_checked_at": "2026-10-06T12:43:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Charting Multiple Courses to Artificial General Intelligence"
+    },
+    "arXiv:2509.25253": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25253",
+      "identity_tokens": [
+        "arXiv:2509.25253"
+      ],
+      "reason": "Representation alignment is a knowledge-distillation training method; no inference efficiency result.",
+      "first_checked_at": "2026-10-06T12:43:51+00:00",
+      "last_checked_at": "2026-10-06T12:43:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Knowledge distillation through geometry-aware representational alignment"
+    },
+    "arXiv:2509.20950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20950",
+      "identity_tokens": [
+        "arXiv:2509.20950"
+      ],
+      "reason": "Prior-data fitted networks approximate Gaussian-process inference for physical equations, not language models.",
+      "first_checked_at": "2026-10-06T12:43:51+00:00",
+      "last_checked_at": "2026-10-06T12:43:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Decoupled-Value Attention for Prior-Data Fitted Networks: GP Inference for Physical Equations"
+    },
+    "arXiv:2509.11496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.11496",
+      "identity_tokens": [
+        "arXiv:2509.11496"
+      ],
+      "reason": "Task-specific claim-normalization model switching, with no inference cost/throughput improvement method.",
+      "first_checked_at": "2026-10-06T12:43:51+00:00",
+      "last_checked_at": "2026-10-06T12:43:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "AKCIT-FN at CheckThat! 2025: Switching Fine-Tuned SLMs and LLM Prompting for Multilingual Claim Normalization"
+    },
+    "arXiv:2402.18428": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18428",
+      "identity_tokens": [
+        "arXiv:2402.18428"
+      ],
+      "reason": "Collaborative learning for neural MT is a training method, not inference efficiency.",
+      "first_checked_at": "2026-10-06T12:43:52+00:00",
+      "last_checked_at": "2026-10-06T12:43:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Leveraging Diverse Modeling Contexts With Collaborating Learning for Neural Machine Translation"
+    },
+    "DOI:10.1109/candar60563.2023.00020": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/candar60563.2023.00020",
+      "identity_tokens": [
+        "DOI:10.1109/candar60563.2023.00020"
+      ],
+      "reason": "Multi-FPGA vision Transformer implementation; no language model or text-generation inference.",
+      "first_checked_at": "2026-10-06T12:43:52+00:00",
+      "last_checked_at": "2026-10-06T12:43:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Parallel Implementation of Vision Transformer on a Multi-FPGA Cluster"
+    },
+    "DOI:10.1080/19312458.2024.2388098": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/19312458.2024.2388098",
+      "identity_tokens": [
+        "DOI:10.1080/19312458.2024.2388098"
+      ],
+      "reason": "Task-specific named-entity recognition; no inference-efficiency or LLM-serving method.",
+      "first_checked_at": "2026-10-06T12:43:53+00:00",
+      "last_checked_at": "2026-10-06T12:43:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Bootstrapping public entities. Domain-specific NER for public speakers"
+    },
+    "DOI:10.1109/ijcnn60899.2024.10650189": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ijcnn60899.2024.10650189",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn60899.2024.10650189"
+      ],
+      "reason": "Knowledge distillation is a training method; no inference-side efficiency result.",
+      "first_checked_at": "2026-10-06T12:43:53+00:00",
+      "last_checked_at": "2026-10-06T12:43:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Relation-Based Multi-Teacher Knowledge Distillation"
+    },
+    "DOI:10.1109/iccad66269.2025.11240791": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccad66269.2025.11240791",
+      "identity_tokens": [
+        "DOI:10.1109/iccad66269.2025.11240791"
+      ],
+      "reason": "FPGA acceleration targets diffusion Transformers, a distinct generative-model family from language-model inference.",
+      "first_checked_at": "2026-10-06T12:43:54+00:00",
+      "last_checked_at": "2026-10-06T12:43:54+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "title": "Diff-DiT: Temporal Differential Accelerator for Low-bit Diffusion Transformers on FPGA"
+    },
+    "DOI:10.1109/iccad66269.2025.11240876": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccad66269.2025.11240876",
+      "identity_tokens": [
+        "DOI:10.1109/iccad66269.2025.11240876"
+      ],
+      "reason": "Spiking-network/MoE accelerator; no conventional LLM or text-generation evidence.",
+      "first_checked_at": "2026-10-06T12:43:54+00:00",
+      "last_checked_at": "2026-10-06T12:43:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "3D Acceleration for Mixture-of-Experts and Multi-Head Attention Spiking Transformers with Dynamic Head Pruning"
+    },
+    "arXiv:2510.18674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.18674",
+      "identity_tokens": [
+        "arXiv:2510.18674"
+      ],
+      "reason": "Clinical LLM membership-inference privacy attack analysis, not inference optimization.",
+      "first_checked_at": "2026-10-06T12:43:55+00:00",
+      "last_checked_at": "2026-10-06T12:43:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Exploring Membership Inference Vulnerabilities in Clinical Large Language Models"
+    },
+    "arXiv:2510.04568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04568",
+      "identity_tokens": [
+        "arXiv:2510.04568"
+      ],
+      "reason": "Multi-agent long-context QA workflow reports answer quality, not inference-system efficiency.",
+      "first_checked_at": "2026-10-06T12:43:55+00:00",
+      "last_checked_at": "2026-10-06T12:43:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "title": "COSMIR: Chain Orchestrated Structured Memory for Iterative Reasoning over Long Context"
+    },
+    "DOI:10.1145/3750069.3755958": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3750069.3755958",
+      "identity_tokens": [
+        "DOI:10.1145/3750069.3755958"
+      ],
+      "reason": "Manufacturing event-boundary detection; no LLM inference efficiency relevance.",
+      "first_checked_at": "2026-10-06T12:43:56+00:00",
+      "last_checked_at": "2026-10-06T12:43:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "An EST-based Generic Event Boundary Detector"
     }
   }
 }
