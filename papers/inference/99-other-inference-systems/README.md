@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（342本）
+## 自動生成の論文一覧（343本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1091,6 +1091,10 @@
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：2  
   Test-Time 学習（TTT）層は、再帰型ニューラルネットワーク（RNN）が長い履歴を固定サイズvectorへ圧縮することで表現力を失う問題に対し、隠れ 状態そのものを「学習するモデル」にする。
+
+- **2024-05 · [Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference](2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md)**  
+  実装：[✓](https://github.com/lzhxmu/VTW) ・ リポジトリ内被引用：2  
+  マルチモーダル大規模言語モデル（MLLM）は、画像を数百個のvision トークンへ変換してテキストトークンと同じTransformerへ入れるため、深い層でも視覚トークン分の注意機構とMLP計算を払い続ける。
 
 - **2024-03 · [Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression](2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md)**  
   実装：[✓](https://github.com/decoding-comp-trust/comp-trust) ・ リポジトリ内被引用：2  

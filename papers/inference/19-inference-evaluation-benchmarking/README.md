@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（20本）
+## 自動生成の論文一覧（21本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -45,6 +45,10 @@
 - **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   MoEは各トークンが少数専門家だけを通るため、密モデルより少ない計算でモデル容量を増やせる。しかしサービングでは複数要求の復号トークンを同一バッチへまとめる。個々のトークンの選択専門家が異なると、バッチ全体の和集合はほぼ全専門家へ広がり、結局すべての専門家重みをGPUメモリから読む。計算疎性がメモリ帯域削減へつながらないことがLYNXの出発点である。
+
+- **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
+  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：8  
+  GPUカーネルはLLM推論を含む機械学習実行の性能を決めるが、CUDAやTritonで正しく高速な実装を書くには、演算融合、タイル化、メモリ階層、テンソル Coreなどハードウェア固有知識が要る。KernelBenchは、この最適化作業を言語モデルがどこまで自動化できるかを「コードが動くか」だけでなく、実測速度まで含めて測る。
 
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
