@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r126-screen-01-part-05-ef9bd550ebdf",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3613424.3614248",
+      "identity_tokens": [
+        "DOI:10.1145/3613424.3614248"
+      ],
+      "title": "Grape: Practical and Efficient Graph-based Executions for Dynamic Deep Neural Networks on GPUs",
+      "reason": "ACM DOI page was inaccessible. The title suggests graph-based GPU execution for dynamic DNNs and the linked lineage is training/offload; serving relevance cannot be established without publisher abstract/body, so retain as borderline.",
+      "source_url": "https://doi.org/10.1145/3613424.3614248",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.09741",
+      "identity_tokens": [
+        "arXiv:2510.09741"
+      ],
+      "title": "Constructive Distortion: Improving MLLMs with Attention-Guided Image Warping",
+      "reason": "一次要旨のConstructive Distortionは画像のattention誘導warpingでMLLMの視覚入力を改善する研究。入力画質・認識品質の課題を扱い、推論計算・モデル記憶量・serving遅延の改善を報告していない。",
+      "source_url": "https://arxiv.org/abs/2510.09741",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.06826",
+      "identity_tokens": [
+        "arXiv:2510.06826"
+      ],
+      "title": "Mid-Training of Large Language Models: A Survey",
+      "reason": "一次要旨はfoundation modelのmid-training、継続事前学習、fine-tuning、compositionalityを論じる調査論文。長いcontextが計算コストを要するという周辺論点はあるが、推論時の具体的最適化方法や評価結果を提示しない。",
+      "source_url": "https://arxiv.org/abs/2510.06826",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCPMT.2024.3492189",
+      "identity_tokens": [
+        "DOI:10.1109/TCPMT.2024.3492189"
+      ],
+      "title": "Co-Designed Silicon Photonics Chip I/O for Energy-Efficient Petascale Connectivity",
+      "reason": "IEEE DOI record was inaccessible. The title points to energy-efficient silicon-photonic chip I/O connectivity, but the primary abstract needed to determine whether it addresses LLM-scale model serving was unavailable; retain as borderline.",
+      "source_url": "https://doi.org/10.1109/TCPMT.2024.3492189",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03320",
+      "identity_tokens": [
+        "arXiv:2506.03320"
+      ],
+      "title": "The Future of Continual Learning in the Era of Foundation Models: Three Key Directions",
+      "reason": "一次要旨はfoundation model時代のcontinual learningの必要性と知識更新・適応・モデル組成を議論する方向性論文。inference compute/memory/latency/throughputやservingの改善手法を扱わない。",
+      "source_url": "https://arxiv.org/abs/2506.03320",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    }
+  ]
+}
