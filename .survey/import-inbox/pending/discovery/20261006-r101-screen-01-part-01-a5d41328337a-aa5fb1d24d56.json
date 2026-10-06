@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r101-screen-01-part-01-a5d41328337a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01414",
+      "identity_tokens": [
+        "arXiv:2603.01414"
+      ],
+      "title": "Jailbreaking Embodied LLMs via Action-Level Manipulation",
+      "reason": "Blindfold uses an adversarial proxy planner to alter actions, hide malicious steps with noise, and verify executable plans. It reports up to 53% higher attack success than baselines in simulation and on a robot arm. This is an embodied-agent jailbreak/security attack; it contributes no inference compute, memory, latency, throughput, quantization, or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2603.01414",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01051",
+      "identity_tokens": [
+        "arXiv:2603.01051"
+      ],
+      "title": "CelloAI Benchmarks: Toward Repeatable Evaluation of AI Assistants",
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "source_url": "https://arxiv.org/abs/2603.01051",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.19594",
+      "identity_tokens": [
+        "arXiv:2602.19594"
+      ],
+      "title": "ISO-Bench: Can Coding Agents Optimize Real-World Inference Workloads?",
+      "reason": "Useful benchmark for agents optimizing vLLM/SGLang, but it measures agent patching rather than introducing a serving method; retain as adjacent evaluation work.",
+      "source_url": "https://arxiv.org/abs/2602.19594",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16819",
+      "identity_tokens": [
+        "arXiv:2602.16819"
+      ],
+      "title": "Hybrid-Gym: Training Coding Agents to Generalize Across Tasks",
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "source_url": "https://arxiv.org/abs/2602.16819",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07672",
+      "identity_tokens": [
+        "arXiv:2602.07672"
+      ],
+      "title": "Debugging code world models",
+      "reason": "主題は学習エージェント/安全/ドメイン固有応用などで、LLM推論の計算量・メモリ・遅延・スループット・量子化・serving改善に具体的に結び付かない。",
+      "source_url": "https://arxiv.org/abs/2602.07672",
+      "first_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "last_checked_at": "2026-10-06T13:59:53.909794+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    }
+  ]
+}
