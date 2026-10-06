@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a66a942611dffe31-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.15730",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.15730",
+    "identity_tokens": [
+      "arXiv:2407.15730"
+    ],
+    "reason": "The work compresses solar-observation video for telemetry; it does not concern language or Transformer inference.",
+    "first_checked_at": "2026-10-06T12:48:06+00:00",
+    "last_checked_at": "2026-10-06T12:48:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+    ],
+    "title": "Neural-Based Video Compression on Solar Dynamics Observatory Images"
+  },
+  "processed_at": "2026-10-06T12:48:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a66a942611df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

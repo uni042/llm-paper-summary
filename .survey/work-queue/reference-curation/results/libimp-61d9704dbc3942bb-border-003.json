@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61d9704dbc3942bb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.11469",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.11469",
+    "identity_tokens": [
+      "arXiv:2506.11469"
+    ],
+    "reason": "CNN image-classification evaluation; no Transformer/BERT/LLM or serving-latency result. Search includes substantial candidate evaluation and fine-tuning.",
+    "first_checked_at": "2026-10-06T12:48:02+00:00",
+    "last_checked_at": "2026-10-06T12:48:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Structure-Aware Automatic Channel Pruning by Searching with Graph Embedding"
+  },
+  "processed_at": "2026-10-06T12:48:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61d9704dbc39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

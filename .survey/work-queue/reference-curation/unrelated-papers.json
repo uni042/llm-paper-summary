@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T12:43:56+00:00",
-  "record_count": 8229,
+  "updated_at": "2026-10-06T12:48:11+00:00",
+  "record_count": 8261,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -118206,6 +118206,455 @@
         "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
       ],
       "title": "An EST-based Generic Event Boundary Detector"
+    },
+    "DOI:10.1109/tcad.2024.3443027": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2024.3443027",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2024.3443027"
+      ],
+      "reason": "The work accelerates deep symbolic regression, including BFGS optimization; its target is symbolic expression discovery rather than language-model inference.",
+      "first_checked_at": "2026-10-06T12:47:57+00:00",
+      "last_checked_at": "2026-10-06T12:47:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Harmonia: A Unified Architecture for Efficient Deep Symbolic Regression"
+    },
+    "arXiv:2501.18895": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.18895",
+      "identity_tokens": [
+        "arXiv:2501.18895"
+      ],
+      "reason": "The work is about supernet training and subnet selection for speech-recognition model compression. It does not concern LLM inference or a sufficiently direct transformer-efficiency lineage.",
+      "first_checked_at": "2026-10-06T12:47:57+00:00",
+      "last_checked_at": "2026-10-06T12:47:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Efficient Supernet Training with Orthogonal Softmax for Scalable ASR Model Compression"
+    },
+    "DOI:10.1109/iceic64972.2025.10879761": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iceic64972.2025.10879761",
+      "identity_tokens": [
+        "DOI:10.1109/iceic64972.2025.10879761"
+      ],
+      "reason": "The method is deadline-driven residual quantization for CNN/ResNet image classification; it is not a Transformer/LLM inference method.",
+      "first_checked_at": "2026-10-06T12:47:58+00:00",
+      "last_checked_at": "2026-10-06T12:47:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Deadline-Driven CNN Model Based on Residual Quantization"
+    },
+    "arXiv:2412.11515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.11515",
+      "identity_tokens": [
+        "arXiv:2412.11515"
+      ],
+      "reason": "The paper concerns optical matrix-converter synthesis for generic optical computing; the abstract does not establish a language-model or transformer inference method/lineage.",
+      "first_checked_at": "2026-10-06T12:47:58+00:00",
+      "last_checked_at": "2026-10-06T12:47:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Sub-quadratic scalable approximate linear converter using multi-plane light conversion with low-entropy mode mixers"
+    },
+    "arXiv:2507.11773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.11773",
+      "identity_tokens": [
+        "arXiv:2507.11773"
+      ],
+      "reason": "Small-data methods/social overview, not a technical inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T12:47:58+00:00",
+      "last_checked_at": "2026-10-06T12:47:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "title": "Small Data Explainer - The impact of small data methods in everyday life"
+    },
+    "DOI:10.1007/s11047-025-10026-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11047-025-10026-9",
+      "identity_tokens": [
+        "DOI:10.1007/s11047-025-10026-9"
+      ],
+      "reason": "Survey of spiking neural membrane systems, not conventional LLM inference.",
+      "first_checked_at": "2026-10-06T12:47:59+00:00",
+      "last_checked_at": "2026-10-06T12:47:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "A survey on learning models of spiking neural membrane systems"
+    },
+    "DOI:10.1109/itc-cscc66376.2025.11137717": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/itc-cscc66376.2025.11137717",
+      "identity_tokens": [
+        "DOI:10.1109/itc-cscc66376.2025.11137717"
+      ],
+      "reason": "Low-complexity Vision Transformer for image edge computing, vision-only.",
+      "first_checked_at": "2026-10-06T12:47:59+00:00",
+      "last_checked_at": "2026-10-06T12:47:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Low-Complexity Vision Transformer with Bit Reduction for Edge Computing"
+    },
+    "arXiv:2507.03300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.03300",
+      "identity_tokens": [
+        "arXiv:2507.03300"
+      ],
+      "reason": "Large Routing Model for vehicle-routing optimization, not a language model.",
+      "first_checked_at": "2026-10-06T12:47:59+00:00",
+      "last_checked_at": "2026-10-06T12:47:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "LRM-1B: Towards Large Routing Model"
+    },
+    "DOI:10.1007/s00521-025-11209-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00521-025-11209-2",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-025-11209-2"
+      ],
+      "reason": "Abstract concerns regular/octave CNN convolution acceleration on FPGA (MobileNetV2/ResNet-50), not language or Transformer inference; no plausible direct lineage link beyond generic FPGA acceleration.",
+      "first_checked_at": "2026-10-06T12:48:00+00:00",
+      "last_checked_at": "2026-10-06T12:48:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "title": "A compact and flexible FPGA accelerator for regular and octave convolutional neural networks"
+    },
+    "arXiv:2504.19538": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.19538",
+      "identity_tokens": [
+        "arXiv:2504.19538"
+      ],
+      "reason": "The work reduces molecular-property foundation-model fine-tuning cost and model size for chemistry prediction. The abstract indicates a domain-specific training/finetuning objective rather than LLM inference improvement or a plausible LLM lineage.",
+      "first_checked_at": "2026-10-06T12:48:00+00:00",
+      "last_checked_at": "2026-10-06T12:48:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Towards Faster and More Compact Foundation Models for Molecular Property Prediction"
+    },
+    "arXiv:2504.12549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.12549",
+      "identity_tokens": [
+        "arXiv:2504.12549"
+      ],
+      "reason": "The paper studies extraction of memorized books from LLMs and correlation with popularity/duplication; it does not propose an inference optimization.",
+      "first_checked_at": "2026-10-06T12:48:00+00:00",
+      "last_checked_at": "2026-10-06T12:48:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Memorization: A Close Look at Books"
+    },
+    "DOI:10.1109/icassp49660.2025.10890316": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp49660.2025.10890316",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49660.2025.10890316"
+      ],
+      "reason": "The abstract is about synthetic paragraph data for handwritten-text recognition and dataset scarcity, not model inference efficiency.",
+      "first_checked_at": "2026-10-06T12:48:00+00:00",
+      "last_checked_at": "2026-10-06T12:48:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Decreasing Word Error Rates in Paragraph Handwritten Text Recognition with Synthetic Data"
+    },
+    "arXiv:2407.11017": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.11017",
+      "identity_tokens": [
+        "arXiv:2407.11017"
+      ],
+      "reason": "Primary arXiv full text at https://arxiv.org/html/2407.11017 studies direct/inverse prompting to improve answer selection and generation accuracy on MATH and related tasks; it does not reduce inference compute, memory, latency, throughput, or serving cost.",
+      "first_checked_at": "2026-10-06T12:48:01+00:00",
+      "last_checked_at": "2026-10-06T12:48:01+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Direct-Inverse Prompting: Analyzing LLMs' Discriminative Capacity in Self-Improving Generation"
+    },
+    "arXiv:2406.06211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.06211",
+      "identity_tokens": [
+        "arXiv:2406.06211"
+      ],
+      "reason": "Primary arXiv full text at https://arxiv.org/html/2406.06211 presents an LLM for instruction-conditioned driving trajectories. It explicitly notes LLM-based models incur higher inference costs and are currently more suited to offline use; the contribution is motion generation/safety, not efficiency improvement.",
+      "first_checked_at": "2026-10-06T12:48:02+00:00",
+      "last_checked_at": "2026-10-06T12:48:02+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "title": "iMotion-LLM: Instruction-Conditioned Trajectory Generation"
+    },
+    "arXiv:2506.23133": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23133",
+      "identity_tokens": [
+        "arXiv:2506.23133"
+      ],
+      "reason": "Reasoning-format voting targets reasoning quality; no compute/latency reduction method is described.",
+      "first_checked_at": "2026-10-06T12:48:03+00:00",
+      "last_checked_at": "2026-10-06T12:48:03+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Format-Adapter: Improving Reasoning Capability of LLMs by Adapting Suitable Format"
+    },
+    "arXiv:2506.13965": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13965",
+      "identity_tokens": [
+        "arXiv:2506.13965"
+      ],
+      "reason": "Legal statutory-interpretation retrieval, with no inference-system efficiency contribution.",
+      "first_checked_at": "2026-10-06T12:48:03+00:00",
+      "last_checked_at": "2026-10-06T12:48:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ],
+      "title": "Are manual annotations necessary for statutory interpretations retrieval?"
+    },
+    "arXiv:2506.10831": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.10831",
+      "identity_tokens": [
+        "arXiv:2506.10831"
+      ],
+      "reason": "Primary text confirms this is not an inference improvement.",
+      "first_checked_at": "2026-10-06T12:48:03+00:00",
+      "last_checked_at": "2026-10-06T12:48:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Efficiency Robustness of Dynamic Deep Learning Systems"
+    },
+    "arXiv:2507.01504": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.01504",
+      "identity_tokens": [
+        "arXiv:2507.01504"
+      ],
+      "reason": "Cross-modal person re-identification, not language-model inference.",
+      "first_checked_at": "2026-10-06T12:48:04+00:00",
+      "last_checked_at": "2026-10-06T12:48:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Following the Clues: Experiments on Person Re-ID Using Cross-Modal Intelligence"
+    },
+    "DOI:10.1109/tcsi.2024.3488119": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsi.2024.3488119",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2024.3488119"
+      ],
+      "reason": "Logic neural-network FPGA implementation, not Transformer/LLM inference.",
+      "first_checked_at": "2026-10-06T12:48:04+00:00",
+      "last_checked_at": "2026-10-06T12:48:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Logic Neural Networks for Efficient FPGA Implementation"
+    },
+    "DOI:10.1109/ijcnn64981.2025.11227797": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ijcnn64981.2025.11227797",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn64981.2025.11227797"
+      ],
+      "reason": "Conceptual GPT/Transformer analysis without a concrete serving or inference-cost improvement.",
+      "first_checked_at": "2026-10-06T12:48:04+00:00",
+      "last_checked_at": "2026-10-06T12:48:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "2025: A GPT Odyssey. Deconstructing Intelligence by Gradual Dissolution of a Transformer"
+    },
+    "DOI:10.21437/interspeech.2024-1331": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2024-1331",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2024-1331"
+      ],
+      "reason": "The work compresses CNNs with quaternion transformations and pruning for audio tagging; it is not language/Transformer inference.",
+      "first_checked_at": "2026-10-06T12:48:05+00:00",
+      "last_checked_at": "2026-10-06T12:48:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Efficient CNNs with Quaternion Transformations and Pruning for Audio Tagging"
+    },
+    "arXiv:2407.15730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.15730",
+      "identity_tokens": [
+        "arXiv:2407.15730"
+      ],
+      "reason": "The work compresses solar-observation video for telemetry; it does not concern language or Transformer inference.",
+      "first_checked_at": "2026-10-06T12:48:06+00:00",
+      "last_checked_at": "2026-10-06T12:48:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Neural-Based Video Compression on Solar Dynamics Observatory Images"
+    },
+    "DOI:10.1109/isvlsi61997.2024.00082": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isvlsi61997.2024.00082",
+      "identity_tokens": [
+        "DOI:10.1109/isvlsi61997.2024.00082"
+      ],
+      "reason": "The work implements image-segmentation CNN/ViT models on FPGA for Lapa dataset; its contribution is task-specific segmentation/hardware implementation, not a plausible LLM inference lineage.",
+      "first_checked_at": "2026-10-06T12:48:06+00:00",
+      "last_checked_at": "2026-10-06T12:48:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "SegmentAI: A Neural Net Framework for Optimized Multiclass Image Segmentation via FPGA"
+    },
+    "DOI:10.1109/iccsn66511.2025.11172505": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccsn66511.2025.11172505",
+      "identity_tokens": [
+        "DOI:10.1109/iccsn66511.2025.11172505"
+      ],
+      "reason": "Compression of a time-series sensor-prediction model, a task-specific application.",
+      "first_checked_at": "2026-10-06T12:48:07+00:00",
+      "last_checked_at": "2026-10-06T12:48:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Research on Compression Algorithms for Time Series Prediction Models in Source Measure Units Based on Pruning, Quantization, and Knowledge Distillation"
+    },
+    "arXiv:2507.17335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.17335",
+      "identity_tokens": [
+        "arXiv:2507.17335"
+      ],
+      "reason": "Vision-language license-plate recognition; no LLM inference efficiency method.",
+      "first_checked_at": "2026-10-06T12:48:08+00:00",
+      "last_checked_at": "2026-10-06T12:48:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "TransLPRNet: Lite Vision-Language Network for Single/Dual-line Chinese License Plate Recognition"
+    },
+    "arXiv:2410.11434": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.11434",
+      "identity_tokens": [
+        "arXiv:2410.11434"
+      ],
+      "reason": "The article reports a low-bandwidth communication experiment from the Titanic wreck and text-to-lipsynchronous-video reconstruction; it is not an ML model-efficiency paper.",
+      "first_checked_at": "2026-10-06T12:48:08+00:00",
+      "last_checked_at": "2026-10-06T12:48:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Titanic Calling: Low Bandwidth Video Conference from the Titanic Wreck"
+    },
+    "DOI:10.1109/icdle63439.2024.00009": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icdle63439.2024.00009",
+      "identity_tokens": [
+        "DOI:10.1109/icdle63439.2024.00009"
+      ],
+      "reason": "The article is a general discussion of AI in remote education, without a concrete inference-efficiency method.",
+      "first_checked_at": "2026-10-06T12:48:09+00:00",
+      "last_checked_at": "2026-10-06T12:48:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "The Evolution of AI and its Role in Remote Education"
+    },
+    "DOI:10.1109/icdsis65355.2025.11070875": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icdsis65355.2025.11070875",
+      "identity_tokens": [
+        "DOI:10.1109/icdsis65355.2025.11070875"
+      ],
+      "reason": "Abstract identifies a resume/CV extraction RAG system evaluated on 100 resumes; its target is recruitment information extraction, not model inference efficiency or a plausible transformer-efficiency lineage.",
+      "first_checked_at": "2026-10-06T12:48:10+00:00",
+      "last_checked_at": "2026-10-06T12:48:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Contextual Compression of Unstructured Resumes using VectorStore-Based Retrieval Augmented Generation"
+    },
+    "DOI:10.1109/icsp65755.2025.11087185": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icsp65755.2025.11087185",
+      "identity_tokens": [
+        "DOI:10.1109/icsp65755.2025.11087185"
+      ],
+      "reason": "Abstract is specifically a CNN convolution accelerator and memory-access optimization; it does not involve transformer/LLM inference, and the claimed transfer from a Transformer FPGA seed is too weak to retain.",
+      "first_checked_at": "2026-10-06T12:48:10+00:00",
+      "last_checked_at": "2026-10-06T12:48:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "A Method to Improve the Energy Efficiency Ratio of FPGA Convolutional Operations through Memory Access Optimization"
+    },
+    "DOI:10.1109/icfpt64416.2024.11113464": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icfpt64416.2024.11113464",
+      "identity_tokens": [
+        "DOI:10.1109/icfpt64416.2024.11113464"
+      ],
+      "reason": "The work optimizes FPGA routing/interconnect MUX architecture, not neural-network inference or model compression.",
+      "first_checked_at": "2026-10-06T12:48:11+00:00",
+      "last_checked_at": "2026-10-06T12:48:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "FPGA Routing Optimization Based on Multi-Level MUX Architecture"
+    },
+    "DOI:10.1109/acait63902.2024.11022264": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/acait63902.2024.11022264",
+      "identity_tokens": [
+        "DOI:10.1109/acait63902.2024.11022264"
+      ],
+      "reason": "Abstract focuses on training dense retrieval representations with Matryoshka learning and distillation for RAG retrieval; it does not improve LLM inference or model serving.",
+      "first_checked_at": "2026-10-06T12:48:11+00:00",
+      "last_checked_at": "2026-10-06T12:48:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "A Dense Retrieval Model Training Method Combining Matryoshka Representation Learning and Knowledge Distillation"
+    },
+    "DOI:10.1016/j.patrec.2024.11.016": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patrec.2024.11.016",
+      "identity_tokens": [
+        "DOI:10.1016/j.patrec.2024.11.016"
+      ],
+      "reason": "Primary publisher search identifies asymmetric trained ternary quantization for medical-signal classification. Its scope is task-specific signal classification, not language/Transformer inference.",
+      "first_checked_at": "2026-10-06T12:48:11+00:00",
+      "last_checked_at": "2026-10-06T12:48:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "An asymmetric heuristic for trained ternary quantization based on the statistics of the weights: An application to medical signal classification"
     }
   }
 }
