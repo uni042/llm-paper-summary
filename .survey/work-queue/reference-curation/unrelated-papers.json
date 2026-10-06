@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T12:18:06+00:00",
-  "record_count": 8146,
+  "updated_at": "2026-10-06T12:23:10+00:00",
+  "record_count": 8176,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -117042,6 +117042,427 @@
         "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
       ],
       "title": "Automated Legacy Documentation to SysML Conversion"
+    },
+    "arXiv:2510.14919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14919",
+      "identity_tokens": [
+        "arXiv:2510.14919"
+      ],
+      "reason": "Predicts downstream task performance from scaling/context; no inference optimization method.",
+      "first_checked_at": "2026-10-06T12:23:00+00:00",
+      "last_checked_at": "2026-10-06T12:23:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "title": "Predicting Task Performance with Context-aware Scaling Laws"
+    },
+    "arXiv:2510.10466": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.10466",
+      "identity_tokens": [
+        "arXiv:2510.10466"
+      ],
+      "reason": "VLM hallucination mitigation by cross-modal guidance; quality method, not resource efficiency.",
+      "first_checked_at": "2026-10-06T12:23:00+00:00",
+      "last_checked_at": "2026-10-06T12:23:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "When Images Speak Louder: Mitigating Language Bias-induced Hallucinations in VLMs through Cross-Modal Guidance"
+    },
+    "arXiv:2510.09951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.09951",
+      "identity_tokens": [
+        "arXiv:2510.09951"
+      ],
+      "reason": "Hippocampus-inspired actor-critic spatial representation study; unrelated to LLM serving.",
+      "first_checked_at": "2026-10-06T12:23:00+00:00",
+      "last_checked_at": "2026-10-06T12:23:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Emergence of Spatial Representation in an Actor-Critic Agent with Hippocampus-Inspired Sequence Generator"
+    },
+    "arXiv:2510.06828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.06828",
+      "identity_tokens": [
+        "arXiv:2510.06828"
+      ],
+      "reason": "Theoretical recurrent action-model formulation; no concrete LLM inference/serving improvement.",
+      "first_checked_at": "2026-10-06T12:23:00+00:00",
+      "last_checked_at": "2026-10-06T12:23:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Recurrence-Complete Frame-based Action Models"
+    },
+    "arXiv:2310.03049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03049",
+      "identity_tokens": [
+        "arXiv:2310.03049"
+      ],
+      "reason": "Optical-neuron QAT for diffractive physics/image processors, not digital LLM inference.",
+      "first_checked_at": "2026-10-06T12:23:01+00:00",
+      "last_checked_at": "2026-10-06T12:23:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "QuATON: Quantization Aware Training of Optical Neurons"
+    },
+    "DOI:10.1109/iccvw60793.2023.00168": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccvw60793.2023.00168",
+      "identity_tokens": [
+        "DOI:10.1109/iccvw60793.2023.00168"
+      ],
+      "reason": "Resource-constrained deep-learning challenge for computer vision, no LLM-specific method.",
+      "first_checked_at": "2026-10-06T12:23:01+00:00",
+      "last_checked_at": "2026-10-06T12:23:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "RCV2023 Challenges: Benchmarking Model Training and Inference for Resource-Constrained Deep Learning"
+    },
+    "DOI:10.1109/itoec57671.2023.10291588": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/itoec57671.2023.10291588",
+      "identity_tokens": [
+        "DOI:10.1109/itoec57671.2023.10291588"
+      ],
+      "reason": "Underwater acoustic communication modulation/control; the DNN estimates channel BER, not model inference efficiency.",
+      "first_checked_at": "2026-10-06T12:23:01+00:00",
+      "last_checked_at": "2026-10-06T12:23:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Adaptive Modulation and Coding for Underwater Acoustic"
+    },
+    "DOI:10.1145/3746027.3758172": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746027.3758172",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3758172"
+      ],
+      "reason": "Quantized recommender-system preference model; no language-model inference/serving connection.",
+      "first_checked_at": "2026-10-06T12:23:02+00:00",
+      "last_checked_at": "2026-10-06T12:23:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "RQ-Rec: Residual Quantized Hierarchical Preference Modeling for Cross-Domain Recommendation"
+    },
+    "arXiv:2510.20975": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.20975",
+      "identity_tokens": [
+        "arXiv:2510.20975"
+      ],
+      "reason": "Local LLM application for x86 reverse engineering; improves analyst workflow, not model inference efficiency.",
+      "first_checked_at": "2026-10-06T12:23:03+00:00",
+      "last_checked_at": "2026-10-06T12:23:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "REx86: A Local Large Language Model for Assisting in x86 Assembly Reverse Engineering"
+    },
+    "arXiv:2305.03391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.03391",
+      "identity_tokens": [
+        "arXiv:2305.03391"
+      ],
+      "reason": "Filter pruning for audio CNNs; task-specific audio classification/tagging, not LLM inference.",
+      "first_checked_at": "2026-10-06T12:23:03+00:00",
+      "last_checked_at": "2026-10-06T12:23:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Compressing Audio CNNS with Graph Centrality Based Filter Pruning"
+    },
+    "DOI:10.1109/ipdpsw59300.2023.00029": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ipdpsw59300.2023.00029",
+      "identity_tokens": [
+        "DOI:10.1109/ipdpsw59300.2023.00029"
+      ],
+      "reason": "Neural-ODE/residual hybrid vision transformer on FPGA; computer-vision architecture, not language-model inference.",
+      "first_checked_at": "2026-10-06T12:23:03+00:00",
+      "last_checked_at": "2026-10-06T12:23:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "A Lightweight Transformer Model using Neural ODE for FPGAs"
+    },
+    "arXiv:2304.09516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.09516",
+      "identity_tokens": [
+        "arXiv:2304.09516"
+      ],
+      "reason": "Controls keyword inclusion/position in generated text for task quality, with no efficiency objective.",
+      "first_checked_at": "2026-10-06T12:23:03+00:00",
+      "last_checked_at": "2026-10-06T12:23:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Controlling keywords and their positions in text generation"
+    },
+    "arXiv:2304.01500": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.01500",
+      "identity_tokens": [
+        "arXiv:2304.01500"
+      ],
+      "reason": "Physics-aware training for diffractive optical neural networks and optical imaging; outside LLM inference.",
+      "first_checked_at": "2026-10-06T12:23:04+00:00",
+      "last_checked_at": "2026-10-06T12:23:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Physics-aware Roughness Optimization for Diffractive Optical Neural Networks"
+    },
+    "arXiv:2303.01166": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.01166",
+      "identity_tokens": [
+        "arXiv:2303.01166"
+      ],
+      "reason": "Binary point-cloud transformer for SLAM place recognition; task-specific point-cloud vision.",
+      "first_checked_at": "2026-10-06T12:23:04+00:00",
+      "last_checked_at": "2026-10-06T12:23:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "BPT: Binary Point Cloud Transformer for Place Recognition"
+    },
+    "DOI:10.1109/iscas58744.2024.10557837": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iscas58744.2024.10557837",
+      "identity_tokens": [
+        "DOI:10.1109/iscas58744.2024.10557837"
+      ],
+      "reason": "ViT-specific hardware/software compression and computer-vision accelerator; no LLM inference method.",
+      "first_checked_at": "2026-10-06T12:23:05+00:00",
+      "last_checked_at": "2026-10-06T12:23:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "HSViT: A Hardware and Software Collaborative Design for Vision Transformer via Multi-level Compression"
+    },
+    "DOI:10.1109/icassp48485.2024.10447258": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp48485.2024.10447258",
+      "identity_tokens": [
+        "DOI:10.1109/icassp48485.2024.10447258"
+      ],
+      "reason": "On-device self-supervised keyword spotting; speech-model QAT rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-06T12:23:05+00:00",
+      "last_checked_at": "2026-10-06T12:23:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "On-Device Constrained Self-Supervised Learning for Keyword Spotting via Quantization Aware Pre-Training and Fine-Tuning"
+    },
+    "arXiv:2402.14843": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.14843",
+      "identity_tokens": [
+        "arXiv:2402.14843"
+      ],
+      "reason": "Improves text diffusion generation quality/control, not inference resource use or deployment efficiency.",
+      "first_checked_at": "2026-10-06T12:23:05+00:00",
+      "last_checked_at": "2026-10-06T12:23:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Text Diffusion with Reinforced Conditioning"
+    },
+    "arXiv:2510.19155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19155",
+      "identity_tokens": [
+        "arXiv:2510.19155"
+      ],
+      "reason": "Parameter-efficient fine-tuning for robustness/forgetting; training method, not inference optimization.",
+      "first_checked_at": "2026-10-06T12:23:06+00:00",
+      "last_checked_at": "2026-10-06T12:23:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "VeFA: Vector-Based Feature Space Adaptation for Robust Model Fine-Tuning"
+    },
+    "DOI:10.1109/aiccsa66935.2025.11315316": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/aiccsa66935.2025.11315316",
+      "identity_tokens": [
+        "DOI:10.1109/aiccsa66935.2025.11315316"
+      ],
+      "reason": "Multi-agent RAG claim-verification application; no concrete inference resource optimization.",
+      "first_checked_at": "2026-10-06T12:23:06+00:00",
+      "last_checked_at": "2026-10-06T12:23:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "ClaimVerAgents: A Multi-Agent Retrieval-Augmented Claim Verification Framework"
+    },
+    "DOI:10.1109/iccvw69036.2025.00512": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccvw69036.2025.00512",
+      "identity_tokens": [
+        "DOI:10.1109/iccvw69036.2025.00512"
+      ],
+      "reason": "Non-autoregressive sign-language production for a specialized task; no LLM inference efficiency method.",
+      "first_checked_at": "2026-10-06T12:23:06+00:00",
+      "last_checked_at": "2026-10-06T12:23:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Iterative Latent Refinement for Robust Non-Autoregressive Sign Language Production"
+    },
+    "arXiv:2510.04944": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04944",
+      "identity_tokens": [
+        "arXiv:2510.04944"
+      ],
+      "reason": "SSM/attention mathematical duality analysis; no specific inference-efficiency method or deployment evaluation.",
+      "first_checked_at": "2026-10-06T12:23:07+00:00",
+      "last_checked_at": "2026-10-06T12:23:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "On Structured State-Space Duality"
+    },
+    "DOI:10.1109/socc66126.2025.11235392": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/socc66126.2025.11235392",
+      "identity_tokens": [
+        "DOI:10.1109/socc66126.2025.11235392"
+      ],
+      "reason": "Spiking-transformer simulation/dataflow for vision workloads; distinct spiking/vision architecture, not LLM inference.",
+      "first_checked_at": "2026-10-06T12:23:07+00:00",
+      "last_checked_at": "2026-10-06T12:23:07+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "title": "SimST: Simulation Framework for Energy-Dataflow Co-Optimization in Spike-Driven Transformer"
+    },
+    "arXiv:2509.20677": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20677",
+      "identity_tokens": [
+        "arXiv:2509.20677"
+      ],
+      "reason": "Studies in-context learning stability and prompt-size estimation, not model inference efficiency.",
+      "first_checked_at": "2026-10-06T12:23:08+00:00",
+      "last_checked_at": "2026-10-06T12:23:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Stability of In-Context Learning: A Spectral Coverage Perspective"
+    },
+    "arXiv:2508.19806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19806",
+      "identity_tokens": [
+        "arXiv:2508.19806"
+      ],
+      "reason": "Event-camera vision sparsity for object detection/flow; not LLM inference.",
+      "first_checked_at": "2026-10-06T12:23:08+00:00",
+      "last_checked_at": "2026-10-06T12:23:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "Context-aware Sparse Spatiotemporal Learning for Event-based Vision"
+    },
+    "arXiv:2508.16516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.16516",
+      "identity_tokens": [
+        "arXiv:2508.16516"
+      ],
+      "reason": "Dynamic quantization for graph collaborative filtering; non-language recommender model.",
+      "first_checked_at": "2026-10-06T12:23:09+00:00",
+      "last_checked_at": "2026-10-06T12:23:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "A Node-Aware Dynamic Quantization Approach for Graph Collaborative Filtering"
+    },
+    "DOI:10.1080/0305215x.2025.2544215": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/0305215x.2025.2544215",
+      "identity_tokens": [
+        "DOI:10.1080/0305215x.2025.2544215"
+      ],
+      "reason": "LLM-generated optimization-framework code, an application rather than inference/serving optimization.",
+      "first_checked_at": "2026-10-06T12:23:09+00:00",
+      "last_checked_at": "2026-10-06T12:23:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Leveraging large language models for the automatic implementation of problems in optimization frameworks"
+    },
+    "DOI:10.3390/ai6090233": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ai6090233",
+      "identity_tokens": [
+        "DOI:10.3390/ai6090233"
+      ],
+      "reason": "Vision-only efficient ViT architecture; no language-model inference result.",
+      "first_checked_at": "2026-10-06T12:23:09+00:00",
+      "last_checked_at": "2026-10-06T12:23:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "EEViT: Efficient Enhanced Vision Transformer Architectures with Information Propagation and Improved Inductive Bias"
+    },
+    "arXiv:2509.07222": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.07222",
+      "identity_tokens": [
+        "arXiv:2509.07222"
+      ],
+      "reason": "Primary text confirms this is a fairness study of quantized ResNet18 image classification, with no LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-06T12:23:10+00:00",
+      "last_checked_at": "2026-10-06T12:23:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Explaining How Quantization Disparately Skews a Model"
+    },
+    "DOI:10.1016/j.neunet.2025.108114": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108114",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2025.108114"
+      ],
+      "reason": "Cross-lingual semantic alignment and distillation for low-resource languages; training-side method, no inference efficiency result.",
+      "first_checked_at": "2026-10-06T12:23:10+00:00",
+      "last_checked_at": "2026-10-06T12:23:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "A domain-specific cross-lingual semantic alignment learning model for low-resource languages"
+    },
+    "arXiv:2508.10557": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10557",
+      "identity_tokens": [
+        "arXiv:2508.10557"
+      ],
+      "reason": "Hybrid PTQ/QAT for 3D perception models; model-quantization training efficiency is task-specific, not LLM inference.",
+      "first_checked_at": "2026-10-06T12:23:10+00:00",
+      "last_checked_at": "2026-10-06T12:23:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "PTQAT: A Hybrid Parameter-Efficient Quantization Algorithm for 3D Perception Tasks"
     }
   }
 }

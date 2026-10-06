@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd10ef46d271d6e0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/jiot.2025.3579587",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/jiot.2025.3579587",
+    "identity_tokens": [
+      "DOI:10.1109/jiot.2025.3579587"
+    ],
+    "reason": "Plausible adjacent model compression/LLM deployment topic, but primary full text was unavailable; no stronger inclusion claim is supported.",
+    "first_checked_at": "2026-10-06T12:23:09+00:00",
+    "last_checked_at": "2026-10-06T12:23:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Transformer-Based Nonautoregressive Image Captioning via Guided Keyword Generation and Learnable Positional Encoding for IoT Devices"
+  },
+  "processed_at": "2026-10-06T12:23:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd10ef46d271",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

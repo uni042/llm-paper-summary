@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ec2e34d063dbe00-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1609/aaai.v38i16.29781",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1609/aaai.v38i16.29781",
+    "identity_tokens": [
+      "DOI:10.1609/aaai.v38i16.29781"
+    ],
+    "reason": "ShareBERT constructs encoder transformations by sharing embedding parameters with hidden layers, with embedding factorization/virtual embeddings variants. AAAI full text reports GLUE results: ShareBERT Small uses 5.0M parameters (21.9x fewer) and reaches 95.5% of BERT Base average score; Base/Large trade parameter count for accuracy. It also evaluates translation and image captioning. This is model-size compression for encoder PLMs, but not autoregressive LLM inference/serving; retained as borderline adjacent compression evidence.",
+    "first_checked_at": "2026-10-06T12:23:04+00:00",
+    "last_checked_at": "2026-10-06T12:23:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ShareBERT: Embeddings Are Capable of Learning Hidden Layers"
+  },
+  "processed_at": "2026-10-06T12:23:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ec2e34d063d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
