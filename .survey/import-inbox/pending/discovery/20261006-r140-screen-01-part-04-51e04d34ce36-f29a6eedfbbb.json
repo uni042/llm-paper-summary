@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r140-screen-01-part-04-51e04d34ce36",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20995",
+      "identity_tokens": [
+        "arXiv:2607.20995"
+      ],
+      "title": "Where Animacy Lives in Large Language Models: Tracing the Circuits of the Animacy Concept",
+      "reason": "The paper analyzes animacy circuits with controlled prompts and ablations; its findings concern interpretability/generalization, not serving cost.",
+      "source_url": "https://arxiv.org/abs/2607.20995",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24833",
+      "identity_tokens": [
+        "arXiv:2607.24833"
+      ],
+      "title": "AdaKP: Online Adaptive Knowledge-Point Selection for Reasoning-Oriented Reinforcement Learning",
+      "reason": "AdaKP reduces knowledge-point selection overhead during RL training; its main trained-model comparison uses no hints at inference, outside this inference-efficiency target.",
+      "source_url": "https://arxiv.org/abs/2607.24833",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18958",
+      "identity_tokens": [
+        "arXiv:2607.18958"
+      ],
+      "title": "Dual Adversarial Fine-tuning for Enhancing Robustness of Large Vision Language Model",
+      "reason": "The method is adversarial robustness fine-tuning for LVLMs; tested improvements are robustness/accuracy, not inference cost.",
+      "source_url": "https://arxiv.org/abs/2607.18958",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19321",
+      "identity_tokens": [
+        "arXiv:2607.19321"
+      ],
+      "title": "ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D",
+      "reason": "Inference-server optimization appears as a safety-benchmark task; the paper evaluates sabotage/monitor detection, not a serving optimization.",
+      "source_url": "https://arxiv.org/abs/2607.19321",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28612",
+      "identity_tokens": [
+        "arXiv:2608.28612"
+      ],
+      "title": "InternReviewer&InternAdvocate: Objective Reward and Evaluation for Agentic Reinforcement Learning in Peer Review and Rebuttal",
+      "reason": "The paper’s infrastructure gains serve peer-review agent training/evaluation rollouts, not LLM decoding or inference serving.",
+      "source_url": "https://arxiv.org/abs/2608.28612",
+      "first_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "last_checked_at": "2026-10-06T19:47:03.759326+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    }
+  ]
+}
