@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b06044cf68fd8131-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.01067",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.01067",
+    "identity_tokens": [
+      "arXiv:2404.01067"
+    ],
+    "reason": "Efficiency contribution is training-data/fine-tuning compute, not inference runtime; lineage overlap is training-resource only.",
+    "first_checked_at": "2026-10-06T18:24:29+00:00",
+    "last_checked_at": "2026-10-06T18:24:29+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the Mystery of Influential Data for Mathematical Reasoning"
+  },
+  "processed_at": "2026-10-06T18:24:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b06044cf68fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

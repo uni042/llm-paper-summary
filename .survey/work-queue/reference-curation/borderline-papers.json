@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T18:11:27+00:00",
-  "record_count": 3648,
+  "updated_at": "2026-10-06T18:24:31+00:00",
+  "record_count": 3662,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -55808,6 +55808,218 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Decoding the interactions and functions of non-coding RNA with artificial intelligence"
+    },
+    "DOI:10.1109/tsmc.2023.3284840": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tsmc.2023.3284840",
+      "identity_tokens": [
+        "DOI:10.1109/tsmc.2023.3284840"
+      ],
+      "reason": "IEEE Xplore primary abstract was available, but full-text method/evaluation/limitations could not be accessed. 題名/一次abstractから接点は否定できないためborderlineとする。",
+      "first_checked_at": "2026-10-06T18:24:26+00:00",
+      "last_checked_at": "2026-10-06T18:24:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning Dynamic Dependencies With Graph Evolution Recurrent Unit for Stock Predictions"
+    },
+    "DOI:10.1145/3605573.3605647": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3605573.3605647",
+      "identity_tokens": [
+        "DOI:10.1145/3605573.3605647"
+      ],
+      "reason": "ACM DOI primary page was unavailable, so abstract/full text could not be verified. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "first_checked_at": "2026-10-06T18:24:26+00:00",
+      "last_checked_at": "2026-10-06T18:24:26+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoTrain: Efficient Scheduling for Large-Model Training upon GPU and CPU in Parallel"
+    },
+    "arXiv:2505.16104": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.16104",
+      "identity_tokens": [
+        "arXiv:2505.16104"
+      ],
+      "reason": "Safety realignment is the goal; no additional inference compute/latency saving is shown, though it is connected to pruning lineage.",
+      "first_checked_at": "2026-10-06T18:24:26+00:00",
+      "last_checked_at": "2026-10-06T18:24:26+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hierarchical Safety Realignment: Lightweight Restoration of Safety in Pruned Large Vision-Language Models"
+    },
+    "arXiv:2410.11119": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.11119",
+      "identity_tokens": [
+        "arXiv:2410.11119"
+      ],
+      "reason": "Classification/tagging, not autoregressive prompt shortening or measured LLM serving savings; retain as adjacent long-context work.",
+      "first_checked_at": "2026-10-06T18:24:27+00:00",
+      "last_checked_at": "2026-10-06T18:24:27+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ChuLo: Chunk-Level Key Information Representation for Long Document Understanding"
+    },
+    "DOI:10.1080/17588928.2025.2484485": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/17588928.2025.2484485",
+      "identity_tokens": [
+        "DOI:10.1080/17588928.2025.2484485"
+      ],
+      "reason": "Taylor & Francis DOI page retrieval failed; primary abstract/full text could not be verified. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "first_checked_at": "2026-10-06T18:24:28+00:00",
+      "last_checked_at": "2026-10-06T18:24:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Markov: Transformers, memory, and attention"
+    },
+    "arXiv:2411.07176": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.07176",
+      "identity_tokens": [
+        "arXiv:2411.07176"
+      ],
+      "reason": "No KV-cache, attention-compute, latency or throughput reduction is proposed or measured; its KV-lineage link is conceptual.",
+      "first_checked_at": "2026-10-06T18:24:28+00:00",
+      "last_checked_at": "2026-10-06T18:24:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "More Expressive Attention with Negative Weights"
+    },
+    "DOI:10.1109/tpds.2024.3406420": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2024.3406420",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2024.3406420"
+      ],
+      "reason": "IEEE DOI/Xplore primary source could not be opened; secondary search metadata was not used as primary abstract evidence. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "first_checked_at": "2026-10-06T18:24:29+00:00",
+      "last_checked_at": "2026-10-06T18:24:29+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Multidimensional Communication Scheduling Method for Hybrid Parallel DNN Training"
+    },
+    "DOI:10.1145/3620665.3640393": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3620665.3640393",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640393"
+      ],
+      "reason": "ACM DOI page returned 403 Forbidden; no author/ACM primary abstract or full text was retrievable. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "first_checked_at": "2026-10-06T18:24:29+00:00",
+      "last_checked_at": "2026-10-06T18:24:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CMC: Video Transformer Acceleration via CODEC Assisted Matrix Condensing"
+    },
+    "arXiv:2404.01067": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.01067",
+      "identity_tokens": [
+        "arXiv:2404.01067"
+      ],
+      "reason": "Efficiency contribution is training-data/fine-tuning compute, not inference runtime; lineage overlap is training-resource only.",
+      "first_checked_at": "2026-10-06T18:24:29+00:00",
+      "last_checked_at": "2026-10-06T18:24:29+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring the Mystery of Influential Data for Mathematical Reasoning"
+    },
+    "DOI:10.1016/j.eswa.2024.123847": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2024.123847",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2024.123847"
+      ],
+      "reason": "ScienceDirect primary preview supplied abstract but no accessible article full text; image-captioning attention is clear, while full-text system-efficiency details could not be checked. 題名/一次abstractから接点は否定できないためborderlineとする。",
+      "first_checked_at": "2026-10-06T18:24:30+00:00",
+      "last_checked_at": "2026-10-06T18:24:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CA-Captioner: A novel concentrated attention for image captioning"
+    },
+    "DOI:10.1109/mm.2025.3593444": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mm.2025.3593444",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2025.3593444"
+      ],
+      "reason": "IEEE Micro issue listing verified title/bibliography but primary abstract text could not be reached; cached input metadata is not treated as evidence. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "first_checked_at": "2026-10-06T18:24:30+00:00",
+      "last_checked_at": "2026-10-06T18:24:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Corsair: An In-Memory Computing Chiplet Architecture for Inference-Time Compute Acceleration"
+    },
+    "arXiv:2508.16745": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.16745",
+      "identity_tokens": [
+        "arXiv:2508.16745"
+      ],
+      "reason": "Authors note synthetic-task external-validity limits and small-model coverage; no system latency/cost improvement is shown.",
+      "first_checked_at": "2026-10-06T18:24:30+00:00",
+      "last_checked_at": "2026-10-06T18:24:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Memorization: Extending Reasoning Depth with Recurrence, Memory and Test-Time Compute Scaling"
+    },
+    "arXiv:2502.05220": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.05220",
+      "identity_tokens": [
+        "arXiv:2502.05220"
+      ],
+      "reason": "A security/UAV application architecture, not a general serving optimization; reported time/memory comparisons establish no baseline speedup.",
+      "first_checked_at": "2026-10-06T18:24:31+00:00",
+      "last_checked_at": "2026-10-06T18:24:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Aero-LLM: A Distributed Framework for Secure UAV Communication and Intelligent Decision-Making"
+    },
+    "DOI:10.1109/hpca61900.2025.00049": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00049",
+      "identity_tokens": [
+        "DOI:10.1109/hpca61900.2025.00049"
+      ],
+      "reason": "Generic dynamic networks rather than LLM decoder serving; sparse/adaptive inference hardware lineage is plausible but untested.",
+      "first_checked_at": "2026-10-06T18:24:31+00:00",
+      "last_checked_at": "2026-10-06T18:24:31+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adyna: Accelerating Dynamic Neural Networks with Adaptive Scheduling"
     }
   }
 }

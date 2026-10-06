@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T18:11:28+00:00",
-  "record_count": 9160,
+  "updated_at": "2026-10-06T18:24:32+00:00",
+  "record_count": 9183,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -131343,6 +131343,329 @@
         "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
       ],
       "title": "Token Transforming: A Unified and Training-Free Token Compression Framework for Vision Transformer Acceleration"
+    },
+    "arXiv:2401.17604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.17604",
+      "identity_tokens": [
+        "arXiv:2401.17604"
+      ],
+      "reason": "Primary abstract token pruning is for cued-speech lip/hand multimodal recognition, not LLM serving.",
+      "first_checked_at": "2026-10-06T18:24:26+00:00",
+      "last_checked_at": "2026-10-06T18:24:26+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Computation and Parameter Efficient Multi-Modal Fusion Transformer for Cued Speech Recognition"
+    },
+    "DOI:10.1007/978-3-031-72684-2_24": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-031-72684-2_24",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-031-72684-2_24"
+      ],
+      "reason": "Springer primary abstract describes low-bit PTQ customized for SAM image segmentation, not LLM quantization/inference.",
+      "first_checked_at": "2026-10-06T18:24:26+00:00",
+      "last_checked_at": "2026-10-06T18:24:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md"
+      ],
+      "title": "PQ-SAM: Post-training Quantization for Segment Anything Model"
+    },
+    "arXiv:2510.24088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.24088",
+      "identity_tokens": [
+        "arXiv:2510.24088"
+      ],
+      "reason": "Primary abstract derives discrete-diffusion likelihood estimators; it does not propose fewer generation steps or lower inference latency.",
+      "first_checked_at": "2026-10-06T18:24:26+00:00",
+      "last_checked_at": "2026-10-06T18:24:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Information-Theoretic Discrete Diffusion"
+    },
+    "arXiv:2505.21817": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21817",
+      "identity_tokens": [
+        "arXiv:2505.21817"
+      ],
+      "reason": "Image-diffusion generation, not language-model inference or serving.",
+      "first_checked_at": "2026-10-06T18:24:27+00:00",
+      "last_checked_at": "2026-10-06T18:24:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "ALTER: All-in-One Layer Pruning and Temporal Expert Routing for Efficient Diffusion Generation"
+    },
+    "arXiv:2505.20535": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20535",
+      "identity_tokens": [
+        "arXiv:2505.20535"
+      ],
+      "reason": "Primary abstract studies Rotary Masked Autoencoders for irregular time-series and other modalities, outside LLM inference systems.",
+      "first_checked_at": "2026-10-06T18:24:27+00:00",
+      "last_checked_at": "2026-10-06T18:24:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Rotary Masked Autoencoders are Versatile Learners"
+    },
+    "arXiv:2505.16972": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16972",
+      "identity_tokens": [
+        "arXiv:2505.16972"
+      ],
+      "reason": "Primary abstract scales synthetic speech data for ASR training/pretraining, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-06T18:24:27+00:00",
+      "last_checked_at": "2026-10-06T18:24:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "From Tens of Hours to Tens of Thousands: Scaling Back-Translation for Speech Recognition"
+    },
+    "arXiv:2504.03714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03714",
+      "identity_tokens": [
+        "arXiv:2504.03714"
+      ],
+      "reason": "Robustness/security study; no inference speed, memory or serving optimization.",
+      "first_checked_at": "2026-10-06T18:24:27+00:00",
+      "last_checked_at": "2026-10-06T18:24:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Breach in the Shield: Unveiling the Vulnerabilities of Large Language Models"
+    },
+    "arXiv:2509.24368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24368",
+      "identity_tokens": [
+        "arXiv:2509.24368"
+      ],
+      "reason": "Primary abstract is watermarking for diffusion language models, a provenance/robustness method rather than inference-cost optimization.",
+      "first_checked_at": "2026-10-06T18:24:28+00:00",
+      "last_checked_at": "2026-10-06T18:24:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Watermarking Diffusion Language Models"
+    },
+    "arXiv:2509.24088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24088",
+      "identity_tokens": [
+        "arXiv:2509.24088"
+      ],
+      "reason": "Primary abstract studies multi-agent error recognition and knowledge transfer; no LLM runtime, memory or serving improvement is proposed.",
+      "first_checked_at": "2026-10-06T18:24:28+00:00",
+      "last_checked_at": "2026-10-06T18:24:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "CORRECT: COndensed eRror RECognition via knowledge Transfer in multi-agent systems"
+    },
+    "DOI:10.1109/cvpr52734.2025.02616": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr52734.2025.02616",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52734.2025.02616"
+      ],
+      "reason": "CVF primary abstract is a volumetric-attention method for hyperspectral restoration/denoising/classification, not an LLM or LLM-serving technique.",
+      "first_checked_at": "2026-10-06T18:24:28+00:00",
+      "last_checked_at": "2026-10-06T18:24:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "VolFormer: Explore More Comprehensive Cube Interaction for Hyperspectral Image Restoration and Beyond"
+    },
+    "arXiv:2502.15393": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.15393",
+      "identity_tokens": [
+        "arXiv:2502.15393"
+      ],
+      "reason": "Primary abstract describes long-video caption dataset/annotation and output quality, not inference-compute reduction or serving methods.",
+      "first_checked_at": "2026-10-06T18:24:28+00:00",
+      "last_checked_at": "2026-10-06T18:24:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "LongCaptioning: Unlocking the Power of Long Video Caption Generation in Large Multimodal Models"
+    },
+    "arXiv:2501.09765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.09765",
+      "identity_tokens": [
+        "arXiv:2501.09765"
+      ],
+      "reason": "Primary abstract concerns education-data PII detection and privacy/precision, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T18:24:29+00:00",
+      "last_checked_at": "2026-10-06T18:24:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Enhancing the De-identification of Personally Identifiable Information in Educational Data"
+    },
+    "arXiv:2501.05037": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.05037",
+      "identity_tokens": [
+        "arXiv:2501.05037"
+      ],
+      "reason": "Primary abstract is a long-video QA dataset/instruction-tuning contribution for understanding quality, with no inference resource reduction.",
+      "first_checked_at": "2026-10-06T18:24:29+00:00",
+      "last_checked_at": "2026-10-06T18:24:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "LongViTU: Instruction Tuning for Long-Form Video Understanding"
+    },
+    "arXiv:2411.18322": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.18322",
+      "identity_tokens": [
+        "arXiv:2411.18322"
+      ],
+      "reason": "Primary abstract studies MoE image-classification scaling, not LLM autoregressive serving.",
+      "first_checked_at": "2026-10-06T18:24:29+00:00",
+      "last_checked_at": "2026-10-06T18:24:29+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Mixture of Experts in Image Classification: What's the Sweet Spot?"
+    },
+    "arXiv:2404.03380": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03380",
+      "identity_tokens": [
+        "arXiv:2404.03380"
+      ],
+      "reason": "Graph-learning workloads only; no decoder LLM or LLM serving/memory connection is demonstrated.",
+      "first_checked_at": "2026-10-06T18:24:30+00:00",
+      "last_checked_at": "2026-10-06T18:24:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "On the Theoretical Expressive Power and the Design Space of Higher-Order Graph Transformers"
+    },
+    "arXiv:2509.26063": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.26063",
+      "identity_tokens": [
+        "arXiv:2509.26063"
+      ],
+      "reason": "Primary abstract is discrete-diffusion user/item recommendation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T18:24:30+00:00",
+      "last_checked_at": "2026-10-06T18:24:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Fading to Grow: Growing Preference Ratios via Preference Fading Discrete Diffusion for Recommendation"
+    },
+    "arXiv:2506.01535": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01535",
+      "identity_tokens": [
+        "arXiv:2506.01535"
+      ],
+      "reason": "Primary abstract covers vocabulary/embedding transfer for low-resource languages, without inference compute/memory reduction.",
+      "first_checked_at": "2026-10-06T18:24:30+00:00",
+      "last_checked_at": "2026-10-06T18:24:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Dictionaries to the Rescue: Cross-Lingual Vocabulary Transfer for Low-Resource Languages Using Bilingual Dictionaries"
+    },
+    "arXiv:2505.23654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23654",
+      "identity_tokens": [
+        "arXiv:2505.23654"
+      ],
+      "reason": "Primary abstract evaluates argument coverage in LLM summaries; it does not implement prompt compression or latency optimization.",
+      "first_checked_at": "2026-10-06T18:24:31+00:00",
+      "last_checked_at": "2026-10-06T18:24:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "ARC: Argument Representation and Coverage Analysis for Zero-Shot Long Document Summarization with Instruction Following LLMs"
+    },
+    "arXiv:2603.00439": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00439",
+      "identity_tokens": [
+        "arXiv:2603.00439"
+      ],
+      "reason": "Primary abstract is Mamba-based CAD sequence generation, not language-model inference or serving.",
+      "first_checked_at": "2026-10-06T18:24:31+00:00",
+      "last_checked_at": "2026-10-06T18:24:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Mamba-CAD: State Space Model for 3D Computer-Aided Design Generative Modeling"
+    },
+    "arXiv:2503.10542": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10542",
+      "identity_tokens": [
+        "arXiv:2503.10542"
+      ],
+      "reason": "Primary abstract analyzes supervision pathologies on a synthetic graph-search task, not inference efficiency.",
+      "first_checked_at": "2026-10-06T18:24:31+00:00",
+      "last_checked_at": "2026-10-06T18:24:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Language Models, Graph Searching, and Supervision Adulteration: When More Supervision is Less and How to Make More More"
+    },
+    "arXiv:2503.06491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.06491",
+      "identity_tokens": [
+        "arXiv:2503.06491"
+      ],
+      "reason": "Primary abstract proposes frozen experts plus PEFT for training parameter efficiency, without LLM inference/serving gains.",
+      "first_checked_at": "2026-10-06T18:24:32+00:00",
+      "last_checked_at": "2026-10-06T18:24:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "MoFE: Mixture of Frozen Experts Architecture"
+    },
+    "arXiv:2501.06999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06999",
+      "identity_tokens": [
+        "arXiv:2501.06999"
+      ],
+      "reason": "Image generative probability modeling; no LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T18:24:32+00:00",
+      "last_checked_at": "2026-10-06T18:24:32+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Likelihood Training of Cascaded Diffusion Models via Hierarchical Volume-preserving Maps"
+    },
+    "arXiv:2410.13147": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13147",
+      "identity_tokens": [
+        "arXiv:2410.13147"
+      ],
+      "reason": "Primary abstract describes an LLM-agent drug/molecule optimization application; it contributes no inference efficiency technique or system evaluation.",
+      "first_checked_at": "2026-10-06T18:24:32+00:00",
+      "last_checked_at": "2026-10-06T18:24:32+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "AgentDrug: Utilizing Large Language Models in an Agentic Workflow for Zero-Shot Molecular Optimization"
     }
   }
 }
