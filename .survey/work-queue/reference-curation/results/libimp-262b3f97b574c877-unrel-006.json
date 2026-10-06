@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-262b3f97b574c877-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.437",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.437",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2020.emnlp-main.437",
+      "arXiv:2002.08910"
+    ],
+    "reason": "外部retrievalなしでpretrained LMのparametersへ知識を保持しclosed-book QAする能力を評価する研究。model sizeとQA品質の関係が主題で推論systems効率ではない。",
+    "first_checked_at": "2026-10-06T14:30:48+00:00",
+    "last_checked_at": "2026-10-06T21:30:26+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+    ],
+    "title": "How Much Knowledge Can You Pack into the Parameters of a Language Model?"
+  },
+  "processed_at": "2026-10-06T21:30:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-262b3f97b574",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

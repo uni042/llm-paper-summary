@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-262b3f97b574c877-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2111.09543",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2111.09543",
+    "identity_tokens": [
+      "arXiv:2111.09543"
+    ],
+    "reason": "ELECTRA型replaced-token detectionとgradient-disentangled embedding sharingで事前学習効率・NLU品質を改善する研究。推論効率ではなくtraining efficiencyとdownstream accuracyが主目的。",
+    "first_checked_at": "2026-10-06T21:30:26+00:00",
+    "last_checked_at": "2026-10-06T21:30:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing"
+  },
+  "processed_at": "2026-10-06T21:30:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-262b3f97b574",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

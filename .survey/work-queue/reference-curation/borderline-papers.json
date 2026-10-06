@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T21:23:39+00:00",
-  "record_count": 4195,
+  "updated_at": "2026-10-06T21:30:37+00:00",
+  "record_count": 4225,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6292,18 +6292,6 @@
       "last_checked_at": "2026-10-04T21:40:32+00:00",
       "linked_from": [],
       "title": "Discovering faster matrix multiplication algorithms with reinforcement learning"
-    },
-    "arXiv:2109.05093": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2109.05093",
-      "identity_tokens": [
-        "arXiv:2109.05093"
-      ],
-      "reason": "自己回帰言語モデルの各復号stepでincremental parserにより不許可tokenを拒否し、SQL等の形式言語制約を保証する推論時decoding方式。推論経路へ直接介入するが、主目的・評価はtext-to-SQLの正しさで速度・メモリ効率化ではないためborderline。",
-      "first_checked_at": "2026-10-04T21:43:57+00:00",
-      "last_checked_at": "2026-10-04T21:43:57+00:00",
-      "linked_from": [],
-      "title": "PICARD: Parsing Incrementally for Constrained Auto-Regressive Decoding from Language Models"
     },
     "arXiv:2403.14403": {
       "classification": "borderline",
@@ -64041,6 +64029,472 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Atten-LTC-Enhanced MoE Model for Agent Trajectory Prediction in Autonomous Driving"
+    },
+    "DOI:10.1109/icicat68430.2025.11414702": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icicat68430.2025.11414702",
+      "identity_tokens": [
+        "DOI:10.1109/icicat68430.2025.11414702"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/ICICAT68430.2025.11414702) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:19+00:00",
+      "last_checked_at": "2026-10-06T21:30:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VST-DTP: A Hybrid State-Space-Transformer with Differentiable Topology and Physics Priors for Pulmonary Vessel Segmentation"
+    },
+    "DOI:10.1109/aiot66900.2025.00093": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aiot66900.2025.00093",
+      "identity_tokens": [
+        "DOI:10.1109/aiot66900.2025.00093"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/AIoT66900.2025.00093) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:19+00:00",
+      "last_checked_at": "2026-10-06T21:30:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Vision Knowledge Pipeline Systems on Resource-Constrained Edge Devices"
+    },
+    "DOI:10.1007/s42514-025-00264-9": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s42514-025-00264-9",
+      "identity_tokens": [
+        "DOI:10.1007/s42514-025-00264-9"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1007/s42514-025-00264-9) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:20+00:00",
+      "last_checked_at": "2026-10-06T21:30:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Redundancy reduction with gradient-weighted pruning for cross-domain few-shot learning"
+    },
+    "DOI:10.1109/aihcir67580.2025.11404771": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aihcir67580.2025.11404771",
+      "identity_tokens": [
+        "DOI:10.1109/aihcir67580.2025.11404771"
+      ],
+      "reason": "No independently retrieved primary source; retain as borderline until the publisher page or author manuscript is available.",
+      "first_checked_at": "2026-10-06T21:30:21+00:00",
+      "last_checked_at": "2026-10-06T21:30:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Image Generation Based on Large Models"
+    },
+    "DOI:10.1109/itnac66378.2025.11302633": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/itnac66378.2025.11302633",
+      "identity_tokens": [
+        "DOI:10.1109/itnac66378.2025.11302633"
+      ],
+      "reason": "The assigned primary DOI page was inaccessible, so the paper scope cannot be confirmed from a primary source; retain as borderline pending publisher/author text.",
+      "first_checked_at": "2026-10-06T21:30:21+00:00",
+      "last_checked_at": "2026-10-06T21:30:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review of the Use of Large Language Models to Generate Synthetic Cybersecurity Datasets"
+    },
+    "DOI:10.1109/scored68498.2025.11399052": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/scored68498.2025.11399052",
+      "identity_tokens": [
+        "DOI:10.1109/scored68498.2025.11399052"
+      ],
+      "reason": "The primary publisher text could not be independently retrieved; do not classify from the packet abstract alone.",
+      "first_checked_at": "2026-10-06T21:30:21+00:00",
+      "last_checked_at": "2026-10-06T21:30:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TurkRetNet: A Novel Retentive Network for Turkish Text Classification"
+    },
+    "DOI:10.1109/telfor67910.2025.11314236": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/telfor67910.2025.11314236",
+      "identity_tokens": [
+        "DOI:10.1109/telfor67910.2025.11314236"
+      ],
+      "reason": "The primary publisher text could not be independently retrieved; do not classify from the packet abstract alone.",
+      "first_checked_at": "2026-10-06T21:30:21+00:00",
+      "last_checked_at": "2026-10-06T21:30:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Encoder-Decoder Retnet Model for Fmcw Radar Interference Mitigation"
+    },
+    "DOI:10.1109/gcwkshps68340.2025.11591138": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/gcwkshps68340.2025.11591138",
+      "identity_tokens": [
+        "DOI:10.1109/gcwkshps68340.2025.11591138"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/GCWkshps68340.2025.11591138) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:22+00:00",
+      "last_checked_at": "2026-10-06T21:30:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Federated Fine-Tuning with Heterogeneous MLP-Pruned Large Language Models: An Architecture for Resource-Constrained Environments"
+    },
+    "DOI:10.1109/globecom59602.2025.11432306": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/globecom59602.2025.11432306",
+      "identity_tokens": [
+        "DOI:10.1109/globecom59602.2025.11432306"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/GLOBECOM59602.2025.11432306) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:22+00:00",
+      "last_checked_at": "2026-10-06T21:30:22+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Runtime- and Cost-Efficient Approach of Deploying Mixture-of-Experts in Edge Networks"
+    },
+    "DOI:10.1145/3779307": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779307",
+      "identity_tokens": [
+        "DOI:10.1145/3779307"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1145/3779307) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:22+00:00",
+      "last_checked_at": "2026-10-06T21:30:22+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Heterogeneous Confidential Computing System for Large Language Models: A Survey"
+    },
+    "DOI:10.1145/3743093.3771068": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3743093.3771068",
+      "identity_tokens": [
+        "DOI:10.1145/3743093.3771068"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1145/3743093.3771068) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:23+00:00",
+      "last_checked_at": "2026-10-06T21:30:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Uni-IL: Unified Incremental Learning of Vision-Language Models via Mixture of Attribute-Guided Experts"
+    },
+    "DOI:10.1016/j.displa.2025.103290": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.displa.2025.103290",
+      "identity_tokens": [
+        "DOI:10.1016/j.displa.2025.103290"
+      ],
+      "reason": "The primary Elsevier text could not be retrieved; retain as borderline because the scope could not be confirmed from a primary source.",
+      "first_checked_at": "2026-10-06T21:30:23+00:00",
+      "last_checked_at": "2026-10-06T21:30:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An adaptive U-Net framework for dermatological lesion segmentation"
+    },
+    "DOI:10.1109/sbac-padw69789.2025.00026": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/sbac-padw69789.2025.00026",
+      "identity_tokens": [
+        "DOI:10.1109/sbac-padw69789.2025.00026"
+      ],
+      "reason": "The candidate is linked to hybrid LLM inference/model selection, but its primary publisher source was inaccessible; retain as borderline pending primary text.",
+      "first_checked_at": "2026-10-06T21:30:24+00:00",
+      "last_checked_at": "2026-10-06T21:30:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reducing Costs in Large-Scale Classification: A Hybrid BERT–LLM Strategy"
+    },
+    "DOI:10.1016/j.knosys.2025.115050": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2025.115050",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2025.115050"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1016/j.knosys.2025.115050) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:29+00:00",
+      "last_checked_at": "2026-10-06T21:30:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SparseLight: Dynamic gradient-optimized softmax for efficient transformer acceleration"
+    },
+    "DOI:10.1109/vcip67698.2025.11396896": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/vcip67698.2025.11396896",
+      "identity_tokens": [
+        "DOI:10.1109/vcip67698.2025.11396896"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/VCIP67698.2025.11396896) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:30+00:00",
+      "last_checked_at": "2026-10-06T21:30:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transparent System For Lightweight Neural Talking Faces"
+    },
+    "DOI:10.1145/3773274.3774258": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3773274.3774258",
+      "identity_tokens": [
+        "DOI:10.1145/3773274.3774258"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1145/3773274.3774258) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:30+00:00",
+      "last_checked_at": "2026-10-06T21:30:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Hybrid Forecasting and Reinforcement Learning Approach for Latency-Constrained Scaling of Generative AI Systems"
+    },
+    "DOI:10.3844/jcssp.2025.3089.3112": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3844/jcssp.2025.3089.3112",
+      "identity_tokens": [
+        "DOI:10.3844/jcssp.2025.3089.3112"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.3844/jcssp.2025.3089.3112) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:30+00:00",
+      "last_checked_at": "2026-10-06T21:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Convergence of GenAI and RPA: A Digital Heaven in Supply Chain Optimization Process"
+    },
+    "DOI:10.1145/3746252.3760800": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746252.3760800",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3760800"
+      ],
+      "reason": "The primary ACM page was inaccessible, so its relation to the linked conditional-computation lineage cannot be judged from primary evidence; retain as borderline.",
+      "first_checked_at": "2026-10-06T21:30:31+00:00",
+      "last_checked_at": "2026-10-06T21:30:31+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Content Anomaly Detection on Social Media via Counterfactual Mitigation of Social Event-Induced Bias"
+    },
+    "DOI:10.1145/3746252.3761483": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746252.3761483",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761483"
+      ],
+      "reason": "The primary ACM text could not be fetched; do not use the title alone to settle scope.",
+      "first_checked_at": "2026-10-06T21:30:31+00:00",
+      "last_checked_at": "2026-10-06T21:30:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SDD: Shape-aware Data-driven Attention Mechanism for Time Series Analysis"
+    },
+    "DOI:10.1145/3788910.3788915": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3788910.3788915",
+      "identity_tokens": [
+        "DOI:10.1145/3788910.3788915"
+      ],
+      "reason": "The candidate is linked to offload/hierarchical memory and its title suggests LLM inference, but the ACM primary page denied retrieval; retain as borderline pending source text.",
+      "first_checked_at": "2026-10-06T21:30:31+00:00",
+      "last_checked_at": "2026-10-06T21:30:31+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OmniOpt: Towards a Holistic Optimization Framework for Efficient and Elastic Large Language Model Inference"
+    },
+    "DOI:10.1109/icicse66971.2025.11430022": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icicse66971.2025.11430022",
+      "identity_tokens": [
+        "DOI:10.1109/icicse66971.2025.11430022"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/ICICSE66971.2025.11430022) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:32+00:00",
+      "last_checked_at": "2026-10-06T21:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Technical Overview of Continuous and Discrete Diffusion-based Language Models"
+    },
+    "DOI:10.64898/2025.12.02.691830": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2025.12.02.691830",
+      "identity_tokens": [
+        "DOI:10.64898/2025.12.02.691830"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.64898/2025.12.02.691830) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:32+00:00",
+      "last_checked_at": "2026-10-06T21:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MS4MS: LLMs-driven Multi-agent System for Small-molecule Identification via LC-MS/MS"
+    },
+    "DOI:10.1109/cdc57313.2025.11312823": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cdc57313.2025.11312823",
+      "identity_tokens": [
+        "DOI:10.1109/cdc57313.2025.11312823"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/CDC57313.2025.11312823) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:33+00:00",
+      "last_checked_at": "2026-10-06T21:30:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ensuring Stability in Bilinear Structured State-Space Models via IQCs: A Free Parameterisation Approach"
+    },
+    "DOI:10.1109/cdc57313.2025.11312999": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cdc57313.2025.11312999",
+      "identity_tokens": [
+        "DOI:10.1109/cdc57313.2025.11312999"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/CDC57313.2025.11312999) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:33+00:00",
+      "last_checked_at": "2026-10-06T21:30:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Free Parametrization of ℒ2-bounded State Space Models"
+    },
+    "DOI:10.1101/2025.11.09.687124": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1101/2025.11.09.687124",
+      "identity_tokens": [
+        "DOI:10.1101/2025.11.09.687124"
+      ],
+      "reason": "Primary bioRxiv/publisher text was not retrievable from the assigned DOI; retain as borderline because the primary scope is unverified.",
+      "first_checked_at": "2026-10-06T21:30:35+00:00",
+      "last_checked_at": "2026-10-06T21:30:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "USP-ddG: a unified structural paradigm with data efficacy and mixture-of-experts for predicting mutational effects on protein–protein interactions"
+    },
+    "DOI:10.1109/icdmw69685.2025.00252": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icdmw69685.2025.00252",
+      "identity_tokens": [
+        "DOI:10.1109/icdmw69685.2025.00252"
+      ],
+      "reason": "This candidate is linked to KV-cache/long-context inference, but primary text could not be retrieved; retain as borderline pending direct publisher/author text.",
+      "first_checked_at": "2026-10-06T21:30:35+00:00",
+      "last_checked_at": "2026-10-06T21:30:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NMRet: A Memory-Augmented Retrieval Framework for Large Language Models"
+    },
+    "DOI:10.1109/isai-nlp66160.2025.11320543": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isai-nlp66160.2025.11320543",
+      "identity_tokens": [
+        "DOI:10.1109/isai-nlp66160.2025.11320543"
+      ],
+      "reason": "The title suggests model pruning but the primary publisher text was inaccessible; retain as borderline until contribution and inference measurements can be verified.",
+      "first_checked_at": "2026-10-06T21:30:35+00:00",
+      "last_checked_at": "2026-10-06T21:30:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Structured Layerwise Pruning via Extended-Interval Activation- and Derivative-Based Significance Measures"
+    },
+    "DOI:10.1109/iccd65941.2025.00016": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccd65941.2025.00016",
+      "identity_tokens": [
+        "DOI:10.1109/iccd65941.2025.00016"
+      ],
+      "reason": "This candidate is linked to LLM inference/serving systems, but the primary publisher text could not be retrieved; retain as borderline.",
+      "first_checked_at": "2026-10-06T21:30:36+00:00",
+      "last_checked_at": "2026-10-06T21:30:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RAM-Wafer: RL-Based Automatic Mapping Framework for Large-Scale AI Training on Wafer-Scale Computing"
+    },
+    "DOI:10.1109/bddm68348.2025.11442002": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/bddm68348.2025.11442002",
+      "identity_tokens": [
+        "DOI:10.1109/bddm68348.2025.11442002"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/BDDM68348.2025.11442002) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:37+00:00",
+      "last_checked_at": "2026-10-06T21:30:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VRWKV-MSA: Multi-Modal Survival Analysis Using VRWKV with Optimal Transport Alignment"
+    },
+    "DOI:10.1109/iccc68654.2025.11437641": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccc68654.2025.11437641",
+      "identity_tokens": [
+        "DOI:10.1109/iccc68654.2025.11437641"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/ICCC68654.2025.11437641) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:37+00:00",
+      "last_checked_at": "2026-10-06T21:30:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accuracy-Enhanced Stochastic Self-Attention with Sobol Low-Discrepancy Sequences"
+    },
+    "DOI:10.1109/iccc68654.2025.11438161": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccc68654.2025.11438161",
+      "identity_tokens": [
+        "DOI:10.1109/iccc68654.2025.11438161"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted (https://doi.org/10.1109/ICCC68654.2025.11438161) but the page could not be retrieved in this environment (DOI redirect inaccessible / publisher JavaScript or access restriction). The packet abstract was not independently verified as primary text; no content claim is inferred. Final borderline because primary abstract/full text is unavailable for scope confirmation.",
+      "first_checked_at": "2026-10-06T21:30:37+00:00",
+      "last_checked_at": "2026-10-06T21:30:37+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recurrent Neural Network on Human Activity Recognition Based on Latent State Space"
     }
   }
 }
