@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T17:25:08+00:00",
-  "record_count": 9046,
+  "updated_at": "2026-10-06T17:30:36+00:00",
+  "record_count": 9066,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -129744,6 +129744,286 @@
         "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
       ],
       "title": "Inductive Generative Recommendation via Retrieval-based Speculation"
+    },
+    "DOI:10.1609/aaai.v39i2.32120": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v39i2.32120",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v39i2.32120"
+      ],
+      "reason": "Evaluation targets sentiment benchmarks and cross-modal accuracy, without an LLM inference-efficiency claim.",
+      "first_checked_at": "2026-10-06T17:30:26+00:00",
+      "last_checked_at": "2026-10-06T17:30:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "MSAmba: Exploring Multimodal Sentiment Analysis with State Space Models"
+    },
+    "arXiv:2408.06608": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.06608",
+      "identity_tokens": [
+        "arXiv:2408.06608"
+      ],
+      "reason": "Conclusion and evaluation cover a streaming architecture for neural radiance-field rendering and reduced pixel rendering; no language-model inference or serving workload is proposed.",
+      "first_checked_at": "2026-10-06T17:30:26+00:00",
+      "last_checked_at": "2026-10-06T17:30:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "Potamoi: Accelerating Neural Rendering via a Unified Streaming Architecture"
+    },
+    "arXiv:2510.10991": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.10991",
+      "identity_tokens": [
+        "arXiv:2510.10991"
+      ],
+      "reason": "This is a taxonomy and survey of agentic multimodal LLM concepts, not a new inference algorithm or measured serving improvement. Its relationship to MoE-LLaVA is at the broad multimodal-model level, without a concrete efficiency method that could be evaluated as an inference contribution.",
+      "first_checked_at": "2026-10-06T17:30:27+00:00",
+      "last_checked_at": "2026-10-06T17:30:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "A Survey on Agentic Multimodal Large Language Models"
+    },
+    "arXiv:2509.25171": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25171",
+      "identity_tokens": [
+        "arXiv:2509.25171"
+      ],
+      "reason": "The paper uses tree-search replay and trajectory-aware fine-tuning to optimize reward quality for discrete-diffusion generation. Although the model family overlaps diffusion language generation, the contribution is post-training/model-quality optimization and reports no inference-step, latency, throughput, or memory reduction.",
+      "first_checked_at": "2026-10-06T17:30:27+00:00",
+      "last_checked_at": "2026-10-06T17:30:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "TR2-D2: Tree Search Guided Trajectory-Aware Fine-Tuning for Discrete Diffusion"
+    },
+    "arXiv:2410.16954": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.16954",
+      "identity_tokens": [
+        "arXiv:2410.16954"
+      ],
+      "reason": "LoRA-C applies parameter-efficient fine-tuning to robust CNN classifiers for IoT vision tasks. Parameter efficiency is a training property here; the paper does not optimize LLM inference, and its CNN architecture/task is distinct from the cited LoRA-pruning language-model system.",
+      "first_checked_at": "2026-10-06T17:30:28+00:00",
+      "last_checked_at": "2026-10-06T17:30:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "title": "LoRA-C: Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices"
+    },
+    "arXiv:2410.10511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10511",
+      "identity_tokens": [
+        "arXiv:2410.10511"
+      ],
+      "reason": "Set Autoregressive Modeling changes the token grouping/order for visual autoregressive image generation. The evaluated generation domain is images rather than text LLM inference, and the paper does not demonstrate a language-serving efficiency result; the multi-token-prediction citation is a conceptual autoregressive analogy, not a shared LLM method.",
+      "first_checked_at": "2026-10-06T17:30:28+00:00",
+      "last_checked_at": "2026-10-06T17:30:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Customize Your Visual Autoregressive Recipe with Set Autoregressive Modeling"
+    },
+    "arXiv:2411.18463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.18463",
+      "identity_tokens": [
+        "arXiv:2411.18463"
+      ],
+      "reason": "The peptide-binder pipeline generates amino-acid sequences and evaluates protein binding geometry, so its autoregressive sequence construction is biological design rather than token decoding for an LLM. Its forward citation from multi-token prediction is only a broad autoregression connection; it neither changes model inference nor reports serving resource gains.",
+      "first_checked_at": "2026-10-06T17:30:29+00:00",
+      "last_checked_at": "2026-10-06T17:30:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Hotspot-Driven Peptide Design via Multi-Fragment Autoregressive Extension"
+    },
+    "arXiv:2402.15729": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15729",
+      "identity_tokens": [
+        "arXiv:2402.15729"
+      ],
+      "reason": "The paper addresses reasoning correctness and code generation behavior in math tasks through CoT/PoT training and attention/reward strategies. It does not propose a decoding-cost, memory, latency, or serving method; the citation from multi-token prediction does not make its behavioral study an inference-system extension.",
+      "first_checked_at": "2026-10-06T17:30:29+00:00",
+      "last_checked_at": "2026-10-06T17:30:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "How Do Humans Write Code? Large Models Do It the Same Way Too"
+    },
+    "arXiv:2505.17549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17549",
+      "identity_tokens": [
+        "arXiv:2505.17549"
+      ],
+      "reason": "The generative model jointly handles advertising recommendation, creative selection, allocation, and bidding/payment objectives. Multi-token prediction is used within this application model, but the contribution concerns ad-system decisions and business outcomes rather than LLM decoding or a transferable inference-cost improvement.",
+      "first_checked_at": "2026-10-06T17:30:30+00:00",
+      "last_checked_at": "2026-10-06T17:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "EGA-V2: An End-to-end Generative Framework for Industrial Advertising"
+    },
+    "arXiv:2409.07273": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.07273",
+      "identity_tokens": [
+        "arXiv:2409.07273"
+      ],
+      "reason": "The study compares Mamba/self-supervised architectures for speech reconstruction and recognition. The evaluated outputs and task-specific modules are speech-processing systems, with no text-LLM serving or inference-cost technique; the Jamba citation is an architecture-family association only.",
+      "first_checked_at": "2026-10-06T17:30:31+00:00",
+      "last_checked_at": "2026-10-06T17:30:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Rethinking Mamba in Speech Processing by Self-Supervised Models"
+    },
+    "arXiv:2506.09251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09251",
+      "identity_tokens": [
+        "arXiv:2506.09251"
+      ],
+      "reason": "The paper studies transfer of length generalization through joint training on algorithmic tasks and observes related effects in pretrained LMs. It does not extend a deployed context window or reduce the compute/memory cost of long-context inference; the YaRN citation is adjacent context-length work but the proposed contribution is a training/generalization analysis.",
+      "first_checked_at": "2026-10-06T17:30:31+00:00",
+      "last_checked_at": "2026-10-06T17:30:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Extrapolation by Association: Length Generalization Transfer in Transformers"
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.432": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.432",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.432"
+      ],
+      "reason": "The paper’s stated contributions are image retrieval ranking and generator robustness, not reducing model inference resource use; no relevant serving optimization is claimed.",
+      "first_checked_at": "2026-10-06T17:30:31+00:00",
+      "last_checked_at": "2026-10-06T17:30:31+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "VLM Is a Strong Reranker: Advancing Multimodal Retrieval-augmented Generation via Knowledge-enhanced Reranking and Noise-injected Training"
+    },
+    "arXiv:2406.13828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.13828",
+      "identity_tokens": [
+        "arXiv:2406.13828"
+      ],
+      "reason": "The method adds spatial-logic constraints during language-model training to improve nested spatial reasoning. It does not compress prompts, lower serving cost, or optimize inference; the cited context-compression paper is a separate inference mechanism and the present objective is reasoning quality.",
+      "first_checked_at": "2026-10-06T17:30:32+00:00",
+      "last_checked_at": "2026-10-06T17:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Neuro-symbolic Training for Reasoning over Spatial Language"
+    },
+    "arXiv:2412.14166": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.14166",
+      "identity_tokens": [
+        "arXiv:2412.14166"
+      ],
+      "reason": "The contribution scales 3D scene reconstruction training through synthetic geometric scenes and evaluates reconstruction/generalization. Its learned system is a vision reconstruction model, not language generation or an LLM inference method; the Jamba citation is only a broad model-family connection.",
+      "first_checked_at": "2026-10-06T17:30:33+00:00",
+      "last_checked_at": "2026-10-06T17:30:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "MegaSynth: Scaling Up 3D Scene Reconstruction with Synthesized Data"
+    },
+    "arXiv:2412.15285": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15285",
+      "identity_tokens": [
+        "arXiv:2412.15285"
+      ],
+      "reason": "The two-phase data mixture/order changes LLM pretraining to improve accuracy. It provides no change to deployed decoding, serving, or inference resource use, and the Jamba citation does not establish a connection to an inference optimization method.",
+      "first_checked_at": "2026-10-06T17:30:33+00:00",
+      "last_checked_at": "2026-10-06T17:30:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Maximize Your Data's Potential: Enhancing LLM Accuracy with Two-Phase Pretraining"
+    },
+    "arXiv:2510.08177": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08177",
+      "identity_tokens": [
+        "arXiv:2510.08177"
+      ],
+      "reason": "Model Rebalancing adjusts parameter allocation for long-tailed visual recognition and evaluates classification performance. It does not concern language-model generation or inference resource use; the DeepSpeed Inference citation is not reflected in the paper's objective or evaluated system.",
+      "first_checked_at": "2026-10-06T17:30:34+00:00",
+      "last_checked_at": "2026-10-06T17:30:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Long-tailed Recognition with Model Rebalancing"
+    },
+    "arXiv:2510.23081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.23081",
+      "identity_tokens": [
+        "arXiv:2510.23081"
+      ],
+      "reason": "The survey covers LLM mid-training data, architecture, and training strategies for capability acquisition. It synthesizes training-stage work rather than presenting a serving/inference optimization, and the YaRN citation alone does not make mid-training a context-extension method.",
+      "first_checked_at": "2026-10-06T17:30:34+00:00",
+      "last_checked_at": "2026-10-06T17:30:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "A Survey on LLM Mid-training"
+    },
+    "arXiv:2509.24496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24496",
+      "identity_tokens": [
+        "arXiv:2509.24496"
+      ],
+      "reason": "Full text extracts low-dimensional model fingerprints and builds evolutionary trees; it studies model identity/relationships, not routing efficiency or inference resources.",
+      "first_checked_at": "2026-10-06T17:30:35+00:00",
+      "last_checked_at": "2026-10-06T17:30:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "LLM DNA: Tracing Model Evolution via Functional Representations"
+    },
+    "arXiv:2506.11029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11029",
+      "identity_tokens": [
+        "arXiv:2506.11029"
+      ],
+      "reason": "YingLong is a masked, bidirectional time-series forecasting model whose output scaling improves forecast accuracy. Its forecasting objective and non-causal masked-recovery architecture are distinct from autoregressive LLM serving, and the multi-token-prediction citation is not an inference contribution here.",
+      "first_checked_at": "2026-10-06T17:30:36+00:00",
+      "last_checked_at": "2026-10-06T17:30:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Output Scaling: YingLong-Delayed Chain of Thought in a Large Pretrained Time Series Forecasting Model"
+    },
+    "arXiv:2412.05818": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.05818",
+      "identity_tokens": [
+        "arXiv:2412.05818"
+      ],
+      "reason": "SILMM uses iterative self-feedback and preference optimization to improve compositional text-to-image alignment. The target output is generated imagery and the method concerns alignment/training, not language-model decoding or reduced inference resource use; the LLaVA token-reduction citation is an adjacent multimodal lineage but not the contribution evaluated here.",
+      "first_checked_at": "2026-10-06T17:30:36+00:00",
+      "last_checked_at": "2026-10-06T17:30:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "SILMM: Self-Improving Large Multimodal Models for Compositional Text-to-Image Generation"
     }
   }
 }

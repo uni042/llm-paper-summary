@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T17:25:07+00:00",
-  "record_count": 3529,
+  "updated_at": "2026-10-06T17:30:35+00:00",
+  "record_count": 3548,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -54015,6 +54015,293 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A Survey on Collaborative Mechanisms Between Large and Small Language Models"
+    },
+    "DOI:10.1109/cvpr52734.2025.02760": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cvpr52734.2025.02760",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52734.2025.02760"
+      ],
+      "reason": "Official full-text PDF was blocked by the publisher endpoint; abstract suggests parameter/compute scaling benefits but does not settle inference memory or latency, so retain as borderline.",
+      "first_checked_at": "2026-10-06T17:30:25+00:00",
+      "last_checked_at": "2026-10-06T17:30:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UniAlign: Scaling Multimodal Alignment within One Unified Model"
+    },
+    "DOI:10.1109/tcsi.2024.3443270": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsi.2024.3443270",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2024.3443270"
+      ],
+      "reason": "IEEE full paper was not available through the publisher endpoint; institutional abstract establishes a possible Transformer-kernel hardware connection but offers insufficient implementation/accuracy detail for a stronger disposition.",
+      "first_checked_at": "2026-10-06T17:30:25+00:00",
+      "last_checked_at": "2026-10-06T17:30:25+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware-Efficient SoftMax Architecture With Bit-Wise Exponentiation and Reciprocal Calculation"
+    },
+    "arXiv:2510.19307": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.19307",
+      "identity_tokens": [
+        "arXiv:2510.19307"
+      ],
+      "reason": "RIL trains smaller VLM students to improve vision-language benchmark quality and states that inference runs at the original student speed without a think phase. This is a plausible multimodal deployment neighbor, retained as borderline: the paper does not measure memory/latency gains against an equal-quality baseline or modify an LLM decoding/serving algorithm, despite its speculative-decoding lineage link.",
+      "first_checked_at": "2026-10-06T17:30:25+00:00",
+      "last_checked_at": "2026-10-06T17:30:25+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unified Reinforcement and Imitation Learning for Vision-Language Models"
+    },
+    "arXiv:2406.01283": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.01283",
+      "identity_tokens": [
+        "arXiv:2406.01283"
+      ],
+      "reason": "Experiments on BERT-style document classification report token pruning/combining and lower time/memory, but do not establish LLM generation or serving behavior; retain as a sparse-attention lineage lead.",
+      "first_checked_at": "2026-10-06T17:30:26+00:00",
+      "last_checked_at": "2026-10-06T17:30:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Focus on the Core: Efficient Attention via Pruned Token Compression for Document Classification"
+    },
+    "arXiv:2510.05554": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.05554",
+      "identity_tokens": [
+        "arXiv:2510.05554"
+      ],
+      "reason": "The paper derives a theoretical transition in attention behavior with context length; it analyzes scaling but does not provide a serving optimization or resource reduction. Keep as weak long-context lineage research.",
+      "first_checked_at": "2026-10-06T17:30:26+00:00",
+      "last_checked_at": "2026-10-06T17:30:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Critical attention scaling in long-context transformers"
+    },
+    "arXiv:2506.17639": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.17639",
+      "identity_tokens": [
+        "arXiv:2506.17639"
+      ],
+      "reason": "RLRC reports pruning/quantization, up to 8x memory reduction and 2.3x inference speedup, but its evaluated system is a vision-language-action robot policy whose objective and action-generation stack are VLA-specific. It is adjacent to the cited LLM quantization lineage, so retained as borderline for possible transfer; the paper does not establish an LLM text-serving result.",
+      "first_checked_at": "2026-10-06T17:30:27+00:00",
+      "last_checked_at": "2026-10-06T17:30:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RLRC: Reinforcement Learning-Based Recovery for Compressed Vision-Language-Action Models"
+    },
+    "arXiv:2408.04680": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.04680",
+      "identity_tokens": [
+        "arXiv:2408.04680"
+      ],
+      "reason": "Full paper describes SpeziLLM deployment across edge/fog/cloud, but its evaluation emphasizes framework usability and healthcare case studies rather than measured latency, memory, or inference-cost results.",
+      "first_checked_at": "2026-10-06T17:30:28+00:00",
+      "last_checked_at": "2026-10-06T17:30:28+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Fog Computing for Enhanced LLM Execution in Medical Applications"
+    },
+    "arXiv:2407.00118": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.00118",
+      "identity_tokens": [
+        "arXiv:2407.00118"
+      ],
+      "reason": "Full text reviews transformer pruning, quantization, attention/KV efficiency and multimodal/world-model methods; it is a broad survey, not a new validated serving intervention, but is related to the cited sparse-attention lineage.",
+      "first_checked_at": "2026-10-06T17:30:28+00:00",
+      "last_checked_at": "2026-10-06T17:30:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Efficient Multimodal Models to World Models: A Survey"
+    },
+    "arXiv:2502.05390": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.05390",
+      "identity_tokens": [
+        "arXiv:2502.05390"
+      ],
+      "reason": "The method learns task representations and evaluates task fidelity; it does not reduce prompt tokens or report serving compute/memory/latency. Because it is linked to prompt compression, keep as a weak neighboring lead.",
+      "first_checked_at": "2026-10-06T17:30:29+00:00",
+      "last_checked_at": "2026-10-06T17:30:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning Task Representations from In-Context Learning"
+    },
+    "arXiv:2410.11772": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.11772",
+      "identity_tokens": [
+        "arXiv:2410.11772"
+      ],
+      "reason": "Experiments and conclusion show layer-selective reinforcement-learning PEFT reduces fine-tuning memory and compute; it concerns training resources, not inference, and the 70B-scale validation is absent.",
+      "first_checked_at": "2026-10-06T17:30:29+00:00",
+      "last_checked_at": "2026-10-06T17:30:29+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Layer-wise Importance Matters: Less Memory for Better Performance in Parameter-efficient Fine-tuning of Large Language Models"
+    },
+    "arXiv:2504.07113": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.07113",
+      "identity_tokens": [
+        "arXiv:2504.07113"
+      ],
+      "reason": "The benchmark finds routers can save cost yet route by category heuristics, with safety/efficiency failures; it proposes evaluation and recommendations rather than a new routing method.",
+      "first_checked_at": "2026-10-06T17:30:31+00:00",
+      "last_checked_at": "2026-10-06T17:30:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How Robust Are Router-LLMs? Analysis of the Fragility of LLM Routing Capabilities"
+    },
+    "arXiv:2504.16082": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.16082",
+      "identity_tokens": [
+        "arXiv:2504.16082"
+      ],
+      "reason": "Primary source identity mismatch prevents abstract or full-text verification; preserve as borderline until the canonical source is resolved.",
+      "first_checked_at": "2026-10-06T17:30:32+00:00",
+      "last_checked_at": "2026-10-06T17:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MR. Video: \"MapReduce\" is the Principle for Long Video Understanding"
+    },
+    "arXiv:2410.18125": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.18125",
+      "identity_tokens": [
+        "arXiv:2410.18125"
+      ],
+      "reason": "Survey discusses SLM routing, resource efficiency, latency, and offloading but offers no single new measured serving method; retain as a map for concrete edge-routing work.",
+      "first_checked_at": "2026-10-06T17:30:32+00:00",
+      "last_checked_at": "2026-10-06T17:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward Edge General Intelligence via Large Language Models: Opportunities and Challenges"
+    },
+    "arXiv:2409.17606": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.17606",
+      "identity_tokens": [
+        "arXiv:2409.17606"
+      ],
+      "reason": "Hardware design/results cover network bandwidth, latency, area, timing, and energy; no LLM accelerator or inference workload is evaluated, though the linked memory-wall/quantization lineage makes it a weak hardware lead.",
+      "first_checked_at": "2026-10-06T17:30:32+00:00",
+      "last_checked_at": "2026-10-06T17:30:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlooNoC: A 645-Gb/s/link 0.15-pJ/B/hop Open-Source NoC With Wide Physical Links and End-to-End AXI4 Parallel Multistream Support"
+    },
+    "arXiv:2410.09016": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.09016",
+      "identity_tokens": [
+        "arXiv:2410.09016"
+      ],
+      "reason": "Full experiments compare LoRA placement across Mamba/Jamba-like SSMs and tasks; the contribution is adaptation/training parameters, not serving inference efficiency.",
+      "first_checked_at": "2026-10-06T17:30:33+00:00",
+      "last_checked_at": "2026-10-06T17:30:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parameter-Efficient Fine-Tuning of State Space Models"
+    },
+    "arXiv:2306.04169": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.04169",
+      "identity_tokens": [
+        "arXiv:2306.04169"
+      ],
+      "reason": "Full text proves and evaluates a faster general low-rank optimization algorithm, but does not apply it to LLM weight compression or inference; its model-compression citation link merits a weak lead only.",
+      "first_checked_at": "2026-10-06T17:30:34+00:00",
+      "last_checked_at": "2026-10-06T17:30:34+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Alternating Minimization with Applications to Weighted Low Rank Approximation"
+    },
+    "DOI:10.1038/s41467-025-63771-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41467-025-63771-x",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-025-63771-x"
+      ],
+      "reason": "Full text evaluates spiking models on temporal, speech, and Penn Tree Bank language-modeling tasks and reports energy reductions, but it is not an LLM inference method; retain only as a weak recurrent-sequence lineage connection.",
+      "first_checked_at": "2026-10-06T17:30:34+00:00",
+      "last_checked_at": "2026-10-06T17:30:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient and robust temporal processing with neural oscillations modulated spiking neural networks"
+    },
+    "DOI:10.1016/j.neunet.2025.108039": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108039",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2025.108039"
+      ],
+      "reason": "Full survey reviews recurrent/SSM and long-context Transformer optimization, complexity, and online processing; it is a research map rather than a new measured optimization, so retain as borderline.",
+      "first_checked_at": "2026-10-06T17:30:35+00:00",
+      "last_checked_at": "2026-10-06T17:30:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "State-space modeling in long sequence processing: a survey on recurrence in the transformer era"
+    },
+    "DOI:10.1038/s41598-025-87574-8": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-025-87574-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-87574-8"
+      ],
+      "reason": "Full paper reports competitive inference speeds but provides no detailed complexity or training/inference-time comparison; retain as borderline until resource claims are quantified.",
+      "first_checked_at": "2026-10-06T17:30:35+00:00",
+      "last_checked_at": "2026-10-06T17:30:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A hybrid model based on transformer and Mamba for enhanced sequence modeling"
     }
   }
 }

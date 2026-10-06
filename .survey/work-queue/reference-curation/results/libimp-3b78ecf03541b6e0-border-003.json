@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b78ecf03541b6e0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tcsi.2024.3443270",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tcsi.2024.3443270",
+    "identity_tokens": [
+      "DOI:10.1109/tcsi.2024.3443270"
+    ],
+    "reason": "IEEE full paper was not available through the publisher endpoint; institutional abstract establishes a possible Transformer-kernel hardware connection but offers insufficient implementation/accuracy detail for a stronger disposition.",
+    "first_checked_at": "2026-10-06T17:30:25+00:00",
+    "last_checked_at": "2026-10-06T17:30:25+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hardware-Efficient SoftMax Architecture With Bit-Wise Exponentiation and Reciprocal Calculation"
+  },
+  "processed_at": "2026-10-06T17:30:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b78ecf03541",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
