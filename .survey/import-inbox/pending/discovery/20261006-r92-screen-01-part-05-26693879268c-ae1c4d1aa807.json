@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r92-screen-01-part-05-26693879268c",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ASAP65064.2025.00023",
+      "identity_tokens": [
+        "DOI:10.1109/ASAP65064.2025.00023"
+      ],
+      "title": "METAL: A Memory-Efficient Transformer Architecture for Long-Context Inference on FPGA",
+      "reason": "Abstract or lineage indicates a plausible inference-efficiency connection, but primary full text could not be reviewed; relevance remains unresolved.",
+      "source_url": "https://doi.org/10.1109/ASAP65064.2025.00023",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ASAP65064.2025.00024",
+      "identity_tokens": [
+        "DOI:10.1109/ASAP65064.2025.00024"
+      ],
+      "title": "An MLA-LLM Hardware Acceleration with Tensor-Train Decomposition on Group Vector Systolic Accelerator",
+      "reason": "Abstract or lineage indicates a plausible inference-efficiency connection, but primary full text could not be reviewed; relevance remains unresolved.",
+      "source_url": "https://doi.org/10.1109/ASAP65064.2025.00024",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICCSN66511.2025.11172505",
+      "identity_tokens": [
+        "DOI:10.1109/ICCSN66511.2025.11172505"
+      ],
+      "title": "Research on Compression Algorithms for Time Series Prediction Models in Source Measure Units Based on Pruning, Quantization, and Knowledge Distillation",
+      "reason": "Compression of a time-series sensor-prediction model, a task-specific application.",
+      "source_url": "https://doi.org/10.1109/ICCSN66511.2025.11172505",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.17335",
+      "identity_tokens": [
+        "arXiv:2507.17335"
+      ],
+      "title": "TransLPRNet: Lite Vision-Language Network for Single/Dual-line Chinese License Plate Recognition",
+      "reason": "Vision-language license-plate recognition; no LLM inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2507.17335",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.11709",
+      "identity_tokens": [
+        "arXiv:2507.11709"
+      ],
+      "title": "Double Duty: FPGA Architecture to Enable Concurrent LUT and Adder Chain Usage",
+      "reason": "Generic FPGA fabric architecture rather than an LLM accelerator; area/logic utilization results do not directly establish transformer tokens/s or memory-bandwidth gains.",
+      "source_url": "https://arxiv.org/abs/2507.11709",
+      "first_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "last_checked_at": "2026-10-06T12:39:20.755350+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    }
+  ]
+}
