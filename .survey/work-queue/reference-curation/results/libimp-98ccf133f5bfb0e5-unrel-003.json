@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98ccf133f5bfb0e5-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.02244",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.02244",
+    "identity_tokens": [
+      "arXiv:2601.02244"
+    ],
+    "reason": "一次要旨は非線形制御系の安定化controllerの特徴づけでLLM推論とは無関係。",
+    "first_checked_at": "2026-10-06T21:23:34+00:00",
+    "last_checked_at": "2026-10-06T21:23:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+    ],
+    "title": "Characterizing All Locally Exponentially Stabilizing Controllers as a Linear Feedback Plus Learnable Nonlinear Youla Dynamics"
+  },
+  "processed_at": "2026-10-06T21:23:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98ccf133f5bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

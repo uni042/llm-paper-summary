@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0cbe95a28c6586e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.1737",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2026.acl-long.1737",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.acl-long.1737"
+    ],
+    "reason": "ACL全文はdiffusion language model向けwatermarkingの検出性/不可視性を扱い、LLM inference efficiencyやservingを改善しない。",
+    "first_checked_at": "2026-10-06T21:23:35+00:00",
+    "last_checked_at": "2026-10-06T21:23:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "From TDMA to CDMA: A Multi-bit Watermark for Diffusion Language Models"
+  },
+  "processed_at": "2026-10-06T21:23:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0cbe95a28c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

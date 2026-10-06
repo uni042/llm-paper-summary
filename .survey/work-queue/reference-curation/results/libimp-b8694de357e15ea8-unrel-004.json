@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b8694de357e15ea8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.03633",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.03633",
+    "identity_tokens": [
+      "arXiv:2601.03633"
+    ],
+    "reason": "一次要旨はレーダー降水予測用rectified-flow networkでありLLM推論とは無関係。",
+    "first_checked_at": "2026-10-06T21:23:37+00:00",
+    "last_checked_at": "2026-10-06T21:23:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "MFC-RFNet: A Multi-scale Guided Rectified Flow Network for Radar Sequence Prediction"
+  },
+  "processed_at": "2026-10-06T21:23:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b8694de357e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

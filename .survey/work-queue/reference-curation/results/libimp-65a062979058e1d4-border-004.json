@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65a062979058e1d4-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icpads67057.2025.11323053",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icpads67057.2025.11323053",
+    "identity_tokens": [
+      "DOI:10.1109/icpads67057.2025.11323053"
+    ],
+    "reason": "HKU Scholars Hub (author-institution repository) full record and abstract were retrieved. It explicitly says no files are attached and the publisher full text may require subscription; full text could not be reviewed, so record borderline.",
+    "first_checked_at": "2026-10-06T21:23:31+00:00",
+    "last_checked_at": "2026-10-06T21:23:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SwiftReTaKe: Quick and Accurate Redundancy Reduction for Cloud-Edge Collaborative Video-Language Understanding"
+  },
+  "processed_at": "2026-10-06T21:23:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65a062979058",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

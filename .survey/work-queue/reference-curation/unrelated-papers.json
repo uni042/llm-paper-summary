@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T21:13:00+00:00",
-  "record_count": 9740,
+  "updated_at": "2026-10-06T21:23:39+00:00",
+  "record_count": 9763,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -139491,6 +139491,331 @@
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
       "title": "Statistical benchmarking of transformer models in low signal-to-noise time-series forecasting"
+    },
+    "arXiv:2512.23073": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23073",
+      "identity_tokens": [
+        "arXiv:2512.23073"
+      ],
+      "reason": "arXiv一次要旨はVLM mask fine-tuning/adaptation法。推論時resourceやservingを改善する方法ではない。",
+      "first_checked_at": "2026-10-06T21:23:26+00:00",
+      "last_checked_at": "2026-10-06T21:23:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Rethinking Fine-Tuning: Unlocking Hidden Capabilities in Vision-Language Models"
+    },
+    "arXiv:2512.22702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22702",
+      "identity_tokens": [
+        "arXiv:2512.22702"
+      ],
+      "reason": "arXiv一次要旨は時系列予測benchmarkのposition paperで、LLM推論・配備効率を扱わない。",
+      "first_checked_at": "2026-10-06T21:23:26+00:00",
+      "last_checked_at": "2026-10-06T21:23:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Position: Current Benchmarking Hinders Real Progress in Deep Learning for Time Series Forecasting"
+    },
+    "arXiv:2601.12272": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12272",
+      "identity_tokens": [
+        "arXiv:2601.12272"
+      ],
+      "reason": "本文で圧縮対象は汎用CNN/ViT等で、LLMはstrategy searchを補助するagent。LLM inference/serving自体の資源改善は提案されない。",
+      "first_checked_at": "2026-10-06T21:23:28+00:00",
+      "last_checked_at": "2026-10-06T21:23:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "AgenticPruner: MAC-Constrained Neural Network Compression via LLM-Driven Strategy Search"
+    },
+    "arXiv:2601.12375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12375",
+      "identity_tokens": [
+        "arXiv:2601.12375"
+      ],
+      "reason": "一次要旨は6G O-RANの制御予測用state-space modelで、LLM inference/servingとは異なる用途。",
+      "first_checked_at": "2026-10-06T21:23:28+00:00",
+      "last_checked_at": "2026-10-06T21:23:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "LiQSS: Post-Transformer Linear Quantum-Inspired State-Space Tensor Networks for Real-Time 6G"
+    },
+    "arXiv:2603.28769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28769",
+      "identity_tokens": [
+        "arXiv:2603.28769"
+      ],
+      "reason": "本文は大規模LLM benchmarkの統計的評価を分散実行するframework。評価処理のthroughputであり、serving時の推論資源改善ではない。",
+      "first_checked_at": "2026-10-06T21:23:29+00:00",
+      "last_checked_at": "2026-10-06T21:23:29+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "title": "Spark-LLM-Eval: A Distributed Framework for Statistically Rigorous Large Language Model Evaluation"
+    },
+    "arXiv:2602.06044": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06044",
+      "identity_tokens": [
+        "arXiv:2602.06044"
+      ],
+      "reason": "The work is about sparse-view 3D Gaussian splatting for spatial reconstruction/rendering. Its sparse modeling and real-time graphics objective do not concern language-model inference or a linked LLM technique.",
+      "first_checked_at": "2026-10-06T21:23:30+00:00",
+      "last_checked_at": "2026-10-06T21:23:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "COSMOS: Coherent Supergaussian Modeling with Spatial Priors for Sparse-View 3D Splatting"
+    },
+    "arXiv:2512.14549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.14549",
+      "identity_tokens": [
+        "arXiv:2512.14549"
+      ],
+      "reason": "Primary arXiv abstract (2512.14549) combines autoregressive and masked-diffusion objectives as a language-model training objective; the claimed efficiency is training efficiency, outside this inference-only scope.",
+      "first_checked_at": "2026-10-06T21:23:30+00:00",
+      "last_checked_at": "2026-10-06T21:23:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Dual-objective Language Models: Training Efficiency Without Overfitting"
+    },
+    "arXiv:2601.16905": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.16905",
+      "identity_tokens": [
+        "arXiv:2601.16905"
+      ],
+      "reason": "本文の方法・実験はMoE unlearning時のrouter安定性と知識消去であり、推論資源改善を提案・測定していない。MoE routingという共通基盤だけでは効率系統への技術的接続がない。",
+      "first_checked_at": "2026-10-06T21:23:32+00:00",
+      "last_checked_at": "2026-10-06T21:23:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "GRIP: Algorithm-Agnostic Machine Unlearning for Mixture-of-Experts via Geometric Router Constraints"
+    },
+    "arXiv:2601.15894": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15894",
+      "identity_tokens": [
+        "arXiv:2601.15894"
+      ],
+      "reason": "本文の手法・評価は画像生成VAEの逆問題（CIFAR-10/fastMRI）における潜在事後推論の高速化。LLM inference/servingや長文Transformer推論への接続はない。",
+      "first_checked_at": "2026-10-06T21:23:32+00:00",
+      "last_checked_at": "2026-10-06T21:23:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Iterative Amortized Hierarchical VAE"
+    },
+    "arXiv:2512.20330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20330",
+      "identity_tokens": [
+        "arXiv:2512.20330"
+      ],
+      "reason": "The experiments concern multicontrast cardiac-MRI reconstruction (DualSpaceCMR/VQPrompt/Moero), not language-model inference. The authors report sparse MoE routing slows PyTorch throughput and wall-clock training; the paper does not propose an LLM-serving or inference optimization. The medical reconstruction application is distinct from the linked LLM-expert lineage.",
+      "first_checked_at": "2026-10-06T21:23:33+00:00",
+      "last_checked_at": "2026-10-06T21:23:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Branch Learning in MRI: More Data, More Models, More Training"
+    },
+    "arXiv:2512.20562": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20562",
+      "identity_tokens": [
+        "arXiv:2512.20562"
+      ],
+      "reason": "Primary arXiv abstract (2512.20562) studies sample complexity and gradient-descent feature learning for shallow two-layer networks on spherical polynomials; it is a learning-theory/training result, not LLM inference.",
+      "first_checked_at": "2026-10-06T21:23:33+00:00",
+      "last_checked_at": "2026-10-06T21:23:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Shallow Neural Networks Learn Low-Degree Spherical Polynomials with Feature Learning by Learnable Channel Attention"
+    },
+    "arXiv:2512.19331": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.19331",
+      "identity_tokens": [
+        "arXiv:2512.19331"
+      ],
+      "reason": "Primary arXiv abstract (2512.19331) describes memory integration for whole-slide-image multiple-instance learning and pathology analysis; it is not language-model inference.",
+      "first_checked_at": "2026-10-06T21:23:33+00:00",
+      "last_checked_at": "2026-10-06T21:23:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "DeltaMIL: Gated Memory Integration for Efficient and Discriminative Whole Slide Image Analysis"
+    },
+    "arXiv:2601.02659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02659",
+      "identity_tokens": [
+        "arXiv:2601.02659"
+      ],
+      "reason": "全文はessay scoring用encoderとfeature-based分類器の比較。linked long-context Transformerの技術貢献やLLM inference resource改善はない。",
+      "first_checked_at": "2026-10-06T21:23:34+00:00",
+      "last_checked_at": "2026-10-06T21:23:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Empirical Comparison of Encoder-Based Language Models and Feature-Based Supervised Machine Learning Approaches to Automated Scoring of Long Essays"
+    },
+    "arXiv:2601.02244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02244",
+      "identity_tokens": [
+        "arXiv:2601.02244"
+      ],
+      "reason": "一次要旨は非線形制御系の安定化controllerの特徴づけでLLM推論とは無関係。",
+      "first_checked_at": "2026-10-06T21:23:34+00:00",
+      "last_checked_at": "2026-10-06T21:23:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Characterizing All Locally Exponentially Stabilizing Controllers as a Linear Feedback Plus Learnable Nonlinear Youla Dynamics"
+    },
+    "arXiv:2601.00942": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.00942",
+      "identity_tokens": [
+        "arXiv:2601.00942"
+      ],
+      "reason": "一次要旨はsparse/dense LLMのdecoding-temperature下reliability比較。推論効率を改善する手法やresource evaluationではない。",
+      "first_checked_at": "2026-10-06T21:23:34+00:00",
+      "last_checked_at": "2026-10-06T21:23:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "Reliability Under Randomness: An Empirical Analysis of Sparse and Dense Language Models Across Decoding Temperatures"
+    },
+    "DOI:10.18653/v1/2026.acl-long.1737": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1737",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1737"
+      ],
+      "reason": "ACL全文はdiffusion language model向けwatermarkingの検出性/不可視性を扱い、LLM inference efficiencyやservingを改善しない。",
+      "first_checked_at": "2026-10-06T21:23:35+00:00",
+      "last_checked_at": "2026-10-06T21:23:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "From TDMA to CDMA: A Multi-bit Watermark for Diffusion Language Models"
+    },
+    "DOI:10.18653/v1/2026.eacl-demo.44": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.eacl-demo.44",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.eacl-demo.44"
+      ],
+      "reason": "ACL一次ページは低resource Bangla NLP toolkit/platformと特定。LLM推論効率やserving手法ではない。全文PDF fetchはtimeoutだが一次abstract/pageで用途を判断できる。",
+      "first_checked_at": "2026-10-06T21:23:36+00:00",
+      "last_checked_at": "2026-10-06T21:23:36+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "BanSuite: A Unified Toolkit and Software Platform for Low-Resource NLP in Bangla"
+    },
+    "arXiv:2601.07430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.07430",
+      "identity_tokens": [
+        "arXiv:2601.07430"
+      ],
+      "reason": "一次要旨の主題はLLMの知識操作・想起能力を学習で向上する方法。推論効率/serving改善はない。",
+      "first_checked_at": "2026-10-06T21:23:36+00:00",
+      "last_checked_at": "2026-10-06T21:23:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "KALE: Enhancing Knowledge Manipulation in Large Language Models via Knowledge-aware Learning"
+    },
+    "arXiv:2601.03633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03633",
+      "identity_tokens": [
+        "arXiv:2601.03633"
+      ],
+      "reason": "一次要旨はレーダー降水予測用rectified-flow networkでありLLM推論とは無関係。",
+      "first_checked_at": "2026-10-06T21:23:37+00:00",
+      "last_checked_at": "2026-10-06T21:23:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "MFC-RFNet: A Multi-scale Guided Rectified Flow Network for Radar Sequence Prediction"
+    },
+    "arXiv:2601.04275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04275",
+      "identity_tokens": [
+        "arXiv:2601.04275"
+      ],
+      "reason": "一次要旨はLLM machine unlearningで、推論 compute/memory/latency/serving効率化を扱わない。",
+      "first_checked_at": "2026-10-06T21:23:37+00:00",
+      "last_checked_at": "2026-10-06T21:23:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "Shadow Unlearning: A Neuro-Semantic Approach to Fidelity-Preserving Faceless Forgetting in LLMs"
+    },
+    "arXiv:2601.11951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.11951",
+      "identity_tokens": [
+        "arXiv:2601.11951"
+      ],
+      "reason": "一次要旨の主題はWSN異常検知。RWKVを特徴抽出に使うだけで、LLM推論効率やservingの貢献ではない。",
+      "first_checked_at": "2026-10-06T21:23:38+00:00",
+      "last_checked_at": "2026-10-06T21:23:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "A Method for Detecting Spatio-temporal Correlation Anomalies of WSN Nodes Based on Topological Information Enhancement and Time-frequency Feature Extraction"
+    },
+    "arXiv:2601.12095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12095",
+      "identity_tokens": [
+        "arXiv:2601.12095"
+      ],
+      "reason": "本文は数値を代数構造を保つembeddingへ写す手法と演算テスト。sparse attention/長文処理のlinked lineageまたはLLM inference resource改善との接続を確認できない。",
+      "first_checked_at": "2026-10-06T21:23:38+00:00",
+      "last_checked_at": "2026-10-06T21:23:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Neural Isomorphic Fields: A Transformer-based Algebraic Numerical Embedding"
+    },
+    "arXiv:2601.00352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.00352",
+      "identity_tokens": [
+        "arXiv:2601.00352"
+      ],
+      "reason": "全文の対象はvisual-tactile sensor representation/domain generalization。multimodal LLM inference/servingや圧縮への接続がない。",
+      "first_checked_at": "2026-10-06T21:23:39+00:00",
+      "last_checked_at": "2026-10-06T21:23:39+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+      ],
+      "title": "OmniVaT: Single Domain Generalization for Multimodal Visual-Tactile Learning"
     }
   }
 }
