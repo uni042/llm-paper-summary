@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r116-screen-01-part-04-bc6c17a7fecf",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.06497",
+      "identity_tokens": [
+        "arXiv:2309.06497"
+      ],
+      "title": "A Distributed Data-Parallel PyTorch Implementation of the Distributed Shampoo Optimizer for Training Neural Networks At-Scale",
+      "reason": "Distributed Shampoo is a data-parallel optimizer for neural-network training, not the linked GPU offload/inference-serving problem.",
+      "source_url": "https://arxiv.org/abs/2309.06497",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.02544",
+      "identity_tokens": [
+        "arXiv:2408.02544"
+      ],
+      "title": "Caution for the Environment: Multimodal Agents are Susceptible to Environmental Distractions",
+      "reason": "This evaluates multimodal-agent robustness to visual distractions; it proposes no inference scheduling or efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2408.02544",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2024.102786",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2024.102786"
+      ],
+      "title": "Large models for intelligent transportation systems and autonomous vehicles: A survey",
+      "reason": "The transportation/AV survey may discuss efficient LLM deployment but is application-domain synthesis; publisher full text was unavailable for method-level review.",
+      "source_url": "https://doi.org/10.1016/j.aei.2024.102786",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.phrs.2024.107530",
+      "identity_tokens": [
+        "DOI:10.1016/j.phrs.2024.107530"
+      ],
+      "title": "TCMChat: A Generative Large Language Model for Traditional Chinese Medicine.",
+      "reason": "Title/abstract identifies a domain task or contribution with no plausible LLM inference-system or serving contribution.",
+      "source_url": "https://doi.org/10.1016/j.phrs.2024.107530",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.05140",
+      "identity_tokens": [
+        "arXiv:2402.05140"
+      ],
+      "title": "Tag-LLM: Repurposing General-Purpose LLMs for Specialized Domains",
+      "reason": "Tag-based adapters specialize LLMs, but the work focuses on task adaptation/quality rather than inference latency, memory, or serving.",
+      "source_url": "https://arxiv.org/abs/2402.05140",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    }
+  ]
+}
