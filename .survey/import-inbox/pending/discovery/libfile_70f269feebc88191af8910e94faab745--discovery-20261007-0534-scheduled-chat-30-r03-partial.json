@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-0534-scheduled-chat-30/r03-partial",
+  "reference_main_sha": "611e2af798a4812940358c95acc3775cd354ad5d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2004.03844",
+      "identity_tokens": [
+        "arXiv:2004.03844"
+      ],
+      "title": "On the effect of dropping layers of pre-trained transformer models",
+      "reason": "事前学習Transformerから上位層等を削除してモデルサイズと推論時間・メモリを削減し、BERT/RoBERTa/XLNetで最大40%削減時にも元性能の最大98.2%を維持するため、推論向け構造pruningとして対象。",
+      "source_url": "https://arxiv.org/abs/2004.03844",
+      "body_check": "fulltext_review: arXiv PDF本文の§1–5を確認。top/bottom/alternate/parameter/contribution/symmetricのlayer-dropping戦略、BERT/RoBERTa/XLNet/ALBERT/DistilBERTとGLUE評価、上位層削除が一貫して有効で40% size reduction時に最大98.2%性能維持、knowledge distillation相当のsize/performance/inference speedを追加trainingなしで得る結果を確認した。",
+      "first_checked_at": "2026-10-07T06:00:00+09:00",
+      "last_checked_at": "2026-10-07T06:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "worklist_rank": 78
+    }
+  ]
+}
