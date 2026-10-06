@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r137-screen-01-part-09-a06c57f4fe62",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1111/jedm.70064",
+      "identity_tokens": [
+        "DOI:10.1111/jedm.70064"
+      ],
+      "title": "Automated Scoring of Long‐Context Essays Using Linear‐Complexity Language Models",
+      "reason": "The bibliographic title (“Automated Scoring of Long‐Context Essays Using Linear‐Complexity Language Models”) signals a possible connection to inference/architecture efficiency and linked lineage: 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, but the primary DOI URL could not be accessed. The title alone cannot establish a concrete LLM compute, memory, latency, throughput, or serving result; keep borderline pending primary-source review.",
+      "source_url": "https://doi.org/10.1111/jedm.70064",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/123",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/123"
+      ],
+      "title": "G-SalAlignMamba: Geometry-Aware Vision Mamba for Dual-Modal Salient Object Detection",
+      "reason": "The IJCAI primary PDF describes G-SalAlignMamba for RGB-D/RGB-T salient-object detection. It reports 30.41 FPS and 83.80M parameters and addresses geometric alignment, sparse foreground salience, and image decoder boundaries. These are visual segmentation/detection mechanisms; there is no LLM or language-serving evaluation.",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/123",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/164",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/164"
+      ],
+      "title": "Learning Heterogeneous Global Local Frequency Dependencies in Diffusion-Based Image Compression",
+      "reason": "The IJCAI primary PDF describes FMDiff for diffusion-based image compression, with Fourier/Mamba branches for local/global image-frequency dependencies. Ablations compare magnitude/phase and Mamba variants; conclusion reports image distortion/perceptual tradeoffs. It addresses image compression and reconstruction, not LLM inference or KV/serving efficiency.",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/164",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/276",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/276"
+      ],
+      "title": "AnoMamba: Aligning Reconstruction with Time Series Anomaly Detection via Selective Global Dependency Modeling",
+      "reason": "The IJCAI primary PDF describes AnoMamba for univariate and multivariate time-series anomaly detection. It uses patch embedding and global step-size reweighting; experiments use eight anomaly-detection benchmarks and report detection metrics plus efficiency. The inference operation is task-specific reconstruction scoring, with no language/LLM inference or serving evaluation.",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/276",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/294",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/294"
+      ],
+      "title": "Towards Efficient and Effective Unimodal Trajectory Representation Learning: A Simple Yet Powerful Approach",
+      "reason": "The IJCAI primary PDF describes SimTRL, a bidirectional Mamba trajectory encoder for road-network trajectory representation. Experiments report 11.2x pre-training speedup against multimodal comparison and lower training time, while the efficiency table measures epochs and seconds per epoch. The claimed gain is trajectory-model pre-training, not LLM inference or serving.",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/294",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
