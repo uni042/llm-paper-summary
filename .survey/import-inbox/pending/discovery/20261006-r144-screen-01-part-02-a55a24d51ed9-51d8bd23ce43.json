@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r144-screen-01-part-02-a55a24d51ed9",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03080",
+      "identity_tokens": [
+        "arXiv:2606.03080"
+      ],
+      "title": "Regret Pre-training: Bridging Prior and Posterior Views for Enhanced Knowledge Grounding",
+      "reason": "The arXiv abstract describes a self-supervised pretraining objective for knowledge grounding; it does not propose inference compute, memory, latency, serving, or a linked systems mechanism.",
+      "source_url": "https://arxiv.org/abs/2606.03080",
+      "first_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "last_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03564",
+      "identity_tokens": [
+        "arXiv:2606.03564"
+      ],
+      "title": "CR-Seg: Attention-Guided and CoT-Enhanced Coarse-to-Refined Reasoning Segmentation",
+      "reason": "CR-Seg uses MLLM reasoning and attention priors to improve visual segmentation alignment and robustness. The full text frames its contribution as perception/segmentation quality and reasoning consistency, with no distributed-training or inference-efficiency mechanism connected to DeepSpeed.",
+      "source_url": "https://arxiv.org/abs/2606.03564",
+      "first_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "last_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04160",
+      "identity_tokens": [
+        "arXiv:2606.04160"
+      ],
+      "title": "Decomposing Refusal Steering in Mixture-of-Experts Models",
+      "reason": "The arXiv abstract concerns refusal-steering/safety alignment in MoE language models; it does not propose inference efficiency, serving, or distributed-training systems.",
+      "source_url": "https://arxiv.org/abs/2606.04160",
+      "first_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "last_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04166",
+      "identity_tokens": [
+        "arXiv:2606.04166"
+      ],
+      "title": "End-to-End Text Line Detection and Ordering",
+      "reason": "The arXiv abstract concerns document text-line detection and reading-order prediction, with no LLM systems or inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2606.04166",
+      "first_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "last_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/1402-4896/ae7657",
+      "identity_tokens": [
+        "DOI:10.1088/1402-4896/ae7657"
+      ],
+      "title": "Grouped self-attention and quantum-enhanced knowledge distillation",
+      "reason": "一次publisher/DOI abstractを取得できず、packet abstractだけでは対象範囲との関係を一次証拠で確定できないため。",
+      "source_url": "https://doi.org/10.1088/1402-4896/ae7657",
+      "first_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "last_checked_at": "2026-10-06T20:18:54.774215+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    }
+  ]
+}
