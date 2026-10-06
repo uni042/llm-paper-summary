@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r38-screen-01-part-09-6b2469cbf922",
+  "reference_main_sha": "b05a032087f45ed87d2608bca644099ed8cb0933",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.05381",
+      "identity_tokens": [
+        "arXiv:2510.05381"
+      ],
+      "title": "Context Length Alone Hurts LLM Performance Despite Perfect Retrieval",
+      "reason": "This study documents long-context performance degradation despite perfect retrieval, but proposes no resource-saving inference method.",
+      "source_url": "https://arxiv.org/abs/2510.05381",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.09515",
+      "identity_tokens": [
+        "arXiv:2305.09515"
+      ],
+      "title": "AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation",
+      "reason": "AR-Diffusion is a text-generation architecture combining autoregressive and diffusion ideas, but the paper emphasizes generation quality without a measured inference-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2305.09515",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.311",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.311"
+      ],
+      "title": "UNQOVERing Stereotypical Biases via Underspecified Questions",
+      "reason": "UNQOVER evaluates stereotypical biases in language models, not inference resource use.",
+      "source_url": "https://arxiv.org/abs/2010.02428",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.00634",
+      "identity_tokens": [
+        "arXiv:2407.00634"
+      ],
+      "title": "Tarsier: Recipes for Training and Evaluating Large Video Description Models",
+      "reason": "Tarsier provides video-description training/evaluation recipes, not an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2407.00634",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2304.09797",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.09797",
+        "arXiv:2304.09797"
+      ],
+      "title": "Progressive-Hint Prompting Improves Reasoning in Large Language Models",
+      "reason": "Progressive-Hint Prompting improves reasoning through prompts without measured inference resource reduction or serving mechanism.",
+      "source_url": "https://arxiv.org/abs/2304.09797",
+      "first_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "last_checked_at": "2026-10-06T04:32:12.578056+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ]
+    }
+  ]
+}
+
