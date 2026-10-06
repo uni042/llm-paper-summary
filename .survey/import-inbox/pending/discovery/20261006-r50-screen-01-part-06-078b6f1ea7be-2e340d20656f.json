@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r50-screen-01-part-06-078b6f1ea7be",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TBDATA.2025.3618472",
+      "identity_tokens": [
+        "DOI:10.1109/TBDATA.2025.3618472"
+      ],
+      "title": "Two-Step Nyström Sampling for Large-Scale Kernel Approximation",
+      "reason": "Nyström sampling for generic kernel approximation is not a transformer/LLM attention or inference method.",
+      "source_url": "https://doi.org/10.1109/TBDATA.2025.3618472",
+      "first_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "last_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSI.2025.3609633",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2025.3609633"
+      ],
+      "title": "LSTM Hardware Inference Accelerator for LiteRT",
+      "reason": "LSTM accelerator for LiteRT is mobile recurrent-model hardware, not a demonstrated LLM inference technique.",
+      "source_url": "https://doi.org/10.1109/TCSI.2025.3609633",
+      "first_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "last_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22400",
+      "identity_tokens": [
+        "arXiv:2601.22400"
+      ],
+      "title": "Spectral Filtering for Complex Linear Dynamical Systems",
+      "reason": "Spectral filtering for complex dynamical systems has no LLM inference connection.",
+      "source_url": "https://arxiv.org/abs/2601.22400",
+      "first_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "last_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20742",
+      "identity_tokens": [
+        "arXiv:2601.20742"
+      ],
+      "title": "Compression Tells Intelligence: Visual Coding, Visual Token Technology, and the Unification",
+      "reason": "The paper surveys visual coding/token technology broadly; visual token compression may be adjacent, but no concrete LLM inference contribution is established.",
+      "source_url": "https://arxiv.org/abs/2601.20742",
+      "first_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "last_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20856",
+      "identity_tokens": [
+        "arXiv:2601.20856"
+      ],
+      "title": "SokoBench: Evaluating Long-Horizon Planning and Reasoning in Large Language Models",
+      "reason": "SokoBench evaluates long-horizon reasoning/planning ability rather than improving inference.",
+      "source_url": "https://arxiv.org/abs/2601.20856",
+      "first_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "last_checked_at": "2026-10-06T06:51:36.853774+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    }
+  ]
+}
