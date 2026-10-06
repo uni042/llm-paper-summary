@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r157-screen-01-part-05-be1236e9dc4b",
+  "reference_main_sha": "85ffc4e77bc345a0b91450e6a364175124d877b3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.14378",
+      "identity_tokens": [
+        "arXiv:2110.14378"
+      ],
+      "title": "Towards artificial general intelligence via a multimodal foundation model",
+      "reason": "Linked to training memory/offload, but the Nature Communications full text describes GPU-resource savings in multimodal pretraining, not inference.",
+      "source_url": "https://arxiv.org/abs/2110.14378",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.18965",
+      "identity_tokens": [
+        "arXiv:2502.18965"
+      ],
+      "title": "OneRec: Unifying Retrieve and Rank with Generative Recommender and Iterative Preference Alignment",
+      "reason": "OneRec concerns generative retrieval/ranking recommendation and preference alignment, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2502.18965",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.13213",
+      "identity_tokens": [
+        "arXiv:2205.13213"
+      ],
+      "title": "Fast Vision Transformers with HiLo Attention",
+      "reason": "HiLo is an efficient ViT attention method with a conceivable decoder transfer, but has no autoregressive LM evidence.",
+      "source_url": "https://arxiv.org/abs/2205.13213",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09977",
+      "identity_tokens": [
+        "arXiv:2403.09977"
+      ],
+      "title": "EfficientVMamba: Atrous Selective Scan for Light Weight Visual Mamba",
+      "reason": "EfficientVMamba is a lightweight visual state-space model, not an LLM inference/serving method.",
+      "source_url": "https://arxiv.org/abs/2403.09977",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.10845",
+      "identity_tokens": [
+        "arXiv:2107.10845"
+      ],
+      "title": "QuantumNAS: Noise-Adaptive Search for Robust Quantum Circuits",
+      "reason": "Linked from sparse-attention work, but the primary paper searches noise-adaptive quantum circuits, not neural/LLM inference.",
+      "source_url": "https://arxiv.org/abs/2107.10845",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    }
+  ]
+}
