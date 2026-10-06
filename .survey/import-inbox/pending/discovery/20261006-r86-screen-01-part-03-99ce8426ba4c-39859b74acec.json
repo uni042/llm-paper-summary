@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r86-screen-01-part-03-99ce8426ba4c",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.15625/1813-9663/22770",
+      "identity_tokens": [
+        "DOI:10.15625/1813-9663/22770"
+      ],
+      "title": "Mamba-MHAR: An efficient multimodal framework for human action recognition",
+      "reason": "人間行動認識のmultimodal Mamba分類モデルで、LLM推論系統との具体的な技術接続がない。",
+      "source_url": "https://doi.org/10.15625/1813-9663/22770",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/e27090959",
+      "identity_tokens": [
+        "DOI:10.3390/e27090959"
+      ],
+      "title": "Reconstructing Hyperspectral Images from RGB Images by Multi-Scale Spectral–Spatial Sequence Learning",
+      "reason": "RGBからhyperspectral imageを再構成するvision taskで、LLM推論効率の対象外。",
+      "source_url": "https://doi.org/10.3390/e27090959",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.15423",
+      "identity_tokens": [
+        "arXiv:2508.15423"
+      ],
+      "title": "An Empirical Study of Knowledge Distillation for Code Understanding Tasks",
+      "reason": "本文はcode understanding向けencoder PLMのKDを調査し、decoder-only LLMは明示的にscope外とする。 小型encoder code-PLM中心で、著者自身がLLMを対象外とし一般LLM inferenceへの外挿に注意。",
+      "source_url": "https://arxiv.org/abs/2508.15423",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.20752",
+      "identity_tokens": [
+        "arXiv:2506.20752"
+      ],
+      "title": "Characterization and Mitigation of Training Instabilities in Microscaling Formats",
+      "reason": "本文はLLM trainingにおけるmicroscaling formatの不安定性と緩和を扱う。量子化形式の既存系統とは接点があるが、主対象はtraining stability。 direct inference/serving latency・memory改善の検証ではない。",
+      "source_url": "https://arxiv.org/abs/2506.20752",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ai6060127",
+      "identity_tokens": [
+        "DOI:10.3390/ai6060127"
+      ],
+      "title": "NSA-CHG: An Intelligent Prediction Framework for Real-Time TBM Parameter Optimization in Complex Geological Conditions",
+      "reason": "トンネル掘削機の地質条件/parameter予測を対象にし、language model inferenceではない。",
+      "source_url": "https://doi.org/10.3390/ai6060127",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ]
+    }
+  ]
+}
