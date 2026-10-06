@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r114-screen-01-part-09-2cf59f504f12",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.16723",
+      "identity_tokens": [
+        "arXiv:2512.16723"
+      ],
+      "title": "KOSS: Kalman-Optimal Selective State Spaces for Long-Term Sequence Modeling",
+      "reason": "KOSS formulates state selection via Kalman gain and uses spectral differentiation plus segment-wise scans; it reports copying and long-horizon forecasting gains, including near-linear hardware-oriented processing. Its evaluations are time-series/radar rather than LLMs; the SSM alternative is a plausible architecture relation but LLM inference benefit is not tested.",
+      "source_url": "https://arxiv.org/abs/2512.16723",
+      "first_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "last_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.12889",
+      "identity_tokens": [
+        "arXiv:2512.12889"
+      ],
+      "title": "Distillation of Discrete Diffusion by Exact Conditional Distribution Matching",
+      "reason": "The method distills discrete diffusion samplers by matching conditional distributions to one- or few-step students, targeting fewer function evaluations. It is a plausible text-generation acceleration method if applied to language diffusion, but the paper’s scope/evaluation does not establish an LLM-serving improvement.",
+      "source_url": "https://arxiv.org/abs/2512.12889",
+      "first_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "last_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.13478",
+      "identity_tokens": [
+        "arXiv:2512.13478"
+      ],
+      "title": "NRR-Core: Non-Resolution Reasoning as a Computational Framework for Contextual Identity and Ambiguity Preservation",
+      "reason": "NRR-Core specifies contextual retention and non-resolution operators and tests one gated multi-vector embedding on a synthetic two-turn ambiguity task. The paper proposes non-collapsing attention as an implementation direction but does not evaluate long-context LLM memory, sparse attention, or serving costs.",
+      "source_url": "https://arxiv.org/abs/2512.13478",
+      "first_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "last_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TIP.2025.3639925",
+      "identity_tokens": [
+        "DOI:10.1109/TIP.2025.3639925"
+      ],
+      "title": "Large Visual Language Models Continual Learning With Dynamic Mixture of Experts",
+      "reason": "IEEE DOI https://doi.org/10.1109/TIP.2025.3639925 opened only a robot-verification/JavaScript page. Abstract describes continual-learning MoE for visual-language models; primary methods/evaluation and inference efficiency are unavailable.",
+      "source_url": "https://doi.org/10.1109/TIP.2025.3639925",
+      "first_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "last_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1021/acs.analchem.5c02375",
+      "identity_tokens": [
+        "DOI:10.1021/acs.analchem.5c02375"
+      ],
+      "title": "GPMassSimulator: A Graphormer-Based Method for Glycopeptide MS/MS Spectra Prediction.",
+      "reason": "Primary ACS DOI https://doi.org/10.1021/acs.analchem.5c02375 was inaccessible. Abstract concerns glycopeptide MS/MS prediction by Graphormer; the speculative-decoding lineage relation could not be checked in full text.",
+      "source_url": "https://doi.org/10.1021/acs.analchem.5c02375",
+      "first_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "last_checked_at": "2026-10-06T15:41:13.894880+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+      ]
+    }
+  ]
+}
