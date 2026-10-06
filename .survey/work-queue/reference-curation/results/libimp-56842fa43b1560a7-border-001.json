@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56842fa43b1560a7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.19107",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.19107",
+    "identity_tokens": [
+      "arXiv:2609.19107"
+    ],
+    "reason": "This paper analyzes how model growth, recursion and boundary operators change pretraining scaling exponents. The text situates looping as inference-time compute scaling and parameter efficiency, but its experiments concern scaling behavior during training rather than a serving intervention or measured inference resource improvement. The relation to inference-scale surveys is indirect.",
+    "first_checked_at": "2026-10-06T09:07:17+00:00",
+    "last_checked_at": "2026-10-06T09:07:17+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents"
+  },
+  "processed_at": "2026-10-06T09:07:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56842fa43b15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

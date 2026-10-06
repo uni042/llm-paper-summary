@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T09:04:15+00:00",
-  "record_count": 2655,
+  "updated_at": "2026-10-06T09:07:23+00:00",
+  "record_count": 2661,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -40798,6 +40798,96 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Toki: Profiling HBM Performance on FPGA Systems with RISC-V Soft Cores and PCIe Host DMA Traffic"
+    },
+    "arXiv:2609.23111": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23111",
+      "identity_tokens": [
+        "arXiv:2609.23111"
+      ],
+      "reason": "Inherit4Rec transfers dense-recommender parameters into a sparse MoE to scale recommendation models; full text reports up to 72% lower incremental MoE training cost with small quality changes. Evaluation shares the active shared-plus-top-1 path at inference, but the resource result is training-cost reduction rather than LLM inference/serving improvement. Its linked UniMoMo recommender-acceleration lineage is plausible, but the in-scope runtime connection needs further comparison.",
+      "first_checked_at": "2026-10-06T09:07:14+00:00",
+      "last_checked_at": "2026-10-06T09:07:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Inherit4Rec: Parameter Inheritance for Efficient Scaling of Recommendation Models"
+    },
+    "arXiv:2609.21605": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21605",
+      "identity_tokens": [
+        "arXiv:2609.21605"
+      ],
+      "reason": "The paper studies recurrent Transformers that feed the preceding token's hidden state into the next token while retaining KV states, trading recurrence depth against sequence time. Experiments compare block executions/accuracy, but the authors explicitly say block counts omit attention overhead and are neither latency nor throughput measurements; the compute budget is approximate. Relevant to LLM compute allocation, yet no serving-efficiency gain is established.",
+      "first_checked_at": "2026-10-06T09:07:16+00:00",
+      "last_checked_at": "2026-10-06T09:07:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Trading Depth for Time in Recurrent Transformers"
+    },
+    "arXiv:2609.19717": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19717",
+      "identity_tokens": [
+        "arXiv:2609.19717"
+      ],
+      "reason": "Abstract Token Curriculum trains continuous latent thoughts with curriculum backtracking, truncated backpropagation and candidate dropout. Full text reports lower training cost (2.41 vs 3.79 GiB peak memory and 113 vs 139 ms per step in one comparison), but this is training-time efficiency; the paper does not measure inference token/latency savings. Keep borderline for possible reasoning-lineage relevance only.",
+      "first_checked_at": "2026-10-06T09:07:16+00:00",
+      "last_checked_at": "2026-10-06T09:07:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learn Your Own Thoughts: Abstract Token Curriculum"
+    },
+    "arXiv:2609.19107": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19107",
+      "identity_tokens": [
+        "arXiv:2609.19107"
+      ],
+      "reason": "This paper analyzes how model growth, recursion and boundary operators change pretraining scaling exponents. The text situates looping as inference-time compute scaling and parameter efficiency, but its experiments concern scaling behavior during training rather than a serving intervention or measured inference resource improvement. The relation to inference-scale surveys is indirect.",
+      "first_checked_at": "2026-10-06T09:07:17+00:00",
+      "last_checked_at": "2026-10-06T09:07:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents"
+    },
+    "arXiv:2609.16665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16665",
+      "identity_tokens": [
+        "arXiv:2609.16665"
+      ],
+      "reason": "The study geometrically analyzes finite-step failures in looped Transformers and identifies recoverable utility losses within recurrent inference steps. The full text defines looping as an inference-time compute resource and tests interventions on path direction/step count, but reports no latency or serving-efficiency result and proposes no resource-saving deployment method; retain as adjacent analysis only.",
+      "first_checked_at": "2026-10-06T09:07:18+00:00",
+      "last_checked_at": "2026-10-06T09:07:18+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Right Direction, Wrong Step: Geometric Analysis of Finite-Step Failure in Looped Transformers"
+    },
+    "DOI:10.1007/s11263-026-03044-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11263-026-03044-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-026-03044-2"
+      ],
+      "reason": "The publisher page provides title/abstract preview describing oscillator-network vision inference, but labels the article full text as subscription content; no author/institution full-text source was found in this pass. It is also vision-only rather than LLM inference, so retain as borderline pending accessible primary body/scope check.",
+      "first_checked_at": "2026-10-06T09:07:23+00:00",
+      "last_checked_at": "2026-10-06T09:07:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OscVision: Oscillator Networks for Low Power Vision Inference"
     }
   }
 }
