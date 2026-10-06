@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r134-screen-01-part-05-81fd0f3214c4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33181",
+      "identity_tokens": [
+        "arXiv:2609.33181"
+      ],
+      "title": "SeOPD: Self-Evolving LLMs via Online Policy Distillation from Self-Generated Chain-of-Thought",
+      "reason": "自己生成CoTを使ったオンライン方策蒸留の訓練研究で、推論時コスト改善は示さない。",
+      "source_url": "https://arxiv.org/abs/2609.33181",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33467",
+      "identity_tokens": [
+        "arXiv:2609.33467"
+      ],
+      "title": "A Cheap Verifier is Good Enough: LLM Post-training is Robust to Erroneous Rewards",
+      "reason": "安価なverifierと誤った報酬に対するLLM post-training頑健性を研究し、配備時の推論効率改善ではない。",
+      "source_url": "https://arxiv.org/abs/2609.33467",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33492",
+      "identity_tokens": [
+        "arXiv:2609.33492"
+      ],
+      "title": "FedMHAR: Federated Multimodal Human Activity Recognition using Multi-Agent Reinforcement Learning",
+      "reason": "人間活動認識の連合マルチモーダル学習で、対象技術や推論効率との直接関係がない。",
+      "source_url": "https://arxiv.org/abs/2609.33492",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33541",
+      "identity_tokens": [
+        "arXiv:2609.33541"
+      ],
+      "title": "An Analytical Framework for a Multi-Particle Oja Flow",
+      "reason": "多粒子Oja流の解析でself-attentionとの数学的接点はあるが、LLM推論実装・効率結果はない。",
+      "source_url": "https://arxiv.org/abs/2609.33541",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33691",
+      "identity_tokens": [
+        "arXiv:2609.33691"
+      ],
+      "title": "When Do Agents Help? Embedding, LLM and Agentic Alignment of Classical Texts and Their Translations",
+      "reason": "古典文献と翻訳の対応付けworkflow比較で、推論時間/メモリ/費用改善が目的ではない。",
+      "source_url": "https://arxiv.org/abs/2609.33691",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    }
+  ]
+}
