@@ -1,0 +1,183 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f66e12d1880ec0c3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f66e12d1880e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.13048",
+    "arXiv:2306.00978",
+    "arXiv:2307.16449"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "df618d0049c589eaa455358c53cc674dec66042c",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-06T12:55:25.067819+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.13048",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2023.findings-emnlp.936"
+    },
+    {
+      "requested_id": "arXiv:2306.00978",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2306.00978"
+    },
+    {
+      "requested_id": "arXiv:2307.16449",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2307.16449",
+      "year": 2023,
+      "published": "2023-07-31",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 680,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, integrating video foundation models and large language models to build a video understanding system can overcome the limitations of specific pre-defined vision tasks. Yet, existing systems can only handle videos with very few frames. For long videos, the computation complexity, memory cost, and long-term temporal connection impose additional challenges. Taking advantage of the Atkinson-Shiffrin memory model, with tokens in Transformers being employed as the carriers of memory in combination with our specially designed memory mechanism, we propose the MovieChat to overcome these challenges. MovieChat achieves state-of-the-art performance in long video understanding, along with the released MovieChat-1K benchmark with 1K long video and 14K manual annotations for validation of the effectiveness of our method. The code, models and data can be found in https://reself.github.io/MovieChat.",
+      "identifiers": [
+        "SemanticScholar:6f9b7c8cde1be2e62a503c31cac883c6d44c9d0d"
+      ],
+      "semantic_scholar_id": "6f9b7c8cde1be2e62a503c31cac883c6d44c9d0d",
+      "canonical_id": "arXiv:2307.16449",
+      "arxiv_id": "2307.16449",
+      "doi": "10.1109/CVPR52733.2024.01725",
+      "authors": [
+        "En-Xin Song",
+        "Wenhao Chai",
+        "Guan-Hong Wang",
+        "Yu-Chen Zhang",
+        "Haoyang Zhou",
+        "Feiyang Wu",
+        "Hao-Zhe Chi",
+        "Xun Guo",
+        "Tianbo Ye",
+        "Yan-Ting Zhang",
+        "Yang Lu",
+        "Jenq-Neng Hwang",
+        "Gao-Ang Wang"
+      ],
+      "priority": 680,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 680,
+        "citation_count": 680,
+        "total": 680,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1163,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2307.16449",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvpr52733.2024.01725",
+        "id:SemanticScholar:6f9b7c8cde1be2e62a503c31cac883c6d44c9d0d",
+        "id:arXiv:2307.16449",
+        "title:moviechat from dense token to sparse memory for long video understanding",
+        "url:https://arxiv.org/abs/2307.16449"
+      ],
+      "record": {
+        "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+        "source_url": "https://arxiv.org/abs/2307.16449",
+        "year": 2023,
+        "published": "2023-07-31",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 680,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, integrating video foundation models and large language models to build a video understanding system can overcome the limitations of specific pre-defined vision tasks. Yet, existing systems can only handle videos with very few frames. For long videos, the computation complexity, memory cost, and long-term temporal connection impose additional challenges. Taking advantage of the Atkinson-Shiffrin memory model, with tokens in Transformers being employed as the carriers of memory in combination with our specially designed memory mechanism, we propose the MovieChat to overcome these challenges. MovieChat achieves state-of-the-art performance in long video understanding, along with the released MovieChat-1K benchmark with 1K long video and 14K manual annotations for validation of the effectiveness of our method. The code, models and data can be found in https://reself.github.io/MovieChat.",
+        "identifiers": [
+          "SemanticScholar:6f9b7c8cde1be2e62a503c31cac883c6d44c9d0d"
+        ],
+        "semantic_scholar_id": "6f9b7c8cde1be2e62a503c31cac883c6d44c9d0d",
+        "canonical_id": "arXiv:2307.16449",
+        "arxiv_id": "2307.16449",
+        "doi": "10.1109/CVPR52733.2024.01725",
+        "authors": [
+          "En-Xin Song",
+          "Wenhao Chai",
+          "Guan-Hong Wang",
+          "Yu-Chen Zhang",
+          "Haoyang Zhou",
+          "Feiyang Wu",
+          "Hao-Zhe Chi",
+          "Xun Guo",
+          "Tianbo Ye",
+          "Yan-Ting Zhang",
+          "Yang Lu",
+          "Jenq-Neng Hwang",
+          "Gao-Ang Wang"
+        ],
+        "priority": 680,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 680,
+          "citation_count": 680,
+          "total": 680,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1163,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:64c07a9323507c3ad104abb5e716330e88fb7e8eccd28778b36baeb84de10e42",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
