@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-290f7211a3ce1eb2-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.19348",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.19348",
+    "identity_tokens": [
+      "arXiv:2603.19348"
+    ],
+    "reason": "一次全文はSmolLM2-135Mの層異質性とGrowth Transformer Trainingを示し、training cost削減には関係するがinference compute/latency改善ではない。1B+への一般化も未検証。",
+    "first_checked_at": "2026-10-06T11:01:26+00:00",
+    "last_checked_at": "2026-10-06T11:01:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Anatomical Heterogeneity in Transformer Language Models"
+  },
+  "processed_at": "2026-10-06T11:01:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-290f7211a3ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

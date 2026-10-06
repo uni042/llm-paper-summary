@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T10:45:47+00:00",
-  "record_count": 7912,
+  "updated_at": "2026-10-06T11:01:33+00:00",
+  "record_count": 7947,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -113770,6 +113770,499 @@
         "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
       ],
       "title": "HNFA-ViT: A Hybrid Nyström–Full Attention Vision Transformer for Efficient Brain Tumor MRI Classification"
+    },
+    "arXiv:2603.26188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26188",
+      "identity_tokens": [
+        "arXiv:2603.26188"
+      ],
+      "reason": "心エコー画像セグメンテーションでLLMとは無関係。",
+      "first_checked_at": "2026-10-06T11:01:24+00:00",
+      "last_checked_at": "2026-10-06T11:01:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "OSA: Echocardiography Video Segmentation via Orthogonalized State Update and Anatomical Prior-aware Feature Enhancement"
+    },
+    "DOI:10.1109/icitiit68860.2026.11499618": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icitiit68860.2026.11499618",
+      "identity_tokens": [
+        "DOI:10.1109/icitiit68860.2026.11499618"
+      ],
+      "reason": "マルウェア分類の表現学習でLLM推論最適化ではない。",
+      "first_checked_at": "2026-10-06T11:01:24+00:00",
+      "last_checked_at": "2026-10-06T11:01:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "A Cross-Platform Malware Classification Using Domain-Aware Representation Learning"
+    },
+    "DOI:10.1038/s41598-026-44870-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-44870-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-44870-1"
+      ],
+      "reason": "自動運転3D車線検出。Mamba利用だが画像認識が対象。",
+      "first_checked_at": "2026-10-06T11:01:24+00:00",
+      "last_checked_at": "2026-10-06T11:01:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Efficient monocular 3D lane detection via Mamba-enhanced CM-3DLane framework"
+    },
+    "DOI:10.1109/aiei69164.2026.11496926": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/aiei69164.2026.11496926",
+      "identity_tokens": [
+        "DOI:10.1109/aiei69164.2026.11496926"
+      ],
+      "reason": "意味通信の学習/チャネル適応/量子化で、LLM推論の量子化ではない。",
+      "first_checked_at": "2026-10-06T11:01:24+00:00",
+      "last_checked_at": "2026-10-06T11:01:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Custom Training, Channel Adaptation, and Quantization of Deep Learning Enabled Semantic Communication"
+    },
+    "DOI:10.1109/nice69539.2026.11567512": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/nice69539.2026.11567512",
+      "identity_tokens": [
+        "DOI:10.1109/nice69539.2026.11567512"
+      ],
+      "reason": "spiking classifier用neuromorphic early exitでLLM decodeではない。",
+      "first_checked_at": "2026-10-06T11:01:25+00:00",
+      "last_checked_at": "2026-10-06T11:01:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "InterneurOn: A Collapsing-Bound Decision Neuron for Neuromorphic Early Exit"
+    },
+    "DOI:10.1080/13682199.2026.2641383": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/13682199.2026.2641383",
+      "identity_tokens": [
+        "DOI:10.1080/13682199.2026.2641383"
+      ],
+      "reason": "画像圧縮向けSSMでLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:25+00:00",
+      "last_checked_at": "2026-10-06T11:01:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Efficient learned image compression with dual-route attention based on state space modeling"
+    },
+    "arXiv:2603.07120": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07120",
+      "identity_tokens": [
+        "arXiv:2603.07120"
+      ],
+      "reason": "multi-focus画像融合でLLM推論効率ではない。",
+      "first_checked_at": "2026-10-06T11:01:25+00:00",
+      "last_checked_at": "2026-10-06T11:01:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Inter-Image Pixel Shuffling for Multi-focus Image Fusion"
+    },
+    "arXiv:2603.06256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06256",
+      "identity_tokens": [
+        "arXiv:2603.06256"
+      ],
+      "reason": "視線認識のMoE視覚分類でLLM推論ではない.",
+      "first_checked_at": "2026-10-06T11:01:26+00:00",
+      "last_checked_at": "2026-10-06T11:01:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "GazeMoE: Perception of Gaze Target with Mixture-of-Experts"
+    },
+    "arXiv:2603.18448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18448",
+      "identity_tokens": [
+        "arXiv:2603.18448"
+      ],
+      "reason": "映画ショット理解VLMの性能評価で推論cost削減手法ではない。",
+      "first_checked_at": "2026-10-06T11:01:26+00:00",
+      "last_checked_at": "2026-10-06T11:01:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Seeking Universal Shot Language Understanding Solutions"
+    },
+    "arXiv:2603.18742": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18742",
+      "identity_tokens": [
+        "arXiv:2603.18742"
+      ],
+      "reason": "動画diffusion transformer量子化/cacheの高速化だがLLMではなく動画生成。",
+      "first_checked_at": "2026-10-06T11:01:26+00:00",
+      "last_checked_at": "2026-10-06T11:01:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ],
+      "title": "6Bit-Diffusion: Inference-Time Mixed-Precision Quantization for Video Diffusion Models"
+    },
+    "arXiv:2603.18757": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18757",
+      "identity_tokens": [
+        "arXiv:2603.18757"
+      ],
+      "reason": "物体検出のdomain adaptationでLLM inference効率ではない。",
+      "first_checked_at": "2026-10-06T11:01:26+00:00",
+      "last_checked_at": "2026-10-06T11:01:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "DA-Mamba: Learning Domain-Aware State Space Model for Global-Local Alignment in Domain Adaptive Object Detection"
+    },
+    "arXiv:2603.18838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18838",
+      "identity_tokens": [
+        "arXiv:2603.18838"
+      ],
+      "reason": "モデルensembleによるfairness予測後処理でLLM推論効率ではない。",
+      "first_checked_at": "2026-10-06T11:01:27+00:00",
+      "last_checked_at": "2026-10-06T11:01:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "A Model Ensemble-Based Post-Processing Framework for Fairness-Aware Prediction"
+    },
+    "arXiv:2603.21888": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21888",
+      "identity_tokens": [
+        "arXiv:2603.21888"
+      ],
+      "reason": "音声表現のfederated fine-tuningが主題で推論時改善ではない。",
+      "first_checked_at": "2026-10-06T11:01:27+00:00",
+      "last_checked_at": "2026-10-06T11:01:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Adaptive Federated Fine-Tuning of Self-Supervised Speech Representations"
+    },
+    "arXiv:2603.22466": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22466",
+      "identity_tokens": [
+        "arXiv:2603.22466"
+      ],
+      "reason": "映像センサ側の撮像省電力でLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:27+00:00",
+      "last_checked_at": "2026-10-06T11:01:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "Color When It Counts: Grayscale-Guided Online Triggering for Always-On Streaming Video Sensing"
+    },
+    "DOI:10.1109/smartindustrycon68821.2026.11493084": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/smartindustrycon68821.2026.11493084",
+      "identity_tokens": [
+        "DOI:10.1109/smartindustrycon68821.2026.11493084"
+      ],
+      "reason": "異種センサの時刻同期/欠損対策でLLMとは無関係。",
+      "first_checked_at": "2026-10-06T11:01:27+00:00",
+      "last_checked_at": "2026-10-06T11:01:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Time Synchronization and Robustness to Data Incompleteness"
+    },
+    "arXiv:2603.20074": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20074",
+      "identity_tokens": [
+        "arXiv:2603.20074"
+      ],
+      "reason": "視覚SSMによる画像空間モデルでLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:28+00:00",
+      "last_checked_at": "2026-10-06T11:01:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "MFil-Mamba: Multi-Filter Scanning for Spatial Redundancy-Aware Visual State Space Models"
+    },
+    "DOI:10.1002/rcs.70164": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/rcs.70164",
+      "identity_tokens": [
+        "DOI:10.1002/rcs.70164"
+      ],
+      "reason": "膵癌診断向け軽量画像分類。LLM推論やLLM系統への接点は要旨にない。",
+      "first_checked_at": "2026-10-06T11:01:28+00:00",
+      "last_checked_at": "2026-10-06T11:01:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Explainable Lightweight Model Using Low‐Rank and Convolutional Block Attention for Pancreatic Cancer Diagnosis"
+    },
+    "DOI:10.1016/j.asoc.2026.115246": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.115246",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.115246"
+      ],
+      "reason": "水中画像補正の視覚タスクでLLM推論の改善ではない。",
+      "first_checked_at": "2026-10-06T11:01:28+00:00",
+      "last_checked_at": "2026-10-06T11:01:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Underwater image enhancement via dual-domain experts with hybrid-masked contrastive learning"
+    },
+    "DOI:10.1016/j.grets.2026.100362": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.grets.2026.100362",
+      "identity_tokens": [
+        "DOI:10.1016/j.grets.2026.100362"
+      ],
+      "reason": "AI/ICT政策の概念枠組みで具体的なモデル最適化ではない。",
+      "first_checked_at": "2026-10-06T11:01:28+00:00",
+      "last_checked_at": "2026-10-06T11:01:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Generalized green and red concepts for artificial intelligence, big data, and information and communication technologies: Multidimensional framework and countermeasures"
+    },
+    "DOI:10.1016/j.joitmc.2026.100770": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.joitmc.2026.100770",
+      "identity_tokens": [
+        "DOI:10.1016/j.joitmc.2026.100770"
+      ],
+      "reason": "気候政策分析でLLM推論効率の研究ではない。",
+      "first_checked_at": "2026-10-06T11:01:29+00:00",
+      "last_checked_at": "2026-10-06T11:01:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Quantifying Responsible AI's Role in Global Climate Policy Stabilization"
+    },
+    "arXiv:2603.17365": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17365",
+      "identity_tokens": [
+        "arXiv:2603.17365"
+      ],
+      "reason": "一般DNNの内部noise kernel設計でLLM推論/servingの具体策ではない。",
+      "first_checked_at": "2026-10-06T11:01:29+00:00",
+      "last_checked_at": "2026-10-06T11:01:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Variational Kernel Design for Internal Noise: Gaussian Chaos Noise, Representation Compatibility, and Reliable Deep Learning"
+    },
+    "arXiv:2603.15265": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15265",
+      "identity_tokens": [
+        "arXiv:2603.15265"
+      ],
+      "reason": "ロボット操作向けvisuomotor policy学習でLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:29+00:00",
+      "last_checked_at": "2026-10-06T11:01:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "MoE-ACT: Scaling Multi-Task Bimanual Manipulation with Sparse Task-Conditioned Mixture-of-Experts Transformers"
+    },
+    "DOI:10.1109/percomworkshops68308.2026.11585485": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/percomworkshops68308.2026.11585485",
+      "identity_tokens": [
+        "DOI:10.1109/percomworkshops68308.2026.11585485"
+      ],
+      "reason": "視覚セグメンテーション用early exitでLLM inferenceではない。",
+      "first_checked_at": "2026-10-06T11:01:29+00:00",
+      "last_checked_at": "2026-10-06T11:01:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Context-Aware Inference in Segmentation with Block-skipping Early Exit Networks"
+    },
+    "arXiv:2603.13682": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13682",
+      "identity_tokens": [
+        "arXiv:2603.13682"
+      ],
+      "reason": "医療画像分類向け学習損失でLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:30+00:00",
+      "last_checked_at": "2026-10-06T11:01:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Every Error has Its Magnitude: Asymmetric Mistake Severity Training for Multiclass Multiple Instance Learning"
+    },
+    "DOI:10.3390/s26072186": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26072186",
+      "identity_tokens": [
+        "DOI:10.3390/s26072186"
+      ],
+      "reason": "遠隔探査画像超解像向けMoEでLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:30+00:00",
+      "last_checked_at": "2026-10-06T11:01:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Distortion-Aware Routing and Parameter-Shared MoE for Multispectral Remote Sensing Super-Resolution"
+    },
+    "arXiv:2603.28360": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28360",
+      "identity_tokens": [
+        "arXiv:2603.28360"
+      ],
+      "reason": "multi-LLM uncertainty測定で、inferenceコストを減らす具体策ではない。",
+      "first_checked_at": "2026-10-06T11:01:30+00:00",
+      "last_checked_at": "2026-10-06T11:01:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "CoE: Collaborative Entropy for Uncertainty Quantification in Agentic Multi-LLM Systems"
+    },
+    "arXiv:2603.27661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.27661",
+      "identity_tokens": [
+        "arXiv:2603.27661"
+      ],
+      "reason": "エッジ検出用視覚モデルのpruningでLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:30+00:00",
+      "last_checked_at": "2026-10-06T11:01:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Amped: Adaptive Multi-stage Non-edge Pruning for Edge Detection"
+    },
+    "DOI:10.1109/spccs69331.2026.11588613": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/spccs69331.2026.11588613",
+      "identity_tokens": [
+        "DOI:10.1109/spccs69331.2026.11588613"
+      ],
+      "reason": "歩行者tracking向けSelective SSMでLLM inferenceではない。",
+      "first_checked_at": "2026-10-06T11:01:31+00:00",
+      "last_checked_at": "2026-10-06T11:01:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Trajectory Prediction and Online Tracking of Pedestrian Multi-Objective Tracking Based on Selective State Space Model"
+    },
+    "arXiv:2603.12222": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12222",
+      "identity_tokens": [
+        "arXiv:2603.12222"
+      ],
+      "reason": "ViT画像分類pruningで、LLM/言語系統への直接接続がない。",
+      "first_checked_at": "2026-10-06T11:01:31+00:00",
+      "last_checked_at": "2026-10-06T11:01:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "HiAP: A Multi-Granular Stochastic Auto-Pruning Framework for Vision Transformers"
+    },
+    "arXiv:2603.12506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12506",
+      "identity_tokens": [
+        "arXiv:2603.12506"
+      ],
+      "reason": "text-to-image diffusionの品質向上でLLM推論コスト削減ではない。",
+      "first_checked_at": "2026-10-06T11:01:31+00:00",
+      "last_checked_at": "2026-10-06T11:01:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Naïve PAINE: Lightweight Text-to-Image Generation Improvement with Prompt Evaluation"
+    },
+    "DOI:10.1007/s10044-026-01644-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10044-026-01644-9",
+      "identity_tokens": [
+        "DOI:10.1007/s10044-026-01644-9"
+      ],
+      "reason": "医療画像VQAの画像/text融合。出版社要旨は精度向上で、LLM inference効率を示さない。",
+      "first_checked_at": "2026-10-06T11:01:32+00:00",
+      "last_checked_at": "2026-10-06T11:01:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Medical dynamic feature enhanced multimodal fusion for medical visual question answering"
+    },
+    "DOI:10.1109/icccs69761.2026.11613279": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icccs69761.2026.11613279",
+      "identity_tokens": [
+        "DOI:10.1109/icccs69761.2026.11613279"
+      ],
+      "reason": "時空間グラフ予測向けMoEでLLM推論ではない。",
+      "first_checked_at": "2026-10-06T11:01:32+00:00",
+      "last_checked_at": "2026-10-06T11:01:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Multi-Scale MoE-Based Implicit Graph Learning for Spatio-Temporal Forecasting"
+    },
+    "DOI:10.1109/iccitx70146.2026.11679945": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccitx70146.2026.11679945",
+      "identity_tokens": [
+        "DOI:10.1109/iccitx70146.2026.11679945"
+      ],
+      "reason": "更年期医療RAGの応用評価で、LLM資源効率を改善する方法ではない。",
+      "first_checked_at": "2026-10-06T11:01:32+00:00",
+      "last_checked_at": "2026-10-06T11:01:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Bridging the Menopause Information Gap: A Peer-Reviewed Multimodal RAG Framework with Hybrid Retrieval"
+    },
+    "DOI:10.1109/jiot.2026.3656382": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3656382",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3656382"
+      ],
+      "reason": "拡散モデルのwatermark方式。LLM inferenceではない。",
+      "first_checked_at": "2026-10-06T11:01:33+00:00",
+      "last_checked_at": "2026-10-06T11:01:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Scalable and Robust Watermarking for Diffusion Models via Task-Decoupled Mixture-of-Watermarks"
+    },
+    "DOI:10.1109/tcsvt.2025.3637303": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3637303",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3637303"
+      ],
+      "reason": "MLLMの継続学習/忘却対策で、推論効率ではなく学習機構。",
+      "first_checked_at": "2026-10-06T11:01:33+00:00",
+      "last_checked_at": "2026-10-06T11:01:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Adaptive Momentum Mixture-of-Experts for Continual Visual Question Answering"
     }
   }
 }

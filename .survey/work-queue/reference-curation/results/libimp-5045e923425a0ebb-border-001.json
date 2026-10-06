@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5045e923425a0ebb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.26599/bdma.2025.9020065",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.26599/bdma.2025.9020065",
+    "identity_tokens": [
+      "DOI:10.26599/bdma.2025.9020065"
+    ],
+    "reason": "出版社abstractはlow-bit CUTLASS GEMM/linear layerでA100最大1.99x/1.28x speedupを報告する有望な基盤。ただし本文PDFを取得できず、LLMでの実効推論・quality条件を確認できない。",
+    "first_checked_at": "2026-10-06T11:01:30+00:00",
+    "last_checked_at": "2026-10-06T11:01:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Leveraging Large-Scale Data for Efficient Low-Bit CUTLASS GEMM Optimization via Neural Networks"
+  },
+  "processed_at": "2026-10-06T11:01:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5045e923425a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

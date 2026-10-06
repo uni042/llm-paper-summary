@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T10:45:46+00:00",
-  "record_count": 2812,
+  "updated_at": "2026-10-06T11:01:32+00:00",
+  "record_count": 2822,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -43163,6 +43163,159 @@
       ],
       "borderline_recheck_count": 0,
       "title": "State Stream Transformer (SST) V2: Parallel Training of Nonlinear Recurrence for Latent Space Reasoning"
+    },
+    "DOI:10.1109/icoeca68095.2026.11485047": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icoeca68095.2026.11485047",
+      "identity_tokens": [
+        "DOI:10.1109/icoeca68095.2026.11485047"
+      ],
+      "reason": "IEEE abstractはGemma 2BのQLoRA/Q4_K_M local deployment、1.5GB/2.4x size reductionを報告し関連するが、本文を取得できずmemory/runtime/accuracy条件を検証できない。",
+      "first_checked_at": "2026-10-06T11:01:25+00:00",
+      "last_checked_at": "2026-10-06T11:01:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Privacy-Preserving Medical Chatbot: A Local Deployment Framework using Parameter-Efficient Fine-Tuning and Quantized Inference"
+    },
+    "DOI:10.1109/icoeca68095.2026.11485055": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icoeca68095.2026.11485055",
+      "identity_tokens": [
+        "DOI:10.1109/icoeca68095.2026.11485055"
+      ],
+      "reason": "IEEE abstractはINT8量子化とLoRA/QLoRA accuracy recovery、runtime最大70%増の例を示すが、一次全文を取得できずbenchmark条件を確認できない。",
+      "first_checked_at": "2026-10-06T11:01:25+00:00",
+      "last_checked_at": "2026-10-06T11:01:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From FP32 to QLoRA: A Four-Phase Experimental Pipeline for Assessing Accuracy Recovery in Quantized Transformers"
+    },
+    "arXiv:2603.19348": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.19348",
+      "identity_tokens": [
+        "arXiv:2603.19348"
+      ],
+      "reason": "一次全文はSmolLM2-135Mの層異質性とGrowth Transformer Trainingを示し、training cost削減には関係するがinference compute/latency改善ではない。1B+への一般化も未検証。",
+      "first_checked_at": "2026-10-06T11:01:26+00:00",
+      "last_checked_at": "2026-10-06T11:01:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Anatomical Heterogeneity in Transformer Language Models"
+    },
+    "DOI:10.1145/3748522.3779794": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3748522.3779794",
+      "identity_tokens": [
+        "DOI:10.1145/3748522.3779794"
+      ],
+      "reason": "LLM multi-user inference scheduling/HBM-PIM contentionを直接扱う題名・要旨で関連するが、出版社本文/著者全文が取得できず、手法・測定値を一次全文で確認できない。",
+      "first_checked_at": "2026-10-06T11:01:27+00:00",
+      "last_checked_at": "2026-10-06T11:01:27+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing-in-Memory Accelerators"
+    },
+    "DOI:10.1016/j.aei.2026.104424": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2026.104424",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2026.104424"
+      ],
+      "reason": "出版社previewは軽量VLM、量子化image-text adapter、AGX Orin 43/56msを報告するが、本文PDFは403で提案法・評価条件・限界を一次全文で確認できない。",
+      "first_checked_at": "2026-10-06T11:01:28+00:00",
+      "last_checked_at": "2026-10-06T11:01:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Performance and lightweight coexistence: Vision-language model for visual scene question answering in autonomous driving"
+    },
+    "DOI:10.1186/s12913-026-14350-3": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1186/s12913-026-14350-3",
+      "identity_tokens": [
+        "DOI:10.1186/s12913-026-14350-3"
+      ],
+      "reason": "ローカルLLMとresource efficiencyの比較で関連可能性がある。PMC全文はcaptcha、著者原稿PDFはreader未対応で、資源/実runtime測定と限界を全文確認できない。",
+      "first_checked_at": "2026-10-06T11:01:29+00:00",
+      "last_checked_at": "2026-10-06T11:01:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing bone metastasis CT report analysis: a comparison of local and proprietary large language models for privacy and resource efficiency"
+    },
+    "DOI:10.26599/bdma.2025.9020065": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.26599/bdma.2025.9020065",
+      "identity_tokens": [
+        "DOI:10.26599/bdma.2025.9020065"
+      ],
+      "reason": "出版社abstractはlow-bit CUTLASS GEMM/linear layerでA100最大1.99x/1.28x speedupを報告する有望な基盤。ただし本文PDFを取得できず、LLMでの実効推論・quality条件を確認できない。",
+      "first_checked_at": "2026-10-06T11:01:30+00:00",
+      "last_checked_at": "2026-10-06T11:01:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Leveraging Large-Scale Data for Efficient Low-Bit CUTLASS GEMM Optimization via Neural Networks"
+    },
+    "DOI:10.54097/41gx1442": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.54097/41gx1442",
+      "identity_tokens": [
+        "DOI:10.54097/41gx1442"
+      ],
+      "reason": "著者公開全文はFlightLLMなどFPGA transformer/LLM dataflow/tilingを扱うが、内容は既報概説で独自のLLM方法・計測がない。既存FPGA-LLM系統への参考性はあるが、独立した貢献が弱い。",
+      "first_checked_at": "2026-10-06T11:01:30+00:00",
+      "last_checked_at": "2026-10-06T11:01:30+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FPGA-Based Deep Learning Acceleration: Analysis of Dataflow and Tiling Strategies"
+    },
+    "DOI:10.1109/mpcon69668.2026.11508306": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mpcon69668.2026.11508306",
+      "identity_tokens": [
+        "DOI:10.1109/mpcon69668.2026.11508306"
+      ],
+      "reason": "IEEE abstractはBERTbase/DistilBERTのINT8 PTQでCPU latency 2.29–2.33x、model size 1.93–2.41x改善とし関連するが、本文で比較条件・限界を確認できない。",
+      "first_checked_at": "2026-10-06T11:01:31+00:00",
+      "last_checked_at": "2026-10-06T11:01:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QuanTool: A Benchmarking Framework for Evaluating Post-Training Quantization with Best Practices for Transformer Models"
+    },
+    "DOI:10.1109/les.2025.3583743": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/les.2025.3583743",
+      "identity_tokens": [
+        "DOI:10.1109/les.2025.3583743"
+      ],
+      "reason": "著者ページabstractはGPT-2 fused-attention FPGAでthroughput 25.3%改善とするが、本文PDFが取得できずhardware setup、比較条件、品質・電力を確認できない。",
+      "first_checked_at": "2026-10-06T11:01:32+00:00",
+      "last_checked_at": "2026-10-06T11:01:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Zero-Shot Fused Attention-Based GPT-2 Accelerator for Resource-Constrained Embedded Platform"
     }
   }
 }
