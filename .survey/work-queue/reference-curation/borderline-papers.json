@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T04:59:47+00:00",
-  "record_count": 2276,
+  "updated_at": "2026-10-06T05:09:47+00:00",
+  "record_count": 2284,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -35080,6 +35080,126 @@
       ],
       "borderline_recheck_count": 0,
       "title": "SWE-fficiency: Can Language Models Optimize Real-World Repositories on Real Workloads?"
+    },
+    "arXiv:2106.14156": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.14156",
+      "identity_tokens": [
+        "arXiv:2106.14156"
+      ],
+      "reason": "The primary work develops mixed-precision post-training quantization for vision transformers, evaluated on image classification and detection; it is not validated for LLMs or language-model serving, so transfer to this lineage remains uncertain.",
+      "first_checked_at": "2026-10-06T05:09:40+00:00",
+      "last_checked_at": "2026-10-06T05:09:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Post-Training Quantization for Vision Transformer"
+    },
+    "arXiv:2503.24235": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.24235",
+      "identity_tokens": [
+        "arXiv:2503.24235"
+      ],
+      "reason": "This is a broad test-time scaling survey; it synthesizes relevant efficiency metrics and prior KV-sharing results but contributes no new inference method or evaluation to adopt directly.",
+      "first_checked_at": "2026-10-06T05:09:41+00:00",
+      "last_checked_at": "2026-10-06T05:09:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on Test-Time Scaling in Large Language Models: What, How, Where, and How Well?"
+    },
+    "arXiv:2506.21734": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.21734",
+      "identity_tokens": [
+        "arXiv:2506.21734"
+      ],
+      "reason": "Hierarchical Reasoning Model uses recurrent multi-timescale computation and scales inference compute for accuracy, but the primary evaluation does not establish reduced latency, memory, or cost; more compute can increase resource use.",
+      "first_checked_at": "2026-10-06T05:09:42+00:00",
+      "last_checked_at": "2026-10-06T05:09:42+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hierarchical Reasoning Model"
+    },
+    "DOI:10.1109/isca66397.2026.00058": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00058",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00058"
+      ],
+      "reason": "The title/DOI indicate directly relevant hybrid NVM/DRAM LLM inference architecture, but the DOI publisher page returned an internal error and no primary paper text was accessible.",
+      "first_checked_at": "2026-10-06T05:09:43+00:00",
+      "last_checked_at": "2026-10-06T05:09:43+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SHyLA: 3D-Stacked NVM-DRAM Hybrid LLM-Inference Architecture Exploiting Data and Memory Heterogeneity"
+    },
+    "arXiv:2512.01078": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01078",
+      "identity_tokens": [
+        "arXiv:2512.01078"
+      ],
+      "reason": "SimWorld is an open-ended simulator for agent behavior in physical/social settings; despite its link to serving/disaggregation, its contribution is simulation capability rather than inference cost or serving performance.",
+      "first_checked_at": "2026-10-06T05:09:44+00:00",
+      "last_checked_at": "2026-10-06T05:09:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00151-smoothagent-lookahead-context-engineering.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SimWorld: An Open-ended Realistic Simulator for Autonomous Agents in Physical and Social Worlds"
+    },
+    "arXiv:2507.05791": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.05791",
+      "identity_tokens": [
+        "arXiv:2507.05791"
+      ],
+      "reason": "GTA1 studies test-time scaling for GUI-agent task quality; primary text does not report a concrete compute, memory, or serving-latency reduction, so relevance is adjacent.",
+      "first_checked_at": "2026-10-06T05:09:45+00:00",
+      "last_checked_at": "2026-10-06T05:09:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GTA1: GUI Test-time Scaling Agent"
+    },
+    "DOI:10.1109/isca66397.2026.00054": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00054",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00054"
+      ],
+      "reason": "The title/DOI indicate directly relevant hybrid-memory speculative LLM serving, but primary full text was inaccessible, so the method and evaluation could not be independently reviewed.",
+      "first_checked_at": "2026-10-06T05:09:47+00:00",
+      "last_checked_at": "2026-10-06T05:09:47+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HybridSpec: Exploiting Hybrid-Bonding Memory to Accelerate LLM Serving Through Heterogeneous Architecture and Speculative Decoding"
+    },
+    "arXiv:2603.22862": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.22862",
+      "identity_tokens": [
+        "arXiv:2603.22862"
+      ],
+      "reason": "The primary paper is a broad survey of LLM-agent tool orchestration and efficiency. It maps relevant latency/cost strategies but reports no original method or evidence that can be directly transferred.",
+      "first_checked_at": "2026-10-06T05:09:47+00:00",
+      "last_checked_at": "2026-10-06T05:09:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration"
     }
   }
 }
