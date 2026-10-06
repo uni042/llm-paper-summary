@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r84-screen-01-part-06-c957846dacb1",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jbi.2025.104896",
+      "identity_tokens": [
+        "DOI:10.1016/j.jbi.2025.104896"
+      ],
+      "title": "Resource-efficient instruction tuning of large language models for biomedical named entity recognition",
+      "reason": "Abstract/title identify a different objective or task domain; no plausible LLM inference compute, memory, latency, throughput, quantization, offload, KV-cache, serving, or transferable existing-paper-lineage result is present.",
+      "source_url": "https://doi.org/10.1016/j.jbi.2025.104896",
+      "first_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "last_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03716",
+      "identity_tokens": [
+        "arXiv:2508.03716"
+      ],
+      "title": "FeynTune: large language models for high-energy theory",
+      "reason": "Abstract/title identify a different objective or task domain; no plausible LLM inference compute, memory, latency, throughput, quantization, offload, KV-cache, serving, or transferable existing-paper-lineage result is present.",
+      "source_url": "https://arxiv.org/abs/2508.03716",
+      "first_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "last_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3524356",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2024.3524356"
+      ],
+      "title": "Fine-Grained Structured Sparse Computing for FPGA-Based AI Inference",
+      "reason": "Potentially direct sparse-LLM hardware evidence, but source-text retrieval failed; keep borderline for later evidence recovery.",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3524356",
+      "first_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "last_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08298",
+      "identity_tokens": [
+        "arXiv:2503.08298"
+      ],
+      "title": "Progressive Entity Matching: A Design Space Exploration",
+      "reason": "Abstract/title identify a different objective or task domain; no plausible LLM inference compute, memory, latency, throughput, quantization, offload, KV-cache, serving, or transferable existing-paper-lineage result is present.",
+      "source_url": "https://arxiv.org/abs/2503.08298",
+      "first_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "last_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.18784",
+      "identity_tokens": [
+        "arXiv:2501.18784"
+      ],
+      "title": "Successor-Generator Planning with LLM-generated Heuristics",
+      "reason": "Abstract/title identify a different objective or task domain; no plausible LLM inference compute, memory, latency, throughput, quantization, offload, KV-cache, serving, or transferable existing-paper-lineage result is present.",
+      "source_url": "https://arxiv.org/abs/2501.18784",
+      "first_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "last_checked_at": "2026-10-06T11:27:10.111701+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ]
+    }
+  ]
+}
