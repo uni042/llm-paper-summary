@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r27-screen-01-part-07-2bac352ecc66",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29612",
+      "identity_tokens": [
+        "arXiv:2608.29612"
+      ],
+      "title": "LLMs Interpret, Embeddings Organize, Graphs Emerge: Agent-Driven Compilation of Scientific Knowledge",
+      "reason": "要旨はscientific knowledge compilation by LLM agentsを扱うと記述する（Sustained scientific work requires a knowledge substrate that carries interpretation across tasks and preserves paths to source evidence. We call this process \\emph{scientific knowledge compilation} and implement it in ASKS, the \\emph{Agent）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2608.29612",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00050",
+      "identity_tokens": [
+        "arXiv:2609.00050"
+      ],
+      "title": "Towards Agentic Cloud Engineering: Graph and Loop Engineering with a Zero-Trust Agent Harness",
+      "reason": "cloud engineering reliability frameworkでserving efficiencyが対象でない。",
+      "source_url": "https://arxiv.org/abs/2609.00050",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27086",
+      "identity_tokens": [
+        "arXiv:2608.27086"
+      ],
+      "title": "A Contract-Centered Architecture for Scalable and Manageable Agentic Runtimes",
+      "reason": "agent runtime lineageに概念上接続するが性能証拠を欠き関係が弱い。",
+      "source_url": "https://arxiv.org/abs/2608.27086",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2608.00101-agentic-coding-production-scale-characterization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27241",
+      "identity_tokens": [
+        "arXiv:2608.27241"
+      ],
+      "title": "Importance Scoring of Transformer Attention Heads in Learning Tabular Data",
+      "reason": "要旨はtabular-transformer attention-head importanceを扱うと記述する（Computationally demanding and opaque deep learning models can be better understood and optimized by analyzing how they transform data. While deep transformers have been widely studied in computer vision and natural language processing, thei）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2608.27241",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25370",
+      "identity_tokens": [
+        "arXiv:2608.25370"
+      ],
+      "title": "CRAMER: Control via Request-Aware Masking for Editing Recommenders",
+      "reason": "LLM reranking代替としての間接接続に留まり、serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2608.25370",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
