@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T19:39:46+00:00",
-  "record_count": 3789,
+  "updated_at": "2026-10-06T19:45:13+00:00",
+  "record_count": 3809,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -57928,6 +57928,308 @@
       ],
       "borderline_recheck_count": 0,
       "title": "TransAlpha: Lightweight Design Empowers Stock Return Forecasting"
+    },
+    "arXiv:2608.13037": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13037",
+      "identity_tokens": [
+        "arXiv:2608.13037"
+      ],
+      "reason": "一次本文ではDiT動画生成の推論時guidanceを対象とし、LLM servingへの直接適用や言語モデル評価はない。attention/gradient計算の削減手法として近接するが、対象領域差が大きく現状はborderline。",
+      "first_checked_at": "2026-10-06T19:44:57+00:00",
+      "last_checked_at": "2026-10-06T19:44:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization"
+    },
+    "DOI:10.1145/3770855.3818010": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3818010",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818010"
+      ],
+      "reason": "公式ACM DOI landing pageを開けず一次abstract/full textを確認できなかった。題名上LLM-based POI recommendationのprompt optimizationで、推論効率の実測有無を判断できないためborderline。",
+      "first_checked_at": "2026-10-06T19:44:59+00:00",
+      "last_checked_at": "2026-10-06T19:44:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "G²PRO: Gradient-guided Graph Prompt Optimization for LLM-based POI Recommendation"
+    },
+    "DOI:10.1145/3770855.3818184": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3818184",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818184"
+      ],
+      "reason": "公式ACM DOI landing pageが403で一次abstract/full textを確認できない。題名はpersonalized micro-video popularity predictionで、LLM servingとの関連は弱いが一次証拠がないためborderline。",
+      "first_checked_at": "2026-10-06T19:44:59+00:00",
+      "last_checked_at": "2026-10-06T19:44:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Explicit Retrieval, Implicit Cognition: Towards Personalized Micro-video Popularity Prediction via Dual Latent Memory"
+    },
+    "DOI:10.1145/3770855.3818976": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3818976",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818976"
+      ],
+      "reason": "公式ACM DOI landing pageが403で一次abstract/full textを確認できない。題名はhuman mobility modelingでLLM inference optimizationとの明確な関係が見えず、一次根拠不足としてborderline。",
+      "first_checked_at": "2026-10-06T19:44:59+00:00",
+      "last_checked_at": "2026-10-06T19:44:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Scaling Bottleneck of Human Mobility Modeling"
+    },
+    "arXiv:2608.06819": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.06819",
+      "identity_tokens": [
+        "arXiv:2608.06819"
+      ],
+      "reason": "本文のtoken-selection方式はgreedy SLMより精度が上がる一方、matched S2Tよりlatencyが3.18xから3.30xへ増加。共同decodeの対象範囲は近いが、計算効率改善を示さず明確な性能/遅延tradeoffである。",
+      "first_checked_at": "2026-10-06T19:44:59+00:00",
+      "last_checked_at": "2026-10-06T19:44:59+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FutureBridge: Token Selection Beyond Local Preference in Collaborative Decoding"
+    },
+    "DOI:10.64898/2026.08.26.747235": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.08.26.747235",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.26.747235"
+      ],
+      "reason": "BioRxiv DOI landing page attempt returned inaccessible. Candidate title implies unsupervised genomic gene finding, not LLM inference, but its primary abstract/body could not be verified from the assigned primary URL; preserve reasoned borderline pending retrieval.",
+      "first_checked_at": "2026-10-06T19:45:00+00:00",
+      "last_checked_at": "2026-10-06T19:45:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vipsania: Unsupervised Deep Gene Finding"
+    },
+    "DOI:10.1145/3844618": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3844618",
+      "identity_tokens": [
+        "DOI:10.1145/3844618"
+      ],
+      "reason": "タイトル/候補metadataは70B LLM inference向けchiplet hybrid architectureで対象に近い。ACM primary landing pageは403/不可達でabstract/full textを読めず、仕様・評価・制限を確認できないため、関連性を否定せずborderlineで保持。",
+      "first_checked_at": "2026-10-06T19:45:00+00:00",
+      "last_checked_at": "2026-10-06T19:45:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cambricon-FlexLLM: A Flexible Chiplet-Based Hybrid Architecture for On-Device 70B LLM Inference"
+    },
+    "arXiv:2608.28062": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28062",
+      "identity_tokens": [
+        "arXiv:2608.28062"
+      ],
+      "reason": "マルチモーダルsearch agentの研究で、本文が扱うefficiencyは長いtraining rolloutのthroughput/計算浪費であり、主要貢献がLLM inference runtime改善かは弱い。agent inferenceのtool timeout/予算管理との接点を残す。",
+      "first_checked_at": "2026-10-06T19:45:01+00:00",
+      "last_checked_at": "2026-10-06T19:45:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "WeAgent-MMSearch: Native Text-Vision Interaction for Multimodal Search Agents"
+    },
+    "arXiv:2608.10357": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.10357",
+      "identity_tokens": [
+        "arXiv:2608.10357"
+      ],
+      "reason": "一次本文の最適化はlong-horizon RL training時のsink-aware attentionとpeak VRAMであり、著者自身もthroughput/latencyは未評価とする。attention実装の近接性はあるが、serving効率の証拠がない。",
+      "first_checked_at": "2026-10-06T19:45:03+00:00",
+      "last_checked_at": "2026-10-06T19:45:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Reinforcement Learning for Long-Horizon Tool-Use Agentic Tasks"
+    },
+    "DOI:10.1117/12.3101171": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3101171",
+      "identity_tokens": [
+        "DOI:10.1117/12.3101171"
+      ],
+      "reason": "SPIE DOIのprimary page/PDFはtoolから取得できず、タイトルからattentionモデルのwavefront measurement研究と推定されるが要旨/本文で対象と効率指標を確認できない。",
+      "first_checked_at": "2026-10-06T19:45:06+00:00",
+      "last_checked_at": "2026-10-06T19:45:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Performance of attention-based deep-learning models in Shack-Hartmann wavefront sensor measurements"
+    },
+    "arXiv:2608.22101": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22101",
+      "identity_tokens": [
+        "arXiv:2608.22101"
+      ],
+      "reason": "stateful inferenceによるstreaming ASRのturn-onset WER/低遅延改善。voice-agent inferenceに隣接するが、評価対象は音声認識encoder/RNNTでLLM decode/serving改善ではない。",
+      "first_checked_at": "2026-10-06T19:45:09+00:00",
+      "last_checked_at": "2026-10-06T19:45:09+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Fresh Starts: Stateful Inference for Streaming ASR in Conversational Voice Agents"
+    },
+    "DOI:10.1145/3842760": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3842760",
+      "identity_tokens": [
+        "DOI:10.1145/3842760"
+      ],
+      "reason": "memory-safe hybrid-parallel Transformer trainingはmemory/system系統に近い可能性があるが、タイトルはtrainingであり対象LLM inference改善とは異なる。ACM本文が403で検証できないのでborderlineを維持。",
+      "first_checked_at": "2026-10-06T19:45:09+00:00",
+      "last_checked_at": "2026-10-06T19:45:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory-Safe Hierarchical Planning for Hybrid-Parallel Transformer Training"
+    },
+    "DOI:10.1088/1361-6501/ae9cd1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/1361-6501/ae9cd1",
+      "identity_tokens": [
+        "DOI:10.1088/1361-6501/ae9cd1"
+      ],
+      "reason": "IOP DOI URLはtoolで取得不能。題名は産業設備のremaining-useful-life予測でLLM推論効率と明らかに別領域に見えるが、primary abstractを確認できなかったためsource-unavailableとして保留。",
+      "first_checked_at": "2026-10-06T19:45:09+00:00",
+      "last_checked_at": "2026-10-06T19:45:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dual-branch remaining useful life prediction based on local pattern learning and functional trajectory reconstruction"
+    },
+    "DOI:10.59266/houjs.2026.1332": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.59266/houjs.2026.1332",
+      "identity_tokens": [
+        "DOI:10.59266/houjs.2026.1332"
+      ],
+      "reason": "出版社一次ページを解決できず、候補titleはVietnamese pothole YOLO detectionを示すのみ。LLM推論との関係/方法を一次資料で確認できず、過剰除外を避けborderlineに記録。",
+      "first_checked_at": "2026-10-06T19:45:09+00:00",
+      "last_checked_at": "2026-10-06T19:45:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "YOLOV12-SA-EVC: MÔ HÌNH PHÁT HIỆN “Ổ GÀ” TRÊN MẶT ĐƯỜNG BỘ"
+    },
+    "arXiv:2608.24293": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24293",
+      "identity_tokens": [
+        "arXiv:2608.24293"
+      ],
+      "reason": "動画表現tokenizerの適応的token keep/dropにより視覚token量を削減する研究。multimodal LLMへの入力token削減に転用できる可能性はあるが、本文評価はvideo representation向けでLLM推論のKV/cache/latencyを実証しない。",
+      "first_checked_at": "2026-10-06T19:45:10+00:00",
+      "last_checked_at": "2026-10-06T19:45:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation"
+    },
+    "DOI:10.1145/3789240.3829145": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829145",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829145"
+      ],
+      "reason": "公式DOI landing pageを直接開けず、一次要旨・本文でLLM inferenceやservingとの関係を確認できなかったため保留性のborderlineとする。",
+      "first_checked_at": "2026-10-06T19:45:12+00:00",
+      "last_checked_at": "2026-10-06T19:45:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Networked Agent Memory and Causality Representation: Experiences towards Interpretable Cloud-Scale Root-Causing"
+    },
+    "DOI:10.1145/3789240.3829174": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829174",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829174"
+      ],
+      "reason": "公式DOI landing pageを直接開けず、一次要旨・本文によるtraining-cluster schedulingの評価詳細を確認できなかった。題名上はtraining clusterでserving対象外に見えるが、一次証拠不足でborderline。",
+      "first_checked_at": "2026-10-06T19:45:12+00:00",
+      "last_checked_at": "2026-10-06T19:45:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LEVELLER: Fair Communication Scheduling via Progress-Rate Awareness in Multi-Tenant Training Clusters"
+    },
+    "DOI:10.64898/2026.08.05.742817": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.08.05.742817",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.05.742817"
+      ],
+      "reason": "bioRxiv DOI landing pageを取得できず、一次abstract/full textを確認できない。題名はantibody sequence retrievalでLLM inference optimizationとの結び付きが薄いが、一次資料未確認のためborderline。",
+      "first_checked_at": "2026-10-06T19:45:12+00:00",
+      "last_checked_at": "2026-10-06T19:45:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast retrieval of structurally similar antibodies from large sequence databases with AbSLang"
+    },
+    "DOI:10.1145/3832322": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832322",
+      "identity_tokens": [
+        "DOI:10.1145/3832322"
+      ],
+      "reason": "ACM DOIの一次landing pageを開いたがtool応答は「URL ... is not accessible via this tool」。候補タイトルは2DCNN action recognitionで、視覚時系列に限定された可能性が高いが一次要旨を検証できず、最終除外を保留する。",
+      "first_checked_at": "2026-10-06T19:45:13+00:00",
+      "last_checked_at": "2026-10-06T19:45:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Global-local Temporal Modeling Enhanced 2DCNN with Category-supervised Contrastive Learning for Action Recognition"
+    },
+    "DOI:10.1371/journal.pone.0352744": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1371/journal.pone.0352744",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0352744"
+      ],
+      "reason": "PLOS DOI landing page attempt returned inaccessible; exact publisher search located only a PLOS topic/browse result, not the article abstract/full text. Title indicates few-shot vegetation classification with Mamba, a possible SSM application but no verified LLM-inference result; retain for manual source retrieval.",
+      "first_checked_at": "2026-10-06T19:45:13+00:00",
+      "last_checked_at": "2026-10-06T19:45:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MetaMamba: Meta-learning with mamba for few-shot vegetation species classification using UAV-based hyperspectral imagery in desert rangeland"
     }
   }
 }

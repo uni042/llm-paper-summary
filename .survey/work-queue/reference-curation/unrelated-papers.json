@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T19:39:47+00:00",
-  "record_count": 9404,
+  "updated_at": "2026-10-06T19:45:14+00:00",
+  "record_count": 9442,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -134764,6 +134764,542 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "Wavelet-prior-guided mamba network for accurate and efficient rice disease recognition"
+    },
+    "arXiv:2608.12748": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12748",
+      "identity_tokens": [
+        "arXiv:2608.12748"
+      ],
+      "reason": "一次要旨は物体参照表現の視覚グラウンディング、mACHとJEPA補助学習を扱い、補助streamは推論時オーバーヘッドなしとする。LLMの推論計算・メモリ・配信改善ではない。",
+      "first_checked_at": "2026-10-06T19:44:57+00:00",
+      "last_checked_at": "2026-10-06T19:44:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Scaling Representation Diversity: Modulated Attention and Reconstructive Regularization for Visual Grounding"
+    },
+    "arXiv:2608.13200": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13200",
+      "identity_tokens": [
+        "arXiv:2608.13200"
+      ],
+      "reason": "一次要旨はクエリ意図推論を含む生成埋め込み検索器で、主目的はretrieval品質向上とtest-time computeによる検索精度向上。LLM推論効率の改善ではない。",
+      "first_checked_at": "2026-10-06T19:44:57+00:00",
+      "last_checked_at": "2026-10-06T19:44:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "GEM: A Generative Embedding Model Bridging Reasoning and Retrieval"
+    },
+    "arXiv:2608.14740": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14740",
+      "identity_tokens": [
+        "arXiv:2608.14740"
+      ],
+      "reason": "一次要旨は画像・動画生成の構造的視覚教師信号と編集品質を評価する。モデル推論コストやLLM servingを改善する提案ではない。",
+      "first_checked_at": "2026-10-06T19:44:58+00:00",
+      "last_checked_at": "2026-10-06T19:44:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "From Dense Prediction to Visual Editing: Structured Supervision for Unified Image and Video Creation"
+    },
+    "arXiv:2608.11909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11909",
+      "identity_tokens": [
+        "arXiv:2608.11909"
+      ],
+      "reason": "一次要旨はRoPEの有限精度transformerにおける表現力と位置一般化を理論・制御実験で分析する。serving効率化手法や性能測定はない。",
+      "first_checked_at": "2026-10-06T19:44:58+00:00",
+      "last_checked_at": "2026-10-06T19:44:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Disentangling the Expressivity of RoPE"
+    },
+    "arXiv:2608.07033": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07033",
+      "identity_tokens": [
+        "arXiv:2608.07033"
+      ],
+      "reason": "一次要旨はEEG foundation modelsの低遅延/ローカル配備を扱うが、EEG信号の時間・電力性能であり、言語モデルまたはLLM推論系統への直接的適用を示さない。",
+      "first_checked_at": "2026-10-06T19:45:00+00:00",
+      "last_checked_at": "2026-10-06T19:45:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "ZIPBrain: Can EEG Foundation Models Be Faster, Locally Deployable, but Accurate?"
+    },
+    "arXiv:2608.29167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29167",
+      "identity_tokens": [
+        "arXiv:2608.29167"
+      ],
+      "reason": "Feature-spectral fragilityを画像segmentation modelで分析し、LLM推論効率ではなく視覚モデルrobustnessを研究する。",
+      "first_checked_at": "2026-10-06T19:45:01+00:00",
+      "last_checked_at": "2026-10-06T19:45:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Feature-Spectral Fragility in Segmentation: Dataset Dependence, Architecture-Specific Localization, and Spectral Correlates"
+    },
+    "arXiv:2609.22194": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22194",
+      "identity_tokens": [
+        "arXiv:2609.22194"
+      ],
+      "reason": "広告agentのSFT/RL学習計算量配分とskill成績を扱うpost-training研究であり、LLM inferenceのcompute/latency/memory/serving改善ではない。",
+      "first_checked_at": "2026-10-06T19:45:01+00:00",
+      "last_checked_at": "2026-10-06T19:45:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "A Pinch of SFT, A Dash of RL: When Reinforcement Learning Helps Long-Horizon Advertising Agents"
+    },
+    "arXiv:2608.16211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16211",
+      "identity_tokens": [
+        "arXiv:2608.16211"
+      ],
+      "reason": "medical research agentのbenchmark-as-teacher/self-evolving trainingが対象であり、LLM推論runtime効率を測らない。",
+      "first_checked_at": "2026-10-06T19:45:02+00:00",
+      "last_checked_at": "2026-10-06T19:45:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "BaT: Towards Self-Evolving Medical Research Agent with Stage Rubrics"
+    },
+    "arXiv:2608.16273": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16273",
+      "identity_tokens": [
+        "arXiv:2608.16273"
+      ],
+      "reason": "national-scale EHR event prediction向け243M transformerの開発で、LLM serving efficiencyではない。",
+      "first_checked_at": "2026-10-06T19:45:02+00:00",
+      "last_checked_at": "2026-10-06T19:45:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Foresight-England: Development of a National-Scale Generative AI Model of Electronic Health Records for Medical Event Prediction across the COVID-19 Pandemic"
+    },
+    "arXiv:2608.15507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15507",
+      "identity_tokens": [
+        "arXiv:2608.15507"
+      ],
+      "reason": "LLMのcurrent-year知識評価で、知識の時間依存性を調べる研究。inference compute/memory/latency改善なし。",
+      "first_checked_at": "2026-10-06T19:45:02+00:00",
+      "last_checked_at": "2026-10-06T19:45:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Do Language Models Consistently Encode the Current Year?"
+    },
+    "arXiv:2608.15687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15687",
+      "identity_tokens": [
+        "arXiv:2608.15687"
+      ],
+      "reason": "MoE内部のsycophancy localization/steeringで、主評価はbehavior controlとquality retention。推論効率やserving性能の改善は示さない。",
+      "first_checked_at": "2026-10-06T19:45:03+00:00",
+      "last_checked_at": "2026-10-06T19:45:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "THESIS-MoE: Trainable Hierarchical Extraction and SteerIng of Sycophancy in Mixture-of-Experts"
+    },
+    "arXiv:2608.15815": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15815",
+      "identity_tokens": [
+        "arXiv:2608.15815"
+      ],
+      "reason": "WiFi CSIからの人間動作予測にKoopman latent dynamicsを使う視覚/時系列タスクで、LLM inferenceではない。",
+      "first_checked_at": "2026-10-06T19:45:03+00:00",
+      "last_checked_at": "2026-10-06T19:45:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "KOALA: Koopman Operator Learning for WiFi-Based Anticipatory Human Motion Prediction"
+    },
+    "arXiv:2608.12253": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12253",
+      "identity_tokens": [
+        "arXiv:2608.12253"
+      ],
+      "reason": "一次要旨はmulti-agent RLのuser simulator collapseを扱い、Verbalized Samplingは多様性とheld-out成功率を上げる推論時手法だが、遅延・メモリ・throughput削減を示さない。",
+      "first_checked_at": "2026-10-06T19:45:03+00:00",
+      "last_checked_at": "2026-10-06T19:45:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL"
+    },
+    "arXiv:2608.21415": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21415",
+      "identity_tokens": [
+        "arXiv:2608.21415"
+      ],
+      "reason": "一次要旨はVLMの社会的bias低減のためのcounterfactual ensemble decodingを提案。複数視点の表現・token分布を統合するため、推論効率向上ではなくバイアス評価が主題。",
+      "first_checked_at": "2026-10-06T19:45:04+00:00",
+      "last_checked_at": "2026-10-06T19:45:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Mitigating Bias in Large Vision-Language Models via Counterfactual Ensemble Decoding"
+    },
+    "arXiv:2608.10537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10537",
+      "identity_tokens": [
+        "arXiv:2608.10537"
+      ],
+      "reason": "一次要旨はSAE feature abstractnessを測る解釈可能性指標とsteering実験を扱う。LLM推論servingの改善ではない。",
+      "first_checked_at": "2026-10-06T19:45:04+00:00",
+      "last_checked_at": "2026-10-06T19:45:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Measuring Semantic Abstractness of SAE Features via Nonlocality"
+    },
+    "arXiv:2608.10636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10636",
+      "identity_tokens": [
+        "arXiv:2608.10636"
+      ],
+      "reason": "一次要旨は視覚文書retrievalのcompact student distillationであり、LLM inference/runtime optimizationではなく視覚検索モデルのretrieval品質・モデル設計が対象。",
+      "first_checked_at": "2026-10-06T19:45:04+00:00",
+      "last_checked_at": "2026-10-06T19:45:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "DistilVDR: A Compact End-to-End Visual Document Retriever via Dual-Student Distillation"
+    },
+    "arXiv:2608.09031": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09031",
+      "identity_tokens": [
+        "arXiv:2608.09031"
+      ],
+      "reason": "一次要旨はlinearized graph sequence modelsのhop extractionを扱う。言語モデルinference efficiencyではない。",
+      "first_checked_at": "2026-10-06T19:45:04+00:00",
+      "last_checked_at": "2026-10-06T19:45:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "HOPPER: Learnable Hop Extraction for Linearized Graph Sequence Models"
+    },
+    "arXiv:2608.09907": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09907",
+      "identity_tokens": [
+        "arXiv:2608.09907"
+      ],
+      "reason": "一次要旨はprivate data rehearsal-free MoE routingをinstruction tuning時に行う研究。distributed model trainingが対象で、serving推論改善ではない。",
+      "first_checked_at": "2026-10-06T19:45:05+00:00",
+      "last_checked_at": "2026-10-06T19:45:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "DistMoE: Private-data Rehearsal-free Routing in Mixture-of-Experts for Distributed Instruction Tuning"
+    },
+    "arXiv:2608.08867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08867",
+      "identity_tokens": [
+        "arXiv:2608.08867"
+      ],
+      "reason": "一次要旨は交通事故検出をcoarse-to-fine VLM trackingで行う応用。タスク精度が対象で、LLM/VLM推論効率向上の手法ではない。",
+      "first_checked_at": "2026-10-06T19:45:05+00:00",
+      "last_checked_at": "2026-10-06T19:45:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Zero-Shot Traffic Accident Detection via a Coarse-to-Fine VLM-Tracking Pipeline"
+    },
+    "arXiv:2608.07852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07852",
+      "identity_tokens": [
+        "arXiv:2608.07852"
+      ],
+      "reason": "一次要旨はSAEでassistant personaの内部表現を調べるmechanistic interpretability研究。LLMの計算効率・serving改善ではない。",
+      "first_checked_at": "2026-10-06T19:45:05+00:00",
+      "last_checked_at": "2026-10-06T19:45:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "\"Many Are My Names\": The Anatomy of the Assistant and Its Personas via Sparse Autoencoders"
+    },
+    "arXiv:2608.08336": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08336",
+      "identity_tokens": [
+        "arXiv:2608.08336"
+      ],
+      "reason": "一次要旨はTransformerのcompute-efficient fine-tuning手法であり、節約対象は適応/学習計算。配備後のLLM推論効率を評価していない。",
+      "first_checked_at": "2026-10-06T19:45:06+00:00",
+      "last_checked_at": "2026-10-06T19:45:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Circuit Fine-Tuning for Compute-Efficient Transformer Adaptation"
+    },
+    "arXiv:2608.18590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18590",
+      "identity_tokens": [
+        "arXiv:2608.18590"
+      ],
+      "reason": "FD-CanKDはコンパクトな視覚object detectorの知識蒸留で、LLM推論/servingの効率最適化ではない。",
+      "first_checked_at": "2026-10-06T19:45:06+00:00",
+      "last_checked_at": "2026-10-06T19:45:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "FD-CanKD: Frequency-Decoupled Cross-Attention Distillation as a Refinement Prior for Compact Object Detectors"
+    },
+    "arXiv:2608.17695": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17695",
+      "identity_tokens": [
+        "arXiv:2608.17695"
+      ],
+      "reason": "training-free accelerationはあるが、flow-matching video generationのdenoisingでありLLM推論や対象のstate-space/serving lineageではない。",
+      "first_checked_at": "2026-10-06T19:45:06+00:00",
+      "last_checked_at": "2026-10-06T19:45:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Magnitude-Direction Decoupling for Fast Video Generation with Flow Matching Models"
+    },
+    "arXiv:2608.17950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17950",
+      "identity_tokens": [
+        "arXiv:2608.17950"
+      ],
+      "reason": "長文脈LLMのlatent topology/解釈性分析で、長文脈推論のmemory/latency低減やserving optimizationを示さない。",
+      "first_checked_at": "2026-10-06T19:45:07+00:00",
+      "last_checked_at": "2026-10-06T19:45:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Do Large Language Models Play Six Degrees of Separation? Measuring Topological Compression in Long-Context Manifolds"
+    },
+    "arXiv:2608.18063": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18063",
+      "identity_tokens": [
+        "arXiv:2608.18063"
+      ],
+      "reason": "超高解像度画像編集向けdiffusion bridgeで、視覚生成のattention sparsityが目的。LLM inferenceの改善ではない。",
+      "first_checked_at": "2026-10-06T19:45:07+00:00",
+      "last_checked_at": "2026-10-06T19:45:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "EDITBRIDGE: Towards Faithful and Efficient Ultra-High-Resolution Image Editing"
+    },
+    "arXiv:2608.13884": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13884",
+      "identity_tokens": [
+        "arXiv:2608.13884"
+      ],
+      "reason": "vLLM/SGLangを題材にするが、研究質問はAI支援開発下のPR throughput/cycle-time/community指標であり、推論engineの性能改善・測定ではない。",
+      "first_checked_at": "2026-10-06T19:45:08+00:00",
+      "last_checked_at": "2026-10-06T19:45:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Engineering Signals of Human-AI Collaboration in the Agentic Coding Era: A Longitudinal Analysis of 33,228 Pull Requests from vLLM and SGLang with Implications for Biomedical AI Agents and Bioinformatics Pipeline Developmen"
+    },
+    "arXiv:2608.14403": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14403",
+      "identity_tokens": [
+        "arXiv:2608.14403"
+      ],
+      "reason": "CRAFTはreference-aware diffusion transformerのsubject personalization training。FlashAttention由来で候補入りしたが、寄与はattention rewardとtraining data削減でLLM serving/inference高速化でない。",
+      "first_checked_at": "2026-10-06T19:45:08+00:00",
+      "last_checked_at": "2026-10-06T19:45:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "CRAFT: Constrained Reward via Attention Fine-Tuning for Subject Personalization without Composed Targets"
+    },
+    "DOI:10.1007/s13042-026-03209-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s13042-026-03209-y",
+      "identity_tokens": [
+        "DOI:10.1007/s13042-026-03209-y"
+      ],
+      "reason": "crowd activity analysis向けdiffusion model reviewで、応用領域は監視/人流。LLM inference systemsとは異なる。",
+      "first_checked_at": "2026-10-06T19:45:08+00:00",
+      "last_checked_at": "2026-10-06T19:45:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Research progress of diffusion model in crowd activity analysis"
+    },
+    "arXiv:2608.22140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22140",
+      "identity_tokens": [
+        "arXiv:2608.22140"
+      ],
+      "reason": "lexical perturbationがLLM reasoningに及ぼすrobustness効果を研究するが、目的は推論の精度/挙動分析で計算効率・serving改善ではない。",
+      "first_checked_at": "2026-10-06T19:45:10+00:00",
+      "last_checked_at": "2026-10-06T19:45:10+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Lexical Perturbations Disrupt LLM Reasoning: An Empirical Study of Attention Diversion"
+    },
+    "arXiv:2609.29626": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29626",
+      "identity_tokens": [
+        "arXiv:2609.29626"
+      ],
+      "reason": "産業coding LLMの共同開発/post-training過程が中心で、primary text自身がbudget-matched/hardware-controlled efficiencyを示しておらず、推論システム改善を立証しない。",
+      "first_checked_at": "2026-10-06T19:45:10+00:00",
+      "last_checked_at": "2026-10-06T19:45:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "iCoder-27B: Recursive AI-Led Development of Frontier Industrial Coding Model"
+    },
+    "arXiv:2609.22178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22178",
+      "identity_tokens": [
+        "arXiv:2609.22178"
+      ],
+      "reason": "computer-use agentの能力・安全性のjoint trainingが対象で、推論compute/latency/servingの最適化を報告しない。",
+      "first_checked_at": "2026-10-06T19:45:11+00:00",
+      "last_checked_at": "2026-10-06T19:45:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Beyond Task Completion: Training Capable and Safe Computer-Use Agents"
+    },
+    "arXiv:2608.24644": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24644",
+      "identity_tokens": [
+        "arXiv:2608.24644"
+      ],
+      "reason": "人間/agent向けliterate programming environmentの設計で、LLM model inference runtime最適化を扱わない。",
+      "first_checked_at": "2026-10-06T19:45:11+00:00",
+      "last_checked_at": "2026-10-06T19:45:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "A Literate Programming Environment for Human and Machine Agents"
+    },
+    "arXiv:2608.25124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25124",
+      "identity_tokens": [
+        "arXiv:2608.25124"
+      ],
+      "reason": "Wafer-scale accelerator向けCUDA-to-CSLコード翻訳/最適化agentで、LLMの推論engine自体を改善する研究ではない。",
+      "first_checked_at": "2026-10-06T19:45:11+00:00",
+      "last_checked_at": "2026-10-06T19:45:11+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "FABRICA: Agentic CUDA-to-CSL Translation and Optimization for Wafer-Scale Systems"
+    },
+    "arXiv:2608.10795": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10795",
+      "identity_tokens": [
+        "arXiv:2608.10795"
+      ],
+      "reason": "一次本文はLLMを使う進化的コード最適化の過去mutation記憶を扱う。最適化対象は生成コード/検索探索で、LLM自体の推論機構ではない。",
+      "first_checked_at": "2026-10-06T19:45:12+00:00",
+      "last_checked_at": "2026-10-06T19:45:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "EvoMem: Memory-Augmented Evolution for Code Optimization"
+    },
+    "arXiv:2608.10976": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10976",
+      "identity_tokens": [
+        "arXiv:2608.10976"
+      ],
+      "reason": "一次要旨は運転VLA向けの実行可能chain-of-thoughtと動画理解を扱う。モデル推論効率より自動運転タスク性能が対象。",
+      "first_checked_at": "2026-10-06T19:45:13+00:00",
+      "last_checked_at": "2026-10-06T19:45:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "XCoT-VLA: Executable Chain-of-Thought for Vision-Language-Action Driving"
+    },
+    "arXiv:2608.29626": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29626",
+      "identity_tokens": [
+        "arXiv:2608.29626"
+      ],
+      "reason": "Mamba saliency detection for optical remote-sensing images is a visual perception task; no LLM inference or serving improvement.",
+      "first_checked_at": "2026-10-06T19:45:13+00:00",
+      "last_checked_at": "2026-10-06T19:45:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SPLG-Mamba: Structure-Preserving Local-Global Mamba Network for Salient Object Detection in Optical Remote Sensing Images"
+    },
+    "arXiv:2608.29793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29793",
+      "identity_tokens": [
+        "arXiv:2608.29793"
+      ],
+      "reason": "GridFlowは都市スケール3D点群生成であり、LLM inference/runtime最適化ではない。",
+      "first_checked_at": "2026-10-06T19:45:14+00:00",
+      "last_checked_at": "2026-10-06T19:45:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "GridFlow: Structured Latent Flow for Seamless City-Scale 3D Point Cloud Generation"
+    },
+    "DOI:10.3390/ijms27177764": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ijms27177764",
+      "identity_tokens": [
+        "DOI:10.3390/ijms27177764"
+      ],
+      "reason": "PMAVPは抗ウイルスペプチド予測のProtT5/Mamba分類モデル。系列モデル計算量は動機だが、対象は生物配列の識別でLLM推論最適化ではない。",
+      "first_checked_at": "2026-10-06T19:45:14+00:00",
+      "last_checked_at": "2026-10-06T19:45:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PMAVP: A Mamba-Inspired Deep Learning Framework for Antiviral Peptide Identification and Functional Activity Prediction"
     }
   }
 }
