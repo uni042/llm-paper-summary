@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r90-screen-01-part-04-798ca878bac9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.12436",
+      "identity_tokens": [
+        "arXiv:2504.12436"
+      ],
+      "title": "Sparsity Outperforms Low-Rank Projections in Few-Shot Adaptation",
+      "reason": "Sparse optimization is for few-shot vision-language adaptation and gradient updates; the reported gains concern adaptation/training rather than inference.",
+      "source_url": "https://arxiv.org/abs/2504.12436",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10887670",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10887670"
+      ],
+      "title": "MPNAS: Multimodal Sentiment Analysis Pruning via Neural Architecture Search",
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; search located bibliographic records but no publisher/author full-text copy.",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10887670",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890844",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10890844"
+      ],
+      "title": "Diversity Seeking Techniques for Red-Teaming Large Language Models",
+      "reason": "Red-team diversity technique evaluates attack generation, not inference efficiency.",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890844",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.01806",
+      "identity_tokens": [
+        "arXiv:2504.01806"
+      ],
+      "title": "Quattro: Transformer-Accelerated Iterative Linear Quadratic Regulator Framework for Fast Trajectory Optimization",
+      "reason": "Transformer accelerator is for iterative linear-quadratic control/trajectory optimization, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2504.01806",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.15575/join.v10i1.1486",
+      "identity_tokens": [
+        "DOI:10.15575/join.v10i1.1486"
+      ],
+      "title": "LLM-Based Information Retrieval for Disease Detection Using Semantic Similarity",
+      "reason": "LLM is used for disease-information retrieval; the contribution is task accuracy/semantic matching rather than model inference efficiency.",
+      "source_url": "https://doi.org/10.15575/join.v10i1.1486",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    }
+  ]
+}
