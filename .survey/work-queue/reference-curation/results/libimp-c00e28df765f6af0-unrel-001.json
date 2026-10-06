@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c00e28df765f6af0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2112.07658",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2112.07658",
+    "identity_tokens": [
+      "arXiv:2112.07658"
+    ],
+    "reason": "画像分類向けVision Transformerで入力画像ごとに空間tokenを早期停止して推論計算を削減する研究。DeiT-Tiny/SmallのImageNet推論が最終適用先であり、LLM/言語モデル推論システムを対象としない。",
+    "first_checked_at": "2026-10-06T21:34:51+00:00",
+    "last_checked_at": "2026-10-06T21:34:51+00:00",
+    "linked_from": [],
+    "title": "A-ViT: Adaptive Tokens for Efficient Vision Transformer"
+  },
+  "processed_at": "2026-10-06T21:34:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c00e28df765f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

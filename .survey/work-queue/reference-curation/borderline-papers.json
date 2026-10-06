@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T21:30:37+00:00",
-  "record_count": 4225,
+  "updated_at": "2026-10-06T21:34:54+00:00",
+  "record_count": 4234,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -31426,19 +31426,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Autoregressive Diffusion Models"
-    },
-    "arXiv:1903.04611": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1903.04611",
-      "identity_tokens": [
-        "arXiv:1903.04611"
-      ],
-      "reason": "PCIe、NVLink、NVSwitch、GPUDirect等を複数GPU/HPC platformで実測し、topology・routing由来のNUMA効果と通信性能を分析する。分散LLM推論の通信設計に直接有用だが、論文自体は汎用multi-GPU/HPC評価でLLM推論専用ではないためborderline。",
-      "first_checked_at": "2026-10-05T16:07:16+00:00",
-      "last_checked_at": "2026-10-05T16:07:16+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Evaluating Modern GPU Interconnect: PCIe, NVLink, NV-SLI, NVSwitch and GPUDirect"
     },
     "DOI:10.1145/3085572": {
       "classification": "borderline",
@@ -64495,6 +64482,157 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Recurrent Neural Network on Human Activity Recognition Based on Latent State Space"
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.1074": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1074",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.1074"
+      ],
+      "reason": "The full text optimizes adapter rank and fine-tuning quality/parameter count, but does not evaluate inference latency, serving throughput, runtime memory, or deployment; the link to inference adapter storage is plausible but indirect, so retain as borderline.",
+      "first_checked_at": "2026-10-06T21:34:49+00:00",
+      "last_checked_at": "2026-10-06T21:34:49+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NormAL LoRA: What is the perfect size?"
+    },
+    "DOI:10.52202/085713-3056": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-3056",
+      "identity_tokens": [
+        "DOI:10.52202/085713-3056"
+      ],
+      "reason": "Although linked to speculative decoding, the assigned DOI primary source could not be retrieved; retain as borderline until primary text confirms whether diffusion speculation transfers to LLM inference.",
+      "first_checked_at": "2026-10-06T21:34:50+00:00",
+      "last_checked_at": "2026-10-06T21:34:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ASDSV: Multimodal Generation Made Efficient with Approximate Speculative Diffusion and Speculative Verification"
+    },
+    "DOI:10.52202/085713-3076": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-3076",
+      "identity_tokens": [
+        "DOI:10.52202/085713-3076"
+      ],
+      "reason": "The assigned primary NeurIPS DOI source was inaccessible; retain as borderline pending confirmation of pruning method and inference measurements.",
+      "first_checked_at": "2026-10-06T21:34:50+00:00",
+      "last_checked_at": "2026-10-06T21:34:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Objective One-Shot Pruning for Large Language Models"
+    },
+    "DOI:10.52202/085713-5546": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-5546",
+      "identity_tokens": [
+        "DOI:10.52202/085713-5546"
+      ],
+      "reason": "The title/lineage suggests on-device LLM inference optimization, but no primary text was retrievable; retain as borderline pending publisher/author text.",
+      "first_checked_at": "2026-10-06T21:34:50+00:00",
+      "last_checked_at": "2026-10-06T21:34:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AegisGuard: RL-Guided Adapter Tuning for TEE-Based Efficient & Secure On-Device Inference"
+    },
+    "DOI:10.1145/3650200.3656619": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3650200.3656619",
+      "identity_tokens": [
+        "DOI:10.1145/3650200.3656619"
+      ],
+      "reason": "The ACM primary page denied retrieval. Since its lineage is training offload/memory systems, the connection to LLM inference is unresolved; retain as borderline.",
+      "first_checked_at": "2026-10-06T21:34:50+00:00",
+      "last_checked_at": "2026-10-06T21:34:50+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sylva: Sparse Embedded Adapters via Hierarchical Approximate Second-Order Information"
+    },
+    "DOI:10.1145/3797552.3797694": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3797552.3797694",
+      "identity_tokens": [
+        "DOI:10.1145/3797552.3797694"
+      ],
+      "reason": "The ACM/publisher primary page denied retrieval; retain as borderline pending accessible publisher or author primary text.",
+      "first_checked_at": "2026-10-06T21:34:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Analysis of the Application of DeepSeek in Reference Consultation Services of University Libraries"
+    },
+    "DOI:10.1080/24751839.2025.2587991": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/24751839.2025.2587991",
+      "identity_tokens": [
+        "DOI:10.1080/24751839.2025.2587991"
+      ],
+      "reason": "This candidate is linked to an LLM inference/serving lineage, but its primary DOI text was inaccessible; retain as borderline rather than screen it out from secondary metadata.",
+      "first_checked_at": "2026-10-06T21:34:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From text to idea embeddings: a review on quintessential information extraction"
+    },
+    "DOI:10.1109/ase63991.2025.00209": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ase63991.2025.00209",
+      "identity_tokens": [
+        "DOI:10.1109/ase63991.2025.00209"
+      ],
+      "reason": "This candidate is linked to MoE routing/conditional computation, but its primary DOI text was inaccessible; retain as borderline until primary text can confirm whether the connection is substantive.",
+      "first_checked_at": "2026-10-06T21:34:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:53+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Soleker: Uncovering Vulnerabilities in Solana Smart Contracts"
+    },
+    "DOI:10.1109/ttc66953.2025.11289008": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ttc66953.2025.11289008",
+      "identity_tokens": [
+        "DOI:10.1109/ttc66953.2025.11289008"
+      ],
+      "reason": "The primary publisher text and abstract were unavailable, so retain as borderline rather than infer scope from its title.",
+      "first_checked_at": "2026-10-06T21:34:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Analysis of the use of Recurrent Neural Network for Multiple Frequency-Shift Keying signals decoding during Entry, Descent, and Landing phase of interplanetary missions"
+    },
+    "DOI:10.1007/s11227-025-07169-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-025-07169-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-07169-y"
+      ],
+      "reason": "The primary Springer text could not be retrieved; retain as borderline rather than infer scope from metadata.",
+      "first_checked_at": "2026-10-06T21:34:54+00:00",
+      "last_checked_at": "2026-10-06T21:34:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pipeline parallelism with reduced network communication for efficient compute-intensive neural network training"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c578805781b479a7-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.12376",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.12376",
+    "identity_tokens": [
+      "arXiv:2511.12376"
+    ],
+    "reason": "The full text evaluates checkpoint compression/sparsification and quantization in the training checkpoint lifecycle; it does not report reduced model inference latency, serving memory, or decoding cost.",
+    "first_checked_at": "2026-10-06T21:34:53+00:00",
+    "last_checked_at": "2026-10-06T21:34:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+    ],
+    "title": "BitSnap: Checkpoint Sparsification and Quantization in LLM Training"
+  },
+  "processed_at": "2026-10-06T21:34:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c578805781b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

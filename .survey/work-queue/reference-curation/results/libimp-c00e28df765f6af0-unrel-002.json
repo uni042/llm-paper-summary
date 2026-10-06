@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c00e28df765f6af0-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1907.12461",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1907.12461",
+    "identity_tokens": [
+      "DOI:10.1162/tacl_a_00313",
+      "arXiv:1907.12461"
+    ],
+    "reason": "BERT/GPT-2/RoBERTaの事前学習checkpointをencoder/decoder初期化へ利用し、翻訳・要約等の生成品質を改善する転移学習研究。推論runtime・serving・memory最適化が主目的ではない。",
+    "first_checked_at": "2026-10-04T21:37:53+00:00",
+    "last_checked_at": "2026-10-06T21:34:51+00:00",
+    "linked_from": [],
+    "title": "Leveraging Pre-trained Checkpoints for Sequence Generation Tasks"
+  },
+  "processed_at": "2026-10-06T21:34:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c00e28df765f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

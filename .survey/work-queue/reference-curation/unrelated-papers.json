@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T21:30:36+00:00",
-  "record_count": 9788,
+  "updated_at": "2026-10-06T21:34:55+00:00",
+  "record_count": 9806,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -18606,11 +18606,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1907.12461",
       "identity_tokens": [
+        "DOI:10.1162/tacl_a_00313",
         "arXiv:1907.12461"
       ],
-      "reason": "pre-trained checkpointをsequence generation taskへ転移して品質を改善するfine-tuning/model adaptation研究で、推論runtime・memory・serving最適化を主目的としない。",
+      "reason": "BERT/GPT-2/RoBERTaの事前学習checkpointをencoder/decoder初期化へ利用し、翻訳・要約等の生成品質を改善する転移学習研究。推論runtime・serving・memory最適化が主目的ではない。",
       "first_checked_at": "2026-10-04T21:37:53+00:00",
-      "last_checked_at": "2026-10-04T21:37:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:51+00:00",
       "linked_from": [],
       "title": "Leveraging Pre-trained Checkpoints for Sequence Generation Tasks"
     },
@@ -90805,11 +90806,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2110.08387",
       "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.225",
         "arXiv:2110.08387"
       ],
-      "reason": "LM自身が外部知識を生成し追加promptとして与えることでcommonsense reasoning精度を高めるprompting能力研究。推論runtime・memory・serving効率化を扱わない。",
+      "reason": "言語モデルに外部知識文を生成させ、その知識を追加入力としてcommonsense reasoning精度を改善するprompting手法。推論システム効率化を扱わない。",
       "first_checked_at": "2026-10-05T15:43:22+00:00",
-      "last_checked_at": "2026-10-05T16:39:38+00:00",
+      "last_checked_at": "2026-10-06T21:34:51+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
@@ -90913,13 +90915,14 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2011.05864",
       "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.733",
         "arXiv:2011.05864"
       ],
-      "reason": "BERT sentence embeddingをsemantic textual similarityへ適用・改善するrepresentation/NLP task研究。推論runtime・memory・serving効率化を扱わない。",
+      "reason": "BERT sentence embeddingのanisotropyを分析し、normalizing flowでsemantic textual similarity性能を改善する表現学習・後処理研究。STS品質が主評価であり、LLM推論runtime・serving・memory効率化を扱わない。",
       "first_checked_at": "2026-10-05T15:48:46+00:00",
-      "last_checked_at": "2026-10-05T15:48:46+00:00",
+      "last_checked_at": "2026-10-06T21:34:52+00:00",
       "linked_from": [],
-      "title": "On the Sentence Embeddings from BERT for Semantic Textual Similarity"
+      "title": "On the Sentence Embeddings from Pre-trained Language Models"
     },
     "arXiv:2310.03589": {
       "classification": "unrelated",
@@ -140174,6 +140177,248 @@
         "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
       ],
       "title": "SynClaimEval: A Framework for Evaluating the Utility of Synthetic Data in Long-Context Claim Verification"
+    },
+    "arXiv:2512.12301": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12301",
+      "identity_tokens": [
+        "arXiv:2512.12301"
+      ],
+      "reason": "TwinFormer applies patching, top-k sparse attention, and GRU aggregation to long-sequence time-series forecasting. The paper reports linear sequence-length complexity and consumer-GPU forecasting, but the target is time-series prediction, not LLM inference or serving; the architectural analogy alone does not establish an LLM lineage match.",
+      "first_checked_at": "2026-10-06T21:34:51+00:00",
+      "last_checked_at": "2026-10-06T21:34:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "TwinFormer: A Dual-Level Transformer for Long-Sequence Time-Series Forecasting"
+    },
+    "arXiv:2512.13727": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13727",
+      "identity_tokens": [
+        "arXiv:2512.13727"
+      ],
+      "reason": "RAST-MoE-RL is a policy/representation framework for ride-hailing dispatch trained with reinforcement learning. Its MoE experts serve urban demand regimes and improve matching/pickup outcomes; it does not address LLMs, language generation, or LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T21:34:51+00:00",
+      "last_checked_at": "2026-10-06T21:34:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md"
+      ],
+      "title": "RAST-MoE-RL: A Regime-Aware Spatio-Temporal MoE Framework for Deep Reinforcement Learning in Ride-Hailing"
+    },
+    "arXiv:2112.07658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.07658",
+      "identity_tokens": [
+        "arXiv:2112.07658"
+      ],
+      "reason": "画像分類向けVision Transformerで入力画像ごとに空間tokenを早期停止して推論計算を削減する研究。DeiT-Tiny/SmallのImageNet推論が最終適用先であり、LLM/言語モデル推論システムを対象としない。",
+      "first_checked_at": "2026-10-06T21:34:51+00:00",
+      "last_checked_at": "2026-10-06T21:34:51+00:00",
+      "linked_from": [],
+      "title": "A-ViT: Adaptive Tokens for Efficient Vision Transformer"
+    },
+    "arXiv:2103.04505": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.04505",
+      "identity_tokens": [
+        "arXiv:2103.04505"
+      ],
+      "reason": "mobile/edge向けDNN一般のsplit computingとearly exitingを整理するsurveyで、画像分類・音声認識等を含む広いdeep learning applicationが対象。LLM/Transformer推論を最終適用先とするsystems surveyではない。",
+      "first_checked_at": "2026-10-06T21:34:51+00:00",
+      "last_checked_at": "2026-10-06T21:34:51+00:00",
+      "linked_from": [],
+      "title": "Split Computing and Early Exiting for Deep Learning Applications: Survey and Research Challenges"
+    },
+    "DOI:10.1007/3-540-45820-4_14": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-45820-4_14",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-45820-4_14"
+      ],
+      "reason": "二言語parallel corpusのsentence alignmentを高速・高精度に行う機械翻訳前処理研究であり、LLM/Transformer推論システムとは無関係。",
+      "first_checked_at": "2026-10-06T21:34:52+00:00",
+      "last_checked_at": "2026-10-06T21:34:52+00:00",
+      "linked_from": [],
+      "title": "Fast and accurate sentence alignment of bilingual corpora"
+    },
+    "arXiv:1903.04611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.04611",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2019.2928289",
+        "arXiv:1903.04611"
+      ],
+      "reason": "6種類のHPC/GPU環境でmulti-GPU interconnect特性とNUMA効果を評価する一般GPU/HPC characterization研究。LLM/Transformer推論を最終workloadとして評価していない。",
+      "first_checked_at": "2026-10-06T21:34:52+00:00",
+      "last_checked_at": "2026-10-06T21:34:52+00:00",
+      "linked_from": [],
+      "title": "Evaluating Modern GPU Interconnect: PCIe, NVLink, NV-SLI, NVSwitch and GPUDirect"
+    },
+    "arXiv:2310.02124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.02124",
+      "identity_tokens": [
+        "arXiv:2310.02124"
+      ],
+      "reason": "LLM agent社会のdebate/reflection、人格trait、conformity/consensus等を社会心理学の観点から分析する研究。主目的はcollaborative intelligenceの理解・品質改善で、agent runtime/serving最適化ではない。",
+      "first_checked_at": "2026-10-06T21:34:52+00:00",
+      "last_checked_at": "2026-10-06T21:34:52+00:00",
+      "linked_from": [],
+      "title": "Exploring Collaboration Mechanisms for LLM Agents: A Social Psychology View"
+    },
+    "DOI:10.1007/s10489-024-05747-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10489-024-05747-w",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-024-05747-w"
+      ],
+      "reason": "pruning、quantization、knowledge distillation、low-rank factorization等を機械学習全般とmobile/edge/IoT deploymentについて整理する総合review。NLP/LLMの節は含むが、LLM推論システムを中心に体系化・評価する論文ではない。",
+      "first_checked_at": "2026-10-06T21:34:52+00:00",
+      "last_checked_at": "2026-10-06T21:34:52+00:00",
+      "linked_from": [],
+      "title": "A comprehensive review of model compression techniques in machine learning"
+    },
+    "arXiv:2511.16653": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16653",
+      "identity_tokens": [
+        "arXiv:2511.16653"
+      ],
+      "reason": "The full text evaluates image-classification datasets (CIFAR-10/100 and Tiny ImageNet) and pruning quality; it does not evaluate LLM inference or language-model serving.",
+      "first_checked_at": "2026-10-06T21:34:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:53+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md"
+      ],
+      "title": "Teacher-Guided One-Shot Pruning via Context-Aware Knowledge Distillation"
+    },
+    "arXiv:2511.12376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.12376",
+      "identity_tokens": [
+        "arXiv:2511.12376"
+      ],
+      "reason": "The full text evaluates checkpoint compression/sparsification and quantization in the training checkpoint lifecycle; it does not report reduced model inference latency, serving memory, or decoding cost.",
+      "first_checked_at": "2026-10-06T21:34:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "BitSnap: Checkpoint Sparsification and Quantization in LLM Training"
+    },
+    "arXiv:2511.18672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.18672",
+      "identity_tokens": [
+        "arXiv:2511.18672"
+      ],
+      "reason": "The full text addresses selective refinement and serving cost for novel-view synthesis in computer vision; it does not study language-model decoding or LLM inference systems.",
+      "first_checked_at": "2026-10-06T21:34:53+00:00",
+      "last_checked_at": "2026-10-06T21:34:53+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+      ],
+      "title": "Sphinx: Efficiently Serving Novel View Synthesis using Regression-Guided Selective Refinement"
+    },
+    "arXiv:2511.19023": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19023",
+      "identity_tokens": [
+        "arXiv:2511.19023"
+      ],
+      "reason": "The full text centers on preference-data ranking and alignment training objectives/experiments, not inference compute, memory, latency, throughput, or serving.",
+      "first_checked_at": "2026-10-06T21:34:54+00:00",
+      "last_checked_at": "2026-10-06T21:34:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "OrdMoE: Preference Alignment via Hierarchical Expert Group Ranking in Multimodal Mixture-of-Experts LLMs"
+    },
+    "arXiv:2511.19778": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19778",
+      "identity_tokens": [
+        "arXiv:2511.19778"
+      ],
+      "reason": "The primary abstract places the contribution in diffusion-image generation positional encoding, outside the LLM inference/serving scope.",
+      "first_checked_at": "2026-10-06T21:34:54+00:00",
+      "last_checked_at": "2026-10-06T21:34:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Phase-Aligned RoPE for Mixed-Resolution Diffusion Transformer"
+    },
+    "arXiv:2511.17089": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17089",
+      "identity_tokens": [
+        "arXiv:2511.17089"
+      ],
+      "reason": "The primary abstract concerns image-generation sampling structure, not LLM inference efficiency or a relevant serving mechanism.",
+      "first_checked_at": "2026-10-06T21:34:54+00:00",
+      "last_checked_at": "2026-10-06T21:34:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Spanning Tree Autoregressive Visual Generation"
+    },
+    "arXiv:2509.17429": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.17429",
+      "identity_tokens": [
+        "arXiv:2509.17429"
+      ],
+      "reason": "The primary abstract is about temporal prediction/multi-agent coordination and gives no LLM inference efficiency contribution.",
+      "first_checked_at": "2026-10-06T21:34:54+00:00",
+      "last_checked_at": "2026-10-06T21:34:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Multi-scale Temporal Prediction via Incremental Generation and Multi-agent Collaboration"
+    },
+    "arXiv:2506.11994": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11994",
+      "identity_tokens": [
+        "arXiv:2506.11994"
+      ],
+      "reason": "The primary abstract is about spectral estimation, outside LLM inference and serving.",
+      "first_checked_at": "2026-10-06T21:34:55+00:00",
+      "last_checked_at": "2026-10-06T21:34:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Spectral Estimation with Free Decompression"
+    },
+    "arXiv:2506.02338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02338",
+      "identity_tokens": [
+        "arXiv:2506.02338"
+      ],
+      "reason": "The full text constructs training data and evaluates reinforcement-learning cold-starting for reasoning models; it does not optimize inference-time compute, memory, latency, or serving.",
+      "first_checked_at": "2026-10-06T21:34:55+00:00",
+      "last_checked_at": "2026-10-06T21:34:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "One Missing Piece for Open-Source Reasoning Models: A Dataset to Mitigate Cold-Starting Short CoT LLMs in RL"
+    },
+    "arXiv:2505.22151": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22151",
+      "identity_tokens": [
+        "arXiv:2505.22151"
+      ],
+      "reason": "The primary abstract concerns offline MARL policies and multi-agent coordination, with no language-model inference/serving contribution.",
+      "first_checked_at": "2026-10-06T21:34:55+00:00",
+      "last_checked_at": "2026-10-06T21:34:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Oryx: a Scalable Sequence Model for Many-Agent Coordination in Offline MARL"
     }
   }
 }
