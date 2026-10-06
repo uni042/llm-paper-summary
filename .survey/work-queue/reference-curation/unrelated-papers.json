@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T12:07:34+00:00",
-  "record_count": 8114,
+  "updated_at": "2026-10-06T12:13:04+00:00",
+  "record_count": 8139,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -757,9 +757,9 @@
       "identity_tokens": [
         "arXiv:1909.08053"
       ],
-      "reason": "Transformerを数百GPUへ分割して大規模モデルを学習するintra-layer model parallelismが主題で、主要評価もtraining scaling efficiency・学習済みモデル品質。推論runtime/serving最適化を最終目的としない。",
+      "reason": "主目的が巨大Transformerの分散学習であり、推論サービング最適化ではない。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-10-05T22:23:07+00:00",
+      "last_checked_at": "2026-10-06T12:12:51+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
@@ -3449,21 +3449,6 @@
       ],
       "title": "Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models"
     },
-    "arXiv:1811.06965": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1811.06965",
-      "identity_tokens": [
-        "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
-        "arXiv:1811.06965"
-      ],
-      "reason": "microbatch pipelineで巨大networkを複数acceleratorへ分割するtraining library。評価はAmoebaNetと6B Transformerの学習で、推論system最適化が主目的ではない。",
-      "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-10-05T22:27:26+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism"
-    },
     "DOI:10.1145/3503221.3508418": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3503221.3508418",
@@ -5122,9 +5107,9 @@
         "DOI:10.48550/arxiv.2104.04473",
         "arXiv:2104.04473"
       ],
-      "reason": "tensor・pipeline・data parallelismを組み合わせ、trillion-parameter LMの分散学習を数千GPUへscaleするtraining system研究。提案interleaved pipeline scheduleの主要評価もtraining throughputであり推論対象外。",
+      "reason": "テンソル・パイプライン・データ並列を組み合わせた大規模LLM学習のスケーリングが主題で、推論ではなく学習専用最適化に該当するため現行サーベイ範囲外。",
       "first_checked_at": "2026-09-30T09:50:07+00:00",
-      "last_checked_at": "2026-10-05T22:23:07+00:00",
+      "last_checked_at": "2026-10-06T12:12:55+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
@@ -8993,9 +8978,9 @@
       "identity_tokens": [
         "arXiv:2101.06840"
       ],
-      "reason": "ZeRO-Offload places optimizer states and computation on CPU to make billion-parameter DNN training feasible with a single GPU. The paper's stated goal and measured speedups concern model training and training throughput; it does not optimize LLM inference or serving. Excluded under the workflow's training-process-only rule.",
+      "reason": "optimizer stateとgradientをCPUへoffloadする巨大モデル学習方式で、推論offloadではない。",
       "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-06T12:12:52+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[0]"
       ],
@@ -93540,9 +93525,9 @@
       "identity_tokens": [
         "arXiv:1802.05799"
       ],
-      "reason": "分散deep learningのtraining通信を主題とし、推論ではなく学習専用最適化に該当する。",
+      "reason": "分散深層学習の学習ランタイムが主題で、LLM推論ではない。",
       "first_checked_at": "2026-10-05T22:17:57+00:00",
-      "last_checked_at": "2026-10-05T22:27:25+00:00",
+      "last_checked_at": "2026-10-06T12:12:51+00:00",
       "linked_from": [],
       "title": "Horovod: fast and easy distributed deep learning in TensorFlow"
     },
@@ -93860,9 +93845,9 @@
       "identity_tokens": [
         "arXiv:2110.02861"
       ],
-      "reason": "optimizer stateの8-bit化によるtraining memory削減が主目的で、推論量子化ではない。",
+      "reason": "optimizer stateを8-bit化する学習メモリ削減が主題で、推論量子化ではない。",
       "first_checked_at": "2026-10-05T22:18:01+00:00",
-      "last_checked_at": "2026-10-05T22:18:01+00:00",
+      "last_checked_at": "2026-10-06T12:12:53+00:00",
       "linked_from": [],
       "title": "8-bit Optimizers via Block-wise Quantization"
     },
@@ -94091,9 +94076,9 @@
       "identity_tokens": [
         "arXiv:1712.05889"
       ],
-      "reason": "汎用分散AI frameworkであり、LLM推論固有のmemory/KV/MoE/serving最適化を扱わない。",
+      "reason": "汎用AI分散実行基盤としてtask/actor、分散scheduler、fault-tolerant storeを提案し、主評価も強化学習アプリケーションである。LLM推論サービング固有の最適化を主題としないため対象外。",
       "first_checked_at": "2026-10-05T22:27:24+00:00",
-      "last_checked_at": "2026-10-05T22:27:24+00:00",
+      "last_checked_at": "2026-10-06T12:12:54+00:00",
       "linked_from": [],
       "title": "Ray: A Distributed Framework for Emerging AI Applications"
     },
@@ -94103,9 +94088,9 @@
       "identity_tokens": [
         "arXiv:2502.12110"
       ],
-      "reason": "agent memoryのsemantic organizationとtask能力が主題で、推論servingのKV/階層memoryやsystem効率を最終適用先として評価しない。",
+      "reason": "エージェントの長期記憶内容の生成・編成が主題で、推論サービングやKV/メモリ階層のシステム最適化ではない。",
       "first_checked_at": "2026-10-05T22:27:25+00:00",
-      "last_checked_at": "2026-10-05T22:27:25+00:00",
+      "last_checked_at": "2026-10-06T12:12:52+00:00",
       "linked_from": [],
       "title": "A-MEM: Agentic Memory for LLM Agents"
     },
@@ -116602,6 +116587,363 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
       ],
       "title": "Developing Conversational Speech Systems for Robots to Detect Speech Biomarkers of Cognition in People Living with Dementia"
+    },
+    "arXiv:2310.13321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.13321",
+      "identity_tokens": [
+        "arXiv:2310.13321"
+      ],
+      "reason": "Grammatical-error-correction robustness/data augmentation addresses task quality, with no inference compute, memory, latency, quantization, or serving method indicated.",
+      "first_checked_at": "2026-10-06T12:12:51+00:00",
+      "last_checked_at": "2026-10-06T12:12:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Beyond Hard Samples: Robust and Effective Grammatical Error Correction with Cycle Self-Augmenting"
+    },
+    "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+      "identity_tokens": [
+        "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+        "arXiv:1811.06965"
+      ],
+      "reason": "pipeline parallelismによる巨大ニューラルネットワーク学習が主題で、LLM推論の実行系を対象にしない。",
+      "first_checked_at": "2026-09-27T12:58:27+09:00",
+      "last_checked_at": "2026-10-06T12:12:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism"
+    },
+    "DOI:10.18653/v1/d19-1633": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1633",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1633"
+      ],
+      "reason": "非自己回帰ニューラル機械翻訳の条件付きmasked LM復号であり、LLM推論システムを対象にしない。",
+      "first_checked_at": "2026-10-06T12:12:52+00:00",
+      "last_checked_at": "2026-10-06T12:12:52+00:00",
+      "linked_from": [],
+      "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models"
+    },
+    "arXiv:1901.10430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1901.10430",
+      "identity_tokens": [
+        "arXiv:1901.10430"
+      ],
+      "reason": "主対象がニューラル機械翻訳向けattention代替architectureで、LLM推論システムの最適化ではない。",
+      "first_checked_at": "2026-10-06T12:12:52+00:00",
+      "last_checked_at": "2026-10-06T12:12:52+00:00",
+      "linked_from": [],
+      "title": "Pay Less Attention with Lightweight and Dynamic Convolutions"
+    },
+    "arXiv:2506.01844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01844",
+      "identity_tokens": [
+        "arXiv:2506.01844"
+      ],
+      "reason": "ロボット向けvision-language-action modelの学習・制御が主題で、LLM推論基盤の対象外。",
+      "first_checked_at": "2026-10-06T12:12:53+00:00",
+      "last_checked_at": "2026-10-06T12:12:53+00:00",
+      "linked_from": [],
+      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
+    },
+    "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": [
+        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945"
+      ],
+      "reason": "汎用OSのhardware resource disaggregationが主題で、LLM推論固有の研究ではない。",
+      "first_checked_at": "2026-10-06T12:12:53+00:00",
+      "last_checked_at": "2026-10-06T12:12:53+00:00",
+      "linked_from": [],
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
+    },
+    "arXiv:2202.08906": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.08906",
+      "identity_tokens": [
+        "arXiv:2202.08906"
+      ],
+      "reason": "本文の主問題は大規模疎MoEの事前学習時のtraining instabilityとdownstream fine-tuning時のtransfer qualityであり、router z-loss、fine-tuning hyperparameter、expert specializationを中心に269B ST-MoE-32Bを構築する。推論サービング、expert offload/cache、runtime scheduling、kernel、memory hierarchyの改善を最終適用先として評価していないため、現行の推論中心サーベイ範囲から除外する。",
+      "first_checked_at": "2026-10-06T12:12:53+00:00",
+      "last_checked_at": "2026-10-06T12:12:55+00:00",
+      "linked_from": [],
+      "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models"
+    },
+    "arXiv:2203.07814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.07814",
+      "identity_tokens": [
+        "DOI:10.1126/science.abq1158",
+        "arXiv:2203.07814"
+      ],
+      "reason": "競技プログラミング向けコード生成能力・学習データ・大規模サンプリング/挙動フィルタリングが主題で、LLM推論基盤・サービング・メモリ階層・MoE推論最適化そのものを扱わないため対象外。",
+      "first_checked_at": "2026-10-06T12:12:54+00:00",
+      "last_checked_at": "2026-10-06T12:12:54+00:00",
+      "linked_from": [],
+      "title": "Competition-level code generation with AlphaCode"
+    },
+    "arXiv:2501.14105": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.14105",
+      "identity_tokens": [
+        "arXiv:2501.14105"
+      ],
+      "reason": "Clinical note sectioning fine-tunes LLMs for a medical application; the candidate description indicates no model-system efficiency method.",
+      "first_checked_at": "2026-10-06T12:12:56+00:00",
+      "last_checked_at": "2026-10-06T12:12:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "MedSlice: fine-tuned large language models for secure clinical note sectioning"
+    },
+    "DOI:10.1145/3658617.3697695": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3658617.3697695",
+      "identity_tokens": [
+        "DOI:10.1145/3658617.3697695"
+      ],
+      "reason": "Universal deformable attention acceleration is explicitly for vision tasks; no LLM inference or linked language-model use is indicated.",
+      "first_checked_at": "2026-10-06T12:12:56+00:00",
+      "last_checked_at": "2026-10-06T12:12:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "UEDA: A Universal And Efficient Deformable Attention Accelerator For Various Vision Tasks"
+    },
+    "arXiv:2510.15542": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.15542",
+      "identity_tokens": [
+        "arXiv:2510.15542"
+      ],
+      "reason": "Spiking-network deployment on neuromorphic hardware is a different model family and is not an LLM/Transformer inference contribution.",
+      "first_checked_at": "2026-10-06T12:12:57+00:00",
+      "last_checked_at": "2026-10-06T12:12:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "SpikeFit: Towards Optimal Deployment of Spiking Networks on Neuromorphic Hardware"
+    },
+    "arXiv:2510.14826": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14826",
+      "identity_tokens": [
+        "arXiv:2510.14826"
+      ],
+      "reason": "Tool use for state-space-model length generalization addresses capability/sequence generalization, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-06T12:12:57+00:00",
+      "last_checked_at": "2026-10-06T12:12:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "To Infinity and Beyond: Tool-Use Unlocks Length Generalization in State Space Models"
+    },
+    "arXiv:2509.23963": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23963",
+      "identity_tokens": [
+        "arXiv:2509.23963"
+      ],
+      "reason": "Compute-optimal scaling robustness concerns scaling/training laws rather than inference-time systems or model efficiency.",
+      "first_checked_at": "2026-10-06T12:12:57+00:00",
+      "last_checked_at": "2026-10-06T12:12:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Evaluating the Robustness of Chinchilla Compute-Optimal Scaling"
+    },
+    "arXiv:2509.21487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21487",
+      "identity_tokens": [
+        "arXiv:2509.21487"
+      ],
+      "reason": "Dual-head reasoning distillation is described as train-time-only classifier accuracy improvement; no inference cost reduction is indicated.",
+      "first_checked_at": "2026-10-06T12:12:57+00:00",
+      "last_checked_at": "2026-10-06T12:12:57+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Dual-Head Reasoning Distillation: Improving Classifier Accuracy with Train-Time-Only Reasoning"
+    },
+    "arXiv:2402.08207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.08207",
+      "identity_tokens": [
+        "arXiv:2402.08207"
+      ],
+      "reason": "Road-network image understanding/sequence prediction is a domain-specific map-generation task; no reusable LLM inference optimization is indicated.",
+      "first_checked_at": "2026-10-06T12:12:58+00:00",
+      "last_checked_at": "2026-10-06T12:12:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Translating Images to Road Network: A Sequence-to-Sequence Perspective"
+    },
+    "DOI:10.1109/access.2024.3488004": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2024.3488004",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3488004"
+      ],
+      "reason": "Concurrent GPU/PIM execution accelerates CNN training, not LLM inference or the linked LLM serving lineage.",
+      "first_checked_at": "2026-10-06T12:12:58+00:00",
+      "last_checked_at": "2026-10-06T12:12:58+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Accelerating CNN Training With Concurrent Execution of GPU and Processing-in-Memory"
+    },
+    "DOI:10.3390/inventions9040079": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/inventions9040079",
+      "identity_tokens": [
+        "DOI:10.3390/inventions9040079"
+      ],
+      "reason": "LLM-based onboarding software solution; application of an LLM, not an optimization to inference compute, memory, latency, quantization, or serving.",
+      "first_checked_at": "2026-10-06T12:12:59+00:00",
+      "last_checked_at": "2026-10-06T12:12:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Increasing the Reliability of Software Systems Using a Large-Language-Model-Based Solution for Onboarding"
+    },
+    "DOI:10.32473/flairs.37.1.135617": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.32473/flairs.37.1.135617",
+      "identity_tokens": [
+        "DOI:10.32473/flairs.37.1.135617"
+      ],
+      "reason": "Compression effects on fairness/bias are evaluation outcomes, not inference optimization or an actionable model-system efficiency contribution.",
+      "first_checked_at": "2026-10-06T12:12:59+00:00",
+      "last_checked_at": "2026-10-06T12:12:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Beyond Size and Accuracy: The Impact of Model Compression on Fairness"
+    },
+    "DOI:10.48550/arxiv.2504.14350": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2504.14350",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.14350",
+        "arXiv:2504.14350"
+      ],
+      "reason": "Output-length constraints evaluate reasoning ability rather than reducing inference-system resource cost.",
+      "first_checked_at": "2026-10-06T12:13:00+00:00",
+      "last_checked_at": "2026-10-06T12:13:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Time's Up! An Empirical Study of LLM Reasoning Ability Under Output Length Constraint"
+    },
+    "DOI:10.4258/hir.2025.31.2.136": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.4258/hir.2025.31.2.136",
+      "identity_tokens": [
+        "DOI:10.4258/hir.2025.31.2.136"
+      ],
+      "reason": "RAG response generation for Korean adolescents is a downstream application study, not an inference efficiency method.",
+      "first_checked_at": "2026-10-06T12:13:00+00:00",
+      "last_checked_at": "2026-10-06T12:13:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "LLM-Based Response Generation for Korean Adolescents: A Study Using the NAVER Knowledge iN Q&A Dataset with RAG"
+    },
+    "arXiv:2411.11699": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.11699",
+      "identity_tokens": [
+        "arXiv:2411.11699"
+      ],
+      "reason": "LiTformer applies a non-autoregressive Transformer to high-speed-link transmitter modeling, a domain-specific communications task with no general language-model inference optimization.",
+      "first_checked_at": "2026-10-06T12:13:01+00:00",
+      "last_checked_at": "2026-10-06T12:13:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "LiTformer: Efficient Modeling and Analysis of High-Speed Link Transmitters Using Non-Autoregressive Transformer"
+    },
+    "arXiv:2408.15447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.15447",
+      "identity_tokens": [
+        "arXiv:2408.15447"
+      ],
+      "reason": "Ordinal embeddings for video-caption length control concern task output behavior, not inference-system efficiency.",
+      "first_checked_at": "2026-10-06T12:13:01+00:00",
+      "last_checked_at": "2026-10-06T12:13:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Fine-Grained Length Controllable Video Captioning With Ordinal Embeddings"
+    },
+    "DOI:10.1016/j.neucom.2024.128216": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2024.128216",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2024.128216"
+      ],
+      "reason": "Pruned ternary quantization targets medical signal classification models rather than language-model inference or a transferable LLM method.",
+      "first_checked_at": "2026-10-06T12:13:03+00:00",
+      "last_checked_at": "2026-10-06T12:13:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "Trainable pruned ternary quantization for medical signal classification models"
+    },
+    "arXiv:2406.06925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.06925",
+      "identity_tokens": [
+        "arXiv:2406.06925"
+      ],
+      "reason": "Non-autoregressive personalized bundle generation is a recommender application, not a language-model inference efficiency contribution.",
+      "first_checked_at": "2026-10-06T12:13:03+00:00",
+      "last_checked_at": "2026-10-06T12:13:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Non-autoregressive Personalized Bundle Generation"
+    },
+    "DOI:10.1016/j.neucom.2025.130832": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.130832",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.130832"
+      ],
+      "reason": "Phrase-level back-translation is NMT training-data augmentation, with no inference efficiency method indicated.",
+      "first_checked_at": "2026-10-06T12:13:04+00:00",
+      "last_checked_at": "2026-10-06T12:13:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "PhraseBT: A phrase-level back-translation data augmentation method for neural machine translation"
+    },
+    "arXiv:2506.07833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07833",
+      "identity_tokens": [
+        "arXiv:2506.07833"
+      ],
+      "reason": "Concept-aware fine-tuning improves LLM task capability/training, rather than reducing inference compute, memory, latency, or serving cost.",
+      "first_checked_at": "2026-10-06T12:13:04+00:00",
+      "last_checked_at": "2026-10-06T12:13:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "title": "Improving Large Language Models with Concept-Aware Fine-Tuning"
     }
   }
 }

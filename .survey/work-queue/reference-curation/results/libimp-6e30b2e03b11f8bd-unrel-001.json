@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6e30b2e03b11f8bd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2203.07814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2203.07814",
+    "identity_tokens": [
+      "DOI:10.1126/science.abq1158",
+      "arXiv:2203.07814"
+    ],
+    "reason": "競技プログラミング向けコード生成能力・学習データ・大規模サンプリング/挙動フィルタリングが主題で、LLM推論基盤・サービング・メモリ階層・MoE推論最適化そのものを扱わないため対象外。",
+    "first_checked_at": "2026-10-06T12:12:54+00:00",
+    "last_checked_at": "2026-10-06T12:12:54+00:00",
+    "linked_from": [],
+    "title": "Competition-level code generation with AlphaCode"
+  },
+  "processed_at": "2026-10-06T12:12:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6e30b2e03b11",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
