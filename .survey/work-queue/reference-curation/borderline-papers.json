@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T03:59:14+00:00",
-  "record_count": 2210,
+  "updated_at": "2026-10-06T04:09:05+00:00",
+  "record_count": 2224,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -34075,6 +34075,223 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Large Language Models Are Human-Level Prompt Engineers"
+    },
+    "arXiv:2407.15841": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.15841",
+      "identity_tokens": [
+        "arXiv:2407.15841"
+      ],
+      "reason": "SlowFast-LLaVA uses a two-stream, token-budgeted approach for video LLMs and reports resource-sensitive results, but the contribution is narrow to video input and does not establish general LLM serving gains.",
+      "first_checked_at": "2026-10-06T04:08:59+00:00",
+      "last_checked_at": "2026-10-06T04:08:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SlowFast-LLaVA: A Strong Training-Free Baseline for Video Large Language Models"
+    },
+    "arXiv:2601.12538": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.12538",
+      "identity_tokens": [
+        "arXiv:2601.12538"
+      ],
+      "reason": "This is a broad survey of agentic reasoning rather than a concrete inference optimization method; any compute-efficiency implications are indirect.",
+      "first_checked_at": "2026-10-06T04:08:59+00:00",
+      "last_checked_at": "2026-10-06T04:08:59+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Agentic Reasoning for Large Language Models: Towards Recursively Self-Improving and Collective Agents"
+    },
+    "arXiv:2505.15778": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.15778",
+      "identity_tokens": [
+        "arXiv:2505.15778"
+      ],
+      "reason": "Soft Thinking changes reasoning representation to continuous concept tokens, but the full text does not establish that it reduces inference compute, memory, latency, or token cost.",
+      "first_checked_at": "2026-10-06T04:09:01+00:00",
+      "last_checked_at": "2026-10-06T04:09:01+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Soft Thinking: Unlocking the Reasoning Potential of LLMs in Continuous Concept Space"
+    },
+    "arXiv:1802.00150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1802.00150",
+      "identity_tokens": [
+        "arXiv:1802.00150"
+      ],
+      "reason": "This is a multi-bit quantization method for recurrent neural networks, not current transformer/LLM inference. The potential quantization relevance is technically adjacent but transfer is uncertain.",
+      "first_checked_at": "2026-10-06T04:09:01+00:00",
+      "last_checked_at": "2026-10-06T04:09:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Alternating Multi-bit Quantization for Recurrent Neural Networks"
+    },
+    "arXiv:1902.01370": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.01370",
+      "identity_tokens": [
+        "arXiv:1902.01370"
+      ],
+      "reason": "Insertion-based decoding caches hidden states and permits inferred generation order, but the work is older machine translation and does not show relevance to modern autoregressive LLM serving.",
+      "first_checked_at": "2026-10-06T04:09:01+00:00",
+      "last_checked_at": "2026-10-06T04:09:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Insertion-based Decoding with Automatically Inferred Generation Order"
+    },
+    "DOI:10.15607/rss.2025.xxi.010": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.15607/rss.2025.xxi.010",
+      "identity_tokens": [
+        "DOI:10.15607/rss.2025.xxi.010"
+      ],
+      "reason": "π₀ is a vision-language-action robot-control flow model. Its action-generation architecture is adjacent to model inference, but it does not study LLM serving/quantization or general inference efficiency.",
+      "first_checked_at": "2026-10-06T04:09:02+00:00",
+      "last_checked_at": "2026-10-06T04:09:02+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "π₀: A Vision-Language-Action Flow Model for General Robot Control"
+    },
+    "arXiv:2504.21318": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.21318",
+      "identity_tokens": [
+        "arXiv:2504.21318"
+      ],
+      "reason": "The technical report focuses on reasoning-model post-training and reasoning performance; although output length and serving lineages are relevant, the full text does not introduce a distinct inference optimization.",
+      "first_checked_at": "2026-10-06T04:09:02+00:00",
+      "last_checked_at": "2026-10-06T04:09:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.02691-output-aware-rotation-int2-kv-cache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md",
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Phi-4-reasoning Technical Report"
+    },
+    "arXiv:1904.13377": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1904.13377",
+      "identity_tokens": [
+        "arXiv:1904.13377"
+      ],
+      "reason": "The work is a speech-recognition architecture from 2019; it tests deep self-attention ASR and training regularization, while retaining the full network at inference. Transfer to current LLM inference efficiency is weak.",
+      "first_checked_at": "2026-10-06T04:09:03+00:00",
+      "last_checked_at": "2026-10-06T04:09:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Very Deep Self-Attention Networks for End-to-End Speech Recognition"
+    },
+    "arXiv:2504.00906": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.00906",
+      "identity_tokens": [
+        "arXiv:2504.00906"
+      ],
+      "reason": "The paper concerns computer-use agent architecture and task performance. It does not provide a concrete LLM inference-serving optimization, so its connection to inference-system lineages is indirect.",
+      "first_checked_at": "2026-10-06T04:09:03+00:00",
+      "last_checked_at": "2026-10-06T04:09:03+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agent S2: A Compositional Generalist-Specialist Framework for Computer Use Agents"
+    },
+    "arXiv:2402.17453": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.17453",
+      "identity_tokens": [
+        "arXiv:2402.17453"
+      ],
+      "reason": "Case-based reasoning is used to improve data-science agent task solving, but the reported contribution does not establish inference-system savings or reusable context/KV mechanisms.",
+      "first_checked_at": "2026-10-06T04:09:04+00:00",
+      "last_checked_at": "2026-10-06T04:09:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning"
+    },
+    "DOI:10.3390/ai4010004": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/ai4010004",
+      "identity_tokens": [
+        "DOI:10.3390/ai4010004"
+      ],
+      "reason": "This is a broad survey of transformer-based textual NLP tasks and architectures. It notes attention complexity but does not focus on inference optimization methods or serving measurements.",
+      "first_checked_at": "2026-10-06T04:09:04+00:00",
+      "last_checked_at": "2026-10-06T04:09:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "End-to-End Transformer-Based Models in Textual-Based NLP"
+    },
+    "arXiv:2605.06716": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06716",
+      "identity_tokens": [
+        "arXiv:2605.06716"
+      ],
+      "reason": "This is a survey of agent memory mechanisms. It is useful background for memory-related work but does not contribute a specific validated inference optimization or serving result.",
+      "first_checked_at": "2026-10-06T04:09:04+00:00",
+      "last_checked_at": "2026-10-06T04:09:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
+    },
+    "arXiv:2512.22315": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22315",
+      "identity_tokens": [
+        "arXiv:2512.22315"
+      ],
+      "reason": "VideoZoomer learns temporal focus for long-video reasoning, but the primary text does not establish inference latency/memory savings and may add selection/tool overhead.",
+      "first_checked_at": "2026-10-06T04:09:05+00:00",
+      "last_checked_at": "2026-10-06T04:09:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VideoZoomer: Reinforcement-Learned Temporal Focusing for Long Video Reasoning"
+    },
+    "arXiv:2602.22897": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22897",
+      "identity_tokens": [
+        "arXiv:2602.22897"
+      ],
+      "reason": "OmniGAIA is primarily an omni-modal agent/model report and benchmark. Despite a serving-lineage association, its full text does not establish a concrete serving optimization or resource-efficiency method.",
+      "first_checked_at": "2026-10-06T04:09:05+00:00",
+      "last_checked_at": "2026-10-06T04:09:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.22983-liveserve-interaction-aware-serving-for-real-time-omni-modal-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OmniGAIA: Towards Native Omni-Modal AI Agents"
     }
   }
 }

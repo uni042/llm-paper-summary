@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c32fc1108d27579d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.17453",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.17453",
+    "identity_tokens": [
+      "arXiv:2402.17453"
+    ],
+    "reason": "Case-based reasoning is used to improve data-science agent task solving, but the reported contribution does not establish inference-system savings or reusable context/KV mechanisms.",
+    "first_checked_at": "2026-10-06T04:09:04+00:00",
+    "last_checked_at": "2026-10-06T04:09:04+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning"
+  },
+  "processed_at": "2026-10-06T04:09:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c32fc1108d27",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

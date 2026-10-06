@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa4776edce3aecb9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.12812",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.12812",
+    "identity_tokens": [
+      "arXiv:2512.12812"
+    ],
+    "reason": "The study changes prompt wording and measures response outcomes; no cache/runtime technique or resource efficiency measurement is proposed.",
+    "first_checked_at": "2026-10-06T04:09:03+00:00",
+    "last_checked_at": "2026-10-06T04:09:03+00:00",
+    "linked_from": [
+      "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+    ],
+    "title": "Does Tone Change the Answer? Evaluating Prompt Politeness Effects on Modern LLMs: GPT, Gemini, and LLaMA"
+  },
+  "processed_at": "2026-10-06T04:09:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa4776edce3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
