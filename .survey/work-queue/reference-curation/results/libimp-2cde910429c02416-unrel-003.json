@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2cde910429c02416-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.14106",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.14106",
+    "identity_tokens": [
+      "arXiv:2407.14106"
+    ],
+    "reason": "TorchGT targets topology-aware graph-transformer training. Its methods and measurements concern graph sparsity, partitioning, GPU memory access and per-epoch training time, not LLM generation/serving.",
+    "first_checked_at": "2026-10-06T18:44:32+00:00",
+    "last_checked_at": "2026-10-06T18:44:32+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+    ],
+    "title": "TorchGT: A Holistic System for Large-Scale Graph Transformer Training"
+  },
+  "processed_at": "2026-10-06T18:44:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2cde910429c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

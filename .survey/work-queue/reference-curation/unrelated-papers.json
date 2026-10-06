@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T18:40:21+00:00",
-  "record_count": 9244,
+  "updated_at": "2026-10-06T18:44:36+00:00",
+  "record_count": 9263,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -132520,6 +132520,272 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "Masked Diffusion Captioning for Visual Feature Learning"
+    },
+    "arXiv:2402.15943": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15943",
+      "identity_tokens": [
+        "arXiv:2402.15943"
+      ],
+      "reason": "This is a catalog of trustworthy foundation-model software-engineering challenges; its object is development practice rather than model inference optimization.",
+      "first_checked_at": "2026-10-06T18:44:30+00:00",
+      "last_checked_at": "2026-10-06T18:44:30+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "Rethinking Software Engineering in the Foundation Model Era: A Curated Catalogue of Challenges in the Development of Trustworthy FMware"
+    },
+    "arXiv:2401.06340": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06340",
+      "identity_tokens": [
+        "arXiv:2401.06340"
+      ],
+      "reason": "The temporal-spectral Transformer with subject-specific adapters addresses RSVP-BCI EEG decoding. Input, task and experiments are EEG classification, not LLM inference or language-model serving.",
+      "first_checked_at": "2026-10-06T18:44:30+00:00",
+      "last_checked_at": "2026-10-06T18:44:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "A Temporal-Spectral Fusion Transformer with Subject-specific Adapter for Enhancing RSVP-BCI Decoding"
+    },
+    "DOI:10.18653/v1/2026.findings-acl.989": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.989",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.989"
+      ],
+      "reason": "LS-Guard studies individualized LLM safety guardrails; the primary abstract does not target inference compute, memory, latency, or serving.",
+      "first_checked_at": "2026-10-06T18:44:30+00:00",
+      "last_checked_at": "2026-10-06T18:44:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "LS-Guard: Adaptive Safety Guardrails Tailored to Individual LLMs"
+    },
+    "arXiv:2409.19937": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.19937",
+      "identity_tokens": [
+        "arXiv:2409.19937"
+      ],
+      "reason": "MaskMamba targets masked image generation and image quality/speed; it does not study language-model inference or LLM serving.",
+      "first_checked_at": "2026-10-06T18:44:31+00:00",
+      "last_checked_at": "2026-10-06T18:44:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "MaskMamba: A Hybrid Mamba-Transformer Model for Masked Image Generation"
+    },
+    "arXiv:2409.08642": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.08642",
+      "identity_tokens": [
+        "arXiv:2409.08642"
+      ],
+      "reason": "CPL is MCTS plus preference training for reasoning/generalization quality; experiments measure task accuracy. Test-time compute and latency are identified as future challenges, not optimized in this work.",
+      "first_checked_at": "2026-10-06T18:44:31+00:00",
+      "last_checked_at": "2026-10-06T18:44:31+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "CPL: Critical Plan Step Learning Boosts LLM Generalization in Reasoning Tasks"
+    },
+    "arXiv:2407.14106": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.14106",
+      "identity_tokens": [
+        "arXiv:2407.14106"
+      ],
+      "reason": "TorchGT targets topology-aware graph-transformer training. Its methods and measurements concern graph sparsity, partitioning, GPU memory access and per-epoch training time, not LLM generation/serving.",
+      "first_checked_at": "2026-10-06T18:44:32+00:00",
+      "last_checked_at": "2026-10-06T18:44:32+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "TorchGT: A Holistic System for Large-Scale Graph Transformer Training"
+    },
+    "arXiv:2405.18616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18616",
+      "identity_tokens": [
+        "arXiv:2405.18616"
+      ],
+      "reason": "The wavelet tokenizer maps image pixels to ViT image tokens and evaluates ImageNet training throughput/accuracy; it does not target language models, autoregressive inference or serving latency.",
+      "first_checked_at": "2026-10-06T18:44:32+00:00",
+      "last_checked_at": "2026-10-06T18:44:32+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Wavelet-Based Image Tokenizer for Vision Transformers"
+    },
+    "arXiv:2510.23013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.23013",
+      "identity_tokens": [
+        "arXiv:2510.23013"
+      ],
+      "reason": "MoEMeta uses mixture-of-experts meta-learning for few-shot relational learning, not large language model inference or MoE serving efficiency.",
+      "first_checked_at": "2026-10-06T18:44:32+00:00",
+      "last_checked_at": "2026-10-06T18:44:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "MoEMeta: Mixture-of-Experts Meta Learning for Few-Shot Relational Learning"
+    },
+    "arXiv:2510.22102": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22102",
+      "identity_tokens": [
+        "arXiv:2510.22102"
+      ],
+      "reason": "This paper mitigates positional-encoding coordinate prediction bias in spatial prediction, not LLM inference resources or serving.",
+      "first_checked_at": "2026-10-06T18:44:33+00:00",
+      "last_checked_at": "2026-10-06T18:44:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Mitigating Coordinate Prediction Bias from Positional Encoding Failures"
+    },
+    "arXiv:2507.05391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.05391",
+      "identity_tokens": [
+        "arXiv:2507.05391"
+      ],
+      "reason": "The full text studies adherence to privacy-sharing preferences using profiles, verification/paraphrasing and local-model fallback. Its objective is privacy behavior, not model routing or inference efficiency.",
+      "first_checked_at": "2026-10-06T18:44:33+00:00",
+      "last_checked_at": "2026-10-06T18:44:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Controlling What You Share: Assessing Language Model Adherence to Privacy Preferences"
+    },
+    "arXiv:2411.10599": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10599",
+      "identity_tokens": [
+        "arXiv:2411.10599"
+      ],
+      "reason": "The measured energy is that of code generated by LLMs, not energy/resource use of LLM inference; prompt effects are inconsistent across tasks.",
+      "first_checked_at": "2026-10-06T18:44:34+00:00",
+      "last_checked_at": "2026-10-06T18:44:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "An exploration of prompting LLMs to generate energy-efficient code"
+    },
+    "arXiv:2410.07599": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.07599",
+      "identity_tokens": [
+        "arXiv:2410.07599"
+      ],
+      "reason": "Adventurer is a vision-only Mamba architecture reporting ImageNet training throughput/accuracy, not language-model inference serving.",
+      "first_checked_at": "2026-10-06T18:44:34+00:00",
+      "last_checked_at": "2026-10-06T18:44:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Adventurer: Optimizing Vision Mamba Architecture Designs for Efficiency"
+    },
+    "arXiv:2506.06150": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06150",
+      "identity_tokens": [
+        "arXiv:2506.06150"
+      ],
+      "reason": "Photonic hardware is experimentally applied to MNIST/MedNIST image classification; no LLM inference, serving, or token/KV optimization is studied.",
+      "first_checked_at": "2026-10-06T18:44:34+00:00",
+      "last_checked_at": "2026-10-06T18:44:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Inverse-designed nanophotonic neural network accelerators for ultra-compact optical computing"
+    },
+    "arXiv:2503.16064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16064",
+      "identity_tokens": [
+        "arXiv:2503.16064"
+      ],
+      "reason": "PromptHash optimizes image-text retrieval representation learning and hashing; its efficiency is retrieval/storage, not LLM inference cost or latency.",
+      "first_checked_at": "2026-10-06T18:44:34+00:00",
+      "last_checked_at": "2026-10-06T18:44:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "PromptHash: Affinity-Prompted Collaborative Cross-Modal Learning for Adaptive Hashing Retrieval"
+    },
+    "arXiv:2501.06098": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06098",
+      "identity_tokens": [
+        "arXiv:2501.06098"
+      ],
+      "reason": "ELFATT is evaluated as a Vision Transformer attention operator for image/long-range vision tasks; no LLM inference implementation or serving evaluation is established.",
+      "first_checked_at": "2026-10-06T18:44:35+00:00",
+      "last_checked_at": "2026-10-06T18:44:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "ELFATT: Efficient Linear Fast Attention for Vision Transformers"
+    },
+    "arXiv:2412.08907": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.08907",
+      "identity_tokens": [
+        "arXiv:2412.08907"
+      ],
+      "reason": "GaGA is a geolocation assistant/dataset contribution focused on accuracy; it proposes no compute, memory, or serving optimization for VLM inference.",
+      "first_checked_at": "2026-10-06T18:44:35+00:00",
+      "last_checked_at": "2026-10-06T18:44:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "GaGA: Towards Interactive Global Geolocation Assistant"
+    },
+    "arXiv:2407.09093": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.09093",
+      "identity_tokens": [
+        "arXiv:2407.09093"
+      ],
+      "reason": "BDIA reversibility is motivated/evaluated to save backpropagation training memory. The paper says inference uses an otherwise unchanged Transformer up to activation quantization and reports no inference-memory/serving gain.",
+      "first_checked_at": "2026-10-06T18:44:35+00:00",
+      "last_checked_at": "2026-10-06T18:44:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "On Exact Bit-level Reversible Transformers Without Changing Architectures"
+    },
+    "arXiv:2212.06605": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.06605",
+      "identity_tokens": [
+        "arXiv:2212.06605"
+      ],
+      "reason": "This is a Johnson–Lindenstrauss-style weighted-distance projection result, not a language model, inference system or model-compression/serving method.",
+      "first_checked_at": "2026-10-06T18:44:35+00:00",
+      "last_checked_at": "2026-10-06T18:44:35+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Dimensionality Reduction on Complex Vector Spaces for Euclidean Distance with Dynamic Weights"
+    },
+    "arXiv:2506.15940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15940",
+      "identity_tokens": [
+        "arXiv:2506.15940"
+      ],
+      "reason": "Polyline Path Masked Attention is a Vision Transformer attention design for image processing; no LLM/language-model inference evaluation is described.",
+      "first_checked_at": "2026-10-06T18:44:36+00:00",
+      "last_checked_at": "2026-10-06T18:44:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Polyline Path Masked Attention for Vision Transformer"
     }
   }
 }
