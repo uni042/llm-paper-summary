@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T17:30:36+00:00",
-  "record_count": 9066,
+  "updated_at": "2026-10-06T17:45:42+00:00",
+  "record_count": 9093,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -130024,6 +130024,385 @@
         "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
       ],
       "title": "SILMM: Self-Improving Large Multimodal Models for Compositional Text-to-Image Generation"
+    },
+    "arXiv:2602.08810": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08810",
+      "identity_tokens": [
+        "arXiv:2602.08810"
+      ],
+      "reason": "一次要旨のlrnnxはLinear RNN研究を統一interfaceで実装・比較するsoftware libraryであり、個別の推論高速化方式やLLM serving評価を提示しない。実装の再利用性向上だけでは推論効率対象に入らない。",
+      "first_checked_at": "2026-10-06T17:45:25+00:00",
+      "last_checked_at": "2026-10-06T17:45:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "lrnnx: A library for Linear RNNs"
+    },
+    "arXiv:2510.27234": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.27234",
+      "identity_tokens": [
+        "arXiv:2510.27234"
+      ],
+      "reason": "一次arXiv要旨は3D visual geometry reconstructionへMixture-of-Expertsを適用するコンピュータビジョン研究であり、LLM inferenceや言語model servingの効率を扱わない。",
+      "first_checked_at": "2026-10-06T17:45:26+00:00",
+      "last_checked_at": "2026-10-06T17:45:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "MoRE: 3D Visual Geometry Reconstruction Meets Mixture-of-Experts"
+    },
+    "arXiv:2503.21592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21592",
+      "identity_tokens": [
+        "arXiv:2503.21592"
+      ],
+      "reason": "一次要旨の対象はgraph generation用のdiscrete diffusion denoisingで、LLM推論やserving効率の手法・測定を含まない。",
+      "first_checked_at": "2026-10-06T17:45:27+00:00",
+      "last_checked_at": "2026-10-06T17:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Simple and Critical Iterative Denoising: A Recasting of Discrete Diffusion in Graph Generation"
+    },
+    "arXiv:2411.12155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.12155",
+      "identity_tokens": [
+        "arXiv:2411.12155"
+      ],
+      "reason": "一次要旨のcoarse-to-fine Q-networkはrobotic/RL action sequenceを使って探索サンプル効率を上げる研究であり、LLMを用いた推論や生成model効率には関係しない。",
+      "first_checked_at": "2026-10-06T17:45:27+00:00",
+      "last_checked_at": "2026-10-06T17:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Coarse-to-fine Q-Network with Action Sequence for Data-Efficient Reinforcement Learning"
+    },
+    "arXiv:2402.18508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18508",
+      "identity_tokens": [
+        "arXiv:2402.18508"
+      ],
+      "reason": "本文のOrchidはdata-dependent convolutionをsequence modelingに導入するが、結論/将来課題でcausal autoregressive LMへの拡張を今後の作業としている。現評価はautoregressive LLM inferenceやserving効率を示さず、lineageリンクだけでは対象に入らない。",
+      "first_checked_at": "2026-10-06T17:45:27+00:00",
+      "last_checked_at": "2026-10-06T17:45:27+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Orchid: Flexible and Data-Dependent Convolution for Sequence Modeling"
+    },
+    "arXiv:2405.05231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.05231",
+      "identity_tokens": [
+        "arXiv:2405.05231"
+      ],
+      "reason": "一次本文はDiskGNNのout-of-core GNN訓練でI/Oとmodel accuracyを両立し、分散データを訓練する仕組みを評価する。LLM serving lineageとのリンクはあるが、推論ではなくGNN trainingを扱うと本文で確認したため対象外。",
+      "first_checked_at": "2026-10-06T17:45:29+00:00",
+      "last_checked_at": "2026-10-06T17:45:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
+      ],
+      "title": "DiskGNN: Bridging I/O Efficiency and Model Accuracy for Out-of-Core GNN Training"
+    },
+    "DOI:10.1109/jlt.2023.3276588": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jlt.2023.3276588",
+      "identity_tokens": [
+        "DOI:10.1109/jlt.2023.3276588"
+      ],
+      "reason": "IEEE一次テキストのSiPACは分散deep learning training向けのphotonic interconnect/collective architectureで、通信時間・system-level性能を訓練時の同期通信で評価する。Training Offload系統との関係はあるが推論対象ではない。",
+      "first_checked_at": "2026-10-06T17:45:30+00:00",
+      "last_checked_at": "2026-10-06T17:45:30+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Peta-Scale Embedded Photonics Architecture for Distributed Deep Learning Applications"
+    },
+    "arXiv:2310.17418": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.17418",
+      "identity_tokens": [
+        "arXiv:2310.17418"
+      ],
+      "reason": "一次要旨のCircuit as Set of PointsはEDAのcongestion predictionに関するもので、LLM model inference、serving、token/compute/memory削減を扱わない。",
+      "first_checked_at": "2026-10-06T17:45:30+00:00",
+      "last_checked_at": "2026-10-06T17:45:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Circuit as Set of Points"
+    },
+    "arXiv:2606.08994": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08994",
+      "identity_tokens": [
+        "arXiv:2606.08994"
+      ],
+      "reason": "本文はlanguage confusionを減らすlogit/token boostingであり、推論効率改善ではない。vanilla throughputはbaselineとほぼ同水準、adaptive methodはdetector overheadで遅くなる。さらに候補のdistributed training lineageとの接続もなく、効率対象外とする。",
+      "first_checked_at": "2026-10-06T17:45:31+00:00",
+      "last_checked_at": "2026-10-06T17:45:31+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Language-Aware Token Boosting: LLM Language Confusion Reduction Without Tuning"
+    },
+    "arXiv:2605.17978": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17978",
+      "identity_tokens": [
+        "arXiv:2605.17978"
+      ],
+      "reason": "一次要旨のAutoVecCoderはLLMが生成するSIMD vectorized codeの実行速度を改善するcode-generation training frameworkで、LLM自身のinference compute/latency/memoryは改善対象ではない。",
+      "first_checked_at": "2026-10-06T17:45:31+00:00",
+      "last_checked_at": "2026-10-06T17:45:31+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "AutoVecCoder: Teaching LLMs to Generate Explicitly Vectorized Code"
+    },
+    "arXiv:2605.09922": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09922",
+      "identity_tokens": [
+        "arXiv:2605.09922"
+      ],
+      "reason": "本文のTPAWはself-playによるLLM alignment fine-tuningで、過去policy checkpointやresponse weightsを訓練最適化に用いる。分散学習/memory lineageに近い語はあるが、推論時のcostやservingを評価しないため対象外。",
+      "first_checked_at": "2026-10-06T17:45:32+00:00",
+      "last_checked_at": "2026-10-06T17:45:32+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Team-Based Self-Play With Dual Adaptive Weighting for Fine-Tuning LLMs"
+    },
+    "arXiv:2605.10863": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10863",
+      "identity_tokens": [
+        "arXiv:2605.10863"
+      ],
+      "reason": "本文のDGPOはforward/reverse answer groupsに基づくpreference optimization/fine-tuning手法。効率や推論costではなく、複数benchmarkのaccuracy改善が目的であり、候補のtraining lineageだけでは対象の推論系統に入らない。",
+      "first_checked_at": "2026-10-06T17:45:32+00:00",
+      "last_checked_at": "2026-10-06T17:45:32+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "DGPO: Beyond Pairwise Preferences with Directional Consistent Groupwise Optimization"
+    },
+    "arXiv:2311.00591": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.00591",
+      "identity_tokens": [
+        "arXiv:2311.00591"
+      ],
+      "reason": "一次要旨のCoopはtensor rematerializationを用いたDNN訓練のmemory fragmentation対策であり、forward/backward訓練時の再計算・allocationが対象。推論時のLLM KV cacheやservingを扱わない。",
+      "first_checked_at": "2026-10-06T17:45:33+00:00",
+      "last_checked_at": "2026-10-06T17:45:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Coop: Memory is not a Commodity"
+    },
+    "arXiv:2510.23095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.23095",
+      "identity_tokens": [
+        "arXiv:2510.23095"
+      ],
+      "reason": "一次要旨のMHRoPE/MRoPE-IはVLM positional encodingの設計を変えて理解精度を高める研究で、token削減、演算量、memory、latencyや推論速度の改善を主張・測定していない。品質向上だけでは対象の推論効率スコープに入らない。",
+      "first_checked_at": "2026-10-06T17:45:33+00:00",
+      "last_checked_at": "2026-10-06T17:45:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Revisiting Multimodal Positional Encoding in Vision-Language Models"
+    },
+    "arXiv:2503.16843": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16843",
+      "identity_tokens": [
+        "arXiv:2503.16843"
+      ],
+      "reason": "一次要旨のLoRASculptはvisual instruction tuning時のLoRA更新を疎にして知識保持/下流精度を改善するfine-tuning手法。推論時の低ランク計算やadapter serving効率は測定していない。",
+      "first_checked_at": "2026-10-06T17:45:34+00:00",
+      "last_checked_at": "2026-10-06T17:45:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "title": "LoRASculpt: Sculpting LoRA for Harmonizing General and Specialized Knowledge in Multimodal Large Language Models"
+    },
+    "arXiv:2505.00626": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00626",
+      "identity_tokens": [
+        "arXiv:2505.00626"
+      ],
+      "reason": "一次要旨/本文はLLM role learningの訓練shortcutを診断・修正する研究であり、servingや推論compute/memory/latencyを改善する手法・測定ではない。",
+      "first_checked_at": "2026-10-06T17:45:36+00:00",
+      "last_checked_at": "2026-10-06T17:45:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "The Illusion of Role Separation: Hidden Shortcuts in LLM Role Learning (and How to Fix Them)"
+    },
+    "arXiv:2412.09585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.09585",
+      "identity_tokens": [
+        "arXiv:2412.09585"
+      ],
+      "reason": "一次要旨のvisual embedding distillationはMLLMの画像認識能力をpretraining時に改善する方法で、推論時token数・memory・latencyの削減を示さない。",
+      "first_checked_at": "2026-10-06T17:45:36+00:00",
+      "last_checked_at": "2026-10-06T17:45:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "Elevating Visual Perception in Multimodal LLMs with Visual Embedding Distillation"
+    },
+    "arXiv:2412.03587": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.03587",
+      "identity_tokens": [
+        "arXiv:2412.03587"
+      ],
+      "reason": "一次本文のSAFEはadapterを選択的にfreezeしてparameter-efficient fine-tuningのmemory/compute/training timeを下げるが、明示的に1-step training costの比較である。inference memoryやruntimeを改善しない。",
+      "first_checked_at": "2026-10-06T17:45:36+00:00",
+      "last_checked_at": "2026-10-06T17:45:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "title": "Not All Adapters Matter: Selective Adapter Freezing for Memory-Efficient Fine-Tuning of Language Models"
+    },
+    "arXiv:2404.18924": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18924",
+      "identity_tokens": [
+        "arXiv:2404.18924"
+      ],
+      "reason": "一次arXiv要旨はremote sensing imageのsingle-image super-resolution architectureを扱い、LLM・生成推論system・計算資源削減の主張がない。",
+      "first_checked_at": "2026-10-06T17:45:37+00:00",
+      "last_checked_at": "2026-10-06T17:45:37+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Swin2-MoSE: A New Single Image Super-Resolution Model for Remote Sensing"
+    },
+    "arXiv:2403.12806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.12806",
+      "identity_tokens": [
+        "arXiv:2403.12806"
+      ],
+      "reason": "本文のVisualCriticはLMMを画像品質の主観評価器にするためのtraining/data methodで、visual criticのgeneralization/qualityを検証する。linked training-offload/memory系統にある効率手法との技術的接続はなく、推論資源削減も報告しない。",
+      "first_checked_at": "2026-10-06T17:45:38+00:00",
+      "last_checked_at": "2026-10-06T17:45:38+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "VisualCritic: Making LMMs Perceive Visual Quality Like Humans"
+    },
+    "arXiv:2306.09459": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.09459",
+      "identity_tokens": [
+        "arXiv:2306.09459"
+      ],
+      "reason": "一次要旨のRecurrent Action Transformerはreinforcement learningの行動履歴/外部memoryを扱うdecision-making architectureで、LLM language inference/servingの性能を対象にしない。",
+      "first_checked_at": "2026-10-06T17:45:38+00:00",
+      "last_checked_at": "2026-10-06T17:45:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Recurrent Action Transformer with Memory"
+    },
+    "arXiv:2402.05146": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05146",
+      "identity_tokens": [
+        "arXiv:2402.05146"
+      ],
+      "reason": "一次本文の方法と評価はCartPole/LunarLander/MuJoCo上の自律運転向けDRL方策を訓練中に構造化剪定するもので、LLMや生成推論のモデル・配信を扱わない。SpAtten系統との語彙上の接点はあるが対象モデルと処理段階が異なる。",
+      "first_checked_at": "2026-10-06T17:45:39+00:00",
+      "last_checked_at": "2026-10-06T17:45:39+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "Compressing Deep Reinforcement Learning Networks With a Dynamic Structured Pruning Method for Autonomous Driving"
+    },
+    "arXiv:2302.10872": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.10872",
+      "identity_tokens": [
+        "arXiv:2302.10872"
+      ],
+      "reason": "一次要旨の対象は推薦システムの巨大embedding tableとGPU/TPU/IPUのhardware-software co-designで、正答throughput向上は推薦クエリ向け。LLM生成推論や既存LLM効率系統への具体的な転用を扱わない。",
+      "first_checked_at": "2026-10-06T17:45:39+00:00",
+      "last_checked_at": "2026-10-06T17:45:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "MP-Rec: Hardware-Software Co-design to Enable Multi-path Recommendation"
+    },
+    "arXiv:2405.01248": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.01248",
+      "identity_tokens": [
+        "arXiv:2405.01248"
+      ],
+      "reason": "本文のDiffusionPipeはlarge diffusion modelのpipeline training throughputとpipeline bubbleを最適化するが、言語モデルを対象にせず推論samplingも扱わない。Training Offload/Memory Systemsとの一般システム類似だけでLLM対象には含めない。",
+      "first_checked_at": "2026-10-06T17:45:41+00:00",
+      "last_checked_at": "2026-10-06T17:45:41+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "DiffusionPipe: Training Large Diffusion Models with Efficient Pipelines"
+    },
+    "arXiv:2311.12904": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.12904",
+      "identity_tokens": [
+        "arXiv:2311.12904"
+      ],
+      "reason": "一次arXiv要旨は代数幾何のGröbner basisを計算する数学学習研究で、LLM推論・serving・生成モデル効率への接点がない。",
+      "first_checked_at": "2026-10-06T17:45:41+00:00",
+      "last_checked_at": "2026-10-06T17:45:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Learning to Compute Gröbner Bases"
+    },
+    "arXiv:2502.14905": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.14905",
+      "identity_tokens": [
+        "arXiv:2502.14905"
+      ],
+      "reason": "一次要旨のJSON schema adherenceはRLで生成形式の正しさを改善する訓練戦略で、推論compute・memory・latency・token効率の改善を目的/測定していない。",
+      "first_checked_at": "2026-10-06T17:45:42+00:00",
+      "last_checked_at": "2026-10-06T17:45:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Think Inside the JSON: Reinforcement Strategy for Strict LLM Schema Adherence"
+    },
+    "arXiv:2410.00871": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.00871",
+      "identity_tokens": [
+        "arXiv:2410.00871"
+      ],
+      "reason": "一次arXiv要旨はmasked autoregressive pretrainingでhybrid Mamba-Transformerのvision backboneを作る研究で、computer visionの表現精度を狙いLLM inference efficiencyを報告しない。",
+      "first_checked_at": "2026-10-06T17:45:42+00:00",
+      "last_checked_at": "2026-10-06T17:45:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "MAP: Unleashing Hybrid Mamba-Transformer Vision Backbone’s Potential with Masked Autoregressive Pretraining"
     }
   }
 }

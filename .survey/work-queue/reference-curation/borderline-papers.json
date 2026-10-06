@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T17:30:35+00:00",
-  "record_count": 3548,
+  "updated_at": "2026-10-06T17:45:42+00:00",
+  "record_count": 3581,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -54302,6 +54302,504 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A hybrid model based on transformer and Mamba for enhanced sequence modeling"
+    },
+    "arXiv:2604.05343": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05343",
+      "identity_tokens": [
+        "arXiv:2604.05343"
+      ],
+      "reason": "一次本文はhierarchical anchor generationで長系列のsymbolic musicを生成し、系列誤差と計算量を抑えると報告するが、実装・評価対象は音楽tokenとピアノ表現で、LLMや自然言語推論は対象外。Sparse Transformer/long-contextとの構造上の接点はあるためborderlineに残す。",
+      "first_checked_at": "2026-10-06T17:45:25+00:00",
+      "last_checked_at": "2026-10-06T17:45:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Anchored Cyclic Generation: A Novel Paradigm for Long-Sequence Symbolic Music Generation"
+    },
+    "DOI:10.1007/s11227-026-08275-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08275-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08275-1"
+      ],
+      "reason": "Springer DOI一次ページで要旨/本文を取得できなかった。題名からは3D medical segmentation用cross-modal MoEで、LLM推論効率との直接接続は確認できないが、一次証拠なしで範囲外確定を避けborderlineとする。",
+      "first_checked_at": "2026-10-06T17:45:25+00:00",
+      "last_checked_at": "2026-10-06T17:45:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sg-moe-net: semantic-guided mixture of experts with cross-modality attention for 3D medical segmentation"
+    },
+    "DOI:10.1109/icmla66185.2025.00053": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icmla66185.2025.00053",
+      "identity_tokens": [
+        "DOI:10.1109/icmla66185.2025.00053"
+      ],
+      "reason": "IEEE DOIから一次abstract/full textを取得できなかった。表題はLLMのadaptive pruningによるfederated split learning圧縮を示しmemory系統と接点があり得るが、訓練/推論段階や効果を本文で確かめられないためborderline。",
+      "first_checked_at": "2026-10-06T17:45:25+00:00",
+      "last_checked_at": "2026-10-06T17:45:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Privacy-Preserving Model Compression: Adaptive Pruning for Federated Split Learning of LLMs"
+    },
+    "arXiv:2505.09022": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.09022",
+      "identity_tokens": [
+        "arXiv:2505.09022"
+      ],
+      "reason": "本文のB2S6はMambaにblock structureとchannel biasを加えて長距離系列処理/accuracyを評価するが、主目的は効率化でなくsequence modelingの表現力・training stability。language modelingは予備評価でfrontier-scale serving latency/memory測定がないためborderline。",
+      "first_checked_at": "2026-10-06T17:45:26+00:00",
+      "last_checked_at": "2026-10-06T17:45:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Block-Biased Mamba for Long-Range Sequence Processing"
+    },
+    "arXiv:2409.05395": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.05395",
+      "identity_tokens": [
+        "arXiv:2409.05395"
+      ],
+      "reason": "本文はVLMでTransformerとMambaの品質を比較するモデル研究で、対象自体は隣接するsequence architectureだが、推論latency/throughput/memoryやefficient deploymentを検証していない。効率の根拠がないためborderlineに留める。",
+      "first_checked_at": "2026-10-06T17:45:26+00:00",
+      "last_checked_at": "2026-10-06T17:45:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Shaking Up VLMs: Comparing Transformers and Structured State Space Models for Vision & Language Modeling"
+    },
+    "DOI:10.1109/isscc49661.2025.10904594": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isscc49661.2025.10904594",
+      "identity_tokens": [
+        "DOI:10.1109/isscc49661.2025.10904594"
+      ],
+      "reason": "DOI先のIEEE一次本文/要旨を取得できず、候補タイトルはmultimodal diffusion acceleratorを名乗るため直接関連の可能性が高い。一次根拠なしに性能やscope適合を確定できず、source-unavailable borderlineで保留する。",
+      "first_checked_at": "2026-10-06T17:45:28+00:00",
+      "last_checked_at": "2026-10-06T17:45:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "23.3 EdgeDiff: 418.4mJ/Inference Multi-Modal Few-Step Diffusion Model Accelerator with Mixed-Precision and Reordered Group Quantization"
+    },
+    "DOI:10.1109/tgrs.2025.3608726": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tgrs.2025.3608726",
+      "identity_tokens": [
+        "DOI:10.1109/tgrs.2025.3608726"
+      ],
+      "reason": "IEEE DOIの一次要旨/本文を取得できなかった。赤外線小物体検出向けTransformerという題名はLLM効率との接点を示さないが、primary evidenceが得られず確定除外を避けborderlineとする。",
+      "first_checked_at": "2026-10-06T17:45:29+00:00",
+      "last_checked_at": "2026-10-06T17:45:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HSTNet: A Hybrid Spatial–Channel Sparse Transformer Network for Infrared Small Target Detection"
+    },
+    "DOI:10.1109/tnnls.2024.3400809": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnnls.2024.3400809",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2024.3400809"
+      ],
+      "reason": "IEEE一次ソースからabstract/full textを取得できず、題名はhyperspectral/multispectral image fusionの応用Transformerを示す。LLM servingとの直接関係は見えないものの、内容の一次確認不能のためborderline記録とする。",
+      "first_checked_at": "2026-10-06T17:45:29+00:00",
+      "last_checked_at": "2026-10-06T17:45:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Advancing Hyperspectral and Multispectral Image Fusion: An Information-Aware Transformer-Based Unfolding Network"
+    },
+    "DOI:10.1007/s11227-026-08769-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08769-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08769-y"
+      ],
+      "reason": "Springer DOI一次ソースでabstract/full textを取得できなかった。候補タイトルはheterogeneous cloud task schedulingのmemory-aware RLで、関連lineageはFlashAttention/kernel系だが、LLM attention/servingを扱うか本文確認できないためborderlineとする。",
+      "first_checked_at": "2026-10-06T17:45:30+00:00",
+      "last_checked_at": "2026-10-06T17:45:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MSQL: Task scheduling optimization via memory sensitive reinforcement learning in heterogeneous cloud environments"
+    },
+    "DOI:10.1109/isca66397.2026.00065": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00065",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00065"
+      ],
+      "reason": "IEEE DOIから一次abstract/full textを取得できなかった。候補タイトルはrobotics向けheterogeneous acceleratorで、LLM serving lineageとの接点は候補由来情報だけでは検証できない。分野外と確定する一次本文がないためborderline。",
+      "first_checked_at": "2026-10-06T17:45:30+00:00",
+      "last_checked_at": "2026-10-06T17:45:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerator Polymorphism: Transcending Domain-Specific Architectures with Robotics"
+    },
+    "arXiv:2607.20439": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20439",
+      "identity_tokens": [
+        "arXiv:2607.20439"
+      ],
+      "reason": "本文のAsymVerifyはpolitical evasion classificationの低信頼例へ追加verification callをかけ、accuracyを改善するquality-control cascade。平均1.48 calls/exampleでcostを抑えるとするが推論call数削減やserving efficiencyが主題ではなく、限定的なconfidence-gating隣接研究としてborderline。",
+      "first_checked_at": "2026-10-06T17:45:31+00:00",
+      "last_checked_at": "2026-10-06T17:45:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AsymVerify at SemEval-2026 Task 6: Asymmetric Confidence-Gated Verification for Political Evasion Detection"
+    },
+    "DOI:10.1109/mlise70044.2026.11607572": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mlise70044.2026.11607572",
+      "identity_tokens": [
+        "DOI:10.1109/mlise70044.2026.11607572"
+      ],
+      "reason": "IEEE DOIの一次内容を取得できなかった。候補名はMLLM cross-modal safety vulnerability analysisであり推論効率改善を示す表題ではないが、一次abstract/full textがないため安全に範囲外とは断定せずborderlineとする。",
+      "first_checked_at": "2026-10-06T17:45:31+00:00",
+      "last_checked_at": "2026-10-06T17:45:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cross-Modal Misalignment as a Systemic Vulnerability in MLLMs"
+    },
+    "DOI:10.1109/mm.2026.3669122": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mm.2026.3669122",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2026.3669122"
+      ],
+      "reason": "IEEE DOI一次sourceを取得できなかった。表題からedge language-model acceleratorという直接関連の可能性が高いが、精度・演算・電力の主張を一次本文で確認できないためborderlineとして未解決を明示する。",
+      "first_checked_at": "2026-10-06T17:45:32+00:00",
+      "last_checked_at": "2026-10-06T17:45:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LogFlex: Flexible-Bit Log Arithmetic Accelerator for Language Models on Edge"
+    },
+    "arXiv:2502.14445": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.14445",
+      "identity_tokens": [
+        "arXiv:2502.14445"
+      ],
+      "reason": "本文はLLM score predictorが誤答を予測できるかを測るbenchmarkで、routing時の選択器評価に隣接する。しかし提案自体はassessorのbenchmarkで、推論経路を選択してcost/latencyを下げるシステムや測定ではない。quality-aware routingとの接点を残しborderlineとする。",
+      "first_checked_at": "2026-10-06T17:45:32+00:00",
+      "last_checked_at": "2026-10-06T17:45:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PredictaBoard: Benchmarking LLM Score Predictability"
+    },
+    "arXiv:2410.18926": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.18926",
+      "identity_tokens": [
+        "arXiv:2410.18926"
+      ],
+      "reason": "本文のLoRANNはRAG向けANN/vector database retrievalのquery latencyとmemoryを改善し、8-bit RRRを評価する。一方、改善対象はembedding検索/indexでLLM本体の生成・attention推論ではないため、RAG servingの隣接基盤としてborderlineに残す。",
+      "first_checked_at": "2026-10-06T17:45:33+00:00",
+      "last_checked_at": "2026-10-06T17:45:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LoRANN: Low-Rank Matrix Factorization for Approximate Nearest Neighbor Search"
+    },
+    "DOI:10.1145/3805621.3807618": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805621.3807618",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807618"
+      ],
+      "reason": "ACM DOIから一次abstract/full textを取得できなかった。題名はTransformerをedge NPUへdeployするcompatibility framework、関連系統も複数あり直接候補だが、性能/制約の本文確認が未了のためborderlineに留める。",
+      "first_checked_at": "2026-10-06T17:45:34+00:00",
+      "last_checked_at": "2026-10-06T17:45:34+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SHARD: A Compatibility Framework for Deploying Transformer Models on Edge NPUs"
+    },
+    "arXiv:2604.20789": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20789",
+      "identity_tokens": [
+        "arXiv:2604.20789"
+      ],
+      "reason": "本文はfixed-width attentionを含むTransformer variantsを10M/100M語のGPT-2 trainingで評価し、data scarcity下の言語学習/人とのreading-time一致を調べる。inference cost削減目的・latency測定ではなく、本文自身もfrontier-scaleモデルへの一般化根拠なしと明記するためlong-context lineage関連のborderline。",
+      "first_checked_at": "2026-10-06T17:45:34+00:00",
+      "last_checked_at": "2026-10-06T17:45:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity"
+    },
+    "arXiv:2604.17852": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.17852",
+      "identity_tokens": [
+        "arXiv:2604.17852"
+      ],
+      "reason": "本文のLLM-Codecはspeech token LM向けcodec training objectiveでfuture-token headsを使うが、結論はcodec/LLM inference architectureを変えず、補助headsはdeployment時に捨てると記載する。speculative decoding lineageに関連し得る予測可能性の学習だがserving speedupを示さずborderline。",
+      "first_checked_at": "2026-10-06T17:45:34+00:00",
+      "last_checked_at": "2026-10-06T17:45:34+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM-Codec: Neural Audio Codec Meets Language Model Objectives"
+    },
+    "DOI:10.1109/eurosime69483.2026.11511977": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eurosime69483.2026.11511977",
+      "identity_tokens": [
+        "DOI:10.1109/eurosime69483.2026.11511977"
+      ],
+      "reason": "IEEE DOIの一次abstract/full textを取得できなかった。候補タイトル/ローカルabstract情報はpolymer sensorのforce-vector signal post-processingを示しPyTorch compiler/LLM inference系統との直接関連が薄そうだが、primary sourceを確認できないためborderline扱い。",
+      "first_checked_at": "2026-10-06T17:45:35+00:00",
+      "last_checked_at": "2026-10-06T17:45:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A simple and thermo-mechanically robust multiaxial force sensing scheme based on polymer-sensors and AI-based signal post-processing for smart skin technologies"
+    },
+    "arXiv:2604.14749": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14749",
+      "identity_tokens": [
+        "arXiv:2604.14749"
+      ],
+      "reason": "本文のCUCKOOはnegative-constrained KGQAでlogical formのself-directed refinementを必要時だけ行う一方、実験ではKB-Coderより推論時間が約1.6倍高いと明記し、CPU memoryは4.7%減る。品質/robustness目的が主で、遅延改善を示さないためborderline。",
+      "first_checked_at": "2026-10-06T17:45:35+00:00",
+      "last_checked_at": "2026-10-06T17:45:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Which bird does not have wings: Negative-constrained KGQA with Schema-guided Semantic Matching and Self-directed Refinement"
+    },
+    "DOI:10.1109/tpds.2023.3247883": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2023.3247883",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2023.3247883"
+      ],
+      "reason": "IEEE DOI一次abstract/full textが取得できなかった。表題はlarge DNNのtraining computation/communication並列化で、LLM inference効率とは異なるが、外部本文を確認できず境界判定に必要な方法/対象を確定できないためborderline。",
+      "first_checked_at": "2026-10-06T17:45:35+00:00",
+      "last_checked_at": "2026-10-06T17:45:35+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fold3D: Rethinking and Parallelizing Computational and Communicational Tasks in the Training of Large DNN Models"
+    },
+    "arXiv:2511.00090": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00090",
+      "identity_tokens": [
+        "arXiv:2511.00090"
+      ],
+      "reason": "本文のLeMiCaはdiffusion video generationのcache pathを最適化して速度と品質を両立する具体的推論高速化だが、対象は画像/動画拡散samplingでlanguage model inferenceではない。generative inference systemsへ移転できる可能性は弱く残るためborderline。",
+      "first_checked_at": "2026-10-06T17:45:35+00:00",
+      "last_checked_at": "2026-10-06T17:45:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LeMiCa: Lexicographic Minimax Path Caching for Efficient Diffusion-Based Video Generation"
+    },
+    "arXiv:2407.19976": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.19976",
+      "identity_tokens": [
+        "arXiv:2407.19976"
+      ],
+      "reason": "本文のMambaGestureはco-speech gesture generation向けMamba/attention構成で、Mambaのlinear sequence scalingを動機に使うが、実験はgesture qualityでLLM serving cost/latencyを測らない。inference-system lineageとの構造的接点を残してborderlineとする。",
+      "first_checked_at": "2026-10-06T17:45:37+00:00",
+      "last_checked_at": "2026-10-06T17:45:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MambaGesture: Enhancing Co-Speech Gesture Generation with Mamba and Disentangled Multi-Modality Fusion"
+    },
+    "DOI:10.53469/jtpes.2024.04(02).08": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.53469/jtpes.2024.04(02).08",
+      "identity_tokens": [
+        "DOI:10.53469/jtpes.2024.04(02).08"
+      ],
+      "reason": "出版社の一次要旨ではFalcon-7B chatbotに16-bit full quantizationを用いるとするが、本文PDFの取得がcache missで失敗し、量子化形式・baseline・推論メモリ/latency・品質測定を検証できない。offload/hierarchical-memory系統との関連候補としてborderlineに残す。",
+      "first_checked_at": "2026-10-06T17:45:37+00:00",
+      "last_checked_at": "2026-10-06T17:45:37+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing E-commerce Chatbots with Falcon-7B and 16-bit Full Quantization"
+    },
+    "arXiv:2311.12144": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.12144",
+      "identity_tokens": [
+        "arXiv:2311.12144"
+      ],
+      "reason": "一次要旨は自動運転に適用する基盤モデル/LLMのsurveyであり、既存のLLM推論効率系統との方法上の接続を示すには広い分野調査に留まる。自動運転アプリケーション概観は隣接性があるため除外せず、HTML本文の取得失敗も踏まえてborderlineに残す。",
+      "first_checked_at": "2026-10-06T17:45:38+00:00",
+      "last_checked_at": "2026-10-06T17:45:38+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Applications of Large Scale Foundation Models for Autonomous Driving"
+    },
+    "arXiv:2508.15253": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.15253",
+      "identity_tokens": [
+        "arXiv:2508.15253"
+      ],
+      "reason": "本文のCAREはRAG中の矛盾するcontextを識別するsoft-prompting手法で、QA品質を改善する。固定memory token budgetの下で単一段の評価が中心で、A100上の単一構成ではRAGより遅く、推論効率の改善は示さないため、prompt compression系統との接点は残しつつborderlineとする。",
+      "first_checked_at": "2026-10-06T17:45:39+00:00",
+      "last_checked_at": "2026-10-06T17:45:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Conflict-Aware Soft Prompting for Retrieval-Augmented Generation"
+    },
+    "arXiv:2504.03159": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.03159",
+      "identity_tokens": [
+        "arXiv:2504.03159"
+      ],
+      "reason": "本文のP3はzero-shot text classificationで複数位置のtoken確率を一回のmodel runで得てprompt頑健性を評価する。主な成果は分類精度/分散で、一般的な生成推論のthroughput・memory改善を測っていないため、multi-token推論技法としてborderlineに残す。",
+      "first_checked_at": "2026-10-06T17:45:39+00:00",
+      "last_checked_at": "2026-10-06T17:45:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond the Next Token: Towards Prompt-Robust Zero-Shot Classification via Efficient Multi-Token Prediction"
+    },
+    "arXiv:2409.11143": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.11143",
+      "identity_tokens": [
+        "arXiv:2409.11143"
+      ],
+      "reason": "本文のSemformerはsemantic planning tokensをLMに加え、グラフ経路/要約等のaccuracyを評価するが、inference latency, token count, memory savingを実証しない。inference-systems lineageとの関連は弱く、本文でefficiency improvementが確認できないためborderline。",
+      "first_checked_at": "2026-10-06T17:45:40+00:00",
+      "last_checked_at": "2026-10-06T17:45:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Semformer: Transformer Language Models with Semantic Planning"
+    },
+    "arXiv:2404.06003": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.06003",
+      "identity_tokens": [
+        "arXiv:2404.06003"
+      ],
+      "reason": "本文のFreeEvalは評価jobをconcurrentに実行しLLM benchmark実行時間を短縮する評価frameworkで、モデル推論の一要求あたりの効率を改善する手法ではない。ただし評価用途のdistributed/concurrent inference backendを実装するため、系統関連の弱い接点としてborderline。",
+      "first_checked_at": "2026-10-06T17:45:40+00:00",
+      "last_checked_at": "2026-10-06T17:45:40+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FreeEval: A Modular Framework for Trustworthy and Efficient Evaluation of Large Language Models"
+    },
+    "DOI:10.1109/hpca56546.2023.10071043": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca56546.2023.10071043",
+      "identity_tokens": [
+        "DOI:10.1109/hpca56546.2023.10071043"
+      ],
+      "reason": "IEEE HPCA DOI一次資料へアクセスできず要旨/本文を確認できなかった。題名はmulti-GPU training時tensor movement orchestrationでmemory/communication系に隣接するが、LLMモデルとの具体的評価や対象段階を確認できずborderline。",
+      "first_checked_at": "2026-10-06T17:45:40+00:00",
+      "last_checked_at": "2026-10-06T17:45:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tensor Movement Orchestration in Multi-GPU Training Systems"
+    },
+    "arXiv:2510.03824": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03824",
+      "identity_tokens": [
+        "arXiv:2510.03824"
+      ],
+      "reason": "本文のPDNSはstochastic optimal controlを用いたdiffusion samplerで、実験は制御されたcontinuous/discrete targetsに限られ、大規模実用生成への検証は著者自身が限界とする。sampling systemとの一般的隣接性はあるが、LLM推論効率やsampling-step/latency削減は示さずborderline。",
+      "first_checked_at": "2026-10-06T17:45:41+00:00",
+      "last_checked_at": "2026-10-06T17:45:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Proximal Diffusion Neural Sampler"
+    },
+    "DOI:10.1007/s00521-024-10698-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00521-024-10698-x",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-024-10698-x"
+      ],
+      "reason": "Springer DOI一次要旨/本文を取得できなかった。タイトルはtabular-data pretraining向けsparse attentionで、inference-systems系統との接点があり得る一方、LLM servingで使われる方式か、評価がtraining時のみかを確認できずborderline。",
+      "first_checked_at": "2026-10-06T17:45:41+00:00",
+      "last_checked_at": "2026-10-06T17:45:41+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sparse attention is all you need for pre-training on tabular data"
+    },
+    "arXiv:2409.15022": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.15022",
+      "identity_tokens": [
+        "arXiv:2409.15022"
+      ],
+      "reason": "本文はLoihi 2向けdiagonal SSMでstreaming sequence processingを実装するが、評価対象はneuromorphic hardware上のsequence processingで、LLM推論モデルやserving性能との接続がない。低資源sequence runtimeの隣接性を考慮しborderlineに残す。",
+      "first_checked_at": "2026-10-06T17:45:42+00:00",
+      "last_checked_at": "2026-10-06T17:45:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Diagonal Structured State Space Model on Loihi 2 for Efficient Streaming Sequence Processing"
     }
   }
 }

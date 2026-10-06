@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db6d2e8e57761659-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.10872",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.10872",
+    "identity_tokens": [
+      "arXiv:2302.10872"
+    ],
+    "reason": "一次要旨の対象は推薦システムの巨大embedding tableとGPU/TPU/IPUのhardware-software co-designで、正答throughput向上は推薦クエリ向け。LLM生成推論や既存LLM効率系統への具体的な転用を扱わない。",
+    "first_checked_at": "2026-10-06T17:45:39+00:00",
+    "last_checked_at": "2026-10-06T17:45:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "MP-Rec: Hardware-Software Co-design to Enable Multi-path Recommendation"
+  },
+  "processed_at": "2026-10-06T17:45:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db6d2e8e5776",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

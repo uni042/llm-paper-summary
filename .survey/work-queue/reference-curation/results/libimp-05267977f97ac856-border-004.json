@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-05267977f97ac856-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icmla66185.2025.00053",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icmla66185.2025.00053",
+    "identity_tokens": [
+      "DOI:10.1109/icmla66185.2025.00053"
+    ],
+    "reason": "IEEE DOIから一次abstract/full textを取得できなかった。表題はLLMのadaptive pruningによるfederated split learning圧縮を示しmemory系統と接点があり得るが、訓練/推論段階や効果を本文で確かめられないためborderline。",
+    "first_checked_at": "2026-10-06T17:45:25+00:00",
+    "last_checked_at": "2026-10-06T17:45:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Privacy-Preserving Model Compression: Adaptive Pruning for Federated Split Learning of LLMs"
+  },
+  "processed_at": "2026-10-06T17:45:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-05267977f97a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

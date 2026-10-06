@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91c0226c497bad53-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.08994",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.08994",
+    "identity_tokens": [
+      "arXiv:2606.08994"
+    ],
+    "reason": "本文はlanguage confusionを減らすlogit/token boostingであり、推論効率改善ではない。vanilla throughputはbaselineとほぼ同水準、adaptive methodはdetector overheadで遅くなる。さらに候補のdistributed training lineageとの接続もなく、効率対象外とする。",
+    "first_checked_at": "2026-10-06T17:45:31+00:00",
+    "last_checked_at": "2026-10-06T17:45:31+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "Language-Aware Token Boosting: LLM Language Confusion Reduction Without Tuning"
+  },
+  "processed_at": "2026-10-06T17:45:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91c0226c497b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

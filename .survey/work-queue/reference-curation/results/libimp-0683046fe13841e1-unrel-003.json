@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0683046fe13841e1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.12155",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.12155",
+    "identity_tokens": [
+      "arXiv:2411.12155"
+    ],
+    "reason": "一次要旨のcoarse-to-fine Q-networkはrobotic/RL action sequenceを使って探索サンプル効率を上げる研究であり、LLMを用いた推論や生成model効率には関係しない。",
+    "first_checked_at": "2026-10-06T17:45:27+00:00",
+    "last_checked_at": "2026-10-06T17:45:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Coarse-to-fine Q-Network with Action Sequence for Data-Efficient Reinforcement Learning"
+  },
+  "processed_at": "2026-10-06T17:45:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0683046fe138",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
