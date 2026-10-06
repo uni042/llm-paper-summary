@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261006-2245-scheduled-chat-45/r01",
+  "reference_main_sha": "52f9d43374fc368afcf1f62f3a3252c83b85b26c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/068431-1189",
+      "identity_tokens": [
+        "DOI:10.52202/068431-1189",
+        "arXiv:2205.14135"
+      ],
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "reason": "GPU HBMとSRAM間のI/O量を意識したtilingでexact attentionを計算し、attentionのメモリアクセスと実行時間を直接削減する推論・学習kernel研究。",
+      "source_url": "https://arxiv.org/abs/2205.14135",
+      "body_check": "fulltext_relevance_review: 一次論文のIO-aware exact attention、tiling、HBM access削減、長系列Transformerでの速度・memory評価を確認。",
+      "first_checked_at": "2026-10-06T22:58:00+09:00",
+      "last_checked_at": "2026-10-06T22:58:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1609.07061",
+      "identity_tokens": [
+        "arXiv:1609.07061"
+      ],
+      "title": "Quantized Neural Networks: Training Neural Networks with Low Precision Weights and Activations",
+      "reason": "低bit weight/activationでmemory accessとbitwise演算を削減しGPU kernel高速化も示すが、主対象はCNN/RNNでTransformer/LLM推論を最終適用先としないため境界的。",
+      "source_url": "https://arxiv.org/abs/1609.07061",
+      "body_check": "fulltext_relevance_review: 一次資料で1-bit/2-bit量子化、memory削減、bitwise演算、GPU kernel高速化とMNIST/CIFAR/ImageNet/Penn Treebank評価を確認。",
+      "first_checked_at": "2026-10-06T22:59:00+09:00",
+      "last_checked_at": "2026-10-06T22:59:00+09:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.04359",
+      "identity_tokens": [
+        "arXiv:2112.04359"
+      ],
+      "title": "Ethical and social risks of harm from Language Models",
+      "reason": "言語モデルの倫理・社会的リスク分類と影響分析が主題で、推論システムの性能・メモリ・サービング最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2112.04359",
+      "body_check": "abstract_screen_only: abstractでLMのethical/social harm taxonomyが主題と確認。本文未読で対象外確定。",
+      "first_checked_at": "2026-10-06T23:00:00+09:00",
+      "last_checked_at": "2026-10-06T23:00:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.19118",
+      "identity_tokens": [
+        "arXiv:2305.19118"
+      ],
+      "title": "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate",
+      "reason": "複数LLM agentのdebateでreasoning品質・多様性を改善する能力研究で、agent runtime schedulingやserving efficiencyを主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2305.19118",
+      "body_check": "abstract_screen_only: abstractでmulti-agent debateによるdivergent reasoning/answer quality改善が主題と確認。",
+      "first_checked_at": "2026-10-06T23:01:00+09:00",
+      "last_checked_at": "2026-10-06T23:01:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.08910",
+      "identity_tokens": [
+        "arXiv:2002.08910"
+      ],
+      "title": "How Much Knowledge Can You Pack into the Parameters of a Language Model?",
+      "reason": "言語モデルのparameter内knowledge capacityとclosed-book QA性能を調べる知識表現研究で、推論runtime効率を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2002.08910",
+      "body_check": "abstract_screen_only: abstractでLM parameterへのknowledge storageとQA accuracyが主題と確認。",
+      "first_checked_at": "2026-10-06T23:02:00+09:00",
+      "last_checked_at": "2026-10-06T23:02:00+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v35i16.17664",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v35i16.17664",
+        "arXiv:2102.03902"
+      ],
+      "title": "Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention",
+      "reason": "Nyström近似でself-attentionを系列長O(n)へ削減し、長系列Transformerの計算・memory scalabilityを直接改善するefficient attention研究。",
+      "source_url": "https://arxiv.org/abs/2102.03902",
+      "body_check": "fulltext_relevance_review: 一次論文でlandmark-based Nyström approximation、O(n) attention complexity、GLUE/IMDB/LRA評価を確認。",
+      "first_checked_at": "2026-10-06T23:03:00+09:00",
+      "last_checked_at": "2026-10-06T23:03:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/99-other-inference-systems/2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.11501",
+      "identity_tokens": [
+        "arXiv:2211.11501"
+      ],
+      "title": "DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation",
+      "reason": "data science code generationのbenchmark構築とモデル能力評価が主題で、推論kernel生成そのものの効率評価ではない。",
+      "source_url": "https://arxiv.org/abs/2211.11501",
+      "body_check": "abstract_screen_only: abstractで1000問規模のdata-science code generation benchmarkとモデル評価が主題と確認。",
+      "first_checked_at": "2026-10-06T23:04:00+09:00",
+      "last_checked_at": "2026-10-06T23:04:00+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1610.10099",
+      "identity_tokens": [
+        "arXiv:1610.10099"
+      ],
+      "title": "Neural Machine Translation in Linear Time",
+      "reason": "ByteNetはdilated convolutionにより系列長線形時間でdecodeしquadratic attentionを回避する効率アーキテクチャだが、Transformer/LLM以前のNMT/character LMが最終適用先のため境界的。",
+      "source_url": "https://arxiv.org/abs/1610.10099",
+      "body_check": "fulltext_relevance_review: 一次資料でByteNet encoder/decoder、dilated convolution、linear-time sequence processing、WMT/character LM評価を確認。",
+      "first_checked_at": "2026-10-06T23:05:00+09:00",
+      "last_checked_at": "2026-10-06T23:05:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patcog.2020.107281",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2020.107281"
+      ],
+      "title": "Binary neural networks: A survey",
+      "reason": "binary neural network一般の量子化・学習・hardware-friendly designを整理するsurveyで、主評価対象は画像分類・物体検出・segmentationでありLLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1016/j.patcog.2020.107281",
+      "body_check": "abstract_screen_only: 出版情報abstractでBNN一般のbinarization、training、vision tasksが主題と確認。",
+      "first_checked_at": "2026-10-06T23:06:00+09:00",
+      "last_checked_at": "2026-10-06T23:06:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.12925",
+      "identity_tokens": [
+        "arXiv:2306.12925"
+      ],
+      "title": "AudioPaLM: A Large Language Model That Can Speak and Listen",
+      "reason": "text/speech language modelを統合してspeech recognition/translation/generation能力を改善するmultimodal model研究で、推論runtime効率を主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2306.12925",
+      "body_check": "abstract_screen_only: abstractでAudioPaLMのspeech understanding/generation、translation品質、voice transferが主題と確認。",
+      "first_checked_at": "2026-10-06T23:07:00+09:00",
+      "last_checked_at": "2026-10-06T23:07:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "worklist_rank": 10
+    }
+  ]
+}
