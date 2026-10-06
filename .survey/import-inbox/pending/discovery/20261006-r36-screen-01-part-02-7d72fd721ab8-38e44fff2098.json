@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r36-screen-01-part-02-7d72fd721ab8",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.12742",
+      "identity_tokens": [
+        "arXiv:2203.12742"
+      ],
+      "title": "Accelerating Bayesian Optimization for Biological Sequence Design with Denoising Autoencoders",
+      "reason": "Biological sequence design with denoising autoencoders is outside the LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2203.12742",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jproc.2011.2165309",
+      "identity_tokens": [
+        "DOI:10.1109/jproc.2011.2165309"
+      ],
+      "title": "Powering a Ventricular Assist Device (VAD) With the Free-Range Resonant Electrical Energy Delivery (FREE-D) System",
+      "reason": "The primary paper concerns wireless resonant power delivery for ventricular-assist devices, unrelated to processing-in-memory or LLM inference.",
+      "source_url": "https://doi.org/10.1109/JPROC.2011.2165309",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1804.00222",
+      "identity_tokens": [
+        "arXiv:1804.00222"
+      ],
+      "title": "Meta-Learning Update Rules for Unsupervised Representation Learning",
+      "reason": "This work learns update rules for unsupervised representation learning; it is a training/learning method with no LLM inference efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/1804.00222",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07164",
+      "identity_tokens": [
+        "arXiv:2504.07164"
+      ],
+      "title": "R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents",
+      "reason": "The contribution is task environments and verifiers for agent training/test-time scaling; measurements concern task-solving performance rather than serving resource use.",
+      "source_url": "https://arxiv.org/abs/2504.07164",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.11294-agentzip-memory-compression-high-fanout-agent-sandboxes.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06716",
+      "identity_tokens": [
+        "arXiv:2605.06716"
+      ],
+      "title": "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms",
+      "reason": "This is a survey of agent memory mechanisms. It is useful background for memory-related work but does not contribute a specific validated inference optimization or serving result.",
+      "source_url": "https://arxiv.org/abs/2605.06716",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    }
+  ]
+}
