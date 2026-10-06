@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r117-screen-01-part-09-f89458f82d70",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.01456",
+      "identity_tokens": [
+        "arXiv:2412.01456"
+      ],
+      "title": "Phaseformer: Phase-Based Attention Mechanism for Underwater Image Restoration and Beyond",
+      "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。",
+      "source_url": "https://arxiv.org/abs/2412.01456",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.10727",
+      "identity_tokens": [
+        "arXiv:2305.10727"
+      ],
+      "title": "Boost Vision Transformer with GPU-Friendly Sparsity and Quantization",
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。GPUSQ-ViT combines 2:4 sparsity, quantization-aware training and distillation for GPU-friendly ViT deployment. It reports 1.39–1.79x latency and 3.22–3.43x throughput gains on A100, with additional gains on Orin and small accuracy change. These are vision workloads, so transfer to LLM serving is unverified.",
+      "source_url": "https://arxiv.org/abs/2305.10727",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.05713",
+      "identity_tokens": [
+        "arXiv:2505.05713"
+      ],
+      "title": "Understanding Stragglers in Large Model Training Using What-if Analysis",
+      "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。This work analyzes stragglers in LLM training using a five-month cluster trace and what-if simulation. Findings concern training-stage imbalance, sequence-length imbalance, memory fragmentation and launch delays; it does not address inference systems.",
+      "source_url": "https://arxiv.org/abs/2505.05713",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    }
+  ]
+}
