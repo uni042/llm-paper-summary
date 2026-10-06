@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r28-screen-01-part-03-f62171e5b95e",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00412",
+      "identity_tokens": [
+        "arXiv:2608.00412"
+      ],
+      "title": "C2P-Cache: Scalable GPU L1 Cache Sharing via Concurrent Candidate Pruning",
+      "reason": "GPU SM間L1 data-cache sharingのcomputer-architecture studyで、LLM KV cacheではなくLLM servingとの具体的接続もない。",
+      "source_url": "https://arxiv.org/abs/2608.00412",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00521-026-12323-5",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-026-12323-5"
+      ],
+      "title": "Progressive MIL architectures for weakly supervised network intrusion detection",
+      "reason": "弱教師MILによるnetwork intrusion classificationで、LLM inference servingの改善ではない。",
+      "source_url": "https://doi.org/10.1007/s00521-026-12323-5",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00521-026-12379-3",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-026-12379-3"
+      ],
+      "title": "LiteLLM: a lightweight transformer architecture for efficient short-text classification",
+      "reason": "short-text classification向け軽量Transformerであり、generative LLM servingやLLM inference costの測定ではない。",
+      "source_url": "https://doi.org/10.1007/s00521-026-12379-3",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICISC69558.2026.11681248",
+      "identity_tokens": [
+        "DOI:10.1109/ICISC69558.2026.11681248"
+      ],
+      "title": "Lightweight GAN-Assisted Attention U-Net with Transformer Bottleneck for Accurate Brain Tumor Segmentation",
+      "reason": "MRI brain-tumor segmentation用GAN/U-Netで、LLM servingの対象外。",
+      "source_url": "https://doi.org/10.1109/ICISC69558.2026.11681248",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/MAPR72750.2026.11685695",
+      "identity_tokens": [
+        "DOI:10.1109/MAPR72750.2026.11685695"
+      ],
+      "title": "Improving Vietnamese Text Classification with Multi-Head Attention Pooling in Pre-trained Language Models",
+      "reason": "Vietnamese text classificationにおけるpretrained encoderのpooling手法で、LLM decode/serving efficiencyではない。",
+      "source_url": "https://doi.org/10.1109/MAPR72750.2026.11685695",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
