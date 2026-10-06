@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T13:32:17+00:00",
-  "record_count": 8370,
+  "updated_at": "2026-10-06T13:34:31+00:00",
+  "record_count": 8386,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -120194,6 +120194,230 @@
         "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
       ],
       "title": "CALM: Culturally Self-Aware Language Models"
+    },
+    "arXiv:2511.06754": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.06754",
+      "identity_tokens": [
+        "arXiv:2511.06754"
+      ],
+      "reason": "SlotVLA models object-relation representations for robotic manipulation. Its experiments target action/representation quality rather than LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T13:34:28+00:00",
+      "last_checked_at": "2026-10-06T13:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "SlotVLA: Towards Modeling of Object-Relation Representations in Robotic Manipulation"
+    },
+    "arXiv:2609.14858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14858",
+      "identity_tokens": [
+        "arXiv:2609.14858"
+      ],
+      "reason": "Dream-RSI studies recursive self-improvement in evolving simulated worlds. Its full text centers on agent/environment learning, not efficient LLM serving.",
+      "first_checked_at": "2026-10-06T13:34:28+00:00",
+      "last_checked_at": "2026-10-06T13:34:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds"
+    },
+    "arXiv:2605.26079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26079",
+      "identity_tokens": [
+        "arXiv:2605.26079"
+      ],
+      "reason": "Automated Benchmark Auditing evaluates benchmark integrity for AI agents/LLMs. Its target is audit reliability, not inference systems.",
+      "first_checked_at": "2026-10-06T13:34:28+00:00",
+      "last_checked_at": "2026-10-06T13:34:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Automated Benchmark Auditing for AI Agents and Large Language Models"
+    },
+    "arXiv:2602.21712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21712",
+      "identity_tokens": [
+        "arXiv:2602.21712"
+      ],
+      "reason": "The paper proposes a tooth-segmentation model using hierarchical features and bidirectional sequence modeling. It does not concern LLM inference/serving.",
+      "first_checked_at": "2026-10-06T13:34:29+00:00",
+      "last_checked_at": "2026-10-06T13:34:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Innovative tooth segmentation using hierarchical features and bidirectional sequence modeling"
+    },
+    "arXiv:2512.12216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12216",
+      "identity_tokens": [
+        "arXiv:2512.12216"
+      ],
+      "reason": "Training Versatile Coding Agents in Synthetic Environments develops agent training tasks and capability evaluations, not inference optimization.",
+      "first_checked_at": "2026-10-06T13:34:29+00:00",
+      "last_checked_at": "2026-10-06T13:34:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Training Versatile Coding Agents in Synthetic Environments"
+    },
+    "arXiv:2512.04504": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04504",
+      "identity_tokens": [
+        "arXiv:2512.04504"
+      ],
+      "reason": "UltraImage studies resolution extrapolation in image diffusion transformers. It is a generative vision quality/generalization method, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T13:34:29+00:00",
+      "last_checked_at": "2026-10-06T13:34:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "UltraImage: Rethinking Resolution Extrapolation in Image Diffusion Transformers"
+    },
+    "arXiv:2606.02419": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02419",
+      "identity_tokens": [
+        "arXiv:2606.02419"
+      ],
+      "reason": "DPA4 improves interatomic-potential accuracy/cost via SO(2) convolution. The model and evaluation are scientific atomistic simulation, not language-model inference.",
+      "first_checked_at": "2026-10-06T13:34:29+00:00",
+      "last_checked_at": "2026-10-06T13:34:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "DPA4: Pushing the Accuracy-Cost Frontier of Interatomic Potentials with EMFA SO(2) Convolution"
+    },
+    "arXiv:2603.23786": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.23786",
+      "identity_tokens": [
+        "arXiv:2603.23786"
+      ],
+      "reason": "Rubin Observatory Data Preview 1 is an astronomy survey/data-release paper; the PyTorch citation is incidental and it does not study LLM inference optimization.",
+      "first_checked_at": "2026-10-06T13:34:29+00:00",
+      "last_checked_at": "2026-10-06T13:34:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "The Vera C. Rubin Observatory Data Preview 1"
+    },
+    "arXiv:2602.01064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01064",
+      "identity_tokens": [
+        "arXiv:2602.01064"
+      ],
+      "reason": "Knowledge Purification studies multi-teacher knowledge-distillation training for LLMs; no inference-time system optimization is proposed or evaluated.",
+      "first_checked_at": "2026-10-06T13:34:30+00:00",
+      "last_checked_at": "2026-10-06T13:34:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Exploring Knowledge Purification in Multi-Teacher Knowledge Distillation for LLMs"
+    },
+    "arXiv:2603.22323": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22323",
+      "identity_tokens": [
+        "arXiv:2603.22323"
+      ],
+      "reason": "The multi-task battery-health framework targets SOH/RUL prediction with domain-specific models and metrics; the sparse-transformer lineage is incidental to LLM inference.",
+      "first_checked_at": "2026-10-06T13:34:30+00:00",
+      "last_checked_at": "2026-10-06T13:34:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "A Multitask Targeted Learning Framework for Lithium-Ion Battery State-of-Health and Remaining Useful Life"
+    },
+    "DOI:10.1016/j.cels.2026.101531": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.cels.2026.101531",
+      "identity_tokens": [
+        "DOI:10.1016/j.cels.2026.101531"
+      ],
+      "reason": "The title/available publisher metadata identify an AI microbiology/microbiome research review, not LLM inference optimization.",
+      "first_checked_at": "2026-10-06T13:34:30+00:00",
+      "last_checked_at": "2026-10-06T13:34:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Artificial intelligence for microbiology and microbiome research."
+    },
+    "arXiv:2605.20164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20164",
+      "identity_tokens": [
+        "arXiv:2605.20164"
+      ],
+      "reason": "Policy-Aware Rubric Rewards changes RLVR training supervision and evaluates learning/reasoning. It does not claim inference cost, memory, or throughput improvements.",
+      "first_checked_at": "2026-10-06T13:34:30+00:00",
+      "last_checked_at": "2026-10-06T13:34:30+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR"
+    },
+    "arXiv:2604.26375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.26375",
+      "identity_tokens": [
+        "arXiv:2604.26375"
+      ],
+      "reason": "SG-UniBuc-NLP uses chunked RoBERTa for long-context evasion detection. Its contribution is a SemEval task system and classification score, not general long-context inference optimization.",
+      "first_checked_at": "2026-10-06T13:34:31+00:00",
+      "last_checked_at": "2026-10-06T13:34:31+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "SG-UniBuc-NLP at SemEval-2026 Task 6: Multi-Head RoBERTa with Chunking for Long-Context Evasion Detection"
+    },
+    "arXiv:2604.16845": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16845",
+      "identity_tokens": [
+        "arXiv:2604.16845"
+      ],
+      "reason": "DART is a Distill-Audit-Repair training workflow for harm drift in difference-aware LLMs. Its evaluations concern safety behavior rather than inference compute or system efficiency.",
+      "first_checked_at": "2026-10-06T13:34:31+00:00",
+      "last_checked_at": "2026-10-06T13:34:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "DART: Mitigating Harm Drift in Difference-Aware LLMs via Distill-Audit-Repair Training"
+    },
+    "arXiv:2601.04885": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04885",
+      "identity_tokens": [
+        "arXiv:2601.04885"
+      ],
+      "reason": "CuMA aligns LLMs with sparse cultural values using demographic-aware adapter mixtures. The work is training/alignment and does not report inference-efficiency benefits.",
+      "first_checked_at": "2026-10-06T13:34:31+00:00",
+      "last_checked_at": "2026-10-06T13:34:31+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "CuMA: Aligning LLMs with Sparse Cultural Values via Demographic-Aware Mixture of Adapters"
+    },
+    "arXiv:2309.07062": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07062",
+      "identity_tokens": [
+        "arXiv:2309.07062"
+      ],
+      "reason": "Large Language Models for Compiler Optimization studies LLMs as compiler optimization agents; it does not optimize the LLM inference runtime itself.",
+      "first_checked_at": "2026-10-06T13:34:31+00:00",
+      "last_checked_at": "2026-10-06T13:34:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Large Language Models for Compiler Optimization"
     }
   }
 }

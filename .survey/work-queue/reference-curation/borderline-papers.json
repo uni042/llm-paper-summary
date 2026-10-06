@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T13:32:17+00:00",
-  "record_count": 3133,
+  "updated_at": "2026-10-06T13:34:30+00:00",
+  "record_count": 3138,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -48029,6 +48029,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "OPSD-V: On-Policy Self-Distillation for Post-Training Few-Step Autoregressive Video Generators"
+    },
+    "arXiv:2608.16590": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16590",
+      "identity_tokens": [
+        "arXiv:2608.16590"
+      ],
+      "reason": "Zetta presents an efficient closed-loop embodied harness with latency/throughput constraints for physical intelligence. It is robotics infrastructure rather than LLM serving, but its closed-loop scheduling/runtime design may transfer.",
+      "first_checked_at": "2026-10-06T13:34:28+00:00",
+      "last_checked_at": "2026-10-06T13:34:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Zetta $\\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence"
+    },
+    "arXiv:2606.26387": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26387",
+      "identity_tokens": [
+        "arXiv:2606.26387"
+      ],
+      "reason": "VIGILant mitigates visual laziness in multimodal LLMs through counterfactual visual alignment. The method improves visual grounding; it is not presented as a compute or latency reduction, so the connection to inference efficiency is indirect.",
+      "first_checked_at": "2026-10-06T13:34:28+00:00",
+      "last_checked_at": "2026-10-06T13:34:28+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Staying VIGILant: Mitigating Visual Laziness via Counterfactual Visual Alignment in MLLMs"
+    },
+    "arXiv:2511.23021": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.23021",
+      "identity_tokens": [
+        "arXiv:2511.23021"
+      ],
+      "reason": "Masked Diffusion for Generative Recommendation applies discrete diffusion to recommendation outputs. Parallel generation is a possible inference lead, but primary evaluation is recommender quality rather than general LLM efficiency.",
+      "first_checked_at": "2026-10-06T13:34:28+00:00",
+      "last_checked_at": "2026-10-06T13:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Masked Diffusion for Generative Recommendation"
+    },
+    "arXiv:2511.19221": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19221",
+      "identity_tokens": [
+        "arXiv:2511.19221"
+      ],
+      "reason": "Percept-WAM is a perception-enhanced world-action model for autonomous driving. It focuses on driving capability and robustness; a cited cached-knowledge serving paper does not establish an efficiency contribution here.",
+      "first_checked_at": "2026-10-06T13:34:29+00:00",
+      "last_checked_at": "2026-10-06T13:34:29+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Percept-WAM: Perception-Enhanced World-Awareness-Action Model for Robust End-to-End Autonomous Driving"
+    },
+    "arXiv:2511.06727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.06727",
+      "identity_tokens": [
+        "arXiv:2511.06727"
+      ],
+      "reason": "S-DAG structures multi-agent heterogeneous reasoning as a subject-based directed acyclic graph and evaluates reasoning quality. It may reduce redundant agent collaboration, but the full text provides no clear inference cost or latency claim.",
+      "first_checked_at": "2026-10-06T13:34:30+00:00",
+      "last_checked_at": "2026-10-06T13:34:30+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "S-DAG: A Subject-Based Directed Acyclic Graph for Multi-Agent Heterogeneous Reasoning"
     }
   }
 }

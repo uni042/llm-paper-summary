@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a320891d4813241-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.06754",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.06754",
+    "identity_tokens": [
+      "arXiv:2511.06754"
+    ],
+    "reason": "SlotVLA models object-relation representations for robotic manipulation. Its experiments target action/representation quality rather than LLM inference efficiency.",
+    "first_checked_at": "2026-10-06T13:34:28+00:00",
+    "last_checked_at": "2026-10-06T13:34:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+    ],
+    "title": "SlotVLA: Towards Modeling of Object-Relation Representations in Robotic Manipulation"
+  },
+  "processed_at": "2026-10-06T13:34:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a320891d481",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
