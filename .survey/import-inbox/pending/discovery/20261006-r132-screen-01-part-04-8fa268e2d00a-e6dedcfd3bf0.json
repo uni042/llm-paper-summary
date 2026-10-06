@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r132-screen-01-part-04-8fa268e2d00a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15943",
+      "identity_tokens": [
+        "arXiv:2402.15943"
+      ],
+      "title": "Rethinking Software Engineering in the Foundation Model Era: A Curated Catalogue of Challenges in the Development of Trustworthy FMware",
+      "reason": "This is a catalog of trustworthy foundation-model software-engineering challenges; its object is development practice rather than model inference optimization.",
+      "source_url": "https://arxiv.org/abs/2402.15943",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TC.2023.3329937",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2023.3329937"
+      ],
+      "title": "HASP: Hierarchical Asynchronous Parallelism for Multi-NN Tasks",
+      "reason": "一次出版社ページ https://doi.org/10.1109/TC.2023.3329937 を開いたが、読める要旨/本文を取得できず、入力要旨だけで対象外とは判定しない。一次証拠を照合できないためborderline。",
+      "source_url": "https://doi.org/10.1109/TC.2023.3329937",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06340",
+      "identity_tokens": [
+        "arXiv:2401.06340"
+      ],
+      "title": "A Temporal-Spectral Fusion Transformer with Subject-specific Adapter for Enhancing RSVP-BCI Decoding",
+      "reason": "The temporal-spectral Transformer with subject-specific adapters addresses RSVP-BCI EEG decoding. Input, task and experiments are EEG classification, not LLM inference or language-model serving.",
+      "source_url": "https://arxiv.org/abs/2401.06340",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.03559",
+      "identity_tokens": [
+        "arXiv:2312.03559"
+      ],
+      "title": "MCAIMem: A Mixed SRAM and eDRAM Cell for Area and Energy-Efficient On-Chip AI Memory",
+      "reason": "MCAIMem designs mixed SRAM/eDRAM memory cells and reports area/energy tradeoffs for on-chip AI, but does not evaluate LLM inference or KV/model memory. Transfer to the target lineage is unestablished.",
+      "source_url": "https://arxiv.org/abs/2312.03559",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.989",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.989"
+      ],
+      "title": "LS-Guard: Adaptive Safety Guardrails Tailored to Individual LLMs",
+      "reason": "LS-Guard studies individualized LLM safety guardrails; the primary abstract does not target inference compute, memory, latency, or serving.",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.989",
+      "first_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "last_checked_at": "2026-10-06T18:38:25.625541+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ]
+    }
+  ]
+}
