@@ -196,13 +196,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：5  
   通常注意機構は過去トークンのKVキャッシュを保持するため再取得に強いが、状態量が文脈長へ比例する。
 
+- **2024-09 · [CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification](2024-2409.01366-chess-optimizing-llm-inference-via-channel-wise-thresholding-and-selecti.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  活性疎化は小さい中間値をゼロにし、後続行列積で対応する演算を省く。しかしLLMのFFNではチャネルごとに活性分布と後段重みへの影響が異なり、全チャネルへ同じ閾値を置くと「値は小さいが出力へ重要」な成分まで落とす。注意層もQ/K/V/O投影を同じように疎化すると品質感度が異なる。
+
 - **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
   実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：3  
   実運用では、同じ能力系列でも低遅延用・高品質用の複数モデルを切り替えたり、投機的復号で小型ドラフトと大型対象モデルを同時常駐させたりする。
-
-- **2024-09 · [CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification](2024-2409.01366-chess-optimizing-llm-inference-via-channel-wise-thresholding-and-selecti.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  活性疎化は小さい中間値をゼロにし、後続行列積で対応する演算を省く。しかしLLMのFFNではチャネルごとに活性分布と後段重みへの影響が異なり、全チャネルへ同じ閾値を置くと「値は小さいが出力へ重要」な成分まで落とす。注意層もQ/K/V/O投影を同じように疎化すると品質感度が異なる。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -215,7 +215,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   非構造疎重みをHBMから圧縮状態で読み、オンチップで密タイルへ復元してテンソル Coreの余剰演算力を使うことで、LLM生成の重み帯域律速を削る。
 
 - **2022-11 · [Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production](2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   しかし推論では、巨大な専門家重みをGPUへ置く容量問題、ルータ出力に従ってトークンを専門家別に並べ替える費用、専門家ごとの小さく不均一な行列積によるGPU利用率低下が生じる。本論文はこれらを一つの推論エンジンで処理し、専門家の重みを4ビット整数へ量子化して容量・帯域を減らす。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -233,7 +233,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
-  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：29  
   重みのみを3～4ビットへ量子化するとメモリ転送量は減るが、多くの既存GPU実装は行列積の直前に低ビット重みをFP16へ戻す逆量子化を行う。OPT-175Bの3ビット量子化では、逆量子化を行うOPTQ実装に対して生成遅延を約2.1倍高速化した。
 
 ### 6年前（2020-11〜2021-10）
@@ -249,7 +249,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 7年前（2019-11〜2020-10）
 
 - **2020-10 · [LightSeq: A High Performance Inference Library for Transformers](2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md)**  
-  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：11  
   モデルが大きくても、特に小バッチや自己回帰復号ではカーネル起動とGPUメモリ往復が相対的に大きくなり、理論FLOPsほどGPUを使い切れない。中心機構は三つある。標準機械翻訳ベンチマークではTensorFlow実装に対して最大14倍、同時期のCUDA専用FasterTransformerに対して最大1.4倍の高速化を報告する。
 
 ### 8年前（2018-11〜2019-10）
@@ -259,12 +259,12 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   FLOP（Factorized Low-rank Pruning）は、非構造疎性のように0位置を大量に持つ行列を作るのではなく、重み行列を低ランク因子へ分解し、不要なrank-1成分を学習で削る構造枝刈り法である。100Mパラメータ級word LMでは50%圧縮でPPL 24.5から25.3程度に留め、論文全体として学習・推論とも2倍超の高速化を報告する。
 
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   通常の数値安定softmaxは、まず入力最大値を求め、次にexp(x-max)の和を求め、最後に各要素を正規化する。この安全な実装は同じベクトルを複数回メモリから読む。本論文は最大値と指数和を同じ走査で更新するオンライン正規化子（online normalizer）を導入し、古典的softmaxと数学的に同じ結果を保ちながらメモリアクセスを減らす。
 <!-- survey:auto:end -->
