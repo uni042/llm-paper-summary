@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2508.19828",
+      "year": 2025,
+      "published": "2025-08-27",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 219,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of NLP tasks, but they remain fundamentally stateless, constrained by limited context windows that hinder long-horizon reasoning. Recent efforts to address this limitation often augment LLMs with an external memory bank, yet most existing pipelines are static and heuristic-driven, lacking a learned mechanism for deciding what to store, update, or retrieve. We present Memory-R1, a reinforcement learning (RL) framework that equips LLMs with the ability to actively manage and utilize external memory through two specialized agents: a Memory Manager that learns structured operations, including ADD, UPDATE, DELETE, and NOOP; and an Answer Agent that pre-selects and reasons over relevant entries. Both agents are fine-tuned with outcome-driven RL (PPO and GRPO), enabling adaptive memory management with minimal supervision. With only 152 training QA pairs, Memory-R1 outperforms strong baselines and generalizes across diverse question types, three benchmarks (LoCoMo, MSC, LongMemEval), and multiple model scales (3B-14B).",
+      "identifiers": [
+        "SemanticScholar:9df0947ec8a14c43e69f3b72ece5e9af2b8e8215"
+      ],
+      "semantic_scholar_id": "9df0947ec8a14c43e69f3b72ece5e9af2b8e8215",
+      "canonical_id": "arXiv:2508.19828",
+      "arxiv_id": "2508.19828",
+      "doi": "10.48550/arXiv.2508.19828",
+      "authors": [
+        "Si-Kuan Yan",
+        "Xiu-Feng Yang",
+        "Zuchao Huang",
+        "Ercong Nie",
+        "Zifeng Ding",
+        "Zonggen Li",
+        "Xiao-Wen Ma",
+        "Jin-He Bi",
+        "K. Kersting",
+        "Jeff Z. Pan",
+        "Hinrich Schutze",
+        "Volker Tresp",
+        "Yun-Pu Ma"
+      ],
+      "priority": 229,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 219,
+        "citation_count": 219,
+        "total": 229,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Memory ManagerとAnswer Agentが外部memoryの追加・更新・削除・選別を学習し、長期agent推論のcontextノイズとlatencyを削減するagentic inference memory方式であり対象。",
+      "library_body_check": "fulltext_review: arXiv本文を確認。Memory ManagerがADD/UPDATE/DELETE/NOOPを学習し、Answer Agentが関連memoryをpre-select/distillする。LoCoMo/MSC/LongMemEval、3B-14Bで評価し、静的reranker pipelineより低いinference latencyも報告する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents",
+      "source_url": "https://arxiv.org/abs/2506.15841",
+      "year": 2025,
+      "published": "2025-06-18",
+      "venue": "arXiv.org",
+      "citation_count": 223,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern language agents must operate over long-horizon, multi-turn interactions, where they retrieve external information, adapt to observations, and answer interdependent queries. Yet, most LLM systems rely on full-context prompting, appending all past turns regardless of their relevance. This leads to unbounded memory growth, increased computational costs, and degraded reasoning performance on out-of-distribution input lengths. We introduce MEM1, an end-to-end reinforcement learning framework that enables agents to operate with constant memory across long multi-turn tasks. At each turn, MEM1 updates a compact shared internal state that jointly supports memory consolidation and reasoning. This state integrates prior memory with new observations from the environment while strategically discarding irrelevant or redundant information. To support training in more realistic and compositional settings, we propose a simple yet effective and scalable approach to constructing multi-turn environments by composing existing datasets into arbitrarily complex task sequences. Experiments across three domains, including internal retrieval QA, open-domain web QA, and multi-turn web shopping, show that MEM1-7B improves performance by 3.5x while reducing memory usage by 3.7x compared to Qwen2.5-14B-Instruct on a 16-objective multi-hop QA task, and generalizes beyond the training horizon. Our results demonstrate the promise of reasoning-driven memory consolidation as a scalable alternative to existing solutions for training long-horizon interactive agents, where both efficiency and performance are optimized.",
+      "identifiers": [
+        "SemanticScholar:6c5f3dd82ee674d929a8eb4b256ca2045e02ae60"
+      ],
+      "semantic_scholar_id": "6c5f3dd82ee674d929a8eb4b256ca2045e02ae60",
+      "canonical_id": "arXiv:2506.15841",
+      "arxiv_id": "2506.15841",
+      "doi": "10.48550/arXiv.2506.15841",
+      "authors": [
+        "Zi-Jian Zhou",
+        "Ao Qu",
+        "Zhaoxuan Wu",
+        "Sunghwan Kim",
+        "Sunghwan Kim",
+        "Alok Prakash",
+        "Daniela Rus",
+        "Jinhua Zhao",
+        "B. Low",
+        "Paul Liang"
+      ],
+      "priority": 223,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 223,
+        "citation_count": 223,
+        "total": 223,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 475,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長期agentで過去contextを無制限追記せずcompact internal stateへ逐次統合して不要情報を破棄し、memoryとinference timeを直接削減するagentic inference方式であり対象。",
+      "library_body_check": "fulltext_review: arXiv本文を確認。各turnでprior memory・new observation・reasoningをcompact shared stateへ統合し旧stateを破棄する。16-objective multi-hop QAでQwen2.5-14B-Instruct比memory 3.7x削減、性能3.5x改善を報告し、WebShopでもpeak tokenとinference timeを削減する。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness",
+      "source_url": "https://arxiv.org/abs/2412.11664",
+      "year": 2024,
+      "published": "2024-12-16",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 210,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generating Chain-of-Thought (CoT) before deriving the answer can effectively improve the reasoning capabilities of large language models (LLMs) and significantly improve the accuracy of the generated answer. However, in most cases, the length of the generated CoT is much longer than the desired final answer, which results in additional decoding costs. Furthermore, existing research has discovered that shortening the reasoning steps in CoT, even while preserving the key information, diminishes LLMs' abilities. These phenomena make it difficult to use LLMs and CoT in many real-world applications that only require the final answer and are sensitive to latency, such as search and recommendation. To reduce the costs of model decoding and shorten the length of the generated CoT, this paper presents Conditioned Compressed Chain-of-Thought (C3oT), a CoT compression framework that involves a compressor to compress an original longer CoT into a shorter CoT while maintaining key information and interpretability, a conditioned training method to train LLMs with both longer CoT and shorter CoT simultaneously to learn the corresponding relationships between them, and a conditioned inference method to gain the reasoning ability learned from longer CoT by generating shorter CoT. We conduct experiments over four datasets from arithmetic and commonsense scenarios, showing that the proposed method is capable of compressing the length of generated CoT by up to more than 50% without compromising its effectiveness.",
+      "identifiers": [
+        "SemanticScholar:2cd94b619034ae0226f4391e3ff628fe9ce780a1"
+      ],
+      "semantic_scholar_id": "2cd94b619034ae0226f4391e3ff628fe9ce780a1",
+      "canonical_id": "arXiv:2412.11664",
+      "arxiv_id": "2412.11664",
+      "doi": "10.48550/arXiv.2412.11664",
+      "authors": [
+        "Yu Kang",
+        "Xiang-Hui Sun",
+        "Liangyu Chen",
+        "Wei Zou"
+      ],
+      "priority": 210,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 210,
+        "citation_count": 210,
+        "total": 210,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 659,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長いChain-of-Thoughtを条件付き圧縮して推論時生成tokenとdecoding cost/latencyを削減するreasoning inference効率化であり対象。",
+      "library_body_check": "fulltext_review: arXiv/AAAI本文情報を確認。compressorでlong CoTからshort CoTを作り、long/short conditionを同時学習して推論時short conditionで生成する。GSM8K/MathQA/ECQA/StrategyQAで50%超のCoT長圧縮でもeffectivenessを維持する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-071988487122",
+    "round": "libimp-0719884871223998-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0719884871223998-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0719884871223998-pre01.json",
+    "receipt": "sha256:df8c4256aa51a394f26d4350e52c9b94e3d470927026b799eedef2e4a66fad3b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-071988487122",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BERT Loses Patience: Fast and Robust Inference with Early Exit",
+      "source_url": "https://arxiv.org/abs/2006.04152",
+      "year": 2020,
+      "published": "2020-06-07",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 470,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose Patience-based Early Exit, a straightforward yet effective inference method that can be used as a plug-and-play technique to simultaneously improve the efficiency and robustness of a pretrained language model (PLM). To achieve this, our approach couples an internal-classifier with each layer of a PLM and dynamically stops inference when the intermediate predictions of the internal classifiers remain unchanged for a pre-defined number of steps. Our approach improves inference efficiency as it allows the model to make a prediction with fewer layers. Meanwhile, experimental results with an ALBERT model show that our method can improve the accuracy and robustness of the model by preventing it from overthinking and exploiting multiple classifiers for prediction, yielding a better accuracy-speed trade-off compared to existing early exit methods.",
+      "identifiers": [
+        "SemanticScholar:4abdbcf983f78cf3f5bf6e2032503f0e534f6ca8"
+      ],
+      "semantic_scholar_id": "4abdbcf983f78cf3f5bf6e2032503f0e534f6ca8",
+      "canonical_id": "arXiv:2006.04152",
+      "arxiv_id": "2006.04152",
+      "authors": [
+        "Wangchunshu Zhou",
+        "Can-Wen Xu",
+        "Tao Ge",
+        "Julian McAuley",
+        "Ke Xu",
+        "Furu Wei"
+      ],
+      "priority": 480,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 470,
+        "citation_count": 470,
+        "total": 480,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2312,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "各PLM layerへinternal classifierを置き、連続するlayerで予測がpatience回変化しなければ早期終了するPABEEにより入力ごとの計算深度を削減する。ALBERT/BERTで1.57x/1.62x級speed-upと品質維持を実測する推論効率化研究で対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv本文§1、§3、§4を確認。分類ではargmax一致、回帰では出力差thresholdでpatience counterを更新し、条件成立時に残りlayerをskip。V100 16GB、batch=1のlatency-sensitive inferenceでALBERT-base 1.57x、BERT-base 1.62x speed-upを報告し、GLUE品質を維持/改善。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a3e4fc24cd41",
+    "round": "libimp-a3e4fc24cd41e36a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a3e4fc24cd41e36a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a3e4fc24cd41e36a-pre01.json",
+    "receipt": "sha256:b8242a21467a61a518885d4e1b125123aebb626ad2a0db0ee972ee2cf28191f7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a3e4fc24cd41",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
