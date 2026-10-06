@@ -1,35 +1,51 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261004T1110-ollama0351-ascend950",
+  "attempt_id": "library-import-maint-20261006T2048-vllm0310-llamacpp060",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "55126a112f1c4ab290648c455f0aaeadfd8e3aea",
+      "expected_blob_sha": "d0f5e55e8989ee0a406f0f6135b4f22decce2eb0",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-10-02**",
-          "new": "- フレームワーク差分の最終確認: **2026-10-04**"
+          "old": "- フレームワーク差分の最終確認: **2026-10-04**",
+          "new": "- フレームワーク差分の最終確認: **2026-10-06**"
         },
         {
-          "op": "insert_before_once",
-          "anchor": "### 2026-09-23",
-          "text": "### 2026-09-30\n\n#### DeepSeek — Ascend 950向け推論基盤\n\n- **DeepGEMM-Ascend / DeepEP-Ascendを公開**\n\n  DeepSeekがAscend 950向けの推論・MoE実行基盤を公開。`DeepGEMM-Ascend` は既存DeepGEMMとAPI互換でBF16 / FP8 / FP4 GEMM、MQA logits、MegaMoEを扱い、Ascend固有layout・alignment・address計算を抽象化する。`DeepEP-Ascend` はexpert parallelismのtoken dispatch / combine通信をAscend 950へ移植し、NVIDIA版DeepEPと公開APIを揃える。LLM kernel / MoE通信基盤のhardware backend拡張として記録する。\n\n  一次資料: https://github.com/deepseek-ai/DeepGEMM-Ascend / https://github.com/deepseek-ai/DeepEP-Ascend\n\n"
+          "op": "insert_after_once",
+          "anchor": "## 最新更新",
+          "text": "\n\n### 2026-10-05\n\n#### vLLM\n\n- **v0.31.0 — released 2026-10-05 UTC**\n\n  DeepSeek-V4.1-Flash向けFlashMLA mega attention + NVFP4圧縮KV cacheをSM100既定へ移行し、sparse MQA logits、Mega-Gate、decoder boundary fusionを追加。`vllm preload` のGPU weight-cache daemonは量子化・TP shard済みweightをengine再起動間でGPUに保持してCUDA IPCで再利用し、data parallel / MTP draftにも拡張された。Model Runner V2ではdraft-model speculative decoding、DFlash async scheduling等を追加し、大規模servingではMoonEP、prefill context parallelism + DP、DeepEPv2 + sequence parallelism、KV offloading back-pressure detectionを追加。`tokenizer_mode=\"slow\"`削除等のbreaking changeも含む。\n\n  一次資料: https://github.com/vllm-project/vllm/releases/tag/v0.31.0\n"
+        },
+        {
+          "op": "insert_after_once",
+          "anchor": "### 2026-10-05",
+          "text": "\n\n#### llama.cpp\n\n- **v0.6.0 — released 2026-10-05 UTC**\n\n  token / embedding混在入力とMTP / deepstack state embeddingを扱う拡張batch API `llama_batch_ext` / `llama_process`、GLM-5.3-Flash 320B hybrid model、Qwen4Exp MTP speculative decodingを追加。backendではMetal F16-KV Flash Attention、Vulkanの量子化K/V向けsparse Flash Attention、CUDA NVFP4 MMQ accumulation最適化を含む。serverにはdecision model向け`/v1/systemone` APIを追加し、ggmlをv0.26.0へ更新した。\n\n  一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0\n"
         }
       ]
     },
     {
-      "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "c37552a42e6d9a66f200d2b0e16ab07b9e5517dd",
+      "path": "framework-updates/inference-engines/vllm/README.md",
+      "expected_blob_sha": "846211a24390eda76dd0ed9cb2bd298e46a84c14",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-09-28 — v0.35.0（released）",
-          "text": "### 2026-09-29 — v0.35.1（released）\n\n- **decision model / multimodal判定APIを拡張**: CloudflareのClef 27B / Clef Flash 9Bを`/v1/systemone`から扱えるようにし、画像を含むmultimodal stateに対してchoice / probability / score型の判定を返せるようになった。web searchは1応答あたり3回から10回へ拡張。\n- **Modelfileの`CAPABILITY`宣言**: model能力をmetadataとして明示でき、GGUF / safetensorsからの作成やmodel継承でも保持される。\n\n[release](https://github.com/ollama/ollama/releases/tag/v0.35.1)\n\n"
+          "anchor": "## 2026-09-13",
+          "text": "## 2026-10-05\n\n- **v0.31.0（released）**: DeepSeek-V4.1-Flash向けFlashMLA mega attention + NVFP4圧縮KV cacheをSM100既定へ移し、sparse MQA logits、Mega-Gate、TP all-reduce / mHC入力準備 / MoE finalize等のfusionを追加。`vllm preload` のweight-cache daemonは量子化・TP shard済みweightをGPUへ保持してengine再起動時にCUDA IPCで再利用し、DP / MTP draft / health-readinessにも対応した。Model Runner V2ではdraft-model speculative decodingとcustom logits processorを追加し、DFlash async scheduling、DSpark adaptive verification等を拡張。MoonEP、prefill context parallelism + DP、DeepEPv2 + sequence parallelism、KV offloading back-pressure detectionも追加された。`tokenizer_mode=\"slow\"`削除、online `quantization=\"fp8\"`置換等のbreaking changeを含む。[release](https://github.com/vllm-project/vllm/releases/tag/v0.31.0)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/llama-cpp/README.md",
+      "expected_blob_sha": "a8673324aa4f2866af3019f51367f1c21c66f3d2",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 2026-09-28",
+          "text": "## 2026-10-05\n\n- **v0.6.0（released）**: 拡張batch API `llama_batch_ext` / `llama_process` を追加し、token / embedding混在入力とMTP / deepstack state embeddingを扱えるようにした。GLM-5.3-Flash（GLM5-Next）320B hybrid model、Clef decision model、Qwen4ExpのMTP speculative decodingも追加。backendではMetal tensor-APIのF16 KV Flash Attention、Vulkanの量子化K/V向けsparse Flash Attention、CUDAのNVFP4 MMQ accumulation最適化を含む。serverにはdecision model用`/v1/systemone` APIを追加し、ggmlはv0.26.0へ更新。[release](https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0)\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-04 08:30 maintenance: DeepSeekのAscend 950向けDeepGEMM/DeepEP backend公開とOllama v0.35.1のdecision-model/multimodal/CAPABILITY更新を反映。"
+  "summary": "2026-10-06 08:30 maintenance: vLLM v0.31.0とllama.cpp v0.6.0の確定リリースを反映。"
 }
