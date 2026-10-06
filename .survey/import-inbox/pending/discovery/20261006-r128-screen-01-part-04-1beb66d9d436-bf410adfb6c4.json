@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r128-screen-01-part-04-1beb66d9d436",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1364/ofc.2024.m1g.3",
+      "identity_tokens": [
+        "DOI:10.1364/ofc.2024.m1g.3"
+      ],
+      "title": "Beyond the Beachfront: Integration of Silicon Photonic I/Os under a High-Power ASIC",
+      "reason": "タイトル/系統情報上の関連可能性を否定できない一方、指定primary publisher sourceが取得不能で根拠を確認できないため、未検証のabstractキャッシュで除外しない。",
+      "source_url": "https://doi.org/10.1364/ofc.2024.m1g.3",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3725843.3756075",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756075"
+      ],
+      "title": "TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles",
+      "reason": "タイトル/系統情報上の関連可能性を否定できない一方、指定primary publisher sourceが取得不能で根拠を確認できないため、未検証のabstractキャッシュで除外しない。",
+      "source_url": "https://doi.org/10.1145/3725843.3756075",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12831",
+      "identity_tokens": [
+        "arXiv:2510.12831"
+      ],
+      "title": "MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training",
+      "reason": "一次要旨のMTSQL-R1はagentic trainingで複数turn text-to-SQLの正確さを高める研究で、モデル推論コストを下げる仕組みは報告されていない。",
+      "source_url": "https://arxiv.org/abs/2510.12831",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23283",
+      "identity_tokens": [
+        "arXiv:2506.23283"
+      ],
+      "title": "MoMa: Modulating Mamba for Adapting Image Foundation Models to Video Recognition",
+      "reason": "一次要旨はMamba adapterによるimage foundation modelのvideo recognition adaptationで、LLM/言語推論servingの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2506.23283",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.04180",
+      "identity_tokens": [
+        "arXiv:2506.04180"
+      ],
+      "title": "SuperWriter: Reflection-Driven Long-Form Generation with Large Language Models",
+      "reason": "一次要旨のSuperWriterはplanning/reflectionによる長文生成品質の改善が中心で、推論最適化やtoken/latency削減を主張していない。",
+      "source_url": "https://arxiv.org/abs/2506.04180",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    }
+  ]
+}
