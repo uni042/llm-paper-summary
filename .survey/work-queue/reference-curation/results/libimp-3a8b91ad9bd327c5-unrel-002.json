@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a8b91ad9bd327c5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1101/2021.12.22.473759",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1101/2021.12.22.473759",
+    "identity_tokens": [
+      "DOI:10.1101/2021.12.22.473759"
+    ],
+    "reason": "Protein sequence design/denoising autoencoder, outside language-model inference scope.",
+    "first_checked_at": "2026-10-06T07:59:57+00:00",
+    "last_checked_at": "2026-10-06T07:59:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+    ],
+    "title": "Function-guided protein design by deep manifold sampling"
+  },
+  "processed_at": "2026-10-06T07:59:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a8b91ad9bd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

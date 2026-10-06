@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bb0b8ab2de47886-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.54254/2755-2721/97/20241406",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.54254/2755-2721/97/20241406",
+    "identity_tokens": [
+      "DOI:10.54254/2755-2721/97/20241406"
+    ],
+    "reason": "The DOI publisher page could not be retrieved as readable full text in this run; the available record describes a broad LLM review, without a paper-specific inference optimization established from primary text.",
+    "first_checked_at": "2026-10-06T07:59:56+00:00",
+    "last_checked_at": "2026-10-06T07:59:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Advancements and Applications of Large Language Models in Natural Language Processing: A Comprehensive Review"
+  },
+  "processed_at": "2026-10-06T07:59:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bb0b8ab2de4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

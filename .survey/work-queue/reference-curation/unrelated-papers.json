@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T07:46:52+00:00",
-  "record_count": 7392,
+  "updated_at": "2026-10-06T08:00:03+00:00",
+  "record_count": 7411,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -106485,6 +106485,272 @@
         "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
       ],
       "title": "A Review of Deep Learning for Video Captioning"
+    },
+    "arXiv:2408.06731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.06731",
+      "identity_tokens": [
+        "arXiv:2408.06731"
+      ],
+      "reason": "The paper evaluates whether LLMs generate convincing localized election disinformation and how humans detect it; its experiments are capability/safety benchmarking, not inference-cost optimization.",
+      "first_checked_at": "2026-10-06T07:59:56+00:00",
+      "last_checked_at": "2026-10-06T07:59:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Large language models can consistently generate high-quality content for election disinformation operations"
+    },
+    "arXiv:2412.20953": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.20953",
+      "identity_tokens": [
+        "arXiv:2412.20953"
+      ],
+      "reason": "The paper investigates adversarial vulnerabilities in dense embedding retrieval/search systems; the subject is retrieval security rather than model inference efficiency or compression.",
+      "first_checked_at": "2026-10-06T07:59:56+00:00",
+      "last_checked_at": "2026-10-06T07:59:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "GASLITEing the Retrieval: Exploring Vulnerabilities in Dense Embedding-based Search"
+    },
+    "arXiv:2412.18260": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.18260",
+      "identity_tokens": [
+        "arXiv:2412.18260"
+      ],
+      "reason": "The paper is an experimental study of LLM-assisted code vulnerability detection; it compares detection capability and does not propose an inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-06T07:59:56+00:00",
+      "last_checked_at": "2026-10-06T07:59:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Investigating Large Language Models for Code Vulnerability Detection: An Experimental Study"
+    },
+    "arXiv:2302.04852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.04852",
+      "identity_tokens": [
+        "arXiv:2302.04852"
+      ],
+      "reason": "SparseProp accelerates backpropagation by propagating gradients only through sparse activations; the contribution targets neural-network training throughput, not inference serving.",
+      "first_checked_at": "2026-10-06T07:59:56+00:00",
+      "last_checked_at": "2026-10-06T07:59:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "SparseProp: Efficient Sparse Backpropagation for Faster Training of Neural Networks"
+    },
+    "arXiv:2406.04379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04379",
+      "identity_tokens": [
+        "arXiv:2406.04379"
+      ],
+      "reason": "VHDL-Eval is a code-generation benchmark, not an inference optimization.",
+      "first_checked_at": "2026-10-06T07:59:57+00:00",
+      "last_checked_at": "2026-10-06T07:59:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "VHDL-Eval: A Framework for Evaluating Large Language Models in VHDL Code Generation"
+    },
+    "DOI:10.1101/2021.12.22.473759": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2021.12.22.473759",
+      "identity_tokens": [
+        "DOI:10.1101/2021.12.22.473759"
+      ],
+      "reason": "Protein sequence design/denoising autoencoder, outside language-model inference scope.",
+      "first_checked_at": "2026-10-06T07:59:57+00:00",
+      "last_checked_at": "2026-10-06T07:59:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Function-guided protein design by deep manifold sampling"
+    },
+    "DOI:10.3389/fnut.2025.1635682": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fnut.2025.1635682",
+      "identity_tokens": [
+        "DOI:10.3389/fnut.2025.1635682"
+      ],
+      "reason": "Primary-text findings do not support a concrete inference-efficiency connection to the target family.",
+      "first_checked_at": "2026-10-06T07:59:57+00:00",
+      "last_checked_at": "2026-10-06T07:59:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ],
+      "title": "Large language models in clinical nutrition: an overview of its applications, capabilities, limitations, and potential future prospects"
+    },
+    "arXiv:2403.14353": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.14353",
+      "identity_tokens": [
+        "arXiv:2403.14353"
+      ],
+      "reason": "Continuous-learning video analytics focuses teacher labeling and student retraining/adaptation, not LLM serving.",
+      "first_checked_at": "2026-10-06T07:59:58+00:00",
+      "last_checked_at": "2026-10-06T07:59:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "DACAPO: Accelerating Continuous Learning in Autonomous Systems for Video Analytics"
+    },
+    "arXiv:2505.16826": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16826",
+      "identity_tokens": [
+        "arXiv:2505.16826"
+      ],
+      "reason": "KTAE changes reinforcement-learning training advantages, not inference efficiency.",
+      "first_checked_at": "2026-10-06T07:59:58+00:00",
+      "last_checked_at": "2026-10-06T07:59:58+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "KTAE: A Model-Free Algorithm to Key-Tokens Advantage Estimation in Mathematical Reasoning"
+    },
+    "arXiv:2312.15033": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.15033",
+      "identity_tokens": [
+        "arXiv:2312.15033"
+      ],
+      "reason": "Primary-text findings do not support a concrete inference-efficiency connection to the target family.",
+      "first_checked_at": "2026-10-06T07:59:58+00:00",
+      "last_checked_at": "2026-10-06T07:59:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "Sparsity-Guided Holistic Explanation for LLMs with Interpretable Inference-Time Intervention"
+    },
+    "arXiv:2411.04395": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04395",
+      "identity_tokens": [
+        "arXiv:2411.04395"
+      ],
+      "reason": "Integrated electro-optic communication link between digital electronics and analog photonics; not a model inference method.",
+      "first_checked_at": "2026-10-06T07:59:59+00:00",
+      "last_checked_at": "2026-10-06T07:59:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Integrated electro-optic digital-to-analog link for efficient computing and arbitrary waveform generation"
+    },
+    "arXiv:2401.17505": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.17505",
+      "identity_tokens": [
+        "arXiv:2401.17505"
+      ],
+      "reason": "Primary-text findings do not support a concrete inference-efficiency connection to the target family.",
+      "first_checked_at": "2026-10-06T08:00:00+00:00",
+      "last_checked_at": "2026-10-06T08:00:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Arrows of Time for Large Language Models"
+    },
+    "arXiv:2407.17465": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.17465",
+      "identity_tokens": [
+        "arXiv:2407.17465"
+      ],
+      "reason": "u-μP concerns hyperparameter scaling and low-precision training rather than inference.",
+      "first_checked_at": "2026-10-06T08:00:00+00:00",
+      "last_checked_at": "2026-10-06T08:00:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "u-μP: The Unit-Scaled Maximal Update Parametrization"
+    },
+    "arXiv:2503.16870": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16870",
+      "identity_tokens": [
+        "arXiv:2503.16870"
+      ],
+      "reason": "Sparse Logit Sampling reduces teacher-logit work for LLM knowledge distillation; the optimization is a training/distillation pipeline and does not reduce deployed model inference cost.",
+      "first_checked_at": "2026-10-06T08:00:00+00:00",
+      "last_checked_at": "2026-10-06T08:00:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Sparse Logit Sampling: Accelerating Knowledge Distillation in LLMs"
+    },
+    "DOI:10.1016/j.engappai.2023.106651": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engappai.2023.106651",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2023.106651"
+      ],
+      "reason": "Task-specific small transformer for electrical arc detection; its contribution is detector accuracy, not inference efficiency.",
+      "first_checked_at": "2026-10-06T08:00:01+00:00",
+      "last_checked_at": "2026-10-06T08:00:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "A Transformer Neural Network For AC series arc-fault detection"
+    },
+    "arXiv:2412.21102": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.21102",
+      "identity_tokens": [
+        "arXiv:2412.21102"
+      ],
+      "reason": "The paper studies diversity in multi-agent LLM conversations and ways to control it; the objective and experiments concern interaction diversity, not inference resources.",
+      "first_checked_at": "2026-10-06T08:00:02+00:00",
+      "last_checked_at": "2026-10-06T08:00:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Exploring and Controlling Diversity in LLM-Agent Conversation"
+    },
+    "DOI:10.1007/s40558-024-00309-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s40558-024-00309-9",
+      "identity_tokens": [
+        "DOI:10.1007/s40558-024-00309-9"
+      ],
+      "reason": "The full open-access study compares zero-shot and fine-tuned models for tourism-review sentiment and keyword extraction; it is an application evaluation and does not introduce an inference optimization.",
+      "first_checked_at": "2026-10-06T08:00:02+00:00",
+      "last_checked_at": "2026-10-06T08:00:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Discovering sentiment insights: streamlining tourism review analysis with Large Language Models"
+    },
+    "arXiv:2506.15629": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15629",
+      "identity_tokens": [
+        "arXiv:2506.15629"
+      ],
+      "reason": "The paper evaluates compositional generalization and instruction-following ability of LLMs; its experiments concern task generalization rather than compute, memory, latency, or serving efficiency.",
+      "first_checked_at": "2026-10-06T08:00:02+00:00",
+      "last_checked_at": "2026-10-06T08:00:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Revisiting Compositional Generalization Capability of Large Language Models Considering Instruction Following Ability"
+    },
+    "DOI:10.1038/s43856-025-00790-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s43856-025-00790-1",
+      "identity_tokens": [
+        "DOI:10.1038/s43856-025-00790-1"
+      ],
+      "reason": "The primary full text studies BERT/GPT feature extraction on antibiotic-prescription EHR data and reports predictive F1; its use of efficient feature extraction is an application claim, not a model-side inference optimization.",
+      "first_checked_at": "2026-10-06T08:00:03+00:00",
+      "last_checked_at": "2026-10-06T08:00:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Transformers and large language models are efficient feature extractors for electronic health record studies"
     }
   }
 }
