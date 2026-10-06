@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T10:01:33+00:00",
-  "record_count": 2742,
+  "updated_at": "2026-10-06T10:11:34+00:00",
+  "record_count": 2753,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -42110,6 +42110,172 @@
       ],
       "borderline_recheck_count": 0,
       "title": "ProEchoMem: Enhancing Long Video Understanding via Multi-Trace Probe-Echo Memory"
+    },
+    "arXiv:2606.29182": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.29182",
+      "identity_tokens": [
+        "arXiv:2606.29182"
+      ],
+      "reason": "The paper is about evidence selection and updating beliefs in a scientific-discovery agent; it is adjacent to long-context memory but does not establish a concrete inference-efficiency gain.",
+      "first_checked_at": "2026-10-06T10:11:23+00:00",
+      "last_checked_at": "2026-10-06T10:11:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evidence-Informed LLM Beliefs for Continual Scientific Discovery"
+    },
+    "arXiv:2606.26515": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26515",
+      "identity_tokens": [
+        "arXiv:2606.26515"
+      ],
+      "reason": "The paper reduces the cost of test-time adaptation for video perception, but evaluations are vision segmentation/depth/action tasks rather than LLMs; transfer to the linked TTT lineage is uncertain.",
+      "first_checked_at": "2026-10-06T10:11:24+00:00",
+      "last_checked_at": "2026-10-06T10:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Forget, Anticipate and Adapt: Test Time Training for Long Videos"
+    },
+    "DOI:10.1145/3787109.3815259": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3787109.3815259",
+      "identity_tokens": [
+        "DOI:10.1145/3787109.3815259"
+      ],
+      "reason": "PiCASO is a strong edge-LLM deployment/quantization candidate, but only a university announcement and ACM metadata were accessible; primary paper full text could not be verified.",
+      "first_checked_at": "2026-10-06T10:11:26+00:00",
+      "last_checked_at": "2026-10-06T10:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PiCASO: A Real-time Pi-Integrated Conversational AI System with Optimized LLMs"
+    },
+    "arXiv:2606.25092": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25092",
+      "identity_tokens": [
+        "arXiv:2606.25092"
+      ],
+      "reason": "The primary study tests whether MoE experts are functionally modular and finds most apparent modules dissolve; this is useful expert-pruning evidence but does not propose or measure an inference optimization.",
+      "first_checked_at": "2026-10-06T10:11:29+00:00",
+      "last_checked_at": "2026-10-06T10:11:29+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.28042-translation-specialist-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2606.10703-causal-audit-expert-importance.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How Modular Is a Frontier Mixture-of-Experts? A Pre-registered Causal Test in Which Apparent Expert Modularity Mostly Dissolves"
+    },
+    "arXiv:2606.23404": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.23404",
+      "identity_tokens": [
+        "arXiv:2606.23404"
+      ],
+      "reason": "ReasoningLens identifies redundant overthinking and mentions early stopping as remediation, but it is a visualization/diagnostic system and does not evaluate token or latency savings.",
+      "first_checked_at": "2026-10-06T10:11:30+00:00",
+      "last_checked_at": "2026-10-06T10:11:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReasoningLens: Hierarchical Visualization and Diagnostic Auditing for Large Reasoning Models"
+    },
+    "DOI:10.1109/mlmc69743.2026.11686801": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mlmc69743.2026.11686801",
+      "identity_tokens": [
+        "DOI:10.1109/mlmc69743.2026.11686801"
+      ],
+      "reason": "Topology-aware 3D-LLM token compression is directly relevant to multimodal inference efficiency, but the primary IEEE article was inaccessible, preventing verification of method and measured savings.",
+      "first_checked_at": "2026-10-06T10:11:31+00:00",
+      "last_checked_at": "2026-10-06T10:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DFTC: Differentiable Feature Topology Compression for Efficient 3D-LLMs"
+    },
+    "arXiv:2607.01707": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01707",
+      "identity_tokens": [
+        "arXiv:2607.01707"
+      ],
+      "reason": "The paper trains visual grounding behavior in LVLMs, but does not claim a compute, token, memory, or latency reduction; relation to visual-token inference acceleration is indirect.",
+      "first_checked_at": "2026-10-06T10:11:32+00:00",
+      "last_checked_at": "2026-10-06T10:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LASER: A Corrective Lens for LVLMs via Visual Attention Preservation and Sink Suppression"
+    },
+    "arXiv:2607.00368": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00368",
+      "identity_tokens": [
+        "arXiv:2607.00368"
+      ],
+      "reason": "This is an evaluation framework for TTT memory claims, not an inference-memory or compute optimization; relation to the TTT lineage is methodological.",
+      "first_checked_at": "2026-10-06T10:11:32+00:00",
+      "last_checked_at": "2026-10-06T10:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Perplexity: A Behavioral Evaluation Framework for Deployment-Memory Claims in LLM Test-Time Training"
+    },
+    "DOI:10.1016/j.neucom.2026.134419": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134419",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134419"
+      ],
+      "reason": "The publisher abstract reports a dialogue-memory system using fewer input tokens, which is relevant to long-context LLM efficiency, but the primary full paper could not be retrieved to verify its method/evaluation/limitations.",
+      "first_checked_at": "2026-10-06T10:11:33+00:00",
+      "last_checked_at": "2026-10-06T10:11:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dual-perspective cognitive architecture for long-term dialogue memory"
+    },
+    "DOI:10.1109/compsac69091.2026.00285": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/compsac69091.2026.00285",
+      "identity_tokens": [
+        "DOI:10.1109/compsac69091.2026.00285"
+      ],
+      "reason": "The abstract describes inference-time routing for ambiguous LLM code requests and up to 57.2% fewer tokens, a direct match; however, IEEE primary full text could not be retrieved, so the claim cannot be validated here.",
+      "first_checked_at": "2026-10-06T10:11:34+00:00",
+      "last_checked_at": "2026-10-06T10:11:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward Reliable LLM Code Generation: Adaptive Routing Framework for Ambiguous Requirements"
+    },
+    "DOI:10.1109/icccas70754.2026.11672637": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icccas70754.2026.11672637",
+      "identity_tokens": [
+        "DOI:10.1109/icccas70754.2026.11672637"
+      ],
+      "reason": "Streaming attention and mixed precision on FPGA are potentially transferable transformer inference techniques and linked to FTRANS, but the primary article could not be read and the title scopes experiments to ViTs.",
+      "first_checked_at": "2026-10-06T10:11:34+00:00",
+      "last_checked_at": "2026-10-06T10:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy-Efficient FPGA Accelerator for Vision Transformers via Integer Streaming Attention and Asymmetric Mixed Precision"
     }
   }
 }

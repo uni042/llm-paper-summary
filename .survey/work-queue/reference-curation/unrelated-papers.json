@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T10:01:33+00:00",
-  "record_count": 7771,
+  "updated_at": "2026-10-06T10:11:34+00:00",
+  "record_count": 7803,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -111795,6 +111795,454 @@
         "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
       ],
       "title": "Chunk-Wise Quantization for Graph Collaborative Filtering"
+    },
+    "DOI:10.1109/tcsvt.2026.3672108": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3672108",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3672108"
+      ],
+      "reason": "Title/abstract specify whole-slide images and genomics.",
+      "first_checked_at": "2026-10-06T10:11:23+00:00",
+      "last_checked_at": "2026-10-06T10:11:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "CD-Former: A Cross-Modal Dual-Interaction Transformer With Whole-Slide Image Pyramids and Genomics for Survival Prediction"
+    },
+    "arXiv:2606.32002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.32002",
+      "identity_tokens": [
+        "arXiv:2606.32002"
+      ],
+      "reason": "The paper audits risks in self-generated QA training and instruction injection; despite a KV-compaction citation, it proposes no KV cache or inference-efficiency method.",
+      "first_checked_at": "2026-10-06T10:11:24+00:00",
+      "last_checked_at": "2026-10-06T10:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2602.16284-fast-kv-compaction-via-attention-matching.md"
+      ],
+      "title": "Self-Study Reconsidered: The Hidden Fragility of Learning from Self-Generated QA"
+    },
+    "arXiv:2606.30813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30813",
+      "identity_tokens": [
+        "arXiv:2606.30813"
+      ],
+      "reason": "Title/abstract: layer-wise gradient update coupling.",
+      "first_checked_at": "2026-10-06T10:11:24+00:00",
+      "last_checked_at": "2026-10-06T10:11:24+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Gradient Smoothing: Coupling Layer-wise Updates for Improved Optimization"
+    },
+    "arXiv:2606.30849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30849",
+      "identity_tokens": [
+        "arXiv:2606.30849"
+      ],
+      "reason": "Title/abstract: asymmetric cache behavior for portrait animation; no LLM inference workload.",
+      "first_checked_at": "2026-10-06T10:11:24+00:00",
+      "last_checked_at": "2026-10-06T10:11:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "title": "SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation"
+    },
+    "arXiv:2606.29575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29575",
+      "identity_tokens": [
+        "arXiv:2606.29575"
+      ],
+      "reason": "Title/abstract: efficient speech separation, not LLM serving.",
+      "first_checked_at": "2026-10-06T10:11:25+00:00",
+      "last_checked_at": "2026-10-06T10:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "TF-MoE: Time-Frequency Mixture-of-Experts for Efficient Speech Separation"
+    },
+    "arXiv:2606.29613": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29613",
+      "identity_tokens": [
+        "arXiv:2606.29613"
+      ],
+      "reason": "Title/abstract: role specialization and explanation quality.",
+      "first_checked_at": "2026-10-06T10:11:25+00:00",
+      "last_checked_at": "2026-10-06T10:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Does Role Specialization Matter for Explanation Faithfulness in Mixture-of-Experts?"
+    },
+    "DOI:10.1038/s40494-026-02777-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s40494-026-02777-0",
+      "identity_tokens": [
+        "DOI:10.1038/s40494-026-02777-0"
+      ],
+      "reason": "Title/abstract: multi-scale diffusion image-generation model.",
+      "first_checked_at": "2026-10-06T10:11:25+00:00",
+      "last_checked_at": "2026-10-06T10:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "MMED: a Mamba-enhanced multi-scale diffusion model for efficient thangka image generation"
+    },
+    "arXiv:2606.28623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28623",
+      "identity_tokens": [
+        "arXiv:2606.28623"
+      ],
+      "reason": "Title/abstract: longitudinal patient data and clinical subtype prediction.",
+      "first_checked_at": "2026-10-06T10:11:25+00:00",
+      "last_checked_at": "2026-10-06T10:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Improving Patient Subtyping on Longitudinal Data using Representations from Mamba-based Architecture"
+    },
+    "DOI:10.1145/3765611.3815482": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3765611.3815482",
+      "identity_tokens": [
+        "DOI:10.1145/3765611.3815482"
+      ],
+      "reason": "Title/abstract: pretrained time-series foundation model adaptation.",
+      "first_checked_at": "2026-10-06T10:11:26+00:00",
+      "last_checked_at": "2026-10-06T10:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Heterogeneous Mixture-of-Experts Adaptation for Finetuning Pretrained Time-series Foundation Models"
+    },
+    "arXiv:2606.22338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22338",
+      "identity_tokens": [
+        "arXiv:2606.22338"
+      ],
+      "reason": "Primary text: benchmark of robot memory under interference, not an LLM optimization.",
+      "first_checked_at": "2026-10-06T10:11:26+00:00",
+      "last_checked_at": "2026-10-06T10:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "RoboMME-Interference: Benchmarking Robot Memory Under Interference"
+    },
+    "arXiv:2606.26942": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26942",
+      "identity_tokens": [
+        "arXiv:2606.26942"
+      ],
+      "reason": "Title/abstract: instruction tuning for facial-expression quality reports; no inference cost reduction.",
+      "first_checked_at": "2026-10-06T10:11:27+00:00",
+      "last_checked_at": "2026-10-06T10:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "TraMP-LLaMA: Generative Interpretability with Decoupled Instruction Tuning for Facial Expression Quality Assessment"
+    },
+    "arXiv:2608.26136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26136",
+      "identity_tokens": [
+        "arXiv:2608.26136"
+      ],
+      "reason": "Title/abstract: evaluation methodology for sparse autoencoder explanations.",
+      "first_checked_at": "2026-10-06T10:11:27+00:00",
+      "last_checked_at": "2026-10-06T10:11:27+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Reward-Informed Sparse Autoencoders and the Solution-Completeness Confound"
+    },
+    "DOI:10.1007/s00138-026-01864-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00138-026-01864-3",
+      "identity_tokens": [
+        "DOI:10.1007/s00138-026-01864-3"
+      ],
+      "reason": "Title/abstract: vision classification.",
+      "first_checked_at": "2026-10-06T10:11:27+00:00",
+      "last_checked_at": "2026-10-06T10:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "ViT-KANMoE: a vision transformer enhanced with a pure Kolmogorov–Arnold network-based mixture-of-experts for malaria blood smear image classification"
+    },
+    "arXiv:2606.26412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26412",
+      "identity_tokens": [
+        "arXiv:2606.26412"
+      ],
+      "reason": "Primary text title/topic is browser shader privacy measurement, not LLM performance.",
+      "first_checked_at": "2026-10-06T10:11:27+00:00",
+      "last_checked_at": "2026-10-06T10:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md"
+      ],
+      "title": "What Browsers Do in the Shaders: A Measurement Study of WebGPU Privacy"
+    },
+    "DOI:10.1109/jcsse68839.2026.11597018": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jcsse68839.2026.11597018",
+      "identity_tokens": [
+        "DOI:10.1109/jcsse68839.2026.11597018"
+      ],
+      "reason": "Title/abstract: structure-to-detail routing for diffusion transformers; no concrete LLM token/latency/serving result.",
+      "first_checked_at": "2026-10-06T10:11:28+00:00",
+      "last_checked_at": "2026-10-06T10:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "TimeAware MoE: Adaptive Structure-to-Details Routing for Diffusion Transformers"
+    },
+    "arXiv:2607.00465": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00465",
+      "identity_tokens": [
+        "arXiv:2607.00465"
+      ],
+      "reason": "StochasT changes visual instruction-tuning context construction and benchmark evaluation; it is applied during training and does not alter KV caching or inference.",
+      "first_checked_at": "2026-10-06T10:11:28+00:00",
+      "last_checked_at": "2026-10-06T10:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "title": "StochasT: Learning with Stochastic Turn Depth for Visual Instruction Tuning"
+    },
+    "DOI:10.1016/j.ins.2026.123925": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123925",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123925"
+      ],
+      "reason": "Abstract/title: KAN-augmented multimodal MoE for tabular learning.",
+      "first_checked_at": "2026-10-06T10:11:28+00:00",
+      "last_checked_at": "2026-10-06T10:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "KAMEL: A universal KAN-augmented multimodal mixture-of-experts framework for learning heterogeneous and imbalanced tabular data"
+    },
+    "DOI:10.1016/j.jfranklin.2026.108926": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jfranklin.2026.108926",
+      "identity_tokens": [
+        "DOI:10.1016/j.jfranklin.2026.108926"
+      ],
+      "reason": "Title/abstract specify diagnosis under changing machine operating conditions.",
+      "first_checked_at": "2026-10-06T10:11:29+00:00",
+      "last_checked_at": "2026-10-06T10:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Deep adversarial subdomain adaptation method with gated mixture-of-experts augmented lifting wavelet network for rotating machinery fault diagnosis under variable operating conditions"
+    },
+    "DOI:10.1016/j.knosys.2026.116569": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116569",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116569"
+      ],
+      "reason": "Abstract/title: survey of audio-visual LLMs; no specific latency, token, memory, or serving intervention is stated.",
+      "first_checked_at": "2026-10-06T10:11:29+00:00",
+      "last_checked_at": "2026-10-06T10:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "A survey on audio-visual large language models"
+    },
+    "DOI:10.1016/j.knosys.2026.116588": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116588",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116588"
+      ],
+      "reason": "Title/abstract: high-fidelity surveillance image fusion/attention.",
+      "first_checked_at": "2026-10-06T10:11:29+00:00",
+      "last_checked_at": "2026-10-06T10:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "SVD-TEA Fusion: SVD-based Texture-Enhanced Attention Network for High-Fidelity Surveillance"
+    },
+    "arXiv:2606.24969": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24969",
+      "identity_tokens": [
+        "arXiv:2606.24969"
+      ],
+      "reason": "Title/abstract: reservoir computing signal processing.",
+      "first_checked_at": "2026-10-06T10:11:30+00:00",
+      "last_checked_at": "2026-10-06T10:11:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Frequency Domain Reservoir Computing"
+    },
+    "arXiv:2606.23126": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23126",
+      "identity_tokens": [
+        "arXiv:2606.23126"
+      ],
+      "reason": "Title/abstract: industrial anomaly detection.",
+      "first_checked_at": "2026-10-06T10:11:30+00:00",
+      "last_checked_at": "2026-10-06T10:11:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "MambaADv2: Evolving Duality-enhanced State Space Model for Unsupervised Anomaly Detection"
+    },
+    "arXiv:2606.23473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23473",
+      "identity_tokens": [
+        "arXiv:2606.23473"
+      ],
+      "reason": "Title/abstract: continual segmentation training.",
+      "first_checked_at": "2026-10-06T10:11:30+00:00",
+      "last_checked_at": "2026-10-06T10:11:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "title": "C^2GR: Coupled Comprehensive Generative Replay for a Continually Learnable Universal Segmentation Model"
+    },
+    "DOI:10.1109/jsen.2026.3674514": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jsen.2026.3674514",
+      "identity_tokens": [
+        "DOI:10.1109/jsen.2026.3674514"
+      ],
+      "reason": "Title/abstract: two-stage force-myography motion recognition.",
+      "first_checked_at": "2026-10-06T10:11:31+00:00",
+      "last_checked_at": "2026-10-06T10:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Robust Wearable Motion Recognition Using a Two-Stage FMG Pipeline With Rest Filtering and Placement Adaptation"
+    },
+    "DOI:10.1109/pesgm58988.2026.11693335": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/pesgm58988.2026.11693335",
+      "identity_tokens": [
+        "DOI:10.1109/pesgm58988.2026.11693335"
+      ],
+      "reason": "Title/abstract: time-series forecasting with missing data.",
+      "first_checked_at": "2026-10-06T10:11:31+00:00",
+      "last_checked_at": "2026-10-06T10:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "A Mixture of Experts Method with Coordinated Imputation for Multi-Residential Load Forecasting under Missing Data"
+    },
+    "DOI:10.1109/siu71813.2026.11636359": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/siu71813.2026.11636359",
+      "identity_tokens": [
+        "DOI:10.1109/siu71813.2026.11636359"
+      ],
+      "reason": "Title/abstract: radar signal classification.",
+      "first_checked_at": "2026-10-06T10:11:31+00:00",
+      "last_checked_at": "2026-10-06T10:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Tango Scanning Mamba Model for Radar Pulse Repetition Interval Type Classification"
+    },
+    "DOI:10.1109/tcc.2026.3707138": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcc.2026.3707138",
+      "identity_tokens": [
+        "DOI:10.1109/tcc.2026.3707138"
+      ],
+      "reason": "Title/abstract describe end-to-end container scheduling.",
+      "first_checked_at": "2026-10-06T10:11:32+00:00",
+      "last_checked_at": "2026-10-06T10:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "GEN-CSAF: A Generative Autonomy Framework for End-to-End Task Scheduling in Container-Based Systems"
+    },
+    "arXiv:2607.04498": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04498",
+      "identity_tokens": [
+        "arXiv:2607.04498"
+      ],
+      "reason": "Abstract: UniSkip-Mamba uses frequency-aware fusion/scan for AV forgery localization; 6x is specific to that detector.",
+      "first_checked_at": "2026-10-06T10:11:32+00:00",
+      "last_checked_at": "2026-10-06T10:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "UniSkip-Mamba: A Frequency-Aware State Space Model for Audio-Visual Temporal Forgery Localization"
+    },
+    "arXiv:2607.03585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03585",
+      "identity_tokens": [
+        "arXiv:2607.03585"
+      ],
+      "reason": "Abstract: digital-twin time-series representation, imputation/forecasting, and industrial temperature sensing.",
+      "first_checked_at": "2026-10-06T10:11:32+00:00",
+      "last_checked_at": "2026-10-06T10:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Modular Foundation Models for Time-Series Perception in Digital Twins"
+    },
+    "DOI:10.1038/s41598-026-60487-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-60487-w",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-60487-w"
+      ],
+      "reason": "Title/abstract identify video sports action recognition, not language-model inference.",
+      "first_checked_at": "2026-10-06T10:11:33+00:00",
+      "last_checked_at": "2026-10-06T10:11:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "MMViT: Bridging Mamba and Attention for efficient video action recognition in sports"
+    },
+    "DOI:10.1016/j.neucom.2026.133615": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133615",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133615"
+      ],
+      "reason": "Title/abstract: remote-sensing image restoration.",
+      "first_checked_at": "2026-10-06T10:11:34+00:00",
+      "last_checked_at": "2026-10-06T10:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "History-augmented contrastive learning with soft mixture of experts for blind super-resolution of planetary remote sensing images"
+    },
+    "DOI:10.1109/iri69576.2026.00017": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iri69576.2026.00017",
+      "identity_tokens": [
+        "DOI:10.1109/iri69576.2026.00017"
+      ],
+      "reason": "Abstract focuses on safety thresholds and uncertainty fusion, not reduced compute, memory, latency, or tokens.",
+      "first_checked_at": "2026-10-06T10:11:34+00:00",
+      "last_checked_at": "2026-10-06T10:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Epistemic Edge: Subjective Logic Guardrails for LLM-Driven IoT Actuation"
     }
   }
 }

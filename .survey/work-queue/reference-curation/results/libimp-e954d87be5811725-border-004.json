@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e954d87be5811725-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icccas70754.2026.11672637",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icccas70754.2026.11672637",
+    "identity_tokens": [
+      "DOI:10.1109/icccas70754.2026.11672637"
+    ],
+    "reason": "Streaming attention and mixed precision on FPGA are potentially transferable transformer inference techniques and linked to FTRANS, but the primary article could not be read and the title scopes experiments to ViTs.",
+    "first_checked_at": "2026-10-06T10:11:34+00:00",
+    "last_checked_at": "2026-10-06T10:11:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Energy-Efficient FPGA Accelerator for Vision Transformers via Integer Streaming Attention and Asymmetric Mixed Precision"
+  },
+  "processed_at": "2026-10-06T10:11:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e954d87be581",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

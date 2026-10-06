@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9315141c394e7ecc-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.25092",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.25092",
+    "identity_tokens": [
+      "arXiv:2606.25092"
+    ],
+    "reason": "The primary study tests whether MoE experts are functionally modular and finds most apparent modules dissolve; this is useful expert-pruning evidence but does not propose or measure an inference optimization.",
+    "first_checked_at": "2026-10-06T10:11:29+00:00",
+    "last_checked_at": "2026-10-06T10:11:29+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2605.28042-translation-specialist-expert-pruning.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2606.10703-causal-audit-expert-importance.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How Modular Is a Frontier Mixture-of-Experts? A Pre-registered Causal Test in Which Apparent Expert Modularity Mostly Dissolves"
+  },
+  "processed_at": "2026-10-06T10:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9315141c394e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
