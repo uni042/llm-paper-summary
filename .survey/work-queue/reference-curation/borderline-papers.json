@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T12:48:10+00:00",
-  "record_count": 3034,
+  "updated_at": "2026-10-06T12:51:41+00:00",
+  "record_count": 3039,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -46534,6 +46534,82 @@
       ],
       "borderline_recheck_count": 0,
       "title": "TileMap: Mapping Multi-Head Attention on Spatial Accelerators with Tile-based Analysis"
+    },
+    "DOI:10.1016/j.patrec.2024.04.024": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patrec.2024.04.024",
+      "identity_tokens": [
+        "DOI:10.1016/j.patrec.2024.04.024"
+      ],
+      "reason": "Institutional publication record at https://knova.um.edu.my/research_publications_2021_2025/5350/ provides the abstract but explicitly says the document is not available there; publisher full-text endpoint was not accessible. Abstract describes post-training structured pruning of autoregressive Text-VQA Transformers, up to 60% size reduction at <2.4% accuracy drop, but full method/evaluation/limits could not be verified.",
+      "first_checked_at": "2026-10-06T12:51:40+00:00",
+      "last_checked_at": "2026-10-06T12:51:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient label-free pruning and retraining for Text-VQA Transformers"
+    },
+    "arXiv:2403.19969": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.19969",
+      "identity_tokens": [
+        "arXiv:2403.19969"
+      ],
+      "reason": "Primary-text review found only a weak or application-specific connection to the target inference-efficiency scope.",
+      "first_checked_at": "2026-10-06T12:51:40+00:00",
+      "last_checked_at": "2026-10-06T12:51:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Separate, Dynamic and Differentiable (SMART) Pruner for Block/Output Channel Pruning on Computer Vision Tasks"
+    },
+    "arXiv:2403.18338": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.18338",
+      "identity_tokens": [
+        "arXiv:2403.18338"
+      ],
+      "reason": "Primary-text review found only a weak or application-specific connection to the target inference-efficiency scope.",
+      "first_checked_at": "2026-10-06T12:51:40+00:00",
+      "last_checked_at": "2026-10-06T12:51:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "mALBERT: Is a Compact Multilingual BERT Model Still Worth It?"
+    },
+    "DOI:10.1007/s00500-023-09490-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00500-023-09490-1",
+      "identity_tokens": [
+        "DOI:10.1007/s00500-023-09490-1"
+      ],
+      "reason": "Springer primary full-text endpoint was inaccessible; no author/institutional full-text copy was found in the search performed. Title/metadata indicates non-autoregressive MT repetition reduction using unlikelihood training; connection to an existing NAT lineage is plausible, but no inference efficiency result or primary method/evaluation could be checked.",
+      "first_checked_at": "2026-10-06T12:51:41+00:00",
+      "last_checked_at": "2026-10-06T12:51:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Alleviating repetitive tokens in non-autoregressive machine translation with unlikelihood training"
+    },
+    "arXiv:2312.00174": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.00174",
+      "identity_tokens": [
+        "arXiv:2312.00174"
+      ],
+      "reason": "an edge-model compression result but task-specific ITS rather than language-model inference; retain borderline.",
+      "first_checked_at": "2026-10-06T12:51:41+00:00",
+      "last_checked_at": "2026-10-06T12:51:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compression of end-to-end non-autoregressive image-to-speech system for low-resourced devices"
     }
   }
 }
