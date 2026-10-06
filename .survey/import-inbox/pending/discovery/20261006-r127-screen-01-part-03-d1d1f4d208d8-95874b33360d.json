@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r127-screen-01-part-03-d1d1f4d208d8",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.13523",
+      "identity_tokens": [
+        "arXiv:2509.13523"
+      ],
+      "title": "AERIS: Argonne Earth Systems Model for Reliable and Skillful Predictions",
+      "reason": "本文のAERISは地球システム/気象予測用のpixel-level Swin diffusion transformerで、SWiPeがwindow/sequence/pipeline parallelismを組み合わせる。attention/sequence parallelismとしてtransfer可能性はあるものの、学習・高解像度気象予測向け分散化で、LLM推論/servingを評価していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2509.13523",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCVDM66874.2025.11290442",
+      "identity_tokens": [
+        "DOI:10.1109/ICCVDM66874.2025.11290442"
+      ],
+      "title": "Efficient Large Language Model Fine-Tuning with Joint Structural Pruning and Parameter Sharing",
+      "reason": "研究対象はLLM推論/servingや効率化に関係する可能性があり入力要旨もそれを示唆する場合があるが、一次publisher sourceを取得できなかったため本文根拠を確認せず除外しない。",
+      "source_url": "https://doi.org/10.1109/ICCVDM66874.2025.11290442",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.15326",
+      "identity_tokens": [
+        "arXiv:2508.15326"
+      ],
+      "title": "Exploring Scaling Laws of CTR Model for Online Performance Improvement",
+      "reason": "本文のSUAN/LightSUANはオンライン広告のCTR予測モデルで、LLM scaling lawに触発されLLM部品を借りるが言語モデル推論を最適化する研究ではない。低レイテンシ一般の類似性だけは残す。",
+      "source_url": "https://arxiv.org/abs/2508.15326",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.12461",
+      "identity_tokens": [
+        "arXiv:2508.12461"
+      ],
+      "title": "Is GPT-OSS Good? A Comprehensive Evaluation of OpenAI's Latest Open Source Models",
+      "reason": "本文はGPT-OSSおよび複数open-weight LLMのベンチマーク比較で、独自の推論最適化手法を提案しない。推論時の資源/energy情報は比較材料として有用だが、評価研究なのでborderlineに置く。",
+      "source_url": "https://arxiv.org/abs/2508.12461",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.13356",
+      "identity_tokens": [
+        "arXiv:2506.13356"
+      ],
+      "title": "StoryBench: A Dynamic Benchmark for Evaluating Long-Term Memory with Multi Turns",
+      "reason": "StoryBench本文の中心はLLMの長期記憶/多段推論を評価するinteractive-fiction benchmarkで、contextの意味的連続性や動的な複数turn評価を測る。長文脈系統との関係はあるが、context圧縮や長文脈推論の計算削減は提案しない。",
+      "source_url": "https://arxiv.org/abs/2506.13356",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    }
+  ]
+}
