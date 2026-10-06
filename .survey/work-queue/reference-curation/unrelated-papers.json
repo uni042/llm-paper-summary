@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T05:19:25+00:00",
-  "record_count": 7079,
+  "updated_at": "2026-10-06T05:30:56+00:00",
+  "record_count": 7102,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -102098,6 +102098,329 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
       ],
       "title": "OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models"
+    },
+    "arXiv:2603.09952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09952",
+      "identity_tokens": [
+        "arXiv:2603.09952"
+      ],
+      "reason": "The paper studies width scaling and normalization of neural optimizers during training, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T05:30:49+00:00",
+      "last_checked_at": "2026-10-06T05:30:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer"
+    },
+    "arXiv:2602.08064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08064",
+      "identity_tokens": [
+        "arXiv:2602.08064"
+      ],
+      "reason": "SiameseNorm studies pre/post-normalization architecture and training stability, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-06T05:30:49+00:00",
+      "last_checked_at": "2026-10-06T05:30:49+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "SiameseNorm: Breaking the Barrier to Reconciling Pre/Post-Norm"
+    },
+    "arXiv:2602.05970": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05970",
+      "identity_tokens": [
+        "arXiv:2602.05970"
+      ],
+      "reason": "Inverse depth scaling is a model/training scaling observation, not a concrete LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-06T05:30:49+00:00",
+      "last_checked_at": "2026-10-06T05:30:49+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "Inverse Depth Scaling From Most Layers Being Similar"
+    },
+    "arXiv:1711.01239": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1711.01239",
+      "identity_tokens": [
+        "arXiv:1711.01239"
+      ],
+      "reason": "Routing Networks select task-specific nonlinear functions in a multitask architecture; it is not an LLM serving or inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T05:30:50+00:00",
+      "last_checked_at": "2026-10-06T05:30:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Routing Networks: Adaptive Selection of Non-linear Functions for Multi-Task Learning"
+    },
+    "arXiv:1910.03723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.03723",
+      "identity_tokens": [
+        "arXiv:1910.03723"
+      ],
+      "reason": "The work studies knowledge distillation from internal representations; it does not establish a relevant LLM inference or serving improvement.",
+      "first_checked_at": "2026-10-06T05:30:50+00:00",
+      "last_checked_at": "2026-10-06T05:30:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Knowledge Distillation from Internal Representations"
+    },
+    "arXiv:2404.08555": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08555",
+      "identity_tokens": [
+        "arXiv:2404.08555"
+      ],
+      "reason": "This is a survey and critical analysis of RLHF, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-06T05:30:51+00:00",
+      "last_checked_at": "2026-10-06T05:30:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "RLHF Deciphered: A Critical Analysis of Reinforcement Learning from Human Feedback for LLMs"
+    },
+    "arXiv:2511.09971": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.09971",
+      "identity_tokens": [
+        "arXiv:2511.09971"
+      ],
+      "reason": "NumPert probes language models for veracity prediction using numerical perturbations; it does not optimize inference cost or runtime.",
+      "first_checked_at": "2026-10-06T05:30:51+00:00",
+      "last_checked_at": "2026-10-06T05:30:51+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "NumPert: Numerical Perturbations to Probe Language Models for Veracity Prediction"
+    },
+    "arXiv:2606.05661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05661",
+      "identity_tokens": [
+        "arXiv:2606.05661"
+      ],
+      "reason": "Continual Learning Bench is an evaluation benchmark for stateful environments, not an inference-serving improvement.",
+      "first_checked_at": "2026-10-06T05:30:52+00:00",
+      "last_checked_at": "2026-10-06T05:30:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Continual Learning Bench: Evaluating Frontier AI Systems in Real-World Stateful Environments"
+    },
+    "arXiv:2604.08510": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08510",
+      "identity_tokens": [
+        "arXiv:2604.08510"
+      ],
+      "reason": "The implicit-curriculum hypothesis studies what language models learn during training; it does not propose an inference-time efficiency improvement.",
+      "first_checked_at": "2026-10-06T05:30:52+00:00",
+      "last_checked_at": "2026-10-06T05:30:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.28042-translation-specialist-expert-pruning.md"
+      ],
+      "title": "What do Language Models Learn and When? The Implicit Curriculum Hypothesis"
+    },
+    "arXiv:2602.21198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21198",
+      "identity_tokens": [
+        "arXiv:2602.21198"
+      ],
+      "reason": "Reflective test-time planning evaluates embodied-agent planning behavior; no concrete inference compute, memory, or serving improvement is presented.",
+      "first_checked_at": "2026-10-06T05:30:52+00:00",
+      "last_checked_at": "2026-10-06T05:30:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs"
+    },
+    "arXiv:2508.20453": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.20453",
+      "identity_tokens": [
+        "arXiv:2508.20453"
+      ],
+      "reason": "MCP-Bench is a benchmark for tool-using agents; its planning/concurrency metrics evaluate agent task behavior rather than improving LLM inference runtime.",
+      "first_checked_at": "2026-10-06T05:30:53+00:00",
+      "last_checked_at": "2026-10-06T05:30:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.23933-specbox-speculative-sandbox-scheduling-agent-serving.md"
+      ],
+      "title": "MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers"
+    },
+    "arXiv:2505.17862": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17862",
+      "identity_tokens": [
+        "arXiv:2505.17862"
+      ],
+      "reason": "Daily-Omni introduces an audio-visual reasoning model and temporal alignment; no concrete inference efficiency mechanism or runtime result is presented.",
+      "first_checked_at": "2026-10-06T05:30:53+00:00",
+      "last_checked_at": "2026-10-06T05:30:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
+      ],
+      "title": "Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities"
+    },
+    "arXiv:2402.19474": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19474",
+      "identity_tokens": [
+        "arXiv:2402.19474"
+      ],
+      "reason": "All-Seeing V2 focuses on open-world visual relation comprehension, not a direct inference-efficiency or serving technique.",
+      "first_checked_at": "2026-10-06T05:30:53+00:00",
+      "last_checked_at": "2026-10-06T05:30:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "The All-Seeing Project V2: Towards General Relation Comprehension of the Open World"
+    },
+    "arXiv:2607.06988": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06988",
+      "identity_tokens": [
+        "arXiv:2607.06988"
+      ],
+      "reason": "WAM-TTT studies test-time steering of world-action models from human play; it is not a concrete LLM inference-serving optimization.",
+      "first_checked_at": "2026-10-06T05:30:53+00:00",
+      "last_checked_at": "2026-10-06T05:30:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time"
+    },
+    "arXiv:2604.04902": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04902",
+      "identity_tokens": [
+        "arXiv:2604.04902"
+      ],
+      "reason": "The paper studies interpretability of latent reasoning representations, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-06T05:30:54+00:00",
+      "last_checked_at": "2026-10-06T05:30:54+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "Are Latent Reasoning Models Easily Interpretable?"
+    },
+    "arXiv:1511.00363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.00363",
+      "identity_tokens": [
+        "arXiv:1511.00363"
+      ],
+      "reason": "BinaryConnect is a neural-network training method using binary weights during propagation; it is not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-06T05:30:54+00:00",
+      "last_checked_at": "2026-10-06T05:30:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "BinaryConnect: Training Deep Neural Networks with binary weights during propagations"
+    },
+    "DOI:10.1162/neco.1990.2.4.490": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1990.2.4.490",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1990.2.4.490"
+      ],
+      "reason": "This is an online recurrent-network trajectory training algorithm, not an LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-06T05:30:54+00:00",
+      "last_checked_at": "2026-10-06T05:30:54+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "An Efficient Gradient-Based Algorithm for On-Line Training of Recurrent Network Trajectories"
+    },
+    "DOI:10.1109/mm.2011.89": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mm.2011.89",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2011.89"
+      ],
+      "reason": "This is a general overview of GPU parallel computing, not a concrete LLM inference method.",
+      "first_checked_at": "2026-10-06T05:30:54+00:00",
+      "last_checked_at": "2026-10-06T05:30:54+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "GPUs and the Future of Parallel Computing"
+    },
+    "arXiv:2507.01006": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.01006",
+      "identity_tokens": [
+        "arXiv:2507.01006"
+      ],
+      "reason": "The paper presents multimodal reasoning models and scalable reinforcement-learning training; no direct inference efficiency technique is identified.",
+      "first_checked_at": "2026-10-06T05:30:55+00:00",
+      "last_checked_at": "2026-10-06T05:30:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning"
+    },
+    "arXiv:2208.03188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.03188",
+      "identity_tokens": [
+        "arXiv:2208.03188"
+      ],
+      "reason": "BlenderBot 3 studies deployment and continual learning for a conversational agent, but does not present a concrete inference-runtime optimization.",
+      "first_checked_at": "2026-10-06T05:30:55+00:00",
+      "last_checked_at": "2026-10-06T05:30:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "BlenderBot 3: a deployed conversational agent that continually learns to responsibly engage"
+    },
+    "arXiv:2510.04374": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04374",
+      "identity_tokens": [
+        "arXiv:2510.04374"
+      ],
+      "reason": "GDPval is an evaluation benchmark for economically valuable tasks and compares model performance; it does not introduce an inference or serving optimization.",
+      "first_checked_at": "2026-10-06T05:30:56+00:00",
+      "last_checked_at": "2026-10-06T05:30:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks"
+    },
+    "arXiv:2602.24144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.24144",
+      "identity_tokens": [
+        "arXiv:2602.24144"
+      ],
+      "reason": "Dynamic retrieval and persistent homology are used for dataset distillation; the method is a training-data/distillation contribution, not an LLM inference efficiency method.",
+      "first_checked_at": "2026-10-06T05:30:56+00:00",
+      "last_checked_at": "2026-10-06T05:30:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.06161-all-for-1-bit.md"
+      ],
+      "title": "Fixed Anchors Are Not Enough: Dynamic Retrieval and Persistent Homology for Dataset Distillation"
+    },
+    "arXiv:2602.02341": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02341",
+      "identity_tokens": [
+        "arXiv:2602.02341"
+      ],
+      "reason": "LongVPO is a video preference-optimization/training method, not a video-inference serving optimization.",
+      "first_checked_at": "2026-10-06T05:30:56+00:00",
+      "last_checked_at": "2026-10-06T05:30:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "LongVPO: From Anchored Cues to Self-Reasoning for Long-Form Video Preference Optimization"
     }
   }
 }

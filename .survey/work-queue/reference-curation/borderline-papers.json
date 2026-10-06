@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T05:19:24+00:00",
-  "record_count": 2296,
+  "updated_at": "2026-10-06T05:30:55+00:00",
+  "record_count": 2305,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -35380,6 +35380,144 @@
       ],
       "borderline_recheck_count": 0,
       "title": "DUEL: Exact Likelihood for Masked Diffusion via Deterministic Unmasking"
+    },
+    "DOI:10.1145/3794855": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3794855",
+      "identity_tokens": [
+        "DOI:10.1145/3794855"
+      ],
+      "reason": "Global-local diffusion targets long-video coherence and generation of longer videos, but the reviewed text does not provide a concrete inference-cost/latency optimization despite lineage relevance.",
+      "first_checked_at": "2026-10-06T05:30:48+00:00",
+      "last_checked_at": "2026-10-06T05:30:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16339-lacache-exact-caching-precision-adaptive-dllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tuning-Free Long Video Generation via Global-Local Collaborative Diffusion"
+    },
+    "DOI:10.48550/arxiv.2512.18134": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2512.18134",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.18134",
+        "arXiv:2512.18134"
+      ],
+      "reason": "Twill optimizes software pipelining and warp specialization for tensor-core kernels; its evidence is generic kernel scheduling rather than a direct LLM inference/serving evaluation.",
+      "first_checked_at": "2026-10-06T05:30:48+00:00",
+      "last_checked_at": "2026-10-06T05:30:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimal Software Pipelining and Warp Specialization for Tensor Core GPUs"
+    },
+    "arXiv:2602.12430": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12430",
+      "identity_tokens": [
+        "arXiv:2602.12430"
+      ],
+      "reason": "Survey of agent-skill architecture and progressive loading is relevant to agent token handling but supplies no direct inference-serving method or measured runtime gain.",
+      "first_checked_at": "2026-10-06T05:30:50+00:00",
+      "last_checked_at": "2026-10-06T05:30:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2608.19662.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward"
+    },
+    "arXiv:2503.23037": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.23037",
+      "identity_tokens": [
+        "arXiv:2503.23037"
+      ],
+      "reason": "Broad survey of agentic LLMs; it provides taxonomy rather than a concrete inference or serving improvement to evaluate.",
+      "first_checked_at": "2026-10-06T05:30:50+00:00",
+      "last_checked_at": "2026-10-06T05:30:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Large Language Models, a survey"
+    },
+    "arXiv:2601.07526": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.07526",
+      "identity_tokens": [
+        "arXiv:2601.07526"
+      ],
+      "reason": "MegaFlow improves distributed agent-task orchestration/runtime, but the reported workload-level gains combine orchestration and external task execution rather than isolating LLM inference serving.",
+      "first_checked_at": "2026-10-06T05:30:51+00:00",
+      "last_checked_at": "2026-10-06T05:30:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MegaFlow: Large-Scale Distributed Orchestration System for the Agentic Era"
+    },
+    "arXiv:2604.18555": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.18555",
+      "identity_tokens": [
+        "arXiv:2604.18555"
+      ],
+      "reason": "The note compares TurboQuant-style product estimation with DRIVE/EDEN on error/recall and explicitly does not compare runtime; relevance is limited to cache quantization quality.",
+      "first_checked_at": "2026-10-06T05:30:52+00:00",
+      "last_checked_at": "2026-10-06T05:30:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Note on TurboQuant and the Earlier DRIVE/EDEN Line of Work"
+    },
+    "arXiv:2606.06712": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06712",
+      "identity_tokens": [
+        "arXiv:2606.06712"
+      ],
+      "reason": "On-policy distillation converts autoregressive models toward diffusion language models, but reviewed text did not show quantified inference speedup or serving-resource results; the connection to parallel decoding remains speculative.",
+      "first_checked_at": "2026-10-06T05:30:53+00:00",
+      "last_checked_at": "2026-10-06T05:30:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Data-Efficient Autoregressive-to-Diffusion Language Models via On-Policy Distillation"
+    },
+    "arXiv:2505.23885": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.23885",
+      "identity_tokens": [
+        "arXiv:2505.23885"
+      ],
+      "reason": "OWL is a multi-agent task-automation system and reduces planner training overhead, but reported results do not isolate LLM inference latency, memory, or throughput.",
+      "first_checked_at": "2026-10-06T05:30:55+00:00",
+      "last_checked_at": "2026-10-06T05:30:55+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation"
+    },
+    "DOI:10.1145/3580305.3599931": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3580305.3599931",
+      "identity_tokens": [
+        "DOI:10.1145/3580305.3599931"
+      ],
+      "reason": "WebGLM reports faster web retrieval (5.3 s average and 4.07 s median) using asynchronous fetching; the measured improvement is retrieval latency, not LLM inference serving.",
+      "first_checked_at": "2026-10-06T05:30:55+00:00",
+      "last_checked_at": "2026-10-06T05:30:55+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "WebGLM: Towards An Efficient Web-Enhanced Question Answering System with Human Preferences"
     }
   }
 }
