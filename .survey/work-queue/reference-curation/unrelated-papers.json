@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T08:00:03+00:00",
-  "record_count": 7411,
+  "updated_at": "2026-10-06T08:10:23+00:00",
+  "record_count": 7424,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -106751,6 +106751,188 @@
         "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
       ],
       "title": "Transformers and large language models are efficient feature extractors for electronic health record studies"
+    },
+    "DOI:10.3390/rs14235959": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/rs14235959",
+      "identity_tokens": [
+        "DOI:10.3390/rs14235959"
+      ],
+      "reason": "The article uses DNN BER estimation and DDQN to adapt modulation, coding, and transmit power for underwater acoustic links. Its energy-efficiency target is radio communication, not transformer or LLM inference.",
+      "first_checked_at": "2026-10-06T08:10:17+00:00",
+      "last_checked_at": "2026-10-06T08:10:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Adaptive Modulation and Coding for Underwater Acoustic Communications Based on Data-Driven Learning Algorithm"
+    },
+    "arXiv:2501.19164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.19164",
+      "identity_tokens": [
+        "arXiv:2501.19164"
+      ],
+      "reason": "The paper studies visual noise as a way to mitigate object hallucinations in large vision models. The method addresses output reliability, not model inference compute, memory, latency, or serving.",
+      "first_checked_at": "2026-10-06T08:10:17+00:00",
+      "last_checked_at": "2026-10-06T08:10:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "title": "Poison as Cure: Visual Noise for Mitigating Object Hallucinations in LVMs"
+    },
+    "arXiv:2510.01354": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.01354",
+      "identity_tokens": [
+        "arXiv:2510.01354"
+      ],
+      "reason": "WAInjectBench evaluates prompt-injection detection for web agents. The paper is a security benchmark and does not propose or assess inference-efficiency improvements.",
+      "first_checked_at": "2026-10-06T08:10:18+00:00",
+      "last_checked_at": "2026-10-06T08:10:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "WAInjectBench: Benchmarking Prompt Injection Detections for Web Agents"
+    },
+    "arXiv:2503.23029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.23029",
+      "identity_tokens": [
+        "arXiv:2503.23029"
+      ],
+      "reason": "This work builds a biomedical RAG and deep-thinking LLM knowledge-mining workflow for clinical support. Its contribution is domain application and answer support, not a model inference efficiency technique.",
+      "first_checked_at": "2026-10-06T08:10:18+00:00",
+      "last_checked_at": "2026-10-06T08:10:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "A retrieval-augmented knowledge mining method with deep thinking LLMs for biomedical research and clinical support"
+    },
+    "arXiv:2502.05478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.05478",
+      "identity_tokens": [
+        "arXiv:2502.05478"
+      ],
+      "reason": "OntoTune performs ontology-driven self-training to align LLMs. Its mechanism and evaluation concern training/alignment quality, not inference efficiency.",
+      "first_checked_at": "2026-10-06T08:10:19+00:00",
+      "last_checked_at": "2026-10-06T08:10:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "OntoTune: Ontology-Driven Self-training for Aligning Large Language Models"
+    },
+    "arXiv:2609.09973": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09973",
+      "identity_tokens": [
+        "arXiv:2609.09973"
+      ],
+      "reason": "The paper evaluates video-caption quality with multiple-choice questions. It is an evaluation protocol for caption quality, not inference efficiency.",
+      "first_checked_at": "2026-10-06T08:10:20+00:00",
+      "last_checked_at": "2026-10-06T08:10:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Putting Captions to the Test: Evaluating Video Caption Quality through Multiple-Choice Question Answering"
+    },
+    "arXiv:2604.27960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.27960",
+      "identity_tokens": [
+        "arXiv:2604.27960"
+      ],
+      "reason": "The paper studies LLMs as answer-set-programming coders and self-correction for nonmonotonic reasoning. It evaluates task capability rather than model inference efficiency.",
+      "first_checked_at": "2026-10-06T08:10:20+00:00",
+      "last_checked_at": "2026-10-06T08:10:20+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "LLMs as ASP Programmers: Self-Correction Enables Task-Agnostic Nonmonotonic Reasoning"
+    },
+    "arXiv:2211.16769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.16769",
+      "identity_tokens": [
+        "arXiv:2211.16769"
+      ],
+      "reason": "The paper proposes uncertainty-aware image captioning methods and evaluates caption quality/uncertainty. It does not study inference resource efficiency; the relation to iterative-refinement captioning is task-level only.",
+      "first_checked_at": "2026-10-06T08:10:22+00:00",
+      "last_checked_at": "2026-10-06T08:10:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Uncertainty-Aware Image Captioning"
+    },
+    "arXiv:2604.11129": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11129",
+      "identity_tokens": [
+        "arXiv:2604.11129"
+      ],
+      "reason": "DeCoVec constructs task vectors in decoding space via in-context learning for task adaptation. Its results concern adaptation quality, with no inference-cost or serving optimization.",
+      "first_checked_at": "2026-10-06T08:10:22+00:00",
+      "last_checked_at": "2026-10-06T08:10:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "DeCoVec: Building Decoding Space based Task Vector for Large Language Models via In-Context Learning"
+    },
+    "arXiv:2603.00029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00029",
+      "identity_tokens": [
+        "arXiv:2603.00029"
+      ],
+      "reason": "The paper identifies activation dimensions as semantic/domain detectors and steers selected activations for adaptation or jailbreak experiments. It studies interpretability and behavior rather than efficiency.",
+      "first_checked_at": "2026-10-06T08:10:22+00:00",
+      "last_checked_at": "2026-10-06T08:10:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "Embracing Anisotropy: Turning Massive Activations into Interpretable Control Knobs for Large Language Models"
+    },
+    "arXiv:2510.03417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.03417",
+      "identity_tokens": [
+        "arXiv:2510.03417"
+      ],
+      "reason": "NEXUS benchmarks multi-turn LLM jailbreaks and unsafe-sequence exploration. It is security evaluation rather than a technique for inference efficiency.",
+      "first_checked_at": "2026-10-06T08:10:23+00:00",
+      "last_checked_at": "2026-10-06T08:10:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "NEXUS: Network Exploration for eXploiting Unsafe Sequences in Multi-Turn LLM Jailbreaks"
+    },
+    "arXiv:2411.12174": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.12174",
+      "identity_tokens": [
+        "arXiv:2411.12174"
+      ],
+      "reason": "Just KIDDIN combines knowledge infusion and distillation to detect indecent memes. The evaluated task is content moderation/classification and no inference-efficiency mechanism is reported.",
+      "first_checked_at": "2026-10-06T08:10:23+00:00",
+      "last_checked_at": "2026-10-06T08:10:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Just KIDDIN: Knowledge Infusion and Distillation for Detection of INdecent Memes"
+    },
+    "arXiv:2410.13779": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13779",
+      "identity_tokens": [
+        "arXiv:2410.13779"
+      ],
+      "reason": "The paper investigates a pathological language-model task as a diagnostic of reasoning/generalization. It analyzes capability behavior, not inference compute, memory, or serving.",
+      "first_checked_at": "2026-10-06T08:10:23+00:00",
+      "last_checked_at": "2026-10-06T08:10:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "The Mystery of the Pathological Path-star Task for Language Models"
     }
   }
 }

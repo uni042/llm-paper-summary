@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fb40781e12a16c6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.18175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.18175",
+    "identity_tokens": [
+      "arXiv:2407.18175"
+    ],
+    "reason": "Quasar-ViT applies hardware-oriented quantization-aware architecture search to vision transformers. It has concrete hardware/quantization methods, but experiments target vision models and do not establish transfer to LLM inference.",
+    "first_checked_at": "2026-10-06T08:10:17+00:00",
+    "last_checked_at": "2026-10-06T08:10:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Quasar-ViT: Hardware-Oriented Quantization-Aware Architecture Search for Vision Transformers"
+  },
+  "processed_at": "2026-10-06T08:10:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fb40781e12a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

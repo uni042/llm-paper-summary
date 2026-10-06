@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T08:00:03+00:00",
-  "record_count": 2525,
+  "updated_at": "2026-10-06T08:10:23+00:00",
+  "record_count": 2545,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -38837,6 +38837,310 @@
       ],
       "borderline_recheck_count": 0,
       "title": "SDA: Low-Bit Stable Diffusion Acceleration on Edge FPGAs"
+    },
+    "arXiv:2308.04637": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.04637",
+      "identity_tokens": [
+        "arXiv:2308.04637"
+      ],
+      "reason": "The paper evaluates sparse binary Transformers on multivariate time-series classification, anomaly detection, and forecasting; fixed/causal attention masks plus binary weights reduce storage up to 53x and FLOPs up to 10.5x. The mechanisms are concrete but the evaluated domain is time-series rather than language-model inference.",
+      "first_checked_at": "2026-10-06T08:10:16+00:00",
+      "last_checked_at": "2026-10-06T08:10:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sparse Binary Transformers for Multivariate Time Series Modeling"
+    },
+    "arXiv:2505.10518": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.10518",
+      "identity_tokens": [
+        "arXiv:2505.10518"
+      ],
+      "reason": "MuToR inserts register tokens for multi-token prediction during pretraining/fine-tuning. Full text says auxiliary registers are removed at inference and do not change inference graph latency; relevance is limited to training objective and a linked parallel-decoding lineage.",
+      "first_checked_at": "2026-10-06T08:10:17+00:00",
+      "last_checked_at": "2026-10-06T08:10:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Token Prediction Needs Registers"
+    },
+    "arXiv:2407.18175": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18175",
+      "identity_tokens": [
+        "arXiv:2407.18175"
+      ],
+      "reason": "Quasar-ViT applies hardware-oriented quantization-aware architecture search to vision transformers. It has concrete hardware/quantization methods, but experiments target vision models and do not establish transfer to LLM inference.",
+      "first_checked_at": "2026-10-06T08:10:17+00:00",
+      "last_checked_at": "2026-10-06T08:10:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quasar-ViT: Hardware-Oriented Quantization-Aware Architecture Search for Vision Transformers"
+    },
+    "arXiv:2311.05034": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.05034",
+      "identity_tokens": [
+        "arXiv:2311.05034"
+      ],
+      "reason": "JIT-Q stores high-precision weights and generates low-precision copies on demand using processing-in-memory, reporting up to 24% capacity savings and up to 2.4% throughput loss. The full text evaluates ML training, not LLM serving/inference; keep as a hardware/quantization adjacency.",
+      "first_checked_at": "2026-10-06T08:10:17+00:00",
+      "last_checked_at": "2026-10-06T08:10:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Just-in-time Quantization with Processing-In-Memory for Efficient ML Training"
+    },
+    "DOI:10.1109/tcsvt.2024.3386779": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsvt.2024.3386779",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2024.3386779"
+      ],
+      "reason": "IEEE publisher full text was unavailable in this session (publisher page did not expose the article body); available metadata/abstract describes a softmax architecture for vision transformers and nonlinear functions, so the hardware lineage is plausible but full-text methods/results could not be checked.",
+      "first_checked_at": "2026-10-06T08:10:18+00:00",
+      "last_checked_at": "2026-10-06T08:10:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SoftAct: A High-Precision Softmax Architecture for Transformers Supporting Nonlinear Functions"
+    },
+    "DOI:10.1109/iscas46773.2023.10182145": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas46773.2023.10182145",
+      "identity_tokens": [
+        "DOI:10.1109/iscas46773.2023.10182145"
+      ],
+      "reason": "The IEEE publisher full text was inaccessible; the primary conference submission page exposes only the abstract, describing an FPGA accelerator unifying attention and convolution with reported energy-efficiency gains. Since the full design/evaluation and transfer to LLMs cannot be checked, retain as borderline.",
+      "first_checked_at": "2026-10-06T08:10:18+00:00",
+      "last_checked_at": "2026-10-06T08:10:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unified Accelerator for Attention and Convolution in Inference Based on FPGA"
+    },
+    "arXiv:2502.14377": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.14377",
+      "identity_tokens": [
+        "arXiv:2502.14377"
+      ],
+      "reason": "RelaCtrl reduces diffusion-transformer control cost through relevance-guided efficient control. It offers a concrete efficiency method, but only for diffusion generation/control rather than language-model inference.",
+      "first_checked_at": "2026-10-06T08:10:19+00:00",
+      "last_checked_at": "2026-10-06T08:10:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RelaCtrl: Relevance-Guided Efficient Control for Diffusion Transformers"
+    },
+    "arXiv:2407.17879": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.17879",
+      "identity_tokens": [
+        "arXiv:2407.17879"
+      ],
+      "reason": "HG-PIPE designs a hybrid-grained pipeline for accelerating vision transformers. It provides hardware acceleration evidence, but the evaluated models are ViT and the paper does not demonstrate applicability to LLM serving.",
+      "first_checked_at": "2026-10-06T08:10:19+00:00",
+      "last_checked_at": "2026-10-06T08:10:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HG-PIPE: Vision Transformer Acceleration with Hybrid-Grained Pipeline"
+    },
+    "DOI:10.1109/cvpr52733.2024.01507": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cvpr52733.2024.01507",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52733.2024.01507"
+      ],
+      "reason": "The paper uses contrastive learning to improve post-training quantization calibration and evaluates vision models. It is a concrete quantization method, but evidence is vision-only and does not establish gains for language-model inference.",
+      "first_checked_at": "2026-10-06T08:10:19+00:00",
+      "last_checked_at": "2026-10-06T08:10:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Post-Training Quantization Calibration Through Contrastive Learning"
+    },
+    "DOI:10.1109/asp-dac58780.2024.10473931": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/asp-dac58780.2024.10473931",
+      "identity_tokens": [
+        "DOI:10.1109/asp-dac58780.2024.10473931"
+      ],
+      "reason": "IEEE publisher full text was not accessible; the conference-hosted material available was presentation slides, not the paper body. Abstract/secondary metadata describe SWAT, an FPGA Swin-Transformer accelerator, but full methods and evaluation could not be verified.",
+      "first_checked_at": "2026-10-06T08:10:19+00:00",
+      "last_checked_at": "2026-10-06T08:10:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SWAT: An Efficient Swin Transformer Accelerator Based on FPGA"
+    },
+    "DOI:10.1007/s11227-026-08783-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08783-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08783-0"
+      ],
+      "reason": "Springer primary full text could not be accessed in this session; search surfaced only secondary summaries/metadata. The described reverse-reasoning approach uses smaller auxiliary models and parallel sampling, so relevance to inference-efficiency tradeoffs is plausible but unverified in the primary text.",
+      "first_checked_at": "2026-10-06T08:10:20+00:00",
+      "last_checked_at": "2026-10-06T08:10:20+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-model relevance-guided reverse reasoning: improving chain-of-thought with small models"
+    },
+    "DOI:10.1109/isca66397.2026.00034": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00034",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00034"
+      ],
+      "reason": "IEEE full paper was inaccessible; primary conference text was not available in the session (only metadata and author presentation summary). Topic is silicon-photonic DNN acceleration and may inform accelerator efficiency, but no primary full-text method/evaluation review could be completed.",
+      "first_checked_at": "2026-10-06T08:10:20+00:00",
+      "last_checked_at": "2026-10-06T08:10:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Shining Light on Silicon Photonic DNN Accelerators"
+    },
+    "DOI:10.1145/3829441.3829500": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3829441.3829500",
+      "identity_tokens": [
+        "DOI:10.1145/3829441.3829500"
+      ],
+      "reason": "ACM publisher full text was not accessible and no author/institution primary full-text copy was found during this screening. The title/abstract describe a traceable knowledge-graph workflow for medical-insurance policy QA, but no direct inference-efficiency method is evident and body-level relevance could not be confirmed.",
+      "first_checked_at": "2026-10-06T08:10:20+00:00",
+      "last_checked_at": "2026-10-06T08:10:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MedPolicy-KG: A Traceable Clause Logic Graph with Evidence-Tiered Promotion for Chinese Medical Insurance Policy QA"
+    },
+    "arXiv:2201.08050": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2201.08050",
+      "identity_tokens": [
+        "arXiv:2201.08050"
+      ],
+      "reason": "TerViT uses ternary weights/activations in vision transformer models and studies accuracy/efficiency tradeoffs. This has a direct low-bit transformer mechanism but is vision-specific, so its connection to the linked BERT quantization lineage needs follow-up.",
+      "first_checked_at": "2026-10-06T08:10:21+00:00",
+      "last_checked_at": "2026-10-06T08:10:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TerViT: An Efficient Ternary Vision Transformer"
+    },
+    "arXiv:2305.09651": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.09651",
+      "identity_tokens": [
+        "arXiv:2305.09651"
+      ],
+      "reason": "The work tailors instructions to student difficulty for knowledge distillation and reports learning gains. Its contribution is distillation data/training, not model inference compression or serving efficiency; the connection to TernaryBERT is weak.",
+      "first_checked_at": "2026-10-06T08:10:21+00:00",
+      "last_checked_at": "2026-10-06T08:10:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tailoring Instructions to Student’s Learning Levels Boosts Knowledge Distillation"
+    },
+    "arXiv:2303.05295": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.05295",
+      "identity_tokens": [
+        "arXiv:2303.05295"
+      ],
+      "reason": "Dynamic Stashing Quantization targets transformer/LLM training: it dynamically quantizes stashed activations between forward/backward passes to reduce arithmetic and DRAM operations. Full text reports up to 20.95x fewer arithmetic operations and 2.55x fewer DRAM operations on IWSLT17, but it optimizes training rather than inference.",
+      "first_checked_at": "2026-10-06T08:10:21+00:00",
+      "last_checked_at": "2026-10-06T08:10:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Stashing Quantization for Efficient Transformer Training"
+    },
+    "arXiv:2411.17966": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17966",
+      "identity_tokens": [
+        "arXiv:2411.17966"
+      ],
+      "reason": "The paper presents a reconfigurable stream-network architecture and evaluates streaming dataflow hardware. It does not establish a transformer/LLM inference workload or model-specific speed/memory result; retain only as a weak hardware-architecture connection to accelerator lineage.",
+      "first_checked_at": "2026-10-06T08:10:21+00:00",
+      "last_checked_at": "2026-10-06T08:10:21+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reconfigurable Stream Network Architecture"
+    },
+    "arXiv:2604.12618": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.12618",
+      "identity_tokens": [
+        "arXiv:2604.12618"
+      ],
+      "reason": "CODO is a compiler for dataflow optimization on FPGA designs. Full text focuses on generic accelerator compilation and does not establish a transformer/LLM case study; lineage relation is therefore indirect.",
+      "first_checked_at": "2026-10-06T08:10:22+00:00",
+      "last_checked_at": "2026-10-06T08:10:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CODO: An Automated Compiler for Comprehensive Dataflow Optimization"
+    },
+    "DOI:10.1109/tpami.2023.3328298": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpami.2023.3328298",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2023.3328298"
+      ],
+      "reason": "IEEE publisher full text was unavailable, and the accessible full-text copy was on a prohibited GitHub Pages host, so it was not opened. Metadata indicates controllable-length image captioning and faster non-autoregressive generation; without primary article text, the vision-captioning result remains borderline.",
+      "first_checked_at": "2026-10-06T08:10:22+00:00",
+      "last_checked_at": "2026-10-06T08:10:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Image Captioning With Controllable and Adaptive Length Levels"
+    },
+    "arXiv:2306.00014": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.00014",
+      "identity_tokens": [
+        "arXiv:2306.00014"
+      ],
+      "reason": "PreQuant quantizes pre-trained language models before fine-tuning and evaluates task performance under lower precision. Its goal is task-agnostic model quantization, but the evaluated workflow centers on fine-tuning and does not establish a deployed inference-speed benefit; retain as a weak quantization lineage connection.",
+      "first_checked_at": "2026-10-06T08:10:23+00:00",
+      "last_checked_at": "2026-10-06T08:10:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PreQuant: A Task-agnostic Quantization Approach for Pre-trained Language Models"
     }
   }
 }
