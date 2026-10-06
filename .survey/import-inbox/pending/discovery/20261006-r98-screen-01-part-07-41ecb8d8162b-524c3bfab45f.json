@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r98-screen-01-part-07-41ecb8d8162b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.06754",
+      "identity_tokens": [
+        "arXiv:2511.06754"
+      ],
+      "title": "SlotVLA: Towards Modeling of Object-Relation Representations in Robotic Manipulation",
+      "reason": "SlotVLA models object-relation representations for robotic manipulation. Its experiments target action/representation quality rather than LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.06754",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14858",
+      "identity_tokens": [
+        "arXiv:2609.14858"
+      ],
+      "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+      "reason": "Dream-RSI studies recursive self-improvement in evolving simulated worlds. Its full text centers on agent/environment learning, not efficient LLM serving.",
+      "source_url": "https://arxiv.org/abs/2609.14858",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16590",
+      "identity_tokens": [
+        "arXiv:2608.16590"
+      ],
+      "title": "Zetta $\\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence",
+      "reason": "Zetta presents an efficient closed-loop embodied harness with latency/throughput constraints for physical intelligence. It is robotics infrastructure rather than LLM serving, but its closed-loop scheduling/runtime design may transfer.",
+      "source_url": "https://arxiv.org/abs/2608.16590",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26387",
+      "identity_tokens": [
+        "arXiv:2606.26387"
+      ],
+      "title": "Staying VIGILant: Mitigating Visual Laziness via Counterfactual Visual Alignment in MLLMs",
+      "reason": "VIGILant mitigates visual laziness in multimodal LLMs through counterfactual visual alignment. The method improves visual grounding; it is not presented as a compute or latency reduction, so the connection to inference efficiency is indirect.",
+      "source_url": "https://arxiv.org/abs/2606.26387",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26079",
+      "identity_tokens": [
+        "arXiv:2605.26079"
+      ],
+      "title": "Automated Benchmark Auditing for AI Agents and Large Language Models",
+      "reason": "Automated Benchmark Auditing evaluates benchmark integrity for AI agents/LLMs. Its target is audit reliability, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2605.26079",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    }
+  ]
+}
