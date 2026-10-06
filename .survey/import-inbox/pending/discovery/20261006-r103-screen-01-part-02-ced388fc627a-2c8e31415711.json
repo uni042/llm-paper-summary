@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r103-screen-01-part-02-ced388fc627a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07451",
+      "identity_tokens": [
+        "arXiv:2605.07451"
+      ],
+      "title": "VNN-LIB 2.0: Rigorous Foundations for Neural Network Verification",
+      "reason": "VNN-LIB 2.0 specifies neural-network verification formats/semantics and evaluates verification interoperability. It is formal verification infrastructure, not a PyTorch compilation or model-inference optimization.",
+      "source_url": "https://arxiv.org/abs/2605.07451",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07755",
+      "identity_tokens": [
+        "arXiv:2605.07755"
+      ],
+      "title": "Rethinking State Tracking in Recurrent Models Through Error Control Dynamics",
+      "reason": "要旨の主題は推論システム効率ではなく、LLMの計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与がない。",
+      "source_url": "https://arxiv.org/abs/2605.07755",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04266",
+      "identity_tokens": [
+        "arXiv:2605.04266"
+      ],
+      "title": "Explaining and Preventing Alignment Collapse in Iterative RLHF",
+      "reason": "The work analyzes alignment collapse during iterative RLHF and proposes training-side mitigation, evaluated on alignment/capability measures. It is RLHF behavior/training research, not quantization or inference deployment.",
+      "source_url": "https://arxiv.org/abs/2605.04266",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.vlsi.2026.102656",
+      "identity_tokens": [
+        "DOI:10.1016/j.vlsi.2026.102656"
+      ],
+      "title": "FSMformer: An efficient direction-aware graph transformer for state register detection of gate-level netlist",
+      "reason": "要旨の主題は推論システム効率ではなく、LLMの計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与がない。",
+      "source_url": "https://doi.org/10.1016/j.vlsi.2026.102656",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.24110",
+      "identity_tokens": [
+        "arXiv:2604.24110"
+      ],
+      "title": "Latency and Cost of Multi-Agent Intelligent Tutoring at Scale",
+      "reason": "Useful deployed latency/cost measurements, but no proposed inference optimization; retain for systems context.",
+      "source_url": "https://arxiv.org/abs/2604.24110",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ]
+    }
+  ]
+}
