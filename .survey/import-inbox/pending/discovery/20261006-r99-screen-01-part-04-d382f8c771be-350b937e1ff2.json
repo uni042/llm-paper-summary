@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r99-screen-01-part-04-d382f8c771be",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12108",
+      "identity_tokens": [
+        "arXiv:2602.12108"
+      ],
+      "title": "The Pensieve Paradigm: Stateful Language Models Mastering Their Own Context",
+      "reason": "Pensieve/StateLM gives language models stateful context management for long-context tasks, evaluated on retrieval and reasoning. It may avoid reprocessing raw context, but the body does not establish a direct serving-cost/latency gain for the selected lineage.",
+      "source_url": "https://arxiv.org/abs/2602.12108",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.19961",
+      "identity_tokens": [
+        "arXiv:2601.19961"
+      ],
+      "title": "MeanCache: From Instantaneous to Average Velocity for Accelerating Flow Matching Inference",
+      "reason": "MeanCache reuses average flow velocity to skip redundant flow-matching computations and reports 3.42x–4.12x acceleration while preserving video/image quality. It is generative diffusion, not LLM inference, but caching/step-skipping is a potentially transferable adjacent optimization.",
+      "source_url": "https://arxiv.org/abs/2601.19961",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08602",
+      "identity_tokens": [
+        "arXiv:2601.08602"
+      ],
+      "title": "WaveFormer: Frequency-Time Decoupled Vision Modeling with Wave Equation",
+      "reason": "WaveFormer models vision data through a frequency-time decoupled wave-equation architecture. It does not address LLM inference.",
+      "source_url": "https://arxiv.org/abs/2601.08602",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02749",
+      "identity_tokens": [
+        "arXiv:2601.02749"
+      ],
+      "title": "The Path Ahead for Agentic AI: Challenges and Opportunities",
+      "reason": "The Path Ahead for Agentic AI is a broad challenges/opportunities overview. It does not add or evaluate a concrete inference optimization.",
+      "source_url": "https://arxiv.org/abs/2601.02749",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07806",
+      "identity_tokens": [
+        "arXiv:2512.07806"
+      ],
+      "title": "Multi-view Pyramid Transformer: Look Coarser to See Broader",
+      "reason": "Multi-view Pyramid Transformer is a computer-vision method for coarser/broader multi-view visual representation; it offers no LLM inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2512.07806",
+      "first_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "last_checked_at": "2026-10-06T13:35:29.396069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    }
+  ]
+}
