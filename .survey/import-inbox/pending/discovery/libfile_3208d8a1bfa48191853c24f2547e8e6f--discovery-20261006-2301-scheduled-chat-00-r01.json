@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261006-2301-scheduled-chat-00/r01",
+  "reference_main_sha": "2ee613c3bfaeb5fbfada3cd90cf4922af7a8b31b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:0912.3599",
+      "identity_tokens": [
+        "arXiv:0912.3599"
+      ],
+      "title": "Robust Principal Component Analysis?",
+      "reason": "低rank成分とsparse成分の凸最適化による分離と、video surveillance・face recognitionへの応用が主題であり、LLM/Transformer推論システムを最終適用先としていない。",
+      "source_url": "https://arxiv.org/abs/0912.3599",
+      "body_check": "abstract_screen_only: arXiv一次abstractでPrincipal Component Pursuitによるrobust PCA、video surveillance、face recognitionが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp.2018.8461368",
+      "identity_tokens": [
+        "DOI:10.1109/icassp.2018.8461368",
+        "arXiv:1712.05884"
+      ],
+      "title": "Natural TTS Synthesis by Conditioning WaveNet on MEL Spectrogram Predictions",
+      "reason": "Tacotron 2の音声合成品質を主目的とし、文字列→mel spectrogram→WaveNet vocoderのモデル設計とMOSを評価する。LLM推論サービングやメモリ・カーネル効率化が最終目的ではない。",
+      "source_url": "https://arxiv.org/abs/1712.05884",
+      "body_check": "abstract_screen_only: arXiv一次abstractでTTS architecture、MOS 4.53、WaveNet簡素化が主貢献と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1139",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1139",
+        "arXiv:1905.07129"
+      ],
+      "title": "ERNIE: Enhanced Language Representation with Informative Entities",
+      "reason": "知識グラフのentity embeddingを言語モデルの事前学習へ統合し、knowledge-driven NLP taskの精度を改善する表現学習研究である。推論runtimeやserving効率の改善を主目的としない。",
+      "source_url": "https://arxiv.org/abs/1905.07129",
+      "body_check": "abstract_screen_only: arXiv一次abstractでtext corpusとknowledge graphを用いたpre-training、knowledge-driven taskの精度改善が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.14599",
+      "identity_tokens": [
+        "arXiv:1910.14599"
+      ],
+      "title": "Adversarial NLI: A New Benchmark for Natural Language Understanding",
+      "reason": "human-and-model-in-the-loopで構築した自然言語推論benchmark datasetと、その難易度・学習効果の評価が主題であり、LLM推論システム効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/1910.14599",
+      "body_check": "abstract_screen_only: arXiv一次abstractでadversarial NLI dataset、benchmark、trainingによるNLI性能向上が主貢献と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:9d7a75601e0e50dd68d40cfb8ef0e891dad797a6",
+      "identity_tokens": [
+        "SemanticScholar:9d7a75601e0e50dd68d40cfb8ef0e891dad797a6"
+      ],
+      "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+      "reason": "自己回帰生成のmulti-iteration特性に対してiteration-level schedulingとselective batchingを導入する分散推論serving system。GPT-3系最大341Bを評価し、GPT-3 175Bで同等latency条件のFasterTransformer比36.9倍throughputを報告しており、LLM推論サービングが直接の最終適用先。",
+      "source_url": "https://www.usenix.org/conference/osdi22/presentation/yu",
+      "body_check": "fulltext_relevance_review: USENIX OSDI 2022一次PDF本文を確認。request-level batchingのearly-finish/late-arrival問題、iteration-level scheduling、variable-length attentionに対するselective batching、model parallelismとmemory-aware schedulingを実装し、GPT-3 175Bで36.9x throughput at same latencyを評価。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.07691",
+      "identity_tokens": [
+        "arXiv:2403.07691"
+      ],
+      "title": "ORPO: Monolithic Preference Optimization without Reference Model",
+      "reason": "reference modelを不要にするodds-ratio preference optimizationでSFTとpreference alignmentを統合する学習手法が主題。推論時のruntime、memory、serving効率を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2403.07691",
+      "body_check": "abstract_screen_only: 一次abstractでpreference-aligned SFT、reference-model-free training、AlpacaEval/IFEval/MT-Bench性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.11691",
+      "identity_tokens": [
+        "arXiv:2407.11691"
+      ],
+      "title": "VLMEvalKit: An Open-Source ToolKit for Evaluating Large Multi-Modality Models",
+      "reason": "large multimodality modelの評価toolkitとbenchmark/leaderboardの再現性が主目的。distributed inferenceを評価処理として実装するが、推論サービング性能の最適化自体を研究対象としていない。",
+      "source_url": "https://arxiv.org/abs/2407.11691",
+      "body_check": "abstract_screen_only: arXiv一次abstractで多数のmultimodal model/benchmarkを統一interfaceで評価し、data preparation・distributed inference・post-processing・metricsを自動化するevaluation toolkitが主貢献と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.03356",
+      "identity_tokens": [
+        "arXiv:2311.03356"
+      ],
+      "title": "GLaMM: Pixel Grounding Large Multimodal Model",
+      "reason": "自然言語応答とpixel-level segmentation maskを統合するgrounded multimodal model、GranD dataset、視覚言語task品質が主題であり、推論runtimeやserving効率を主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2311.03356",
+      "body_check": "abstract_screen_only: 一次abstractでgrounded conversation generation、segmentation masks、GranD datasetとdownstream vision-language taskが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1273496.1273501",
+      "identity_tokens": [
+        "DOI:10.1145/1273496.1273501"
+      ],
+      "title": "Scalable training of L1-regularized log-linear models",
+      "reason": "L1正則化log-linear modelを大規模学習するOWL-QN最適化法が主題で、millions of parametersのtraining optimizationを扱う。LLM推論システムの最終適用ではない。",
+      "source_url": "https://doi.org/10.1145/1273496.1273501",
+      "body_check": "abstract_screen_only: ACM一次abstractでL1-regularized log-likelihoodを効率的に学習するOrthant-Wise Limited-memory Quasi-Newton法が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1801.07736",
+      "identity_tokens": [
+        "arXiv:1801.07736"
+      ],
+      "title": "MaskGAN: Better Text Generation via Filling in the ______",
+      "reason": "actor-critic conditional GANで欠損textを補完し、maximum-likelihood language modelよりsample qualityを改善する生成学習手法。推論サービングや推論効率を目的としない。",
+      "source_url": "https://arxiv.org/abs/1801.07736",
+      "body_check": "abstract_screen_only: arXiv一次abstractでGAN/actor-critic trainingとconditional/unconditional text sample quality改善が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-06T23:01:10+09:00",
+      "last_checked_at": "2026-10-06T23:01:10+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "worklist_rank": 11
+    }
+  ]
+}
