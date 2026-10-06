@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r143-screen-01-part-01-d34f7c2277ad",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19901",
+      "identity_tokens": [
+        "arXiv:2606.19901"
+      ],
+      "title": "Linear Recurrent Unit with Semantic Modulation for Image Super-Resolution",
+      "reason": "Primary full text is an LRU/semantic-modulation model for single-image super-resolution. Its efficiency and memory results concern image restoration, not language-model inference; the linked LRU title alone does not establish a language-model contribution.",
+      "source_url": "https://arxiv.org/abs/2606.19901",
+      "first_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "last_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20374",
+      "identity_tokens": [
+        "arXiv:2606.20374"
+      ],
+      "title": "ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters",
+      "reason": "Primary full text describes ARGUS as a training-cluster tracing/diagnosis system and says inference-serving generalization is future work. Its contribution is observability, not an inference/serving improvement.",
+      "source_url": "https://arxiv.org/abs/2606.20374",
+      "first_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "last_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20419",
+      "identity_tokens": [
+        "arXiv:2606.20419"
+      ],
+      "title": "Spectral Query-Key Product Weight Steering for Training-Free VLM Hallucination Mitigation",
+      "reason": "Primary text edits VLM query-key weights to reduce hallucination while leaving architecture and inference unchanged; it explicitly reports zero inference-cost change, making this a quality intervention rather than an efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2606.20419",
+      "first_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "last_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.media.2026.104157",
+      "identity_tokens": [
+        "DOI:10.1016/j.media.2026.104157"
+      ],
+      "title": "Reconstructing shared visual experiences from human brain activity across individuals",
+      "reason": "The DOI publisher page could not be fetched. The source record describes cross-person fMRI reconstruction, but its nonempty linked lineage requires full-text verification before exclusion.",
+      "source_url": "https://doi.org/10.1016/j.media.2026.104157",
+      "first_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "last_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19051",
+      "identity_tokens": [
+        "arXiv:2606.19051"
+      ],
+      "title": "Which Sections of a Research Paper Best Reveal Its Research Methods? Evidence from Library and Information Science",
+      "reason": "Primary arXiv abstract identifies the task as classifying research-method sections in Library and Information Science articles; it contains no LLM inference, serving, or model-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2606.19051",
+      "first_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "last_checked_at": "2026-10-06T20:14:02.704173+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    }
+  ]
+}
