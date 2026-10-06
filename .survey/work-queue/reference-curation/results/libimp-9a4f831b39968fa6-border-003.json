@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a4f831b39968fa6-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.18191",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.18191",
+    "identity_tokens": [
+      "arXiv:2511.18191"
+    ],
+    "reason": "Decoding acceleration is concrete but applies to time-series models rather than LLM serving.",
+    "first_checked_at": "2026-10-06T07:30:23+00:00",
+    "last_checked_at": "2026-10-06T07:30:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating Time Series Foundation Models with Speculative Decoding"
+  },
+  "processed_at": "2026-10-06T07:30:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a4f831b3996",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

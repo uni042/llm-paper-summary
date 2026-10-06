@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75fb124dbed99c7d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2111.15263",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2111.15263",
+    "identity_tokens": [
+      "arXiv:2111.15263"
+    ],
+    "reason": "Title and abstract identify a task/domain-specific application or general analysis without a concrete LLM/VLM inference-efficiency method or actionable link to the cited inference lineage.",
+    "first_checked_at": "2026-10-06T07:30:22+00:00",
+    "last_checked_at": "2026-10-06T07:30:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+    ],
+    "title": "Multi-modal Text Recognition Networks: Interactive Enhancements between Visual and Semantic Features"
+  },
+  "processed_at": "2026-10-06T07:30:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75fb124dbed9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
