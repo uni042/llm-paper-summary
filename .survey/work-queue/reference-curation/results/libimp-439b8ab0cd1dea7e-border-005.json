@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-439b8ab0cd1dea7e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.04979",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.04979",
+    "identity_tokens": [
+      "arXiv:2603.04979"
+    ],
+    "reason": "RISC-V microscaling kernels show hardware throughput gains, but no LLM/model-level workload or end-to-end serving evaluation is demonstrated.",
+    "first_checked_at": "2026-10-06T06:53:56+00:00",
+    "last_checked_at": "2026-10-06T06:53:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Vmxdotp: A RISC-V Vector ISA Extension for Efficient Microscaling (MX) Format Acceleration"
+  },
+  "processed_at": "2026-10-06T06:53:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-439b8ab0cd1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

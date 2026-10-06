@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T06:50:20+00:00",
-  "record_count": 2383,
+  "updated_at": "2026-10-06T06:53:59+00:00",
+  "record_count": 2396,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -36694,6 +36694,201 @@
       ],
       "borderline_recheck_count": 0,
       "title": "SparseCol: A 1320 BTOPS/W Precision-Scalable NPU Exploiting Training-Free Structured Bit-Level Sparsity and Dynamic Dataflow"
+    },
+    "DOI:10.1145/3796723": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3796723",
+      "identity_tokens": [
+        "DOI:10.1145/3796723"
+      ],
+      "reason": "Analog in-memory FPGA AI acceleration may bear on inference hardware, but the primary article was inaccessible and LLM workload relevance is unknown.",
+      "first_checked_at": "2026-10-06T06:53:54+00:00",
+      "last_checked_at": "2026-10-06T06:53:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Azure-Lily: An FPGA Architecture with Analog IMC Engines for Efficient AI"
+    },
+    "arXiv:2602.12143": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12143",
+      "identity_tokens": [
+        "arXiv:2602.12143"
+      ],
+      "reason": "STAR predicts large-model performance using statistical/agentic reasoning; it is a model-selection/prediction study, not inference optimization.",
+      "first_checked_at": "2026-10-06T06:53:54+00:00",
+      "last_checked_at": "2026-10-06T06:53:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "STAR : Bridging Statistical and Agentic Reasoning for Large Model Performance Prediction"
+    },
+    "arXiv:2603.26984": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.26984",
+      "identity_tokens": [
+        "arXiv:2603.26984"
+      ],
+      "reason": "Robustness defense is a plausible VLM inference lineage, but primary full text could not be retrieved to establish the method’s inference cost or applicability.",
+      "first_checked_at": "2026-10-06T06:53:55+00:00",
+      "last_checked_at": "2026-10-06T06:53:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Provable Energy-Guided Test-Time Defense Boosting Adversarial Robustness of Large Vision-Language Models"
+    },
+    "arXiv:2603.25319": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25319",
+      "identity_tokens": [
+        "arXiv:2603.25319"
+      ],
+      "reason": "Multi-reference image generation addresses long visual context, but is a generative data/model capability paper without a direct inference-efficiency result.",
+      "first_checked_at": "2026-10-06T06:53:55+00:00",
+      "last_checked_at": "2026-10-06T06:53:55+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MACRO: Advancing Multi-Reference Image Generation with Structured Long-Context Data"
+    },
+    "DOI:10.62051/ijcsit.v8n3.11": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.62051/ijcsit.v8n3.11",
+      "identity_tokens": [
+        "DOI:10.62051/ijcsit.v8n3.11"
+      ],
+      "reason": "Review of neural-network compression is broad and does not establish a concrete LLM or transformer inference method.",
+      "first_checked_at": "2026-10-06T06:53:56+00:00",
+      "last_checked_at": "2026-10-06T06:53:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review of Joint Optimization Methods for Neural Network Compression"
+    },
+    "arXiv:2603.04979": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04979",
+      "identity_tokens": [
+        "arXiv:2603.04979"
+      ],
+      "reason": "RISC-V microscaling kernels show hardware throughput gains, but no LLM/model-level workload or end-to-end serving evaluation is demonstrated.",
+      "first_checked_at": "2026-10-06T06:53:56+00:00",
+      "last_checked_at": "2026-10-06T06:53:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vmxdotp: A RISC-V Vector ISA Extension for Efficient Microscaling (MX) Format Acceleration"
+    },
+    "arXiv:2604.07350": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07350",
+      "identity_tokens": [
+        "arXiv:2604.07350"
+      ],
+      "reason": "Spatial test-time memory is for 3D reconstruction; despite an inference-time memory mechanism, the target is not LLM/VLM inference and no direct lineage connection is established.",
+      "first_checked_at": "2026-10-06T06:53:57+00:00",
+      "last_checked_at": "2026-10-06T06:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast Spatial Memory with Elastic Test-Time Training"
+    },
+    "DOI:10.1109/jssc.2025.3646072": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2025.3646072",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2025.3646072"
+      ],
+      "reason": "The SRAM digital-CIM article is directly about efficient INT8/FP16 AI inference hardware, but primary full text was not retrieved, so LLM applicability cannot be assessed.",
+      "first_checked_at": "2026-10-06T06:53:57+00:00",
+      "last_checked_at": "2026-10-06T06:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A 3 nm FinFET 125 TOPS/W-29 TFLOPS/W, 90 TOPS/mm2-17 TFLOPS/mm2 SRAM-Based INT8, and FP16 Digital-CIM Compiler With Support for Multi-Weight Update/Cycle"
+    },
+    "arXiv:2603.29194": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.29194",
+      "identity_tokens": [
+        "arXiv:2603.29194"
+      ],
+      "reason": "The paper studies agent memory retention and bounded context, but its central contribution is memory architecture/quality rather than a concrete LLM inference optimization, and the abstract’s claims need cautious treatment.",
+      "first_checked_at": "2026-10-06T06:53:57+00:00",
+      "last_checked_at": "2026-10-06T06:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Layered Memory Architectures for LLM Agents: An Experimental Evaluation of Long-Term Context Retention"
+    },
+    "arXiv:2603.29616": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.29616",
+      "identity_tokens": [
+        "arXiv:2603.29616"
+      ],
+      "reason": "This is an evaluation critique/benchmarking study of video understanding rather than an inference improvement; retain only as a weak evaluation-lineage candidate.",
+      "first_checked_at": "2026-10-06T06:53:58+00:00",
+      "last_checked_at": "2026-10-06T06:53:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Video-Oasis: Rethinking Evaluation of Video Understanding"
+    },
+    "arXiv:2601.20742": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20742",
+      "identity_tokens": [
+        "arXiv:2601.20742"
+      ],
+      "reason": "The paper surveys visual coding/token technology broadly; visual token compression may be adjacent, but no concrete LLM inference contribution is established.",
+      "first_checked_at": "2026-10-06T06:53:58+00:00",
+      "last_checked_at": "2026-10-06T06:53:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compression Tells Intelligence: Visual Coding, Visual Token Technology, and the Unification"
+    },
+    "arXiv:2601.20856": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20856",
+      "identity_tokens": [
+        "arXiv:2601.20856"
+      ],
+      "reason": "SokoBench evaluates long-horizon reasoning/planning ability rather than improving inference.",
+      "first_checked_at": "2026-10-06T06:53:58+00:00",
+      "last_checked_at": "2026-10-06T06:53:58+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SokoBench: Evaluating Long-Horizon Planning and Reasoning in Large Language Models"
+    },
+    "DOI:10.3390/electronics15051052": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15051052",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15051052"
+      ],
+      "reason": "FPGA heterogeneous inference platforms are directly relevant to LLM inference energy, but primary text could not be fetched to verify workloads and measurements.",
+      "first_checked_at": "2026-10-06T06:53:59+00:00",
+      "last_checked_at": "2026-10-06T06:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reducing Energy Footprint of LLM Inference Through FPGA-Based Heterogeneous Computing Platforms"
     }
   }
 }

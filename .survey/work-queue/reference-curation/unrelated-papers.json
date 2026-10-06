@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T06:50:20+00:00",
-  "record_count": 7218,
+  "updated_at": "2026-10-06T06:54:00+00:00",
+  "record_count": 7238,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -104046,6 +104046,286 @@
         "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
       ],
       "title": "ViTexQA: A Multi-Frame Temporal Perception Dataset for Video Text Question Answering"
+    },
+    "arXiv:2602.08693": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08693",
+      "identity_tokens": [
+        "arXiv:2602.08693"
+      ],
+      "reason": "Cognition-alignment claims concern behavioral properties of language models, not inference efficiency.",
+      "first_checked_at": "2026-10-06T06:53:54+00:00",
+      "last_checked_at": "2026-10-06T06:53:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Reasoning aligns language models to human cognition"
+    },
+    "arXiv:2602.06033": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06033",
+      "identity_tokens": [
+        "arXiv:2602.06033"
+      ],
+      "reason": "Interactive physics learning for VLMs evaluates generalization/capability, not inference cost or efficiency.",
+      "first_checked_at": "2026-10-06T06:53:54+00:00",
+      "last_checked_at": "2026-10-06T06:53:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Can vision language models learn intuitive physics from interaction?"
+    },
+    "arXiv:2602.01677": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01677",
+      "identity_tokens": [
+        "arXiv:2602.01677"
+      ],
+      "reason": "SMTrack is a visual tracking temporal model, not LLM inference.",
+      "first_checked_at": "2026-10-06T06:53:54+00:00",
+      "last_checked_at": "2026-10-06T06:53:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "SMTrack: State-Aware Mamba for Efficient Temporal Modeling in Visual Tracking"
+    },
+    "DOI:10.1038/s41746-026-02359-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41746-026-02359-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41746-026-02359-1"
+      ],
+      "reason": "Histopathology malignancy prediction is an application-specific vision model, not LLM inference optimization.",
+      "first_checked_at": "2026-10-06T06:53:55+00:00",
+      "last_checked_at": "2026-10-06T06:53:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Deep learning for malignancy and tumor origin prediction using cytology or histopathology whole slide images"
+    },
+    "DOI:10.1007/s00530-025-02126-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-025-02126-4",
+      "identity_tokens": [
+        "DOI:10.1007/s00530-025-02126-4"
+      ],
+      "reason": "Crop-disease feature fusion using Nyström attention is not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T06:53:55+00:00",
+      "last_checked_at": "2026-10-06T06:53:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "KonvLiNA: integrating Kolmogorov-Arnold network with linear Nyström attention for feature fusion in crop disease detection"
+    },
+    "arXiv:2512.19528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.19528",
+      "identity_tokens": [
+        "arXiv:2512.19528"
+      ],
+      "reason": "Soccer scene analysis uses a multimodal transformer but does not involve LLM inference or efficiency.",
+      "first_checked_at": "2026-10-06T06:53:55+00:00",
+      "last_checked_at": "2026-10-06T06:53:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Multi-Modal Soccer Scene Analysis with Masked Pre-Training"
+    },
+    "arXiv:2603.21436": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21436",
+      "identity_tokens": [
+        "arXiv:2603.21436"
+      ],
+      "reason": "Streaming 3D reconstruction maintains geometry across video but is not language-model inference or a relevant model-serving method.",
+      "first_checked_at": "2026-10-06T06:53:56+00:00",
+      "last_checked_at": "2026-10-06T06:53:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "PAS3R: Pose-Adaptive Streaming 3D Reconstruction for Long Video Sequences"
+    },
+    "arXiv:2604.21354": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21354",
+      "identity_tokens": [
+        "arXiv:2604.21354"
+      ],
+      "reason": "Travel-planning task decomposition; no inference efficiency or existing model-inference technique.",
+      "first_checked_at": "2026-10-06T06:53:56+00:00",
+      "last_checked_at": "2026-10-06T06:53:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Decoupled Travel Planning with Behavior Forest"
+    },
+    "arXiv:2604.20333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20333",
+      "identity_tokens": [
+        "arXiv:2604.20333"
+      ],
+      "reason": "Kernel associative-memory compression is not LLM quantization or inference.",
+      "first_checked_at": "2026-10-06T06:53:56+00:00",
+      "last_checked_at": "2026-10-06T06:53:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "Quantization robustness from dense representations of sparse functions in high-capacity kernel associative memory"
+    },
+    "DOI:10.1145/3770854.3780202": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770854.3780202",
+      "identity_tokens": [
+        "DOI:10.1145/3770854.3780202"
+      ],
+      "reason": "The proposal targets robustness of multi-agent coordination, with no direct inference cost or model-serving improvement.",
+      "first_checked_at": "2026-10-06T06:53:56+00:00",
+      "last_checked_at": "2026-10-06T06:53:56+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "Robust LLM-based Multi-Agent System with Action Negotiation and Sharing Redundancy Enhancement"
+    },
+    "arXiv:2604.17397": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17397",
+      "identity_tokens": [
+        "arXiv:2604.17397"
+      ],
+      "reason": "Speculative decoding is applied to autoregressive video diffusion, not language-model inference.",
+      "first_checked_at": "2026-10-06T06:53:57+00:00",
+      "last_checked_at": "2026-10-06T06:53:57+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "title": "Speculative Decoding for Autoregressive Video Generation"
+    },
+    "DOI:10.1038/s41746-026-02541-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41746-026-02541-5",
+      "identity_tokens": [
+        "DOI:10.1038/s41746-026-02541-5"
+      ],
+      "reason": "Clinical coding deployment and coding accuracy are outside inference optimization scope.",
+      "first_checked_at": "2026-10-06T06:53:57+00:00",
+      "last_checked_at": "2026-10-06T06:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Evaluating real-world deployment of an HL7-CDA-aligned LLM for ICD-10-CM coding"
+    },
+    "DOI:10.1109/tvt.2025.3622754": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tvt.2025.3622754",
+      "identity_tokens": [
+        "DOI:10.1109/tvt.2025.3622754"
+      ],
+      "reason": "Bidirectional semantic communication compression is not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T06:53:58+00:00",
+      "last_checked_at": "2026-10-06T06:53:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "BidDeepSC-1.58b: 1.58-Bit Bidirectional Slimmable Semantic Communication System"
+    },
+    "DOI:10.1109/tbdata.2025.3618472": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tbdata.2025.3618472",
+      "identity_tokens": [
+        "DOI:10.1109/tbdata.2025.3618472"
+      ],
+      "reason": "Nyström sampling for generic kernel approximation is not a transformer/LLM attention or inference method.",
+      "first_checked_at": "2026-10-06T06:53:58+00:00",
+      "last_checked_at": "2026-10-06T06:53:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Two-Step Nyström Sampling for Large-Scale Kernel Approximation"
+    },
+    "DOI:10.1109/tcsi.2025.3609633": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsi.2025.3609633",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2025.3609633"
+      ],
+      "reason": "LSTM accelerator for LiteRT is mobile recurrent-model hardware, not a demonstrated LLM inference technique.",
+      "first_checked_at": "2026-10-06T06:53:59+00:00",
+      "last_checked_at": "2026-10-06T06:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "LSTM Hardware Inference Accelerator for LiteRT"
+    },
+    "arXiv:2601.22400": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22400",
+      "identity_tokens": [
+        "arXiv:2601.22400"
+      ],
+      "reason": "Spectral filtering for complex dynamical systems has no LLM inference connection.",
+      "first_checked_at": "2026-10-06T06:53:59+00:00",
+      "last_checked_at": "2026-10-06T06:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Spectral Filtering for Complex Linear Dynamical Systems"
+    },
+    "DOI:10.1016/j.knosys.2026.115674": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115674",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115674"
+      ],
+      "reason": "Semi-supervised community detection is outside LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T06:53:59+00:00",
+      "last_checked_at": "2026-10-06T06:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "DiMAE: A state-space modeling framework for semi-supervised community detection via geometry-regularized similarity diffusion"
+    },
+    "arXiv:2603.19253": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19253",
+      "identity_tokens": [
+        "arXiv:2603.19253"
+      ],
+      "reason": "LLM argument classification benchmarks model quality, not inference cost or serving.",
+      "first_checked_at": "2026-10-06T06:53:59+00:00",
+      "last_checked_at": "2026-10-06T06:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "A comprehensive study of LLM-based argument classification: from Llama through DeepSeek to GPT-5.2"
+    },
+    "arXiv:2602.19131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19131",
+      "identity_tokens": [
+        "arXiv:2602.19131"
+      ],
+      "reason": "Test-time causal structure learning is a domain-specific causal-discovery method, not LLM inference.",
+      "first_checked_at": "2026-10-06T06:53:59+00:00",
+      "last_checked_at": "2026-10-06T06:53:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Test-Time Learning of Causal Structure from Interventional Data"
+    },
+    "arXiv:2602.16811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16811",
+      "identity_tokens": [
+        "arXiv:2602.16811"
+      ],
+      "reason": "Greek QA evaluation is a language-model benchmark, not an inference optimization.",
+      "first_checked_at": "2026-10-06T06:54:00+00:00",
+      "last_checked_at": "2026-10-06T06:54:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Evaluating Monolingual and Multilingual Large Language Models for Greek Question Answering: The DemosQA Benchmark"
     }
   }
 }
