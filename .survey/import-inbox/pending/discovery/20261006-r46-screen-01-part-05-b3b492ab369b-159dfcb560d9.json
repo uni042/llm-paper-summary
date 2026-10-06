@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r46-screen-01-part-05-b3b492ab369b",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30215",
+      "identity_tokens": [
+        "arXiv:2605.30215"
+      ],
+      "title": "Déjà View: Looping Transformers for Multi-View 3D Reconstruction",
+      "reason": "Déjà View applies a looped transformer to multi-view 3D reconstruction and studies parameter-efficient recurrent depth. Limitations say recurrence does not extrapolate beyond trained loop-step range and channels diverge past it. Related to looped computation, but not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2605.30215",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25604",
+      "identity_tokens": [
+        "arXiv:2605.25604"
+      ],
+      "title": "DVAO: Dynamic Variance-adaptive Advantage Optimization for Multi-reward Reinforcement Learning",
+      "reason": "DVAO estimates reward variance and adapts GRPO advantage weights for multi-reward RL; experiments are training-side on 8 H20 GPUs. Limitations discuss dependence on group variance estimates. It does not target inference cost or serving; relation to efficient reasoning is weak.",
+      "source_url": "https://arxiv.org/abs/2605.25604",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10207",
+      "identity_tokens": [
+        "arXiv:2605.10207"
+      ],
+      "title": "LASAR: Latent Adaptive Semantic Aligned Reasoning for Generative Recommendation",
+      "reason": "LASAR uses latent semantic-aligned reasoning and adaptive latent-step allocation for generative recommendation; experiments use Qwen3-based models on three datasets. Its limitation notes sequential, hard-to-parallelize latent feedback; general LLM inference transfer is unestablished.",
+      "source_url": "https://arxiv.org/abs/2605.10207",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06510",
+      "identity_tokens": [
+        "arXiv:2605.06510"
+      ],
+      "title": "Is One Layer Enough? Understanding Inference Dynamics in Tabular Foundation Models",
+      "reason": "Tabular foundation-model inference dynamics, distinct from LLM/VLM inference; no serving improvement established.",
+      "source_url": "https://arxiv.org/abs/2605.06510",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08245",
+      "identity_tokens": [
+        "arXiv:2605.08245"
+      ],
+      "title": "When Language Overwrites Vision: Over-Alignment and Geometric Debiasing in Vision-Language Models",
+      "reason": "VLM hallucination/geometric debiasing addresses representation accuracy rather than inference cost.",
+      "source_url": "https://arxiv.org/abs/2605.08245",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ]
+    }
+  ]
+}
