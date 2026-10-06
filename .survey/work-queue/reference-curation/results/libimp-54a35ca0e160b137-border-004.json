@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a35ca0e160b137-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.14293",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.14293",
+    "identity_tokens": [
+      "arXiv:2602.14293"
+    ],
+    "reason": "KernelBlaster optimizes CUDA kernels and reports speedups on general benchmark kernels, but the paper does not validate LLM inference operators or end-to-end serving; follow-up relevance is plausible but indirect.",
+    "first_checked_at": "2026-10-06T04:59:43+00:00",
+    "last_checked_at": "2026-10-06T04:59:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "KernelBlaster: Continual Cross-Task CUDA Optimization via Memory-Augmented In-Context Reinforcement Learning"
+  },
+  "processed_at": "2026-10-06T04:59:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a35ca0e160",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T04:49:46+00:00",
-  "record_count": 7011,
+  "updated_at": "2026-10-06T04:59:48+00:00",
+  "record_count": 7027,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -101141,6 +101141,231 @@
         "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
       ],
       "title": "Stabilizing Reinforcement Learning with LLMs: Formulation and Practices"
+    },
+    "DOI:10.1007/s10618-021-00745-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10618-021-00745-9",
+      "identity_tokens": [
+        "DOI:10.1007/s10618-021-00745-9"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:41+00:00",
+      "last_checked_at": "2026-10-06T04:59:41+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Time series extrinsic regression"
+    },
+    "DOI:10.1109/hpca53966.2022.00067": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca53966.2022.00067",
+      "identity_tokens": [
+        "DOI:10.1109/hpca53966.2022.00067"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:42+00:00",
+      "last_checked_at": "2026-10-06T04:59:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "FAST: DNN Training Under Variable Precision Block Floating Point with Stochastic Rounding"
+    },
+    "arXiv:2603.12277": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12277",
+      "identity_tokens": [
+        "arXiv:2603.12277"
+      ],
+      "reason": "The primary paper studies prompt-injection security and role confusion; it does not propose an inference cache, eviction strategy, or serving-performance optimization.",
+      "first_checked_at": "2026-10-06T04:59:42+00:00",
+      "last_checked_at": "2026-10-06T04:59:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.14872-agentkv-phase-aware-kv-eviction-agentic-llms.md"
+      ],
+      "title": "Prompt Injection as Role Confusion"
+    },
+    "arXiv:2512.23447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23447",
+      "identity_tokens": [
+        "arXiv:2512.23447"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:42+00:00",
+      "last_checked_at": "2026-10-06T04:59:42+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "title": "Coupling Experts and Routers in Mixture-of-Experts via an Auxiliary Loss"
+    },
+    "arXiv:2511.20030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20030",
+      "identity_tokens": [
+        "arXiv:2511.20030"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:43+00:00",
+      "last_checked_at": "2026-10-06T04:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Cross-Contrastive Clustering for Multimodal Attributed Graphs with Dual Graph Filtering"
+    },
+    "arXiv:2512.24762": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24762",
+      "identity_tokens": [
+        "arXiv:2512.24762"
+      ],
+      "reason": "The full technical report concerns generative recommendation modeling/benchmarking; searches and methods/results show no KV-cache, LLM-serving, inference-efficiency, or cache-offload contribution relevant to the linked lineage.",
+      "first_checked_at": "2026-10-06T04:59:44+00:00",
+      "last_checked_at": "2026-10-06T04:59:44+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md"
+      ],
+      "title": "OpenOneRec Technical Report"
+    },
+    "DOI:10.21203/rs.3.rs-8770196/v1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21203/rs.3.rs-8770196/v1",
+      "identity_tokens": [
+        "DOI:10.21203/rs.3.rs-8770196/v1"
+      ],
+      "reason": "The primary paper is a meteorological/temporal fusion model for traffic-flow forecasting; its evaluation concerns traffic prediction accuracy and contains no LLM inference or KV-cache method.",
+      "first_checked_at": "2026-10-06T04:59:44+00:00",
+      "last_checked_at": "2026-10-06T04:59:44+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "title": "MFTFormer: Meteorological-Frequency-Temporal Transformer with Block-Aligned Fusion for Traffic Flow Prediction"
+    },
+    "arXiv:2511.10720": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10720",
+      "identity_tokens": [
+        "arXiv:2511.10720"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:45+00:00",
+      "last_checked_at": "2026-10-06T04:59:45+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+      ],
+      "title": "PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization"
+    },
+    "arXiv:2111.05193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.05193",
+      "identity_tokens": [
+        "arXiv:2111.05193"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:45+00:00",
+      "last_checked_at": "2026-10-06T04:59:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "A Survey on Green Deep Learning"
+    },
+    "arXiv:2602.17951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17951",
+      "identity_tokens": [
+        "arXiv:2602.17951"
+      ],
+      "reason": "ROCKET improves spatial alignment/training for vision-language-action models; its contribution and evaluation concern VLA representation/performance rather than inference compute, memory, or serving.",
+      "first_checked_at": "2026-10-06T04:59:46+00:00",
+      "last_checked_at": "2026-10-06T04:59:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "ROCKET: Residual-Oriented Multi-Layer Alignment for Spatially-Aware Vision-Language-Action Models"
+    },
+    "DOI:10.1038/s41467-025-66566-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-025-66566-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-025-66566-2"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:46+00:00",
+      "last_checked_at": "2026-10-06T04:59:46+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md"
+      ],
+      "title": "Monolithic electro-optic platform on silicon with bandwidth of 100 GHz and beyond"
+    },
+    "DOI:10.1016/j.inffus.2025.103991": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103991",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.103991"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:46+00:00",
+      "last_checked_at": "2026-10-06T04:59:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Multimodal recommender systems: A survey of representation, modeling, and optimization"
+    },
+    "arXiv:2603.20527": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20527",
+      "identity_tokens": [
+        "arXiv:2603.20527"
+      ],
+      "reason": "RMNP is an optimizer/preconditioner evaluated on model training and optimization; it reports no inference-time or KV-cache improvement, so the linked inference lineage is not supported by the primary text.",
+      "first_checked_at": "2026-10-06T04:59:46+00:00",
+      "last_checked_at": "2026-10-06T04:59:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "RMNP: Row-Momentum Normalized Preconditioning for Scalable Matrix-Based Optimization"
+    },
+    "arXiv:2305.14318": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14318",
+      "identity_tokens": [
+        "arXiv:2305.14318"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:47+00:00",
+      "last_checked_at": "2026-10-06T04:59:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ],
+      "title": "CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models"
+    },
+    "arXiv:2512.01643": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.01643",
+      "identity_tokens": [
+        "arXiv:2512.01643"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:48+00:00",
+      "last_checked_at": "2026-10-06T04:59:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "ViT3: Unlocking Test-Time Training in Vision"
+    },
+    "arXiv:2502.12893": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12893",
+      "identity_tokens": [
+        "arXiv:2502.12893"
+      ],
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "first_checked_at": "2026-10-06T04:59:48+00:00",
+      "last_checked_at": "2026-10-06T04:59:48+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "H-CoT: Hijacking the Chain-of-Thought Safety Reasoning Mechanism to Jailbreak Large Reasoning Models, Including OpenAI o1/o3, DeepSeek-R1, and Gemini 2.0 Flash Thinking"
     }
   }
 }

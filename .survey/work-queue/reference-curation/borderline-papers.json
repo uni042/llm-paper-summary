@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T04:49:45+00:00",
-  "record_count": 2265,
+  "updated_at": "2026-10-06T04:59:47+00:00",
+  "record_count": 2276,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -34914,6 +34914,172 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems"
+    },
+    "arXiv:2512.01939": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01939",
+      "identity_tokens": [
+        "arXiv:2512.01939"
+      ],
+      "reason": "This is an empirical study of agent framework/developer practices; it reports workflow latency observations but proposes no concrete serving optimization method or validated cost reduction.",
+      "first_checked_at": "2026-10-06T04:59:41+00:00",
+      "last_checked_at": "2026-10-06T04:59:41+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Empirical Study of Agent Developer Practices in AI Agent Frameworks"
+    },
+    "arXiv:2604.27707": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.27707",
+      "identity_tokens": [
+        "arXiv:2604.27707"
+      ],
+      "reason": "This is a conceptual/theoretical agent-memory analysis with conditional generalization claims; it explicitly lacks compute-matched frontier-model validation and does not demonstrate inference-efficiency gains.",
+      "first_checked_at": "2026-10-06T04:59:43+00:00",
+      "last_checked_at": "2026-10-06T04:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Contextual Agentic Memory is a Memo, Not True Memory"
+    },
+    "arXiv:2603.10085": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10085",
+      "identity_tokens": [
+        "arXiv:2603.10085"
+      ],
+      "reason": "KernelSkill reports GPU kernel optimization results on generic KernelBench levels, not demonstrated LLM inference kernels or serving workloads; relevance is exploratory and requires direct serving validation.",
+      "first_checked_at": "2026-10-06T04:59:43+00:00",
+      "last_checked_at": "2026-10-06T04:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KernelSkill: A Multi-Agent Framework for GPU Kernel Optimization"
+    },
+    "arXiv:2602.14293": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14293",
+      "identity_tokens": [
+        "arXiv:2602.14293"
+      ],
+      "reason": "KernelBlaster optimizes CUDA kernels and reports speedups on general benchmark kernels, but the paper does not validate LLM inference operators or end-to-end serving; follow-up relevance is plausible but indirect.",
+      "first_checked_at": "2026-10-06T04:59:43+00:00",
+      "last_checked_at": "2026-10-06T04:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KernelBlaster: Continual Cross-Task CUDA Optimization via Memory-Augmented In-Context Reinforcement Learning"
+    },
+    "arXiv:2601.00583": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.00583",
+      "identity_tokens": [
+        "arXiv:2601.00583"
+      ],
+      "reason": "Primary text evaluates heterogeneous federated MoE training/resource allocation and convergence, not LLM serving or inference latency; the lineage match is only the broader adaptive-expert theme.",
+      "first_checked_at": "2026-10-06T04:59:44+00:00",
+      "last_checked_at": "2026-10-06T04:59:44+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.23888-siftmoe-similarity-aware-expert-selection.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HFedMoE: Resource-aware Heterogeneous Federated Learning with Mixture-of-Experts"
+    },
+    "arXiv:2604.28138": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.28138",
+      "identity_tokens": [
+        "arXiv:2604.28138"
+      ],
+      "reason": "The runtime reduces/overlaps checkpoint-restore overhead for agent sandboxes, but does not optimize LLM token generation, KV memory, or serving throughput; the relevance is adjacent agent-runtime engineering.",
+      "first_checked_at": "2026-10-06T04:59:44+00:00",
+      "last_checked_at": "2026-10-06T04:59:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes"
+    },
+    "arXiv:2512.04987": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04987",
+      "identity_tokens": [
+        "arXiv:2512.04987"
+      ],
+      "reason": "Nex-N1/NexAU primarily scale agent environment construction and train agent models; benchmark results are capability/quality focused, with no measured inference-cost or serving improvement despite a high-throughput runtime component.",
+      "first_checked_at": "2026-10-06T04:59:44+00:00",
+      "last_checked_at": "2026-10-06T04:59:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Nex-N1: Agentic Models Trained via a Unified Ecosystem for Large-Scale Environment Construction"
+    },
+    "arXiv:2511.12294": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12294",
+      "identity_tokens": [
+        "arXiv:2511.12294"
+      ],
+      "reason": "ProofWright studies agentic formal verification of CUDA correctness; the paper does not report LLM inference performance or a serving optimization, though kernel safety is adjacent to this lineage.",
+      "first_checked_at": "2026-10-06T04:59:45+00:00",
+      "last_checked_at": "2026-10-06T04:59:45+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.24595-model2kernel-safe-cuda-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ProofWright: Towards Agentic Formal Verification of CUDA"
+    },
+    "DOI:10.1109/hpca68181.2026.11408598": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca68181.2026.11408598",
+      "identity_tokens": [
+        "DOI:10.1109/hpca68181.2026.11408598"
+      ],
+      "reason": "The title/DOI indicates directly relevant PIM speculative decoding, but primary full text could not be retrieved for method/results review.",
+      "first_checked_at": "2026-10-06T04:59:45+00:00",
+      "last_checked_at": "2026-10-06T04:59:45+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Draft Sequence Length: Enhancing Speculative Decoding Throughput on PIM-Enabled Systems"
+    },
+    "arXiv:2603.07685": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.07685",
+      "identity_tokens": [
+        "arXiv:2603.07685"
+      ],
+      "reason": "Megatron Core evaluates scalable MoE model training; reported optimizations concern training throughput/memory, and the paper does not establish inference-serving gains despite linked serving lineage.",
+      "first_checked_at": "2026-10-06T04:59:47+00:00",
+      "last_checked_at": "2026-10-06T04:59:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md",
+        "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scalable Training of Mixture-of-Experts Models with Megatron Core"
+    },
+    "arXiv:2511.06090": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.06090",
+      "identity_tokens": [
+        "arXiv:2511.06090"
+      ],
+      "reason": "SWE-fficiency benchmarks code/repository optimization on real workloads; it does not present a concrete LLM inference optimization, though repository-level system optimization could inform future serving work.",
+      "first_checked_at": "2026-10-06T04:59:47+00:00",
+      "last_checked_at": "2026-10-06T04:59:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SWE-fficiency: Can Language Models Optimize Real-World Repositories on Real Workloads?"
     }
   }
 }

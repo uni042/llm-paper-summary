@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a35ca0e160b137-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.24762",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.24762",
+    "identity_tokens": [
+      "arXiv:2512.24762"
+    ],
+    "reason": "The full technical report concerns generative recommendation modeling/benchmarking; searches and methods/results show no KV-cache, LLM-serving, inference-efficiency, or cache-offload contribution relevant to the linked lineage.",
+    "first_checked_at": "2026-10-06T04:59:44+00:00",
+    "last_checked_at": "2026-10-06T04:59:44+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md"
+    ],
+    "title": "OpenOneRec Technical Report"
+  },
+  "processed_at": "2026-10-06T04:59:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a35ca0e160",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
