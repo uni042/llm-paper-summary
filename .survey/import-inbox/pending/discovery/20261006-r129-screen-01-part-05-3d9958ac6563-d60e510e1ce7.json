@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r129-screen-01-part-05-3d9958ac6563",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21817",
+      "identity_tokens": [
+        "arXiv:2505.21817"
+      ],
+      "title": "ALTER: All-in-One Layer Pruning and Temporal Expert Routing for Efficient Diffusion Generation",
+      "reason": "Image-diffusion generation, not language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2505.21817",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20535",
+      "identity_tokens": [
+        "arXiv:2505.20535"
+      ],
+      "title": "Rotary Masked Autoencoders are Versatile Learners",
+      "reason": "Primary abstract studies Rotary Masked Autoencoders for irregular time-series and other modalities, outside LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2505.20535",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.16104",
+      "identity_tokens": [
+        "arXiv:2505.16104"
+      ],
+      "title": "Hierarchical Safety Realignment: Lightweight Restoration of Safety in Pruned Large Vision-Language Models",
+      "reason": "Safety realignment is the goal; no additional inference compute/latency saving is shown, though it is connected to pruning lineage.",
+      "source_url": "https://arxiv.org/abs/2505.16104",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16972",
+      "identity_tokens": [
+        "arXiv:2505.16972"
+      ],
+      "title": "From Tens of Hours to Tens of Thousands: Scaling Back-Translation for Speech Recognition",
+      "reason": "Primary abstract scales synthetic speech data for ASR training/pretraining, not LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.16972",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03714",
+      "identity_tokens": [
+        "arXiv:2504.03714"
+      ],
+      "title": "Breach in the Shield: Unveiling the Vulnerabilities of Large Language Models",
+      "reason": "Robustness/security study; no inference speed, memory or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2504.03714",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ]
+    }
+  ]
+}
