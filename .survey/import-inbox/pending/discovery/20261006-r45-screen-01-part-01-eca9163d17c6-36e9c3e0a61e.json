@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r45-screen-01-part-01-eca9163d17c6",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07276",
+      "identity_tokens": [
+        "arXiv:2602.07276"
+      ],
+      "title": "Steer2Adapt: Dynamically Composing Steering Vectors Elicits Efficient Adaptation of LLMs",
+      "reason": "Steer2Adapt searches a composition of activation-steering vectors and injects it at inference. The text evaluates task adaptation but does not establish reduced generation compute, memory, or serving latency; optimization/search overhead and adaptation quality need a workload-specific check.",
+      "source_url": "https://arxiv.org/abs/2602.07276",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05085",
+      "identity_tokens": [
+        "arXiv:2602.05085"
+      ],
+      "title": "Locas: Your Models are Principled Initializers of Locally-Supported Parametric Memories",
+      "reason": "Locas attaches locally supported parametric memory for continual learning and reports accuracy/parameter/time tradeoffs for test-time training. It can reduce memory parameters versus some adaptation baselines, but its reported relative times include added adaptation compute and do not show cheaper ordinary LLM serving.",
+      "source_url": "https://arxiv.org/abs/2602.05085",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1108/ecam-08-2025-1273",
+      "identity_tokens": [
+        "DOI:10.1108/ecam-08-2025-1273"
+      ],
+      "title": "Classifying OSHA construction accident reports: leveraging ensemble learning and lightweight large language models (l-LLMs)",
+      "reason": "Construction-accident classification with small encoder models and ensembles is an application benchmark, not a general LLM inference optimization.",
+      "source_url": "https://doi.org/10.1108/ecam-08-2025-1273",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bioengineering13010030",
+      "identity_tokens": [
+        "DOI:10.3390/bioengineering13010030"
+      ],
+      "title": "Accurate Clinical Entity Recognition and Code Mapping of Anatomopathological Reports Using BioClinicalBERT Enhanced by Retrieval-Augmented Generation: A Hybrid Deep Learning Approach",
+      "reason": "Clinical entity extraction and ontology mapping application; no LLM serving optimization.",
+      "source_url": "https://doi.org/10.3390/bioengineering13010030",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-33686-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-33686-0"
+      ],
+      "title": "Boundary-enhanced sparse transformer for generalizable and accurate medical image segmentation",
+      "reason": "Medical-image segmentation transformer, not an LLM inference contribution.",
+      "source_url": "https://doi.org/10.1038/s41598-025-33686-0",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
