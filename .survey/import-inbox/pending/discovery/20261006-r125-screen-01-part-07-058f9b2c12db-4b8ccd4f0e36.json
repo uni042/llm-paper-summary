@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r125-screen-01-part-07-058f9b2c12db",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16811",
+      "identity_tokens": [
+        "arXiv:2505.16811"
+      ],
+      "title": "Semi-Supervised State-Space Model with Dynamic Stacking Filter for Real-World Video Deraining",
+      "reason": "一次要旨のdynamic stacking state-space modelはreal-world video derainingの品質改善手法であり、LLM/言語model inferenceやefficiency measurementを扱わない。",
+      "source_url": "https://arxiv.org/abs/2505.16811",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3641554.3701844",
+      "identity_tokens": [
+        "DOI:10.1145/3641554.3701844"
+      ],
+      "title": "Integrating Small Language Models with Retrieval-Augmented Generation in Computing Education: Key Takeaways, Setup, and Practical Insights",
+      "reason": "ACM DOI一次ページを開けずabstract/full textを取得できなかった。題名はcomputing educationでSLM+RAG integration insightsを扱う実用報告で、LLM inference serving efficiencyが技術貢献か確認できないため、一次根拠欠如を明記してborderlineに残す。",
+      "source_url": "https://doi.org/10.1145/3641554.3701844",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06699",
+      "identity_tokens": [
+        "arXiv:2501.06699"
+      ],
+      "title": "Large Language Models, Knowledge Graphs and Search Engines: A Crossroads for Answering Users' Questions",
+      "reason": "一次要旨はLLM/Knowledge Graph/Search Engineをユーザー情報ニーズに組み合わせるsurvey/taxonomyで、実行系の推論効率改善や測定ではない。",
+      "source_url": "https://arxiv.org/abs/2501.06699",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10735",
+      "identity_tokens": [
+        "arXiv:2410.10735"
+      ],
+      "title": "Embedding Self-Correction as an Inherent Ability in Large Language Models for Enhanced Mathematical Reasoning",
+      "reason": "本文のCoSCは数学LLMのself-correctionをfine-tuningで教え、multi-round inferenceでaccuracyを高める。ZeRO-Infinity training-memory系統との技術的接続や推論コスト削減は確認されず、反復修正は追加推論を要するため対象外。",
+      "source_url": "https://arxiv.org/abs/2410.10735",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.18654",
+      "identity_tokens": [
+        "arXiv:2409.18654"
+      ],
+      "title": "Speech-Mamba: Long-Context Speech Recognition with Selective State Spaces Models",
+      "reason": "本文のSpeech-MambaはTransformerとselective SSMを組み合わせ長い音声列を扱い、near-linear sequence scalingを狙う。Jamba系統に使うMamba/long-context architectureとの接点はあるが対象はspeech recognitionで、LLM servingの性能測定はないためborderline。",
+      "source_url": "https://arxiv.org/abs/2409.18654",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    }
+  ]
+}
