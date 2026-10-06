@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r70-screen-01-part-08-c69c69944ba2",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/473",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/473"
+      ],
+      "title": "Cross-Sensor Domain Generalization for Non-Contact Sleep Staging",
+      "reason": "XSensorSleep addresses cross-sensor sleep staging with RF sensing, outside LLM inference efficiency.",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/473",
+      "first_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "last_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/771",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/771"
+      ],
+      "title": "SAM-GPT: Hilbert Curve Enhanced Mamba for Brain Lesion Segmentation and VLM-based Analysis",
+      "reason": "SAM-GPT applies segmentation priors to VLM medical-image analysis; the abstract reports task accuracy, not inference-cost reduction.",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/771",
+      "first_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "last_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/778",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/778"
+      ],
+      "title": "GroupMIL: Semantic Group Based Multiple Instance Learning for Whole Slide Image Analysing",
+      "reason": "GroupMIL is a whole-slide-image multiple-instance-learning method, outside LLM/VLM inference and serving.",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/778",
+      "first_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "last_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.24963/ijcai.2026/865",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/865"
+      ],
+      "title": "A Survey on Actionable Interpretability in Large Language Models",
+      "reason": "IJCAI一次本文はLLM actionable interpretability surveyでefficiencyをdownstream objectiveの一つに含むが、効率改善を実装・測定する新手法ではない。DuoAttention系統との関係は概観レベルなのでborderline。",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/865",
+      "first_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "last_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frsip.2026.1911510",
+      "identity_tokens": [
+        "DOI:10.3389/frsip.2026.1911510"
+      ],
+      "title": "TF-Mamba-DPHNet: a time-frequency state-space and dual-path interaction framework with hybrid cross-scale feature calibration for speech enhancement",
+      "reason": "TF-Mamba-DPHNet targets speech enhancement, not LLM inference.",
+      "source_url": "https://doi.org/10.3389/frsip.2026.1911510",
+      "first_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "last_checked_at": "2026-10-06T09:22:08.717436+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    }
+  ]
+}
