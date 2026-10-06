@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8ac5347cd62c3a7c-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1145/2451116.2451160",
+  "reason": "CUDA kernelをelastic kernelへ変換してGPU資源割当を細粒度制御し、同時kernel実行のthroughputを改善するGPU runtime基礎研究。LLM専用ではないが、推論kernel共存・GPU schedulingの基盤として関連するためborderline。",
+  "title": "Improving GPGPU concurrency with elastic kernels",
+  "identity_tokens": [
+    "DOI:10.1145/2451116.2451160"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ac5347cd62c",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
