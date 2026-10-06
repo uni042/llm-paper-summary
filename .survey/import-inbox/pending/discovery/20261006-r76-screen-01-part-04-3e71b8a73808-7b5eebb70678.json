@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r76-screen-01-part-04-3e71b8a73808",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14391",
+      "identity_tokens": [
+        "arXiv:2606.14391"
+      ],
+      "title": "Learning to Hear Hesitation: Continual Learning for Disfluency-Aware ASR",
+      "reason": "音声のdisfluency認識の継続学習であり、対象のLLM推論効率ではない。",
+      "source_url": "https://arxiv.org/abs/2606.14391",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.13016",
+      "identity_tokens": [
+        "arXiv:2606.13016"
+      ],
+      "title": "Otters++: A Time-to-first-spike Based Energy Efficient Optical Spiking Transformer",
+      "reason": "一次本文は実デバイス由来の光シナプス減衰をspiking transformerへ適用し、GLUEと合成エネルギー推算を示す。ただしLLMでの評価や実運用LLM serving計測はなく、エネルギー値も回路合成と既報値を組み合わせたモデル推算。ハードウェア効率系譜との接点は弱い。",
+      "source_url": "https://arxiv.org/abs/2606.13016",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11609",
+      "identity_tokens": [
+        "arXiv:2606.11609"
+      ],
+      "title": "Multi-Agent Reasoning with Adaptive Worker Allocation for Stance Detection",
+      "reason": "一次本文ではstance detection向けmulti-agent worker数を難易度適応で割当て、固定多数workerに近い性能をより低い計算費用で達成する。追加workerのtoken費用は線形増加し、レイテンシ測定はなく、単一の分類応用に限られるため一般的serving効率との接続は限定的。",
+      "source_url": "https://arxiv.org/abs/2606.11609",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3097614",
+      "identity_tokens": [
+        "DOI:10.1117/12.3097614"
+      ],
+      "title": "Family-guided multi-expert attachment framework for enhanced class-wise modulation recognition",
+      "reason": "信号変調認識のmulti-expert分類器で、LLM inferenceとの具体的技術接続がない。",
+      "source_url": "https://doi.org/10.1117/12.3097614",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10359",
+      "identity_tokens": [
+        "arXiv:2606.10359"
+      ],
+      "title": "ReflectiChain: Epistemic Grounding in LLM-Driven World Models for Supply Chain Resilience",
+      "reason": "サプライチェーン向けLLM world modelの信頼性/頑健性が対象で、推論効率改善を示さない。",
+      "source_url": "https://arxiv.org/abs/2606.10359",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    }
+  ]
+}
