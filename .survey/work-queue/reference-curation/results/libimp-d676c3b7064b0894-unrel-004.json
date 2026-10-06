@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d676c3b7064b0894-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.22582",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.22582",
+    "identity_tokens": [
+      "arXiv:2601.22582"
+    ],
+    "reason": "MC-GRPO changes small-rollout reinforcement-learning training, not inference.",
+    "first_checked_at": "2026-10-06T06:09:51+00:00",
+    "last_checked_at": "2026-10-06T06:09:51+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "title": "MC-GRPO: Median-Centered Group Relative Policy Optimization for Small-Rollout Reinforcement Learning"
+  },
+  "processed_at": "2026-10-06T06:09:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d676c3b7064b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
