@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r28-screen-01-part-02-f62171e5b95e",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04421",
+      "identity_tokens": [
+        "arXiv:2608.04421"
+      ],
+      "title": "Generative Optimization for Incentivized Advertising with Global Level Constraints",
+      "reason": "incentivized advertisingのreward/engagement optimization。LLM inference servingの改善とは異なる。",
+      "source_url": "https://arxiv.org/abs/2608.04421",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04811",
+      "identity_tokens": [
+        "arXiv:2608.04811"
+      ],
+      "title": "StaticSegFormer: An Efficient High-Performance Semantic Segmentation Based on Static Structured Pruning",
+      "reason": "semantic segmentationの静的structured pruningで、language model/LLM serving対象ではない。",
+      "source_url": "https://arxiv.org/abs/2608.04811",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04933",
+      "identity_tokens": [
+        "arXiv:2608.04933"
+      ],
+      "title": "Mimir: A Neuro-Symbolic Memory System with Dynamic Grounding for Embodied Agents in Interactive Environments",
+      "reason": "embodied environmentでのneuro-symbolic world-state/progress memory。inference compute/serving efficiencyの明示的評価なし。",
+      "source_url": "https://arxiv.org/abs/2608.04933",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3820441.3820459",
+      "identity_tokens": [
+        "DOI:10.1145/3820441.3820459"
+      ],
+      "title": "Integrating AI Clusters into Virtual Private Cloud",
+      "reason": "ACM primary fulltext request returned access denied/403; conference schedule and packet abstract only. GPU/AI cluster networking paperとKV-cache offload lineageの接続を本文で確認できなかった。",
+      "source_url": "https://doi.org/10.1145/3820441.3820459",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14670",
+      "identity_tokens": [
+        "arXiv:2608.14670"
+      ],
+      "title": "ARGUS: Attention-Guided Transformers for Scalable Person Identification Using Wi-Fi Telemetry",
+      "reason": "Wi-Fi telemetryによるperson identification system。LLMやlanguage-model servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2608.14670",
+      "first_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "last_checked_at": "2026-10-06T00:21:20.797907+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
