@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r39-screen-01-part-06-bb2916dbd762",
+  "reference_main_sha": "b05a032087f45ed87d2608bca644099ed8cb0933",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22966",
+      "identity_tokens": [
+        "arXiv:2601.22966"
+      ],
+      "title": "A Unified View of Attention and Residual Sinks: Outlier-Driven Rescaling is Essential for Transformer Training",
+      "reason": "Studies outlier-driven transformer training and quantization robustness, not a low-bit inference method or deployment cost.",
+      "source_url": "https://arxiv.org/abs/2601.22966",
+      "first_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "last_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24827",
+      "identity_tokens": [
+        "arXiv:2604.24827",
+        "DOI:10.48550/arxiv.2604.24827"
+      ],
+      "title": "Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity",
+      "reason": "Estimates black-box parameter counts via factual capacity; no MoE inference/offload/memory-hierarchy optimization.",
+      "source_url": "https://arxiv.org/abs/2604.24827",
+      "first_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "last_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.13898",
+      "identity_tokens": [
+        "arXiv:2512.13898"
+      ],
+      "title": "Let's (not) just put things in Context: Test-Time Training for Long-Context LLMs",
+      "reason": "Test-time training for long-context tasks adds adaptation compute; paper does not establish reduced inference compute, memory, or latency.",
+      "source_url": "https://arxiv.org/abs/2512.13898",
+      "first_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "last_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/EIBDCT69742.2026.11566699",
+      "identity_tokens": [
+        "DOI:10.1109/EIBDCT69742.2026.11566699"
+      ],
+      "title": "A Unified Inference Optimization Framework for Qwen3-VL-2B-Instruct",
+      "reason": "DOI resolver returned Internal Error; searches exposed secondary summaries but not accessible primary full text, so claims could not be verified from the primary source.",
+      "source_url": "https://doi.org/10.1109/EIBDCT69742.2026.11566699",
+      "first_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "last_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07162",
+      "identity_tokens": [
+        "arXiv:2603.07162"
+      ],
+      "title": "Spectral Conditioning of Attention Improves Transformer Performance",
+      "reason": "Spectral conditioning studies transformer performance/training rather than serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2603.07162",
+      "first_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "last_checked_at": "2026-10-06T04:45:33.202320+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
