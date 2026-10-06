@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r87-screen-01-part-04-02ba30d5ac02",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/DSP65409.2025.11075195",
+      "identity_tokens": [
+        "DOI:10.1109/DSP65409.2025.11075195"
+      ],
+      "title": "LRP-QViT: Mixed-Precision Vision Transformer Quantization Using Layer Importance Score",
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "source_url": "https://doi.org/10.1109/DSP65409.2025.11075195",
+      "first_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "last_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/FCCM62733.2025.00041",
+      "identity_tokens": [
+        "DOI:10.1109/FCCM62733.2025.00041"
+      ],
+      "title": "HighWave: Large-Scale High-Bandwidth Wave Simulations on FPGAs",
+      "reason": "FPGA wave simulation for scientific computing, unrelated to language-model inference.",
+      "source_url": "https://doi.org/10.1109/FCCM62733.2025.00041",
+      "first_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "last_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21239",
+      "identity_tokens": [
+        "arXiv:2504.21239"
+      ],
+      "title": "Memorization and Knowledge Injection in Gated LLMs",
+      "reason": "Memorization/knowledge injection analysis in gated LLMs, not an inference optimization method.",
+      "source_url": "https://arxiv.org/abs/2504.21239",
+      "first_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "last_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.17070",
+      "identity_tokens": [
+        "arXiv:2504.17070"
+      ],
+      "title": "MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems",
+      "reason": "Trojan attacks on robot task-planning systems, unrelated to inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2504.17070",
+      "first_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "last_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TC.2024.3517751",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2024.3517751"
+      ],
+      "title": "Hardware Accelerated Vision Transformer via Heterogeneous Architecture Design and Adaptive Dataflow Mapping",
+      "reason": "The abstract suggests a plausible inference-efficiency or existing-paper-lineage connection, but primary full text was not accessible/verified, so the method, evaluation, and limitations cannot be judged.",
+      "source_url": "https://doi.org/10.1109/TC.2024.3517751",
+      "first_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "last_checked_at": "2026-10-06T12:02:31.167172+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    }
+  ]
+}
