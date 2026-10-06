@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r137-screen-01-part-04-a06c57f4fe62",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jsmc.2026.08.003",
+      "identity_tokens": [
+        "DOI:10.1016/j.jsmc.2026.08.003"
+      ],
+      "title": "Sleep Data Repositories in Practice",
+      "reason": "The bibliographic title (“Sleep Data Repositories in Practice”) suggests a task-specific application; linked lineage: state space models / selective SSM / recurrent inference / hardware-aware sequence modeling. The primary DOI page could not be accessed, so an abstract-only scope exclusion would not be evidence-based; retain as borderline until primary abstract/full text is available.",
+      "source_url": "https://doi.org/10.1016/j.jsmc.2026.08.003",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116501",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116501"
+      ],
+      "title": "Driver EEG fatigue recognition based on matrix recovery and vision transformer",
+      "reason": "The bibliographic title (“Driver EEG fatigue recognition based on matrix recovery and vision transformer”) signals a possible connection to inference/architecture efficiency and linked lineage: state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, but the primary DOI URL could not be accessed. The title alone cannot establish a concrete LLM compute, memory, latency, throughput, or serving result; keep borderline pending primary-source review.",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.116501",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133853",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133853"
+      ],
+      "title": "Mamba-enhanced local attention network for remote sensing image super-resolution",
+      "reason": "Primary publisher full-text extract describes MELA for remote-sensing image super-resolution, combining a Mamba cross-scan layer and local window attention. It evaluates image reconstruction on four remote-sensing datasets and states efficiency as a vision-model design goal; no language model or LLM-serving workload is evaluated. The claimed efficiency is specific to image restoration, so this is unrelated to LLM inference efficiency.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.133853",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.135147",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.135147"
+      ],
+      "title": "Beyond probability guided categorization: A subspace projection-aware approach for medical image segmentation",
+      "reason": "The bibliographic title (“Beyond probability guided categorization: A subspace projection-aware approach for medical image segmentation”) suggests a task-specific application; linked lineage: state space models / selective SSM / recurrent inference / hardware-aware sequence modeling. The primary DOI page could not be accessed, so an abstract-only scope exclusion would not be evidence-based; retain as borderline until primary abstract/full text is available.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.135147",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.135209",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.135209"
+      ],
+      "title": "ALFStyle: Adaptive LoRA fusion network for diffusion-based style transfer",
+      "reason": "The bibliographic title (“ALFStyle: Adaptive LoRA fusion network for diffusion-based style transfer”) signals a possible connection to inference/architecture efficiency and linked lineage: state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, but the primary DOI URL could not be accessed. The title alone cannot establish a concrete LLM compute, memory, latency, throughput, or serving result; keep borderline pending primary-source review.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.135209",
+      "first_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "last_checked_at": "2026-10-06T19:22:54.203412+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
