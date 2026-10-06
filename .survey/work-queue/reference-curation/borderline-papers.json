@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T00:17:43+00:00",
-  "record_count": 2121,
+  "updated_at": "2026-10-06T01:38:39+00:00",
+  "record_count": 2135,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -32725,6 +32725,218 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CRAMER: Control via Request-Aware Masking for Editing Recommenders"
+    },
+    "DOI:10.1016/j.rineng.2026.112223": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.rineng.2026.112223",
+      "identity_tokens": [
+        "DOI:10.1016/j.rineng.2026.112223"
+      ],
+      "reason": "ScienceDirect primary article returned 403; publisher search-index abstract/highlights only. Promising BERT early-exit/distillation metrics available, but methods, evaluation conditions, and limitations could not be checked in full text.",
+      "first_checked_at": "2026-10-06T01:38:33+00:00",
+      "last_checked_at": "2026-10-06T01:38:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GREEN-LM: Carbon-Aware Neural Language Models with Energy-Adaptive Layers and Sparse Knowledge Distillation"
+    },
+    "DOI:10.1109/icce-taiwan71481.2026.11652794": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icce-taiwan71481.2026.11652794",
+      "identity_tokens": [
+        "DOI:10.1109/icce-taiwan71481.2026.11652794"
+      ],
+      "reason": "IEEE primary full text could not be retrieved; only conference metadata/secondary catalog summary available. Packet abstract and secondary summary describe early-exit JSON repair, but experimental details could not be verified in publisher full text.",
+      "first_checked_at": "2026-10-06T01:38:33+00:00",
+      "last_checked_at": "2026-10-06T01:38:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reliable Structured Feedback Generation for Educational LLM Systems Under Early Exit"
+    },
+    "arXiv:2607.17843": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17843",
+      "identity_tokens": [
+        "arXiv:2607.17843"
+      ],
+      "reason": "計算再利用はtraining構成に限られ、対象のLLM inference efficiency改善と異なる。",
+      "first_checked_at": "2026-10-06T01:38:34+00:00",
+      "last_checked_at": "2026-10-06T01:38:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mobius Learning: Cyclic Depth Folding in Transformers"
+    },
+    "arXiv:2607.18662": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18662",
+      "identity_tokens": [
+        "arXiv:2607.18662"
+      ],
+      "reason": "音声生成のDiffusion Transformer圧縮は隣接技術だが、LLM/LLM servingではなく、対象系統への関係は弱い。",
+      "first_checked_at": "2026-10-06T01:38:34+00:00",
+      "last_checked_at": "2026-10-06T01:38:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Staged Depth-Pruning Distillation of a Flow-Matching Text-to-Speech Teacher: A Compact Hindi Speech Synthesizer"
+    },
+    "arXiv:2607.00362": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00362",
+      "identity_tokens": [
+        "arXiv:2607.00362"
+      ],
+      "reason": "on-device LLM/TEE系統に隣接するが主題はsecurity taxonomyで、inference efficiencyの具体策/定量効果が弱い。",
+      "first_checked_at": "2026-10-06T01:38:35+00:00",
+      "last_checked_at": "2026-10-06T01:38:35+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SoK: Attack and Defense Landscape of Mobile On-device AI Systems"
+    },
+    "DOI:10.1145/3820441.3820459": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3820441.3820459",
+      "identity_tokens": [
+        "DOI:10.1145/3820441.3820459"
+      ],
+      "reason": "ACM primary fulltext request returned access denied/403; conference schedule and packet abstract only. GPU/AI cluster networking paperとKV-cache offload lineageの接続を本文で確認できなかった。",
+      "first_checked_at": "2026-10-06T01:38:36+00:00",
+      "last_checked_at": "2026-10-06T01:38:36+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Integrating AI Clusters into Virtual Private Cloud"
+    },
+    "arXiv:2609.04225": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.04225",
+      "identity_tokens": [
+        "arXiv:2609.04225"
+      ],
+      "reason": "voice-agent latencyとの関連はある一方、LLM推論計算・serving latencyの削減は扱わない。",
+      "first_checked_at": "2026-10-06T01:38:37+00:00",
+      "last_checked_at": "2026-10-06T01:38:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02640-metronome.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Trade-off Was in the Labels: Causal Supervision for Turn-Aware Streaming ASR"
+    },
+    "arXiv:2608.28609": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28609",
+      "identity_tokens": [
+        "arXiv:2608.28609"
+      ],
+      "reason": "LLM context/memoryの間接接続はあるが、効率改善との関連が弱く評価指標も異なる。",
+      "first_checked_at": "2026-10-06T01:38:37+00:00",
+      "last_checked_at": "2026-10-06T01:38:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parametric Multimodal User Memory: Storing What Captions Cannot Carry"
+    },
+    "arXiv:2609.25018": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25018",
+      "identity_tokens": [
+        "arXiv:2609.25018"
+      ],
+      "reason": "OS development agent workflowとserving lineageの接続は弱く、LLM推論資源の計測/削減を示さない。",
+      "first_checked_at": "2026-10-06T01:38:38+00:00",
+      "last_checked_at": "2026-10-06T01:38:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OSFoundry: Building and Evolving Operating Systems with Specification-Guided Agents"
+    },
+    "DOI:10.1109/aann71145.2026.11709365": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aann71145.2026.11709365",
+      "identity_tokens": [
+        "DOI:10.1109/aann71145.2026.11709365"
+      ],
+      "reason": "空のpacket abstractのためpublisher DOI/IEEE primary pageを試したが、本文/author full-textに到達できなかった。題名だけではSkipFoldの手法・測定範囲を確定できない。",
+      "first_checked_at": "2026-10-06T01:38:38+00:00",
+      "last_checked_at": "2026-10-06T01:38:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkipFold: Test-Time Dynamic Depth for Scalable Biomolecular Inference"
+    },
+    "DOI:10.30871/jaic.v10i4.13255": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.30871/jaic.v10i4.13255",
+      "identity_tokens": [
+        "DOI:10.30871/jaic.v10i4.13255"
+      ],
+      "reason": "publisher primary pageではabstract/summaryを取得したが、掲載本文/PDFに到達できず全文確認不可。split inference/60% cloud-token reductionの要旨記述は有望だが本文と限界を検証できない。",
+      "first_checked_at": "2026-10-06T01:38:38+00:00",
+      "last_checked_at": "2026-10-06T01:38:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PerceptionGuard: Privacy-Aware Split Inference for Multimodal Mobile Applications"
+    },
+    "DOI:10.59431/jda.v5i1.822": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.59431/jda.v5i1.822",
+      "identity_tokens": [
+        "DOI:10.59431/jda.v5i1.822"
+      ],
+      "reason": "Journal publisher full-text link https://journal.msti-indonesia.com/index.php/jda/article/view/822/729 failed with Cache miss; publisher abstract was readable, but article body and limitations were not retrieved.",
+      "first_checked_at": "2026-10-06T01:38:38+00:00",
+      "last_checked_at": "2026-10-06T01:38:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Design and Performance Evaluation of an OpenClaw-Based Desktop AI Assistant Deployed on Virtual Private Server: A Comparative Study with N8N Workflow Automation"
+    },
+    "DOI:10.48550/arxiv.2607.24625": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2607.24625",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.24625",
+        "arXiv:2607.24625"
+      ],
+      "reason": "agent runtime securityの間接接点はあるが、inference serving efficiencyとの関連が弱い。",
+      "first_checked_at": "2026-10-06T01:38:39+00:00",
+      "last_checked_at": "2026-10-06T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Permissions Policy Algebra for Taint Confinement in LLM Agents"
+    },
+    "arXiv:2607.22038": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.22038",
+      "identity_tokens": [
+        "arXiv:2607.22038"
+      ],
+      "reason": "技術は汎用multi-task DNN acceleratorで、LLM/MoE inference lineageとの適用接続は未提示。",
+      "first_checked_at": "2026-10-06T01:38:39+00:00",
+      "last_checked_at": "2026-10-06T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sparse by Command: Task-Conditional Compute Skipping for Multi-Task Inference Accelerators"
     }
   }
 }

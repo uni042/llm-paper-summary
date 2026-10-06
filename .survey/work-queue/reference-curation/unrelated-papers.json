@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T00:17:43+00:00",
-  "record_count": 6689,
+  "updated_at": "2026-10-06T01:38:40+00:00",
+  "record_count": 6716,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -96618,6 +96618,384 @@
         "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
       ],
       "title": "Importance Scoring of Transformer Attention Heads in Learning Tabular Data"
+    },
+    "DOI:10.1016/j.neucom.2026.134628": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134628",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134628"
+      ],
+      "reason": "underwater image restoration向けvision MoEで、LLM inference/serving対象外。",
+      "first_checked_at": "2026-10-06T01:38:33+00:00",
+      "last_checked_at": "2026-10-06T01:38:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Degradation-aware pyramid heterogeneous mixture-of-experts network for underwater image restoration"
+    },
+    "DOI:10.1016/j.sysarc.2026.103932": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103932",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103932"
+      ],
+      "reason": "edge multimodal sentiment modelのzero-cost search/pruning。text/image task classifierでありLLM servingではない。",
+      "first_checked_at": "2026-10-06T01:38:34+00:00",
+      "last_checked_at": "2026-10-06T01:38:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "ZeroMSA: Zero-cost proxy-based evolutionary pruning for multimodal sentiment analysis on edge systems"
+    },
+    "DOI:10.1109/iolts69666.2026.11633626": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iolts69666.2026.11633626",
+      "identity_tokens": [
+        "DOI:10.1109/iolts69666.2026.11633626"
+      ],
+      "reason": "robustness hardening/adversarial trainingとDNN pruningの研究で、LLM inference efficiency/servingへの直接接続がない。",
+      "first_checked_at": "2026-10-06T01:38:34+00:00",
+      "last_checked_at": "2026-10-06T01:38:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Hybrid Hardening for Robust DNNs Under Adversarial Attacks"
+    },
+    "arXiv:2607.20993": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20993",
+      "identity_tokens": [
+        "arXiv:2607.20993"
+      ],
+      "reason": "3D CT vision encoderのconcept-channel interpretability/probing研究で、inference efficiency改善ではない。",
+      "first_checked_at": "2026-10-06T01:38:34+00:00",
+      "last_checked_at": "2026-10-06T01:38:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Sparse Concept Channels in Frozen 3D CT Vision Encoders"
+    },
+    "DOI:10.1007/s11633-025-1605-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11633-025-1605-x",
+      "identity_tokens": [
+        "DOI:10.1007/s11633-025-1605-x"
+      ],
+      "reason": "vision-language tracking向けdynamic attention/modal mixing。generative LLM inference servingを扱わない。",
+      "first_checked_at": "2026-10-06T01:38:34+00:00",
+      "last_checked_at": "2026-10-06T01:38:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "DynaMix-VLT: Dynamic Multi-head Attention and Semantic-guided Modal Mixing for Robust Vision-language Tracking"
+    },
+    "arXiv:2607.13246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13246",
+      "identity_tokens": [
+        "arXiv:2607.13246"
+      ],
+      "reason": "Muon optimizer is studied for matrix-factorization training/objectives. Existing MoE-compression lineage is only indirect: paper does not prune/compress experts at inference.",
+      "first_checked_at": "2026-10-06T01:38:35+00:00",
+      "last_checked_at": "2026-10-06T01:38:35+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md"
+      ],
+      "title": "Reassessing Muon for Matrix Factorization"
+    },
+    "arXiv:2607.00382": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00382",
+      "identity_tokens": [
+        "arXiv:2607.00382"
+      ],
+      "reason": "image-to-shape diffusion transformer compressionであり、LLM inference/servingや既存LLM系統との接続は示さない。",
+      "first_checked_at": "2026-10-06T01:38:35+00:00",
+      "last_checked_at": "2026-10-06T01:38:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Vitality-Aware Compression for Efficient Image-to-Shape Diffusion Transformers"
+    },
+    "arXiv:2607.00927": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00927",
+      "identity_tokens": [
+        "arXiv:2607.00927"
+      ],
+      "reason": "Diffusion Transformerのpost-training pruningでimage generation対象。LLM serving範囲外。",
+      "first_checked_at": "2026-10-06T01:38:35+00:00",
+      "last_checked_at": "2026-10-06T01:38:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Post-Training Pruning for Diffusion Transformers"
+    },
+    "DOI:10.1016/j.asoc.2026.116098": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.116098",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.116098"
+      ],
+      "reason": "firefighter action recognition用graph attention modelであり、LLM inference対象外。",
+      "first_checked_at": "2026-10-06T01:38:35+00:00",
+      "last_checked_at": "2026-10-06T01:38:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Class-aware topology-guided graph attention for large-scale skeleton-based firefighter action recognition"
+    },
+    "DOI:10.1016/j.knosys.2026.116642": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116642",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116642"
+      ],
+      "reason": "signed graph representation learningのvariational MoE autoencoderで、LLM serving改善ではない。",
+      "first_checked_at": "2026-10-06T01:38:36+00:00",
+      "last_checked_at": "2026-10-06T01:38:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "VMoE-SGAE: A Variational Mixture-of-Experts Auto-Encoder for Signed Graph Representation Learning"
+    },
+    "arXiv:2608.04421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04421",
+      "identity_tokens": [
+        "arXiv:2608.04421"
+      ],
+      "reason": "incentivized advertisingのreward/engagement optimization。LLM inference servingの改善とは異なる。",
+      "first_checked_at": "2026-10-06T01:38:36+00:00",
+      "last_checked_at": "2026-10-06T01:38:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Generative Optimization for Incentivized Advertising with Global Level Constraints"
+    },
+    "arXiv:2608.04811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04811",
+      "identity_tokens": [
+        "arXiv:2608.04811"
+      ],
+      "reason": "semantic segmentationの静的structured pruningで、language model/LLM serving対象ではない。",
+      "first_checked_at": "2026-10-06T01:38:36+00:00",
+      "last_checked_at": "2026-10-06T01:38:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "StaticSegFormer: An Efficient High-Performance Semantic Segmentation Based on Static Structured Pruning"
+    },
+    "arXiv:2608.04933": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04933",
+      "identity_tokens": [
+        "arXiv:2608.04933"
+      ],
+      "reason": "embodied environmentでのneuro-symbolic world-state/progress memory。inference compute/serving efficiencyの明示的評価なし。",
+      "first_checked_at": "2026-10-06T01:38:36+00:00",
+      "last_checked_at": "2026-10-06T01:38:36+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md"
+      ],
+      "title": "Mimir: A Neuro-Symbolic Memory System with Dynamic Grounding for Embodied Agents in Interactive Environments"
+    },
+    "arXiv:2608.14670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14670",
+      "identity_tokens": [
+        "arXiv:2608.14670"
+      ],
+      "reason": "Wi-Fi telemetryによるperson identification system。LLMやlanguage-model servingを扱わない。",
+      "first_checked_at": "2026-10-06T01:38:36+00:00",
+      "last_checked_at": "2026-10-06T01:38:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "ARGUS: Attention-Guided Transformers for Scalable Person Identification Using Wi-Fi Telemetry"
+    },
+    "arXiv:2607.11193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11193",
+      "identity_tokens": [
+        "arXiv:2607.11193"
+      ],
+      "reason": "Transformer model software testing/repairで、推論実行効率を直接改善しない。",
+      "first_checked_at": "2026-10-06T01:38:37+00:00",
+      "last_checked_at": "2026-10-06T01:38:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "RepTran: Search-Based Repair of Transformer Models"
+    },
+    "DOI:10.1038/s41598-026-59312-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-59312-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-59312-1"
+      ],
+      "reason": "coastal landscape edge vision-transformer recognition用model design。対象はvision classificationでLLM servingではない。",
+      "first_checked_at": "2026-10-06T01:38:37+00:00",
+      "last_checked_at": "2026-10-06T01:38:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "A fog-aware lightweight vision transformer architecture for real-time coastal landscape recognition on edge devices"
+    },
+    "arXiv:2607.03595": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03595",
+      "identity_tokens": [
+        "arXiv:2607.03595"
+      ],
+      "reason": "VLMによるimage affordance grounding能力研究で、推論resource/latency/serving最適化ではない。",
+      "first_checked_at": "2026-10-06T01:38:37+00:00",
+      "last_checked_at": "2026-10-06T01:38:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Token-Based Affordance Grounding with Large Vision-Language Models"
+    },
+    "DOI:10.25259/jksus_1438_2025": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25259/jksus_1438_2025",
+      "identity_tokens": [
+        "DOI:10.25259/jksus_1438_2025"
+      ],
+      "reason": "Code vulnerability detection向けreasoning data構築/LLM tuningで、推論serving資源削減ではない。",
+      "first_checked_at": "2026-10-06T01:38:38+00:00",
+      "last_checked_at": "2026-10-06T01:38:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "CodeVulReason: Incentivizing reasoning for code vulnerability detection"
+    },
+    "arXiv:2608.09548": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09548",
+      "identity_tokens": [
+        "arXiv:2608.09548"
+      ],
+      "reason": "教育用LLMの評価benchmarkであり、model servingやinference efficiency手法を提案しない。",
+      "first_checked_at": "2026-10-06T01:38:38+00:00",
+      "last_checked_at": "2026-10-06T01:38:38+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ],
+      "title": "ELBench: A Multi-Dimensional Benchmark for Education-Facing Large Language Models"
+    },
+    "arXiv:2607.25228": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25228",
+      "identity_tokens": [
+        "arXiv:2607.25228"
+      ],
+      "reason": "LLM generates symbolic decision process/materialized taxonomy offline; inference classifier is random forest. §3 setup and evaluation concern table-column annotation rather than serving efficiency.",
+      "first_checked_at": "2026-10-06T01:38:39+00:00",
+      "last_checked_at": "2026-10-06T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ],
+      "title": "Interpretable Column Annotation with LLM-Symbolized Decision Process Materialization"
+    },
+    "arXiv:2607.27251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27251",
+      "identity_tokens": [
+        "arXiv:2607.27251"
+      ],
+      "reason": "半導体reliability surrogate modeling用recursive transformer。language model inferenceを対象としない。",
+      "first_checked_at": "2026-10-06T01:38:39+00:00",
+      "last_checked_at": "2026-10-06T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Recursive transformers for semiconductor thermo-mechanical reliability"
+    },
+    "DOI:10.53941/aimat.2026.100011": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.53941/aimat.2026.100011",
+      "identity_tokens": [
+        "DOI:10.53941/aimat.2026.100011"
+      ],
+      "reason": "nanoparticle researchにおけるLLM applicationsのsurveyであり、LLM自身のserving/inference optimizationではない。",
+      "first_checked_at": "2026-10-06T01:38:39+00:00",
+      "last_checked_at": "2026-10-06T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Large Language Models in Nanoparticles Research: Methods, Applications, Impacts, and Future Directions"
+    },
+    "arXiv:2608.00412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00412",
+      "identity_tokens": [
+        "arXiv:2608.00412"
+      ],
+      "reason": "GPU SM間L1 data-cache sharingのcomputer-architecture studyで、LLM KV cacheではなくLLM servingとの具体的接続もない。",
+      "first_checked_at": "2026-10-06T01:38:39+00:00",
+      "last_checked_at": "2026-10-06T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md"
+      ],
+      "title": "C2P-Cache: Scalable GPU L1 Cache Sharing via Concurrent Candidate Pruning"
+    },
+    "DOI:10.1007/s00521-026-12323-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00521-026-12323-5",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-026-12323-5"
+      ],
+      "reason": "弱教師MILによるnetwork intrusion classificationで、LLM inference servingの改善ではない。",
+      "first_checked_at": "2026-10-06T01:38:39+00:00",
+      "last_checked_at": "2026-10-06T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Progressive MIL architectures for weakly supervised network intrusion detection"
+    },
+    "DOI:10.1007/s00521-026-12379-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00521-026-12379-3",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-026-12379-3"
+      ],
+      "reason": "short-text classification向け軽量Transformerであり、generative LLM servingやLLM inference costの測定ではない。",
+      "first_checked_at": "2026-10-06T01:38:40+00:00",
+      "last_checked_at": "2026-10-06T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "LiteLLM: a lightweight transformer architecture for efficient short-text classification"
+    },
+    "DOI:10.1109/icisc69558.2026.11681248": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icisc69558.2026.11681248",
+      "identity_tokens": [
+        "DOI:10.1109/icisc69558.2026.11681248"
+      ],
+      "reason": "MRI brain-tumor segmentation用GAN/U-Netで、LLM servingの対象外。",
+      "first_checked_at": "2026-10-06T01:38:40+00:00",
+      "last_checked_at": "2026-10-06T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Lightweight GAN-Assisted Attention U-Net with Transformer Bottleneck for Accurate Brain Tumor Segmentation"
+    },
+    "DOI:10.1109/mapr72750.2026.11685695": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mapr72750.2026.11685695",
+      "identity_tokens": [
+        "DOI:10.1109/mapr72750.2026.11685695"
+      ],
+      "reason": "Vietnamese text classificationにおけるpretrained encoderのpooling手法で、LLM decode/serving efficiencyではない。",
+      "first_checked_at": "2026-10-06T01:38:40+00:00",
+      "last_checked_at": "2026-10-06T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Improving Vietnamese Text Classification with Multi-Head Attention Pooling in Pre-trained Language Models"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4e4131982a4e15e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00412",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00412",
+    "identity_tokens": [
+      "arXiv:2608.00412"
+    ],
+    "reason": "GPU SM間L1 data-cache sharingのcomputer-architecture studyで、LLM KV cacheではなくLLM servingとの具体的接続もない。",
+    "first_checked_at": "2026-10-06T01:38:39+00:00",
+    "last_checked_at": "2026-10-06T01:38:39+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md"
+    ],
+    "title": "C2P-Cache: Scalable GPU L1 Cache Sharing via Concurrent Candidate Pruning"
+  },
+  "processed_at": "2026-10-06T01:38:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4e4131982a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
