@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r115-screen-01-part-03-d93cb069e691",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16093",
+      "identity_tokens": [
+        "arXiv:2511.16093"
+      ],
+      "title": "Parallelizable Complex Neural Dynamics Models for PMSM Temperature Estimation With Hardware Acceleration",
+      "reason": "The work estimates motor temperature with neural dynamics and hardware acceleration, not LLM systems.",
+      "source_url": "https://arxiv.org/abs/2511.16093",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16147",
+      "identity_tokens": [
+        "arXiv:2511.16147"
+      ],
+      "title": "TS-PEFT: Unveiling Token-Level Redundancy in Parameter-Efficient Fine-Tuning",
+      "reason": "TS-PEFT studies token-level redundancy in parameter-efficient fine-tuning for time-series models and evaluates forecasting/fine-tuning outcomes. The token notion and target workloads are time-series PEFT rather than LLM inference; no transferable serving optimization is established.",
+      "source_url": "https://arxiv.org/abs/2511.16147",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16378",
+      "identity_tokens": [
+        "arXiv:2511.16378"
+      ],
+      "title": "CAMS: Towards Compositional Zero-Shot Learning via Gated Cross-Attention and Multi-Space Disentanglement",
+      "reason": "The work addresses compositional zero-shot learning, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.16378",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14390",
+      "identity_tokens": [
+        "arXiv:2511.14390"
+      ],
+      "title": "Accelerating Automatic Differentiation of Direct Form Digital Filters",
+      "reason": "The work accelerates automatic differentiation for digital filters, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2511.14390",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14823",
+      "identity_tokens": [
+        "arXiv:2511.14823"
+      ],
+      "title": "Dynamic Nested Hierarchies: Pioneering Self-Evolution in Machine Learning Architectures for Lifelong Intelligence",
+      "reason": "Dynamic nested hierarchies propose self-evolving neural architectures and evaluate model capability across learning tasks; the contribution is architectural/lifelong learning, not efficient LLM decoding or serving. The RetNet citation relation alone does not establish a systems lineage.",
+      "source_url": "https://arxiv.org/abs/2511.14823",
+      "first_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "last_checked_at": "2026-10-06T15:51:17.148145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    }
+  ]
+}
