@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15c75756d6fa2979-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2208.10658",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2208.10658",
+    "identity_tokens": [
+      "arXiv:2208.10658"
+    ],
+    "reason": "Over recent years, there has been a rapid development of deep learning (DL) in both industry and academia fields. However, finding the optimal hyperparameters of a DL model often needs high computational cost and human expertise. To mitigate the above issue, evolutionary computation (EC) as a powerful heuristic search approach has shown significant merits in the automated design of DL models, so-called evolutionary deep learning (EDL). This article aims to analyze EDL from the perspective of automated machine learning (AutoML). Specifically, we first illuminate EDL from DL and EC and regard EDL as an optimization problem. According to the DL pipeline, we systematically introduce EDL methods ranging from data preparation, model generation, to model deployment with a new taxonomy (i.e., what and how to evolve/optimize), and focus on the discussions of solution representation and search paradigm in handling the optimization problem by EC. Finally, key applications, open issues, and potentially promising lines of future research are suggested. This survey has reviewed recent developments of EDL and offers insightful guidelines for the development of EDL.",
+    "first_checked_at": "2026-10-06T13:16:31+00:00",
+    "last_checked_at": "2026-10-06T13:16:31+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+    ],
+    "title": "Survey on Evolutionary Deep Learning: Principles, Algorithms, Applications, and Open Issues"
+  },
+  "processed_at": "2026-10-06T13:16:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15c75756d6fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

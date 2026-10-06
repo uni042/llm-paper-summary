@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3322b3343089e68-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.03613",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.03613",
+    "identity_tokens": [
+      "arXiv:2508.03613"
+    ],
+    "reason": "Goedel-Prover-V2 combines scaffolded data, verifier feedback and self-correction; reports an 8B prover exceeding a 671B model on MiniF2F and performance at small test-time budgets. The gains are theorem-proving-specific, not general serving optimization.",
+    "first_checked_at": "2026-10-06T13:16:39+00:00",
+    "last_checked_at": "2026-10-06T13:16:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction"
+  },
+  "processed_at": "2026-10-06T13:16:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3322b334308",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

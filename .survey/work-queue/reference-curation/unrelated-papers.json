@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T13:09:31+00:00",
-  "record_count": 8323,
+  "updated_at": "2026-10-06T13:16:40+00:00",
+  "record_count": 8345,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -119491,20 +119491,6 @@
       ],
       "title": "Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model"
     },
-    "DOI:10.1038/s41467-024-45187-1": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1038/s41467-024-45187-1",
-      "identity_tokens": [
-        "DOI:10.1038/s41467-024-45187-1"
-      ],
-      "reason": "reservoir computingの理論・物理実装・時系列/通信/IoT等の展望を扱うPerspectiveであり、LLM推論を対象としない。",
-      "first_checked_at": "2026-10-06T13:09:31+00:00",
-      "last_checked_at": "2026-10-06T13:09:31+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
-      ],
-      "title": "Emerging opportunities and challenges for the future of reservoir computing"
-    },
     "DOI:10.1145/3551349.3559555": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3551349.3559555",
@@ -119533,6 +119519,328 @@
         "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
       ],
       "title": "FedSIT: Efficient Federated Fine-Tuning with Model Splitting and Importance-Based Tuning"
+    },
+    "arXiv:2512.03422": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03422",
+      "identity_tokens": [
+        "arXiv:2512.03422"
+      ],
+      "reason": "In this paper, we provide a comprehensive overview of existing scene representation methods for robotics, covering traditional representations such as point clouds, voxels, signed distance functions (SDF), and scene graphs, as well as more recent neural representations like Neural Radiance Fields (NeRF), 3D Gaussian Splatting (3DGS), and the emerging Foundation Models. While current SLAM and localization systems predominantly rely on sparse representations like point clouds and voxels, dense scene representations are expected to play a critical role in downstream tasks such as navigation and obstacle avoidance. Moreover, neural representations such as NeRF, 3DGS, and foundation models are well-suited for integrating high-level semantic features and language-based priors, enabling more comprehensive 3D scene understanding and embodied intelligence. In this paper, we categorized the core modules of robotics into five parts (Perception, Mapping, Localization, Navigation, Manipulation). We start by presenting the standard formulation of different scene representation methods and comparing the advantages and disadvantages of scene representation across different modules. This survey is",
+      "first_checked_at": "2026-10-06T13:16:31+00:00",
+      "last_checked_at": "2026-10-06T13:16:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "title": "What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models"
+    },
+    "arXiv:2604.01658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01658",
+      "identity_tokens": [
+        "arXiv:2604.01658"
+      ],
+      "reason": "Large language model (LLM)-based evolution is a promising approach for open-ended discovery, where progress requires sustained search and knowledge accumulation. Existing methods still rely heavily on fixed heuristics and hard-coded exploration rules, which limit the autonomy of LLM agents. We present CORAL, the first framework for autonomous multi-agent evolution on open-ended problems. CORAL replaces rigid control with long-running agents that explore, reflect, and collaborate through shared persistent memory, asynchronous multi-agent execution, and heartbeat-based interventions. It also provides practical safeguards, including isolated workspaces, evaluator separation, resource management, and agent session and health management. Evaluated on diverse mathematical, algorithmic, and systems optimization tasks, CORAL sets new state-of-the-art results on 10 tasks, achieving 3-10 times higher improvement rates with far fewer evaluations than fixed evolutionary search baselines across tasks. On Anthropic's kernel engineering task, four co-evolving agents improve the best known score from 1363 to 1103 cycles. Mechanistic analyses further show how these gains arise from knowledge reuse",
+      "first_checked_at": "2026-10-06T13:16:31+00:00",
+      "last_checked_at": "2026-10-06T13:16:31+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery"
+    },
+    "arXiv:2208.10658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.10658",
+      "identity_tokens": [
+        "arXiv:2208.10658"
+      ],
+      "reason": "Over recent years, there has been a rapid development of deep learning (DL) in both industry and academia fields. However, finding the optimal hyperparameters of a DL model often needs high computational cost and human expertise. To mitigate the above issue, evolutionary computation (EC) as a powerful heuristic search approach has shown significant merits in the automated design of DL models, so-called evolutionary deep learning (EDL). This article aims to analyze EDL from the perspective of automated machine learning (AutoML). Specifically, we first illuminate EDL from DL and EC and regard EDL as an optimization problem. According to the DL pipeline, we systematically introduce EDL methods ranging from data preparation, model generation, to model deployment with a new taxonomy (i.e., what and how to evolve/optimize), and focus on the discussions of solution representation and search paradigm in handling the optimization problem by EC. Finally, key applications, open issues, and potentially promising lines of future research are suggested. This survey has reviewed recent developments of EDL and offers insightful guidelines for the development of EDL.",
+      "first_checked_at": "2026-10-06T13:16:31+00:00",
+      "last_checked_at": "2026-10-06T13:16:31+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Survey on Evolutionary Deep Learning: Principles, Algorithms, Applications, and Open Issues"
+    },
+    "arXiv:2309.07430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07430",
+      "identity_tokens": [
+        "arXiv:2309.07430"
+      ],
+      "reason": "Analyzing vast textual data and summarizing key information from electronic health records imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown promise in natural language processing (NLP) tasks, their effectiveness on a diverse range of clinical summarization tasks remains unproven. Here we applied adaptation methods to eight LLMs, spanning four distinct clinical summarization tasks: radiology reports, patient questions, progress notes and doctor–patient dialogue. Quantitative assessments with syntactic, semantic and conceptual NLP metrics reveal trade-offs between models and adaptation methods. A clinical reader study with 10 physicians evaluated summary completeness, correctness and conciseness; in most cases, summaries from our best-adapted LLMs were deemed either equivalent (45%) or superior (36%) compared with summaries from medical experts. The ensuing safety analysis highlights challenges faced by both LLMs and medical experts, as we connect errors to potential medical harm and categorize types of fabricated information. Our research provides evidence of LLMs outperforming medical experts in clinical text summa",
+      "first_checked_at": "2026-10-06T13:16:32+00:00",
+      "last_checked_at": "2026-10-06T13:16:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Adapted large language models can outperform medical experts in clinical text summarization"
+    },
+    "arXiv:2310.07579": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07579",
+      "identity_tokens": [
+        "arXiv:2310.07579"
+      ],
+      "reason": "Machine unlearning, the study of efficiently removing the impact of specific training instances on a model, has garnered increased attention in recent years due to regulatory guidelines such as the \\emph{Right to be Forgotten}. Achieving precise unlearning typically involves fully retraining the model and is computationally infeasible in case of very large models such as Large Language Models (LLMs). To this end, recent work has proposed several algorithms which approximate the removal of training data without retraining the model. These algorithms crucially rely on access to the model parameters in order to update them, an assumption that may not hold in practice due to computational constraints or having only query access to the LLMs. In this work, we propose a new class of unlearning methods for LLMs called ``In-Context Unlearning.'' This method unlearns instances from the model by simply providing specific kinds of inputs in context, without the need to update model parameters. To unlearn specific training instances, we present these instances to the LLMs at inference time along with labels that differ from their ground truth. Our experimental results demonstrate that in-contex",
+      "first_checked_at": "2026-10-06T13:16:33+00:00",
+      "last_checked_at": "2026-10-06T13:16:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "In-Context Unlearning: Language Models as Few Shot Unlearners"
+    },
+    "DOI:10.21203/rs.3.rs-3483777/v1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21203/rs.3.rs-3483777/v1",
+      "identity_tokens": [
+        "DOI:10.21203/rs.3.rs-3483777/v1"
+      ],
+      "reason": "Sifting through vast textual data and summarizing key information from electronic health records (EHR) imposes a substantial burden on how clinicians allocate their time. Although large language models (LLMs) have shown immense promise in natural language processing (NLP) tasks, their efficacy on a diverse range of clinical summarization tasks has not yet been rigorously demonstrated. In this work, we apply domain adaptation methods to eight LLMs, spanning six datasets and four distinct clinical summarization tasks: radiology reports, patient questions, progress notes, and doctor-patient dialogue. Our thorough quantitative assessment reveals trade-offs between models and adaptation methods in addition to instances where recent advances in LLMs may not improve results. Further, in a clinical reader study with ten physicians, we show that summaries from our best-adapted LLMs are preferable to human summaries in terms of completeness and correctness. Our ensuing qualitative analysis highlights challenges faced by both LLMs and human experts. Lastly, we correlate traditional quantitative NLP metrics with reader study scores to enhance our understanding of how these metrics align with p",
+      "first_checked_at": "2026-10-06T13:16:33+00:00",
+      "last_checked_at": "2026-10-06T13:16:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts"
+    },
+    "arXiv:2502.13130": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13130",
+      "identity_tokens": [
+        "arXiv:2502.13130"
+      ],
+      "reason": "We present Magma, a foundation model that serves multimodal AI agentic tasks in both the digital and physical worlds. Magma is a significant extension of vision-language (VL) models in that it not only retains the VL understanding ability (verbal intelligence) of the latter, but is also equipped with the ability to ground and act in the visual-spatial world (spatial-temporal intelligence). To endow agentic capabilities for tasks ranging from UI navigation to robot manipulation, Magma is trained on large amounts of heterogeneous datasets that span from images, videos to robotics data, where actionable visual objects (e.g. clickable buttons in GUI) in images are labeled by Set-of-Mark (SoM) for action grounding, and object movements (e.g. trace of human hands or robotic arms) in videos are labeled by Trace-of-Mark (ToM) for action planning. Extensive experiments show that SoM and ToM help bridge the gap between verbal and action abilities and significantly enhance spatio-temporal intelligence which is fundamental to agentic tasks, as shown in Fig. 1. In particular, Magma creates new state-of-the-art results on UI navigation and robotic manipulation tasks, outperforming previous model",
+      "first_checked_at": "2026-10-06T13:16:33+00:00",
+      "last_checked_at": "2026-10-06T13:16:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Magma: A Foundation Model for Multimodal AI Agents"
+    },
+    "arXiv:2309.14402": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.14402",
+      "identity_tokens": [
+        "arXiv:2309.14402"
+      ],
+      "reason": "Language models can store vast factual knowledge, yet their ability to flexibly use this knowledge for downstream tasks (e.g., via instruction finetuning) remains questionable. This paper investigates four fundamental knowledge manipulation tasks: retrieval (e.g.,\"What is person A's attribute X?\"), classification (e.g.,\"Is A's attribute X even or odd?\"), comparison (e.g.,\"Is A greater than B in attribute X?\"), and inverse search (e.g.,\"Which person's attribute X equals T?\"). We show that language models excel in knowledge retrieval but struggle even in the simplest classification or comparison tasks unless Chain of Thoughts (CoTs) are employed during both training and inference. Moreover, their performance in inverse knowledge search is virtually 0%, regardless of the prompts. Our primary contribution is a controlled, synthetic experiment that confirms these weaknesses are inherent to language models: they cannot efficiently manipulate knowledge from pre-training data, even when such knowledge is perfectly stored in the models, despite adequate training and sufficient model size. Our findings also apply to modern pretrained language models such as GPT-4, thus giving rise to many Tu",
+      "first_checked_at": "2026-10-06T13:16:34+00:00",
+      "last_checked_at": "2026-10-06T13:16:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Physics of Language Models: Part 3.2, Knowledge Manipulation"
+    },
+    "arXiv:2405.18392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18392",
+      "identity_tokens": [
+        "arXiv:2405.18392"
+      ],
+      "reason": "Scale has become a main ingredient in obtaining strong machine learning models. As a result, understanding a model's scaling properties is key to effectively designing both the right training setup as well as future generations of architectures. In this work, we argue that scale and training research has been needlessly complex due to reliance on the cosine schedule, which prevents training across different lengths for the same model size. We investigate the training behavior of a direct alternative -- constant learning rate and cooldowns -- and find that it scales predictably and reliably similar to cosine. Additionally, we show that stochastic weight averaging yields improved performance along the training trajectory, without additional training costs, across different scales. Importantly, with these findings we demonstrate that scaling experiments can be performed with significantly reduced compute and GPU hours by utilizing fewer but reusable training runs. Our code is available at \\url{https://github.com/epfml/schedules-and-scaling/}.",
+      "first_checked_at": "2026-10-06T13:16:34+00:00",
+      "last_checked_at": "2026-10-06T13:16:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md"
+      ],
+      "title": "Scaling Laws and Compute-Optimal Training Beyond Fixed Training Durations"
+    },
+    "arXiv:2307.09458": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.09458",
+      "identity_tokens": [
+        "arXiv:2307.09458"
+      ],
+      "reason": "\\emph{Circuit analysis} is a promising technique for understanding the internal mechanisms of language models. However, existing analyses are done in small models far from the state of the art. To address this, we present a case study of circuit analysis in the 70B Chinchilla model, aiming to test the scalability of circuit analysis. In particular, we study multiple-choice question answering, and investigate Chinchilla's capability to identify the correct answer \\emph{label} given knowledge of the correct answer \\emph{text}. We find that the existing techniques of logit attribution, attention pattern visualization, and activation patching naturally scale to Chinchilla, allowing us to identify and categorize a small set of `output nodes' (attention heads and MLPs). We further study the `correct letter' category of attention heads aiming to understand the semantics of their features, with mixed results. For normal multiple-choice question answers, we significantly compress the query, key and value subspaces of the head without loss of performance when operating on the answer labels for multiple-choice questions, and we show that the query and key subspaces represent an `Nth item in a",
+      "first_checked_at": "2026-10-06T13:16:35+00:00",
+      "last_checked_at": "2026-10-06T13:16:35+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Does Circuit Analysis Interpretability Scale? Evidence from Multiple Choice Capabilities in Chinchilla"
+    },
+    "arXiv:2407.15186": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.15186",
+      "identity_tokens": [
+        "arXiv:2407.15186"
+      ],
+      "reason": "With the development of the Large Language Models (LLMs), a large range of LLM-based Text-to-SQL(Text2SQL) methods have emerged. This survey provides a comprehensive review of LLM-based Text2SQL studies. We first enumerate classic benchmarks and evaluation metrics. For the two mainstream methods, prompt engineering and finetuning, we introduce a comprehensive taxonomy and offer practical insights into each subcategory. We present an overall analysis of the above methods and various models evaluated on well-known datasets and extract some characteristics. Finally, we discuss the challenges and future directions in this field.",
+      "first_checked_at": "2026-10-06T13:16:35+00:00",
+      "last_checked_at": "2026-10-06T13:16:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ],
+      "title": "A Survey on Employing Large Language Models for Text-to-SQL Tasks"
+    },
+    "arXiv:2407.04069": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04069",
+      "identity_tokens": [
+        "arXiv:2407.04069"
+      ],
+      "reason": "Large Language Models (LLMs) have recently gained significant attention due to their remarkable capabilities in performing diverse tasks across various domains. However, a thorough evaluation of these models is crucial before deploying them in real-world applications to ensure they produce reliable performance. Despite the well-established importance of evaluating LLMs in the community, the complexity of the evaluation process has led to varied evaluation setups, causing inconsistencies in findings and interpretations. To address this, we systematically review the primary challenges and limitations causing these inconsistencies and unreliable evaluations in various steps of LLM evaluation. Based on our critical review, we present our perspectives and recommendations to ensure LLM evaluations are reproducible, reliable, and robust.",
+      "first_checked_at": "2026-10-06T13:16:35+00:00",
+      "last_checked_at": "2026-10-06T13:16:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "A Systematic Survey and Critical Review on Evaluating Large Language Models: Challenges, Limitations, and Recommendations"
+    },
+    "DOI:10.1038/s41592-024-02353-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41592-024-02353-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41592-024-02353-z"
+      ],
+      "reason": "Institutional full-text review covers single-cell omics transformer input adaptations, applications and biology challenges. It focuses on domain-specific non-sequential data and does not discuss general serving or inference-efficiency methods.",
+      "first_checked_at": "2026-10-06T13:16:35+00:00",
+      "last_checked_at": "2026-10-06T13:16:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Transformers in single-cell omics: a review and new perspectives"
+    },
+    "arXiv:2405.20853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.20853",
+      "identity_tokens": [
+        "arXiv:2405.20853"
+      ],
+      "reason": "The polygon mesh representation of 3D data exhibits great flexibility, fast rendering speed, and storage efficiency, which is widely preferred in various applications. However, given its unstructured graph representation, the direct generation of high-fidelity 3D meshes is challenging. Fortunately, with a pre-defined ordering strategy, 3D meshes can be represented as sequences, and the generation process can be seamlessly treated as an auto-regressive problem. In this paper, we validate the Neural Coordinate Field (NeurCF), an explicit coordinate representation with implicit neural embeddings, is a simple-yet-effective representation for large-scale sequential mesh modeling. After that, we present MeshXL, a family of generative pre-trained auto-regressive models, which addresses the process of 3D mesh generation with modern large language model approaches. Extensive experiments show that MeshXL is able to generate high-quality 3D meshes, and can also serve as foundation models for various down-stream applications.",
+      "first_checked_at": "2026-10-06T13:16:36+00:00",
+      "last_checked_at": "2026-10-06T13:16:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "MeshXL: Neural Coordinate Field for Generative 3D Foundation Models"
+    },
+    "arXiv:2310.19488": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.19488",
+      "identity_tokens": [
+        "arXiv:2310.19488"
+      ],
+      "reason": "CoLLM combines collaborative recommendation embeddings with LLM prompts and evaluates recommendation quality. Discussion notes reliance on collaborator models; no inference-efficiency method is evaluated, so Prompt Cache link is incidental.",
+      "first_checked_at": "2026-10-06T13:16:37+00:00",
+      "last_checked_at": "2026-10-06T13:16:37+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "CoLLM: Integrating Collaborative Embeddings Into Large Language Models for Recommendation"
+    },
+    "arXiv:2406.04207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04207",
+      "identity_tokens": [
+        "arXiv:2406.04207"
+      ],
+      "reason": "Recently, the Mamba architecture based on state-space models has demonstrated remarkable performance in a series of natural language processing tasks and has been rapidly applied to remote sensing change detection (CD) tasks. However, most methods enhance the global receptive field by directly modifying the scanning mode of Mamba, neglecting the crucial role that local information plays in dense prediction tasks (e.g., binary CD). In this article, we propose a model called CDMamba, which effectively combines global and local features for handling binary CD tasks. Specifically, the scaled residual ConvMamba (SRCM) block is proposed to utilize the ability of Mamba to extract global features and convolution to enhance the local details, to alleviate the issue that current Mamba-based methods lack detailed clues and are difficult to achieve fine detection in dense prediction tasks. Furthermore, considering the characteristics of bi-temporal feature interaction required for CD, the adaptive global–local guided fusion (AGLGF) block is proposed to dynamically facilitate the bi-temporal interaction guided by other temporal global/local features. Our intuition is that more discriminative ch",
+      "first_checked_at": "2026-10-06T13:16:37+00:00",
+      "last_checked_at": "2026-10-06T13:16:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "CDMamba: Incorporating Local Clues Into Mamba for Remote Sensing Image Binary Change Detection"
+    },
+    "arXiv:2405.03553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.03553",
+      "identity_tokens": [
+        "arXiv:2405.03553"
+      ],
+      "reason": "Although recent advancements in large language models (LLMs) have significantly improved their performance on various tasks, they still face challenges with complex and symbolic multi-step reasoning, particularly in mathematical reasoning. To bolster the mathematical reasoning capabilities of LLMs, most existing efforts concentrate on seeking assistance from either domain experts or GPT-4 for high-quality process-supervised data, which is not only expensive but also labor-intensive. In our study, we propose an innovative framework, AlphaMath, that bypasses the need for process annotations (from humans or GPTs) by leveraging Monte Carlo Tree Search (MCTS). This framework focuses on unleashing the potential of a well-pretrained LLM to autonomously enhance its mathematical reasoning. Specifically, we integrate a value model with the LLM, automatically generating both process supervision and step-level evaluation signals in MCTS. Furthermore, we propose an efficient inference strategy, step-level beam search, where the value model is crafted to assist the policy model (i.e., LLM) in navigating more effective reasoning paths, rather than solely relying on prior probabilities. The experi",
+      "first_checked_at": "2026-10-06T13:16:37+00:00",
+      "last_checked_at": "2026-10-06T13:16:37+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "AlphaMath Almost Zero: process Supervision without process"
+    },
+    "arXiv:2404.16811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.16811",
+      "identity_tokens": [
+        "arXiv:2404.16811"
+      ],
+      "reason": "Training supervision targets long-context information utilization and lost-in-the-middle quality. Evaluations concern answer quality; no context capacity, sparse attention, cache or serving efficiency is improved.",
+      "first_checked_at": "2026-10-06T13:16:38+00:00",
+      "last_checked_at": "2026-10-06T13:16:38+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Make Your LLM Fully Utilize the Context"
+    },
+    "arXiv:2310.10505": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10505",
+      "identity_tokens": [
+        "arXiv:2310.10505"
+      ],
+      "reason": "Reinforcement Learning from Human Feedback (RLHF) is key to aligning Large Language Models (LLMs), typically paired with the Proximal Policy Optimization (PPO) algorithm. While PPO is a powerful method designed for general reinforcement learning tasks, it is overly sophisticated for LLMs, leading to laborious hyper-parameter tuning and significant computation burdens. To make RLHF efficient, we present ReMax, which leverages 3 properties of RLHF: fast simulation, deterministic transitions, and trajectory-level rewards. These properties are not exploited in PPO, making it less suitable for RLHF. Building on the renowned REINFORCE algorithm, ReMax does not require training an additional value model as in PPO and is further enhanced with a new variance reduction technique. ReMax offers several benefits over PPO: it is simpler to implement, eliminates more than 4 hyper-parameters in PPO, reduces GPU memory usage, and shortens training time. ReMax can save about 46% GPU memory than PPO when training a 7B model and enables training on A800-80GB GPUs without the memory-saving offloading technique needed by PPO. Applying ReMax to a Mistral-7B model resulted in a 94.78% win rate on the Alpa",
+      "first_checked_at": "2026-10-06T13:16:38+00:00",
+      "last_checked_at": "2026-10-06T13:16:38+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ],
+      "title": "ReMax: A Simple, Effective, and Efficient Reinforcement Learning Method for Aligning Large Language Models"
+    },
+    "arXiv:2511.00062": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00062",
+      "identity_tokens": [
+        "arXiv:2511.00062"
+      ],
+      "reason": "We introduce [Cosmos-Predict2.5], the latest generation of the Cosmos World Foundation Models for Physical AI. Built on a flow-based architecture, [Cosmos-Predict2.5] unifies Text2World, Image2World, and Video2World generation in a single model and leverages [Cosmos-Reason1], a Physical AI vision-language model, to provide richer text grounding and finer control of world simulation. Trained on 200M curated video clips and refined with reinforcement learning-based post-training, [Cosmos-Predict2.5] achieves substantial improvements over [Cosmos-Predict1] in video quality and instruction alignment, with models released at 2B and 14B scales. These capabilities enable more reliable synthetic data generation, policy evaluation, and closed-loop simulation for robotics and autonomous systems. We further extend the family with [Cosmos-Transfer2.5], a control-net style framework for Sim2Real and Real2Real world translation. Despite being 3.5$\\times$ smaller than [Cosmos-Transfer1], it delivers higher fidelity and robust long-horizon video generation. Together, these advances establish [Cosmos-Predict2.5] and [Cosmos-Transfer2.5] as versatile tools for scaling embodied intelligence. To accel",
+      "first_checked_at": "2026-10-06T13:16:39+00:00",
+      "last_checked_at": "2026-10-06T13:16:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "World Simulation with Video Foundation Models for Physical AI"
+    },
+    "arXiv:2409.05746": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05746",
+      "identity_tokens": [
+        "arXiv:2409.05746"
+      ],
+      "reason": "As Large Language Models become more ubiquitous across domains, it becomes important to examine their inherent limitations critically. This work argues that hallucinations in language models are not just occasional errors but an inevitable feature of these systems. We demonstrate that hallucinations stem from the fundamental mathematical and logical structure of LLMs. It is, therefore, impossible to eliminate them through architectural improvements, dataset enhancements, or fact-checking mechanisms. Our analysis draws on computational theory and Godel's First Incompleteness Theorem, which references the undecidability of problems like the Halting, Emptiness, and Acceptance Problems. We demonstrate that every stage of the LLM process-from training data compilation to fact retrieval, intent classification, and text generation-will have a non-zero probability of producing hallucinations. This work introduces the concept of Structural Hallucination as an intrinsic nature of these systems. By establishing the mathematical certainty of hallucinations, we challenge the prevailing notion that they can be fully mitigated.",
+      "first_checked_at": "2026-10-06T13:16:39+00:00",
+      "last_checked_at": "2026-10-06T13:16:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "LLMs Will Always Hallucinate, and We Need to Live With This"
+    },
+    "arXiv:2401.06949": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06949",
+      "identity_tokens": [
+        "arXiv:2401.06949"
+      ],
+      "reason": "Chemistry experiments can be resource- and labor-intensive, often requiring manual tasks like polishing electrodes in electrochemistry. Traditional lab automation infrastructure faces challenges adapting to new experiments. To address this, we introduce ORGANA, an assistive robotic system that automates diverse chemistry experiments using decision-making and perception tools. It makes decisions with chemists in the loop to control robots and lab devices. ORGANA interacts with chemists using Large Language Models (LLMs) to derive experiment goals, handle disambiguation, and provide experiment logs. ORGANA plans and executes complex tasks with visual feedback, while supporting scheduling and parallel task execution. We demonstrate ORGANA's capabilities in solubility, pH measurement, recrystallization, and electrochemistry experiments. In electrochemistry, it executes a 19-step plan in parallel to characterize quinone derivatives for flow batteries. Our user study shows ORGANA reduces frustration and physical demand by over 50%, with users saving an average of 80.3% of their time when using it.",
+      "first_checked_at": "2026-10-06T13:16:40+00:00",
+      "last_checked_at": "2026-10-06T13:16:40+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "ORGANA: A Robotic Assistant for Automated Chemistry Experimentation and Characterization"
+    },
+    "arXiv:2310.16340": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.16340",
+      "identity_tokens": [
+        "arXiv:2310.16340"
+      ],
+      "reason": "Large language model (LLM) applications in cloud root cause analysis (RCA) have been actively explored recently. However, current methods are still reliant on manual workflow settings and do not unleash LLMs' decision-making and environment interaction capabilities. We present RCAgent, a tool-augmented LLM autonomous agent framework for practical and privacy-aware industrial RCA usage. Running on an internally deployed model rather than GPT families, RCAgent is capable of free-form data collection and comprehensive analysis with tools. Our framework combines a variety of enhancements, including a unique Self-Consistency for action trajectories, and a suite of methods for context management, stabilization, and importing domain knowledge. Our experiments show RCAgent's evident and consistent superiority over ReAct across all aspects of RCA--predicting root causes, solutions, evidence, and responsibilities--and tasks covered or uncovered by current rules, as validated by both automated metrics and human evaluations. Furthermore, RCAgent has already been integrated into the diagnosis and issue discovery workflow of the Real-time Compute Platform for Apache Flink of Alibaba Cloud.",
+      "first_checked_at": "2026-10-06T13:16:40+00:00",
+      "last_checked_at": "2026-10-06T13:16:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "RCAgent: Cloud Root Cause Analysis by Autonomous Agents with Tool-Augmented Large Language Models"
     }
   }
 }

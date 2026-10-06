@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3322b3343089e68-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.03321",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.03321",
+    "identity_tokens": [
+      "arXiv:2503.03321"
+    ],
+    "reason": "Visual Attention Redistribution studies irrelevant high-activation visual sink tokens and reallocates attention to image-relevant tokens. Experiments target visual quality; no token/cache compression or latency reduction is reported, making adaptive KV-cache lineage weak.",
+    "first_checked_at": "2026-10-06T13:16:39+00:00",
+    "last_checked_at": "2026-10-06T13:16:39+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "See What You Are Told: Visual Attention Sink in Large Multimodal Models"
+  },
+  "processed_at": "2026-10-06T13:16:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3322b334308",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

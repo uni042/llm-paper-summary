@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43694713bfdcedca-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.18392",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.18392",
+    "identity_tokens": [
+      "arXiv:2405.18392"
+    ],
+    "reason": "Scale has become a main ingredient in obtaining strong machine learning models. As a result, understanding a model's scaling properties is key to effectively designing both the right training setup as well as future generations of architectures. In this work, we argue that scale and training research has been needlessly complex due to reliance on the cosine schedule, which prevents training across different lengths for the same model size. We investigate the training behavior of a direct alternative -- constant learning rate and cooldowns -- and find that it scales predictably and reliably similar to cosine. Additionally, we show that stochastic weight averaging yields improved performance along the training trajectory, without additional training costs, across different scales. Importantly, with these findings we demonstrate that scaling experiments can be performed with significantly reduced compute and GPU hours by utilizing fewer but reusable training runs. Our code is available at \\url{https://github.com/epfml/schedules-and-scaling/}.",
+    "first_checked_at": "2026-10-06T13:16:34+00:00",
+    "last_checked_at": "2026-10-06T13:16:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md"
+    ],
+    "title": "Scaling Laws and Compute-Optimal Training Beyond Fixed Training Durations"
+  },
+  "processed_at": "2026-10-06T13:16:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43694713bfdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

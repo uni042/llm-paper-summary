@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15c75756d6fa2979-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.26645",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.26645",
+    "identity_tokens": [
+      "arXiv:2509.26645"
+    ],
+    "reason": "TTT3R uses test-time state updates for fixed-memory 3D reconstruction; reports 20 FPS and 6GB GPU on thousands of images. Limitations include state forgetting and lower accuracy than slower full attention; task is vision, not language.",
+    "first_checked_at": "2026-10-06T13:16:30+00:00",
+    "last_checked_at": "2026-10-06T13:16:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TTT3R: 3D Reconstruction as Test-Time Training"
+  },
+  "processed_at": "2026-10-06T13:16:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15c75756d6fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

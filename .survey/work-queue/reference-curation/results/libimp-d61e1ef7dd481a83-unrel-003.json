@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d61e1ef7dd481a83-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.04207",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.04207",
+    "identity_tokens": [
+      "arXiv:2406.04207"
+    ],
+    "reason": "Recently, the Mamba architecture based on state-space models has demonstrated remarkable performance in a series of natural language processing tasks and has been rapidly applied to remote sensing change detection (CD) tasks. However, most methods enhance the global receptive field by directly modifying the scanning mode of Mamba, neglecting the crucial role that local information plays in dense prediction tasks (e.g., binary CD). In this article, we propose a model called CDMamba, which effectively combines global and local features for handling binary CD tasks. Specifically, the scaled residual ConvMamba (SRCM) block is proposed to utilize the ability of Mamba to extract global features and convolution to enhance the local details, to alleviate the issue that current Mamba-based methods lack detailed clues and are difficult to achieve fine detection in dense prediction tasks. Furthermore, considering the characteristics of bi-temporal feature interaction required for CD, the adaptive global–local guided fusion (AGLGF) block is proposed to dynamically facilitate the bi-temporal interaction guided by other temporal global/local features. Our intuition is that more discriminative ch",
+    "first_checked_at": "2026-10-06T13:16:37+00:00",
+    "last_checked_at": "2026-10-06T13:16:37+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+    ],
+    "title": "CDMamba: Incorporating Local Clues Into Mamba for Remote Sensing Image Binary Change Detection"
+  },
+  "processed_at": "2026-10-06T13:16:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d61e1ef7dd48",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
