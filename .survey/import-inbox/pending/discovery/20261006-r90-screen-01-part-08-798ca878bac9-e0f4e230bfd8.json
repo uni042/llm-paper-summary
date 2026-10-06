@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r90-screen-01-part-08-798ca878bac9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.22911",
+      "identity_tokens": [
+        "arXiv:2410.22911"
+      ],
+      "title": "CopRA: A Progressive LoRA Training Strategy",
+      "reason": "Progressive LoRA strategy targets fine-tuning, merging, and pruning training dynamics, not inference-time LLM efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.22911",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISPA63168.2024.00176",
+      "identity_tokens": [
+        "DOI:10.1109/ISPA63168.2024.00176"
+      ],
+      "title": "Funnel: An Efficient Sparse Attention Accelerator with Multi-Dataflow Fusion",
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. IEEE DOI page was not accessible through the available web reader; no publisher/author full-text copy was located.",
+      "source_url": "https://doi.org/10.1109/ISPA63168.2024.00176",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICSP62129.2024.10846666",
+      "identity_tokens": [
+        "DOI:10.1109/ICSP62129.2024.10846666"
+      ],
+      "title": "A Hardware Architecture for Shared Residuals and Simplified Symmetric-PWL-Based GELU",
+      "reason": "Hardware architecture targets visual-transformer residual and GELU operations; vision-only evaluation and no LLM inference result.",
+      "source_url": "https://doi.org/10.1109/ICSP62129.2024.10846666",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676536.3676667",
+      "identity_tokens": [
+        "DOI:10.1145/3676536.3676667"
+      ],
+      "title": "Edge-BiT: Software-Hardware Co-Design for Optimizing Binarized Transformer Networks Inference on Edge FPGA",
+      "reason": "Abstract indicates a potentially adjacent efficiency technique, but primary full text could not be verified; retain as borderline pending source access. ACM DOI page returned 403 Forbidden and no author/institutional full-text copy was located.",
+      "source_url": "https://doi.org/10.1145/3676536.3676667",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s13636-024-00375-1",
+      "identity_tokens": [
+        "DOI:10.1186/s13636-024-00375-1"
+      ],
+      "title": "SVQ-MAE: an efficient speech pre-training framework with constrained computational resources",
+      "reason": "Speech representation framework reduces self-supervised pretraining resources; it is a training contribution, not LLM inference.",
+      "source_url": "https://doi.org/10.1186/s13636-024-00375-1",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    }
+  ]
+}
