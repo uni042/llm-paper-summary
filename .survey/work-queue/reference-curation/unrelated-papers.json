@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T10:21:30+00:00",
-  "record_count": 7829,
+  "updated_at": "2026-10-06T10:31:48+00:00",
+  "record_count": 7853,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -112607,6 +112607,342 @@
         "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
       ],
       "title": "Modular knowledge distillation for MIM pre-trained models"
+    },
+    "arXiv:2605.28006": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28006",
+      "identity_tokens": [
+        "arXiv:2605.28006"
+      ],
+      "reason": "LLM reasoningのactivation/probeによる解釈手法を比較する研究で、推論効率改善を提案しない。",
+      "first_checked_at": "2026-10-06T10:31:39+00:00",
+      "last_checked_at": "2026-10-06T10:31:39+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Integrated and Cross-Architecture Interpretation of LLM Reasoning"
+    },
+    "arXiv:2605.28063": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28063",
+      "identity_tokens": [
+        "arXiv:2605.28063"
+      ],
+      "reason": "speechとsoundの統合生成モデルであり、LLM推論cost削減の証拠はない。",
+      "first_checked_at": "2026-10-06T10:31:39+00:00",
+      "last_checked_at": "2026-10-06T10:31:39+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts"
+    },
+    "arXiv:2605.28347": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28347",
+      "identity_tokens": [
+        "arXiv:2605.28347"
+      ],
+      "reason": "VLMのmulti-label recognition向けfederated prompt tuningで、学習/個別適応が中心。",
+      "first_checked_at": "2026-10-06T10:31:39+00:00",
+      "last_checked_at": "2026-10-06T10:31:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "FedMPT: Federated Multi-label Prompt Tuning of Vision-Language Models"
+    },
+    "DOI:10.1109/icc59461.2026.11587317": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icc59461.2026.11587317",
+      "identity_tokens": [
+        "DOI:10.1109/icc59461.2026.11587317"
+      ],
+      "reason": "IoV intrusion detection向けpersonalized federated MoEは分散学習・分類応用で、LLM inference costを扱わない。",
+      "first_checked_at": "2026-10-06T10:31:40+00:00",
+      "last_checked_at": "2026-10-06T10:31:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Heterogeneous Personalized Federated Learning with Mixture-of-Experts for Intrusion Detection in the Internet of Vehicles"
+    },
+    "arXiv:2605.24755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.24755",
+      "identity_tokens": [
+        "arXiv:2605.24755"
+      ],
+      "reason": "multimodal audio diariesからdelusion-related contentを分類する応用で、LLM推論効率の改善方式がない。",
+      "first_checked_at": "2026-10-06T10:31:41+00:00",
+      "last_checked_at": "2026-10-06T10:31:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Automated Detection and Classification of Delusion-related Content in Naturalistic Audio Diaries Using Multi-Agent Language Models"
+    },
+    "arXiv:2605.31041": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31041",
+      "identity_tokens": [
+        "arXiv:2605.31041"
+      ],
+      "reason": "VLA自動運転の視覚情報依存性を分析する診断研究で、計算量/速度低減の手法ではない。",
+      "first_checked_at": "2026-10-06T10:31:41+00:00",
+      "last_checked_at": "2026-10-06T10:31:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "title": "Does Visual Information Play a Decisive Role in Vision-Language-Action Model Driving Behavior?"
+    },
+    "DOI:10.3390/batteries12060196": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/batteries12060196",
+      "identity_tokens": [
+        "DOI:10.3390/batteries12060196"
+      ],
+      "reason": "Mamba系battery health予測の時系列fusionであり、LLM推論効率とは無関係。",
+      "first_checked_at": "2026-10-06T10:31:41+00:00",
+      "last_checked_at": "2026-10-06T10:31:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Multimodal State of Health Prediction for Lithium-Ion Batteries via Mamba-Based Fusion of Discharge Curves and Impedance Spectra"
+    },
+    "arXiv:2605.29641": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.29641",
+      "identity_tokens": [
+        "arXiv:2605.29641"
+      ],
+      "reason": "データセンターqueue policyのA/B試験推定法が主題で、LLM推論servingの具体的scheduler改善ではない。",
+      "first_checked_at": "2026-10-06T10:31:42+00:00",
+      "last_checked_at": "2026-10-06T10:31:42+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ],
+      "title": "Experimentation for Different Scheduling Policies on Queues: Mixed Differences-in-Q Estimators Based on Little's Law"
+    },
+    "arXiv:2605.30229": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30229",
+      "identity_tokens": [
+        "arXiv:2605.30229"
+      ],
+      "reason": "mean-field理論でself-attentionのmode collapseを解析する理論研究で、推論時効率化の具体策やLLM評価はない。",
+      "first_checked_at": "2026-10-06T10:31:42+00:00",
+      "last_checked_at": "2026-10-06T10:31:42+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Anti Mode-Collapse in Mean-Field Transformer via Auxiliary Variables"
+    },
+    "DOI:10.1038/s41598-026-54190-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-54190-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-54190-z"
+      ],
+      "reason": "AFBNetは英語翻訳授業の評価向けBERT/attentionモデルで、推論効率や既存quantization方式への具体的寄与を示さない。",
+      "first_checked_at": "2026-10-06T10:31:43+00:00",
+      "last_checked_at": "2026-10-06T10:31:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "An intelligent assessment method for English translation teaching model based on improved BERT and attention mechanism"
+    },
+    "DOI:10.1109/smartcomp-companion70724.2026.00037": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/smartcomp-companion70724.2026.00037",
+      "identity_tokens": [
+        "DOI:10.1109/smartcomp-companion70724.2026.00037"
+      ],
+      "reason": "量子着想hybrid architectureのsecure smart systems応用であり、LLM推論改善やMoE servingの方法を示す候補ではない。",
+      "first_checked_at": "2026-10-06T10:31:43+00:00",
+      "last_checked_at": "2026-10-06T10:31:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "QAIRAS: A Resource-Bounded Hybrid Quantum-Inspired Architecture for Secure Smart Systems"
+    },
+    "DOI:10.1109/tcad.2025.3621408": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2025.3621408",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2025.3621408"
+      ],
+      "reason": "高速transmitterの電力/信号完全性co-analysis向けmasked decoderで、言語model decoderやLLM inferenceとは別領域。",
+      "first_checked_at": "2026-10-06T10:31:43+00:00",
+      "last_checked_at": "2026-10-06T10:31:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "CD-FiLM: Contrastive Masked Decoder With Feature-Wise Linear Modulation for Power–Signal Integrity Co-Analysis of High-Speed Transmitters"
+    },
+    "DOI:10.1109/tcsvt.2026.3664694": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3664694",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3664694"
+      ],
+      "reason": "zero-shot temporal action localizationのtest-time adaptationで、LLM inference efficiencyを改善しない。",
+      "first_checked_at": "2026-10-06T10:31:44+00:00",
+      "last_checked_at": "2026-10-06T10:31:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Bidirectional Temporal-Sensitive Adaptation for Generalized Zero-Shot Temporal Action Localization"
+    },
+    "DOI:10.1186/s42047-026-00241-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s42047-026-00241-8",
+      "identity_tokens": [
+        "DOI:10.1186/s42047-026-00241-8"
+      ],
+      "reason": "頸部細胞診slideの画像分類foundation modelが対象で、LLM効率との技術的接続がない。",
+      "first_checked_at": "2026-10-06T10:31:44+00:00",
+      "last_checked_at": "2026-10-06T10:31:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Domain-specific foundation model allows weakly supervised whole-slide cervical cytology classification"
+    },
+    "arXiv:2605.30904": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30904",
+      "identity_tokens": [
+        "arXiv:2605.30904"
+      ],
+      "reason": "画像生成用visual tokenizerの連続/離散表現統合で、LLM/VLM inferenceを高速化する方式ではない。",
+      "first_checked_at": "2026-10-06T10:31:44+00:00",
+      "last_checked_at": "2026-10-06T10:31:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "title": "MergeTok: Unified Continuous and Discrete Visual Tokenization via Token Merging"
+    },
+    "arXiv:2605.22814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22814",
+      "identity_tokens": [
+        "arXiv:2605.22814"
+      ],
+      "reason": "3D環境探索向けcuriosity-driven reinforcement learningの論文で、LLM推論を効率化するものではない。",
+      "first_checked_at": "2026-10-06T10:31:45+00:00",
+      "last_checked_at": "2026-10-06T10:31:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Remember to be Curious: Episodic Context and Persistent Worlds for 3D Exploration"
+    },
+    "arXiv:2605.20916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20916",
+      "identity_tokens": [
+        "arXiv:2605.20916"
+      ],
+      "reason": "implicit sentiment detectionにcognitive-appraisal multi-task modelを適用する分類研究で、LLM/MoE推論費用削減の証拠がない。",
+      "first_checked_at": "2026-10-06T10:31:46+00:00",
+      "last_checked_at": "2026-10-06T10:31:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Task-Routed Mixture-of-Experts with Cognitive Appraisal for Implicit Sentiment Analysis"
+    },
+    "arXiv:2605.26019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26019",
+      "identity_tokens": [
+        "arXiv:2605.26019"
+      ],
+      "reason": "チリ消費者契約条項のabusive clause detectionをRAGで支援する法務応用で、inference efficiency方式ではない。",
+      "first_checked_at": "2026-10-06T10:31:46+00:00",
+      "last_checked_at": "2026-10-06T10:31:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Retrieval-Augmented Detection of Potentially Abusive Clauses in Chilean Terms of Service"
+    },
+    "arXiv:2605.26111": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26111",
+      "identity_tokens": [
+        "arXiv:2605.26111"
+      ],
+      "reason": "subject-driven image generationでmultimodal capacityを高める研究で、token/computation削減の方式ではない。",
+      "first_checked_at": "2026-10-06T10:31:47+00:00",
+      "last_checked_at": "2026-10-06T10:31:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "title": "Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation"
+    },
+    "arXiv:2605.25134": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.25134",
+      "identity_tokens": [
+        "arXiv:2605.25134"
+      ],
+      "reason": "sparse optimizationのreparameterization/weight decay/learning-rate理論が対象で、LLM推論ではなく最適化・学習理論。",
+      "first_checked_at": "2026-10-06T10:31:47+00:00",
+      "last_checked_at": "2026-10-06T10:31:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Theoretical Analysis of Sparse Optimization with Reparameterization, Weight Decay, and Adaptive Learning Rate"
+    },
+    "arXiv:2605.21421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21421",
+      "identity_tokens": [
+        "arXiv:2605.21421"
+      ],
+      "reason": "スマートフォン上のmarkerless gait/motion-analysis pipelineが対象で、LLM推論efficiencyとは無関係。",
+      "first_checked_at": "2026-10-06T10:31:47+00:00",
+      "last_checked_at": "2026-10-06T10:31:47+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "title": "AIGaitor: Privacy-preserving and cloud-free motion analysis for everyone, using edge computing"
+    },
+    "arXiv:2605.19663": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19663",
+      "identity_tokens": [
+        "arXiv:2605.19663"
+      ],
+      "reason": "VLMにpseudocode-guided reasoningを与えて信頼性を高める研究で、効率改善はabstractから確認できない。",
+      "first_checked_at": "2026-10-06T10:31:48+00:00",
+      "last_checked_at": "2026-10-06T10:31:48+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "Pseudocode-Guided Structured Reasoning for Automating Reliable Inference in Vision-Language Models"
+    },
+    "arXiv:2605.19781": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19781",
+      "identity_tokens": [
+        "arXiv:2605.19781"
+      ],
+      "reason": "Muonを含むoptimizer学習則のgeometryを最適化するtraining理論で、推論高速化ではない。",
+      "first_checked_at": "2026-10-06T10:31:48+00:00",
+      "last_checked_at": "2026-10-06T10:31:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "From SGD to Muon: Adaptive Optimization via Schatten-p Norms"
+    },
+    "arXiv:2605.20495": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20495",
+      "identity_tokens": [
+        "arXiv:2605.20495"
+      ],
+      "reason": "顕微鏡VLMのexpert prompt選定は主に注釈負担を下げる人手/データ効率の研究で、モデル推論の計算資源削減ではない。",
+      "first_checked_at": "2026-10-06T10:31:48+00:00",
+      "last_checked_at": "2026-10-06T10:31:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "A Human-in-the-Loop Framework for Efficient Prompt Selection in Microscopy Vision-Language Models"
     }
   }
 }

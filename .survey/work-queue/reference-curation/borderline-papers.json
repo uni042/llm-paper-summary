@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T10:21:28+00:00",
-  "record_count": 2764,
+  "updated_at": "2026-10-06T10:31:47+00:00",
+  "record_count": 2780,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -42442,6 +42442,247 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Reflective Cross-Granularity Grounding with Preference Optimization for Long Video Understanding"
+    },
+    "arXiv:2605.27935": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27935",
+      "identity_tokens": [
+        "arXiv:2605.27935"
+      ],
+      "reason": "一次本文はQwen/Minimax/GLM等のagentic planningで層別活性・effective depthをmechanisticに調べる。意味方向は早く形成される場合がある一方、深い層が最終出力の安定化に必要と報告し、深さを単純に削る結論ではない。適応depth研究との接点はあるが、推論削減方法/latency評価はない。",
+      "first_checked_at": "2026-10-06T10:31:38+00:00",
+      "last_checked_at": "2026-10-06T10:31:38+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Do Agents Think Deeper? A Mechanistic Investigation of Layer-Wise Dynamics in Sequential Planning"
+    },
+    "DOI:10.1117/12.3109823": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3109823",
+      "identity_tokens": [
+        "DOI:10.1117/12.3109823"
+      ],
+      "reason": "delocalized deep learning向けphotonic transceiverはデータ移動/energyを扱うhardware系譜に関連しうるが、候補情報からLLMやtransformer serving上の測定を確認できない。出版社本文も取得不能。",
+      "first_checked_at": "2026-10-06T10:31:39+00:00",
+      "last_checked_at": "2026-10-06T10:31:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Integrated photonic transceiver for delocalized deep learning"
+    },
+    "DOI:10.1109/iscas66217.2026.11561964": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas66217.2026.11561964",
+      "identity_tokens": [
+        "DOI:10.1109/iscas66217.2026.11561964"
+      ],
+      "reason": "RRAM-CIMでFourier-based Transformerをmixed precision/DFT symmetryで高速・省電力化するhardware方式として関連するが、LLM servingへの転用と実測評価を本文で確認できない。",
+      "first_checked_at": "2026-10-06T10:31:40+00:00",
+      "last_checked_at": "2026-10-06T10:31:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy-Efficient Acceleration of Fourier-based Transformers on RRAM-CIM via Mixed-Precision and DFT Symmetry"
+    },
+    "DOI:10.1109/iscas66217.2026.11562594": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas66217.2026.11562594",
+      "identity_tokens": [
+        "DOI:10.1109/iscas66217.2026.11562594"
+      ],
+      "reason": "公式ISCAS paper recordのabstractはFP8×INT2/4/6 DCIM、double-buffering、LLaMA3.2で最大4–6x throughput/energy改善・area最大5x低減を報告し直接関連する。ただしfull textに到達できず、比較条件/限界が検証できない。",
+      "first_checked_at": "2026-10-06T10:31:40+00:00",
+      "last_checked_at": "2026-10-06T10:31:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Synthesizable Mixed-Precision DCIM Macro with Parallel Write and Compute"
+    },
+    "DOI:10.1109/iscas66217.2026.11562903": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas66217.2026.11562903",
+      "identity_tokens": [
+        "DOI:10.1109/iscas66217.2026.11562903"
+      ],
+      "reason": "MX-SE super-exponent形式はAI edge向け量子化誤差改善としてlow-bit model圧縮系譜に接点があるが、LLMでの方法・評価を示す本文が取得できない。",
+      "first_checked_at": "2026-10-06T10:31:40+00:00",
+      "last_checked_at": "2026-10-06T10:31:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MX-SE: Microscaling Data Format with Super Exponent for AI edge computing"
+    },
+    "DOI:10.1145/3774905.3794695": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774905.3794695",
+      "identity_tokens": [
+        "DOI:10.1145/3774905.3794695"
+      ],
+      "reason": "BitNetv2のHadamard変換とBitLinearを共通butterfly adder-treeで再利用するPIM acceleratorで、LLM hardware efficiencyとの直接接点がある。ACM publisherはopen access/abstractを提示するがfull text本文を取得できず、測定条件・結果詳細を検証できない。",
+      "first_checked_at": "2026-10-06T10:31:41+00:00",
+      "last_checked_at": "2026-10-06T10:31:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hadamard-Aware Bit-wise PIM Architecture via Butterfly Adder-Tree Reuse"
+    },
+    "DOI:10.1109/dcoss-iot69657.2026.00056": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dcoss-iot69657.2026.00056",
+      "identity_tokens": [
+        "DOI:10.1109/dcoss-iot69657.2026.00056"
+      ],
+      "reason": "LLMをFPGAで推論するedge co-designとして関連するが、機関リポジトリの一次記録はabstractのみでfull textは未公開。ハードウェア構成・実測・限界の本文検証ができない。",
+      "first_checked_at": "2026-10-06T10:31:42+00:00",
+      "last_checked_at": "2026-10-06T10:31:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "(DEMO) TITAN: Tiny Inference and Training for Transformer Models on FPGA-Based Edge Nodes"
+    },
+    "DOI:10.1109/iciba68339.2026.11651876": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iciba68339.2026.11651876",
+      "identity_tokens": [
+        "DOI:10.1109/iciba68339.2026.11651876"
+      ],
+      "reason": "AWQをFPGA上のViTへ適用する研究でquantization系譜には接点があるが、対象はvision transformerでLLM評価なし。一次出版社full textを取得できず、転用可能性を判定できない。",
+      "first_checked_at": "2026-10-06T10:31:42+00:00",
+      "last_checked_at": "2026-10-06T10:31:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring the Application of AWQ in Vision Transformers on FPGA Accelerators"
+    },
+    "DOI:10.1109/icra57385.2026.11697183": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icra57385.2026.11697183",
+      "identity_tokens": [
+        "DOI:10.1109/icra57385.2026.11697183"
+      ],
+      "reason": "DyRefは複雑度に応じて反省戦略を選ぶLLMロボット計画法として、反復の冗長性を減らす点で関連する。著者プロジェクトページの要旨/方法説明では成功率+16.1%、冗長reflection−64.4%を掲げるが、論文本体・評価条件・限界を取得できない。",
+      "first_checked_at": "2026-10-06T10:31:43+00:00",
+      "last_checked_at": "2026-10-06T10:31:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DyRef: Dynamic Reflection Framework via Graph-Based Complexity for Robotic Planning"
+    },
+    "DOI:10.1109/icscst70031.2026.11709804": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icscst70031.2026.11709804",
+      "identity_tokens": [
+        "DOI:10.1109/icscst70031.2026.11709804"
+      ],
+      "reason": "Raspberry Pi向け軽量Transformer sentiment modelはBERT圧縮/edge inference系譜と接点があるが、要旨は蒸留中心でLLMではない。本文の比較条件と効率値を確認できず、弱い関連に留まる。",
+      "first_checked_at": "2026-10-06T10:31:43+00:00",
+      "last_checked_at": "2026-10-06T10:31:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight Transformer Architecture for Real-Time Sentiment Analysis in Edge IoT Systems"
+    },
+    "arXiv:2605.23259": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.23259",
+      "identity_tokens": [
+        "arXiv:2605.23259"
+      ],
+      "reason": "一次本文のMGRはLLM residual streamにmulti-gate/attention poolingを導入し、深層activationの安定性と通信負荷を改善するarchitectureを提案する。0.12B/0.35B/0.77BモデルをFineWebでscratch trainingしloss/activation/gradientを比較するが、主な計算はtrain-time communicationで、推論latency/throughputの実測はなく、小規模学習評価に限られる。",
+      "first_checked_at": "2026-10-06T10:31:45+00:00",
+      "last_checked_at": "2026-10-06T10:31:45+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Gate Residuals"
+    },
+    "arXiv:2605.22984": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22984",
+      "identity_tokens": [
+        "arXiv:2605.22984"
+      ],
+      "reason": "一次本文はtest-time trainingによるLLM安全alignmentの劣化/jailbreakを複数モデルで評価し、dynamic alignmentやprovider-side detectorを提案する。TTT/serving運用系譜には関連するが、主題はsecurityで推論compute/memory/latency改善を測らず、効率候補としては直接性が弱い。",
+      "first_checked_at": "2026-10-06T10:31:45+00:00",
+      "last_checked_at": "2026-10-06T10:31:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Test-Time Training Undermines Safety Guardrails"
+    },
+    "arXiv:2605.21171": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21171",
+      "identity_tokens": [
+        "arXiv:2605.21171"
+      ],
+      "reason": "一次本文はDeiT/ViTを全重みternarizationし、ImageNet精度・ESP32-S3 memory/latencyを評価する。1.58-bit LLM量子化系譜には技術的類似性があるが、対象は視覚分類モデルで言語/LLM性能・KV/decode costはなく、適用先の違いが大きい。",
+      "first_checked_at": "2026-10-06T10:31:45+00:00",
+      "last_checked_at": "2026-10-06T10:31:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FTerViT: Fully Ternary Vision Transformer"
+    },
+    "arXiv:2609.05424": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05424",
+      "identity_tokens": [
+        "arXiv:2609.05424"
+      ],
+      "reason": "一次arXiv本文はPhytium/Cambricon MLU370上でViT推論のhead sparsification、embedding圧縮、INT8/mixed precision、operator fusionとsingle-card pipelineを評価し、全処理latency 18.7ms・Jetson AGX Xavier比2.89xを報告する。一方、対象modelはViTとrobotics operatorでLLM実験はなく、NeuPIMs系統へのhardware接続は間接的。",
+      "first_checked_at": "2026-10-06T10:31:46+00:00",
+      "last_checked_at": "2026-10-06T10:31:46+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Research on Intra-Chip Fusion Deployment and Optimization of Embodied Intelligence Business Operator NPU"
+    },
+    "arXiv:2605.25166": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25166",
+      "identity_tokens": [
+        "arXiv:2605.25166"
+      ],
+      "reason": "一次本文は時系列foundation modelのstructure-guided sparse MoE routingを扱い、regime priorでexpert selectionを促す。MoE/conditional compute系譜との接点はあるが、時系列予測向けでLLMの推論FLOPs/latency削減の直接評価はなく、LLM serving転用は未確認。",
+      "first_checked_at": "2026-10-06T10:31:46+00:00",
+      "last_checked_at": "2026-10-06T10:31:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AME-TS: Anchored Mixture-of-Experts for Time Series Forecasting"
+    },
+    "arXiv:2605.21260": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21260",
+      "identity_tokens": [
+        "arXiv:2605.21260"
+      ],
+      "reason": "一次本文はCoT reasoning riskをoracle-trajectory benefitとtrajectory-mismatch costへ分解し、stability条件で累積誤差のbounded/linear/exponential regimesを理論化する。実LLMでの計算削減methodやruntime評価はなく、test-time reasoning cost理論との概念的接点に留まる。",
+      "first_checked_at": "2026-10-06T10:31:47+00:00",
+      "last_checked_at": "2026-10-06T10:31:47+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Cost and Benefit of Chain of Thought: A Learning-Theoretic Perspective"
     }
   }
 }
