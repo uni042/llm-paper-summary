@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r35-screen-01-part-08-00152dcc2d50",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.16006",
+      "identity_tokens": [
+        "arXiv:2404.16006"
+      ],
+      "title": "MMT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/2404.16006",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.04309",
+      "identity_tokens": [
+        "arXiv:2007.04309"
+      ],
+      "title": "Self-Supervised Policy Adaptation during Deployment",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/2007.04309",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1906.09777",
+      "identity_tokens": [
+        "arXiv:1906.09777"
+      ],
+      "title": "A Tensorized Transformer for Language Modeling",
+      "reason": "Tensorized Transformer compresses self-attention parameters and evaluates language modeling and translation, making it relevant to model-size/memory reduction. It does not establish modern decoder-only serving latency, KV-cache behavior, or throughput.",
+      "source_url": "https://arxiv.org/abs/1906.09777",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.08241",
+      "identity_tokens": [
+        "arXiv:1802.08241"
+      ],
+      "title": "Hessian-based Analysis of Large Batch Training and Robustness to Adversaries",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/1802.08241",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.04925",
+      "identity_tokens": [
+        "arXiv:2401.04925"
+      ],
+      "title": "The Impact of Reasoning Step Length on Large Language Models",
+      "reason": "This is an empirical study of how Chain-of-Thought demonstration length affects reasoning accuracy; it finds task-dependent effects but does not propose an inference optimization. Shorter demonstrations could affect token cost, but net serving benefit is unmeasured.",
+      "source_url": "https://arxiv.org/abs/2401.04925",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    }
+  ]
+}
