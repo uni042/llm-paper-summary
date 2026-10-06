@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fcab0a0caabbf36-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.17340",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.17340",
+    "identity_tokens": [
+      "arXiv:2605.17340"
+    ],
+    "reason": "Title and abstract identify a domain/task-specific model or general theory with no concrete LLM/VLM inference efficiency method or actionable connection to the linked inference lineage.",
+    "first_checked_at": "2026-10-06T07:14:26+00:00",
+    "last_checked_at": "2026-10-06T07:14:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "Olivia: Harmonizing Time Series Foundation Models with Power Spectral Density"
+  },
+  "processed_at": "2026-10-06T07:14:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fcab0a0caab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

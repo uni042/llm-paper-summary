@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T07:10:20+00:00",
-  "record_count": 2417,
+  "updated_at": "2026-10-06T07:14:34+00:00",
+  "record_count": 2433,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -37209,6 +37209,248 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CoCoSI: Collaborative Cognitive Map Construction for Spatial Intelligence"
+    },
+    "arXiv:2605.18359": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18359",
+      "identity_tokens": [
+        "arXiv:2605.18359"
+      ],
+      "reason": "Could relate to visual-token attention allocation, but a concrete efficiency gain over the linked token-reduction work is not demonstrated.",
+      "first_checked_at": "2026-10-06T07:14:26+00:00",
+      "last_checked_at": "2026-10-06T07:14:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RAVE: Re-Allocating Visual Attention in Large Multimodal Models"
+    },
+    "DOI:10.23919/date69613.2026.11539457": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/date69613.2026.11539457",
+      "identity_tokens": [
+        "DOI:10.23919/date69613.2026.11539457"
+      ],
+      "reason": "Plausible inference/efficiency lineage candidate, but primary full text was unavailable; do not infer its method or results from metadata/secondary snippets.",
+      "first_checked_at": "2026-10-06T07:14:27+00:00",
+      "last_checked_at": "2026-10-06T07:14:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SSR: Sparse Segment Reduction for Ternary GEMM Acceleration"
+    },
+    "arXiv:2604.14692": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14692",
+      "identity_tokens": [
+        "arXiv:2604.14692"
+      ],
+      "reason": "Relevant video reasoning lineage but it may add sequential search work rather than reduce it; retain pending cost accounting and comparison with linked token compression.",
+      "first_checked_at": "2026-10-06T07:14:27+00:00",
+      "last_checked_at": "2026-10-06T07:14:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chain-of-Glimpse: Search-Guided Progressive Object-Grounded Reasoning for Video Understanding"
+    },
+    "arXiv:2604.14922": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14922",
+      "identity_tokens": [
+        "arXiv:2604.14922"
+      ],
+      "reason": "Related to long-context activation and quantization, but its main effect is training-time optimization, not demonstrated inference improvement.",
+      "first_checked_at": "2026-10-06T07:14:27+00:00",
+      "last_checked_at": "2026-10-06T07:14:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LongAct: Harnessing Intrinsic Activation Patterns for Long-Context Reinforcement Learning"
+    },
+    "DOI:10.1007/s44443-026-00754-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44443-026-00754-y",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00754-y"
+      ],
+      "reason": "A generation-speed method but for CAD-domain diffusion code generation, not LLM inference/serving; retain only as an adjacent non-autoregressive-generation comparison.",
+      "first_checked_at": "2026-10-06T07:14:27+00:00",
+      "last_checked_at": "2026-10-06T07:14:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Balancing speed and executability in interactive text-to-CAD code generation for early-stage parametric CAD ideation"
+    },
+    "arXiv:2608.05160": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05160",
+      "identity_tokens": [
+        "arXiv:2608.05160"
+      ],
+      "reason": "Related to recurrent-depth reasoning by topic, but provides an analysis metric rather than an inference optimization; connection to efficient reasoning is weak.",
+      "first_checked_at": "2026-10-06T07:14:28+00:00",
+      "last_checked_at": "2026-10-06T07:14:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Ignition Index: Measuring Global Workspace Dynamics in Language Models"
+    },
+    "DOI:10.1007/s10664-026-10880-w": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10664-026-10880-w",
+      "identity_tokens": [
+        "DOI:10.1007/s10664-026-10880-w"
+      ],
+      "reason": "Plausible inference/efficiency lineage candidate, but primary full text was unavailable; do not infer its method or results from metadata/secondary snippets.",
+      "first_checked_at": "2026-10-06T07:14:28+00:00",
+      "last_checked_at": "2026-10-06T07:14:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring and improving knowledge distillation for pre-trained code models"
+    },
+    "arXiv:2604.25299": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.25299",
+      "identity_tokens": [
+        "arXiv:2604.25299"
+      ],
+      "reason": "Related to recurrent latent computation but the paper does not demonstrate an LLM inference/serving optimization; retain as adjacent multimodal generation work only.",
+      "first_checked_at": "2026-10-06T07:14:29+00:00",
+      "last_checked_at": "2026-10-06T07:14:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Thinking Pixel: Recursive Sparse Reasoning in Multimodal Diffusion Latents"
+    },
+    "DOI:10.1109/jocici69279.2026.11701724": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jocici69279.2026.11701724",
+      "identity_tokens": [
+        "DOI:10.1109/jocici69279.2026.11701724"
+      ],
+      "reason": "Plausible inference/efficiency lineage candidate, but primary full text was unavailable; do not infer its method or results from metadata/secondary snippets.",
+      "first_checked_at": "2026-10-06T07:14:30+00:00",
+      "last_checked_at": "2026-10-06T07:14:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating CORDIC-Based and Approximate Softmax Accelerators for Deep Learning Inference on FPGAs"
+    },
+    "DOI:10.1109/tvlsi.2026.3673259": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tvlsi.2026.3673259",
+      "identity_tokens": [
+        "DOI:10.1109/tvlsi.2026.3673259"
+      ],
+      "reason": "Plausible inference/efficiency lineage candidate, but primary full text was unavailable; do not infer its method or results from metadata/secondary snippets.",
+      "first_checked_at": "2026-10-06T07:14:30+00:00",
+      "last_checked_at": "2026-10-06T07:14:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "T3: Transformer Accelerator With Efficient Top-K Sorting and Dynamic Tanh Computation for Marine Edge Computing"
+    },
+    "arXiv:2605.23833": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.23833",
+      "identity_tokens": [
+        "arXiv:2605.23833"
+      ],
+      "reason": "Hardware acceleration is relevant to FlightLLM/FPGA inference, but this general accelerator paper does not make an explicit LLM inference case; retain for a targeted workload check.",
+      "first_checked_at": "2026-10-06T07:14:31+00:00",
+      "last_checked_at": "2026-10-06T07:14:31+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DORA: Dataflow-Instruction Orchestration Architecture for DNN Acceleration"
+    },
+    "arXiv:2605.11869": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11869",
+      "identity_tokens": [
+        "arXiv:2605.11869"
+      ],
+      "reason": "Concrete inference acceleration, but target is video diffusion rather than LLM/VLM inference; retain only as an adjacent visual-generation accelerator pending scope review.",
+      "first_checked_at": "2026-10-06T07:14:31+00:00",
+      "last_checked_at": "2026-10-06T07:14:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FIS-DiT: Breaking the Few-Step Video Inference Barrier via Training-Free Frame Interleaved Sparsity"
+    },
+    "arXiv:2605.12163": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12163",
+      "identity_tokens": [
+        "arXiv:2605.12163"
+      ],
+      "reason": "Connected to the recurrent latent-reasoning seed, but no demonstrated efficiency benefit or actionable inference optimization is reported.",
+      "first_checked_at": "2026-10-06T07:14:32+00:00",
+      "last_checked_at": "2026-10-06T07:14:32+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Consistent Latent Reasoning: Long Latent Sequence Reasoning for Vision-Language Model"
+    },
+    "arXiv:2605.08665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08665",
+      "identity_tokens": [
+        "arXiv:2605.08665"
+      ],
+      "reason": "Related to efficient-reasoning literature but the claimed efficiency is training data use, not the assigned inference-efficiency scope; keep borderline pending lineage-specific relevance review.",
+      "first_checked_at": "2026-10-06T07:14:32+00:00",
+      "last_checked_at": "2026-10-06T07:14:32+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hint Tuning: Less Data Makes Better Reasoners"
+    },
+    "arXiv:2605.07193": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07193",
+      "identity_tokens": [
+        "arXiv:2605.07193"
+      ],
+      "reason": "The one-step generation idea could reduce iterative inference, but task/model scope is not shown to be LLM reasoning or serving; verify applicability before follow-up.",
+      "first_checked_at": "2026-10-06T07:14:33+00:00",
+      "last_checked_at": "2026-10-06T07:14:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Coupling Models for One-Step Discrete Generation"
+    },
+    "arXiv:2604.08872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.08872",
+      "identity_tokens": [
+        "arXiv:2604.08872"
+      ],
+      "reason": "The efficient-reasoning lineage connection is plausible, but an actionable inference-cost method is not demonstrated; follow up only if linked work needs a depth-selection bound.",
+      "first_checked_at": "2026-10-06T07:14:34+00:00",
+      "last_checked_at": "2026-10-06T07:14:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How does Chain of Thought decompose complex tasks?"
     }
   }
 }
