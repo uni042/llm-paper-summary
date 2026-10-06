@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r43-screen-01-part-03-84df744c25c5",
+  "reference_main_sha": "b9f5ba2efd293e62612217d6834a4475daa40ec2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.23885",
+      "identity_tokens": [
+        "arXiv:2505.23885"
+      ],
+      "title": "OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation",
+      "reason": "OWL is a multi-agent task-automation system and reduces planner training overhead, but reported results do not isolate LLM inference latency, memory, or throughput.",
+      "source_url": "https://arxiv.org/abs/2505.23885",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04374",
+      "identity_tokens": [
+        "arXiv:2510.04374"
+      ],
+      "title": "GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks",
+      "reason": "GDPval is an evaluation benchmark for economically valuable tasks and compares model performance; it does not introduce an inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2510.04374",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3580305.3599931",
+      "identity_tokens": [
+        "DOI:10.1145/3580305.3599931"
+      ],
+      "title": "WebGLM: Towards An Efficient Web-Enhanced Question Answering System with Human Preferences",
+      "reason": "WebGLM reports faster web retrieval (5.3 s average and 4.07 s median) using asynchronous fetching; the measured improvement is retrieval latency, not LLM inference serving.",
+      "source_url": "https://arxiv.org/abs/2306.07906",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.24144",
+      "identity_tokens": [
+        "arXiv:2602.24144"
+      ],
+      "title": "Fixed Anchors Are Not Enough: Dynamic Retrieval and Persistent Homology for Dataset Distillation",
+      "reason": "Dynamic retrieval and persistent homology are used for dataset distillation; the method is a training-data/distillation contribution, not an LLM inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2602.24144",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.06161-all-for-1-bit.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02341",
+      "identity_tokens": [
+        "arXiv:2602.02341"
+      ],
+      "title": "LongVPO: From Anchored Cues to Self-Reasoning for Long-Form Video Preference Optimization",
+      "reason": "LongVPO is a video preference-optimization/training method, not a video-inference serving optimization.",
+      "source_url": "https://arxiv.org/abs/2602.02341",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    }
+  ]
+}
