@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28191c97bafebf88-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.17502",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.17502",
+    "identity_tokens": [
+      "arXiv:2511.17502"
+    ],
+    "reason": "RynnVLA-002 is a vision-language-action/world-model capability paper with no LLM serving-efficiency contribution.",
+    "first_checked_at": "2026-10-06T05:19:20+00:00",
+    "last_checked_at": "2026-10-06T05:19:20+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md"
+    ],
+    "title": "RynnVLA-002: A Unified Vision-Language-Action and World Model"
+  },
+  "processed_at": "2026-10-06T05:19:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28191c97bafe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T05:09:47+00:00",
-  "record_count": 7054,
+  "updated_at": "2026-10-06T05:19:25+00:00",
+  "record_count": 7079,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -101745,6 +101745,359 @@
         "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
       ],
       "title": "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction"
+    },
+    "arXiv:2304.13013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.13013",
+      "identity_tokens": [
+        "arXiv:2304.13013"
+      ],
+      "reason": "This paper studies low-precision VLM training stability, not inference-time compute or memory.",
+      "first_checked_at": "2026-10-06T05:19:19+00:00",
+      "last_checked_at": "2026-10-06T05:19:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "Stable and low-precision training for large-scale vision-language models"
+    },
+    "DOI:10.1109/isca66397.2026.00060": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00060",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00060"
+      ],
+      "reason": "This paper designs a general CXL controller and routing switch; it does not evaluate or target LLM inference workloads.",
+      "first_checked_at": "2026-10-06T05:19:19+00:00",
+      "last_checked_at": "2026-10-06T05:19:19+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "title": "A Silicon-Proven Unified Low-Latency CXL Controller and Port-Based Routing Switch for Memory-Centric Fabrics"
+    },
+    "arXiv:2603.20620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20620",
+      "identity_tokens": [
+        "arXiv:2603.20620"
+      ],
+      "reason": "The paper studies how reasoning traces affect generated outputs, not a method to reduce inference resources.",
+      "first_checked_at": "2026-10-06T05:19:19+00:00",
+      "last_checked_at": "2026-10-06T05:19:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "Reasoning Traces Shape Outputs but Models Won't Say So"
+    },
+    "arXiv:2601.09350": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.09350",
+      "identity_tokens": [
+        "arXiv:2601.09350"
+      ],
+      "reason": "The paper optimizes memory/resolution for video moment retrieval, a retrieval task; it does not establish LLM inference or video-LLM serving gains.",
+      "first_checked_at": "2026-10-06T05:19:19+00:00",
+      "last_checked_at": "2026-10-06T05:19:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "See More, Store Less: Memory-Efficient Resolution for Video Moment Retrieval"
+    },
+    "arXiv:2511.17502": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17502",
+      "identity_tokens": [
+        "arXiv:2511.17502"
+      ],
+      "reason": "RynnVLA-002 is a vision-language-action/world-model capability paper with no LLM serving-efficiency contribution.",
+      "first_checked_at": "2026-10-06T05:19:20+00:00",
+      "last_checked_at": "2026-10-06T05:19:20+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md"
+      ],
+      "title": "RynnVLA-002: A Unified Vision-Language-Action and World Model"
+    },
+    "arXiv:1907.05600": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1907.05600",
+      "identity_tokens": [
+        "arXiv:1907.05600"
+      ],
+      "reason": "Score-based generative modeling estimates data distributions; it is not an LLM inference or serving method.",
+      "first_checked_at": "2026-10-06T05:19:21+00:00",
+      "last_checked_at": "2026-10-06T05:19:21+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Generative Modeling by Estimating Gradients of the Data Distribution"
+    },
+    "DOI:10.1145/1807128.1807152": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1807128.1807152",
+      "identity_tokens": [
+        "DOI:10.1145/1807128.1807152"
+      ],
+      "reason": "YCSB benchmarks cloud key-value/database serving systems and does not address LLM workloads or inference.",
+      "first_checked_at": "2026-10-06T05:19:21+00:00",
+      "last_checked_at": "2026-10-06T05:19:21+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Benchmarking cloud serving systems with YCSB"
+    },
+    "arXiv:2401.15391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.15391",
+      "identity_tokens": [
+        "arXiv:2401.15391"
+      ],
+      "reason": "MultiHop-RAG is a retrieval benchmark; it contributes an evaluation dataset rather than an inference-efficiency method.",
+      "first_checked_at": "2026-10-06T05:19:21+00:00",
+      "last_checked_at": "2026-10-06T05:19:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md"
+      ],
+      "title": "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries"
+    },
+    "arXiv:2204.11786": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.11786",
+      "identity_tokens": [
+        "arXiv:2204.11786"
+      ],
+      "reason": "This survey covers mobile deep-learning systems broadly and predates current LLM serving; it supplies no concrete LLM inference method.",
+      "first_checked_at": "2026-10-06T05:19:21+00:00",
+      "last_checked_at": "2026-10-06T05:19:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "Enable Deep Learning on Mobile Devices: Methods, Systems, and Applications"
+    },
+    "DOI:10.1145/3746252.3761254": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746252.3761254",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761254"
+      ],
+      "reason": "The paper improves text-embedding training through hard-negative mining; it does not optimize LLM generation or serving.",
+      "first_checked_at": "2026-10-06T05:19:22+00:00",
+      "last_checked_at": "2026-10-06T05:19:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Improving Text Embedding Models with Positive-aware Hard-negative Mining"
+    },
+    "arXiv:2511.17397": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17397",
+      "identity_tokens": [
+        "arXiv:2511.17397"
+      ],
+      "reason": "MCMoE addresses missing modalities in action-quality assessment, not LLM inference resource use.",
+      "first_checked_at": "2026-10-06T05:19:22+00:00",
+      "last_checked_at": "2026-10-06T05:19:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md"
+      ],
+      "title": "MCMoE: Completing Missing Modalities with Mixture of Experts for Incomplete Multimodal Action Quality Assessment"
+    },
+    "DOI:10.1145/3774655": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774655",
+      "identity_tokens": [
+        "DOI:10.1145/3774655"
+      ],
+      "reason": "The LLM is applied to UAV path planning; the contribution is an application/planning method, not LLM inference systems.",
+      "first_checked_at": "2026-10-06T05:19:22+00:00",
+      "last_checked_at": "2026-10-06T05:19:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "title": "LLM-based UAV Path Planning for Autonomous and Adaptive Industry Systems"
+    },
+    "arXiv:2407.01284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01284",
+      "identity_tokens": [
+        "arXiv:2407.01284"
+      ],
+      "reason": "We-Math evaluates multimodal mathematical reasoning and does not propose a compute, memory, or serving optimization.",
+      "first_checked_at": "2026-10-06T05:19:22+00:00",
+      "last_checked_at": "2026-10-06T05:19:22+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "We-Math: Does Your Large Multimodal Model Achieve Human-like Mathematical Reasoning?"
+    },
+    "arXiv:2306.07207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.07207",
+      "identity_tokens": [
+        "arXiv:2306.07207"
+      ],
+      "reason": "The primary text describes a video-assistant model and temporal visual representation; it does not establish an inference-efficiency technique despite citation adjacency to video-compression work.",
+      "first_checked_at": "2026-10-06T05:19:23+00:00",
+      "last_checked_at": "2026-10-06T05:19:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "title": "Valley: Video Assistant with Large Language Model Enhanced Ability"
+    },
+    "arXiv:2405.01483": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.01483",
+      "identity_tokens": [
+        "arXiv:2405.01483"
+      ],
+      "reason": "MANTIS improves multi-image instruction tuning and model capability; no inference-cost reduction method is presented.",
+      "first_checked_at": "2026-10-06T05:19:23+00:00",
+      "last_checked_at": "2026-10-06T05:19:23+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "MANTIS: Interleaved Multi-Image Instruction Tuning"
+    },
+    "arXiv:2407.04973": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04973",
+      "identity_tokens": [
+        "arXiv:2407.04973"
+      ],
+      "reason": "LogicVista is a multimodal reasoning benchmark, not an inference optimization.",
+      "first_checked_at": "2026-10-06T05:19:23+00:00",
+      "last_checked_at": "2026-10-06T05:19:23+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "LogicVista: Multimodal LLM Logical Reasoning Benchmark in Visual Contexts"
+    },
+    "arXiv:2511.17729": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17729",
+      "identity_tokens": [
+        "arXiv:2511.17729"
+      ],
+      "reason": "M3-Bench evaluates multimodal tool-using agents and reports capability/trajectory metrics, not an efficiency method tied to the linked MoE lineage.",
+      "first_checked_at": "2026-10-06T05:19:23+00:00",
+      "last_checked_at": "2026-10-06T05:19:23+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md"
+      ],
+      "title": "M^3-Bench: Multi-Modal, Multi-Hop, Multi-Threaded Tool-Using MLLM Agent Benchmark"
+    },
+    "arXiv:2606.06021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06021",
+      "identity_tokens": [
+        "arXiv:2606.06021"
+      ],
+      "reason": "OPRD is an on-policy representation-distillation training method; the paper does not establish lower LLM inference cost.",
+      "first_checked_at": "2026-10-06T05:19:24+00:00",
+      "last_checked_at": "2026-10-06T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "OPRD: On-Policy Representation Distillation"
+    },
+    "DOI:10.1109/tpami.2026.3697367": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2026.3697367",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3697367"
+      ],
+      "reason": "Ego-R1 improves egocentric video reasoning with tool use; it does not present a concrete serving/inference optimization.",
+      "first_checked_at": "2026-10-06T05:19:24+00:00",
+      "last_checked_at": "2026-10-06T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "Ego-R1: Agentic Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning"
+    },
+    "arXiv:2603.06658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06658",
+      "identity_tokens": [
+        "arXiv:2603.06658"
+      ],
+      "reason": "ASMIL addresses whole-slide-image classification, not LLM inference.",
+      "first_checked_at": "2026-10-06T05:19:24+00:00",
+      "last_checked_at": "2026-10-06T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "ASMIL: Attention-Stabilized Multiple Instance Learning for Whole Slide Imaging"
+    },
+    "arXiv:2512.07777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07777",
+      "identity_tokens": [
+        "arXiv:2512.07777"
+      ],
+      "reason": "This work evaluates narrative incoherence detection and does not present LLM serving or inference optimization.",
+      "first_checked_at": "2026-10-06T05:19:24+00:00",
+      "last_checked_at": "2026-10-06T05:19:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Mary, the Cheeseburger-Eating Vegetarian: Do LLMs Recognize Incoherence in Narratives?"
+    },
+    "arXiv:2604.11556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11556",
+      "identity_tokens": [
+        "arXiv:2604.11556"
+      ],
+      "reason": "FM-Agent applies Hoare-style formal reasoning to verify large-system properties; the primary contribution is verification correctness/scale, not request scheduling or LLM serving efficiency despite lineage metadata.",
+      "first_checked_at": "2026-10-06T05:19:25+00:00",
+      "last_checked_at": "2026-10-06T05:19:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md"
+      ],
+      "title": "FM-Agent: Scaling Formal Methods to Large Systems via LLM-Based Hoare-Style Reasoning"
+    },
+    "DOI:10.1109/tsg.2025.3610482": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tsg.2025.3610482",
+      "identity_tokens": [
+        "DOI:10.1109/tsg.2025.3610482"
+      ],
+      "reason": "The heterogeneous-expert method targets nonintrusive load monitoring for smart grids, outside LLM inference systems.",
+      "first_checked_at": "2026-10-06T05:19:25+00:00",
+      "last_checked_at": "2026-10-06T05:19:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "A Heterogeneous Multiple-Experts Approach to Low-Frequency Nonintrusive Load Monitoring"
+    },
+    "arXiv:2512.08529": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.08529",
+      "identity_tokens": [
+        "arXiv:2512.08529"
+      ],
+      "reason": "MVP improves GUI grounding quality; no inference-resource optimization is proposed.",
+      "first_checked_at": "2026-10-06T05:19:25+00:00",
+      "last_checked_at": "2026-10-06T05:19:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "title": "MVP: Multiple View Prediction Improves GUI Grounding"
+    },
+    "arXiv:2506.03135": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03135",
+      "identity_tokens": [
+        "arXiv:2506.03135"
+      ],
+      "reason": "OmniSpatial is a spatial-reasoning benchmark, not an inference optimization.",
+      "first_checked_at": "2026-10-06T05:19:25+00:00",
+      "last_checked_at": "2026-10-06T05:19:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models"
     }
   }
 }
