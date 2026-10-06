@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r64-screen-01-part-02-78dddc8378e0",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.02284",
+      "identity_tokens": [
+        "arXiv:2303.02284"
+      ],
+      "title": "Fixed-Point Quantization Aware Training for on-Device Keyword-Spotting",
+      "reason": "Fixed-point QAT combines squashed weight distributions and cosine regularization and quantizes transient variables for keyword-spotting models. Google Speech Commands and an in-house KWS set report 4-bit accuracy retention and 68% shorter execution time with fixed-point inference. This is a concrete embedded quantization method but for convolutional audio KWS, not transformer/LLM inference; linked low-bit relation is weak.",
+      "source_url": "https://arxiv.org/abs/2303.02284",
+      "first_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "last_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.08387",
+      "identity_tokens": [
+        "arXiv:2211.08387"
+      ],
+      "title": "AutoTemplate: A Simple Recipe for Lexically Constrained Text Generation",
+      "reason": "AutoTemplate separates constrained generation into template generation and lexicalization, evaluating keyword-to-sentence generation and entity-guided summarization against constraint-satisfaction baselines. It targets lexical constraint quality rather than inference compute, memory, or latency; relation to iterative non-autoregressive generation is task-level only.",
+      "source_url": "https://arxiv.org/abs/2211.08387",
+      "first_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "last_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.17292",
+      "identity_tokens": [
+        "arXiv:2509.17292"
+      ],
+      "title": "Multi-View Attention Multiple-Instance Learning Enhanced by LLM Reasoning for Cognitive Distortion Detection",
+      "reason": "The framework decomposes utterances into emotion, logic and behavior elements, applies LLM reasoning and gated multi-view MIL for cognitive-distortion classification. Evaluation on Korean and English mental-health datasets measures classification quality. It is a task-specific LLM application, not inference efficiency or compression; the linked MiniLM paper is unrelated technically.",
+      "source_url": "https://arxiv.org/abs/2509.17292",
+      "first_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "last_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00047",
+      "identity_tokens": [
+        "arXiv:2502.00047"
+      ],
+      "title": "HadamRNN: Binary and Sparse Ternary Orthogonal RNNs",
+      "reason": "HadamRNN parameterizes orthogonal recurrent matrices with binary or sparse-ternary weights and evaluates copy, MNIST, IMDB, GLUE and IoT tasks. It reports near full-precision task quality with compact low-bit recurrent weights. The approach is RNN-specific and not transformer/LLM inference; BERT quantization linkage is a weak low-bit analogy.",
+      "source_url": "https://arxiv.org/abs/2502.00047",
+      "first_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "last_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.13738",
+      "identity_tokens": [
+        "arXiv:2408.13738"
+      ],
+      "title": "Poor-Supervised Evaluation for SuperLLM via Mutual Consistency",
+      "reason": "PoEM evaluates LLM capability without reliable labels by alternating model/human reference calibration and filtering. Experiments across 3 task types and 16 LLMs report 0.98 average Pearson correlation with supervised evaluation. The contribution is an evaluation method, not inference optimization; the linked test-time scaling paper is only a shared evaluation context.",
+      "source_url": "https://arxiv.org/abs/2408.13738",
+      "first_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "last_checked_at": "2026-10-06T08:38:10.118184+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ]
+    }
+  ]
+}
