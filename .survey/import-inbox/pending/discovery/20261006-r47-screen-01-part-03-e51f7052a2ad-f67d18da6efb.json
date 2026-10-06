@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r47-screen-01-part-03-e51f7052a2ad",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSI.2025.3606054",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2025.3606054"
+      ],
+      "title": "LLNN: A Scalable LUT-Based Logic Neural Network Architecture for FPGAs",
+      "reason": "FPGA logic neural network for non-language tasks; no LLM inference method.",
+      "source_url": "https://doi.org/10.1109/TCSI.2025.3606054",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22716",
+      "identity_tokens": [
+        "arXiv:2512.22716"
+      ],
+      "title": "Memento 2: Learning by Stateful Reflective Memory",
+      "reason": "Agent memory/continual learning is adjacent, but the evaluated contribution is not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.22716",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICEdge67252.2025.11412934",
+      "identity_tokens": [
+        "DOI:10.1109/ICEdge67252.2025.11412934"
+      ],
+      "title": "Towards Efficient Acceleration of Hyena and Kolmogorov–Arnold Networks on NPUs",
+      "reason": "The DOI landing page and exact-title search exposed metadata/abstract only; publisher primary full text could not be retrieved, so its claimed NPU acceleration could not be assessed.",
+      "source_url": "https://doi.org/10.1109/ICEdge67252.2025.11412934",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13495",
+      "identity_tokens": [
+        "arXiv:2512.13495"
+      ],
+      "title": "Soul: Breathe Life into Digital Human for High-fidelity Long-term Multimodal Animation",
+      "reason": "Digital-human animation generation, not LLM/VLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2512.13495",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.10267",
+      "identity_tokens": [
+        "arXiv:2512.10267"
+      ],
+      "title": "Long-LRM++: Preserving Fine Details in Feed-Forward Wide-Coverage Reconstruction",
+      "reason": "3D reconstruction model, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2512.10267",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    }
+  ]
+}
