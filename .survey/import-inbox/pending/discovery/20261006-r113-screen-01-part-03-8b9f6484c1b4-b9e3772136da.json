@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r113-screen-01-part-03-8b9f6484c1b4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2026.3669168",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2026.3669168"
+      ],
+      "title": "Generalization Properties of Robust Learning With Random Features",
+      "reason": "Robust random-feature regression theory; no LLM inference or target model-serving mechanism.",
+      "source_url": "https://doi.org/10.1109/TPAMI.2026.3669168",
+      "first_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "last_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICMSCI67830.2026.11469322",
+      "identity_tokens": [
+        "DOI:10.1109/ICMSCI67830.2026.11469322"
+      ],
+      "title": "Benchmarking Quantized LLMS for Faithfulness in Resource-Constrained RAG",
+      "reason": "Primary publisher DOI https://doi.org/10.1109/ICMSCI67830.2026.11469322 was inaccessible (browser returned an internal error). The abstract describes a quantized-LLM RAG-faithfulness benchmark, but methods/results/limitations could not be checked.",
+      "source_url": "https://doi.org/10.1109/ICMSCI67830.2026.11469322",
+      "first_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "last_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01305",
+      "identity_tokens": [
+        "arXiv:2603.01305"
+      ],
+      "title": "AG-VAS: Anchor-Guided Zero-Shot Visual Anomaly Segmentation with Large Multimodal Models",
+      "reason": "Zero-shot visual anomaly segmentation with large multimodal models; no inference efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2603.01305",
+      "first_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "last_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2025.114513",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2025.114513"
+      ],
+      "title": "Efficient dual-branch high-resolution transformer design for crack segmentation",
+      "reason": "The publisher article record https://www.sciencedirect.com/science/article/pii/S1568494625018265 was returned only as a search-result excerpt; direct full-text open failed. The excerpt gives ECFormer’s dual-branch spatial-reduction/linear attention and crack-segmentation results, but full limitations and detailed methods could not be verified.",
+      "source_url": "https://doi.org/10.1016/j.asoc.2025.114513",
+      "first_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "last_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.dcmed.2026.02.002",
+      "identity_tokens": [
+        "DOI:10.1016/j.dcmed.2026.02.002"
+      ],
+      "title": "QingNangTCM: a parameter-efficient fine-tuning large language model for traditional Chinese medicine",
+      "reason": "No abstract is present in the packet. Primary DOI https://doi.org/10.1016/j.dcmed.2026.02.002 did not resolve to readable full text; the title suggests LLM parameter-efficient fine-tuning but evidence is insufficient to determine method/results.",
+      "source_url": "https://doi.org/10.1016/j.dcmed.2026.02.002",
+      "first_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "last_checked_at": "2026-10-06T15:31:51.683252+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
