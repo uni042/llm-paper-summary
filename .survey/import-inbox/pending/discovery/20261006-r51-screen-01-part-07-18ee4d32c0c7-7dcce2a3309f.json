@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r51-screen-01-part-07-18ee4d32c0c7",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23936",
+      "identity_tokens": [
+        "arXiv:2608.23936"
+      ],
+      "title": "MnemoDyn: Learning Resting State Dynamics from 40K FMRI sequences",
+      "reason": "Resting-state fMRI dynamics modeling is unrelated to LLM inference.",
+      "source_url": "https://arxiv.org/abs/2608.23936",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23435",
+      "identity_tokens": [
+        "arXiv:2608.23435"
+      ],
+      "title": "Towards Comprehensive Basketball Understanding",
+      "reason": "Basketball understanding benchmark assesses event and player understanding, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.23435",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21874",
+      "identity_tokens": [
+        "arXiv:2608.21874"
+      ],
+      "title": "Pruned Traffic Trees: Native Semantic Compression with a Protocol-Structured Model Family for Encrypted Traffic Classification",
+      "reason": "Traffic-tree semantic compression is for encrypted-traffic classification, not language models.",
+      "source_url": "https://arxiv.org/abs/2608.21874",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.20492",
+      "identity_tokens": [
+        "arXiv:2608.20492"
+      ],
+      "title": "Annotations as Rollouts: Efficient and Scalable Reinforcement Learning for Video MLLMs",
+      "reason": "OraRL reduces RL training rollout cost, but primary results show similar single-request inference latency and more reasoning tokens; inference savings are not established.",
+      "source_url": "https://arxiv.org/abs/2608.20492",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17319",
+      "identity_tokens": [
+        "arXiv:2608.17319"
+      ],
+      "title": "Wuying-Browser-Agent: Real-World Centric Fundamental Long-Horizon Browser Agents",
+      "reason": "Wuying-Browser-Agent contributes browser-agent training, execution harness, and benchmark results, not a concrete inference-cost optimization.",
+      "source_url": "https://arxiv.org/abs/2608.17319",
+      "first_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "last_checked_at": "2026-10-06T06:57:10.546129+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
