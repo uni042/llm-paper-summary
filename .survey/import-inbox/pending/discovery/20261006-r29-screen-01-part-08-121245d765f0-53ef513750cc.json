@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r29-screen-01-part-08-121245d765f0",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-025-4809-7",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-025-4809-7"
+      ],
+      "title": "Multimodal prior-augmented text-driven 3D human-object interaction generation",
+      "reason": "3D human-object interaction generationのmultimodal vision taskで、LLM servingではない。",
+      "source_url": "https://doi.org/10.1007/s11432-025-4809-7",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14433",
+      "identity_tokens": [
+        "arXiv:2604.14433"
+      ],
+      "title": "Zero-Ablation Overstates Register Content Dependence in DINO Vision Transformers",
+      "reason": "DINO vision transformerのregister解釈性分析で、推論効率の方法ではない。",
+      "source_url": "https://arxiv.org/abs/2604.14433",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12668",
+      "identity_tokens": [
+        "arXiv:2604.12668"
+      ],
+      "title": "OFA-Diffusion Compression: Compressing Diffusion Model in One-Shot Manner",
+      "reason": "Diffusion model compressionは画像生成対象で、LLM推論とは異なる。",
+      "source_url": "https://arxiv.org/abs/2604.12668",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774904.3792582",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792582"
+      ],
+      "title": "IConMoE: Modeling Intents of Misinformation using Concept Activation Vector-based Mixture of Experts",
+      "reason": "misinformation intent classification用MoE; LLM追加callを避けるが、LLM自体の推論効率改善ではなくtask classifierの設計である。",
+      "source_url": "https://doi.org/10.1145/3774904.3792582",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5565/rev/elcvia.2276",
+      "identity_tokens": [
+        "DOI:10.5565/rev/elcvia.2276"
+      ],
+      "title": "Self-Supervised Multimodal 3-D Garment Reconstruction from a Single Consumer Image for Energy-Efficient Virtual Try-On Systems",
+      "reason": "mobile NPU向け3D garment reconstruction/virtual try-onの画像生成でLLMと対象が異なる。",
+      "source_url": "https://doi.org/10.5565/rev/elcvia.2276",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    }
+  ]
+}
