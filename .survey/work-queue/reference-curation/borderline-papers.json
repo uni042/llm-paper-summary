@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T13:52:09+00:00",
-  "record_count": 3163,
+  "updated_at": "2026-10-06T13:57:52+00:00",
+  "record_count": 3164,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -48481,6 +48481,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Nucleus-Image: Sparse MoE for Image Generation"
+    },
+    "arXiv:1909.00015": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1909.00015",
+      "identity_tokens": [
+        "arXiv:1909.00015"
+      ],
+      "reason": "softmaxを学習可能なalpha-entmaxへ置換し、headごとにcontext-dependentな厳密ゼロattentionを学習するため機構上はsparse attentionに近い。一方、論文の主要評価はmachine translationの精度・interpretability・head diversityで、実際の推論FLOPs/latency/memory削減を実装評価していないため現行の推論システム収録対象としては境界的。",
+      "first_checked_at": "2026-10-06T13:57:52+00:00",
+      "last_checked_at": "2026-10-06T13:57:52+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptively Sparse Transformers"
     }
   }
 }
