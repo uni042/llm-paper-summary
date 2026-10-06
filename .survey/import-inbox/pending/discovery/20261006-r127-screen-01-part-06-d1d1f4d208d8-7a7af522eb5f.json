@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r127-screen-01-part-06-d1d1f4d208d8",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s44287-024-00078-x",
+      "identity_tokens": [
+        "DOI:10.1038/s44287-024-00078-x"
+      ],
+      "title": "System technology co-optimization for advanced integration",
+      "reason": "研究対象はLLM推論/servingや効率化に関係する可能性があり入力要旨もそれを示唆する場合があるが、一次publisher sourceを取得できなかったため本文根拠を確認せず除外しない。",
+      "source_url": "https://doi.org/10.1038/s44287-024-00078-x",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.06009",
+      "identity_tokens": [
+        "arXiv:2403.06009"
+      ],
+      "title": "Detectors for Safe and Reliable LLMs: Implementations, Uses, and Limitations",
+      "reason": "一次要旨の対象はLLMの安全性・信頼性を測る検出器の実装・利用・制約であり、推論効率や serving コストを改善する方法を提案していない。",
+      "source_url": "https://arxiv.org/abs/2403.06009",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.08068",
+      "identity_tokens": [
+        "arXiv:2507.08068"
+      ],
+      "title": "Quantile Reward Policy Optimization: Alignment with Pointwise Regression and Exact Partition Functions",
+      "reason": "一次要旨は報酬最適化アルゴリズムによるalignment学習と分配関数の厳密計算である。学習時の目的関数に関する研究で、推論時の計算・メモリ削減ではない。",
+      "source_url": "https://arxiv.org/abs/2507.08068",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.02813",
+      "identity_tokens": [
+        "arXiv:2506.02813"
+      ],
+      "title": "Brain-Like Processing Pathways Form in Models With Heterogeneous Experts",
+      "reason": "本文を確認したところ、Mixture-of-Pathwaysは小規模の合成認知タスク/異種expertモデルでタスク経路形成を研究しており、MoE inference routing最適化ではない。linked lineageは関連するが、LLM/MoE servingでの実験はなく転用は未確立なのでborderlineに残す。",
+      "source_url": "https://arxiv.org/abs/2506.02813",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.19089",
+      "identity_tokens": [
+        "arXiv:2505.19089"
+      ],
+      "title": "Plug-and-Play Context Feature Reuse for Efficient Masked Generation",
+      "reason": "本文のReCAPはMasked image generationの反復inferenceでfeatureを再利用する手法。cache/reuseの発想はKV/cache lineageへ転用余地がある一方、対象は画像生成MGMsであり、LLM KV-cacheやdecoder workloadではない。",
+      "source_url": "https://arxiv.org/abs/2505.19089",
+      "first_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "last_checked_at": "2026-10-06T17:57:22.244879+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ]
+    }
+  ]
+}
