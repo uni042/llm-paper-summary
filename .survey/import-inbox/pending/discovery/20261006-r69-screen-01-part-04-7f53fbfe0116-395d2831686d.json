@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r69-screen-01-part-04-7f53fbfe0116",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08419",
+      "identity_tokens": [
+        "arXiv:2609.08419"
+      ],
+      "title": "CAR-MIL: Counterfactual Attention Regularization for Multiple Instance Learning",
+      "reason": "Counterfactual attention regularization for pathology multiple-instance learning, outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.08419",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09526",
+      "identity_tokens": [
+        "arXiv:2609.09526"
+      ],
+      "title": "Benchmarking Agentic HLS Design Tasks With HLS-Eval",
+      "reason": "Benchmark for LLM/agent high-level synthesis design tasks, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.09526",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/adco.70006",
+      "identity_tokens": [
+        "DOI:10.1002/adco.70006"
+      ],
+      "title": "On‐Chip Learning With Crossbar Arrays for Adaptive Edge Intelligence",
+      "reason": "On-chip learning with crossbar arrays for edge intelligence is hardware/learning work, not a direct LLM inference/serving method.",
+      "source_url": "https://doi.org/10.1002/adco.70006",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10044-026-01772-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10044-026-01772-2"
+      ],
+      "title": "Mamba-CrossMod: a multimodal affective analysis framework based on selective state space model",
+      "reason": "The Springer publisher page was accessible and revealed an abstract for a multimodal-affective Mamba framework, but the full article is subscription-only and no author/institution full-text copy was found. Since the input abstract is empty, title/preview alone is insufficient for a full-text disposition; record as borderline. The publisher preview indicates MOSI/MOSEI sentiment classification, not an LLM inference optimization.",
+      "source_url": "https://doi.org/10.1007/s10044-026-01772-2",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07086",
+      "identity_tokens": [
+        "arXiv:2609.07086"
+      ],
+      "title": "Conditioned Initialization for Attention",
+      "reason": "The abstract does not indicate an in-scope LLM inference/serving efficiency method or lineage connection.",
+      "source_url": "https://arxiv.org/abs/2609.07086",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
