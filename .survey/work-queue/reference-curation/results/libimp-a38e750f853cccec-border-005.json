@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a38e750f853cccec-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.12629",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.12629",
+    "identity_tokens": [
+      "arXiv:2505.12629"
+    ],
+    "reason": "本文のlatent tokensは学習可能な追加tokenを各予測過程に挿入してLLMの計算能力を増す仕組みで、推論時にもlatent tokenを逐次入力へ足す。能力向上は系統に近いが、追加計算が必要で推論コスト削減の手法ではないためborderline。",
+    "first_checked_at": "2026-10-06T18:06:48+00:00",
+    "last_checked_at": "2026-10-06T18:06:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing Latent Computation in Transformers with Latent Tokens"
+  },
+  "processed_at": "2026-10-06T18:06:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a38e750f853c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c32d37e2bd73bcc0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.17178",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.17178",
+    "identity_tokens": [
+      "arXiv:2411.17178"
+    ],
+    "reason": "本文のLiteVARは視覚autoregressive画像生成モデルをattention computationとweight quantizationで圧縮する。量子化/attentionの技術的類似性はあるが、LLMではなくimage-generation token処理が対象で、言語推論性能は確認できないためborderline。",
+    "first_checked_at": "2026-10-06T18:06:51+00:00",
+    "last_checked_at": "2026-10-06T18:06:51+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LiteVAR: Compressing Visual Autoregressive Modelling with Efficient Attention and Quantization"
+  },
+  "processed_at": "2026-10-06T18:06:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c32d37e2bd73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

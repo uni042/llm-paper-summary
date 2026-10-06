@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0cb1270298b3173-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.08068",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.08068",
+    "identity_tokens": [
+      "arXiv:2507.08068"
+    ],
+    "reason": "一次要旨は報酬最適化アルゴリズムによるalignment学習と分配関数の厳密計算である。学習時の目的関数に関する研究で、推論時の計算・メモリ削減ではない。",
+    "first_checked_at": "2026-10-06T18:06:55+00:00",
+    "last_checked_at": "2026-10-06T18:06:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+    ],
+    "title": "Quantile Reward Policy Optimization: Alignment with Pointwise Regression and Exact Partition Functions"
+  },
+  "processed_at": "2026-10-06T18:06:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0cb1270298b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dea89f5e095fb537-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.14159",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.14159",
+    "identity_tokens": [
+      "arXiv:2405.14159"
+    ],
+    "reason": "本文のSTLMは50M程度の小規模言語モデルと研究計画のintroductory reportで、parameter削減・byte-level embedding等の将来提案を挙げる。ただし提案部分はfuture workで、実証されたLLM inference improvementの研究ではないためborderline。",
+    "first_checked_at": "2026-10-06T18:06:53+00:00",
+    "last_checked_at": "2026-10-06T18:06:53+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Super Tiny Language Models"
+  },
+  "processed_at": "2026-10-06T18:06:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dea89f5e095f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

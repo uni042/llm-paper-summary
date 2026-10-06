@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dea89f5e095fb537-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.08464",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.08464",
+    "identity_tokens": [
+      "arXiv:2409.08464"
+    ],
+    "reason": "本文のVLTPはtask-oriented image segmentationにtext promptを使ってvision tokenをpruneする画像Transformer研究。token pruningとの類似はあるがLLM input/visual-token servingと異なるarchitecture/taskで、LLM inferenceへの効果は未検証なのでborderline。",
+    "first_checked_at": "2026-10-06T18:06:52+00:00",
+    "last_checked_at": "2026-10-06T18:06:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VLTP: Vision-Language Guided Token Pruning for Task-Oriented Segmentation"
+  },
+  "processed_at": "2026-10-06T18:06:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dea89f5e095f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

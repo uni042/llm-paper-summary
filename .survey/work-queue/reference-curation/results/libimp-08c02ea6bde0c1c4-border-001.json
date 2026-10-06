@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08c02ea6bde0c1c4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.13523",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.13523",
+    "identity_tokens": [
+      "arXiv:2509.13523"
+    ],
+    "reason": "本文のAERISは地球システム/気象予測用のpixel-level Swin diffusion transformerで、SWiPeがwindow/sequence/pipeline parallelismを組み合わせる。attention/sequence parallelismとしてtransfer可能性はあるものの、学習・高解像度気象予測向け分散化で、LLM推論/servingを評価していないためborderline。",
+    "first_checked_at": "2026-10-06T18:06:39+00:00",
+    "last_checked_at": "2026-10-06T18:06:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AERIS: Argonne Earth Systems Model for Reliable and Skillful Predictions"
+  },
+  "processed_at": "2026-10-06T18:06:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08c02ea6bde0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

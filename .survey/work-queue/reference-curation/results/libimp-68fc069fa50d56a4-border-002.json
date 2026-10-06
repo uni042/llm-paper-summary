@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68fc069fa50d56a4-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.01341",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.01341",
+    "identity_tokens": [
+      "arXiv:2502.01341"
+    ],
+    "reason": "本文ではLlama 3.1/3.2を使うVLM向け視覚テキストconnector Alignを提案するが、目的は文書理解精度であり効率化が主目的ではない。付録ではMLP/Perceiver/Ovis比較の時間とGPU memoryがほぼ同等で、推論性能改善とはいえないため関連候補としてborderlineに残す。",
+    "first_checked_at": "2026-10-06T18:06:42+00:00",
+    "last_checked_at": "2026-10-06T18:06:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AlignVLM: Bridging Vision and Language Latent Spaces for Multimodal Document Understanding"
+  },
+  "processed_at": "2026-10-06T18:06:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68fc069fa50d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

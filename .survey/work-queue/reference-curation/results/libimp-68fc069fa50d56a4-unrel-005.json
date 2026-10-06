@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68fc069fa50d56a4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.25779",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.25779",
+    "identity_tokens": [
+      "arXiv:2510.25779"
+    ],
+    "reason": "一次要旨はマルチエージェント市場を模擬する実験環境と市場行動評価であり、LLMモデルや推論基盤の効率改善を提案する研究ではない。",
+    "first_checked_at": "2026-10-06T18:06:43+00:00",
+    "last_checked_at": "2026-10-06T18:06:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets"
+  },
+  "processed_at": "2026-10-06T18:06:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68fc069fa50d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68fc069fa50d56a4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.06020",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.06020",
+    "identity_tokens": [
+      "arXiv:2504.06020"
+    ],
+    "reason": "一次要旨の方法はRLHF報酬のprompt-free/prompt-related分解と学習サンプル選択。焦点は報酬モデルの汎化とalignment学習で、推論処理の高速化・省メモリ化ではない。",
+    "first_checked_at": "2026-10-06T18:06:43+00:00",
+    "last_checked_at": "2026-10-06T18:06:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+    ],
+    "title": "Information-Theoretic Reward Decomposition for Generalizable RLHF"
+  },
+  "processed_at": "2026-10-06T18:06:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68fc069fa50d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

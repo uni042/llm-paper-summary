@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c32d37e2bd73bcc0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.05034",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.05034",
+    "identity_tokens": [
+      "arXiv:2409.05034"
+    ],
+    "reason": "一次要旨は時間周波数特徴から音源位置を推定する音響タスクである。LLM/生成推論の最適化とは問題設定が異なる。",
+    "first_checked_at": "2026-10-06T18:06:52+00:00",
+    "last_checked_at": "2026-10-06T18:06:52+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+    ],
+    "title": "TF-Mamba: A Time-Frequency Network for Sound Source Localization"
+  },
+  "processed_at": "2026-10-06T18:06:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c32d37e2bd73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

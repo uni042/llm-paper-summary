@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T17:55:10+00:00",
-  "record_count": 9121,
+  "updated_at": "2026-10-06T18:06:55+00:00",
+  "record_count": 9149,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -130797,6 +130797,398 @@
         "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
       ],
       "title": "Language-Driven Visual Consensus for Zero-Shot Semantic Segmentation"
+    },
+    "arXiv:2510.12831": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12831",
+      "identity_tokens": [
+        "arXiv:2510.12831"
+      ],
+      "reason": "一次要旨のMTSQL-R1はagentic trainingで複数turn text-to-SQLの正確さを高める研究で、モデル推論コストを下げる仕組みは報告されていない。",
+      "first_checked_at": "2026-10-06T18:06:41+00:00",
+      "last_checked_at": "2026-10-06T18:06:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training"
+    },
+    "arXiv:2506.23283": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23283",
+      "identity_tokens": [
+        "arXiv:2506.23283"
+      ],
+      "reason": "一次要旨はMamba adapterによるimage foundation modelのvideo recognition adaptationで、LLM/言語推論servingの効率化ではない。",
+      "first_checked_at": "2026-10-06T18:06:42+00:00",
+      "last_checked_at": "2026-10-06T18:06:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "MoMa: Modulating Mamba for Adapting Image Foundation Models to Video Recognition"
+    },
+    "arXiv:2506.04180": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.04180",
+      "identity_tokens": [
+        "arXiv:2506.04180"
+      ],
+      "reason": "一次要旨のSuperWriterはplanning/reflectionによる長文生成品質の改善が中心で、推論最適化やtoken/latency削減を主張していない。",
+      "first_checked_at": "2026-10-06T18:06:42+00:00",
+      "last_checked_at": "2026-10-06T18:06:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "SuperWriter: Reflection-Driven Long-Form Generation with Large Language Models"
+    },
+    "arXiv:2504.06020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.06020",
+      "identity_tokens": [
+        "arXiv:2504.06020"
+      ],
+      "reason": "一次要旨の方法はRLHF報酬のprompt-free/prompt-related分解と学習サンプル選択。焦点は報酬モデルの汎化とalignment学習で、推論処理の高速化・省メモリ化ではない。",
+      "first_checked_at": "2026-10-06T18:06:43+00:00",
+      "last_checked_at": "2026-10-06T18:06:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Information-Theoretic Reward Decomposition for Generalizable RLHF"
+    },
+    "arXiv:2408.13591": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.13591",
+      "identity_tokens": [
+        "arXiv:2408.13591"
+      ],
+      "reason": "一次要旨はランダム特徴を用いるカーネル分位回帰の誤差率・理論保証と合成/実データ評価である。LLMやニューラル推論サービングを扱わない。",
+      "first_checked_at": "2026-10-06T18:06:43+00:00",
+      "last_checked_at": "2026-10-06T18:06:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Optimal Kernel Quantile Learning with Random Features"
+    },
+    "arXiv:2510.25779": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25779",
+      "identity_tokens": [
+        "arXiv:2510.25779"
+      ],
+      "reason": "一次要旨はマルチエージェント市場を模擬する実験環境と市場行動評価であり、LLMモデルや推論基盤の効率改善を提案する研究ではない。",
+      "first_checked_at": "2026-10-06T18:06:43+00:00",
+      "last_checked_at": "2026-10-06T18:06:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets"
+    },
+    "arXiv:2505.17859": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17859",
+      "identity_tokens": [
+        "arXiv:2505.17859"
+      ],
+      "reason": "一次要旨のHölder-DPOはラベルノイズに頑健なモデルalignmentおよび人間フィードバックの評価を扱う。主指標は学習後のalignment品質で、LLM推論時の性能改善ではない。",
+      "first_checked_at": "2026-10-06T18:06:44+00:00",
+      "last_checked_at": "2026-10-06T18:06:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Scalable Valuation of Human Feedback through Provably Robust Model Alignment"
+    },
+    "arXiv:2510.20766": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.20766",
+      "identity_tokens": [
+        "arXiv:2510.20766"
+      ],
+      "reason": "一次要旨は画像DiTの位置埋め込みを調整して超高解像度画像を生成する技術である。LLMや言語モデル推論の効率改善対象ではない。",
+      "first_checked_at": "2026-10-06T18:06:44+00:00",
+      "last_checked_at": "2026-10-06T18:06:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion"
+    },
+    "arXiv:2510.18091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.18091",
+      "identity_tokens": [
+        "arXiv:2510.18091"
+      ],
+      "reason": "一次要旨は画像ViTの可変パッチで視覚入力token数を減らし、ViT画像推論/学習を高速化する。VQA応用も含むが、LLMのtoken/attention処理やLLM serving の改善を実証していない。",
+      "first_checked_at": "2026-10-06T18:06:45+00:00",
+      "last_checked_at": "2026-10-06T18:06:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Accelerating Vision Transformers with Adaptive Patch Sizes"
+    },
+    "arXiv:2501.12218": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12218",
+      "identity_tokens": [
+        "arXiv:2501.12218"
+      ],
+      "reason": "一次要旨は映像中の点追跡とtemporal visual featuresを扱うcomputer vision研究で、LLM推論処理の改善ではない。",
+      "first_checked_at": "2026-10-06T18:06:46+00:00",
+      "last_checked_at": "2026-10-06T18:06:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Exploring Temporally-Aware Features for Point Tracking"
+    },
+    "arXiv:2412.14112": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.14112",
+      "identity_tokens": [
+        "arXiv:2412.14112"
+      ],
+      "reason": "一次要旨はin-vitro neuronを使うsynthetic biological intelligence研究室の構築・実験基盤の解説で、LLM software servingとは無関係。",
+      "first_checked_at": "2026-10-06T18:06:46+00:00",
+      "last_checked_at": "2026-10-06T18:06:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Starting a synthetic biological intelligence lab from scratch"
+    },
+    "arXiv:2505.02491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02491",
+      "identity_tokens": [
+        "arXiv:2505.02491"
+      ],
+      "reason": "一次要旨の対象は量子リザバー計算と量子系の非マルコフ性による記憶保持である。LLM推論・Transformer serving の最適化とは対象モデルも目的も異なる。",
+      "first_checked_at": "2026-10-06T18:06:47+00:00",
+      "last_checked_at": "2026-10-06T18:06:47+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Non-Markovianity and memory enhancement in quantum reservoir computing"
+    },
+    "arXiv:2503.02650": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.02650",
+      "identity_tokens": [
+        "arXiv:2503.02650"
+      ],
+      "reason": "一次要旨の主題はLLMによる非構造化文書の標準形式への変換性能である。変換能力の評価であり、メモリ・計算・レイテンシ・スループットの改善を示していない。",
+      "first_checked_at": "2026-10-06T18:06:47+00:00",
+      "last_checked_at": "2026-10-06T18:06:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "The Effectiveness of Large Language Models in Transforming Unstructured Text to Standardized Formats"
+    },
+    "arXiv:2510.14751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14751",
+      "identity_tokens": [
+        "arXiv:2510.14751"
+      ],
+      "reason": "一次要旨のFSPは将来要約を予測する補助headによる事前学習法で、評価の中心はreasoning/coding等の能力向上。推論時の生成回数・計算・メモリ・latencyを改善する手法とは示されていない。",
+      "first_checked_at": "2026-10-06T18:06:48+00:00",
+      "last_checked_at": "2026-10-06T18:06:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Beyond Multi-Token Prediction: Pretraining LLMs with Future Summaries"
+    },
+    "arXiv:2508.11977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.11977",
+      "identity_tokens": [
+        "arXiv:2508.11977"
+      ],
+      "reason": "一次要旨はe-commerceの商品推薦向けgenerative retrievalであり、LLM inference servingや言語モデルの推論効率改善を扱わない。",
+      "first_checked_at": "2026-10-06T18:06:49+00:00",
+      "last_checked_at": "2026-10-06T18:06:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "TBGRecall: A Generative Retrieval Model for E-commerce Recommendation Scenarios"
+    },
+    "arXiv:2507.08336": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.08336",
+      "identity_tokens": [
+        "arXiv:2507.08336"
+      ],
+      "reason": "一次要旨はcross-encoder rerankerの学習方法（distillation対contrastive learning）の比較で、推論実行のコスト/latency最適化が対象ではない。",
+      "first_checked_at": "2026-10-06T18:06:49+00:00",
+      "last_checked_at": "2026-10-06T18:06:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Distillation versus Contrastive Learning: How to Train Your Rerankers"
+    },
+    "arXiv:2509.15472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15472",
+      "identity_tokens": [
+        "arXiv:2509.15472"
+      ],
+      "reason": "一次要旨では対象はFlickr30K・COCO・CC3M向けの画像テキスト学習データ蒸留と検索性能で、LLMの推論処理・メモリ・サービングを改善する手法ではない。",
+      "first_checked_at": "2026-10-06T18:06:50+00:00",
+      "last_checked_at": "2026-10-06T18:06:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Efficient Multimodal Dataset Distillation via Generative Models"
+    },
+    "arXiv:2508.08730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.08730",
+      "identity_tokens": [
+        "arXiv:2508.08730"
+      ],
+      "reason": "一次要旨の提案は医療向け生成のLoRA構成と意味保持で、改善指標はタスク品質と学習可能パラメータ数。KVキャッシュの格納・圧縮やLLM推論コストを変更する内容は確認できない。",
+      "first_checked_at": "2026-10-06T18:06:50+00:00",
+      "last_checked_at": "2026-10-06T18:06:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Magical: Medical Lay Language Generation via Semantic Invariance and Layperson-tailored Adaptation"
+    },
+    "arXiv:2506.02921": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02921",
+      "identity_tokens": [
+        "arXiv:2506.02921"
+      ],
+      "reason": "一次要旨と本文の評価対象は18種の長文脈LLM向け理解・推論ベンチマークである。測定基盤は有用だが、新しい推論最適化や実運用の計算・レイテンシ改善を提案していない。",
+      "first_checked_at": "2026-10-06T18:06:50+00:00",
+      "last_checked_at": "2026-10-06T18:06:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "A Controllable Examination for Long-Context Language Models"
+    },
+    "arXiv:2505.00022": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00022",
+      "identity_tokens": [
+        "arXiv:2505.00022"
+      ],
+      "reason": "一次要旨はドイツ語の事前学習コーパス作成と1B/8Bモデルの事前学習品質を扱う。データ準備・学習効率の研究であり、既存LLMの推論コストや serving を下げる提案ではない。",
+      "first_checked_at": "2026-10-06T18:06:50+00:00",
+      "last_checked_at": "2026-10-06T18:06:50+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Aleph-Alpha-GermanWeb: Improving German-language LLM pre-training with model-based data curation and synthetic data generation"
+    },
+    "arXiv:2501.10402": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.10402",
+      "identity_tokens": [
+        "arXiv:2501.10402"
+      ],
+      "reason": "一次要旨はEEGから音声のmelスペクトログラムを再構成する課題とSSMモデルである。LLM推論の対象・処理系・性能改善ではない。",
+      "first_checked_at": "2026-10-06T18:06:51+00:00",
+      "last_checked_at": "2026-10-06T18:06:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "SSM2Mel: State Space Model to Reconstruct Mel Spectrogram from the EEG"
+    },
+    "arXiv:2411.06217": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.06217",
+      "identity_tokens": [
+        "arXiv:2411.06217"
+      ],
+      "reason": "一次要旨の対象は単一チャネル音声の雑音除去で、Mamba/SSMを使った音声強調モデルの品質比較である。LLM推論の効率化ではない。",
+      "first_checked_at": "2026-10-06T18:06:52+00:00",
+      "last_checked_at": "2026-10-06T18:06:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Selective State Space Model for Monaural Speech Enhancement"
+    },
+    "arXiv:2409.05034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05034",
+      "identity_tokens": [
+        "arXiv:2409.05034"
+      ],
+      "reason": "一次要旨は時間周波数特徴から音源位置を推定する音響タスクである。LLM/生成推論の最適化とは問題設定が異なる。",
+      "first_checked_at": "2026-10-06T18:06:52+00:00",
+      "last_checked_at": "2026-10-06T18:06:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "TF-Mamba: A Time-Frequency Network for Sound Source Localization"
+    },
+    "arXiv:2510.14300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14300",
+      "identity_tokens": [
+        "arXiv:2510.14300"
+      ],
+      "reason": "一次要旨はロボット操作向けVision-Language-Actionモデルのaction expertをMoE化して実タスク性能を上げる。リアルタイム制御の関心はあるが、LLM servingや一般LLM推論の計算・メモリ改善を評価していない。",
+      "first_checked_at": "2026-10-06T18:06:52+00:00",
+      "last_checked_at": "2026-10-06T18:06:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Expertise need not monopolize: Action-Specialized Mixture of Experts for Vision-Language-Action Learning"
+    },
+    "arXiv:2410.16148": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.16148",
+      "identity_tokens": [
+        "arXiv:2410.16148"
+      ],
+      "reason": "一次要旨はpodcast音声から章タイトルとtimestampを生成するアプリ/章分け処理の研究で、LLM servingの計算・メモリ・throughput改善を提案しない。",
+      "first_checked_at": "2026-10-06T18:06:53+00:00",
+      "last_checked_at": "2026-10-06T18:06:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "PODTILE: Facilitating Podcast Episode Browsing with Auto-generated Chapters"
+    },
+    "DOI:10.3390/bs14080677": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bs14080677",
+      "identity_tokens": [
+        "DOI:10.3390/bs14080677"
+      ],
+      "reason": "出版社本文の要旨は大学magazine利用者のeye-trackingによるattention/行動予測とレイアウト改善を対象とする。LLM推論やその効率化を含まない。",
+      "first_checked_at": "2026-10-06T18:06:54+00:00",
+      "last_checked_at": "2026-10-06T18:06:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Predicting Behaviour Patterns in Online and PDF Magazines with AI Eye-Tracking"
+    },
+    "arXiv:2403.06009": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.06009",
+      "identity_tokens": [
+        "arXiv:2403.06009"
+      ],
+      "reason": "一次要旨の対象はLLMの安全性・信頼性を測る検出器の実装・利用・制約であり、推論効率や serving コストを改善する方法を提案していない。",
+      "first_checked_at": "2026-10-06T18:06:55+00:00",
+      "last_checked_at": "2026-10-06T18:06:55+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Detectors for Safe and Reliable LLMs: Implementations, Uses, and Limitations"
+    },
+    "arXiv:2507.08068": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.08068",
+      "identity_tokens": [
+        "arXiv:2507.08068"
+      ],
+      "reason": "一次要旨は報酬最適化アルゴリズムによるalignment学習と分配関数の厳密計算である。学習時の目的関数に関する研究で、推論時の計算・メモリ削減ではない。",
+      "first_checked_at": "2026-10-06T18:06:55+00:00",
+      "last_checked_at": "2026-10-06T18:06:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Quantile Reward Policy Optimization: Alignment with Pointwise Regression and Exact Partition Functions"
     }
   }
 }

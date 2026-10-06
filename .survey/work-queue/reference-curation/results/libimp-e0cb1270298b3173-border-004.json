@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0cb1270298b3173-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.02813",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.02813",
+    "identity_tokens": [
+      "arXiv:2506.02813"
+    ],
+    "reason": "本文を確認したところ、Mixture-of-Pathwaysは小規模の合成認知タスク/異種expertモデルでタスク経路形成を研究しており、MoE inference routing最適化ではない。linked lineageは関連するが、LLM/MoE servingでの実験はなく転用は未確立なのでborderlineに残す。",
+    "first_checked_at": "2026-10-06T18:06:54+00:00",
+    "last_checked_at": "2026-10-06T18:06:54+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Brain-Like Processing Pathways Form in Models With Heterogeneous Experts"
+  },
+  "processed_at": "2026-10-06T18:06:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0cb1270298b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
