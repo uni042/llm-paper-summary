@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r97-screen-01-part-04-cf13a941cb86",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.18634",
+      "identity_tokens": [
+        "arXiv:2512.18634"
+      ],
+      "title": "From Shortcut to Induction Head: How Data Diversity Shapes Algorithm Selection in Transformers",
+      "reason": "This mechanistic study examines data diversity and algorithm selection/induction heads in transformers. It provides no concrete inference optimization or serving evaluation.",
+      "source_url": "https://arxiv.org/abs/2512.18634",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/00207543.2026.2641103",
+      "identity_tokens": [
+        "DOI:10.1080/00207543.2026.2641103"
+      ],
+      "title": "Large language models in supply chain management: a systematic literature review and application framework",
+      "reason": "Publisher full text is subscriber restricted; accessible bibliographic/abstract records do not provide the primary full body.",
+      "source_url": "https://doi.org/10.1080/00207543.2026.2641103",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.06254",
+      "identity_tokens": [
+        "arXiv:2511.06254"
+      ],
+      "title": "LLaDA-Rec: Discrete Diffusion for Parallel Semantic ID Generation in Generative Recommendation",
+      "reason": "LLaDA-Rec uses discrete diffusion to generate semantic IDs in parallel over T steps (T<=M), with adaptive masked-token prediction. This is a concrete parallel-generation idea but evaluated in recommendation rather than general LLM inference.",
+      "source_url": "https://arxiv.org/abs/2511.06254",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05176",
+      "identity_tokens": [
+        "arXiv:2602.05176"
+      ],
+      "title": "Among Us: Measuring and Mitigating Malicious Contributions in Model Collaboration Systems",
+      "reason": "Among Us measures and mitigates malicious contributions in collaborative model systems; its focus is trust/security, not inference cost or throughput.",
+      "source_url": "https://arxiv.org/abs/2602.05176",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.01188",
+      "identity_tokens": [
+        "arXiv:2511.01188"
+      ],
+      "title": "ZoFia: Zero-Shot Fake News Detection with Entity-Guided Retrieval and Multi-LLM Interaction",
+      "reason": "ZoFia combines entity-guided retrieval and multiple LLM interactions for fake-news detection. It is an application pipeline and does not report an inference-efficiency technique; multi-model routing/cache transfer is unestablished.",
+      "source_url": "https://arxiv.org/abs/2511.01188",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ]
+    }
+  ]
+}
