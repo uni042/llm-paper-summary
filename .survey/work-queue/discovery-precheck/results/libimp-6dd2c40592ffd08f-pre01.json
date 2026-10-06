@@ -1,0 +1,153 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6dd2c40592ffd08f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6dd2c40592ff",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2407.18921"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d92f3971badded76792a0d042a723c392132a1b5",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-06T21:43:48.738094+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2407.18921",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Mobile Edge Intelligence for Large Language Models: A Contemporary Survey",
+      "source_url": "https://arxiv.org/abs/2407.18921",
+      "year": 2024,
+      "published": "2024-07-09",
+      "venue": "IEEE Communications Surveys and Tutorials",
+      "citation_count": 364,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device large language models (LLMs), referring to running LLMs on edge devices, have raised considerable interest since they are more cost-effective, latency-efficient, and privacy-preserving compared with the cloud LLM paradigm. Nonetheless unlike cloud LLMs, the performance of on-device LLMs is intrinsically constrained by resource limitations on edge devices. Sitting between cloud and on-device AI, mobile edge intelligence (MEI) may address this dilemma by provisioning AI capabilities at the edge of mobile networks, e.g., on base stations. This article provides a contemporary survey on harnessing MEI for LLM deployment. We begin by illustrating several killer applications to demonstrate the urgent need for deploying LLMs at the network edge. Next, we present the preliminaries of LLMs, MEI, and resource-efficient LLM techniques. We then provide an architectural overview of MEI for LLMs (MEI4LLM), outlining its core components and how it supports LLM deployment. Subsequently, we delve into various aspects of MEI4LLM, extensively covering edge LLM caching and delivery, edge LLM training, and edge LLM inference. Finally, we identify future research opportunities. We hope this article inspires researchers in the field to leverage mobile edge computing to facilitate LLM deployment, thereby unleashing the potential of LLMs across various privacy- and delay-sensitive applications.",
+      "identifiers": [
+        "SemanticScholar:92e3b209fe9cad9078810e225f6b6b8b391f304b"
+      ],
+      "semantic_scholar_id": "92e3b209fe9cad9078810e225f6b6b8b391f304b",
+      "canonical_id": "arXiv:2407.18921",
+      "arxiv_id": "2407.18921",
+      "doi": "10.1109/COMST.2025.3527641",
+      "authors": [
+        "Guan-Qiao Qu",
+        "Qi-Yuan Chen",
+        "Wei Wei",
+        "Zheng-Yi Lin",
+        "Xian-Hao Chen",
+        "Kaibin Huang"
+      ],
+      "priority": 364,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 364,
+        "citation_count": 364,
+        "total": 364,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 819,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2407.18921",
+      "identity_tokens": [
+        "id:DOI:10.1109/comst.2025.3527641",
+        "id:SemanticScholar:92e3b209fe9cad9078810e225f6b6b8b391f304b",
+        "id:arXiv:2407.18921",
+        "title:mobile edge intelligence for large language models a contemporary survey",
+        "url:https://arxiv.org/abs/2407.18921"
+      ],
+      "record": {
+        "title": "Mobile Edge Intelligence for Large Language Models: A Contemporary Survey",
+        "source_url": "https://arxiv.org/abs/2407.18921",
+        "year": 2024,
+        "published": "2024-07-09",
+        "venue": "IEEE Communications Surveys and Tutorials",
+        "citation_count": 364,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "On-device large language models (LLMs), referring to running LLMs on edge devices, have raised considerable interest since they are more cost-effective, latency-efficient, and privacy-preserving compared with the cloud LLM paradigm. Nonetheless unlike cloud LLMs, the performance of on-device LLMs is intrinsically constrained by resource limitations on edge devices. Sitting between cloud and on-device AI, mobile edge intelligence (MEI) may address this dilemma by provisioning AI capabilities at the edge of mobile networks, e.g., on base stations. This article provides a contemporary survey on harnessing MEI for LLM deployment. We begin by illustrating several killer applications to demonstrate the urgent need for deploying LLMs at the network edge. Next, we present the preliminaries of LLMs, MEI, and resource-efficient LLM techniques. We then provide an architectural overview of MEI for LLMs (MEI4LLM), outlining its core components and how it supports LLM deployment. Subsequently, we delve into various aspects of MEI4LLM, extensively covering edge LLM caching and delivery, edge LLM training, and edge LLM inference. Finally, we identify future research opportunities. We hope this article inspires researchers in the field to leverage mobile edge computing to facilitate LLM deployment, thereby unleashing the potential of LLMs across various privacy- and delay-sensitive applications.",
+        "identifiers": [
+          "SemanticScholar:92e3b209fe9cad9078810e225f6b6b8b391f304b"
+        ],
+        "semantic_scholar_id": "92e3b209fe9cad9078810e225f6b6b8b391f304b",
+        "canonical_id": "arXiv:2407.18921",
+        "arxiv_id": "2407.18921",
+        "doi": "10.1109/COMST.2025.3527641",
+        "authors": [
+          "Guan-Qiao Qu",
+          "Qi-Yuan Chen",
+          "Wei Wei",
+          "Zheng-Yi Lin",
+          "Xian-Hao Chen",
+          "Kaibin Huang"
+        ],
+        "priority": 364,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 364,
+          "citation_count": 364,
+          "total": 364,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 819,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ca25dac4d8950bbd0a56e7896da747cb05f9bb6e34b13359d7744693a3993807",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

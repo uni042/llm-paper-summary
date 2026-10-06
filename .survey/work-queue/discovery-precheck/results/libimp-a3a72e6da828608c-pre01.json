@@ -1,0 +1,339 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a3a72e6da828608c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a3a72e6da828",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:1606.09274",
+    "arXiv:2002.11985",
+    "arXiv:2107.00910"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d92f3971badded76792a0d042a723c392132a1b5",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-06T21:43:48.719475+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:1606.09274",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2002.11985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2107.00910",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT",
+      "source_url": "https://arxiv.org/abs/2002.11985",
+      "year": 2020,
+      "published": "2020-02-27",
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "citation_count": 245,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Abstract Pre-trained Transformer-based models have achieved state-of-the-art performance for various Natural Language Processing (NLP) tasks. However, these models often have billions of parameters, and thus are too resource- hungry and computation-intensive to suit low- capability devices or applications with strict latency requirements. One potential remedy for this is model compression, which has attracted considerable research attention. Here, we summarize the research in compressing Transformers, focusing on the especially popular BERT model. In particular, we survey the state of the art in compression for BERT, we clarify the current best practices for compressing large-scale Transformer models, and we provide insights into the workings of various methods. Our categorization and analysis also shed light on promising future research directions for achieving lightweight, accurate, and generic NLP models.",
+      "identifiers": [
+        "SemanticScholar:c31aaa8c395c0fb8674c4130dde51ad3d33aac4f"
+      ],
+      "semantic_scholar_id": "c31aaa8c395c0fb8674c4130dde51ad3d33aac4f",
+      "canonical_id": "arXiv:2002.11985",
+      "arxiv_id": "2002.11985",
+      "doi": "10.1162/tacl_a_00413",
+      "authors": [
+        "Prakhar Ganesh",
+        "Yao Chen",
+        "Xin Lou",
+        "Mohammad Ali Khan",
+        "Y. Yang",
+        "Hassan Sajjad",
+        "Preslav Nakov",
+        "De-Ming Chen",
+        "M. Winslett"
+      ],
+      "priority": 255,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 245,
+        "citation_count": 245,
+        "total": 255,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2413,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Learned Token Pruning for Transformers",
+      "source_url": "https://arxiv.org/abs/2107.00910",
+      "year": 2021,
+      "published": "2021-07-02",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 234,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient deployment of transformer models in practice is challenging due to their inference cost including memory footprint, latency, and power consumption, which scales quadratically with input sequence length. To address this, we present a novel token reduction method dubbed Learned Token Pruning (LTP) which adaptively removes unimportant tokens as an input sequence passes through transformer layers. In particular, LTP prunes tokens with an attention score below a threshold, whose value is learned for each layer during training. Our threshold-based method allows the length of the pruned sequence to vary adaptively based on the input sequence, and avoids algorithmically expensive operations such as top-k token selection. We extensively test the performance of LTP on GLUE and SQuAD tasks and show that our method outperforms the prior state-of-the-art token pruning methods by up to ∽2.5% higher accuracy with the same amount of FLOPs. In particular, LTP achieves up to 2.1× FLOPs reduction with less than 1% accuracy drop, which results in up to 1.9× and 2.0× throughput improvement on Intel Haswell CPUs and NVIDIA V100 GPUs. Furthermore, we demonstrate that LTP is more robust than prior methods to variations in input sequence lengths. Our code has been developed in PyTorch and open-sourced",
+      "identifiers": [
+        "SemanticScholar:c156b1b30e3dd9284615e5304f2fb2826c09d0ff"
+      ],
+      "semantic_scholar_id": "c156b1b30e3dd9284615e5304f2fb2826c09d0ff",
+      "canonical_id": "arXiv:2107.00910",
+      "arxiv_id": "2107.00910",
+      "doi": "10.1145/3534678.3539260",
+      "authors": [
+        "Sehoon Kim",
+        "Sheng Shen",
+        "D. Thorsley",
+        "A. Gholami",
+        "Woosuk Kwon",
+        "Joseph Hassoun",
+        "K. Keutzer"
+      ],
+      "priority": 234,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 234,
+        "citation_count": 234,
+        "total": 234,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1922,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compression of Neural Machine Translation Models via Pruning",
+      "source_url": "https://arxiv.org/abs/1606.09274",
+      "year": 2016,
+      "published": "2016-06-01",
+      "venue": "Conference on Computational Natural Language Learning",
+      "citation_count": 227,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Neural Machine Translation (NMT), like many other deep learning domains, typically suffers from over-parameterization, resulting in large storage sizes. This paper examines three simple magnitude-based pruning schemes to compress NMT models, namely class-blind, class-uniform, and class-distribution, which differ in terms of how pruning thresholds are computed for the different classes of weights in the NMT architecture. We demonstrate the efficacy of weight pruning as a compression technique for a state-of-the-art NMT system. We show that an NMT model with over 200 million parameters can be pruned by 40% with very little performance loss as measured on the WMT'14 English-German translation task. This sheds light on the distribution of redundancy in the NMT architecture. Our main result is that with retraining, we can recover and even surpass the original performance with an 80%-pruned model.",
+      "identifiers": [
+        "SemanticScholar:230579a14d54ae00073d6c3522ffcef313320be9"
+      ],
+      "semantic_scholar_id": "230579a14d54ae00073d6c3522ffcef313320be9",
+      "canonical_id": "arXiv:1606.09274",
+      "arxiv_id": "1606.09274",
+      "doi": "10.18653/v1/K16-1029",
+      "authors": [
+        "A. See",
+        "Minh-Thang Luong",
+        "Christopher D. Manning"
+      ],
+      "priority": 227,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 227,
+        "citation_count": 227,
+        "total": 227,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 3779,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2002.11985",
+      "identity_tokens": [
+        "id:DOI:10.1162/tacl_a_00413",
+        "id:SemanticScholar:c31aaa8c395c0fb8674c4130dde51ad3d33aac4f",
+        "id:arXiv:2002.11985",
+        "title:compressing largescale transformerbased models a case study on bert",
+        "url:https://arxiv.org/abs/2002.11985"
+      ],
+      "record": {
+        "title": "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT",
+        "source_url": "https://arxiv.org/abs/2002.11985",
+        "year": 2020,
+        "published": "2020-02-27",
+        "venue": "Transactions of the Association for Computational Linguistics",
+        "citation_count": 245,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Abstract Pre-trained Transformer-based models have achieved state-of-the-art performance for various Natural Language Processing (NLP) tasks. However, these models often have billions of parameters, and thus are too resource- hungry and computation-intensive to suit low- capability devices or applications with strict latency requirements. One potential remedy for this is model compression, which has attracted considerable research attention. Here, we summarize the research in compressing Transformers, focusing on the especially popular BERT model. In particular, we survey the state of the art in compression for BERT, we clarify the current best practices for compressing large-scale Transformer models, and we provide insights into the workings of various methods. Our categorization and analysis also shed light on promising future research directions for achieving lightweight, accurate, and generic NLP models.",
+        "identifiers": [
+          "SemanticScholar:c31aaa8c395c0fb8674c4130dde51ad3d33aac4f"
+        ],
+        "semantic_scholar_id": "c31aaa8c395c0fb8674c4130dde51ad3d33aac4f",
+        "canonical_id": "arXiv:2002.11985",
+        "arxiv_id": "2002.11985",
+        "doi": "10.1162/tacl_a_00413",
+        "authors": [
+          "Prakhar Ganesh",
+          "Yao Chen",
+          "Xin Lou",
+          "Mohammad Ali Khan",
+          "Y. Yang",
+          "Hassan Sajjad",
+          "Preslav Nakov",
+          "De-Ming Chen",
+          "M. Winslett"
+        ],
+        "priority": 255,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 245,
+          "citation_count": 245,
+          "total": 255,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2413,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2107.00910",
+      "identity_tokens": [
+        "id:DOI:10.1145/3534678.3539260",
+        "id:SemanticScholar:c156b1b30e3dd9284615e5304f2fb2826c09d0ff",
+        "id:arXiv:2107.00910",
+        "title:learned token pruning for transformers",
+        "url:https://arxiv.org/abs/2107.00910"
+      ],
+      "record": {
+        "title": "Learned Token Pruning for Transformers",
+        "source_url": "https://arxiv.org/abs/2107.00910",
+        "year": 2021,
+        "published": "2021-07-02",
+        "venue": "Knowledge Discovery and Data Mining",
+        "citation_count": 234,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient deployment of transformer models in practice is challenging due to their inference cost including memory footprint, latency, and power consumption, which scales quadratically with input sequence length. To address this, we present a novel token reduction method dubbed Learned Token Pruning (LTP) which adaptively removes unimportant tokens as an input sequence passes through transformer layers. In particular, LTP prunes tokens with an attention score below a threshold, whose value is learned for each layer during training. Our threshold-based method allows the length of the pruned sequence to vary adaptively based on the input sequence, and avoids algorithmically expensive operations such as top-k token selection. We extensively test the performance of LTP on GLUE and SQuAD tasks and show that our method outperforms the prior state-of-the-art token pruning methods by up to ∽2.5% higher accuracy with the same amount of FLOPs. In particular, LTP achieves up to 2.1× FLOPs reduction with less than 1% accuracy drop, which results in up to 1.9× and 2.0× throughput improvement on Intel Haswell CPUs and NVIDIA V100 GPUs. Furthermore, we demonstrate that LTP is more robust than prior methods to variations in input sequence lengths. Our code has been developed in PyTorch and open-sourced",
+        "identifiers": [
+          "SemanticScholar:c156b1b30e3dd9284615e5304f2fb2826c09d0ff"
+        ],
+        "semantic_scholar_id": "c156b1b30e3dd9284615e5304f2fb2826c09d0ff",
+        "canonical_id": "arXiv:2107.00910",
+        "arxiv_id": "2107.00910",
+        "doi": "10.1145/3534678.3539260",
+        "authors": [
+          "Sehoon Kim",
+          "Sheng Shen",
+          "D. Thorsley",
+          "A. Gholami",
+          "Woosuk Kwon",
+          "Joseph Hassoun",
+          "K. Keutzer"
+        ],
+        "priority": 234,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 234,
+          "citation_count": 234,
+          "total": 234,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1922,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:1606.09274",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/k16-1029",
+        "id:SemanticScholar:230579a14d54ae00073d6c3522ffcef313320be9",
+        "id:arXiv:1606.09274",
+        "title:compression of neural machine translation models via pruning",
+        "url:https://arxiv.org/abs/1606.09274"
+      ],
+      "record": {
+        "title": "Compression of Neural Machine Translation Models via Pruning",
+        "source_url": "https://arxiv.org/abs/1606.09274",
+        "year": 2016,
+        "published": "2016-06-01",
+        "venue": "Conference on Computational Natural Language Learning",
+        "citation_count": 227,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Neural Machine Translation (NMT), like many other deep learning domains, typically suffers from over-parameterization, resulting in large storage sizes. This paper examines three simple magnitude-based pruning schemes to compress NMT models, namely class-blind, class-uniform, and class-distribution, which differ in terms of how pruning thresholds are computed for the different classes of weights in the NMT architecture. We demonstrate the efficacy of weight pruning as a compression technique for a state-of-the-art NMT system. We show that an NMT model with over 200 million parameters can be pruned by 40% with very little performance loss as measured on the WMT'14 English-German translation task. This sheds light on the distribution of redundancy in the NMT architecture. Our main result is that with retraining, we can recover and even surpass the original performance with an 80%-pruned model.",
+        "identifiers": [
+          "SemanticScholar:230579a14d54ae00073d6c3522ffcef313320be9"
+        ],
+        "semantic_scholar_id": "230579a14d54ae00073d6c3522ffcef313320be9",
+        "canonical_id": "arXiv:1606.09274",
+        "arxiv_id": "1606.09274",
+        "doi": "10.18653/v1/K16-1029",
+        "authors": [
+          "A. See",
+          "Minh-Thang Luong",
+          "Christopher D. Manning"
+        ],
+        "priority": 227,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 227,
+          "citation_count": 227,
+          "total": 227,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 3779,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:993dd5022da40e661684aa93194fc9d7c0086b47d1f2421987f65c42f0869f2a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
