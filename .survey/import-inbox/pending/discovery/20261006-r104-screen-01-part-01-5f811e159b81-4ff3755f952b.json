@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r104-screen-01-part-01-5f811e159b81",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.05149",
+      "identity_tokens": [
+        "arXiv:2601.05149"
+      ],
+      "title": "Multi-Scale Local Speculative Decoding for Image Generation",
+      "reason": "Speculative decoding is for image diffusion, not LLM token generation.",
+      "source_url": "https://arxiv.org/abs/2601.05149",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.05174",
+      "identity_tokens": [
+        "arXiv:2601.05174"
+      ],
+      "title": "FaST: Efficient and Effective Long-Horizon Forecasting for Large-Scale Spatial-Temporal Graphs via Mixture-of-Experts",
+      "reason": "MoE forecasts spatial-temporal graphs, not language inference.",
+      "source_url": "https://arxiv.org/abs/2601.05174",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.00679",
+      "identity_tokens": [
+        "arXiv:2601.00679"
+      ],
+      "title": "QSLM: A Performance- and Memory-aware Quantization Framework with Tiered Search Strategy for Spike-driven Language Models",
+      "reason": "Quantization is for spike-driven language models; applicability to conventional LLM serving is unclear.",
+      "source_url": "https://arxiv.org/abs/2601.00679",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0339594",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0339594"
+      ],
+      "title": "Protocol for a scoping review examining the application of large language models in healthcare education and public health learning spaces",
+      "reason": "要旨からLLM推論の計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与が確認できない。",
+      "source_url": "https://doi.org/10.1371/journal.pone.0339594",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.est.2025.119594",
+      "identity_tokens": [
+        "DOI:10.1016/j.est.2025.119594"
+      ],
+      "title": "Mixture of experts-driven deep data mining for electrolyte additive design in zinc–iodine flow batteries",
+      "reason": "要旨からLLM推論の計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与が確認できない。",
+      "source_url": "https://doi.org/10.1016/j.est.2025.119594",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    }
+  ]
+}
