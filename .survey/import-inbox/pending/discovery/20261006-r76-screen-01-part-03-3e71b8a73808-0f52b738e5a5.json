@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r76-screen-01-part-03-3e71b8a73808",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16256",
+      "identity_tokens": [
+        "arXiv:2606.16256"
+      ],
+      "title": "KeepLoRA++: Continual Learning with Layer-Scaled Residual Gradient Adaptation",
+      "reason": "KeepLoRA++は継続学習時のパラメータ更新方式であり、対象の推論時効率ではない。",
+      "source_url": "https://arxiv.org/abs/2606.16256",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16368",
+      "identity_tokens": [
+        "arXiv:2606.16368"
+      ],
+      "title": "Evaluating LLM Personalization via Semantic Constraint Verification",
+      "reason": "LLMの個人化評価用制約検証ベンチマークで、推論資源低減方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2606.16368",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805622.3810717",
+      "identity_tokens": [
+        "DOI:10.1145/3805622.3810717"
+      ],
+      "title": "Reflective Cross-Granularity Grounding with Preference Optimization for Long Video Understanding",
+      "reason": "出版社の一次本文URLを試したが本文を取得できず、ローカル要旨だけではLongVU系との精度・token効率の実測や制約を確認できない。",
+      "source_url": "https://doi.org/10.1145/3805622.3810717",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15045",
+      "identity_tokens": [
+        "arXiv:2606.15045"
+      ],
+      "title": "NEURON-Fabric: CXL-Side Low-Bit Gradient Aggregation for Distributed Training",
+      "reason": "CXL low-bit gradient aggregationは分散学習時の勾配通信が対象で、LLM推論時quantization/serving効率ではない。",
+      "source_url": "https://arxiv.org/abs/2606.15045",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15320",
+      "identity_tokens": [
+        "arXiv:2606.15320"
+      ],
+      "title": "Conditional Multi-Event Temporal Grounding in Long-Form Video",
+      "reason": "長尺動画のtemporal groundingタスクが対象で、LLM推論コスト削減方式を扱わない。",
+      "source_url": "https://arxiv.org/abs/2606.15320",
+      "first_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "last_checked_at": "2026-10-06T10:14:00.694763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    }
+  ]
+}
