@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T14:19:56+00:00",
+  "updated_at": "2026-10-06T14:27:30+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3309,6 +3309,46 @@
       "processed_at": "2026-10-06T14:19:56+00:00",
       "canonical_id": "arXiv:2604.16957",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-f3b145c1aa40--libfile_0c6b73674e4c8191a4e7fcdd3fb07d7a--2604.16957-open-tq-metal.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-de52ae65b70e--libfile_0177baccd5c8819186ffac80d0bdc6d7--2607.07026-constrained-diffusion.md",
+      "processed_at": "2026-10-06T14:27:30+00:00",
+      "canonical_id": "arXiv:2607.07026",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-de52ae65b70e--libfile_0177baccd5c8819186ffac80d0bdc6d7--2607.07026-constrained-diffusion.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-dde6525b9dde--libfile_02c6756439e4819180a09659c21063ae--2605.05696-irminsul.md",
+      "processed_at": "2026-10-06T14:27:30+00:00",
+      "canonical_id": "arXiv:2605.05696",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-dde6525b9dde--libfile_02c6756439e4819180a09659c21063ae--2605.05696-irminsul.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-251ca153f01d--libfile_3cc79a5ab610819186a71420387e4308--2607.23765-wiserouter.md",
+      "processed_at": "2026-10-06T14:27:30+00:00",
+      "canonical_id": "arXiv:2607.23765",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-251ca153f01d--libfile_3cc79a5ab610819186a71420387e4308--2607.23765-wiserouter.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-b5d812b033b7--libfile_528a0bc420f4819193e457bb079a9f13--2607.28979-mixture-of-translators.md",
+      "processed_at": "2026-10-06T14:27:30+00:00",
+      "canonical_id": "arXiv:2607.28979",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-b5d812b033b7--libfile_528a0bc420f4819193e457bb079a9f13--2607.28979-mixture-of-translators.md"
+    },
+    {
+      "status": "discarded_blocked_discovery_invalid",
+      "source_path": ".survey/import-inbox/blocked/discovery/libfile_c700c12c5bcc819183bebda40f119867--discovery-20261006-2301-scheduled-chat-00-r03-partial.json",
+      "processed_at": "2026-10-06T14:27:30+00:00",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "status": "discarded_blocked_discovery_invalid",
+      "source_path": ".survey/import-inbox/blocked/discovery/libfile_f30fa5bd8aec8191b99c7d71fa8fcad0--discovery-20261006-2301-scheduled-chat-00-r02.json",
+      "processed_at": "2026-10-06T14:27:30+00:00",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     }
   ]
 }

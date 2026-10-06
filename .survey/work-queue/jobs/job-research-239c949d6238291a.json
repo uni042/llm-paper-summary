@@ -35,10 +35,15 @@
   "selection_reason": "PILLは拡散言語モデルの可変長infillingで反復的な長さ探索や生成中の長さ変更を避け、追加forward passを減らす。5モデル・8 benchmarkで強いbaselineより1.82x高速化し品質も改善するため、推論効率化として対象内。",
   "semantic_scholar_id": "9bb47057463cfd1b6b0eed12b9d8804322315445",
   "source_url": "https://arxiv.org/abs/2609.02108",
-  "status": "ready",
+  "status": "superseded",
   "title": "Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T14:29:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md",
+  "represented_canonical_id": "arXiv:2609.02108",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
