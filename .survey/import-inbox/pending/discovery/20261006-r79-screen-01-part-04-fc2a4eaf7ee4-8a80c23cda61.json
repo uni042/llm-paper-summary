@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r79-screen-01-part-04-fc2a4eaf7ee4",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26505",
+      "identity_tokens": [
+        "arXiv:2604.26505"
+      ],
+      "title": "Quantamination: Dynamic Quantization Leaks Your Data Across the Batch",
+      "reason": "Quantamination exploits shared batch min/max scales in per-tensor dynamic activation quantization; experiments report 99.6–100% LLM token recovery in studied settings. Per-token quantization avoids the side channel and can be faster. This is a security analysis of an existing serving optimization, not an inference-improvement method.",
+      "source_url": "https://arxiv.org/abs/2604.26505",
+      "first_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "last_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.62051/ijcsit.v8n4.07",
+      "identity_tokens": [
+        "DOI:10.62051/ijcsit.v8n4.07"
+      ],
+      "title": "Improvement of Speech-Paraformer Large ASR for Industrial Voice Control in High-Noise Environments",
+      "reason": "Speech-Paraformer noise robustness concerns ASR post-processing, not an LLM inference improvement.",
+      "source_url": "https://doi.org/10.62051/ijcsit.v8n4.07",
+      "first_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "last_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23740",
+      "identity_tokens": [
+        "arXiv:2604.23740"
+      ],
+      "title": "Transformer as an Euler Discretization of Score-based Variational Flow",
+      "reason": "Theoretical transformer representation work proposes no serving/inference-cost improvement.",
+      "source_url": "https://arxiv.org/abs/2604.23740",
+      "first_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "last_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05260-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05260-2"
+      ],
+      "title": "Hybrid Mamba-attention encoder for text-to-time 3D human motion grounding",
+      "reason": "Primary Springer DOI page returned inaccessible error. Empty abstract; title does not establish an LLM efficiency connection.",
+      "source_url": "https://doi.org/10.1007/s11760-026-05260-2",
+      "first_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "last_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/EEiSS69782.2026.11584595",
+      "identity_tokens": [
+        "DOI:10.1109/EEiSS69782.2026.11584595"
+      ],
+      "title": "Parameter-Efficient Mixture-of-Experts Adaptation of Qwen3 for Cross-Site Scripting Detection",
+      "reason": "Primary IEEE DOI page inaccessible. Abstract describes Qwen3 PEFT/MoE for XSS detection but primary evaluation and efficiency overhead could not be checked.",
+      "source_url": "https://doi.org/10.1109/EEiSS69782.2026.11584595",
+      "first_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "last_checked_at": "2026-10-06T10:42:18.351357+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    }
+  ]
+}
