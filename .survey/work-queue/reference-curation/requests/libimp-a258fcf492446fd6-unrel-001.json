@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a258fcf492446fd6-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2604.24162",
+  "reason": "arXiv本文のProblem Setup/Method/Latency evaluationを確認。既配置LLMのbackdoor防御としてattention行を推論時に再平衡するsecurity介入。論文自身が相対latency overheadを評価する防御で、効率改善ではなく追加処理を伴うため対象外。",
+  "title": "Defusing the Trigger: Tail-Risk-Informed Attention Rebalancing for LLM Backdoor Mitigation",
+  "identity_tokens": [
+    "arXiv:2604.24162"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a258fcf49244",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
