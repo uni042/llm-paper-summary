@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r68-screen-01-part-04-f840970c11ac",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21605",
+      "identity_tokens": [
+        "arXiv:2609.21605"
+      ],
+      "title": "Trading Depth for Time in Recurrent Transformers",
+      "reason": "The paper studies recurrent Transformers that feed the preceding token's hidden state into the next token while retaining KV states, trading recurrence depth against sequence time. Experiments compare block executions/accuracy, but the authors explicitly say block counts omit attention overhead and are neither latency nor throughput measurements; the compute budget is approximate. Relevant to LLM compute allocation, yet no serving-efficiency gain is established.",
+      "source_url": "https://arxiv.org/abs/2609.21605",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19521",
+      "identity_tokens": [
+        "arXiv:2609.19521"
+      ],
+      "title": "LSTM-UT and Recurrent-Depth Transformers on Cellular Automata",
+      "reason": "Recurrent-depth comparisons on cellular automata, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.19521",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19664",
+      "identity_tokens": [
+        "arXiv:2609.19664"
+      ],
+      "title": "VideoResearcher: Self-Improving Tool Design for Long-Video Understanding",
+      "reason": "Self-improving video-tool design workflow; abstract focuses agent/tool quality and manual design effort, not runtime inference resources.",
+      "source_url": "https://arxiv.org/abs/2609.19664",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19717",
+      "identity_tokens": [
+        "arXiv:2609.19717"
+      ],
+      "title": "Learn Your Own Thoughts: Abstract Token Curriculum",
+      "reason": "Abstract Token Curriculum trains continuous latent thoughts with curriculum backtracking, truncated backpropagation and candidate dropout. Full text reports lower training cost (2.41 vs 3.79 GiB peak memory and 113 vs 139 ms per step in one comparison), but this is training-time efficiency; the paper does not measure inference token/latency savings. Keep borderline for possible reasoning-lineage relevance only.",
+      "source_url": "https://arxiv.org/abs/2609.19717",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19767",
+      "identity_tokens": [
+        "arXiv:2609.19767"
+      ],
+      "title": "Benchmarking MLLMs via Cognitive Expected Scene Graph for Safety-Critical Visual Negation Understanding",
+      "reason": "Safety-critical visual-negation benchmark; no inference resource method.",
+      "source_url": "https://arxiv.org/abs/2609.19767",
+      "first_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "last_checked_at": "2026-10-06T09:03:57.117185+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
