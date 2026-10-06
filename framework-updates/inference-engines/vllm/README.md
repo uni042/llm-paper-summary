@@ -44,6 +44,10 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 - **ROCm DeepSeek-V4.1のmHC post + delayed pre projectionを融合 — merged 2026-09-14 UTC**: AITER fused kernelで小batch decodeの各seamから1 launchを除去。40 layer × 2 seamでforward stepあたり80 launchを削減し、MI355X・TP4の二方向crossover測定でmean ITL **6.9015 → 6.8141 ms（-1.28%）**。[PR #56513](https://github.com/vllm-project/vllm/pull/56513)
 
+## 2026-10-05
+
+- **v0.31.0（released）**: DeepSeek-V4.1-Flash向けFlashMLA mega attention + NVFP4圧縮KV cacheをSM100既定へ移し、sparse MQA logits、Mega-Gate、TP all-reduce / mHC入力準備 / MoE finalize等のfusionを追加。`vllm preload` のweight-cache daemonは量子化・TP shard済みweightをGPUへ保持してengine再起動時にCUDA IPCで再利用し、DP / MTP draft / health-readinessにも対応した。Model Runner V2ではdraft-model speculative decodingとcustom logits processorを追加し、DFlash async scheduling、DSpark adaptive verification等を拡張。MoonEP、prefill context parallelism + DP、DeepEPv2 + sequence parallelism、KV offloading back-pressure detectionも追加された。`tokenizer_mode="slow"`削除、online `quantization="fp8"`置換等のbreaking changeを含む。[release](https://github.com/vllm-project/vllm/releases/tag/v0.31.0)
+
 ## 2026-09-13
 
 - **Sparse MLAでPCP+DCP併用を追加 — merged 2026-09-12 UTC**: prefill queryを分割するPCPとdecode KVを分割するDCPを同じsparse-MLA deploymentで併用可能にした。4×GB200・GLM-5.3 NVFP4、32768 input / 1 outputの測定ではTP4のTTFT **5512.1 ms**に対しPCP4+DCP4は **3326.8 ms（約1.66倍高速）**。ただし1 input / 1024 outputでは現行PCP4+DCP4 piecewise pathが **735.9 tok/s**で、TP4 **3412.7 tok/s**やDCP4 **2236.8 tok/s**より遅い。長文prefillの構成自由度は増す一方、decode pathには最適化余地が残る。[PR #56157](https://github.com/vllm-project/vllm/pull/56157)

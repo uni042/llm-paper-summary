@@ -1,16 +1,18 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261004T1110-ollama0351-ascend950",
+  "attempt_id": "library-import-maint-20261006T2048-vllm0310-llamacpp060",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/ollama/README.md"
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/ollama/README.md"
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md"
   ],
-  "summary": "2026-10-04 08:30 maintenance: DeepSeekのAscend 950向けDeepGEMM/DeepEP backend公開とOllama v0.35.1のdecision-model/multimodal/CAPABILITY更新を反映。"
+  "summary": "2026-10-06 08:30 maintenance: vLLM v0.31.0とllama.cpp v0.6.0の確定リリースを反映。"
 }

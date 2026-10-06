@@ -25,6 +25,10 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 以下の更新履歴は、これらの主要能力について**GPU外memoryをどこまで使えるか、低bit / fusionでmemory trafficをどこまで減らせるか、投機的デコードとmulti-GPUでtokenごとの待ち時間をどこまで削減できるか**を追う。
 
+## 2026-10-05
+
+- **v0.6.0（released）**: 拡張batch API `llama_batch_ext` / `llama_process` を追加し、token / embedding混在入力とMTP / deepstack state embeddingを扱えるようにした。GLM-5.3-Flash（GLM5-Next）320B hybrid model、Clef decision model、Qwen4ExpのMTP speculative decodingも追加。backendではMetal tensor-APIのF16 KV Flash Attention、Vulkanの量子化K/V向けsparse Flash Attention、CUDAのNVFP4 MMQ accumulation最適化を含む。serverにはdecision model用`/v1/systemone` APIを追加し、ggmlはv0.26.0へ更新。[release](https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0)
+
 ## 2026-09-28
 
 - **b11238 — padding処理の統合**: `ggml_pad_ext` のleft padding対応を利用し、Parakeet、LFM2-Audio、Granite Speech、Gemma 4 audio encoderの従来のright-pad + rollを単一operationへ置換。DFlash2でも先頭zero block連結を同operationへ統合し、paddingだけを読むtapをskipする。大規模end-to-end benchmarkはrelease noteにないため、速度倍率は記録しない。[release b11238](https://github.com/ggml-org/llama.cpp/releases/tag/b11238)

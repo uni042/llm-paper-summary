@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-10-04**
+- フレームワーク差分の最終確認: **2026-10-06**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -67,6 +67,26 @@
 ---
 
 ## 最新更新
+
+### 2026-10-05
+
+#### llama.cpp
+
+- **v0.6.0 — released 2026-10-05 UTC**
+
+  token / embedding混在入力とMTP / deepstack state embeddingを扱う拡張batch API `llama_batch_ext` / `llama_process`、GLM-5.3-Flash 320B hybrid model、Qwen4Exp MTP speculative decodingを追加。backendではMetal F16-KV Flash Attention、Vulkanの量子化K/V向けsparse Flash Attention、CUDA NVFP4 MMQ accumulation最適化を含む。serverにはdecision model向け`/v1/systemone` APIを追加し、ggmlをv0.26.0へ更新した。
+
+  一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0
+
+
+#### vLLM
+
+- **v0.31.0 — released 2026-10-05 UTC**
+
+  DeepSeek-V4.1-Flash向けFlashMLA mega attention + NVFP4圧縮KV cacheをSM100既定へ移行し、sparse MQA logits、Mega-Gate、decoder boundary fusionを追加。`vllm preload` のGPU weight-cache daemonは量子化・TP shard済みweightをengine再起動間でGPUに保持してCUDA IPCで再利用し、data parallel / MTP draftにも拡張された。Model Runner V2ではdraft-model speculative decoding、DFlash async scheduling等を追加し、大規模servingではMoonEP、prefill context parallelism + DP、DeepEPv2 + sequence parallelism、KV offloading back-pressure detectionを追加。`tokenizer_mode="slow"`削除等のbreaking changeも含む。
+
+  一次資料: https://github.com/vllm-project/vllm/releases/tag/v0.31.0
+
 
 ### 2026-10-02
 
