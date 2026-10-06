@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r146-screen-01-part-01-8afa4dddf3a4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICADCS70036.2026.11583464",
+      "identity_tokens": [
+        "DOI:10.1109/ICADCS70036.2026.11583464"
+      ],
+      "title": "Large Language Model Assisted Policy Simulation Platform for Evidence-Driven Public Decision Making",
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "source_url": "https://doi.org/10.1109/ICADCS70036.2026.11583464",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23780",
+      "identity_tokens": [
+        "arXiv:2605.23780"
+      ],
+      "title": "Beyond Binary Edits Robust Multimodal Knowledge Editing with Adversarial Subspace Alignment",
+      "reason": "The paper studies intrinsic multimodal knowledge editing (latent adversarial variants and low-rank alignment), with experiments on edit reliability/generalization. It does not propose an inference compute, memory, latency, throughput, quantization, or serving optimization; the linked MoE-LLaVA relation is only an MLLM application/architecture context.",
+      "source_url": "https://arxiv.org/abs/2605.23780",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.24051",
+      "identity_tokens": [
+        "arXiv:2605.24051"
+      ],
+      "title": "Memento: Personalized RAG-Style Long-Retention Data Scaling for META Ads Recommendation",
+      "reason": "The full text describes long-history ad recommendation infrastructure using retrieval, INT8 storage, and asynchronous serving, with low-latency production requests. It is a recommender system rather than an LLM inference/serving method; the Big Bird long-sequence lineage and use of RAG-style retrieval leave a possible but weak transfer connection.",
+      "source_url": "https://arxiv.org/abs/2605.24051",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/10298436.2026.2678484",
+      "identity_tokens": [
+        "DOI:10.1080/10298436.2026.2678484"
+      ],
+      "title": "AI-powered design framework for open-graded friction course (OGFC) asphalt mixtures",
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "source_url": "https://doi.org/10.1080/10298436.2026.2678484",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CVIPPR69607.2026.11604538",
+      "identity_tokens": [
+        "DOI:10.1109/CVIPPR69607.2026.11604538"
+      ],
+      "title": "AF-FLA Net: Adaptive Feature Pyramid and Focused Linear Attention for Efficient BEV Perception",
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "source_url": "https://doi.org/10.1109/CVIPPR69607.2026.11604538",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    }
+  ]
+}
