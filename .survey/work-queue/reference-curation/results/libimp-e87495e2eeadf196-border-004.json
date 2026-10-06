@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e87495e2eeadf196-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.28031",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.28031",
+    "identity_tokens": [
+      "arXiv:2603.28031"
+    ],
+    "reason": "Could inform reasoning-depth limits in the linked efficient-reasoning line, but offers no actionable token/latency saving method.",
+    "first_checked_at": "2026-10-06T07:17:48+00:00",
+    "last_checked_at": "2026-10-06T07:17:48+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On the Complexity of Determinations"
+  },
+  "processed_at": "2026-10-06T07:17:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e87495e2eead",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
