@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r117-screen-01-part-08-f89458f82d70",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IMW59701.2024.10536972",
+      "identity_tokens": [
+        "DOI:10.1109/IMW59701.2024.10536972"
+      ],
+      "title": "Present and Future, Challenges of High Bandwith Memory (HBM)",
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。IEEE publisher page exposed the abstract only; full text was not accessible through the primary source.",
+      "source_url": "https://doi.org/10.1109/IMW59701.2024.10536972",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2024.1376042",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2024.1376042"
+      ],
+      "title": "Open and remotely accessible Neuroplatform for research in wetware computing",
+      "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。",
+      "source_url": "https://doi.org/10.3389/frai.2024.1376042",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5",
+      "identity_tokens": [
+        "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5"
+      ],
+      "title": "Intervening Anchor Token: Decoding Strategy in Alleviating Hallucinations for MLLMs",
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。OpenReview primary PDF/forum retrieval was blocked by an access challenge; the official abstract and first-page excerpt were available.",
+      "source_url": "https://www.semanticscholar.org/paper/07d64f525e478d095bb4b38ec72c1d747fbfebb5",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.13556",
+      "identity_tokens": [
+        "arXiv:2404.13556"
+      ],
+      "title": "ChatRetriever: Adapting Large Language Models for Generalized and Robust Conversational Dense Retrieval",
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。ChatRetriever adapts dense retrieval for conversational context and evaluates retrieval/QA quality. It does not demonstrate a concrete LLM serving memory or inference-cost improvement; relation to inference systems is weak.",
+      "source_url": "https://arxiv.org/abs/2404.13556",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1148/radiol.241073",
+      "identity_tokens": [
+        "DOI:10.1148/radiol.241073"
+      ],
+      "title": "Open-Source Large Language Models in Radiology: A Review and Tutorial for Practical Research and Clinical Deployment.",
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The tutorial discusses practical open-source LLM deployment in radiology, including quantization and local resource constraints, but is a deployment tutorial rather than a new method or controlled systems benchmark. Keep as weak deployment background.",
+      "source_url": "https://doi.org/10.1148/radiol.241073",
+      "first_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "last_checked_at": "2026-10-06T16:18:29.519240+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    }
+  ]
+}
