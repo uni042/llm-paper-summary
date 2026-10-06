@@ -877,7 +877,7 @@
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：✓ ・ リポジトリ内被引用：43  
+  実装：✓ ・ リポジトリ内被引用：44  
   H100でFlashAttention-2がピーク性能の約35%しか使えない問題に対し、TMAロードとテンソル Core計算のワープ特化、GEMMとsoftmaxの非同期パイプライン、FP8向けブロック量子化と非コヒーレント変換を導入する。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -897,7 +897,7 @@
   RAGCacheはretrieved knowledgeの中間状態をキャッシュし、再出現したchunkのプリフィルを省くシステムである。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   複数の将来トークンを同時予測する補助ヘッドを学習し、推論時にそのヘッドを自己投機的復号へ再利用して別ドラフトモデルなしで生成を高速化する。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
@@ -940,6 +940,10 @@
   実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：14  
   また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
 
+- **2024-04 · [JetMoE: Reaching Llama2 Performance with 0.1M Dollars](2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md)**  
+  実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：13  
+  JetMoEはFFNだけでなく注意機構にも専門家 ルーティングを導入し、総8Bパラメータを持ちながら1 トークンで実行するのは約2Bに抑える。これによりLlama2-7Bより総パラメータは多いが、推論計算量を約70%減らす。
+
 - **2024-02 · [WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More](2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   LLM量子化では重みだけを4ビット化すると品質は保ちやすいが、長文脈で増えるKVキャッシュが残る。
@@ -960,10 +964,6 @@
   実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts) ・ リポジトリ内被引用：12  
   一方で専門家間の負荷偏り、全対全通信通信、専門家配置、メモリ容量が実システムの律速になる。
 
-- **2024-04 · [JetMoE: Reaching Llama2 Performance with 0.1M Dollars](2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md)**  
-  実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：12  
-  JetMoEはFFNだけでなく注意機構にも専門家 ルーティングを導入し、総8Bパラメータを持ちながら1 トークンで実行するのは約2Bに抑える。これによりLlama2-7Bより総パラメータは多いが、推論計算量を約70%減らす。
-
 - **2024-07 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
   実装：[✓](https://github.com/sustcsonglin/flash-linear-attention) ・ リポジトリ内被引用：11  
   第一に、線形注意をGPU向けにchunk化してHBM往復を減らすFLASHLINEARATTENTIONを設計する。
@@ -980,6 +980,10 @@
   実装：✓ ・ リポジトリ内被引用：9  
   Jacobi復号は複数の未来位置を仮置きし、対象モデルで全位置を並列更新して固定点まで反復することでこの依存を緩める。論文はドメイン固有・一般ベンチマークで生成品質を保ちながら2.4〜3.4倍の生成高速化を報告する。
 
+- **2024-07 · [Mixture of A Million Experts：百万専門家を扱うPEER層](2024-2407.04153-mixture-of-a-million-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
+
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   Sambaは、選択的状態空間モデル（Selective State Space モデル; SSM）で遠い過去を固定サイズ状態へ畳み込み、スライディング窓注意（Sliding Window 注意機構; SWA）で直近トークンを正確に参照する。
@@ -987,10 +991,6 @@
 - **2024-08 · [Harder Task Needs More Experts: Dynamic Routing in MoE Models](unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md)**  
   実装：[✓](https://github.com/ZhenweiAn/Dynamic_MoE) ・ リポジトリ内被引用：7  
   一般的な疎な混合専門家モデル（MoE）はTop-1やTop-2のように、全トークンへ同じ数の専門家を割り当てる。推論時の最大専門家数を2へ制限した設定で、動的方式はTop-2より平均活性専門家数を減らし、活性パラメータを90%未満へ抑えながら下流タスク平均を0.7ポイント上回る。
-
-- **2024-07 · [Mixture of A Million Experts：百万専門家を扱うPEER層](2024-2407.04153-mixture-of-a-million-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
 
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -1000,6 +1000,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   自己回帰LLMは通常1回の前向き計算で1トークンを確定する。投機的な候補列をまとめて検証すれば複数トークンを受理できるが、単一枝では途中の1トークンが対象モデル予測と違った時点で、その後ろの候補をすべて捨てる。このため候補列を長くしても、実際に受理できる有効復号長（Effective Decoding Length; EDL）は伸びにくい。
 
+- **2024-04 · [Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence](2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  Transformerの自己注意は長い系列でKVキャッシュが増える。一方RWKVは過去を再帰状態へ畳み込み、デコード時には固定サイズ状態を更新するため、系列長に比例したKV保存を必要としない。本論文はRWKV-4からEagle（RWKV-5）とFinch（RWKV-6）へ進め、再帰状態の表現力を高める。
+
 - **2024-10 · [Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution](2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   複数小型モデルの重み付き多数決、オンライン投機長調整、SSM/LLM非同期パイプラインを統合した投機的復号サービング。
@@ -1007,10 +1011,6 @@
 - **2024-06 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
   実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：5  
   LLM推論アクセラレータを設計するとき、演算器数、メモリ種類・帯域、チップ面積、並列配置を変えるたびにRTL実装や実機評価を行うのは現実的でない。実機との比較では各種演算子・入力 サイズの遅延誤差が平均10.9%、LLM推論全体では平均4.1%。
-
-- **2024-04 · [Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence](2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  Transformerの自己注意は長い系列でKVキャッシュが増える。一方RWKVは過去を再帰状態へ畳み込み、デコード時には固定サイズ状態を更新するため、系列長に比例したKV保存を必要としない。本論文はRWKV-4からEagle（RWKV-5）とFinch（RWKV-6）へ進め、再帰状態の表現力を高める。
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1123,7 +1123,7 @@
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：142  
+  実装：✓ ・ リポジトリ内被引用：143  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
@@ -1159,7 +1159,7 @@
   Retentive Network（RetNet）は、注意と再帰の関係から導いた保持機構（retention）を中心に、同じモデルを三つの計算形式で実行する。
 
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
-  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：26  
   RWKVは、Transformerの並列学習とRNNの軽量な逐次推論を同じモデルで両立させる言語モデルアーキテクチャである。標準自己注意は系列長が伸びると全トークン対の相互作用を扱い、推論では過去の鍵・値を保持する必要がある。論文は最大14Bパラメータまでモデルを拡張し、同規模Transformerと競争力のある言語モデル性能を示す。
 
 - **2023-08 · [LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models](2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md)**  
@@ -1214,13 +1214,13 @@
   実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：8  
   In-文脈 Autoencoder（ICAE）は、長い文脈を通常のテキスト トークンではない少数の学習済みメモリ slotへ圧縮し、その連続表現を同じLLMが後続生成の条件として直接読む。
 
+- **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
+  実装：[✓](https://github.com/HazyResearch/H3) ・ リポジトリ内被引用：7  
+  H3（Hungry Hungry Hippos）は、S4などの状態空間モデルが長距離依存を効率良く扱える一方、言語で重要な「特定のkeyに対応するvalueを記憶して後で取り出す」能力では注意に劣るという問題を分析し、その不足を補う状態空間層を提案する。
+
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
   実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：6  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
-
-- **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/H3) ・ リポジトリ内被引用：6  
-  H3（Hungry Hungry Hippos）は、S4などの状態空間モデルが長距離依存を効率良く扱える一方、言語で重要な「特定のkeyに対応するvalueを記憶して後で取り出す」能力では注意に劣るという問題を分析し、その不足を補う状態空間層を提案する。
 
 - **2023-04 · [Scaling Transformer to 1M tokens and beyond with RMT](2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md)**  
   実装：[✓](https://github.com/burtsev/RMT-experiments) ・ リポジトリ内被引用：5  
@@ -1265,7 +1265,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：255  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：257  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -1281,7 +1281,7 @@
   注意行列を保存せず安定な逐次ソフトマックス集約とチャンク化で厳密な自己注意を計算し、16,384トークン推論時の注意メモリを59倍削減する。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   GLaM（Generalist Language モデル）は、密モデルの全パラメータを毎トークン実行する代わりに、混合専門家モデル（MoE）のルータで一部専門家だけを活性化することで、総モデル容量と実際の計算量を分離する。最大構成は1.2兆パラメータでGPT-3の約7倍の総パラメータを持つが、論文は推論FLOPsをGPT-3の約半分と報告する。
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
@@ -1371,6 +1371,6 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：124  
+  実装：✓ ・ リポジトリ内被引用：125  
   各入力に対して全専門家を実行せず、学習可能なゲートが上位少数だけを選択することで、総容量を大きくしながら一例あたりの計算を限定する。論文は最大1370億パラメータのモデルを構築し、現代のGPUクラスタ上で計算効率の低下を小さく抑えつつ、従来より1000倍超のモデル容量を扱えると報告する。
 <!-- survey:auto:end -->
