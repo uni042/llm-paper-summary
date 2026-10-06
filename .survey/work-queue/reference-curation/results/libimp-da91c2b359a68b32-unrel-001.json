@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da91c2b359a68b32-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.19901",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.19901",
+    "identity_tokens": [
+      "arXiv:2606.19901"
+    ],
+    "reason": "Primary full text is an LRU/semantic-modulation model for single-image super-resolution. Its efficiency and memory results concern image restoration, not language-model inference; the linked LRU title alone does not establish a language-model contribution.",
+    "first_checked_at": "2026-10-06T20:27:14+00:00",
+    "last_checked_at": "2026-10-06T20:27:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+    ],
+    "title": "Linear Recurrent Unit with Semantic Modulation for Image Super-Resolution"
+  },
+  "processed_at": "2026-10-06T20:27:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da91c2b359a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

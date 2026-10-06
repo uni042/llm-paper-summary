@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da91c2b359a68b32-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.19051",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.19051",
+    "identity_tokens": [
+      "arXiv:2606.19051"
+    ],
+    "reason": "Primary arXiv abstract identifies the task as classifying research-method sections in Library and Information Science articles; it contains no LLM inference, serving, or model-efficiency method.",
+    "first_checked_at": "2026-10-06T20:27:15+00:00",
+    "last_checked_at": "2026-10-06T20:27:15+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Which Sections of a Research Paper Best Reveal Its Research Methods? Evidence from Library and Information Science"
+  },
+  "processed_at": "2026-10-06T20:27:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da91c2b359a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
