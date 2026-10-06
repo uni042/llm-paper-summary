@@ -1,0 +1,146 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-16c1752439ef736a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-16c1752439ef",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2021.eacl-main.8"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "14a5b5e667290f660dd37ccb5ee3fe104b645fdc",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-06T22:58:54.092829+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2021.eacl-main.8",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "BERxiT: Early Exiting for BERT with Better Fine-Tuning and Extension to Regression",
+      "source_url": "https://doi.org/10.18653/v1/2021.eacl-main.8",
+      "year": 2021,
+      "published": null,
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 169,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The slow speed of BERT has motivated much research on accelerating its inference, and the early exiting idea has been proposed to make trade-offs between model quality and efficiency. This paper aims to address two weaknesses of previous work: (1) existing fine-tuning strategies for early exiting models fail to take full advantage of BERT; (2) methods to make exiting decisions are limited to classification tasks. We propose a more advanced fine-tuning strategy and a learning-to-exit module that extends early exiting to tasks other than classification. Experiments demonstrate improved early exiting for BERT, with better trade-offs obtained by the proposed fine-tuning strategy, successful application to regression tasks, and the possibility to combine it with other acceleration methods. Source code can be found at https://github.com/castorini/berxit.",
+      "identifiers": [
+        "SemanticScholar:7b37c0a4976c4d2a5a440d494fbb0f3daede2a00"
+      ],
+      "semantic_scholar_id": "7b37c0a4976c4d2a5a440d494fbb0f3daede2a00",
+      "doi": "10.18653/v1/2021.eacl-main.8",
+      "canonical_id": "DOI:10.18653/v1/2021.eacl-main.8",
+      "authors": [
+        "Ji Xin",
+        "Raphael Tang",
+        "Yaoliang Yu",
+        "Jimmy Lin"
+      ],
+      "priority": 179,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 169,
+        "citation_count": 169,
+        "total": 179,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1923,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2021.eacl-main.8",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2021.eacl-main.8",
+        "id:SemanticScholar:7b37c0a4976c4d2a5a440d494fbb0f3daede2a00",
+        "title:berxit early exiting for bert with better finetuning and extension to regression",
+        "url:https://doi.org/10.18653/v1/2021.eacl-main.8"
+      ],
+      "record": {
+        "title": "BERxiT: Early Exiting for BERT with Better Fine-Tuning and Extension to Regression",
+        "source_url": "https://doi.org/10.18653/v1/2021.eacl-main.8",
+        "year": 2021,
+        "published": null,
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 169,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The slow speed of BERT has motivated much research on accelerating its inference, and the early exiting idea has been proposed to make trade-offs between model quality and efficiency. This paper aims to address two weaknesses of previous work: (1) existing fine-tuning strategies for early exiting models fail to take full advantage of BERT; (2) methods to make exiting decisions are limited to classification tasks. We propose a more advanced fine-tuning strategy and a learning-to-exit module that extends early exiting to tasks other than classification. Experiments demonstrate improved early exiting for BERT, with better trade-offs obtained by the proposed fine-tuning strategy, successful application to regression tasks, and the possibility to combine it with other acceleration methods. Source code can be found at https://github.com/castorini/berxit.",
+        "identifiers": [
+          "SemanticScholar:7b37c0a4976c4d2a5a440d494fbb0f3daede2a00"
+        ],
+        "semantic_scholar_id": "7b37c0a4976c4d2a5a440d494fbb0f3daede2a00",
+        "doi": "10.18653/v1/2021.eacl-main.8",
+        "canonical_id": "DOI:10.18653/v1/2021.eacl-main.8",
+        "authors": [
+          "Ji Xin",
+          "Raphael Tang",
+          "Yaoliang Yu",
+          "Jimmy Lin"
+        ],
+        "priority": 179,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 169,
+          "citation_count": 169,
+          "total": 179,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1923,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cdc8e22a07481da4f1166f5e706ddc35088f7585497cdf077111ed8230d91cab",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
