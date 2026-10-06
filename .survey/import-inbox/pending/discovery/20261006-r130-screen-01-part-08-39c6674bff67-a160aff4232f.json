@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r130-screen-01-part-08-39c6674bff67",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23958",
+      "identity_tokens": [
+        "arXiv:2509.23958"
+      ],
+      "title": "Reinforcement Learning with Inverse Rewards for World Model Post-training",
+      "reason": "Inverse rewards for world-model post-training is an RL/post-training contribution without a serving-efficiency result.",
+      "source_url": "https://arxiv.org/abs/2509.23958",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3776759.3776826",
+      "identity_tokens": [
+        "DOI:10.1145/3776759.3776826"
+      ],
+      "title": "Survey of Quantization-Aware Training (QAT) Applications in Deep Learning Quantization",
+      "reason": "Primary publisher abstract could not be retrieved (publisher page returned 403); relevance cannot be resolved from primary abstract evidence.",
+      "source_url": "https://doi.org/10.1145/3776759.3776826",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3718958.3750503",
+      "identity_tokens": [
+        "DOI:10.1145/3718958.3750503"
+      ],
+      "title": "From ATOP to ZCube: Automated Topology Optimization Pipeline and A Highly Cost-Effective Network Topology for Large Model Training",
+      "reason": "Primary publisher abstract could not be retrieved (publisher page returned 403); relevance cannot be resolved from primary abstract evidence.",
+      "source_url": "https://doi.org/10.1145/3718958.3750503",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.18013",
+      "identity_tokens": [
+        "arXiv:2507.18013"
+      ],
+      "title": "Technical Report of TeleChat2, TeleChat2.5 and T1",
+      "reason": "TeleChat2/2.5 report says fast inference is a priority but gives quality/training optimization descriptions without controlled serving latency or throughput measurements.",
+      "source_url": "https://arxiv.org/abs/2507.18013",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17336",
+      "identity_tokens": [
+        "arXiv:2506.17336"
+      ],
+      "title": "Privacy-Preserving LLM Interaction with Socratic Chain-of-Thought Reasoning and Homomorphically Encrypted Vector Databases",
+      "reason": "The contribution is privacy-preserving interaction with encrypted vector databases; it does not demonstrate lower LLM inference cost.",
+      "source_url": "https://arxiv.org/abs/2506.17336",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    }
+  ]
+}
