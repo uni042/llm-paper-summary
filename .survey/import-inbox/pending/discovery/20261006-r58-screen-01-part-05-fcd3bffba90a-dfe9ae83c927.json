@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r58-screen-01-part-05-fcd3bffba90a",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/FPL60245.2023.00012",
+      "identity_tokens": [
+        "DOI:10.1109/FPL60245.2023.00012"
+      ],
+      "title": "HPTA: A High Performance Transformer Accelerator Based on FPGA",
+      "reason": "Full primary text is unavailable; plausible transformer-efficiency lineage is retained as reasoned borderline.",
+      "source_url": "https://doi.org/10.1109/FPL60245.2023.00012",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2021.3121264",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2021.3121264"
+      ],
+      "title": "A Framework for Accelerating Transformer-Based Language Model on ReRAM-Based Architecture",
+      "reason": "Full primary text is unavailable; plausible transformer-efficiency lineage is retained as reasoned borderline.",
+      "source_url": "https://doi.org/10.1109/TCAD.2021.3121264",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16826",
+      "identity_tokens": [
+        "arXiv:2505.16826"
+      ],
+      "title": "KTAE: A Model-Free Algorithm to Key-Tokens Advantage Estimation in Mathematical Reasoning",
+      "reason": "KTAE changes reinforcement-learning training advantages, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.16826",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.10076",
+      "identity_tokens": [
+        "arXiv:2404.10076"
+      ],
+      "title": "Field-Programmable Gate Array Architecture for Deep Learning: Survey and Future Directions",
+      "reason": "General FPGA deep-learning survey is only indirectly connected to LLM inference and offers no specific method.",
+      "source_url": "https://arxiv.org/abs/2404.10076",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.15033",
+      "identity_tokens": [
+        "arXiv:2312.15033"
+      ],
+      "title": "Sparsity-Guided Holistic Explanation for LLMs with Interpretable Inference-Time Intervention",
+      "reason": "Primary-text findings do not support a concrete inference-efficiency connection to the target family.",
+      "source_url": "https://arxiv.org/abs/2312.15033",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    }
+  ]
+}
