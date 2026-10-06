@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb1e9b20bb59763b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.24974",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.24974",
+    "identity_tokens": [
+      "arXiv:2609.24974"
+    ],
+    "reason": "Harness distillation for agent scaffolding; no concrete inference resource reduction.",
+    "first_checked_at": "2026-10-06T06:40:16+00:00",
+    "last_checked_at": "2026-10-06T06:40:16+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md"
+    ],
+    "title": "Harness-Zero: Harness Distillation via Agent-as-Harness"
+  },
+  "processed_at": "2026-10-06T06:40:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb1e9b20bb59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

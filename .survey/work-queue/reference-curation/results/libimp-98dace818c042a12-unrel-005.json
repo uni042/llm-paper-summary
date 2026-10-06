@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98dace818c042a12-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.22158",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.22158",
+    "identity_tokens": [
+      "arXiv:2602.22158"
+    ],
+    "reason": "LLMTailor merges weights and optimizer shards for selective LLM training checkpoints; the experiments concern training storage/checkpoint time, not inference execution or serving.",
+    "first_checked_at": "2026-10-06T06:40:11+00:00",
+    "last_checked_at": "2026-10-06T06:40:11+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+    ],
+    "title": "LLMTailor: A Layer-wise Tailoring Tool for Efficient Checkpointing of Large Language Models"
+  },
+  "processed_at": "2026-10-06T06:40:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98dace818c04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

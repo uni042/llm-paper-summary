@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T06:19:56+00:00",
-  "record_count": 2338,
+  "updated_at": "2026-10-06T06:40:16+00:00",
+  "record_count": 2360,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -36016,6 +36016,336 @@
       ],
       "borderline_recheck_count": 0,
       "title": "OmniScript: Towards Audio-Visual Script Generation for Long-Form Cinematic Video"
+    },
+    "arXiv:2602.06319": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.06319",
+      "identity_tokens": [
+        "arXiv:2602.06319"
+      ],
+      "reason": "The paper measures an overthinking failure mode but provides no inference-time mitigation or optimization.",
+      "first_checked_at": "2026-10-06T06:40:04+00:00",
+      "last_checked_at": "2026-10-06T06:40:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exposing Weaknesses of Large Reasoning Models through Graph Algorithm Problems"
+    },
+    "arXiv:2602.02313": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02313",
+      "identity_tokens": [
+        "arXiv:2602.02313"
+      ],
+      "reason": "The contribution is reasoning behavior/control rather than a demonstrated inference-cost reduction.",
+      "first_checked_at": "2026-10-06T06:40:04+00:00",
+      "last_checked_at": "2026-10-06T06:40:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Interpreting and Controlling LLM Reasoning through Integrated Policy Gradient"
+    },
+    "arXiv:2602.00154": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00154",
+      "identity_tokens": [
+        "arXiv:2602.00154"
+      ],
+      "reason": "Relevant to threat modeling for reasoning efficiency, but it is an attack paper rather than an improvement.",
+      "first_checked_at": "2026-10-06T06:40:04+00:00",
+      "last_checked_at": "2026-10-06T06:40:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReasoningBomb: A Stealthy Denial-of-Service Attack by Inducing Pathologically Long Reasoning in Large Reasoning Models"
+    },
+    "arXiv:2601.13244": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.13244",
+      "identity_tokens": [
+        "arXiv:2601.13244"
+      ],
+      "reason": "The relation to reasoning efficiency is indirect and benchmark-oriented.",
+      "first_checked_at": "2026-10-06T06:40:05+00:00",
+      "last_checked_at": "2026-10-06T06:40:05+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Do Instruction-Tuned Models Always Perform Better Than Base Models? Evidence from Math and Domain-Shifted Benchmarks"
+    },
+    "arXiv:2602.21750": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.21750",
+      "identity_tokens": [
+        "arXiv:2602.21750"
+      ],
+      "reason": "Useful adjacent depth-efficiency evidence, but protein-model behavior and downstream tasks may not transfer to LLM inference.",
+      "first_checked_at": "2026-10-06T06:40:05+00:00",
+      "last_checked_at": "2026-10-06T06:40:05+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Words to Amino Acids: Does the Curse of Depth Persist?"
+    },
+    "arXiv:2606.18439": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18439",
+      "identity_tokens": [
+        "arXiv:2606.18439"
+      ],
+      "reason": "Potentially adjacent transformer acceleration, but domain transfer to language models is unproven.",
+      "first_checked_at": "2026-10-06T06:40:06+00:00",
+      "last_checked_at": "2026-10-06T06:40:06+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RegimeVGGT: Layer-Wise Spatially Preserving Redundancy Removal for Visual Geometry Grounded Transformer"
+    },
+    "arXiv:2606.12316": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.12316",
+      "identity_tokens": [
+        "arXiv:2606.12316"
+      ],
+      "reason": "Looped transitions and parameter counts alone do not establish LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T06:40:06+00:00",
+      "last_checked_at": "2026-10-06T06:40:06+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Slots, Transitions, Loops: Learning Composable World Models for ARC"
+    },
+    "arXiv:2605.31293": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.31293",
+      "identity_tokens": [
+        "arXiv:2605.31293"
+      ],
+      "reason": "Its objective is knowledge suppression, not inference efficiency; auxiliary models may add overhead.",
+      "first_checked_at": "2026-10-06T06:40:07+00:00",
+      "last_checked_at": "2026-10-06T06:40:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Divergence Decoding: Inference-Time Unlearning via Auxiliary Models"
+    },
+    "arXiv:2605.20551": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20551",
+      "identity_tokens": [
+        "arXiv:2605.20551"
+      ],
+      "reason": "Plausible token-pruning lineage, but the primary task and feature extractor are vision-place retrieval; transfer to language-model inference is not established.",
+      "first_checked_at": "2026-10-06T06:40:07+00:00",
+      "last_checked_at": "2026-10-06T06:40:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Faster or Stronger: Towards Flexible Visual Place Recognition via Weighted Aggregation and Token Pruning"
+    },
+    "arXiv:2605.09867": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09867",
+      "identity_tokens": [
+        "arXiv:2605.09867"
+      ],
+      "reason": "Related to recurrent latent-context reasoning lineage, but evaluated contribution is online learning rather than inference efficiency.",
+      "first_checked_at": "2026-10-06T06:40:07+00:00",
+      "last_checked_at": "2026-10-06T06:40:07+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Continuous Latent Contexts Enable Efficient Online Learning in Transformers"
+    },
+    "arXiv:2512.24086": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24086",
+      "identity_tokens": [
+        "arXiv:2512.24086"
+      ],
+      "reason": "It is linked to generic sparse-attention inference work, but its tested architecture/task is diffusion generation, so applicability to language-model serving is uncertain.",
+      "first_checked_at": "2026-10-06T06:40:08+00:00",
+      "last_checked_at": "2026-10-06T06:40:08+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RainFusion2.0: Temporal-Spatial Awareness and Hardware-Efficient Block-wise Sparse Attention"
+    },
+    "arXiv:2512.23340": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.23340",
+      "identity_tokens": [
+        "arXiv:2512.23340"
+      ],
+      "reason": "Model collaboration is adjacent to routing/serving, but the contribution is performance scaling rather than a demonstrated serving-efficiency method.",
+      "first_checked_at": "2026-10-06T06:40:08+00:00",
+      "last_checked_at": "2026-10-06T06:40:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Law of Multi-Model Collaboration: Scaling Limits of Model Ensembling for Large Language Models"
+    },
+    "arXiv:2608.03263": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03263",
+      "identity_tokens": [
+        "arXiv:2608.03263"
+      ],
+      "reason": "The paper explains reasoning behavior rather than providing a validated efficiency method.",
+      "first_checked_at": "2026-10-06T06:40:09+00:00",
+      "last_checked_at": "2026-10-06T06:40:09+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Ignition Is Real, and It Lives at the Readout: Latent composition, difficulty-clocked ignition, and the interface-constituted commit in a recurrent-depth reasoner"
+    },
+    "arXiv:2606.20075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.20075",
+      "identity_tokens": [
+        "arXiv:2606.20075"
+      ],
+      "reason": "The work studies supervision efficacy, not concrete inference compute or memory reduction.",
+      "first_checked_at": "2026-10-06T06:40:10+00:00",
+      "last_checked_at": "2026-10-06T06:40:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Makes Effective Supervision in Latent Chain-of-Thought: An Information-Theoretic Analysis"
+    },
+    "arXiv:2602.06600": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.06600",
+      "identity_tokens": [
+        "arXiv:2602.06600"
+      ],
+      "reason": "The paper studies reasoning behavior related to overthinking but does not demonstrate an inference-cost improvement.",
+      "first_checked_at": "2026-10-06T06:40:11+00:00",
+      "last_checked_at": "2026-10-06T06:40:11+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Echoes as Anchors: Probabilistic Costs and Attention Refocusing in LLM Reasoning"
+    },
+    "arXiv:2602.02909": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02909",
+      "identity_tokens": [
+        "arXiv:2602.02909"
+      ],
+      "reason": "Theoretical bounds may inform efficiency work, but the abstraction is not a concrete inference improvement.",
+      "first_checked_at": "2026-10-06T06:40:12+00:00",
+      "last_checked_at": "2026-10-06T06:40:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reasoning about Reasoning: BAPO Bounds on Chain-of-Thought Token Complexity in LLMs"
+    },
+    "arXiv:2602.08214": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08214",
+      "identity_tokens": [
+        "arXiv:2602.08214"
+      ],
+      "reason": "RECUR addresses adversarial resource exhaustion rather than an inference-efficiency improvement; relevance is limited to robustness and overthinking risk.",
+      "first_checked_at": "2026-10-06T06:40:13+00:00",
+      "last_checked_at": "2026-10-06T06:40:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RECUR: Resource Exhaustion Attack via Recursive-Entropy Guided Counterfactual Utilization and Reflection"
+    },
+    "arXiv:2604.20368": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20368",
+      "identity_tokens": [
+        "arXiv:2604.20368"
+      ],
+      "reason": "Attention-approximation lineage is relevant, but primary experiments are computer vision only; transfer to LLM/VLM inference is unverified.",
+      "first_checked_at": "2026-10-06T06:40:14+00:00",
+      "last_checked_at": "2026-10-06T06:40:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LaplacianFormer:Rethinking Linear Attention with Laplacian Kernel"
+    },
+    "arXiv:2512.22716": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22716",
+      "identity_tokens": [
+        "arXiv:2512.22716"
+      ],
+      "reason": "Agent memory/continual learning is adjacent, but the evaluated contribution is not inference efficiency.",
+      "first_checked_at": "2026-10-06T06:40:15+00:00",
+      "last_checked_at": "2026-10-06T06:40:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memento 2: Learning by Stateful Reflective Memory"
+    },
+    "DOI:10.1109/icedge67252.2025.11412934": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icedge67252.2025.11412934",
+      "identity_tokens": [
+        "DOI:10.1109/icedge67252.2025.11412934"
+      ],
+      "reason": "The DOI landing page and exact-title search exposed metadata/abstract only; publisher primary full text could not be retrieved, so its claimed NPU acceleration could not be assessed.",
+      "first_checked_at": "2026-10-06T06:40:15+00:00",
+      "last_checked_at": "2026-10-06T06:40:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Efficient Acceleration of Hyena and Kolmogorov–Arnold Networks on NPUs"
+    },
+    "arXiv:2202.07105": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.07105",
+      "identity_tokens": [
+        "arXiv:2202.07105"
+      ],
+      "reason": "Useful background taxonomy, but low novelty/currentness for this screening batch.",
+      "first_checked_at": "2026-10-06T06:40:16+00:00",
+      "last_checked_at": "2026-10-06T06:40:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on Model Compression and Acceleration for Pretrained Language Models"
+    },
+    "arXiv:2205.13016": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.13016",
+      "identity_tokens": [
+        "arXiv:2205.13016"
+      ],
+      "reason": "Relevant compression lineage but older encoder-only evidence is weak for current LLM inference follow-up.",
+      "first_checked_at": "2026-10-06T06:40:16+00:00",
+      "last_checked_at": "2026-10-06T06:40:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BiT: Robustly Binarized Multi-distilled Transformer"
     }
   }
 }
