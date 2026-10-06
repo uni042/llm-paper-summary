@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-02ca48e0e1505110-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s43018-026-01186-3",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s43018-026-01186-3",
+    "identity_tokens": [
+      "DOI:10.1038/s43018-026-01186-3"
+    ],
+    "reason": "Histology tumor-subtype model, outside LLM/VLM inference.",
+    "first_checked_at": "2026-10-06T06:50:15+00:00",
+    "last_checked_at": "2026-10-06T06:50:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "Hetairos is a histology-based artificial intelligence model for predicting central nervous system tumor methylation subtypes"
+  },
+  "processed_at": "2026-10-06T06:50:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-02ca48e0e150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

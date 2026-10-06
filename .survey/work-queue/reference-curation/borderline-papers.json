@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T06:43:21+00:00",
-  "record_count": 2368,
+  "updated_at": "2026-10-06T06:50:20+00:00",
+  "record_count": 2383,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -36467,6 +36467,233 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation"
+    },
+    "arXiv:2605.30757": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30757",
+      "identity_tokens": [
+        "arXiv:2605.30757"
+      ],
+      "reason": "Memory-budget evidence is architecture/task-specific and does not establish broadly applicable serving savings.",
+      "first_checked_at": "2026-10-06T06:50:14+00:00",
+      "last_checked_at": "2026-10-06T06:50:14+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chain-of-Thought and Compressed Looped Transformers: A Memory-Budget Separation"
+    },
+    "arXiv:2605.17837": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17837",
+      "identity_tokens": [
+        "arXiv:2605.17837"
+      ],
+      "reason": "The task is diffusion video generation rather than LLM/VLM inference.",
+      "first_checked_at": "2026-10-06T06:50:14+00:00",
+      "last_checked_at": "2026-10-06T06:50:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Temporal Aware Pruning for Efficient Diffusion-based Video Generation"
+    },
+    "arXiv:2605.17478": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17478",
+      "identity_tokens": [
+        "arXiv:2605.17478"
+      ],
+      "reason": "External memory is adjacent, but the primary task is visual-geometry reconstruction, not language inference.",
+      "first_checked_at": "2026-10-06T06:50:14+00:00",
+      "last_checked_at": "2026-10-06T06:50:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mamba-VGGT: Persistent Long-Sequence Video Geometry Grounded Transformer via External Sliding Window Mamba Memory"
+    },
+    "arXiv:2609.01449": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01449",
+      "identity_tokens": [
+        "arXiv:2609.01449"
+      ],
+      "reason": "Recurrent-depth lineage is plausible, but evaluation is toy algorithmic tasks and does not establish efficient LLM serving.",
+      "first_checked_at": "2026-10-06T06:50:15+00:00",
+      "last_checked_at": "2026-10-06T06:50:15+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Diffusion as a Training Curriculum for Timestep-Free Iterative Reasoning"
+    },
+    "arXiv:2608.24302": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24302",
+      "identity_tokens": [
+        "arXiv:2608.24302"
+      ],
+      "reason": "Long-video system is adjacent, but the paper does not establish a concrete inference-resource reduction.",
+      "first_checked_at": "2026-10-06T06:50:15+00:00",
+      "last_checked_at": "2026-10-06T06:50:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VideoHarness-RSI: Recursive Harness Self-Improvement for Long-Video Understanding with Frozen Vision-Language Models"
+    },
+    "arXiv:2604.25570": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.25570",
+      "identity_tokens": [
+        "arXiv:2604.25570"
+      ],
+      "reason": "The model and evaluation are vision-specific; transfer to LLM/VLM inference is unverified.",
+      "first_checked_at": "2026-10-06T06:50:17+00:00",
+      "last_checked_at": "2026-10-06T06:50:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vision SmolMamba: Spike-Guided Token Pruning for Energy-Efficient Spiking State-Space Vision Models"
+    },
+    "arXiv:2607.26253": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26253",
+      "identity_tokens": [
+        "arXiv:2607.26253"
+      ],
+      "reason": "The resource savings concern RLVR training rollouts rather than deployed inference/serving.",
+      "first_checked_at": "2026-10-06T06:50:17+00:00",
+      "last_checked_at": "2026-10-06T06:50:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Early Verdicts, Better Budgets: Sequential Adaptive Rollout Allocation for Compute-Efficient RLVR"
+    },
+    "arXiv:2607.09520": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09520",
+      "identity_tokens": [
+        "arXiv:2607.09520"
+      ],
+      "reason": "Direct energy evidence, but this is a bottleneck analysis rather than a validated optimization.",
+      "first_checked_at": "2026-10-06T06:50:18+00:00",
+      "last_checked_at": "2026-10-06T06:50:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Seeing is Free, Speaking is Not: Uncovering the True Energy Bottleneck in Edge VLM Inference"
+    },
+    "arXiv:2607.04163": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.04163",
+      "identity_tokens": [
+        "arXiv:2607.04163"
+      ],
+      "reason": "The objective is hallucination control; no inference-cost savings are measured.",
+      "first_checked_at": "2026-10-06T06:50:18+00:00",
+      "last_checked_at": "2026-10-06T06:50:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SeeMe: Mitigating Hallucinations in Large Vision-Language Models through Effective Visual Token Engineering"
+    },
+    "arXiv:2607.04277": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.04277",
+      "identity_tokens": [
+        "arXiv:2607.04277"
+      ],
+      "reason": "The paper analyzes self-improvement behavior and proposes no inference-cost improvement.",
+      "first_checked_at": "2026-10-06T06:50:18+00:00",
+      "last_checked_at": "2026-10-06T06:50:18+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Reference in Large Language Models: The Introspection Threshold for Recursive Self-Improvement"
+    },
+    "arXiv:2605.14315": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14315",
+      "identity_tokens": [
+        "arXiv:2605.14315"
+      ],
+      "reason": "The generic attention acceleration is adjacent, but language-model applicability is not evaluated.",
+      "first_checked_at": "2026-10-06T06:50:18+00:00",
+      "last_checked_at": "2026-10-06T06:50:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TurboVGGT: Fast Visual Geometry Reconstruction with Adaptive Alternating Attention"
+    },
+    "arXiv:2605.14477": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14477",
+      "identity_tokens": [
+        "arXiv:2605.14477"
+      ],
+      "reason": "The work studies test-time learning/search, not lower LLM inference resource use.",
+      "first_checked_at": "2026-10-06T06:50:19+00:00",
+      "last_checked_at": "2026-10-06T06:50:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Test-Time Learning with an Evolving Library"
+    },
+    "arXiv:2607.14103": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.14103",
+      "identity_tokens": [
+        "arXiv:2607.14103"
+      ],
+      "reason": "Potential inter-agent token savings are not measured as serving-cost improvements.",
+      "first_checked_at": "2026-10-06T06:50:19+00:00",
+      "last_checked_at": "2026-10-06T06:50:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Latent Communication Between Language Model Agents: Channels, Alignment, and the Limits of Text"
+    },
+    "arXiv:2606.24422": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24422",
+      "identity_tokens": [
+        "arXiv:2606.24422"
+      ],
+      "reason": "This is a streaming benchmark, not a resource-saving method.",
+      "first_checked_at": "2026-10-06T06:50:20+00:00",
+      "last_checked_at": "2026-10-06T06:50:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EgoSAT: A Comprehensive Benchmark of Egocentric Streaming Interaction Understanding"
+    },
+    "arXiv:2606.16016": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16016",
+      "identity_tokens": [
+        "arXiv:2606.16016"
+      ],
+      "reason": "Hardware efficiency is adjacent, but LLM/VLM workload mapping and serving gains are not established.",
+      "first_checked_at": "2026-10-06T06:50:20+00:00",
+      "last_checked_at": "2026-10-06T06:50:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SparseCol: A 1320 BTOPS/W Precision-Scalable NPU Exploiting Training-Free Structured Bit-Level Sparsity and Dynamic Dataflow"
     }
   }
 }
