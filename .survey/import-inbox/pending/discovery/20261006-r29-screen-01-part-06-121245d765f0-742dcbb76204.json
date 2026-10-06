@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r29-screen-01-part-06-121245d765f0",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3724/2096-7004.di.2026.0094",
+      "identity_tokens": [
+        "DOI:10.3724/2096-7004.di.2026.0094"
+      ],
+      "title": "Learning Source Representation via Iterative Feature Refinement for Data-Informed Neural Machine Translation",
+      "reason": "neural machine translation encoder表現改善で、LLM serving対象外。",
+      "source_url": "https://doi.org/10.3724/2096-7004.di.2026.0094",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.28075",
+      "identity_tokens": [
+        "arXiv:2604.28075"
+      ],
+      "title": "Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling",
+      "reason": "German LM pretraining data filteringで、training-data efficiencyが主題で推論時最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2604.28075",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.26181",
+      "identity_tokens": [
+        "arXiv:2604.26181"
+      ],
+      "title": "SWAN: World-Aware Adaptive Multimodal Networks for Runtime Variations",
+      "reason": "runtime変動対応multimodal DNNで、LLM servingへの具体的接続が要旨にない。",
+      "source_url": "https://arxiv.org/abs/2604.26181",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/2167647X261439005",
+      "identity_tokens": [
+        "DOI:10.1177/2167647X261439005"
+      ],
+      "title": "TS-PET: A Novel Framework for Fine-Tuning Pretrained Time-Series Models",
+      "reason": "time-series foundation modelのfine-tuning手法で、推論時効率ではない。",
+      "source_url": "https://doi.org/10.1177/2167647X261439005",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.23919/FRUCT70069.2026.11506568",
+      "identity_tokens": [
+        "DOI:10.23919/FRUCT70069.2026.11506568"
+      ],
+      "title": "Optimized Pruning Strategies for Non-Local Architectures in Lung Computed Tomography Tumor Recognition",
+      "reason": "CT tumor recognition用non-local U-Net pruningで、LLM推論ではない。",
+      "source_url": "https://doi.org/10.23919/FRUCT70069.2026.11506568",
+      "first_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "last_checked_at": "2026-10-06T02:25:55.092703+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
