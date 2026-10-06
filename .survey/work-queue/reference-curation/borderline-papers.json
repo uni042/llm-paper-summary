@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T18:44:36+00:00",
-  "record_count": 3701,
+  "updated_at": "2026-10-06T18:49:07+00:00",
+  "record_count": 3712,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -56607,6 +56607,172 @@
       ],
       "borderline_recheck_count": 0,
       "title": "LAD: LoRA-Adapted Diffusion"
+    },
+    "arXiv:2401.03540": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.03540",
+      "identity_tokens": [
+        "arXiv:2401.03540"
+      ],
+      "reason": "SeTformerは最適輸送型attentionにより視覚・言語ドメインでFLOPsを下げるが、検証の中心は視覚認識であり、autoregressive LLMの推論速度/メモリを測定していない。",
+      "first_checked_at": "2026-10-06T18:48:55+00:00",
+      "last_checked_at": "2026-10-06T18:48:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SeTformer is What You Need for Vision and Language"
+    },
+    "arXiv:2610.02150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02150",
+      "identity_tokens": [
+        "arXiv:2610.02150"
+      ],
+      "reason": "SourceLearnは反復的なsource retrievalを永続的能力へ変えるagent memory手法としてLLMのlong-context/RAG境界に近いが、本文の評価はQA性能であり、KV cacheや推論資源削減を測っていない。",
+      "first_checked_at": "2026-10-06T18:48:57+00:00",
+      "last_checked_at": "2026-10-06T18:48:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Knowledge Access to Source Learning: Developing Source-Specific Competence"
+    },
+    "DOI:10.1016/j.aei.2026.104602": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2026.104602",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2026.104602"
+      ],
+      "reason": "レビューは産業具身LLMと導入上の計算・メモリ制約を扱うが、個別の推論効率化手法や比較評価を提案していない。量子化系統とは文脈上近いものの、本batchの登録対象としては適用範囲が弱い。",
+      "first_checked_at": "2026-10-06T18:48:59+00:00",
+      "last_checked_at": "2026-10-06T18:48:59+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A review on large language models for industrial embodied intelligence"
+    },
+    "arXiv:2509.00404": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.00404",
+      "identity_tokens": [
+        "arXiv:2509.00404"
+      ],
+      "reason": "FP4はLLM量子化系統に直接近いが、本文の方法と評価は重み・活性・勾配を対象とする学習時量子化で、推論時の重み量子化・サービング改善を評価していない。",
+      "first_checked_at": "2026-10-06T18:48:59+00:00",
+      "last_checked_at": "2026-10-06T18:48:59+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Metis: Training LLMs with FP4 Quantization"
+    },
+    "arXiv:2508.06350": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.06350",
+      "identity_tokens": [
+        "arXiv:2508.06350"
+      ],
+      "reason": "SETSは動画異常検出MLLMの視覚トークンを絞り計算負荷を抑えるが、評価は異常検出精度中心で、LLM推論レイテンシ・メモリ・スループットの改善量は測っていない。用途依存のトークン選択としては近接する。",
+      "first_checked_at": "2026-10-06T18:48:59+00:00",
+      "last_checked_at": "2026-10-06T18:48:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Aligning Effective Tokens with Video Anomaly in Large Language Models"
+    },
+    "arXiv:2504.00072": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.00072",
+      "identity_tokens": [
+        "arXiv:2504.00072"
+      ],
+      "reason": "論文は音声主導のフレーム選択と字幕化で長尺動画をLLMの文脈窓へ適合させるが、目的は動画章分割の精度。計算削減の推論ベンチマークや一般的な長文LLMの実行効率評価はない。",
+      "first_checked_at": "2026-10-06T18:49:00+00:00",
+      "last_checked_at": "2026-10-06T18:49:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chapter-Llama: Efficient Chaptering in Hour-Long Videos with LLMs"
+    },
+    "arXiv:2610.02657": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02657",
+      "identity_tokens": [
+        "arXiv:2610.02657"
+      ],
+      "reason": "AR-to-diffusion変換はLLM生成方式の比較として関連するが、本文のbatch-1 throughputはAR基準の0.134/0.168倍で、serving優位を示さない。小規模のengineering pass改善はconversion自体のend-to-end advantageではないと著者も限定している。",
+      "first_checked_at": "2026-10-06T18:49:04+00:00",
+      "last_checked_at": "2026-10-06T18:49:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Context-Tower Conversion Preserves Generation While Freezing Retains Knowledge: Low-Budget AR-to-Diffusion Conversion of MoE LLMs"
+    },
+    "DOI:10.2196/68291": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.2196/68291",
+      "identity_tokens": [
+        "DOI:10.2196/68291"
+      ],
+      "reason": "候補packet内の要旨はフェデレーテッドLLMによる薬物有害反応レビューで、効率化研究とは示されない。一次出版社ページを本screenで取得・確認できず、内容を要旨キャッシュ以上には確定できないため、関係を断定せずborderlineとする。",
+      "first_checked_at": "2026-10-06T18:49:05+00:00",
+      "last_checked_at": "2026-10-06T18:49:05+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Applications of Federated Large Language Model for Adverse Drug Reactions Prediction: Scoping Review"
+    },
+    "arXiv:2411.08909": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.08909",
+      "identity_tokens": [
+        "arXiv:2411.08909"
+      ],
+      "reason": "BiMamba-Sは二次タンパク質LMで長文脈と効率的LMアーキテクチャを扱うが、学習・評価対象はアミノ酸列/生物学タスクであり、一般的LLMの推論高速化ではない。",
+      "first_checked_at": "2026-10-06T18:49:05+00:00",
+      "last_checked_at": "2026-10-06T18:49:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LC-PLM: Long-context Protein Language Modeling Using Bidirectional Mamba with Shared Projection Layers"
+    },
+    "DOI:10.1016/j.knosys.2026.117083": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.117083",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.117083"
+      ],
+      "reason": "タイトルは画像生成向けRAGだが、一次出版社ページから要旨/本文を確認できず、LLM推論資源改善に該当するか確定できないため理由付きborderlineとする。",
+      "first_checked_at": "2026-10-06T18:49:06+00:00",
+      "last_checked_at": "2026-10-06T18:49:06+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GLAF: Test-time adaptive global–local knowledge fusion for retrieval-augmented image generation"
+    },
+    "DOI:10.1016/j.neucom.2026.134265": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134265",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134265"
+      ],
+      "reason": "一次本文はSparse CLIP-MoEの視覚teacherとCLIP zero-shot point-cloud recognitionを扱う。精度を主評価とし、生成LLMの推論serving効率は評価しないため対象範囲は弱いが、VLM/MoE計算効率との隣接性を踏まえborderlineに残す。",
+      "first_checked_at": "2026-10-06T18:49:07+00:00",
+      "last_checked_at": "2026-10-06T18:49:07+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoTeach-CLIP: Cross-modal collaborative teachers for zero-shot point cloud recognition"
     }
   }
 }

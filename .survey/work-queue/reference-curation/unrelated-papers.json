@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T18:44:36+00:00",
-  "record_count": 9263,
+  "updated_at": "2026-10-06T18:49:08+00:00",
+  "record_count": 9293,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -132786,6 +132786,429 @@
         "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
       ],
       "title": "Polyline Path Masked Attention for Vision Transformer"
+    },
+    "DOI:10.48550/arxiv.2409.03811": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2409.03811",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2409.03811",
+        "arXiv:2409.03811"
+      ],
+      "reason": "一次要旨のPARCOは組合せ最適化用の並列自己回帰方策であり、LLM言語生成の推論システムではない。",
+      "first_checked_at": "2026-10-06T18:48:55+00:00",
+      "last_checked_at": "2026-10-06T18:48:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "PARCO: Learning Parallel Autoregressive Policies for Efficient Multi-Agent Combinatorial Optimization"
+    },
+    "arXiv:2311.11822": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.11822",
+      "identity_tokens": [
+        "arXiv:2311.11822"
+      ],
+      "reason": "差分プライバシーを伴うゼロ冗長分散学習のメモリ/通信手法で、対象は学習ステージ。LLM推論の効率化ではない。",
+      "first_checked_at": "2026-10-06T18:48:56+00:00",
+      "last_checked_at": "2026-10-06T18:48:56+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Zero redundancy distributed learning with differential privacy"
+    },
+    "DOI:10.1016/j.rcim.2025.103113": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.rcim.2025.103113",
+      "identity_tokens": [
+        "DOI:10.1016/j.rcim.2025.103113"
+      ],
+      "reason": "一次要旨は工業ロボットへの自然言語モデル統合を調査するレビュー。リアルタイム応答を課題として挙げるが、推論効率化手法・比較実験を提供しない。",
+      "first_checked_at": "2026-10-06T18:48:56+00:00",
+      "last_checked_at": "2026-10-06T18:48:56+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Transformation of industrial robotics with natural language models: Recent progress and future prospects"
+    },
+    "arXiv:2610.04162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.04162",
+      "identity_tokens": [
+        "arXiv:2610.04162"
+      ],
+      "reason": "本文の主題はRAG reranker/MoE routerなどtop-k選択器の学習勾配を改善する方法で、評価も学習後のQA/perplexity。推論コスト削減やruntime routing効率の測定ではない。",
+      "first_checked_at": "2026-10-06T18:48:56+00:00",
+      "last_checked_at": "2026-10-06T18:48:56+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Principled Top-$k$ Selection for Language Models with Hybrid Gradients"
+    },
+    "DOI:10.1109/tmc.2026.3683668": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3683668",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3683668"
+      ],
+      "reason": "Bi-level sparsificationはfederated multi-task learningの知識交換/学習通信量を減らす手法で、対象は学習中の異種タスク連携である。LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-06T18:48:57+00:00",
+      "last_checked_at": "2026-10-06T18:48:57+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "One Size Fits All: Achieving Generic and Communication-Efficient Federated Multi-Task Learning via Bi-Level Sparsification"
+    },
+    "arXiv:2610.04140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.04140",
+      "identity_tokens": [
+        "arXiv:2610.04140"
+      ],
+      "reason": "ExpertMuon-CompassはMoEの専門家別最適化ステップ幅を調整する学習時optimizerであり、serving/inference最適化ではない。",
+      "first_checked_at": "2026-10-06T18:48:57+00:00",
+      "last_checked_at": "2026-10-06T18:48:57+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training"
+    },
+    "arXiv:2610.00848": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00848",
+      "identity_tokens": [
+        "arXiv:2610.00848"
+      ],
+      "reason": "VLMの低レベル視覚表現の幾何学的類似を調べる研究で、生成推論の計算・メモリ効率を改善する方法ではない。",
+      "first_checked_at": "2026-10-06T18:48:58+00:00",
+      "last_checked_at": "2026-10-06T18:48:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "Geometric Similarity in VLM Low-Level Vision Representations"
+    },
+    "arXiv:2610.00850": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00850",
+      "identity_tokens": [
+        "arXiv:2610.00850"
+      ],
+      "reason": "coding agent向けsecurity supervisionの学習データ/手法が対象で、LLM推論効率を改善する目的ではない。",
+      "first_checked_at": "2026-10-06T18:48:58+00:00",
+      "last_checked_at": "2026-10-06T18:48:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "AuraForge: Scaling Security Supervision for Training Coding Agents"
+    },
+    "arXiv:2610.01069": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01069",
+      "identity_tokens": [
+        "arXiv:2610.01069"
+      ],
+      "reason": "論理ゲートネットワークのスケーリング研究であり、LLM推論システムとは異なる。",
+      "first_checked_at": "2026-10-06T18:48:58+00:00",
+      "last_checked_at": "2026-10-06T18:48:58+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Overcoming Kernel Redundancy for Scaling Logic Gate Networks"
+    },
+    "arXiv:2509.23286": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23286",
+      "identity_tokens": [
+        "arXiv:2509.23286"
+      ],
+      "reason": "dLLMの安全アライメントと有害応答停止が主題。安全目的の早期停止評価は、通常の推論計算・メモリ・速度を改善する手法ではない。",
+      "first_checked_at": "2026-10-06T18:48:59+00:00",
+      "last_checked_at": "2026-10-06T18:48:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "A2D: Any-Order, Any-Step Safety Alignment for Diffusion Language Models"
+    },
+    "DOI:10.1007/s11219-025-09728-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11219-025-09728-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11219-025-09728-1"
+      ],
+      "reason": "一次要旨では過去のバグ修正例を検索してLLM修復プロンプトへ加えるAPR手法で、比較対象も修復精度。KV-cacheとのローカル系統リンクは内容上の推論最適化を示さない。",
+      "first_checked_at": "2026-10-06T18:49:00+00:00",
+      "last_checked_at": "2026-10-06T18:49:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "ReAPR: Automatic program repair via retrieval-augmented large language models"
+    },
+    "arXiv:2507.04369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.04369",
+      "identity_tokens": [
+        "arXiv:2507.04369"
+      ],
+      "reason": "Mambaによるカメラ・LiDAR融合の3D物体検出が対象で、LLM推論ではない。推論速度は検出器タスク内の指標であり、LLM向け手法ではない。",
+      "first_checked_at": "2026-10-06T18:49:00+00:00",
+      "last_checked_at": "2026-10-06T18:49:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Height-Fidelity Dense Global Fusion for Multi-Modal 3D Object Detection"
+    },
+    "arXiv:2503.17497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17497",
+      "identity_tokens": [
+        "arXiv:2503.17497"
+      ],
+      "reason": "AnytimeYOLOはCNN系物体検出器に任意時点で出力する早期終了を加える研究で、LLMやTransformer推論の最適化ではない。",
+      "first_checked_at": "2026-10-06T18:49:01+00:00",
+      "last_checked_at": "2026-10-06T18:49:01+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ],
+      "title": "You Only Look Once at Anytime (AnytimeYOLO): Analysis and Optimization of Early-Exits for Object-Detection"
+    },
+    "arXiv:2412.20249": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.20249",
+      "identity_tokens": [
+        "arXiv:2412.20249"
+      ],
+      "reason": "CXL接続を中心とした計算システムの調査で、LLM推論に対する具体的な手法・評価を扱わない。",
+      "first_checked_at": "2026-10-06T18:49:01+00:00",
+      "last_checked_at": "2026-10-06T18:49:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey"
+    },
+    "arXiv:2412.06787": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06787",
+      "identity_tokens": [
+        "arXiv:2412.06787"
+      ],
+      "reason": "離散状態生成モデルを検討する研究だが、一次要旨の評価範囲は視覚生成であり、LLMの推論効率・serving改善が目的ではない。",
+      "first_checked_at": "2026-10-06T18:49:01+00:00",
+      "last_checked_at": "2026-10-06T18:49:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "[MASK] is All You Need"
+    },
+    "arXiv:2407.04711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04711",
+      "identity_tokens": [
+        "arXiv:2407.04711"
+      ],
+      "reason": "農業向け果実検出データセット/視覚基盤モデルが対象で、LLM重み圧縮系統とのつながりを示す推論手法はない。",
+      "first_checked_at": "2026-10-06T18:49:02+00:00",
+      "last_checked_at": "2026-10-06T18:49:02+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "title": "MetaFruit Meets Foundation Models: Leveraging a Comprehensive Multi-Fruit Dataset for Advancing Agricultural Foundation Models"
+    },
+    "arXiv:2404.09356": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.09356",
+      "identity_tokens": [
+        "arXiv:2404.09356"
+      ],
+      "reason": "LLMの制御・利用格差とアクセスを分析する研究で、serving効率を改善する手法や評価ではない。",
+      "first_checked_at": "2026-10-06T18:49:02+00:00",
+      "last_checked_at": "2026-10-06T18:49:02+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "title": "LLeMpower: Understanding Disparities in the Control and Access of Large Language Models"
+    },
+    "arXiv:2404.08811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08811",
+      "identity_tokens": [
+        "arXiv:2404.08811"
+      ],
+      "reason": "タイトルと一次要旨の対象はfoundation modelの学習インフラ・学習参入障壁であり、推論改善ではない。inference-systems系統に直接つながる手法はない。",
+      "first_checked_at": "2026-10-06T18:49:03+00:00",
+      "last_checked_at": "2026-10-06T18:49:03+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Reducing the Barriers to Entry for Foundation Model Training"
+    },
+    "arXiv:2402.00861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00861",
+      "identity_tokens": [
+        "arXiv:2402.00861"
+      ],
+      "reason": "データ圧縮をLLMの汚染耐性・汎化評価に使うベンチマーク方法で、モデル推論の圧縮や効率改善を提案する研究ではない。",
+      "first_checked_at": "2026-10-06T18:49:03+00:00",
+      "last_checked_at": "2026-10-06T18:49:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Evaluating Large Language Models for Generalization and Robustness via Data Compression"
+    },
+    "DOI:10.1364/jocn.511696": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1364/jocn.511696",
+      "identity_tokens": [
+        "DOI:10.1364/jocn.511696"
+      ],
+      "reason": "全光ネットワークを使う分散深層学習の通信アーキテクチャで、要旨は学習通信が対象。LLM推論/serving最適化とは異なる。",
+      "first_checked_at": "2026-10-06T18:49:03+00:00",
+      "last_checked_at": "2026-10-06T18:49:03+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Fast and scalable all-optical network architecture for distributed deep learning"
+    },
+    "arXiv:2610.03223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03223",
+      "identity_tokens": [
+        "arXiv:2610.03223"
+      ],
+      "reason": "AdaStepはagent強化学習におけるstep-level credit assignmentの学習手法であり、LLM推論の実行時資源改善ではない。",
+      "first_checked_at": "2026-10-06T18:49:04+00:00",
+      "last_checked_at": "2026-10-06T18:49:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "AdaStep: Adaptive Step Credit Weighting for Agentic Reinforcement Learning"
+    },
+    "arXiv:2610.03249": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03249",
+      "identity_tokens": [
+        "arXiv:2610.03249"
+      ],
+      "reason": "自己修復recurrent ensembleによる分布シフト下の制御器復旧が対象。LLMまたはLLM inferenceの効率化とは異なる。",
+      "first_checked_at": "2026-10-06T18:49:04+00:00",
+      "last_checked_at": "2026-10-06T18:49:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Self-Repairing Recurrent Ensembles for Real-Time Recovery from Distribution Shift"
+    },
+    "arXiv:2610.03591": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03591",
+      "identity_tokens": [
+        "arXiv:2610.03591"
+      ],
+      "reason": "自然災害のhazard analysisで科学ルートやツールを選ぶエージェントの研究であり、LLMの推論実装資源やdecode効率を改善しない。KV系統との関連は実証されない。",
+      "first_checked_at": "2026-10-06T18:49:05+00:00",
+      "last_checked_at": "2026-10-06T18:49:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "HazardWeaver: Scientific Route Selection for Hazard Analysis Agents"
+    },
+    "arXiv:2610.03858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03858",
+      "identity_tokens": [
+        "arXiv:2610.03858"
+      ],
+      "reason": "本文は各学習例のkey-value表現を保存する一般的な非パラメトリックNN層を提案するが、言語モデル・LLM推論を対象とせず、LLM用KV cache最適化の証拠もない。",
+      "first_checked_at": "2026-10-06T18:49:05+00:00",
+      "last_checked_at": "2026-10-06T18:49:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Retrieval-Centric Deep Learning in Growing Nonparametric Neural Networks"
+    },
+    "arXiv:2408.12596": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12596",
+      "identity_tokens": [
+        "arXiv:2408.12596"
+      ],
+      "reason": "Poplarは異種GPUクラスタでの分散DNN学習と学習スループット最適化。推論ではなく学習システムである。",
+      "first_checked_at": "2026-10-06T18:49:06+00:00",
+      "last_checked_at": "2026-10-06T18:49:06+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Poplar: Efficient Scaling of Distributed DNN Training on Heterogeneous GPU Clusters"
+    },
+    "arXiv:2406.11403": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11403",
+      "identity_tokens": [
+        "arXiv:2406.11403"
+      ],
+      "reason": "MMFMチャレンジ技術報告は構造化出力の制約付けとタスク精度を主題とする。軽量設計への言及はあるが、LLM inferenceのcompute/memory/latency改善手法を評価していない。",
+      "first_checked_at": "2026-10-06T18:49:06+00:00",
+      "last_checked_at": "2026-10-06T18:49:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Multimodal Structured Generation: CVPR's 2nd MMFM Challenge Technical Report"
+    },
+    "arXiv:2407.09502": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.09502",
+      "identity_tokens": [
+        "arXiv:2407.09502"
+      ],
+      "reason": "人工生命とLLMの相互作用を展望する論考で、推論効率の実装・計測を含まない。",
+      "first_checked_at": "2026-10-06T18:49:06+00:00",
+      "last_checked_at": "2026-10-06T18:49:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "From Text to Life: On the Reciprocal Relationship between Artificial Life and Large Language Models"
+    },
+    "arXiv:2610.02376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02376",
+      "identity_tokens": [
+        "arXiv:2610.02376"
+      ],
+      "reason": "CocoはTPU設計者のモデル/アクセラレータ共同設計を支援するエージェントで、LLM自身の推論実行を改善する研究ではない。",
+      "first_checked_at": "2026-10-06T18:49:07+00:00",
+      "last_checked_at": "2026-10-06T18:49:07+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Coco: An Agentic Copilot for the Hardware--Software Co-Design Lifecycle"
+    },
+    "DOI:10.1016/j.engappai.2026.115560": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115560",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2026.115560"
+      ],
+      "reason": "一次出版社要旨でMoE spectral operator transformerは都市風場のPDE予測用と確認。global modelingの効率化は報告されるが、LLM推論ではない。",
+      "first_checked_at": "2026-10-06T18:49:07+00:00",
+      "last_checked_at": "2026-10-06T18:49:07+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Cascaded spectral operator transformer with mixture-of-experts for urban wind field prediction"
+    },
+    "DOI:10.1109/tcsi.2026.3704401": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsi.2026.3704401",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2026.3704401"
+      ],
+      "reason": "一次要旨のCT-LNN FPGA acceleratorは人体活動認識用Liquid Neural Networkを実装し、LLM/Transformer推論を対象にしていない。",
+      "first_checked_at": "2026-10-06T18:49:08+00:00",
+      "last_checked_at": "2026-10-06T18:49:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "CT-LNN: FPGA-Based Accelerator for Continuous-Time Liquid Neural Networks"
     }
   }
 }

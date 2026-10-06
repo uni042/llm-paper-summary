@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8b78987d9ea0e09e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.20249",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.20249",
+    "identity_tokens": [
+      "arXiv:2412.20249"
+    ],
+    "reason": "CXL接続を中心とした計算システムの調査で、LLM推論に対する具体的な手法・評価を扱わない。",
+    "first_checked_at": "2026-10-06T18:49:01+00:00",
+    "last_checked_at": "2026-10-06T18:49:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey"
+  },
+  "processed_at": "2026-10-06T18:49:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8b78987d9ea0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
