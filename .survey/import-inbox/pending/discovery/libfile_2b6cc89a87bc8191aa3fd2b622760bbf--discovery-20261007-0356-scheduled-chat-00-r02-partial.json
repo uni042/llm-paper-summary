@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0356-scheduled-chat-00/r02-partial",
+  "reference_main_sha": "a4a2e89517df5bfbffb0eb50331a7db690ca1b95",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.07772",
+      "identity_tokens": [
+        "arXiv:2412.07772"
+      ],
+      "title": "From Slow Bidirectional to Fast Autoregressive Video Diffusion Models",
+      "reason": "KV cacheと4-step distillationで9.4 FPSの高速streamingを実現するが、最終適用先はvideo diffusion generationでありLLM/言語モデル推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2412.07772",
+      "body_check": "abstract_screen_only: arXiv一次abstractでbidirectional video diffusionをautoregressive streamingへ変換し、4-step generator・KV caching・9.4 FPSを評価する研究と確認。最終workloadがvideo generationのため本文未読。",
+      "first_checked_at": "2026-10-07T03:56:28+09:00",
+      "last_checked_at": "2026-10-07T03:56:28+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2024.3506283",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2024.3506283"
+      ],
+      "title": "Foundation Models Defining a New Era in Vision: A Survey and Outlook",
+      "reason": "vision foundation modelsを中心にarchitecture・pretraining・vision applicationsを整理するsurveyで、LLM推論systems効率を最終対象としない。",
+      "source_url": "https://doi.org/10.1109/TPAMI.2024.3506283",
+      "body_check": "abstract_screen_only: 一次書誌/abstractでvision foundation modelsのsurvey/outlookが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T03:56:28+09:00",
+      "last_checked_at": "2026-10-07T03:56:28+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01613",
+      "identity_tokens": [
+        "arXiv:2402.01613"
+      ],
+      "title": "Nomic Embed: Training a Reproducible Long Context Text Embedder",
+      "reason": "8192-context text embedding modelの再現可能なtraining pipeline・data・MTEB/LoCo品質が主題。FlashAttention等を用いるが、推論runtime/serving効率を主要貢献として評価しない。",
+      "source_url": "https://arxiv.org/abs/2402.01613",
+      "body_check": "abstract_screen_only: arXiv一次abstractでopen weights/data/code、8192 context embedder、MTEB/LoCo品質が主貢献と確認。本文未読。",
+      "first_checked_at": "2026-10-07T03:56:28+09:00",
+      "last_checked_at": "2026-10-07T03:56:28+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.15736",
+      "identity_tokens": [
+        "arXiv:2211.15736"
+      ],
+      "title": "Post-Training Quantization on Diffusion Models",
+      "reason": "post-training quantizationでdiffusion modelのnoise-estimation networkを8-bit化して生成を高速化する研究だが、最終適用先はdiffusion image generationでありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2211.15736",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmulti-time-step diffusion固有のPTQ、8-bit quantization、edge deployment向けgeneration accelerationが主題と確認。LLM推論への最終適用なしのため本文未読。",
+      "first_checked_at": "2026-10-07T03:56:28+09:00",
+      "last_checked_at": "2026-10-07T03:56:28+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "worklist_rank": 25
+    }
+  ]
+}
