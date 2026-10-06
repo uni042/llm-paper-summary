@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r108-screen-01-part-04-ba945f3b9f9f",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116820",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116820"
+      ],
+      "title": "DEMONet: Underwater acoustic target recognition based on multi-expert network and cross-temporal variational autoencoder",
+      "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+      "source_url": "https://doi.org/10.1016/j.knosys.2026.116820",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832024",
+      "identity_tokens": [
+        "DOI:10.1145/3832024"
+      ],
+      "title": "UbiEnlight: User-Perception-Aware Real-Time Low-Light Video Enhancement on Mobile Devices and Smartglasses",
+      "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+      "source_url": "https://doi.org/10.1145/3832024",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33816",
+      "identity_tokens": [
+        "arXiv:2609.33816"
+      ],
+      "title": "Dual-Vocabulary Language Model for Cross-Tokenizer Distillation",
+      "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+      "source_url": "https://arxiv.org/abs/2609.33816",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30706",
+      "identity_tokens": [
+        "arXiv:2609.30706"
+      ],
+      "title": "LAVOIR: Teaching a Single-Pass Decision Encoder When and What to Ask with Amortized Value of Information",
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "source_url": "https://arxiv.org/abs/2609.30706",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25655",
+      "identity_tokens": [
+        "arXiv:2609.25655"
+      ],
+      "title": "From Experts to Sub-experts: Fine-grained Parameter-Efficient Fine-Tuning for MoE LLMs",
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "source_url": "https://arxiv.org/abs/2609.25655",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    }
+  ]
+}
