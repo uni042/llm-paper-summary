@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r27-screen-01-part-01-2bac352ecc66",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14360",
+      "identity_tokens": [
+        "arXiv:2609.14360"
+      ],
+      "title": "Robust small-molecule identification from incomplete, degraded, and inconsistent spectra using multimodal mixed-condition training",
+      "reason": "要旨はchemical MS/IR/NMRによるsmall-molecule identificationを扱うと記述する（Reliable small-molecule identification often requires complementary evidence from multiple spectroscopic measurements. In practice, however, spectra may be unavailable, degraded by measurement-related variations, or even incorrectly associa）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2609.14360",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13857",
+      "identity_tokens": [
+        "arXiv:2609.13857"
+      ],
+      "title": "ReH-FUSE: Reliability-Aware Hierarchical Fusion of Experts for Multimodal Emotion Recognition in Conversation",
+      "reason": "要旨はdialogue emotion recognitionのtext/audio expert fusionを扱うと記述する（Multimodal emotion recognition in conversation (ERC) requires adapting to the instance-dependent reliability of different evidence sources. Lexical content may be decisive, vocal expression may provide complementary cues, or accurate recogn）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2609.13857",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.14072",
+      "identity_tokens": [
+        "arXiv:2609.14072"
+      ],
+      "title": "Multi-Modal Tumor Survival Prediction via Graph-Guided Mixture of Experts",
+      "reason": "臨床予測用tool/model選択に限られLLM servingとの関係が弱く、効率改善もない。",
+      "source_url": "https://arxiv.org/abs/2609.14072",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13478",
+      "identity_tokens": [
+        "arXiv:2609.13478"
+      ],
+      "title": "BadEngram: Backdoor Attack on Gated Memory Components in LLMs",
+      "reason": "本文はgated-memory backdoor攻撃・防御分析でserving効率と技術接点なし。",
+      "source_url": "https://arxiv.org/abs/2609.13478",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2607.07388-tf-engram-ssd-backed-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13556",
+      "identity_tokens": [
+        "arXiv:2609.13556"
+      ],
+      "title": "Domain-Specific Jargon in Large Language Models: A Comparative Analysis between General-Purpose and Specialist Models",
+      "reason": "要旨はdomain jargon理解とLLM component reweightingを扱うと記述する（Large Language Models (LLMs) have shown remarkable proficiency on general-purpose tasks, yet their performance often degrades in highly-specialized technical domains. Moreover, little is known about how parametric knowledge of domain-specif）。LLM inference compute/memory/latency/throughput/cache/servingの具体的改善法・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2609.13556",
+      "first_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "last_checked_at": "2026-10-06T00:07:16.145956+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
