@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0a8278fa1c5de13f-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2509.00190",
+  "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 The paper uses spectral embeddings, clustering and Markov transitions to interpret chain-of-thought dynamics. Its evaluation is explainability/trajectory analysis, not inference compute, memory or decoding efficiency, so the stated lineage/version relationship does not translate into a technical efficiency link.",
+  "title": "Explainable Chain-of-Thought Reasoning: An Empirical Analysis on State-Aware Reasoning Dynamics",
+  "identity_tokens": [
+    "arXiv:2509.00190"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a8278fa1c5d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
