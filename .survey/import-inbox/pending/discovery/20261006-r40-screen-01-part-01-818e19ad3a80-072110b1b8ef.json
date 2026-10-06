@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r40-screen-01-part-01-818e19ad3a80",
+  "reference_main_sha": "b05a032087f45ed87d2608bca644099ed8cb0933",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.00583",
+      "identity_tokens": [
+        "arXiv:2601.00583"
+      ],
+      "title": "HFedMoE: Resource-aware Heterogeneous Federated Learning with Mixture-of-Experts",
+      "reason": "Primary text evaluates heterogeneous federated MoE training/resource allocation and convergence, not LLM serving or inference latency; the lineage match is only the broader adaptive-expert theme.",
+      "source_url": "https://arxiv.org/abs/2601.00583",
+      "first_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "last_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.23888-siftmoe-similarity-aware-expert-selection.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.28138",
+      "identity_tokens": [
+        "arXiv:2604.28138"
+      ],
+      "title": "Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes",
+      "reason": "The runtime reduces/overlaps checkpoint-restore overhead for agent sandboxes, but does not optimize LLM token generation, KV memory, or serving throughput; the relevance is adjacent agent-runtime engineering.",
+      "source_url": "https://arxiv.org/abs/2604.28138",
+      "first_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "last_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21203/rs.3.rs-8770196/v1",
+      "identity_tokens": [
+        "DOI:10.21203/rs.3.rs-8770196/v1"
+      ],
+      "title": "MFTFormer: Meteorological-Frequency-Temporal Transformer with Block-Aligned Fusion for Traffic Flow Prediction",
+      "reason": "The primary paper is a meteorological/temporal fusion model for traffic-flow forecasting; its evaluation concerns traffic prediction accuracy and contains no LLM inference or KV-cache method.",
+      "source_url": "https://doi.org/10.21203/rs.3.rs-8770196/v1",
+      "first_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "last_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04987",
+      "identity_tokens": [
+        "arXiv:2512.04987"
+      ],
+      "title": "Nex-N1: Agentic Models Trained via a Unified Ecosystem for Large-Scale Environment Construction",
+      "reason": "Nex-N1/NexAU primarily scale agent environment construction and train agent models; benchmark results are capability/quality focused, with no measured inference-cost or serving improvement despite a high-throughput runtime component.",
+      "source_url": "https://arxiv.org/abs/2512.04987",
+      "first_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "last_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10720",
+      "identity_tokens": [
+        "arXiv:2511.10720"
+      ],
+      "title": "PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization",
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "source_url": "https://arxiv.org/abs/2511.10720",
+      "first_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "last_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md"
+      ]
+    }
+  ]
+}
