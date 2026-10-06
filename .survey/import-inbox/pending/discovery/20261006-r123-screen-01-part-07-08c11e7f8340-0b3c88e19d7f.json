@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r123-screen-01-part-07-08c11e7f8340",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24496",
+      "identity_tokens": [
+        "arXiv:2509.24496"
+      ],
+      "title": "LLM DNA: Tracing Model Evolution via Functional Representations",
+      "reason": "Full text extracts low-dimensional model fingerprints and builds evolutionary trees; it studies model identity/relationships, not routing efficiency or inference resources.",
+      "source_url": "https://arxiv.org/abs/2509.24496",
+      "first_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "last_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108039",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2025.108039"
+      ],
+      "title": "State-space modeling in long sequence processing: a survey on recurrence in the transformer era",
+      "reason": "Full survey reviews recurrent/SSM and long-context Transformer optimization, complexity, and online processing; it is a research map rather than a new measured optimization, so retain as borderline.",
+      "source_url": "https://doi.org/10.1016/j.neunet.2025.108039",
+      "first_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "last_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11029",
+      "identity_tokens": [
+        "arXiv:2506.11029"
+      ],
+      "title": "Output Scaling: YingLong-Delayed Chain of Thought in a Large Pretrained Time Series Forecasting Model",
+      "reason": "YingLong is a masked, bidirectional time-series forecasting model whose output scaling improves forecast accuracy. Its forecasting objective and non-causal masked-recovery architecture are distinct from autoregressive LLM serving, and the multi-token-prediction citation is not an inference contribution here.",
+      "source_url": "https://arxiv.org/abs/2506.11029",
+      "first_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "last_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-025-87574-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-87574-8"
+      ],
+      "title": "A hybrid model based on transformer and Mamba for enhanced sequence modeling",
+      "reason": "Full paper reports competitive inference speeds but provides no detailed complexity or training/inference-time comparison; retain as borderline until resource claims are quantified.",
+      "source_url": "https://doi.org/10.1038/s41598-025-87574-8",
+      "first_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "last_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.05818",
+      "identity_tokens": [
+        "arXiv:2412.05818"
+      ],
+      "title": "SILMM: Self-Improving Large Multimodal Models for Compositional Text-to-Image Generation",
+      "reason": "SILMM uses iterative self-feedback and preference optimization to improve compositional text-to-image alignment. The target output is generated imagery and the method concerns alignment/training, not language-model decoding or reduced inference resource use; the LLaVA token-reduction citation is an adjacent multimodal lineage but not the contribution evaluated here.",
+      "source_url": "https://arxiv.org/abs/2412.05818",
+      "first_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "last_checked_at": "2026-10-06T17:25:55.060805+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    }
+  ]
+}
