@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7df7b9dbe5dfaa39-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.19664",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.19664",
+    "identity_tokens": [
+      "arXiv:2511.19664"
+    ],
+    "reason": "The paper analyzes diffusion training objectives and variational bounds; its contribution is mathematical/training-side and has no inference acceleration result.",
+    "first_checked_at": "2026-10-06T13:41:07+00:00",
+    "last_checked_at": "2026-10-06T13:41:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Demystifying Diffusion Objectives: Reweighted Losses are Better Variational Bounds"
+  },
+  "processed_at": "2026-10-06T13:41:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7df7b9dbe5df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T13:34:30+00:00",
-  "record_count": 3138,
+  "updated_at": "2026-10-06T13:41:11+00:00",
+  "record_count": 3152,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -48104,6 +48104,216 @@
       ],
       "borderline_recheck_count": 0,
       "title": "S-DAG: A Subject-Based Directed Acyclic Graph for Multi-Agent Heterogeneous Reasoning"
+    },
+    "arXiv:2605.17991": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17991",
+      "identity_tokens": [
+        "arXiv:2605.17991"
+      ],
+      "reason": "Stable Audio 3 uses adversarial post-training and a multi-step ping-pong sampler for audio generation. Its method concerns generation quality/robustness; it does not provide an LLM inference-efficiency result.",
+      "first_checked_at": "2026-10-06T13:41:03+00:00",
+      "last_checked_at": "2026-10-06T13:41:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stable Audio 3"
+    },
+    "arXiv:2604.01194": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01194",
+      "identity_tokens": [
+        "arXiv:2604.01194"
+      ],
+      "reason": "AgentWatcher attributes output-relevant context spans and applies a rule-based monitor; restricting the monitor to a small context is intended to scale detection to long contexts and cut monitor computation. The paper is a prompt-injection defense, not an inference-system optimization, and does not quantify general serving savings.",
+      "first_checked_at": "2026-10-06T13:41:04+00:00",
+      "last_checked_at": "2026-10-06T13:41:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AgentWatcher: A Rule-based Prompt Injection Monitor"
+    },
+    "arXiv:2603.15644": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15644",
+      "identity_tokens": [
+        "arXiv:2603.15644"
+      ],
+      "reason": "The paper compares tokenization strategies for structured EHR foundation models and evaluates downstream task performance. Tokenization/context representation may affect sequence size, but the study does not establish a direct inference-efficiency improvement.",
+      "first_checked_at": "2026-10-06T13:41:05+00:00",
+      "last_checked_at": "2026-10-06T13:41:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tokenization Tradeoffs in Structured EHR Foundation Models"
+    },
+    "arXiv:2602.12108": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12108",
+      "identity_tokens": [
+        "arXiv:2602.12108"
+      ],
+      "reason": "Pensieve/StateLM gives language models stateful context management for long-context tasks, evaluated on retrieval and reasoning. It may avoid reprocessing raw context, but the body does not establish a direct serving-cost/latency gain for the selected lineage.",
+      "first_checked_at": "2026-10-06T13:41:05+00:00",
+      "last_checked_at": "2026-10-06T13:41:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Pensieve Paradigm: Stateful Language Models Mastering Their Own Context"
+    },
+    "arXiv:2601.19961": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.19961",
+      "identity_tokens": [
+        "arXiv:2601.19961"
+      ],
+      "reason": "MeanCache reuses average flow velocity to skip redundant flow-matching computations and reports 3.42x–4.12x acceleration while preserving video/image quality. It is generative diffusion, not LLM inference, but caching/step-skipping is a potentially transferable adjacent optimization.",
+      "first_checked_at": "2026-10-06T13:41:06+00:00",
+      "last_checked_at": "2026-10-06T13:41:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MeanCache: From Instantaneous to Average Velocity for Accelerating Flow Matching Inference"
+    },
+    "arXiv:2511.21317": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21317",
+      "identity_tokens": [
+        "arXiv:2511.21317"
+      ],
+      "reason": "HTTM merges temporal visual tokens for VGGT; on 1,000 frames it reports about 7x lower latency than VGGT and 4.58x less merging cost. It is a 3D-vision transformer rather than an LLM, but temporal token merging may inform adjacent long-sequence systems.",
+      "first_checked_at": "2026-10-06T13:41:07+00:00",
+      "last_checked_at": "2026-10-06T13:41:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HTTM: Head-wise Temporal Token Merging for Faster VGGT"
+    },
+    "arXiv:2511.09611": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.09611",
+      "identity_tokens": [
+        "arXiv:2511.09611"
+      ],
+      "reason": "MMaDA-Parallel is a multimodal diffusion language model for editing/generation and uses parallel sampling of output tokens. The work does not report a direct latency or throughput comparison demonstrating inference acceleration.",
+      "first_checked_at": "2026-10-06T13:41:08+00:00",
+      "last_checked_at": "2026-10-06T13:41:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MMaDA-Parallel: Multimodal Large Diffusion Language Models for Thinking-Aware Editing and Generation"
+    },
+    "DOI:10.1109/cnml68938.2026.11452501": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cnml68938.2026.11452501",
+      "identity_tokens": [
+        "DOI:10.1109/cnml68938.2026.11452501"
+      ],
+      "reason": "The author preprint proposes hierarchical token/fragment/document memory and curriculum fine-tuning for multi-document reasoning. It targets long contexts but the reported contribution is training/accuracy, without measured inference-cost or latency gains.",
+      "first_checked_at": "2026-10-06T13:41:09+00:00",
+      "last_checked_at": "2026-10-06T13:41:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hierarchical Curriculum Learning for Multi-Document Reasoning in Large Language Models"
+    },
+    "arXiv:2601.05106": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.05106",
+      "identity_tokens": [
+        "arXiv:2601.05106"
+      ],
+      "reason": "FusionRoute trains token-level expert selection across complementary LLMs and evaluates math, code, and instruction-following tasks. The method targets quality through collaboration; the full text provides no clear latency/throughput result and notes extra joint-training requirements.",
+      "first_checked_at": "2026-10-06T13:41:09+00:00",
+      "last_checked_at": "2026-10-06T13:41:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Token-Level LLM Collaboration via FusionRoute"
+    },
+    "arXiv:2512.19918": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.19918",
+      "identity_tokens": [
+        "arXiv:2512.19918"
+      ],
+      "reason": "Widget2Code uses multimodal LLMs to convert visual widgets to UI code. It is a downstream application; the primary body does not establish a token-pruning or inference-efficiency improvement despite the visual-token lineage link.",
+      "first_checked_at": "2026-10-06T13:41:09+00:00",
+      "last_checked_at": "2026-10-06T13:41:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs"
+    },
+    "arXiv:2602.10959": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.10959",
+      "identity_tokens": [
+        "arXiv:2602.10959"
+      ],
+      "reason": "The paper derives depth- and context-aware theoretical bounds for choosing RoPE base values in long-context LLMs and checks predictions across model families. It informs context-extension design but does not report a direct inference compute/latency reduction.",
+      "first_checked_at": "2026-10-06T13:41:10+00:00",
+      "last_checked_at": "2026-10-06T13:41:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rotary Positional Embeddings as Phase Modulation: Theoretical Bounds on the RoPE Base for Long-Context Transformers"
+    },
+    "arXiv:2605.11161": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11161",
+      "identity_tokens": [
+        "arXiv:2605.11161"
+      ],
+      "reason": "Interpretability Can Be Actionable studies using interpretability signals to change model behavior. It references cost-aware routing but does not itself present a concrete inference-cost/latency reduction method.",
+      "first_checked_at": "2026-10-06T13:41:11+00:00",
+      "last_checked_at": "2026-10-06T13:41:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Interpretability Can Be Actionable"
+    },
+    "arXiv:2603.02298": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.02298",
+      "identity_tokens": [
+        "arXiv:2603.02298"
+      ],
+      "reason": "CuTe Layout Representation and Algebra formalizes GPU tensor layouts relevant to tiled kernel implementations. It is low-level accelerator infrastructure, but the paper does not evaluate an LLM inference kernel or serving gain.",
+      "first_checked_at": "2026-10-06T13:41:11+00:00",
+      "last_checked_at": "2026-10-06T13:41:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CuTe Layout Representation and Algebra"
+    },
+    "arXiv:2602.16986": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.16986",
+      "identity_tokens": [
+        "arXiv:2602.16986"
+      ],
+      "reason": "This work studies scaling laws and unified architecture for recommendation systems. Its system/compute implications are recommendation-specific and no direct LLM inference result is established.",
+      "first_checked_at": "2026-10-06T13:41:11+00:00",
+      "last_checked_at": "2026-10-06T13:41:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bending the Scaling Law Curve in Large-Scale Recommendation Systems"
     }
   }
 }

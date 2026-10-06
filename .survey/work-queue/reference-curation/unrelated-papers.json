@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T13:34:31+00:00",
-  "record_count": 8386,
+  "updated_at": "2026-10-06T13:41:12+00:00",
+  "record_count": 8412,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -120418,6 +120418,370 @@
         "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
       ],
       "title": "Large Language Models for Compiler Optimization"
+    },
+    "arXiv:2607.20768": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20768",
+      "identity_tokens": [
+        "arXiv:2607.20768"
+      ],
+      "reason": "The study audits diversity metrics and majority-vote gains in LLM ensembles. It is an evaluation/measurement contribution, not a lower-cost inference method.",
+      "first_checked_at": "2026-10-06T13:41:04+00:00",
+      "last_checked_at": "2026-10-06T13:41:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles"
+    },
+    "arXiv:2606.20128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20128",
+      "identity_tokens": [
+        "arXiv:2606.20128"
+      ],
+      "reason": "The paper audits correctness of LLM-generated GPU kernels. It evaluates coding correctness and benchmark claims, not GPU execution/inference improvements.",
+      "first_checked_at": "2026-10-06T13:41:04+00:00",
+      "last_checked_at": "2026-10-06T13:41:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "The Correctness Illusion in LLM-Generated GPU Kernels"
+    },
+    "DOI:10.1109/tpami.2026.3669720": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2026.3669720",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3669720"
+      ],
+      "reason": "Publisher title identifies an image-restoration baseline. It does not concern LLM inference or serving.",
+      "first_checked_at": "2026-10-06T13:41:04+00:00",
+      "last_checked_at": "2026-10-06T13:41:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Visual-in-Visual: A Unified and Efficient Baseline for Image Restoration"
+    },
+    "DOI:10.1016/j.aei.2025.104222": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.aei.2025.104222",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2025.104222"
+      ],
+      "reason": "Publisher title and abstract identify liquid neural networks for smart manufacturing, outside LLM inference systems.",
+      "first_checked_at": "2026-10-06T13:41:04+00:00",
+      "last_checked_at": "2026-10-06T13:41:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Liquid neural network in smart manufacturing: A new opportunity"
+    },
+    "DOI:10.1007/s10586-026-05939-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10586-026-05939-8",
+      "identity_tokens": [
+        "DOI:10.1007/s10586-026-05939-8"
+      ],
+      "reason": "Publisher title and abstract identify hierarchical federated learning for IoT intrusion detection. The LLM is used in a cyber-detection application; no inference optimization or serving method is indicated.",
+      "first_checked_at": "2026-10-06T13:41:05+00:00",
+      "last_checked_at": "2026-10-06T13:41:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Lightweight large language model based hierarchical federated learning for B5G enabled IoT intrusion detection networks"
+    },
+    "arXiv:2602.15030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15030",
+      "identity_tokens": [
+        "arXiv:2602.15030"
+      ],
+      "reason": "Sphere Encoder addresses image-generation representation/quality. The method and evaluation do not involve LLM inference or serving.",
+      "first_checked_at": "2026-10-06T13:41:05+00:00",
+      "last_checked_at": "2026-10-06T13:41:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Image Generation with a Sphere Encoder"
+    },
+    "arXiv:2601.22950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22950",
+      "identity_tokens": [
+        "arXiv:2601.22950"
+      ],
+      "reason": "This paper studies whether perplexity can identify correctness; its experiments assess model evaluation signals, not inference compute or runtime optimization.",
+      "first_checked_at": "2026-10-06T13:41:05+00:00",
+      "last_checked_at": "2026-10-06T13:41:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Perplexity Cannot Always Tell Right from Wrong"
+    },
+    "arXiv:2601.08602": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08602",
+      "identity_tokens": [
+        "arXiv:2601.08602"
+      ],
+      "reason": "WaveFormer models vision data through a frequency-time decoupled wave-equation architecture. It does not address LLM inference.",
+      "first_checked_at": "2026-10-06T13:41:06+00:00",
+      "last_checked_at": "2026-10-06T13:41:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "WaveFormer: Frequency-Time Decoupled Vision Modeling with Wave Equation"
+    },
+    "arXiv:2601.02749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02749",
+      "identity_tokens": [
+        "arXiv:2601.02749"
+      ],
+      "reason": "The Path Ahead for Agentic AI is a broad challenges/opportunities overview. It does not add or evaluate a concrete inference optimization.",
+      "first_checked_at": "2026-10-06T13:41:06+00:00",
+      "last_checked_at": "2026-10-06T13:41:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "The Path Ahead for Agentic AI: Challenges and Opportunities"
+    },
+    "arXiv:2512.07806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07806",
+      "identity_tokens": [
+        "arXiv:2512.07806"
+      ],
+      "reason": "Multi-view Pyramid Transformer is a computer-vision method for coarser/broader multi-view visual representation; it offers no LLM inference-system contribution.",
+      "first_checked_at": "2026-10-06T13:41:06+00:00",
+      "last_checked_at": "2026-10-06T13:41:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Multi-view Pyramid Transformer: Look Coarser to See Broader"
+    },
+    "DOI:10.3390/bdcc10010033": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bdcc10010033",
+      "identity_tokens": [
+        "DOI:10.3390/bdcc10010033"
+      ],
+      "reason": "Publisher title identifies large-model applications/challenges in low-altitude economy, not inference optimization.",
+      "first_checked_at": "2026-10-06T13:41:07+00:00",
+      "last_checked_at": "2026-10-06T13:41:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Large Model in Low-Altitude Economy: Applications and Challenges"
+    },
+    "arXiv:2601.03329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03329",
+      "identity_tokens": [
+        "arXiv:2601.03329"
+      ],
+      "reason": "This paper provides a mathematical treatment of attention mechanisms rather than a new inference optimization; it contains no evaluated serving or system-level efficiency result.",
+      "first_checked_at": "2026-10-06T13:41:07+00:00",
+      "last_checked_at": "2026-10-06T13:41:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Attention mechanisms in neural networks"
+    },
+    "arXiv:2512.22238": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22238",
+      "identity_tokens": [
+        "arXiv:2512.22238"
+      ],
+      "reason": "Masking Teacher and Reinforcing Student is a vision-language-model distillation/training method. Its contribution is training quality, not inference efficiency.",
+      "first_checked_at": "2026-10-06T13:41:07+00:00",
+      "last_checked_at": "2026-10-06T13:41:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Masking Teacher and Reinforcing Student for Distilling Vision-Language Models"
+    },
+    "arXiv:2511.19664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19664",
+      "identity_tokens": [
+        "arXiv:2511.19664"
+      ],
+      "reason": "The paper analyzes diffusion training objectives and variational bounds; its contribution is mathematical/training-side and has no inference acceleration result.",
+      "first_checked_at": "2026-10-06T13:41:07+00:00",
+      "last_checked_at": "2026-10-06T13:41:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Demystifying Diffusion Objectives: Reweighted Losses are Better Variational Bounds"
+    },
+    "arXiv:2511.10971": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10971",
+      "identity_tokens": [
+        "arXiv:2511.10971"
+      ],
+      "reason": "ERMoE studies eigen-reparameterized MoE routing on image/MRI tasks. Although it measures a small inference-time reduction, the method and evidence are vision-specific rather than LLM serving or expert inference.",
+      "first_checked_at": "2026-10-06T13:41:08+00:00",
+      "last_checked_at": "2026-10-06T13:41:08+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "ERMoE: Eigen-Reparameterized Mixture-of-Experts for Stable Routing and Interpretable Specialization"
+    },
+    "arXiv:2511.05460": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05460",
+      "identity_tokens": [
+        "arXiv:2511.05460"
+      ],
+      "reason": "Synapse arbitrates experts for time-series foundation models. The problem and evaluation are time-series forecasting, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T13:41:08+00:00",
+      "last_checked_at": "2026-10-06T13:41:08+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Synapse: Adaptive Arbitration of Complementary Expertise in Time Series Foundational Models"
+    },
+    "DOI:10.1016/j.engappai.2025.112004": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.112004",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.112004"
+      ],
+      "reason": "Publisher title identifies an ANN for aircraft flight-phase classification, unrelated to LLM inference/serving.",
+      "first_checked_at": "2026-10-06T13:41:08+00:00",
+      "last_checked_at": "2026-10-06T13:41:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Artificial neural network model based on Kolmogorov-Arnold representation theorem and retention mechanism for real-time aircraft flight phases classification"
+    },
+    "arXiv:2606.05080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05080",
+      "identity_tokens": [
+        "arXiv:2606.05080"
+      ],
+      "reason": "AutoLab measures whether frontier models can solve long-horizon auto-research/engineering tasks. It is a capability benchmark, not a runtime optimization.",
+      "first_checked_at": "2026-10-06T13:41:08+00:00",
+      "last_checked_at": "2026-10-06T13:41:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "AutoLab: Can Frontier Models Solve Long-Horizon Auto Research and Engineering Tasks?"
+    },
+    "arXiv:2601.03181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03181",
+      "identity_tokens": [
+        "arXiv:2601.03181"
+      ],
+      "reason": "This is a survey of multimodal foundation models for prediction/control in wireless networks. It focuses on wireless application architectures rather than LLM inference optimization.",
+      "first_checked_at": "2026-10-06T13:41:10+00:00",
+      "last_checked_at": "2026-10-06T13:41:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Multi-Modal Data-Enhanced Foundation Models for Prediction and Control in Wireless Networks: A Survey"
+    },
+    "arXiv:2511.18050": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.18050",
+      "identity_tokens": [
+        "arXiv:2511.18050"
+      ],
+      "reason": "UltraFlux co-designs data/model for high-resolution text-to-image quality across aspect ratios; the paper is image-generation quality/scaling work without LLM serving efficiency.",
+      "first_checked_at": "2026-10-06T13:41:10+00:00",
+      "last_checked_at": "2026-10-06T13:41:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image Generation across Diverse Aspect Ratios"
+    },
+    "arXiv:2602.03227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03227",
+      "identity_tokens": [
+        "arXiv:2602.03227"
+      ],
+      "reason": "Spiral RoPE adapts rotary positional encoding for 2D image-generation/vision-transformer representations; its experiments are visual generation, not long-context LLM inference.",
+      "first_checked_at": "2026-10-06T13:41:10+00:00",
+      "last_checked_at": "2026-10-06T13:41:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Spiral RoPE: Rotate Your Rotary Positional Embeddings in the 2D Plane"
+    },
+    "DOI:10.1016/j.inffus.2026.104241": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104241",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2026.104241"
+      ],
+      "reason": "Publisher title identifies a security/privacy survey of LLMs; it is not an inference-efficiency paper and no concrete inference optimization is indicated.",
+      "first_checked_at": "2026-10-06T13:41:10+00:00",
+      "last_checked_at": "2026-10-06T13:41:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Security and privacy in LLMs: A comprehensive survey of threats and mitigation strategies"
+    },
+    "arXiv:2601.17124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17124",
+      "identity_tokens": [
+        "arXiv:2601.17124"
+      ],
+      "reason": "iFSQ modifies finite scalar quantization for image-generation models. The change has no additional inference latency in that visual-model setting, but does not address LLM weights/KV or serving.",
+      "first_checked_at": "2026-10-06T13:41:11+00:00",
+      "last_checked_at": "2026-10-06T13:41:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "title": "iFSQ: Improving FSQ for Image Generation with 1 Line of Code"
+    },
+    "arXiv:2601.13910": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13910",
+      "identity_tokens": [
+        "arXiv:2601.13910"
+      ],
+      "reason": "This survey reviews deep-learning singing-voice-synthesis approaches. It is outside LLM inference/serving.",
+      "first_checked_at": "2026-10-06T13:41:11+00:00",
+      "last_checked_at": "2026-10-06T13:41:11+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Synthetic Singers: A Review of Deep-Learning-based Singing Voice Synthesis Approaches"
+    },
+    "arXiv:2605.00380": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00380",
+      "identity_tokens": [
+        "arXiv:2605.00380"
+      ],
+      "reason": "ResRL is a residual reinforcement-learning training method for LLM reasoning. Its reported gains are training/reasoning performance, not inference-system efficiency.",
+      "first_checked_at": "2026-10-06T13:41:12+00:00",
+      "last_checked_at": "2026-10-06T13:41:12+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "ResRL: Boosting LLM Reasoning via Negative Sample Projection Residual Reinforcement Learning"
+    },
+    "arXiv:2603.15091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15091",
+      "identity_tokens": [
+        "arXiv:2603.15091"
+      ],
+      "reason": "Trustworthy Koopman Operator Learning studies invariance diagnostics/error bounds for dynamical systems; it does not address LLM inference.",
+      "first_checked_at": "2026-10-06T13:41:12+00:00",
+      "last_checked_at": "2026-10-06T13:41:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Trustworthy Koopman Operator Learning: Invariance Diagnostics and Error Bounds"
     }
   }
 }
