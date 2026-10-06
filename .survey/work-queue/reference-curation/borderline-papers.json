@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T23:50:35+00:00",
-  "record_count": 4269,
+  "updated_at": "2026-10-06T23:54:50+00:00",
+  "record_count": 4265,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -64680,21 +64680,6 @@
       "borderline_recheck_count": 0,
       "title": "MDAgents: An Adaptive Collaboration of LLMs for Medical Decision-Making"
     },
-    "arXiv:2308.00088": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2308.00088",
-      "identity_tokens": [
-        "arXiv:2308.00088"
-      ],
-      "reason": "Optics perspective discusses possible neural-network compute speed/energy but gives no LLM workload or measured serving result; connection to linked inference hardware remains weak.",
-      "first_checked_at": "2026-10-06T23:27:24+00:00",
-      "last_checked_at": "2026-10-06T23:27:24+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "The physics of optical computing"
-    },
     "arXiv:2308.00442": {
       "classification": "borderline",
       "canonical_id": "arXiv:2308.00442",
@@ -64709,52 +64694,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FLatten Transformer: Vision Transformer using Focused Linear Attention"
-    },
-    "arXiv:2111.13587": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2111.13587",
-      "identity_tokens": [
-        "arXiv:2111.13587"
-      ],
-      "reason": "AFNO is linked to inference systems and has efficient token mixing, but its demonstrated results are vision segmentation, not language generation.",
-      "first_checked_at": "2026-10-06T23:27:24+00:00",
-      "last_checked_at": "2026-10-06T23:27:24+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
-        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Adaptive Fourier Neural Operators: Efficient Token Mixers for Transformers"
-    },
-    "arXiv:2103.15358": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2103.15358",
-      "identity_tokens": [
-        "arXiv:2103.15358"
-      ],
-      "reason": "Vision Longformer has global tokens potentially usable for VL, but the paper evaluates visual encoding, not LLM decoder inference.",
-      "first_checked_at": "2026-10-06T23:27:26+00:00",
-      "last_checked_at": "2026-10-06T23:27:26+00:00",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Multi-Scale Vision Longformer: A New Vision Transformer for High-Resolution Image Encoding"
-    },
-    "DOI:10.1016/j.eng.2022.04.024": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1016/j.eng.2022.04.024",
-      "identity_tokens": [
-        "DOI:10.1016/j.eng.2022.04.024"
-      ],
-      "reason": "Publisher abstract characterizes a broad review of pretrained language models and NLP applications, without a concrete efficiency contribution.",
-      "first_checked_at": "2026-10-06T23:27:27+00:00",
-      "last_checked_at": "2026-10-06T23:27:27+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Pre-Trained Language Models and Their Applications"
     },
     "arXiv:2111.13824": {
       "classification": "borderline",
