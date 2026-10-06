@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0603-scheduled-chat-00/r02",
+  "reference_main_sha": "61a9ad7140fdcbd034a9a06855d8efbd8fa7cc2a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.433",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.433",
+        "arXiv:2110.07577"
+      ],
+      "title": "UniPELT: A Unified Framework for Parameter-Efficient Language Model Tuning",
+      "reason": "Adapter/Prefix-tuning/LoRAをgatingで統合し、少数trainable parametersでtask adaptation品質を改善するPELT研究。主目的はfine-tuning効率とGLUE精度で、推論runtime・serving効率ではない。",
+      "source_url": "https://arxiv.org/abs/2110.07577",
+      "body_check": "abstract_screen_only: arXiv一次abstractでparameter-efficient language model tuning、gatingによるPELT統合、GLUEで1–4%改善が主題と確認。推論systems最適化ではないため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1162/tacl_a_00413",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00413",
+        "arXiv:2002.11985"
+      ],
+      "title": "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT",
+      "reason": "BERT/Transformerの量子化、pruning、distillation、matrix decomposition、dynamic early exit等をmodel size・runtime memory・inference speedの観点で体系化する推論圧縮survey。推論向け圧縮系統の直接対象。",
+      "source_url": "https://arxiv.org/abs/2002.11985",
+      "body_check": "fulltext_relevance_review: TACL一次本文を確認。本文は明示的にinference-time model size/speedupを対象とし、quantization、pruning、matrix decomposition、dynamic inference accelerationを比較。例としてTinyBERT系9.4x GPU speedupや極小student約25x等の実測を整理し、edge deployment/latency制約を問題設定に置く。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.11625",
+      "identity_tokens": [
+        "arXiv:2208.11625"
+      ],
+      "title": "PromptFL: Let Federated Participants Cooperatively Learn Prompts Instead of Models – Federated Learning in Age of Foundation Model",
+      "reason": "federated learningでfull modelではなくsoft promptだけを共同学習して通信・local trainingを高速化する研究。効率化対象は分散学習/aggregationで、推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2208.11625",
+      "body_check": "abstract_screen_only: arXiv一次abstractでfederated prompt training、global aggregation/local training acceleration、CLIP client adaptationが主題と確認。推論への最終適用なしのため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.05257",
+      "identity_tokens": [
+        "arXiv:2507.05257"
+      ],
+      "title": "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
+      "reason": "LLM memory agentのretrieval、test-time learning、long-range understanding、selective forgettingを評価するbenchmark研究。memory mechanismを扱うが、runtime memory footprintやserving効率ではなく能力評価が主目的。",
+      "source_url": "https://arxiv.org/abs/2507.05257",
+      "body_check": "abstract_screen_only: arXiv一次abstractでMemoryAgentBench、incremental multi-turn format、4 memory competencies、RAG/external-memory agentの品質比較が主題と確認。推論systems効率化ではないため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.05916",
+      "identity_tokens": [
+        "arXiv:2310.05916"
+      ],
+      "title": "Interpreting CLIP's Image Representation via Text-Based Decomposition",
+      "reason": "CLIP image encoderのlayer/head/patch contributionをtext representationで解釈し、spurious feature除去やzero-shot segmentationへ利用するinterpretability研究。推論効率化が主目的でない。",
+      "source_url": "https://arxiv.org/abs/2310.05916",
+      "body_check": "abstract_screen_only: 一次abstractでCLIP representation decomposition、attention-head interpretation、spatial localization、segmentation/model repairが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.14883",
+      "identity_tokens": [
+        "arXiv:2110.14883"
+      ],
+      "title": "Colossal-AI: A Unified Deep Learning System For Large-Scale Parallel Training",
+      "reason": "data/pipeline/tensor/sequence parallelismとheterogeneous trainingを統合する大規模分散training system。最大2.76x training speedupが主評価で、推論servingを最終対象としない。",
+      "source_url": "https://arxiv.org/abs/2110.14883",
+      "body_check": "abstract_screen_only: 一次abstract相当の書誌情報でlarge-scale parallel training、ZeRO系heterogeneous training、training speedupが主題と確認。推論用途なしのため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ],
+      "worklist_rank": 61
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-acl.807",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-acl.807",
+        "arXiv:2402.12451"
+      ],
+      "title": "The Revolution of Multimodal Large Language Models: A Survey",
+      "reason": "MLLMのarchitecture、multimodal alignment、training、visual tasks、dataset/benchmarkを広く整理するsurvey。computational requirements比較は含むが、推論systems効率を中心とするsurveyではない。",
+      "source_url": "https://arxiv.org/abs/2402.12451",
+      "body_check": "abstract_screen_only: arXiv一次abstractでvisual-based MLLM architecture/training/application surveyが主題と確認。推論効率は中心的問題設定でないため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 62
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3534678.3539260",
+      "identity_tokens": [
+        "DOI:10.1145/3534678.3539260",
+        "arXiv:2107.00910"
+      ],
+      "title": "Learned Token Pruning for Transformers",
+      "reason": "Transformer inferenceの二次的sequence-length costを直接問題化し、layerごとのlearned thresholdで低attention tokenを除去する。FLOPs最大2.1x削減、CPU 1.9x/GPU 2.0x throughput改善を実測しており直接対象。",
+      "source_url": "https://arxiv.org/abs/2107.00910",
+      "body_check": "fulltext_relevance_review: arXiv一次資料を確認。top-kの高コストを避けるthreshold-based adaptive token pruningを各層へ適用し、GLUEでaccuracy drop <1%の条件で最大2.1x FLOPs reduction、Intel Haswell CPU最大1.9x、NVIDIA V100 GPU最大2.0x throughput improvementを報告。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11596",
+      "identity_tokens": [
+        "arXiv:2308.11596"
+      ],
+      "title": "SeamlessM4T: Massively Multilingual&Multimodal Machine Translation",
+      "reason": "speech/textを跨ぐ多言語・多モーダルmachine translation modelの構築と翻訳品質が主題。推論runtime・serving・memory最適化を主要貢献としない。",
+      "source_url": "https://arxiv.org/abs/2308.11596",
+      "body_check": "abstract_screen_only: 一次書誌/abstractでmultilingual multimodal translation、speech/text task統合と品質評価が主題と確認。推論systems効率化ではないため本文未読。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md"
+      ],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:1606.09274",
+      "identity_tokens": [
+        "arXiv:1606.09274"
+      ],
+      "title": "Compression of Neural Machine Translation Models via Pruning",
+      "reason": "200M+ parameter NMT modelのweight pruningでstorage footprintを削減し、80% pruning後のretrainingで元性能を回復/超過する。古いNMT対象だが言語生成modelの推論deployment向けweight compressionとして対象。",
+      "source_url": "https://arxiv.org/abs/1606.09274",
+      "body_check": "fulltext_relevance_review: 一次abstract相当の書誌情報を精査。class-blind/class-uniform/class-distributionのmagnitude pruningをNMTへ適用し、40% pruningでWMT14 En-De性能低下が小さく、retraining併用で80%-pruned modelが元性能を回復/超過。model storage削減が明示的目的。",
+      "first_checked_at": "2026-10-07T06:03:34+09:00",
+      "last_checked_at": "2026-10-07T06:03:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "worklist_rank": 68
+    }
+  ]
+}
