@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r48-screen-01-part-06-529473a53be9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.17901",
+      "identity_tokens": [
+        "arXiv:2512.17901"
+      ],
+      "title": "When Reasoning Meets Its Laws",
+      "reason": "Potential background for efficient-reasoning research, but no actionable inference-efficiency method is evaluated.",
+      "source_url": "https://arxiv.org/abs/2512.17901",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.13492",
+      "identity_tokens": [
+        "arXiv:2512.13492"
+      ],
+      "title": "Transform Trained Transformer: Accelerating Naive 4K Video Generation Over 10⨉",
+      "reason": "The sparse-attention lineage is adjacent, but primary evaluation concerns diffusion video generation rather than language-model serving.",
+      "source_url": "https://arxiv.org/abs/2512.13492",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21882",
+      "identity_tokens": [
+        "arXiv:2511.21882"
+      ],
+      "title": "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium",
+      "reason": "It is adjacent to recurrent-depth reasoning, but the tested method increases inference computation substantially.",
+      "source_url": "https://arxiv.org/abs/2511.21882",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.05476",
+      "identity_tokens": [
+        "arXiv:2511.05476"
+      ],
+      "title": "A Metamorphic Testing Perspective on Knowledge Distillation for Language Models of Code: Does the Student Deeply Mimic the Teacher?",
+      "reason": "Relevant to quality auditing of compressed models, but it contributes an evaluation framework rather than an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2511.05476",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.03328",
+      "identity_tokens": [
+        "arXiv:2511.03328"
+      ],
+      "title": "Benchmarking the Thinking Mode of Multimodal Large Language Models in Clinical Tasks",
+      "reason": "It is a benchmark related to reasoning cost, but it does not provide an inference-efficiency method or direct cost comparison.",
+      "source_url": "https://arxiv.org/abs/2511.03328",
+      "first_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "last_checked_at": "2026-10-06T06:35:21.615682+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    }
+  ]
+}
