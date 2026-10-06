@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r86-screen-01-part-04-99ce8426ba4c",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/journalmedia6020085",
+      "identity_tokens": [
+        "DOI:10.3390/journalmedia6020085"
+      ],
+      "title": "Anti-Sustainability Narratives in Chat Apps: What Shapes the Brazilian Far-Right Discussion About Socio-Environmental Issues on WhatsApp and Telegram",
+      "reason": "WhatsApp/Telegramのpolitical narrativeを分析する社会科学研究で、model inference efficiencyの手法を含まない。",
+      "source_url": "https://doi.org/10.3390/journalmedia6020085",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11044063",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS56072.2025.11044063"
+      ],
+      "title": "Super Microscaling: Enhancing Precision and Hardware Efficiency in Deep Learning Quantization",
+      "reason": "一次出版社本文を試したが取得できず、IEEEの書誌・要旨はSMX量子化形式とhardware engineを述べる。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11044063",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.110371",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.110371"
+      ],
+      "title": "Efficient quantized transformer for atrial fibrillation detection in cross-domain datasets",
+      "reason": "出版社の本文にアクセスしたところHTTP 403。検索可能な出版社記事本文抜粋はECG分類専用の3-bit重み/activation量子化を示す。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "source_url": "https://doi.org/10.1016/j.engappai.2025.110371",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.15120",
+      "identity_tokens": [
+        "arXiv:2504.15120"
+      ],
+      "title": "Kuwain 1.5B: An Arabic SLM via Language Injection",
+      "reason": "Arabic SLMへlanguage knowledgeを注入する研究で、推論resource optimizationではない。",
+      "source_url": "https://arxiv.org/abs/2504.15120",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.13535",
+      "identity_tokens": [
+        "arXiv:2504.13535"
+      ],
+      "title": "MusFlow: Multimodal Music Generation via Conditional Flow Matching",
+      "reason": "条件付きflow matchingによるmusic generationで、LLM inference/resource optimizationの対象外。",
+      "source_url": "https://arxiv.org/abs/2504.13535",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    }
+  ]
+}
