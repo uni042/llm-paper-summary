@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r111-screen-01-part-05-d3a4e4ed62a1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04115",
+      "identity_tokens": [
+        "arXiv:2605.04115"
+      ],
+      "title": "Learning reveals invisible structure in low-rank RNNs",
+      "reason": "Low-rank RNN learning dynamics theory, outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2605.04115",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02790",
+      "identity_tokens": [
+        "arXiv:2605.02790"
+      ],
+      "title": "Compositional Neural-Cyber-Physical System Verification in the Interactive Theorem Prover of Your Choice",
+      "reason": "Formal verification of neural cyber-physical systems, not model serving or inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.02790",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463074",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463074"
+      ],
+      "title": "RDQ: Learnable Kronecker Rotation Matrix Decomposition for Efficient Large Language Model Quantization",
+      "reason": "The title/lineage indicate an LLM quantization method (learnable Kronecker rotation decomposition), but the IEEE DOI primary article could not be retrieved, so method, evaluation and limitations could not be verified.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463074",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463591",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463591"
+      ],
+      "title": "EvoAlpha: An LLM-Enhanced Evolutionary Framework for Formulaic Alpha Mining",
+      "reason": "LLM-assisted financial formula mining application, without a concrete inference efficiency mechanism.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463591",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463947",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463947"
+      ],
+      "title": "Let More Experts Speak: Balancing Exploration and Exploitation in PEFT for Mixture-of-Experts Models",
+      "reason": "PEFT expert exploration/exploitation is a model-adaptation/training topic, not inference serving efficiency.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463947",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    }
+  ]
+}
