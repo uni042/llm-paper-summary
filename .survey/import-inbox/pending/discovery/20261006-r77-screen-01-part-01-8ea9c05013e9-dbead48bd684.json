@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r77-screen-01-part-01-8ea9c05013e9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-54190-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-54190-z"
+      ],
+      "title": "An intelligent assessment method for English translation teaching model based on improved BERT and attention mechanism",
+      "reason": "AFBNetは英語翻訳授業の評価向けBERT/attentionモデルで、推論効率や既存quantization方式への具体的寄与を示さない。",
+      "source_url": "https://doi.org/10.1038/s41598-026-54190-z",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/DCOSS-IoT69657.2026.00056",
+      "identity_tokens": [
+        "DOI:10.1109/DCOSS-IoT69657.2026.00056"
+      ],
+      "title": "(DEMO) TITAN: Tiny Inference and Training for Transformer Models on FPGA-Based Edge Nodes",
+      "reason": "LLMをFPGAで推論するedge co-designとして関連するが、機関リポジトリの一次記録はabstractのみでfull textは未公開。ハードウェア構成・実測・限界の本文検証ができない。",
+      "source_url": "https://doi.org/10.1109/DCOSS-IoT69657.2026.00056",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICIBA68339.2026.11651876",
+      "identity_tokens": [
+        "DOI:10.1109/ICIBA68339.2026.11651876"
+      ],
+      "title": "Exploring the Application of AWQ in Vision Transformers on FPGA Accelerators",
+      "reason": "AWQをFPGA上のViTへ適用する研究でquantization系譜には接点があるが、対象はvision transformerでLLM評価なし。一次出版社full textを取得できず、転用可能性を判定できない。",
+      "source_url": "https://doi.org/10.1109/ICIBA68339.2026.11651876",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICRA57385.2026.11697183",
+      "identity_tokens": [
+        "DOI:10.1109/ICRA57385.2026.11697183"
+      ],
+      "title": "DyRef: Dynamic Reflection Framework via Graph-Based Complexity for Robotic Planning",
+      "reason": "DyRefは複雑度に応じて反省戦略を選ぶLLMロボット計画法として、反復の冗長性を減らす点で関連する。著者プロジェクトページの要旨/方法説明では成功率+16.1%、冗長reflection−64.4%を掲げるが、論文本体・評価条件・限界を取得できない。",
+      "source_url": "https://doi.org/10.1109/ICRA57385.2026.11697183",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICSCST70031.2026.11709804",
+      "identity_tokens": [
+        "DOI:10.1109/ICSCST70031.2026.11709804"
+      ],
+      "title": "Lightweight Transformer Architecture for Real-Time Sentiment Analysis in Edge IoT Systems",
+      "reason": "Raspberry Pi向け軽量Transformer sentiment modelはBERT圧縮/edge inference系譜と接点があるが、要旨は蒸留中心でLLMではない。本文の比較条件と効率値を確認できず、弱い関連に留まる。",
+      "source_url": "https://doi.org/10.1109/ICSCST70031.2026.11709804",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    }
+  ]
+}
