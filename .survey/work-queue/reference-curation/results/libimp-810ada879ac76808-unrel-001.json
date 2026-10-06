@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-810ada879ac76808-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35347",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35347",
+    "identity_tokens": [
+      "arXiv:2609.35347"
+    ],
+    "reason": "マルチ教師オンポリシー蒸留は訓練時の教師配分が対象で、推論効率の改善を測らない。",
+    "first_checked_at": "2026-10-06T19:07:51+00:00",
+    "last_checked_at": "2026-10-06T19:07:51+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+    ],
+    "title": "Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation"
+  },
+  "processed_at": "2026-10-06T19:07:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-810ada879ac7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

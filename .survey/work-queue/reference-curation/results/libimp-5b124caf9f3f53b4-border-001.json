@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b124caf9f3f53b4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.15439/2026f9874",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.15439/2026f9874",
+    "identity_tokens": [
+      "DOI:10.15439/2026f9874"
+    ],
+    "reason": "指定DOIのpublisher landingを直接開いたがbrowser取得不能。題名はPolish LLMのRAG評価で効率最適化でない可能性が高いが要旨未確認のためborderline。",
+    "first_checked_at": "2026-10-06T19:07:49+00:00",
+    "last_checked_at": "2026-10-06T19:07:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Re-evaluating Polish LLMs in RAG: The Evolution of Bielik and PLLuM and the Limits of Open-Source Evaluators"
+  },
+  "processed_at": "2026-10-06T19:07:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b124caf9f3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

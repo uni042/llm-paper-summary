@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T18:49:08+00:00",
-  "record_count": 9293,
+  "updated_at": "2026-10-06T19:08:00+00:00",
+  "record_count": 9343,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -133209,6 +133209,707 @@
         "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
       ],
       "title": "CT-LNN: FPGA-Based Accelerator for Continuous-Time Liquid Neural Networks"
+    },
+    "arXiv:2609.33702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33702",
+      "identity_tokens": [
+        "arXiv:2609.33702"
+      ],
+      "reason": "活性説明の評価と再構成を扱い、推論実行効率化ではない。",
+      "first_checked_at": "2026-10-06T19:07:43+00:00",
+      "last_checked_at": "2026-10-06T19:07:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "Understanding Confabulation and Rethinking Reconstruction in Activation Explanations"
+    },
+    "arXiv:2609.33721": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33721",
+      "identity_tokens": [
+        "arXiv:2609.33721"
+      ],
+      "reason": "LLM能力改善と同時の信頼度学習で、推論提供コストの低減は評価されない。",
+      "first_checked_at": "2026-10-06T19:07:43+00:00",
+      "last_checked_at": "2026-10-06T19:07:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Shared Experience, Separate Learning: Companion Confidence Calibration for LLMs"
+    },
+    "arXiv:2609.33781": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33781",
+      "identity_tokens": [
+        "arXiv:2609.33781"
+      ],
+      "reason": "LLM reasoningのRL訓練時信用割当・探索が主題で、配備時の計算/メモリ削減ではない。",
+      "first_checked_at": "2026-10-06T19:07:44+00:00",
+      "last_checked_at": "2026-10-06T19:07:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Surprising Success, Repeated Failure: Entropy-Guided Credit Assignment for Exploration in LLM Reasoning"
+    },
+    "arXiv:2609.32352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32352",
+      "identity_tokens": [
+        "arXiv:2609.32352"
+      ],
+      "reason": "眼科VLM能力のbenchmarkで、推論効率機構は提案しない。",
+      "first_checked_at": "2026-10-06T19:07:44+00:00",
+      "last_checked_at": "2026-10-06T19:07:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "EyeVQA: Benchmarking Ophthalmic Vision-Language Models from Recognition to Spatial Grounding"
+    },
+    "arXiv:2609.32452": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32452",
+      "identity_tokens": [
+        "arXiv:2609.32452"
+      ],
+      "reason": "reflective prompt最適化の証拠選択を比べる研究で、推論serving最適化やprompt探索コスト削減を示さない。",
+      "first_checked_at": "2026-10-06T19:07:44+00:00",
+      "last_checked_at": "2026-10-06T19:07:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "What Should the Reflector See? An Empirical Study of Evidence in Reflective Prompt Optimization"
+    },
+    "arXiv:2609.32473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32473",
+      "identity_tokens": [
+        "arXiv:2609.32473"
+      ],
+      "reason": "計算リソグラフィ工程改善用の仮想LLM engineerで、LLM推論効率自体は扱わない。",
+      "first_checked_at": "2026-10-06T19:07:45+00:00",
+      "last_checked_at": "2026-10-06T19:07:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "VPEvolve: A Self-Evolving Virtual Process Engineer for Computational Lithography"
+    },
+    "arXiv:2609.32631": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32631",
+      "identity_tokens": [
+        "arXiv:2609.32631"
+      ],
+      "reason": "本文の対象はSWE agent RL訓練で、shadow sandboxが中間検証を非同期化し末尾latencyを平均2.07秒とする。これは訓練時credit assignmentの検証手順で、LLM推論servingの計算・memory改善ではない。",
+      "first_checked_at": "2026-10-06T19:07:45+00:00",
+      "last_checked_at": "2026-10-06T19:07:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "SWE-MILE: Asynchronous Potential-Induced Milestone Credit Assignment for Long-Horizon Software Engineering Agents"
+    },
+    "arXiv:2609.32780": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32780",
+      "identity_tokens": [
+        "arXiv:2609.32780"
+      ],
+      "reason": "疎MoE VLMは28B総/9B活性だが、実測でQwen3-VL-8Bよりdecode 11.1%遅く、VRAM 52GB対11GB。活性parameter数だけでは推論効率改善を立証しない。",
+      "first_checked_at": "2026-10-06T19:07:45+00:00",
+      "last_checked_at": "2026-10-06T19:07:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "OmniMoE-VL: A Sparse Vision-Language Model with Coupled Visual-Depth Routing"
+    },
+    "arXiv:2609.32781": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32781",
+      "identity_tokens": [
+        "arXiv:2609.32781"
+      ],
+      "reason": "拡散VLMのオンポリシー蒸留による訓練性能向上で、推論最適化を評価しない。",
+      "first_checked_at": "2026-10-06T19:07:45+00:00",
+      "last_checked_at": "2026-10-06T19:07:45+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "CT-OPD: Counterfactual Trace On-Policy Distillation for Diffusion Vision-Language Models"
+    },
+    "arXiv:2610.00394": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00394",
+      "identity_tokens": [
+        "arXiv:2610.00394"
+      ],
+      "reason": "データ反復学習時のn-gram記憶枝の過学習分析で、推論時KV/メモリ削減を示さない。",
+      "first_checked_at": "2026-10-06T19:07:46+00:00",
+      "last_checked_at": "2026-10-06T19:07:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "Forking: Sudden Overfitting Under Replay"
+    },
+    "arXiv:2610.00487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00487",
+      "identity_tokens": [
+        "arXiv:2610.00487"
+      ],
+      "reason": "物理組立計画向けマルチモーダル逐次モンテカルロで、LLM serving効率が主題ではない。",
+      "first_checked_at": "2026-10-06T19:07:46+00:00",
+      "last_checked_at": "2026-10-06T19:07:46+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "ScaffoldM3C: A Multimodal Sequential Monte Carlo Framework for Generative Stable Construction Planning"
+    },
+    "arXiv:2610.00636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00636",
+      "identity_tokens": [
+        "arXiv:2610.00636"
+      ],
+      "reason": "計算材料科学agentのベンチマークで、推論コストや効率改善を提案しない。",
+      "first_checked_at": "2026-10-06T19:07:47+00:00",
+      "last_checked_at": "2026-10-06T19:07:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "CompMat-Bench: Benchmarking AI Agents for Computational Materials Science"
+    },
+    "arXiv:2609.36777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36777",
+      "identity_tokens": [
+        "arXiv:2609.36777"
+      ],
+      "reason": "3D scene coding agentの評価ベンチマークで、推論実行最適化ではない。",
+      "first_checked_at": "2026-10-06T19:07:47+00:00",
+      "last_checked_at": "2026-10-06T19:07:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "Code4Scene: Benchmarking Coding Agents for Constructing and Editing 3D Scenes"
+    },
+    "arXiv:2609.37172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37172",
+      "identity_tokens": [
+        "arXiv:2609.37172"
+      ],
+      "reason": "LLMによるヒューリスティック設計の自動化で、効率化対象は生成ヒューリスティックでありLLM推論ではない。",
+      "first_checked_at": "2026-10-06T19:07:47+00:00",
+      "last_checked_at": "2026-10-06T19:07:47+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "SimpleEvol: An Agent-Loop Framework for LLM-Driven Automated Heuristic Design with Minimal Human Priors"
+    },
+    "arXiv:2609.37221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37221",
+      "identity_tokens": [
+        "arXiv:2609.37221"
+      ],
+      "reason": "LLM駆動の最適化タスク構成で、モデル推論速度/メモリの評価はない。",
+      "first_checked_at": "2026-10-06T19:07:47+00:00",
+      "last_checked_at": "2026-10-06T19:07:47+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "OptiCom : A Unified Framework for State-Conditioned Composition in LLM-Driven Optimization"
+    },
+    "arXiv:2609.37891": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37891",
+      "identity_tokens": [
+        "arXiv:2609.37891"
+      ],
+      "reason": "合成データを用いたLLM学習レシピで、推論時の効率化ではない。",
+      "first_checked_at": "2026-10-06T19:07:48+00:00",
+      "last_checked_at": "2026-10-06T19:07:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "It's All Training: A Fully Synthetic Single-Stage Recipe for LLMs"
+    },
+    "arXiv:2609.38058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38058",
+      "identity_tokens": [
+        "arXiv:2609.38058"
+      ],
+      "reason": "本文は複数の時系列基盤モデルの予測を軽量潜在状態で統合する予測精度研究。LLM推論コストの改善ではない。",
+      "first_checked_at": "2026-10-06T19:07:48+00:00",
+      "last_checked_at": "2026-10-06T19:07:48+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Latent Inference-Time Guidance of Time Series Foundation Models"
+    },
+    "arXiv:2609.34488": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34488",
+      "identity_tokens": [
+        "arXiv:2609.34488"
+      ],
+      "reason": "深層強化学習ポリシーの適応計算であり、LLM推論の研究ではない。",
+      "first_checked_at": "2026-10-06T19:07:48+00:00",
+      "last_checked_at": "2026-10-06T19:07:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md"
+      ],
+      "title": "FlexLoop: Depth-Elastic Looped Policies for Adaptive Test-Time Computation in Deep RL"
+    },
+    "arXiv:2609.34968": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34968",
+      "identity_tokens": [
+        "arXiv:2609.34968"
+      ],
+      "reason": "世界行動モデルの連合学習・専門家組立で、LLM推論効率を扱わない。",
+      "first_checked_at": "2026-10-06T19:07:49+00:00",
+      "last_checked_at": "2026-10-06T19:07:49+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "RoboFL: Federated Expert Assembly for World Action Models"
+    },
+    "arXiv:2609.29131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29131",
+      "identity_tokens": [
+        "arXiv:2609.29131"
+      ],
+      "reason": "タグ付き翻訳のデータ/訓練/報酬最適化で、推論serving効率化ではない。",
+      "first_checked_at": "2026-10-06T19:07:49+00:00",
+      "last_checked_at": "2026-10-06T19:07:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Tag-Aware Structured Text Translation: Towards a Systematic Understanding"
+    },
+    "DOI:10.1140/epjb/s10051-026-01263-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1140/epjb/s10051-026-01263-7",
+      "identity_tokens": [
+        "DOI:10.1140/epjb/s10051-026-01263-7"
+      ],
+      "reason": "要旨は非線形AN(N)V方程式の厳密波解を構成する数理物理で、LLM推論や計算効率化ではない。",
+      "first_checked_at": "2026-10-06T19:07:50+00:00",
+      "last_checked_at": "2026-10-06T19:07:50+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Effective-time bilinear neural construction of lump-stripe and lump solutions for a variable-coefficient ANNV equation"
+    },
+    "arXiv:2609.38911": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38911",
+      "identity_tokens": [
+        "arXiv:2609.38911"
+      ],
+      "reason": "安定性と可塑性を扱う一般学習理論で、LLM推論の計算・メモリ・レイテンシ改善を提案しない。",
+      "first_checked_at": "2026-10-06T19:07:50+00:00",
+      "last_checked_at": "2026-10-06T19:07:50+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Generalized Residual Closure: General Learning Dynamics for Stability-Plasticity Compatibility"
+    },
+    "arXiv:2609.39507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39507",
+      "identity_tokens": [
+        "arXiv:2609.39507"
+      ],
+      "reason": "具身ロボット操作agentの能力ベンチマークで、LLM推論実行の効率化手法はない。",
+      "first_checked_at": "2026-10-06T19:07:51+00:00",
+      "last_checked_at": "2026-10-06T19:07:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "LIBERO-Agent: Evaluating General-Purpose Agents for Direct Embodied Manipulation"
+    },
+    "arXiv:2609.35347": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35347",
+      "identity_tokens": [
+        "arXiv:2609.35347"
+      ],
+      "reason": "マルチ教師オンポリシー蒸留は訓練時の教師配分が対象で、推論効率の改善を測らない。",
+      "first_checked_at": "2026-10-06T19:07:51+00:00",
+      "last_checked_at": "2026-10-06T19:07:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation"
+    },
+    "arXiv:2609.35432": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35432",
+      "identity_tokens": [
+        "arXiv:2609.35432"
+      ],
+      "reason": "コーディングagentの物理タスクへの拡張/学習が主題で、LLM推論資源を減らさない。",
+      "first_checked_at": "2026-10-06T19:07:51+00:00",
+      "last_checked_at": "2026-10-06T19:07:51+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence"
+    },
+    "arXiv:2609.35568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35568",
+      "identity_tokens": [
+        "arXiv:2609.35568"
+      ],
+      "reason": "NPU向けカーネルをLLM agentで合成する研究で、LLM本体の推論最適化ではない。",
+      "first_checked_at": "2026-10-06T19:07:52+00:00",
+      "last_checked_at": "2026-10-06T19:07:52+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "From Experience to Expertise: Adoption-Aware Memory Learning for Data-Scarce NPU Kernel Synthesis"
+    },
+    "arXiv:2609.33117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33117",
+      "identity_tokens": [
+        "arXiv:2609.33117"
+      ],
+      "reason": "心電図解釈のstreaming benchmark/agent環境で、推論高速化の提案はない。",
+      "first_checked_at": "2026-10-06T19:07:52+00:00",
+      "last_checked_at": "2026-10-06T19:07:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "ECG-Scroll: A Long-Horizon, Streaming Benchmark and Agent Environment for Interpretation of Ambulatory Electrocardiograms"
+    },
+    "arXiv:2609.33180": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33180",
+      "identity_tokens": [
+        "arXiv:2609.33180"
+      ],
+      "reason": "agent自己改善の評価ベンチマーク信頼性を調査するもので、実行効率化ではない。",
+      "first_checked_at": "2026-10-06T19:07:52+00:00",
+      "last_checked_at": "2026-10-06T19:07:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Which Self-Improvements Should We Trust? Reliable Self-Improvement When Agents Reuse Their Benchmarks"
+    },
+    "arXiv:2609.24144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24144",
+      "identity_tokens": [
+        "arXiv:2609.24144"
+      ],
+      "reason": "一次要旨はgroup-relative RLの学習時におけるpaired rollout分散・報酬推定を分析し、推論実行を効率化する成果を提示していない。",
+      "first_checked_at": "2026-10-06T19:07:53+00:00",
+      "last_checked_at": "2026-10-06T19:07:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Luck Is Not Skill: When Do Paired Rollouts Help Group-Relative RL of LLM Agents?"
+    },
+    "arXiv:2609.24163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24163",
+      "identity_tokens": [
+        "arXiv:2609.24163"
+      ],
+      "reason": "一次要旨は音声合成LLMのRLベース自己修正による品質向上を扱い、推論時token/latency/memoryの削減やserving throughputは評価していない。",
+      "first_checked_at": "2026-10-06T19:07:53+00:00",
+      "last_checked_at": "2026-10-06T19:07:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis"
+    },
+    "arXiv:2609.24290": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24290",
+      "identity_tokens": [
+        "arXiv:2609.24290"
+      ],
+      "reason": "一次要旨はclarification方策をcounterfactual情報利得で訓練する研究で、ユーザー対話品質が焦点。推論資源効率の改善を示していない。",
+      "first_checked_at": "2026-10-06T19:07:53+00:00",
+      "last_checked_at": "2026-10-06T19:07:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "When and How Should an Agent Clarify? CIGAsk: Teaching LLMs to Clarify via Counterfactual Information Gain"
+    },
+    "arXiv:2609.24457": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24457",
+      "identity_tokens": [
+        "arXiv:2609.24457"
+      ],
+      "reason": "一次要旨は化学反応アニメーション向け小型モデルの制約付きプログラム生成で、モデル規模は記載されるが推論効率の改善手法・比較測定が主題ではない。",
+      "first_checked_at": "2026-10-06T19:07:54+00:00",
+      "last_checked_at": "2026-10-06T19:07:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Constrained Program Generation for 3D Reaction Animation with a 0.8B Model"
+    },
+    "arXiv:2609.24650": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24650",
+      "identity_tokens": [
+        "arXiv:2609.24650"
+      ],
+      "reason": "一次要旨はLLMによる文章可読性評価で推論・few-shot promptingの効果を比較するタスク評価であり、推論効率化手法を提案しない。",
+      "first_checked_at": "2026-10-06T19:07:54+00:00",
+      "last_checked_at": "2026-10-06T19:07:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Assessing Readability with LLMs: The Role of Reasoning and Few-Shot Prompting"
+    },
+    "arXiv:2609.29333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29333",
+      "identity_tokens": [
+        "arXiv:2609.29333"
+      ],
+      "reason": "一次要旨が扱うのは大学試験のLLM採点の較正・LoRAによる品質改善で、推論計算量、メモリ、レイテンシ、スループットの改善を測定・提案していない。",
+      "first_checked_at": "2026-10-06T19:07:54+00:00",
+      "last_checked_at": "2026-10-06T19:07:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Where LLM Graders Succeed and Break: Evidence from Two Computer-Science Exams"
+    },
+    "arXiv:2609.30226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30226",
+      "identity_tokens": [
+        "arXiv:2609.30226"
+      ],
+      "reason": "一次要旨のPoEMは新報酬へのRL再学習を既存方策から予測する枠組みであり、post-training計算の節約が主題。LLMの実行時推論/serving改善ではない。",
+      "first_checked_at": "2026-10-06T19:07:55+00:00",
+      "last_checked_at": "2026-10-06T19:07:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "PoEM: Predicting RL Outcomes from Existing Policies"
+    },
+    "arXiv:2609.30467": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30467",
+      "identity_tokens": [
+        "arXiv:2609.30467"
+      ],
+      "reason": "一次要旨は医療RAG factuality評価の失敗分類と検証器の限界を分析しており、推論資源やserving性能を改善する方法・測定を提示していない。",
+      "first_checked_at": "2026-10-06T19:07:55+00:00",
+      "last_checked_at": "2026-10-06T19:07:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Where Does Retrieval-Based Open-Ended Evaluation Fail? Automatic Taxonomy Induction from Long-Form Medical Answer Factuality Verification"
+    },
+    "arXiv:2609.27349": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27349",
+      "identity_tokens": [
+        "arXiv:2609.27349"
+      ],
+      "reason": "一次要旨は分子設計エージェントのベンチマークと成功率・失敗要因評価が中心で、推論効率の改善手法や資源測定を示していない。",
+      "first_checked_at": "2026-10-06T19:07:55+00:00",
+      "last_checked_at": "2026-10-06T19:07:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "MolDesignBench: Evaluating LLM-based Agent for Scenario-grounded Molecular Design"
+    },
+    "arXiv:2609.28263": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28263",
+      "identity_tokens": [
+        "arXiv:2609.28263"
+      ],
+      "reason": "一次要旨はLLMサービスを動機とするオンライン資源配分LPのSGD最適化だが、LLM自体の推論/serving技術を変更せず、一般的オンライン最適化の理論・計算量を扱う。",
+      "first_checked_at": "2026-10-06T19:07:56+00:00",
+      "last_checked_at": "2026-10-06T19:07:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving"
+    },
+    "arXiv:2609.28275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28275",
+      "identity_tokens": [
+        "arXiv:2609.28275"
+      ],
+      "reason": "一次要旨は論文・ソフトウェア情報を抽出して方法のアトラスを構築するデジタルライブラリ研究で、LLM推論効率を対象としていない。",
+      "first_checked_at": "2026-10-06T19:07:56+00:00",
+      "last_checked_at": "2026-10-06T19:07:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "PaperAtlas: an automatically constructed atlas of computational methods and software from 6.4 million open-access articles"
+    },
+    "arXiv:2609.28724": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28724",
+      "identity_tokens": [
+        "arXiv:2609.28724"
+      ],
+      "reason": "一次要旨の並列化は生成コードをCPU/GPUで高速化するコンパイラ最適化が対象で、LLM推論のtoken・memory・serving改善ではない。agent token削減の記述はコード最適化タスクに限られる。",
+      "first_checked_at": "2026-10-06T19:07:56+00:00",
+      "last_checked_at": "2026-10-06T19:07:56+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "The Canonical Parallel Form as a Substrate for Parallelizing Compilers and Agentic Optimizers"
+    },
+    "arXiv:2609.25669": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25669",
+      "identity_tokens": [
+        "arXiv:2609.25669"
+      ],
+      "reason": "一次要旨はサブレディット間のスラング普及をネットワークモデルで説明する研究で、LLM推論・serving手法を扱わない。",
+      "first_checked_at": "2026-10-06T19:07:57+00:00",
+      "last_checked_at": "2026-10-06T19:07:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "From Utterances to Networks: Modelling Slang Adoption and Diffusion Across Subreddits"
+    },
+    "arXiv:2609.23997": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23997",
+      "identity_tokens": [
+        "arXiv:2609.23997"
+      ],
+      "reason": "一次要旨はマルチロボット協調用の通信・行動方策学習と実演評価であり、LLM推論資源や推論レイテンシの改善を検証していない。",
+      "first_checked_at": "2026-10-06T19:07:57+00:00",
+      "last_checked_at": "2026-10-06T19:07:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "RoboTalk: Learning Multi-Robot Communication and Coordination from Multimodal Demonstrations"
+    },
+    "arXiv:2609.33181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33181",
+      "identity_tokens": [
+        "arXiv:2609.33181"
+      ],
+      "reason": "自己生成CoTを使ったオンライン方策蒸留の訓練研究で、推論時コスト改善は示さない。",
+      "first_checked_at": "2026-10-06T19:07:58+00:00",
+      "last_checked_at": "2026-10-06T19:07:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "SeOPD: Self-Evolving LLMs via Online Policy Distillation from Self-Generated Chain-of-Thought"
+    },
+    "arXiv:2609.33467": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33467",
+      "identity_tokens": [
+        "arXiv:2609.33467"
+      ],
+      "reason": "安価なverifierと誤った報酬に対するLLM post-training頑健性を研究し、配備時の推論効率改善ではない。",
+      "first_checked_at": "2026-10-06T19:07:58+00:00",
+      "last_checked_at": "2026-10-06T19:07:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "A Cheap Verifier is Good Enough: LLM Post-training is Robust to Erroneous Rewards"
+    },
+    "arXiv:2609.33492": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33492",
+      "identity_tokens": [
+        "arXiv:2609.33492"
+      ],
+      "reason": "人間活動認識の連合マルチモーダル学習で、対象技術や推論効率との直接関係がない。",
+      "first_checked_at": "2026-10-06T19:07:58+00:00",
+      "last_checked_at": "2026-10-06T19:07:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "FedMHAR: Federated Multimodal Human Activity Recognition using Multi-Agent Reinforcement Learning"
+    },
+    "arXiv:2609.33541": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33541",
+      "identity_tokens": [
+        "arXiv:2609.33541"
+      ],
+      "reason": "多粒子Oja流の解析でself-attentionとの数学的接点はあるが、LLM推論実装・効率結果はない。",
+      "first_checked_at": "2026-10-06T19:07:58+00:00",
+      "last_checked_at": "2026-10-06T19:07:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "An Analytical Framework for a Multi-Particle Oja Flow"
+    },
+    "arXiv:2609.33691": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33691",
+      "identity_tokens": [
+        "arXiv:2609.33691"
+      ],
+      "reason": "古典文献と翻訳の対応付けworkflow比較で、推論時間/メモリ/費用改善が目的ではない。",
+      "first_checked_at": "2026-10-06T19:07:59+00:00",
+      "last_checked_at": "2026-10-06T19:07:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "title": "When Do Agents Help? Embedding, LLM and Agentic Alignment of Classical Texts and Their Translations"
+    },
+    "arXiv:2609.35879": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35879",
+      "identity_tokens": [
+        "arXiv:2609.35879"
+      ],
+      "reason": "情報発見能力を測るbenchmarkで、推論実行最適化を提案しない。",
+      "first_checked_at": "2026-10-06T19:07:59+00:00",
+      "last_checked_at": "2026-10-06T19:07:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "CruxBench: A Benchmark of Information Discovery"
+    },
+    "arXiv:2609.31788": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31788",
+      "identity_tokens": [
+        "arXiv:2609.31788"
+      ],
+      "reason": "CTレポート精度向上が中心。蒸留モデルは追加推論処理不要とするが、既存構成より推論資源を減らした測定はない。",
+      "first_checked_at": "2026-10-06T19:08:00+00:00",
+      "last_checked_at": "2026-10-06T19:08:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "SelfCue: Making a 3D CT Report Generator Say What It Already Knows"
+    },
+    "arXiv:2609.32035": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32035",
+      "identity_tokens": [
+        "arXiv:2609.32035"
+      ],
+      "reason": "reasoning/self-consistencyの誤り挙動を分析し、推論コスト削減手法を示さない。",
+      "first_checked_at": "2026-10-06T19:08:00+00:00",
+      "last_checked_at": "2026-10-06T19:08:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Reasoning Concentrates Errors, and Self-Consistency Never Notices"
     }
   }
 }

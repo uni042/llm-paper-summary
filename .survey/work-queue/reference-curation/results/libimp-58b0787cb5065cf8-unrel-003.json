@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58b0787cb5065cf8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.38058",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.38058",
+    "identity_tokens": [
+      "arXiv:2609.38058"
+    ],
+    "reason": "本文は複数の時系列基盤モデルの予測を軽量潜在状態で統合する予測精度研究。LLM推論コストの改善ではない。",
+    "first_checked_at": "2026-10-06T19:07:48+00:00",
+    "last_checked_at": "2026-10-06T19:07:48+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+    ],
+    "title": "Latent Inference-Time Guidance of Time Series Foundation Models"
+  },
+  "processed_at": "2026-10-06T19:07:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58b0787cb506",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

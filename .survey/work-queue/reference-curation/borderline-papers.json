@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T18:49:07+00:00",
-  "record_count": 3712,
+  "updated_at": "2026-10-06T19:07:59+00:00",
+  "record_count": 3719,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -56773,6 +56773,111 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CoTeach-CLIP: Cross-modal collaborative teachers for zero-shot point cloud recognition"
+    },
+    "arXiv:2609.33885": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33885",
+      "identity_tokens": [
+        "arXiv:2609.33885"
+      ],
+      "reason": "receiver別の誤解を予測しメッセージ修正、費用に見合う時だけ問い合わせる。本文は解釈失敗44%減を示す一方、実測は選択式receiver理解・合成agent contextで、LLM inference latency/serving cost改善ではない。",
+      "first_checked_at": "2026-10-06T19:07:43+00:00",
+      "last_checked_at": "2026-10-06T19:07:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Prospective Interpretation Risk: Principled Communication Control Between LLMs"
+    },
+    "DOI:10.15439/2026f9874": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.15439/2026f9874",
+      "identity_tokens": [
+        "DOI:10.15439/2026f9874"
+      ],
+      "reason": "指定DOIのpublisher landingを直接開いたがbrowser取得不能。題名はPolish LLMのRAG評価で効率最適化でない可能性が高いが要旨未確認のためborderline。",
+      "first_checked_at": "2026-10-06T19:07:49+00:00",
+      "last_checked_at": "2026-10-06T19:07:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Re-evaluating Polish LLMs in RAG: The Evolution of Bielik and PLLuM and the Limits of Open-Source Evaluators"
+    },
+    "DOI:10.1109/tmc.2026.3688699": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2026.3688699",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3688699"
+      ],
+      "reason": "IEEE DOI一次landingを直接開いたがbrowser取得不能。書誌題名からRF fingerprint identification研究で関連は弱そうだが、primary abstract未確認のためborderlineに保持。",
+      "first_checked_at": "2026-10-06T19:07:50+00:00",
+      "last_checked_at": "2026-10-06T19:07:50+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Generalized Category Discovery in Radio Frequency Fingerprint Identification: An End-to-End Approach With Signal-Augmented Entropy Regularization"
+    },
+    "DOI:10.64898/2026.09.30.755565": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.09.30.755565",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.30.755565"
+      ],
+      "reason": "提示bioRxiv DOIとcandidate abstract/full URLを直接取得できなかった。cache要旨は神経集団系列working memoryを示すが一次現行確認不能のためborderline。",
+      "first_checked_at": "2026-10-06T19:07:50+00:00",
+      "last_checked_at": "2026-10-06T19:07:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Attractor dynamics underlie sequence working memory in data-constrained recurrent neural networks"
+    },
+    "DOI:10.3390/app16199496": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/app16199496",
+      "identity_tokens": [
+        "DOI:10.3390/app16199496"
+      ],
+      "reason": "一次資料から要旨を取得できず内容の一次確認ができないため、関連なしとは確定せず保留する。",
+      "first_checked_at": "2026-10-06T19:07:54+00:00",
+      "last_checked_at": "2026-10-06T19:07:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Document-Level Claim Extraction and Decontextualization Method Based on Large Language Models"
+    },
+    "arXiv:2609.32802": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32802",
+      "identity_tokens": [
+        "arXiv:2609.32802"
+      ],
+      "reason": "障害時pipeline復旧の比較。正常時の分解系は直接1 callより確実に良くならず、re-groundingは+0.394 retentionに+59.8 token/item。pipelineコストと接点はあるが主題は障害復旧精度で、効率改善法ではない。",
+      "first_checked_at": "2026-10-06T19:07:59+00:00",
+      "last_checked_at": "2026-10-06T19:07:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Re-derivability Decides What a Staged Agent Pipeline Recovers After an Upstream Fault"
+    },
+    "arXiv:2609.32825": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32825",
+      "identity_tokens": [
+        "arXiv:2609.32825"
+      ],
+      "reason": "stage間情報損失を評価しre-groundingで精度回復するが、総token中央値1.17倍となりcompute-matched対照もない。pipeline設計との接点はあるが改善されたinference効率の証拠ではない。",
+      "first_checked_at": "2026-10-06T19:07:59+00:00",
+      "last_checked_at": "2026-10-06T19:07:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Decomposition Tax: LLM Pipelines Lose Up to 40 Accuracy Points at Their Own Interfaces"
     }
   }
 }
