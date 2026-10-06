@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r47-screen-01-part-05-e51f7052a2ad",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.08917",
+      "identity_tokens": [
+        "arXiv:2511.08917"
+      ],
+      "title": "\"It's trained by non-disabled people\": Evaluating How Image Quality Affects Product Captioning with Vision-Language Models",
+      "reason": "Evaluates product-caption quality under image degradation; task evaluation, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.08917",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.07105",
+      "identity_tokens": [
+        "arXiv:2202.07105"
+      ],
+      "title": "A Survey on Model Compression and Acceleration for Pretrained Language Models",
+      "reason": "Useful background taxonomy, but low novelty/currentness for this screening batch.",
+      "source_url": "https://arxiv.org/abs/2202.07105",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.13016",
+      "identity_tokens": [
+        "arXiv:2205.13016"
+      ],
+      "title": "BiT: Robustly Binarized Multi-distilled Transformer",
+      "reason": "Relevant compression lineage but older encoder-only evidence is weak for current LLM inference follow-up.",
+      "source_url": "https://arxiv.org/abs/2205.13016",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24974",
+      "identity_tokens": [
+        "arXiv:2609.24974"
+      ],
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "reason": "Harness distillation for agent scaffolding; no concrete inference resource reduction.",
+      "source_url": "https://arxiv.org/abs/2609.24974",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20290",
+      "identity_tokens": [
+        "arXiv:2608.20290"
+      ],
+      "title": "Phantom Gains: Auditing Self-Improvement Against a Measured Null",
+      "reason": "Audits self-improvement against a null; no runtime optimization.",
+      "source_url": "https://arxiv.org/abs/2608.20290",
+      "first_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "last_checked_at": "2026-10-06T06:27:47.542490+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    }
+  ]
+}
