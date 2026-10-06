@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-256a86ccd73aec5f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.26049",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.26049",
+    "identity_tokens": [
+      "arXiv:2603.26049"
+    ],
+    "reason": "Context- and gaze-guided vision-language pretraining is evaluated on chest X-ray tasks. It improves medical multimodal representation rather than LLM deployment efficiency; quantization linkage is incidental.",
+    "first_checked_at": "2026-10-06T14:21:59+00:00",
+    "last_checked_at": "2026-10-06T14:21:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "Seeing Like Radiologists: Context- and Gaze-Guided Vision-Language Pretraining for Chest X-rays"
+  },
+  "processed_at": "2026-10-06T14:21:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-256a86ccd73a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

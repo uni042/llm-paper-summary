@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17d22ce0036fc5aa-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.24110",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.24110",
+    "identity_tokens": [
+      "arXiv:2604.24110"
+    ],
+    "reason": "Useful deployed latency/cost measurements, but no proposed inference optimization; retain for systems context.",
+    "first_checked_at": "2026-10-06T14:21:58+00:00",
+    "last_checked_at": "2026-10-06T14:21:58+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Latency and Cost of Multi-Agent Intelligent Tutoring at Scale"
+  },
+  "processed_at": "2026-10-06T14:21:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17d22ce0036f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
