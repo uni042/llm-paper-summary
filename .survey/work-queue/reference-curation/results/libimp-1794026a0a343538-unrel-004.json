@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1794026a0a343538-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.13154",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.13154",
+    "identity_tokens": [
+      "arXiv:2204.13154"
+    ],
+    "reason": "attention機構の歴史と多様なtaskへの展開を整理する一般review。LLM推論効率・serving・memory最適化を中心に扱わない。",
+    "first_checked_at": "2026-10-06T20:50:56+00:00",
+    "last_checked_at": "2026-10-06T20:50:56+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+    ],
+    "title": "Attention Mechanism in Neural Networks: Where it Comes and Where it Goes"
+  },
+  "processed_at": "2026-10-06T20:50:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1794026a0a34",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

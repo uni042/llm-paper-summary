@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa9e2cfa8711c4a1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.16067",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.16067",
+    "identity_tokens": [
+      "arXiv:2604.16067"
+    ],
+    "reason": "arXiv本文はrobotic VLA modelのknowledge-preserving fine-tuningにおけるgradient isolationを扱う。主寄与はtraining中の忘却抑制であり、LLM inference efficiencyではない。",
+    "first_checked_at": "2026-10-06T20:51:10+00:00",
+    "last_checked_at": "2026-10-06T20:51:10+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "AEGIS: Anchor-Enforced Gradient Isolation for Knowledge-Preserving Vision-Language-Action Fine-Tuning"
+  },
+  "processed_at": "2026-10-06T20:51:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa9e2cfa8711",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
