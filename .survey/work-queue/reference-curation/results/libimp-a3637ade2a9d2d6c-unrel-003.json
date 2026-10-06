@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3637ade2a9d2d6c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.22556",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.22556",
+    "identity_tokens": [
+      "arXiv:2605.22556"
+    ],
+    "reason": "The paper proposes a compact spatially adaptive implicit neural representation for digital elevation terrain tiles, evaluated on terrain reconstruction and gradient fidelity. It does not concern language models or LLM inference/serving.",
+    "first_checked_at": "2026-10-06T20:36:06+00:00",
+    "last_checked_at": "2026-10-06T20:36:06+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "ImplicitTerrainV2: Wavelet-Guided Spatially Adaptive Neural Terrain Representation"
+  },
+  "processed_at": "2026-10-06T20:36:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3637ade2a9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

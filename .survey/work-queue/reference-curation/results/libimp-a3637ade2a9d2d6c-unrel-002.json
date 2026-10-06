@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3637ade2a9d2d6c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.22355",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.22355",
+    "identity_tokens": [
+      "arXiv:2605.22355"
+    ],
+    "reason": "The full text presents a dataset and benchmark for map-free public-transit route generation with text models. Its contribution is task/data/evaluation quality, not an inference efficiency or serving mechanism; the linked lineages do not establish a technical systems connection.",
+    "first_checked_at": "2026-10-06T20:36:05+00:00",
+    "last_checked_at": "2026-10-06T20:36:05+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "TransitLM: A Large-Scale Dataset and Benchmark for Map-Free Transit Route Generation"
+  },
+  "processed_at": "2026-10-06T20:36:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3637ade2a9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

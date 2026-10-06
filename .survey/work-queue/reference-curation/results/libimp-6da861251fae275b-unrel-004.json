@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6da861251fae275b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3389/fmed.2026.1793962",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3389/fmed.2026.1793962",
+    "identity_tokens": [
+      "DOI:10.3389/fmed.2026.1793962"
+    ],
+    "reason": "The primary Frontiers full text studies deep-learning frame synthesis for digital-subtraction angiography to reduce imaging radiation dose, with clinical image-quality and diagnostic evaluation. It is medical imaging; its GPU speed result is not LLM inference optimization.",
+    "first_checked_at": "2026-10-06T20:36:00+00:00",
+    "last_checked_at": "2026-10-06T20:36:00+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Deep learning-based frame synthesis enables radiation dose reduction in digital subtraction angiography imaging: a multicenter study"
+  },
+  "processed_at": "2026-10-06T20:36:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6da861251fae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
