@@ -35,10 +35,15 @@
   "selection_reason": "Llama-3.1-8Bを核にspeech encoder/adaptor/LLM/streaming speech decoderを統合し、textとspeechを同時生成する。非自己回帰streaming decoderとchunked playbackでresponse latencyを最短226 msまで抑え、real-time speech LLM推論latencyを直接扱うため対象内。",
   "semantic_scholar_id": "218ddd5ca9e959c91ad6b48a379397e4cb0d47d8",
   "source_url": "https://arxiv.org/abs/2409.06666",
-  "status": "ready",
+  "status": "superseded",
   "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-06T13:03:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+  "represented_canonical_id": "arXiv:2409.06666",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

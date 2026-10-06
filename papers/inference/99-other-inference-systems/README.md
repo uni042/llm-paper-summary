@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（344本）
+## 自動生成の論文一覧（347本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1112,6 +1112,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   LongVUは、時間方向と空間方向の冗長性を同じ規則で一律に削るのではなく、三段階で別々に判定して視覚トークンを圧縮する。
 
+- **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
+  実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：1  
+  音声対話をASR→LLM→TTSの直列パイプラインで構成すると、文字起こしと音声合成の待ち時間が累積する。LLaMA-Omniは音声表現をLLMへ直接入力し、LLMのテキスト出力と音声unit生成を同時に進めることで低遅延化する。
+
 - **2024-02 · [Efficient Prompt Caching via Embedding Similarity](2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMサービスでは、過去と完全一致するプロンプトなら応答をキャッシュから返してモデル推論を省ける。しかし実際には「SATはいつ2400点から1600点へ変わったか」のような表現違いを再利用したい一方、語彙が非常に似ていても意味が逆の質問へ同じ応答を返してはいけない。未調整E5の最良46.0%に対し、BCE微調整は54.0%、SLDは52.4%に達する。
@@ -1290,6 +1294,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本研究はこの設計空間をブロックデータ表現（Block Data Representation; BDR）として整理し、その中から共有microexponent（MX）形式を提案する。
 
+- **2023-10 · [A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration](2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数LLMエージェントの協調は単一実行より精度を上げられるが、全タスクへ同じ人数・同じ通信グラフを使うと不要なAPI呼出しが増える。DyLANはタスクに応じて参加エージェントを選び、問題解決中の通信構造も動的に変える。
+
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
@@ -1315,6 +1323,10 @@
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
   UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応型 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
+
+- **2021-12 · [LongT5: Efficient Text-To-Text Transformer for Long Sequences](2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md)**  
+  実装：[✓](https://github.com/google-research/longt5) ・ リポジトリ内被引用：2  
+  LongT5はT5のテキスト-to-テキスト interfaceを保ったまま、encoder 注意機構を長系列向けへ変更し、モデル サイズと入力 lengthを同時にscaleする。
 
 ### 6年前（2020-11〜2021-10）
 
