@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T16:10:04+00:00",
-  "record_count": 8801,
+  "updated_at": "2026-10-06T16:14:38+00:00",
+  "record_count": 8827,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -126259,6 +126259,370 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Triton-Sanitizer: A Fast and Device-Agnostic Memory Sanitizer for Triton with Rich Diagnostic Context"
+    },
+    "arXiv:2603.00828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00828",
+      "identity_tokens": [
+        "arXiv:2603.00828"
+      ],
+      "reason": "The paper applies random-walk Transformer gating to mixture-of-experts for mesh analysis/classification. Its evaluations concern mesh classes and expert complementarity, not language models or serving efficiency.",
+      "first_checked_at": "2026-10-06T16:14:27+00:00",
+      "last_checked_at": "2026-10-06T16:14:27+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "MME: Mixture of Mesh Experts with Random Walk Transformer Gating"
+    },
+    "arXiv:2602.04412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04412",
+      "identity_tokens": [
+        "arXiv:2602.04412"
+      ],
+      "reason": "HoRD distills robust simulated humanoid-control behavior into a student policy for sparse commands. Its expert routing/distillation context concerns robot control, not LLM model routing or inference serving.",
+      "first_checked_at": "2026-10-06T16:14:28+00:00",
+      "last_checked_at": "2026-10-06T16:14:28+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "HoRD: Robust Humanoid Control via History-Conditioned Reinforcement Learning and Online Distillation"
+    },
+    "arXiv:2602.04489": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04489",
+      "identity_tokens": [
+        "arXiv:2602.04489"
+      ],
+      "reason": "Psycholinguistic model of human garden-path processing that uses LLM surprisal as a predictor; not an LLM inference method.",
+      "first_checked_at": "2026-10-06T16:14:28+00:00",
+      "last_checked_at": "2026-10-06T16:14:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "LLM surprisal is necessary but not sufficient to capture English garden-path effects: Evidence from joint latent modeling of reading paradigms"
+    },
+    "arXiv:2602.18131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18131",
+      "identity_tokens": [
+        "arXiv:2602.18131"
+      ],
+      "reason": "Temporal predictive coding studies online recurrent learning, with neuromorphic/edge motivation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T16:14:29+00:00",
+      "last_checked_at": "2026-10-06T16:14:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Learning Long-Range Dependencies with Temporal Predictive Coding"
+    },
+    "DOI:10.3389/fonc.2026.1734345": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fonc.2026.1734345",
+      "identity_tokens": [
+        "DOI:10.3389/fonc.2026.1734345"
+      ],
+      "reason": "The full Frontiers paper proposes spectral boundary enhancement and function-specialized MoE for medical polyp segmentation, reporting segmentation scores and 15.04 FPS. Its MoE is task-specific image segmentation; it has no language-model inference/serving connection.",
+      "first_checked_at": "2026-10-06T16:14:30+00:00",
+      "last_checked_at": "2026-10-06T16:14:30+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "SpectraNet: a novel model for polyp segmentation leveraging a spectral-guided mixture of functional experts"
+    },
+    "arXiv:2601.22573": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22573",
+      "identity_tokens": [
+        "arXiv:2601.22573"
+      ],
+      "reason": "DELNet stores and reuses experts for continual image-weather restoration and reports PSNR improvements across restoration datasets. Its expert routing is a vision-restoration task, with no language-model serving or inference-cost result.",
+      "first_checked_at": "2026-10-06T16:14:30+00:00",
+      "last_checked_at": "2026-10-06T16:14:30+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "DELNet: Continuous All-in-One Weather Removal via Dynamic Expert Library"
+    },
+    "arXiv:2601.21266": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21266",
+      "identity_tokens": [
+        "arXiv:2601.21266"
+      ],
+      "reason": "The paper compares Transformer, RNN and SSM neural estimators against classical filters for nonlinear state estimation. It is a control/filtering evaluation and does not propose or benchmark LLM inference systems.",
+      "first_checked_at": "2026-10-06T16:14:31+00:00",
+      "last_checked_at": "2026-10-06T16:14:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Model-Free Neural Filtering: A Comparison with Classical Filters in Nonlinear Systems"
+    },
+    "arXiv:2603.11304": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11304",
+      "identity_tokens": [
+        "arXiv:2603.11304"
+      ],
+      "reason": "The paper proves worst-case guarantees for low-rank PCA/matrix-completion estimators and evaluates simulations and environmental applications. It concerns robust statistics across domains, not neural model compression or LLM inference.",
+      "first_checked_at": "2026-10-06T16:14:31+00:00",
+      "last_checked_at": "2026-10-06T16:14:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Worst-case low-rank approximations"
+    },
+    "DOI:10.1007/s40747-026-02239-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s40747-026-02239-x",
+      "identity_tokens": [
+        "DOI:10.1007/s40747-026-02239-x"
+      ],
+      "reason": "The publisher full text describes PoseRWGCN: RWKV temporal stream plus GCN spatial stream for 3D human-pose sequences, with causal and bidirectional modes; on two pose datasets it reports 62.1% fewer FLOPs than its baseline. The evaluation is task-specific pose estimation and supplies no language-model result or transferable LLM serving test.",
+      "first_checked_at": "2026-10-06T16:14:31+00:00",
+      "last_checked_at": "2026-10-06T16:14:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "PoseRWGCN: an attention-free dual-stream RWKV-GCN architecture for real-time 3D human pose estimation"
+    },
+    "arXiv:2603.04648": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.04648",
+      "identity_tokens": [
+        "arXiv:2603.04648"
+      ],
+      "reason": "PPO robustness to sensor failures in control policies; not language-model inference or model serving.",
+      "first_checked_at": "2026-10-06T16:14:32+00:00",
+      "last_checked_at": "2026-10-06T16:14:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "When Sensors Fail: Temporal Sequence Models for Robust PPO under Sensor Drift"
+    },
+    "arXiv:2602.02685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02685",
+      "identity_tokens": [
+        "arXiv:2602.02685"
+      ],
+      "reason": "The paper studies decentralized diffusion-model denoising experts and finds sparse Top-2 routing gives better generation quality than full expert aggregation. Its domain is image diffusion and expert/data alignment, not LLM serving or inference cost.",
+      "first_checked_at": "2026-10-06T16:14:32+00:00",
+      "last_checked_at": "2026-10-06T16:14:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Expert-Data Alignment Governs Generation Quality in Decentralized Diffusion Models"
+    },
+    "arXiv:2602.02729": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02729",
+      "identity_tokens": [
+        "arXiv:2602.02729"
+      ],
+      "reason": "CAPS combines clock weighting, prefix-product recurrence and softmax paths for time-series forecasting and reports linear-complexity results on temporal forecasting benchmarks. The evaluated task is time series, with no language-model inference or serving evaluation.",
+      "first_checked_at": "2026-10-06T16:14:32+00:00",
+      "last_checked_at": "2026-10-06T16:14:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "CAPS: Unifying Attention, Recurrence, and Alignment in Transformer-based Time Series Forecasting"
+    },
+    "arXiv:2602.18450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18450",
+      "identity_tokens": [
+        "arXiv:2602.18450"
+      ],
+      "reason": "The paper models semantic-state convergence in a closed multi-agent linguistic system using manifold projection dynamics. Its claims are theoretical/synthetic convergence properties, not a practical LLM inference, memory, or serving optimization.",
+      "first_checked_at": "2026-10-06T16:14:32+00:00",
+      "last_checked_at": "2026-10-06T16:14:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Asymptotic Semantic Collapse in Hierarchical Optimization"
+    },
+    "DOI:10.1007/s00371-026-04353-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00371-026-04353-w",
+      "identity_tokens": [
+        "DOI:10.1007/s00371-026-04353-w"
+      ],
+      "reason": "The publisher full text describes a contextual-anchor encoder and frame-level global aggregator for video captioning, evaluated on MSVD and MSR-VTT. It reports caption-quality gains; it does not address sparse-attention efficiency, long-context language models, or serving.",
+      "first_checked_at": "2026-10-06T16:14:33+00:00",
+      "last_checked_at": "2026-10-06T16:14:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Enhancing video captioning with contextual anchor-guided semantic modeling"
+    },
+    "DOI:10.1109/tpami.2026.3669168": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2026.3669168",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3669168"
+      ],
+      "reason": "Robust random-feature regression theory; no LLM inference or target model-serving mechanism.",
+      "first_checked_at": "2026-10-06T16:14:33+00:00",
+      "last_checked_at": "2026-10-06T16:14:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Generalization Properties of Robust Learning With Random Features"
+    },
+    "arXiv:2603.01305": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01305",
+      "identity_tokens": [
+        "arXiv:2603.01305"
+      ],
+      "reason": "Zero-shot visual anomaly segmentation with large multimodal models; no inference efficiency contribution.",
+      "first_checked_at": "2026-10-06T16:14:34+00:00",
+      "last_checked_at": "2026-10-06T16:14:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "AG-VAS: Anchor-Guided Zero-Shot Visual Anomaly Segmentation with Large Multimodal Models"
+    },
+    "DOI:10.1109/tcsvt.2025.3602826": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3602826",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3602826"
+      ],
+      "reason": "TCFF-Adapter improves few-shot CLIP image classification through cross-modal feature fusion; no LLM inference or serving optimization is presented.",
+      "first_checked_at": "2026-10-06T16:14:34+00:00",
+      "last_checked_at": "2026-10-06T16:14:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "TCFF-Adapter: Text-Driven Adaption of CLIP for Few-Shot Image Classification"
+    },
+    "DOI:10.3390/drones10020102": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/drones10020102",
+      "identity_tokens": [
+        "DOI:10.3390/drones10020102"
+      ],
+      "reason": "LF-SSM targets real-time UAV object tracking on edge platforms. It is an SSM efficiency application, but not a language-model inference or serving contribution.",
+      "first_checked_at": "2026-10-06T16:14:35+00:00",
+      "last_checked_at": "2026-10-06T16:14:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "LF-SSM: Lightweight HiPPO-Free State Space Model for Real-Time UAV Tracking"
+    },
+    "DOI:10.1109/tai.2025.3592174": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tai.2025.3592174",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2025.3592174"
+      ],
+      "reason": "The paper improves sample efficiency for reinforcement-learning world models, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T16:14:35+00:00",
+      "last_checked_at": "2026-10-06T16:14:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Balanced Sampling and Reusing Imaginary Data for World Models in Reinforcement Learning"
+    },
+    "DOI:10.1109/tcsvt.2025.3600922": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3600922",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3600922"
+      ],
+      "reason": "This work reconstructs dynamic 4D CT with neural fields; it is a medical-imaging method, not model-serving efficiency.",
+      "first_checked_at": "2026-10-06T16:14:36+00:00",
+      "last_checked_at": "2026-10-06T16:14:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Non-Local Guided Neural Fields for 4D CT Reconstruction"
+    },
+    "arXiv:2602.21143": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21143",
+      "identity_tokens": [
+        "arXiv:2602.21143"
+      ],
+      "reason": "The paper introduces and evaluates a benchmark for LLM agents synthesizing information across sources. It measures agent task ability rather than proposing an inference optimization or serving mechanism.",
+      "first_checked_at": "2026-10-06T16:14:36+00:00",
+      "last_checked_at": "2026-10-06T16:14:36+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "A Benchmark for Deep Information Synthesis"
+    },
+    "DOI:10.1109/tnnls.2026.3662308": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tnnls.2026.3662308",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2026.3662308"
+      ],
+      "reason": "Sequence-model benchmark for EMG-based human-machine control; not language-model inference.",
+      "first_checked_at": "2026-10-06T16:14:36+00:00",
+      "last_checked_at": "2026-10-06T16:14:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Beyond Subject-Specific Models in Dynamical Human--Machine Interaction: Benchmarking and Optimization Strategies"
+    },
+    "arXiv:2602.18857": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18857",
+      "identity_tokens": [
+        "arXiv:2602.18857"
+      ],
+      "reason": "VariBASed develops Bayesian belief approximation and sequential Monte-Carlo planning for deep reinforcement learning. Its reported target is decision-making/data efficiency in control, not LLM inference or serving; the paper also depends on approximate value functions/importance weights.",
+      "first_checked_at": "2026-10-06T16:14:37+00:00",
+      "last_checked_at": "2026-10-06T16:14:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "VariBASed: Variational Bayes-Adaptive Sequential Monte-Carlo Planning for Deep Reinforcement Learning"
+    },
+    "arXiv:2602.10378": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10378",
+      "identity_tokens": [
+        "arXiv:2602.10378"
+      ],
+      "reason": "Flash-SD-KDE reorganizes score-debiased kernel-density computations into matrix multiplication and reports up to 47x speedup on KDE workloads. The application is statistical density estimation, not neural-network inference or serving.",
+      "first_checked_at": "2026-10-06T16:14:37+00:00",
+      "last_checked_at": "2026-10-06T16:14:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Flash-SD-KDE: Accelerating SD-KDE with Tensor Cores"
+    },
+    "arXiv:2602.08190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08190",
+      "identity_tokens": [
+        "arXiv:2602.08190"
+      ],
+      "reason": "ZipFlow schedules compressed CPU-to-GPU data movement for columnar Lakehouse analytics and evaluates database-query execution. It does not move model weights/KV state or optimize LLM inference; its linked inference-systems relation is not substantiated by the paper.",
+      "first_checked_at": "2026-10-06T16:14:37+00:00",
+      "last_checked_at": "2026-10-06T16:14:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "ZipFlow: a Compiler-based Framework to Unleash Compressed Data Movement for Modern GPUs"
+    },
+    "arXiv:2602.08885": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08885",
+      "identity_tokens": [
+        "arXiv:2602.08885"
+      ],
+      "reason": "SimpliPy accelerates symbolic-expression simplification, enabling amortized symbolic-regression training/inference, with a reported 100x speedup over SymPy and test-time compute comparisons. This is a specialized scientific symbolic-regression task, not language-model inference or the linked sparse-attention lineage.",
+      "first_checked_at": "2026-10-06T16:14:38+00:00",
+      "last_checked_at": "2026-10-06T16:14:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Breaking the Simplification Bottleneck in Amortized Neural Symbolic Regression"
     }
   }
 }

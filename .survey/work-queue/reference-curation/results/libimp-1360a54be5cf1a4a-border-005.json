@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1360a54be5cf1a4a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.10195",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.10195",
+    "identity_tokens": [
+      "arXiv:2602.10195"
+    ],
+    "reason": "Versor replaces standard linear sequence operations with geometric-algebra transforms and reports large parameter-count reduction plus results on physical dynamics, reasoning, and WikiText-103. It is an architecture candidate with no serving latency/throughput evaluation and mixed non-language tasks; relevance to efficient LLM inference remains unresolved.",
+    "first_checked_at": "2026-10-06T16:14:28+00:00",
+    "last_checked_at": "2026-10-06T16:14:28+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Versor: A Geometric Sequence Architecture"
+  },
+  "processed_at": "2026-10-06T16:14:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1360a54be5cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
