@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r136-screen-01-part-08-8170a774eb5c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TIP.2026.3728620",
+      "identity_tokens": [
+        "DOI:10.1109/TIP.2026.3728620"
+      ],
+      "title": "EScAPe: Eliminate Semantic Ambiguity in Prostate MRI Segmentation in Benign Prostatic Hyperplasia",
+      "reason": "一次DOI/publisher全文を取得できなかった。題名はprostate MRI segmentationのsemantic ambiguity対処で、LLM推論効率の具体的接点を一次本文で確認できないためborderline。",
+      "source_url": "https://doi.org/10.1109/TIP.2026.3728620",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.08.20.746066",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.20.746066"
+      ],
+      "title": "A reusable neural approach to recombination mapping for model and non-model species",
+      "reason": "一次DOI/preprint全文を取得できなかった。題名はrecombination mappingのneural methodで、SSM関連candidateとして抽出されているがLLM inferenceとの接続を一次本文で判断できないためborderline。",
+      "source_url": "https://doi.org/10.64898/2026.08.20.746066",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02344",
+      "identity_tokens": [
+        "arXiv:2609.02344"
+      ],
+      "title": "Subcellularly Resolved Single-Cell Embedding Learning with Transcriptomic data, Protein Structure and Localization Information",
+      "reason": "本文はtranscriptomic・protein structure・localization情報を統合するsingle-cell embedding学習である。クロスattention/embeddingの用途は生物学的細胞型分類で、LLM inference効率の手法ではない。",
+      "source_url": "https://arxiv.org/abs/2609.02344",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02387",
+      "identity_tokens": [
+        "arXiv:2609.02387"
+      ],
+      "title": "Semantics-Guided Automatic Tensorization for Multiobjective Evolutionary Algorithms: A Multi-Agent Framework",
+      "reason": "一次arXiv abstractはmultiobjective evolutionary algorithms向けautomatic tensorization agent frameworkを評価する。LLM/LLM-serving推論効率との直接関係は示されない。",
+      "source_url": "https://arxiv.org/abs/2609.02387",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/jmse14171625",
+      "identity_tokens": [
+        "DOI:10.3390/jmse14171625"
+      ],
+      "title": "AquaMambaTrack: Reliability-First Mamba ReID for Underwater Fish Multi-Object Tracking",
+      "reason": "一次DOI/MDPI本文を取得できなかった。題名はunderwater fish tracking向けMamba ReIDであり、対象LLM serving効率との接続は不明。primary full text未確認なのでborderline。",
+      "source_url": "https://doi.org/10.3390/jmse14171625",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
