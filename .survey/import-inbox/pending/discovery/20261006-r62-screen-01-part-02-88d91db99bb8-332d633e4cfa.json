@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r62-screen-01-part-02-88d91db99bb8",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1201/9781003162810",
+      "identity_tokens": [
+        "DOI:10.1201/9781003162810"
+      ],
+      "title": "Low-Power Computer Vision",
+      "reason": "The primary full text was unavailable, so despite the title/abstract indicating a weak or unrelated application, the lineage connection cannot be ruled out on primary-body evidence.",
+      "source_url": "https://doi.org/10.1201/9781003162810",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3721145.3735111",
+      "identity_tokens": [
+        "DOI:10.1145/3721145.3735111"
+      ],
+      "title": "SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications",
+      "reason": "ACM full paper was not accessible. The abstract describes HBM-based processing-in-memory for sparse matrix-vector multiplication, a possible hardware primitive for the linked NPU-PIM LLM inference line; method and evaluated workloads cannot be verified from the primary body.",
+      "source_url": "https://doi.org/10.1145/3721145.3735111",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.15051",
+      "identity_tokens": [
+        "arXiv:2502.15051"
+      ],
+      "title": "Approximating Latent Manifolds in Neural Networks via Vanishing Ideals",
+      "reason": "The paper studies algebraic approximation of latent manifolds in neural networks using vanishing ideals. It is theoretical representation analysis and reports no inference efficiency or model compression contribution.",
+      "source_url": "https://arxiv.org/abs/2502.15051",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.06075",
+      "identity_tokens": [
+        "arXiv:2211.06075"
+      ],
+      "title": "Helping the Weak Makes You Strong: Simple Multi-Task Learning Improves Non-Autoregressive Translators",
+      "reason": "The work uses multi-task learning to strengthen non-autoregressive translation systems and improve generation quality. It inherits parallel decoding’s speed characteristics, but the contribution is training/quality rather than a direct inference-cost method.",
+      "source_url": "https://arxiv.org/abs/2211.06075",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSVT.2025.3550901",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2025.3550901"
+      ],
+      "title": "Event-Based Video Reconstruction Via Spatial–Temporal Heterogeneous Spiking Neural Network",
+      "reason": "IEEE publisher full text was unavailable. The article concerns event-based video reconstruction using spiking neural networks; its linked 1-bit LLM topic does not establish a transformer inference connection.",
+      "source_url": "https://doi.org/10.1109/TCSVT.2025.3550901",
+      "first_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "last_checked_at": "2026-10-06T08:18:50.663378+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    }
+  ]
+}
