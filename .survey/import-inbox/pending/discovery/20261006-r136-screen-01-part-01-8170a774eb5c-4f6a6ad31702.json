@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r136-screen-01-part-01-8170a774eb5c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fenrg.2026.1888547",
+      "identity_tokens": [
+        "DOI:10.3389/fenrg.2026.1888547"
+      ],
+      "title": "MAFD-NET: multi-head attention dynamic sampling fusion network for power tower detection in high-resolution remote sensing images",
+      "reason": "一次出版社本文でMAFD-NETの対象が送電鉄塔検出であり、YOLO11の検出精度・特徴融合を評価していると確認した。Mamba/attentionは視覚検出器の構成要素で、LLMの推論計算・メモリ・serving改善を扱わない。",
+      "source_url": "https://doi.org/10.3389/fenrg.2026.1888547",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10934",
+      "identity_tokens": [
+        "arXiv:2609.10934"
+      ],
+      "title": "Using Semantic Uncertainty to Estimate Transition Relevance in Turn-taking",
+      "reason": "一次arXiv abstractは対話turn-takingのsemantic uncertaintyを用いたTRP推定と認識精度比較を説明する。LLMはuncertainty score sourceであり、LLM自体の推論compute/memory/latency/serving改善は提案・評価しない。",
+      "source_url": "https://arxiv.org/abs/2609.10934",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11040",
+      "identity_tokens": [
+        "arXiv:2609.11040"
+      ],
+      "title": "Toward Interpretable Multimodal Fusion: Heat Conduction Modeling for Hyperspectral and LiDAR Joint Classification",
+      "reason": "本文はHSI-LiDAR分類向けのheat-conduction型sub-quadratic視覚融合で、LLM推論は評価していない。既存SSM系統との演算構造上の類似だけではLLMへの有効性が確定しないため、マルチモーダルLLM視覚encoderへの移植可能性は弱い接点としてborderlineに留める。",
+      "source_url": "https://arxiv.org/abs/2609.11040",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11081",
+      "identity_tokens": [
+        "arXiv:2609.11081"
+      ],
+      "title": "TailProp: content-adaptive light- and heavy-tailed propagation for vision",
+      "reason": "本文のO(N^1.5)は画像特徴map上のTail Propagation Operatorの計算であり、LLMや言語sequence推論の改善を示さない。視覚sequence operatorとしての接点はあるが、LLM/multimodal encoderへの移植と推論効果は未検証なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2609.11081",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11372",
+      "identity_tokens": [
+        "arXiv:2609.11372"
+      ],
+      "title": "RAMamba-Net: A Reliability-Aware and Mamba-Based Multimodal Fusion Network for Auditory Attention Detection",
+      "reason": "本文の対象はEEG/EOGから注意中の音声話者を推定する生体信号分類である。Mambaは時系列encoderに使われるが、LLM推論や言語servingの効率改善は提案・評価されない。",
+      "source_url": "https://arxiv.org/abs/2609.11372",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
