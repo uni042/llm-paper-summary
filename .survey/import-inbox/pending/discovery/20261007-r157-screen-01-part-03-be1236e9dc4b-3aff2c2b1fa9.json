@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r157-screen-01-part-03-be1236e9dc4b",
+  "reference_main_sha": "85ffc4e77bc345a0b91450e6a364175124d877b3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05079",
+      "identity_tokens": [
+        "arXiv:2402.05079"
+      ],
+      "title": "Mamba-UNet: UNet-Like Pure Visual Mamba for Medical Image Segmentation",
+      "reason": "Mamba-UNet targets medical-image segmentation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2402.05079",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.01694",
+      "identity_tokens": [
+        "arXiv:2307.01694"
+      ],
+      "title": "Spike-driven Transformer",
+      "reason": "Spiking-transformer energy efficiency is a plausible systems connection, but the architecture is neuromorphic and tested on vision rather than autoregressive LLMs.",
+      "source_url": "https://arxiv.org/abs/2307.01694",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1807.07281",
+      "identity_tokens": [
+        "arXiv:1807.07281"
+      ],
+      "title": "ClariNet: Parallel Wave Generation in End-to-End Text-to-Speech",
+      "reason": "ClariNet addresses parallel waveform generation for text-to-speech, not LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/1807.07281",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13016",
+      "identity_tokens": [
+        "arXiv:2604.13016"
+      ],
+      "title": "Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe",
+      "reason": "On-policy distillation of LLMs is a post-training/training method, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.13016",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:c90a5375329ea537d4ac266297b1c5cca89af19b",
+      "identity_tokens": [
+        "SemanticScholar:c90a5375329ea537d4ac266297b1c5cca89af19b"
+      ],
+      "title": "ATP: In-network Aggregation for Multi-tenant Learning",
+      "reason": "Official USENIX article describes ATP as in-network aggregation for multi-tenant distributed DNN training; gains are training throughput, not inference.",
+      "source_url": "https://www.semanticscholar.org/paper/c90a5375329ea537d4ac266297b1c5cca89af19b",
+      "first_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "last_checked_at": "2026-10-06T23:17:51.379573+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ]
+    }
+  ]
+}
