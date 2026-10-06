@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r129-screen-01-part-02-3d9958ac6563",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TPDS.2024.3406420",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2024.3406420"
+      ],
+      "title": "A Multidimensional Communication Scheduling Method for Hybrid Parallel DNN Training",
+      "reason": "IEEE DOI/Xplore primary source could not be opened; secondary search metadata was not used as primary abstract evidence. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "source_url": "https://doi.org/10.1109/TPDS.2024.3406420",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3620665.3640393",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640393"
+      ],
+      "title": "CMC: Video Transformer Acceleration via CODEC Assisted Matrix Condensing",
+      "reason": "ACM DOI page returned 403 Forbidden; no author/ACM primary abstract or full text was retrievable. 題名/系統情報から接点を排除できず、未取得一次根拠を推測で補わずborderlineとする。",
+      "source_url": "https://doi.org/10.1145/3620665.3640393",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03380",
+      "identity_tokens": [
+        "arXiv:2404.03380"
+      ],
+      "title": "On the Theoretical Expressive Power and the Design Space of Higher-Order Graph Transformers",
+      "reason": "Graph-learning workloads only; no decoder LLM or LLM serving/memory connection is demonstrated.",
+      "source_url": "https://arxiv.org/abs/2404.03380",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.01067",
+      "identity_tokens": [
+        "arXiv:2404.01067"
+      ],
+      "title": "Exploring the Mystery of Influential Data for Mathematical Reasoning",
+      "reason": "Efficiency contribution is training-data/fine-tuning compute, not inference runtime; lineage overlap is training-resource only.",
+      "source_url": "https://arxiv.org/abs/2404.01067",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2024.123847",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2024.123847"
+      ],
+      "title": "CA-Captioner: A novel concentrated attention for image captioning",
+      "reason": "ScienceDirect primary preview supplied abstract but no accessible article full text; image-captioning attention is clear, while full-text system-efficiency details could not be checked. 題名/一次abstractから接点は否定できないためborderlineとする。",
+      "source_url": "https://doi.org/10.1016/j.eswa.2024.123847",
+      "first_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "last_checked_at": "2026-10-06T18:17:21.584750+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    }
+  ]
+}
