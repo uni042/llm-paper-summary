@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r142-screen-01-part-07-539096a0ad24",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24369",
+      "identity_tokens": [
+        "arXiv:2606.24369"
+      ],
+      "title": "Accelerating Disaggregated RL for Visual Generative LLMs with Diffusion-Based Parallelism and Trainer-Assisted Generation",
+      "reason": "Primary arXiv HTML page https://arxiv.org/html/2606.24369 returned an internal error; linked paper text unavailable.",
+      "source_url": "https://arxiv.org/abs/2606.24369",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25087",
+      "identity_tokens": [
+        "arXiv:2606.25087"
+      ],
+      "title": "Neural Network Quantization by Learning Low-Loss Subspaces",
+      "reason": "QLS is directly a weight-quantization method and is linked to AWQ, but the full paper does not test LLMs; transfer to LLM inference remains unestablished.",
+      "source_url": "https://arxiv.org/abs/2606.25087",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.21437/odyssey.2026-31",
+      "identity_tokens": [
+        "DOI:10.21437/odyssey.2026-31"
+      ],
+      "title": "LLM-Based Language Verification and Multimodal Ensemble for Spoken Language Recognition",
+      "reason": "DOI landing page https://doi.org/10.21437/odyssey.2026-31 was not accessible; linked paper text unavailable.",
+      "source_url": "https://doi.org/10.21437/odyssey.2026-31",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.23159",
+      "identity_tokens": [
+        "arXiv:2606.23159"
+      ],
+      "title": "General-Purpose Nonlinear Function Approximation via Linear Integrated Photonics",
+      "reason": "Primary arXiv HTML page https://arxiv.org/html/2606.23159 returned an internal error; cannot verify photonic inference acceleration relevance.",
+      "source_url": "https://arxiv.org/abs/2606.23159",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23332",
+      "identity_tokens": [
+        "arXiv:2606.23332"
+      ],
+      "title": "Don't Listen to Me: A Lightweight, Low-Latency Model for Own-Voice Cancellation in Far-Field Speech Enhancement",
+      "reason": "Primary arXiv paper is a low-latency speech-enhancement/own-voice-cancellation model, not an LLM or language-model serving method.",
+      "source_url": "https://arxiv.org/abs/2606.23332",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    }
+  ]
+}
