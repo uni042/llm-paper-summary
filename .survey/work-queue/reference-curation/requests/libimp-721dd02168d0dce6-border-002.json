@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-721dd02168d0dce6-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2406.16282",
+  "reason": "一次本文のApprox-BP/Memory-Sharing BPはactivation memoryを共有しfine-tuning peak memoryを削る訓練手法である。対象lineageはtraining offload/memoryで一定の関連性がある一方、推論時のKV/activation memoryやserving速度を扱わないためborderline。",
+  "title": "Reducing Fine-Tuning Memory Overhead by Approximate and Memory-Sharing Backpropagation",
+  "identity_tokens": [
+    "arXiv:2406.16282"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-721dd02168d0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e0cb1270298b3173-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2506.02813",
+  "reason": "本文を確認したところ、Mixture-of-Pathwaysは小規模の合成認知タスク/異種expertモデルでタスク経路形成を研究しており、MoE inference routing最適化ではない。linked lineageは関連するが、LLM/MoE servingでの実験はなく転用は未確立なのでborderlineに残す。",
+  "title": "Brain-Like Processing Pathways Form in Models With Heterogeneous Experts",
+  "identity_tokens": [
+    "arXiv:2506.02813"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0cb1270298b",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

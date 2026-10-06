@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e0cb1270298b3173-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2505.19089",
+  "reason": "本文のReCAPはMasked image generationの反復inferenceでfeatureを再利用する手法。cache/reuseの発想はKV/cache lineageへ転用余地がある一方、対象は画像生成MGMsであり、LLM KV-cacheやdecoder workloadではない。",
+  "title": "Plug-and-Play Context Feature Reuse for Efficient Masked Generation",
+  "identity_tokens": [
+    "arXiv:2505.19089"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0cb1270298b",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
