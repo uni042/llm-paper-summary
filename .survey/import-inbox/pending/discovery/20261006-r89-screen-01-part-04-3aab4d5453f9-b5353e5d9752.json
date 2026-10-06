@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r89-screen-01-part-04-3aab4d5453f9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2026.105130",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2026.105130"
+      ],
+      "title": "LLM-guided hybrid control and meta-optimization for multi-BESS voltage regulation in distribution networks",
+      "reason": "Input abstract is absent. Attempted ScienceDirect DOI/publisher primary source; web retrieval returned URL not accessible, so it cannot be excluded by title alone.",
+      "source_url": "https://doi.org/10.1016/j.aei.2026.105130",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3679735",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3679735"
+      ],
+      "title": "Efficient Transformer Models via Language-Aware Frequency-Based Vocabulary Pruning",
+      "reason": "Plausible adjacent model compression/LLM deployment topic, but primary full text was unavailable; no stronger inclusion claim is supported.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3679735",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746027.3758172",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3758172"
+      ],
+      "title": "RQ-Rec: Residual Quantized Hierarchical Preference Modeling for Cross-Domain Recommendation",
+      "reason": "Quantized recommender-system preference model; no language-model inference/serving connection.",
+      "source_url": "https://doi.org/10.1145/3746027.3758172",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3773041",
+      "identity_tokens": [
+        "DOI:10.1145/3773041"
+      ],
+      "title": "Exploring Microscaling MX Minifloat Systolic Arrays on FPGAs",
+      "reason": "Plausible adjacent model compression/LLM deployment topic, but primary full text was unavailable; no stronger inclusion claim is supported.",
+      "source_url": "https://doi.org/10.1145/3773041",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.20975",
+      "identity_tokens": [
+        "arXiv:2510.20975"
+      ],
+      "title": "REx86: A Local Large Language Model for Assisting in x86 Assembly Reverse Engineering",
+      "reason": "Local LLM application for x86 reverse engineering; improves analyst workflow, not model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2510.20975",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
