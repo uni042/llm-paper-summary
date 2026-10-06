@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r134-screen-01-part-08-81fd0f3214c4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32802",
+      "identity_tokens": [
+        "arXiv:2609.32802"
+      ],
+      "title": "Re-derivability Decides What a Staged Agent Pipeline Recovers After an Upstream Fault",
+      "reason": "障害時pipeline復旧の比較。正常時の分解系は直接1 callより確実に良くならず、re-groundingは+0.394 retentionに+59.8 token/item。pipelineコストと接点はあるが主題は障害復旧精度で、効率改善法ではない。",
+      "source_url": "https://arxiv.org/abs/2609.32802",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32825",
+      "identity_tokens": [
+        "arXiv:2609.32825"
+      ],
+      "title": "The Decomposition Tax: LLM Pipelines Lose Up to 40 Accuracy Points at Their Own Interfaces",
+      "reason": "stage間情報損失を評価しre-groundingで精度回復するが、総token中央値1.17倍となりcompute-matched対照もない。pipeline設計との接点はあるが改善されたinference効率の証拠ではない。",
+      "source_url": "https://arxiv.org/abs/2609.32825",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35879",
+      "identity_tokens": [
+        "arXiv:2609.35879"
+      ],
+      "title": "CruxBench: A Benchmark of Information Discovery",
+      "reason": "情報発見能力を測るbenchmarkで、推論実行最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2609.35879",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31788",
+      "identity_tokens": [
+        "arXiv:2609.31788"
+      ],
+      "title": "SelfCue: Making a 3D CT Report Generator Say What It Already Knows",
+      "reason": "CTレポート精度向上が中心。蒸留モデルは追加推論処理不要とするが、既存構成より推論資源を減らした測定はない。",
+      "source_url": "https://arxiv.org/abs/2609.31788",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32035",
+      "identity_tokens": [
+        "arXiv:2609.32035"
+      ],
+      "title": "Reasoning Concentrates Errors, and Self-Consistency Never Notices",
+      "reason": "reasoning/self-consistencyの誤り挙動を分析し、推論コスト削減手法を示さない。",
+      "source_url": "https://arxiv.org/abs/2609.32035",
+      "first_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "last_checked_at": "2026-10-06T18:55:58.859306+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
