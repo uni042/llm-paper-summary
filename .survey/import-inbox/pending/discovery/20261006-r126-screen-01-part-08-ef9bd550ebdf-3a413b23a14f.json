@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r126-screen-01-part-08-ef9bd550ebdf",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/wevj15070323",
+      "identity_tokens": [
+        "DOI:10.3390/wevj15070323"
+      ],
+      "title": "YOLO-ADual: A Lightweight Traffic Sign Detection Model for a Mobile Driving System",
+      "reason": "MDPI primary page returned HTTP 429. The title identifies a lightweight traffic-sign detector; without publisher abstract/body the model and efficiency evidence cannot be checked, so retain as borderline.",
+      "source_url": "https://doi.org/10.3390/wevj15070323",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.18051",
+      "identity_tokens": [
+        "arXiv:2406.18051"
+      ],
+      "title": "ViT-1.58b: Mobile Vision Transformers in the 1-bit Era",
+      "reason": "一次本文の手法はBitLinear系ternary 1.58-bit weightと8-bit activationをViT画像分類へ適用する。量子化自体はLLMへ移転し得るが、この論文は画像patch encoderでの検証のみで、LLM重み・生成品質・推論servingを評価しないため直接候補としては弱い。",
+      "source_url": "https://arxiv.org/abs/2406.18051",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3674500",
+      "identity_tokens": [
+        "DOI:10.1145/3674500"
+      ],
+      "title": "Object-centric Learning with Capsule Networks: A Survey",
+      "reason": "ACM DOI page could not be retrieved. The title indicates a capsule-network survey; without primary abstract/body its actual treatment of Transformer attention or inference efficiency cannot be verified, so retain as borderline.",
+      "source_url": "https://doi.org/10.1145/3674500",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01087",
+      "identity_tokens": [
+        "arXiv:2409.01087"
+      ],
+      "title": "Pre-trained language models for keyphrase prediction: A review",
+      "reason": "一次要旨は事前学習言語モデルを用いたkeyphrase extraction/generationの分類とsurvey。タスク別予測モデルの整理が目的で、LLM decoding/servingの計算・記憶量改善を扱わない。",
+      "source_url": "https://arxiv.org/abs/2409.01087",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.13238",
+      "identity_tokens": [
+        "arXiv:2404.13238"
+      ],
+      "title": "Personalized Wireless Federated Learning for Large Language Models",
+      "reason": "一次本文はLLMを用いるが、主な貢献はwireless federated fine-tuningのLoRA/adapter・partial aggregationであり、通信遅延や学習energyを減らす学習手法である。inference-time memory/latency/throughputの改善を検証していない。",
+      "source_url": "https://arxiv.org/abs/2404.13238",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    }
+  ]
+}
