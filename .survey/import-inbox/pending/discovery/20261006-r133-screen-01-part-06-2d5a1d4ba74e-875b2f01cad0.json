@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r133-screen-01-part-06-2d5a1d4ba74e",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02657",
+      "identity_tokens": [
+        "arXiv:2610.02657"
+      ],
+      "title": "Context-Tower Conversion Preserves Generation While Freezing Retains Knowledge: Low-Budget AR-to-Diffusion Conversion of MoE LLMs",
+      "reason": "AR-to-diffusion変換はLLM生成方式の比較として関連するが、本文のbatch-1 throughputはAR基準の0.134/0.168倍で、serving優位を示さない。小規模のengineering pass改善はconversion自体のend-to-end advantageではないと著者も限定している。",
+      "source_url": "https://arxiv.org/abs/2610.02657",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03223",
+      "identity_tokens": [
+        "arXiv:2610.03223"
+      ],
+      "title": "AdaStep: Adaptive Step Credit Weighting for Agentic Reinforcement Learning",
+      "reason": "AdaStepはagent強化学習におけるstep-level credit assignmentの学習手法であり、LLM推論の実行時資源改善ではない。",
+      "source_url": "https://arxiv.org/abs/2610.03223",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03249",
+      "identity_tokens": [
+        "arXiv:2610.03249"
+      ],
+      "title": "Self-Repairing Recurrent Ensembles for Real-Time Recovery from Distribution Shift",
+      "reason": "自己修復recurrent ensembleによる分布シフト下の制御器復旧が対象。LLMまたはLLM inferenceの効率化とは異なる。",
+      "source_url": "https://arxiv.org/abs/2610.03249",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03591",
+      "identity_tokens": [
+        "arXiv:2610.03591"
+      ],
+      "title": "HazardWeaver: Scientific Route Selection for Hazard Analysis Agents",
+      "reason": "自然災害のhazard analysisで科学ルートやツールを選ぶエージェントの研究であり、LLMの推論実装資源やdecode効率を改善しない。KV系統との関連は実証されない。",
+      "source_url": "https://arxiv.org/abs/2610.03591",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03858",
+      "identity_tokens": [
+        "arXiv:2610.03858"
+      ],
+      "title": "Retrieval-Centric Deep Learning in Growing Nonparametric Neural Networks",
+      "reason": "本文は各学習例のkey-value表現を保存する一般的な非パラメトリックNN層を提案するが、言語モデル・LLM推論を対象とせず、LLM用KV cache最適化の証拠もない。",
+      "source_url": "https://arxiv.org/abs/2610.03858",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    }
+  ]
+}
