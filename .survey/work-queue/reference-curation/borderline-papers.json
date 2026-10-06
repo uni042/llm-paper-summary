@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T06:09:50+00:00",
-  "record_count": 2325,
+  "updated_at": "2026-10-06T06:19:56+00:00",
+  "record_count": 2338,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -35821,6 +35821,201 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MixFusion: A Patch-Level Parallel Serving System for Mixed-Resolution Diffusion Models"
+    },
+    "DOI:10.1016/j.knosys.2026.115341": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115341",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115341"
+      ],
+      "reason": "Attempted https://doi.org/10.1016/j.knosys.2026.115341 and publisher full-text https://www.sciencedirect.com/science/article/pii/S0950705126000845; DOI open inaccessible and publisher returned 403 Forbidden. Search preview exposed abstract/intro only, not full method/evaluation/limitations. Mamba-for-time-series has a plausible state-space lineage link but cross-domain relevance is unresolved.",
+      "first_checked_at": "2026-10-06T06:19:49+00:00",
+      "last_checked_at": "2026-10-06T06:19:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cross-domain time-frequency Mamba: A more effective model for long-term time series forecasting"
+    },
+    "arXiv:2609.11801": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11801",
+      "identity_tokens": [
+        "arXiv:2609.11801"
+      ],
+      "reason": "The paper trains recurrent latent states along a flow trajectory and evaluates algorithmic reasoning (Sudoku, maze, ARC, N-Queens, graph coloring), including inference-time ODE/SDE ablations. It is not an LLM method and uses repeated flow steps; language-model transfer remains unshown.",
+      "first_checked_at": "2026-10-06T06:19:49+00:00",
+      "last_checked_at": "2026-10-06T06:19:49+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Thinking with Looped Flows"
+    },
+    "arXiv:2602.14814": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14814",
+      "identity_tokens": [
+        "arXiv:2602.14814"
+      ],
+      "reason": "Linear RNN state tracking is studied on code/REPL-style interaction and synthetic permutation composition. Limitations say experiments omit realistic parsing, control flow and memory management; no LLM inference-efficiency improvement is established.",
+      "first_checked_at": "2026-10-06T06:19:52+00:00",
+      "last_checked_at": "2026-10-06T06:19:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning State-Tracking from Code Using Linear RNNs"
+    },
+    "arXiv:2601.21257": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21257",
+      "identity_tokens": [
+        "arXiv:2601.21257"
+      ],
+      "reason": "MoCo is an experimental framework for model collaboration, not a serving optimization. Evaluations report collaboration quality and analyze training/inference efficiency, but methods center on collaborative-model strategies; relationship to MoE/inference systems is plausible but indirect.",
+      "first_checked_at": "2026-10-06T06:19:52+00:00",
+      "last_checked_at": "2026-10-06T06:19:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoCo: A One-Stop Shop for Model Collaboration Research"
+    },
+    "arXiv:2605.30215": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30215",
+      "identity_tokens": [
+        "arXiv:2605.30215"
+      ],
+      "reason": "Déjà View applies a looped transformer to multi-view 3D reconstruction and studies parameter-efficient recurrent depth. Limitations say recurrence does not extrapolate beyond trained loop-step range and channels diverge past it. Related to looped computation, but not LLM inference.",
+      "first_checked_at": "2026-10-06T06:19:52+00:00",
+      "last_checked_at": "2026-10-06T06:19:52+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Déjà View: Looping Transformers for Multi-View 3D Reconstruction"
+    },
+    "arXiv:2605.25604": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25604",
+      "identity_tokens": [
+        "arXiv:2605.25604"
+      ],
+      "reason": "DVAO estimates reward variance and adapts GRPO advantage weights for multi-reward RL; experiments are training-side on 8 H20 GPUs. Limitations discuss dependence on group variance estimates. It does not target inference cost or serving; relation to efficient reasoning is weak.",
+      "first_checked_at": "2026-10-06T06:19:53+00:00",
+      "last_checked_at": "2026-10-06T06:19:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DVAO: Dynamic Variance-adaptive Advantage Optimization for Multi-reward Reinforcement Learning"
+    },
+    "arXiv:2605.10207": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10207",
+      "identity_tokens": [
+        "arXiv:2605.10207"
+      ],
+      "reason": "LASAR uses latent semantic-aligned reasoning and adaptive latent-step allocation for generative recommendation; experiments use Qwen3-based models on three datasets. Its limitation notes sequential, hard-to-parallelize latent feedback; general LLM inference transfer is unestablished.",
+      "first_checked_at": "2026-10-06T06:19:53+00:00",
+      "last_checked_at": "2026-10-06T06:19:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LASAR: Latent Adaptive Semantic Aligned Reasoning for Generative Recommendation"
+    },
+    "arXiv:2609.01924": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01924",
+      "identity_tokens": [
+        "arXiv:2609.01924"
+      ],
+      "reason": "Virtual unrolling and mean-Jacobian probes/interventions test global-workspace behavior in recurrent transformers. Qwen and looped-model experiments are analyzed; limitations identify the linearized single-token lens and validated horizon. This is mechanistic analysis, not inference-efficiency technique.",
+      "first_checked_at": "2026-10-06T06:19:53+00:00",
+      "last_checked_at": "2026-10-06T06:19:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Looped Transformers under the Jacobian Lens: Does the Global Workspace Survive Recurrence?"
+    },
+    "arXiv:2607.11523": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.11523",
+      "identity_tokens": [
+        "arXiv:2607.11523"
+      ],
+      "reason": "Vinci2 combines proactive query timing with EgoMemo text memory for continuous egocentric-video assistance; experiments assess assistance behavior. Limitations note that captions lose fine visual detail and entity resolution can fail. No inference-cost reduction is demonstrated.",
+      "first_checked_at": "2026-10-06T06:19:54+00:00",
+      "last_checked_at": "2026-10-06T06:19:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vinci2: Providing Proactive Assistance in Continuous Egocentric Videos"
+    },
+    "arXiv:2607.03118": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.03118",
+      "identity_tokens": [
+        "arXiv:2607.03118"
+      ],
+      "reason": "Vidu S1 is a real-time interactive video diffusion model with TurboDiffusion/TurboServe worker and serving stack; paper reports compute/memory savings and up to 42 FPS at 540p. Method/evaluation concern video diffusion, not LLM inference; transfer is unclear.",
+      "first_checked_at": "2026-10-06T06:19:54+00:00",
+      "last_checked_at": "2026-10-06T06:19:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vidu S1: A Real-Time Interactive Video Generation Model"
+    },
+    "arXiv:2606.06096": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06096",
+      "identity_tokens": [
+        "arXiv:2606.06096"
+      ],
+      "reason": "OrderGrad develops policy-gradient estimators for order-statistic objectives and evaluates LLM math-reasoning pass@k. It changes training objectives for tail/best-of-K outcomes; no direct inference-compute or serving-cost reduction is established.",
+      "first_checked_at": "2026-10-06T06:19:54+00:00",
+      "last_checked_at": "2026-10-06T06:19:54+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OrderGrad: Optimizing Beyond the Mean with Order-Statistic Policy Gradient Estimation"
+    },
+    "DOI:10.1109/tpami.2026.3673141": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpami.2026.3673141",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3673141"
+      ],
+      "reason": "Attempted https://doi.org/10.1109/TPAMI.2026.3673141 and searched exact title for an author/arXiv copy. DOI page inaccessible and search exposed bibliographic/abstract records only; no primary full-text method/evaluation/limitations copy was reachable. Abstract indicates token pruning/clip selection, plausible but final relevance cannot be resolved without full text.",
+      "first_checked_at": "2026-10-06T06:19:55+00:00",
+      "last_checked_at": "2026-10-06T06:19:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SELongVLM: Empowering Long Video Language Models With Self-Corrective Clip Selection"
+    },
+    "arXiv:2604.11102": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11102",
+      "identity_tokens": [
+        "arXiv:2604.11102"
+      ],
+      "reason": "OmniScript introduces hierarchical audio-video script generation and a long-video data/model pipeline; experiments compare script quality across multimodal models. Full text focuses on annotation, temporal grounding and generation quality, not token/KV reduction or inference acceleration.",
+      "first_checked_at": "2026-10-06T06:19:56+00:00",
+      "last_checked_at": "2026-10-06T06:19:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OmniScript: Towards Audio-Visual Script Generation for Long-Form Cinematic Video"
     }
   }
 }

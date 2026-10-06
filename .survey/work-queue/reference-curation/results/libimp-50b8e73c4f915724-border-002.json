@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-50b8e73c4f915724-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.11523",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.11523",
+    "identity_tokens": [
+      "arXiv:2607.11523"
+    ],
+    "reason": "Vinci2 combines proactive query timing with EgoMemo text memory for continuous egocentric-video assistance; experiments assess assistance behavior. Limitations note that captions lose fine visual detail and entity resolution can fail. No inference-cost reduction is demonstrated.",
+    "first_checked_at": "2026-10-06T06:19:54+00:00",
+    "last_checked_at": "2026-10-06T06:19:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Vinci2: Providing Proactive Assistance in Continuous Egocentric Videos"
+  },
+  "processed_at": "2026-10-06T06:19:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-50b8e73c4f91",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
