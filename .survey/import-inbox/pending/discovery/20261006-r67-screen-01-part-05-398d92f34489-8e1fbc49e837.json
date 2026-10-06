@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r67-screen-01-part-05-398d92f34489",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28949",
+      "identity_tokens": [
+        "arXiv:2609.28949"
+      ],
+      "title": "Exploiting Target Knowledge from MLLMs for Robust Few-Shot Segmentation",
+      "reason": "Few-shot image segmentation capability method using MLLM target knowledge; no inference cost reduction.",
+      "source_url": "https://arxiv.org/abs/2609.28949",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29180",
+      "identity_tokens": [
+        "arXiv:2609.29180"
+      ],
+      "title": "X-Rec Technical Report",
+      "reason": "Generative recommender technical report; the abstract concerns recommendation architecture rather than direct LLM inference resources.",
+      "source_url": "https://arxiv.org/abs/2609.29180",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29768",
+      "identity_tokens": [
+        "arXiv:2609.29768"
+      ],
+      "title": "Depth through recurrence: Looped transformers for flow-matching TTS",
+      "reason": "The work shares Transformer weights through recurrence for flow-matching text-to-speech and compares seven depth layouts at a fixed 18 block calls per network evaluation. It is adjacent evidence on compute/parameter tradeoffs in a generative Transformer, but is TTS rather than LLM inference and the fixed call count does not itself demonstrate lower inference compute/latency; retain only as borderline.",
+      "source_url": "https://arxiv.org/abs/2609.29768",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30340",
+      "identity_tokens": [
+        "arXiv:2609.30340"
+      ],
+      "title": "GAUDI: Geometry-Aware Diffusion for Calibrated Air-Quality Time-Series Imputation",
+      "reason": "Air-quality time-series imputation method; outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.30340",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3844511",
+      "identity_tokens": [
+        "DOI:10.1145/3844511"
+      ],
+      "title": "SATLLM: A Sparsity-aware Accelerator for Ternary-Weight Large Language Models",
+      "reason": "The publisher's ACM Digital Library full-text URL returned 403 Forbidden. A search surfaced only a secondary aggregator snippet, which was not treated as primary-text evidence. Abstract strongly indicates direct sparse ternary LLM inference acceleration, but full-text review remains required.",
+      "source_url": "https://doi.org/10.1145/3844511",
+      "first_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "last_checked_at": "2026-10-06T08:58:50.115518+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    }
+  ]
+}
