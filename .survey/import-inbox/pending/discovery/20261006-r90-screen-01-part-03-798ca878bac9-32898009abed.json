@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r90-screen-01-part-03-798ca878bac9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22664",
+      "identity_tokens": [
+        "arXiv:2505.22664"
+      ],
+      "title": "Zero-Shot Vision Encoder Grafting via LLM Surrogates",
+      "reason": "Zero-shot vision encoder composition; no LLM inference efficiency evaluation.",
+      "source_url": "https://arxiv.org/abs/2505.22664",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14723",
+      "identity_tokens": [
+        "arXiv:2505.14723"
+      ],
+      "title": "QUADS: QUAntized Distillation Framework for Efficient Speech Language Understanding",
+      "reason": "Task/model family is speech intent understanding and the method is training/distillation oriented; no general LLM serving evidence.",
+      "source_url": "https://arxiv.org/abs/2505.14723",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3735653",
+      "identity_tokens": [
+        "DOI:10.1145/3735653"
+      ],
+      "title": "U-Net Encapsulated Transformer for Reducing Dimensionality in Training Large Language Models",
+      "reason": "Dimensionality reduction is proposed for training large language models; workflow scope is inference-time efficiency.",
+      "source_url": "https://doi.org/10.1145/3735653",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.130517",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.130517"
+      ],
+      "title": "Attaining hardware-efficient inference in memristor-based transformer accelerator via network redesign",
+      "reason": "No abstract in packet; publisher primary page could not be retrieved and no author/institutional full-text copy was located.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2025.130517",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics14091767",
+      "identity_tokens": [
+        "DOI:10.3390/electronics14091767"
+      ],
+      "title": "An Effective Mixed-Precision Quantization Method for Joint Image Deblurring and Edge Detection",
+      "reason": "Mixed-precision quantization targets image deblurring and edge detection, with no language-model connection.",
+      "source_url": "https://doi.org/10.3390/electronics14091767",
+      "first_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "last_checked_at": "2026-10-06T12:23:15.895346+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    }
+  ]
+}
