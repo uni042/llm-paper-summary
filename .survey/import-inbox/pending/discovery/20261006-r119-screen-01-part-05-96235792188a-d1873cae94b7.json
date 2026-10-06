@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r119-screen-01-part-05-96235792188a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.04621",
+      "identity_tokens": [
+        "arXiv:2310.04621"
+      ],
+      "title": "Model Compression in Practice: Lessons Learned from Practitioners Creating On-device Machine Learning Experiences",
+      "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 This practitioner survey discusses compression for on-device machine learning, including deployment lessons. The connection to edge inference is plausible, but it is synthesis rather than a concrete LLM inference method or measured serving optimization.",
+      "source_url": "https://arxiv.org/abs/2310.04621",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.23905",
+      "identity_tokens": [
+        "arXiv:2503.23905"
+      ],
+      "title": "Boosting MLLM Reasoning with Text-Debiased Hint-GRPO",
+      "reason": "一次資料abstractを確認。対象はLLM inferenceのcompute/memory/latency/throughput/KV cache/quantization/offload/servingと接続せず、対象外。",
+      "source_url": "https://arxiv.org/abs/2503.23905",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.07462",
+      "identity_tokens": [
+        "arXiv:2308.07462"
+      ],
+      "title": "Playing with words: Comparing the vocabulary and lexical diversity of ChatGPT and humans",
+      "reason": "一次資料abstractを確認。対象はLLM inferenceのcompute/memory/latency/throughput/KV cache/quantization/offload/servingと接続せず、対象外。",
+      "source_url": "https://arxiv.org/abs/2308.07462",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3695053.3731410",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731410"
+      ],
+      "title": "Scaling Llama 3 Training with Efficient Parallelism Strategies",
+      "reason": "一次出版社資料でabstractは確認したが全文を取得できず、method/evaluation/limitationsおよび系統との接続を検証できないためborderlineに残す。 The ACM paper concerns parallel strategies for Llama 3 training, related to sequence/distributed attention. ACM full text access failed; training relevance is plausible from the primary abstract, but body methods/limits could not be verified.",
+      "source_url": "https://doi.org/10.1145/3695053.3731410",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08554",
+      "identity_tokens": [
+        "arXiv:2510.08554"
+      ],
+      "title": "Improving Reasoning for Diffusion Language Models via Group Diffusion Policy Optimization",
+      "reason": "一次資料abstractを確認。対象はLLM inferenceのcompute/memory/latency/throughput/KV cache/quantization/offload/servingと接続せず、対象外。",
+      "source_url": "https://arxiv.org/abs/2510.08554",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
