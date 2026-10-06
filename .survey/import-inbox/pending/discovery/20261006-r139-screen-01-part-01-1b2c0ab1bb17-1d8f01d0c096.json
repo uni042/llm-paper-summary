@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r139-screen-01-part-01-1b2c0ab1bb17",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12748",
+      "identity_tokens": [
+        "arXiv:2608.12748"
+      ],
+      "title": "Scaling Representation Diversity: Modulated Attention and Reconstructive Regularization for Visual Grounding",
+      "reason": "一次要旨は物体参照表現の視覚グラウンディング、mACHとJEPA補助学習を扱い、補助streamは推論時オーバーヘッドなしとする。LLMの推論計算・メモリ・配信改善ではない。",
+      "source_url": "https://arxiv.org/abs/2608.12748",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13037",
+      "identity_tokens": [
+        "arXiv:2608.13037"
+      ],
+      "title": "Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization",
+      "reason": "一次本文ではDiT動画生成の推論時guidanceを対象とし、LLM servingへの直接適用や言語モデル評価はない。attention/gradient計算の削減手法として近接するが、対象領域差が大きく現状はborderline。",
+      "source_url": "https://arxiv.org/abs/2608.13037",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13200",
+      "identity_tokens": [
+        "arXiv:2608.13200"
+      ],
+      "title": "GEM: A Generative Embedding Model Bridging Reasoning and Retrieval",
+      "reason": "一次要旨はクエリ意図推論を含む生成埋め込み検索器で、主目的はretrieval品質向上とtest-time computeによる検索精度向上。LLM推論効率の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2608.13200",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14740",
+      "identity_tokens": [
+        "arXiv:2608.14740"
+      ],
+      "title": "From Dense Prediction to Visual Editing: Structured Supervision for Unified Image and Video Creation",
+      "reason": "一次要旨は画像・動画生成の構造的視覚教師信号と編集品質を評価する。モデル推論コストやLLM servingを改善する提案ではない。",
+      "source_url": "https://arxiv.org/abs/2608.14740",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11909",
+      "identity_tokens": [
+        "arXiv:2608.11909"
+      ],
+      "title": "Disentangling the Expressivity of RoPE",
+      "reason": "一次要旨はRoPEの有限精度transformerにおける表現力と位置一般化を理論・制御実験で分析する。serving効率化手法や性能測定はない。",
+      "source_url": "https://arxiv.org/abs/2608.11909",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    }
+  ]
+}
