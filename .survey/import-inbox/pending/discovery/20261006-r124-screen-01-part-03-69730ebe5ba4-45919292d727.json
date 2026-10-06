@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r124-screen-01-part-03-69730ebe5ba4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISSCC49661.2025.10904594",
+      "identity_tokens": [
+        "DOI:10.1109/ISSCC49661.2025.10904594"
+      ],
+      "title": "23.3 EdgeDiff: 418.4mJ/Inference Multi-Modal Few-Step Diffusion Model Accelerator with Mixed-Precision and Reordered Group Quantization",
+      "reason": "DOI先のIEEE一次本文/要旨を取得できず、候補タイトルはmultimodal diffusion acceleratorを名乗るため直接関連の可能性が高い。一次根拠なしに性能やscope適合を確定できず、source-unavailable borderlineで保留する。",
+      "source_url": "https://doi.org/10.1109/ISSCC49661.2025.10904594",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TGRS.2025.3608726",
+      "identity_tokens": [
+        "DOI:10.1109/TGRS.2025.3608726"
+      ],
+      "title": "HSTNet: A Hybrid Spatial–Channel Sparse Transformer Network for Infrared Small Target Detection",
+      "reason": "IEEE DOIの一次要旨/本文を取得できなかった。赤外線小物体検出向けTransformerという題名はLLM効率との接点を示さないが、primary evidenceが得られず確定除外を避けborderlineとする。",
+      "source_url": "https://doi.org/10.1109/TGRS.2025.3608726",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TNNLS.2024.3400809",
+      "identity_tokens": [
+        "DOI:10.1109/TNNLS.2024.3400809"
+      ],
+      "title": "Advancing Hyperspectral and Multispectral Image Fusion: An Information-Aware Transformer-Based Unfolding Network",
+      "reason": "IEEE一次ソースからabstract/full textを取得できず、題名はhyperspectral/multispectral image fusionの応用Transformerを示す。LLM servingとの直接関係は見えないものの、内容の一次確認不能のためborderline記録とする。",
+      "source_url": "https://doi.org/10.1109/TNNLS.2024.3400809",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.05231",
+      "identity_tokens": [
+        "arXiv:2405.05231"
+      ],
+      "title": "DiskGNN: Bridging I/O Efficiency and Model Accuracy for Out-of-Core GNN Training",
+      "reason": "一次本文はDiskGNNのout-of-core GNN訓練でI/Oとmodel accuracyを両立し、分散データを訓練する仕組みを評価する。LLM serving lineageとのリンクはあるが、推論ではなくGNN trainingを扱うと本文で確認したため対象外。",
+      "source_url": "https://arxiv.org/abs/2405.05231",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JLT.2023.3276588",
+      "identity_tokens": [
+        "DOI:10.1109/JLT.2023.3276588"
+      ],
+      "title": "Peta-Scale Embedded Photonics Architecture for Distributed Deep Learning Applications",
+      "reason": "IEEE一次テキストのSiPACは分散deep learning training向けのphotonic interconnect/collective architectureで、通信時間・system-level性能を訓練時の同期通信で評価する。Training Offload系統との関係はあるが推論対象ではない。",
+      "source_url": "https://doi.org/10.1109/JLT.2023.3276588",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    }
+  ]
+}
