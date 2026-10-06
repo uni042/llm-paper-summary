@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T13:16:40+00:00",
-  "record_count": 8345,
+  "updated_at": "2026-10-06T13:32:17+00:00",
+  "record_count": 8370,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -119841,6 +119841,359 @@
         "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
       ],
       "title": "RCAgent: Cloud Root Cause Analysis by Autonomous Agents with Tool-Augmented Large Language Models"
+    },
+    "arXiv:2512.18634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.18634",
+      "identity_tokens": [
+        "arXiv:2512.18634"
+      ],
+      "reason": "This mechanistic study examines data diversity and algorithm selection/induction heads in transformers. It provides no concrete inference optimization or serving evaluation.",
+      "first_checked_at": "2026-10-06T13:32:09+00:00",
+      "last_checked_at": "2026-10-06T13:32:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "From Shortcut to Induction Head: How Data Diversity Shapes Algorithm Selection in Transformers"
+    },
+    "arXiv:2602.05176": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05176",
+      "identity_tokens": [
+        "arXiv:2602.05176"
+      ],
+      "reason": "Among Us measures and mitigates malicious contributions in collaborative model systems; its focus is trust/security, not inference cost or throughput.",
+      "first_checked_at": "2026-10-06T13:32:10+00:00",
+      "last_checked_at": "2026-10-06T13:32:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Among Us: Measuring and Mitigating Malicious Contributions in Model Collaboration Systems"
+    },
+    "arXiv:2512.09619": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.09619",
+      "identity_tokens": [
+        "arXiv:2512.09619"
+      ],
+      "reason": "GLaD studies geometric latent distillation for vision-language-action policies; the primary body evaluates embodied policy quality/training, not quantized LLM inference.",
+      "first_checked_at": "2026-10-06T13:32:10+00:00",
+      "last_checked_at": "2026-10-06T13:32:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "title": "GLaD: Geometric Latent Distillation for Vision-Language-Action Models"
+    },
+    "DOI:10.3390/e27121223": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/e27121223",
+      "identity_tokens": [
+        "DOI:10.3390/e27121223"
+      ],
+      "reason": "The title/available publisher metadata identify image steganography with latent-space embedding and decoder selection, outside LLM inference or serving.",
+      "first_checked_at": "2026-10-06T13:32:10+00:00",
+      "last_checked_at": "2026-10-06T13:32:10+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Deep Learning-Based Image Steganography with Latent Space Embedding and Smart Decoder Selection"
+    },
+    "DOI:10.1109/tip.2025.3630327": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2025.3630327",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2025.3630327"
+      ],
+      "reason": "The title/available publisher metadata identify hyperspectral open-set image recognition, outside LLM inference or serving.",
+      "first_checked_at": "2026-10-06T13:32:10+00:00",
+      "last_checked_at": "2026-10-06T13:32:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "HyperCASR: Spectral-Spatial Open-Set Recognition With Category-Aware Semantic Reconstruction for Hyperspectral Imagery"
+    },
+    "arXiv:2604.19440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.19440",
+      "identity_tokens": [
+        "arXiv:2604.19440"
+      ],
+      "reason": "This work analyzes LLM-guided evolutionary search as an optimizer for external problem solving; it is not an optimizer for LLM inference and presents no serving efficiency method.",
+      "first_checked_at": "2026-10-06T13:32:11+00:00",
+      "last_checked_at": "2026-10-06T13:32:11+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "What Makes an LLM a Good Optimizer? A Trajectory Analysis of LLM-Guided Evolutionary Search"
+    },
+    "arXiv:2512.08417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.08417",
+      "identity_tokens": [
+        "arXiv:2512.08417"
+      ],
+      "reason": "Rennervate proposes a defense against indirect prompt injection using attention behavior. The full text concerns attack/defense efficacy, not attention-compute optimization or serving efficiency.",
+      "first_checked_at": "2026-10-06T13:32:11+00:00",
+      "last_checked_at": "2026-10-06T13:32:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs"
+    },
+    "DOI:10.1109/isca66397.2026.00116": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00116",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00116"
+      ],
+      "reason": "PRowhammer demonstrates a CPU-to-GPU memory attack that can degrade ML/LLM output via library bit flips. It is a security vulnerability study, not an efficiency improvement.",
+      "first_checked_at": "2026-10-06T13:32:11+00:00",
+      "last_checked_at": "2026-10-06T13:32:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "PRowhammer: Propagating Bit-Flips from CPU to GPU"
+    },
+    "arXiv:2605.12673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12673",
+      "identity_tokens": [
+        "arXiv:2605.12673"
+      ],
+      "reason": "BenchJack audits benchmark integrity for AI agents. The paper measures benchmark contamination/reward gaming, not inference systems or model-serving efficiency.",
+      "first_checked_at": "2026-10-06T13:32:12+00:00",
+      "last_checked_at": "2026-10-06T13:32:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack"
+    },
+    "arXiv:2604.01472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01472",
+      "identity_tokens": [
+        "arXiv:2604.01472"
+      ],
+      "reason": "Newton-Muon is an optimizer for parameter training. Its evaluations concern optimization/training behavior and do not establish inference-time compute, memory, or latency improvements.",
+      "first_checked_at": "2026-10-06T13:32:12+00:00",
+      "last_checked_at": "2026-10-06T13:32:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "The Newton-Muon Optimizer"
+    },
+    "arXiv:2603.00883": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00883",
+      "identity_tokens": [
+        "arXiv:2603.00883"
+      ],
+      "reason": "Knowledge without Wisdom measures alignment between model outputs and intended impact. Its benchmark/measurement contribution does not address inference performance.",
+      "first_checked_at": "2026-10-06T13:32:12+00:00",
+      "last_checked_at": "2026-10-06T13:32:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "Knowledge without Wisdom: Measuring Misalignment between LLMs and Intended Impact"
+    },
+    "arXiv:2401.08190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.08190",
+      "identity_tokens": [
+        "arXiv:2401.08190"
+      ],
+      "reason": "MARIO is a reproducible math-reasoning pipeline that uses interpreter outputs. Its contribution is task accuracy/reproducibility; it does not optimize inference systems despite a remote memory-optimization citation.",
+      "first_checked_at": "2026-10-06T13:32:13+00:00",
+      "last_checked_at": "2026-10-06T13:32:13+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "MARIO: MAth Reasoning with code Interpreter Output - A Reproducible Pipeline"
+    },
+    "arXiv:2602.03619": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03619",
+      "identity_tokens": [
+        "arXiv:2602.03619"
+      ],
+      "reason": "The paper learns query-specific rubrics for DeepResearch report quality; the body evaluates rubric learning and report generation rather than reducing inference cost or serving resources.",
+      "first_checked_at": "2026-10-06T13:32:13+00:00",
+      "last_checked_at": "2026-10-06T13:32:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Learning Query-Specific Rubrics from Human Preferences for DeepResearch Report Generation"
+    },
+    "arXiv:2605.21384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21384",
+      "identity_tokens": [
+        "arXiv:2605.21384"
+      ],
+      "reason": "SpecBench audits reward hacking in long-horizon coding agents; its contribution is benchmark design and agent evaluation, not inference compute, memory, latency, throughput, cache, quantization, or serving.",
+      "first_checked_at": "2026-10-06T13:32:14+00:00",
+      "last_checked_at": "2026-10-06T13:32:14+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents"
+    },
+    "arXiv:2507.10496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.10496",
+      "identity_tokens": [
+        "arXiv:2507.10496"
+      ],
+      "reason": "Camera-relative positional encoding improves multi-view geometry representation; experiments concern camera/3D vision and do not propose LLM inference efficiency or context-window optimization.",
+      "first_checked_at": "2026-10-06T13:32:14+00:00",
+      "last_checked_at": "2026-10-06T13:32:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Cameras as Relative Positional Encoding"
+    },
+    "arXiv:2605.06388": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06388",
+      "identity_tokens": [
+        "arXiv:2605.06388"
+      ],
+      "reason": "The paper compares reconstruction and semantic latent spaces for robot world models. Its objective is representation quality for robotics, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T13:32:14+00:00",
+      "last_checked_at": "2026-10-06T13:32:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Reconstruction or Semantics? What Makes a Latent Space Useful for Robotic World Models"
+    },
+    "arXiv:2512.15699": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15699",
+      "identity_tokens": [
+        "arXiv:2512.15699"
+      ],
+      "reason": "FrontierCS introduces evolving computer-science programming challenges and evaluates coding capability. It does not propose model-serving or inference optimization.",
+      "first_checked_at": "2026-10-06T13:32:15+00:00",
+      "last_checked_at": "2026-10-06T13:32:15+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "FrontierCS: Evolving Challenges for Evolving Intelligence"
+    },
+    "arXiv:2511.20886": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20886",
+      "identity_tokens": [
+        "arXiv:2511.20886"
+      ],
+      "reason": "V2-SAM combines SAM2 with multi-prompt experts for cross-view object correspondence. The MoE wording is an application architecture for segmentation, not LLM MoE serving or inference optimization.",
+      "first_checked_at": "2026-10-06T13:32:15+00:00",
+      "last_checked_at": "2026-10-06T13:32:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "V2-SAM: Marrying SAM2 with Multi-Prompt Experts for Cross-View Object Correspondence"
+    },
+    "arXiv:2603.28743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28743",
+      "identity_tokens": [
+        "arXiv:2603.28743"
+      ],
+      "reason": "Transferable hypersphere optimization studies language-model scaling and optimizer/training transfer; the full text has no inference or serving evaluation despite quantization/MoE citation links.",
+      "first_checked_at": "2026-10-06T13:32:16+00:00",
+      "last_checked_at": "2026-10-06T13:32:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Rethinking Language Model Scaling under Transferable Hypersphere Optimization"
+    },
+    "arXiv:2601.15275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15275",
+      "identity_tokens": [
+        "arXiv:2601.15275"
+      ],
+      "reason": "RayRoPE introduces projective ray positional encoding for multi-view vision attention. The paper addresses geometric representation, not LLM context extension or inference cost.",
+      "first_checked_at": "2026-10-06T13:32:16+00:00",
+      "last_checked_at": "2026-10-06T13:32:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "RayRoPE: Projective Ray Positional Encoding for Multi-view Attention"
+    },
+    "DOI:10.1109/tpami.2025.3646069": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2025.3646069",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2025.3646069"
+      ],
+      "reason": "PubMed primary bibliographic record/abstract identifies MoEGAD as graph-level anomaly detection with pseudo-anomalous graph generation. It is a graph-detection application, not LLM inference/serving; the MoE citation link is terminology-level only.",
+      "first_checked_at": "2026-10-06T13:32:16+00:00",
+      "last_checked_at": "2026-10-06T13:32:16+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "MoEGAD: A Mixture-of-Experts Framework With Pseudo-Anomaly Generation for Graph-Level Anomaly Detection"
+    },
+    "arXiv:2605.01517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.01517",
+      "identity_tokens": [
+        "arXiv:2605.01517"
+      ],
+      "reason": "VAnim is a rendering-aware sparse-state method for structure-preserving vector animation. Its sparse representation is animation-specific and does not concern LLM inference or serving.",
+      "first_checked_at": "2026-10-06T13:32:17+00:00",
+      "last_checked_at": "2026-10-06T13:32:17+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "VAnim: Rendering-Aware Sparse State Modeling for Structure-Preserving Vector Animation"
+    },
+    "arXiv:2603.02236": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02236",
+      "identity_tokens": [
+        "arXiv:2603.02236"
+      ],
+      "reason": "CUDABench benchmarks text-to-CUDA code generation models. Its contribution is capability evaluation, not GPU kernel optimization or LLM inference acceleration.",
+      "first_checked_at": "2026-10-06T13:32:17+00:00",
+      "last_checked_at": "2026-10-06T13:32:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "CUDABench: Benchmarking LLMs for Text-to-CUDA Generation"
+    },
+    "arXiv:2601.12465": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12465",
+      "identity_tokens": [
+        "arXiv:2601.12465"
+      ],
+      "reason": "Process Advantage Shaping trains deeper reasoning over long contexts; evaluation concerns reasoning quality, not inference compute, memory, latency, or serving.",
+      "first_checked_at": "2026-10-06T13:32:17+00:00",
+      "last_checked_at": "2026-10-06T13:32:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Incentivizing In-depth Reasoning over Long Contexts with Process Advantage Shaping"
+    },
+    "arXiv:2601.03483": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03483",
+      "identity_tokens": [
+        "arXiv:2601.03483"
+      ],
+      "reason": "CALM studies culturally self-aware language models and MoE modeling for cultural representation. It does not evaluate inference efficiency or serving improvements.",
+      "first_checked_at": "2026-10-06T13:32:17+00:00",
+      "last_checked_at": "2026-10-06T13:32:17+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "CALM: Culturally Self-Aware Language Models"
     }
   }
 }

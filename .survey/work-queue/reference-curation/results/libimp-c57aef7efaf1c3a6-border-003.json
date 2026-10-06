@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c57aef7efaf1c3a6-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.13476",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.13476",
+    "identity_tokens": [
+      "arXiv:2602.13476"
+    ],
+    "reason": "AsyncVLA separates edge execution from workstation VLA inference and tests action robustness under artificial 0.2/2/5-second workstation delay. It targets robot navigation and delay tolerance, not LLM inference throughput; system decomposition may merit a transfer check.",
+    "first_checked_at": "2026-10-06T13:32:16+00:00",
+    "last_checked_at": "2026-10-06T13:32:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AsyncVLA: An Asynchronous VLA for Fast and Robust Navigation on the Edge"
+  },
+  "processed_at": "2026-10-06T13:32:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c57aef7efaf1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

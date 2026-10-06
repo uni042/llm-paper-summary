@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c57aef7efaf1c3a6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.10016",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.10016",
+    "identity_tokens": [
+      "arXiv:2602.10016"
+    ],
+    "reason": "Kunlun studies unified scaling laws/architecture for massive recommendation systems, with system efficiency concerns but no directly measured LLM serving improvement. The connection through compiler lineage is weak.",
+    "first_checked_at": "2026-10-06T13:32:16+00:00",
+    "last_checked_at": "2026-10-06T13:32:16+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Kunlun: Establishing Scaling Laws for Massive-Scale Recommendation Systems through Unified Architecture Design"
+  },
+  "processed_at": "2026-10-06T13:32:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c57aef7efaf1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

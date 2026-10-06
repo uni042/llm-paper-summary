@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c38c343636297fa-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.02454",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.02454",
+    "identity_tokens": [
+      "arXiv:2602.02454"
+    ],
+    "reason": "World-Gymnast uses temporal KV caching to avoid recomputing full history and reports 10x lower rollout time for 20 parallel 40-frame trajectories. This is robot world-model training throughput, not LLM serving; investigate whether the cache technique transfers.",
+    "first_checked_at": "2026-10-06T13:32:13+00:00",
+    "last_checked_at": "2026-10-06T13:32:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "World-Gymnast: Training Robots with Reinforcement Learning in a World Model"
+  },
+  "processed_at": "2026-10-06T13:32:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c38c3436362",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
