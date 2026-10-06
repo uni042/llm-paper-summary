@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45e9d92c5098546f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.06607",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.06607",
+    "identity_tokens": [
+      "arXiv:2311.06607"
+    ],
+    "reason": "Monkey studies image tiling/resolution for multimodal models, but emphasizes capability rather than reduced inference cost; high-resolution tiling may increase compute.",
+    "first_checked_at": "2026-10-06T04:39:19+00:00",
+    "last_checked_at": "2026-10-06T04:39:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Monkey: Image Resolution and Text Label are Important Things for Large Multi-Modal Models"
+  },
+  "processed_at": "2026-10-06T04:39:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45e9d92c5098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

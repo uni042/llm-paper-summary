@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T04:30:01+00:00",
-  "record_count": 6960,
+  "updated_at": "2026-10-06T04:39:26+00:00",
+  "record_count": 6997,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -100423,6 +100423,527 @@
         "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
       ],
       "title": "The Polar Express: Optimal Matrix Sign Methods and Their Application to the Muon Algorithm"
+    },
+    "DOI:10.1145/3318464.3380579": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3318464.3380579",
+      "identity_tokens": [
+        "DOI:10.1145/3318464.3380579"
+      ],
+      "reason": "Learning multi-dimensional indexes concerns database indexing, not LLM inference systems.",
+      "first_checked_at": "2026-10-06T04:39:16+00:00",
+      "last_checked_at": "2026-10-06T04:39:16+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Learning Multi-Dimensional Indexes"
+    },
+    "arXiv:1803.02329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.02329",
+      "identity_tokens": [
+        "arXiv:1803.02329"
+      ],
+      "reason": "Learning memory access patterns is a general systems topic without a demonstrated LLM inference connection.",
+      "first_checked_at": "2026-10-06T04:39:17+00:00",
+      "last_checked_at": "2026-10-06T04:39:17+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Learning Memory Access Patterns"
+    },
+    "DOI:10.18653/v1/2021.findings-emnlp.210": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.findings-emnlp.210",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.findings-emnlp.210"
+      ],
+      "reason": "Challenges in detoxifying language models concerns safety/alignment, not inference efficiency.",
+      "first_checked_at": "2026-10-06T04:39:17+00:00",
+      "last_checked_at": "2026-10-06T04:39:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Challenges in Detoxifying Language Models"
+    },
+    "arXiv:1804.03209": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1804.03209",
+      "identity_tokens": [
+        "arXiv:1804.03209"
+      ],
+      "reason": "Speech Commands is a speech-recognition dataset, not an optimization method.",
+      "first_checked_at": "2026-10-06T04:39:17+00:00",
+      "last_checked_at": "2026-10-06T04:39:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition"
+    },
+    "DOI:10.1109/tie.2010.2046002": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tie.2010.2046002",
+      "identity_tokens": [
+        "DOI:10.1109/tie.2010.2046002"
+      ],
+      "reason": "The paper studies wireless power transfer, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-06T04:39:17+00:00",
+      "last_checked_at": "2026-10-06T04:39:17+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Analysis, Experimental Results, and Range Adaptation of Magnetically Coupled Resonators for Wireless Power Transfer"
+    },
+    "arXiv:2304.14178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.14178",
+      "identity_tokens": [
+        "arXiv:2304.14178"
+      ],
+      "reason": "mPLUG-Owl presents a multimodal model and capability results without a concrete inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T04:39:17+00:00",
+      "last_checked_at": "2026-10-06T04:39:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "mPLUG-Owl: Modularization Empowers Large Language Models with Multimodality"
+    },
+    "arXiv:1711.00043": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1711.00043",
+      "identity_tokens": [
+        "arXiv:1711.00043"
+      ],
+      "reason": "Unsupervised machine translation is a training method, not LLM inference optimization.",
+      "first_checked_at": "2026-10-06T04:39:18+00:00",
+      "last_checked_at": "2026-10-06T04:39:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Unsupervised Machine Translation Using Monolingual Corpora Only"
+    },
+    "arXiv:1905.02450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.02450",
+      "identity_tokens": [
+        "arXiv:1905.02450"
+      ],
+      "reason": "MASS is a masked sequence-to-sequence pretraining method, not inference efficiency.",
+      "first_checked_at": "2026-10-06T04:39:18+00:00",
+      "last_checked_at": "2026-10-06T04:39:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md",
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "MASS: Masked Sequence to Sequence Pre-training for Language Generation"
+    },
+    "arXiv:2304.07193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.07193",
+      "identity_tokens": [
+        "arXiv:2304.07193"
+      ],
+      "reason": "DINOv2 learns self-supervised visual features, not LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-06T04:39:18+00:00",
+      "last_checked_at": "2026-10-06T04:39:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "DINOv2: Learning Robust Visual Features without Supervision"
+    },
+    "DOI:10.1145/2976749.2978318": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2976749.2978318",
+      "identity_tokens": [
+        "DOI:10.1145/2976749.2978318"
+      ],
+      "reason": "Differential privacy for deep learning addresses privacy-preserving training, not inference efficiency.",
+      "first_checked_at": "2026-10-06T04:39:18+00:00",
+      "last_checked_at": "2026-10-06T04:39:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Deep Learning with Differential Privacy"
+    },
+    "arXiv:1705.06950": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1705.06950",
+      "identity_tokens": [
+        "arXiv:1705.06950"
+      ],
+      "reason": "Kinetics is a human-action video dataset, not an inference optimization method.",
+      "first_checked_at": "2026-10-06T04:39:19+00:00",
+      "last_checked_at": "2026-10-06T04:39:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "The Kinetics Human Action Video Dataset"
+    },
+    "DOI:10.1162/tacl_a_00065": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00065",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00065"
+      ],
+      "reason": "Google multilingual NMT describes zero-shot translation, not inference systems.",
+      "first_checked_at": "2026-10-06T04:39:19+00:00",
+      "last_checked_at": "2026-10-06T04:39:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Google’s Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation"
+    },
+    "arXiv:2502.01456": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.01456",
+      "identity_tokens": [
+        "arXiv:2502.01456"
+      ],
+      "reason": "Process Reinforcement through Implicit Rewards concerns model training/post-training.",
+      "first_checked_at": "2026-10-06T04:39:20+00:00",
+      "last_checked_at": "2026-10-06T04:39:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Process Reinforcement through Implicit Rewards"
+    },
+    "DOI:10.18653/v1/2021.acl-long.81": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.81",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.81"
+      ],
+      "reason": "The paper catalogs fairness benchmark pitfalls, not inference efficiency.",
+      "first_checked_at": "2026-10-06T04:39:20+00:00",
+      "last_checked_at": "2026-10-06T04:39:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Stereotyping Norwegian Salmon: An Inventory of Pitfalls in Fairness Benchmark Datasets"
+    },
+    "arXiv:1902.04094": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1902.04094",
+      "identity_tokens": [
+        "arXiv:1902.04094"
+      ],
+      "reason": "BERT as a Markov random field language model is a modeling/training paper without a relevant inference optimization.",
+      "first_checked_at": "2026-10-06T04:39:20+00:00",
+      "last_checked_at": "2026-10-06T04:39:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model"
+    },
+    "DOI:10.1137/1032002": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1137/1032002",
+      "identity_tokens": [
+        "DOI:10.1137/1032002"
+      ],
+      "reason": "Parallel dense-linear-algebra algorithms are general numerical methods, not a concrete LLM inference contribution.",
+      "first_checked_at": "2026-10-06T04:39:21+00:00",
+      "last_checked_at": "2026-10-06T04:39:21+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Parallel Algorithms for Dense Linear Algebra Computations"
+    },
+    "arXiv:1503.06733": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1503.06733",
+      "identity_tokens": [
+        "arXiv:1503.06733"
+      ],
+      "reason": "Yara Parser is a dependency parser, not LLM inference systems.",
+      "first_checked_at": "2026-10-06T04:39:21+00:00",
+      "last_checked_at": "2026-10-06T04:39:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md"
+      ],
+      "title": "Yara Parser: A Fast and Accurate Dependency Parser"
+    },
+    "arXiv:2504.02605": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.02605",
+      "identity_tokens": [
+        "arXiv:2504.02605"
+      ],
+      "reason": "Its contribution is a multilingual issue-resolution dataset and benchmark; serving lineage references do not correspond to a tested inference method.",
+      "first_checked_at": "2026-10-06T04:39:21+00:00",
+      "last_checked_at": "2026-10-06T04:39:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ],
+      "title": "Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving"
+    },
+    "arXiv:2508.15144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.15144",
+      "identity_tokens": [
+        "arXiv:2508.15144"
+      ],
+      "reason": "Mobile-Agent-v3 presents GUI automation capabilities without a concrete inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T04:39:21+00:00",
+      "last_checked_at": "2026-10-06T04:39:21+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Mobile-Agent-v3: Fundamental Agents for GUI Automation"
+    },
+    "DOI:10.18653/v1/2020.findings-emnlp.311": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.311",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.311"
+      ],
+      "reason": "UNQOVER evaluates stereotypical biases in language models, not inference resource use.",
+      "first_checked_at": "2026-10-06T04:39:22+00:00",
+      "last_checked_at": "2026-10-06T04:39:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "UNQOVERing Stereotypical Biases via Underspecified Questions"
+    },
+    "arXiv:2407.00634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.00634",
+      "identity_tokens": [
+        "arXiv:2407.00634"
+      ],
+      "reason": "Tarsier provides video-description training/evaluation recipes, not an inference optimization.",
+      "first_checked_at": "2026-10-06T04:39:22+00:00",
+      "last_checked_at": "2026-10-06T04:39:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "title": "Tarsier: Recipes for Training and Evaluating Large Video Description Models"
+    },
+    "DOI:10.48550/arxiv.2304.09797": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2304.09797",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.09797",
+        "arXiv:2304.09797"
+      ],
+      "reason": "Progressive-Hint Prompting improves reasoning through prompts without measured inference resource reduction or serving mechanism.",
+      "first_checked_at": "2026-10-06T04:39:22+00:00",
+      "last_checked_at": "2026-10-06T04:39:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Progressive-Hint Prompting Improves Reasoning in Large Language Models"
+    },
+    "DOI:10.18653/v1/d15-1202": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d15-1202",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d15-1202"
+      ],
+      "reason": "The paper solves arithmetic word problems, outside inference efficiency.",
+      "first_checked_at": "2026-10-06T04:39:23+00:00",
+      "last_checked_at": "2026-10-06T04:39:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Solving General Arithmetic Word Problems"
+    },
+    "DOI:10.1109/ijcnn.2000.861302": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ijcnn.2000.861302",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn.2000.861302"
+      ],
+      "reason": "Recurrent nets that time and count concerns recurrent-network capabilities, not LLM serving.",
+      "first_checked_at": "2026-10-06T04:39:23+00:00",
+      "last_checked_at": "2026-10-06T04:39:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Recurrent nets that time and count"
+    },
+    "arXiv:1811.00075": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1811.00075",
+      "identity_tokens": [
+        "arXiv:1811.00075"
+      ],
+      "reason": "The UEA archive is a time-series classification dataset collection.",
+      "first_checked_at": "2026-10-06T04:39:23+00:00",
+      "last_checked_at": "2026-10-06T04:39:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "The UEA multivariate time series classification archive, 2018"
+    },
+    "arXiv:2103.00453": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.00453",
+      "identity_tokens": [
+        "arXiv:2103.00453"
+      ],
+      "reason": "Self-diagnosis and self-debiasing addresses NLP bias mitigation, not inference resources.",
+      "first_checked_at": "2026-10-06T04:39:23+00:00",
+      "last_checked_at": "2026-10-06T04:39:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Self-Diagnosis and Self-Debiasing: A Proposal for Reducing Corpus-Based Bias in NLP"
+    },
+    "DOI:10.3115/v1/d14-1058": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3115/v1/d14-1058",
+      "identity_tokens": [
+        "DOI:10.3115/v1/d14-1058"
+      ],
+      "reason": "This is an arithmetic word-problem solving method, outside inference systems.",
+      "first_checked_at": "2026-10-06T04:39:23+00:00",
+      "last_checked_at": "2026-10-06T04:39:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Learning to Solve Arithmetic Word Problems with Verb Categorization"
+    },
+    "arXiv:2602.02475": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02475",
+      "identity_tokens": [
+        "arXiv:2602.02475"
+      ],
+      "reason": "AgentRx diagnoses agent failures; it does not propose inference efficiency or serving optimization.",
+      "first_checked_at": "2026-10-06T04:39:24+00:00",
+      "last_checked_at": "2026-10-06T04:39:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md"
+      ],
+      "title": "AgentRx: Diagnosing AI Agent Failures from Execution Trajectories"
+    },
+    "arXiv:2107.06499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.06499",
+      "identity_tokens": [
+        "arXiv:2107.06499"
+      ],
+      "reason": "Deduplicating training data improves model quality through data curation, not runtime optimization.",
+      "first_checked_at": "2026-10-06T04:39:24+00:00",
+      "last_checked_at": "2026-10-06T04:39:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Deduplicating Training Data Makes Language Models Better"
+    },
+    "arXiv:1711.10433": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1711.10433",
+      "identity_tokens": [
+        "arXiv:1711.10433"
+      ],
+      "reason": "Parallel WaveNet is domain-specific speech synthesis and has no technical connection to LLM inference systems.",
+      "first_checked_at": "2026-10-06T04:39:24+00:00",
+      "last_checked_at": "2026-10-06T04:39:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Parallel WaveNet: Fast High-Fidelity Speech Synthesis"
+    },
+    "DOI:10.1109/micro.2007.30": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2007.30",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2007.30"
+      ],
+      "reason": "CACTI 6.0 studies general cache organization, not LLM KV cache or model serving.",
+      "first_checked_at": "2026-10-06T04:39:25+00:00",
+      "last_checked_at": "2026-10-06T04:39:25+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Optimizing NUCA Organizations and Wiring Alternatives for Large Caches with CACTI 6.0"
+    },
+    "arXiv:2002.06305": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.06305",
+      "identity_tokens": [
+        "arXiv:2002.06305"
+      ],
+      "reason": "This paper studies pretrained-language-model fine-tuning choices, not inference optimization.",
+      "first_checked_at": "2026-10-06T04:39:25+00:00",
+      "last_checked_at": "2026-10-06T04:39:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "Fine-Tuning Pretrained Language Models: Weight Initializations, Data Orders, and Early Stopping"
+    },
+    "arXiv:2302.06675": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.06675",
+      "identity_tokens": [
+        "arXiv:2302.06675"
+      ],
+      "reason": "Symbolic discovery of optimization algorithms concerns training optimizers, not inference.",
+      "first_checked_at": "2026-10-06T04:39:25+00:00",
+      "last_checked_at": "2026-10-06T04:39:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Symbolic Discovery of Optimization Algorithms"
+    },
+    "DOI:10.1145/339647.339673": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/339647.339673",
+      "identity_tokens": [
+        "DOI:10.1145/339647.339673"
+      ],
+      "reason": "Smart Memories is a general memory-architecture paper without an LLM inference/KV-cache connection.",
+      "first_checked_at": "2026-10-06T04:39:25+00:00",
+      "last_checked_at": "2026-10-06T04:39:25+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Smart Memories"
+    },
+    "arXiv:2505.23281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23281",
+      "identity_tokens": [
+        "arXiv:2505.23281"
+      ],
+      "reason": "The paper focuses on contamination, competition coverage, and proof evaluation; its parallel-decoding lineage label is unsupported by its methods.",
+      "first_checked_at": "2026-10-06T04:39:26+00:00",
+      "last_checked_at": "2026-10-06T04:39:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "title": "MathArena: Evaluating LLMs on Uncontaminated Math Competitions"
+    },
+    "DOI:10.1109/icassp.1982.1171604": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp.1982.1171604",
+      "identity_tokens": [
+        "DOI:10.1109/icassp.1982.1171604"
+      ],
+      "reason": "This work studies vector quantization for speech coding, not LLM quantization or serving.",
+      "first_checked_at": "2026-10-06T04:39:26+00:00",
+      "last_checked_at": "2026-10-06T04:39:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ],
+      "title": "Multiple stage vector quantization for speech coding"
+    },
+    "arXiv:2311.11944": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.11944",
+      "identity_tokens": [
+        "arXiv:2311.11944"
+      ],
+      "reason": "FinanceBench is a financial QA benchmark, not an inference optimization.",
+      "first_checked_at": "2026-10-06T04:39:26+00:00",
+      "last_checked_at": "2026-10-06T04:39:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md"
+      ],
+      "title": "FinanceBench: A New Benchmark for Financial Question Answering"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45e9d92c5098546f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1902.04094",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1902.04094",
+    "identity_tokens": [
+      "arXiv:1902.04094"
+    ],
+    "reason": "BERT as a Markov random field language model is a modeling/training paper without a relevant inference optimization.",
+    "first_checked_at": "2026-10-06T04:39:20+00:00",
+    "last_checked_at": "2026-10-06T04:39:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+    ],
+    "title": "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model"
+  },
+  "processed_at": "2026-10-06T04:39:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45e9d92c5098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
