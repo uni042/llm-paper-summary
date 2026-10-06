@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r152-screen-01-part-04-ae678aed1fe1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3077269",
+      "identity_tokens": [
+        "DOI:10.1117/12.3077269"
+      ],
+      "title": "Evaluation of hardware-induced errors in optically computing transformer models",
+      "reason": "optical transformer inferenceのhardware-induced error解析はLLM hardwareに直接隣接するが、SPIE一次資料を取得できず、精度-効率のトレードオフや改善手法を確認できない。",
+      "source_url": "https://doi.org/10.1117/12.3077269",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3800575",
+      "identity_tokens": [
+        "DOI:10.1145/3800575"
+      ],
+      "title": "MoEPlan: A Lazy Learned Query-Selection Optimizer via Mixture of Optimizer Experts",
+      "reason": "MoEPlanはquery optimizerの候補plan選択を効率化する内容でモデルMoEとは異なる可能性が高いが、ACM一次資料を取得できず正確な対象と性能指標を検証できない。",
+      "source_url": "https://doi.org/10.1145/3800575",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1371/journal.pgen.1012242",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pgen.1012242"
+      ],
+      "title": "Wiz regulates clustered protocadherin genes by restricting CTCF/cohesin loop extrusion in a genomic-distance biased manner",
+      "reason": "遺伝子発現制御の生物学研究でLLM inferenceとの関連は薄いが、PLOS一次資料を取得できなかったため内容確認未了として保留する。",
+      "source_url": "https://doi.org/10.1371/journal.pgen.1012242",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.03589",
+      "identity_tokens": [
+        "arXiv:2603.03589"
+      ],
+      "title": "stratum: A System Infrastructure for Massive Agent-Centric ML Workloads",
+      "reason": "本文はLLMエージェントが多数のdata-science pipelineを探索するstratum基盤で、pipeline実行を最大16.6倍高速化する。ただしLLM token inference自体のcompute/latencyを改善するものではなく、agent workload infrastructureとして隣接する。",
+      "source_url": "https://arxiv.org/abs/2603.03589",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01565",
+      "identity_tokens": [
+        "arXiv:2603.01565"
+      ],
+      "title": "Investigating Group Relative Policy Optimization for Diffusion Transformer based Text-to-Audio Generation",
+      "reason": "一次資料の要旨を確認。Text-to-audio (T2A) generation has advanced considerably in recent years, yet existing methods continue to face challenges in accurately rendering complex text prompts, particularly those involving intricate audio effects, and achieving precise text-audio alignment. While prior approaches have explored data augmentation, explicit timing conditioning, and rei",
+      "source_url": "https://arxiv.org/abs/2603.01565",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
