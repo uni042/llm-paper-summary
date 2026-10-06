@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r152-screen-01-part-01-ae678aed1fe1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16936",
+      "identity_tokens": [
+        "arXiv:2603.16936"
+      ],
+      "title": "TDMM-LM: Bridging Facial Understanding and Animation via Language Models",
+      "reason": "一次資料の要旨を確認。Text-guided human body animation has advanced rapidly, yet facial animation lags due to the scarcity of well-annotated, text-paired facial corpora. To close this gap, we leverage foundation generative models to synthesize a large, balanced corpus of facial behavior. We design prompts suite covering emotions and head motions, generate about 80 hours of facial",
+      "source_url": "https://arxiv.org/abs/2603.16936",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-00587-9",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00587-9"
+      ],
+      "title": "MIME: Mutual information-guided mixture of experts for robust multimodal sentiment analysis",
+      "reason": "出版社本文は音声・映像が雑音を含むmultimodal sentiment analysis向けMI-guided MoE denoisingであり、LLM serving性能の改善や推論コスト削減を扱わない。",
+      "source_url": "https://doi.org/10.1007/s44443-026-00587-9",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/I3CTCON68242.2026.11508072",
+      "identity_tokens": [
+        "DOI:10.1109/I3CTCON68242.2026.11508072"
+      ],
+      "title": "Scales of Attention: A Hierarchical InLegalBERT Framework for Legal Judgment Prediction",
+      "reason": "legal judgment predictionでInLegalBERTを階層化する題名は長文処理の効率に関係する可能性があるが、IEEE一次資料を取得できず、推論長/latencyへの実証を確認できない。",
+      "source_url": "https://doi.org/10.1109/I3CTCON68242.2026.11508072",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12577",
+      "identity_tokens": [
+        "arXiv:2603.12577"
+      ],
+      "title": "Expert Pyramid Tuning: Efficient Parameter Fine-Tuning for Expertise-Driven Task Allocation",
+      "reason": "本文はLLM向けMoE-LoRAのparameter-efficient fine-tuningを提案し、測定している改善は主にtrainable parameter数とmulti-task性能である。推論時のcompute/memory/latency削減は示されない。",
+      "source_url": "https://arxiv.org/abs/2603.12577",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12846",
+      "identity_tokens": [
+        "arXiv:2603.12846"
+      ],
+      "title": "Deep-Learning-Designed AlGaAs Interface Linking Trapped Ions to Telecom Quantum Networks",
+      "reason": "一次資料の要旨を確認。The realization of a scalable quantum internet requires efficient light-matter interfaces that map stationary qubits onto photonic carriers for long-distance transmission. A central challenge is the generation of entangled photons simultaneously compatible with single-emitter transitions and low-loss telecom fiber infrastructure. Spontaneous parametric down-",
+      "source_url": "https://arxiv.org/abs/2603.12846",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
