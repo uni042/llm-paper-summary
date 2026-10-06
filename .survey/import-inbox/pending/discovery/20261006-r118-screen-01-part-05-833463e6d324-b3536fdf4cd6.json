@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r118-screen-01-part-05-833463e6d324",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.16178",
+      "identity_tokens": [
+        "arXiv:2412.16178"
+      ],
+      "title": "Context Clues: Evaluating Long Context Models for Clinical Prediction Tasks on EHRs",
+      "reason": "一次資料abstractはFoundation Models (FMs) trained on Electronic Health Records (EHRs) have achieved state-of-the-art results on numerous clinical prediction tasks. However, most existing EHR FMs have context windows of<1k tokens. This preを対象とする。LLM推論の計算量、メモリ、latency、throughput、KV cache、quantization、offload、servingへの具体的な技術接続がないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2412.16178",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.10917",
+      "identity_tokens": [
+        "arXiv:2309.10917"
+      ],
+      "title": "End-to-End Speech Recognition Contextualization with Large Language Models",
+      "reason": "一次資料abstractはIn recent years, Large Language Models (LLMs) have garnered significant attention from the research community due to their exceptional performance and generalization capabilities. In this paper, we introduce a novel methを対象とする。LLM推論の計算量、メモリ、latency、throughput、KV cache、quantization、offload、servingへの具体的な技術接続がないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2309.10917",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13458",
+      "identity_tokens": [
+        "arXiv:2502.13458"
+      ],
+      "title": "ThinkGuard: Deliberative Slow Thinking Leads to Cautious Guardrails",
+      "reason": "一次資料abstractはEnsuring the safety of large language models (LLMs) is critical as they are deployed in real-world applications. Existing guardrails rely on rule-based filtering or single-pass classification, limiting their ability to hを対象とする。LLM推論の計算量、メモリ、latency、throughput、KV cache、quantization、offload、servingへの具体的な技術接続がないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2502.13458",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.02827",
+      "identity_tokens": [
+        "arXiv:2404.02827"
+      ],
+      "title": "BAdam: A Memory Efficient Full Parameter Optimization Method for Large Language Models",
+      "reason": "一次本文を確認した。BAdam uses block-coordinate descent with Adam updates for full-parameter fine-tuning and fits Llama 3-8B/70B on limited GPUs. The savings are training-time optimizer memory and running time; it does not improve inference memory or serving.",
+      "source_url": "https://arxiv.org/abs/2404.02827",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.02319",
+      "identity_tokens": [
+        "arXiv:2404.02319"
+      ],
+      "title": "Symbolic Prompt Program Search: A Structure-Aware Approach to Efficient Compile-Time Prompt Optimization",
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。SAMMO searches symbolic prompt programs at compile time across instruction tuning, RAG and prompt compression. It may reduce repeated prompt-program cost, but reported evidence centers on task performance; no direct token/latency/serving cost result was establ",
+      "source_url": "https://arxiv.org/abs/2404.02319",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    }
+  ]
+}
