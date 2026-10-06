@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T09:07:23+00:00",
-  "record_count": 2661,
+  "updated_at": "2026-10-06T09:20:42+00:00",
+  "record_count": 2666,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -40888,6 +40888,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "OscVision: Oscillator Networks for Low Power Vision Inference"
+    },
+    "arXiv:2609.02671": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.02671",
+      "identity_tokens": [
+        "arXiv:2609.02671"
+      ],
+      "reason": "The paper routes recommendation examples between a cheap fast path and a more expensive refinement path, evaluates selector routing and an accuracy–efficiency tradeoff, and reports normalized step-based inference cost rather than wall-clock latency. It is a concrete compute-allocation method for sequential recommendation, but does not study LLM inference/serving; relevance to the LLM inference-time-scaling line is adjacent and needs a workload/lineage check.",
+      "first_checked_at": "2026-10-06T09:20:36+00:00",
+      "last_checked_at": "2026-10-06T09:20:36+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recommender System as Slow and Fast Thinkers"
+    },
+    "DOI:10.1007/s10044-026-01772-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10044-026-01772-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10044-026-01772-2"
+      ],
+      "reason": "The Springer publisher page was accessible and revealed an abstract for a multimodal-affective Mamba framework, but the full article is subscription-only and no author/institution full-text copy was found. Since the input abstract is empty, title/preview alone is insufficient for a full-text disposition; record as borderline. The publisher preview indicates MOSI/MOSEI sentiment classification, not an LLM inference optimization.",
+      "first_checked_at": "2026-10-06T09:20:37+00:00",
+      "last_checked_at": "2026-10-06T09:20:37+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mamba-CrossMod: a multimodal affective analysis framework based on selective state space model"
+    },
+    "arXiv:2609.03318": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.03318",
+      "identity_tokens": [
+        "arXiv:2609.03318"
+      ],
+      "reason": "Iapetus jointly schedules token compression and layer offloading for collaborative ViT inference across satellite links, with latency, battery and task-accomplishment evaluations. It reports lower cost and latency than its satellite scheduling comparators, but the evaluated model is ViT-L image classification, not an LLM/VLM serving workload. The edge/offload systems transfer is plausible but requires a language-model workload match.",
+      "first_checked_at": "2026-10-06T09:20:39+00:00",
+      "last_checked_at": "2026-10-06T09:20:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Iapetus: Content-Aware Hierarchical Scheduling for Collaborative ViT Inference in LEO Satellite Networks"
+    },
+    "arXiv:2609.06438": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06438",
+      "identity_tokens": [
+        "arXiv:2609.06438"
+      ],
+      "reason": "InsightChain develops multi-stage LLM analytics for data visualization and evaluates chain quality across ten domains. Its full text mentions AsymSpec only as a complementary response to context-growth inference cost; the method itself optimizes visualization reasoning/pipeline quality and reports no decoding, latency, memory or serving savings. The explicit linked speculative-decoding citation gives a weak lineage connection, but concrete runtime fit is not established.",
+      "first_checked_at": "2026-10-06T09:20:41+00:00",
+      "last_checked_at": "2026-10-06T09:20:41+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "InsightChain: Optimized Chain-of-Insight Analytics for LLM-driven Data Visualization"
+    },
+    "arXiv:2609.22228": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22228",
+      "identity_tokens": [
+        "arXiv:2609.22228"
+      ],
+      "reason": "This is a robustness study of latent-reasoning models under adversarial perturbations, rather than a new inference optimization. It discusses how latent vectors can shorten explicit reasoning trajectories and reduce memory/latency, but its experiments assess attack robustness across a limited set of models; the primary text explicitly frames results as robustness-risk evidence, not a complete LRM characterization. Its latent-inference connection is plausible but indirect.",
+      "first_checked_at": "2026-10-06T09:20:42+00:00",
+      "last_checked_at": "2026-10-06T09:20:42+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Assessing Adversarial Robustness of Latent Reasoning Models"
     }
   }
 }

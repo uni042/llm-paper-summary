@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-429c59a4c5835881-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.08106",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.08106",
+    "identity_tokens": [
+      "arXiv:2609.08106"
+    ],
+    "reason": "Nyström attention for stock prediction is task-specific financial forecasting; no LLM inference or in-scope lineage evidence.",
+    "first_checked_at": "2026-10-06T09:20:36+00:00",
+    "last_checked_at": "2026-10-06T09:20:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "Nystr\\\"om Attention Matches Full Attention for Cross-Sectional Stock Prediction"
+  },
+  "processed_at": "2026-10-06T09:20:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-429c59a4c583",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
