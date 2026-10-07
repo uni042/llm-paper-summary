@@ -1,13 +1,18 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "44aaff9d407763f0a97632ddaf5809a19cf3eabe32174449d5b0d6ec5e912f1d",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-comb-2602.01519.md",
+  "status": "imported",
+  "source_sha256": "9c84976e5029d1573071e9bee4b073a44eabb0411d8bcd314c108ac8680e992a",
   "canonical_id": "arXiv:2602.01519",
-  "worker_completed_at": "2026-10-01T15:50:00Z",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.01519-you-need-an-encoder-for-native-position-independent-caching.md",
+  "reaudit_update": true,
+  "reaudit_version": "2026-10-07-v1",
+  "legacy_escaped_git_blob_sha_accepted": false,
+  "previous_paper_sha256": "13268bef35543c1d5b5efee20caf5675f69e5e7a466d101422695096ef81e34b",
+  "previous_paper_git_blob_sha": "2c1d97c8911989bd5c701aa41e7a0d3bcbb4465f",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-10-08T07:27:27+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-comb",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
@@ -19,8 +24,5 @@
     "limitation_chars": 253,
     "insufficiency_flags": []
   },
-  "failures": [
-    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2602.01519-you-need-an-encoder-for-native-position-independent-caching.md と 10 段落 / 2306文字 (73.5%) が完全一致"
-  ],
-  "processed_at": "2026-10-07T22:21:19+00:00"
+  "processed_at": "2026-10-07T22:43:17+00:00"
 }

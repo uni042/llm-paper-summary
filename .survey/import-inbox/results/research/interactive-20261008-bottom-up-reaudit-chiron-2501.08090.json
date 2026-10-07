@@ -1,14 +1,28 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_metadata",
-  "source_sha256": "2c861ed714657aead6e6fd1256f7a94a119702d04130f59f9db99753ada263a7",
-  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-chiron-2501.08090.md",
+  "status": "imported",
+  "source_sha256": "0241973171883c59af7aca9cdf0162d59bb6bc3865256484ef4ba232d9314832",
   "canonical_id": "arXiv:2501.08090",
-  "worker_completed_at": null,
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.08090-chiron-hierarchical-autoscaling.md",
+  "reaudit_update": true,
+  "reaudit_version": "2026-10-07-v1",
+  "legacy_escaped_git_blob_sha_accepted": false,
+  "previous_paper_sha256": "3f16d93a1ab31a14181a1c802e83778df47c0e4b0b2bd97f47859c7ce219bcac",
+  "previous_paper_git_blob_sha": "c219cf12124488dc9620f22c865a8473a5570b8d",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-10-08T07:27:27+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-chiron",
-  "failures": [
-    "worker_completed_at"
-  ],
-  "processed_at": "2026-10-07T22:21:18+00:00"
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4994,
+    "body_paragraphs": 58,
+    "method_chars": 1316,
+    "method_paragraphs": 20,
+    "evaluation_chars": 979,
+    "limitation_chars": 297,
+    "insufficiency_flags": []
+  },
+  "processed_at": "2026-10-07T22:43:07+00:00"
 }

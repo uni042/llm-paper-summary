@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-07T22:25:15+00:00",
+  "generated_at": "2026-10-07T22:44:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 155,
+  "count": 154,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -2707,31 +2707,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4937ba6b798c8191a7a487e8ccfdac95--2402.11295-onebit.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4937ba6b798c8191a7a487e8ccfdac95--2402.11295-onebit.json",
       "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.01519",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T22:21:19+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2602.01519-you-need-an-encoder-for-native-position-independent-caching.md と 10 段落 / 2306文字 (73.5%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4471,
-        "body_paragraphs": 23,
-        "method_chars": 1424,
-        "method_paragraphs": 8,
-        "evaluation_chars": 1199,
-        "limitation_chars": 253,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-comb-2602.01519.md",
-      "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-comb-2602.01519.json",
-      "worker_run_key": "interactive-20261008-bottom-up-reaudit-comb"
     },
     {
       "canonical_id": "arXiv:2604.10603",

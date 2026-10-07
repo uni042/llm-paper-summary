@@ -1,14 +1,28 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_metadata",
-  "source_sha256": "a58eb8cb31fadf8b94ec6771105d29d127a4d7db87e2e695642649f4866f3017",
-  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-crossflow-2609.27085.md",
+  "status": "imported",
+  "source_sha256": "3b64e99fb99dad5787179077d135ef54b0397d8a2bf2f1da6ae1a02d00738f9b",
   "canonical_id": "arXiv:2609.27085",
-  "worker_completed_at": null,
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.27085-crossflow-prefill-decode-elasticity-for-agentic-llm-serving.md",
+  "reaudit_update": true,
+  "reaudit_version": "2026-10-07-v1",
+  "legacy_escaped_git_blob_sha_accepted": false,
+  "previous_paper_sha256": "c5554d3bc6953362d4a0e4a1d05f226562d6d2fe2e310344d34cc5d6925c59f9",
+  "previous_paper_git_blob_sha": "ecbca3025c8900c89c9fb778d4ab84fde561ad0d",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-10-08T07:27:27+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-crossflow",
-  "failures": [
-    "worker_completed_at"
-  ],
-  "processed_at": "2026-10-07T22:25:15+00:00"
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3188,
+    "body_paragraphs": 22,
+    "method_chars": 944,
+    "method_paragraphs": 8,
+    "evaluation_chars": 1095,
+    "limitation_chars": 147,
+    "insufficiency_flags": []
+  },
+  "processed_at": "2026-10-07T22:43:39+00:00"
 }
