@@ -44,7 +44,7 @@
 
 - **2026-03 · [HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention](2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  DeepSeek Sparse 注意機構（DSA）のような細粒度疎注意機構は、軽量indexerで全過去トークンをスコアし、上位keyだけへ本注意機構を計算する。
+  狙いはブロック疎 注意へ変更することではなく、ブロックを検索用の粗い索引としてだけ使い、最終的な注意対象はトークン粒度のまま維持することにある。
 
 - **2026-02 · [HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing](2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -63,8 +63,8 @@
   索引分岐でGQAグループ別にKVブロックを選び、専用GPUカーネルと組み合わせて1M文脈の注意計算28.4倍削減、H800でプリフィル14.2倍・デコード7.6倍高速化。
 
 - **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  長文脈の疎注意では、注意機構本体が読むKVをK件へ減らしても、N件のindexer スコアから正確なTop-Kを毎デコード 段階選ぶ必要がある。
+  実装：[✓](https://github.com/longcheng-nv/GVR_TopK_supplementaty_materials) ・ リポジトリ内被引用：3  
+  Guess-Verify-Refine（GVR）は、DeepSeek Sparse 注意機構（DSA）の復号時に毎トークン実行される正確な上位K選択（exact Top-K）を高速化するGPUアルゴリズムである。
 
 - **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
   実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：2  
@@ -75,8 +75,8 @@
   長文脈生成ではKVキャッシュ容量だけでなく、毎トークンの注意機構が過去全トークンを読む費用が律速になる。
 
 - **2026-03 · [FlashPrefill: Instantaneous Pattern Discovery and Thresholding for Ultra-Fast Long-Context Prefilling](2026-2603.06199-flashprefill-instantaneous-pattern-discovery-and-thresholding-for-ultra-.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  注意パターンを高速ブロック検索し、並べ替え不要の動的しきい値で疎化することで、プリフィルを256Kで最大27.78倍、4Kでも1.71倍高速化。
+  実装：[✓](https://github.com/qhfan/FlashPrefill) ・ リポジトリ内被引用：2  
+  FlashPrefillは、長文脈大規模言語モデル（LLM）のプリフィル（プリフィル）で支配的になる二次複雑度の自己注意を、入力ごとに発見したブロック-疎 注意へ置換する手法である。
 
 - **2026-08 · [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md)**  
   実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：1  
@@ -118,11 +118,11 @@
 
 - **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  単純なCPUオフロードは、注意機構のたびに必要KVをPCIe経由でGPUへ戻すため、GPU演算器よりCPU–GPUリンクが律速になる。
+  Beyondは、長文脈・多要求の大規模言語モデル（LLM）推論でキー・値キャッシュ（KV キャッシュ）がGPUの高帯域メモリ（HBM）を超えたとき、CPU DRAMを単なる退避先として使うのではなく、CPU側のメモリ帯域と演算能力も注意計算へ参加させるCPU–GPU協調ランタイムである。
 
 - **2026-07 · [RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention](2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  特徴は単一の決定的疎パターンだけに依存せず、確率的サンプリングを複数シードで繰り返して予測を統合する点にある。
+  実装：[✓](https://github.com/santosardr/riskernel) ・ リポジトリ内被引用：0  
+  RIS-Kernelは、長文脈の自己注意（self-注意機構）が全トークン対を評価することで計算量・メモリ量が急増する問題に対し、推論時だけ注意相互作用を疎化するReduced Interaction Sampling（RIS）を実装した推論層である。
 
 - **2026-04 · [HieraSparse: Hierarchical Semi-Structured Sparse KV Attention](2026-2604.16864-hierasparse.md)**  
   実装：[✓](https://github.com/psl-ntu/HieraSparse) ・ リポジトリ内被引用：0  

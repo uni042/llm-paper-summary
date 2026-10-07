@@ -68,7 +68,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2025-12 · [Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation](2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  CPU等へ専門家を置くオフロードでは、ルータが選んだ重みを毎トークン転送するためPCIe帯域が律速になる。H100 GPU-onlyとGPU-NDPで、比較対象比おおむね3〜8倍のエンドツーエンド スループット改善を報告する。
+  本論文は、CPUや近傍メモリ処理（Near-Data Processing; NDP）側へエキスパートをオフロードする混合エキスパート（MoE）推論で、PCIe等のエキスパート転送が全体を支配する問題に対し、「ほとんどのエキスパートはINT2/INT3のまま転送し…
 
 - **2026-08 · [Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference](2026-2608.12103-kernel-managed-expert-cache-tiering.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

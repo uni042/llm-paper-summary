@@ -50,9 +50,9 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：3  
   それでもLoRAアダプタ、接頭辞キャッシュ、専用モデル、検索状態などのエージェント固有メモリを全員分GPUへ常駐させると、エージェント数の増加に伴って容量を超える。一般的なSGLang等はアプリケーションの将来実行順を知らず、要求が来てから必要状態をCPUからGPUへロードし、LRU等で過去の利用履歴に基づき退避する。
 
-- **2026-03 · [DyQ-VLA: Temporal-Dynamic-Aware Quantization for Embodied Vision-Language-Action Models](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  通常の静的量子化は全時刻を同じビット幅で処理するが、粗い自由空間移動では多少の誤差が許容される一方、把持や挿入では小さな誤差が失敗へ増幅される。
+- **2026-03 · [DyQ-VLA: Dynamic Quantization and Compensation for VLA models with Runtime Error Awareness](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
+  実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：2  
+  DyQ-VLAは、視覚言語行動モデル（Vision-Language-行動 モデル; VLA）の量子化を単なる「タスク 成功を保ちながら低ビット化する」問題ではなく、閉ループ実行中の実行時 誤差が次の観測・行動へどう伝播するかという観点から設計し直す。
 
 - **2026-06 · [KernelSight-LM: A Kernel-Level LLM Inference Simulator](2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -80,11 +80,11 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 - **2024-11 · [APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving](2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
-  APEXは、LLMサービングのデータ並列・パイプライン並列・テンソル並列の組合せを、実機へ総当たり配備せずCPU上で探索するシミュレータである。APEXはこの動的状態を明示的に模擬し、TTFT、TPOT、電力を計画ごとに推定する。
+  APEXは、LLM サービングでテンソル並列（テンソル 並列方式; TP）、パイプライン並列（パイプライン 並列方式; PP）、データ並列（data 並列方式; DP）、エキスパート並列（エキスパート 並列方式; EP）をどう組み合わせるべきかを、GPUクラスタへ候補を総当たり配備せずCPU上のシミュレーションで探索するシステムである。
 
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  SamuLLMは、1つのアプリケーションが複数のLLMを使うオフライン推論を対象にする。単一LLMの最適化と異なり、GPU群へ複数モデルを同時に置くと、モデルごとのテンソル並列・パイプライン並列等の選択と、同時実行モデル集合が互いに干渉する。
+  実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
+  SamuLLMは、複数のLLMから構成されるオフライン推論アプリケーションを単一ノード複数GPUで実行するとき、「どのモデルを同時に走らせるか」と「各モデルへデータ並列（データ 並列方式; DP）とテンソル並列（テンソル 並列方式; TP）を何度ずつ割り当てるか」を共同最適化するフレームワークである。
 
 ### 3年前（2023-11〜2024-10）
 

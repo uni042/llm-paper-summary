@@ -72,7 +72,7 @@
 
 - **2026-02 · [Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems](2026-2602.09721-revealing-the-challenges-of-attention-ffn-disaggregation-for-modern-moe-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  本論文は、混合エキスパート（Mixture of エキスパート; MoE）推論で注目される注意機構-FFN分離（注意機構-FFN Disaggregation; AFD）を「分離すれば必ず効率が上がる」方式として扱わず、どのモデル・network・hardware条件で成立し、どこで逆効果になるかを定量化する分析研究である。
+  本論文は、混合エキスパート（Mixture of エキスパート; MoE）推論で注目される注意-FFN分離（注意-FFN Disaggregation; AFD）を「分離すれば必ず効率が上がる」方式として扱わず、どのモデル・ネットワーク・ハードウェア条件で成立し、どこで逆効果になるかを定量化する分析研究である。
 
 - **2026-02 · [OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration](2026-2602.12151-oserve-spatial-temporal-workload-orchestration.md)**  
   実装：[✓](https://anonymous.4open.science/r/LiveServe_Documents-1F54/) ・ リポジトリ内被引用：4  
@@ -96,7 +96,7 @@
 
 - **2026-04 · [Introspective Diffusion Language Models](2026-2604.11035-introspective-diffusion-language-models.md)**  
   実装：[✓](https://github.com/Introspective-Diffusion/I-DLM) ・ リポジトリ内被引用：3  
-  拡散言語モデルは複数トークンを並列に更新できる一方、推論・コードの品質が同規模自己回帰モデルに届きにくい。I-DLMは原因を「内省一貫性（introspective consistency）」、すなわちモデルが自分で生成したトークンを後の検証分布でも受理できる性質の不足として分析する。
+  推論時は内省的ストライド復号（内省的 Strided デコード; ISD）により、同じ順伝播の中で「前回生成トークンの検証」と「次の複数トークン提案」を重ねる。厳密因果注意を維持するため既存AR サービング カーネル・KV キャッシュを再利用しやすく、高concurrencyで従来DLMより約3倍のスループットを得る。
 
 - **2026-04 · [Cascadia: An Efficient Cascade Serving System for Large Language Models](2025-2506.04203-cascadia-cascade-serving-routing-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -855,8 +855,8 @@
   GPU型ごとの計算・メモリ・価格差と要求特性を実測モデル化し、混合整数線形計画でGPU構成・モデル配置・要求割当を同時決定する異種GPUサービング設計。
 
 - **2025-02 · [AIBrix: Towards Scalable, Cost-Effective Large Language Model Inference Infrastructure](2025-2504.03648-aibrix-towards-scalable-cost-effective-large-language-model-inference-in.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  一般的なKubernetes基盤はPodのCPU/GPU資源量を扱えても、LLM特有のプリフィル／復号、KVキャッシュ再利用、LoRAアダプタ切替、トークン単位SLOを直接理解しない。主要構成には高密度LoRA管理、接頭辞認識・負荷認識ルータ、LLM向け自動スケーラ、分散KVキャッシュ、統一ランタイム、SLO駆動GPU最適化、アクセラレータ診断がある。
+  実装：[✓](https://github.com/vllm-project/aibrix) ・ リポジトリ内被引用：12  
+  AIBrixは制御面（control plane）とデータ面（data plane）をLLM固有情報で結び、高密度LoRA管理、LLM認識ゲートウェイ、統一AI実行時（AI ランタイム）、LLM専用自動スケーラ、分散KVキャッシュ、Kubernetes+Rayの混合粒度オーケストレーション、SLO駆動の異種GPU最適化を一つの基盤へ統合する。
 
 - **2024-11 · [Marconi: Prefix Caching for the Era of Hybrid LLMs](2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md)**  
   実装：[✓](https://github.com/ruipeterpan/marconi) ・ リポジトリ内被引用：12  
@@ -960,7 +960,7 @@
 
 - **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
   実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：5  
-  同期方式は最長ロールアウトが終わるまで学習側が待つため、長い推論列ほどGPU利用率が落ちる。
+  AReaLは、長い推論列を生成する大規模推論モデル（Large Reasoning モデル; LRM）の強化学習（reinforcement learning; RL）で、ロールアウト生成とパラメータ更新を同じバッチ障壁で交互実行する同期方式をやめ、生成GPU群と学習GPU群を完全に分離する学習 システムである。
 
 - **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1196,6 +1196,10 @@
   実装：✓ ・ リポジトリ内被引用：34  
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
+- **2024-04 · [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md)**  
+  実装：[✓](https://github.com/LoongServe/LoongServe) ・ リポジトリ内被引用：33  
+  LoongServeは、長文脈大規模言語モデル（LLM）のサービングで、要求ごと・処理段階ごとに必要なGPU資源が大きく変わるのに、従来のテンソル並列や系列並列の並列度が起動時に固定される問題を解くシステムである。
+
 - **2024-06 · [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)**  
   実装：[✓](https://github.com/QLM-project/QLM) ・ リポジトリ内被引用：32  
   対話的 / バッチ要求や複数モデルを同じクラスタで扱うとき、各要求グループがあと何秒待てるかとモデルがどのGPUに載っているかを見て、待ち行列順序と実行先を組み替え、遅延目標を守れる要求数を増やすシステム。
@@ -1224,13 +1228,9 @@
   実装：✓ ・ リポジトリ内被引用：16  
   TRAILはLLM内部層埋め込みで残り出力長を逐次予測し、KVキャッシュ増加前だけプリエンプトする制限付きSPRPTでvLLMの待ち時間を削減する。
 
-- **2024-04 · [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md)**  
-  実装：[✓](https://github.com/LoongServe/LoongServe) ・ リポジトリ内被引用：16  
-  LoongServeは固定したテンソル並列度や、プリフィル/デコードを固定GPU群へ分ける方式では、この時間変動へ追従できず、計算資源の遊休、KVキャッシュ移送、GPUメモリ断片化が起きると指摘する。1M トークン入力ではKVキャッシュだけで488GBになり得る例を示し、長文脈ではこの不整合が支配的になる。
-
 - **2024-03 · [Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference](2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
-  LLMサービングはGPU台数を増やせば性能を上げやすいが、データセンターでは電力供給自体が設備拡張の制約になる。本研究は「最速の構成」を探すのではなく、要求されるサービス水準目標（Service-Level Objective; SLO）を満たしたうえで、1要求または1tokenを処理するエネルギーを小さくする観点からLLM推論を分析する。
+  本研究は、大規模言語モデル（LLM）サービングを遅延・スループットだけでなく、サービス水準目標（Service-Level Objective; SLO）を守ったときの電力・エネルギーまで含めて実機解析した特性評価研究である。短い要求や低負荷では周波数を下げてもSLOを維持しやすく、長いプリフィルでは周波数低下の影響が大きい。
 
 - **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：9  

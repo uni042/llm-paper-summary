@@ -191,11 +191,11 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  A100実機評価では、既存システムに対し95パーセンタイル推論時間を平均1.63倍改善する。
+  学習ではエキスパート 並列の全対全通信とdata 並列の全削減通信（全削減通信）が帯域競合し、競合時の全対全通信は中央値1.83倍、最悪4.14倍遅くなる。推論では入力依存のエキスパート 人気度 偏りを前層ルーティングから予測し、人気エキスパートを複数GPUへreplicate、低人気エキスパートをpackしてstragglerを減らす。
 
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：✓ ・ リポジトリ内被引用：52  
-  Switch Transformerは、通常のTransformerのフィードフォワードネットワーク（FFN）を多数の専門家FFNへ置き換え、各トークンについてルータが1つの専門家だけを選ぶ疎な混合専門家モデルである。従来MoEのtop-kルーティングは複数専門家を同時に活性化するため、専門家間通信と各専門家のバッチ容量が増えやすい。
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：52  
+  論文は、専門家容量、容量超過トークンの扱い、負荷分散補助損失、ルータだけを高精度で計算する選択的精度、初期値スケールの縮小、専門家専用ドロップアウト、データ・モデル・専門家並列の組合せまで含め、巨大な疎モデルを実際に安定学習するための設計をまとめている。
 <!-- survey:auto:end -->

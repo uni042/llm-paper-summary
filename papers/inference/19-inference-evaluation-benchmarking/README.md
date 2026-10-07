@@ -52,7 +52,7 @@
 
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
   実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：8  
-  GPUカーネルはLLM推論を含む機械学習実行の性能を決めるが、CUDAやTritonで正しく高速な実装を書くには、演算融合、タイル化、メモリ階層、テンソル Coreなどハードウェア固有知識が要る。KernelBenchは、この最適化作業を言語モデルがどこまで自動化できるかを「コードが動くか」だけでなく、実測速度まで含めて測る。
+  GPUカーネル最適化では「同じ出力を返すコードを書ける」だけでは不十分で、参照実装より実測で速くなければ意味がない。生成物は自動でコンパイル・正当性検証・時間測定されるため、一般的なコード ベンチマークより「GPU固有の性能工学」を直接評価する。
 
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -72,7 +72,7 @@
 
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
   実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：3  
-  キャッシュ拡張生成（Cache-Augmented Generation; CAG）は、知識集合が限定的かつ長文脈モデルのcontext windowへ収まる用途で、質問時のretrievalを丸ごと省く設計である。
+  キャッシュ拡張生成（キャッシュ拡張生成; CAG）は、知識集合が限定的かつ長文脈モデルの文脈 ウィンドウへ収まる用途で、質問時の検索を丸ごと省く設計である。
 
 ### 3年前（2023-11〜2024-10）
 
@@ -86,17 +86,17 @@
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  Transformer型LLMは層を深くすることで容量を増やすが、全層が推論品質へ同程度に寄与するとは限らない。
+  枝刈り（枝刈り）方法自体は単純で、ある長さ n の連続層 ブロックについて、そのブロックへの入力表現と通過後表現の角距離（angular distance）を測る。
 
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  自己整合性（自己整合性; SC）は同じ問題から複数の思考連鎖をsamplingし、最終回答の多数決を取ることで推論精度を上げる。さらにtask/モデルごとの性能と費用の交換条件を調整する制御方式を導く。通常SCと同等の性能を狙いながら、平均sampling数をGSM8Kで80.1%、Coin Flipで84.2%など削減した。
+  実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：1  
+  自己整合性（自己整合性; SC）は、同じ問題から複数の思考連鎖（chain-of-thought; CoT）を標本化し、最終回答を多数決することで単一生成の偶然性を抑える。
 
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  本論文は新しい高速化方式を提案するのではなく、LLaMA 7B/13B/65Bを実機で動かし、スループットとGPUエネルギーを同時に測ることで、推論構成の交換条件を明らかにする。V100 32GBでは最低8枚、A100 80GBでは最低4枚が必要で、V100では8/16/32分割まで拡張する。
+  実装：✓ ・ リポジトリ内被引用：6  
+  本論文は、大規模言語モデル（large language モデル; LLM）の推論を「処理速度」だけでなく「実際にGPUが何ジュール消費したか」まで同じ実験で計測するベンチマーク研究である。さらにA100の電力上限（power cap）を下げ、レイテンシと総エネルギーの交換条件を実測する。
 
 ### 6年前（2020-11〜2021-10）
 

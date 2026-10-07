@@ -152,7 +152,7 @@
 
 - **2024-02 · [BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation](2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md)**  
   実装：[✓](https://github.com/DD-DuDa/BitDistiller) ・ リポジトリ内被引用：3  
-  4bit未満のLLM量子化では、重みの離散化段階が粗くなり、少数の大値へrangeを合わせると多数の通常重みの表現誤差が急増する。
+  BitDistillerは、4bit未満、とくに2bit・3bitの重み量子化で急激に悪化するLLM品質を、量子化認識学習（Quantization-Aware 学習; QAT）と自己蒸留（self-distillation）で回復する枠組みである。
 
 ### 4年前（2022-11〜2023-10）
 

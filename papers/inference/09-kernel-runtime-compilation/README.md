@@ -57,8 +57,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   動画Diffusion Transformerでは数万トークンの時空間系列へ注意を掛けるため、注意機構が生成時間の大きな割合を占める。
 
 - **2026-09 · [Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights](2026-2609.02652-unfolding-the-leech-lattice-fused-multi-shell-decoding-and-vram-layouts-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  2-bit級のLLM重み量子化では、ディスク上のbit数だけ小さくても、GPUが各重みを復号するための符号表や補助ストリームが大きければ、実際のデコードは速くならない。一方、融合カーネルによりFP16より小さい転送量を活かし、4B、8B、14Bモデルでエンドツーエンド 1.11倍、1.29倍、1.41倍を報告する。
+  実装：[✓](https://github.com/pjmalandrino/llvq) ・ リポジトリ内被引用：0  
+  本論文は、Leech格子ベクトル量子化（Leech-lattice vector 量子化; LLVQ）を「2 bit/重みで保存できる」という圧縮アルゴリズムの段階から、実際のGPUデコードへ載せる段階まで実装し、そのとき生じる保存bit数と実行時VRAM bit数の乖離を測るシステム研究である。
 
 - **2026-09 · [AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels](2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -198,7 +198,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2024-02 · [Simple linear attention language models balance the recall-throughput tradeoff](2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md)**  
   実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：5  
-  通常注意機構は過去トークンのKVキャッシュを保持するため再取得に強いが、状態量が文脈長へ比例する。
+  通常のソフトマックス注意（softmax 注意機構）は全過去トークンのキー・値（KV）を残すため正確な照合に強い一方、状態量が文脈長に比例する。
 
 - **2024-09 · [CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification](2024-2409.01366-chess-optimizing-llm-inference-via-channel-wise-thresholding-and-selecti.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

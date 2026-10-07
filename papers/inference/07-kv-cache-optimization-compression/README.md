@@ -97,7 +97,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-04 · [The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference](2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  本論文は、自己回帰推論で標準的に用いられるKVキャッシュ（KV キャッシュ）が、キャッシュを無効化して各stepでprefix全体を再計算する経路と「数学的には同値だから、同じトークン列を返す」とみなされてきた前提をFP16実装で検証する分析論文である。中心的な主張は「KV キャッシュというアルゴリズム自体が近似だから違う」のではない。
+  本論文は、自己回帰推論で標準的に用いられるKVキャッシュ（KV キャッシュ）が、キャッシュを無効化して各段階でprefix全体を再計算する経路と「数学的には同値だから、同じトークン列を返す」とみなされてきた前提をFP16実装で検証する分析論文である。中心的な主張は「KV キャッシュというアルゴリズム自体が近似だから違う」のではない。
 
 - **2026-04 · [IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs](2026-2604.10539-icecache-semantic-kv-offload.md)**  
   実装：[✓](https://github.com/yuzhenmao/IceCache) ・ リポジトリ内被引用：2  
@@ -145,7 +145,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-07 · [MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression](2026-2607.00760-mosaickv-serving-long-context-llm-with-dynamic-two-d-kv-cache-compressio.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  従来方式は系列軸のトークン 枝刈りか経路軸の量子化・低ランク化のどちらか一方を主に圧縮する。
+  MosaicKVは、極長文脈のKVキャッシュを系列方向とチャネル方向の両方で圧縮し、容量削減だけでなく注意計算そのものを高速化するサービングシステムである。一方、両者を単純に組み合わせると重要要素まで二重に捨ててしまい、論文のQuestベース素朴実装ではチャネル圧縮率30%で24.5%、70%で82.8%の精度低下が生じる。
 
 - **2026-07 · [KVpop：将来注意を用いた予測型オンラインKVキャッシュ枝刈り](2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -201,7 +201,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-02 · [InnerQ: Hardware-Aware Tuning-Free Quantization of KV Cache for Large Language Models](2026-2602.23200-innerq-hardware-aware-tuning-free-quantization-of-kv-cache-for-large-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  長文生成ではキー・バリューキャッシュ（KV キャッシュ）が系列長に比例して増え、復号時のメモリ容量と帯域を圧迫する。従来の群単位量子化は外側次元に沿って群を作ることが多く、外れ値を局所化できる一方、GPUで各行を復号してベクトル行列積する際に多数のscale/zero-pointを読み直す。
+  InnerQは、長文脈デコードで増え続けるキー・バリューキャッシュ（KV キャッシュ）を低ビット化する際、量子化誤差だけでなく「量子化済みKVをGPU上で復号してベクトル行列積（GEMV）へ渡すときのスケール/zero-point読み出し」を主要ボトルネックとして設計する調整不要（調整不要）のKV量子化方式である。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
@@ -219,7 +219,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-09 · [To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems](2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md)**  
   実装：[✓](https://github.com/FastLM/KVLearn) ・ リポジトリ内被引用：0  
-  プリフィルとデコードを別ノード群へ分離するLLMサービングでは、KVキャッシュを残すか捨てるかの費用構造が単一GPUのLRUと異なる。
+  KVLearnは、プリフィル（プリフィル）とデコード（デコード）を別ノード プールへ分離するLLM サービングで、KV キャッシュを「残す／捨てる」判断を単なるLRUではなく期待コスト最小化として扱う。
 
 - **2026-09 · [The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems](2026-2609.27746-kv-cache-working-set-online-capacity-planning.md)**  
   実装：[✓](https://github.com/llc-kc/kv_cache_capacity_estimator) ・ リポジトリ内被引用：0  
@@ -251,7 +251,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-09 · [Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression](2026-2609.36322-periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  チャンク型KV圧縮が窓境界に対する位置位相を新たに作り、同じ情報の検索精度を最大40ポイント変動させる周期的弱点を生むことを実証する。
+  チャンク型KVキャッシュ圧縮（chunked KV-cache compression）は、連続するトークンを固定幅の窓へ区切り、各窓を少数のK/V表現へ要約することで長文脈推論のKV容量と注意計算を削減する。
 
 - **2026-09 · [OmniKVQuant: KV Cache Quantization for Omni-LLMs](2026-2609.11582-omnikvquant-kv-cache-quantization-for-omni-llms.md)**  
   実装：[✓](https://github.com/kaistmm/OmniKVQuant) ・ リポジトリ内被引用：0  
@@ -623,7 +623,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2024-02 · [No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization](2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md)**  
   実装：✓ ・ リポジトリ内被引用：25  
-  KVキャッシュ圧縮で一般的な追い出しは、注意機構上の重要度が低いトークンを完全に削除する。
+  論文はH2O型の追い出しを使うと、後続質問で必要な細部、システムプロンプト中の安全指示、過去の会話内容が不可逆に失われ、幻覚や安全指示の破綻まで起こり得ることを示す。
 
 - **2024-05 · [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](2024-2405.12981-cross-layer-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：23  
@@ -675,11 +675,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2024-02 · [GliDe with a CaPE: A Low-Hassle Method to Accelerate Speculative Decoding](2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
-  投機的復号は小さい下書きモデルが複数トークンを先に提案し、大きい対象モデルがまとめて検証する。実時間評価ではGliDe最大2.17倍、CaPE併用最大2.61倍の高速化を報告する。
+  速度はドラフトの軽さだけでなく、提案トークンが対象に受理される割合に強く依存する。Vicuna 7B/13B/33BとMistral-7B-Instructを含む評価で、GliDeは従来ドラフトより受理率 率を平均19.9%改善し、実時間でVicunaを最大約2.17倍、CaPE併用で2.50〜2.61倍高速化した。
 
 - **2024-10 · [LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management](2024-2410.00428-layerkv-optimizing-large-language-model-serving-with-layer-wise-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
-  さらにサービス水準目標（Service Level Objective; SLO）認識スケジューラが、既存デコード要求の出力トークン時間（Time Per Output Token; TPOT）を破らない範囲だけ新規プリフィルを投入する。
+  LayerKVは、長文脈LLMの最初のトークンまでの時間（時間 to First トークン; TTFT）が増える主因を、プリフィル計算そのものだけでなく「十分なGPU KVブロックが空くまで新規リクエストを開始できない待ち行列」と捉え、KVキャッシュ管理の粒度をリクエスト単位から層単位へ細かくするサービング手法である。
 
 - **2024-07 · [ThinK: Thinner Key Cache by Query-Driven Pruning](2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -735,7 +735,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2024-04 · [SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget](2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md)**  
   実装：[✓](https://github.com/hetailang/SqueezeAttention) ・ リポジトリ内被引用：5  
-  KVキャッシュ圧縮の多くは、各層の中で重要トークンを選び、古い・低注意機構 トークンを捨てる「系列方向」の最適化を行う。論文は約30〜70%のKV メモリ削減と最大2.2倍スループット改善を報告する。
+  SqueezeAttentionは、KVキャッシュ圧縮を「各層の中でどのトークンを残すか」という系列方向だけでなく、「総KV予算をどの注意機構層へ配るか」という層方向まで含む二次元問題として扱う。
 
 - **2024-10 · [InfiniPot: Infinite Context Processing on Memory-Constrained LLMs](2024-2410.01518-infinipot-infinite-context-processing-on-memory-constrained-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
