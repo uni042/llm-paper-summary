@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7972a1bdd7e7c17-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3605573.3605613",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3605573.3605613",
+    "identity_tokens": [
+      "DOI:10.1145/3605573.3605613",
+      "arXiv:2110.14883"
+    ],
+    "reason": "data/pipeline/tensor/sequence parallelismとZeRO系heterogeneous trainingを統合する大規模分散学習systemで、主要評価も最大2.76xのtraining speedup。推論servingを最終適用先としない。",
+    "first_checked_at": "2026-10-06T21:42:51+00:00",
+    "last_checked_at": "2026-10-07T05:49:23+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md",
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "Colossal-AI: A Unified Deep Learning System For Large-Scale Parallel Training"
+  },
+  "processed_at": "2026-10-07T05:49:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7972a1bdd7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

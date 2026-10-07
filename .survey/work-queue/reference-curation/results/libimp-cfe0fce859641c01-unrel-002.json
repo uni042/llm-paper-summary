@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cfe0fce859641c01-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.09573",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.09573",
+    "identity_tokens": [
+      "arXiv:2210.09573"
+    ],
+    "reason": "attention pruning/polarizationと専用acceleratorでVision Transformerを高速化するが、論文自身がNLP Transformerとの差を明示し、最終workloadはViT画像処理。LLM/言語モデル推論対象外。",
+    "first_checked_at": "2026-10-07T05:49:21+00:00",
+    "last_checked_at": "2026-10-07T05:49:21+00:00",
+    "linked_from": [],
+    "title": "ViTCoD: Vision Transformer Acceleration via Dedicated Algorithm and Accelerator Co-Design"
+  },
+  "processed_at": "2026-10-07T05:49:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cfe0fce85964",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

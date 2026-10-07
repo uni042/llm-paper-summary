@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T05:41:39+00:00",
-  "record_count": 4276,
+  "updated_at": "2026-10-07T05:49:24+00:00",
+  "record_count": 4278,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -9324,20 +9324,6 @@
         "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
       ],
       "title": "GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference"
-    },
-    "arXiv:1902.09113": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1902.09113",
-      "identity_tokens": [
-        "arXiv:1902.09113"
-      ],
-      "reason": "Star topologyでattention complexityをO(n²)からO(n)へ削減。本文の評価はmasked summation、SST、SNLI、CoNLL等で、causal decoder/LLM serving latencyは測定しない。効率的Transformerの隣接研究だがLLM推論への直接適用根拠が限定的。",
-      "first_checked_at": "2026-10-05T02:20:12+00:00",
-      "last_checked_at": "2026-10-05T02:20:12+00:00",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
-      ],
-      "title": "Star-Transformer"
     },
     "DOI:10.1145/3744255.3811741": {
       "classification": "borderline",
@@ -64815,21 +64801,6 @@
       "borderline_recheck_count": 0,
       "title": "CogACT: A Foundational Vision-Language-Action Model for Synergizing Cognition and Action in Robotic Manipulation"
     },
-    "arXiv:2004.12832": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2004.12832",
-      "identity_tokens": [
-        "arXiv:2004.12832"
-      ],
-      "reason": "The full text (§§2–3 and experiments) evaluates query-document passage ranking, offline document representations, and retrieval FLOPs/latency. Its gains concern search/ranking, not autoregressive generation or model-serving cost; retain as borderline for possible RAG retrieval-pipeline relevance.",
-      "first_checked_at": "2026-10-06T23:37:14+00:00",
-      "last_checked_at": "2026-10-06T23:37:14+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT"
-    },
     "arXiv:1911.03852": {
       "classification": "borderline",
       "canonical_id": "arXiv:1911.03852",
@@ -65274,6 +65245,69 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory"
+    },
+    "arXiv:2201.11227": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2201.11227",
+      "identity_tokens": [
+        "arXiv:2201.11227"
+      ],
+      "reason": "Constrained Semantic Decodingで推論時に有効なprogramだけを生成するが、主目的はcode generationのcorrectness/runtime-error防止であり、推論latency・throughput・memory効率化を評価しないため境界扱い。",
+      "first_checked_at": "2026-10-07T05:49:18+00:00",
+      "last_checked_at": "2026-10-07T05:49:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Synchromesh: Reliable code generation from pre-trained language models"
+    },
+    "arXiv:2602.02474": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02474",
+      "identity_tokens": [
+        "arXiv:2602.02474"
+      ],
+      "reason": "LLM agentの長履歴memoryをextract/consolidate/pruneするskillsをcontrollerが選択し進化させる。agent memory管理には関連するが、主評価はtask performanceでruntime memory footprint・latency・serving効率のsystems評価が不足するため境界扱い。",
+      "first_checked_at": "2026-10-07T05:49:18+00:00",
+      "last_checked_at": "2026-10-07T05:49:18+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents"
+    },
+    "DOI:10.18653/v1/2024.naacl-industry.19": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2024.naacl-industry.19",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.naacl-industry.19"
+      ],
+      "reason": "RAGでstructured output hallucinationを減らし、小型retrieverにより15.5B級model相当を3B級modelで狙えるresource benefitも示すが、主要目的は品質・generalizationでsystems efficiencyの厳密評価が中心でないため境界扱い。",
+      "first_checked_at": "2026-10-07T05:49:18+00:00",
+      "last_checked_at": "2026-10-07T05:49:18+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reducing hallucination in structured outputs via Retrieval-Augmented Generation"
+    },
+    "DOI:10.18653/v1/n19-1133": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/n19-1133",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1133",
+        "arXiv:1902.09113"
+      ],
+      "reason": "全結合自己注意をstar-shaped topologyへ疎化し、relay node経由で長距離依存を保ちながら計算量を二乗から線形へ下げるefficient Transformer研究で推論効率技術として関連する。一方、評価は22個の比較的小規模NLPデータセットで、LLM推論・サービングを最終適用先としていないためborderline。",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-07T05:49:21+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Star-Transformer"
     }
   }
 }

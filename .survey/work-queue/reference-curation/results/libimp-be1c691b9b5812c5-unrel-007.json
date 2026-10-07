@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be1c691b9b5812c5-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.10348",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.10348",
+    "identity_tokens": [
+      "arXiv:2310.10348"
+    ],
+    "reason": "attribution patchingでmodel内部circuitを発見するmechanistic interpretability研究。2 forward+1 backwardで分析を高速化するが、対象は解釈手法の計算効率でLLM serving/inference効率ではない。",
+    "first_checked_at": "2026-10-07T05:49:20+00:00",
+    "last_checked_at": "2026-10-07T05:49:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+    ],
+    "title": "Attribution Patching Outperforms Automated Circuit Discovery"
+  },
+  "processed_at": "2026-10-07T05:49:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be1c691b9b58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

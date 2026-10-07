@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f09f4bfae18f83c9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.11651",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.11651",
+    "identity_tokens": [
+      "arXiv:2503.11651"
+    ],
+    "reason": "画像からcamera・depth・point map等を推定する3D vision foundation modelで、LLM推論システム最適化を主貢献としない。",
+    "first_checked_at": "2026-10-06T23:37:11+00:00",
+    "last_checked_at": "2026-10-07T05:49:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "VGGT: Visual Geometry Grounded Transformer"
+  },
+  "processed_at": "2026-10-07T05:49:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f09f4bfae18f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

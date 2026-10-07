@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f09f4bfae18f83c9-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1162/tacl_a_00373",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1162/tacl_a_00373",
+    "identity_tokens": [
+      "DOI:10.1162/tacl_a_00373",
+      "arXiv:2007.12626"
+    ],
+    "reason": "要約評価指標と人間評価の整合性を体系評価するNLG evaluation研究で、推論システム効率化を扱わない。",
+    "first_checked_at": "2026-10-04T17:54:50+00:00",
+    "last_checked_at": "2026-10-07T05:49:25+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2505.10259-specoffload-unlocking-latent-gpu-capacity-for-llm-inference.md",
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+    ],
+    "title": "SummEval: Re-evaluating Summarization Evaluation"
+  },
+  "processed_at": "2026-10-07T05:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f09f4bfae18f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

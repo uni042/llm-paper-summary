@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7972a1bdd7e7c17-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.11523",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.11523",
+    "identity_tokens": [
+      "arXiv:2309.11523"
+    ],
+    "reason": "RetNetのdecayを2次元空間へ拡張したvision backboneで線形complexityを実現するが、最終評価はImageNet/COCO/ADE20Kの画像認識・検出・segmentationで、LLM推論ではない。",
+    "first_checked_at": "2026-10-07T05:49:22+00:00",
+    "last_checked_at": "2026-10-07T05:49:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "RMT: Retentive Networks Meet Vision Transformers"
+  },
+  "processed_at": "2026-10-07T05:49:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7972a1bdd7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
