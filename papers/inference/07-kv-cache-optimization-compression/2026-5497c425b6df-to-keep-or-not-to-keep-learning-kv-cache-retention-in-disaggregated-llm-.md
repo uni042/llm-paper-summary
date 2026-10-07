@@ -83,37 +83,72 @@ references_checked_at: '2026-10-04'
 references_source: crossref-deposited-reference-metadata
 references_total: 34
 ---
+
 # To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems
 
 ## 概要
-プリフィルとデコードを別ノード群へ分離するLLMサービングでは、KVキャッシュを残すか捨てるかの費用構造が単一GPUのLRUと異なる。missするとプリフィル再計算だけでなく、生成したKVをデコード側へネットワーク転送する。一方、再利用されないKVを大域 プールへ保存しても、作成時の転送とメモリ占有を無駄にする。KVLearnはこの判断をオンライン学習付きの費用最適化へ置き換える。
+
+KVLearnは、プリフィル（prefill）とデコード（decode）を別node poolへ分離するLLM servingで、KV cacheを「残す／捨てる」判断を単なるLRUではなく期待cost最小化として扱う。分離構成ではcache missのcostが同一device上の再計算だけではない。prefill nodeでprefixを再計算した後、そのKV blockをdecode nodeへnetwork転送する必要がある。一方で、再利用されないblockをglobal KV poolへ保存すると、保存時の追加転送とmemory占有を先払いしたまま無駄にする。
+
+KVLearnは、将来のprefix再利用確率を学習するPrefix Reuse Predictor（PRP）、その確率を再計算・転送・保存costへ変換するCost-Aware Retention Score（CARS）、pool pressureとhit状況に応じてKEEP閾値を変えるAdaptive Threshold Controller（ATC）の3要素を組み合わせる。model weightやattention計算は変更せず、global KV pool coordinatorのadmission/eviction pathへ置く制御機構である。
+
+## 問題設定
+
+古典的なLRU/LFUはrecency/frequencyを使うが、同じ再利用確率でもblockの価値は同一ではない。長いprefix、特にimage/video由来の大量tokenを含むmultimodal requestは、miss時のprefill再計算が高価で、KV tensor自体も大きい。一方、高速fabricでは転送costが下がるため、保存すべきreuse thresholdも変わる。
+
+したがって保持判断には、将来reuse probability、miss時recompute cost、reuse時transfer cost、poolに置き続けるstorage opportunity cost、現在のpool occupancyを同時に扱う必要がある。KVLearnはこれらをonlineに結び付ける。
 
 ## 手法
-Prefix Reuse Predictor（PRP）は接頭辞の構造・時間特徴16次元から将来再利用確率を予測する。モデル重みには触れず、追い出し等で後から得られる再利用 ラベルを再生 バッファへ蓄積し、軽量MLPをoff-path更新する。
 
-Cost-Aware Retention Score（CARS）は予測確率だけでなく、ブロックを捨てた場合の再計算費用R、再利用時の転送費用T、保持中のストレージ費用Uを同じ尺度へ変換する。公開実装では概念的に `CARS=P_hat*(R-T)-U` とし、長い接頭辞ほど再計算費用が増えるため、同じ再利用確率でも保持価値が高くなる。
+### 1. Prefix Reuse Predictor（PRP）
 
-Adaptive Threshold Controller（ATC）はプール 占有率と命中状況を閉ループで観測し、KEEP判定閾値を調整する。固定閾値では通信量 局面やメモリ pressureが変わった際に過剰受入れ/過剰追い出しへ偏るためである。これによりPRPの予測値を直接離散 判定にせず、システム状態へ追従させる。
+PRPはblock `b` の構造・時間的特徴 `x(b)` から再利用確率 `P̂(b)=fθ(x(b))∈[0,1]` を出す軽量predictorである。公開実装の既定値ではfeature dimension 16、hidden size 32の小さなnetworkを使い、LLM本体のhidden stateやweightには触れない。
+
+reuse labelは要求到着時には分からないので、evictionや一定horizon経過後に「再利用された／されなかった」という遅延labelを得る。これをreplay bufferへ蓄積し、既定ではbuffer 20k、100 labelごとのmini-batchでoff-path更新する。静的traceから一度学習して固定するのではなく、workloadのreuse patternへオンライン追従する設計である。
+
+### 2. Cost-Aware Retention Score（CARS）
+
+KV block sizeは公開実装で `|b| = 2·ℓ·h_kv·d_h·L·δ` と見積もる。miss時の再計算cost `R(b)` は短prefixのbandwidth-bound領域では `α_bw L`、長prefixのcompute-bound領域では `α_flop L²`、reuse時transfer costは `T(b)=|b|/β`、保持costは `U(b)=γ|b|Δt` とする。
+
+最終scoreは `CARS(b)=P̂(b)·(R(b)-T(b))-U(b,Δt)` で、ATCの閾値 `θ` を超えたblockだけKEEPする。これは「reuseされたときに回避できるrecompute minus transfer」の期待値から保存costを引く。prefill costがsuper-linearになる長いprefixでは、必要reuse probabilityが低くても保持価値が上がる。逆にstorage pressureやtransfer costが高い場合はscoreが下がる。
+
+### 3. Adaptive Threshold Controller（ATC）
+
+CARSが同じでも、poolが空いている時と満杯に近い時でadmission aggressivenessは変えるべきである。ATCはpool occupancyとhit率をfeedbackとしてKEEP thresholdをclosed-loop調整する。公開実装の既定値はtarget occupancy `ρ*=0.85`、比例gain `Kp=2e-2`、積分gain `Ki=5e-4`、hit floor `0.55` である。
+
+PRPは「reuseされそうか」、CARSは「reuseされるならどれだけ得か」、ATCは「今どれだけ厳しく入れるべきか」を担当し、prediction・cost modeling・resource controlを分離する。
+
+### 4. Serving stackへの統合
+
+KVLearnはMooncake型の `P → S → D`、すなわちprefill・storage/global pool・decodeの分離topologyを想定する。radix prefix hitならlookup、miss後にprefillしたblockについてadmitを呼び、eviction等から遅延labelをPRPへ返す。ATCはperiodic tickでpool状態を追跡する。
+
+KVLearn自身はRDMA/NCCLによるtensor movementを実装しない。data planeは既存stackへ任せ、control planeでkeep/discard decisionだけを提供する。
 
 ## 評価条件
-|項目|条件|
-|---|---|
-|ワークロード|テキスト + マルチモーダル セッション|
-|構成|globally disaggregated プリフィル/ストレージ/デコード|
-|代表校正|A100 + LLaMA-3-8B|
-|相互接続網既定|InfiniBand HDR 200 Gbps相当、25 GB/s|
-|比較|No-Cache、LRU-Pool、Mooncake型、理想条件|
-|指標|TTFT、KV transfer volume、スループット|
+
+論文・公式実装はtextとmultimodal workloadの双方を対象とし、No-Cache、LRU-Pool、Mooncake-style disaggregated baseline、およびoracleに近い理想条件と比較する。主要指標は最初のtokenまでの時間（time to first token; TTFT）、inter-node KV transfer volume、throughputである。
+
+公式実装のcost calibration例はA100 + LLaMA-3-8Bで、`α_bw≈0.026 ms/token`、`α_flop≈8×10^-6 ms/token²`、bandwidth/compute境界 `L×=512`。fabric既定値はInfiniBand HDR 200 Gbps相当の `β=25 GB/s` である。別GPU/model/fabricへ移す場合には再校正が必要になる。
 
 ## 主要結果
-KVLearnはエンドツーエンドの最初のトークンまでの時間（TTFT）をNo-Cache比最大56%、LRU-Pool比最大38%、Mooncake型分離比較対象比最大33%削減する。LRU-Pool比のノード間 KV transfer volumeは最大53%削減され、MM-Sessionではスループットが理想条件の約5%以内に収まる。つまり命中率だけを最大化するより、再計算・転送・保持費用を同時に考えた方が分離環境の実コストへ一致する。
+
+end-to-end TTFTはNo-Cache比で最大56%、LRU-Pool比で最大38%、Mooncake-style分離baseline比で最大33%削減される。inter-node KV transfer volumeはLRU-Pool比で最大53%削減される。LRUがreuseされないblockでもrecencyでpoolへ入れやすいのに対し、KVLearnは保存時の追加転送と将来価値を比較してadmissionを抑えるためである。
+
+multimodalのMM-Session workloadではthroughputがoracleの約5%以内に収まる。image/video由来の長いprefixはrecompute costが大きく、長さ依存costをscoreへ明示的に入れる利点が出やすい。公式実装でも、prefillがsuper-linearになる領域ではprefixが長いほどoptimal reuse thresholdが下がる設計になっている。
 
 ## 既存研究との差
-LRU/LFUは過去のアクセスを主に使い、接頭辞長による再計算費用やネットワーク 帯域を直接表現しない。KVLearnは将来再利用を学習し、同じ再利用確率でもブロック長や相互接続網条件で保持価値を変える。さらに閾値をメモリ pressureへ適応させるため、予測と資源 制御を分離している。
+
+LRU/LFUはrecency/frequencyをproxyとして使うが、recompute cost・fabric bandwidth・block sizeを直接比較しない。Mooncake型のdisaggregated servingはKVの分離保存・転送基盤を提供するが、「生成したblockを保存すべきか」というadmission policy自体は別問題である。
+
+KVLearnはreuse predictionだけでもない。reuse probabilityをsystem costへ写像するCARSと、resource pressureに応じてdecision thresholdを動かすATCを組み合わせ、予測精度とserving objectiveを接続する。
 
 ## 限界
-PRPは過去ラベルから学ぶため、急なワークロード分布変化では予測が遅れる。コスト モデルの係数もGPU、モデル、ネットワークごとに校正が必要である。テンソル 転送自体はKVLearnの責務外であり、RDMA/NCCL データ転送面の性能が低ければルーティング 判定だけでは解消できない。
+
+PRPは遅延labelから学ぶため、workload distributionが急変した直後は過去patternに引きずられる。CARSの `α_bw`、`α_flop`、`β`、storage cost係数はhardware/model/networkごとに変わるため、別環境で無校正のまま同じ判断が最適とは限らない。
+
+公開実装はkeep/evict controlに焦点を当て、RDMA/NCCL transfer engine、KV compression、model execution kernelそのものは範囲外である。network congestionやdata-plane implementationが支配的な環境ではadmission policyだけではTTFTを十分に下げられない。headline改善値も特定workload・topologyでの最大値であり、すべてのreuse分布で同じ削減率を保証するものではない。
 
 ## 一次資料
+
 - https://doi.org/10.1145/3793230.3837769
 - https://github.com/FastLM/KVLearn
