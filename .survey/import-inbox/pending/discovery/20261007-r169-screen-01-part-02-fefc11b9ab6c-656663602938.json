@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r169-screen-01-part-02-fefc11b9ab6c",
+  "reference_main_sha": "816d613bc25a72ef639f82db0286894931a1a8e1",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15574",
+      "identity_tokens": [
+        "arXiv:2605.15574"
+      ],
+      "title": "MI-CXR: A Benchmark for Longitudinal Reasoning over Multi-Interval Chest X-rays",
+      "reason": "一次資料の要旨は縦断的な胸部X線解釈を評価する医療VQAベンチマークであり、LLM推論の効率化方法ではない。",
+      "source_url": "https://arxiv.org/abs/2605.15574",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13368",
+      "identity_tokens": [
+        "arXiv:2605.13368"
+      ],
+      "title": "What Does LLM Refinement Actually Improve? A Systematic Study on Document-Level Literary Translation",
+      "reason": "一次本文はtranslation refinementを複数inference passの方法として分析し品質変化を示すが、推論compute/latencyを減らす機構ではない。serving/schedulingとのリンクは弱く、反復passはむしろ費用増になり得る。",
+      "source_url": "https://arxiv.org/abs/2605.13368",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.22192",
+      "identity_tokens": [
+        "arXiv:2604.22192"
+      ],
+      "title": "CharTide: Data-Centric Chart-to-Code Generation via Tri-Perspective Tuning and Inquiry-Driven Evolution",
+      "reason": "一次資料の要旨はchart-to-code VLM向けの学習データ・tuning手法と生成品質を扱い、推論計算/メモリ/latencyの改善を示さない。",
+      "source_url": "https://arxiv.org/abs/2604.22192",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21461",
+      "identity_tokens": [
+        "arXiv:2604.21461"
+      ],
+      "title": "Do MLLMs Understand Pointing? Benchmarking and Enhancing Referential Reasoning in Egocentric Vision",
+      "reason": "一次資料の要旨はegocentric pointingのreferential reasoning benchmarkと精度向上を扱う。入力視覚token削減・効率改善は示さない。",
+      "source_url": "https://arxiv.org/abs/2604.21461",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18264",
+      "identity_tokens": [
+        "arXiv:2604.18264"
+      ],
+      "title": "Universally Empowering Zeroth-Order Optimization via Adaptive Layer-wise Sampling",
+      "reason": "一次資料の要旨が対象とするのはforward passだけで行うzeroth-order LLM fine-tuningの収束速度/分散であり、効率化の対象は学習時である。",
+      "source_url": "https://arxiv.org/abs/2604.18264",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ]
+    }
+  ]
+}
