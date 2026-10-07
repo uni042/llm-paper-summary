@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261007-1148-scheduled-chat-45/r02-partial",
+  "reference_main_sha": "85f1ce83ee43383f37ec8cd38eb17ce2145c8cba",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.15112",
+      "identity_tokens": [
+        "arXiv:2309.15112"
+      ],
+      "title": "InternLM-XComposer: A Vision-Language Large Model for Advanced Text-image Comprehension and Composition",
+      "reason": "画像・テキスト理解とinterleaved compositionの能力・品質を主目的とするvision-language model研究で、LLM推論runtime・memory・serving効率化を主要貢献としない。",
+      "source_url": "https://arxiv.org/abs/2309.15112",
+      "body_check": "abstract_screen_only: arXiv一次abstractでtext-image comprehension/compositionとmultimodal benchmark性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "worklist_rank": 21
+    }
+  ]
+}
