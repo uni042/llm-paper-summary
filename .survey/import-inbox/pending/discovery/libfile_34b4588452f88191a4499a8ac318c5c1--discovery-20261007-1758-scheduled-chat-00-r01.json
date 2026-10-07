@@ -1,0 +1,164 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1758-scheduled-chat-00/r01",
+  "reference_main_sha": "8d17c200c6e231cf5a63362cd6d34038363a988e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.10620",
+      "identity_tokens": [
+        "arXiv:2308.10620",
+        "DOI:10.1145/3695988"
+      ],
+      "title": "Large Language Models for Software Engineering: A Systematic Literature Review",
+      "reason": "ソフトウェア工学におけるLLM利用395論文を体系化するレビューで、主対象はコード生成・テスト・保守等のSE応用。推論ランタイム、メモリ、サービング効率化を研究対象にしない。",
+      "source_url": "https://arxiv.org/abs/2308.10620",
+      "body_check": "abstract_screen_only; arXiv/ACM一次abstractでLLM4SEのsystematic literature reviewと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.14735",
+      "identity_tokens": [
+        "arXiv:2403.14735"
+      ],
+      "title": "Foundation Models for Time Series Analysis: A Tutorial and Survey",
+      "reason": "時系列解析向け基盤モデルをarchitecture、pre-training、adaptation、data modalityの観点で整理するsurveyで、LLM推論システム効率化を主対象としない。",
+      "source_url": "https://arxiv.org/abs/2403.14735",
+      "body_check": "abstract_screen_only; arXiv一次abstractでtime-series foundation modelsのsurveyと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-024-08025-4",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-024-08025-4"
+      ],
+      "title": "Scalable watermarking for identifying large language model outputs",
+      "reason": "LLM生成物を識別するwatermarkingのスケーラビリティと検出が主題で、推論速度・メモリ・サービング効率の改善を目的としない。",
+      "source_url": "https://doi.org/10.1038/s41586-024-08025-4",
+      "body_check": "abstract_screen_only; 出版一次資料の書誌・abstractでLLM output watermarkingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1477",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1477",
+        "arXiv:1709.02755"
+      ],
+      "title": "Simple Recurrent Units for Highly Parallelizable Recurrence",
+      "reason": "再帰ネットワークのSRUを提案し学習・系列モデル計算を並列化する古典的architecture研究で、現行のLLM推論・サービング基盤を最終対象としない。",
+      "source_url": "https://arxiv.org/abs/1709.02755",
+      "body_check": "abstract_screen_only; 一次abstractでSRU recurrent architectureとtraining/inference並列性が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.04564",
+      "identity_tokens": [
+        "arXiv:2312.04564"
+      ],
+      "title": "EAGLES: Efficient Accelerated 3D Gaussians with Lightweight EncodingS",
+      "reason": "量子化embeddingとpruningで3D Gaussian Splattingのscene storageを10–20倍削減しrenderingを高速化するが、最終workloadは高解像度3D novel-view synthesisでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2312.04564",
+      "body_check": "abstract_screen_only; arXiv一次abstractで3D Gaussian Splattingのmemory/rendering効率化が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1155/2022/4189781",
+      "identity_tokens": [
+        "DOI:10.1155/2022/4189781"
+      ],
+      "title": "U-Net-Based Medical Image Segmentation",
+      "reason": "U-Net系の医用画像segmentationを扱う研究で、最終適用先がmedical imagingでありLLM/Transformer推論システムではない。",
+      "source_url": "https://doi.org/10.1155/2022/4189781",
+      "body_check": "abstract_screen_only; 出版一次ページでU-Net medical image segmentationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.11235",
+      "identity_tokens": [
+        "arXiv:2301.11235"
+      ],
+      "title": "Handbook of Convergence Theorems for (Stochastic) Gradient Methods",
+      "reason": "勾配法・確率的勾配法の収束証明と複雑度を整理する最適化理論handbookで、LLM推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2301.11235",
+      "body_check": "abstract_screen_only; 一次書誌/abstractでgradient/SGD convergence theorem handbookと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.19678",
+      "identity_tokens": [
+        "arXiv:2504.19678"
+      ],
+      "title": "From LLM Reasoning to Autonomous AI Agents: A Comprehensive Review",
+      "reason": "約60のbenchmark、agent framework、agent間protocol、応用を整理するagent/評価surveyで、推論サービングや計算・メモリ効率化を中心対象としない。",
+      "source_url": "https://arxiv.org/abs/2504.19678",
+      "body_check": "abstract_screen_only; arXiv一次abstractでLLM/agent benchmark・framework・protocol surveyと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.53",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.53",
+        "arXiv:2110.07814"
+      ],
+      "title": "Meta-learning via Language Model In-context Tuning",
+      "reason": "複数taskでin-context tuningを行いfew-shot適応と頑健性を改善するmeta-learning研究で、推論runtime・memory・serving効率化を主要目的としない。",
+      "source_url": "https://arxiv.org/abs/2110.07814",
+      "body_check": "abstract_screen_only; 一次abstractでmeta-training/in-context tuningが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.710",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.710",
+        "arXiv:1911.03631"
+      ],
+      "title": "Hierarchical Graph Network for Multi-hop Question Answering",
+      "reason": "multi-hop QAの推論品質をhierarchical graph networkで改善するtask/model研究で、LLM推論システムの速度・メモリ・サービングを扱わない。",
+      "source_url": "https://arxiv.org/abs/1911.03631",
+      "body_check": "abstract_screen_only; 一次abstractでmulti-hop QA modelが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:05:00+09:00",
+      "last_checked_at": "2026-10-07T18:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 20
+    }
+  ]
+}
