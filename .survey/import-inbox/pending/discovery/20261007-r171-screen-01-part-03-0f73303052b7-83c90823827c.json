@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r171-screen-01-part-03-0f73303052b7",
+  "reference_main_sha": "3fa407c1e70c455c90d1573cfb6aa03f9e0da9f9",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MLNLP66797.2025.11388500",
+      "identity_tokens": [
+        "DOI:10.1109/MLNLP66797.2025.11388500"
+      ],
+      "title": "MeMixFormer: A Speech-Based Memory-Augmented Mixed Attention Transformer Framework for Depression Detection",
+      "reason": "一次資料abstract/full textを確認できず、タイトルだけでは対象性を確定できないためborderline。次手順はIEEE Xplore/publisher access可能な環境で要旨・本文を確認すること。",
+      "source_url": "https://doi.org/10.1109/MLNLP66797.2025.11388500",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.16153",
+      "identity_tokens": [
+        "arXiv:2508.16153"
+      ],
+      "title": "Memento: Fine-tuning LLM Agents without Fine-tuning LLMs",
+      "reason": "本文のM-MDP/case memoryは過去trajectoryをretrievalしagent planningに再利用する。推論 token/latency/memory footprintやserving throughputの改善は示さず、目的はagent task performanceとcontinual adaptation。",
+      "source_url": "https://arxiv.org/abs/2508.16153",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.03803",
+      "identity_tokens": [
+        "arXiv:2503.03803"
+      ],
+      "title": "EgoLife: Towards Egocentric Life Assistant",
+      "reason": "一次要旨はデータセット・assistant prototypeで、LLM推論効率の具体的手法ではない。",
+      "source_url": "https://arxiv.org/abs/2503.03803",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1093/bioinformatics/btae163",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btae163"
+      ],
+      "title": "Advancing entity recognition in biomedicine via instruction tuning of large language models",
+      "reason": "linked weight-quantization lineageがあるが、一次本文を確認できないためabstractだけでunrelatedにできない。一次sourceにアクセス可能な環境で要旨・本文を確認する必要がある。",
+      "source_url": "https://doi.org/10.1093/bioinformatics/btae163",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09937",
+      "identity_tokens": [
+        "arXiv:2506.09937"
+      ],
+      "title": "SAFE: Multitask Failure Detection for Vision-Language-Action Models",
+      "reason": "ロボットpolicy監視のbenchmark/detectionであり、LLM推論serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2506.09937",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
