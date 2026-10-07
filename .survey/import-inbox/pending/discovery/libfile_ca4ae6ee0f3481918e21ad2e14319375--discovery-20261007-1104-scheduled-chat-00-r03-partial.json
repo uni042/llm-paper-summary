@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1104-scheduled-chat-00/r03-partial",
+  "reference_main_sha": "d08c55eec6ac36d046ece8682f0e389725ee5412",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.11158",
+      "identity_tokens": [
+        "arXiv:2304.11158"
+      ],
+      "title": "Emergent and Predictable Memorization in Large Language Models",
+      "reason": "Pythia系列でtraining-data memorizationを測り、低compute trialからfull training時のmemorizationを予測する安全性/学習挙動研究。推論systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2304.11158",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmemorization scaling laws、train-time prediction、PII memorization riskが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.11154",
+      "identity_tokens": [
+        "arXiv:2004.11154"
+      ],
+      "title": "Random Features for Kernel Approximation: A Survey on Algorithms, Theory, and Beyond",
+      "reason": "random-feature kernel approximationのalgorithm/theory/benchmarkを整理する一般kernel-method surveyで、LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://arxiv.org/abs/2004.11154",
+      "body_check": "abstract_screen_only: arXiv一次abstractでrandom featuresのsampling、variance reduction、kernel approximation theory、classification benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.10802",
+      "identity_tokens": [
+        "arXiv:2307.10802"
+      ],
+      "title": "Meta-Transformer: A Unified Framework for Multimodal Learning",
+      "reason": "frozen encoderとmodality-specific tokenizer/headで12 modalityを統一学習するmultimodal representation研究。主評価は各downstream task品質でLLM推論runtime・serving効率を対象としない。",
+      "source_url": "https://arxiv.org/abs/2307.10802",
+      "body_check": "abstract_screen_only: arXiv一次abstractでunpaired multimodal learning、frozen encoder、12 modalitiesのperception/data-mining tasksが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ],
+      "worklist_rank": 47
+    }
+  ]
+}
