@@ -80,6 +80,7 @@ quality_self_review_passed: true
 quality_self_review_version: '2026-10-07-v1'
 worker_run_key: 'interactive-20261008-bottom-up-reaudit-pruning'
 
+worker_completed_at: '2026-10-08T07:27:27+09:00'
 ---
 
 # A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts
