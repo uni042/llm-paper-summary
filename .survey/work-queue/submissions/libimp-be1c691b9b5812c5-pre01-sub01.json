@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Structured Pruning Learns Compact and Accurate Models",
+      "source_url": "https://arxiv.org/abs/2204.00408",
+      "year": 2022,
+      "published": "2022-04-01",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 260,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing size of neural language models has led to increased attention in model compression. The two predominant approaches are pruning, which gradually removes weights from a pre-trained model, and distillation, which trains a smaller compact model to match a larger one. Pruning methods can significantly reduce the model size but hardly achieve large speedups as distillation. However, distillation methods require large amounts of unlabeled data and are expensive to train. In this work, we propose a task-specific structured pruning method CoFi (Coarse- and Fine-grained Pruning), which delivers highly parallelizable subnetworks and matches the distillation methods in both accuracy and latency, without resorting to any unlabeled data. Our key insight is to jointly prune coarse-grained (e.g., layers) and fine-grained (e.g., heads and hidden units) modules, which controls the pruning decision of each parameter with masks of different granularity. We also devise a layerwise distillation strategy to transfer knowledge from unpruned to pruned models during optimization. Our experiments on GLUE and SQuAD datasets show that CoFi yields models with over 10X speedups with a small accuracy drop, showing its effectiveness and efficiency compared to previous pruning and distillation approaches.",
+      "identifiers": [
+        "SemanticScholar:9e82736043eebe3f71eb86cbef6e2ac45306ece5"
+      ],
+      "semantic_scholar_id": "9e82736043eebe3f71eb86cbef6e2ac45306ece5",
+      "canonical_id": "arXiv:2204.00408",
+      "arxiv_id": "2204.00408",
+      "doi": "10.48550/arXiv.2204.00408",
+      "authors": [
+        "Mengzhou Xia",
+        "Zexuan Zhong",
+        "Danqi Chen"
+      ],
+      "priority": 270,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 260,
+        "citation_count": 260,
+        "total": 270,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1650,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "CoFiがlayer/head/hidden unitを粗粒度・細粒度で共同pruningし、並列実行可能なcompact language modelを生成。GLUE/SQuADで小さな精度低下のまま10倍超のspeedupを示すため直接対象。",
+      "library_body_check": "fulltext_relevance_review: 一次資料でcoarse/fine-grained masksとlayerwise distillationを組み合わせるtask-specific structured pruningを確認。model sizeだけでなくlatencyを主要評価し、10x超speedupを報告。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution",
+      "source_url": "https://arxiv.org/abs/2008.02496",
+      "year": 2020,
+      "published": "2020-08-06",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 220,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained language models like BERT and its variants have recently achieved impressive performance in various natural language understanding tasks. However, BERT heavily relies on the global self-attention block and thus suffers large memory footprint and computation cost. Although all its attention heads query on the whole input sequence for generating the attention map from a global perspective, we observe some heads only need to learn local dependencies, which means the existence of computation redundancy. We therefore propose a novel span-based dynamic convolution to replace these self-attention heads to directly model local dependencies. The novel convolution heads, together with the rest self-attention heads, form a new mixed attention block that is more efficient at both global and local context learning. We equip BERT with this mixed attention design and build a ConvBERT model. Experiments have shown that ConvBERT significantly outperforms BERT and its variants in various downstream tasks, with lower training cost and fewer model parameters. Remarkably, ConvBERTbase model achieves 86.4 GLUE score, 0.7 higher than ELECTRAbase, while using less than 1/4 training cost. Code and pre-trained models will be released.",
+      "identifiers": [
+        "SemanticScholar:2a218786f4615b82389f78472e7ff22e6ce57490"
+      ],
+      "semantic_scholar_id": "2a218786f4615b82389f78472e7ff22e6ce57490",
+      "canonical_id": "arXiv:2008.02496",
+      "arxiv_id": "2008.02496",
+      "authors": [
+        "Zi-Hang Jiang",
+        "Weihao Yu",
+        "Daquan Zhou",
+        "Yunpeng Chen",
+        "Jiashi Feng",
+        "Shui-Cheng Yan"
+      ],
+      "priority": 230,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 220,
+        "citation_count": 220,
+        "total": 230,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2253,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "self-attention headの一部をspan-based dynamic convolutionへ置換するmixed attentionで計算を削減し、ConvBERT-baseがELECTRA-baseより低training costで高性能、small modelでは推論効率改善を狙うため対象。",
+      "library_body_check": "fulltext_relevance_review: 一次資料でmixed attention block、span-based dynamic convolution、bottleneck設計を確認。BERT系encoderのattention計算冗長性を減らすarchitectureとして速度/compute効率を直接扱う。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-be1c691b9b58",
+    "round": "libimp-be1c691b9b5812c5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-be1c691b9b5812c5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-be1c691b9b5812c5-pre01.json",
+    "receipt": "sha256:696fd15e363fa91fda56543e8dbca2bb92bc0d3e2de4b53a306b29a6c7af464f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-be1c691b9b58",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

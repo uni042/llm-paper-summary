@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-0930-scheduled-chat-30/r01::provider-gap",
+  "reference_main_sha": "13fd296ebd0824ff0f3820e505fa11c6a7b3c3f8",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.11665",
+      "identity_tokens": [
+        "arXiv:2302.11665",
+        "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d"
+      ],
+      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+      "reason": "複数の大規模モデルを分散クラスタで配置・model-parallel化し、bursty workload下の統計多重化でSLOを満たすserving system。モデル並列化のoverheadとqueueing/statistical multiplexingのtrade-offを最適化し、推論サービングを直接対象とする。",
+      "source_url": "https://arxiv.org/abs/2302.11665",
+      "body_check": "fulltext_review: arXiv本文を確認。centralized controller、model placement/parallelization、shortest-queue dispatch、SLO-aware admissionを組み合わせる。production workload評価で99%以上のrequestがlatency constraintを満たす条件下、最大10x高いrequest rateまたは6x高いburstinessを処理し、replication系より最大2.3x少ないdeviceで99% SLO attainmentを達成する。",
+      "first_checked_at": "2026-10-07T09:30:53+09:00",
+      "last_checked_at": "2026-10-07T09:30:53+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.12031",
+      "identity_tokens": [
+        "arXiv:2403.12031",
+        "DOI:10.48550/arxiv.2403.12031"
+      ],
+      "title": "RouterBench: A Benchmark for Multi-LLM Routing System",
+      "reason": "複数LLMから入力ごとに利用モデルを選ぶrouting systemを、推論ドルコストと品質のtrade-offで評価するbenchmark/framework。405,467 inference outcomesを用い、安価なモデルへのroutingで同等品質時のserving costを下げるmulti-LLM serving研究として直接対象。",
+      "source_url": "https://arxiv.org/abs/2403.12031",
+      "body_check": "fulltext_review: arXiv本文§1–5を確認。11 models・8 datasets・64 tasks、405,467 samplesを収集し、cost-quality planeとAIQでrouterを比較。KNN/MLP predictive router等を評価し、同程度のperformanceでもLLM service monetary costが2–5x変動し得ることを示す。benchmarkはlatency/throughput指標への拡張も明示。",
+      "first_checked_at": "2026-10-07T09:30:53+09:00",
+      "last_checked_at": "2026-10-07T09:30:53+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.10729-boute-heterogeneous-model-gpu-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.10907-routerwise-resource-allocation-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md",
+        "papers/inference/15-inference-simulation-emulation/2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md"
+      ],
+      "worklist_rank": 26
+    }
+  ],
+  "parent_run_key": "20261007-0930-scheduled-chat-30/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_df9b45ad15888191aaeb4e6e08b16910--discovery-20261007-0930-scheduled-chat-30-r01.json",
+  "provider_gap_ids": [
+    "arXiv:2302.11665",
+    "arXiv:2403.12031"
+  ]
+}
