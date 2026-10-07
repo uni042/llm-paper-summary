@@ -248,7 +248,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
   実装：[✓](https://github.com/haopeng-nlp/transformer-rfa) ・ リポジトリ内被引用：3  
-  Random Feature 注意機構（RFA）は、softmax注意をrandom feature法で近似し、系列長nに対する時間・空間の二次増加を線形へ変える。言語モデリングと機械翻訳で強いTransformer基準と同等以上の品質を示し、機械翻訳デコードではvanilla Transformerの約2倍高速だった。
+  Random Feature 注意機構（RFA）は、通常のsoftmax注意がqueryとkeyの全組合せを評価するため系列長に対して二次の時間・空間コストを持つ問題を、カーネル近似へ置き換えて解く。
 
 ### 7年前（2019-11〜2020-10）
 
