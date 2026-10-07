@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r172-screen-01-part-01-8aace3f1b594",
+  "reference_main_sha": "599e3c1cd37e6144178b11316a64fa3cef8a6d07",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0341311",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0341311"
+      ],
+      "title": "ViT-Stain: Vision transformer-driven virtual staining for skin histopathology via global contextual learning",
+      "reason": "PLOS ONE本文は皮膚組織のvirtual staining画像生成を評価し、LLM推論・LLM servingの改善ではない。",
+      "source_url": "https://doi.org/10.1371/journal.pone.0341311",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.18150",
+      "identity_tokens": [
+        "arXiv:2601.18150"
+      ],
+      "title": "FP8-RL: A Practical and Stable Low-Precision Stack for LLM Reinforcement Learning",
+      "reason": "一次要旨はRL rolloutのFP8 weight/KV cacheと最大44% throughput改善を明示するため対象に強く近い。arXiv本文HTMLを試したが利用可能な本文を取得できず、本文条件を確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2601.18150",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18699",
+      "identity_tokens": [
+        "arXiv:2601.18699"
+      ],
+      "title": "Mechanistic Analysis of Catastrophic Forgetting in Large Language Models During Continual Fine-tuning",
+      "reason": "本文要旨のLRCPは継続fine-tuningのcatastrophic forgettingを抑えるtraining介入であり、推論時compute/memory/serving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2601.18699",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10567",
+      "identity_tokens": [
+        "arXiv:2601.10567"
+      ],
+      "title": "Generative AI collective behavior needs an interactionist paradigm",
+      "reason": "本文要旨はLLM collectiveの社会的・相互作用的分析枠組みを論じる理論/研究アジェンダで、推論効率改善手法を提案しない。",
+      "source_url": "https://arxiv.org/abs/2601.10567",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.enconman.2025.120737",
+      "identity_tokens": [
+        "DOI:10.1016/j.enconman.2025.120737"
+      ],
+      "title": "Application of Informer model based on dual probsparse self-attention mechanism and temporal feature decoder in PEMFC degradation prediction",
+      "reason": "出版社本文はPEMFC劣化予測用の時系列Informer改良であり、燃料電池予測の精度改善が目的。LLM推論の計算・メモリ・serving改善ではない。",
+      "source_url": "https://doi.org/10.1016/j.enconman.2025.120737",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    }
+  ]
+}
