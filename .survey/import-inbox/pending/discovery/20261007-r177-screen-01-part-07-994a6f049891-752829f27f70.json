@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r177-screen-01-part-07-994a6f049891",
+  "reference_main_sha": "466fc8d7e56d67d7dfc457fd360767d8dd92edd2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13563",
+      "identity_tokens": [
+        "arXiv:2607.13563"
+      ],
+      "title": "Nexus: Native Mesh Generation with Diffusion",
+      "reason": "The full text is a diffusion-based 3D mesh-generation method that replaces autoregressive mesh-token serialization with octree vertex and topology diffusion. Despite discussing faster mesh generation, this is not LLM/VLM inference or the linked language-model serving lineage.",
+      "source_url": "https://arxiv.org/abs/2607.13563",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.31612",
+      "identity_tokens": [
+        "arXiv:2606.31612"
+      ],
+      "title": "What Memory Do GUI Agents Really Need? From Passive Records to Active Task-Driving States",
+      "reason": "The full text’s active GUI task-state memory helps long-horizon agent execution, but its experiments report task success, not reductions in inference tokens, calls, latency or memory. The paper mentions screenshot downsampling for lower visual-token/training cost, which is a data/training choice rather than the agent-memory method’s measured runtime benefit. Retain as borderline because agent memory could affect inference workload but the claimed connection is not established.",
+      "source_url": "https://arxiv.org/abs/2606.31612",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30534",
+      "identity_tokens": [
+        "arXiv:2606.30534"
+      ],
+      "title": "Orca: The World is in Your Mind",
+      "reason": "arXiv abstract: Orca learns a multimodal world-state transition model; the contribution is a world-model learning paradigm, not LLM inference resource reduction.",
+      "source_url": "https://arxiv.org/abs/2606.30534",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17199",
+      "identity_tokens": [
+        "arXiv:2606.17199"
+      ],
+      "title": "PowerOPD: Stabilizing On-Policy Distillation with Bounded Power Transformation",
+      "reason": "arXiv abstract: PowerOPD stabilizes on-policy distillation and gradient estimates during LLM post-training; it targets training stability/sample efficiency, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.17199",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14302",
+      "identity_tokens": [
+        "arXiv:2606.14302"
+      ],
+      "title": "Retrospective Progress-Aware Self-Refinement for LLM Agent Training",
+      "reason": "arXiv abstract: RePro adds retrospective progress supervision and rollouts for LLM-agent training; it improves training signals/task success rather than inference compute, memory or latency.",
+      "source_url": "https://arxiv.org/abs/2606.14302",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
