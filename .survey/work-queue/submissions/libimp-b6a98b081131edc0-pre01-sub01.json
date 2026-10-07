@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
+      "source_url": "https://arxiv.org/abs/2401.17377",
+      "year": 2024,
+      "published": "2024-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 166,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Are $n$-gram language models still relevant in this era of neural large language models (LLMs)? Our answer is yes, and we showcase their values in both text analysis and improving neural LLMs. This was done by modernizing $n$-gram LMs in two aspects. First, we train them at the same data scale as neural LLMs -- 5 trillion tokens. This is the largest $n$-gram LM ever built. Second, existing $n$-gram LMs use small $n$ which hinders their performance; we instead allow $n$ to be arbitrarily large, by introducing a new $\\infty$-gram LM with backoff. Instead of pre-computing $n$-gram count tables (which would be very expensive), we develop an engine named infini-gram -- powered by suffix arrays -- that can compute $\\infty$-gram (as well as $n$-gram with arbitrary $n$) probabilities with millisecond-level latency. The $\\infty$-gram framework and infini-gram engine enable us to conduct many novel and interesting analyses of human-written and machine-generated text: we find that the $\\infty$-gram LM has fairly high accuracy for next-token prediction (47%), and can complement neural LLMs to greatly reduce their perplexity. When analyzing machine-generated text, we also observe irregularities in the machine--$\\infty$-gram agreement level with respect to the suffix length, which indicates deficiencies in neural LLM pretraining and the positional embeddings of Transformers.",
+      "identifiers": [
+        "SemanticScholar:1c143a753d4eb82da5526132149f6e4ed5271b63"
+      ],
+      "semantic_scholar_id": "1c143a753d4eb82da5526132149f6e4ed5271b63",
+      "canonical_id": "arXiv:2401.17377",
+      "arxiv_id": "2401.17377",
+      "doi": "10.48550/arXiv.2401.17377",
+      "authors": [
+        "Jiacheng Liu",
+        "Sewon Min",
+        "Luke S. Zettlemoyer",
+        "Yejin Choi",
+        "Hannaneh Hajishirzi"
+      ],
+      "priority": 166,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 166,
+        "citation_count": 166,
+        "total": 166,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 981,
+        "matched_prestigious_venue": null
+      },
+      "reason": "接尾辞配列で5兆トークン規模の無限長n-gram確率をディスク上で照会する推論エンジン。1.4兆トークン索引を128 CPUで約48時間構築、n-gram計数20ms未満、無限長LM推論200ms程度、索引7byte/tokenを示し、CPU/ディスク階層による低遅延推論システムとして対象。",
+      "library_body_check": "fulltext_review: arXiv v4本文§3接尾辞配列とディスク上推論、索引構築/クエリ遅延の実測、§5神経LMとの補間を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Language Model Cascades: Token-level uncertainty and beyond",
+      "source_url": "https://arxiv.org/abs/2404.10136",
+      "year": 2024,
+      "published": "2024-04-15",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 156,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in language models (LMs) have led to significant improvements in quality on complex NLP tasks, but at the expense of increased inference costs. Cascading offers a simple strategy to achieve more favorable cost-quality tradeoffs: here, a small model is invoked for most\"easy\"instances, while a few\"hard\"instances are deferred to the large model. While the principles underpinning cascading are well-studied for classification tasks - with deferral based on predicted class uncertainty favored theoretically and practically - a similar understanding is lacking for generative LM tasks. In this work, we initiate a systematic study of deferral rules for LM cascades. We begin by examining the natural extension of predicted class uncertainty to generative LM tasks, namely, the predicted sequence uncertainty. We show that this measure suffers from the length bias problem, either over- or under-emphasizing outputs based on their lengths. This is because LMs produce a sequence of uncertainty values, one for each output token; and moreover, the number of output tokens is variable across examples. To mitigate this issue, we propose to exploit the richer token-level uncertainty information implicit in generative LMs. We argue that naive predicted sequence uncertainty corresponds to a simple aggregation of these uncertainties. By contrast, we show that incorporating token-level uncertainty through learned post-hoc deferral rules can significantly outperform such simple aggregation strategies, via experiments on a range of natural language benchmarks with FLAN-T5 models. We further show that incorporating embeddings from the smaller model and intermediate layers of the larger model can give an additional boost in the overall cost-quality tradeoff.",
+      "identifiers": [
+        "SemanticScholar:19e499d76a2e49574b499cd9ebd31304880d33d6"
+      ],
+      "semantic_scholar_id": "19e499d76a2e49574b499cd9ebd31304880d33d6",
+      "canonical_id": "arXiv:2404.10136",
+      "arxiv_id": "2404.10136",
+      "doi": "10.48550/arXiv.2404.10136",
+      "authors": [
+        "Neha Gupta",
+        "Harikrishna Narasimhan",
+        "Wittawat Jitkrittum",
+        "A. Rawat",
+        "A. Menon",
+        "Sanjiv Kumar"
+      ],
+      "priority": 166,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 156,
+        "citation_count": 156,
+        "total": 166,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 905,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "小型LMで処理可能な要求を大規模LMへ回さず、トークン単位の不確実性から学習した保留判定を用いて推論費用と生成品質を両立する多モデル推論ルーティング研究。FLAN-T5で単純な系列不確実性集約より良い費用品質トレードオフを報告するため対象。",
+      "library_body_check": "fulltext_review: arXiv本文の生成系列長バイアス、トークン単位保留ルール、FLAN-T5での費用品質比較を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b6a98b081131",
+    "round": "libimp-b6a98b081131edc0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b6a98b081131edc0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b6a98b081131edc0-pre01.json",
+    "receipt": "sha256:efb3d69e2e2d418639868750fd52d1911fb283888e6cf54b6ce506aa4cd8a7b4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b6a98b081131",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
