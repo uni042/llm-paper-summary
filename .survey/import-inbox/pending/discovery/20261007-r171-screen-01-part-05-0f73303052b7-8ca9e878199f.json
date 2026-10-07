@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r171-screen-01-part-05-0f73303052b7",
+  "reference_main_sha": "3fa407c1e70c455c90d1573cfb6aa03f9e0da9f9",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25319",
+      "identity_tokens": [
+        "arXiv:2606.25319"
+      ],
+      "title": "V-Zero: Answer-Label-Free On-Policy Distillation with Contrastive Evidence Gating for Fine-Grained Visual Reasoning",
+      "reason": "報告された速度向上はsupervised fine-tuning/reinforcement learningとのtraining時間比較で、推論時の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2606.25319",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15455",
+      "identity_tokens": [
+        "arXiv:2606.15455"
+      ],
+      "title": "Understanding Diversity Collapse in RLVR via the Lens of Overtraining",
+      "reason": "提案はtraining optimizationで、対象は推論runtime/servingではない。",
+      "source_url": "https://arxiv.org/abs/2606.15455",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10484",
+      "identity_tokens": [
+        "arXiv:2606.10484"
+      ],
+      "title": "AgentCanary: A Security Evaluation Framework for Autonomous AI Agents in Real Executable Environments",
+      "reason": "security evaluation frameworkであり、inference/servingの性能改善ではない。",
+      "source_url": "https://arxiv.org/abs/2606.10484",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-024-4894-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-024-4894-0"
+      ],
+      "title": "DeMamba: AI-generated video detection on million-scale GenVideo benchmark",
+      "reason": "対象はvideo authenticity detectionであり、LLM inferenceやservingの効率化ではない。",
+      "source_url": "https://doi.org/10.1007/s11432-024-4894-0",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18678",
+      "identity_tokens": [
+        "arXiv:2605.18678"
+      ],
+      "title": "Lance: Unified Multimodal Modeling by Multi-Task Synergy",
+      "reason": "本文のmodel design/experimentsはvisual modalityの統一と品質・benchmarkを扱い、LLM inference-servingのlatency/token/memory改善を測定・主張しない。軽量という記述だけでは対象LLM推論効率の証拠にならない。",
+      "source_url": "https://arxiv.org/abs/2605.18678",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
