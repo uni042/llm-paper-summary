@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r177-screen-01-part-06-994a6f049891",
+  "reference_main_sha": "466fc8d7e56d67d7dfc457fd360767d8dd92edd2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12376",
+      "identity_tokens": [
+        "arXiv:2402.12376"
+      ],
+      "title": "FiT: Flexible Vision Transformer for Diffusion Model",
+      "reason": "arXiv abstract: FiT adapts vision-transformer tokenization to resolution-flexible image diffusion generation; it concerns image synthesis architecture, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2402.12376",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29910",
+      "identity_tokens": [
+        "arXiv:2608.29910"
+      ],
+      "title": "Matrix-Game 3.5: Enhancing Real-Time Streaming Interactive World Models with Patch Memory",
+      "reason": "arXiv abstract: Matrix-Game 3.5 is an interactive world/video-generation system with patch memory; the target is generated world quality and interaction, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.29910",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27454",
+      "identity_tokens": [
+        "arXiv:2608.27454"
+      ],
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "reason": "The full text builds a persistent wiki that compiles agent experience into reusable skills injected into prompts at inference time. It evaluates task success, while explicitly noting WikiSkill may incur higher inference cost on some datasets; it does not demonstrate reduced tokens/latency or LLM serving resource use. Because the candidate is linked to serving/scheduling and reuse could plausibly affect agent call counts, retain as a weak, unresolved efficiency connection.",
+      "source_url": "https://arxiv.org/abs/2608.27454",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15161",
+      "identity_tokens": [
+        "arXiv:2607.15161"
+      ],
+      "title": "On-Policy Delta Distillation",
+      "reason": "arXiv abstract: On-Policy Delta Distillation changes a post-training reward/supervision signal for student models; it is a training method, not a runtime inference optimization.",
+      "source_url": "https://arxiv.org/abs/2607.15161",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04425",
+      "identity_tokens": [
+        "arXiv:2607.04425"
+      ],
+      "title": "UI-MOPD: Multi-Platform On-Policy Distillation for Unified GUI Agents",
+      "reason": "The full text’s multi-platform on-policy distillation, teacher routing and reward design are training/post-training procedures; it expressly states teacher routing affects teacher log-probability computation and does not add teachers/agents at inference. It is linked to serving lineage only by a broad association, with no inference-saving mechanism.",
+      "source_url": "https://arxiv.org/abs/2607.04425",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
