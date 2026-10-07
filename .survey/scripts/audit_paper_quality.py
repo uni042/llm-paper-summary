@@ -178,6 +178,11 @@ def _heading_matches(title: str, prefixes: tuple[str, ...]) -> bool:
         or normalized.startswith(prefix.casefold() + "：")
         or normalized.startswith(prefix.casefold() + ":")
         or normalized.startswith(prefix.casefold() + "の")
+        or normalized.startswith(prefix.casefold() + "・")
+        or normalized.startswith(prefix.casefold() + "／")
+        or normalized.startswith(prefix.casefold() + "/")
+        or normalized.startswith(prefix.casefold() + "（")
+        or normalized.startswith(prefix.casefold() + "(")
         for prefix in prefixes
     )
 
