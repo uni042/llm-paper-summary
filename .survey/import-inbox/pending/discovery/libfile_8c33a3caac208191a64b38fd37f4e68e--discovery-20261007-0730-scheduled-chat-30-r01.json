@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-0730-scheduled-chat-30/r01",
+  "reference_main_sha": "abec505f6824f1104e37b025e24be4221a8b4493",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20552",
+      "identity_tokens": [
+        "arXiv:2601.20552"
+      ],
+      "title": "DeepSeek-OCR 2: Visual Causal Flow",
+      "reason": "DeepEncoder V2で画像意味に応じてvisual token順序を動的再配置しOCR/2D理解能力を改善するvision-language model研究。推論runtime・serving・memory効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2601.20552",
+      "body_check": "abstract_screen_only: arXiv一次abstractでvisual tokenのcausal reordering、2D image understanding、OCR model architectureが主題と確認。推論システム最適化ではないため本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "worklist_rank": 100
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3626202.3637562",
+      "identity_tokens": [
+        "DOI:10.1145/3626202.3637562",
+        "arXiv:2401.03868"
+      ],
+      "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
+      "reason": "FPGA上のLLM推論に対し、sparse DSP chain、always-on-chip decode、mixed precision、length-adaptive compilationを統合し計算・memory・compile overheadを直接削減するため対象。",
+      "source_url": "https://arxiv.org/abs/2401.03868",
+      "body_check": "fulltext_review: arXiv本文§1–3を確認。configurable sparse DSP chainでblock/N:M sparsityを処理し、decode activationをon-chip保持してoff-chip trafficを削減、length-adaptive compilationでinstruction storageを約500x削減。OPT-6.7B/LLaMA2-7BでU280がV100S比6.0x energy efficiency、1.8x cost efficiency、VHK158がA100比1.2x throughputを報告。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ],
+      "worklist_rank": 102
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2541940.2541942",
+      "identity_tokens": [
+        "DOI:10.1145/2541940.2541942"
+      ],
+      "title": "Architectural support for address translation on GPUs: designing memory management units for CPU/GPUs with unified address spaces",
+      "reason": "CPU/GPU統合仮想アドレス空間のTLB・page-table walker設計を扱う一般GPU memory-management研究で、LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1145/2541940.2541942",
+      "body_check": "abstract_screen_only: 出版書誌・abstractでGPU MMU、TLB/PTW、unified address spaceのaddress translation overhead削減が主題と確認。LLM推論固有の適用・評価がないため本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ],
+      "worklist_rank": 106
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1804.06028",
+      "identity_tokens": [
+        "arXiv:1804.06028"
+      ],
+      "title": "ListOps: A Diagnostic Dataset for Latent Tree Learning",
+      "reason": "latent tree modelの構文解析能力を診断するprefix-arithmetic toy datasetを提案するbenchmark研究で、推論systems効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1804.06028",
+      "body_check": "abstract_screen_only: arXiv一次abstractでlatent tree learningのparsing abilityを診断するListOps datasetとmodel accuracy比較が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.02842-iceformer.md"
+      ],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.08678",
+      "identity_tokens": [
+        "arXiv:2402.08678"
+      ],
+      "title": "Graph Mamba: Towards Learning on Graphs with State Space Models",
+      "reason": "selective state-space modelをgraph representation learningへ適用しgraph benchmarkの性能・計算量を改善するGNN研究で、最終適用先がLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2402.08678",
+      "body_check": "abstract_screen_only: arXiv一次abstractでNeighborhood Tokenization、Token Ordering、bidirectional selective SSM encoderを用いるGraph Mamba Networksとgraph benchmark評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "worklist_rank": 108
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.05022",
+      "identity_tokens": [
+        "arXiv:2106.05022",
+        "DOI:10.1145/3469116.3470012"
+      ],
+      "title": "Adaptive Inference through Early-Exit Networks: Design, Challenges and Directions",
+      "reason": "入力難度に応じてruntime計算深度を変えるearly-exitを、設計・学習・deployment・hardware/SLOまで体系化しBERT系NLP事例も含むため推論効率技術として強く関連する。一方、対象はLLMではなくDNN全般なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2106.05022",
+      "body_check": "fulltext_review: arXiv HTML本文§1–4を確認。backbone途中のexit head、confidence/learned exit policy、anytime/budgeted adaptive inference、latency/throughput/energy SLO向けhardware-aware designを整理。Table 1にはDeeBERT/FastBERT/Depth-Adaptive Transformer等のNLP early-exitを含むが、survey全体はvision等を含む一般DNN deploymentが対象。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2600428.2609627",
+      "identity_tokens": [
+        "DOI:10.1145/2600428.2609627"
+      ],
+      "title": "Impact of response latency on user behavior in web search",
+      "reason": "web searchの応答遅延が利用者行動へ与える影響を測定する情報検索/HCI研究で、LLM推論serving方式やruntime最適化を提案しない。",
+      "source_url": "https://doi.org/10.1145/2600428.2609627",
+      "body_check": "abstract_screen_only: 出版書誌・研究概要でweb search response latencyとuser behaviorの関係分析が主題と確認。LLM inference system自体の設計研究ではないため本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md"
+      ],
+      "worklist_rank": 110
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.13558",
+      "identity_tokens": [
+        "arXiv:2312.13558"
+      ],
+      "title": "The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction",
+      "reason": "LASERで特定層weight matrixの高次成分を除去しLLM reasoning性能を改善するpost-training interventionだが、主目的・評価は推論品質向上でありmodel size、latency、memory、serving効率削減を目的化しない。",
+      "source_url": "https://arxiv.org/abs/2312.13558",
+      "body_check": "abstract_screen_only: arXiv一次abstractでlayer-selective rank reductionによりLLM performance/reasoningを改善し、その成立条件と機構を分析することが主題と確認。推論効率指標を主貢献としないため本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.19351-dash-kv-asymmetric-hashing-long-context.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.12533",
+      "identity_tokens": [
+        "arXiv:2203.12533"
+      ],
+      "title": "Pathways: Asynchronous Distributed Dataflow for ML",
+      "reason": "数千acceleratorをgang-scheduleする大規模ML orchestration layerでTransformerも評価するが、汎用ML execution/training orchestrationが主題でLLM推論servingを最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2203.12533",
+      "body_check": "abstract_screen_only: arXiv一次abstractでsharded asynchronous dataflow、heterogeneous parallel computation、2048 TPU上のSPMDおよびTransformer pipeline/shardingの汎用ML orchestrationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18486",
+      "identity_tokens": [
+        "arXiv:2409.18486",
+        "DOI:10.48550/arxiv.2409.18486"
+      ],
+      "title": "Evaluation of OpenAI o1: Opportunities and Challenges of AGI",
+      "reason": "OpenAI o1のreasoning、coding、vision等の能力・安全性を広範に評価するmodel evaluation研究で、推論runtime・memory・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2409.18486",
+      "body_check": "abstract_screen_only: 一次書誌・abstractでo1のreasoning能力、benchmark性能、AGI opportunities/challengesの評価が主題と確認。推論systems最適化ではないため本文未読。",
+      "first_checked_at": "2026-10-07T07:30:06+09:00",
+      "last_checked_at": "2026-10-07T07:30:06+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.20552-adrenaline.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
+      ],
+      "worklist_rank": 113
+    }
+  ]
+}
