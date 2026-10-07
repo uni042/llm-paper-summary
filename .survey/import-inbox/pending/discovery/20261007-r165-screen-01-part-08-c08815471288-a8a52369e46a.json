@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r165-screen-01-part-08-c08815471288",
+  "reference_main_sha": "f3f36070d3eeff791b97b133877782e5a142c3fe",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02156",
+      "identity_tokens": [
+        "arXiv:2602.02156"
+      ],
+      "title": "LoopViT: Scaling Visual ARC with Looped Transformers",
+      "reason": "LoopViT scales visual ARC by looping a vision transformer; this is a vision reasoning architecture and does not address LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2602.02156",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23014",
+      "identity_tokens": [
+        "arXiv:2601.23014"
+      ],
+      "title": "Mem-T: Densifying Rewards for Long-Horizon Memory Agents",
+      "reason": "Read the primary reward-densification method and evaluation. Mem-T is a training/reward method for long-horizon memory agents; its paper plots performance against inference cost, but its proposed change is reward shaping rather than an inference-cost mechanism, leaving only a weak indirect link to the agent-memory efficiency lineage.",
+      "source_url": "https://arxiv.org/abs/2601.23014",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18795",
+      "identity_tokens": [
+        "arXiv:2601.18795"
+      ],
+      "title": "Reuse your FLOPs: Scaling RL on Hard Problems by Conditioning on Very Off-Policy Prefixes",
+      "reason": "PrefixRL improves sample efficiency of reinforcement-learning training by conditioning on off-policy prefixes; the primary abstract concerns training compute/reward, not deployment inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.18795",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02204",
+      "identity_tokens": [
+        "arXiv:2601.02204"
+      ],
+      "title": "NextFlow: Unified Sequential Modeling Activates Multimodal Understanding and Generation",
+      "reason": "Read the primary architecture and inference-efficiency analysis. NextFlow uses next-scale visual token generation to reduce image synthesis FLOPs/runtime, but the efficiency claim is for image generation in a multimodal vision model, not LLM language inference or serving.",
+      "source_url": "https://arxiv.org/abs/2601.02204",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2025.104089",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2025.104089"
+      ],
+      "title": "Building regulation question-answering system using retrieval-augmented generation with dual-stage fine-tuned large language model",
+      "reason": "Elsevier DOI publisher page was attempted as the primary source but returned an internal-error response; no primary abstract/full text was available.",
+      "source_url": "https://doi.org/10.1016/j.aei.2025.104089",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
