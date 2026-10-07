@@ -1,0 +1,451 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ed4e3988f5f42c0b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ed4e3988f5f4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2404.15159",
+    "arXiv:2505.13417",
+    "arXiv:2512.06688",
+    "arXiv:2512.24601"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ee46a489e7b45da164c52d08ffbaed07c66a6419",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T04:53:25.126361+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2404.15159",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.13417",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.06688",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.24601",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Recursive Language Models",
+      "source_url": "https://arxiv.org/abs/2512.24601",
+      "year": 2025,
+      "published": "2025-12-31",
+      "venue": "arXiv.org",
+      "citation_count": 94,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study allowing large language models (LLMs) to process arbitrarily long prompts through the lens of inference-time scaling. We propose Recursive Language Models (RLMs), a general inference paradigm that treats long prompts as part of an external environment and allows the LLM to programmatically examine, decompose, and recursively call itself over snippets of the prompt. We find that RLMs can successfully process inputs up to two orders of magnitude beyond model context windows and, even for shorter prompts, dramatically outperform the quality of vanilla frontier LLMs and common long-context and coding scaffolds (e.g., on GPT-5 by a median across the evaluated benchmarks of $26\\%$ against compaction, $130\\%$ against CodeAct with sub-calls, and $13\\%$ against Claude Code) across four diverse long-context tasks while having comparable cost. At a small scale, we post-train the first model around the RLM. Our model, RLM-Qwen3-8B, outperforms the underlying Qwen3-8B model by $28.3\\%$ on average and even approaches the quality of vanilla GPT-5 on three long-context tasks. Code is available at https://github.com/alexzhang13/rlm.",
+      "identifiers": [
+        "SemanticScholar:a267af44051ea607afe39c5bf9282cf7a1e7291d"
+      ],
+      "semantic_scholar_id": "a267af44051ea607afe39c5bf9282cf7a1e7291d",
+      "canonical_id": "arXiv:2512.24601",
+      "arxiv_id": "2512.24601",
+      "doi": "10.48550/arXiv.2512.24601",
+      "authors": [
+        "Alex L. Zhang",
+        "T. Kraska",
+        "Omar Khattab"
+      ],
+      "priority": 194,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 94,
+        "citation_count": 94,
+        "total": 194,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+      "source_url": "https://arxiv.org/abs/2512.06688",
+      "year": 2025,
+      "published": "2025-12-07",
+      "venue": "arXiv.org",
+      "citation_count": 84,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Personalization is one of the next milestones in advancing AI capability and alignment. We introduce PersonaMem-v2, the state-of-the-art dataset for LLM personalization that simulates 1,000 realistic user-chatbot interactions on 300+ scenarios, 20,000+ user preferences, and 128k-token context windows, where most user preferences are implicitly revealed to reflect real-world interactions. Using this data, we investigate how reinforcement fine-tuning enables a model to improve its long-context reasoning capabilities for user understanding and personalization. We also develop a framework for training an agentic memory system, which maintains a single, human-readable memory that grows with each user over time. In our experiments, frontier LLMs still struggle with implicit personalization, achieving only 37-48% accuracy. While they support long context windows, reasoning remains the bottleneck for implicit personalization tasks. Using reinforcement fine-tuning, we successfully train Qwen3-4B to outperforms GPT-5, reaching 53% accuracy in implicit personalization. Moreover, our agentic memory framework achieves state-of-the-art 55% accuracy while using 16x fewer input tokens, relying on a 2k-token memory instead of full 32k conversation histories. These results underscore the impact of our dataset and demonstrate agentic memory as a scalable path toward real-world personalized intelligence.",
+      "identifiers": [
+        "SemanticScholar:5e364810740f92046868a4ddb7a1b30576439e4d"
+      ],
+      "semantic_scholar_id": "5e364810740f92046868a4ddb7a1b30576439e4d",
+      "canonical_id": "arXiv:2512.06688",
+      "arxiv_id": "2512.06688",
+      "doi": "10.48550/arXiv.2512.06688",
+      "authors": [
+        "Bo-Wen Jiang",
+        "Yuan Yuan",
+        "Maohao Shen",
+        "Zhuo-Qun Hao",
+        "Zhangchen Xu",
+        "Zi-Chen Chen",
+        "Zi-Yi Liu",
+        "Anvesh Rao Vijjini",
+        "Jia-Shu He",
+        "Hanchao Yu",
+        "Radha Poovendran",
+        "Greg Wornell",
+        "Lyle Ungar",
+        "Dan Roth",
+        "Sihao Chen",
+        "C. J. Taylor"
+      ],
+      "priority": 184,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 84,
+        "citation_count": 84,
+        "total": 184,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 304,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaptThink: Reasoning Models Can Learn When to Think",
+      "source_url": "https://arxiv.org/abs/2505.13417",
+      "year": 2025,
+      "published": "2025-05-19",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 170,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, large reasoning models have achieved impressive performance on various tasks by employing human-like deep thinking. However, the lengthy thinking process substantially increases inference overhead, making efficiency a critical bottleneck. In this work, we first demonstrate that NoThinking, which prompts the reasoning model to skip thinking and directly generate the final solution, is a better choice for relatively simple tasks in terms of both performance and efficiency. Motivated by this, we propose AdaptThink, a novel RL algorithm to teach reasoning models to choose the optimal thinking mode adaptively based on problem difficulty. Specifically, AdaptThink features two core components: (1) a constrained optimization objective that encourages the model to choose NoThinking while maintaining the overall performance; (2) an importance sampling strategy that balances Thinking and NoThinking samples during on-policy training, thereby enabling cold start and allowing the model to explore and exploit both thinking modes throughout the training process. Our experiments indicate that AdaptThink significantly reduces the inference costs while further enhancing performance. Notably, on three math datasets, AdaptThink reduces the average response length of DeepSeek-R1-Distill-Qwen-1.5B by 53% and improves its accuracy by 2.4%, highlighting the promise of adaptive thinking-mode selection for optimizing the balance between reasoning quality and efficiency. Our codes and models are available at https://github.com/THU-KEG/AdaptThink.",
+      "identifiers": [
+        "SemanticScholar:0fe4e9d7f771290da5bec757ae77208d320922bb"
+      ],
+      "semantic_scholar_id": "0fe4e9d7f771290da5bec757ae77208d320922bb",
+      "canonical_id": "arXiv:2505.13417",
+      "arxiv_id": "2505.13417",
+      "doi": "10.48550/arXiv.2505.13417",
+      "authors": [
+        "Jia-Jie Zhang",
+        "Nianyi Lin",
+        "Lei Hou",
+        "Ling Feng",
+        "Juan-Zi Li"
+      ],
+      "priority": 180,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 170,
+        "citation_count": 170,
+        "total": 180,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
+      "source_url": "https://arxiv.org/abs/2404.15159",
+      "year": 2024,
+      "published": "2024-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 177,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fine-tuning Large Language Models (LLMs) is a common practice to adapt pre-trained models for specific applications. While methods like LoRA have effectively addressed GPU memory constraints during fine-tuning, their performance often falls short, especially in multi-task scenarios. In contrast, Mixture-of-Expert (MoE) models, such as Mixtral 8x7B, demonstrate remarkable performance in multi-task learning scenarios while maintaining a reduced parameter count. However, the resource requirements of these MoEs remain challenging, particularly for consumer-grade GPUs with less than 24GB memory. To tackle these challenges, we propose MixLoRA, an approach to construct a resource-efficient sparse MoE model based on LoRA. MixLoRA inserts multiple LoRA-based experts within the feed-forward network block of a frozen pre-trained dense model and employs a commonly used top-k router. Unlike other LoRA-based MoE methods, MixLoRA enhances model performance by utilizing independent attention-layer LoRA adapters. Additionally, an auxiliary load balance loss is employed to address the imbalance problem of the router. Our evaluations show that MixLoRA improves about 9% accuracy compared to state-of-the-art PEFT methods in multi-task learning scenarios. We also propose a new high-throughput framework to alleviate the computation and memory bottlenecks during the training and inference of MOE models. This framework reduces GPU memory consumption by 40% and token computation latency by 30% during both training and inference.",
+      "identifiers": [
+        "SemanticScholar:ebcf108f8bc42140721ff02b6727b0a291362957"
+      ],
+      "semantic_scholar_id": "ebcf108f8bc42140721ff02b6727b0a291362957",
+      "canonical_id": "arXiv:2404.15159",
+      "arxiv_id": "2404.15159",
+      "doi": "10.48550/arXiv.2404.15159",
+      "authors": [
+        "Dengchun Li",
+        "Ying-Zi Ma",
+        "Naizheng Wang",
+        "Zheng-Mao Ye",
+        "Zhi-Yuan Cheng",
+        "Ying-Hao Tang",
+        "Yan Zhang",
+        "Lei Duan",
+        "Jie Zuo",
+        "Cal Yang",
+        "Mingjie Tang"
+      ],
+      "priority": 177,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 177,
+        "citation_count": 177,
+        "total": 177,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 898,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.24601",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.24601",
+        "id:SemanticScholar:a267af44051ea607afe39c5bf9282cf7a1e7291d",
+        "id:arXiv:2512.24601",
+        "title:recursive language models",
+        "url:https://arxiv.org/abs/2512.24601"
+      ],
+      "record": {
+        "title": "Recursive Language Models",
+        "source_url": "https://arxiv.org/abs/2512.24601",
+        "year": 2025,
+        "published": "2025-12-31",
+        "venue": "arXiv.org",
+        "citation_count": 94,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We study allowing large language models (LLMs) to process arbitrarily long prompts through the lens of inference-time scaling. We propose Recursive Language Models (RLMs), a general inference paradigm that treats long prompts as part of an external environment and allows the LLM to programmatically examine, decompose, and recursively call itself over snippets of the prompt. We find that RLMs can successfully process inputs up to two orders of magnitude beyond model context windows and, even for shorter prompts, dramatically outperform the quality of vanilla frontier LLMs and common long-context and coding scaffolds (e.g., on GPT-5 by a median across the evaluated benchmarks of $26\\%$ against compaction, $130\\%$ against CodeAct with sub-calls, and $13\\%$ against Claude Code) across four diverse long-context tasks while having comparable cost. At a small scale, we post-train the first model around the RLM. Our model, RLM-Qwen3-8B, outperforms the underlying Qwen3-8B model by $28.3\\%$ on average and even approaches the quality of vanilla GPT-5 on three long-context tasks. Code is available at https://github.com/alexzhang13/rlm.",
+        "identifiers": [
+          "SemanticScholar:a267af44051ea607afe39c5bf9282cf7a1e7291d"
+        ],
+        "semantic_scholar_id": "a267af44051ea607afe39c5bf9282cf7a1e7291d",
+        "canonical_id": "arXiv:2512.24601",
+        "arxiv_id": "2512.24601",
+        "doi": "10.48550/arXiv.2512.24601",
+        "authors": [
+          "Alex L. Zhang",
+          "T. Kraska",
+          "Omar Khattab"
+        ],
+        "priority": 194,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 94,
+          "citation_count": 94,
+          "total": 194,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 280,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.06688",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.06688",
+        "id:SemanticScholar:5e364810740f92046868a4ddb7a1b30576439e4d",
+        "id:arXiv:2512.06688",
+        "title:personamemv2 towards personalized intelligence via learning implicit user personas and agentic memory",
+        "url:https://arxiv.org/abs/2512.06688"
+      ],
+      "record": {
+        "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+        "source_url": "https://arxiv.org/abs/2512.06688",
+        "year": 2025,
+        "published": "2025-12-07",
+        "venue": "arXiv.org",
+        "citation_count": 84,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Personalization is one of the next milestones in advancing AI capability and alignment. We introduce PersonaMem-v2, the state-of-the-art dataset for LLM personalization that simulates 1,000 realistic user-chatbot interactions on 300+ scenarios, 20,000+ user preferences, and 128k-token context windows, where most user preferences are implicitly revealed to reflect real-world interactions. Using this data, we investigate how reinforcement fine-tuning enables a model to improve its long-context reasoning capabilities for user understanding and personalization. We also develop a framework for training an agentic memory system, which maintains a single, human-readable memory that grows with each user over time. In our experiments, frontier LLMs still struggle with implicit personalization, achieving only 37-48% accuracy. While they support long context windows, reasoning remains the bottleneck for implicit personalization tasks. Using reinforcement fine-tuning, we successfully train Qwen3-4B to outperforms GPT-5, reaching 53% accuracy in implicit personalization. Moreover, our agentic memory framework achieves state-of-the-art 55% accuracy while using 16x fewer input tokens, relying on a 2k-token memory instead of full 32k conversation histories. These results underscore the impact of our dataset and demonstrate agentic memory as a scalable path toward real-world personalized intelligence.",
+        "identifiers": [
+          "SemanticScholar:5e364810740f92046868a4ddb7a1b30576439e4d"
+        ],
+        "semantic_scholar_id": "5e364810740f92046868a4ddb7a1b30576439e4d",
+        "canonical_id": "arXiv:2512.06688",
+        "arxiv_id": "2512.06688",
+        "doi": "10.48550/arXiv.2512.06688",
+        "authors": [
+          "Bo-Wen Jiang",
+          "Yuan Yuan",
+          "Maohao Shen",
+          "Zhuo-Qun Hao",
+          "Zhangchen Xu",
+          "Zi-Chen Chen",
+          "Zi-Yi Liu",
+          "Anvesh Rao Vijjini",
+          "Jia-Shu He",
+          "Hanchao Yu",
+          "Radha Poovendran",
+          "Greg Wornell",
+          "Lyle Ungar",
+          "Dan Roth",
+          "Sihao Chen",
+          "C. J. Taylor"
+        ],
+        "priority": 184,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 84,
+          "citation_count": 84,
+          "total": 184,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 304,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.13417",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.13417",
+        "id:SemanticScholar:0fe4e9d7f771290da5bec757ae77208d320922bb",
+        "id:arXiv:2505.13417",
+        "title:adaptthink reasoning models can learn when to think",
+        "url:https://arxiv.org/abs/2505.13417"
+      ],
+      "record": {
+        "title": "AdaptThink: Reasoning Models Can Learn When to Think",
+        "source_url": "https://arxiv.org/abs/2505.13417",
+        "year": 2025,
+        "published": "2025-05-19",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 170,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, large reasoning models have achieved impressive performance on various tasks by employing human-like deep thinking. However, the lengthy thinking process substantially increases inference overhead, making efficiency a critical bottleneck. In this work, we first demonstrate that NoThinking, which prompts the reasoning model to skip thinking and directly generate the final solution, is a better choice for relatively simple tasks in terms of both performance and efficiency. Motivated by this, we propose AdaptThink, a novel RL algorithm to teach reasoning models to choose the optimal thinking mode adaptively based on problem difficulty. Specifically, AdaptThink features two core components: (1) a constrained optimization objective that encourages the model to choose NoThinking while maintaining the overall performance; (2) an importance sampling strategy that balances Thinking and NoThinking samples during on-policy training, thereby enabling cold start and allowing the model to explore and exploit both thinking modes throughout the training process. Our experiments indicate that AdaptThink significantly reduces the inference costs while further enhancing performance. Notably, on three math datasets, AdaptThink reduces the average response length of DeepSeek-R1-Distill-Qwen-1.5B by 53% and improves its accuracy by 2.4%, highlighting the promise of adaptive thinking-mode selection for optimizing the balance between reasoning quality and efficiency. Our codes and models are available at https://github.com/THU-KEG/AdaptThink.",
+        "identifiers": [
+          "SemanticScholar:0fe4e9d7f771290da5bec757ae77208d320922bb"
+        ],
+        "semantic_scholar_id": "0fe4e9d7f771290da5bec757ae77208d320922bb",
+        "canonical_id": "arXiv:2505.13417",
+        "arxiv_id": "2505.13417",
+        "doi": "10.48550/arXiv.2505.13417",
+        "authors": [
+          "Jia-Jie Zhang",
+          "Nianyi Lin",
+          "Lei Hou",
+          "Ling Feng",
+          "Juan-Zi Li"
+        ],
+        "priority": 180,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 170,
+          "citation_count": 170,
+          "total": 180,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.15159",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.15159",
+        "id:SemanticScholar:ebcf108f8bc42140721ff02b6727b0a291362957",
+        "id:arXiv:2404.15159",
+        "title:mixlora enhancing large language models finetuning with lora based mixture of experts",
+        "url:https://arxiv.org/abs/2404.15159"
+      ],
+      "record": {
+        "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
+        "source_url": "https://arxiv.org/abs/2404.15159",
+        "year": 2024,
+        "published": "2024-04-22",
+        "venue": "arXiv.org",
+        "citation_count": 177,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fine-tuning Large Language Models (LLMs) is a common practice to adapt pre-trained models for specific applications. While methods like LoRA have effectively addressed GPU memory constraints during fine-tuning, their performance often falls short, especially in multi-task scenarios. In contrast, Mixture-of-Expert (MoE) models, such as Mixtral 8x7B, demonstrate remarkable performance in multi-task learning scenarios while maintaining a reduced parameter count. However, the resource requirements of these MoEs remain challenging, particularly for consumer-grade GPUs with less than 24GB memory. To tackle these challenges, we propose MixLoRA, an approach to construct a resource-efficient sparse MoE model based on LoRA. MixLoRA inserts multiple LoRA-based experts within the feed-forward network block of a frozen pre-trained dense model and employs a commonly used top-k router. Unlike other LoRA-based MoE methods, MixLoRA enhances model performance by utilizing independent attention-layer LoRA adapters. Additionally, an auxiliary load balance loss is employed to address the imbalance problem of the router. Our evaluations show that MixLoRA improves about 9% accuracy compared to state-of-the-art PEFT methods in multi-task learning scenarios. We also propose a new high-throughput framework to alleviate the computation and memory bottlenecks during the training and inference of MOE models. This framework reduces GPU memory consumption by 40% and token computation latency by 30% during both training and inference.",
+        "identifiers": [
+          "SemanticScholar:ebcf108f8bc42140721ff02b6727b0a291362957"
+        ],
+        "semantic_scholar_id": "ebcf108f8bc42140721ff02b6727b0a291362957",
+        "canonical_id": "arXiv:2404.15159",
+        "arxiv_id": "2404.15159",
+        "doi": "10.48550/arXiv.2404.15159",
+        "authors": [
+          "Dengchun Li",
+          "Ying-Zi Ma",
+          "Naizheng Wang",
+          "Zheng-Mao Ye",
+          "Zhi-Yuan Cheng",
+          "Ying-Hao Tang",
+          "Yan Zhang",
+          "Lei Duan",
+          "Jie Zuo",
+          "Cal Yang",
+          "Mingjie Tang"
+        ],
+        "priority": 177,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 177,
+          "citation_count": 177,
+          "total": 177,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 898,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e235347cdebd1de977c322aa4d07381cb2dbff3f7a989a44da6e13524ad7d8e2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
