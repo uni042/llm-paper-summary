@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-07T22:02:47.460556+00:00",
+  "generated_at": "2026-10-07T22:13:08.784400+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 641,
+  "count": 640,
   "worker_counts": {
-    "scheduled-chat-00": 217,
+    "scheduled-chat-00": 216,
     "scheduled-chat-30": 205,
     "scheduled-chat-45": 219
   },
@@ -14204,28 +14204,6 @@
         "limitation_chars": 323
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
-      "canonical_id": "arXiv:2312.07104",
-      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
-      "file_bytes": 15677,
-      "source_sha256": "c5b5e1e14d578da90c8e581c9221ac2965748c75a991b1600701c8db2f47f87b",
-      "source_git_blob_sha": "95e1e726c0e44b5e13df3860ef7a0b39df6ffd21",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.976018,
-      "quality_metrics": {
-        "body_chars": 3684,
-        "method_chars": 1551,
-        "evaluation_chars": 347,
-        "limitation_chars": 186
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 347 < 500"
-      ],
       "warnings": []
     },
     {
