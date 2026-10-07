@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r173-screen-01-part-06-11ce56b41477",
+  "reference_main_sha": "4fb448f1e7abc516c48c22f092e30f892087230b",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17528",
+      "identity_tokens": [
+        "arXiv:2608.17528"
+      ],
+      "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
+      "reason": "Agentic-RL training and orchestration framework; contribution is training/control infrastructure, not lower inference compute, memory, latency, or serving cost.",
+      "source_url": "https://arxiv.org/abs/2608.17528",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00782",
+      "identity_tokens": [
+        "arXiv:2608.00782"
+      ],
+      "title": "Distill Where You Fail: Recovering Learning Signals of Negative RL-Groups from Adaptive Teacher Guidance",
+      "reason": "Adaptive teacher guidance recovers RL training signals; training intervention, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2608.00782",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17247",
+      "identity_tokens": [
+        "arXiv:2607.17247"
+      ],
+      "title": "Distilled Reinforcement Learning for LLM Post-training",
+      "reason": "LLM post-training with distilled RL; no reduced inference cost, memory, latency, or throughput.",
+      "source_url": "https://arxiv.org/abs/2607.17247",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09996",
+      "identity_tokens": [
+        "arXiv:2607.09996"
+      ],
+      "title": "Who&When Pro: Can LLMs Really Attribute Failures in AI Agents?",
+      "reason": "Agent failure-attribution evaluation, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2607.09996",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01793",
+      "identity_tokens": [
+        "arXiv:2607.01793"
+      ],
+      "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
+      "reason": "LLM-agent safety testing/verification, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.01793",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
