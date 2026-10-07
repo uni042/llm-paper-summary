@@ -35,10 +35,15 @@
   "selection_reason": "H-Scaleは、NVFP4重みのみのpost-training quantizationで、activation calibrationから得た対角Hessian proxyを用いて各16要素groupのE4M3 scaleを選び直す軽量な後処理である。FP4値格子や量子化済み重み形式を変えず、BF16重みの推論コスト・メモリを抑えうる量子化モデルの品質を改善する目的で、LLM推論用の重み圧縮・効率化に直接該当する。一次本文の評価は複数モデル・NVFP4 baselineで平均ベンチマーク値の改善を報告するが、全個別指標が改善するわけではなく、実測の推論latencyやthroughput向上を示すものではない。",
   "semantic_scholar_id": "aaf4fa1b6f65ad48cb458188a3a6b416538711ae",
   "source_url": "https://arxiv.org/abs/2608.28113",
-  "status": "ready",
+  "status": "superseded",
   "title": "H-Scale: Hessian-Guided Scale Refinement for NVFP4 Sub-Byte LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-07T05:20:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.28113-h-scale-hessian-guided-scale-refinement-for-nvfp4-sub-byte-llm-inference.md",
+  "represented_canonical_id": "arXiv:2608.28113",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

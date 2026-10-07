@@ -35,10 +35,15 @@
   "selection_reason": "InfoKVは長い推論のprefillとdecodeで保持するKV cacheのtokenを選別・圧縮し、KVメモリを制約したLLM推論の品質を評価する手法であり、推論時圧縮・inference efficiencyの対象範囲に該当する。LongReasonでLlama-3.1-8B-InstructおよびLlama-3.2-3B-Instructの複数cache budget・context長を、またDeepSeek-R1-Distill-Qwen-7B/Llama-8BでIFEval、AIME 2024、LiveCodeBenchを比較しており、単なる学習時圧縮ではない。結果はタスク性能の改善を示すが、本文で実行速度や実機メモリ削減量を測定した根拠は確認できないため、その点の優位性までは主張しない。",
   "semantic_scholar_id": "062725eb5341f1d592f6e321f816353d3facc2be",
   "source_url": "https://arxiv.org/abs/2606.26875",
-  "status": "ready",
+  "status": "superseded",
   "title": "Information-Aware KV Cache Compression for Long Reasoning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-07T05:20:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.26875-information-aware-kv-cache-compression-for-long-reasoning.md",
+  "represented_canonical_id": "arXiv:2606.26875",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

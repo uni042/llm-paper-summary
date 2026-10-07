@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-400f8d995b4fb34a-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2504.02495",
+  "reason": "推論時のparallel sampling量を増やしてgeneralist reward modelの性能をscaleし、meta reward modelで投票を導くためinference-time compute配分には直接関係する。一方、目的はreward qualityのscalingで、latency・throughput・memory・serving効率の削減が主評価ではないため境界扱い。",
+  "title": "Inference-Time Scaling for Generalist Reward Modeling",
+  "identity_tokens": [
+    "arXiv:2504.02495"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-400f8d995b4f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
