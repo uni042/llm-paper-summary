@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r163-screen-01-part-02-5b9e9d22059e",
+  "reference_main_sha": "ce6ac963b8c52abd8221730c20ee9623f424c8c2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.15166",
+      "identity_tokens": [
+        "arXiv:2310.15166"
+      ],
+      "title": "Large Language Models are Visual Reasoning Coordinators",
+      "reason": "本文は複数VLMを自然言語で調整する視覚推論タスクの品質向上が主題。推論器の呼出し効率・コスト・throughput改善を示すものではない。",
+      "source_url": "https://arxiv.org/abs/2310.15166",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24322",
+      "identity_tokens": [
+        "arXiv:2606.24322"
+      ],
+      "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
+      "reason": "本文は永続memory poisoningへの由来拘束・権限保護と形式検証が主題。memoryの推論効率・容量圧縮・KV cache管理を改善する提案ではない。",
+      "source_url": "https://arxiv.org/abs/2606.24322",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24597",
+      "identity_tokens": [
+        "arXiv:2606.24597"
+      ],
+      "title": "Qwen-AgentWorld: Language World Models for General Agents",
+      "reason": "主題はagentic world-modelの学習・simulation能力とbenchmark。推論効率技術でない。",
+      "source_url": "https://arxiv.org/abs/2606.24597",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18693",
+      "identity_tokens": [
+        "arXiv:2605.18693"
+      ],
+      "title": "SkillGenBench: Benchmarking Skill Generation Pipelines for LLM Agents",
+      "reason": "skill-generation手法を比較するbenchmark/harnessで、LLM inference optimizationではない。",
+      "source_url": "https://arxiv.org/abs/2605.18693",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06550",
+      "identity_tokens": [
+        "arXiv:2604.06550"
+      ],
+      "title": "SkillSieve: A Hierarchical Triage Framework for Detecting Malicious AI Agent Skills",
+      "reason": "Agent skill securityをregex/AST/LLM triageで検出する安全性分析。inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2604.06550",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    }
+  ]
+}
