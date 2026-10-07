@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r163-screen-01-part-01-5b9e9d22059e",
+  "reference_main_sha": "ce6ac963b8c52abd8221730c20ee9623f424c8c2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02818",
+      "identity_tokens": [
+        "arXiv:2511.02818"
+      ],
+      "title": "Orion-MSP: Multi-Scale Sparse Attention for Tabular In-Context Learning",
+      "reason": "一次本文では表形式ICL専用で、特徴方向のblock-sparse attentionを使い高次元表の計算・メモリを改善する。ただし言語列/LLMのsequence inferenceではなく、LLM推論への適用可能性は未検証のため隣接技術として保留。",
+      "source_url": "https://arxiv.org/abs/2511.02818",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104278",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104278"
+      ],
+      "title": "MedScaleRE-PF: a prompt-based framework with retrieval-augmented generation, chain-of-thought, and self-verification for scale-specific relation extraction in Chinese medical literature",
+      "reason": "入力にabstractがなく、DOI publisher primary pageへのアクセスも失敗したため、題名から医療関係抽出と推定できるだけで確定除外しない。primary abstract/full textを取得して対象scopeとの関係を判断する。",
+      "source_url": "https://doi.org/10.1016/j.ipm.2025.104278",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.27924",
+      "identity_tokens": [
+        "arXiv:2604.27924"
+      ],
+      "title": "Can AI Be a Good Peer Reviewer? A Survey of Peer Review Process, Evaluation, and the Future",
+      "reason": "Surveyの対象はpeer review generation、rebuttal/meta-review、評価手法で、inference-system improvementではない。",
+      "source_url": "https://arxiv.org/abs/2604.27924",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22511",
+      "identity_tokens": [
+        "arXiv:2601.22511"
+      ],
+      "title": "Mock Worlds, Real Skills: Building Small Agentic Language Models with Synthetic Tasks, Simulated Environments, and Rubric-Based Rewards",
+      "reason": "本文は合成タスク・模擬環境を作るagent学習のデータ/訓練基盤が主題。小規模モデル能力向上を扱うが、LLM推論時の計算・memory・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2601.22511",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.11779",
+      "identity_tokens": [
+        "arXiv:2410.11779"
+      ],
+      "title": "MLLM can see? Dynamic Correction Decoding for Hallucination Mitigation",
+      "reason": "提案はMLLMのhallucinationをpreceding-layer logitsで訂正し、精度/事実性を改善する。resource reductionやserving throughputは主張しない。",
+      "source_url": "https://arxiv.org/abs/2410.11779",
+      "first_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "last_checked_at": "2026-10-07T09:22:11.595320+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ]
+    }
+  ]
+}
