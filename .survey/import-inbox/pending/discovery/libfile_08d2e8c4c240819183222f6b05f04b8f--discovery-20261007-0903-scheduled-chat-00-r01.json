@@ -1,0 +1,184 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0903-scheduled-chat-00/r01",
+  "reference_main_sha": "577ca7e32409a43c764d25ad0398ff3b414d0d25",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12588",
+      "identity_tokens": [
+        "arXiv:2408.12588"
+      ],
+      "title": "Real-Time Video Generation with Pyramid Attention Broadcast",
+      "reason": "Pyramid Attention BroadcastでDiT型動画拡散モデルのattention出力を後続stepへ再利用し最大10.5倍高速化するが、最終workloadはvideo diffusion generationでありLLM/言語モデル推論ではない。",
+      "source_url": "https://arxiv.org/abs/2408.12588",
+      "body_check": "abstract_screen_only: arXiv一次abstractでtraining-freeなDiT video generation acceleration、最大10.5x speedup、720p real-time generationが主題と確認。LLM推論への最終適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+      ],
+      "worklist_rank": 100
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.27393",
+      "identity_tokens": [
+        "arXiv:2604.27393"
+      ],
+      "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+      "reason": "9Bのomni-modal LLMをedgeで12GB未満RAMに収め、visual 16x/audio 5x token圧縮、LLM backboneのtext-only低rate decoding、軽量speech decoder分離によりreal-time full-duplex推論を実現する。推論architecture・token budget・latency/memory制約が方式設計の直接対象なので収録対象。",
+      "source_url": "https://arxiv.org/abs/2604.27393",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§1–3を確認。448x448 sliceの1024 visual tokensを64へ圧縮（16x）、audioを50 tokens/sから10 tokens/sへ圧縮（5x）、Qwen3-8B backboneは3–4 text decoding steps/sに限定し約0.3B speech decoderへ音声token生成を委譲。edge RAM <12GBとreal-time full-duplexを明示的に評価・設計目標としている。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02640-metronome.md"
+      ],
+      "worklist_rank": 101
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.19384",
+      "identity_tokens": [
+        "arXiv:2406.19384"
+      ],
+      "title": "The Remarkable Robustness of LLMs: Stages of Inference?",
+      "reason": "LLMの隣接layer削除・交換に対するprediction robustnessを調べ、推論計算を4段階へ解釈するmechanistic analysis。中間layerの冗長性は示すが、動的layer skippingやruntime/serving最適化方式を提案・評価しない。",
+      "source_url": "https://arxiv.org/abs/2406.19384",
+      "body_check": "abstract_screen_only: arXiv一次abstractでlayer deletion/swapping後も72–95% prediction accuracyを保持する現象と4-stage inference仮説の分析が主題と確認。推論効率化方式そのものではないため本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ],
+      "worklist_rank": 102
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/860435.860505",
+      "identity_tokens": [
+        "DOI:10.1145/860435.860505"
+      ],
+      "title": "Investigating the relationship between language model perplexity and IR precision-recall measures",
+      "reason": "aspect-based language modelのperplexityと情報検索precision-recall性能の関係を測る2003年のIR評価研究で、LLM/Transformer推論runtime・memory・servingを対象としない。",
+      "source_url": "https://doi.org/10.1145/860435.860505",
+      "body_check": "abstract_screen_only: 一次書誌・abstractでperplexityとinformation retrieval precision/recallの経験的関係分析が主題と確認。LLM推論systems対象外のため本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ],
+      "worklist_rank": 103
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2112.06749",
+      "identity_tokens": [
+        "arXiv:2112.06749"
+      ],
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
+      "reason": "非自己回帰型SUNDAEが反復denoisingを少数stepへ収束させ、Transformer Baseの自己回帰decodingに対して4 stepで4.7倍、8 stepで2.6倍、10 stepで2.2倍の生成高速化を実測する。言語生成推論のdecoding algorithmを直接高速化するため対象。",
+      "source_url": "https://arxiv.org/abs/2112.06749",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§2.2–3.2を確認。low-temperature、argmax-unrolled、partial-token updateで反復回数を削減し、WMT14 En-DeでAR Transformer Base（attention-state cache付きgreedy decoding）比4-step 4.7x / 8-step 2.6x / 10-step 2.2x / 16-step 1.4x speedupを報告。63M MT modelに加え335M unconditional LMも評価。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "worklist_rank": 104
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18401",
+      "identity_tokens": [
+        "arXiv:2404.18401"
+      ],
+      "title": "Spectral-Spatial Mamba for Hyperspectral Image Classification",
+      "reason": "Mambaの線形計算特性をhyperspectral image分類へ適用するvision研究で、最終workloadはHSI classification。LLM推論への最終適用・評価がない。",
+      "source_url": "https://arxiv.org/abs/2404.18401",
+      "body_check": "abstract_screen_only: arXiv一次abstractでspectral/spatial token生成、Mamba block、HSI classification benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "worklist_rank": 105
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.03051",
+      "identity_tokens": [
+        "arXiv:2410.03051"
+      ],
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "reason": "LLMベースvideo captionerでvisual token mergingを推論経路へ適用し、元ViT tokenの10–20%まで削減して長動画入力の計算overheadを抑える。H100上でtoken mergingとSGLang併用のinference timeも直接評価しており、MLLM推論効率の対象。",
+      "source_url": "https://arxiv.org/abs/2410.03051",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§1–2.1とAppendix efficiencyを確認。attention key cosine similarity→bipartite soft matching→weighted mergeでvisual tokensを段階削減し、10–20% tokenでもmarginal performance drop。378x378・8 frames・single H100でvideo QA pair当たり推論時間を比較し、R_vtk=0.1とSGLang併用が最速設定となる。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "worklist_rank": 106
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01026",
+      "identity_tokens": [
+        "arXiv:2312.01026"
+      ],
+      "title": "Token Fusion: Bridging the Gap between Token Pruning and Token Merging",
+      "reason": "token pruning/mergingを統合してVision Transformerのedge deployment計算効率を改善するが、最終評価はimage classificationとimage generationでありLLM/MLLM推論を対象としない。",
+      "source_url": "https://arxiv.org/abs/2312.01026",
+      "body_check": "abstract_screen_only: arXiv一次abstractでViT、resource-constrained edge device、classification/image generationのaccuracy-efficiencyが主題と確認。LLM推論への最終適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "worklist_rank": 108
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.01113",
+      "identity_tokens": [
+        "arXiv:2002.01113"
+      ],
+      "title": "Efficient Riemannian Optimization on the Stiefel Manifold via the Cayley Transform",
+      "reason": "Cayley transformでStiefel manifold上のSGD/ADAM学習を高速化するtraining optimizer研究。CNN/RNNのtraining time・convergenceが主評価で、推論への最終適用を持たない。",
+      "source_url": "https://arxiv.org/abs/2002.01113",
+      "body_check": "abstract_screen_only: arXiv一次abstractでorthonormal parameter制約のtraining optimizer、CNN/RNNのper-iteration/training-time短縮が主題と確認。推論用途なしのため本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10650",
+      "identity_tokens": [
+        "arXiv:2212.10650"
+      ],
+      "title": "KronA: Parameter Efficient Tuning with Kronecker Adapter",
+      "reason": "Kronecker積adapterでtrainable parameterを削減するparameter-efficient fine-tuning研究で、主目的はmodel adaptation/training efficiency。LLM推論runtime・memory・servingの最終改善を評価しない。",
+      "source_url": "https://arxiv.org/abs/2212.10650",
+      "body_check": "abstract_screen_only: 一次書誌・abstractでKronecker Adapterによるparameter-efficient tuningが主題と確認。推論systems最適化ではないため本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+      ],
+      "worklist_rank": 110
+    }
+  ]
+}
