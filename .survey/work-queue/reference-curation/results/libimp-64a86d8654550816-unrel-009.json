@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64a86d8654550816-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.18486",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.18486",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2409.18486",
+      "arXiv:2409.18486"
+    ],
+    "reason": "OpenAI o1のreasoning、coding、vision等の能力・安全性を広範に評価するmodel evaluation研究で、推論runtime・memory・serving効率化を提案しない。",
+    "first_checked_at": "2026-10-07T05:41:35+00:00",
+    "last_checked_at": "2026-10-07T05:41:35+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.20552-adrenaline.md",
+      "papers/inference/17-pim-near-data-acceleration/2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md"
+    ],
+    "title": "Evaluation of OpenAI o1: Opportunities and Challenges of AGI"
+  },
+  "processed_at": "2026-10-07T05:41:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64a86d865455",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

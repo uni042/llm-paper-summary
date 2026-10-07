@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e1610191818178ee-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.10622",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.10622",
+    "identity_tokens": [
+      "arXiv:2503.10622"
+    ],
+    "reason": "LayerNormをelement-wise Dynamic Tanhへ置換しTransformer構造を簡素化する。language modelでも検証するが主貢献はnormalization不要性と学習/品質で、推論latency・memory削減の直接評価が中心でないため境界扱い。",
+    "first_checked_at": "2026-10-07T05:41:39+00:00",
+    "last_checked_at": "2026-10-07T05:41:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Transformers without Normalization"
+  },
+  "processed_at": "2026-10-07T05:41:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e16101918181",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

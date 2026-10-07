@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-64a86d8654550816-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.13558",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.13558",
+    "identity_tokens": [
+      "arXiv:2312.13558"
+    ],
+    "reason": "LASERで特定層weight matrixの高次成分を除去しLLM reasoning性能を改善するpost-training interventionだが、主目的・評価は推論品質向上でありmodel size、latency、memory、serving効率削減を目的化しない。",
+    "first_checked_at": "2026-10-07T05:41:34+00:00",
+    "last_checked_at": "2026-10-07T05:41:34+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.19351-dash-kv-asymmetric-hashing-long-context.md",
+      "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+    ],
+    "title": "The Truth is in There: Improving Reasoning in Language Models with Layer-Selective Rank Reduction"
+  },
+  "processed_at": "2026-10-07T05:41:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-64a86d865455",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

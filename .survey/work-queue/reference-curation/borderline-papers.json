@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T05:28:24+00:00",
-  "record_count": 4272,
+  "updated_at": "2026-10-07T05:41:39+00:00",
+  "record_count": 4276,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65212,6 +65212,68 @@
       ],
       "borderline_recheck_count": 0,
       "title": "LLaMA-MoE: Building Mixture-of-Experts from LLaMA with Continual Pre-Training"
+    },
+    "arXiv:2308.10248": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.10248",
+      "identity_tokens": [
+        "arXiv:2308.10248"
+      ],
+      "reason": "推論時に中間activationへsteering vectorを加算するActAddはLLM forward pathを変更するが、目的・評価はsentiment/toxicity等の出力制御であり、latency・throughput・memory削減を主要評価しないため境界扱い。",
+      "first_checked_at": "2026-10-07T05:41:27+00:00",
+      "last_checked_at": "2026-10-07T05:41:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Steering Language Models With Activation Engineering"
+    },
+    "arXiv:2106.05022": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.05022",
+      "identity_tokens": [
+        "DOI:10.1145/3469116.3470012",
+        "arXiv:2106.05022"
+      ],
+      "reason": "入力難度に応じてruntime計算深度を変えるearly-exitを、設計・学習・deployment・hardware/SLOまで体系化しBERT系NLP事例も含むため推論効率技術として強く関連する。一方、対象はLLMではなくDNN全般なのでborderline。",
+      "first_checked_at": "2026-10-07T05:41:33+00:00",
+      "last_checked_at": "2026-10-07T05:41:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Inference through Early-Exit Networks: Design, Challenges and Directions"
+    },
+    "arXiv:2503.10622": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.10622",
+      "identity_tokens": [
+        "arXiv:2503.10622"
+      ],
+      "reason": "LayerNormをelement-wise Dynamic Tanhへ置換しTransformer構造を簡素化する。language modelでも検証するが主貢献はnormalization不要性と学習/品質で、推論latency・memory削減の直接評価が中心でないため境界扱い。",
+      "first_checked_at": "2026-10-07T05:41:39+00:00",
+      "last_checked_at": "2026-10-07T05:41:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transformers without Normalization"
+    },
+    "arXiv:2601.03192": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03192",
+      "identity_tokens": [
+        "arXiv:2601.03192"
+      ],
+      "reason": "frozen LLMとepisodic memoryを分離し、semantic recall後にQ-valueでmemoryを選ぶruntime learning方式。agent runtime memoryには関連するが主評価はtask successでlatency/memory footprint/serving効率のsystems評価が不足するため境界扱い。",
+      "first_checked_at": "2026-10-07T05:41:39+00:00",
+      "last_checked_at": "2026-10-07T05:41:39+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.14138-limbo-lifelong-inference-time-memory-and-budget-optimization-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory"
     }
   }
 }
