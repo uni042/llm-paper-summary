@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T05:49:24+00:00",
-  "record_count": 4278,
+  "updated_at": "2026-10-07T07:59:28+00:00",
+  "record_count": 4279,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65308,6 +65308,20 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Star-Transformer"
+    },
+    "arXiv:2005.14187": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2005.14187",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.686",
+        "arXiv:2005.14187"
+      ],
+      "reason": "対象ハードウェアの実測遅延制約を使うニューラルアーキテクチャ探索でTransformer推論を直接高速化し、Raspberry Pi-4上で3倍の高速化と3.7倍の小型化を示すため推論効率との関連は強い。一方、最終評価は2020年のencoder-decoder機械翻訳Transformerであり、現行サーベイの中心である生成LLM推論・serving・KV cache等より前世代のNLP推論最適化なのでborderlineとした。",
+      "first_checked_at": "2026-10-07T07:59:28+00:00",
+      "last_checked_at": "2026-10-07T07:59:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing"
     }
   }
 }

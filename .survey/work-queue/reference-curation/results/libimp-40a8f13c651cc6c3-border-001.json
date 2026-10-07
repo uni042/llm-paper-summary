@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40a8f13c651cc6c3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2005.14187",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2005.14187",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2020.acl-main.686",
+      "arXiv:2005.14187"
+    ],
+    "reason": "対象ハードウェアの実測遅延制約を使うニューラルアーキテクチャ探索でTransformer推論を直接高速化し、Raspberry Pi-4上で3倍の高速化と3.7倍の小型化を示すため推論効率との関連は強い。一方、最終評価は2020年のencoder-decoder機械翻訳Transformerであり、現行サーベイの中心である生成LLM推論・serving・KV cache等より前世代のNLP推論最適化なのでborderlineとした。",
+    "first_checked_at": "2026-10-07T07:59:28+00:00",
+    "last_checked_at": "2026-10-07T07:59:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing"
+  },
+  "processed_at": "2026-10-07T07:59:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40a8f13c651c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
