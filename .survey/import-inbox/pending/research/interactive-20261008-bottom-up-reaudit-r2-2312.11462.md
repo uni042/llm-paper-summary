@@ -1,0 +1,223 @@
+---
+canonical_id: arXiv:2312.11462
+arxiv_id: '2312.11462'
+doi: 10.48550/arxiv.2312.11462
+title: Cascade Speculative Drafting for Even Faster LLM Inference
+summary: 通常の投機的復号ではdraft model自身がK tokenを自己回帰生成し、後ろのdraft tokenほどtargetに届く確率が低いのに同じ計算費を払う。CS Draftingは、より小さいmodelが大きいdraft modelをさらに投機するVertical Cascadeと、先頭には強いdraft・後方には安いdraftを割り当てるHorizontal Cascadeを組み合わせ、最下層をMax-Gram統計draftまで落としてdraft側の逐次費用を削る。単一A40・Vicuna-7Bでは通常投機的復号の約44 tokens/sに対し56 tokens/s前後、Tree Attention併用で63 tokens/s超を報告する。
+list_summary: "下書きモデル自身をさらに投機するVertical Cascadeと、後方トークンほど小さいドラフトへ切替えるHorizontal Cascadeで投機的復号のドラフト費用を削る。"
+publication: arXiv
+publication_type: preprint
+publication_status: Preprint
+lineage: inference-systems
+topics:
+- LLM推論
+- 投機的復号
+- cascade drafting
+source: https://arxiv.org/abs/2312.11462
+sources:
+- https://arxiv.org/abs/2312.11462
+- https://arxiv.org/html/2312.11462
+last_checked: '2026-09-28'
+authors:
+- Chen, Ziyi
+- Yang, Xiaocong
+- Lin, Jiacheng
+- Sun, Chenkai
+- Chang, Kevin Chen-Chuan
+- Huang, Jie
+published: '2023-12-18'
+arxiv_categories:
+  primary: cs.CL
+  cross_list: []
+code: https://github.com/lfsszd/CS-Drafting
+implementation: 複数サイズのdraft modelと最下層のMax-Gram統計draftを再帰的に組み合わせる。Vertical Cascadeでは小modelの候補を上位draftがreviewし、Horizontal Cascadeではdraft位置が後ろになるほど小さいmodelへ切り替える。最終target reviewではlenienceを使わず、target単独と同じ出力分布を維持する。
+implementation_status: official-code
+references:
+- canonical_id: arXiv:2401.10774
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: arXiv:2210.11416
+  arxiv_id: '2210.11416'
+- canonical_id: arXiv:2310.12072
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2305.09781
+- canonical_id: arXiv:2308.04623
+  arxiv_id: '2308.04623'
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2310.08461
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 29
+
+
+last_audited: '2026-10-08'
+audit_version: 2
+under16kb_reaudit_target_path: papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md
+under16kb_reaudit_source_git_blob_sha: '6ddf3911c5e6a1888abdde042e9245e94b5f4d72'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r2-2312.11462'
+worker_completed_at: '2026-10-07T22:46:12.988Z'
+
+---
+
+# Cascade Speculative Drafting for Even Faster LLM Inference
+
+> 下書きモデル自身をさらに投機するVertical Cascadeと、後方トークンほど小さいドラフトへ切替えるHorizontal Cascadeで投機的復号のドラフト費用を削る。
+
+## 概要
+
+投機的復号（投機的復号）は、小さい下書きモデルが先の候補トークンを複数作り、大きい対象モデルがそれらを一度に検証する。対象が先頭から何トークンか受理できれば、通常ならそのトークン数だけ必要だった対象 順伝播を1回へまとめられる。正しいaccept/reject規則を使えば、最終的な出力分布は対象モデル単独の自己回帰生成と一致する。
+
+ただし通常の投機的復号には、見落とされやすい**ドラフト側の逐次ボトルネック**がある。K個の候補を作るには、小さいとはいえ下書きモデルをK回自己回帰実行する。ドラフトを小さくすれば1回は速いが対象との一致率が下がり、ドラフトを大きくすれば受理率は高まってもK回分のドラフト計算が重くなる。このため実際には対象より2桁ほど小さいモデルがドラフトに選ばれることが多い。
+
+Cascade Speculative Drafting（CS Drafting）は、「1つの下書きモデルにK トークン全部を同じ方法で作らせる」という前提を崩す。**Vertical Cascade**は下書きモデル自身のトークン生成を、さらに小さいモデルによる投機的復号で加速する。**Horizontal Cascade**は、1回のドラフト列の前半と後半では価値が違うことを利用し、受理されやすい先頭トークンには強いモデル、受理されにくい後方トークンにはより安いモデルを割り当てる。
+
+両cascadeの最下層には、neural モデルより桁違いに安い統計ドラフト **Max-Gram（MaG）** を置く。MaGは既存プロンプトや直前生成列に現れた最大一致ngramを使い、見つからなければWikipediaから作ったbigram分布へfallbackする。上位のneural ドラフトがMaG候補をreviewするので、統計モデル単独の低い品質をそのまま対象へ渡さずに済む。
+
+FLAN-T5 familyの理論化されたStandardized Walltime Improvementでは、通常の投機的復号に対してGSM8Kで最大44%、MMLUで最大81%の追加高速化倍率を報告する。単一NVIDIA A40上のVicuna-7Bでは、通常投機的復号が約44 トークン/sなのに対しCS Draftingは約56 トークン/s、Tree Attentionと組み合わせるとGSM8K 63.81、MMLU 63.37 トークン/sまで向上する。
+
+## 問題設定
+
+### Draft modelが速くても、K回の逐次実行は残る
+
+通常の投機的復号では、対象が1回検証する前に下書きモデルが
+
+[
+x_{t+1}
+ightarrow x_{t+2}
+ightarrow cdots 
+ightarrow x_{t+K}
+]
+
+とK回自己回帰生成する。対象 順伝播の回数は減るが、ドラフトのcritical pathはK 段階残る。
+
+対象との一致率だけを考えれば大きなドラフトが有利だが、ドラフト 1 段階の時間も大きくなる。逆に極小ドラフトは速いが、早い位置でrejectされると対象 1回あたりの確定トークン数が減る。CS Draftingはこの「ドラフト品質とドラフト 遅延」の交換条件を、モデル階層そのものへ分解する。
+
+### Draft列の後ろほど「計算を掛ける価値」が低い
+
+投機的復号でj番目のドラフト トークンが対象に採用されるには、その前の1〜j-1番目が全て受理される必要がある。各トークンの受理率 probabilityを単純化してpとすれば、j番目まで到達する確率は概ね (p^j) のように指数的に下がる。
+
+したがって、先頭トークンと末尾トークンへ同じ大きさの下書きモデルを使うのは資源配分として非対称である。後ろのトークンは、予測自体が正しくても前トークンのrejectで捨てられる可能性が高いため、安いモデルへ任せた方が期待walltimeを下げられる。
+
+## 手法
+
+### 1. Vertical Cascade — draft modelを「小model + reviewer」に分解する
+
+通常は対象 Tに対しドラフト Dが自己回帰生成する。Vertical Cascadeでは、D自身を小モデル Sの対象として投機的復号する。
+
+つまり
+**統計ドラフト → 小neural ドラフト → 大neural ドラフト → 最終対象**
+というreview階層を作る。最下層だけが候補を直接生成し、その候補を上位モデルがまとめて検証・修正して、さらに上へ渡す。
+
+この再帰構造により、大きい下書きモデルがK トークンを1つずつ生成する必要を減らす。上位ドラフトは「generator」より「reviewer」として使われる割合が増えるため、対象への高い一致率を保ちながらドラフト 遅延を下げられる。
+
+### 2. Draft階層内だけlenienceを使い、最終出力は変えない
+
+論文はreviewを緩める **lenience** も利用する。ドラフト階層の中間reviewでは、本来ならrejectする候補を少し受け入れやすくして、下位モデルの候補をより長く通す。
+
+ここで重要なのは、lenienceを**最終対象 reviewには適用しない**ことだ。中間ドラフトが多少誤った候補を通しても、最後に対象が通常の厳密な投機的 sampling規則で検証する。このため中間cascadeの速度最適化が最終出力分布を変えない。
+
+### 3. Horizontal Cascade — 後ろのtokenほど小さいmodelへ切り替える
+
+Horizontal Cascadeはドラフト positionごとにモデルを変える。先頭は対象との一致が重要なので比較的大きい下書きモデルを使い、位置が後ろになるにつれて小さいモデルへ切り替える。
+
+例えば先頭数トークンをFLAN-T5-baseで、その後をFLAN-T5-small、さらに後ろをMaGで作る、といった構成を取れる。前述の通り後方トークンは対象まで到達する確率が低いので、高価なモデルを使う期待価値が小さい。
+
+Vertical Cascadeが「1つのモデルの生成自体を別モデルで投機する」縦方向の階層化なのに対し、Horizontal Cascadeは「ドラフト列の位置ごとに計算予算を変える」横方向の階層化である。両者は独立なので同時に使える。
+
+### 4. Max-Gram — neural autoregressive generationの最下層をなくす
+
+cascade最下層に通常のtiny neural LMを置くと、結局そこには自己回帰順伝播が残る。MaGはこれを統計的文字列再利用で置き換える。
+
+生成済み接頭辞末尾と、元プロンプトや既存トークン列の中で一致する最大ngramを探し、その続きトークンを候補とする。長い一致がなければWikipedia由来bigramへfallbackする。
+
+LLM生成では入力中の固有名詞、コード、定型句、質問文の一部が回答で再利用されることが多いため、単純な統計モデルでも一定数の候補をほぼ無コストで供給できる。MaG単独では対象一致率が低いが、上にneural reviewerを置くことでその弱点を吸収する。
+
+### 5. EWIF/SWIで「modelごとの1 forward cost」を分けて比較する
+
+CS Draftingは複数モデルを階層化するため、単純な受理率 rateだけでは速度を評価できない。論文はモデル 1 順伝播のコスト ratioと受理率 probabilityから**Expected Walltime Improvement Factor（EWIF）**を解析し、実験では**Standardized Walltime Improvement（SWI）**を使う。
+
+SWIは各モデル 順伝播の時間を実測値またはパラメータ数で固定して、GPUノイズから独立したalgorithmic 高速化倍率を比較する指標である。一方、実GPU上のトークン/sも別に測定する。理論上のcascade利得と実実時間を分けている。
+
+## 評価
+
+### 代表的な評価条件
+
+| 項目 | 内容 |
+|---|---|
+| Encoder-decoder 対象 | FLAN-T5-XXL |
+| neural drafts | FLAN-T5-base / FLAN-T5-small |
+| Decoder-only 対象 | Vicuna-7B |
+| Vicuna ドラフト | 68M モデル + Max-Gram |
+| Tasks | GSM8K、MMLU |
+| 復号 | zero-shot CoT、主にgreedy |
+| 実時間 GPU | 単一 NVIDIA A40 |
+| 比較 | 自己回帰、通常投機的復号、Medusa、Tree Attention併用 |
+| 指標 | SWI、トークン/s |
+
+### FLAN-T5の標準化walltime
+
+| 条件 | GSM8K | MMLU |
+|---|---:|---:|
+| 通常SD / base ドラフト | 約2.99倍 | 約3.42倍 |
+| CS / base + MaG | 約3.27倍 | 約4.21倍 |
+| CS / base + small + MaG | 約3.43倍 | 約4.32倍 |
+
+同じモデル群でも、ドラフトを1枚増やせば常に改善するわけではない。GSM8Kではbase+MaGからbase+small+MaGへの差は小さく、cascade階層数と追加review コストの釣り合いがある。
+
+論文は通常投機的復号の最速構成に対し、GSM8Kで最大44%、MMLUで最大81%の追加SWI改善を報告している。
+
+### Vicuna-7Bの実wall-clock
+
+| 方法 | GSM8K トークン/s | MMLU トークン/s |
+|---|---:|---:|
+| 自己回帰 | 33.34 | 33.11 |
+| 通常Speculative Decoding | 44.31 | 43.65 |
+| CS Drafting | 56.72 | 55.60 |
+| Medusa | 61.87 | 56.19 |
+| CS + Tree Attention | 63.81 | 63.37 |
+
+CS Drafting単体でも通常SDを約27〜28%上回る。Tree Attentionと組み合わせるとMedusaも上回り、cascade draftingが候補探索方式と排他的ではないことを示す。
+
+Horizontal Cascadeを外すablationではVicuna-7B/GSM8Kのwalltimeが56.16から53.55 トークン/sへ落ち、後方トークンへ安いモデルを割り当てる効果が独立に確認されている。
+
+### 段階的ドラフトによる利得の詳細監査
+
+実験の核となる比較は、通常の投機的復号で一つの小型モデルが逐次生成する候補を、さらに下位のモデルや安価な候補生成器で肩代わりするという処理である。縦方向の多段化は候補生成器自身に存在する自己回帰の待ち時間を短縮し、横方向の切替は先頭に近い採用されやすい候補へ計算資源を集中する。どちらも大型モデルの検証方式だけを置き換えたものではないため、受理率と候補生成時間の双方を測定しなければ寄与を分けられない。
+
+FLAN-T5の比較では、標準方式を自己回帰の計算時間で正規化すると、問題種類によって約2.99倍または約3.42倍である。提案方式の多段構成は対応する比較で約3.43倍または約4.32倍へ改善する。ただし、各値は同じ一組のモデル構成・推論条件における数字である。下位のドラフトを増やした場合には、候補生成が安くなる反面、検証器とドラフト群を動かす管理費も増加するため、階層を増やせば必ず速くなるわけではない。
+
+Vicuna-7Bの単一A40上の測定では、GSM8Kで通常投機的復号の44.31トークン毎秒に対し、提案方式単体は56.72、さらに木構造の注意計算を組み合わせた構成は63.81となる。同じ表でMedusaは61.87なので、提案方式単体がMedusaを全条件で上回ったと述べるのは誤りである。後者と木構造の注意計算を併用したときに初めてこの条件では上回る。
+
+水平の多段化を無効にする構成要素除去実験では、GSM8Kの計測値は56.16から53.55トークン毎秒へ低下する。これは位置ごとの計算予算の配分が独立して貢献することを支持するが、縦方向の多段化や木構造の探索と合わせた効果を分離せず一つの倍率へまとめることは適切でない。
+
+著者による「最大81%の追加高速化」は通常投機的復号に対する改善であり、自己回帰単独に対する81倍や全データセット一律81%という意味ではない。公開資料の版により要旨の最大値が異なる場合もあるため、再現実験では使用版と最良ケースの対象タスクを必ず併記する。対象の大型モデルと複数の小型ドラフトを同時常駐させるメモリ費用も速度と同時に評価する。
+
+## 既存研究との差
+
+通常投機的復号は対象 + 1 ドラフトという2階層で、ドラフト自身は自己回帰生成する。CS Draftingはそのドラフトをさらに投機する**再帰的な投機的 execution**へ拡張する。
+
+MedusaやTree Attentionは複数候補を対象へ効率良く検証する側を改善する。一方CS Draftingは「候補を作る段階の計算配分」を改善するため、Tree Attentionと併用できる。
+
+また単純なモデル cascadeが入力ごとに「easyなら小モデル、離散なら大モデル」を選ぶのに対し、Horizontal Cascadeは**同じ1回のドラフト列の中で位置ごとにモデル サイズを変える**点が異なる。
+
+## 限界
+
+複数neural モデルを同時に保持すると追加VRAMが必要であり、対象・ドラフト familyが大きい環境ではメモリ オーバーヘッドが問題になる。MaG自体は小さいが、base/small モデルを複数置く構成は単一ドラフトより複雑である。
+
+Horizontal Cascadeの最適な切替位置やVertical Cascadeの階層数は、各モデルの実順伝播 遅延と受理率 rateに依存する。論文のA40・FLAN-T5/Vicuna条件を別GPUや現代的continuous-batching 推論提供へそのまま移すことはできない。
+
+また実験は主にバッチ 1のinteractive inferenceを想定する。大バッチでは対象 順伝播の効率が上がり、ドラフト reviewの相対コストも変わるため、現在のvLLM/SGLang環境で同じ相対高速化倍率を得るかは未評価である。
+
+## 一次資料
+
+- arXiv: https://arxiv.org/abs/2312.11462
+- arXiv HTML: https://arxiv.org/html/2312.11462
+- 公式実装: https://github.com/lfsszd/CS-Drafting
+
+## 修正履歴
+
+- 2026-09-28: 短い一般説明を全面的に再構成。LLMと通常の投機的復号は理解しているがcascade draftingは初見の読者向けに、ドラフト側のK-段階逐次律速、後方トークンほど価値が下がる理由、Vertical/Horizontal Cascade、ドラフト階層内lenience、Max-Gram、EWIF/SWIの意味、FLAN-T5・Vicuna/A40の定量結果とablationを一次資料から追加。
