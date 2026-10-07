@@ -1,0 +1,163 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1758-scheduled-chat-00/r03",
+  "reference_main_sha": "8d17c200c6e231cf5a63362cd6d34038363a988e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.03126",
+      "identity_tokens": [
+        "arXiv:2206.03126"
+      ],
+      "title": "Signal Propagation in Transformers: Theoretical Perspectives and the Role of Rank Collapse",
+      "reason": "Transformer初期化時のrank collapseがquery/key勾配消失とtrainingへ与える影響を理論解析し、residual scalingを議論する学習理論研究。推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2206.03126",
+      "body_check": "abstract_screen_only; arXiv一次abstractでrank collapseとtraining gradientsが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.14152",
+      "identity_tokens": [
+        "arXiv:2305.14152",
+        "DOI:10.48550/arxiv.2305.14152"
+      ],
+      "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization",
+      "reason": "量子化尺度のみを更新するPEQAにより、4ビット未満の重みを保持したまま学習時の更新対象と最適化器メモリを削減する。最大65B規模LLMの省メモリ微調整を扱うため、学習メモリ効率の収録候補。NeurIPS 2023論文。",
+      "source_url": "https://arxiv.org/abs/2305.14152",
+      "body_check": "primary_abstract_review: arXivおよび開催学会の一次要旨から、学習システムの計算・通信・メモリ効率化に直接関係することを確認。全文はResearchで評価する。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T21:38:46.060Z",
+      "linked_from": [],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.12674",
+      "identity_tokens": [
+        "arXiv:2205.12674"
+      ],
+      "title": "Training Language Models with Memory Augmentation",
+      "reason": "TRIMEはin-batch memoryを用いるtraining objectiveとbatchingを提案し、memory-augmented LMを学習する研究。推論時memoryは扱うが主要貢献はtraining methodで、外部memory検索はむしろ推論を遅くし得る。",
+      "source_url": "https://arxiv.org/abs/2205.12674",
+      "body_check": "abstract_screen_only; arXiv一次abstractでtraining objective/memory constructionが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08034",
+      "identity_tokens": [
+        "arXiv:2310.08034"
+      ],
+      "title": "Receive, Reason, and React: Drive as You Say, With Large Language Models in Autonomous Vehicles",
+      "reason": "LLMとtoolを自動運転の意思決定・自然言語personalizationへ適用するdomain application研究。HighwayEnvでdriving qualityを評価し、LLM推論基盤の効率化は扱わない。",
+      "source_url": "https://arxiv.org/abs/2310.08034",
+      "body_check": "abstract_screen_only; arXiv一次abstractでautonomous driving decision/personalizationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.03802",
+      "identity_tokens": [
+        "arXiv:2106.03802"
+      ],
+      "title": "Learning to Efficiently Sample from Diffusion Probabilistic Models",
+      "reason": "DDPMの推論step scheduleを動的計画法で最適化し4000 stepから32 stepまで減らすが、最終対象は画像・音声のdiffusion generative modelでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2106.03802",
+      "body_check": "abstract_screen_only; arXiv一次abstractでDDPM sampling schedule最適化が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 58
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3309551",
+      "identity_tokens": [
+        "DOI:10.1145/3309551"
+      ],
+      "title": "Deep Neural Network Approximation for Custom Hardware: Where We've Been, Where We're Going",
+      "reason": "custom hardware向けDNN approximationを整理する汎用surveyで、LLM/Transformer推論を特定対象としない。",
+      "source_url": "https://doi.org/10.1145/3309551",
+      "body_check": "abstract_screen_only; 出版書誌でcustom hardware向けDNN approximation surveyと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.iref.2025.104719",
+      "identity_tokens": [
+        "DOI:10.1016/j.iref.2025.104719"
+      ],
+      "title": "Deep learning for financial forecasting: A review of recent trends",
+      "reason": "2020–2024年の金融予測向けdeep learning 187研究を整理するfinance domain surveyで、LLM推論systemsを対象にしない。",
+      "source_url": "https://doi.org/10.1016/j.iref.2025.104719",
+      "body_check": "abstract_screen_only; 出版版abstractでfinancial forecasting deep learning reviewと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.02288",
+      "identity_tokens": [
+        "arXiv:2604.02288"
+      ],
+      "title": "Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing",
+      "reason": "RLVRのpost-trainingでcorrect/failed sampleをGRPO/SDPOへroutingするSRPOを提案する学習最適化研究。per-step compute削減も報告するが対象はtraining過程で、推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2604.02288",
+      "body_check": "abstract_screen_only; arXiv一次abstractでRL post-training optimizationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 62
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tse.2024.3428972",
+      "identity_tokens": [
+        "DOI:10.1109/tse.2024.3428972",
+        "arXiv:2404.10100"
+      ],
+      "title": "LLM-Based Test-Driven Interactive Code Generation: User Study and Empirical Evaluation",
+      "reason": "test-driven対話でcode generation accuracyとユーザー評価を改善するsoftware engineering研究。主要指標はpass@1とcognitive loadで、推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2404.10100",
+      "body_check": "abstract_screen_only; arXiv一次abstractでinteractive code generation workflow/user studyが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.12630",
+      "identity_tokens": [
+        "arXiv:2108.12630"
+      ],
+      "title": "GroupFormer: Group Activity Recognition with Clustered Spatial-Temporal Transformer",
+      "reason": "clustered spatial-temporal Transformerでgroup activity recognitionを改善するcomputer vision研究で、最終workloadはVolleyball/Collective Activityの認識。LLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2108.12630",
+      "body_check": "abstract_screen_only; arXiv一次abstractでgroup activity recognitionが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:17:00+09:00",
+      "last_checked_at": "2026-10-07T18:17:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 67
+    }
+  ],
+  "correction_note": "2026-10-08 JST: training system scope: GPipe / Horovod / PEQA の誤った unrelated 判定を accept に修正。元のrun_keyと他recordsを保持。"
+}
