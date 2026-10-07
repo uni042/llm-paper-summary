@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2710939d55960823-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.06031",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.06031",
+    "identity_tokens": [
+      "arXiv:2204.06031"
+    ],
+    "reason": "事前学習言語モデルを知識ベースとして利用できる条件、知識のプロービング、更新・推論能力を整理するNLP surveyで、LLM推論runtime・memory・serving効率化を中心対象としない。",
+    "first_checked_at": "2026-10-07T05:57:32+00:00",
+    "last_checked_at": "2026-10-07T06:59:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+    ],
+    "title": "A Review on Language Models as Knowledge Bases"
+  },
+  "processed_at": "2026-10-07T06:59:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2710939d5596",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

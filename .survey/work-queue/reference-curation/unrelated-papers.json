@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T05:57:38+00:00",
-  "record_count": 10112,
+  "updated_at": "2026-10-07T06:59:11+00:00",
+  "record_count": 10115,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -8949,9 +8949,9 @@
       "identity_tokens": [
         "arXiv:2101.06840"
       ],
-      "reason": "optimizer stateとgradientをCPUへoffloadする巨大モデル学習方式で、推論offloadではない。",
+      "reason": "GPU上のoptimizer state等をCPUへoffloadして大規模モデル学習を可能にするtraining systemであり、論文の目的・評価は13B超モデルのsingle-GPU training、training TFLOPS、multi-GPU training scalingである。推論を最終適用先としない。",
       "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-06T12:12:52+00:00",
+      "last_checked_at": "2026-10-07T06:59:09+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[0]"
       ],
@@ -115899,9 +115899,9 @@
       "identity_tokens": [
         "arXiv:2506.01844"
       ],
-      "reason": "ロボット向けvision-language-action modelの学習・制御が主題で、LLM推論基盤の対象外。",
+      "reason": "小型VLAと非同期推論stackで推論コスト・robot control rateを改善するが、最終workloadは実機・simulationのrobotics policyである。現行サーベイはLLM推論systemsを対象とするため、ロボット制御向けVLA効率化は対象外。",
       "first_checked_at": "2026-10-06T12:12:53+00:00",
-      "last_checked_at": "2026-10-06T12:12:53+00:00",
+      "last_checked_at": "2026-10-07T06:59:11+00:00",
       "linked_from": [],
       "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
     },
@@ -143162,9 +143162,9 @@
       "identity_tokens": [
         "DOI:10.1186/s12943-025-02369-9"
       ],
-      "reason": "癌診断・治療におけるAI技術を扱う医療reviewで、LLM推論systemsのruntime・serving・memory効率化を最終対象としない。",
+      "reason": "AIによる癌診断、imaging、genomics、drug discovery、治療計画等を整理するoncology reviewで、LLM/Transformer推論systemsを対象としない。",
       "first_checked_at": "2026-10-07T05:22:09+00:00",
-      "last_checked_at": "2026-10-07T05:28:25+00:00",
+      "last_checked_at": "2026-10-07T06:59:10+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
       ],
@@ -143200,9 +143200,9 @@
       "identity_tokens": [
         "arXiv:2304.02015"
       ],
-      "reason": "MATH 401を用いてGPT-4、ChatGPT、InstructGPT、Galactica、LLaMAの算術能力を評価する能力ベンチマーク研究。推論runtime・memory・serving効率化を提案しない。",
+      "reason": "GPT-4/ChatGPT/InstructionGPT/Galactica/LLaMAの算術能力をMATH 401で評価するbenchmark研究。推論runtime・memory・serving効率化を提案しない。",
       "first_checked_at": "2026-10-07T05:22:10+00:00",
-      "last_checked_at": "2026-10-07T05:22:11+00:00",
+      "last_checked_at": "2026-10-07T06:59:10+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md"
       ],
@@ -143226,9 +143226,9 @@
       "identity_tokens": [
         "arXiv:2307.04087"
       ],
-      "reason": "4.2M件のvisual instruction tuning dataとdata recipeでMLLMの視覚理解・推論品質を高める学習/data研究。推論systems効率化が主目的ではない。",
+      "reason": "4.2M件のvisual instruction tuning dataを構築しMLLMの理解・推論品質を改善する学習/data研究。推論systems効率化ではない。",
       "first_checked_at": "2026-10-07T05:22:11+00:00",
-      "last_checked_at": "2026-10-07T05:22:11+00:00",
+      "last_checked_at": "2026-10-07T06:59:11+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
       ],
@@ -143240,9 +143240,9 @@
       "identity_tokens": [
         "DOI:10.1147/rd.395.0575"
       ],
-      "reason": "3次元processor gridによる一般的なparallel matrix multiplicationで2D方式よりcommunicationを削減する古典HPC研究。LLM/Transformer推論を最終workloadとしない。",
+      "reason": "3次元processor gridによるparallel matrix multiplicationの通信削減を扱う一般HPC研究で、LLM/Transformer推論を最終workloadとしない。",
       "first_checked_at": "2026-10-07T05:22:11+00:00",
-      "last_checked_at": "2026-10-07T05:22:11+00:00",
+      "last_checked_at": "2026-10-07T06:59:11+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
         "papers/inference/99-other-inference-systems/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md"
@@ -143539,9 +143539,9 @@
       "identity_tokens": [
         "arXiv:2003.07278"
       ],
-      "reason": "ELMo/BERT等のcontextual embedding、cross-lingual pretraining、downstream応用、model compressionを広く整理するNLP surveyで、推論systems効率を中心課題としない。",
+      "reason": "ELMo/BERT等のcontextual embedding、cross-lingual pretraining、downstream task、model compression、representation analysisを整理するNLP survey。推論systems効率が中心ではない。",
       "first_checked_at": "2026-10-07T05:28:25+00:00",
-      "last_checked_at": "2026-10-07T05:28:25+00:00",
+      "last_checked_at": "2026-10-07T06:59:10+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
       ],
@@ -143553,9 +143553,9 @@
       "identity_tokens": [
         "arXiv:2304.06819"
       ],
-      "reason": "memory-efficient multimodal Transformerを用いるが、最終workloadは病理画像とtranscriptomicsを統合した癌患者のsurvival predictionであり、LLM/MLLM推論systemsを対象としない。",
+      "reason": "memory-efficient multimodal Transformerを用いるが、最終workloadはwhole-slide histologyとtranscriptomicsによる患者survival prediction。LLM推論systemsではない。",
       "first_checked_at": "2026-10-07T05:28:25+00:00",
-      "last_checked_at": "2026-10-07T05:28:25+00:00",
+      "last_checked_at": "2026-10-07T06:59:10+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
       ],
@@ -144073,9 +144073,9 @@
       "identity_tokens": [
         "arXiv:2401.16456"
       ],
-      "reason": "single-head attentionとmemory-efficient macro designでVision Transformerを高速化するが、最終評価は画像認識/vision modelでLLM推論ではない。",
+      "reason": "single-head attentionとmacro designでVision TransformerをGPU/CPU/iPhone上で高速化するが、最終評価はImageNet画像分類、COCO detection/segmentationでLLM推論ではない。",
       "first_checked_at": "2026-10-07T05:41:40+00:00",
-      "last_checked_at": "2026-10-07T05:41:40+00:00",
+      "last_checked_at": "2026-10-07T06:59:09+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
         "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
@@ -144102,9 +144102,9 @@
       "identity_tokens": [
         "arXiv:2304.11158"
       ],
-      "reason": "Pythia系列でtraining-data memorizationを測り、低compute trialからfull training時のmemorizationを予測する安全性/学習挙動研究。推論systems効率化ではない。",
+      "reason": "Pythia系列で学習データの逐語的memorizationを測定し、小規模trial runから大規模modelのmemorizationを予測するscaling law研究。推論runtime・memory・serving効率化ではない。",
       "first_checked_at": "2026-10-07T05:49:12+00:00",
-      "last_checked_at": "2026-10-07T05:49:12+00:00",
+      "last_checked_at": "2026-10-07T06:59:07+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
       ],
@@ -144116,9 +144116,9 @@
       "identity_tokens": [
         "arXiv:2004.11154"
       ],
-      "reason": "random-feature kernel approximationのalgorithm/theory/benchmarkを整理する一般kernel-method surveyで、LLM/Transformer推論を最終workloadとしない。",
+      "reason": "random featureによるkernel approximationのalgorithm・理論・classification性能を整理する一般機械学習surveyで、LLM/Transformer推論systemsを最終対象としない。",
       "first_checked_at": "2026-10-07T05:49:13+00:00",
-      "last_checked_at": "2026-10-07T05:49:13+00:00",
+      "last_checked_at": "2026-10-07T06:59:08+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
       ],
@@ -144158,13 +144158,13 @@
       "identity_tokens": [
         "DOI:10.1145/2508148.2485964"
       ],
-      "reason": "GPU architectureのpower modeling/estimation frameworkを提案する一般GPU研究で、LLM/Transformer推論を最終workloadとしない。",
+      "reason": "cycle-level GPGPU power modelを構築・実機検証しDVFS/clock gatingのenergy効果を評価する一般GPU architecture研究で、LLM/Transformer推論を最終workloadとしない。",
       "first_checked_at": "2026-10-07T05:49:15+00:00",
-      "last_checked_at": "2026-10-07T05:49:15+00:00",
+      "last_checked_at": "2026-10-07T06:59:06+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
       ],
-      "title": "GPUWattch"
+      "title": "GPUWattch: Enabling Energy Optimizations in GPGPUs"
     },
     "arXiv:2403.02308": {
       "classification": "unrelated",
@@ -144172,9 +144172,9 @@
       "identity_tokens": [
         "arXiv:2403.02308"
       ],
-      "reason": "RWKV型architectureを画像認識・dense predictionへ適用するvisual perception研究で、最終適用先がvision modelでありLLM推論ではない。",
+      "reason": "RWKV-like architectureで高解像度画像のspatial aggregationを効率化するが、最終評価はimage classificationとdense predictionでありLLM推論systemsではない。",
       "first_checked_at": "2026-10-07T05:49:15+00:00",
-      "last_checked_at": "2026-10-07T05:49:15+00:00",
+      "last_checked_at": "2026-10-07T06:59:07+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
       ],
@@ -144516,9 +144516,9 @@
       "identity_tokens": [
         "arXiv:2204.06031"
       ],
-      "reason": "事前学習済み言語モデルを知識ベースとして扱うための知識表現・抽出・更新・信頼性を整理するレビューであり、推論ランタイム、サービング、メモリ、カーネル等の効率化を最終対象としない。",
+      "reason": "事前学習言語モデルを知識ベースとして利用できる条件、知識のプロービング、更新・推論能力を整理するNLP surveyで、LLM推論runtime・memory・serving効率化を中心対象としない。",
       "first_checked_at": "2026-10-07T05:57:32+00:00",
-      "last_checked_at": "2026-10-07T05:57:32+00:00",
+      "last_checked_at": "2026-10-07T06:59:07+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
       ],
@@ -144530,9 +144530,9 @@
       "identity_tokens": [
         "arXiv:2007.00072"
       ],
-      "reason": "Transformerのデータ移動・レイアウトを全体最適化するsystems研究だが、論文が直接最適化・評価するのはBERT encoderの学習であり、推論への最終適用を評価しないため現行の学習凍結範囲。",
+      "reason": "Transformerのデータ移動をグローバル最適化するsystems研究だが、論文自身が対象をBERTのtraining iterationと明示し、主要結果もBERT encoder trainingの1.30x高速化・data movement 22.91%削減である。現行サーベイの推論専用範囲外。",
       "first_checked_at": "2026-10-07T05:57:32+00:00",
-      "last_checked_at": "2026-10-07T05:57:32+00:00",
+      "last_checked_at": "2026-10-07T06:59:07+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
       ],
@@ -144544,9 +144544,9 @@
       "identity_tokens": [
         "arXiv:2403.16952"
       ],
-      "reason": "事前学習データの混合比と性能の関係を予測し、学習データ配分を最適化するtraining研究。1Bモデル100B token学習等が主要評価で、推論systemsへの最終適用がない。",
+      "reason": "事前学習データのdomain mixture比率からlanguage model性能を予測し、1B model・100B tokensのtraining mixtureを最適化する学習研究。推論systems効率化ではない。",
       "first_checked_at": "2026-10-07T05:57:32+00:00",
-      "last_checked_at": "2026-10-07T05:57:32+00:00",
+      "last_checked_at": "2026-10-07T06:59:08+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
@@ -144558,9 +144558,9 @@
       "identity_tokens": [
         "DOI:10.1109/ipdps.2014.45"
       ],
-      "reason": "GPU上の単一始点最短路問題に対するWorkfront Sweep、Near-Far、Bucketingを提案するグラフアルゴリズム研究で、LLM/Transformer推論を最終workloadとしない。",
+      "reason": "GPU上のsingle-source shortest pathをWorkfront Sweep、Near-Far、Bucketingで高速化するgraph algorithm研究で、LLM/Transformer推論を最終workloadとしない。",
       "first_checked_at": "2026-10-07T05:57:33+00:00",
-      "last_checked_at": "2026-10-07T05:57:33+00:00",
+      "last_checked_at": "2026-10-07T06:59:08+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md"
       ],
@@ -144573,9 +144573,9 @@
         "DOI:10.1109/mipr62202.2024.00031",
         "arXiv:2404.07220"
       ],
-      "reason": "Dense/Sparse retrievalとhybrid queryを組み合わせてRAGの検索・生成QA精度を改善する研究で、主要評価はNQ、TREC-COVID、SQuADの品質。推論latency、throughput、memory等のsystems効率を主要目的としない。",
+      "reason": "dense/sparse semantic searchとhybrid queryを組み合わせてRAGのretrieval/QA精度を改善する品質研究。主要評価はNQ、TREC-COVID、SQuADのaccuracyで、latency・throughput・memory削減を目的としない。",
       "first_checked_at": "2026-10-07T05:57:33+00:00",
-      "last_checked_at": "2026-10-07T05:57:33+00:00",
+      "last_checked_at": "2026-10-07T06:59:08+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
@@ -144587,9 +144587,9 @@
       "identity_tokens": [
         "arXiv:2410.24210"
       ],
-      "reason": "複数MLPを大半のparameter共有で模倣する効率的ensembleによりtabular deep learningの性能効率を改善する研究で、最終workloadは表形式データの教師あり学習。LLM推論systems対象外。",
+      "reason": "BatchEnsemble系のparameter-efficient ensembleをtabular MLPへ適用し、表形式データの性能・効率trade-offを改善する研究。最終workloadはtabular supervised learningでLLM推論ではない。",
       "first_checked_at": "2026-10-07T05:57:33+00:00",
-      "last_checked_at": "2026-10-07T05:57:33+00:00",
+      "last_checked_at": "2026-10-07T06:59:08+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
@@ -144601,13 +144601,13 @@
       "identity_tokens": [
         "DOI:10.1145/3447993.3448628"
       ],
-      "reason": "高解像度動画をcontent/resource-awareに分割して複数edge serverへ並列offloadする推論systems研究だが、最終workloadはmobile deep visionのsegmentation等でありLLM/VLM推論を対象としない。",
+      "reason": "mobile deep visionの高解像度video frameをcontent/resource-awareに分割し複数edge serverへoffloadするsystems研究。4.85x高速化・52.6%帯域削減を示すが、最終workloadはcomputer vision DNNでLLM推論ではない。",
       "first_checked_at": "2026-10-07T05:57:33+00:00",
-      "last_checked_at": "2026-10-07T05:57:33+00:00",
+      "last_checked_at": "2026-10-07T06:59:09+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
       ],
-      "title": "Elf: accelerate high-resolution mobile deep vision with content-aware parallel offloading"
+      "title": "Elf: Accelerate High-resolution Mobile Deep Vision with Content-aware Parallel Offloading"
     },
     "arXiv:2403.19076": {
       "classification": "unrelated",
@@ -144616,9 +144616,9 @@
         "DOI:10.1109/mcas.2023.3302182",
         "arXiv:2403.19076"
       ],
-      "reason": "MCU/IoT上のTinyML全般を扱うreviewで、MCUNetやon-device trainingを含むが、LLM/言語モデル推論systemsを中心対象としない。",
+      "reason": "MCU/IoT上のTinyMLをalgorithm-system co-design、MCUNet、on-device trainingまで整理するsurvey。主対象はCNN中心のtiny-device MLで、LLM推論systemsを最終対象としない。",
       "first_checked_at": "2026-10-07T05:57:34+00:00",
-      "last_checked_at": "2026-10-07T05:57:34+00:00",
+      "last_checked_at": "2026-10-07T06:59:09+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
       ],
@@ -144630,9 +144630,9 @@
       "identity_tokens": [
         "arXiv:2406.19389"
       ],
-      "reason": "segmentation encoderとLLMを統合しimage/object/pixel-level reasoning品質を高めるMLLM研究で、主要評価はvision understanding/segmentation能力。推論runtime・token削減・serving効率を主要目的としない。",
+      "reason": "universal segmentation encoderとLLMを統合しimage/object/pixel-level reasoning・segmentation品質を高めるMLLM研究。推論runtime・memory・serving効率化が主要目的ではない。",
       "first_checked_at": "2026-10-07T05:57:34+00:00",
-      "last_checked_at": "2026-10-07T05:57:34+00:00",
+      "last_checked_at": "2026-10-07T06:59:10+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
       ],
@@ -144761,6 +144761,42 @@
       "last_checked_at": "2026-10-07T05:57:38+00:00",
       "linked_from": [],
       "title": "What matters when building vision-language models?"
+    },
+    "arXiv:2307.13721": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.13721",
+      "identity_tokens": [
+        "arXiv:2307.13721"
+      ],
+      "reason": "vision/text/audio等を統合するfoundation modelのarchitecture、training、prompting、computer vision応用を整理するsurvey。最終対象はvisual foundation modelsでLLM推論systemsではない。",
+      "first_checked_at": "2026-10-07T06:59:06+00:00",
+      "last_checked_at": "2026-10-07T06:59:06+00:00",
+      "linked_from": [],
+      "title": "Foundational Models Defining a New Era in Vision: A Survey and Outlook"
+    },
+    "arXiv:2305.18201": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18201",
+      "identity_tokens": [
+        "arXiv:2305.18201"
+      ],
+      "reason": "long-form QAのhuman/automatic evaluation指標と人間選好との相関を分析する評価研究で、推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-07T06:59:07+00:00",
+      "last_checked_at": "2026-10-07T06:59:07+00:00",
+      "linked_from": [],
+      "title": "A Critical Evaluation of Evaluations for Long-form Question Answering"
+    },
+    "DOI:10.1145/3037697.3037698": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3037697.3037698",
+      "identity_tokens": [
+        "DOI:10.1145/3037697.3037698"
+      ],
+      "reason": "DNN layer単位でmobile/cloud間を動的partitionしlatency・energy・datacenter throughputを改善するsystems研究だが、評価対象はvision/speech/NLPを含む一般DNNで、LLM/Transformer推論が最終workloadではない。",
+      "first_checked_at": "2026-10-07T06:59:11+00:00",
+      "last_checked_at": "2026-10-07T06:59:11+00:00",
+      "linked_from": [],
+      "title": "Neurosurgeon: Collaborative Intelligence Between the Cloud and Mobile Edge"
     }
   }
 }

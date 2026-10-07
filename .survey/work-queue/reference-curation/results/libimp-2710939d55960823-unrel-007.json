@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2710939d55960823-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.07220",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.07220",
+    "identity_tokens": [
+      "DOI:10.1109/mipr62202.2024.00031",
+      "arXiv:2404.07220"
+    ],
+    "reason": "dense/sparse semantic searchとhybrid queryを組み合わせてRAGのretrieval/QA精度を改善する品質研究。主要評価はNQ、TREC-COVID、SQuADのaccuracyで、latency・throughput・memory削減を目的としない。",
+    "first_checked_at": "2026-10-07T05:57:33+00:00",
+    "last_checked_at": "2026-10-07T06:59:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Blended RAG: Improving RAG (Retriever-Augmented Generation) Accuracy with Semantic Search and Hybrid Query-Based Retrievers"
+  },
+  "processed_at": "2026-10-07T06:59:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2710939d5596",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
