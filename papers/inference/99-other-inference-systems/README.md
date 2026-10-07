@@ -1495,8 +1495,8 @@
   推論時には最初にtarget長を予測し、全位置をmaskした状態から全トークンを同時に生成する。
 
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  Q8BERTは、BERTをproductionへ配置するときのパラメータ メモリ、メモリ 帯域、整数演算利用を改善するため、重みと活性値を8bitへ量子化する研究である。論文はBERTの下流 accuracyをほぼ維持しながら約4倍圧縮できることを示し、INT8演算を高速に実行できるハードウェアでは推論速度改善につながるとする。
+  実装：[✓](https://github.com/NervanaSystems/nlp-architect) ・ リポジトリ内被引用：7  
+  Q8BERTは、BERTの下流task向け微調整（微調整）に量子化認識学習（量子化-aware 学習; QAT）を組み込み、重みと活性値を8ビット整数（INT8）へ適応させる研究である。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

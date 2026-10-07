@@ -184,7 +184,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2026-08 · [Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets](2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-p.md)**  
   実装：[✓](https://github.com/labscommunity/pipeline-sharded-inference-paper) ・ リポジトリ内被引用：0  
-  統合GPU/NPUを持つAI PCは16GB超の共有メモリを持つが、70B級LLMは単体へ収まらない。
+  本研究は、単体では70B級LLMを保持できないIntel AI PC群を、通常のLAN/WAN越しに層 パイプラインとして束ねる分散推論システムである。単純なパイプライン化だけでは、per-stage graphでOpenVINO GPU pluginのKV最適化が発火せずmonolithic モデルより13〜23%遅くなる。
 
 - **2026-08 · [MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices](2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
