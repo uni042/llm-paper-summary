@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1530-scheduled-chat-30/research-prescreen-r01-6",
+  "reference_main_sha": "a1e426e80413fd26c99900f7419814e5774d0655",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.06840",
+      "identity_tokens": [
+        "arXiv:2101.06840"
+      ],
+      "title": "ZeRO-Offload: Democratizing Billion-Scale Model Training",
+      "reason": "GPU上のoptimizer state等をCPUへoffloadして大規模モデル学習を可能にするtraining systemであり、論文の目的・評価は13B超モデルのsingle-GPU training、training TFLOPS、multi-GPU training scalingである。推論を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2101.06840",
+      "body_check": "abstract_screen_only: arXiv一次abstractでlarge-model training、CPUへのdata/compute offload、10B model trainingの40 TFLOPS/GPU、最大128 GPUのtraining scalingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T15:27:08+09:00",
+      "last_checked_at": "2026-10-07T15:27:08+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-39ffc3ced9a3a720",
+      "worklist_rank": 6
+    }
+  ]
+}
