@@ -169,7 +169,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-06 · [Information-Aware KV Cache Compression for Long Reasoning](2026-2606.26875-information-aware-kv-cache-compression-for-long-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  KVキャッシュ圧縮では、直近問い合わせから大きな注意機構を受けた過去トークンを残す方式が一般的である。
+  従来の鍵値キャッシュ（KV キャッシュ）圧縮は、直近の問い合わせから大きな注意（注意機構）を受けたトークンを残す設計が多い。LongReasonでは40%・20%の鍵値キャッシュ保持率でSnapKV、PyramidKV、Expected 注意機構を上回り、長い復号でもRPCより高いタスク性能を示す。
 
 - **2026-06 · [CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference](2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md)**  
   実装：[✓](https://github.com/TUDa-HWAI/CompressKV) ・ リポジトリ内被引用：1  
