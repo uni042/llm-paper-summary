@@ -1513,7 +1513,7 @@
   データ並列（data 並列化）は各GPUへモデル全体を複製し、mini-バッチを分けて勾配を同期する。モデルが大きい、あるいはネットワークが遅いと勾配同期が計算時間を上回り、GPUが通信待ちになる。PipeDreamはモデルの層を複数段へ分け、異なるmini-バッチの順伝播と逆伝播をパイプラインとして重ねることで、モデルを分割しながらGPUを連続稼働させる。
 
 - **2018-02 · [Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement](2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md)**  
-  実装：[✓](https://github.com/nyu-dl/dl4mt-nonauto) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/nyu-dl/dl4mt-nonauto) ・ リポジトリ内被引用：6  
   提案法は条件付き潜在変数モデルと条件付きノイズ除去自己符号化器（ノイズ除去 autoencoder）の二つの見方を組み合わせる。
 
 ### 10年前（2016-11〜2017-10）
