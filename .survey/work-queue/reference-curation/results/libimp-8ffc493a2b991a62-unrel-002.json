@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ffc493a2b991a62-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.03158",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.03158",
+    "identity_tokens": [
+      "arXiv:2602.03158"
+    ],
+    "reason": "The abstract proposes a multi-agent misinformation detection system and perspective aggregation; its focus is detection quality, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-07T13:59:18+00:00",
+    "last_checked_at": "2026-10-07T13:59:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+    ],
+    "title": "PAMAS: Self-Adaptive Multi-Agent System with Perspective Aggregation for Misinformation Detection"
+  },
+  "processed_at": "2026-10-07T13:59:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ffc493a2b99",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

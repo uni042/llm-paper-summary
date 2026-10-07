@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a929c44cf745f1f4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.09095",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.09095",
+    "identity_tokens": [
+      "arXiv:2603.09095"
+    ],
+    "reason": "The abstract diagnoses text-as-image modality performance in multimodal LLMs and input rendering effects; it is a capability/evaluation study, not a compute optimization.",
+    "first_checked_at": "2026-10-07T13:59:20+00:00",
+    "last_checked_at": "2026-10-07T13:59:20+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs"
+  },
+  "processed_at": "2026-10-07T13:59:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a929c44cf745",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

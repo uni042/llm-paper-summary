@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0ee1495a8db8a8d8-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.00621",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.00621",
+    "identity_tokens": [
+      "arXiv:2602.00621"
+    ],
+    "reason": "The paper intervenes on visual embedding neurons at the LVLM prefilling stage to reduce hallucinations, but its experiments establish output-quality changes rather than lower prefill cost, token count, memory, or latency; direct inference-optimization relevance remains uncertain.",
+    "first_checked_at": "2026-10-07T13:59:14+00:00",
+    "last_checked_at": "2026-10-07T13:59:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Interpretable Hallucination Analysis and Mitigation in LVLMs via Contrastive Neuron Steering"
+  },
+  "processed_at": "2026-10-07T13:59:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ee1495a8db8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

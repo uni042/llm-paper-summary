@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T13:51:11+00:00",
-  "record_count": 10761,
+  "updated_at": "2026-10-07T13:59:26+00:00",
+  "record_count": 10789,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -153929,6 +153929,401 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
       ],
       "title": "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding"
+    },
+    "arXiv:2601.22135": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22135",
+      "identity_tokens": [
+        "arXiv:2601.22135"
+      ],
+      "reason": "The primary paper is a physics-guided diffusion framework for full-image relighting; its attention and fine-tuning components are for image synthesis, not LLM or language-model inference, despite an incidental training-memory lineage link.",
+      "first_checked_at": "2026-10-07T13:59:14+00:00",
+      "last_checked_at": "2026-10-07T13:59:14+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "PI-Light: Physics-Inspired Diffusion for Full-Image Relighting"
+    },
+    "arXiv:2603.13779": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13779",
+      "identity_tokens": [
+        "arXiv:2603.13779"
+      ],
+      "reason": "The abstract describes industrial anomaly detection data, a comparison encoder, and task accuracy/localization; it does not address model inference cost or serving.",
+      "first_checked_at": "2026-10-07T13:59:16+00:00",
+      "last_checked_at": "2026-10-07T13:59:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "AD-Copilot: A Vision-Language Assistant for Industrial Anomaly Detection via Visual In-context Comparison"
+    },
+    "arXiv:2603.12664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12664",
+      "identity_tokens": [
+        "arXiv:2603.12664"
+      ],
+      "reason": "The abstract studies text-to-time-series forecasting through semantic temporal features and forecasting error; it is not LLM inference optimization.",
+      "first_checked_at": "2026-10-07T13:59:16+00:00",
+      "last_checked_at": "2026-10-07T13:59:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "From Text to Forecasts: Bridging Modality Gap with Temporal Evolution Semantic Space"
+    },
+    "arXiv:2603.13162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13162",
+      "identity_tokens": [
+        "arXiv:2603.13162"
+      ],
+      "reason": "The abstract optimizes diffusion-based image compression sampling and reconstruction, not language model inference.",
+      "first_checked_at": "2026-10-07T13:59:17+00:00",
+      "last_checked_at": "2026-10-07T13:59:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "DiT-IC: Aligned Diffusion Transformer for Efficient Image Compression"
+    },
+    "arXiv:2603.11219": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11219",
+      "identity_tokens": [
+        "arXiv:2603.11219"
+      ],
+      "reason": "The abstract aligns VLM decisions and end-to-end driving policies through staged training and driving-safety objectives; no inference efficiency mechanism is reported.",
+      "first_checked_at": "2026-10-07T13:59:17+00:00",
+      "last_checked_at": "2026-10-07T13:59:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Senna-2: Aligning VLM and End-to-End Driving Policy for Consistent Decision Making and Planning"
+    },
+    "arXiv:2602.04369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04369",
+      "identity_tokens": [
+        "arXiv:2602.04369"
+      ],
+      "reason": "The abstract aligns LLMs with multiscale time-series representations for forecasting; it does not present an inference efficiency method.",
+      "first_checked_at": "2026-10-07T13:59:17+00:00",
+      "last_checked_at": "2026-10-07T13:59:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Multi-scale hypergraph meets LLMs: Aligning large language models for time series analysis"
+    },
+    "arXiv:2602.03158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03158",
+      "identity_tokens": [
+        "arXiv:2602.03158"
+      ],
+      "reason": "The abstract proposes a multi-agent misinformation detection system and perspective aggregation; its focus is detection quality, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-07T13:59:18+00:00",
+      "last_checked_at": "2026-10-07T13:59:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "title": "PAMAS: Self-Adaptive Multi-Agent System with Perspective Aggregation for Misinformation Detection"
+    },
+    "arXiv:2602.02092": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02092",
+      "identity_tokens": [
+        "arXiv:2602.02092"
+      ],
+      "reason": "The full paper is an image-to-video diffusion model with compressed visual latents and a layer-memory design; it does not concern language-model inference despite an incidental compiler-lineage link.",
+      "first_checked_at": "2026-10-07T13:59:18+00:00",
+      "last_checked_at": "2026-10-07T13:59:18+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "FSVideo: Fast Speed Video Diffusion Model in a Highly-Compressed Latent Space"
+    },
+    "arXiv:2602.02128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02128",
+      "identity_tokens": [
+        "arXiv:2602.02128"
+      ],
+      "reason": "The abstract presents a spatiotemporal diffusion model for protein molecular dynamics; the application and method are outside LLM inference.",
+      "first_checked_at": "2026-10-07T13:59:18+00:00",
+      "last_checked_at": "2026-10-07T13:59:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Scalable Spatio-Temporal SE(3) Diffusion for Long-Horizon Protein Dynamics"
+    },
+    "arXiv:2602.01365": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01365",
+      "identity_tokens": [
+        "arXiv:2602.01365"
+      ],
+      "reason": "The abstract studies domain-order effects in GRPO training; its contribution concerns training sequence and reasoning accuracy, not inference-time cost or latency.",
+      "first_checked_at": "2026-10-07T13:59:19+00:00",
+      "last_checked_at": "2026-10-07T13:59:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "When Domains Interact: Asymmetric and Order-Sensitive Cross-Domain Effects in Reinforcement Learning for Reasoning"
+    },
+    "arXiv:2603.09095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09095",
+      "identity_tokens": [
+        "arXiv:2603.09095"
+      ],
+      "reason": "The abstract diagnoses text-as-image modality performance in multimodal LLMs and input rendering effects; it is a capability/evaluation study, not a compute optimization.",
+      "first_checked_at": "2026-10-07T13:59:20+00:00",
+      "last_checked_at": "2026-10-07T13:59:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs"
+    },
+    "arXiv:2603.09677": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09677",
+      "identity_tokens": [
+        "arXiv:2603.09677"
+      ],
+      "reason": "The abstract proposes a general multimodal parsing taxonomy and staged perception/recognition pipeline; the subject is document/audio-visual parsing rather than LLM inference efficiency.",
+      "first_checked_at": "2026-10-07T13:59:20+00:00",
+      "last_checked_at": "2026-10-07T13:59:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Logics-Parsing-Omni Technical Report"
+    },
+    "arXiv:2603.10101": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.10101",
+      "identity_tokens": [
+        "arXiv:2603.10101"
+      ],
+      "reason": "The abstract introduces contrastive policy optimization for RLVR training rollouts and generalization; its intervention is training-time, not inference-time resource optimization.",
+      "first_checked_at": "2026-10-07T13:59:20+00:00",
+      "last_checked_at": "2026-10-07T13:59:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "title": "CLIPO: Contrastive Learning in Policy Optimization Generalizes RLVR"
+    },
+    "arXiv:2603.07562": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07562",
+      "identity_tokens": [
+        "arXiv:2603.07562"
+      ],
+      "reason": "The abstract models glioblastoma evolution and treatment with a clinical world model and MRI generation; it is a domain application, not LLM inference.",
+      "first_checked_at": "2026-10-07T13:59:21+00:00",
+      "last_checked_at": "2026-10-07T13:59:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Brain-WM: Brain Glioblastoma World Model"
+    },
+    "arXiv:2602.12036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12036",
+      "identity_tokens": [
+        "arXiv:2602.12036"
+      ],
+      "reason": "The abstract proposes prompt construction/selection for reinforcement-learning training of LLMs; the claimed change is training-data utilization, not inference.",
+      "first_checked_at": "2026-10-07T13:59:21+00:00",
+      "last_checked_at": "2026-10-07T13:59:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "Composition-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models"
+    },
+    "arXiv:2602.12158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12158",
+      "identity_tokens": [
+        "arXiv:2602.12158"
+      ],
+      "reason": "The abstract describes neuron-level safety alignment training to improve robustness; it does not present an inference optimization.",
+      "first_checked_at": "2026-10-07T13:59:21+00:00",
+      "last_checked_at": "2026-10-07T13:59:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ],
+      "title": "SafeNeuron: Neuron-Level Safety Alignment for Large Language Models"
+    },
+    "arXiv:2602.10564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10564",
+      "identity_tokens": [
+        "arXiv:2602.10564"
+      ],
+      "reason": "The abstract concerns communication compression for federated fine-tuning and partitioning training workloads; its resource target is training communication, not LLM inference.",
+      "first_checked_at": "2026-10-07T13:59:22+00:00",
+      "last_checked_at": "2026-10-07T13:59:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ],
+      "title": "SplitCom: Communication-efficient Split Federated Fine-tuning of LLMs via Temporal Compression"
+    },
+    "arXiv:2602.10161": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10161",
+      "identity_tokens": [
+        "arXiv:2602.10161"
+      ],
+      "reason": "The abstract analyzes cross-modal safety vulnerabilities and alignment in omni-modal models; it targets safety behavior, not inference resource use.",
+      "first_checked_at": "2026-10-07T13:59:22+00:00",
+      "last_checked_at": "2026-10-07T13:59:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "title": "Omni-Safety under Cross-Modality Conflict: Vulnerabilities, Dynamics Mechanisms and Efficient Alignment"
+    },
+    "arXiv:2602.06602": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06602",
+      "identity_tokens": [
+        "arXiv:2602.06602"
+      ],
+      "reason": "The abstract scales speech tokenizers using a diffusion autoencoder for speech understanding/reconstruction; it is not an LLM inference system or serving optimization.",
+      "first_checked_at": "2026-10-07T13:59:22+00:00",
+      "last_checked_at": "2026-10-07T13:59:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "title": "Scaling Speech Tokenizers with Diffusion Autoencoders"
+    },
+    "arXiv:2603.00492": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00492",
+      "identity_tokens": [
+        "arXiv:2603.00492"
+      ],
+      "reason": "The abstract addresses 3D reconstruction artifacts with autoregressive diffusion and view synthesis, not language model inference.",
+      "first_checked_at": "2026-10-07T13:59:23+00:00",
+      "last_checked_at": "2026-10-07T13:59:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "ArtiFixer: Enhancing and Extending 3D Reconstruction with Auto-Regressive Diffusion Models"
+    },
+    "arXiv:2602.19497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19497",
+      "identity_tokens": [
+        "arXiv:2602.19497"
+      ],
+      "reason": "The abstract introduces a multi-image context image-generation benchmark and evaluation-by-checkpoint, not inference efficiency.",
+      "first_checked_at": "2026-10-07T13:59:23+00:00",
+      "last_checked_at": "2026-10-07T13:59:23+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "MICON-Bench: Benchmarking and Enhancing Multi-Image Context Image Generation in Unified Multimodal Models"
+    },
+    "arXiv:2602.19715": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19715",
+      "identity_tokens": [
+        "arXiv:2602.19715"
+      ],
+      "reason": "The abstract focuses on deepfake detection and reasoning supervision; no inference cost, memory, latency, or serving method is claimed.",
+      "first_checked_at": "2026-10-07T13:59:24+00:00",
+      "last_checked_at": "2026-10-07T13:59:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Pixels Don't Lie (But Your Detector Might): Bootstrapping MLLM-as-a-Judge for Trustworthy Deepfake Detection and Reasoning Supervision"
+    },
+    "arXiv:2602.16220": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16220",
+      "identity_tokens": [
+        "arXiv:2602.16220"
+      ],
+      "reason": "The abstract proposes an MLP-Mixer for long-term time-series forecasting; it does not concern language models or their inference.",
+      "first_checked_at": "2026-10-07T13:59:24+00:00",
+      "last_checked_at": "2026-10-07T13:59:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "SEMixer: Semantics Enhanced MLP-Mixer for Multiscale Mixing and Long-term Time Series Forecasting"
+    },
+    "arXiv:2603.18377": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18377",
+      "identity_tokens": [
+        "arXiv:2603.18377"
+      ],
+      "reason": "The abstract describes privacy-preserving projection of private environment state for cloud-agent planning; its contribution is disclosure control and privacy guarantees, not inference resource reduction.",
+      "first_checked_at": "2026-10-07T13:59:24+00:00",
+      "last_checked_at": "2026-10-07T13:59:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "PlanTwin: Privacy-Preserving Planning Abstractions for Cloud-Assisted LLM Agents"
+    },
+    "arXiv:2603.17998": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17998",
+      "identity_tokens": [
+        "arXiv:2603.17998"
+      ],
+      "reason": "The primary paper applies text-embedding interpolation to steer text-conditioned image generation; the LLM is used to construct prompt pairs, not as an inference system being optimized.",
+      "first_checked_at": "2026-10-07T13:59:25+00:00",
+      "last_checked_at": "2026-10-07T13:59:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "The Unreasonable Effectiveness of Text Embedding Interpolation for Continuous Image Steering"
+    },
+    "arXiv:2603.16849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16849",
+      "identity_tokens": [
+        "arXiv:2603.16849"
+      ],
+      "reason": "The abstract concerns graph neural operators over meshes and graph benchmarks, with no connection to LLM inference or serving.",
+      "first_checked_at": "2026-10-07T13:59:25+00:00",
+      "last_checked_at": "2026-10-07T13:59:25+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "GIST: Gauge-Invariant Spectral Transformers for Scalable Graph Neural Operators"
+    },
+    "arXiv:2603.14819": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14819",
+      "identity_tokens": [
+        "arXiv:2603.14819"
+      ],
+      "reason": "The primary paper targets parameter/head editing for machine unlearning on vision/diffusion models. Its efficiency claim concerns unlearning operations, not LLM inference, and the full text provides no decoding, serving, or inference-memory technique despite the quantization lineage link.",
+      "first_checked_at": "2026-10-07T13:59:25+00:00",
+      "last_checked_at": "2026-10-07T13:59:25+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "RAZOR: Ratio-Aware Layer Editing for Targeted Unlearning in Vision Transformers and Diffusion Models"
+    },
+    "arXiv:2603.15118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15118",
+      "identity_tokens": [
+        "arXiv:2603.15118"
+      ],
+      "reason": "The abstract presents a benchmark for multimodal extraction from government-form documents; model-size evaluation is contextual, not an inference optimization technique.",
+      "first_checked_at": "2026-10-07T13:59:26+00:00",
+      "last_checked_at": "2026-10-07T13:59:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VAREX: A Benchmark for Multi-Modal Structured Extraction from Documents"
     }
   }
 }
