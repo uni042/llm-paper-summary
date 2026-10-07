@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r172-screen-01-part-06-8aace3f1b594",
+  "reference_main_sha": "599e3c1cd37e6144178b11316a64fa3cef8a6d07",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22511",
+      "identity_tokens": [
+        "arXiv:2605.22511"
+      ],
+      "title": "Search-E1: Self-Distillation Drives Self-Evolution in Search-Augmented Reasoning",
+      "reason": "本文要旨のSearch-E1は検索拡張reasoningモデルのself-distillationによるself-evolutionでtraining/post-training手法が中心。",
+      "source_url": "https://arxiv.org/abs/2605.22511",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17637",
+      "identity_tokens": [
+        "arXiv:2605.17637"
+      ],
+      "title": "WebGameBench: Requirement-to-Application Evaluation for Coding Agents via Browser-Native Games",
+      "reason": "本文要旨はbrowser-native gameを用いたcoding-agent評価benchmarkであり、serving・推論効率手法ではない。",
+      "source_url": "https://arxiv.org/abs/2605.17637",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11613",
+      "identity_tokens": [
+        "arXiv:2605.11613"
+      ],
+      "title": "From Generic Correlation to Input-Specific Credit in On-Policy Self Distillation",
+      "reason": "本文要旨はon-policy self-distillationの学習時credit attribution手法で、inference optimizationを扱わない。",
+      "source_url": "https://arxiv.org/abs/2605.11613",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12481",
+      "identity_tokens": [
+        "arXiv:2605.12481"
+      ],
+      "title": "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
+      "reason": "本文はGUI tool-path orchestrationを学ぶagentic RLを扱い、concise tool returnsはtoken overheadを抑える補助だが主成果は行動成功/step効率で、LLM inference compute/memory/servingの改善ではない。",
+      "source_url": "https://arxiv.org/abs/2605.12481",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.28123",
+      "identity_tokens": [
+        "arXiv:2604.28123"
+      ],
+      "title": "Beyond SFT-to-RL: Pre-alignment via Black-Box On-Policy Distillation for Multimodal RL",
+      "reason": "本文要旨はmultimodal RLのpre-alignment via on-policy distillationでtrainingの方法論。",
+      "source_url": "https://arxiv.org/abs/2604.28123",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
