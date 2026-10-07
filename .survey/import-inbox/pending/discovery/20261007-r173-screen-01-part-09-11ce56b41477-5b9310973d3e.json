@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r173-screen-01-part-09-11ce56b41477",
+  "reference_main_sha": "4fb448f1e7abc516c48c22f092e30f892087230b",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09725",
+      "identity_tokens": [
+        "arXiv:2605.09725"
+      ],
+      "title": "On-Policy Distillation with Best-of-N Teacher Rollout Selection",
+      "reason": "On-policy teacher-rollout distillation is a training method, not serving optimization.",
+      "source_url": "https://arxiv.org/abs/2605.09725",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02946",
+      "identity_tokens": [
+        "arXiv:2605.02946"
+      ],
+      "title": "RouteHijack: Routing-Aware Attack on Mixture-of-Experts LLMs",
+      "reason": "MoE routing attack study, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.02946",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.25719",
+      "identity_tokens": [
+        "arXiv:2604.25719"
+      ],
+      "title": "Step-Audio-R1.5 Technical Report",
+      "reason": "Audio reasoning/RLHF targets dialogue/reasoning behavior; no attention-kernel, inference latency, memory, or serving-cost improvement. Lineage link alone is insufficient.",
+      "source_url": "https://arxiv.org/abs/2604.25719",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21921",
+      "identity_tokens": [
+        "arXiv:2604.21921"
+      ],
+      "title": "Context Unrolling in Omni Models",
+      "reason": "Omni-model context representation/capability; no concrete LLM inference or serving efficiency result.",
+      "source_url": "https://arxiv.org/abs/2604.21921",
+      "first_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "last_checked_at": "2026-10-07T10:57:19.850011+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
