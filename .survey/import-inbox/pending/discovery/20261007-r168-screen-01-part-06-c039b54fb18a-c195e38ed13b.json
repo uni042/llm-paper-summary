@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r168-screen-01-part-06-c039b54fb18a",
+  "reference_main_sha": "e47361ba7366eb8e9852cda22dd314696eb9e114",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.112911",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.112911"
+      ],
+      "title": "An explainable and adaptive Internet of Things intrusion detection system supported by Large Language Models",
+      "reason": "ScienceDirectのprimary abstract/previewはLLM+RAGを使うIoT IDSが推論delayを下げると述べるが、効果はアプリケーション固有のDCAE/RAG二段構成で、GLaM MoE lineageとの技術的関係が見えない。出版社はArticle Abstract/Previewのみ返し全文を取得できず、個別実装との照合も未完。",
+      "source_url": "https://doi.org/10.1016/j.engappai.2025.112911",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23568",
+      "identity_tokens": [
+        "arXiv:2512.23568"
+      ],
+      "title": "ThinkGen: Generalized Thinking for Visual Generation",
+      "reason": "一次資料の要旨は視覚生成向けCoT/DiTの共同学習であり、CoT圧縮やLLM推論計算の削減を提案・評価していない。",
+      "source_url": "https://arxiv.org/abs/2512.23568",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ]
+    }
+  ]
+}
