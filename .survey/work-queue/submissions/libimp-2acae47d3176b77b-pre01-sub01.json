@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling",
+      "source_url": "https://arxiv.org/abs/2507.05240",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "IEEE International Conference on Robotics and Automation",
+      "citation_count": 156,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-and-Language Navigation (VLN) in real-world settings requires agents to process continuous visual streams and generate actions with low latency grounded in language instructions. While Video-based Large Language Models (Video-LLMs) have driven recent progress, current VLN methods based on Video-LLM often face trade-offs among fine-grained visual understanding, long-term context modeling and computational efficiency. We introduce StreamVLN, a streaming VLN framework that employs a hybrid slow-fast context modeling strategy to support multi-modal reasoning over interleaved vision, language and action inputs. The fast-streaming dialogue context facilitates responsive action generation through a sliding-window of multi-turn dialogues, while the slow-updating memory context compresses historical visual states using a 3D-aware token pruning strategy. With this slow-fast design, StreamVLN achieves real-time dialogues through KV cache reuse, supporting long video streams with bounded context size and inference cost. Experiments on VLN-CE benchmarks show state-of-the-art performance with low latency, ensuring robustness and efficiency in real-world deployment. The project page is: https://streamvln.github.io/.",
+      "identifiers": [
+        "SemanticScholar:0c409e36467d3828252fb958bd4497226d4ac968"
+      ],
+      "semantic_scholar_id": "0c409e36467d3828252fb958bd4497226d4ac968",
+      "canonical_id": "arXiv:2507.05240",
+      "arxiv_id": "2507.05240",
+      "doi": "10.1109/ICRA57385.2026.11696190",
+      "authors": [
+        "Meng Wei",
+        "Chen-Yang Wan",
+        "Xiqian Yu",
+        "Tai Wang",
+        "Yu-Qiang Yang",
+        "Xiaohan Mao",
+        "Chen-Ming Zhu",
+        "Wen-Zhe Cai",
+        "Han-Qing Wang",
+        "Yi-Lun Chen",
+        "Xi-Hui Liu",
+        "Jiang-Miao Pang"
+      ],
+      "priority": 156,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 156,
+        "citation_count": 156,
+        "total": 156,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Video-LLMを用いた連続視覚言語ナビゲーションにおいて、直近8対話ターンのKVキャッシュを再利用し、古い映像履歴を3次元ボクセルの重複除去で圧縮する二層文脈管理を提案する。逐次プリフィル再計算を抑え、視覚トークンをR2Rで32%、RxRで30%削減しつつ低遅延を維持するため、マルチモーダルLLM推論時のKV管理・トークン圧縮として対象に含める。",
+      "library_body_check": "fulltext_checked; arXiv公式HTML §III-Bで対話間KV再利用と固定長ウィンドウ、§III-C Algorithm 1でボクセル最新トークン保持、§IV-CでPrune-Mem 28%/22%・Prune-All 32%/30%視覚トークン削減、§IV-DでKV再利用と遅延を確認。RTX 4090上の実機推論0.27秒/4アクションも確認。最終タスクはロボットVLNであり一般LLMサービングへの転用範囲には留意。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient sparse collective communication and its application to accelerate distributed deep learning",
+      "source_url": "https://doi.org/10.1145/3452296.3472904",
+      "year": 2020,
+      "published": "2020-09-30",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 154,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient collective communication is crucial to parallel-computing applications such as distributed training of large-scale recommendation systems and natural language processing models. Existing collective communication libraries focus on optimizing operations for dense inputs, resulting in transmissions of many zeros when inputs are sparse. This counters current trends that see increasing data sparsity in large models. We propose OmniReduce, an efficient streaming aggregation system that exploits sparsity to maximize effective bandwidth use by sending only non-zero data blocks. We demonstrate that this idea is beneficial and accelerates distributed training by up to 8.2x. Even at 100 Gbps, OmniReduce delivers 1.4--2.9x better performance for network-bottlenecked DNNs.",
+      "identifiers": [
+        "SemanticScholar:68a439902fd7d8005222f75d354a41fba6d60741"
+      ],
+      "semantic_scholar_id": "68a439902fd7d8005222f75d354a41fba6d60741",
+      "doi": "10.1145/3452296.3472904",
+      "canonical_id": "DOI:10.1145/3452296.3472904",
+      "authors": [
+        "Jiawei Fei",
+        "Chen-Yu Ho",
+        "Atal Narayan Sahu",
+        "Marco Canini",
+        "A. Sapio"
+      ],
+      "priority": 154,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 154,
+        "citation_count": 154,
+        "total": 154,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2198,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OmniReduceは非ゼロ勾配ブロックのみの集約を行う集団通信システムであり、SIGCOMM 2021では分散推薦・自然言語処理モデルの学習を最大8.2倍高速化すると報告する。大規模モデル学習の通信量・帯域律速を改善するシステム研究として収録候補。",
+      "library_body_check": "primary_abstract_review: ACM SIGCOMM 2021の公式要旨で分散学習の疎な集団通信、最大8.2倍の高速化を確認。全文の追加確認はResearchで実施。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2acae47d3176",
+    "round": "libimp-2acae47d3176b77b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2acae47d3176b77b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2acae47d3176b77b-pre01.json",
+    "receipt": "sha256:630a78029478063987db22541ba6cc7da424a46a101198c8265037f4a7afa723"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2acae47d3176",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
