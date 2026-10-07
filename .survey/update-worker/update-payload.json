@@ -1,51 +1,35 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261006T2048-vllm0310-llamacpp060",
+  "attempt_id": "library-import-maint-20261007T1408-mistral-large4",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/README.md",
-      "expected_blob_sha": "d0f5e55e8989ee0a406f0f6135b4f22decce2eb0",
+      "path": "llm-releases/mistral.md",
+      "expected_blob_sha": "f2571da0e43a7b9d92f8334cffb64d3d22ea35bb",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-10-06 | Mistral Large 4 | 1T total / 49B activeのnative multimodal flagship。2026-10-07時点ではAPIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。coding、agentic workflows、multimodal understandingを重点化。 | https://mistral.ai/news/mistral-large-4/ |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/README.md",
+      "expected_blob_sha": "2c7d330afdd0bd702535c3c6278577844f3b5338",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-10-04**",
-          "new": "- フレームワーク差分の最終確認: **2026-10-06**"
+          "old": "- リリース情報の最終確認: **2026-09-24**",
+          "new": "- リリース情報の最終確認: **2026-10-07**"
         },
         {
-          "op": "insert_after_once",
-          "anchor": "## 最新更新",
-          "text": "\n\n### 2026-10-05\n\n#### vLLM\n\n- **v0.31.0 — released 2026-10-05 UTC**\n\n  DeepSeek-V4.1-Flash向けFlashMLA mega attention + NVFP4圧縮KV cacheをSM100既定へ移行し、sparse MQA logits、Mega-Gate、decoder boundary fusionを追加。`vllm preload` のGPU weight-cache daemonは量子化・TP shard済みweightをengine再起動間でGPUに保持してCUDA IPCで再利用し、data parallel / MTP draftにも拡張された。Model Runner V2ではdraft-model speculative decoding、DFlash async scheduling等を追加し、大規模servingではMoonEP、prefill context parallelism + DP、DeepEPv2 + sequence parallelism、KV offloading back-pressure detectionを追加。`tokenizer_mode=\"slow\"`削除等のbreaking changeも含む。\n\n  一次資料: https://github.com/vllm-project/vllm/releases/tag/v0.31.0\n"
-        },
-        {
-          "op": "insert_after_once",
-          "anchor": "### 2026-10-05",
-          "text": "\n\n#### llama.cpp\n\n- **v0.6.0 — released 2026-10-05 UTC**\n\n  token / embedding混在入力とMTP / deepstack state embeddingを扱う拡張batch API `llama_batch_ext` / `llama_process`、GLM-5.3-Flash 320B hybrid model、Qwen4Exp MTP speculative decodingを追加。backendではMetal F16-KV Flash Attention、Vulkanの量子化K/V向けsparse Flash Attention、CUDA NVFP4 MMQ accumulation最適化を含む。serverにはdecision model向け`/v1/systemone` APIを追加し、ggmlをv0.26.0へ更新した。\n\n  一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/vllm/README.md",
-      "expected_blob_sha": "846211a24390eda76dd0ed9cb2bd298e46a84c14",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "## 2026-09-13",
-          "text": "## 2026-10-05\n\n- **v0.31.0（released）**: DeepSeek-V4.1-Flash向けFlashMLA mega attention + NVFP4圧縮KV cacheをSM100既定へ移し、sparse MQA logits、Mega-Gate、TP all-reduce / mHC入力準備 / MoE finalize等のfusionを追加。`vllm preload` のweight-cache daemonは量子化・TP shard済みweightをGPUへ保持してengine再起動時にCUDA IPCで再利用し、DP / MTP draft / health-readinessにも対応した。Model Runner V2ではdraft-model speculative decodingとcustom logits processorを追加し、DFlash async scheduling、DSpark adaptive verification等を拡張。MoonEP、prefill context parallelism + DP、DeepEPv2 + sequence parallelism、KV offloading back-pressure detectionも追加された。`tokenizer_mode=\"slow\"`削除、online `quantization=\"fp8\"`置換等のbreaking changeを含む。[release](https://github.com/vllm-project/vllm/releases/tag/v0.31.0)\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "a8673324aa4f2866af3019f51367f1c21c66f3d2",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "## 2026-09-28",
-          "text": "## 2026-10-05\n\n- **v0.6.0（released）**: 拡張batch API `llama_batch_ext` / `llama_process` を追加し、token / embedding混在入力とMTP / deepstack state embeddingを扱えるようにした。GLM-5.3-Flash（GLM5-Next）320B hybrid model、Clef decision model、Qwen4ExpのMTP speculative decodingも追加。backendではMetal tensor-APIのF16 KV Flash Attention、Vulkanの量子化K/V向けsparse Flash Attention、CUDAのNVFP4 MMQ accumulation最適化を含む。serverにはdecision model用`/v1/systemone` APIを追加し、ggmlはv0.26.0へ更新。[release](https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0)\n\n"
+          "op": "replace_once",
+          "old": "| 2026-04-28 | Mistral Medium 3.5 | Mistral | 256K context、multimodal対応、open weightsを持ち、coding / tool利用を主対象とするMistral系モデル。 | [Mistral系](mistral.md) |",
+          "new": "| 2026-10-06 | Mistral Large 4 | Mistral | 1T total / 49B activeのnative multimodal flagship。APIはpublic preview、weightsは2026年10月末公開予定で、現時点ではopen-weight配布済みではない。 | [Mistral系](mistral.md) |"
         }
       ]
     }
   ],
-  "summary": "2026-10-06 08:30 maintenance: vLLM v0.31.0とllama.cpp v0.6.0の確定リリースを反映。"
+  "summary": "2026-10-07 08:30 maintenance: Mistral Large 4 public previewをLLMリリース一覧へ反映。vLLM v0.31.0 / llama.cpp v0.6.0は既反映、EmbeddingGemma 2は生成LLM一覧の対象外として未追加。"
 }
