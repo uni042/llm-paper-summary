@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r170-screen-01-part-02-b3f6ccb56347",
+  "reference_main_sha": "c722acacbbf591e325c88350bdbd5c25ada4d0f2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16871",
+      "identity_tokens": [
+        "arXiv:2603.16871"
+      ],
+      "title": "WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation",
+      "reason": "対象は対話的3D世界生成・幾何表現であり、LLM推論効率や既存serving機構の改善を扱わない。",
+      "source_url": "https://arxiv.org/abs/2603.16871",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15583",
+      "identity_tokens": [
+        "arXiv:2603.15583"
+      ],
+      "title": "Grounding World Simulation Models in a Real-World Metropolis",
+      "reason": "都市映像生成のgroundingとtrajectory diversityが対象であり、LLM推論システムの性能改善ではない。",
+      "source_url": "https://arxiv.org/abs/2603.15583",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07980",
+      "identity_tokens": [
+        "arXiv:2603.07980"
+      ],
+      "title": "$OneMillion-Bench: How Far are Language Agents from Human Experts?",
+      "reason": "arXiv要旨は専門的業務問題の情報検索・制約判断を評価するbenchmarkで、推論効率を変更するmethodを提案しない。",
+      "source_url": "https://arxiv.org/abs/2603.07980",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21492",
+      "identity_tokens": [
+        "arXiv:2602.21492"
+      ],
+      "title": "GradAlign: Gradient-Aligned Data Selection for LLM Reinforcement Learning",
+      "reason": "技術的寄与はLLMのRL訓練時のdata selectionであり、project scopeが除くtraining-only efficiency/performance改善に当たる。",
+      "source_url": "https://arxiv.org/abs/2602.21492",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20399",
+      "identity_tokens": [
+        "arXiv:2602.20399"
+      ],
+      "title": "GeoPT: Scaling Physics Simulation via Lifted Geometric Pre-Training",
+      "reason": "arXiv要旨はgeometric pre-trainingによるneural physics simulationを扱い、LLM inference/servingとは異なる。",
+      "source_url": "https://arxiv.org/abs/2602.20399",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
