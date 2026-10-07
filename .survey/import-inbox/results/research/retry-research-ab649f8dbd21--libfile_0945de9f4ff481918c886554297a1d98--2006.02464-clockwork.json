@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f83763f8fc30897dc00425d4ef539d8fcbc3d103c91dbf68ef3f30538b5aa2cf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ab649f8dbd21--libfile_0945de9f4ff481918c886554297a1d98--2006.02464-clockwork.md",
+  "canonical_id": "arXiv:2006.02464",
+  "worker_completed_at": "2026-10-07T16:27:33+09:00",
+  "worker_run_key": "20261007-1627-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 1134,
+    "body_paragraphs": 8,
+    "method_chars": 345,
+    "method_paragraphs": 3,
+    "evaluation_chars": 113,
+    "limitation_chars": 158,
+    "insufficiency_flags": [
+      "本文説明量 1134 < 2200",
+      "手法説明量 345 < 700",
+      "評価説明量 113 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 1134 < 2200",
+    "説明不足トリガー: 手法説明量 345 < 700",
+    "説明不足トリガー: 評価説明量 113 < 500"
+  ],
+  "processed_at": "2026-10-07T10:59:37+00:00"
+}

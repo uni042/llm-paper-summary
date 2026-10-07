@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-07T10:47:55+00:00",
+  "generated_at": "2026-10-07T10:59:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2455,73 +2455,11 @@
       "worker_run_key": "20261007-1604-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2006.02464",
-      "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
-      "source_url": "https://arxiv.org/abs/2006.02464",
-      "returned_at": "2026-10-07T10:47:54+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 本文説明量 1134 < 2200",
-        "説明不足トリガー: 手法説明量 345 < 700",
-        "説明不足トリガー: 評価説明量 113 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 1134,
-        "body_paragraphs": 8,
-        "method_chars": 345,
-        "method_paragraphs": 3,
-        "evaluation_chars": 113,
-        "limitation_chars": 158,
-        "insufficiency_flags": [
-          "本文説明量 1134 < 2200",
-          "手法説明量 345 < 700",
-          "評価説明量 113 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0945de9f4ff481918c886554297a1d98--2006.02464-clockwork.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0945de9f4ff481918c886554297a1d98--2006.02464-clockwork.json",
-      "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2410.17247",
-      "title": "PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction",
-      "source_url": "https://arxiv.org/abs/2410.17247",
-      "returned_at": "2026-10-07T10:47:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 本文説明量 928 < 2200",
-        "説明不足トリガー: 手法説明量 317 < 700",
-        "説明不足トリガー: 評価説明量 98 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 928,
-        "body_paragraphs": 8,
-        "method_chars": 317,
-        "method_paragraphs": 3,
-        "evaluation_chars": 98,
-        "limitation_chars": 138,
-        "insufficiency_flags": [
-          "本文説明量 928 < 2200",
-          "手法説明量 317 < 700",
-          "評価説明量 98 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1ae87721d7c48191bb11994685c68612--2410.17247-pyramiddrop.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1ae87721d7c48191bb11994685c68612--2410.17247-pyramiddrop.json",
-      "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2004.11886",
       "title": "Lite Transformer with Long-Short Range Attention",
       "source_url": "https://arxiv.org/abs/2004.11886",
-      "returned_at": "2026-10-07T10:47:55+00:00",
-      "return_count": 3,
+      "returned_at": "2026-10-07T10:59:37+00:00",
+      "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2544,16 +2482,78 @@
           "限界説明量 100 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_202fda3be7e081918eb8b2779a9184c1--2004.11886-lite-transformer.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_202fda3be7e081918eb8b2779a9184c1--2004.11886-lite-transformer.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-05b5f0d263ab--libfile_202fda3be7e081918eb8b2779a9184c1--2004.11886-lite-transformer.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-05b5f0d263ab--libfile_202fda3be7e081918eb8b2779a9184c1--2004.11886-lite-transformer.json",
+      "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2006.02464",
+      "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
+      "source_url": "https://arxiv.org/abs/2006.02464",
+      "returned_at": "2026-10-07T10:59:37+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 本文説明量 1134 < 2200",
+        "説明不足トリガー: 手法説明量 345 < 700",
+        "説明不足トリガー: 評価説明量 113 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 1134,
+        "body_paragraphs": 8,
+        "method_chars": 345,
+        "method_paragraphs": 3,
+        "evaluation_chars": 113,
+        "limitation_chars": 158,
+        "insufficiency_flags": [
+          "本文説明量 1134 < 2200",
+          "手法説明量 345 < 700",
+          "評価説明量 113 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ab649f8dbd21--libfile_0945de9f4ff481918c886554297a1d98--2006.02464-clockwork.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ab649f8dbd21--libfile_0945de9f4ff481918c886554297a1d98--2006.02464-clockwork.json",
+      "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.17247",
+      "title": "PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction",
+      "source_url": "https://arxiv.org/abs/2410.17247",
+      "returned_at": "2026-10-07T10:59:37+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 本文説明量 928 < 2200",
+        "説明不足トリガー: 手法説明量 317 < 700",
+        "説明不足トリガー: 評価説明量 98 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 928,
+        "body_paragraphs": 8,
+        "method_chars": 317,
+        "method_paragraphs": 3,
+        "evaluation_chars": 98,
+        "limitation_chars": 138,
+        "insufficiency_flags": [
+          "本文説明量 928 < 2200",
+          "手法説明量 317 < 700",
+          "評価説明量 98 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5debf13df366--libfile_1ae87721d7c48191bb11994685c68612--2410.17247-pyramiddrop.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5debf13df366--libfile_1ae87721d7c48191bb11994685c68612--2410.17247-pyramiddrop.json",
       "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2509.17765",
       "title": "Qwen3-Omni Technical Report",
       "source_url": "https://arxiv.org/abs/2509.17765",
-      "returned_at": "2026-10-07T10:47:55+00:00",
-      "return_count": 3,
+      "returned_at": "2026-10-07T10:59:38+00:00",
+      "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2575,8 +2575,8 @@
           "評価説明量 159 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.json",
       "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
     }
   ]

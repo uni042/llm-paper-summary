@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-07T09:29:01+00:00",
+  "updated_at": "2026-10-07T10:59:37+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3675,6 +3675,34 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-99bf900f9c31--libfile_8c2ebc480ed48191bd587ec5544d0e3f--2023-2312.06742-honeybee.md",
       "processed_at": "2026-10-07T09:29:01+00:00",
       "canonical_id": "arXiv:2312.06742"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-ab649f8dbd21--libfile_0945de9f4ff481918c886554297a1d98--2006.02464-clockwork.md",
+      "processed_at": "2026-10-07T10:59:36+00:00",
+      "canonical_id": "arXiv:2006.02464",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-ab649f8dbd21--libfile_0945de9f4ff481918c886554297a1d98--2006.02464-clockwork.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-5debf13df366--libfile_1ae87721d7c48191bb11994685c68612--2410.17247-pyramiddrop.md",
+      "processed_at": "2026-10-07T10:59:37+00:00",
+      "canonical_id": "arXiv:2410.17247",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-5debf13df366--libfile_1ae87721d7c48191bb11994685c68612--2410.17247-pyramiddrop.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.md",
+      "processed_at": "2026-10-07T10:59:37+00:00",
+      "canonical_id": "arXiv:2509.17765",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-05b5f0d263ab--libfile_202fda3be7e081918eb8b2779a9184c1--2004.11886-lite-transformer.md",
+      "processed_at": "2026-10-07T10:59:37+00:00",
+      "canonical_id": "arXiv:2004.11886",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-05b5f0d263ab--libfile_202fda3be7e081918eb8b2779a9184c1--2004.11886-lite-transformer.md"
     }
   ]
 }
