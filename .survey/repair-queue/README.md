@@ -87,12 +87,12 @@ The completed Markdown is saved through the normal Library Research lane with
 these extra fields:
 
 - `under16kb_reaudit_target_path`
-- `under16kb_reaudit_source_sha256`
+- `under16kb_reaudit_source_sha256` or `under16kb_reaudit_source_git_blob_sha`
 - `under16kb_reaudit_version`
 - `under16kb_reaudit_passed: true`
 
 The GitHub inbox processor only replaces the already represented paper when the
-target path matches the resolved identity and the source SHA-256 still matches.
+target path matches the resolved identity and the pinned source SHA-256 or Git blob SHA still matches.
 A concurrent edit therefore causes a safe block instead of a stale overwrite.
 After a successful replacement the queue is regenerated immediately and the
 paper disappears. A quality failure remains both in this queue and, through the
