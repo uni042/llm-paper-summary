@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r167-screen-01-part-04-51a05c522c6b",
+  "reference_main_sha": "890e30c030fb7c5b593b3a2beeff7c957f4c15b0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04740",
+      "identity_tokens": [
+        "arXiv:2601.04740"
+      ],
+      "title": "StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation",
+      "reason": "Primary paper generates harmful prompts through knowledge graphs for risk evaluation; it is a safety red-teaming application, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.04740",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07689",
+      "identity_tokens": [
+        "arXiv:2511.07689"
+      ],
+      "title": "Stress Testing Factual Consistency Metrics for Long-Document Summarization",
+      "reason": "Primary paper stress-tests factual-consistency metrics for long-document summarization; it is an evaluation/metric study and proposes no LLM serving or inference optimization.",
+      "source_url": "https://arxiv.org/abs/2511.07689",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01077",
+      "identity_tokens": [
+        "arXiv:2511.01077"
+      ],
+      "title": "AI Progress Should Be Measured by Capability-Per-Resource, Not Scale Alone: A Framework for Gradient-Guided Resource Allocation in LLMs",
+      "reason": "Primary paper is a position/framework for gradient-guided resource allocation in model development/adaptation (training compute and parameter selection); it does not propose runtime inference efficiency improvements.",
+      "source_url": "https://arxiv.org/abs/2511.01077",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00745",
+      "identity_tokens": [
+        "arXiv:2403.00745"
+      ],
+      "title": "AtP*: An efficient and scalable method for localizing LLM behaviour to components",
+      "reason": "Primary full text frames AtP* as mechanistic interpretability/activation-patching attribution for localizing model components; its speedup applies to offline analysis, not user-facing LLM inference.",
+      "source_url": "https://arxiv.org/abs/2403.00745",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JSTARS.2024.3464411",
+      "identity_tokens": [
+        "DOI:10.1109/JSTARS.2024.3464411"
+      ],
+      "title": "ConvLSTM–ViT: A Deep Neural Network for Crop Yield Prediction Using Earth Observations and Remotely Sensed Data",
+      "reason": "IEEE publisher DOI page for the ConvLSTM–ViT crop-yield paper could not be retrieved (robots denial), so its primary abstract/body cannot be checked. Per scope contract, do not convert the metadata abstract/title into an unrelated finding; retain borderline pending a publisher/author primary copy.",
+      "source_url": "https://doi.org/10.1109/JSTARS.2024.3464411",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
