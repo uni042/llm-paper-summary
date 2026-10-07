@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r182-screen-01-part-01-62e76fe6dd18",
+  "reference_main_sha": "c783ac90a63f989552e8790516edc13970e423c2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18377",
+      "identity_tokens": [
+        "arXiv:2603.18377"
+      ],
+      "title": "PlanTwin: Privacy-Preserving Planning Abstractions for Cloud-Assisted LLM Agents",
+      "reason": "The abstract describes privacy-preserving projection of private environment state for cloud-agent planning; its contribution is disclosure control and privacy guarantees, not inference resource reduction.",
+      "source_url": "https://arxiv.org/abs/2603.18377",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17998",
+      "identity_tokens": [
+        "arXiv:2603.17998"
+      ],
+      "title": "The Unreasonable Effectiveness of Text Embedding Interpolation for Continuous Image Steering",
+      "reason": "The primary paper applies text-embedding interpolation to steer text-conditioned image generation; the LLM is used to construct prompt pairs, not as an inference system being optimized.",
+      "source_url": "https://arxiv.org/abs/2603.17998",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16849",
+      "identity_tokens": [
+        "arXiv:2603.16849"
+      ],
+      "title": "GIST: Gauge-Invariant Spectral Transformers for Scalable Graph Neural Operators",
+      "reason": "The abstract concerns graph neural operators over meshes and graph benchmarks, with no connection to LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2603.16849",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14819",
+      "identity_tokens": [
+        "arXiv:2603.14819"
+      ],
+      "title": "RAZOR: Ratio-Aware Layer Editing for Targeted Unlearning in Vision Transformers and Diffusion Models",
+      "reason": "The primary paper targets parameter/head editing for machine unlearning on vision/diffusion models. Its efficiency claim concerns unlearning operations, not LLM inference, and the full text provides no decoding, serving, or inference-memory technique despite the quantization lineage link.",
+      "source_url": "https://arxiv.org/abs/2603.14819",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15118",
+      "identity_tokens": [
+        "arXiv:2603.15118"
+      ],
+      "title": "VAREX: A Benchmark for Multi-Modal Structured Extraction from Documents",
+      "reason": "The abstract presents a benchmark for multimodal extraction from government-form documents; model-size evaluation is contextual, not an inference optimization technique.",
+      "source_url": "https://arxiv.org/abs/2603.15118",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
