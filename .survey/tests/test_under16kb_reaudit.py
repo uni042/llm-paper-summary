@@ -77,6 +77,53 @@ class Under16KbReauditTests(unittest.TestCase):
             self.assertEqual(entry["semantic_status"], "pending")
             self.assertGreaterEqual(entry["japanese_ratio"], reaud.MIN_JAPANESE_RATIO)
 
+    def test_pending_candidate_does_not_escape_by_growing_above_16kb(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/01-offload-hierarchical-memory/example.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(paper_text(attested=False), encoding="utf-8")
+
+            first = reaud.build_queue(root)
+            self.assertEqual(first["count"], 1)
+            self.assertTrue(reaud.write_queue(root, first))
+
+            paper.write_text(
+                paper_text(attested=False) + ("追加の日本語説明。" * 2500),
+                encoding="utf-8",
+            )
+            self.assertGreaterEqual(
+                len(paper.read_bytes()),
+                reaud.MAX_FILE_BYTES,
+            )
+
+            second = reaud.build_queue(root)
+            self.assertEqual(second["count"], 1)
+            self.assertEqual(second["entries"][0]["path"], paper.relative_to(root).as_posix())
+
+    def test_attested_candidate_can_leave_after_growing_above_16kb(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/01-offload-hierarchical-memory/example.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(paper_text(attested=False), encoding="utf-8")
+
+            first = reaud.build_queue(root)
+            self.assertEqual(first["count"], 1)
+            self.assertTrue(reaud.write_queue(root, first))
+
+            paper.write_text(
+                paper_text(attested=True) + ("追加の日本語説明。" * 2500),
+                encoding="utf-8",
+            )
+            self.assertGreaterEqual(
+                len(paper.read_bytes()),
+                reaud.MAX_FILE_BYTES,
+            )
+
+            second = reaud.build_queue(root)
+            self.assertEqual(second["count"], 0)
+
     def test_japanese_ratio_below_80_percent_is_a_reaudit_failure(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
