@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1831-scheduled-chat-30/r01",
+  "reference_main_sha": "d6f6dc994262044df893315d6d181235b3b44fb9",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.18018",
+      "identity_tokens": [
+        "arXiv:2310.18018"
+      ],
+      "title": "NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination for each Benchmark",
+      "reason": "LLMベンチマークのテストデータ汚染を定義・測定する評価方法論のposition paperで、推論runtime、メモリ、カーネル、サービング効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2310.18018",
+      "body_check": "abstract_screen_only: 一次abstractでbenchmark contamination、性能過大評価、汚染検出・論文flaggingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.16079",
+      "identity_tokens": [
+        "arXiv:2311.16079"
+      ],
+      "title": "MEDITRON-70B: Scaling Medical Pretraining for Large Language Models",
+      "reason": "医療コーパスでLlama-2を継続事前学習して医療知識・推論性能を改善するdomain adaptation研究で、推論システム効率化を主要目的としない。",
+      "source_url": "https://arxiv.org/abs/2311.16079",
+      "body_check": "abstract_screen_only: 一次abstractで7B/70B医療LLM、Megatron-LMによるcontinued pretraining、医療benchmark性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.10588",
+      "identity_tokens": [
+        "arXiv:2402.10588"
+      ],
+      "title": "Do Llamas Work in English? On the Latent Language of Multilingual Transformers",
+      "reason": "多言語Llama-2の中間表現が英語寄りのconcept spaceを形成するかを解析する表現研究で、推論効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2402.10588",
+      "body_check": "abstract_screen_only: 一次abstractでnon-English promptの中間embedding、input/concept/output space、言語bias分析が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.00079",
+      "identity_tokens": [
+        "arXiv:2407.00079",
+        "arXiv:2407.00079"
+      ],
+      "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+      "reason": "Kimi本番系のLLMサービングを対象にprefill/decode分離、CPU DRAM/SSDを使う分散KVキャッシュ、KVキャッシュ中心スケジューリング、過負荷時の早期棄却を統合し、長文脈でSLOを守りつつthroughputを改善する直接的な推論システム研究。",
+      "source_url": "https://arxiv.org/abs/2407.00079",
+      "body_check": "fulltext_review: 一次本文を確認。Conductorがprefill/decode instanceを選び、remote prefix KV再利用、chunked pipeline prefill、layer-wise KV streaming、continuous-batch decodeを接続する。CPU/DRAM/SSD/RDMAのdisaggregated KVCacheを利用し、TTFT/TBT SLOとcache reuse・batch効率を同時に最適化する。公開traceでは平均入力7590 token、実験ではbaseline比最大525% throughput増、実workloadでKimiが75%多いrequestを処理したと報告。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3636534.3649379",
+      "identity_tokens": [
+        "DOI:10.1145/3636534.3649379",
+        "arXiv:2308.15272"
+      ],
+      "title": "AutoDroid: LLM-powered Task Automation in Android",
+      "reason": "Androidアプリの任意タスク自動化をLLMで実現するモバイルエージェント研究で、query optimizationは含むが最終適用先と主要貢献はGUI操作自動化でありLLM推論基盤効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.15272",
+      "body_check": "abstract_screen_only: 一次abstractでUI表現、app探索memory injection、task automation、158タスクでのaction accuracy/task successが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.11665",
+      "identity_tokens": [
+        "arXiv:2302.11665",
+        "arXiv:2302.11665"
+      ],
+      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+      "reason": "大規模モデルの分散推論サービングで、モデル並列化の通信overheadと統計多重化によるqueueing latency低減を共同最適化し、モデル配置・並列戦略を選ぶシステム研究で、LLMサービングに直接つながる基盤技術を扱う。",
+      "source_url": "https://arxiv.org/abs/2302.11665",
+      "body_check": "fulltext_review: 一次本文を確認。AlpaServeはモデル並列性を単一巨大モデルの収容だけでなく複数モデル間のstatistical multiplexingへ使い、bursty workload下のlatency SLOを対象にparallelization/placementを最適化する。production workload評価で99%以上のrequestをlatency制約内に保ちながら最大10倍のrequest rateまたは6倍のburstinessを処理すると報告。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.07174",
+      "identity_tokens": [
+        "arXiv:2306.07174"
+      ],
+      "title": "Augmenting Language Models with Long-Term Memory",
+      "reason": "凍結したbackbone LLMをmemory encoderとし、adaptive residual side-networkをretriever/readerとして分離して過去文脈を外部memory bankへキャッシュ・検索するLongMemを提案し、固定context長を超える推論時メモリ利用を扱う。",
+      "source_url": "https://arxiv.org/abs/2306.07174",
+      "body_check": "fulltext_review: 一次本文を確認。decoupled architectureによりbackbone更新によるmemory stalenessを避け、retrieverが長期memory bankから関連chunkを取得してside-networkが読む。65K token規模のlong-form memoryを扱い、ChapterBreakとmemory-augmented in-context learningで長文脈baselineを上回る。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3342195.3387522",
+      "identity_tokens": [
+        "DOI:10.1145/3342195.3387522"
+      ],
+      "title": "Can far memory improve job throughput?",
+      "reason": "ラック規模クラスタ一般のfar memoryとjob throughputの交換条件、Fastswap、far-memory-aware schedulingを扱うメモリ分離研究であり、LLM/Transformer推論を対象としない。",
+      "source_url": "https://doi.org/10.1145/3342195.3387522",
+      "body_check": "abstract_screen_only: 一次論文PDFの題名・導入/概要を確認し、一般クラスタのremote/far memory、swap、job throughputが対象でLLM固有推論ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.09671",
+      "identity_tokens": [
+        "arXiv:2205.09671"
+      ],
+      "title": "A Graph-Transformer for Whole Slide Image Classification",
+      "reason": "病理whole-slide imageをgraphとVision Transformerで分類し肺腺癌・扁平上皮癌等を判別する医用画像研究で、LLM推論基盤を対象としない。",
+      "source_url": "https://arxiv.org/abs/2205.09671",
+      "body_check": "abstract_screen_only: 一次abstractでWSI patch graph、GTP、disease-grade classification、GraphCAMが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.03320",
+      "identity_tokens": [
+        "arXiv:2407.03320"
+      ],
+      "title": "InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output",
+      "reason": "長文脈の画像・動画理解とtext-image composition能力を拡張する7B視覚言語モデル研究で、主要貢献と評価は能力・benchmark品質であり推論runtime/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2407.03320",
+      "body_check": "abstract_screen_only: 一次abstractで96K long context、high-resolution understanding、video understanding、multi-image dialogue、28 benchmarkの能力評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "worklist_rank": 20
+    }
+  ]
+}
