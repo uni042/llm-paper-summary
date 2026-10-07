@@ -553,6 +553,20 @@ def recover_retryable_precheck_provenance_blocks(repo_root: Path) -> int:
     return recovered
 
 
+def research_quality_metrics(audit: Any) -> dict[str, Any]:
+    """Persist the deterministic explanation-floor measurements in receipts."""
+    return {
+        "quality_gate_version": getattr(audit, "quality_gate_version", None),
+        "body_chars": getattr(audit, "prose_chars", 0),
+        "body_paragraphs": getattr(audit, "paragraphs", 0),
+        "method_chars": getattr(audit, "method_chars", 0),
+        "method_paragraphs": getattr(audit, "method_paragraphs", 0),
+        "evaluation_chars": getattr(audit, "evaluation_chars", 0),
+        "limitation_chars": getattr(audit, "limitation_chars", 0),
+        "insufficiency_flags": list(getattr(audit, "insufficiency_flags", []) or []),
+    }
+
+
 def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
     imported = 0
     terminal = 0
@@ -635,6 +649,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         "canonical_id": meta.get("canonical_id"),
                         "worker_completed_at": meta.get("worker_completed_at"),
                         "worker_run_key": meta.get("worker_run_key"),
+                        "quality_metrics": research_quality_metrics(audit),
                         "failures": audit.failures,
                         "processed_at": now(),
                     },
@@ -658,6 +673,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         "paper_path": resolution.get("paper_path"),
                         "worker_completed_at": meta.get("worker_completed_at"),
                         "worker_run_key": meta.get("worker_run_key"),
+                        "quality_metrics": research_quality_metrics(audit),
                         "processed_at": now(),
                     },
                 )
@@ -698,6 +714,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                     "japanese_normalized": japanese_normalized,
                     "worker_completed_at": meta.get("worker_completed_at"),
                     "worker_run_key": meta.get("worker_run_key"),
+                    "quality_metrics": research_quality_metrics(audit),
                     "processed_at": now(),
                 },
             )
