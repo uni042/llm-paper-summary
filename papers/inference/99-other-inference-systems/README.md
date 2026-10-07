@@ -1012,6 +1012,10 @@
   実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：14  
   LLMの活性値量子化では、少数の非常に大きい値が量子化rangeを支配し、通常値へ割り当てられる分解能を下げることが知られている。本論文はその中でも、周囲より最大約10^5倍大きく、特定層・トークン位置に安定して現れる値をmassive 活性値と呼び、その役割を解析する。
 
+- **2024-07 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
+  実装：[✓](https://github.com/sustcsonglin/flash-linear-attention) ・ リポジトリ内被引用：13  
+  第一に、線形注意をGPU向けにchunk化してHBM往復を減らすFLASHLINEARATTENTIONを設計する。
+
 - **2024-04 · [JetMoE: Reaching Llama2 Performance with 0.1M Dollars](2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md)**  
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：13  
   JetMoEはFFNだけでなく注意機構にも専門家 ルーティングを導入し、総8Bパラメータを持ちながら1 トークンで実行するのは約2Bに抑える。これによりLlama2-7Bより総パラメータは多いが、推論計算量を約70%減らす。
@@ -1031,10 +1035,6 @@
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
   実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：12  
   通常の分散学習と違い、各モデル内部ではテンソル並列・パイプライン並列・データ並列を使う一方、モデル間では生成結果、log probability、value、rewardなどを別の分割形状へ再配置して渡す必要がある。評価では既存RLHFシステムに対し1.53〜20.57倍のスループット改善を報告する。
-
-- **2024-07 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
-  実装：[✓](https://github.com/sustcsonglin/flash-linear-attention) ・ リポジトリ内被引用：12  
-  第一に、線形注意をGPU向けにchunk化してHBM往復を減らすFLASHLINEARATTENTIONを設計する。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
   実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts) ・ リポジトリ内被引用：12  
@@ -1223,7 +1223,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：208  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：209  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1267,11 +1267,11 @@
   SparseGPTは、数十億〜数千億パラメータの生成事前学習Transformerを、追加の再学習なしに一回後処理（one-shot）で疎化する手法である。単純な絶対値枝刈り（magnitude 枝刈り）は重みの大きさだけで削除対象を決めるため、大規模モデルでも50%前後の疎化で層出力誤差が急増する場合がある。
 
 - **2023-07 · [Retentive Network: A Successor to Transformer for Large Language Models](2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   Retentive Network（RetNet）は、注意と再帰の関係から導いた保持機構（retention）を中心に、同じモデルを三つの計算形式で実行する。
 
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
-  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：31  
   RWKVは、Transformerの並列学習とRNNの軽量な逐次推論を同じモデルで両立させる言語モデルアーキテクチャである。標準自己注意は系列長が伸びると全トークン対の相互作用を扱い、推論では過去の鍵・値を保持する必要がある。論文は最大14Bパラメータまでモデルを拡張し、同規模Transformerと競争力のある言語モデル性能を示す。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -1287,7 +1287,7 @@
   Sheared LLaMAは、大型モデルを単に疎にするのではなく、既存ランタイムで扱いやすい指定済みの小型密形状へ切り出し、その後の継続事前学習を効率化する方式である。50B追加トークンで同規模open モデルを上回り、OpenLLaMA-3B-v2相当水準をscratch学習比約3%のcomputeで達成する結果を示す。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   Gistingは、毎要求で長い指示文を再エンコードする代わりに、その指示を少数の「gistトークン」へ圧縮し、後続入力がその圧縮表現だけを参照するよう学習する。モデルごとの新しいアダプタを保存するのではなく、タスク指示を通常のキー・値キャッシュ（Key-Value Cache; KVキャッシュ）として再利用可能な短い状態へ変換する。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
@@ -1327,7 +1327,7 @@
   予測パイプライン復号（Predictive Pipelined Decoding; PPD）は、自己回帰大規模言語モデルの「現在トークンが最終層まで確定しないと次トークンの計算を開始できない」という逐次依存を、追加の計算資源で一部重畳する方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：10  
   In-文脈 Autoencoder（ICAE）は、長い文脈を通常のテキスト トークンではない少数の学習済みメモリ slotへ圧縮し、その連続表現を同じLLMが後続生成の条件として直接読む。
 
 - **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
@@ -1389,7 +1389,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：273  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：274  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -1445,7 +1445,7 @@
   Reformerは、長系列Transformerで支配的になる二つの資源問題を別々の機構で解く。
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
+  実装：✓ ・ リポジトリ内被引用：30  
   正の直交ランダム特徴FAVOR+でソフトマックス注意を線形時間・線形空間へ近似し、疎性や低ランク仮定なしに長系列Transformerを実行可能にする。
 
 - **2020-09 · [TernaryBERT: Distillation-aware Ultra-low Bit BERT](2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md)**  
@@ -1479,7 +1479,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：96  
+  実装：✓ ・ リポジトリ内被引用：97  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md)**  
