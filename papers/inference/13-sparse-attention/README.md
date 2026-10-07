@@ -170,6 +170,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   累積注意質量を目標にKV数を動的決定し、K-meansと分布当てはめで選択費用を抑えて注意を最大7.29倍高速化するTactic。
 
+- **2025-02 · [SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference](2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md)**  
+  実装：[✓](https://github.com/thu-ml/SpargeAttn) ・ リポジトリ内被引用：5  
+  固定窓など特定の疎patternを仮定せず、言語、画像、動画で異なる注意機構 patternをオンラインに推定することを狙う。論文は既存の密/sparse 注意機構実装に対して条件により2.5～5倍級の注意処理高速化を示し、画像・動画・言語のエンドツーエンド指標を維持する。
+
 - **2025-07 · [RefreshKV: Updating Small KV Cache During Long-form Generation](2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md)**  
   実装：[✓](https://github.com/carriex/refreshkv) ・ リポジトリ内被引用：4  
   完全KVを保持したまま通常は小さな部分KVへ注意し、クエリ類似度低下時だけ完全注意して重要トークン集合を更新することで長文生成の固定削除失敗を避ける。
@@ -177,10 +181,6 @@
 - **2025-07 · [Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores](2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md)**  
   実装：[✓](https://github.com/vnchari/compactor-vllm) ・ リポジトリ内被引用：4  
   近似レバレッジスコアで質問非依存にKVを選別し、文脈別の圧縮耐性を校正してLongBenchで完全KV相当の性能を保ちながら平均68%のKVメモリを削減する。
-
-- **2025-02 · [SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference](2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md)**  
-  実装：[✓](https://github.com/thu-ml/SpargeAttn) ・ リポジトリ内被引用：4  
-  固定窓など特定の疎patternを仮定せず、言語、画像、動画で異なる注意機構 patternをオンラインに推定することを狙う。論文は既存の密/sparse 注意機構実装に対して条件により2.5～5倍級の注意処理高速化を示し、画像・動画・言語のエンドツーエンド指標を維持する。
 
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
