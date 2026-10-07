@@ -30,6 +30,8 @@ arxiv_categories:
 worker_completed_at: "2026-10-07T17:35:03+09:00"
 worker_run_key: "20261007-1735-scheduled-chat-30/r01"
 reference_main_sha: "96e46e336be8e3716ca9bb21c93a09c05bf96666"
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要
