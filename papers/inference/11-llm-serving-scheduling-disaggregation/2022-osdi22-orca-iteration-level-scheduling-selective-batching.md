@@ -9,7 +9,7 @@ summary: output tokenを1つ生成するたびにbatchを組み替え、長さ�
 list_summary: '出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。'
 authors_affiliations: Gyeong-In Yu, Joo Seong Jeong（Seoul National University）; Geon-Woo Kim（FriendliAI / Seoul National University）; Soojeong Kim（FriendliAI）; Byung-Gon Chun（FriendliAI / Seoul National University）
 published: '2022-07-11'
-publication_status: OSDI 2022
+publication_status: published
 lineage: LLM Serving / Scheduling / Disaggregation
 topics:
 - Continuous batching
@@ -21,8 +21,18 @@ importance: 高
 hardware_evaluation: 実機
 canonical_id: DOI:10.5555/3600237.3600268
 doi: 10.5555/3600237.3600268
-last_audited: '2026-09-10'
-audit_version: 1
+last_audited: '2026-10-07'
+audit_version: 2
+under16kb_reaudit_target_path: papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md
+under16kb_reaudit_source_git_blob_sha: 'b96a6ec4952cc96bda4d6c1c420a2cd7f2c4d654'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_body_chars: 4487
+quality_method_chars: 1625
+quality_eval_chars: 669
+quality_limitation_chars: 361
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07'
 evaluation_type: real-hardware
 implementation_status: code-unavailable
 source: https://www.usenix.org/conference/osdi22/presentation/yu
@@ -40,8 +50,8 @@ authors:
 - Geon-Woo Kim
 - Soojeong Kim
 - Byung-Gon Chun
-publication: arXiv preprint
-publication_type: プレプリント
+publication: OSDI 2022
+publication_type: conference paper
 sources:
 - https://www.usenix.org/conference/osdi22/presentation/yu
 implementation: 公式実装URLは一次資料で確認できず
@@ -140,6 +150,8 @@ Orcaの基本スケジューラは到着順を壊さない反復単位の先着�
 GPT-3 175Bで同程度の遅延となる条件に揃えた比較では、OrcaはFasterTransformerに対して**36.9倍のスループット**を報告する。これは単一カーネルが36.9倍高速という意味ではなく、反復単位で要求を詰め替え、選択的バッチ処理と分散パイプラインでGPUの空きを減らしたサービング全体の差である。
 
 論文は最大バッチサイズを大きくするとスループットを上げやすい一方、ハードウェア・モデル・負荷によっては遅延も増え得ると明記している。したがって最大バッチサイズは固定の最適値ではなく、要求される遅延予算に合わせて運用側が調整する必要がある。
+
+さらにこの36.9倍は、Orcaが反復単位スケジューリング、選択的バッチ処理、分散パイプラインを組み合わせたときのエンドツーエンド結果である。論文は13Bから341Bまで複数規模を実機評価しており、175Bの代表値だけで全モデル規模の倍率が同一だとは主張していない。したがって、Orcaの評価から一般化できるのは「反復境界でバッチを再構成すると、可変長生成の遊休を大幅に減らせる」という設計効果であり、36.9倍という絶対倍率は当時のFasterTransformer、A100クラスタ、モデル並列構成、負荷条件に依存する。
 
 ## 既存研究との差
 当時の一般的な推論エンジンは、サービング層から「この要求／このバッチを完了まで処理する」形で呼び出されることが多かった。Orcaはスケジューラと実行エンジンの境界を変え、1反復ごとに制御を往復させることで、生成モデル特有の複数反復を直接スケジューリング対象にした。
