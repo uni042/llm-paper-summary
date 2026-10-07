@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-93b4de8607c348da-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2007.00072",
+  "reason": "Transformerのデータ移動・レイアウトを全体最適化するsystems研究だが、論文が直接最適化・評価するのはBERT encoderの学習であり、推論への最終適用を評価しないため現行の学習凍結範囲。",
+  "title": "Data Movement Is All You Need: A Case Study on Optimizing Transformers",
+  "identity_tokens": [
+    "arXiv:2007.00072"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93b4de8607c3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
