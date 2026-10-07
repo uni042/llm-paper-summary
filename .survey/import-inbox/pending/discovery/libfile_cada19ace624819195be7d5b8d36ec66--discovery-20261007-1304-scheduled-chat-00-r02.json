@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1304-scheduled-chat-00/r02",
+  "reference_main_sha": "dbbf2898d087bcbd6abc43dfa364c0824715846d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01733",
+      "identity_tokens": [
+        "arXiv:2406.01733"
+      ],
+      "title": "Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching",
+      "reason": "layer cachingでdiffusion Transformerのdenoising計算を削減するが、最終workloadは画像生成用diffusion TransformerでありLLM/言語モデル推論ではない。",
+      "source_url": "https://arxiv.org/abs/2406.01733",
+      "body_check": "abstract_screen_only: arXiv一次abstractでU-ViT-H/2等のdiffusion image generation、cache stepで最大93.68%計算削減が主題と確認。LLM推論対象外のため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 82
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20552",
+      "identity_tokens": [
+        "arXiv:2601.20552"
+      ],
+      "title": "DeepSeek-OCR 2: Visual Causal Flow",
+      "reason": "visual tokenを画像semanticに応じて動的並べ替えし2D理解を改善するencoder architecture研究。主目的はvisual causal reasoning/理解品質で、token数・latency・memory等の推論効率削減を主要貢献としない。",
+      "source_url": "https://arxiv.org/abs/2601.20552",
+      "body_check": "abstract_screen_only: arXiv一次abstractでDeepEncoder V2によるvisual token reorderingと2D reasoningが主題と確認。効率化方式ではないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 83
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.11574",
+      "identity_tokens": [
+        "arXiv:2402.11574"
+      ],
+      "title": "Visual In-Context Learning for Large Vision-Language Models",
+      "reason": "large vision-language modelのvisual in-context learning能力を扱うmultimodal capability研究で、推論runtime・memory・serving効率化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2402.11574",
+      "body_check": "abstract_screen_only: arXiv一次abstract/書誌でvisual in-context learningとtask generalizationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 84
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3626202.3637562",
+      "identity_tokens": [
+        "DOI:10.1145/3626202.3637562"
+      ],
+      "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
+      "reason": "FPGA向けにLLM operatorを完全mappingし、sparsity-aware DSP chain、mixed-precision、on-chip memory管理を含むend-to-end推論acceleratorを設計する。LLM inference hardware/systemを直接対象とする。",
+      "source_url": "https://arxiv.org/abs/2401.03868",
+      "body_check": "fulltext_relevance_review: 一次論文ページと本文記述を確認。LLM推論のmemory/computation bottleneckをFPGA上のcomplete mapping flowで扱い、operator mapping・sparsity・quantization・memory orchestrationを統合してGPU/既存FPGA baselineとのlatency/energy効率を評価するため直接対象。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 85
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.08406",
+      "identity_tokens": [
+        "arXiv:2401.08406"
+      ],
+      "title": "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture",
+      "reason": "RAGとfine-tuningの品質・実装trade-offを農業QA事例で比較するapplication/methodology研究。LLM推論runtime・memory・serving効率のsystematic optimizationが主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2401.08406",
+      "body_check": "abstract_screen_only: arXiv一次abstractでRAG対fine-tuningのpipeline比較とagriculture case studyが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 87
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2541940.2541942",
+      "identity_tokens": [
+        "DOI:10.1145/2541940.2541942"
+      ],
+      "title": "Architectural support for address translation on GPUs: designing memory management units for CPU/GPUs with unified address spaces",
+      "reason": "GPU TLB/page-table walkerとCPU/GPU unified address spaceを扱う一般GPU memory-management研究。LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1145/2541940.2541942",
+      "body_check": "abstract_screen_only: 一次機関repository abstractでGPU MMU、TLB、page table walker、shared virtual memoryが主題と確認。LLM推論固有の適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 89
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03898",
+      "identity_tokens": [
+        "arXiv:2402.03898"
+      ],
+      "title": "DistiLLM: Towards Streamlined Distillation for Large Language Models",
+      "reason": "LLM knowledge distillationの学習安定性・student性能を改善するdistillation/training研究。小型化の副次効果はあるが推論system最適化を主要評価しない。",
+      "source_url": "https://arxiv.org/abs/2402.03898",
+      "body_check": "abstract_screen_only: arXiv一次abstractでLLM distillation objectiveとstudent trainingが主題と確認。推論runtime/servingの最終評価が中心でないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 90
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.05451",
+      "identity_tokens": [
+        "arXiv:2603.05451"
+      ],
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "reason": "新世代GPUの非対称なtensor-core/SFU/共有memory性能に合わせattention algorithmとkernel pipelineを共同設計するFlashAttention系kernel研究。LLM attention推論のthroughput・hardware utilizationを直接改善するため対象。",
+      "source_url": "https://arxiv.org/abs/2603.05451",
+      "body_check": "fulltext_relevance_review: arXiv一次論文の問題設定・手法・評価記述を確認。asymmetric hardware scalingを背景にattentionのalgorithm/kernel pipeliningを共同設計し、LLM系attention workloadで既存FlashAttention実装に対する性能改善を評価する直接的inference-kernel研究。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab",
+      "identity_tokens": [
+        "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab"
+      ],
+      "title": "Retrospective: Scalpel: Customizing DNN Pruning to the Underlying Hardware Parallelism",
+      "reason": "SIMD-aware weight pruningとnode pruningをhardware parallelismへ合わせる一般DNN pruning研究のretrospective。microcontroller/CPU/GPU上のDNNを対象とし、LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://www.semanticscholar.org/paper/42c03c4037d113e7491375b6558277c250c3b5ab",
+      "body_check": "abstract_screen_only: 著者/大学一次紹介のretrospective abstractで一般DNN pruning、microcontroller/CPU/GPU speedupが主題と確認。LLM推論固有の適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.7873/date.2015.0733",
+      "identity_tokens": [
+        "DOI:10.7873/date.2015.0733"
+      ],
+      "title": "DESTINY: A tool for modeling emerging 3D NVM and eDRAM caches",
+      "reason": "SRAM/eDRAM/STT-RAM/ReRAM/PCMの2D/3D cacheをmodelingするmicroarchitecture design-space exploration tool。LLM推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.7873/date.2015.0733",
+      "body_check": "abstract_screen_only: ORNL一次publication abstractでemerging memory/cache modeling、latency/area等のdesign-space explorationが主題と確認。LLM推論固有の適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 93
+    }
+  ]
+}
