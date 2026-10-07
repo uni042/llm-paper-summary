@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1429-scheduled-chat-30/r01",
+  "reference_main_sha": "3a4b655bf0bd78b4232dfe632c08f43558d11b9b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.04670",
+      "identity_tokens": [
+        "arXiv:2511.04670"
+      ],
+      "title": "Cambrian-S: Towards Spatial Supersensing in Video",
+      "reason": "VSI-SUPER/VSI-590Kと予測的センシングにより動画の空間認知・世界モデル能力を高めるマルチモーダルモデル研究で、LLM推論基盤の速度・メモリ・サービング効率化を主要目的としない。",
+      "source_url": "https://arxiv.org/abs/2511.04670",
+      "body_check": "abstract_screen_only: 一次abstractでlong-horizon visual spatial recall/counting、spatial cognition、predictive world modelingと動画理解性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3158661",
+      "identity_tokens": [
+        "DOI:10.1145/3158661"
+      ],
+      "title": "A Survey on NoSQL Stores",
+      "reason": "NoSQLデータストアのデータモデル、一貫性、partitioning、CAP、replication等を整理するデータベースsurveyで、LLM/Transformer推論を対象としない。",
+      "source_url": "https://doi.org/10.1145/3158661",
+      "body_check": "abstract_screen_only: 出版一次資料でNoSQL storeのdata model、consistency model、partitioning、CAP theorem、replication等が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1600",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1600"
+      ],
+      "title": "A Span-Extraction Dataset for Chinese Machine Reading Comprehension",
+      "reason": "中国語機械読解用の約2万問のspan-extraction datasetとbaseline評価が主題で、推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1810.07366",
+      "body_check": "abstract_screen_only: 一次abstractでChinese MRC dataset、Wikipedia paragraph、challenge set、baseline systemsが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07915",
+      "identity_tokens": [
+        "arXiv:2309.07915"
+      ],
+      "title": "MMICL: Empowering Vision-language Model with Multi-Modal In-Context Learning",
+      "reason": "複数画像を含む複雑なmultimodal promptを扱うin-context learning能力とVLM品質の改善が主題で、推論システム効率化を主要貢献としない。",
+      "source_url": "https://arxiv.org/abs/2309.07915",
+      "body_check": "abstract_screen_only: 一次abstractでmulti-modal in-context learning、MIC dataset、MME/MMBench等のzero-shot性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.467",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.467"
+      ],
+      "title": "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?",
+      "reason": "RoBERTaの中間タスク学習が下流転移へ与える影響を110組合せと25 probing taskで分析するtransfer-learning研究で、推論効率化ではない。",
+      "source_url": "https://aclanthology.org/2020.acl-main.467/",
+      "body_check": "abstract_screen_only: ACL一次abstractでintermediate-task training、target-task transfer、probingによる能力分析が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.53",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.53"
+      ],
+      "title": "Meta-learning via Language Model In-context Tuning",
+      "reason": "複数タスクで言語モデルをmeta-trainしfew-shot適応性能と頑健性を改善する学習方式で、推論runtime・memory・serving効率化を主要目的としない。",
+      "source_url": "https://arxiv.org/abs/2110.07814",
+      "body_check": "abstract_screen_only: 一次abstractでin-context tuning、LAMA/BinaryClfs、MAML比較、AUC-ROCとexample-order varianceが主評価と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 47
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11391",
+      "identity_tokens": [
+        "arXiv:2305.11391"
+      ],
+      "title": "A survey of safety and trustworthiness of large language models through the lens of verification and validation",
+      "reason": "LLMの安全性・信頼性を検証と妥当性確認の観点から整理するsurveyで、推論runtime・memory・throughput最適化を中心対象としない。",
+      "source_url": "https://arxiv.org/abs/2305.11391",
+      "body_check": "abstract_screen_only: 一次abstractでvulnerability、falsification/evaluation、verification、runtime monitoring、regulation/ethicsが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.20624",
+      "identity_tokens": [
+        "arXiv:2310.20624"
+      ],
+      "title": "LoRA Fine-tuning Efficiently Undoes Safety Training in Llama 2-Chat 70B",
+      "reason": "量子化LoRAを用いて安全調整を低コストで解除できることを示すAI safety研究で、効率的fine-tuningは手段でありLLM推論システム効率化が目的ではない。",
+      "source_url": "https://arxiv.org/abs/2310.20624",
+      "body_check": "abstract_screen_only: 一次abstractでLlama 2-Chat/Mixtralのsafety training robustness、refusal rate、subversive fine-tuning riskが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-1260",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1260"
+      ],
+      "title": "Abstractive Summarization of Reddit Posts with Multi-level Memory Networks",
+      "reason": "Reddit TIFU要約datasetとmulti-level memory networkによる抽象型要約品質改善が主題で、LLM推論runtime・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1811.00783",
+      "body_check": "abstract_screen_only: 一次abstractで120K Reddit TIFU dataset、multi-level memory network、summarization quality/user studyが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.372",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.emnlp-main.372"
+      ],
+      "title": "All Bark and No Bite: Rogue Dimensions in Transformer Language Models Obscure Representational Quality",
+      "reason": "BERT/GPT-2の表現類似度を少数のrogue dimensionが支配する問題とpostprocessingを分析する表現解析研究で、推論システム効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2109.04404",
+      "body_check": "abstract_screen_only: 一次abstractでcontextual embeddingのcosine/Euclidean similarity、rogue dimensions、standardizationによる表現解析改善が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:29:00+09:00",
+      "last_checked_at": "2026-10-07T14:29:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 51
+    }
+  ]
+}
