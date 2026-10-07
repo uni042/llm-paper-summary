@@ -49,7 +49,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-01 · [KVzap: Fast, Adaptive, and Faithful KV Cache Pruning](2026-2601.07891-kvzap-fast-adaptive-and-faithful-kv-cache-pruning.md)**  
   実装：[✓](https://github.com/NVIDIA/kvpress) ・ リポジトリ内被引用：5  
-  既存枝刈りは圧縮率を上げるほど精度を落とすか、重要度計算が重く、主要inference engineへ入れにくい。
+  KVzapは、長文脈大規模言語モデル（LLM）のキー・バリューキャッシュ（KV キャッシュ）を時間軸方向に削減する手法である。Qwen3-8B/32BとLlama-3.1-8B-Instructで、長文脈検索・理解・reasoningを大きく崩さず平均63〜72%のKVを除去し、2.7〜3.5倍の実効圧縮を報告する。
 
 - **2026-07 · [LazyEviction: Lagged KV Eviction with Attention Pattern Observation for Efficient Long Reasoning](2026-lazyeviction.md)**  
   実装：[✓](https://github.com/Halo-949/LazyEviction) ・ リポジトリ内被引用：4  
@@ -445,7 +445,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2025-10 · [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution](2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
-  未来クエリの分布から各KV対が受ける期待注意量を閉形式で推定し、FlashAttentionのように注意行列を保持しない実装でも学習なしでKVを順位付け・削除する。プリフィルとデコードの双方へ適用し、LongBench、RULER、Needle-in-a-Haystack、AIME25、MATH-500でTOVA、SnapKV、KeyDiff等を上回る。
+  しかし削除時点では未来トークンは存在せず、過去注意を使う方式も高速注意 (FlashAttention) が完全な注意行列を実体化しないため扱いにくい。
 
 - **2024-12 · [A Survey on Large Language Model Acceleration based on KV Cache Management](2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md)**  
   実装：[✓](https://github.com/TreeAI-Lab/Awesome-KV-Cache-Management) ・ リポジトリ内被引用：21  
@@ -655,7 +655,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2024-07 · [RazorAttention: Efficient KV Cache Compression Through Retrieval Heads](2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
-  検索ヘッドは全KVを保持し非検索ヘッドだけ遠方KVを削るヘッド別圧縮と補償トークンにより、長文脈LLMのKVキャッシュを70%以上削減する。
+  長文脈の自己回帰推論では、各注意頭 (注意機構 head) が全過去トークンのキー・値キャッシュ (key-value キャッシュ; KV キャッシュ) を保持すると、キャッシュ容量が文脈長に比例して増える。
 
 - **2024-07 · [Keep the Cost Down: A Review on Methods to Optimize LLM's KV Cache Consumption](2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md)**  
   実装：✓ ・ リポジトリ内被引用：16  

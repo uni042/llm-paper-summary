@@ -28,7 +28,7 @@
 
 - **2026-03 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  吸収型離散拡散では、トークンを段階的にマスク状態へ移し、逆過程でクリーンな系列を復元する。従来は各時刻で状態間の周辺確率比であるconcrete scoreを時刻条件付きネットワークで推定するため、入力系列が変わらないサンプリング区間でも時刻が変わるだけでネットワークを再評価する。学習ネットワークは前者だけを出力すればよく、時刻tを入力する必要がない。
+  この分解に基づき、時間入力をネットワークから除いた再パラメータ化吸収離散拡散（Reparameterized Absorbing Discrete Diffusion; RADD）を提案する。
 
 - **2026-03 · [PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System](2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -832,7 +832,7 @@
 
 - **2025-05 · [Speeding up Model Loading with fastsafetensors](2025-2505.23072-speeding-up-model-loading-with-fastsafetensors.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  大規模モデルのsafetensors読込でCPU上に各テンソルを具体化してからGPUへコピーする二段階経路を避け、パラメータ群をまとめてデバイスへ転送して転送先でテンソル化する。
+  fastsafetensorsは、safetensors形式の大規模モデルをストレージからGPUへロードする際、各テンソルをいったんホストメモリ上のPython/PyTorchオブジェクトとして逐次生成してからGPUへコピーする従来経路を改め、ファイル上の複数テンソルをまとめてGPUへ搬送し、GPU上でテンソル実体化・分割などの前処理を行うローダである。
 
 - **2025-05 · [Llama-Nemotron: Efficient Reasoning Models](2025-2505.00949-llama-nemotron-efficient-reasoning-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1146,7 +1146,7 @@
 
 - **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  本論文は単一の新しい推論アルゴリズムではなく、AIハードウェアの演算性能とメモリ・相互接続帯域の伸びの乖離を分析し、特に自己回帰decoderが「計算壁」より「メモリ壁」に直面していることを示す。過去約20年でピークFLOPSは2年ごとに約3.0倍、DRAM帯域は1.6倍、相互接続帯域は1.4倍程度という差を整理する。
+  AI and メモリ Wallは、単一の圧縮algorithmやserving ランタイムを提案する論文ではなく、AI acceleratorの演算性能の伸びに対してメモリ容量・帯域・interconnectが追いつかず…
 
 - **2024-02 · [BlackMamba: Mixture of Experts for State-Space Models](2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md)**  
   実装：[✓](https://github.com/Zyphra/BlackMamba) ・ リポジトリ内被引用：3  
@@ -1170,7 +1170,7 @@
 
 - **2024-05 · [Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference](2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md)**  
   実装：[✓](https://github.com/lzhxmu/VTW) ・ リポジトリ内被引用：2  
-  マルチモーダル大規模言語モデル（MLLM）は、画像を数百個のvision トークンへ変換してテキストトークンと同じTransformerへ入れるため、深い層でも視覚トークン分の注意機構とMLP計算を払い続ける。
+  LLaVA系では1枚の画像が数百の視覚トークンへ展開され、これらが全decoder層で自己注意（self-注意機構）と前向きネットワーク（FFN）を通るため、画像入力が系列長と計算量を大きく押し上げる。
 
 - **2024-03 · [Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression](2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md)**  
   実装：[✓](https://github.com/decoding-comp-trust/comp-trust) ・ リポジトリ内被引用：2  
@@ -1288,7 +1288,7 @@
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
-  複数LLM APIを価格・精度に応じて段階呼出しする学習済みカスケードで、最良単体モデル相当の性能を最大98%低い推論費で実現する。
+  FrugalGPTは、性能と料金が大きく異なる複数の大規模言語モデル（LLM）APIを、予算制約の中で使い分けるための枠組みである。カスケードでは安価なAPIから順に問い合わせ、生成結果の信頼度が十分高ければそこで終了し、低ければより高価なAPIへ送る。
 
 - **2022-12 · [The case for 4-bit precision: k-bit Inference Scaling Laws](2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
