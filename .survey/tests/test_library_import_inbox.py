@@ -237,6 +237,30 @@ source: https://arxiv.org/abs/2609.12345
             )
             self.assertEqual(persisted["entries"], [])
 
+    def test_returned_research_queue_is_idempotent_when_entries_do_not_change(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            (results / "return.json").write_text(
+                json.dumps(
+                    {
+                        "status": "blocked_quality",
+                        "canonical_id": "arXiv:2609.11111",
+                        "processed_at": "2026-10-07T09:00:00+00:00",
+                        "failures": ["説明不足"],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            first = inbox.sync_returned_research_queue(root)
+            queue_path = root / ".survey/repair-queue/returned-research.json"
+            first_bytes = queue_path.read_bytes()
+            second = inbox.sync_returned_research_queue(root)
+            self.assertEqual(first, second)
+            self.assertEqual(first_bytes, queue_path.read_bytes())
+
     def test_returned_research_queue_assignment_is_stable(self) -> None:
         canonical_id = "DOI:10.1000/stable-owner"
         first = inbox.repair_owner(canonical_id)
