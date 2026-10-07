@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r182-screen-01-part-02-62e76fe6dd18",
+  "reference_main_sha": "c783ac90a63f989552e8790516edc13970e423c2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15800",
+      "identity_tokens": [
+        "arXiv:2603.15800"
+      ],
+      "title": "Evolving Contextual Safety in Multi-Modal Large Language Models via Inference-Time Self-Reflective Memory",
+      "reason": "The primary paper adds a retrieved self-reflective memory to multimodal safety prompts at inference time, but its reported objective is safety behavior and it does not establish an inference-cost, latency, memory, or serving improvement; relevance to inference optimization remains weak.",
+      "source_url": "https://arxiv.org/abs/2603.15800",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13779",
+      "identity_tokens": [
+        "arXiv:2603.13779"
+      ],
+      "title": "AD-Copilot: A Vision-Language Assistant for Industrial Anomaly Detection via Visual In-context Comparison",
+      "reason": "The abstract describes industrial anomaly detection data, a comparison encoder, and task accuracy/localization; it does not address model inference cost or serving.",
+      "source_url": "https://arxiv.org/abs/2603.13779",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12664",
+      "identity_tokens": [
+        "arXiv:2603.12664"
+      ],
+      "title": "From Text to Forecasts: Bridging Modality Gap with Temporal Evolution Semantic Space",
+      "reason": "The abstract studies text-to-time-series forecasting through semantic temporal features and forecasting error; it is not LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2603.12664",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13162",
+      "identity_tokens": [
+        "arXiv:2603.13162"
+      ],
+      "title": "DiT-IC: Aligned Diffusion Transformer for Efficient Image Compression",
+      "reason": "The abstract optimizes diffusion-based image compression sampling and reconstruction, not language model inference.",
+      "source_url": "https://arxiv.org/abs/2603.13162",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11219",
+      "identity_tokens": [
+        "arXiv:2603.11219"
+      ],
+      "title": "Senna-2: Aligning VLM and End-to-End Driving Policy for Consistent Decision Making and Planning",
+      "reason": "The abstract aligns VLM decisions and end-to-end driving policies through staged training and driving-safety objectives; no inference efficiency mechanism is reported.",
+      "source_url": "https://arxiv.org/abs/2603.11219",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
