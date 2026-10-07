@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r176-screen-01-part-01-644abba5f434",
+  "reference_main_sha": "0dce19ea6293a4144e53a729af43406cc39e378e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.03438",
+      "identity_tokens": [
+        "arXiv:2605.03438"
+      ],
+      "title": "Mantis: Mamba-native Tuning is Efficient for 3D Point Cloud Foundation Models",
+      "reason": "arXiv abstract: PEFT adapts a 3D point-cloud foundation model, with training parameter count below 5%; it is a domain-specific training/storage adaptation and does not study LLM inference serving or runtime.",
+      "source_url": "https://arxiv.org/abs/2605.03438",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.100906",
+      "identity_tokens": [
+        "DOI:10.1016/j.cosrev.2026.100906"
+      ],
+      "title": "A survey of large language models for legal tasks: Progress, prospects and challenges",
+      "reason": "Primary DOI landing page https://doi.org/10.1016/j.cosrev.2026.100906 returned Internal Error in the browser; the packet has no abstract and no accessible publisher full text was found.",
+      "source_url": "https://doi.org/10.1016/j.cosrev.2026.100906",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.28192",
+      "identity_tokens": [
+        "arXiv:2604.28192"
+      ],
+      "title": "LaST-R1: Reinforcing Robotic Manipulation via Adaptive Physical Latent Reasoning",
+      "reason": "arXiv abstract: proposes RL post-training for robotic manipulation and reports task success/convergence; no LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving change is claimed.",
+      "source_url": "https://arxiv.org/abs/2604.28192",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17139",
+      "identity_tokens": [
+        "arXiv:2604.17139"
+      ],
+      "title": "The Consensus Trap: Rescuing Multi-Agent LLMs from Adversarial Majorities via Token-Level Collaboration",
+      "reason": "The method interleaves agent token generation to resist adversarial-majority failures. The paper states its comparison uses the same decoding token budget as majority voting; its measured contribution is robustness, with no inference-cost, memory, latency, or throughput reduction. Token-level collaboration is not itself an efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2604.17139",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11554",
+      "identity_tokens": [
+        "arXiv:2604.11554"
+      ],
+      "title": "Relax: An Asynchronous Reinforcement Learning Engine for Omni-Modal Post-Training at Scale",
+      "reason": "Relax separates RL rollout and training services; the reported 1.76×/2.00× throughput gains are RL training speedups with comparable reward convergence. It optimizes post-training pipeline throughput, not deployed LLM serving/inference.",
+      "source_url": "https://arxiv.org/abs/2604.11554",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    }
+  ]
+}
