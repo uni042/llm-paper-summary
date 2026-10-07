@@ -1,0 +1,55 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261007-1945-scheduled-chat-45/r01-partial",
+  "reference_main_sha": "3b91a64955f991f1186cdde5f142068ae34be2a5",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/079017-2000",
+      "identity_tokens": [
+        "DOI:10.52202/079017-2000",
+        "arXiv:2312.07104"
+      ],
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+      "reason": "LLMプログラム実行基盤で、RadixAttentionによるKVキャッシュ再利用と構造化出力復号を含む推論ランタイムを提案し、既存推論システム比で最大6.4倍のスループットを報告するため対象。",
+      "source_url": "https://arxiv.org/abs/2312.07104",
+      "body_check": "fulltext_review: 一次arXiv本文/要旨を確認。frontendとruntimeの共同設計、RadixAttention、compressed FSM、複数LLM workloadでの推論性能評価を確認。",
+      "first_checked_at": "2026-10-07T19:55:00+09:00",
+      "last_checked_at": "2026-10-07T19:55:00+09:00",
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.195",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.195",
+        "arXiv:2004.02984"
+      ],
+      "title": "MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices",
+      "reason": "BERTを教師モデルから知識転移して小型化するモデル設計・学習手法が主題で、LLM推論ランタイム、サービング、KVキャッシュ等の推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2004.02984",
+      "body_check": "abstract_screen_only; 一次arXiv abstractでMobileBERTの圧縮・知識転移が主貢献と確認。本文深読解は省略。",
+      "first_checked_at": "2026-10-07T19:55:00+09:00",
+      "last_checked_at": "2026-10-07T19:55:00+09:00",
+      "worklist_rank": 4
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/hpec58863.2023.10363447",
+      "identity_tokens": [
+        "DOI:10.1109/hpec58863.2023.10363447",
+        "arXiv:2310.03003"
+      ],
+      "title": "From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference",
+      "reason": "LLaMA推論の計算・エネルギー利用をV100/A100、複数モデル規模、最大32 GPUのmodel shardingで実測する推論基盤characterization研究であり、推論資源効率の直接評価として対象。",
+      "source_url": "https://arxiv.org/abs/2310.03003",
+      "body_check": "fulltext_review: 一次arXiv本文/要旨を確認。LLaMA inferenceをV100/A100、Alpaca/GSM8K、multi-node multi-GPUで計測しenergy/performanceを分析。",
+      "first_checked_at": "2026-10-07T19:55:00+09:00",
+      "last_checked_at": "2026-10-07T19:55:00+09:00",
+      "worklist_rank": 9
+    }
+  ]
+}
