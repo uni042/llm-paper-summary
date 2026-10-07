@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r165-screen-01-part-04-c08815471288",
+  "reference_main_sha": "f3f36070d3eeff791b97b133877782e5a142c3fe",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04844",
+      "identity_tokens": [
+        "arXiv:2512.04844"
+      ],
+      "title": "Mitigating Catastrophic Forgetting in Target Language Adaptation of LLMs via Source-Shielded Updates",
+      "reason": "Read the primary method and experiments. Source-Shielded Updates modifies model parameters for target-language adaptation to reduce catastrophic forgetting, a training/fine-tuning method rather than inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.04844",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.10978",
+      "identity_tokens": [
+        "arXiv:2512.10978"
+      ],
+      "title": "Cognitive Mirrors: Exploring the Diverse Functional Roles of Attention Heads in LLM Reasoning",
+      "reason": "The work studies functional roles of attention heads in reasoning; this is an analysis of model behavior, not a concrete inference-time efficiency method.",
+      "source_url": "https://arxiv.org/abs/2512.10978",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05449",
+      "identity_tokens": [
+        "arXiv:2511.05449"
+      ],
+      "title": "How Many Tokens Do 3D Point Cloud Transformer Architectures Really Need?",
+      "reason": "This study estimates token needs for 3D point-cloud transformer architectures; the task and models are point-cloud perception, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2511.05449",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13651",
+      "identity_tokens": [
+        "arXiv:2506.13651"
+      ],
+      "title": "xbench: Tracking Agents Productivity Scaling with Profession-Aligned Real-World Evaluations",
+      "reason": "xbench evaluates agent productivity with profession-aligned real-world tasks; it is a benchmark rather than an inference efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2506.13651",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11604-024-01552-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11604-024-01552-0"
+      ],
+      "title": "The impact of large language models on radiology: a guide for radiologists on the latest innovations in AI",
+      "reason": "Springer DOI publisher page was attempted as the primary source but was inaccessible via the available reader; do not treat cached packet abstract as primary-source verification.",
+      "source_url": "https://doi.org/10.1007/s11604-024-01552-0",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    }
+  ]
+}
