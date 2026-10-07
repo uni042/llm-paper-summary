@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1304-scheduled-chat-00/r03-partial",
+  "reference_main_sha": "dbbf2898d087bcbd6abc43dfa364c0824715846d",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.00656",
+      "identity_tokens": [
+        "arXiv:2404.00656"
+      ],
+      "title": "WavLLM: Towards Robust and Adaptive Speech Large Language Model",
+      "reason": "dual speech encoder、prompt-aware LoRA、two-stage curriculumでspeech LLMのASR/ST/SV/ER/CoT能力を改善するtraining/architecture研究。推論runtime・memory・serving効率化を主題としない。",
+      "source_url": "https://arxiv.org/abs/2404.00656",
+      "body_check": "abstract_screen_only: arXiv一次abstractでspeech capability、curriculum learning、prompt-aware LoRAとtask performanceが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.09573",
+      "identity_tokens": [
+        "arXiv:2210.09573"
+      ],
+      "title": "ViTCoD: Vision Transformer Acceleration via Dedicated Algorithm and Accelerator Co-Design",
+      "reason": "attention pruning/polarizationと専用acceleratorでVision Transformerを高速化するが、論文自身がNLP Transformerとの差を明示し、最終workloadはViT画像処理。LLM/言語モデル推論対象外。",
+      "source_url": "https://arxiv.org/abs/2210.09573",
+      "body_check": "abstract_screen_only: arXiv一次abstractでViT専用algorithm/accelerator co-design、90% attention sparsity、CPU/GPU/既存ViT accelerator比較が主題と確認。LLM推論への最終適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [],
+      "worklist_rank": 95
+    }
+  ]
+}
