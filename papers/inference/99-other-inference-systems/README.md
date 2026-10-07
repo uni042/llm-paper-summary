@@ -1502,9 +1502,9 @@
   実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：7  
   適応的 注意機構 Spanは、Transformerのすべての注意ヘッドへ同じ固定文脈長を割り当てる代わりに、ヘッドごとに「何文字前まで見るか」を学習させる自己注意（self-注意機構）機構である。
 
-- **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
+- **2018-11 · [ブロック並列 Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  Blockwise Parallel Decodingは、この逐次性そのものを完全に捨てるのではなく、複数の将来位置を一度に予測し、元の自己回帰スコアリングモデルで「通常の貪欲復号なら同じトークンを選んだか」を並列検証する。
+  ブロック並列 Parallel Decodingは、この逐次性そのものを完全に捨てるのではなく、複数の将来位置を一度に予測し、元の自己回帰スコアリングモデルで「通常の貪欲復号なら同じトークンを選んだか」を並列検証する。
 
 ### 9年前（2017-11〜2018-10）
 
