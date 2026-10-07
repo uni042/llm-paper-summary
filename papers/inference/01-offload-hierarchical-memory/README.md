@@ -28,7 +28,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2025-11 · [In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading](2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  MoE専門家の活性化局所性を測定し、LRUをLFUへ置換するキャッシュと投機的専門家事前取得を比較して、メモリ制約下オフロードの改善余地を定量分析。
+  本論文は、Mixture of エキスパート（MoE）をGPUメモリに収めきれない環境で、エキスパート重みをCPU主記憶から必要時に転送するオフロードを対象に、キャッシュと投機的先読み（投機的 プリフェッチ）がどこまで有効かを実測・トレースから分析した研究である。
 
 - **2026-08 · [Potential Applications of HBF in LLM Serving Systems](2026-2608.13127-hbf-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

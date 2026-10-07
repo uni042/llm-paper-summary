@@ -411,7 +411,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-05 · [Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles](2026-2605.19775-understanding-inference-scaling-for-llms-bottlenecks-trade-offs-and-perf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  reasoning モデルでは入力より出力が桁違いに長くなり、実時間の99%以上をメモリ律速なデコードが占める条件が現れる。本論文は8Bから671BまでをGPU clusterで実測し、通常の「GPUを増やしてdata 並列化（DP）でリクエストを分散すればスループットが伸びる」というheuristicが、KV キャッシュ容量壁で崩れる条件を整理する。
+  本論文は、新しい推論アルゴリズムを提案するのではなく、推論型大規模言語モデル（reasoning LLM）の長い思考連鎖（Chain-of-Thought; CoT）が推論基盤のボトルネックをどう変えるかを、8Bから671Bまでのモデルと8基のNVIDIA H200で系統的に測定する性能特性研究である。
 
 - **2026-05 · [ArborKV: Structure-Aware KV Cache Management for Scaling Tree-based LLM Reasoning](2026-2605.22106-arborkv-structure-aware-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

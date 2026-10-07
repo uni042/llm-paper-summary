@@ -1352,7 +1352,7 @@
 
 - **2023-05 · [LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning](2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md)**  
   実装：[✓](https://github.com/aim-uofa/LoRAPrune) ・ リポジトリ内被引用：4  
-  LoRAPruneは、低ランク適応（Low-Rank Adaptation; LoRA）による省メモリ微調整と、推論時に実際の計算量を減らしやすい構造化枝刈りを一体化する。
+  LoRAPruneは、低ランク適応 (Low-Rank Adaptation; LoRA) による省メモリ微調整と、注意頭・チャネルのような構造単位を削る構造化枝刈り (structured 枝刈り) を一体化する。従来の勾配ベース枝刈りは巨大な事前学習重み (W0) の勾配を保持するため、65B級では枝刈り作業そのものが数枚の80GB GPUを必要とする。
 
 - **2023-03 · [Resurrecting Recurrent Neural Networks for Long Sequences](2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
