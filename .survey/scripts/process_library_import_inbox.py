@@ -831,18 +831,28 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         raise ValueError(
                             f"under16kb re-audit target is missing: {target_rel}"
                         )
-                    current_hash = sha256_bytes(target.read_bytes())
+                    current_bytes = target.read_bytes()
+                    current_hash = sha256_bytes(current_bytes)
+                    current_blob_sha = under16_reaudit.git_blob_sha(current_bytes)
                     expected_hash = str(
                         meta.get("under16kb_reaudit_source_sha256") or ""
                     ).strip()
-                    if not expected_hash:
+                    expected_blob_sha = str(
+                        meta.get("under16kb_reaudit_source_git_blob_sha") or ""
+                    ).strip()
+                    if not expected_hash and not expected_blob_sha:
                         raise ValueError(
-                            "under16kb_reaudit_source_sha256 is required"
+                            "under16kb re-audit requires source SHA-256 or git blob SHA"
                         )
-                    if expected_hash != current_hash:
+                    if expected_hash and expected_hash != current_hash:
                         raise RuntimeError(
-                            "under16kb re-audit source changed since review: "
+                            "under16kb re-audit source changed since review (SHA-256): "
                             f"{expected_hash} != {current_hash}"
+                        )
+                    if expected_blob_sha and expected_blob_sha != current_blob_sha:
+                        raise RuntimeError(
+                            "under16kb re-audit source changed since review (git blob SHA): "
+                            f"{expected_blob_sha} != {current_blob_sha}"
                         )
 
                     target.write_text(raw, encoding="utf-8")
@@ -859,6 +869,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                             "reaudit_update": True,
                             "reaudit_version": version,
                             "previous_paper_sha256": current_hash,
+                            "previous_paper_git_blob_sha": current_blob_sha,
                             "audit_status": audit.status,
                             "japanese_normalized": japanese_normalized,
                             "worker_completed_at": meta.get("worker_completed_at"),
