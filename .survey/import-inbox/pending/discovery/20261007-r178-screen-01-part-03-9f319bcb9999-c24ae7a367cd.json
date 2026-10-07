@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r178-screen-01-part-03-9f319bcb9999",
+  "reference_main_sha": "85e26b943e161cfe557fc0dae0c8b7298dad60e4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11789",
+      "identity_tokens": [
+        "arXiv:2604.11789"
+      ],
+      "title": "LMMs Meet Object-Centric Vision: Understanding, Segmentation, Editing and Generation",
+      "reason": "This is a survey of object-centric vision capabilities in large multimodal models; the abstract covers understanding, segmentation, editing, and generation without a concrete inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2604.11789",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06079",
+      "identity_tokens": [
+        "arXiv:2604.06079"
+      ],
+      "title": "Scientific Graphics Program Synthesis via Dual Self-Consistency Reinforcement Learning",
+      "reason": "The work improves scientific-graphics program synthesis using dual self-consistency reinforcement learning; the primary abstract concerns task success/training, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.06079",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03642",
+      "identity_tokens": [
+        "arXiv:2604.03642"
+      ],
+      "title": "LLM-Based Listwise Reranking Under the Effect of Positional Bias",
+      "reason": "The paper addresses positional bias in LLM listwise reranking through training/fine-tuning and reports ranking quality. It does not provide a runtime, token, memory, or serving-efficiency intervention.",
+      "source_url": "https://arxiv.org/abs/2604.03642",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.02.017",
+      "identity_tokens": [
+        "DOI:10.1016/j.jmsy.2026.02.017"
+      ],
+      "title": "Knowledge-guided multimodal LLM with mixture-of-experts for interpretable defect detection and fault diagnosis: An industrial AI copilot",
+      "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1016/j.jmsy.2026.02.017 (server returned Internal Error), and the packet contains no abstract. Industrial multimodal-LLM application cannot be assessed for inference-efficiency relevance without primary text.",
+      "source_url": "https://doi.org/10.1016/j.jmsy.2026.02.017",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.27703",
+      "identity_tokens": [
+        "arXiv:2603.27703"
+      ],
+      "title": "KAT-Coder-V2 Technical Report",
+      "reason": "KAT-Coder-V2 is a large agentic coding model/training-system report. The reported 6.2x speedup is for tree training; inference is used for rollout generation, but the paper does not establish a new deployed LLM inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2603.27703",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
