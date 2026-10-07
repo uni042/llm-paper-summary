@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2e74533614253ca5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.07664",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.07664",
+    "identity_tokens": [
+      "arXiv:2609.07664"
+    ],
+    "reason": "量子化LLMの推論配置に関係するが、主貢献はJensen-Shannon divergence等による量子化忠実度評価frameworkであり、推論コスト削減機構そのものではない。対象範囲のbenchmark/analysis扱いに含めるか判断が必要なためborderline。",
+    "first_checked_at": "2026-10-05T03:10:26+00:00",
+    "last_checked_at": "2026-10-07T11:00:01+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs"
+  },
+  "processed_at": "2026-10-07T11:00:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2e7453361425",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

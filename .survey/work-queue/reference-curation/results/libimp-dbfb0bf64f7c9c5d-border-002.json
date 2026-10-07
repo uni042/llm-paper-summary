@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbfb0bf64f7c9c5d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05696",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05696",
+    "identity_tokens": [
+      "arXiv:2605.05696"
+    ],
+    "reason": "題名上はMLA向け位置独立KVキャッシュとagentic LLM servingで明確に対象候補だが、このrunでは一次資料本文/要旨を取得できず、本文確認必須のacceptを確定できない。",
+    "first_checked_at": "2026-10-07T11:00:11+00:00",
+    "last_checked_at": "2026-10-07T11:00:11+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving"
+  },
+  "processed_at": "2026-10-07T11:00:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbfb0bf64f7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

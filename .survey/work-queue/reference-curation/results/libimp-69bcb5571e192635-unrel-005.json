@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69bcb5571e192635-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.06221",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.06221",
+    "identity_tokens": [
+      "arXiv:2511.06221"
+    ],
+    "reason": "Diversity-driven training to elicit reasoning in a small model; no serving-efficiency result.",
+    "first_checked_at": "2026-10-07T11:00:05+00:00",
+    "last_checked_at": "2026-10-07T11:00:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+    ],
+    "title": "Tiny Model, Big Logic: Diversity-Driven Optimization Elicits Large-Model Reasoning Ability in VibeThinker-1.5B"
+  },
+  "processed_at": "2026-10-07T11:00:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69bcb5571e19",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
