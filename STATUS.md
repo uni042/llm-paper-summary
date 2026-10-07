@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-07 14:22:25 JST**
+> 自動生成: **2026-10-07 14:26:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **593** |
 | 未claim Research job | **593** |
-| 直近24hのResearch処理完了 | **31** |
+| 直近24hのResearch処理完了 | **29** |
 | 最終Research処理完了 | **10-06 20:58:00 JST** |
 | 最終Discovery探索完了 | **10-07 14:01:00 JST** |
 | 整合性異常 | **0** |
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **true** |
-| 最終maintenance完了 | **10-07 00:00:11 JST（14時間22分前）** |
+| 最終maintenance完了 | **10-07 00:00:11 JST（14時間26分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -101,9 +101,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - Research: **10-06 20:58:00 JST** / worker — / run 20261006-2030-scheduled-chat-30/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_da345c5035f88191be33022d361fd0f0--2604.11035-idlm.json
-- Discovery: **10-07 14:01:00 JST** / worker scheduled-chat-00 / run 20261007-1401-scheduled-chat-00/r02-partial
-  - 本文確認・分類 **8件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_1f144d906b988191a1807841d3b8cef7--discovery-20261007-1401-scheduled-chat-00-r02-partial.json
+- Discovery: **10-07 14:01:00 JST** / worker scheduled-chat-00 / run 20261007-1401-scheduled-chat-00/r01
+  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **10件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_03536ff25338819194be2d16033ade84--discovery-20261007-1401-scheduled-chat-00-r01.json
 
 ## 件数サマリー（旧immutable transport診断）
 
@@ -240,11 +240,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **334** |
+| 成功result未照合のimmutable submission | **336** |
 | └ Research | **121** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **68** |
+| └ Other/Unknown | **70** |
 
 ### 厳格検証が未成立のcompleted job
 

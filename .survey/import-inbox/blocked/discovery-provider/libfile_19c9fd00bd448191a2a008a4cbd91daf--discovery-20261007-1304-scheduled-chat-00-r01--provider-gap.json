@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1304-scheduled-chat-00/r01::provider-gap",
+  "reference_main_sha": "dbbf2898d087bcbd6abc43dfa364c0824715846d",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2103.14636",
+      "identity_tokens": [
+        "arXiv:2103.14636"
+      ],
+      "title": "A Practical Survey on Faster and Lighter Transformers",
+      "reason": "Transformerの計算量・memory footprint削減を中心に、parameter sharing、pruning、mixed precision、knowledge distillation、sparse/factorized attention、architecture changeを実務的に整理する効率化survey。推論節とcompute/memory trade-offを明示的に扱うため対象。",
+      "source_url": "https://arxiv.org/abs/2103.14636",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§1.2–2.4と目次を確認。full attentionのO(n^2)計算・memoryを出発点にgeneral methodsとlower-complexity x-formersを整理し、appendixにInferenceおよびOptimization and Inferenceの実務ガイドを持つ。推論時のcompute/memory削減をsurvey範囲に明示している。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.02193",
+      "identity_tokens": [
+        "arXiv:2508.02193"
+      ],
+      "title": "Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference",
+      "reason": "離散拡散言語モデルの非逐次・並列生成によりtoken-by-token decodingのlatencyを回避し、H20 GPUで2,146 token/sを報告する。言語モデルの高速度推論そのものが主要貢献なので直接対象。",
+      "source_url": "https://arxiv.org/abs/2508.02193",
+      "body_check": "fulltext_relevance_review: arXiv一次本文/abstractを確認。discrete-state diffusionによるparallel generationをinference latency対策として位置づけ、code benchmarkの品質を維持しながらH20 GPUで2,146 token/s、Mercury/Gemini Diffusionより高速なspeed-quality Paretoを報告。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04206-sangam-diffusion-llm-serving.md"
+      ],
+      "worklist_rank": 77
+    }
+  ],
+  "parent_run_key": "20261007-1304-scheduled-chat-00/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_19c9fd00bd448191a2a008a4cbd91daf--discovery-20261007-1304-scheduled-chat-00-r01.json",
+  "provider_gap_ids": [
+    "arXiv:2103.14636",
+    "arXiv:2508.02193"
+  ]
+}

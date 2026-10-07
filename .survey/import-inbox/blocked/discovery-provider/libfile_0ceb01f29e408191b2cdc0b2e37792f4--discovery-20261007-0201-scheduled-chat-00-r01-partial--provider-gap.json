@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0201-scheduled-chat-00/r01-partial::provider-gap",
+  "reference_main_sha": "aeaf9c739fbaec97fc9e71949889f1f6beb93c3b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.13106",
+      "identity_tokens": [
+        "arXiv:2501.13106"
+      ],
+      "title": "VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding",
+      "reason": "Video向けマルチモーダルLLMで、Differential Frame Prunerが時間的に隣接するpatchの画素空間L1距離を使って冗長visual tokenを削除し、長動画のLLM入力token数と学習・推論計算量を削減する。最終適用先がMLLM推論であり、token圧縮が明示的に推論計算削減を目的とするため対象。",
+      "source_url": "https://arxiv.org/abs/2501.13106",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§1–2.2を確認。2x2 spatial downsampling後、連続frameのpatch間L1距離を計算し、既定threshold 0.1未満の後続patchをDiffFPでpruneする。本文はvisual token compressionの利点としてtraining/inference computation demand削減とlong-form video processing efficiencyを明示する。",
+      "first_checked_at": "2026-10-07T02:01:50+09:00",
+      "last_checked_at": "2026-10-07T02:01:50+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "worklist_rank": 15
+    }
+  ],
+  "parent_run_key": "20261007-0201-scheduled-chat-00/r01-partial",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_0ceb01f29e408191b2cdc0b2e37792f4--discovery-20261007-0201-scheduled-chat-00-r01-partial.json",
+  "provider_gap_ids": [
+    "arXiv:2501.13106"
+  ]
+}

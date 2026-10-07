@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T23:52:56+00:00",
+  "updated_at": "2026-10-07T05:26:38+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3636,6 +3636,20 @@
       "source_path": ".survey/import-inbox/blocked/discovery/libfile_5c1a06d041f48191bde11ddffc2fac7e--discovery-20261007-0803-scheduled-chat-00-r01.json",
       "processed_at": "2026-10-06T23:52:56+00:00",
       "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-21041f85cbab--libfile_4a96a08b50708191b87e5fb961a1a282--2607.06763-trees-from-marginals.md",
+      "processed_at": "2026-10-07T05:26:38+00:00",
+      "canonical_id": "arXiv:2607.06763",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-21041f85cbab--libfile_4a96a08b50708191b87e5fb961a1a282--2607.06763-trees-from-marginals.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md",
+      "processed_at": "2026-10-07T05:26:38+00:00",
+      "canonical_id": "arXiv:2603.10087",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md"
     }
   ]
 }
