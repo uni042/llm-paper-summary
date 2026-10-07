@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Repository-wide publication-integrity audit for paper Markdown.
 
-Semantic paper quality belongs to the reading worker's self-review.
-This module intentionally checks only properties that can be verified
-without rereading the paper.
+Semantic correctness still belongs to the reading worker.  This module also
+measures a conservative explanation floor so newly completed Research can be
+sent back for rereading when the body is obviously too short.  Passing the
+floor never proves semantic quality.
 """
 from __future__ import annotations
 
@@ -30,14 +31,20 @@ HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 URL_RE = re.compile(r"https?://\S+")
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
 HTML_TAG_RE = re.compile(r"<[^>]+>")
+TABLE_RE = re.compile(r"^\s*\|.*\|\s*$")
+LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+")
+
 EXCLUDED_LANGUAGE_SECTIONS = {
     "書誌情報", "一次資料", "参考文献", "References", "更新履歴", "監査メモ"
+}
+EXCLUDED_QUALITY_SECTIONS = EXCLUDED_LANGUAGE_SECTIONS | {
+    "引用", "登録履歴"
 }
 # Compatibility alias for callers/tests that previously referenced this name.
 EXCLUDED_SECTIONS = EXCLUDED_LANGUAGE_SECTIONS
 
-# Retired v10 thresholds are preserved under .survey/legacy/quality-v10/.
-# They remain defined as neutral compatibility values for old callers only.
+# Publication-integrity compatibility values.  The repository-wide audit does
+# not turn these into semantic PASS criteria.
 DEFAULT_MIN_BYTES = 0
 DEFAULT_MIN_PROSE_CHARS = 0
 DEFAULT_MIN_PARAGRAPHS = 0
@@ -47,6 +54,29 @@ DEFAULT_MIN_JAPANESE_RATIO = 0.70
 DEFAULT_WARN_JAPANESE_RATIO = 0.80
 STRUCTURED_METHOD_MIN_PROSE_CHARS = 0
 STRUCTURED_METHOD_MIN_PARAGRAPHS = 0
+
+# Conservative "too short to call complete" trigger used by Research preflight
+# and the Library import gate.  These are one-way lower bounds: meeting them
+# does not establish semantic quality.
+QUALITY_GATE_VERSION = "2026-10-07-v1"
+QUALITY_MIN_BODY_CHARS = 2200
+QUALITY_MIN_METHOD_CHARS = 700
+QUALITY_MIN_EVALUATION_CHARS = 500
+QUALITY_WARN_LIMITATION_CHARS = 120
+
+METHOD_H2_PREFIXES = (
+    "手法", "提案手法", "方法", "アルゴリズム", "システム設計", "設計",
+    "アーキテクチャ", "調査方法", "分析方法", "分類", "体系化",
+    "method", "approach", "methodology", "algorithm", "architecture", "taxonomy",
+)
+EVALUATION_H2_PREFIXES = (
+    "評価", "実験", "結果", "主要結果", "性能", "ベンチマーク",
+    "evaluation", "experiment", "result", "benchmark",
+)
+LIMITATION_H2_PREFIXES = (
+    "限界", "制約", "適用範囲", "評価上の制約",
+    "limitation", "constraint", "scope",
+)
 
 
 @dataclass
@@ -59,8 +89,6 @@ class TermHit:
 
 @dataclass
 class PaperResult:
-    # Historical fields stay in the payload for compatibility, but retired
-    # semantic measurements are neutral and never determine PASS/FAIL.
     path: str
     status: str
     file_bytes: int
@@ -69,6 +97,11 @@ class PaperResult:
     method_paragraphs: int = 0
     method_components: int = 0
     method_detection: str = "not-evaluated"
+    method_chars: int = 0
+    evaluation_chars: int = 0
+    limitation_chars: int = 0
+    quality_gate_version: str = QUALITY_GATE_VERSION
+    insufficiency_flags: list[str] = field(default_factory=list)
     japanese_ratio: float = 1.0
     japanese_chars: int = 0
     latin_chars: int = 0
@@ -131,11 +164,140 @@ def _balanced_fences(text: str) -> bool:
     return sum(1 for line in text.splitlines() if FENCE_RE.match(line)) % 2 == 0
 
 
-
 def _normalize_heading(text: str) -> str:
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
     text = re.sub(r"[`*_~]", "", text)
     return text.strip()
+
+
+def _heading_matches(title: str, prefixes: tuple[str, ...]) -> bool:
+    normalized = _normalize_heading(title).casefold()
+    return any(
+        normalized == prefix.casefold()
+        or normalized.startswith(prefix.casefold() + " ")
+        or normalized.startswith(prefix.casefold() + "：")
+        or normalized.startswith(prefix.casefold() + ":")
+        or normalized.startswith(prefix.casefold() + "の")
+        for prefix in prefixes
+    )
+
+
+def _excluded_quality_section(title: str) -> bool:
+    normalized = _normalize_heading(title)
+    return any(
+        normalized == name or normalized.startswith(name + " ")
+        for name in EXCLUDED_QUALITY_SECTIONS
+    )
+
+
+def _clean_metric_line(line: str) -> str:
+    cleaned = URL_RE.sub(" ", line)
+    cleaned = INLINE_CODE_RE.sub(" ", cleaned)
+    cleaned = HTML_TAG_RE.sub(" ", cleaned)
+    cleaned = re.sub(r"!\[[^\]]*\]", " ", cleaned)
+    cleaned = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", cleaned)
+    cleaned = LIST_RE.sub("", cleaned)
+    cleaned = re.sub(r"[*_~>#]", " ", cleaned)
+    return re.sub(r"\s+", " ", cleaned).strip()
+
+
+def _quality_metrics(text: str) -> dict[str, int | str | list[str]]:
+    """Measure explanation prose while excluding frontmatter/references/tables.
+
+    The metric is intentionally simple and reproducible.  It is a shortness
+    detector, not a semantic grader.
+    """
+    lines, _ = strip_frontmatter(text.splitlines())
+    in_fence = False
+    section = "other"
+    excluded = False
+
+    chars = {"body": 0, "method": 0, "evaluation": 0, "limitation": 0}
+    paragraphs = {"body": 0, "method": 0}
+    pending = {"body": 0, "method": 0}
+
+    def flush() -> None:
+        if pending["body"] >= 20:
+            paragraphs["body"] += 1
+        if pending["method"] >= 20:
+            paragraphs["method"] += 1
+        pending["body"] = 0
+        pending["method"] = 0
+
+    for line in lines:
+        if FENCE_RE.match(line):
+            flush()
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+
+        hm = HEADING_RE.match(line)
+        if hm:
+            flush()
+            if len(hm.group(1)) == 2:
+                title = _normalize_heading(hm.group(2))
+                excluded = _excluded_quality_section(title)
+                if excluded:
+                    section = "excluded"
+                elif _heading_matches(title, METHOD_H2_PREFIXES):
+                    section = "method"
+                elif _heading_matches(title, EVALUATION_H2_PREFIXES):
+                    section = "evaluation"
+                elif _heading_matches(title, LIMITATION_H2_PREFIXES):
+                    section = "limitation"
+                else:
+                    section = "other"
+            continue
+
+        stripped = line.strip()
+        if excluded or not stripped or TABLE_RE.match(line):
+            flush()
+            continue
+
+        cleaned = _clean_metric_line(line)
+        if not cleaned:
+            flush()
+            continue
+        count = len(re.sub(r"\s+", "", cleaned))
+        if count == 0:
+            continue
+
+        chars["body"] += count
+        pending["body"] += count
+        if section == "method":
+            chars["method"] += count
+            pending["method"] += count
+        elif section == "evaluation":
+            chars["evaluation"] += count
+        elif section == "limitation":
+            chars["limitation"] += count
+
+        # Each list item is semantically separate even without a blank line.
+        if LIST_RE.match(line):
+            flush()
+
+    flush()
+
+    flags: list[str] = []
+    if chars["body"] < QUALITY_MIN_BODY_CHARS:
+        flags.append(f"本文説明量 {chars['body']} < {QUALITY_MIN_BODY_CHARS}")
+    if chars["method"] < QUALITY_MIN_METHOD_CHARS:
+        flags.append(f"手法説明量 {chars['method']} < {QUALITY_MIN_METHOD_CHARS}")
+    if chars["evaluation"] < QUALITY_MIN_EVALUATION_CHARS:
+        flags.append(f"評価説明量 {chars['evaluation']} < {QUALITY_MIN_EVALUATION_CHARS}")
+    if chars["limitation"] < QUALITY_WARN_LIMITATION_CHARS:
+        flags.append(f"限界説明量 {chars['limitation']} < 推奨 {QUALITY_WARN_LIMITATION_CHARS}")
+
+    return {
+        "body_chars": chars["body"],
+        "body_paragraphs": paragraphs["body"],
+        "method_chars": chars["method"],
+        "method_paragraphs": paragraphs["method"],
+        "evaluation_chars": chars["evaluation"],
+        "limitation_chars": chars["limitation"],
+        "flags": flags,
+    }
 
 
 def _language_prose(text: str) -> str:
@@ -201,6 +363,7 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace | None = No
         )
 
     jp_ratio, jp_chars, latin_chars = _japanese_ratio(text)
+    metrics = _quality_metrics(text)
 
     meta, fm_failures = _frontmatter(text)
     failures.extend(fm_failures)
@@ -209,6 +372,17 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace | None = No
             value = meta.get(key)
             if value is None or (isinstance(value, str) and not value.strip()):
                 failures.append(f"frontmatter.{key} が空")
+
+        # New templates carry an explicit semantic self-review attestation.
+        # Legacy papers without these fields are grandfathered; a present but
+        # unfinished attestation is never accepted.
+        if "quality_self_review_version" in meta or "quality_self_review_passed" in meta:
+            if meta.get("quality_self_review_passed") is not True:
+                failures.append("quality_self_review_passed が true ではない")
+            version = str(meta.get("quality_self_review_version") or "").strip()
+            if not version:
+                failures.append("quality_self_review_version が空")
+
     if not _balanced_fences(text):
         failures.append("Markdownコードフェンスが閉じていない")
     if jp_ratio < DEFAULT_MIN_JAPANESE_RATIO:
@@ -220,6 +394,26 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace | None = No
             f"日本語比率 {jp_ratio:.1%} < 警告基準 {DEFAULT_WARN_JAPANESE_RATIO:.0%}"
         )
 
+    enforce_floor = bool(getattr(args, "enforce_explanation_floor", False))
+    if enforce_floor:
+        if int(metrics["body_chars"]) < QUALITY_MIN_BODY_CHARS:
+            failures.append(
+                f"説明不足トリガー: 本文説明量 {metrics['body_chars']} < {QUALITY_MIN_BODY_CHARS}"
+            )
+        if int(metrics["method_chars"]) < QUALITY_MIN_METHOD_CHARS:
+            failures.append(
+                f"説明不足トリガー: 手法説明量 {metrics['method_chars']} < {QUALITY_MIN_METHOD_CHARS}"
+            )
+        if int(metrics["evaluation_chars"]) < QUALITY_MIN_EVALUATION_CHARS:
+            failures.append(
+                f"説明不足トリガー: 評価説明量 {metrics['evaluation_chars']} < {QUALITY_MIN_EVALUATION_CHARS}"
+            )
+        if int(metrics["limitation_chars"]) < QUALITY_WARN_LIMITATION_CHARS:
+            warnings.append(
+                f"限界説明量 {metrics['limitation_chars']} < 推奨 {QUALITY_WARN_LIMITATION_CHARS}; "
+                "一次資料と照合して具体性を確認"
+            )
+
     try:
         relative = path.relative_to(repo_root).as_posix()
     except ValueError:
@@ -229,6 +423,14 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace | None = No
         path=relative,
         status=status,
         file_bytes=len(raw),
+        prose_chars=int(metrics["body_chars"]),
+        paragraphs=int(metrics["body_paragraphs"]),
+        method_paragraphs=int(metrics["method_paragraphs"]),
+        method_detection="measured",
+        method_chars=int(metrics["method_chars"]),
+        evaluation_chars=int(metrics["evaluation_chars"]),
+        limitation_chars=int(metrics["limitation_chars"]),
+        insufficiency_flags=list(metrics["flags"]),
         japanese_ratio=jp_ratio,
         japanese_chars=jp_chars,
         latin_chars=latin_chars,
@@ -249,15 +451,25 @@ def iter_papers(repo_root: Path) -> Iterable[Path]:
 
 def markdown_report(results: list[PaperResult]) -> str:
     failed = [x for x in results if x.status == "FAIL"]
+    suspicious = [x for x in results if x.insufficiency_flags]
     lines = [
         "# Paper publication-integrity audit",
         "",
         f"- 対象: {len(results)}件",
-        f"- PASS: {len(results) - len(failed)}件",
+        f"- PASS/WARN: {len(results) - len(failed)}件",
         f"- FAIL: {len(failed)}件",
-        "- 意味品質・説明量は対象外。日本語率のみ文体上の機械ゲートとして維持",
+        f"- 説明不足トリガー該当: {len(suspicious)}件（repository-wide監査では自動FAILにしない）",
+        "- 意味品質は読解ワーカーの責務。本文/手法/評価量は極端な短文化を検知する補助指標",
         "",
     ]
+    if suspicious:
+        lines += ["## 説明不足トリガー候補", ""]
+        for item in suspicious:
+            lines.append(
+                f"- `{item.path}` — 本文 {item.prose_chars} / 手法 {item.method_chars} / "
+                f"評価 {item.evaluation_chars} / 限界 {item.limitation_chars}文字"
+            )
+        lines.append("")
     if failed:
         lines += ["## FAIL", ""]
         for item in failed:
@@ -282,6 +494,7 @@ def main() -> int:
     ):
         ap.add_argument(flag, default=None, help=argparse.SUPPRESS)
     args = ap.parse_args()
+    args.enforce_explanation_floor = False
     repo_root = args.repo_root.resolve()
     results = [audit_file(path, repo_root, args) for path in iter_papers(repo_root)]
 
@@ -295,8 +508,8 @@ def main() -> int:
     if args.json_out:
         args.json_out.parent.mkdir(parents=True, exist_ok=True)
         payload = {
-            "schema_version": 2,
-            "audit_kind": "publication_integrity",
+            "schema_version": 3,
+            "audit_kind": "publication_integrity_with_explanation_metrics",
             "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
             "criteria": {
                 "utf8": True,
@@ -306,6 +519,15 @@ def main() -> int:
                 "japanese_ratio_fail_below": DEFAULT_MIN_JAPANESE_RATIO,
                 "japanese_ratio_warn_below": DEFAULT_WARN_JAPANESE_RATIO,
                 "semantic_quality_checked": False,
+                "explanation_floor_measured": True,
+                "explanation_floor_enforced_in_repository_audit": False,
+                "explanation_floor_version": QUALITY_GATE_VERSION,
+                "explanation_floor": {
+                    "body_chars": QUALITY_MIN_BODY_CHARS,
+                    "method_chars": QUALITY_MIN_METHOD_CHARS,
+                    "evaluation_chars": QUALITY_MIN_EVALUATION_CHARS,
+                    "limitation_chars_warning": QUALITY_WARN_LIMITATION_CHARS,
+                },
             },
             "results": [asdict(x) for x in results],
         }
