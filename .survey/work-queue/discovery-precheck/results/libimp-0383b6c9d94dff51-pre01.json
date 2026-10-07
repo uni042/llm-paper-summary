@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0383b6c9d94dff51-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0383b6c9d94d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.14152"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "65e8e3570f806dda85fc738cbe5b930f5a3a02be",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T21:50:15.649490+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.14152",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization",
+      "source_url": "https://arxiv.org/abs/2305.14152",
+      "year": 2023,
+      "published": "2023-05-23",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 157,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face the challenges in fine-tuning and deployment due to their high memory demands and computational costs. While parameter-efficient fine-tuning (PEFT) methods aim to reduce the memory usage of the optimizer state during fine-tuning, the inherent size of pre-trained LLM weights continues to be a pressing concern. Even though quantization techniques are widely proposed to ease memory demands and accelerate LLM inference, most of these techniques are geared towards the deployment phase. To bridge this gap, this paper presents Parameter-Efficient and Quantization-aware Adaptation (PEQA) - a simple yet effective method that combines the advantages of PEFT with quantized LLMs. By updating solely the quantization scales, PEQA can be directly applied to quantized LLMs, ensuring seamless task transitions. Parallel to existing PEFT methods, PEQA significantly reduces the memory overhead associated with the optimizer state. Furthermore, it leverages the advantages of quantization to substantially reduce model sizes. Even after fine-tuning, the quantization structure of a PEQA-tuned LLM remains intact, allowing for accelerated inference on the deployment stage. We employ PEQA-tuning for task-specific adaptation on LLMs with up to 65 billion parameters. To assess the logical reasoning and language comprehension of PEQA-tuned LLMs, we fine-tune low-bit quantized LLMs using a instruction dataset. Our results show that even when LLMs are quantized to below 4-bit precision, their capabilities in language modeling, few-shot in-context learning, and comprehension can be resiliently restored to (or even improved over) their full-precision original performances with PEQA.",
+      "identifiers": [
+        "SemanticScholar:a10843d1349fff8d2a7d9722f800802187fef67f"
+      ],
+      "semantic_scholar_id": "a10843d1349fff8d2a7d9722f800802187fef67f",
+      "canonical_id": "arXiv:2305.14152",
+      "arxiv_id": "2305.14152",
+      "doi": "10.48550/arXiv.2305.14152",
+      "authors": [
+        "Jeonghoon Kim",
+        "J. H. Lee",
+        "Sungdong Kim",
+        "Joonsuk Park",
+        "Kang Min Yoo",
+        "S. Kwon",
+        "Dongsoo Lee"
+      ],
+      "priority": 167,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 157,
+        "citation_count": 157,
+        "total": 167,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1233,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2305.14152",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.14152",
+        "id:SemanticScholar:a10843d1349fff8d2a7d9722f800802187fef67f",
+        "id:arXiv:2305.14152",
+        "title:memoryefficient finetuning of compressed large language models via sub4bit integer quantization",
+        "url:https://arxiv.org/abs/2305.14152"
+      ],
+      "record": {
+        "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization",
+        "source_url": "https://arxiv.org/abs/2305.14152",
+        "year": 2023,
+        "published": "2023-05-23",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 157,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) face the challenges in fine-tuning and deployment due to their high memory demands and computational costs. While parameter-efficient fine-tuning (PEFT) methods aim to reduce the memory usage of the optimizer state during fine-tuning, the inherent size of pre-trained LLM weights continues to be a pressing concern. Even though quantization techniques are widely proposed to ease memory demands and accelerate LLM inference, most of these techniques are geared towards the deployment phase. To bridge this gap, this paper presents Parameter-Efficient and Quantization-aware Adaptation (PEQA) - a simple yet effective method that combines the advantages of PEFT with quantized LLMs. By updating solely the quantization scales, PEQA can be directly applied to quantized LLMs, ensuring seamless task transitions. Parallel to existing PEFT methods, PEQA significantly reduces the memory overhead associated with the optimizer state. Furthermore, it leverages the advantages of quantization to substantially reduce model sizes. Even after fine-tuning, the quantization structure of a PEQA-tuned LLM remains intact, allowing for accelerated inference on the deployment stage. We employ PEQA-tuning for task-specific adaptation on LLMs with up to 65 billion parameters. To assess the logical reasoning and language comprehension of PEQA-tuned LLMs, we fine-tune low-bit quantized LLMs using a instruction dataset. Our results show that even when LLMs are quantized to below 4-bit precision, their capabilities in language modeling, few-shot in-context learning, and comprehension can be resiliently restored to (or even improved over) their full-precision original performances with PEQA.",
+        "identifiers": [
+          "SemanticScholar:a10843d1349fff8d2a7d9722f800802187fef67f"
+        ],
+        "semantic_scholar_id": "a10843d1349fff8d2a7d9722f800802187fef67f",
+        "canonical_id": "arXiv:2305.14152",
+        "arxiv_id": "2305.14152",
+        "doi": "10.48550/arXiv.2305.14152",
+        "authors": [
+          "Jeonghoon Kim",
+          "J. H. Lee",
+          "Sungdong Kim",
+          "Joonsuk Park",
+          "Kang Min Yoo",
+          "S. Kwon",
+          "Dongsoo Lee"
+        ],
+        "priority": 167,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 157,
+          "citation_count": 157,
+          "total": 167,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1233,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:91664e758e3b658821304d1d605697e08c5ed09f4fcb327e2079cf4afc6d589a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
