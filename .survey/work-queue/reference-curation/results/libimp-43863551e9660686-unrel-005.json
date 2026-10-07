@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43863551e9660686-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2109.10686",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2109.10686",
+    "identity_tokens": [
+      "arXiv:2109.10686"
+    ],
+    "reason": "Transformerのpre-training/fine-tuning scalingを分析し、T5系を50%少ないparameter・40%速いtrainingへ再設計する研究。主要目的は学習scale設計で推論専用範囲外。",
+    "first_checked_at": "2026-10-07T09:59:38+00:00",
+    "last_checked_at": "2026-10-07T09:59:38+00:00",
+    "linked_from": [],
+    "title": "Scale Efficiently: Insights from Pre-training and Fine-tuning Transformers"
+  },
+  "processed_at": "2026-10-07T09:59:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43863551e966",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T09:49:48+00:00",
-  "record_count": 4320,
+  "updated_at": "2026-10-07T09:59:52+00:00",
+  "record_count": 4330,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65338,21 +65338,6 @@
       "borderline_recheck_count": 0,
       "title": "SkillClaw: Let Skills Evolve Collectively with Agentic Evolver"
     },
-    "arXiv:2505.23705": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2505.23705",
-      "identity_tokens": [
-        "arXiv:2505.23705"
-      ],
-      "reason": "This paper optimizes real-time VLA action policies using continuous control modules and backbone isolation; it is robotics-specific and does not show lower general-purpose LLM serving cost.",
-      "first_checked_at": "2026-10-07T08:53:44+00:00",
-      "last_checked_at": "2026-10-07T08:53:44+00:00",
-      "linked_from": [
-        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better"
-    },
     "arXiv:2407.03320": {
       "classification": "borderline",
       "canonical_id": "arXiv:2407.03320",
@@ -65520,21 +65505,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Convolutional Neural Network in Medical Image Analysis: A Review"
-    },
-    "arXiv:2106.00515": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2106.00515",
-      "identity_tokens": [
-        "arXiv:2106.00515"
-      ],
-      "reason": "The primary full text proposes k-nearest-neighbor attention for Vision Transformers to restrict dense image-patch attention and reduce noise/compute. Attention sparsification is conceptually adjacent to efficient LLM attention, but the technique and evaluations are specifically visual and do not establish language-model behavior or transfer. Keep borderline for lineage review.",
-      "first_checked_at": "2026-10-07T09:04:27+00:00",
-      "last_checked_at": "2026-10-07T09:04:27+00:00",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "KVT: k-NN Attention for Boosting Vision Transformers"
     },
     "DOI:10.1109/jsen.2026.3666203": {
       "classification": "borderline",
@@ -65949,6 +65919,190 @@
       ],
       "borderline_recheck_count": 0,
       "title": "ReAttn: Improving Attention-based Re-ranking via Attention Re-weighting"
+    },
+    "arXiv:2406.15479": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.15479",
+      "identity_tokens": [
+        "arXiv:2406.15479"
+      ],
+      "reason": "Twin-Merging dynamically composes language-model parameters, and its generative evaluation reports a slight inference-speed reduction rather than a serving gain.",
+      "first_checked_at": "2026-10-07T09:59:39+00:00",
+      "last_checked_at": "2026-10-07T09:59:39+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Twin-Merging: Dynamic Integration of Modular Expertise in Model Merging"
+    },
+    "arXiv:2511.02734": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02734",
+      "identity_tokens": [
+        "arXiv:2511.02734"
+      ],
+      "reason": "CostBench evaluates multi-turn cost-optimal LLM tool planning under changing costs; it is a benchmark, not a new planner or inference-runtime optimization.",
+      "first_checked_at": "2026-10-07T09:59:39+00:00",
+      "last_checked_at": "2026-10-07T09:59:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CostBench: Evaluating Multi-Turn Cost-Optimal Planning and Adaptation in Dynamic Environments for LLM Tool-Use Agents"
+    },
+    "arXiv:2603.25723": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25723",
+      "identity_tokens": [
+        "arXiv:2603.25723"
+      ],
+      "reason": "Natural-language agent harnesses make policy documents compact, but primary experiments report more model/tool calls or tokens than specialized code harnesses; net inference-resource savings are unproven.",
+      "first_checked_at": "2026-10-07T09:59:40+00:00",
+      "last_checked_at": "2026-10-07T09:59:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Natural-Language Agent Harnesses"
+    },
+    "DOI:10.1109/tmc.2024.3415661": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2024.3415661",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2024.3415661"
+      ],
+      "reason": "IEEE Xplore publisher abstract was verified, but opening its full-article page failed with HTTP/tool error 418 (I’m a Teapot); full text could not be reviewed, so final state is borderline.",
+      "first_checked_at": "2026-10-07T09:59:41+00:00",
+      "last_checked_at": "2026-10-07T09:59:41+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Language Models (LLMs) Inference Offloading and Resource Allocation in Cloud-Edge Computing: An Active Inference Approach"
+    },
+    "arXiv:2409.14924": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.14924",
+      "identity_tokens": [
+        "arXiv:2409.14924"
+      ],
+      "reason": "This is a comprehensive RAG/external-data survey, not a new method or measured inference optimization; topic is related but not an actionable efficiency contribution itself.",
+      "first_checked_at": "2026-10-07T09:59:43+00:00",
+      "last_checked_at": "2026-10-07T09:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval Augmented Generation (RAG) and Beyond: A Comprehensive Survey on How to Make your LLMs use External Data More Wisely"
+    },
+    "DOI:10.1038/s41586-025-10041-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41586-025-10041-x",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-10041-x"
+      ],
+      "reason": "Nature article presents Emu3 multimodal next-token model and states its current decoding is naive and could be accelerated later; it contributes no such inference optimization.",
+      "first_checked_at": "2026-10-07T09:59:43+00:00",
+      "last_checked_at": "2026-10-07T09:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multimodal learning with next-token prediction for large multimodal models"
+    },
+    "arXiv:1902.02192": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.02192",
+      "identity_tokens": [
+        "arXiv:1902.02192"
+      ],
+      "reason": "The paper learns non-monotonic word-generation orders for language modeling and translation but does not demonstrate parallel decoding or reduced inference cost/latency.",
+      "first_checked_at": "2026-10-07T09:59:48+00:00",
+      "last_checked_at": "2026-10-07T09:59:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Non-Monotonic Sequential Text Generation"
+    },
+    "arXiv:2305.16317": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.16317",
+      "identity_tokens": [
+        "arXiv:2305.16317"
+      ],
+      "reason": "Parallel diffusion sampling trades additional model evaluations for lower image/robot-policy sample latency; it is not demonstrated for LLM language inference.",
+      "first_checked_at": "2026-10-07T09:59:48+00:00",
+      "last_checked_at": "2026-10-07T09:59:48+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parallel Sampling of Diffusion Models"
+    },
+    "arXiv:2405.05945": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.05945",
+      "identity_tokens": [
+        "arXiv:2405.05945"
+      ],
+      "reason": "Lumina-T2X is a large flow-based diffusion transformer for multimodal synthesis, not an LLM language-inference or serving optimization.",
+      "first_checked_at": "2026-10-07T09:59:50+00:00",
+      "last_checked_at": "2026-10-07T09:59:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lumina-T2X: Transforming Text into Any Modality, Resolution, and Duration via Flow-based Large Diffusion Transformers"
+    },
+    "arXiv:1901.10548": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1901.10548",
+      "identity_tokens": [
+        "arXiv:1901.10548"
+      ],
+      "reason": "Latent normalizing flows model discrete sequences, but the paper establishes no LLM inference-serving or resource advantage for decoder-only systems.",
+      "first_checked_at": "2026-10-07T09:59:51+00:00",
+      "last_checked_at": "2026-10-07T09:59:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Latent Normalizing Flows for Discrete Sequences"
+    },
+    "arXiv:2603.04448": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04448",
+      "identity_tokens": [
+        "arXiv:2603.04448"
+      ],
+      "reason": "SkillNet organizes/routes reusable skills; its token analyses show coverage/quality trade-offs, not uniformly lower inference cost with quality preserved.",
+      "first_checked_at": "2026-10-07T09:59:51+00:00",
+      "last_checked_at": "2026-10-07T09:59:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkillNet: Create, Evaluate, and Connect AI Skills"
+    },
+    "arXiv:2507.16632": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.16632",
+      "identity_tokens": [
+        "arXiv:2507.16632"
+      ],
+      "reason": "Step-Audio 2 is an end-to-end audio language model, but its report does not give a concrete serving optimization or comparative latency result for this model.",
+      "first_checked_at": "2026-10-07T09:59:52+00:00",
+      "last_checked_at": "2026-10-07T09:59:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Step-Audio 2 Technical Report"
     }
   }
 }

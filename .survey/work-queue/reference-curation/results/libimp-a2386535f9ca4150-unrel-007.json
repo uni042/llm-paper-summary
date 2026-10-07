@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2386535f9ca4150-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.23705",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.23705",
+    "identity_tokens": [
+      "arXiv:2505.23705"
+    ],
+    "reason": "ロボット制御用VLAのaction expertがVLM知識転移とtraining dynamicsへ与える影響を分析しknowledge insulationを提案する。実時間性は動機だが主貢献はVLA training/knowledge transferで、汎用LLM推論基盤ではない。",
+    "first_checked_at": "2026-10-07T09:59:46+00:00",
+    "last_checked_at": "2026-10-07T09:59:46+00:00",
+    "linked_from": [],
+    "title": "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better"
+  },
+  "processed_at": "2026-10-07T09:59:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2386535f9ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

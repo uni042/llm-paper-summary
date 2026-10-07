@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T09:49:49+00:00",
-  "record_count": 10270,
+  "updated_at": "2026-10-07T09:59:52+00:00",
+  "record_count": 10308,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -23356,20 +23356,6 @@
         "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
       ],
       "title": "Glancing Transformer for Non-Autoregressive Neural Machine Translation"
-    },
-    "arXiv:2307.01379": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2307.01379",
-      "identity_tokens": [
-        "arXiv:2307.01379"
-      ],
-      "reason": "一次要旨はfree-form LLM回答の予測不確実性を定量化する研究であり、推論効率改善が目的ではない。",
-      "first_checked_at": "2026-10-05T01:38:40+00:00",
-      "last_checked_at": "2026-10-05T01:38:40+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
-      ],
-      "title": "Shifting Attention to Relevance: Towards the Predictive Uncertainty Quantification of Free-Form Large Language Models"
     },
     "DOI:10.1145/3545176": {
       "classification": "unrelated",
@@ -144768,9 +144754,9 @@
       "identity_tokens": [
         "arXiv:2307.13721"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "computer visionのfoundation modelをmultimodal architecture、training objective、dataset、prompting、applicationで整理するsurvey。最終対象はvisionでLLM推論systemsではない。",
       "first_checked_at": "2026-10-07T06:59:06+00:00",
-      "last_checked_at": "2026-10-07T08:53:45+00:00",
+      "last_checked_at": "2026-10-07T09:59:46+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
       ],
@@ -144782,9 +144768,9 @@
       "identity_tokens": [
         "arXiv:2305.18201"
       ],
-      "reason": "long-form QAのhuman/automatic evaluation指標と人間選好との相関を分析する評価研究で、推論runtime・memory・serving効率化を扱わない。",
+      "reason": "長文QA回答のhuman/automatic evaluationを比較し、factuality/completeness等の多面的評価を提唱する評価研究。推論runtime・memory・serving効率化ではない。",
       "first_checked_at": "2026-10-07T06:59:07+00:00",
-      "last_checked_at": "2026-10-07T06:59:07+00:00",
+      "last_checked_at": "2026-10-07T09:59:47+00:00",
       "linked_from": [],
       "title": "A Critical Evaluation of Evaluations for Long-form Question Answering"
     },
@@ -145074,9 +145060,9 @@
       "identity_tokens": [
         "arXiv:2102.07988"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "Transformer言語モデルの同期model-parallel trainingをtoken-level pipelineで高速化する研究。175B GPT-3のtraining高速化が主要評価で、推論専用サーベイの範囲外。",
       "first_checked_at": "2026-10-07T08:53:49+00:00",
-      "last_checked_at": "2026-10-07T08:53:49+00:00",
+      "last_checked_at": "2026-10-07T09:59:45+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
       ],
@@ -145400,9 +145386,9 @@
       "identity_tokens": [
         "arXiv:2005.09267"
       ],
-      "reason": "The paper iteratively pseudo-labels speech-recognition data; the contribution is training-data utilization, not inference efficiency.",
+      "reason": "大量の未ラベル音声をpseudo-labelしてASRをsemi-supervised trainingする手法。subset selectionで学習時間を削減するが、最終目的はspeech recognition trainingでLLM推論systemsではない。",
       "first_checked_at": "2026-10-07T09:04:18+00:00",
-      "last_checked_at": "2026-10-07T09:04:18+00:00",
+      "last_checked_at": "2026-10-07T09:59:37+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
       ],
@@ -145499,9 +145485,9 @@
       "identity_tokens": [
         "arXiv:2605.18740"
       ],
-      "reason": "The paper studies regional-to-global self-distillation to improve fine-grained visual understanding; it removes inference-time visual tools by training the model, but does not introduce inference cost, memory, throughput, serving, or cache optimization.",
+      "reason": "MLLMの細粒度視覚理解をregional-to-global self-distillationで改善する学習研究。推論時toolを不要にして速いが、主要目的は視覚認識品質の向上でLLM推論systems効率化ではない。",
       "first_checked_at": "2026-10-07T09:04:22+00:00",
-      "last_checked_at": "2026-10-07T09:04:22+00:00",
+      "last_checked_at": "2026-10-07T09:59:47+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
       ],
@@ -145527,13 +145513,13 @@
       "identity_tokens": [
         "arXiv:2404.03264"
       ],
-      "reason": "This is a healthcare foundation-model review organized around healthcare challenges and applications, not an LLM inference-system technique.",
+      "reason": "医療foundation modelのmethods/data/applicationsと課題を整理するhealthcare surveyで、計算基盤も課題の一部だがLLM推論runtime最適化が中心ではない。",
       "first_checked_at": "2026-10-07T09:04:23+00:00",
-      "last_checked_at": "2026-10-07T09:04:23+00:00",
+      "last_checked_at": "2026-10-07T09:59:47+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
       ],
-      "title": "Foundation Model for Advancing Healthcare: Challenges, Opportunities and Future Directions"
+      "title": "Foundation Model for Advancing Healthcare: Challenges, Opportunities, and Future Directions"
     },
     "arXiv:2209.02535": {
       "classification": "unrelated",
@@ -145710,9 +145696,9 @@
       "identity_tokens": [
         "arXiv:2211.13672"
       ],
-      "reason": "The self-attention ansatz targets ab-initio quantum chemistry calculations, not language-model inference.",
+      "reason": "self-attentionを用いるPsiformerで多電子Schrödinger方程式のwavefunction近似精度を高めるquantum chemistry研究。LLM推論systemsとは対象外。",
       "first_checked_at": "2026-10-07T09:04:28+00:00",
-      "last_checked_at": "2026-10-07T09:04:28+00:00",
+      "last_checked_at": "2026-10-07T09:59:38+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
       ],
@@ -146993,6 +146979,541 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
       ],
       "title": "Trust Region Masking for Long-Horizon LLM Reinforcement Learning"
+    },
+    "arXiv:2403.05231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.05231",
+      "identity_tokens": [
+        "arXiv:2403.05231"
+      ],
+      "reason": "LoRAをvision trackingへ適用し大規模ViT trackerのtraining memory/timeとtracking性能を改善する研究。推論FPSも改善するが最終workloadはvisual trackingでLLM推論ではない。",
+      "first_checked_at": "2026-10-07T09:59:38+00:00",
+      "last_checked_at": "2026-10-07T09:59:38+00:00",
+      "linked_from": [],
+      "title": "Tracking Meets LoRA: Faster Training, Larger Model, Stronger Performance"
+    },
+    "arXiv:2106.00515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.00515",
+      "identity_tokens": [
+        "arXiv:2106.00515"
+      ],
+      "reason": "top-k類似image patchだけにattentionするk-NN attentionでVision Transformerのtrainingと認識品質を改善する。最終評価はcomputer visionでLLM推論ではない。",
+      "first_checked_at": "2026-10-07T09:59:38+00:00",
+      "last_checked_at": "2026-10-07T09:59:38+00:00",
+      "linked_from": [],
+      "title": "KVT: k-NN Attention for Boosting Vision Transformers"
+    },
+    "arXiv:2109.10686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.10686",
+      "identity_tokens": [
+        "arXiv:2109.10686"
+      ],
+      "reason": "Transformerのpre-training/fine-tuning scalingを分析し、T5系を50%少ないparameter・40%速いtrainingへ再設計する研究。主要目的は学習scale設計で推論専用範囲外。",
+      "first_checked_at": "2026-10-07T09:59:38+00:00",
+      "last_checked_at": "2026-10-07T09:59:38+00:00",
+      "linked_from": [],
+      "title": "Scale Efficiently: Insights from Pre-training and Fine-tuning Transformers"
+    },
+    "arXiv:2306.05179": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.05179",
+      "identity_tokens": [
+        "arXiv:2306.05179"
+      ],
+      "reason": "9言語・12,317問の実試験問題でLLMのmultilingual/multimodal能力を測るbenchmark。モデル能力評価が主題で、推論runtime・memory・serving効率化ではない。",
+      "first_checked_at": "2026-10-07T09:59:39+00:00",
+      "last_checked_at": "2026-10-07T09:59:39+00:00",
+      "linked_from": [],
+      "title": "M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models"
+    },
+    "arXiv:2406.09009": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.09009",
+      "identity_tokens": [
+        "arXiv:2406.09009"
+      ],
+      "reason": "Fredformer targets time-series forecasting, not LLM inference/serving.",
+      "first_checked_at": "2026-10-07T09:59:39+00:00",
+      "last_checked_at": "2026-10-07T09:59:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Fredformer: Frequency Debiased Transformer for Time Series Forecasting"
+    },
+    "arXiv:2309.07311": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07311",
+      "identity_tokens": [
+        "arXiv:2309.07311"
+      ],
+      "reason": "This is empirical analysis of syntax acquisition and phase transitions in masked LMs, not a deployment optimization.",
+      "first_checked_at": "2026-10-07T09:59:40+00:00",
+      "last_checked_at": "2026-10-07T09:59:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Sudden Drops in the Loss: Syntax Acquisition, Phase Transitions, and Simplicity Bias in MLMs"
+    },
+    "arXiv:1910.05124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.05124",
+      "identity_tokens": [
+        "arXiv:1910.05124"
+      ],
+      "reason": "PipeMare improves asynchronous DNN training throughput; training is outside the inference scope.",
+      "first_checked_at": "2026-10-07T09:59:40+00:00",
+      "last_checked_at": "2026-10-07T09:59:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ],
+      "title": "PipeMare: Asynchronous Pipeline Parallel DNN Training"
+    },
+    "arXiv:2210.03930": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.03930",
+      "identity_tokens": [
+        "arXiv:2210.03930"
+      ],
+      "reason": "The method reduces complexity for graph transformers by adaptive node sampling and hierarchical attention over graph nodes; this is not LLM token inference/serving.",
+      "first_checked_at": "2026-10-07T09:59:41+00:00",
+      "last_checked_at": "2026-10-07T09:59:41+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Hierarchical Graph Transformer with Adaptive Node Sampling"
+    },
+    "arXiv:2602.05125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05125",
+      "identity_tokens": [
+        "arXiv:2602.05125"
+      ],
+      "reason": "Recursive rubric decomposition improves LLM judge/reward-model evaluation quality; it does not optimize inference compute, memory, latency, or serving.",
+      "first_checked_at": "2026-10-07T09:59:41+00:00",
+      "last_checked_at": "2026-10-07T09:59:41+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Rethinking Rubric Generation for Improving LLM Judge and Reward Modeling for Open-ended Tasks"
+    },
+    "arXiv:2109.06870": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.06870",
+      "identity_tokens": [
+        "arXiv:2109.06870"
+      ],
+      "reason": "Primary abstract: speech-recognition unsupervised pretraining and training-efficiency trade-offs, not LLM inference.",
+      "first_checked_at": "2026-10-07T09:59:41+00:00",
+      "last_checked_at": "2026-10-07T09:59:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Performance-Efficiency Trade-Offs in Unsupervised Pre-Training for Speech Recognition"
+    },
+    "arXiv:2406.18583": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.18583",
+      "identity_tokens": [
+        "arXiv:2406.18583"
+      ],
+      "reason": "Next-DiT accelerates/strengthens text-to-image/video diffusion generation, not LLM language inference or serving.",
+      "first_checked_at": "2026-10-07T09:59:41+00:00",
+      "last_checked_at": "2026-10-07T09:59:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Lumina-Next: Making Lumina-T2X Stronger and Faster with Next-DiT"
+    },
+    "arXiv:2605.03677": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.03677",
+      "identity_tokens": [
+        "arXiv:2605.03677"
+      ],
+      "reason": "Uni-OPD is an on-policy distillation training recipe with no stated inference-resource/serving improvement.",
+      "first_checked_at": "2026-10-07T09:59:42+00:00",
+      "last_checked_at": "2026-10-07T09:59:42+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe"
+    },
+    "arXiv:2603.08127": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08127",
+      "identity_tokens": [
+        "arXiv:2603.08127"
+      ],
+      "reason": "EvoScientist is a multi-agent scientific-discovery system and does not establish an inference-resource/serving optimization.",
+      "first_checked_at": "2026-10-07T09:59:42+00:00",
+      "last_checked_at": "2026-10-07T09:59:42+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "EvoScientist: Towards Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery"
+    },
+    "arXiv:2511.13653": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13653",
+      "identity_tokens": [
+        "arXiv:2511.13653"
+      ],
+      "reason": "The paper analyzes interpretable circuits in weight-sparse transformers but proposes no deployment pruning/quantization method and reports no runtime or serving gain.",
+      "first_checked_at": "2026-10-07T09:59:42+00:00",
+      "last_checked_at": "2026-10-07T09:59:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Weight-sparse transformers have interpretable circuits"
+    },
+    "arXiv:2510.14276": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14276",
+      "identity_tokens": [
+        "arXiv:2510.14276"
+      ],
+      "reason": "Qwen3Guard focuses on safety classification, not inference efficiency.",
+      "first_checked_at": "2026-10-07T09:59:42+00:00",
+      "last_checked_at": "2026-10-07T09:59:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Qwen3Guard Technical Report"
+    },
+    "arXiv:2307.03381": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03381",
+      "identity_tokens": [
+        "arXiv:2307.03381"
+      ],
+      "reason": "The paper studies arithmetic learning in small transformers, a capability/training analysis rather than inference efficiency.",
+      "first_checked_at": "2026-10-07T09:59:43+00:00",
+      "last_checked_at": "2026-10-07T09:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Teaching Arithmetic to Small Transformers"
+    },
+    "arXiv:2412.15188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15188",
+      "identity_tokens": [
+        "arXiv:2412.15188"
+      ],
+      "reason": "LMFusion adds multimodal generation capability to pretrained LMs but proposes no concrete inference-efficiency improvement.",
+      "first_checked_at": "2026-10-07T09:59:43+00:00",
+      "last_checked_at": "2026-10-07T09:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "LMFusion: Adapting Pretrained Language Models for Multimodal Generation"
+    },
+    "arXiv:2511.19861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19861",
+      "identity_tokens": [
+        "arXiv:2511.19861"
+      ],
+      "reason": "GigaWorld-0 builds world models/data for embodied AI; its target is robotic learning, not LLM inference/serving.",
+      "first_checked_at": "2026-10-07T09:59:44+00:00",
+      "last_checked_at": "2026-10-07T09:59:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "GigaWorld-0: World Models as Data Engine to Empower Embodied AI"
+    },
+    "arXiv:2511.03506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.03506",
+      "identity_tokens": [
+        "arXiv:2511.03506"
+      ],
+      "reason": "HaluMem is a benchmark measuring hallucinations and runtime of agent memory systems; it adds no inference optimization method.",
+      "first_checked_at": "2026-10-07T09:59:44+00:00",
+      "last_checked_at": "2026-10-07T09:59:44+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "HaluMem: Evaluating Hallucinations in Memory Systems of Agents"
+    },
+    "arXiv:2403.19046": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.19046",
+      "identity_tokens": [
+        "arXiv:2403.19046"
+      ],
+      "reason": "LITA addresses video temporal localization capability, not inference compute, memory, or serving.",
+      "first_checked_at": "2026-10-07T09:59:44+00:00",
+      "last_checked_at": "2026-10-07T09:59:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "LITA: Language Instructed Temporal-Localization Assistant"
+    },
+    "arXiv:2501.17399": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.17399",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.958",
+        "arXiv:2501.17399"
+      ],
+      "reason": "実際的なmulti-turn会話能力を測る評価benchmarkで、主要貢献はinstruction-following/context allocation/in-context reasoningの評価。推論runtime・memory・serving効率化を提案しない。",
+      "first_checked_at": "2026-10-07T09:59:44+00:00",
+      "last_checked_at": "2026-10-07T09:59:44+00:00",
+      "linked_from": [],
+      "title": "MultiChallenge: A Realistic Multi-Turn Conversation Evaluation Benchmark Challenging to Frontier LLMs"
+    },
+    "DOI:10.18653/v1/2024.acl-long.276": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2024.acl-long.276",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.acl-long.276",
+        "arXiv:2307.01379"
+      ],
+      "reason": "自由生成LLMの不確実性定量化で意味的に重要なtoken/sentenceへ重みを移すSARが主題。信頼性評価の研究であり、推論計算・メモリ・サービング効率化ではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-07T09:59:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Shifting Attention to Relevance: Towards the Predictive Uncertainty Quantification of Free-Form Large Language Models"
+    },
+    "DOI:10.1007/3-540-39965-8_6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-39965-8_6",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-39965-8_6"
+      ],
+      "reason": "2000年の英語からAmerican Sign Languageへの機械翻訳systemで、現代LLM/Transformer推論基盤とは対象・時代とも異なる。",
+      "first_checked_at": "2026-10-07T09:59:45+00:00",
+      "last_checked_at": "2026-10-07T09:59:45+00:00",
+      "linked_from": [],
+      "title": "A machine translation system from English to American Sign Language"
+    },
+    "arXiv:2306.02896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02896",
+      "identity_tokens": [
+        "arXiv:2306.02896"
+      ],
+      "reason": "attention層の表現能力をcommunication complexityで解析する理論研究で、width/depth/embedding dimensionの必要条件を扱う。実際のLLM推論runtime・memory・serving最適化を目的としない。",
+      "first_checked_at": "2026-10-07T09:59:45+00:00",
+      "last_checked_at": "2026-10-07T09:59:45+00:00",
+      "linked_from": [],
+      "title": "Representational Strengths and Limitations of Transformers"
+    },
+    "arXiv:2505.23705": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23705",
+      "identity_tokens": [
+        "arXiv:2505.23705"
+      ],
+      "reason": "ロボット制御用VLAのaction expertがVLM知識転移とtraining dynamicsへ与える影響を分析しknowledge insulationを提案する。実時間性は動機だが主貢献はVLA training/knowledge transferで、汎用LLM推論基盤ではない。",
+      "first_checked_at": "2026-10-07T09:59:46+00:00",
+      "last_checked_at": "2026-10-07T09:59:46+00:00",
+      "linked_from": [],
+      "title": "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better"
+    },
+    "arXiv:2410.03751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03751",
+      "identity_tokens": [
+        "arXiv:2410.03751"
+      ],
+      "reason": "Primary abstract identifies a survey of speech-language models, not a concrete inference-efficiency method.",
+      "first_checked_at": "2026-10-07T09:59:48+00:00",
+      "last_checked_at": "2026-10-07T09:59:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "title": "Recent Advances in Speech Language Models: A Survey"
+    },
+    "arXiv:2512.22414": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22414",
+      "identity_tokens": [
+        "arXiv:2512.22414"
+      ],
+      "reason": "Primary abstract concerns human-to-robot transfer for VLA policies, an embodied-learning task outside LLM inference optimization.",
+      "first_checked_at": "2026-10-07T09:59:49+00:00",
+      "last_checked_at": "2026-10-07T09:59:49+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Emergence of Human to Robot Transfer in Vision-Language-Action Models"
+    },
+    "arXiv:2012.15515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.15515",
+      "identity_tokens": [
+        "arXiv:2012.15515"
+      ],
+      "reason": "Primary article is a review of NMT methods/resources, not LLM inference optimization.",
+      "first_checked_at": "2026-10-07T09:59:49+00:00",
+      "last_checked_at": "2026-10-07T09:59:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Neural Machine Translation: A Review of Methods, Resources, and Tools"
+    },
+    "arXiv:2510.12276": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12276",
+      "identity_tokens": [
+        "arXiv:2510.12276"
+      ],
+      "reason": "Spatial Forcing aligns representations for VLA learning, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-07T09:59:49+00:00",
+      "last_checked_at": "2026-10-07T09:59:49+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Spatial Forcing: Implicit Spatial Representation Alignment for Vision-language-action Model"
+    },
+    "arXiv:2507.12440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.12440",
+      "identity_tokens": [
+        "arXiv:2507.12440"
+      ],
+      "reason": "EgoVLA is robotic VLA learning from videos, not inference optimization.",
+      "first_checked_at": "2026-10-07T09:59:49+00:00",
+      "last_checked_at": "2026-10-07T09:59:49+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "EgoVLA: Learning Vision-Language-Action Models from Egocentric Human Videos"
+    },
+    "arXiv:2309.13625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.13625",
+      "identity_tokens": [
+        "arXiv:2309.13625"
+      ],
+      "reason": "GraphAdapter tunes VLMs with knowledge graphs; the contribution is adaptation, not inference resource reduction.",
+      "first_checked_at": "2026-10-07T09:59:50+00:00",
+      "last_checked_at": "2026-10-07T09:59:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "GraphAdapter: Tuning Vision-Language Models With Dual Knowledge Graph"
+    },
+    "arXiv:2604.05015": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05015",
+      "identity_tokens": [
+        "arXiv:2604.05015"
+      ],
+      "reason": "Video-MME-v2 is a video-understanding benchmark, not an inference mechanism.",
+      "first_checked_at": "2026-10-07T09:59:50+00:00",
+      "last_checked_at": "2026-10-07T09:59:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding"
+    },
+    "arXiv:2511.13649": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13649",
+      "identity_tokens": [
+        "arXiv:2511.13649"
+      ],
+      "reason": "DMDR distills/RL-trains few-step visual diffusion generation; it does not optimize LLM inference.",
+      "first_checked_at": "2026-10-07T09:59:50+00:00",
+      "last_checked_at": "2026-10-07T09:59:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Distribution Matching Distillation Meets Reinforcement Learning"
+    },
+    "arXiv:2406.10700": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.10700",
+      "identity_tokens": [
+        "arXiv:2406.10700"
+      ],
+      "reason": "Voxel Mamba targets point-cloud 3D object detection, not LLM inference.",
+      "first_checked_at": "2026-10-07T09:59:51+00:00",
+      "last_checked_at": "2026-10-07T09:59:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Voxel Mamba: Group-Free State Space Models for Point Cloud based 3D Object Detection"
+    },
+    "arXiv:2305.04919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.04919",
+      "identity_tokens": [
+        "arXiv:2305.04919"
+      ],
+      "reason": "DiffuseStyleGesture generates co-speech gestures with diffusion and evaluates motion quality; this is not LLM inference.",
+      "first_checked_at": "2026-10-07T09:59:51+00:00",
+      "last_checked_at": "2026-10-07T09:59:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "DiffuseStyleGesture: Stylized Audio-Driven Co-Speech Gesture Generation with Diffusion Models"
+    },
+    "arXiv:2309.12855": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12855",
+      "identity_tokens": [
+        "arXiv:2309.12855"
+      ],
+      "reason": "Cross-modal alignment for biomedical survival analysis is outside LLM inference/serving.",
+      "first_checked_at": "2026-10-07T09:59:52+00:00",
+      "last_checked_at": "2026-10-07T09:59:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Cross-Modal Translation and Alignment for Survival Analysis"
+    },
+    "DOI:10.1093/nar/gkad055": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nar/gkad055",
+      "identity_tokens": [
+        "DOI:10.1093/nar/gkad055"
+      ],
+      "reason": "DeepBIO is a biological-sequence prediction/annotation platform; its high-throughput domain is unrelated to LLM inference.",
+      "first_checked_at": "2026-10-07T09:59:52+00:00",
+      "last_checked_at": "2026-10-07T09:59:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "DeepBIO: an automated and interpretable deep-learning platform for high-throughput biological sequence prediction, functional annotation and visualization analysis"
+    },
+    "arXiv:2201.01032": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.01032",
+      "identity_tokens": [
+        "arXiv:2201.01032"
+      ],
+      "reason": "Coupled attention is applied to scientific operator learning, not LLM inference.",
+      "first_checked_at": "2026-10-07T09:59:52+00:00",
+      "last_checked_at": "2026-10-07T09:59:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Learning Operators with Coupled Attention"
+    },
+    "arXiv:2310.02367": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.02367",
+      "identity_tokens": [
+        "arXiv:2310.02367"
+      ],
+      "reason": "Linear recurrent units are evaluated for sequential recommendation, not language-model inference.",
+      "first_checked_at": "2026-10-07T09:59:52+00:00",
+      "last_checked_at": "2026-10-07T09:59:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Linear Recurrent Units for Sequential Recommendation"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2386535f9ca4150-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.02896",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.02896",
+    "identity_tokens": [
+      "arXiv:2306.02896"
+    ],
+    "reason": "attention層の表現能力をcommunication complexityで解析する理論研究で、width/depth/embedding dimensionの必要条件を扱う。実際のLLM推論runtime・memory・serving最適化を目的としない。",
+    "first_checked_at": "2026-10-07T09:59:45+00:00",
+    "last_checked_at": "2026-10-07T09:59:45+00:00",
+    "linked_from": [],
+    "title": "Representational Strengths and Limitations of Transformers"
+  },
+  "processed_at": "2026-10-07T09:59:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2386535f9ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

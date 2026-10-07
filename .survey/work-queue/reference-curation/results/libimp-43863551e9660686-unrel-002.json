@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43863551e9660686-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.05231",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.05231",
+    "identity_tokens": [
+      "arXiv:2403.05231"
+    ],
+    "reason": "LoRAをvision trackingへ適用し大規模ViT trackerのtraining memory/timeとtracking性能を改善する研究。推論FPSも改善するが最終workloadはvisual trackingでLLM推論ではない。",
+    "first_checked_at": "2026-10-07T09:59:38+00:00",
+    "last_checked_at": "2026-10-07T09:59:38+00:00",
+    "linked_from": [],
+    "title": "Tracking Meets LoRA: Faster Training, Larger Model, Stronger Performance"
+  },
+  "processed_at": "2026-10-07T09:59:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43863551e966",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

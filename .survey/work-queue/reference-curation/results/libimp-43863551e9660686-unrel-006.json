@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43863551e9660686-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.05179",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.05179",
+    "identity_tokens": [
+      "arXiv:2306.05179"
+    ],
+    "reason": "9言語・12,317問の実試験問題でLLMのmultilingual/multimodal能力を測るbenchmark。モデル能力評価が主題で、推論runtime・memory・serving効率化ではない。",
+    "first_checked_at": "2026-10-07T09:59:39+00:00",
+    "last_checked_at": "2026-10-07T09:59:39+00:00",
+    "linked_from": [],
+    "title": "M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models"
+  },
+  "processed_at": "2026-10-07T09:59:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43863551e966",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

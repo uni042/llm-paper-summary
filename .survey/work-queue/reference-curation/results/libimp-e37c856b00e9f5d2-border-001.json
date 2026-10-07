@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e37c856b00e9f5d2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.05945",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.05945",
+    "identity_tokens": [
+      "arXiv:2405.05945"
+    ],
+    "reason": "Lumina-T2X is a large flow-based diffusion transformer for multimodal synthesis, not an LLM language-inference or serving optimization.",
+    "first_checked_at": "2026-10-07T09:59:50+00:00",
+    "last_checked_at": "2026-10-07T09:59:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Lumina-T2X: Transforming Text into Any Modality, Resolution, and Duration via Flow-based Large Diffusion Transformers"
+  },
+  "processed_at": "2026-10-07T09:59:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e37c856b00e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
