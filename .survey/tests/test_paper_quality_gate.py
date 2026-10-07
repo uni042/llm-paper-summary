@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import sys
 import tempfile
 import unittest
@@ -187,6 +188,71 @@ class PaperQualityGateTests(unittest.TestCase):
                 candidate,
             )
             self.assertFalse(any("長文定型文の再利用を検出" in x for x in result.failures))
+
+
+    def test_reaudit_exempts_only_verified_same_paper_from_reuse(self) -> None:
+        """A revision may retain its original paragraphs, but not another paper's."""
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            original = root / "papers/inference/verified.md"
+            original.parent.mkdir(parents=True, exist_ok=True)
+            shared_a = "同一論文の修復前から保持されている固有の設計根拠と処理手順。" * 13
+            shared_b = "修復前の表と比較対象を説明する固有の日本語散文を記録する。" * 13
+            body = shared_a + "\n\n" + shared_b + "\n"
+            original_text = (
+                "---\ncanonical_id: arXiv:2503.18893\n"
+                "title: 同一論文\nsource: https://arxiv.org/abs/2503.18893\n"
+                "summary: 同一論文の解説\nlist_summary: 研究の要点を記録する。\n"
+                "---\n\n# 同一論文\n\n" + body
+            )
+            original.write_text(original_text, encoding="utf-8")
+            source_bytes = original.read_bytes()
+            blob_sha = hashlib.sha1(
+                f"blob {len(source_bytes)}\0".encode("ascii") + source_bytes
+            ).hexdigest()
+            meta = (
+                "---\ncanonical_id: arXiv:2503.18893\n"
+                "title: 同一論文\nsource: https://arxiv.org/abs/2503.18893\n"
+                "summary: 修正論文\nlist_summary: 修正内容を要約する。\n"
+                "under16kb_reaudit_target_path: papers/inference/verified.md\n"
+                f"under16kb_reaudit_source_git_blob_sha: '{blob_sha}'\n"
+                "---\n\n# 同一論文\n\n"
+            )
+            pending_path = ".survey/import-inbox/pending/research/revision.md"
+            revision = meta + body + ("修正後の一次資料に基づく新規評価の説明。" * 30)
+            self.assertEqual(gate._boilerplate_reuse_failures(root, pending_path, revision), [])
+
+            # A false source blob must not bypass the shared-paragraph check.
+            bad_sha = revision.replace(blob_sha, "0" * 40)
+            self.assertTrue(
+                any("長文定型文の再利用を検出" in item for item in
+                    gate._boilerplate_reuse_failures(root, pending_path, bad_sha))
+            )
+
+            # A different canonical identity must not bypass the check.
+            bad_id = revision.replace(
+                "canonical_id: arXiv:2503.18893",
+                "canonical_id: arXiv:2503.18894",
+            )
+            self.assertTrue(
+                any("長文定型文の再利用を検出" in item for item in
+                    gate._boilerplate_reuse_failures(root, pending_path, bad_id))
+            )
+
+            # Even a verified revision still rejects text lifted from another paper.
+            another = root / "papers/inference/other.md"
+            copied_a = "独立した研究のためだけに書かれた全く異なる説明段落。" * 16
+            copied_b = "異なる実験条件を説明する長い別の研究の日本語本文。" * 16
+            another.write_text(
+                "---\ncanonical_id: arXiv:2401.00001\n---\n"
+                + copied_a + "\n\n" + copied_b + "\n",
+                encoding="utf-8",
+            )
+            mixed = revision + "\n\n" + copied_a + "\n\n" + copied_b
+            self.assertTrue(
+                any("papers/inference/other.md" in item for item in
+                    gate._boilerplate_reuse_failures(root, pending_path, mixed))
+            )
 
 
 if __name__ == "__main__":
