@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-07 14:20:04 JST**
+> 自動生成: **2026-10-07 14:22:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,16 +35,16 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **97033** |
-| 処理済み | **16290** |
-| 未処理Discovery候補 | **80743** |
+| 処理済み | **16320** |
+| 未処理Discovery候補 | **80713** |
 | 収録済み | **1719** |
 | Research / Audit候補へ昇格済み | **443** |
-| 無関係として除外 | **9935** |
-| 微妙として除外 | **4193** |
+| 無関係として除外 | **9964** |
+| 微妙として除外 | **4194** |
 
 - 消化率: **16.8%**
-- 現在の生在庫: 後方references **50043件** / 前方引用 **31892件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **81508件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **50024件** / 前方引用 **31892件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **81469件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -70,8 +70,8 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| maintenance pending | **false** |
-| 最終maintenance完了 | **10-07 00:00:11 JST（14時間19分前）** |
+| maintenance pending | **true** |
+| 最終maintenance完了 | **10-07 00:00:11 JST（14時間22分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -101,9 +101,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - Research: **10-06 20:58:00 JST** / worker — / run 20261006-2030-scheduled-chat-30/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_da345c5035f88191be33022d361fd0f0--2604.11035-idlm.json
-- Discovery: **10-07 14:01:00 JST** / worker scheduled-chat-00 / run 20261007-1401-scheduled-chat-00/r01
-  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_03536ff25338819194be2d16033ade84--discovery-20261007-1401-scheduled-chat-00-r01.json
+- Discovery: **10-07 14:01:00 JST** / worker scheduled-chat-00 / run 20261007-1401-scheduled-chat-00/r02-partial
+  - 本文確認・分類 **8件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_1f144d906b988191a1807841d3b8cef7--discovery-20261007-1401-scheduled-chat-00-r02-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
