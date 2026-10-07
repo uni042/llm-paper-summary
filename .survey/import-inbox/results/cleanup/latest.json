@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-07T22:14:36+00:00",
+  "updated_at": "2026-10-07T22:21:18+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3893,6 +3893,52 @@
       "processed_at": "2026-10-07T22:14:36+00:00",
       "canonical_id": "arXiv:2402.11295",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-1153d9f9e0b7--libfile_4937ba6b798c8191a7a487e8ccfdac95--2402.11295-onebit.md"
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-alisa-2403.17312.md",
+      "processed_at": "2026-10-07T22:21:18+00:00",
+      "canonical_id": "arXiv:2403.17312",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-easyep-2504.06792.md",
+      "processed_at": "2026-10-07T22:21:18+00:00",
+      "canonical_id": "arXiv:2504.06792",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-layercast-2506.09501.md",
+      "processed_at": "2026-10-07T22:21:18+00:00",
+      "canonical_id": "arXiv:2506.09501",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-moei2-2411.01016.md",
+      "processed_at": "2026-10-07T22:21:18+00:00",
+      "canonical_id": "arXiv:2411.01016",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-qmoe-2310.16795.md",
+      "processed_at": "2026-10-07T22:21:18+00:00",
+      "canonical_id": "arXiv:2310.16795",
+      "failures": [
+        "worker_completed_at"
+      ]
     }
   ]
 }
