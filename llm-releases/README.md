@@ -3,7 +3,7 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-09-24**
+- リリース情報の最終確認: **2026-10-07**
 - 用語・可読性の最終監査: **2026-09-07**
 
 2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。
@@ -37,7 +37,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 | 2026-07-16 | Kimi K3 | Kimi | 総2.8T、896 routed experts、16 experts/tokenのopen-weight native multimodal MoE。1M contextでimage / videoと長時間coding taskを対象。 | [Kimi系](kimi.md) |
 | 2026-06-03 | Gemma 4 12B Unified | Gemma | Gemma 4世代の12B級open-weight Unified model。大規模MoEよりweight規模が小さく、量子化時のローカル利用も検討しやすい帯域。 | [Gemma系](gemma.md) |
 | 2026-06-01 | MiniMax M3 | MiniMax | 1M contextとimage / video入力を持つopen-weight multimodal model。coding・multi-step agent workを対象。 | [MiniMax系](minimax.md) |
-| 2026-04-28 | Mistral Medium 3.5 | Mistral | 256K context、multimodal対応、open weightsを持ち、coding / tool利用を主対象とするMistral系モデル。 | [Mistral系](mistral.md) |
+| 2026-10-06 | Mistral Large 4 | Mistral | 1T total / 49B activeのnative multimodal flagship。APIはpublic preview、weightsは2026年10月末公開予定で、現時点ではopen-weight配布済みではない。 | [Mistral系](mistral.md) |
 | 2026-03-04 | Phi-4-reasoning-vision-15B | Phi | 約15B parameterのopen-weight multimodal reasoning model。math / science、UI・image理解を重点対象。 | [Phi系](phi.md) |
 | 2025-04-05 | Llama 4 Scout / Maverick | Llama | **期間外最新**。Meta Llama初のnative multimodal MoE世代。Scout / Maverickとも約17B activeでopen weights。 | [Llama系](llama.md) |
 

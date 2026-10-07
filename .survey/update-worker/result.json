@@ -1,18 +1,16 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261006T2048-vllm0310-llamacpp060",
+  "attempt_id": "library-import-maint-20261007T1408-mistral-large4",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "framework-updates/README.md",
-    "framework-updates/inference-engines/vllm/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
+    "llm-releases/mistral.md",
+    "llm-releases/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
-    "framework-updates/README.md",
-    "framework-updates/inference-engines/vllm/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
+    "llm-releases/mistral.md",
+    "llm-releases/README.md"
   ],
-  "summary": "2026-10-06 08:30 maintenance: vLLM v0.31.0とllama.cpp v0.6.0の確定リリースを反映。"
+  "summary": "2026-10-07 08:30 maintenance: Mistral Large 4 public previewをLLMリリース一覧へ反映。vLLM v0.31.0 / llama.cpp v0.6.0は既反映、EmbeddingGemma 2は生成LLM一覧の対象外として未追加。"
 }

@@ -6,6 +6,7 @@ Mistral系はAPI提供だけでなく重み公開（open-weight）も多いた�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-10-06 | Mistral Large 4 | 1T total / 49B activeのnative multimodal flagship。2026-10-07時点ではAPIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。coding、agentic workflows、multimodal understandingを重点化。 | https://mistral.ai/news/mistral-large-4/ |
 | 2026-04-28 | Mistral Medium 3.5 | codingやtool利用を伴うエージェント用途（agentic use）を重視したmultimodalモデル。最大256K-token contextを持ち、weightも公開されるためAPIだけでなく自前環境での実行対象にできる。 | https://docs.mistral.ai/models/mistral-medium-3-5-26-04 |
 | 2026-03-16 | Mistral Small 4 | 通常指示応答（instruct）、推論（reasoning）、multimodal理解、agentic codingを1 modelへ統合した小型側モデル。Apache 2.0 licenseのopen modelとして公開され、再配布・改変条件が比較的明確。 | https://mistral.ai/news/mistral-small-4/ |
 
