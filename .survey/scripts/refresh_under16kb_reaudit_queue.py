@@ -36,6 +36,11 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def git_blob_sha(data: bytes) -> str:
+    header = f"blob {len(data)}\\0".encode("ascii")
+    return hashlib.sha1(header + data).hexdigest()
+
+
 def parse_frontmatter(text: str) -> dict[str, Any]:
     lines = text.splitlines()
     if not lines or lines[0].strip() != "---":
@@ -150,6 +155,7 @@ def build_queue(repo_root: Path, max_file_bytes: int = MAX_FILE_BYTES) -> dict[s
                 "title": meta.get("title"),
                 "file_bytes": size,
                 "source_sha256": sha256_bytes(raw),
+                "source_git_blob_sha": git_blob_sha(raw),
                 "assigned_worker": assigned_worker(rel),
                 "semantic_status": "pending",
                 "mechanical_status": "FAIL" if failures else (
