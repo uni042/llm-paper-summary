@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78fe4ef292933b17-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.18421",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.18421",
+    "identity_tokens": [
+      "arXiv:2605.18421"
+    ],
+    "reason": "Read the primary benchmark construction and evaluation sections. EvoMemBench is a benchmark for agent memory evolution; it measures systems rather than providing an inference memory/latency optimization.",
+    "first_checked_at": "2026-10-07T09:49:45+00:00",
+    "last_checked_at": "2026-10-07T09:49:45+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective"
+  },
+  "processed_at": "2026-10-07T09:49:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78fe4ef29293",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

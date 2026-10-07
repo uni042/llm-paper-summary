@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34e763f4974839cc-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tmech.2024.3507134",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tmech.2024.3507134",
+    "identity_tokens": [
+      "DOI:10.1109/tmech.2024.3507134"
+    ],
+    "reason": "IEEE DOI publisher page was attempted as the primary source but returned an inaccessible/internal-error response; no primary full text or abstract could be read in this session.",
+    "first_checked_at": "2026-10-07T09:49:40+00:00",
+    "last_checked_at": "2026-10-07T09:49:40+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Six-DoF Pose Estimation With Efficient 3-D Gaussian Splatting Representation for Visual Relocalization"
+  },
+  "processed_at": "2026-10-07T09:49:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34e763f49748",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

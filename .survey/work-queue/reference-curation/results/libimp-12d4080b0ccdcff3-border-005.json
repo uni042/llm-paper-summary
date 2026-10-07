@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12d4080b0ccdcff3-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.06037",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.06037",
+    "identity_tokens": [
+      "arXiv:2601.06037"
+    ],
+    "reason": "Read the primary memory architecture, experiments, and conclusion. TeleMem is a long-term multimodal memory system for agentic AI, but the reviewed contribution is memory organization/recall and the evidence does not establish a concrete improvement to LLM inference latency, serving throughput, or model/KV memory; relevance to the target efficiency lineage is weak.",
+    "first_checked_at": "2026-10-07T09:49:39+00:00",
+    "last_checked_at": "2026-10-07T09:49:39+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TeleMem: Building Long-Term and Multimodal Memory for Agentic AI"
+  },
+  "processed_at": "2026-10-07T09:49:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12d4080b0ccd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T09:39:30+00:00",
-  "record_count": 10239,
+  "updated_at": "2026-10-07T09:49:49+00:00",
+  "record_count": 10270,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -146551,6 +146551,448 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "CiteAudit: You Cited It, But Did You Read It? A Benchmark for Verifying Scientific References in the LLM Era"
+    },
+    "arXiv:2602.17259": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17259",
+      "identity_tokens": [
+        "arXiv:2602.17259"
+      ],
+      "reason": "Read the primary paper sections on FRAPPE method, simulation/inference efficiency, and real-world experiments. It trains a diffusion-based vision-language-action robotic policy using future visual representation alignment; the reported efficiency concerns fine-tuning/data use and its evaluated inference is robotic action generation, not LLM inference/serving.",
+      "first_checked_at": "2026-10-07T09:49:39+00:00",
+      "last_checked_at": "2026-10-07T09:49:39+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "FRAPPE: Infusing World Modeling into Generalist Policies via Multiple Future Representation Alignment"
+    },
+    "arXiv:2602.06556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06556",
+      "identity_tokens": [
+        "arXiv:2602.06556"
+      ],
+      "reason": "LIBERO-X is a robustness benchmark for robotic VLA policies; it evaluates robustness scenarios rather than improving LLM inference compute, memory, latency, or serving.",
+      "first_checked_at": "2026-10-07T09:49:39+00:00",
+      "last_checked_at": "2026-10-07T09:49:39+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "LIBERO-X: Robustness Litmus for Vision-Language-Action Models"
+    },
+    "arXiv:2601.22607": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22607",
+      "identity_tokens": [
+        "arXiv:2601.22607"
+      ],
+      "reason": "This paper develops post-training synthetic-data and verifiable-reward RL for interactive tool agents; its contribution is agent training, with no inference-serving or inference-resource method in the primary abstract.",
+      "first_checked_at": "2026-10-07T09:49:39+00:00",
+      "last_checked_at": "2026-10-07T09:49:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "From Self-Evolving Synthetic Data to Verifiable-Reward RL: Post-Training Multi-turn Interactive Tool-Using Agents"
+    },
+    "arXiv:2512.04459": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04459",
+      "identity_tokens": [
+        "arXiv:2512.04459"
+      ],
+      "reason": "Read the primary diffusion-VLM method and driving experiments. dVLM-AD uses iterative diffusion reasoning for end-to-end autonomous driving perception/planning; its target is driving control and not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-07T09:49:40+00:00",
+      "last_checked_at": "2026-10-07T09:49:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "dVLM-AD: Enhance Diffusion Vision-Language-Model for Driving via Controllable Reasoning"
+    },
+    "arXiv:2512.04537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04537",
+      "identity_tokens": [
+        "arXiv:2512.04537"
+      ],
+      "reason": "The work creates robotized humanoid video training data and a video-editing pipeline; it is a robotics dataset/training contribution rather than LLM inference optimization.",
+      "first_checked_at": "2026-10-07T09:49:40+00:00",
+      "last_checked_at": "2026-10-07T09:49:40+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "X-Humanoid: Robotize Human Videos to Generate Humanoid Videos at Scale"
+    },
+    "arXiv:2511.15699": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.15699",
+      "identity_tokens": [
+        "arXiv:2511.15699"
+      ],
+      "reason": "Read the primary method and evaluation. The paper jointly codes semantic/channel information and modulates tokens for communication over a channel; its optimization target is communication reliability/resource use, not computation or memory of LLM inference.",
+      "first_checked_at": "2026-10-07T09:49:40+00:00",
+      "last_checked_at": "2026-10-07T09:49:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Joint Semantic-Channel Coding and Modulation for Token Communications"
+    },
+    "arXiv:2604.10425": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10425",
+      "identity_tokens": [
+        "arXiv:2604.10425"
+      ],
+      "reason": "DiningBench is a dietary-domain multimodal perception/reasoning benchmark, not an inference efficiency method.",
+      "first_checked_at": "2026-10-07T09:49:41+00:00",
+      "last_checked_at": "2026-10-07T09:49:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "DiningBench: A Hierarchical Multi-view Benchmark for Perception and Reasoning in the Dietary Domain"
+    },
+    "arXiv:2605.12015": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12015",
+      "identity_tokens": [
+        "arXiv:2605.12015"
+      ],
+      "reason": "SkillSafetyBench evaluates attack surfaces and safety of agent skills; it is an evaluation benchmark, not an LLM inference efficiency method.",
+      "first_checked_at": "2026-10-07T09:49:41+00:00",
+      "last_checked_at": "2026-10-07T09:49:41+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces"
+    },
+    "arXiv:2605.12400": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12400",
+      "identity_tokens": [
+        "arXiv:2605.12400"
+      ],
+      "reason": "OGLS-SD is an on-policy self-distillation training approach for reasoning; the primary abstract describes training optimization and does not establish inference cost/latency improvement.",
+      "first_checked_at": "2026-10-07T09:49:42+00:00",
+      "last_checked_at": "2026-10-07T09:49:42+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "OGLS-SD: On-Policy Self-Distillation with Outcome-Guided Logit Steering for LLM Reasoning"
+    },
+    "arXiv:2604.24300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24300",
+      "identity_tokens": [
+        "arXiv:2604.24300"
+      ],
+      "reason": "ReVSI rebuilds an evaluation benchmark for VLM 3D spatial reasoning; it does not contribute an inference efficiency or serving method.",
+      "first_checked_at": "2026-10-07T09:49:42+00:00",
+      "last_checked_at": "2026-10-07T09:49:42+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "ReVSI: Rebuilding Visual Spatial Intelligence Evaluation for Accurate Assessment of VLM 3D Reasoning"
+    },
+    "arXiv:2604.13018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13018",
+      "identity_tokens": [
+        "arXiv:2604.13018"
+      ],
+      "reason": "The paper targets autonomous long-horizon engineering for ML research as an agent task; no concrete LLM inference runtime/resource optimization is indicated.",
+      "first_checked_at": "2026-10-07T09:49:42+00:00",
+      "last_checked_at": "2026-10-07T09:49:42+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Toward Autonomous Long-Horizon Engineering for ML Research"
+    },
+    "arXiv:2602.02156": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02156",
+      "identity_tokens": [
+        "arXiv:2602.02156"
+      ],
+      "reason": "LoopViT scales visual ARC by looping a vision transformer; this is a vision reasoning architecture and does not address LLM inference or serving.",
+      "first_checked_at": "2026-10-07T09:49:43+00:00",
+      "last_checked_at": "2026-10-07T09:49:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ],
+      "title": "LoopViT: Scaling Visual ARC with Looped Transformers"
+    },
+    "arXiv:2601.18795": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18795",
+      "identity_tokens": [
+        "arXiv:2601.18795"
+      ],
+      "reason": "PrefixRL improves sample efficiency of reinforcement-learning training by conditioning on off-policy prefixes; the primary abstract concerns training compute/reward, not deployment inference efficiency.",
+      "first_checked_at": "2026-10-07T09:49:43+00:00",
+      "last_checked_at": "2026-10-07T09:49:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "Reuse your FLOPs: Scaling RL on Hard Problems by Conditioning on Very Off-Policy Prefixes"
+    },
+    "arXiv:2601.02204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02204",
+      "identity_tokens": [
+        "arXiv:2601.02204"
+      ],
+      "reason": "Read the primary architecture and inference-efficiency analysis. NextFlow uses next-scale visual token generation to reduce image synthesis FLOPs/runtime, but the efficiency claim is for image generation in a multimodal vision model, not LLM language inference or serving.",
+      "first_checked_at": "2026-10-07T09:49:43+00:00",
+      "last_checked_at": "2026-10-07T09:49:43+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "NextFlow: Unified Sequential Modeling Activates Multimodal Understanding and Generation"
+    },
+    "arXiv:2512.04844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04844",
+      "identity_tokens": [
+        "arXiv:2512.04844"
+      ],
+      "reason": "Read the primary method and experiments. Source-Shielded Updates modifies model parameters for target-language adaptation to reduce catastrophic forgetting, a training/fine-tuning method rather than inference-time efficiency.",
+      "first_checked_at": "2026-10-07T09:49:44+00:00",
+      "last_checked_at": "2026-10-07T09:49:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Mitigating Catastrophic Forgetting in Target Language Adaptation of LLMs via Source-Shielded Updates"
+    },
+    "arXiv:2512.10978": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.10978",
+      "identity_tokens": [
+        "arXiv:2512.10978"
+      ],
+      "reason": "The work studies functional roles of attention heads in reasoning; this is an analysis of model behavior, not a concrete inference-time efficiency method.",
+      "first_checked_at": "2026-10-07T09:49:44+00:00",
+      "last_checked_at": "2026-10-07T09:49:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Cognitive Mirrors: Exploring the Diverse Functional Roles of Attention Heads in LLM Reasoning"
+    },
+    "arXiv:2511.05449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05449",
+      "identity_tokens": [
+        "arXiv:2511.05449"
+      ],
+      "reason": "This study estimates token needs for 3D point-cloud transformer architectures; the task and models are point-cloud perception, not LLM inference or serving.",
+      "first_checked_at": "2026-10-07T09:49:44+00:00",
+      "last_checked_at": "2026-10-07T09:49:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "How Many Tokens Do 3D Point Cloud Transformer Architectures Really Need?"
+    },
+    "arXiv:2506.13651": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13651",
+      "identity_tokens": [
+        "arXiv:2506.13651"
+      ],
+      "reason": "xbench evaluates agent productivity with profession-aligned real-world tasks; it is a benchmark rather than an inference efficiency mechanism.",
+      "first_checked_at": "2026-10-07T09:49:44+00:00",
+      "last_checked_at": "2026-10-07T09:49:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "xbench: Tracking Agents Productivity Scaling with Profession-Aligned Real-World Evaluations"
+    },
+    "arXiv:2504.00587": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.00587",
+      "identity_tokens": [
+        "arXiv:2504.00587"
+      ],
+      "reason": "AgentNet proposes decentralized evolutionary coordination for multi-agent systems; the stated contribution is coordination/evolution, not LLM inference compute, memory, or serving.",
+      "first_checked_at": "2026-10-07T09:49:45+00:00",
+      "last_checked_at": "2026-10-07T09:49:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "title": "AgentNet: Decentralized Evolutionary Coordination for LLM-based Multi-Agent Systems"
+    },
+    "arXiv:2210.10349": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.10349",
+      "identity_tokens": [
+        "arXiv:2210.10349"
+      ],
+      "reason": "Read the primary FC-Attention method and music-generation experiments. Museformer sparsifies/coarsens attention for structured music-token generation, but the paper is a music-generation architecture and does not establish applicability to LLM inference or serving.",
+      "first_checked_at": "2026-10-07T09:49:45+00:00",
+      "last_checked_at": "2026-10-07T09:49:45+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Museformer: Transformer with Fine- and Coarse-Grained Attention for Music Generation"
+    },
+    "arXiv:2605.18421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18421",
+      "identity_tokens": [
+        "arXiv:2605.18421"
+      ],
+      "reason": "Read the primary benchmark construction and evaluation sections. EvoMemBench is a benchmark for agent memory evolution; it measures systems rather than providing an inference memory/latency optimization.",
+      "first_checked_at": "2026-10-07T09:49:45+00:00",
+      "last_checked_at": "2026-10-07T09:49:45+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective"
+    },
+    "arXiv:2605.13643": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13643",
+      "identity_tokens": [
+        "arXiv:2605.13643"
+      ],
+      "reason": "The paper studies strong-to-weak on-policy distillation and teachability during training; it does not claim a concrete reduction in deployment inference resources.",
+      "first_checked_at": "2026-10-07T09:49:46+00:00",
+      "last_checked_at": "2026-10-07T09:49:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Prefix Teach, Suffix Fade: Local Teachability Collapse in Strong-to-Weak On-Policy Distillation"
+    },
+    "arXiv:2604.08545": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08545",
+      "identity_tokens": [
+        "arXiv:2604.08545"
+      ],
+      "reason": "The contribution is meta-cognitive tool use in agentic multimodal models; its stated focus is tool-use capability, not a concrete inference efficiency or serving technique.",
+      "first_checked_at": "2026-10-07T09:49:46+00:00",
+      "last_checked_at": "2026-10-07T09:49:46+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models"
+    },
+    "arXiv:2604.06440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06440",
+      "identity_tokens": [
+        "arXiv:2604.06440"
+      ],
+      "reason": "Activation Prompts concerns visual prompting for vision models; it is outside the LLM inference efficiency and serving scope.",
+      "first_checked_at": "2026-10-07T09:49:46+00:00",
+      "last_checked_at": "2026-10-07T09:49:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "title": "Visual prompting reimagined: The power of the Activation Prompts"
+    },
+    "arXiv:2603.06049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06049",
+      "identity_tokens": [
+        "arXiv:2603.06049"
+      ],
+      "reason": "Read the primary driving-VLA exploration method and experiments. The paper expands policy exploration for out-of-distribution driving during policy learning; it is not an LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-07T09:49:47+00:00",
+      "last_checked_at": "2026-10-07T09:49:47+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Devil is in Narrow Policy: Unleashing Exploration in Driving VLA Models"
+    },
+    "arXiv:2603.00873": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00873",
+      "identity_tokens": [
+        "arXiv:2603.00873"
+      ],
+      "reason": "MC-Search evaluates and enhances multimodal agentic search through structured reasoning chains; the primary abstract focuses on search capability, not inference resource efficiency.",
+      "first_checked_at": "2026-10-07T09:49:47+00:00",
+      "last_checked_at": "2026-10-07T09:49:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "MC-Search: Evaluating and Enhancing Multimodal Agentic Search with Structured Long Reasoning Chains"
+    },
+    "arXiv:2602.08847": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08847",
+      "identity_tokens": [
+        "arXiv:2602.08847"
+      ],
+      "reason": "Read the primary Dr. MAS RL method and experiments. Its contribution stabilizes multi-agent LLM reinforcement-learning training; it does not report a deployment inference resource/latency method.",
+      "first_checked_at": "2026-10-07T09:49:47+00:00",
+      "last_checked_at": "2026-10-07T09:49:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "Dr. MAS: Stable Reinforcement Learning for Multi-Agent LLM Systems"
+    },
+    "arXiv:2601.18375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18375",
+      "identity_tokens": [
+        "arXiv:2601.18375"
+      ],
+      "reason": "The paper applies LLM-refined taxonomies to hierarchical text classification; its stated contribution is classification quality and taxonomy structure, not model inference cost or serving.",
+      "first_checked_at": "2026-10-07T09:49:48+00:00",
+      "last_checked_at": "2026-10-07T09:49:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Hierarchical Text Classification with LLM-Refined Taxonomies"
+    },
+    "arXiv:2601.11077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.11077",
+      "identity_tokens": [
+        "arXiv:2601.11077"
+      ],
+      "reason": "Read the primary benchmark task and evaluation sections. ABC-Bench measures backend coding agents on repository-level tasks; it evaluates agent capability and does not introduce inference efficiency or serving improvements.",
+      "first_checked_at": "2026-10-07T09:49:48+00:00",
+      "last_checked_at": "2026-10-07T09:49:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "ABC-Bench: Benchmarking Agentic Backend Coding in Real-World Development"
+    },
+    "arXiv:2601.08108": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08108",
+      "identity_tokens": [
+        "arXiv:2601.08108"
+      ],
+      "reason": "Adaptive causal prompting targets debiasing and reasoning behavior; the primary abstract does not propose an inference efficiency, memory, latency, or serving technique.",
+      "first_checked_at": "2026-10-07T09:49:48+00:00",
+      "last_checked_at": "2026-10-07T09:49:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "Debiasing Large Language Models via Adaptive Causal Prompting with Sketch-of-Thought"
+    },
+    "arXiv:2512.23075": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23075",
+      "identity_tokens": [
+        "arXiv:2512.23075"
+      ],
+      "reason": "Read the primary trust-region bounds and training experiments. Trust Region Masking addresses policy-gradient mismatch and monotonic-improvement guarantees for long-horizon LLM reinforcement learning; it is an RL training algorithm, not an inference efficiency or serving method.",
+      "first_checked_at": "2026-10-07T09:49:49+00:00",
+      "last_checked_at": "2026-10-07T09:49:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Trust Region Masking for Long-Horizon LLM Reinforcement Learning"
     }
   }
 }

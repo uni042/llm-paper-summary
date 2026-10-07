@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90f2ecefb9d84d3b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.06440",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.06440",
+    "identity_tokens": [
+      "arXiv:2604.06440"
+    ],
+    "reason": "Activation Prompts concerns visual prompting for vision models; it is outside the LLM inference efficiency and serving scope.",
+    "first_checked_at": "2026-10-07T09:49:46+00:00",
+    "last_checked_at": "2026-10-07T09:49:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+    ],
+    "title": "Visual prompting reimagined: The power of the Activation Prompts"
+  },
+  "processed_at": "2026-10-07T09:49:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90f2ecefb9d8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

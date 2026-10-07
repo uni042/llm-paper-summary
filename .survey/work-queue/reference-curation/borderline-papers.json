@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T09:39:29+00:00",
-  "record_count": 4310,
+  "updated_at": "2026-10-07T09:49:48+00:00",
+  "record_count": 4320,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65794,6 +65794,161 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Trajectory-Informed Memory Generation for Self-Improving Agent Systems"
+    },
+    "arXiv:2602.07845": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07845",
+      "identity_tokens": [
+        "arXiv:2602.07845"
+      ],
+      "reason": "Read the primary paper method, adaptive-computation design, experiments, and limitations. Recurrent-depth VLA allocates iterative latent action-head compute at inference with constant memory, a real test-time compute method; however, it targets continuous robotic actions rather than LLM token generation or serving, leaving transfer to this LLM-inference scope uncertain.",
+      "first_checked_at": "2026-10-07T09:49:38+00:00",
+      "last_checked_at": "2026-10-07T09:49:38+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning"
+    },
+    "arXiv:2601.06037": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06037",
+      "identity_tokens": [
+        "arXiv:2601.06037"
+      ],
+      "reason": "Read the primary memory architecture, experiments, and conclusion. TeleMem is a long-term multimodal memory system for agentic AI, but the reviewed contribution is memory organization/recall and the evidence does not establish a concrete improvement to LLM inference latency, serving throughput, or model/KV memory; relevance to the target efficiency lineage is weak.",
+      "first_checked_at": "2026-10-07T09:49:39+00:00",
+      "last_checked_at": "2026-10-07T09:49:39+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TeleMem: Building Long-Term and Multimodal Memory for Agentic AI"
+    },
+    "DOI:10.1109/tmech.2024.3507134": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmech.2024.3507134",
+      "identity_tokens": [
+        "DOI:10.1109/tmech.2024.3507134"
+      ],
+      "reason": "IEEE DOI publisher page was attempted as the primary source but returned an inaccessible/internal-error response; no primary full text or abstract could be read in this session.",
+      "first_checked_at": "2026-10-07T09:49:40+00:00",
+      "last_checked_at": "2026-10-07T09:49:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Six-DoF Pose Estimation With Efficient 3-D Gaussian Splatting Representation for Visual Relocalization"
+    },
+    "arXiv:2605.12039": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12039",
+      "identity_tokens": [
+        "arXiv:2605.12039"
+      ],
+      "reason": "Read the primary skill-graph RL method and experiments. SkillGraph uses reinforcement learning and evolving skill graphs for agents; graph-restricted skill retrieval may reduce inference cost, but the paper is chiefly a training/skill acquisition framework and notes extra inference cost for its teacher-driven graph evolution, so net inference-efficiency relevance remains unclear.",
+      "first_checked_at": "2026-10-07T09:49:41+00:00",
+      "last_checked_at": "2026-10-07T09:49:41+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkillGraph: Skill-Augmented Reinforcement Learning for Agents via Evolving Skill Graphs"
+    },
+    "arXiv:2601.23014": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23014",
+      "identity_tokens": [
+        "arXiv:2601.23014"
+      ],
+      "reason": "Read the primary reward-densification method and evaluation. Mem-T is a training/reward method for long-horizon memory agents; its paper plots performance against inference cost, but its proposed change is reward shaping rather than an inference-cost mechanism, leaving only a weak indirect link to the agent-memory efficiency lineage.",
+      "first_checked_at": "2026-10-07T09:49:42+00:00",
+      "last_checked_at": "2026-10-07T09:49:42+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mem-T: Densifying Rewards for Long-Horizon Memory Agents"
+    },
+    "DOI:10.1016/j.aei.2025.104089": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2025.104089",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2025.104089"
+      ],
+      "reason": "Elsevier DOI publisher page was attempted as the primary source but returned an internal-error response; no primary abstract/full text was available.",
+      "first_checked_at": "2026-10-07T09:49:42+00:00",
+      "last_checked_at": "2026-10-07T09:49:42+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Building regulation question-answering system using retrieval-augmented generation with dual-stage fine-tuned large language model"
+    },
+    "DOI:10.1007/s11604-024-01552-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11604-024-01552-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11604-024-01552-0"
+      ],
+      "reason": "Springer DOI publisher page was attempted as the primary source but was inaccessible via the available reader; do not treat cached packet abstract as primary-source verification.",
+      "first_checked_at": "2026-10-07T09:49:44+00:00",
+      "last_checked_at": "2026-10-07T09:49:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The impact of large language models on radiology: a guide for radiologists on the latest innovations in AI"
+    },
+    "arXiv:2606.27472": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27472",
+      "identity_tokens": [
+        "arXiv:2606.27472"
+      ],
+      "reason": "Read the primary memory-update method, training experiments, and conclusion. Supersede diagnoses/trains the gap between agent memory updates and use; it may affect deployed agent memory behavior, but the paper is framed as diagnosis/training and does not show a direct LLM inference resource or serving improvement.",
+      "first_checked_at": "2026-10-07T09:49:45+00:00",
+      "last_checked_at": "2026-10-07T09:49:45+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Supersede: Diagnosing and Training the Memory-Update Gap in LLM Agents"
+    },
+    "arXiv:2604.09107": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09107",
+      "identity_tokens": [
+        "arXiv:2604.09107"
+      ],
+      "reason": "Read the primary TensorHub design and scale experiments. It reduces stalls and transfer latency when synchronizing weights between LLM RL trainers and rollout workers, including a reported 1T-model transfer comparison; this is training/rollout orchestration rather than general inference serving, so relation to the target throughput lineage is indirect.",
+      "first_checked_at": "2026-10-07T09:49:47+00:00",
+      "last_checked_at": "2026-10-07T09:49:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TensorHub: Scalable and Elastic Weight Transfer for LLM RL Training"
+    },
+    "arXiv:2602.19969": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.19969",
+      "identity_tokens": [
+        "arXiv:2602.19969"
+      ],
+      "reason": "Read the primary ReAttn method, ranking experiments, and limitations. It is an attention-based LLM reranker intended as an efficient alternative to generation-based reranking and introduces post-hoc cross-document IDF and entropy weighting; however, its contribution is retrieval ranking quality, not optimization of model inference execution/serving, so scope fit is weak.",
+      "first_checked_at": "2026-10-07T09:49:48+00:00",
+      "last_checked_at": "2026-10-07T09:49:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReAttn: Improving Attention-based Re-ranking via Attention Re-weighting"
     }
   }
 }
