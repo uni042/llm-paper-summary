@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92c73052a1bf6ff2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.05007",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.05007",
+    "identity_tokens": [
+      "arXiv:2411.05007"
+    ],
+    "reason": "低ランク枝に外れ値を吸収し、4ビット重み・活性量子化と融合カーネルNunchakuで画像生成拡散モデルを高速化する。対象はSDXL、PixArt-Σ、FLUX.1の画像拡散推論であり、自己回帰LLMの推論基盤・学習システムとは異なる。",
+    "first_checked_at": "2026-10-07T21:38:11+00:00",
+    "last_checked_at": "2026-10-07T21:38:11+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md",
+      "papers/inference/99-other-inference-systems/2026-2602.09316-effective-moe-based-llm-compression-by-exploiting-heterogeneous-inter-gr.md"
+    ],
+    "title": "SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion Models"
+  },
+  "processed_at": "2026-10-07T21:38:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92c73052a1bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

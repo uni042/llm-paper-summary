@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T13:59:23+00:00",
+  "updated_at": "2026-10-07T21:38:08+00:00",
   "record_count": 4465,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -65417,21 +65417,6 @@
       "borderline_recheck_count": 0,
       "title": "Video Mamba Suite: State Space Model as a Versatile Alternative for Video Understanding"
     },
-    "DOI:10.1155/2022/4189781": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1155/2022/4189781",
-      "identity_tokens": [
-        "DOI:10.1155/2022/4189781"
-      ],
-      "reason": "Publisher DOI endpoint could not be retrieved: Wiley/Hindawi DOI page failed to fetch after the DOI attempt. Full primary text was not accessible, so relevance cannot be resolved safely.",
-      "first_checked_at": "2026-10-07T08:53:54+00:00",
-      "last_checked_at": "2026-10-07T08:53:54+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "U-Net-Based Medical Image Segmentation"
-    },
     "arXiv:2005.08700": {
       "classification": "borderline",
       "canonical_id": "arXiv:2005.08700",
@@ -68147,6 +68132,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Steering at the Source: Style Modulation Heads for Robust Persona Control"
+    },
+    "arXiv:2402.05935": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.05935",
+      "identity_tokens": [
+        "arXiv:2402.05935"
+      ],
+      "reason": "冗長な視覚エンコーダの削除、全ゼロ画像片のskip token置換、単段学習への統合は計算効率に関係するが、主評価は多モーダル理解精度・データ規模であり、汎用LLM推論/学習システムとしての定量的な性能改善が主貢献か判断を要する。",
+      "first_checked_at": "2026-10-07T21:38:08+00:00",
+      "last_checked_at": "2026-10-07T21:38:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SPHINX-X: Scaling Data and Parameters for a Family of Multi-modal Large Language Models"
     }
   }
 }

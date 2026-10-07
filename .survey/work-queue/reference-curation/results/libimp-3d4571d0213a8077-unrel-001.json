@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d4571d0213a8077-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.08472",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.08472",
+    "identity_tokens": [
+      "arXiv:2404.08472"
+    ],
+    "reason": "一次要旨で、適応的スペクトルブロックと相互作用畳み込みブロックを使い、時系列の分類・予測・異常検知を改善する汎用畳み込みモデルと確認。言語モデルの生成推論、KVキャッシュ、サービング基盤を扱わず、LLM向け最終適用先がない。",
+    "first_checked_at": "2026-10-07T21:38:04+00:00",
+    "last_checked_at": "2026-10-07T21:38:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "TSLANet: Rethinking Transformers for Time Series Representation Learning"
+  },
+  "processed_at": "2026-10-07T21:38:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d4571d0213a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

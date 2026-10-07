@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2839fadfe3f2465b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.01390",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.01390",
+    "identity_tokens": [
+      "arXiv:2108.01390"
+    ],
+    "reason": "画像分類向け視覚Transformerでclass attentionに基づき重要な画像パッチを選択し、非重要パッチを軽量経路で更新する。画像認識の演算量削減が目的で、LLMの自己回帰生成やサービングは扱わない。",
+    "first_checked_at": "2026-10-07T21:38:02+00:00",
+    "last_checked_at": "2026-10-07T21:38:02+00:00",
+    "linked_from": [],
+    "title": "Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer"
+  },
+  "processed_at": "2026-10-07T21:38:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2839fadfe3f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

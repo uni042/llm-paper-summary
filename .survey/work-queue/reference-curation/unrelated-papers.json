@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T13:59:26+00:00",
-  "record_count": 10789,
+  "updated_at": "2026-10-07T21:38:13+00:00",
+  "record_count": 10825,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -9341,21 +9341,6 @@
         "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
       ],
       "title": "Improved Regularization of Convolutional Neural Networks with Cutout"
-    },
-    "arXiv:1709.02755": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1709.02755",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.1709.02755",
-        "arXiv:1709.02755"
-      ],
-      "reason": "RNNの再帰計算を軽量化・並列化するSRUアーキテクチャ研究で高速性はあるが、現行LLM/Transformer推論基盤を最終対象としない。",
-      "first_checked_at": "2026-10-03T15:16:50+00:00",
-      "last_checked_at": "2026-10-03T15:16:50+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
-      ],
-      "title": "Simple Recurrent Units for Highly Parallelizable Recurrence"
     },
     "arXiv:1710.10903": {
       "classification": "unrelated",
@@ -24513,20 +24498,6 @@
         "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
       ],
       "title": "DOC: Improving Long Story Coherence With Detailed Outline Control"
-    },
-    "arXiv:2110.07814": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2110.07814",
-      "identity_tokens": [
-        "arXiv:2110.07814"
-      ],
-      "reason": "一次要旨はlanguage model in-context tuningによるmeta-learningのfine-tuning/training方式を提案するもので、推論効率改善対象外。",
-      "first_checked_at": "2026-10-05T01:56:24+00:00",
-      "last_checked_at": "2026-10-05T01:56:24+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
-      ],
-      "title": "Meta-learning via Language Model In-context Tuning"
     },
     "arXiv:2309.17012": {
       "classification": "unrelated",
@@ -142557,20 +142528,6 @@
       ],
       "title": "Transparently interposing user code at the system interface"
     },
-    "arXiv:1911.03631": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1911.03631",
-      "identity_tokens": [
-        "arXiv:1911.03631"
-      ],
-      "reason": "question/paragraph/sentence/entityの階層graphでmulti-hop QA性能を改善するモデル研究で、HotpotQAの回答品質が主評価。推論runtime・memory・serving効率化を扱わない。",
-      "first_checked_at": "2026-10-07T01:54:01+00:00",
-      "last_checked_at": "2026-10-07T01:54:01+00:00",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
-      ],
-      "title": "Hierarchical Graph Network for Multi-hop Question Answering"
-    },
     "arXiv:2307.10802": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2307.10802",
@@ -144045,11 +144002,14 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2022.emnlp-main.823"
       ],
-      "reason": "長文sequenceを扱うlanguage modelの能力を比較するbenchmark suite。推論runtime・memory・serving効率化方式を提案しない。",
+      "reason": "長文脈のsummarization・QA・NLIを統一評価するbenchmark suiteで、推論runtime・memory・serving効率化そのものを提案しない。",
       "first_checked_at": "2026-10-07T05:41:40+00:00",
-      "last_checked_at": "2026-10-07T05:41:40+00:00",
+      "last_checked_at": "2026-10-07T21:38:07+00:00",
       "linked_from": [
-        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2026-2604.08426-kv-cache-offloading-for-context-intensive-tasks.md"
       ],
       "title": "SCROLLS: Standardized CompaRison Over Long Language Sequences"
     },
@@ -145032,9 +144992,9 @@
       "identity_tokens": [
         "arXiv:2305.18997"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "建設業におけるGPT活用機会・課題と材料選定prototypeを検討するdomain application研究で、LLM推論基盤の効率化を扱わない。",
       "first_checked_at": "2026-10-07T08:53:48+00:00",
-      "last_checked_at": "2026-10-07T08:53:48+00:00",
+      "last_checked_at": "2026-10-07T21:38:07+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
@@ -145272,9 +145232,9 @@
       "identity_tokens": [
         "arXiv:2312.04564"
       ],
-      "reason": "The full method quantizes and prunes 3D Gaussian scene parameters for novel-view rendering; the shared word “compression” does not make it transformer/LLM compression.",
+      "reason": "量子化embeddingとpruningで3D Gaussian Splattingのscene storageを10–20倍削減しrenderingを高速化するが、最終workloadは高解像度3D novel-view synthesisでLLM推論ではない。",
       "first_checked_at": "2026-10-07T08:53:55+00:00",
-      "last_checked_at": "2026-10-07T08:53:55+00:00",
+      "last_checked_at": "2026-10-07T21:37:59+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
       ],
@@ -145284,11 +145244,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2308.10620",
       "identity_tokens": [
+        "DOI:10.1145/3695988",
         "arXiv:2308.10620"
       ],
-      "reason": "Full text treats broad software-engineering applications, datasets, tuning and evaluation; it is an application-domain literature review, not an inference-systems method.",
+      "reason": "ソフトウェア工学におけるLLM利用395論文を体系化するレビューで、主対象はコード生成・テスト・保守等のSE応用。推論ランタイム、メモリ、サービング効率化を研究対象にしない。",
       "first_checked_at": "2026-10-07T08:53:56+00:00",
-      "last_checked_at": "2026-10-07T08:53:56+00:00",
+      "last_checked_at": "2026-10-07T21:37:57+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
       ],
@@ -145300,9 +145261,9 @@
       "identity_tokens": [
         "arXiv:2403.14735"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "時系列解析向け基盤モデルをarchitecture、pre-training、adaptation、data modalityの観点で整理するsurveyで、LLM推論システム効率化を主対象としない。",
       "first_checked_at": "2026-10-07T08:53:57+00:00",
-      "last_checked_at": "2026-10-07T08:53:57+00:00",
+      "last_checked_at": "2026-10-07T21:37:58+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
       ],
@@ -154324,6 +154285,522 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
       ],
       "title": "VAREX: A Benchmark for Multi-Modal Structured Extraction from Documents"
+    },
+    "DOI:10.1038/s41586-024-08025-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-024-08025-4",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-024-08025-4"
+      ],
+      "reason": "LLM生成物を識別するwatermarkingのスケーラビリティと検出が主題で、推論速度・メモリ・サービング効率の改善を目的としない。",
+      "first_checked_at": "2026-10-07T21:37:58+00:00",
+      "last_checked_at": "2026-10-07T21:37:58+00:00",
+      "linked_from": [],
+      "title": "Scalable watermarking for identifying large language model outputs"
+    },
+    "DOI:10.18653/v1/d18-1477": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1477",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1477",
+        "DOI:10.48550/arxiv.1709.02755",
+        "arXiv:1709.02755"
+      ],
+      "reason": "再帰ネットワークのSRUを提案し学習・系列モデル計算を並列化する古典的architecture研究で、現行のLLM推論・サービング基盤を最終対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-07T21:37:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Simple Recurrent Units for Highly Parallelizable Recurrence"
+    },
+    "DOI:10.1155/2022/4189781": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1155/2022/4189781",
+      "identity_tokens": [
+        "DOI:10.1155/2022/4189781"
+      ],
+      "reason": "U-Net系の医用画像segmentationを扱う研究で、最終適用先がmedical imagingでありLLM/Transformer推論システムではない。",
+      "first_checked_at": "2026-10-07T21:37:59+00:00",
+      "last_checked_at": "2026-10-07T21:37:59+00:00",
+      "linked_from": [],
+      "title": "U-Net-Based Medical Image Segmentation"
+    },
+    "arXiv:2301.11235": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.11235",
+      "identity_tokens": [
+        "arXiv:2301.11235"
+      ],
+      "reason": "勾配法・確率的勾配法の収束証明と複雑度を整理する最適化理論handbookで、LLM推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-07T21:37:59+00:00",
+      "last_checked_at": "2026-10-07T21:37:59+00:00",
+      "linked_from": [],
+      "title": "Handbook of Convergence Theorems for (Stochastic) Gradient Methods"
+    },
+    "arXiv:2504.19678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.19678",
+      "identity_tokens": [
+        "arXiv:2504.19678"
+      ],
+      "reason": "約60のbenchmark、agent framework、agent間protocol、応用を整理するagent/評価surveyで、推論サービングや計算・メモリ効率化を中心対象としない。",
+      "first_checked_at": "2026-10-07T21:38:00+00:00",
+      "last_checked_at": "2026-10-07T21:38:00+00:00",
+      "linked_from": [],
+      "title": "From LLM Reasoning to Autonomous AI Agents: A Comprehensive Review"
+    },
+    "DOI:10.18653/v1/2022.acl-long.53": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.53",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.53",
+        "arXiv:2110.07814"
+      ],
+      "reason": "複数taskでin-context tuningを行いfew-shot適応と頑健性を改善するmeta-learning研究で、推論runtime・memory・serving効率化を主要目的としない。",
+      "first_checked_at": "2026-10-05T01:56:24+00:00",
+      "last_checked_at": "2026-10-07T21:38:00+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+      ],
+      "title": "Meta-learning via Language Model In-context Tuning"
+    },
+    "DOI:10.18653/v1/2020.emnlp-main.710": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.710",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.710",
+        "arXiv:1911.03631"
+      ],
+      "reason": "multi-hop QAの推論品質をhierarchical graph networkで改善するtask/model研究で、LLM推論システムの速度・メモリ・サービングを扱わない。",
+      "first_checked_at": "2026-10-07T01:54:01+00:00",
+      "last_checked_at": "2026-10-07T21:38:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Hierarchical Graph Network for Multi-hop Question Answering"
+    },
+    "arXiv:2103.00112": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.00112",
+      "identity_tokens": [
+        "arXiv:2103.00112"
+      ],
+      "reason": "画像を16×16パッチの視覚文と4×4の視覚語に分割し、パッチ内注意とパッチ間注意を組み合わせてImageNet画像分類を改善するTNTである。入力・評価対象は画像分類で、LLMのトークン生成、KVキャッシュ、推論サービングではない。",
+      "first_checked_at": "2026-10-07T21:38:01+00:00",
+      "last_checked_at": "2026-10-07T21:38:01+00:00",
+      "linked_from": [],
+      "title": "Transformer in Transformer"
+    },
+    "arXiv:2107.00651": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.00651",
+      "identity_tokens": [
+        "arXiv:2107.00651"
+      ],
+      "reason": "視覚Transformerの層数・埋め込み次元・注意ヘッド数を重み絡み合わせ型の一発アーキテクチャ探索で最適化する。主貢献はImageNet分類器の設計・学習で、LLM推論基盤の効率化ではない。",
+      "first_checked_at": "2026-10-07T21:38:01+00:00",
+      "last_checked_at": "2026-10-07T21:38:01+00:00",
+      "linked_from": [],
+      "title": "AutoFormer: Searching Transformers for Visual Recognition"
+    },
+    "arXiv:2108.01390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.01390",
+      "identity_tokens": [
+        "arXiv:2108.01390"
+      ],
+      "reason": "画像分類向け視覚Transformerでclass attentionに基づき重要な画像パッチを選択し、非重要パッチを軽量経路で更新する。画像認識の演算量削減が目的で、LLMの自己回帰生成やサービングは扱わない。",
+      "first_checked_at": "2026-10-07T21:38:02+00:00",
+      "last_checked_at": "2026-10-07T21:38:02+00:00",
+      "linked_from": [],
+      "title": "Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer"
+    },
+    "arXiv:2105.07926": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.07926",
+      "identity_tokens": [
+        "arXiv:2105.07926"
+      ],
+      "reason": "敵対的画像、画像破損、分布変化に対する視覚Transformerの頑健性を評価し、位置対応注意尺度とパッチ単位拡張を持つRVTを提案する。最終目的は画像認識の頑健性であり、LLM推論ランタイムではない。",
+      "first_checked_at": "2026-10-07T21:38:02+00:00",
+      "last_checked_at": "2026-10-07T21:38:02+00:00",
+      "linked_from": [],
+      "title": "Towards Robust Vision Transformer"
+    },
+    "arXiv:1709.04057": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.04057",
+      "identity_tokens": [
+        "arXiv:1709.04057"
+      ],
+      "reason": "線形依存を持つ再帰型ニューラルネットの学習・推論を並列走査CUDAカーネルで高速化し、GILR-LSTMと長系列分類を評価する。対象は2017年のRNNであり、LLM推論・KVキャッシュ・サービング固有のシステム研究ではない。",
+      "first_checked_at": "2026-10-07T21:38:02+00:00",
+      "last_checked_at": "2026-10-07T21:38:02+00:00",
+      "linked_from": [],
+      "title": "Parallelizing Linear Recurrent Neural Nets Over Sequence Length"
+    },
+    "arXiv:2210.06707": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.06707",
+      "identity_tokens": [
+        "arXiv:2210.06707"
+      ],
+      "reason": "DeiTとSwinの視覚Transformerを低ビット化し、注意行列の情報歪みを補正するIRMと蒸留DGDでImageNet分類精度を改善する。量子化の最終適用先は視覚分類であり、LLM推論向け量子化ではない。",
+      "first_checked_at": "2026-10-07T21:38:03+00:00",
+      "last_checked_at": "2026-10-07T21:38:03+00:00",
+      "linked_from": [],
+      "title": "Q-ViT: Accurate and Fully Quantized Low-bit Vision Transformer"
+    },
+    "arXiv:2401.16380": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.16380",
+      "identity_tokens": [
+        "arXiv:2401.16380"
+      ],
+      "reason": "Web文書を質問回答形式などへ言い換えた合成データと原文を混ぜ、LLMの事前学習に必要なデータ量・計算量を削減するWRAPである。改善対象は学習データ品質と事前学習効率で、推論システムではない。",
+      "first_checked_at": "2026-10-07T21:38:03+00:00",
+      "last_checked_at": "2026-10-07T21:38:03+00:00",
+      "linked_from": [],
+      "title": "Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling"
+    },
+    "arXiv:2402.17766": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.17766",
+      "identity_tokens": [
+        "arXiv:2402.17766"
+      ],
+      "reason": "点群をReCon++で符号化して言語モデルに接続し、3D物体理解・身体化された視覚的定位を行う多模態モデルである。3D指示データ学習と3D MM-Vet評価が中心で、LLM推論基盤最適化ではない。",
+      "first_checked_at": "2026-10-07T21:38:03+00:00",
+      "last_checked_at": "2026-10-07T21:38:03+00:00",
+      "linked_from": [],
+      "title": "ShapeLLM: Universal 3D Object Understanding for Embodied Interaction"
+    },
+    "DOI:10.1145/55364.55378": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/55364.55378",
+      "identity_tokens": [
+        "DOI:10.1145/55364.55378"
+      ],
+      "reason": "科学技術計算の実行時依存を有向非巡回グラフへ変換し、PARTYランタイムでIntel HypercubeとEncore Multimaxへ並列スケジュールを割り当てる1988年の一般並列計算研究である。LLM・Transformerが対象ではない。",
+      "first_checked_at": "2026-10-07T21:38:04+00:00",
+      "last_checked_at": "2026-10-07T21:38:04+00:00",
+      "linked_from": [],
+      "title": "Principles of runtime support for parallel processors"
+    },
+    "arXiv:2404.05405": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.05405",
+      "identity_tokens": [
+        "arXiv:2404.05405"
+      ],
+      "reason": "人工的な事実タプルの記憶を通じ、言語モデルがパラメータ当たり何ビットの知識を学習で保持できるかを調べる容量尺度研究である。int8量子化やMoEを分析するが、推論遅延・メモリ配置・サービング最適化の提案ではない。",
+      "first_checked_at": "2026-10-07T21:38:04+00:00",
+      "last_checked_at": "2026-10-07T21:38:04+00:00",
+      "linked_from": [],
+      "title": "Physics of Language Models: Part 3.3, Knowledge Capacity Scaling Laws"
+    },
+    "arXiv:2404.08472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08472",
+      "identity_tokens": [
+        "arXiv:2404.08472"
+      ],
+      "reason": "一次要旨で、適応的スペクトルブロックと相互作用畳み込みブロックを使い、時系列の分類・予測・異常検知を改善する汎用畳み込みモデルと確認。言語モデルの生成推論、KVキャッシュ、サービング基盤を扱わず、LLM向け最終適用先がない。",
+      "first_checked_at": "2026-10-07T21:38:04+00:00",
+      "last_checked_at": "2026-10-07T21:38:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "TSLANet: Rethinking Transformers for Time Series Representation Learning"
+    },
+    "arXiv:2504.20690": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.20690",
+      "identity_tokens": [
+        "arXiv:2504.20690"
+      ],
+      "reason": "一次要旨では拡散Transformerを用いた指示付き画像編集が主目的。少量微調整と視覚言語モデルによるノイズ候補選択で画像編集品質・効率を改善するが、LLM生成推論エンジンやサービング効率を対象としない。",
+      "first_checked_at": "2026-10-07T21:38:05+00:00",
+      "last_checked_at": "2026-10-07T21:38:05+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "In-Context Edit: Enabling Instructional Image Editing with In-Context Generation in Large Scale Diffusion Transformer"
+    },
+    "DOI:10.1145/3503222.3507750": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3503222.3507750",
+      "identity_tokens": [
+        "DOI:10.1145/3503222.3507750"
+      ],
+      "reason": "異種サーバーを使った汎用サーバーレス関数のウォーム保持・コールドスタート削減と保持コストの最適化。対象はクラウド関数の起動遅延・配置であり、LLMのKVキャッシュ、復号、推論サービングやモデル実行を扱う研究ではない。",
+      "first_checked_at": "2026-10-07T21:38:05+00:00",
+      "last_checked_at": "2026-10-07T21:38:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md"
+      ],
+      "title": "IceBreaker: warming serverless functions better with heterogeneity"
+    },
+    "arXiv:2406.09136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.09136",
+      "identity_tokens": [
+        "arXiv:2406.09136"
+      ],
+      "reason": "木探索による思考過程からステップ単位の選好情報を抽出し、連鎖思考を模倣するようLLMを微調整する学習手法。推論時の探索負荷を減らす副次効果はあるが、主要提案はモデルの選好最適化・微調整であり、凍結対象の学習アルゴリズムに属する。",
+      "first_checked_at": "2026-10-07T21:38:05+00:00",
+      "last_checked_at": "2026-10-07T21:38:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ],
+      "title": "Chain of Preference Optimization: Improving Chain-of-Thought Reasoning in LLMs"
+    },
+    "arXiv:2302.12170": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.12170",
+      "identity_tokens": [
+        "arXiv:2302.12170"
+      ],
+      "reason": "少数例プロンプトで言語モデルを進化計算の交叉演算子として利用し、ビット列・文章・数式・画像生成プロンプト・Pythonコードを変異させる研究。LLM推論エンジンの高速化・メモリ削減・サービングではない。",
+      "first_checked_at": "2026-10-07T21:38:06+00:00",
+      "last_checked_at": "2026-10-07T21:38:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "Language Model Crossover: Variation through Few-Shot Prompting"
+    },
+    "arXiv:2206.08896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.08896",
+      "identity_tokens": [
+        "arXiv:2206.08896"
+      ],
+      "reason": "コード生成LLMを遺伝的プログラミングの変異演算子として用い、MAP-ElitesでSodarace歩行ロボットのPythonプログラムを大量生成し、新しい条件付きモデルの学習を始動する進化計算研究。LLMの推論処理効率を目的としない。",
+      "first_checked_at": "2026-10-07T21:38:06+00:00",
+      "last_checked_at": "2026-10-07T21:38:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "Evolution through Large Models"
+    },
+    "DOI:10.1145/3669900": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3669900",
+      "identity_tokens": [
+        "DOI:10.1145/3669900"
+      ],
+      "reason": "CXL 1.0/2.0/3.0の一貫性・メモリ意味論、メモリ容量拡張、資源共有、アクセラレータ接続を概説する汎用ハードウェア相互接続サーベイ。LLM推論のKVキャッシュ移動や特定モデルの実行方式・評価を主題とせず、推論サーベイの背景技術にとどまる。",
+      "first_checked_at": "2026-10-07T21:38:06+00:00",
+      "last_checked_at": "2026-10-07T21:38:06+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md"
+      ],
+      "title": "An Introduction to the Compute Express Link (CXL) Interconnect"
+    },
+    "DOI:10.18653/v1/2020.emnlp-main.635": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.635",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.635"
+      ],
+      "reason": "33 NLP task間のtransfer learning効果とtask embeddingによるsource task選択を研究する学習・適応研究で、推論runtime・memory・serving効率化を目的としない。",
+      "first_checked_at": "2026-10-07T21:38:07+00:00",
+      "last_checked_at": "2026-10-07T21:38:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "Exploring and Predicting Transferability across NLP Tasks"
+    },
+    "arXiv:2411.13093": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.13093",
+      "identity_tokens": [
+        "arXiv:2411.13093"
+      ],
+      "reason": "映像のOCR・音声認識・物体検出情報を検索して動画言語モデルの理解精度を改善する応用手法で、LLM推論サービングやGPUメモリ制御のシステム機構が主目的ではない。",
+      "first_checked_at": "2026-10-07T21:38:08+00:00",
+      "last_checked_at": "2026-10-07T21:38:08+00:00",
+      "linked_from": [],
+      "title": "Video-RAG: Visually-aligned Retrieval-Augmented Long Video Comprehension"
+    },
+    "DOI:10.18653/v1/w19-5321": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w19-5321",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w19-5321"
+      ],
+      "reason": "WMT19英独ニュース翻訳の提出システムで、文書単位翻訳の学習・バックトランスレーション・アンサンブル・人手翻訳品質評価が主題。LLM推論基盤やサービング効率の研究ではない。",
+      "first_checked_at": "2026-10-07T21:38:08+00:00",
+      "last_checked_at": "2026-10-07T21:38:08+00:00",
+      "linked_from": [],
+      "title": "Microsoft Translator at WMT 2019: Towards Large-Scale Document-Level Neural Machine Translation"
+    },
+    "arXiv:2110.08499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.08499",
+      "identity_tokens": [
+        "arXiv:2110.08499"
+      ],
+      "reason": "複数文書の要約を目的にマスク文事前学習と文書間情報統合を改善するモデル学習研究。6要約データセットの品質が中心で、LLM推論・分散学習基盤の効率化を主題としない。",
+      "first_checked_at": "2026-10-07T21:38:09+00:00",
+      "last_checked_at": "2026-10-07T21:38:09+00:00",
+      "linked_from": [],
+      "title": "PRIMERA: Pyramid-based Masked Sentence Pre-training for Multi-document Summarization"
+    },
+    "arXiv:2503.14499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14499",
+      "identity_tokens": [
+        "arXiv:2503.14499"
+      ],
+      "reason": "AIエージェントの人間作業時間に対する50%成功可能時間幅を推定する能力評価研究。RE-Bench/HCAST/ソフトウェア課題で自律能力を測り、推論サーバーの速度・資源管理を改善する手法は扱わない。",
+      "first_checked_at": "2026-10-07T21:38:09+00:00",
+      "last_checked_at": "2026-10-07T21:38:09+00:00",
+      "linked_from": [],
+      "title": "Measuring AI Ability to Complete Long Software Tasks"
+    },
+    "arXiv:1812.01608": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1812.01608",
+      "identity_tokens": [
+        "arXiv:1812.01608"
+      ],
+      "reason": "Subscale Pixel Networkで高解像度画像を部分画像として自己回帰生成する画像モデル研究。CelebA-HQ/ImageNetの画質と画像尤度が主評価で、言語モデルの生成推論システムは対象外。",
+      "first_checked_at": "2026-10-07T21:38:09+00:00",
+      "last_checked_at": "2026-10-07T21:38:09+00:00",
+      "linked_from": [],
+      "title": "Generating High Fidelity Images with Subscale Pixel Networks and Multidimensional Upscaling"
+    },
+    "DOI:10.1145/3604915.3610647": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3604915.3610647",
+      "identity_tokens": [
+        "DOI:10.1145/3604915.3610647"
+      ],
+      "reason": "MovieLens 1MとGoodreadsの作品・書籍メタデータからAlpaca等で説明文を生成し、推薦用コンテンツ品質を評価する応用研究。LLM推論サービングの速度・メモリ・費用を改善する機構は提案していない。",
+      "first_checked_at": "2026-10-07T21:38:10+00:00",
+      "last_checked_at": "2026-10-07T21:38:10+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md"
+      ],
+      "title": "LLM Based Generation of Item-Description for Recommendation System"
+    },
+    "DOI:10.18653/v1/n18-4013": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-4013",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-4013"
+      ],
+      "reason": "潜在木構造学習モデルの構文解析能力を調べる人工的な前置演算列の診断データセット。2018年の木構造学習・構文解析評価が対象で、LLM生成推論の高速化・サービング・学習システム効率化ではない。",
+      "first_checked_at": "2026-10-07T21:38:11+00:00",
+      "last_checked_at": "2026-10-07T21:38:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "ListOps: A Diagnostic Dataset for Latent Tree Learning"
+    },
+    "arXiv:1203.0056": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1203.0056",
+      "identity_tokens": [
+        "arXiv:1203.0056"
+      ],
+      "reason": "従来の一問一処理型データベースを、数百のSQL問い合わせ・更新の共有実行へ変える2012年のデータベース実行系。TPC-Wでの応答保証・負荷耐性を対象とし、LLM生成推論やGPUモデル実行は扱わない。",
+      "first_checked_at": "2026-10-07T21:38:11+00:00",
+      "last_checked_at": "2026-10-07T21:38:11+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
+      ],
+      "title": "SharedDB: Killing One Thousand Queries With One Stone"
+    },
+    "arXiv:2411.05007": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.05007",
+      "identity_tokens": [
+        "arXiv:2411.05007"
+      ],
+      "reason": "低ランク枝に外れ値を吸収し、4ビット重み・活性量子化と融合カーネルNunchakuで画像生成拡散モデルを高速化する。対象はSDXL、PixArt-Σ、FLUX.1の画像拡散推論であり、自己回帰LLMの推論基盤・学習システムとは異なる。",
+      "first_checked_at": "2026-10-07T21:38:11+00:00",
+      "last_checked_at": "2026-10-07T21:38:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2602.09316-effective-moe-based-llm-compression-by-exploiting-heterogeneous-inter-gr.md"
+      ],
+      "title": "SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion Models"
+    },
+    "arXiv:2310.00656": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.00656",
+      "identity_tokens": [
+        "arXiv:2310.00656"
+      ],
+      "reason": "自然言語・形式言語を利用して定理証明を行い、証明補題ライブラリを増殖させるニューラル定理証明システム。目的は数学問題の証明正解率と知識再利用であり、LLM実行エンジンの計算資源効率を主対象としない。",
+      "first_checked_at": "2026-10-07T21:38:12+00:00",
+      "last_checked_at": "2026-10-07T21:38:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "LEGO-Prover: Neural Theorem Proving with Growing Libraries"
+    },
+    "DOI:10.1145/2745844.2745848": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2745844.2745848",
+      "identity_tokens": [
+        "DOI:10.1145/2745844.2745848"
+      ],
+      "reason": "FacebookデータセンターのSSD故障を約4年間の実運用データで分析し、摩耗・配置・温度・読出し妨害などの信頼性要因を評価するストレージ研究。LLMのKVオフロードやモデル推論の性能最適化ではない。",
+      "first_checked_at": "2026-10-07T21:38:12+00:00",
+      "last_checked_at": "2026-10-07T21:38:12+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md"
+      ],
+      "title": "A Large-Scale Study of Flash Memory Failures in the Field"
+    },
+    "arXiv:2212.04092": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.04092",
+      "identity_tokens": [
+        "arXiv:2212.04092"
+      ],
+      "reason": "複雑な質問を順次小問へ分解し、追加の少数例や微調整済み部品で解く質問応答手法。DROPのF1向上を主評価とし、逐次プロンプトが増える方式で推論システムのメモリ・遅延・スループット改善を目的としない。",
+      "first_checked_at": "2026-10-07T21:38:12+00:00",
+      "last_checked_at": "2026-10-07T21:38:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Successive Prompting for Decomposing Complex Questions"
+    },
+    "arXiv:1907.02684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1907.02684",
+      "identity_tokens": [
+        "arXiv:1907.02684"
+      ],
+      "reason": "句構造・依存構造を統合するHPSG構文解析アルゴリズムの研究。Penn TreebankとChinese Penn Treebankの構文解析精度を評価し、LLM生成推論や学習基盤の効率化を対象としない。",
+      "first_checked_at": "2026-10-07T21:38:13+00:00",
+      "last_checked_at": "2026-10-07T21:38:13+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2605.01708-splitzip-lossless-kv-compression.md"
+      ],
+      "title": "Head-Driven Phrase Structure Grammar Parsing on Penn Treebank"
+    },
+    "DOI:10.1145/3604932": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3604932",
+      "identity_tokens": [
+        "DOI:10.1145/3604932"
+      ],
+      "reason": "RDFやラベル付き属性グラフ、トリプルストア、索引、分散、ACIDなど51種のグラフデータベースを分類するシステムサーベイ。LLMのモデル実行、MoE、KVキャッシュ、学習時メモリ・通信の効率化を対象としない。",
+      "first_checked_at": "2026-10-07T21:38:13+00:00",
+      "last_checked_at": "2026-10-07T21:38:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Demystifying Graph Databases: Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries"
     }
   }
 }

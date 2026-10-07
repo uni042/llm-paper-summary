@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92c73052a1bf6ff2-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1907.02684",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1907.02684",
+    "identity_tokens": [
+      "arXiv:1907.02684"
+    ],
+    "reason": "句構造・依存構造を統合するHPSG構文解析アルゴリズムの研究。Penn TreebankとChinese Penn Treebankの構文解析精度を評価し、LLM生成推論や学習基盤の効率化を対象としない。",
+    "first_checked_at": "2026-10-07T21:38:13+00:00",
+    "last_checked_at": "2026-10-07T21:38:13+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2605.01708-splitzip-lossless-kv-compression.md"
+    ],
+    "title": "Head-Driven Phrase Structure Grammar Parsing on Penn Treebank"
+  },
+  "processed_at": "2026-10-07T21:38:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92c73052a1bf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
