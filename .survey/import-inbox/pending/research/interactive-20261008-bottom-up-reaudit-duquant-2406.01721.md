@@ -1,0 +1,253 @@
+---
+canonical_id: arXiv:2406.01721
+arxiv_id: '2406.01721'
+doi: 10.48550/arxiv.2406.01721
+title: 'DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs'
+summary: 巨大外れ値と通常外れ値を、外れ値次元を手掛かりにしたブロック回転・ジグザグ置換・再回転で分散する4ビット重み・活性量子化手法。LLaMA群の常識推論で約5ポイント、Vicuna-v1.5-13BのゼロショットMMLUで約10ポイント既存4ビット方式を改善し、LLaMA2-7BではFP16比でプリフィル最大2.08倍、復号時メモリ3.50倍削減を報告する。
+list_summary: 巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
+publication: arXiv
+publication_type: preprint
+publication_status: Preprint
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率
+source: https://arxiv.org/abs/2406.01721
+sources:
+- https://arxiv.org/abs/2406.01721
+- https://proceedings.neurips.cc/paper_files/paper/2024/hash/9febda1c8344cc5f2d51713964864e93-Abstract-Conference.html
+last_checked: '2026-09-28'
+authors:
+- Lin, Haokun
+- Xu, Haobo
+- Wu, Yichen
+- Cui, Jingzhi
+- Zhang, Yingtao
+- Mou, Linzhan
+- Song, Linqi
+- Sun, Zhenan
+- Wei, Ying
+published: '2024-06-03'
+arxiv_categories:
+  primary: cs.CL
+  cross_list: []
+code: https://github.com/Hsu1023/DuQuant
+implementation: 公式実装が公開されている。論文は4ビット重み・活性量子化を中心に、精度評価に加えてLLaMA2-7Bでプリフィル速度と復号時メモリも評価する。
+implementation_status: official-code
+references:
+- canonical_id: arXiv:2310.09259
+  arxiv_id: '2310.09259'
+- canonical_id: arXiv:2404.00456
+  arxiv_id: '2404.00456'
+- canonical_id: arXiv:2012.15701
+  arxiv_id: '2012.15701'
+- canonical_id: arXiv:2308.14508
+  arxiv_id: '2308.14508'
+- canonical_id: arXiv:1308.3432
+  arxiv_id: '1308.3432'
+- canonical_id: arXiv:2307.13304
+- canonical_id: arXiv:2407.11062
+  arxiv_id: '2407.11062'
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2306.03078
+- canonical_id: arXiv:2406.02924
+  arxiv_id: '2406.02924'
+- canonical_id: arXiv:2402.10631
+  arxiv_id: '2402.10631'
+- canonical_id: arXiv:2405.06219
+  arxiv_id: '2405.06219'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:1510.00149
+  arxiv_id: '1510.00149'
+- canonical_id: arXiv:2405.14256
+  arxiv_id: '2405.14256'
+- canonical_id: arXiv:2309.15531
+  arxiv_id: '2309.15531'
+- canonical_id: arXiv:1611.01600
+  arxiv_id: '1611.01600'
+- canonical_id: arXiv:2404.14047
+  arxiv_id: '2404.14047'
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: arXiv:2306.07629
+  arxiv_id: '2306.07629'
+- canonical_id: arXiv:2402.18158
+  arxiv_id: '2402.18158'
+- canonical_id: arXiv:2306.00978
+  arxiv_id: '2306.00978'
+- canonical_id: arXiv:2405.14366
+  arxiv_id: '2405.14366'
+- canonical_id: OpenReview:FIplmUWdm3
+  openreview_id: FIplmUWdm3
+- canonical_id: arXiv:2403.01241
+  arxiv_id: '2403.01241'
+- canonical_id: arXiv:2305.17888
+  arxiv_id: '2305.17888'
+- canonical_id: arXiv:2402.02750
+  arxiv_id: '2402.02750'
+- canonical_id: arXiv:2410.06535
+  arxiv_id: '2410.06535'
+- canonical_id: arXiv:2403.12544
+  arxiv_id: '2403.12544'
+- canonical_id: arXiv:2405.20835
+  arxiv_id: '2405.20835'
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2310.00034
+- canonical_id: arXiv:2402.17762
+  arxiv_id: '2402.17762'
+- canonical_id: arXiv:2203.10705
+  arxiv_id: '2203.10705'
+- canonical_id: arXiv:2407.13623
+  arxiv_id: '2407.13623'
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2402.04396
+  arxiv_id: '2402.04396'
+- canonical_id: arXiv:2312.03863
+  arxiv_id: '2312.03863'
+- canonical_id: arXiv:2406.13035
+  arxiv_id: '2406.13035'
+- canonical_id: arXiv:2406.18139
+  arxiv_id: '2406.18139'
+- canonical_id: arXiv:2402.03666
+  arxiv_id: '2402.03666'
+- canonical_id: arXiv:2403.07378
+  arxiv_id: '2403.07378'
+- canonical_id: arXiv:2405.16005
+  arxiv_id: '2405.16005'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2405.14428
+  arxiv_id: '2405.14428'
+- canonical_id: arXiv:2406.09229
+  arxiv_id: '2406.09229'
+- canonical_id: arXiv:2304.01089
+  arxiv_id: '2304.01089'
+- canonical_id: arXiv:2403.14624
+  arxiv_id: '2403.14624'
+- canonical_id: arXiv:2009.12812
+  arxiv_id: '2009.12812'
+- canonical_id: OpenReview:Tr0lPx9woF
+  openreview_id: Tr0lPx9woF
+- canonical_id: arXiv:2405.17873
+  arxiv_id: '2405.17873'
+- canonical_id: arXiv:2310.19102
+  arxiv_id: '2310.19102'
+- canonical_id: arXiv:2407.07268
+  arxiv_id: '2407.07268'
+- canonical_id: arXiv:2306.05685
+  arxiv_id: '2306.05685'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 78
+last_audited: '2026-10-08'
+audit_version: 2
+under16kb_reaudit_target_path: papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md
+under16kb_reaudit_source_git_blob_sha: '4aeeff0cfc7eee5b7bb05ce7166aacae9d76994f'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-duquant'
+worker_completed_at: '2026-10-08T07:27:27+09:00'
+
+---
+
+# DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs
+
+> 巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
+
+## 概要
+
+低ビット量子化では、活性値のごく一部だけが極端に大きいと量子化範囲がその値に引っ張られ、残りの値へ割り当てられる整数段階が粗くなる。DuQuantが特に問題視するのは、広いトークンで同じ特徴次元に現れる通常外れ値（Normal Outliers）だけではなく、少数トークンにだけ桁違いの振幅で現れる巨大外れ値（Massive Outliers）である。著者らは、巨大外れ値がフィードフォワードネットワーク（Feed-Forward Network; FFN）のダウンプロジェクション入力にも現れ、既存の平滑化だけでは4ビット重み・4ビット活性（W4A4）の精度を大きく落とすことを示す。
+
+DuQuantは、線形層の入出力を変えない直交変換として、外れ値次元を手掛かりに探索したブロック単位回転、ブロック間の外れ値分布を均すジグザグ置換、さらに残った局所外れ値をならす二段目の回転を順番に適用する。変換に対応する逆変換を重み側へ畳み込むため、単に活性値をクリップするのではなく、活性値と重みの双方を量子化しやすい分布へ移す設計である。
+
+4ビット重み・活性量子化の評価では、LLaMAの複数規模にわたる常識推論で既存方式から約5ポイント、Vicuna-v1.5-13BのゼロショットMMLUで約10ポイントの改善を報告する。LLaMA2-7Bの実装評価では、FP16に対してプリフィルを最大2.08倍高速化し、復号時メモリを3.50倍削減しながら、パープレキシティ増加を0.61、精度低下を2.71ポイントに抑えた。
+
+## 問題設定
+
+SmoothQuantのような既存手法は、活性値に集中した通常外れ値を重み側へ移すことで量子化しやすくする。しかし巨大外れ値では、必要なスケーリング係数そのものが非常に大きくなり、活性値側を平滑化した代わりに重み側へ新しい大きな外れ値を作ることがある。したがって「活性値だけの最大値を下げる」ことでは、W4A4で必要な重み・活性値の同時低ビット化を安定させられない。
+
+もう一つの課題は、全特徴次元へ密な回転を適用すれば分布を混ぜられる一方、変換行列の保存量や変換コストが大きくなることである。逆にブロック対角回転へ制限すると、各ブロックの中では値を混ぜられても、巨大外れ値が特定ブロックへ偏った状態は残る。DuQuantはこの「局所的な回転の効率」と「ブロックをまたぐ外れ値分散」を分離し、回転と置換を組み合わせる。
+
+## 手法
+
+### 外れ値誘導のブロック回転
+
+最初の変換では、活性値の各次元に現れる外れ値を観測し、最大外れ値を持つ次元を事前知識として回転行列を構成する。無作為な直交回転ではなく、現在最も大きな外れ値を抑える方向を貪欲に選ぶことで、量子化誤差を支配するピーク値へ直接作用する。回転はブロック対角構造に限定し、完全な密行列を持つ場合より保存量と変換量を抑える。
+
+線形層を Y = XW とすると、活性値Xへ直交回転を入れる一方で、対応する転置・逆変換を重みWへ吸収できる。このため実数演算としての線形変換は等価なまま、量子化直前の値の分布だけを変えられる。DuQuantはこの等価性を利用し、外れ値を隣接チャネルへ広げると同時に、平滑化で重み側へ生じる外れ値も抑える。
+
+### ジグザグ置換
+
+ブロック回転だけでは、もともと大きな外れ値を多く含むブロックとそうでないブロックの差が残る。そこで各チャネルを最大外れ値の大きさで並べ、大きいものと小さいものが各ブロックへ交互に配られるようジグザグ状に置換する。これはチャネル数自体を削る処理ではなく、どのチャネルを同じ回転ブロックへ入れるかを組み替える処理である。
+
+置換後は各ブロックが似た外れ値負荷を持つため、特定ブロックだけが量子化レンジを支配しにくくなる。論文はこの置換によってブロック間の外れ値統計に上界を与え、単純なブロック回転の弱点を補うことを理論的にも説明する。
+
+### 二段目の回転と量子化
+
+ジグザグ置換の後、各ブロックに残る局所的なピークをもう一度回転で平滑化する。処理順は「外れ値誘導回転 → ブロック間置換 → 再回転」であり、最初の回転だけでは届かないブロック間、置換だけでは消えないブロック内の偏りを段階的に減らす。
+
+最終的にはこの変換済み表現へ整数一様量子化を適用する。論文の主眼はW4A4であり、複雑な重み補正を後段へ追加するのではなく、量子化前の値域を変換によって整えることで、4ビットの限られた表現段階を有効に使う。
+
+## 評価
+
+### 代表的な評価条件
+
+| 項目 | 条件 |
+| --- | --- |
+| 主対象 | 4ビット重み・4ビット活性量子化（W4A4） |
+| モデル | LLaMA系列の複数規模、Vicuna-v1.5-13B、実装評価ではLLaMA2-7B |
+| 品質評価 | 常識推論、ゼロショットMMLU、パープレキシティ等 |
+| 比較の中心 | SmoothQuant、QuaRot等の低ビット量子化・回転系手法 |
+| システム評価 | LLaMA2-7Bでプリフィル速度と復号時メモリをFP16と比較 |
+| 実装 | 公式コード公開。性能値は論文で用いた量子化カーネルと実装条件に依存する |
+
+### 代表的な評価結果
+
+| 条件 | 指標 | 比較対象 | DuQuant | 改善・差 | 読み取れること |
+| --- | --- | --- | --- | --- | --- |
+| LLaMA複数規模、W4A4 | 常識推論精度 | 既存4ビット量子化方式 | 全規模で改善 | 約+5ポイント | 巨大外れ値対策が特定規模だけでなく複数LLaMAへ効く |
+| Vicuna-v1.5-13B、W4A4 | ゼロショットMMLU | 既存4ビット量子化方式 | より高精度 | 約+10ポイント | 知識・推論系評価でも低ビット化の劣化を抑える |
+| LLaMA2-7B | プリフィル速度 | FP16 | 最大2.08倍 | 最大2.08倍高速 | 精度改善だけでなく低ビット実装の速度利得を確認 |
+| LLaMA2-7B | 復号時メモリ | FP16 | 3.50倍削減 | 3.50倍 | 重み・活性の低ビット化が容量面へ直接効く |
+| LLaMA2-7B | パープレキシティ / 精度 | FP16 | +0.61 / -2.71ポイント | 小幅な品質低下 | 速度・容量改善には完全無損失ではない交換条件がある |
+
+評価で重要なのは、精度表だけでなく実装上の速度・メモリと品質低下を同じ条件で読むことである。DuQuantの代表値は「4ビット化すれば常に2.08倍」という一般則ではなく、LLaMA2-7Bと論文実装におけるプリフィル測定である。一方、複数モデル・複数課題で精度改善が再現されていることは、変換が単一モデル固有の外れ値配置だけに依存していないことを示す。
+
+### 二種類の外れ値と実測値の区別（再監査補足）
+
+DuQuantは、活性値に存在する外れ値の大きさが一様ではないことに着目する。通常の外れ値は多くのトークンに現れる比較的大きな活性チャネルだが、まれに桁違いに大きい値が出る巨大外れ値では、一般的な平滑化だけでは量子化の尺度が大きく歪む。DuQuantは巨大外れ値が集中するチャネルの位置を利用して局所的な回転を行い、隣接するチャネルへ分散させる。さらにジグザグ型の並べ替えでブロック間の分散を均し、二回目の回転を適用する。重みと活性をともに四ビットにする際、量子化の準備費用を実行時の負担へ持ち込まない設計である。
+
+論文の精度改善は「浮動小数点モデルより五ポイント高精度になる」という意味ではない。複数規模のLLaMAを四ビット重み・四ビット活性に変換した場合、従来の低ビット量子化方式との比較で常識推論の正解率が約五ポイント改善すると報告する。Vicuna-v1.5-13BのゼロショットMMLUでは、低ビットの既存方式に対して約十ポイントの改善を示す場合がある。ただし元の浮動小数点モデルとの比較では、LLaMA2-7Bの困惑度が〇・六一増え、平均正解率は二・七一ポイント低いなど、完全無損失ではない。
+
+同じLLaMA2-7Bの実装評価でプリフィルが最大二・〇八倍高速化し、復号時のメモリが三・五〇分の一になる条件が報告される。これは二回転というアルゴリズムの性質だけで自動的に生じる速度ではなく、対応した四ビット演算カーネルとメモリ配置を利用した場合の結果である。復号とプリフィルでは演算器の利用率が異なり、量子化済みの重みを復号する費用も異なるため、両段階を同じ倍率で評価するのは不適切である。評価は特定のLLaMAやVicunaに中心を置いており、任意の新しいMoEに無変更で適用できるとは証明されていない。一次資料arXiv:2406.01721とNeurIPS 2024の著者公開資料に基づく。
+
+## 既存研究との差
+
+SmoothQuantは活性値と重みのスケールを調整して通常外れ値を移すが、巨大外れ値では重み側へ新しい外れ値を作り得る。DuQuantはスケール移動だけでなく、直交回転によって値そのものを複数チャネルへ分散し、さらにジグザグ置換でブロック間の偏りまで均す。
+
+QuaRotのような回転ベース手法に対しては、固定的な回転ではなく外れ値次元を事前情報として回転を探索する点と、ブロック回転の局所性をジグザグ置換で補う点が差になる。論文は重みと活性値を同時に平滑化することで、QuaRotで用いられる重い後処理を避けられることも利点として挙げる。
+
+## 限界・実装状況
+
+本手法は量子化前変換を設計する後処理型の方式であり、外れ値統計の取得、回転行列の探索、置換と重み変換が必要になる。推論時の利得は量子化カーネル、対象GPU、モデル形状に依存するため、品質表の改善をそのまま任意の実行基盤の高速化へ読み替えることはできない。
+
+評価の中心は4ビット重み・活性量子化である。より低いビット幅、異なるアーキテクチャ、非常に異なる外れ値分布で同じ利得が得られるとは論文の代表結果だけからは言えない。またFP16比の実装結果にはパープレキシティと精度の小幅な劣化が残るため、DuQuantは完全無損失圧縮ではない。
+
+## 一次資料
+
+- arXiv: https://arxiv.org/abs/2406.01721
+- NeurIPS 2024: https://proceedings.neurips.cc/paper_files/paper/2024/hash/9febda1c8344cc5f2d51713964864e93-Abstract-Conference.html
+- 公式コード: https://github.com/Hsu1023/DuQuant
+
+## 修正履歴
+
+- 2026-09-28（修正済み）: 新しい品質ガイドに合わせ、他論文へ流用できる汎用推論テンプレート文を削除。巨大外れ値、外れ値誘導回転、ジグザグ置換、二段目回転の処理関係を一次資料ベースで再構成し、評価条件表・評価結果表、定量結果、既存手法との差、限界を追加。
+
+- 2026-10-08: 16KB未満再監査で一次資料・比較条件・品質と速度の交換条件を本文へ増補。
