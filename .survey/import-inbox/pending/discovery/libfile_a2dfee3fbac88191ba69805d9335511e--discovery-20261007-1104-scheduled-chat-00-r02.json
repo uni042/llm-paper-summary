@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1104-scheduled-chat-00/r02",
+  "reference_main_sha": "d08c55eec6ac36d046ece8682f0e389725ee5412",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.06104",
+      "identity_tokens": [
+        "arXiv:2103.06104"
+      ],
+      "title": "U-Net Transformer: Self and Cross Attention for Medical Image Segmentation",
+      "reason": "U-Netへself/cross-attentionを組み込む医療画像segmentation研究で、最終評価は腹部CT画像。LLM/言語モデル推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2103.06104",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmedical image segmentation、U-shaped architecture、abdominal CT datasetsが主題と明確なため本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2024.naacl-long.15",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.naacl-long.15",
+        "arXiv:2307.05300"
+      ],
+      "title": "Unleashing the Emergent Cognitive Synergy in Large Language Models: A Task-Solving Agent through Multi-Persona Self-Collaboration",
+      "reason": "単一LLM内で複数personaを模擬してproblem-solving品質・hallucinationを改善するprompting/agent能力研究。推論計算効率やservingを主目的・主要評価にしない。",
+      "source_url": "https://arxiv.org/abs/2307.05300",
+      "body_check": "abstract_screen_only: 一次abstractでSolo Performance Prompting、multi-persona self-collaboration、Trivia/Codenames/Logic Gridの能力評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/d18-1477",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1477",
+        "arXiv:1709.02755"
+      ],
+      "title": "Simple Recurrent Units for Highly Parallelizable Recurrence",
+      "reason": "state computationを並列化しやすいSimple Recurrent Unitでsequence model実行を高速化し、cuDNN最適化LSTM比5–9倍のspeed-upをNLP分類/QAで示す。言語sequence inference architectureの計算効率へ直接関係する。",
+      "source_url": "https://arxiv.org/abs/1709.02755",
+      "body_check": "fulltext_relevance_review: 一次論文でSRUがmatrix multiplicationをtime-step間で並列化し、element-wise recurrenceだけを逐次化する構造を確認。分類/QAでcuDNN LSTM比5–9x speed-upを実測し、translationにも適用しているため言語推論効率の系譜として対象。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.11537-predictive-prefetching-expert-replication.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.14485",
+      "identity_tokens": [
+        "arXiv:2409.14485"
+      ],
+      "title": "Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding",
+      "reason": "Visual Summarization Tokenで動画区間の視覚情報をKVへ圧縮し、情報密度に応じて動的圧縮することで長動画MLLMのcontext costを削減する。16倍圧縮でも損失を小さくし単一A100で数千frameを処理するため対象。",
+      "source_url": "https://arxiv.org/abs/2409.14485",
+      "body_check": "fulltext_relevance_review: 一次論文で各video intervalにVSTを置きassociated KVへ視覚情報を集約する仕組み、curriculum/composite-data training、information densityに応じるdynamic compressionを確認。16x compressionとsingle-A100 thousands-frame processingを評価しておりMLLM推論効率へ直接適用。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3158661",
+      "identity_tokens": [
+        "DOI:10.1145/3158661"
+      ],
+      "title": "A Survey on NoSQL Stores",
+      "reason": "NoSQL databaseのdata model・consistency・partitioning・CAP設計を整理するdatabase surveyで、LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1145/3158661",
+      "body_check": "abstract_screen_only: 出版書誌・abstractでNoSQL storesのdistributed database design principlesを整理するsurveyと確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1600",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1600",
+        "arXiv:1810.07366"
+      ],
+      "title": "A Span-Extraction Dataset for Chinese Machine Reading Comprehension",
+      "reason": "中国語machine reading comprehension用datasetの構築とbaseline評価が主題で、推論runtime・memory・serving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1810.07366",
+      "body_check": "abstract_screen_only: 一次書誌/abstractでWikipedia由来約2万questionのspan-extraction MRC datasetとchallenge setが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.07915",
+      "identity_tokens": [
+        "arXiv:2309.07915"
+      ],
+      "title": "MMICL: Empowering Vision-language Model with Multi-Modal In-Context Learning",
+      "reason": "複数画像・テキストを組み合わせたmulti-modal in-context learning能力を高めるモデル/学習研究で、推論token・memory・latency削減を主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2309.07915",
+      "body_check": "abstract_screen_only: 一次書誌と論文概要でmulti-modal in-context learning、interleaved image-text promptingと能力評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/168619.168626",
+      "identity_tokens": [
+        "DOI:10.1145/168619.168626"
+      ],
+      "title": "Transparently interposing user code at the system interface",
+      "reason": "system call interfaceへuser codeを透過的にinterposeする一般OS toolkit研究で、LLM/Transformer推論への最終適用がない。",
+      "source_url": "https://doi.org/10.1145/168619.168626",
+      "body_check": "abstract_screen_only: 出版情報でsystem-call interception/interposition toolkit、filesystem view、tracing等の一般OS用途が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md"
+      ],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3591300",
+      "identity_tokens": [
+        "DOI:10.1145/3591300",
+        "arXiv:2212.06094"
+      ],
+      "title": "Prompting Is Programming: A Query Language for Large Language Models",
+      "reason": "LMQLがpromptのconstraints/control flowから効率的な推論手順を生成し、不要なmodel calls/token generationを避ける。複数taskで計算量/API costを26–85%削減し、LLM inference procedure最適化を直接扱うため対象。",
+      "source_url": "https://arxiv.org/abs/2212.06094",
+      "body_check": "fulltext_relevance_review: 一次論文でLMQL compiler/runtimeがconstraintsを利用してdecoder calls/model queriesを削減し、interactive promptingを効率化する仕組みを確認。accuracyを維持・改善しつつpay-to-use APIで26–85% cost savingsを報告しており推論実行効率が主要貢献。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2602.11808-deep-kernel-fusion-transformers.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md"
+      ],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-1260",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1260",
+        "arXiv:1811.00783"
+      ],
+      "title": "Abstractive Summarization of Reddit Posts with Multi-level Memory Networks",
+      "reason": "Reddit TIFU summarization datasetとmulti-level memory networkによる要約品質改善が主題で、推論systems効率を主要目的・評価にしない。",
+      "source_url": "https://arxiv.org/abs/1811.00783",
+      "body_check": "abstract_screen_only: arXiv一次abstractで120K Reddit posts dataset、word/sentence/paragraph/document-level memoryによるabstractive summarization品質が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 44
+    }
+  ]
+}
