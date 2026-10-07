@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "source_commit": "post-maintenance-working-tree",
-  "checked_at": "2026-10-07T21:23:37.248941+00:00",
-  "status": "issues_found",
+  "source_commit": "citation-backfill-working-tree",
+  "checked_at": "2026-10-07T21:40:01.093005+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 49694,
-  "checked_file_count": 49694,
+  "inventory_file_count": 49710,
+  "checked_file_count": 49710,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,11 +26,5 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 3095,
-  "findings": [
-    {
-      "code": "paper_invalid_metadata",
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
-      "detail": "published must use YYYY-MM or YYYY-MM-DD"
-    }
-  ]
+  "findings": []
 }
