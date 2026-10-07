@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r178-screen-01-part-01-9f319bcb9999",
+  "reference_main_sha": "85e26b943e161cfe557fc0dae0c8b7298dad60e4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28820",
+      "identity_tokens": [
+        "arXiv:2605.28820"
+      ],
+      "title": "From Pixels to Words - Towards Native One-Vision Models at Scale",
+      "reason": "The architecture may reduce modality-interface overhead, but the primary text does not quantify deployed inference gains.",
+      "source_url": "https://arxiv.org/abs/2605.28820",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23657",
+      "identity_tokens": [
+        "arXiv:2605.23657"
+      ],
+      "title": "OpenSkillEval: Automatically Auditing the Open Skill Ecosystem for LLM Agents",
+      "reason": "OpenSkillEval is an audit/benchmark of open agent skills and reports safety/quality auditing; its primary abstract does not present an inference-efficiency intervention.",
+      "source_url": "https://arxiv.org/abs/2605.23657",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23889",
+      "identity_tokens": [
+        "arXiv:2605.23889"
+      ],
+      "title": "HorizonStream: Long-Horizon Attention for Streaming 3D Reconstruction",
+      "reason": "The primary text develops long-horizon attention for streaming 3D reconstruction and evaluates geometric reconstruction quality. Its attention mechanism is for 3D scene reconstruction, not LLM/VLM language inference or serving.",
+      "source_url": "https://arxiv.org/abs/2605.23889",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21028",
+      "identity_tokens": [
+        "arXiv:2605.21028"
+      ],
+      "title": "DySink: Dynamic Frame Sinks for Autoregressive Long Video Generation",
+      "reason": "The efficiency mechanism is for video diffusion frame history, with no demonstrated LLM inference benefit.",
+      "source_url": "https://arxiv.org/abs/2605.21028",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20266",
+      "identity_tokens": [
+        "arXiv:2605.20266"
+      ],
+      "title": "A Survey of Large Audio Language Models: Generalization, Trustworthiness, and Outlook",
+      "reason": "This is a survey of large audio language models focused on generalization and trustworthiness; it synthesizes the field rather than proposing a concrete inference-cost or serving method.",
+      "source_url": "https://arxiv.org/abs/2605.20266",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ]
+    }
+  ]
+}
