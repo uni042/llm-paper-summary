@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-55653d823cdecb10-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1186/s40537-025-01299-z",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1186/s40537-025-01299-z",
+    "identity_tokens": [
+      "DOI:10.1186/s40537-025-01299-z"
+    ],
+    "reason": "Springer Nature publisher abstract and Introduction: COLLAR is a low-rank autoencoder/GRU/Koopman model for multivariate time-series forecasting; its gains target prediction accuracy/robustness, not LLM runtime.",
+    "first_checked_at": "2026-10-07T11:30:14+00:00",
+    "last_checked_at": "2026-10-07T11:30:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "COLLAR: combating low-rank temporal latent representation for high-dimensional multivariate time series prediction using dynamic Koopman regularization"
+  },
+  "processed_at": "2026-10-07T11:30:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-55653d823cde",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98bcbb287b9a12ba-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.15161",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.15161",
+    "identity_tokens": [
+      "arXiv:2607.15161"
+    ],
+    "reason": "arXiv abstract: On-Policy Delta Distillation changes a post-training reward/supervision signal for student models; it is a training method, not a runtime inference optimization.",
+    "first_checked_at": "2026-10-07T11:30:22+00:00",
+    "last_checked_at": "2026-10-07T11:30:22+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+    ],
+    "title": "On-Policy Delta Distillation"
+  },
+  "processed_at": "2026-10-07T11:30:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98bcbb287b9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
