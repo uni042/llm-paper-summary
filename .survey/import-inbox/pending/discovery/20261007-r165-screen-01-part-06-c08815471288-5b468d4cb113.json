@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r165-screen-01-part-06-c08815471288",
+  "reference_main_sha": "f3f36070d3eeff791b97b133877782e5a142c3fe",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12015",
+      "identity_tokens": [
+        "arXiv:2605.12015"
+      ],
+      "title": "SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces",
+      "reason": "SkillSafetyBench evaluates attack surfaces and safety of agent skills; it is an evaluation benchmark, not an LLM inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2605.12015",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12039",
+      "identity_tokens": [
+        "arXiv:2605.12039"
+      ],
+      "title": "SkillGraph: Skill-Augmented Reinforcement Learning for Agents via Evolving Skill Graphs",
+      "reason": "Read the primary skill-graph RL method and experiments. SkillGraph uses reinforcement learning and evolving skill graphs for agents; graph-restricted skill retrieval may reduce inference cost, but the paper is chiefly a training/skill acquisition framework and notes extra inference cost for its teacher-driven graph evolution, so net inference-efficiency relevance remains unclear.",
+      "source_url": "https://arxiv.org/abs/2605.12039",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12400",
+      "identity_tokens": [
+        "arXiv:2605.12400"
+      ],
+      "title": "OGLS-SD: On-Policy Self-Distillation with Outcome-Guided Logit Steering for LLM Reasoning",
+      "reason": "OGLS-SD is an on-policy self-distillation training approach for reasoning; the primary abstract describes training optimization and does not establish inference cost/latency improvement.",
+      "source_url": "https://arxiv.org/abs/2605.12400",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24300",
+      "identity_tokens": [
+        "arXiv:2604.24300"
+      ],
+      "title": "ReVSI: Rebuilding Visual Spatial Intelligence Evaluation for Accurate Assessment of VLM 3D Reasoning",
+      "reason": "ReVSI rebuilds an evaluation benchmark for VLM 3D spatial reasoning; it does not contribute an inference efficiency or serving method.",
+      "source_url": "https://arxiv.org/abs/2604.24300",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13018",
+      "identity_tokens": [
+        "arXiv:2604.13018"
+      ],
+      "title": "Toward Autonomous Long-Horizon Engineering for ML Research",
+      "reason": "The paper targets autonomous long-horizon engineering for ML research as an agent task; no concrete LLM inference runtime/resource optimization is indicated.",
+      "source_url": "https://arxiv.org/abs/2604.13018",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
