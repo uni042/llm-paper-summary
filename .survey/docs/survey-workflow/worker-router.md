@@ -239,9 +239,11 @@ Researchモードのpre-screenだけで明白な対象外と確定した場合�
 
 これらのResearch由来relevance JSONは完成Research件数へ数えない。保存後にLibraryから再取得してJSON parse、identity、classification、`reason` / `body_check` を確認してから次rankへ進む。既存Survey GitHub Importは通常Discovery成果として転送し、GitHub import inbox processorが既存 `reference-curation/requests/` 経路で正規relevance ledgerへ反映する。新しいGitHub write経路・共有可変台帳は作らない。
 
-Research worker自身は厳密な機械監査をノルマにしない。ただし、極端に短い原稿、汎用テンプレート文、比較条件のない数値、主要機構の説明不足を完成扱いにしない。
+Research workerは完成保存前に**説明不足プリフライト**を必須とする。frontmatter、一次資料、参考文献、表を除く説明文について、本文2,200文字未満、手法700文字未満、評価500文字未満のいずれかなら完成扱いせず、一次資料へ戻って不足した機構・評価証拠を補う。限界説明が120文字未満なら自動FAILではないが、具体的な適用範囲・負の条件・追加費用が書けているか再確認する。これらは下限トリガーであって合格点ではなく、文字数を満たすための一般論・同義反復・推測による水増しは禁止する。
 
-GitHub側受信箱プロセッサが保存済みMarkdownに対して公開完全性・日本語率の機械監査を行う。FAILした原稿はGitHub側blockedへ保全される。
+セルフレビュー後は最新templateの `quality_self_review_passed: true`、`quality_self_review_version` と、`quality_body_chars`、`quality_method_chars`、`quality_evaluation_chars`、`quality_limitation_chars` を埋める。各主要機構について、目的、入力・観測、内部処理、出力・更新対象、効く理由、失敗条件・追加費用の6観点を一次資料と照合し、評価は **機構 → 評価条件 → 指標 → 結果 → 読み取れること** の対応を最低1組以上示す。一次資料に複数評価軸・感度・ablation・内部指標・worst caseがある場合、headline値1件だけで終えない。
+
+GitHub側受信箱プロセッサも保存済みMarkdownに対して公開完全性・日本語率に加え同じ説明不足トリガーを機械適用する。本文・手法・評価の下限を割った原稿、または最新template由来の `quality_self_review_passed` がtrueでない原稿は `blocked_quality` として保全し、一次資料を読めるResearch側へ戻す。
 
 最終適用先が学習工程そのものの高速化・省メモリ化で凍結対象なら新規Researchへ回さない。
 
@@ -297,7 +299,7 @@ Survey GitHub ImportはLibrary成果をGitHub受信箱へ転送するアップ�
 
 ### 9.1 Research品質確認と転送
 
-Library `research/*.md` は**今回の転送対象候補を全件検査**し、必ず1件ずつ先頭から末尾まで全文を読む。サンプリング、抜き取り、代表例だけの確認、一括要約、タイトル・概要・検索snippet・機械ゲート結果だけによる代替は禁止する。1件の品質判定を `pass` / `reject` / `hold` のいずれかに確定するまで次のResearchへ進まず、未検査・判定未完了のResearchはGitHubへ転送しない。問題設定、主要機構、入力→処理→出力、評価条件、比較対象、主要結果、限界、既存研究との差が論文固有に記述されているかを確認する。
+Library `research/*.md` は**今回の転送対象候補を全件検査**し、必ず1件ずつ先頭から末尾まで全文を読む。サンプリング、抜き取り、代表例だけの確認、一括要約、タイトル・概要・検索snippet・機械ゲート結果だけによる代替は禁止する。1件の品質判定を `pass` / `reject` / `hold` のいずれかに確定するまで次のResearchへ進まず、未検査・判定未完了のResearchはGitHubへ転送しない。問題設定、主要機構、入力→処理→出力、評価条件、比較対象、主要結果、限界、既存研究との差が論文固有に記述されているかを確認する。加えて、最新template由来の成果では自己レビュー証跡4計測値と `quality_self_review_passed: true` を確認し、本文2,200・手法700・評価500文字の下限を割るものはpassにしない。
 
 汎用テンプレート文が本文の中心、論文名や方式名だけを差し替えれば別論文にも成立する長文、主要機構の具体説明欠落、headline結果だけで評価条件なし、プレースホルダー・未完全文、極端に薄い本文など、現行品質ガイドを明らかに満たさない原稿はアップロードワーカー自身の判断でrejectし、GitHubへ転送せずLibraryから削除する。判断が微妙なものは削除せずLibraryに保留し、転送もしない。
 
@@ -315,6 +317,9 @@ Research MarkdownのYAML frontmatterは、**本文が完成していても書誌
 - arXiv論文では `arxiv_id` と `arxiv_categories.primary`、`arxiv_categories.cross_list`
 - `worker_completed_at`: Research完成時刻（ISO 8601、タイムゾーン付き）
 - `worker_run_key`: 元Scheduled worker runを一意に示すキー
+- `quality_self_review_passed: true`
+- `quality_self_review_version`: 最新templateの品質版
+- `quality_body_chars`, `quality_method_chars`, `quality_evaluation_chars`, `quality_limitation_chars`: 保存前実測値
 
 `last_audited` / `audit_version` は後段監査が更新してよい。引用監査済みなら `references`, `references_checked_at`, `references_source`, `references_total` も保持するが、引用を未確認のまま値を捏造して埋めてはならない。引用メタデータはGitHub側の一次資料citation backfillで後から補完できる。
 
