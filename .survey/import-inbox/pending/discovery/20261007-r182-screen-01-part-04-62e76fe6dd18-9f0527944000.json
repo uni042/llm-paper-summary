@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r182-screen-01-part-04-62e76fe6dd18",
+  "reference_main_sha": "c783ac90a63f989552e8790516edc13970e423c2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00492",
+      "identity_tokens": [
+        "arXiv:2603.00492"
+      ],
+      "title": "ArtiFixer: Enhancing and Extending 3D Reconstruction with Auto-Regressive Diffusion Models",
+      "reason": "The abstract addresses 3D reconstruction artifacts with autoregressive diffusion and view synthesis, not language model inference.",
+      "source_url": "https://arxiv.org/abs/2603.00492",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.13249",
+      "identity_tokens": [
+        "arXiv:2603.13249"
+      ],
+      "title": "Steering at the Source: Style Modulation Heads for Robust Persona Control",
+      "reason": "The paper localizes persona steering to three attention heads and preserves generation coherence, but its claimed computational advantage is relative to fine-tuning and it does not measure inference throughput, memory, or latency; the connection to inference-efficiency remains indirect.",
+      "source_url": "https://arxiv.org/abs/2603.13249",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19497",
+      "identity_tokens": [
+        "arXiv:2602.19497"
+      ],
+      "title": "MICON-Bench: Benchmarking and Enhancing Multi-Image Context Image Generation in Unified Multimodal Models",
+      "reason": "The abstract introduces a multi-image context image-generation benchmark and evaluation-by-checkpoint, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.19497",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19715",
+      "identity_tokens": [
+        "arXiv:2602.19715"
+      ],
+      "title": "Pixels Don't Lie (But Your Detector Might): Bootstrapping MLLM-as-a-Judge for Trustworthy Deepfake Detection and Reasoning Supervision",
+      "reason": "The abstract focuses on deepfake detection and reasoning supervision; no inference cost, memory, latency, or serving method is claimed.",
+      "source_url": "https://arxiv.org/abs/2602.19715",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16220",
+      "identity_tokens": [
+        "arXiv:2602.16220"
+      ],
+      "title": "SEMixer: Semantics Enhanced MLP-Mixer for Multiscale Mixing and Long-term Time Series Forecasting",
+      "reason": "The abstract proposes an MLP-Mixer for long-term time-series forecasting; it does not concern language models or their inference.",
+      "source_url": "https://arxiv.org/abs/2602.16220",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
