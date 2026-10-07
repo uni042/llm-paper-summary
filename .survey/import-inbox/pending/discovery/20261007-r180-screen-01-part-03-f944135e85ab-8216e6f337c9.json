@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r180-screen-01-part-03-f944135e85ab",
+  "reference_main_sha": "d159f4d80bd7d398abb8da3a16129abdcb4eed71",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19829",
+      "identity_tokens": [
+        "arXiv:2607.19829"
+      ],
+      "title": "DARWIN: Evolving Jailbreak Adversary and Guardrail for LLM Safety Evaluation and Protection",
+      "reason": "DARWIN evaluates jailbreak robustness and attack strategies; it is security evaluation, not an inference-cost reduction.",
+      "source_url": "https://arxiv.org/abs/2607.19829",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.13639",
+      "identity_tokens": [
+        "arXiv:2607.13639"
+      ],
+      "title": "OvisOCR2 Technical Report",
+      "reason": "OvisOCR2 proposes a compact 0.8B document-understanding/parser model and one-pass pipeline, suggesting deployment potential, but the primary full text provides no measured inference latency, throughput, memory, or FLOP reduction.",
+      "source_url": "https://arxiv.org/abs/2607.13639",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.12477",
+      "identity_tokens": [
+        "arXiv:2607.12477"
+      ],
+      "title": "Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence",
+      "reason": "The paper contributes a UAV spatial reasoning benchmark and task suite; it does not introduce an LLM-serving or inference optimization technique.",
+      "source_url": "https://arxiv.org/abs/2607.12477",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09322",
+      "identity_tokens": [
+        "arXiv:2607.09322"
+      ],
+      "title": "LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making",
+      "reason": "LongMedBench evaluates long-context medical reasoning; it is a benchmark/dataset contribution and does not establish an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2607.09322",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06065",
+      "identity_tokens": [
+        "arXiv:2607.06065"
+      ],
+      "title": "SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review",
+      "reason": "SWE-Review evaluates agentic code review tasks and reviewer behavior; it does not propose a concrete model-inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2607.06065",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
