@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29533d4ce03d284e-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/n19-1035",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/n19-1035",
+    "identity_tokens": [
+      "DOI:10.18653/v1/n19-1035"
+    ],
+    "reason": "aspect-based sentiment analysisをauxiliary sentenceによるsentence-pair classificationへ変換し精度を改善するtask/model研究で、推論runtime・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-07T07:59:30+00:00",
+    "last_checked_at": "2026-10-07T22:08:41+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+    ],
+    "title": "Utilizing BERT for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence"
+  },
+  "processed_at": "2026-10-07T22:08:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29533d4ce03d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

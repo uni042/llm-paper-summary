@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c531bbfbd3b3588e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3342195.3387522",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3342195.3387522",
+    "identity_tokens": [
+      "DOI:10.1145/3342195.3387522"
+    ],
+    "reason": "ラック規模クラスタ一般のfar memoryとjob throughputの交換条件、Fastswap、far-memory-aware schedulingを扱うメモリ分離研究であり、LLM/Transformer推論を対象としない。",
+    "first_checked_at": "2026-10-07T22:08:54+00:00",
+    "last_checked_at": "2026-10-07T22:08:54+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+    ],
+    "title": "Can far memory improve job throughput?"
+  },
+  "processed_at": "2026-10-07T22:08:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c531bbfbd3b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

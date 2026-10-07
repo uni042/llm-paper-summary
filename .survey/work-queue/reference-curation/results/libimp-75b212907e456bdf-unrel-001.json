@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75b212907e456bdf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1511.06744",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1511.06744",
+    "identity_tokens": [
+      "arXiv:1511.06744"
+    ],
+    "reason": "低ランク畳み込みフィルタを学習時から構成し、VGG-11やGoogLeNetなど画像分類用CNNのパラメータ・演算量を削減する2016年の画像認識研究。Transformer・LLM学習／生成推論のシステム効率化を直接対象としない。",
+    "first_checked_at": "2026-10-07T22:08:49+00:00",
+    "last_checked_at": "2026-10-07T22:08:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Training CNNs with Low-Rank Filters for Efficient Image Classification"
+  },
+  "processed_at": "2026-10-07T22:08:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75b212907e45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

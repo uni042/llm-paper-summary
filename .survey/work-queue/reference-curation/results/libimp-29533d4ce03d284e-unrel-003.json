@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29533d4ce03d284e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2103.03206",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2103.03206",
+    "identity_tokens": [
+      "arXiv:2103.03206"
+    ],
+    "reason": "非対称attentionで高次元multimodal inputをlatent bottleneckへ蒸留し線形的にscaleするarchitectureだが、最終評価は画像・点群・音声・動画等のgeneral perceptionでLLM推論systemsではない。",
+    "first_checked_at": "2026-10-07T07:59:29+00:00",
+    "last_checked_at": "2026-10-07T22:08:40+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "title": "Perceiver: General Perception with Iterative Attention"
+  },
+  "processed_at": "2026-10-07T22:08:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29533d4ce03d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

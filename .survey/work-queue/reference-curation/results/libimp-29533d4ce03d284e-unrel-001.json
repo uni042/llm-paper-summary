@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29533d4ce03d284e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.11477",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.11477",
+    "identity_tokens": [
+      "arXiv:2006.11477"
+    ],
+    "reason": "音声の自己教師あり表現学習とASRのラベル効率が主題で、LLM/Transformer推論runtime・memory・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-07T07:59:28+00:00",
+    "last_checked_at": "2026-10-07T22:08:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations"
+  },
+  "processed_at": "2026-10-07T22:08:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29533d4ce03d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

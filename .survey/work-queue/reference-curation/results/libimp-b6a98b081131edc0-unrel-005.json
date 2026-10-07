@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6a98b081131edc0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.03236",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.03236",
+    "identity_tokens": [
+      "arXiv:2601.03236"
+    ],
+    "reason": "意味・時間・因果・エンティティの4グラフを用いたエージェント記憶検索で、LoCoMo/LongMemEvalの長期推論品質を評価する。LLM推論基盤の計算・メモリ転送効率を改善する機構ではない。",
+    "first_checked_at": "2026-10-07T22:08:52+00:00",
+    "last_checked_at": "2026-10-07T22:08:52+00:00",
+    "linked_from": [],
+    "title": "MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents"
+  },
+  "processed_at": "2026-10-07T22:08:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6a98b081131",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

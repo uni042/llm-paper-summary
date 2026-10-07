@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T21:58:29+00:00",
-  "record_count": 4466,
+  "updated_at": "2026-10-07T22:08:55+00:00",
+  "record_count": 4465,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5930,13 +5930,14 @@
         "DOI:10.48550/arxiv.2601.06123",
         "arXiv:2601.06123"
       ],
-      "reason": "複数LLMのKVキャッシュを共有潜在空間へ写像してモデル間通信を行う研究で、KV状態を直接扱う点は推論システムに近いが、主目的は推論高速化やメモリ削減ではなく協調・技能転送であるためborderline。",
+      "reason": "本文では、複数LLMのKVキャッシュを共有潜在空間へ写像し、モデル間で内部状態やsoft promptを直接受け渡す通信方式を提案している。KVキャッシュ再利用・部分計算共有という推論システム上の接点は明確だが、主目的と評価はモデル間協調・言語モデル損失・モジュール移植性であり、推論レイテンシ、スループット、KVメモリ容量、帯域、サービング効率の改善を直接評価していないため、現行の推論効率サーベイへの収録は境界的と判断する。",
       "first_checked_at": "2026-10-03T18:31:04+00:00",
-      "last_checked_at": "2026-10-03T18:53:31+00:00",
+      "last_checked_at": "2026-10-07T22:08:39+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         ".survey/work-queue/worker-worklist-30.json"
       ],
+      "borderline_recheck_count": 0,
       "title": "Latent Space Communication via K-V Cache Alignment"
     },
     "DOI:10.14778/3749646.3749724": {
@@ -65318,21 +65319,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "SkillClaw: Let Skills Evolve Collectively with Agentic Evolver"
-    },
-    "arXiv:2407.03320": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2407.03320",
-      "identity_tokens": [
-        "arXiv:2407.03320"
-      ],
-      "reason": "The paper extends a 7B vision-language model to 96K context with RoPE extrapolation, but its primary contribution is multimodal capability and it does not establish lower inference cost, memory, or latency.",
-      "first_checked_at": "2026-10-07T08:53:48+00:00",
-      "last_checked_at": "2026-10-07T08:53:48+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output"
     },
     "arXiv:2305.09636": {
       "classification": "borderline",
