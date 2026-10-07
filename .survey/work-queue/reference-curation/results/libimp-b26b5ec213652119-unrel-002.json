@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b26b5ec213652119-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.19384",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.19384",
+    "identity_tokens": [
+      "arXiv:2406.19384"
+    ],
+    "reason": "LLMの隣接layer削除・交換に対するprediction robustnessを調べ、推論計算を4段階へ解釈するmechanistic analysis。中間layerの冗長性は示すが、動的layer skippingやruntime/serving最適化方式を提案・評価しない。",
+    "first_checked_at": "2026-10-07T01:54:03+00:00",
+    "last_checked_at": "2026-10-07T01:54:03+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+      "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+    ],
+    "title": "The Remarkable Robustness of LLMs: Stages of Inference?"
+  },
+  "processed_at": "2026-10-07T01:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b26b5ec21365",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

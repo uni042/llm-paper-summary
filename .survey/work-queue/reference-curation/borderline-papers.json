@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T23:54:50+00:00",
-  "record_count": 4265,
+  "updated_at": "2026-10-07T01:54:00+00:00",
+  "record_count": 4267,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65101,6 +65101,38 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution"
+    },
+    "arXiv:2310.15213": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.15213",
+      "identity_tokens": [
+        "arXiv:2310.15213"
+      ],
+      "reason": "LLM内部の少数attention headがtask functionをcompact vectorとして運ぶmechanistic finding。activation interventionは推論時に使えるが、主目的は解釈・制御であり推論計算効率を評価しないため境界扱い。",
+      "first_checked_at": "2026-10-07T01:53:57+00:00",
+      "last_checked_at": "2026-10-07T01:53:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Function Vectors in Large Language Models"
+    },
+    "DOI:10.1145/3591300": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3591300",
+      "identity_tokens": [
+        "DOI:10.1145/3591300",
+        "arXiv:2212.06094"
+      ],
+      "reason": "LMQLはprompting、decoder、生成制約を一体化するLLM query languageで、制約をdecoder実行へ統合して不要生成を抑えるruntime面を持つ。一方、主貢献はLLM interactionのprogramming abstraction/query languageで、推論serving性能最適化が中心ではないためborderline。",
+      "first_checked_at": "2026-10-07T01:54:00+00:00",
+      "last_checked_at": "2026-10-07T01:54:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2602.11808-deep-kernel-fusion-transformers.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Prompting Is Programming: A Query Language for Large Language Models"
     }
   }
 }
