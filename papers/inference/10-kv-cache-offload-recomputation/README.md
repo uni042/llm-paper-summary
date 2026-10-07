@@ -353,7 +353,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   問い合わせごとに補助モデルの注意から再計算する文書位置を選び、連結したKVキャッシュのチャンク間情報を回復するRAGプリフィル方式。L20上の16K入力では全注意比3.33倍速く、品質との調整に再計算率を使う。
 
 - **2025-03 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   多輪会話の履歴KV再計算と長プロンプトによるFCFS ヘッド-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のスループットを報告する。
 
 - **2024-11 · [Do Large Language Models Need a Content Delivery Network?](2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md)**  
@@ -449,6 +449,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](2024-2310.07240-cachegen.md)**  
-  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：74  
+  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：75  
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 <!-- survey:auto:end -->
