@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "922be926f13b0fd511065b6a5fc67681830365288224dc884cf36a45c98d8dfb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_2d4b2d72b08c819194f5165c61ff2eaa--2023-samsung-pim-pnm-repair-20261008-0428.md",
+  "canonical_id": "DOI:10.1109/hcs59251.2023.10254711",
+  "worker_completed_at": "2026-10-08T04:30:17+09:00",
+  "worker_run_key": "20261008-0428-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4648,
+    "body_paragraphs": 23,
+    "method_chars": 2008,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-07T21:45:20+00:00"
+}

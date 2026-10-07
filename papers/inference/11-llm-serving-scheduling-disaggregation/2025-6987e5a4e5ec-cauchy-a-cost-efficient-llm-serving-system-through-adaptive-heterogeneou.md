@@ -32,6 +32,8 @@ worker_run_key: "20261008-0458-scheduled-chat-00/repair-r01"
 reference_main_sha: "929a86b14a53ef3b0bd0d59a58988db73df2572a"
 quality_self_review_passed: true
 quality_self_review_version: "2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment
