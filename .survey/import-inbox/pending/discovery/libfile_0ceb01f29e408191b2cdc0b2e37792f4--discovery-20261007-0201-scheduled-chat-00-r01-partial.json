@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0201-scheduled-chat-00/r01-partial",
+  "reference_main_sha": "aeaf9c739fbaec97fc9e71949889f1f6beb93c3b",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.00713",
+      "identity_tokens": [
+        "arXiv:2009.00713"
+      ],
+      "title": "WaveGrad: Estimating Gradients for Waveform Generation",
+      "reason": "音声波形生成のための勾配推定型生成モデルで、反復回数と音質のトレードオフを扱うが、最終適用先は音声合成であり、LLM/Transformer推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2009.00713",
+      "body_check": "abstract_screen_only: arXiv一次abstractでconditional waveform generation、反復的refinement、WaveNet級の音声品質が主題であることを確認。LLM/言語モデル推論への最終適用はないため本文未読。",
+      "first_checked_at": "2026-10-07T02:01:50+09:00",
+      "last_checked_at": "2026-10-07T02:01:50+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.08112",
+      "identity_tokens": [
+        "arXiv:2303.08112"
+      ],
+      "title": "Eliciting Latent Predictions from Transformers with the Tuned Lens",
+      "reason": "Transformer内部表現から各層の潜在予測を読み出す解釈可能性手法が主題で、モデルの予測形成過程を分析する。推論レイテンシ、メモリ、サービング、圧縮の改善を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2303.08112",
+      "body_check": "abstract_screen_only: arXiv一次abstractでlogit lensの改良、各層のlatent prediction抽出、モデル解釈・予測軌跡分析が主貢献と確認。推論システム効率の実装・評価は主題でないため本文未読。",
+      "first_checked_at": "2026-10-07T02:01:50+09:00",
+      "last_checked_at": "2026-10-07T02:01:50+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.13106",
+      "identity_tokens": [
+        "arXiv:2501.13106"
+      ],
+      "title": "VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding",
+      "reason": "Video向けマルチモーダルLLMで、Differential Frame Prunerが時間的に隣接するpatchの画素空間L1距離を使って冗長visual tokenを削除し、長動画のLLM入力token数と学習・推論計算量を削減する。最終適用先がMLLM推論であり、token圧縮が明示的に推論計算削減を目的とするため対象。",
+      "source_url": "https://arxiv.org/abs/2501.13106",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§1–2.2を確認。2x2 spatial downsampling後、連続frameのpatch間L1距離を計算し、既定threshold 0.1未満の後続patchをDiffFPでpruneする。本文はvisual token compressionの利点としてtraining/inference computation demand削減とlong-form video processing efficiencyを明示する。",
+      "first_checked_at": "2026-10-07T02:01:50+09:00",
+      "last_checked_at": "2026-10-07T02:01:50+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.05709",
+      "identity_tokens": [
+        "arXiv:1905.05709"
+      ],
+      "title": "Challenges in Building Intelligent Open-domain Dialog Systems",
+      "reason": "open-domain dialog systemの意味理解、一貫した人格、対話性という3課題を整理するsurveyで、対話品質・社会的応答能力が主題。LLM推論サービングやメモリ・カーネル・スケジューリング効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/1905.05709",
+      "body_check": "abstract_screen_only: arXiv一次abstractでsemantics、consistency、interactivenessを軸にneural open-domain dialog研究を整理するsurveyと確認。推論システム効率は主題でないため本文未読。",
+      "first_checked_at": "2026-10-07T02:01:50+09:00",
+      "last_checked_at": "2026-10-07T02:01:50+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "worklist_rank": 25
+    }
+  ]
+}
