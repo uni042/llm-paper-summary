@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1231-scheduled-chat-30/r01",
+  "reference_main_sha": "97373716aeb1e510306deafa6574986088ad259b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.06456",
+      "identity_tokens": [
+        "arXiv:2305.06456"
+      ],
+      "title": "Perpetual Humanoid Control for Real-time Simulated Avatars",
+      "reason": "物理ベースのhumanoid controllerとPMCPによる大規模motion imitation・fail-state recoveryが主題で、LLM推論runtime/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.06456",
+      "body_check": "abstract_screen_only: 一次abstractでphysics-based humanoid control、10,000 motion clips、real-time avatar imitationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.00079",
+      "identity_tokens": [
+        "arXiv:2407.00079",
+        "SemanticScholar:ea3126b88dc191200ea0bf275f092cb70cbad319"
+      ],
+      "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+      "reason": "prefill/decode分離、CPU/DRAM/SSDを使う分散KV cache、KV-cache-aware schedulerでLLM serving throughputとSLOを直接最適化するため対象。",
+      "source_url": "https://arxiv.org/abs/2407.00079",
+      "body_check": "fulltext_review: arXiv一次資料とUSENIX FAST一次ページを確認。KVCache-centric disaggregation、global cache、SLO-aware schedulingを実装し、arXiv v4では特定simulationで最大525% throughput増、実負荷でKimiが75%多いrequestを処理すると報告。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.463",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.463",
+        "arXiv:2004.08249"
+      ],
+      "title": "Understanding the Difficulty of Training Transformers",
+      "reason": "residual branch依存によるtraining instabilityを分析しAdmin initializationで学習安定性・収束を改善するtraining研究で、推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2004.08249",
+      "body_check": "abstract_screen_only: 一次abstractでTransformer training instability、amplification effect、Adaptive model initializationとtraining convergenceが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15852",
+      "identity_tokens": [
+        "arXiv:2402.15852"
+      ],
+      "title": "NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation",
+      "reason": "video-based vision-language navigationのpolicy/robotics能力が主題で、LLM/MLLM推論runtime・memory・serving効率化を主要貢献としない。",
+      "source_url": "https://arxiv.org/abs/2402.15852",
+      "body_check": "abstract_screen_only: 一次書誌・abstractでvideo inputからnavigation actionを計画するVLMとVLN benchmark性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.03436",
+      "identity_tokens": [
+        "arXiv:2205.03436"
+      ],
+      "title": "EdgeViTs: Competing Light-weight CNNs on Mobile Devices with Vision Transformers",
+      "reason": "mobile device向け軽量vision transformerで画像認識効率を改善するが、最終workloadはcomputer visionでLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2205.03436",
+      "body_check": "abstract_screen_only: 一次書誌・abstractでmobile vision、image classification/detection向けlightweight architectureとlatencyが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2023.11.28.568918",
+      "identity_tokens": [
+        "DOI:10.1101/2023.11.28.568918"
+      ],
+      "title": "Universal Cell Embeddings: A Foundation Model for Cell Biology",
+      "reason": "single-cell biologyのuniversal embeddingとcell atlas解析が主題で、LLM推論systemsを対象としない。",
+      "source_url": "https://doi.org/10.1101/2023.11.28.568918",
+      "body_check": "abstract_screen_only: bioRxiv一次abstractで36 million cells、1,000超cell types、8 speciesを統一embedding spaceへ写像するcell biology foundation modelが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.09134",
+      "identity_tokens": [
+        "arXiv:2404.09134"
+      ],
+      "title": "Generative AI Agents with Large Language Model for Satellite Networks via a Mixture of Experts Transmission",
+      "reason": "LLM/RAGで衛星通信の数理modelingを行いMoE-PPOでtransmission strategyを最適化する通信応用研究で、LLM推論serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2404.09134",
+      "body_check": "abstract_screen_only: 一次abstractでsatellite network modeling、RAG expert knowledge、MoE-PPO transmission optimizationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app14052074",
+      "identity_tokens": [
+        "DOI:10.3390/app14052074"
+      ],
+      "title": "A Review of Current Trends, Techniques, and Challenges in Large Language Models (LLMs)",
+      "reason": "LLMの一般的なtrend・technique・challengeを広く整理するsurveyで、推論systems効率化を中心対象としない。",
+      "source_url": "https://doi.org/10.3390/app14052074",
+      "body_check": "abstract_screen_only: 出版一次情報でLLMのarchitecture/application/challengesを包括的に整理するgeneral reviewと確認。推論runtime/serving専論ではないため本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.08460",
+      "identity_tokens": [
+        "arXiv:1911.08460"
+      ],
+      "title": "End-to-end ASR: from Supervised to Semi-Supervised Learning with Modern Architectures",
+      "reason": "end-to-end automatic speech recognitionのsupervised/semi-supervised learningと音声認識性能が主題で、LLM推論systemsを扱わない。",
+      "source_url": "https://arxiv.org/abs/1911.08460",
+      "body_check": "abstract_screen_only: 一次abstractでASR architecture、pseudo-labeling/semi-supervised learning、speech recognition accuracyが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.07174",
+      "identity_tokens": [
+        "arXiv:2306.07174"
+      ],
+      "title": "Augmenting Language Models with Long-Term Memory",
+      "reason": "frozen backbone LLMをmemory encoderとし、SideNetで外部memory bankをretrieval/readするLongMemにより固定context制約を回避し、推論時に長期履歴をcache/retrieveするため対象。",
+      "source_url": "https://arxiv.org/abs/2306.07174",
+      "body_check": "fulltext_review: 一次資料を確認。decoupled architectureでbackboneを凍結し、adaptive residual SideNetがmemory retriever/readerとして動作。memory bankは長期contextをcache/updateでき、65k tokenのlong-form memoryとmany-shot in-context learningを評価。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "worklist_rank": 36
+    }
+  ]
+}
