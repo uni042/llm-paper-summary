@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T10:40:22+00:00",
-  "record_count": 4360,
+  "updated_at": "2026-10-07T10:48:26+00:00",
+  "record_count": 4370,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -66556,6 +66556,157 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Deeper detection limits in astronomical imaging using self-supervised spatiotemporal denoising"
+    },
+    "arXiv:2601.18150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.18150",
+      "identity_tokens": [
+        "arXiv:2601.18150"
+      ],
+      "reason": "一次要旨はRL rolloutのFP8 weight/KV cacheと最大44% throughput改善を明示するため対象に強く近い。arXiv本文HTMLを試したが利用可能な本文を取得できず、本文条件を確認できないためborderline。",
+      "first_checked_at": "2026-10-07T10:48:14+00:00",
+      "last_checked_at": "2026-10-07T10:48:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FP8-RL: A Practical and Stable Low-Precision Stack for LLM Reinforcement Learning"
+    },
+    "arXiv:2604.11811": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11811",
+      "identity_tokens": [
+        "arXiv:2604.11811"
+      ],
+      "reason": "本文はtask-specific memory harnessとagent evolutionを評価し、既存memory系統に近い。一方、比較表ではM*進化に多数のAPI/tokenと時間を要し、推論効率改善を実証していない。memory実用性との関係は残るが、計算コスト改善の証拠は弱い。",
+      "first_checked_at": "2026-10-07T10:48:17+00:00",
+      "last_checked_at": "2026-10-07T10:48:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "M*: Every Task Deserves Its Own Memory Harness"
+    },
+    "arXiv:2604.04202": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.04202",
+      "identity_tokens": [
+        "arXiv:2604.04202"
+      ],
+      "reason": "本文は変化する情報環境におけるpersistent agentsのbenchmark。memory stacksを含むagent環境評価で系統接点はあるが、新たなLLM推論効率機構/改善を示さないためborderline。",
+      "first_checked_at": "2026-10-07T10:48:17+00:00",
+      "last_checked_at": "2026-10-07T10:48:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ClawArena: Benchmarking AI Agents in Evolving Information Environments"
+    },
+    "arXiv:2512.11872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.11872",
+      "identity_tokens": [
+        "arXiv:2512.11872"
+      ],
+      "reason": "本文は自動運転用VLAのmasked diffusion/MoE/online-RLを記述し、LLM diffusionの並列decodeと技術的類似性はあるが、LLM推論の資源効率を測定/改善する証拠は確認できない。別モダリティのVLA機構との接続が弱く、borderline。",
+      "first_checked_at": "2026-10-07T10:48:21+00:00",
+      "last_checked_at": "2026-10-07T10:48:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "WAM-Diff: A Masked Diffusion VLA Framework with MoE and Online Reinforcement Learning for Autonomous Driving"
+    },
+    "DOI:10.1016/j.applthermaleng.2025.129626": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.applthermaleng.2025.129626",
+      "identity_tokens": [
+        "DOI:10.1016/j.applthermaleng.2025.129626"
+      ],
+      "reason": "DOIの出版社ScienceDirectページを一次資料として開いたがInternal Errorで本文/要旨が取得できなかった。タイトルからはデータセンター冷却制御研究と読めるものの、本文根拠を得られないためborderlineに保持。",
+      "first_checked_at": "2026-10-07T10:48:21+00:00",
+      "last_checked_at": "2026-10-07T10:48:21+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy-efficient thermal management of air–liquid-cooled data centers via deep reinforcement learning"
+    },
+    "arXiv:2511.10523": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.10523",
+      "identity_tokens": [
+        "arXiv:2511.10523"
+      ],
+      "reason": "会話memory benchmark本文は文脈規模ごとのcost trade-off、要約抽出で大規模会話を短縮する構成を扱い、agentic memory系統には近い。一方、中心成果はbenchmark/評価で、一般LLM inference servingの具体的改善は限定的。",
+      "first_checked_at": "2026-10-07T10:48:23+00:00",
+      "last_checked_at": "2026-10-07T10:48:23+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Convomem Benchmark: Why Your First 150 Conversations Don't Need RAG"
+    },
+    "DOI:10.1038/s41551-025-01528-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41551-025-01528-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41551-025-01528-z"
+      ],
+      "reason": "出版社Nature本文URLを一次資料として開いたが認証/アクセス失敗となり、要旨/本文を確認できなかった。要旨が入力にもないため本文要件に従ってborderlineとする。",
+      "first_checked_at": "2026-10-07T10:48:23+00:00",
+      "last_checked_at": "2026-10-07T10:48:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A pre-trained large generative model for translating single-cell transcriptomes to proteomes"
+    },
+    "arXiv:2605.25480": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25480",
+      "identity_tokens": [
+        "arXiv:2605.25480"
+      ],
+      "reason": "本文はtop-k固定contextをagent主導の反復search/read/traverseへ置換し、query latencyを評価する。agentic retrievalとの関係はあるが、prompt/token削減や推論コスト低下を主張せず、追加操作で遅くなる可能性も未解決。",
+      "first_checked_at": "2026-10-07T10:48:25+00:00",
+      "last_checked_at": "2026-10-07T10:48:25+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki"
+    },
+    "arXiv:2604.15259": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.15259",
+      "identity_tokens": [
+        "arXiv:2604.15259"
+      ],
+      "reason": "本文はreachability/input-dependence/geometryとOOD generalizationを分析する。推論latency・メモリ削減や従来transformer比のserving性能改善は示しておらず、反復回数を増やすtest-time compute scaling自体を検証する。研究系統上の近接はあるが実用的効率効果は未確認。",
+      "first_checked_at": "2026-10-07T10:48:26+00:00",
+      "last_checked_at": "2026-10-07T10:48:26+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stability and Generalization in Looped Transformers"
+    },
+    "arXiv:2602.22441": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22441",
+      "identity_tokens": [
+        "arXiv:2602.22441"
+      ],
+      "reason": "本文はlatent depth/interventionsとreasoning faithfulnessを研究するが、推論token/latency/compute削減を実測・主張せず、latent computeの効率改善は示さない。関連研究候補としての概念近接はあるが、具体的な推論最適化貢献が弱いためborderline。",
+      "first_checked_at": "2026-10-07T10:48:26+00:00",
+      "last_checked_at": "2026-10-07T10:48:26+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How Do Latent Reasoning Methods Perform Under Weak and Strong Supervision?"
     }
   }
 }

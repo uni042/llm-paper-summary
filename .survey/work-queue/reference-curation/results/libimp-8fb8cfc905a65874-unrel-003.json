@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fb8cfc905a65874-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.08206",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.08206",
+    "identity_tokens": [
+      "arXiv:2511.08206"
+    ],
+    "reason": "本文要旨は電子カルテ構造化タスクのLLM評価ベンチマークで、推論効率を改善する方法ではない。",
+    "first_checked_at": "2026-10-07T10:48:24+00:00",
+    "last_checked_at": "2026-10-07T10:48:24+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "EHRStruct: A Comprehensive Benchmark Framework for Evaluating Large Language Models on Structured Electronic Health Record Tasks"
+  },
+  "processed_at": "2026-10-07T10:48:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fb8cfc905a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

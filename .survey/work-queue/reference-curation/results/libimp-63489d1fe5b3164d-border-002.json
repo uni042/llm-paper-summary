@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63489d1fe5b3164d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.11872",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.11872",
+    "identity_tokens": [
+      "arXiv:2512.11872"
+    ],
+    "reason": "本文は自動運転用VLAのmasked diffusion/MoE/online-RLを記述し、LLM diffusionの並列decodeと技術的類似性はあるが、LLM推論の資源効率を測定/改善する証拠は確認できない。別モダリティのVLA機構との接続が弱く、borderline。",
+    "first_checked_at": "2026-10-07T10:48:21+00:00",
+    "last_checked_at": "2026-10-07T10:48:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "WAM-Diff: A Masked Diffusion VLA Framework with MoE and Online Reinforcement Learning for Autonomous Driving"
+  },
+  "processed_at": "2026-10-07T10:48:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63489d1fe5b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

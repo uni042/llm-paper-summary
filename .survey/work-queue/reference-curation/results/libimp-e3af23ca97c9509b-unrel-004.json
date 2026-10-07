@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3af23ca97c9509b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.03327",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.03327",
+    "identity_tokens": [
+      "arXiv:2605.03327"
+    ],
+    "reason": "RL algorithmの学習過程が主題で、推論時の実行効率を改善しない。",
+    "first_checked_at": "2026-10-07T10:48:28+00:00",
+    "last_checked_at": "2026-10-07T10:48:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "DGPO: Distribution Guided Policy Optimization for Fine Grained Credit Assignment"
+  },
+  "processed_at": "2026-10-07T10:48:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3af23ca97c9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
