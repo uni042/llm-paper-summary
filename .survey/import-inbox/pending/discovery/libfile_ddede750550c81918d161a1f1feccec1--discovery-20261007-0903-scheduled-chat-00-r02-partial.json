@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0903-scheduled-chat-00/r02-partial",
+  "reference_main_sha": "577ca7e32409a43c764d25ad0398ff3b414d0d25",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14167",
+      "identity_tokens": [
+        "arXiv:2305.14167"
+      ],
+      "title": "DetGPT: Detect What You Need via Reasoning",
+      "reason": "LLMとopen-vocabulary detectorを組み合わせ、自然言語要求から対象物を推論して検出するreasoning-based object detection研究。最終評価・適用先はcomputer vision/roboticsで、LLM推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.14167",
+      "body_check": "abstract_screen_only: arXiv一次abstractでreasoning-based object detection、multimodal modelとopen-vocabulary detector、robotics/autonomous driving応用が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.13802",
+      "identity_tokens": [
+        "arXiv:2403.13802"
+      ],
+      "title": "ZigMa: A DiT-style Zigzag Mamba Diffusion Model",
+      "reason": "Mambaを高解像度visual diffusion generationへ適用しTransformer系baselineより速度・memoryを改善するが、最終workloadは画像/動画生成でLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2403.13802",
+      "body_check": "abstract_screen_only: arXiv一次abstractでZigzag Mamba、Stochastic Interpolant、FacesHQ/UCF101/MS COCO等のvisual generationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "worklist_rank": 113
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/363095.363141",
+      "identity_tokens": [
+        "DOI:10.1145/363095.363141"
+      ],
+      "title": "The working set model for program behavior",
+      "reason": "paged memoryのworking set概念とprocess scheduling/memory allocationを定式化した一般OS研究で、LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1145/363095.363141",
+      "body_check": "abstract_screen_only: ACM一次書誌・本文概要でmost-recently-used pagesからworking setを定義しdynamic paged-memory managementへ使う一般OS研究と確認。LLM推論固有の適用がないため本文深読解を省略。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md"
+      ],
+      "worklist_rank": 114
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22074",
+      "identity_tokens": [
+        "arXiv:2601.22074"
+      ],
+      "title": "mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning",
+      "reason": "GPU上でrobot learning/simulationを高速化する軽量frameworkで、最終workloadはrobotics training/simulation。LLM推論runtime・servingを対象としない。",
+      "source_url": "https://arxiv.org/abs/2601.22074",
+      "body_check": "abstract_screen_only: worklist書誌と一次資料タイトル・概要からGPU-accelerated robot learning frameworkが主題であることが明白で、LLM推論への最終適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T09:03:31+09:00",
+      "last_checked_at": "2026-10-07T09:03:31+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "worklist_rank": 117
+    }
+  ]
+}
