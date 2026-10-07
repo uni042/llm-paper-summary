@@ -49,6 +49,19 @@ It has no cron of its own. `.github/workflows/survey-orchestrator.yml` checks th
 The default semantic operation is therefore **insert-if-absent**. Updating an
 already represented paper is a separate explicit maintenance/editing task.
 
+The one bounded exception is the under-16KB semantic re-audit lane. A Research
+payload carrying `under16kb_reaudit_target_path`,
+`under16kb_reaudit_source_sha256`,
+`under16kb_reaudit_version`, and
+`under16kb_reaudit_passed: true` is treated as an explicit in-place repair.
+The processor requires that the canonical identity resolves to exactly that
+existing path, that the source SHA-256 still matches current main, that the
+re-audit version is current, that the normal quality gate passes, and that the
+stricter re-audit Japanese ratio is at least 80%. Only then may it replace the
+existing Markdown. Survey/review papers use the dedicated survey-aware
+re-audit explanation policy rather than an experimental evaluation-length
+requirement.
+
 ### Discovery
 
 The Library classification is not treated as proof that an item is absent from
