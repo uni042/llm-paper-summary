@@ -636,20 +636,36 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
             str(row.get("canonical_id") or ""),
         )
     )
+    policy = {
+        "priority": "before normal Research/Discovery work",
+        "assignment": "sha256(canonical_id)[0] mod 3",
+        "workers": list(REPAIR_WORKERS),
+        "completion": "removed after a later imported/already_represented receipt for the same canonical_id",
+    }
+    queue_path = repo_root / RETURNED_RESEARCH_QUEUE
+    if queue_path.is_file():
+        try:
+            existing = read_json(queue_path)
+        except Exception:
+            existing = {}
+        if (
+            existing.get("schema_version") == 1
+            and existing.get("artifact_type") == "returned_research_queue"
+            and existing.get("policy") == policy
+            and existing.get("count") == len(entries)
+            and existing.get("entries") == entries
+        ):
+            return existing
+
     payload = {
         "schema_version": 1,
         "artifact_type": "returned_research_queue",
         "generated_at": now(),
-        "policy": {
-            "priority": "before normal Research/Discovery work",
-            "assignment": "sha256(canonical_id)[0] mod 3",
-            "workers": list(REPAIR_WORKERS),
-            "completion": "removed after a later imported/already_represented receipt for the same canonical_id",
-        },
+        "policy": policy,
         "count": len(entries),
         "entries": entries,
     }
-    replace_json(repo_root / RETURNED_RESEARCH_QUEUE, payload)
+    replace_json(queue_path, payload)
     return payload
 
 
