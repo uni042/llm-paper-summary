@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -49,6 +50,19 @@ list_summary: 日本語の一覧要約。
 
 
 class Under16KbReauditTests(unittest.TestCase):
+    def test_blob_sha_matches_git_hash_object(self) -> None:
+        # Git object headers end with a NUL byte, not literal backslash-zero.
+        for payload in (b"", b"hello\\n", "日本語の論文解説".encode("utf-8"), b"\\x00" * 512):
+            with self.subTest(payload_len=len(payload)):
+                actual = subprocess.run(
+                    ["git", "hash-object", "--stdin"],
+                    input=payload,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    check=True,
+                ).stdout.decode("ascii").strip()
+                self.assertEqual(reaud.git_blob_sha(payload), actual)
+
     def test_assignment_is_stable(self) -> None:
         path = "papers/inference/01-offload-hierarchical-memory/example.md"
         self.assertEqual(reaud.assigned_worker(path), reaud.assigned_worker(path))
