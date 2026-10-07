@@ -7,6 +7,7 @@ on:
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard_core.py'
+      - '.survey/repair-queue/under-16kb-reaudit.json'
       - '.survey/scripts/reference_pool.py'
       - '.survey/scripts/candidate_priority.py'
       - '.survey/config/candidate-priority.json'
@@ -27,6 +28,7 @@ on:
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard_core.py'
+      - '.survey/repair-queue/under-16kb-reaudit.json'
       - '.survey/scripts/reference_pool.py'
       - '.survey/scripts/candidate_priority.py'
       - '.survey/config/candidate-priority.json'
@@ -39,9 +41,9 @@ on:
       - '.survey/tests/test_research_job_reconciliation.py'
       - '.survey/tests/test_status*.py'
       - '.github/workflows/status-dashboard.yml'
-  # Queue-only pushes stay decoupled so STATUS publication does not amplify the
-  # hot queue lanes. Paper existence is itself direct STATUS evidence, so a
-  # paper-only repair must refresh immediately instead of waiting for cron.
+  # Hot work-queue ingress stays decoupled. A semantic re-audit queue refresh
+  # directly changes the top-line remaining count and must republish STATUS.
+  # Paper-only repair also refreshes without waiting for cron.
   # If the authoritative paper commit already carried STATUS.md, publish exits
   # without adding a second dashboard commit.
   workflow_dispatch:
