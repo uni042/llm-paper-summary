@@ -1267,7 +1267,7 @@
   RWKVは、Transformerの並列学習とRNNの軽量な逐次推論を同じモデルで両立させる言語モデルアーキテクチャである。標準自己注意は系列長が伸びると全トークン対の相互作用を扱い、推論では過去の鍵・値を保持する必要がある。論文は最大14Bパラメータまでモデルを拡張し、同規模Transformerと競争力のある言語モデル性能を示す。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：25  
   位置補間（Position Interpolation; PI）は位置番号を訓練範囲へ圧縮してこの問題を緩和するが、すべてのRoPE周波数を同じ比率で縮めるため、短距離の局所位置関係まで必要以上に変形する。
 
 - **2023-08 · [LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models](2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md)**  
@@ -1503,7 +1503,7 @@
   適応的 注意機構 Spanは、Transformerのすべての注意ヘッドへ同じ固定文脈長を割り当てる代わりに、ヘッドごとに「何文字前まで見るか」を学習させる自己注意（self-注意機構）機構である。
 
 - **2018-11 · [ブロック並列 Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   ブロック並列 Parallel Decodingは、この逐次性そのものを完全に捨てるのではなく、複数の将来位置を一度に予測し、元の自己回帰スコアリングモデルで「通常の貪欲復号なら同じトークンを選んだか」を並列検証する。
 
 ### 9年前（2017-11〜2018-10）

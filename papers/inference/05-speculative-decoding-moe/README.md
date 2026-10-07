@@ -394,6 +394,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/HArmonizedSS/HASS) ・ リポジトリ内被引用：11  
   EAGLE系ドラフトの学習時／復号時の文脈差と蒸留目的のずれをTop-K蒸留＋multi-step context alignmentで揃えるHASS。
 
+- **2024-04 · [Kangaroo: Lossless Self-Speculative Decoding for Accelerating LLMs via Double Early Exiting](2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md)**  
+  実装：[✓](https://github.com/Equationliu/Kangaroo) ・ リポジトリ内被引用：10  
+  一般的な方式では、対象モデルとよく似た予測を出す小型ドラフトモデルを別途学習・配置する必要がある。NeurIPS 2024最終版では単一系列検証だけでなく動的な木状候補にもこの二段目の早期終了を拡張し、Spec-BenchでVicuna-7B平均1.72倍、Vicuna-13B平均1.65倍、最大2.04倍の壁時計高速化を報告する。
+
 - **2024-02 · [Speculative Streaming: Fast LLM Inference without Auxiliary Models](2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   対象モデル内部へ将来n-gram予測ストリームと候補木枝刈りを組み込み、別ドラフトモデルなしで生成と検証を同一順伝播へ重ねる投機的復号。
@@ -405,10 +409,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-03 · [Block Verification Accelerates Speculative Decoding](2024-2403.10444-block-verification-accelerates-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   投機的復号の候補接頭辞をブロック単位で共同検証し、出力分布を変えず期待生成量を理論最適化。PaLM-2評価で標準検証よりブロック効率平均8.30%、実時間平均6.49%改善する。
-
-- **2024-04 · [Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting](2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md)**  
-  実装：[✓](https://github.com/Equationliu/Kangaroo) ・ リポジトリ内被引用：8  
-  Kangarooは別のドラフトモデルを持たず、対象LLMの浅い前半層を自己ドラフトとして使う。浅い表現を補正する小型アダプタと、低確信度になった時点でドラフト生成自体を打ち切る「二重の早期終了」により、追加パラメータと無駄なドラフト計算を同時に抑える。
 
 - **2024-01 · [SpecBranch: Speculative Decoding via Hybrid Drafting and Rollback-Aware Branch Parallelism](2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
