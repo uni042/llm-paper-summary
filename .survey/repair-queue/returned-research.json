@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-07T11:09:52+00:00",
+  "generated_at": "2026-10-07T13:48:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,24 +12,8 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 156,
+  "count": 155,
   "entries": [
-    {
-      "canonical_id": "arXiv:2403.09636",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-09-30T00:31:26+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 64.0% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_141022fbfe988191a1dfce334c8aec91--2024-2403.09636-dmc.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_141022fbfe988191a1dfce334c8aec91--2024-2403.09636-dmc.json",
-      "worker_run_key": "20260930-0600-scheduled-chat-00"
-    },
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
       "title": null,
@@ -45,22 +29,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_2a4f938bc43c819185442964dd572754--2025-openreview-ulCAPXYXfa-omnikv.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_2a4f938bc43c819185442964dd572754--2025-openreview-ulCAPXYXfa-omnikv.json",
       "worker_run_key": "20260930-0600-scheduled-chat-00"
-    },
-    {
-      "canonical_id": "arXiv:2505.07858",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-09-30T04:19:26+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 61.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_69ff3ee31df48191a5a2f0c106cb7af5--2025-2505.07858-scaling-laws-speculative-decoding.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_69ff3ee31df48191a5a2f0c106cb7af5--2025-2505.07858-scaling-laws-speculative-decoding.json",
-      "worker_run_key": "20260930-0203-scheduled-chat-00"
     },
     {
       "canonical_id": "arXiv:2601.06123",
@@ -95,22 +63,6 @@
       "worker_run_key": "20260930-0600-scheduled-chat-00"
     },
     {
-      "canonical_id": "arXiv:2507.00605",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-09-30T14:12:06+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 63.8% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dd99fc1d1efc8191ba5910a267386b71--2025-2507.00605-quantize-sample-verify.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_dd99fc1d1efc8191ba5910a267386b71--2025-2507.00605-quantize-sample-verify.json",
-      "worker_run_key": "20260930-1830-scheduled-chat-30"
-    },
-    {
       "canonical_id": "arXiv:2503.18989",
       "title": null,
       "source_url": null,
@@ -125,22 +77,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e7a9de9b88788191a409cbab30882c76--2025-2503.18989-hat.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e7a9de9b88788191a409cbab30882c76--2025-2503.18989-hat.json",
       "worker_run_key": "20261001-0758-scheduled-chat-00"
-    },
-    {
-      "canonical_id": "arXiv:2510.25602",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-01T07:02:59+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 36.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_00eb1ca2f79881919efc358dc26359bb--2025-2510.25602-int-vs-fp.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_00eb1ca2f79881919efc358dc26359bb--2025-2510.25602-int-vs-fp.json",
-      "worker_run_key": "20261001-1155-scheduled-chat-00"
     },
     {
       "canonical_id": "arXiv:2410.18311",
@@ -317,22 +253,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_1a36b190ebc88191bf45f3be1c7b4de7--2023-2312.04455-attention-buckets.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_1a36b190ebc88191bf45f3be1c7b4de7--2023-2312.04455-attention-buckets.json",
       "worker_run_key": "20261003-0730-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2402.17463",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T01:57:16+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1b1aaf7d01008191889c58f03c35fb46--2024-2402.17463-dca.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1b1aaf7d01008191889c58f03c35fb46--2024-2402.17463-dca.json",
-      "worker_run_key": "20261003-0128-scheduled-chat-30"
     },
     {
       "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
@@ -2578,6 +2498,118 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.json",
       "worker_run_key": "20261007-1627-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.25602",
+      "title": "INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats",
+      "source_url": "https://arxiv.org/abs/2510.25602",
+      "returned_at": "2026-10-07T13:48:33+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 351 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3961,
+        "body_paragraphs": 23,
+        "method_chars": 1546,
+        "method_paragraphs": 9,
+        "evaluation_chars": 351,
+        "limitation_chars": 511,
+        "insufficiency_flags": [
+          "評価説明量 351 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_017f563dd2e8819186cd57bafe901819--2025-2510.25602-int-vs-fp-repair-20261007.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_017f563dd2e8819186cd57bafe901819--2025-2510.25602-int-vs-fp-repair-20261007.json",
+      "worker_run_key": "20261007-1903-scheduled-chat-00/repair-r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.00605",
+      "title": "Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2507.00605",
+      "returned_at": "2026-10-07T13:48:54+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 490 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2560,
+        "body_paragraphs": 18,
+        "method_chars": 752,
+        "method_paragraphs": 6,
+        "evaluation_chars": 490,
+        "limitation_chars": 260,
+        "insufficiency_flags": [
+          "評価説明量 490 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_28495848df488191b15c0fec6e6c398d--2507.00605-quantize-sample-verify-repair-20261007-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_28495848df488191b15c0fec6e6c398d--2507.00605-quantize-sample-verify-repair-20261007-v2.json",
+      "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
+    },
+    {
+      "canonical_id": "arXiv:2402.17463",
+      "title": "Training-Free Long-Context Scaling of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.17463",
+      "returned_at": "2026-10-07T13:48:55+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 本文説明量 2146 < 2200",
+        "説明不足トリガー: 手法説明量 689 < 700",
+        "説明不足トリガー: 評価説明量 287 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2146,
+        "body_paragraphs": 17,
+        "method_chars": 689,
+        "method_paragraphs": 6,
+        "evaluation_chars": 287,
+        "limitation_chars": 246,
+        "insufficiency_flags": [
+          "本文説明量 2146 < 2200",
+          "手法説明量 689 < 700",
+          "評価説明量 287 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_58b7cba04cd481918249794d4fac53e6--2402.17463-dca-repair-20261007-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_58b7cba04cd481918249794d4fac53e6--2402.17463-dca-repair-20261007-v2.json",
+      "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.07858",
+      "title": "Scaling Laws for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2505.07858",
+      "returned_at": "2026-10-07T13:48:55+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 185 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3489,
+        "body_paragraphs": 22,
+        "method_chars": 1456,
+        "method_paragraphs": 9,
+        "evaluation_chars": 185,
+        "limitation_chars": 495,
+        "insufficiency_flags": [
+          "評価説明量 185 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_495913c6c3f48191a046c9a414fa3cd5--2025-2505.07858-scaling-laws-speculative-decoding-repair-20261007.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_495913c6c3f48191a046c9a414fa3cd5--2025-2505.07858-scaling-laws-speculative-decoding-repair-20261007.json",
+      "worker_run_key": "20261007-2031-scheduled-chat-30/repair-r01"
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e7ce51764511ac3cfca7b9ad26afcdbdcdfbec085cf133ac37f69ddd995e74fc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_017f563dd2e8819186cd57bafe901819--2025-2510.25602-int-vs-fp-repair-20261007.md",
+  "canonical_id": "arXiv:2510.25602",
+  "worker_completed_at": "2026-10-07T19:03:22+09:00",
+  "worker_run_key": "20261007-1903-scheduled-chat-00/repair-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3961,
+    "body_paragraphs": 23,
+    "method_chars": 1546,
+    "method_paragraphs": 9,
+    "evaluation_chars": 351,
+    "limitation_chars": 511,
+    "insufficiency_flags": [
+      "評価説明量 351 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 351 < 500"
+  ],
+  "processed_at": "2026-10-07T13:48:33+00:00"
+}
