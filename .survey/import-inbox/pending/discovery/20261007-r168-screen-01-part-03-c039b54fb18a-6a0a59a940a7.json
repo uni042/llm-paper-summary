@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r168-screen-01-part-03-c039b54fb18a",
+  "reference_main_sha": "e47361ba7366eb8e9852cda22dd314696eb9e114",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17508",
+      "identity_tokens": [
+        "arXiv:2603.17508"
+      ],
+      "title": "Omni-I2C: A Holistic Benchmark for High-Fidelity Image-to-Code Generation",
+      "reason": "一次資料の要旨は画像からコードを生成するマルチモーダル評価ベンチマークであり、効率改善法を提案しない。",
+      "source_url": "https://arxiv.org/abs/2603.17508",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08173",
+      "identity_tokens": [
+        "arXiv:2601.08173"
+      ],
+      "title": "The Agent's First Day: Benchmarking Learning, Exploration, and Scheduling in the Workplace Scenarios",
+      "reason": "一次本文はworkplace agentのdynamic scheduling・探索・継続学習を測るbenchmarkであり、LLM serving request schedulingや推論基盤のresource allocationを扱わない。",
+      "source_url": "https://arxiv.org/abs/2601.08173",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08184",
+      "identity_tokens": [
+        "arXiv:2310.08184"
+      ],
+      "title": "Learning from models beyond fine-tuning",
+      "reason": "一次資料の要旨はデータ不足下の基盤モデル活用に関するレビューで、中心はfine-tuning/editing/fusionによる下流適応であり、具体的な推論・serving最適化は扱わない。",
+      "source_url": "https://arxiv.org/abs/2310.08184",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03875",
+      "identity_tokens": [
+        "arXiv:2307.03875"
+      ],
+      "title": "Large Language Models for Supply Chain Optimization",
+      "reason": "一次資料の要旨はサプライチェーン最適化へのLLM適用であり、LLM推論基盤の性能改善ではない。",
+      "source_url": "https://arxiv.org/abs/2307.03875",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.11439",
+      "identity_tokens": [
+        "arXiv:2010.11439"
+      ],
+      "title": "Parallel Tacotron: Non-Autoregressive and Controllable TTS",
+      "reason": "一次資料の要旨は非自己回帰TTSの並列音声合成で推論時間を短縮するが、対象は音声合成モデルでありLLM推論効率や既存LLM系統との技術的接続を示さない。",
+      "source_url": "https://arxiv.org/abs/2010.11439",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    }
+  ]
+}
