@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-07T09:02:23+00:00",
+  "updated_at": "2026-10-07T09:29:01+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3669,6 +3669,12 @@
       "processed_at": "2026-10-07T09:02:23+00:00",
       "canonical_id": "arXiv:2312.06742",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-99bf900f9c31--libfile_8c2ebc480ed48191bd587ec5544d0e3f--2023-2312.06742-honeybee.md"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-99bf900f9c31--libfile_8c2ebc480ed48191bd587ec5544d0e3f--2023-2312.06742-honeybee.md",
+      "processed_at": "2026-10-07T09:29:01+00:00",
+      "canonical_id": "arXiv:2312.06742"
     }
   ]
 }
