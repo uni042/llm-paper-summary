@@ -8,6 +8,7 @@ one-way: passing it never establishes semantic quality.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import re
 from pathlib import Path
 
@@ -108,6 +109,15 @@ def _boilerplate_reuse_failures(repo_root: Path, paper_path: str, content: str) 
     current = (repo_root / paper_path).resolve()
     shared_by_source: dict[str, list[str]] = {}
 
+    # A re-audit manuscript is a revision of its own published paper.  Long
+    # unchanged paragraphs are expected there and are not cross-paper reuse.
+    # Require a matching canonical identity AND the exact original git blob
+    # before exempting that single target; other papers remain fully checked.
+    meta, _ = quality._frontmatter(content)
+    target_path = str(meta.get("under16kb_reaudit_target_path") or "").strip()
+    target_sha = str(meta.get("under16kb_reaudit_source_git_blob_sha") or "").strip()
+    target_id = str(meta.get("canonical_id") or "").strip().casefold()
+
     for other in _reuse_search_paths(repo_root, paper_path):
         try:
             if other.resolve() == current:
@@ -118,6 +128,15 @@ def _boilerplate_reuse_failures(repo_root: Path, paper_path: str, content: str) 
             other_text = other.read_text(encoding="utf-8", errors="strict")
             if quality.is_moved_stub(other_text.splitlines()):
                 continue
+            if (
+                target_path and target_sha and target_id
+                and rel == target_path
+                and str(quality._frontmatter(other_text)[0].get("canonical_id") or "").strip().casefold() == target_id
+            ):
+                raw = other_text.encode("utf-8")
+                actual_sha = hashlib.sha1(f"blob {len(raw)}\0".encode("ascii") + raw).hexdigest()
+                if actual_sha == target_sha:
+                    continue
         except (OSError, UnicodeError, ValueError):
             continue
         overlap = candidate_set.intersection(_normalize_prose_paragraphs(other_text))
