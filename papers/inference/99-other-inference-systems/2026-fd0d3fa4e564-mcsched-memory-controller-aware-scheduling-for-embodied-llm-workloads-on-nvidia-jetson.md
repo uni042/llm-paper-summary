@@ -32,11 +32,23 @@ sources:
 - https://yunmingxiao.github.io/publication/26apsys-mcsched/apsys26-mcsched.pdf
 - https://doi.org/10.1145/3838177.3841726
 implementation: ROS 2のコールバック境界から実行時間・余裕時間・締切違反を取得し、JetsonのACTMONからメモリ制御器圧力を取得する。危険時はSIGSTOP/SIGCONTでLLMプロセス群を停止・再開する試作実装。
-last_checked: '2026-09-21'
+last_checked: '2026-10-08'
 code: null
 references: []
-last_audited: null
-audit_version: 0
+last_audited: '2026-10-08'
+audit_version: 1
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md
+under16kb_reaudit_source_git_blob_sha: 'dae9f75452d102bcaef519ea573f695d2c745b9f'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_body_chars: 4594
+quality_method_chars: 1377
+quality_eval_chars: 818
+quality_limitation_chars: 155
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07'
+worker_completed_at: '2026-10-07T15:50:00+00:00'
+worker_run_key: 'interactive-reverse-reaudit-20261008-mcsched'
 ---
 
 # MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson
