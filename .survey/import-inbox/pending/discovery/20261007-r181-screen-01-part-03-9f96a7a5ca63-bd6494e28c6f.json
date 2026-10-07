@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r181-screen-01-part-03-9f96a7a5ca63",
+  "reference_main_sha": "fa312c3cb8946ca92f01e318fb94fa82fa7f85ca",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11960",
+      "identity_tokens": [
+        "arXiv:2605.11960"
+      ],
+      "title": "Chronicles-OCR: A Cross-Temporal Perception Benchmark for the Evolutionary Trajectory of Chinese Characters",
+      "reason": "Chronicles-OCR is a cross-temporal visual perception benchmark for VLLMs with a new annotation paradigm; it does not propose an inference-cost optimization.",
+      "source_url": "https://arxiv.org/abs/2605.11960",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12070",
+      "identity_tokens": [
+        "arXiv:2605.12070"
+      ],
+      "title": "Missing Old Logits in Asynchronous Agentic RL: Semantic Mismatch and Repair Methods for Off-Policy Correction",
+      "reason": "The paper analyzes missing logits and exact/approximate correction for asynchronous agentic RL; its results concern post-training rollout throughput and correction, not production inference.",
+      "source_url": "https://arxiv.org/abs/2605.12070",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12571",
+      "identity_tokens": [
+        "arXiv:2605.12571"
+      ],
+      "title": "VideoSEAL: Mitigating Evidence Misalignment in Agentic Long Video Understanding by Decoupling Answer Authority",
+      "reason": "VideoSEAL decouples planning from answer authority for long-video evidence alignment. It improves accuracy and grounding but does not report lower compute, memory, latency, token use, or serving load.",
+      "source_url": "https://arxiv.org/abs/2605.12571",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10815",
+      "identity_tokens": [
+        "arXiv:2605.10815"
+      ],
+      "title": "Probing Cross-modal Information Hubs in Audio-Visual LLMs",
+      "reason": "The primary study identifies cross-modal sink tokens and proposes training-free hallucination mitigation through reliance on them. The method changes where information is read but does not prune tokens or demonstrate reduced latency/memory; the attention-sink connection is exploratory.",
+      "source_url": "https://arxiv.org/abs/2605.10815",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10876",
+      "identity_tokens": [
+        "arXiv:2605.10876"
+      ],
+      "title": "AssayBench: An Assay-Level Virtual Cell Benchmark for LLMs and Agents",
+      "reason": "AssayBench is a virtual-cell/phenotypic-screen benchmark for LLMs and agents. Fine-tuning, ensembling, and prompt optimization in its evaluation improve task performance, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.10876",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
