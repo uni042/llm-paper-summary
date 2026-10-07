@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fluctuation-based Adaptive Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2312.11983",
+      "year": 2023,
+      "published": "2023-12-19",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 174,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Network Pruning is a promising way to address the huge computing resource demands of the deployment and inference of Large Language Models (LLMs). Retraining-free is important for LLMs' pruning methods. However, almost all of the existing retraining-free pruning approaches for LLMs focus on unstructured pruning, which requires specific hardware support for acceleration. In this paper, we propose a novel retraining-free structured pruning framework for LLMs, named FLAP (FLuctuation-based Adaptive\nStructured Pruning). It is hardware-friendly by effectively reducing storage and enhancing inference speed. For effective structured pruning of LLMs, we highlight three critical elements that demand the utmost attention: formulating structured importance metrics, adaptively searching the global compressed model, and implementing compensation mechanisms to mitigate performance loss. First, FLAP determines whether the output feature map is easily recoverable when a column of weight is removed, based on the fluctuation pruning metric. Then it standardizes the importance scores to adaptively determine the global compressed model structure. At last, FLAP adds additional bias terms to recover the output feature maps using the baseline values. We thoroughly evaluate our approach on a variety of language benchmarks. Without any retraining, our method significantly outperforms the state-of-the-art methods, including LLM-Pruner and the extension of Wanda in structured pruning. The code is released at https://github.com/CASIA-IVA-Lab/FLAP.",
+      "identifiers": [
+        "SemanticScholar:9ea8001d6eb52d14134ceede7f88b1d8fa8db41f"
+      ],
+      "semantic_scholar_id": "9ea8001d6eb52d14134ceede7f88b1d8fa8db41f",
+      "canonical_id": "arXiv:2312.11983",
+      "arxiv_id": "2312.11983",
+      "doi": "10.48550/arXiv.2312.11983",
+      "authors": [
+        "Yongqi An",
+        "Xu Zhao",
+        "Tao Yu",
+        "Ming Tang",
+        "Jin-Qiao Wang"
+      ],
+      "priority": 174,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 174,
+        "citation_count": 174,
+        "total": 174,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1023,
+        "matched_prestigious_venue": null
+      },
+      "reason": "再学習不要の構造化pruningでLLMのstorageと実推論速度を直接改善するFLAPを提案し、hardware-friendlyなdense縮小モデルとしてdeployment/inference効率を対象とする。",
+      "library_body_check": "fulltext_review: 一次論文内容を確認。weighted input feature fluctuationでchannel importanceを測り、global adaptive structure searchとbaseline bias compensationで再学習なしにstructured pruningする。LLaMA系列でpruning後のperplexity/zero-shot品質と実inference speedを評価し、構造化削減がhardware accelerationへ直結することを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1c1a1718afad",
+    "round": "libimp-1c1a1718afad18c6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1c1a1718afad18c6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1c1a1718afad18c6-pre01.json",
+    "receipt": "sha256:120c58bcc2654451347e2a792fb79440a7f3cc0eb6febce1ffb4786f0bb8e2d0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1c1a1718afad",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

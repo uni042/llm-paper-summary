@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "source_url": "https://arxiv.org/abs/2603.05451",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 76,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications. While FlashAttention-3 optimized attention for Hopper GPUs through asynchronous execution and warp specialization, it primarily targets the H100 architecture. The AI industry has rapidly transitioned to deploying Blackwell-based systems such as the B200 and GB200, which exhibit fundamentally different performance characteristics due to asymmetric hardware scaling: tensor core throughput doubles while other functional units (shared memory bandwidth, exponential units) scale more slowly or remain unchanged. We develop several techniques to address these shifting bottlenecks on Blackwell GPUs: (1) redesigned pipelines that exploit fully asynchronous MMA operations and larger tile sizes, (2) software-emulated exponential and conditional softmax rescaling that reduces non-matmul operations, and (3) leveraging tensor memory and the 2-CTA MMA mode to reduce shared memory traffic and atomic adds in the backward pass. We demonstrate that our method, FlashAttention-4, achieves up to 1.3$\\times$ speedup over cuDNN 9.13 and 2.7$\\times$ over Triton on B200 GPUs with BF16, reaching up to 1613 TFLOPs/s (71% utilization). Beyond algorithmic innovations, we implement FlashAttention-4 entirely in CuTe-DSL embedded in Python, achieving 20-30$\\times$ faster compile times compared to traditional C++ template-based approaches while maintaining full expressivity.",
+      "identifiers": [
+        "SemanticScholar:aeb3bfed03fccc84103ade3f7dcdda8353819ebb"
+      ],
+      "semantic_scholar_id": "aeb3bfed03fccc84103ade3f7dcdda8353819ebb",
+      "canonical_id": "arXiv:2603.05451",
+      "arxiv_id": "2603.05451",
+      "doi": "10.48550/arXiv.2603.05451",
+      "authors": [
+        "Ted Zadouri",
+        "Markus Höhnerbach",
+        "J. Shah",
+        "Timothy Liu",
+        "Vijay Thakkar",
+        "Tri Dao"
+      ],
+      "priority": 176,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 76,
+        "citation_count": 76,
+        "total": 176,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      },
+      "reason": "新世代GPUの非対称なtensor-core/SFU/共有memory性能に合わせattention algorithmとkernel pipelineを共同設計するFlashAttention系kernel研究。LLM attention推論のthroughput・hardware utilizationを直接改善するため対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv一次論文の問題設定・手法・評価記述を確認。asymmetric hardware scalingを背景にattentionのalgorithm/kernel pipeliningを共同設計し、LLM系attention workloadで既存FlashAttention実装に対する性能改善を評価する直接的inference-kernel研究。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e32e6feeb449",
+    "round": "libimp-e32e6feeb4493fee-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e32e6feeb4493fee-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e32e6feeb4493fee-pre01.json",
+    "receipt": "sha256:a65b7328be38448eb6cb4d8a21bc7714d0652006a45b84a0c2ff4d2804f8970d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e32e6feeb449",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
