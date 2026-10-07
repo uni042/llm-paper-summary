@@ -38,11 +38,23 @@ sources:
 - https://www.ijcai.org/proceedings/2026/0502.pdf
 - https://doi.org/10.24963/ijcai.2026/502
 implementation: 論文ではS-LoRAのUnified メモリを基盤にM-LoRAを実装し、生成長予測器、CPU上の非同期整数線形計画ソルバ、予測誤り回復を統合して実機評価している。公開コードURLは論文本文では確認できない。
-last_checked: '2026-09-22'
+last_checked: '2026-10-08'
 code: ''
 references: []
-last_audited: null
-audit_version: 0
+last_audited: '2026-10-08'
+audit_version: 1
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md
+under16kb_reaudit_source_git_blob_sha: '4ec911ab78fd253a44af888d9e9e43189fe2ac53'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_body_chars: 5122
+quality_method_chars: 1382
+quality_eval_chars: 558
+quality_limitation_chars: 247
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07'
+worker_completed_at: '2026-10-07T16:35:00+00:00'
+worker_run_key: 'interactive-reverse-reaudit-20261008-mlora'
 ---
 
 # M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU
