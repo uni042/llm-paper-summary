@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T11:30:26+00:00",
-  "record_count": 4423,
+  "updated_at": "2026-10-07T11:40:49+00:00",
+  "record_count": 4434,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -67509,6 +67509,171 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Multi-Agent Debate with Memory Masking"
+    },
+    "DOI:10.1002/psp4.70201": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/psp4.70201",
+      "identity_tokens": [
+        "DOI:10.1002/psp4.70201"
+      ],
+      "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1002/psp4.70201 (server returned Internal Error); only the packet's cached abstract was available. Since it describes LLM/RAG regulatory-compliance evaluation, efficiency relevance remains unresolved.",
+      "first_checked_at": "2026-10-07T11:40:39+00:00",
+      "last_checked_at": "2026-10-07T11:40:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval Augmented Generation (RAG) for Evaluating Regulatory Compliance of Drug Information and Clinical Trial Protocols"
+    },
+    "arXiv:2602.15028": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.15028",
+      "identity_tokens": [
+        "arXiv:2602.15028"
+      ],
+      "reason": "The primary arXiv abstract is accessible, but HTML full-text retrieval failed and no readable primary PDF was available. The abstract describes a long-context benchmark; given its persistent-memory lineage, the inference-runtime connection cannot be resolved without the body.",
+      "first_checked_at": "2026-10-07T11:40:39+00:00",
+      "last_checked_at": "2026-10-07T11:40:39+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Long Context, Less Focus: A Scaling Gap in LLMs Revealed through Privacy and Personalization"
+    },
+    "arXiv:2603.17787": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.17787",
+      "identity_tokens": [
+        "arXiv:2603.17787"
+      ],
+      "reason": "Memory architecture is adjacent to the target lineage, but the primary text lacks a measurable inference-efficiency result.",
+      "first_checked_at": "2026-10-07T11:40:40+00:00",
+      "last_checked_at": "2026-10-07T11:40:40+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Governed Memory: A Production Architecture for Multi-Agent Workflows"
+    },
+    "arXiv:2606.02461": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.02461",
+      "identity_tokens": [
+        "arXiv:2606.02461"
+      ],
+      "reason": "AgentCL is a benchmark and memory-probing framework for non-parametric inference-time learning; it notes agents spend substantial inference time and measures cross-task reuse/stability, but it does not report reduced inference tokens, calls, latency or serving cost. Given its linked agent-memory lineage and a plausible but unverified reuse-to-efficiency connection, retain as borderline.",
+      "first_checked_at": "2026-10-07T11:40:42+00:00",
+      "last_checked_at": "2026-10-07T11:40:42+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AgentCL: Toward Rigorous Evaluation of Continual Learning in Language Agents"
+    },
+    "arXiv:2605.28820": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28820",
+      "identity_tokens": [
+        "arXiv:2605.28820"
+      ],
+      "reason": "The architecture may reduce modality-interface overhead, but the primary text does not quantify deployed inference gains.",
+      "first_checked_at": "2026-10-07T11:40:42+00:00",
+      "last_checked_at": "2026-10-07T11:40:42+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Pixels to Words - Towards Native One-Vision Models at Scale"
+    },
+    "arXiv:2605.21028": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21028",
+      "identity_tokens": [
+        "arXiv:2605.21028"
+      ],
+      "reason": "The efficiency mechanism is for video diffusion frame history, with no demonstrated LLM inference benefit.",
+      "first_checked_at": "2026-10-07T11:40:42+00:00",
+      "last_checked_at": "2026-10-07T11:40:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DySink: Dynamic Frame Sinks for Autoregressive Long Video Generation"
+    },
+    "arXiv:2606.13035": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.13035",
+      "identity_tokens": [
+        "arXiv:2606.13035"
+      ],
+      "reason": "The full text manages a fixed KV cache for autoregressive video diffusion, using sink/recent/memory regions and retrieval/alignment to improve long-rollout video quality. It is a real cache-management technique but operates on diffusion video latent frames, not LLM/VLM token KV caches, and its results emphasize quality rather than LLM serving efficiency; the lineage tie is weak and transferability unresolved.",
+      "first_checked_at": "2026-10-07T11:40:43+00:00",
+      "last_checked_at": "2026-10-07T11:40:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TetherCache: Stabilizing Autoregressive Long-Form Video Generation with Gated Recall and Trusted Alignment"
+    },
+    "DOI:10.1109/tmi.2026.3689332": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmi.2026.3689332",
+      "identity_tokens": [
+        "DOI:10.1109/tmi.2026.3689332"
+      ],
+      "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1109/TMI.2026.3689332 (server returned Internal Error); no primary abstract/full text was available in the assigned packet. Multimodal medical-diagnosis title alone is insufficient for a final unrelated decision.",
+      "first_checked_at": "2026-10-07T11:40:45+00:00",
+      "last_checked_at": "2026-10-07T11:40:45+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-View Hilbert Curve-Based Hierarchical Information Aggregation for Incomplete Multimodal Alzheimer's Disease Diagnosis"
+    },
+    "DOI:10.1016/j.jmsy.2026.02.017": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.02.017",
+      "identity_tokens": [
+        "DOI:10.1016/j.jmsy.2026.02.017"
+      ],
+      "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1016/j.jmsy.2026.02.017 (server returned Internal Error), and the packet contains no abstract. Industrial multimodal-LLM application cannot be assessed for inference-efficiency relevance without primary text.",
+      "first_checked_at": "2026-10-07T11:40:47+00:00",
+      "last_checked_at": "2026-10-07T11:40:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Knowledge-guided multimodal LLM with mixture-of-experts for interpretable defect detection and fault diagnosis: An industrial AI copilot"
+    },
+    "DOI:10.1016/j.compag.2026.111443": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.compag.2026.111443",
+      "identity_tokens": [
+        "DOI:10.1016/j.compag.2026.111443"
+      ],
+      "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1016/j.compag.2026.111443 (server returned Internal Error), and the packet contains no abstract. The crop-management survey title does not provide enough primary evidence to close relevance.",
+      "first_checked_at": "2026-10-07T11:40:48+00:00",
+      "last_checked_at": "2026-10-07T11:40:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Intelligent management of crop diseases and pests in multiscale and multimodal complex scenarios: Technologies, applications, and prospects"
+    },
+    "arXiv:2602.17547": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17547",
+      "identity_tokens": [
+        "arXiv:2602.17547"
+      ],
+      "reason": "The arXiv primary record says the paper was withdrawn due to significant data errors; the v3 record has no accessible PDF and full-text HTML retrieval fails. Because it is linked to the agent/memory lineage, relevance cannot be ruled out without reading the body.",
+      "first_checked_at": "2026-10-07T11:40:49+00:00",
+      "last_checked_at": "2026-10-07T11:40:49+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KLong: Training LLM Agent for Extremely Long-horizon Tasks"
     }
   }
 }

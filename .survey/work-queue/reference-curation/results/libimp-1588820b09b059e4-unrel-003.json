@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1588820b09b059e4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.08163",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.08163",
+    "identity_tokens": [
+      "arXiv:2603.08163"
+    ],
+    "reason": "Covenant-72B concerns trustless distributed pre-training of a large language model; its primary abstract is about training infrastructure, not inference-time efficiency.",
+    "first_checked_at": "2026-10-07T11:40:38+00:00",
+    "last_checked_at": "2026-10-07T11:40:38+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Covenant-72B: Pre-Training a 72B LLM with Trustless Peers Over-the-Internet"
+  },
+  "processed_at": "2026-10-07T11:40:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1588820b09b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
