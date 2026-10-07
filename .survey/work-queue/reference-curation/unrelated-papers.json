@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T10:10:02+00:00",
-  "record_count": 10338,
+  "updated_at": "2026-10-07T10:20:41+00:00",
+  "record_count": 10361,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -147935,6 +147935,330 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "Are Full Rollouts Necessary for On-Policy Distillation?"
+    },
+    "arXiv:2512.23568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23568",
+      "identity_tokens": [
+        "arXiv:2512.23568"
+      ],
+      "reason": "一次資料の要旨は視覚生成向けCoT/DiTの共同学習であり、CoT圧縮やLLM推論計算の削減を提案・評価していない。",
+      "first_checked_at": "2026-10-07T10:20:32+00:00",
+      "last_checked_at": "2026-10-07T10:20:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "ThinkGen: Generalized Thinking for Visual Generation"
+    },
+    "arXiv:2603.17508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17508",
+      "identity_tokens": [
+        "arXiv:2603.17508"
+      ],
+      "reason": "一次資料の要旨は画像からコードを生成するマルチモーダル評価ベンチマークであり、効率改善法を提案しない。",
+      "first_checked_at": "2026-10-07T10:20:32+00:00",
+      "last_checked_at": "2026-10-07T10:20:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Omni-I2C: A Holistic Benchmark for High-Fidelity Image-to-Code Generation"
+    },
+    "arXiv:2601.08173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08173",
+      "identity_tokens": [
+        "arXiv:2601.08173"
+      ],
+      "reason": "一次本文はworkplace agentのdynamic scheduling・探索・継続学習を測るbenchmarkであり、LLM serving request schedulingや推論基盤のresource allocationを扱わない。",
+      "first_checked_at": "2026-10-07T10:20:33+00:00",
+      "last_checked_at": "2026-10-07T10:20:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "The Agent's First Day: Benchmarking Learning, Exploration, and Scheduling in the Workplace Scenarios"
+    },
+    "arXiv:2310.08184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08184",
+      "identity_tokens": [
+        "arXiv:2310.08184"
+      ],
+      "reason": "一次資料の要旨はデータ不足下の基盤モデル活用に関するレビューで、中心はfine-tuning/editing/fusionによる下流適応であり、具体的な推論・serving最適化は扱わない。",
+      "first_checked_at": "2026-10-07T10:20:33+00:00",
+      "last_checked_at": "2026-10-07T10:20:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Learning from models beyond fine-tuning"
+    },
+    "arXiv:2307.03875": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03875",
+      "identity_tokens": [
+        "arXiv:2307.03875"
+      ],
+      "reason": "一次資料の要旨はサプライチェーン最適化へのLLM適用であり、LLM推論基盤の性能改善ではない。",
+      "first_checked_at": "2026-10-07T10:20:33+00:00",
+      "last_checked_at": "2026-10-07T10:20:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Large Language Models for Supply Chain Optimization"
+    },
+    "arXiv:2010.11439": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.11439",
+      "identity_tokens": [
+        "arXiv:2010.11439"
+      ],
+      "reason": "一次資料の要旨は非自己回帰TTSの並列音声合成で推論時間を短縮するが、対象は音声合成モデルでありLLM推論効率や既存LLM系統との技術的接続を示さない。",
+      "first_checked_at": "2026-10-07T10:20:34+00:00",
+      "last_checked_at": "2026-10-07T10:20:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Parallel Tacotron: Non-Autoregressive and Controllable TTS"
+    },
+    "arXiv:2602.19362": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19362",
+      "identity_tokens": [
+        "arXiv:2602.19362"
+      ],
+      "reason": "一次資料の要旨はoff-policy RLによるreasoning学習法であり、主な貢献は学習時の政策最適化で推論システム効率の改善ではない。",
+      "first_checked_at": "2026-10-07T10:20:35+00:00",
+      "last_checked_at": "2026-10-07T10:20:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "LLMs Can Learn to Reason Via Off-Policy RL"
+    },
+    "arXiv:2602.14833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14833",
+      "identity_tokens": [
+        "arXiv:2602.14833"
+      ],
+      "reason": "一次資料の要旨はRF信号理解向けのマルチモーダル応用モデルであり、LLM推論基盤の最適化ではない。",
+      "first_checked_at": "2026-10-07T10:20:35+00:00",
+      "last_checked_at": "2026-10-07T10:20:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "RF-GPT: Teaching AI to See the Wireless World"
+    },
+    "arXiv:2602.05547": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05547",
+      "identity_tokens": [
+        "arXiv:2602.05547"
+      ],
+      "reason": "一次資料の要旨は複数タスク間のGRPO学習重み付け・samplerを扱い、推論時の資源効率を改善する方法ではない。",
+      "first_checked_at": "2026-10-07T10:20:36+00:00",
+      "last_checked_at": "2026-10-07T10:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "title": "Multi-Task GRPO: Reliable LLM Reasoning Across Tasks"
+    },
+    "arXiv:2602.04877": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04877",
+      "identity_tokens": [
+        "arXiv:2602.04877"
+      ],
+      "reason": "一次資料本文の方法・実験は画像点追跡で相関cost volumeをwarpingへ置換するCVモデル。FlashAttentionとの題名上の近さはあるが、LLM attention/inferenceへの適用を示さず対象外。",
+      "first_checked_at": "2026-10-07T10:20:36+00:00",
+      "last_checked_at": "2026-10-07T10:20:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "CoWTracker: Tracking by Warping instead of Correlation"
+    },
+    "arXiv:2606.09304": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09304",
+      "identity_tokens": [
+        "arXiv:2606.09304"
+      ],
+      "reason": "一次資料の要旨は教師信号の信頼性を使うon-policy distillationの学習アルゴリズムで、推論時の計算・メモリ・レイテンシ改善を示さない。",
+      "first_checked_at": "2026-10-07T10:20:37+00:00",
+      "last_checked_at": "2026-10-07T10:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "SG-OPD: Sign-Gated On-Policy Distillation via Sign-Consistency Gating and Phased Teacher Sampling"
+    },
+    "arXiv:2605.06078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06078",
+      "identity_tokens": [
+        "arXiv:2605.06078"
+      ],
+      "reason": "一次資料の要旨は長期エージェントのcredit assignmentとRLサンプル効率を改善する学習法であり、推論実行効率の最適化ではない。",
+      "first_checked_at": "2026-10-07T10:20:37+00:00",
+      "last_checked_at": "2026-10-07T10:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Milestone-Guided Policy Learning for Long-Horizon Language Agents"
+    },
+    "arXiv:2603.18507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18507",
+      "identity_tokens": [
+        "arXiv:2603.18507"
+      ],
+      "reason": "一次資料の要旨はpersona promptingによるalignment/accuracyの分析・routingで、推論効率の改善を示していない。",
+      "first_checked_at": "2026-10-07T10:20:37+00:00",
+      "last_checked_at": "2026-10-07T10:20:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Expert Personas Improve LLM Alignment but Damage Accuracy: Bootstrapping Intent-Based Persona Routing with PRISM"
+    },
+    "arXiv:2603.06001": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06001",
+      "identity_tokens": [
+        "arXiv:2603.06001"
+      ],
+      "reason": "linked attention/streaming lineageはあるが、一次本文の方法はVLAのOOD指示理解・linguistic groundingをattention recalibrationで改善するもの。KV cache、推論時資源量、latency、throughputの改善を示さず、関連系統との技術的接点は確認できない。",
+      "first_checked_at": "2026-10-07T10:20:38+00:00",
+      "last_checked_at": "2026-10-07T10:20:38+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration"
+    },
+    "arXiv:2511.22173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.22173",
+      "identity_tokens": [
+        "arXiv:2511.22173"
+      ],
+      "reason": "一次資料の要旨は自己改善能力のチェックリスト評価ベンチマークを提案しており、推論計算・メモリ・レイテンシ等を改善する方法を示していない。",
+      "first_checked_at": "2026-10-07T10:20:38+00:00",
+      "last_checked_at": "2026-10-07T10:20:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "title": "RefineBench: Evaluating Refinement Capability of Language Models via Checklists"
+    },
+    "arXiv:2511.21192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21192",
+      "identity_tokens": [
+        "arXiv:2511.21192"
+      ],
+      "reason": "一次資料の要旨はVLAに対する敵対的パッチ攻撃の提案・評価であり、モデル推論効率の改善を扱わない。",
+      "first_checked_at": "2026-10-07T10:20:39+00:00",
+      "last_checked_at": "2026-10-07T10:20:39+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models"
+    },
+    "arXiv:2511.19933": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19933",
+      "identity_tokens": [
+        "arXiv:2511.19933"
+      ],
+      "reason": "一次資料の要旨は本番LLMシステムの失敗分類と設計原則を論じるtaxonomyで、効率を改善する具体的方法を提示しない。",
+      "first_checked_at": "2026-10-07T10:20:39+00:00",
+      "last_checked_at": "2026-10-07T10:20:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Failure Modes in LLM Systems: A System-Level Taxonomy for Reliable AI Applications"
+    },
+    "arXiv:2511.12149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.12149",
+      "identity_tokens": [
+        "arXiv:2511.12149"
+      ],
+      "reason": "一次資料の要旨はVLAの攻撃・バックドア評価枠組みであり、推論効率の改善ではない。",
+      "first_checked_at": "2026-10-07T10:20:39+00:00",
+      "last_checked_at": "2026-10-07T10:20:39+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models"
+    },
+    "arXiv:2511.02303": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.02303",
+      "identity_tokens": [
+        "arXiv:2511.02303"
+      ],
+      "reason": "一次資料の要旨はマルチエージェント推論の協調性・報酬設計を扱い、推論計算量や serving 効率を削減する方法を示していない。",
+      "first_checked_at": "2026-10-07T10:20:40+00:00",
+      "last_checked_at": "2026-10-07T10:20:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Unlocking the Power of Multi-Agent LLM for Reasoning: From Lazy Agents to Deliberation"
+    },
+    "arXiv:2604.20806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20806",
+      "identity_tokens": [
+        "arXiv:2604.20806"
+      ],
+      "reason": "一次資料の要旨は複数画像推論の評価ベンチマークで、推論効率を改善する技術ではない。",
+      "first_checked_at": "2026-10-07T10:20:40+00:00",
+      "last_checked_at": "2026-10-07T10:20:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model"
+    },
+    "arXiv:2604.08927": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08927",
+      "identity_tokens": [
+        "arXiv:2604.08927"
+      ],
+      "reason": "一次資料の要旨は外来診療向けの臨床マルチエージェント・ワークフローであり、一般化可能なLLM推論最適化ではない。",
+      "first_checked_at": "2026-10-07T10:20:40+00:00",
+      "last_checked_at": "2026-10-07T10:20:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "title": "Beyond the Individual: Virtualizing Multi-Disciplinary Reasoning for Clinical Intake via Collaborative Agents"
+    },
+    "arXiv:2604.08326": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08326",
+      "identity_tokens": [
+        "arXiv:2604.08326"
+      ],
+      "reason": "リンク先は学習・attention系統だが、本文の主題は医療LLM alignmentのfine-grained criteria注入で、推論基盤改善との技術的接点は確認できない。",
+      "first_checked_at": "2026-10-07T10:20:41+00:00",
+      "last_checked_at": "2026-10-07T10:20:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "ProMedical: Hierarchical Fine-Grained Criteria Modeling for Medical LLM Alignment via Explicit Injection"
+    },
+    "arXiv:2604.06685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06685",
+      "identity_tokens": [
+        "arXiv:2604.06685"
+      ],
+      "reason": "一次資料の要旨は化学画像理解向けVLMの推論能力を扱い、LLM推論の計算・メモリ・配信効率を改善する手法ではない。",
+      "first_checked_at": "2026-10-07T10:20:41+00:00",
+      "last_checked_at": "2026-10-07T10:20:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "ChemVLR: Prioritizing Reasoning in Perception for Chemical Vision-Language Understanding"
     }
   }
 }

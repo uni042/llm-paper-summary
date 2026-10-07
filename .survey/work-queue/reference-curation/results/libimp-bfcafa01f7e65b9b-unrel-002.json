@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfcafa01f7e65b9b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.06078",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.06078",
+    "identity_tokens": [
+      "arXiv:2605.06078"
+    ],
+    "reason": "一次資料の要旨は長期エージェントのcredit assignmentとRLサンプル効率を改善する学習法であり、推論実行効率の最適化ではない。",
+    "first_checked_at": "2026-10-07T10:20:37+00:00",
+    "last_checked_at": "2026-10-07T10:20:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Milestone-Guided Policy Learning for Long-Horizon Language Agents"
+  },
+  "processed_at": "2026-10-07T10:20:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfcafa01f7e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

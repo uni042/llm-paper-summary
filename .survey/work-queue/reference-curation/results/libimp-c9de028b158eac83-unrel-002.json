@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9de028b158eac83-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.20806",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.20806",
+    "identity_tokens": [
+      "arXiv:2604.20806"
+    ],
+    "reason": "一次資料の要旨は複数画像推論の評価ベンチマークで、推論効率を改善する技術ではない。",
+    "first_checked_at": "2026-10-07T10:20:40+00:00",
+    "last_checked_at": "2026-10-07T10:20:40+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "title": "OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model"
+  },
+  "processed_at": "2026-10-07T10:20:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9de028b158e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
