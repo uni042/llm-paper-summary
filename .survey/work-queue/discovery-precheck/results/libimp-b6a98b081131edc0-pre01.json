@@ -1,0 +1,243 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b6a98b081131edc0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b6a98b081131",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2401.17377",
+    "arXiv:2404.10136"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5b8ad4eefbec8345b682fb2262409ceae4b7d24a",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-07T22:05:00.229107+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2401.17377",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2404.10136",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
+      "source_url": "https://arxiv.org/abs/2401.17377",
+      "year": 2024,
+      "published": "2024-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 166,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Are $n$-gram language models still relevant in this era of neural large language models (LLMs)? Our answer is yes, and we showcase their values in both text analysis and improving neural LLMs. This was done by modernizing $n$-gram LMs in two aspects. First, we train them at the same data scale as neural LLMs -- 5 trillion tokens. This is the largest $n$-gram LM ever built. Second, existing $n$-gram LMs use small $n$ which hinders their performance; we instead allow $n$ to be arbitrarily large, by introducing a new $\\infty$-gram LM with backoff. Instead of pre-computing $n$-gram count tables (which would be very expensive), we develop an engine named infini-gram -- powered by suffix arrays -- that can compute $\\infty$-gram (as well as $n$-gram with arbitrary $n$) probabilities with millisecond-level latency. The $\\infty$-gram framework and infini-gram engine enable us to conduct many novel and interesting analyses of human-written and machine-generated text: we find that the $\\infty$-gram LM has fairly high accuracy for next-token prediction (47%), and can complement neural LLMs to greatly reduce their perplexity. When analyzing machine-generated text, we also observe irregularities in the machine--$\\infty$-gram agreement level with respect to the suffix length, which indicates deficiencies in neural LLM pretraining and the positional embeddings of Transformers.",
+      "identifiers": [
+        "SemanticScholar:1c143a753d4eb82da5526132149f6e4ed5271b63"
+      ],
+      "semantic_scholar_id": "1c143a753d4eb82da5526132149f6e4ed5271b63",
+      "canonical_id": "arXiv:2401.17377",
+      "arxiv_id": "2401.17377",
+      "doi": "10.48550/arXiv.2401.17377",
+      "authors": [
+        "Jiacheng Liu",
+        "Sewon Min",
+        "Luke S. Zettlemoyer",
+        "Yejin Choi",
+        "Hannaneh Hajishirzi"
+      ],
+      "priority": 166,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 166,
+        "citation_count": 166,
+        "total": 166,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 981,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Language Model Cascades: Token-level uncertainty and beyond",
+      "source_url": "https://arxiv.org/abs/2404.10136",
+      "year": 2024,
+      "published": "2024-04-15",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 156,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in language models (LMs) have led to significant improvements in quality on complex NLP tasks, but at the expense of increased inference costs. Cascading offers a simple strategy to achieve more favorable cost-quality tradeoffs: here, a small model is invoked for most\"easy\"instances, while a few\"hard\"instances are deferred to the large model. While the principles underpinning cascading are well-studied for classification tasks - with deferral based on predicted class uncertainty favored theoretically and practically - a similar understanding is lacking for generative LM tasks. In this work, we initiate a systematic study of deferral rules for LM cascades. We begin by examining the natural extension of predicted class uncertainty to generative LM tasks, namely, the predicted sequence uncertainty. We show that this measure suffers from the length bias problem, either over- or under-emphasizing outputs based on their lengths. This is because LMs produce a sequence of uncertainty values, one for each output token; and moreover, the number of output tokens is variable across examples. To mitigate this issue, we propose to exploit the richer token-level uncertainty information implicit in generative LMs. We argue that naive predicted sequence uncertainty corresponds to a simple aggregation of these uncertainties. By contrast, we show that incorporating token-level uncertainty through learned post-hoc deferral rules can significantly outperform such simple aggregation strategies, via experiments on a range of natural language benchmarks with FLAN-T5 models. We further show that incorporating embeddings from the smaller model and intermediate layers of the larger model can give an additional boost in the overall cost-quality tradeoff.",
+      "identifiers": [
+        "SemanticScholar:19e499d76a2e49574b499cd9ebd31304880d33d6"
+      ],
+      "semantic_scholar_id": "19e499d76a2e49574b499cd9ebd31304880d33d6",
+      "canonical_id": "arXiv:2404.10136",
+      "arxiv_id": "2404.10136",
+      "doi": "10.48550/arXiv.2404.10136",
+      "authors": [
+        "Neha Gupta",
+        "Harikrishna Narasimhan",
+        "Wittawat Jitkrittum",
+        "A. Rawat",
+        "A. Menon",
+        "Sanjiv Kumar"
+      ],
+      "priority": 166,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 156,
+        "citation_count": 156,
+        "total": 166,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 905,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2401.17377",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2401.17377",
+        "id:SemanticScholar:1c143a753d4eb82da5526132149f6e4ed5271b63",
+        "id:arXiv:2401.17377",
+        "title:infinigram scaling unbounded ngram language models to a trillion tokens",
+        "url:https://arxiv.org/abs/2401.17377"
+      ],
+      "record": {
+        "title": "Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
+        "source_url": "https://arxiv.org/abs/2401.17377",
+        "year": 2024,
+        "published": "2024-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 166,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Are $n$-gram language models still relevant in this era of neural large language models (LLMs)? Our answer is yes, and we showcase their values in both text analysis and improving neural LLMs. This was done by modernizing $n$-gram LMs in two aspects. First, we train them at the same data scale as neural LLMs -- 5 trillion tokens. This is the largest $n$-gram LM ever built. Second, existing $n$-gram LMs use small $n$ which hinders their performance; we instead allow $n$ to be arbitrarily large, by introducing a new $\\infty$-gram LM with backoff. Instead of pre-computing $n$-gram count tables (which would be very expensive), we develop an engine named infini-gram -- powered by suffix arrays -- that can compute $\\infty$-gram (as well as $n$-gram with arbitrary $n$) probabilities with millisecond-level latency. The $\\infty$-gram framework and infini-gram engine enable us to conduct many novel and interesting analyses of human-written and machine-generated text: we find that the $\\infty$-gram LM has fairly high accuracy for next-token prediction (47%), and can complement neural LLMs to greatly reduce their perplexity. When analyzing machine-generated text, we also observe irregularities in the machine--$\\infty$-gram agreement level with respect to the suffix length, which indicates deficiencies in neural LLM pretraining and the positional embeddings of Transformers.",
+        "identifiers": [
+          "SemanticScholar:1c143a753d4eb82da5526132149f6e4ed5271b63"
+        ],
+        "semantic_scholar_id": "1c143a753d4eb82da5526132149f6e4ed5271b63",
+        "canonical_id": "arXiv:2401.17377",
+        "arxiv_id": "2401.17377",
+        "doi": "10.48550/arXiv.2401.17377",
+        "authors": [
+          "Jiacheng Liu",
+          "Sewon Min",
+          "Luke S. Zettlemoyer",
+          "Yejin Choi",
+          "Hannaneh Hajishirzi"
+        ],
+        "priority": 166,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 166,
+          "citation_count": 166,
+          "total": 166,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 981,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2404.10136",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2404.10136",
+        "id:SemanticScholar:19e499d76a2e49574b499cd9ebd31304880d33d6",
+        "id:arXiv:2404.10136",
+        "title:language model cascades tokenlevel uncertainty and beyond",
+        "url:https://arxiv.org/abs/2404.10136"
+      ],
+      "record": {
+        "title": "Language Model Cascades: Token-level uncertainty and beyond",
+        "source_url": "https://arxiv.org/abs/2404.10136",
+        "year": 2024,
+        "published": "2024-04-15",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 156,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in language models (LMs) have led to significant improvements in quality on complex NLP tasks, but at the expense of increased inference costs. Cascading offers a simple strategy to achieve more favorable cost-quality tradeoffs: here, a small model is invoked for most\"easy\"instances, while a few\"hard\"instances are deferred to the large model. While the principles underpinning cascading are well-studied for classification tasks - with deferral based on predicted class uncertainty favored theoretically and practically - a similar understanding is lacking for generative LM tasks. In this work, we initiate a systematic study of deferral rules for LM cascades. We begin by examining the natural extension of predicted class uncertainty to generative LM tasks, namely, the predicted sequence uncertainty. We show that this measure suffers from the length bias problem, either over- or under-emphasizing outputs based on their lengths. This is because LMs produce a sequence of uncertainty values, one for each output token; and moreover, the number of output tokens is variable across examples. To mitigate this issue, we propose to exploit the richer token-level uncertainty information implicit in generative LMs. We argue that naive predicted sequence uncertainty corresponds to a simple aggregation of these uncertainties. By contrast, we show that incorporating token-level uncertainty through learned post-hoc deferral rules can significantly outperform such simple aggregation strategies, via experiments on a range of natural language benchmarks with FLAN-T5 models. We further show that incorporating embeddings from the smaller model and intermediate layers of the larger model can give an additional boost in the overall cost-quality tradeoff.",
+        "identifiers": [
+          "SemanticScholar:19e499d76a2e49574b499cd9ebd31304880d33d6"
+        ],
+        "semantic_scholar_id": "19e499d76a2e49574b499cd9ebd31304880d33d6",
+        "canonical_id": "arXiv:2404.10136",
+        "arxiv_id": "2404.10136",
+        "doi": "10.48550/arXiv.2404.10136",
+        "authors": [
+          "Neha Gupta",
+          "Harikrishna Narasimhan",
+          "Wittawat Jitkrittum",
+          "A. Rawat",
+          "A. Menon",
+          "Sanjiv Kumar"
+        ],
+        "priority": 166,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 156,
+          "citation_count": 156,
+          "total": 166,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 905,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:efb3d69e2e2d418639868750fd52d1911fb283888e6cf54b6ce506aa4cd8a7b4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
