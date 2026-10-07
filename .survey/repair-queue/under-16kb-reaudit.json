@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-07T14:21:05.539014+00:00",
+  "generated_at": "2026-10-07T21:25:19.617926+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 658,
+  "count": 641,
   "worker_counts": {
-    "scheduled-chat-00": 222,
-    "scheduled-chat-30": 211,
-    "scheduled-chat-45": 225
+    "scheduled-chat-00": 217,
+    "scheduled-chat-30": 205,
+    "scheduled-chat-45": 219
   },
   "entries": [
     {
@@ -4671,26 +4671,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md",
-      "canonical_id": "arXiv:2402.17463",
-      "title": "Training-Free Long-Context Scaling of Large Language Models",
-      "file_bytes": 10709,
-      "source_sha256": "d8c78dedacba5e6b60c165a6e0b80b95a5c7ee1f5a1af1514347ff248ab5f445",
-      "source_git_blob_sha": "b1ebf951c8486007dadd5dbc32b9603d257f0743",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.992778,
-      "quality_metrics": {
-        "body_chars": 2954,
-        "method_chars": 874,
-        "evaluation_chars": 910,
-        "limitation_chars": 246
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
       "canonical_id": "arXiv:1909.05840",
       "title": "Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT",
@@ -7218,6 +7198,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md",
+      "canonical_id": "arXiv:2402.17463",
+      "title": "Training-Free Long-Context Scaling of Large Language Models",
+      "file_bytes": 11883,
+      "source_sha256": "86ff87d0f109a2d8c19fb9ea102bd3e7d4910281e4f6be85dc22130ddf444f10",
+      "source_git_blob_sha": "e1001dc620be3fa68b869000ab44381cee585eee",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.992778,
+      "quality_metrics": {
+        "body_chars": 2954,
+        "method_chars": 874,
+        "evaluation_chars": 910,
+        "limitation_chars": 246
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
       "canonical_id": "arXiv:2503.08524",
       "title": "Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency",
@@ -8780,26 +8780,6 @@
         "method_chars": 1301,
         "evaluation_chars": 520,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md",
-      "canonical_id": "arXiv:2402.16775",
-      "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
-      "file_bytes": 12516,
-      "source_sha256": "c01e67bb4b7373f1bc2d7f6774b258936f33056c26c60c311b19d691f583863a",
-      "source_git_blob_sha": "6ab53b1d99161ac2ff3fe815b035adb778f6dc13",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 3367,
-        "method_chars": 752,
-        "evaluation_chars": 939,
-        "limitation_chars": 218
       },
       "mechanical_failures": [],
       "warnings": []
@@ -14318,9 +14298,9 @@
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md",
       "canonical_id": "arXiv:2412.20993",
       "title": "Efficiently Serving LLM Reasoning Programs with Certaindex",
-      "file_bytes": 15701,
-      "source_sha256": "e982f53143ca42f42844209850ff3c4285bcfe24d808b8fc8810b99805083341",
-      "source_git_blob_sha": "a726972ff341a27d7503ccbe07fd965ef0e22a6c",
+      "file_bytes": 16312,
+      "source_sha256": "f437a824034c222fb2e9f06839d67cd161994e920b72db8ed48a525ea4358d68",
+      "source_git_blob_sha": "bc79746ca47a26e2d3db3dcaad66f49656b9b9b1",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
@@ -14337,54 +14317,12 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md",
-      "canonical_id": "DOI:10.24963/ijcai.2026/502",
-      "title": "M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU",
-      "file_bytes": 15710,
-      "source_sha256": "f4d04b573d1f4abe64ebd9b2ee9d39da02fec43a324dd067a21cb97b06378a34",
-      "source_git_blob_sha": "53dadc28b3857cfea4e07e833f76752a211bd462",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.972408,
-      "quality_metrics": {
-        "body_chars": 4054,
-        "method_chars": 1310,
-        "evaluation_chars": 848,
-        "limitation_chars": 245
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
-      "canonical_id": "arXiv:2408.05235",
-      "title": "SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving",
-      "file_bytes": 15768,
-      "source_sha256": "d1a80f75c5f167eb09f5b964cfa72181773c904b7a667456a8f951a3e371f4ca",
-      "source_git_blob_sha": "e8727a72a945b2d6b1e5320f8a80f63a5b2848cb",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.953375,
-      "quality_metrics": {
-        "body_chars": 3011,
-        "method_chars": 1155,
-        "evaluation_chars": 0,
-        "limitation_chars": 259
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md",
       "canonical_id": "arxiv:2512.03416",
       "title": "TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity",
-      "file_bytes": 15769,
-      "source_sha256": "12b16cdc762cbdbb62d9d74d4ad058c58d13e2b83174077c621a5d55d7673505",
-      "source_git_blob_sha": "5e41285f6fd2a8e42b910ee15aedbdaf3862c259",
+      "file_bytes": 16382,
+      "source_sha256": "bbd17b9490c987554bbc1673b0bdfef292004e9b62a6734e19c43a2cb65c357c",
+      "source_git_blob_sha": "3699e4f97d604ec44544fc01a7c0abad2160facf",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
@@ -14401,32 +14339,34 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md",
-      "canonical_id": "arXiv:2506.03296",
-      "title": "APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs",
-      "file_bytes": 15798,
-      "source_sha256": "d7a91cc4df4ceb8959ae14ab1ff34c7c059d26d7bc6e5a07141251e83da5ebc0",
-      "source_git_blob_sha": "ab70aab0c9b2a6df8639fa4eb79f32e85c34e547",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+      "canonical_id": "arXiv:2408.05235",
+      "title": "SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving",
+      "file_bytes": 16404,
+      "source_sha256": "9b3d3967fd4778cece4129be55220e1df408b080eba402c4e67ab3e7e4d17bfe",
+      "source_git_blob_sha": "6b4bb64b18af3c5d83bc1e2a29fed42286663dc4",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.872321,
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.953375,
       "quality_metrics": {
-        "body_chars": 4300,
-        "method_chars": 1180,
-        "evaluation_chars": 693,
-        "limitation_chars": 374
+        "body_chars": 3011,
+        "method_chars": 1155,
+        "evaluation_chars": 0,
+        "limitation_chars": 259
       },
-      "mechanical_failures": [],
+      "mechanical_failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
       "warnings": []
     },
     {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
       "canonical_id": "arXiv:2511.00330",
       "title": "Sherlock: Reliable and Efficient Agentic Workflow Execution",
-      "file_bytes": 15799,
-      "source_sha256": "3808a7a12a8b236f63dcf1b6429b8ed6633b3b6771384934365dc9cd77837dbf",
-      "source_git_blob_sha": "50dffa4c11ee3f27fdbb5bdb0870dd15cbd00d05",
+      "file_bytes": 16413,
+      "source_sha256": "423a36fa39c3349718ae5555258f7d55640be6133faedf2ebbde7a495cfb871b",
+      "source_git_blob_sha": "7046ce476fdb86aea3f93d3af070c1e99c792449",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
@@ -14443,326 +14383,21 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md",
-      "canonical_id": "DOI:10.1145/3838177.3841726",
-      "title": "MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson",
-      "file_bytes": 15827,
-      "source_sha256": "696ee18e04d2e6f495822436dcfb21bbede41b0620c69bcfa5757d5e2ea1bb7e",
-      "source_git_blob_sha": "023e0f23c2ec4b39a5a1fdcb9547720e9d98699b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.949632,
-      "quality_metrics": {
-        "body_chars": 4594,
-        "method_chars": 1377,
-        "evaluation_chars": 818,
-        "limitation_chars": 155
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.20104-draft-less-retrieve-more-hybrid-tree-construction-for-speculative-decoding.md",
-      "canonical_id": "arXiv:2605.20104",
-      "title": "Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding",
-      "file_bytes": 15831,
-      "source_sha256": "a470ebf24daedb22f6b1bd389f9b8ee1199779b3cfe1be26d60ceafe95b87641",
-      "source_git_blob_sha": "c01ce0d7e66f14b881da5a7e501062398651945c",
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md",
+      "canonical_id": "arXiv:2402.16775",
+      "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
+      "file_bytes": 17620,
+      "source_sha256": "9fd8b005ad98000971affdc379710ae5e37a6702625cad4daa3ec2e66899f3a5",
+      "source_git_blob_sha": "699d984382cc0360492b5c940c9f18d88e33dec5",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.880322,
+      "japanese_ratio": 1.0,
       "quality_metrics": {
-        "body_chars": 3376,
-        "method_chars": 934,
-        "evaluation_chars": 654,
-        "limitation_chars": 310
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md",
-      "canonical_id": "arXiv:2504.18583",
-      "title": "PARD: Accelerating LLM Inference with Low-Cost PARallel Draft Model Adaptation",
-      "file_bytes": 15832,
-      "source_sha256": "8fae860e4a14469d72970a4055455ad50e01deb93e756e1ab7c9814ea834b069",
-      "source_git_blob_sha": "a7398918f8b2196f4fcde30bc0443987e428bcb9",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.712171,
-      "quality_metrics": {
-        "body_chars": 4212,
-        "method_chars": 1355,
-        "evaluation_chars": 369,
-        "limitation_chars": 328
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 369 < 500",
-        "16KB未満再監査: 日本語比率 71.2% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 71.2% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2025-2506.08889-seerattention-r-sparse-attention-adaptation-for-long-reasoning.md",
-      "canonical_id": "arXiv:2506.08889",
-      "title": "SeerAttention-R: Sparse Attention Adaptation for Long Reasoning",
-      "file_bytes": 15862,
-      "source_sha256": "187b7d0eac7ac44eede58621917c5f5d85a48a57025a5e90879da76b924f74a2",
-      "source_git_blob_sha": "4f93e3aa2ccb47e5715b96657c651902e7f54b16",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.934844,
-      "quality_metrics": {
-        "body_chars": 2863,
-        "method_chars": 837,
-        "evaluation_chars": 291,
-        "limitation_chars": 244
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 291 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md",
-      "canonical_id": "arXiv:2601.20309",
-      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
-      "file_bytes": 15874,
-      "source_sha256": "5c93bb5b8c5041cb356c872b93f3a9b524604d900efdf6ba7ef9dce80e422a7c",
-      "source_git_blob_sha": "979512d3dfe11f42e52c360a7ea919f983d7e3bc",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.813151,
-      "quality_metrics": {
-        "body_chars": 4176,
-        "method_chars": 1357,
-        "evaluation_chars": 398,
-        "limitation_chars": 307
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 398 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
-      "canonical_id": "DOI:10.5555/3600237.3600268",
-      "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
-      "file_bytes": 15878,
-      "source_sha256": "b0bfde384f7ad3fb7f966ff49b1456a9c4851b22f702e20332760fbc6fd4da0f",
-      "source_git_blob_sha": "2548d2be448be631712a24a093d7d203a989edbd",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.94367,
-      "quality_metrics": {
-        "body_chars": 4225,
-        "method_chars": 1625,
-        "evaluation_chars": 407,
-        "limitation_chars": 361
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 407 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md",
-      "canonical_id": "arXiv:2508.16646",
-      "title": "Equinox: Holistic Fair Scheduling in Serving Large Language Models",
-      "file_bytes": 15932,
-      "source_sha256": "1d9c00eb17ebd02e5ad7ef9d55fff3690440f2e297db3dbe10949aba53710edf",
-      "source_git_blob_sha": "be1585f5fb48de82858f71d386fcf3e426915486",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.778262,
-      "quality_metrics": {
-        "body_chars": 3968,
-        "method_chars": 1514,
-        "evaluation_chars": 378,
-        "limitation_chars": 289
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 378 < 500",
-        "16KB未満再監査: 日本語比率 77.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.8% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md",
-      "canonical_id": "arXiv:2510.08666",
-      "title": "dInfer: An Efficient Inference Framework for Diffusion Language Models",
-      "file_bytes": 15981,
-      "source_sha256": "3840152ed3dadf5274585c74f7dc70874c7e2d33c921acca80a46a713c8e906c",
-      "source_git_blob_sha": "52645ee3b00887a1e9baa65ef91bdbcb28be5cc8",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.633173,
-      "quality_metrics": {
-        "body_chars": 5291,
-        "method_chars": 2070,
-        "evaluation_chars": 596,
-        "limitation_chars": 445
-      },
-      "mechanical_failures": [
-        "日本語比率 63.3% < 70%",
-        "16KB未満再監査: 日本語比率 63.3% < 80%"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md",
-      "canonical_id": "arXiv:2608.15584",
-      "title": "GraniKV: Asymmetric Granularity KV-Cache Paging for Multi-Agent Systems with Long Shared Prefix",
-      "file_bytes": 16337,
-      "source_sha256": "a77ae2446488f899f69d72e09cd21cd35b914d0382106b903b683dfa3b1fc060",
-      "source_git_blob_sha": "220d29a8038d39ce78ad34b6a2526f5f18dcbfe8",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.996118,
-      "quality_metrics": {
-        "body_chars": 4329,
-        "method_chars": 1349,
-        "evaluation_chars": 0,
-        "limitation_chars": 301
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
-      "canonical_id": "arXiv:2505.24298",
-      "title": "AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning",
-      "file_bytes": 16742,
-      "source_sha256": "e678c1ecee46fc9a798e1f6f9b98d63ae102f53bcfd82be127ef047af65e5387",
-      "source_git_blob_sha": "2477386a9b6071cb2fe4dcfcda45c5b912ad9ef7",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.798113,
-      "quality_metrics": {
-        "body_chars": 4746,
-        "method_chars": 1449,
-        "evaluation_chars": 1416,
-        "limitation_chars": 360
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 79.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.8% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.00760-mosaickv-serving-long-context-llm-with-dynamic-two-d-kv-cache-compressio.md",
-      "canonical_id": "arXiv:2607.00760",
-      "title": "MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression",
-      "file_bytes": 17221,
-      "source_sha256": "1dac5b807b319e2ef0379d480b529247de0d83811bfd90deb11a15b618a6f8ed",
-      "source_git_blob_sha": "864fdbc5d0488b72005c6d499e7bd06bfb1776d4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.919714,
-      "quality_metrics": {
-        "body_chars": 4781,
-        "method_chars": 1542,
-        "evaluation_chars": 1331,
-        "limitation_chars": 456
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2606.03819-treeflash-parallel-ar-approximation-for-faster-speculative-decoding.md",
-      "canonical_id": "arXiv:2606.03819",
-      "title": "TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding",
-      "file_bytes": 17489,
-      "source_sha256": "5e1326a7ad13e6620b42e7166085491a734f6ce4b5231960426334b25641009b",
-      "source_git_blob_sha": "3eefb8af3dddc7af3c33f1cef4c91bc2258e70ed",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.951257,
-      "quality_metrics": {
-        "body_chars": 5021,
-        "method_chars": 1335,
-        "evaluation_chars": 1563,
-        "limitation_chars": 539
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
-      "canonical_id": "arXiv:2101.03961",
-      "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
-      "file_bytes": 17925,
-      "source_sha256": "d7b6ead6c76c5f2fe5735d7a5b7026ac93ce75e8dad60d674a0ca59eec967616",
-      "source_git_blob_sha": "519560c43a0b19adb6e2947174129d12b9670b60",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.845493,
-      "quality_metrics": {
-        "body_chars": 5667,
-        "method_chars": 2077,
-        "evaluation_chars": 925,
-        "limitation_chars": 639
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md",
-      "canonical_id": "arXiv:2607.21927",
-      "title": "RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention",
-      "file_bytes": 18012,
-      "source_sha256": "461698ea36b033769e6cf04edb78f93be21a22cedee431216c58d8c125b59dbf",
-      "source_git_blob_sha": "4477fe4ba1cc4883331ba60ff1b3c71c07f75bd2",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.897203,
-      "quality_metrics": {
-        "body_chars": 5601,
-        "method_chars": 1813,
-        "evaluation_chars": 1911,
-        "limitation_chars": 499
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md",
-      "canonical_id": "arXiv:2601.12967",
-      "title": "Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference",
-      "file_bytes": 19034,
-      "source_sha256": "cb899f9d6228367dd103b62317cca4c494585219d46d5639a713d6e8bf39da26",
-      "source_git_blob_sha": "f1f1f552f1ff2ee504353177d60a293d7946bb41",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.904494,
-      "quality_metrics": {
-        "body_chars": 5790,
-        "method_chars": 1575,
-        "evaluation_chars": 1711,
-        "limitation_chars": 561
+        "body_chars": 3367,
+        "method_chars": 752,
+        "evaluation_chars": 939,
+        "limitation_chars": 218
       },
       "mechanical_failures": [],
       "warnings": []
