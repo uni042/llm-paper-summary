@@ -11715,6 +11715,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md",
+      "status": "PASS",
+      "summary": "LLM量子化を10ベンチマーク・3評価軸で比較し、4ビットの品質維持と「省メモリでも推論は遅くなり得る」という実装依存の交換条件を明らかにする。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
       "status": "PASS",
       "summary": "層間表現の類似度で冗長な連続層 ブロックを選び、深さ 枝刈りとQLoRA回復でLLMの推論メモリ・遅延を削減する。",
@@ -12825,6 +12834,15 @@
       "status": "PASS",
       "summary": "複数小型モデルの重み付き多数決、オンライン投機長調整、SSM/LLM非同期パイプラインを統合した投機的復号サービング。",
       "char_count": 59,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md",
+      "status": "PASS",
+      "summary": "RoPE位置関係を3種のチャンク注意へ再構成し、再学習なしでLlama2 70Bを100k超の文脈へ拡張するDual Chunk Attention。",
+      "char_count": 75,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []

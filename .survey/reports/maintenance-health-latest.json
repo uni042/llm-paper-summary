@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-07T14:16:40+00:00",
+  "checked_at": "2026-10-07T21:22:51+00:00",
   "status": "issues_found",
-  "error_count": 3,
+  "error_count": 1,
   "warning_count": 0,
-  "paper_count": 1725,
-  "latest_paper_commit": "2026-10-07T14:04:55+00:00",
+  "paper_count": 1727,
+  "latest_paper_commit": "2026-10-07T15:28:20+00:00",
   "queue": {
-    "job_count": 1152,
+    "job_count": 1150,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "ready": 596,
-        "superseded": 330,
+        "superseded": 329,
+        "ready": 595,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -30,12 +30,8 @@
     }
   },
   "derived_indexes": {
-    "repaired_files": [
-      "papers/inference/05-speculative-decoding-moe/README.md",
-      "papers/inference/07-kv-cache-optimization-compression/README.md",
-      "papers/inference/99-other-inference-systems/README.md"
-    ],
-    "repair_count": 3
+    "repaired_files": [],
+    "repair_count": 0
   },
   "quality": {
     "baseline_initialized": false,
@@ -51,7 +47,6 @@
         "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md",
         "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md",
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md",
-        "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md",
         "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md",
         "papers/inference/99-other-inference-systems/2026-2608.28113-h-scale-hessian-guided-scale-refinement-for-nvfp4-sub-byte-llm-inference.md"
       ],
@@ -64,29 +59,23 @@
       "overview": []
     },
     "new_failures": {
-      "paper": [
-        "papers/inference/99-other-inference-systems/2026-2608.28113-h-scale-hessian-guided-scale-refinement-for-nvfp4-sub-byte-llm-inference.md"
-      ],
-      "list_summary": [
-        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
-        "papers/inference/99-other-inference-systems/2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md",
-        "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md"
-      ],
+      "paper": [],
+      "list_summary": [],
       "overview": []
     },
     "resolved_failures": {
-      "paper": [],
-      "list_summary": [
-        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      "paper": [
+        "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md"
       ],
+      "list_summary": [],
       "overview": []
     }
   },
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-07T14:16:01+00:00",
-      "total": 1725,
+      "checked_at": "2026-10-07T21:22:21+00:00",
+      "total": 1727,
       "incomplete": 1,
       "findings": [
         {
@@ -99,33 +88,13 @@
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-07T14:16:01+00:00",
-      "total": 1725,
+      "checked_at": "2026-10-07T21:22:21+00:00",
+      "total": 1727,
       "incomplete": 0,
       "findings": []
     }
   },
   "findings": [
-    {
-      "severity": "error",
-      "code": "quality_regression",
-      "detail": "New paper quality failures appeared since the previous maintenance baseline",
-      "scope": "paper",
-      "paths": [
-        "papers/inference/99-other-inference-systems/2026-2608.28113-h-scale-hessian-guided-scale-refinement-for-nvfp4-sub-byte-llm-inference.md"
-      ]
-    },
-    {
-      "severity": "error",
-      "code": "quality_regression",
-      "detail": "New list_summary quality failures appeared since the previous maintenance baseline",
-      "scope": "list_summary",
-      "paths": [
-        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
-        "papers/inference/99-other-inference-systems/2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md",
-        "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md"
-      ]
-    },
     {
       "severity": "error",
       "code": "citation_coverage_incomplete",
