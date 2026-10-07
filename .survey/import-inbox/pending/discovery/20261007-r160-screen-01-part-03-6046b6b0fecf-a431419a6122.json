@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r160-screen-01-part-03-6046b6b0fecf",
+  "reference_main_sha": "96e46e336be8e3716ca9bb21c93a09c05bf96666",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.10588",
+      "identity_tokens": [
+        "arXiv:2402.10588"
+      ],
+      "title": "Do Llamas Work in English? On the Latent Language of Multilingual Transformers",
+      "reason": "The full paper studies multilingual Llama internal representations and translation behavior, not inference-resource optimization.",
+      "source_url": "https://arxiv.org/abs/2402.10588",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.17432",
+      "identity_tokens": [
+        "arXiv:2312.17432"
+      ],
+      "title": "Video Understanding With Large Language Models: A Survey",
+      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "source_url": "https://arxiv.org/abs/2312.17432",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01465",
+      "identity_tokens": [
+        "arXiv:2406.01465"
+      ],
+      "title": "AIFS -- ECMWF's data-driven forecasting system",
+      "reason": "Primary text identifies AIFS as a weather-forecasting system with GNN encoder/decoder and a sliding-window transformer, trained on meteorological fields; its parallelism addresses forecast training, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2406.01465",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.04564",
+      "identity_tokens": [
+        "arXiv:2312.04564"
+      ],
+      "title": "EAGLES: Efficient Accelerated 3D Gaussians with Lightweight EncodingS",
+      "reason": "The full method quantizes and prunes 3D Gaussian scene parameters for novel-view rendering; the shared word “compression” does not make it transformer/LLM compression.",
+      "source_url": "https://arxiv.org/abs/2312.04564",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1155/2022/4189781",
+      "identity_tokens": [
+        "DOI:10.1155/2022/4189781"
+      ],
+      "title": "U-Net-Based Medical Image Segmentation",
+      "reason": "Publisher DOI endpoint could not be retrieved: Wiley/Hindawi DOI page failed to fetch after the DOI attempt. Full primary text was not accessible, so relevance cannot be resolved safely.",
+      "source_url": "https://doi.org/10.1155/2022/4189781",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
