@@ -1,0 +1,77 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261007-1746-scheduled-chat-45/research-relevance-r01-partial",
+  "reference_main_sha": "8a878c11cef8e796a7b3e46a90c0a4b906b73125",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+      "identity_tokens": [
+        "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
+        "arXiv:1811.06965"
+      ],
+      "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+      "reason": "多層ネットワークを複数アクセラレータへ分割し、マイクロバッチによるパイプライン並列化と活性再計算で巨大モデルの学習を可能にする学習システムの基礎研究。6B・128層Transformerを含む。LLM学習のモデル並列・メモリ効率化に関連するため収録候補。",
+      "source_url": "https://arxiv.org/abs/1811.06965",
+      "body_check": "primary_abstract_review: arXivおよび開催学会の一次要旨から、学習システムの計算・通信・メモリ効率化に直接関係することを確認。全文はResearchで評価する。",
+      "first_checked_at": "2026-10-07T17:46:04+09:00",
+      "last_checked_at": "2026-10-07T21:38:41.603Z",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:1802.05799",
+      "identity_tokens": [
+        "arXiv:1802.05799"
+      ],
+      "title": "Horovod: fast and easy distributed deep learning in TensorFlow",
+      "reason": "リング型全還元（ring all-reduce）で複数GPU間の勾配集約を効率化し、分散学習コードの変更量を減らすHorovod。LLM学習システムで重要な通信並列方式であり、推論以外を対象外とする旧理由は誤り。",
+      "source_url": "https://arxiv.org/abs/1802.05799",
+      "body_check": "primary_abstract_review: arXivおよび開催学会の一次要旨から、学習システムの計算・通信・メモリ効率化に直接関係することを確認。全文はResearchで評価する。",
+      "first_checked_at": "2026-10-07T17:46:04+09:00",
+      "last_checked_at": "2026-10-07T21:38:41.603Z",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.16449",
+      "identity_tokens": [
+        "arXiv:2307.16449",
+        "DOI:10.1109/CVPR52733.2024.01725"
+      ],
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+      "reason": "長動画理解MLLMの視覚token memory機構が主題で、最終適用先はlong-video understanding。汎用LLM推論サービング、KV cache、scheduler等の推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2307.16449",
+      "body_check": "abstract_screen_only; arXiv/CVPR abstractでlong-video understandingが主目的と確認",
+      "first_checked_at": "2026-10-07T17:46:04+09:00",
+      "last_checked_at": "2026-10-07T17:46:04+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": [
+        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945"
+      ],
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation",
+      "reason": "汎用データセンターのprocessor/memory/storage分離を管理するOSが主題で、LLM推論または推論サービング固有のシステムではない。",
+      "source_url": "https://www.usenix.org/conference/osdi18/presentation/shan",
+      "body_check": "abstract_screen_only; USENIX一次ページで汎用resource-disaggregated OSと確認",
+      "first_checked_at": "2026-10-07T17:46:04+09:00",
+      "last_checked_at": "2026-10-07T17:46:04+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 8
+    }
+  ],
+  "correction_note": "2026-10-08 JST: training system scope: GPipe / Horovod / PEQA の誤った unrelated 判定を accept に修正。元のrun_keyと他recordsを保持。"
+}
