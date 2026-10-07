@@ -4293,6 +4293,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.14973-attention-is-all-you-need-for-kv-cache-in-diffusion-llms.md",
+      "status": "PASS",
+      "summary": "拡散LLMの注意変化からKV更新の時点と開始層を適応決定し、移動窓外MASKの再計算も省く学習不要の推論高速化方式。",
+      "char_count": 58,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md",
       "status": "PASS",
       "summary": "Q・Kを共同低ランク化した代理注意でtop-k KVを選び、必要な完全精度KVだけCPUから戻すことで、長文脈のGPUメモリと転送量を抑える。",
@@ -8282,6 +8291,17 @@
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-6987e5a4e5ec-cauchy-a-cost-efficient-llm-serving-system-through-adaptive-heterogeneou.md",
+      "status": "WARN",
+      "summary": "prefillとdecodeの特性に合わせて異種GPU組合せを最適配置し、階層スケジューリングと自動伸縮でLLM配信費用を削減する。",
+      "char_count": 66,
+      "japanese_ratio": 0.7758620689655172,
+      "failures": [],
+      "warnings": [
+        "日本語比率 77.6% < 警告基準 80.0%"
+      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
@@ -12563,6 +12583,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2023-2310.07096-sparse-universal-transformer.md",
+      "status": "PASS",
+      "summary": "層間重み共有Transformerに疎な専門家選択と確率的なトークン別早期停止を組み込み、翻訳品質と合成的一般化を維持しつつ反復計算量を削減する。",
+      "char_count": 73,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
       "status": "PASS",
       "summary": "ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。",
@@ -12816,6 +12845,15 @@
       "status": "PASS",
       "summary": "量子化重みのエントロピーを最大化するICQと、元特徴をLoRAへ再注入するIECを組み合わせ、低ビットLLMの配置時精度を小さな追加コストで回復する。",
       "char_count": 75,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.10685-longheads-multi-head-attention-is-secretly-a-long-context-processor.md",
+      "status": "PASS",
+      "summary": "注意頭ごとにクエリと塊代表キーから関連する短い文脈塊を選び、先頭・直近塊とともに位置を再配置して、再学習なしで長文検索と生成を行う。",
+      "char_count": 66,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
