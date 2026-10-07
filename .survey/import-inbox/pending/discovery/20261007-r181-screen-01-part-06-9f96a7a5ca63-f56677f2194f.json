@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r181-screen-01-part-06-9f96a7a5ca63",
+  "reference_main_sha": "fa312c3cb8946ca92f01e318fb94fa82fa7f85ca",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12312",
+      "identity_tokens": [
+        "arXiv:2604.12312"
+      ],
+      "title": "CompliBench: Benchmarking LLM Judges for Compliance Violation Detection in Dialogue Systems",
+      "reason": "CompliBench is an LLM-judge evaluation benchmark and automated data-generation pipeline. It does not propose runtime cost, latency, memory, or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2604.12312",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13029",
+      "identity_tokens": [
+        "arXiv:2604.13029"
+      ],
+      "title": "Visual Preference Optimization with Rubric Rewards",
+      "reason": "rDPO is an offline/on-policy preference training framework for visual reasoning. Its reported gains concern training and answer quality, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.13029",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10866",
+      "identity_tokens": [
+        "arXiv:2604.10866"
+      ],
+      "title": "OccuBench: Evaluating AI Agents on Real-World Professional Tasks via Language Environment Simulation",
+      "reason": "OccuBench is a multi-domain agent benchmark using LLM-simulated environments. Its contribution is evaluation and simulation quality, not deployed inference savings.",
+      "source_url": "https://arxiv.org/abs/2604.10866",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09258",
+      "identity_tokens": [
+        "arXiv:2604.09258"
+      ],
+      "title": "Nexus: Same Pretraining Loss, Better Downstream Generalization via Common Minima",
+      "reason": "Nexus is a pretraining optimizer that improves generalization at similar pretraining loss. The measured changes are training/generalization outcomes, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.09258",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07705",
+      "identity_tokens": [
+        "arXiv:2604.07705"
+      ],
+      "title": "Vision-Language Navigation for Aerial Robots: Towards the Era of Large Language Models",
+      "reason": "The primary paper is an aerial vision-language-navigation survey. It discusses onboard deployment and tradeoffs but contributes a taxonomy/research agenda rather than a concrete measured LLM/VLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2604.07705",
+      "first_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "last_checked_at": "2026-10-07T13:44:49.433989+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
