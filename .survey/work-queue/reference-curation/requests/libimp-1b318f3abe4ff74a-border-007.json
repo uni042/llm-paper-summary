@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1b318f3abe4ff74a-border-007",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2308.10248",
+  "reason": "推論時に中間activationへsteering vectorを加算するActAddはLLM forward pathを変更するが、目的・評価はsentiment/toxicity等の出力制御であり、latency・throughput・memory削減を主要評価しないため境界扱い。",
+  "title": "Steering Language Models With Activation Engineering",
+  "identity_tokens": [
+    "arXiv:2308.10248"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b318f3abe4f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
