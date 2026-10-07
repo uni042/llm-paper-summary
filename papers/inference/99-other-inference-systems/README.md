@@ -1364,7 +1364,7 @@
 
 - **2023-10 · [Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM](2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  低ビット重みの有限値集合を利用し、活性値との積を事前計算した表参照へ変換してGEMMの乗加算数を約2.5倍削減するハードウェア指向方式。
+  低ビット重みが取り得る値の種類が少ないことを利用し、活性値との部分内積をlookup tableへ事前計算して、GEMM本体の乗加算をtable lookupと加算へ置換する方式。約2.5倍という値は市販GPU上のエンドツーエンド速度ではなく、GPT-3規模のMLP形状を使った算術命令数の理論比較である。
 
 - **2023-07 · [Beyond Classical Attention: Quantum Attention for Scalable Computation](2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
