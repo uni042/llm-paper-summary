@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T21:48:51+00:00",
-  "record_count": 10837,
+  "updated_at": "2026-10-07T21:58:36+00:00",
+  "record_count": 10852,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -115868,9 +115868,9 @@
       "identity_tokens": [
         "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945"
       ],
-      "reason": "汎用OSのhardware resource disaggregationが主題で、LLM推論固有の研究ではない。",
+      "reason": "汎用データセンターのprocessor/memory/storage分離を管理するOSが主題で、LLM推論または推論サービング固有のシステムではない。",
       "first_checked_at": "2026-10-06T12:12:53+00:00",
-      "last_checked_at": "2026-10-06T12:12:53+00:00",
+      "last_checked_at": "2026-10-07T21:58:33+00:00",
       "linked_from": [],
       "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
     },
@@ -144978,9 +144978,9 @@
       "identity_tokens": [
         "arXiv:2306.11489"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "知識グラフによる事実性向上が主題で、推論基盤最適化ではない。",
       "first_checked_at": "2026-10-07T08:53:48+00:00",
-      "last_checked_at": "2026-10-07T08:53:48+00:00",
+      "last_checked_at": "2026-10-07T21:58:32+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
@@ -144992,9 +144992,9 @@
       "identity_tokens": [
         "arXiv:2305.18997"
       ],
-      "reason": "建設業におけるGPT活用機会・課題と材料選定prototypeを検討するdomain application研究で、LLM推論基盤の効率化を扱わない。",
+      "reason": "建設業でのGPT活用・ユースケース検証が最終適用先であり、LLM推論基盤・サービング最適化を扱わない。",
       "first_checked_at": "2026-10-07T08:53:48+00:00",
-      "last_checked_at": "2026-10-07T21:38:07+00:00",
+      "last_checked_at": "2026-10-07T21:58:25+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
@@ -145006,9 +145006,9 @@
       "identity_tokens": [
         "arXiv:2305.17560"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "偏微分方程式シミュレーションのsurrogate modeling向けFactorized Transformerであり、効率的attentionを使うが最終適用先は物理PDEでLLM推論ではない。",
       "first_checked_at": "2026-10-07T08:53:49+00:00",
-      "last_checked_at": "2026-10-07T08:53:49+00:00",
+      "last_checked_at": "2026-10-07T21:58:28+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
       ],
@@ -145034,9 +145034,9 @@
       "identity_tokens": [
         "arXiv:2312.03718"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "法律領域でのLLM利用サーベイであり推論システム研究ではない。",
       "first_checked_at": "2026-10-07T08:53:49+00:00",
-      "last_checked_at": "2026-10-07T08:53:49+00:00",
+      "last_checked_at": "2026-10-07T21:58:30+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
@@ -145076,9 +145076,9 @@
       "identity_tokens": [
         "arXiv:2301.04709"
       ],
-      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "reason": "機構的解釈可能性の理論研究であり推論システムではない。",
       "first_checked_at": "2026-10-07T08:53:50+00:00",
-      "last_checked_at": "2026-10-07T08:53:50+00:00",
+      "last_checked_at": "2026-10-07T21:58:31+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
       ],
@@ -145204,9 +145204,9 @@
       "identity_tokens": [
         "arXiv:2312.17432"
       ],
-      "reason": "LLMを用いたvideo understandingの手法・task・dataset・benchmarkを整理する応用surveyで、推論runtime・memory・serving効率化を中心対象としない。",
+      "reason": "映像理解向けLLMのサーベイで、推論基盤・サービング最適化そのものが主題ではない。",
       "first_checked_at": "2026-10-07T08:53:55+00:00",
-      "last_checked_at": "2026-10-07T11:00:14+00:00",
+      "last_checked_at": "2026-10-07T21:58:29+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
       ],
@@ -145218,9 +145218,9 @@
       "identity_tokens": [
         "arXiv:2406.01465"
       ],
-      "reason": "Primary text identifies AIFS as a weather-forecasting system with GNN encoder/decoder and a sliding-window transformer, trained on meteorological fields; its parallelism addresses forecast training, not LLM inference.",
+      "reason": "気象予報システムが最終適用先でありLLM推論基盤ではない。",
       "first_checked_at": "2026-10-07T08:53:55+00:00",
-      "last_checked_at": "2026-10-07T08:53:55+00:00",
+      "last_checked_at": "2026-10-07T21:58:30+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
@@ -154306,9 +154306,9 @@
         "DOI:10.48550/arxiv.1709.02755",
         "arXiv:1709.02755"
       ],
-      "reason": "再帰ネットワークのSRUを提案し学習・系列モデル計算を並列化する古典的architecture研究で、現行のLLM推論・サービング基盤を最終対象としない。",
+      "reason": "再帰型ニューラルネットワークの状態計算を並列化するSRUの研究で、LLM推論・生成サービング・KVキャッシュ等を対象としていない。Transformer以前の汎用NLPモデル高速化であり対象外。",
       "first_checked_at": "2026-10-03T15:16:50+00:00",
-      "last_checked_at": "2026-10-07T21:37:58+00:00",
+      "last_checked_at": "2026-10-07T21:58:26+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
@@ -154344,9 +154344,9 @@
       "identity_tokens": [
         "arXiv:2504.19678"
       ],
-      "reason": "約60のbenchmark、agent framework、agent間protocol、応用を整理するagent/評価surveyで、推論サービングや計算・メモリ効率化を中心対象としない。",
+      "reason": "LLM推論・エージェントのベンチマーク、フレームワーク、応用、協調プロトコルを整理するレビューで、推論基盤効率のシステム研究ではない。",
       "first_checked_at": "2026-10-07T21:38:00+00:00",
-      "last_checked_at": "2026-10-07T21:38:00+00:00",
+      "last_checked_at": "2026-10-07T21:58:35+00:00",
       "linked_from": [],
       "title": "From LLM Reasoning to Autonomous AI Agents: A Comprehensive Review"
     },
@@ -154357,9 +154357,9 @@
         "DOI:10.18653/v1/2022.acl-long.53",
         "arXiv:2110.07814"
       ],
-      "reason": "複数taskでin-context tuningを行いfew-shot適応と頑健性を改善するmeta-learning研究で、推論runtime・memory・serving効率化を主要目的としない。",
+      "reason": "言語モデルのメタ学習・in-context tuningによるタスク適応が主題で、推論ランタイムやサービング最適化ではない。",
       "first_checked_at": "2026-10-05T01:56:24+00:00",
-      "last_checked_at": "2026-10-07T21:38:00+00:00",
+      "last_checked_at": "2026-10-07T21:58:35+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
       ],
@@ -154606,9 +154606,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/2020.emnlp-main.635"
       ],
-      "reason": "33 NLP task間のtransfer learning効果とtask embeddingによるsource task選択を研究する学習・適応研究で、推論runtime・memory・serving効率化を目的としない。",
+      "reason": "33種のNLPタスク間転移と転移元予測を調べる学習研究で、推論システムではない。",
       "first_checked_at": "2026-10-07T21:38:07+00:00",
-      "last_checked_at": "2026-10-07T21:38:07+00:00",
+      "last_checked_at": "2026-10-07T21:58:36+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
       ],
@@ -154961,6 +154961,192 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08930-blockserve-diffusion-llm-continuous-batching.md"
       ],
       "title": "Beyond Autoregression: Discrete Diffusion for Complex Reasoning and Planning"
+    },
+    "DOI:10.1145/3641289": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3641289",
+      "identity_tokens": [
+        "DOI:10.1145/3641289"
+      ],
+      "reason": "LLMの能力・安全性・社会的影響について「何を・どこで・どう評価するか」を整理する評価方法サーベイであり、推論サービング、KVキャッシュ、メモリ階層、推論カーネル、量子化、スケジューリング等の実行効率を主対象としていない。",
+      "first_checked_at": "2026-10-07T21:58:26+00:00",
+      "last_checked_at": "2026-10-07T21:58:26+00:00",
+      "linked_from": [],
+      "title": "A Survey on Evaluation of Large Language Models"
+    },
+    "DOI:10.18653/v1/2020.acl-main.195": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.195",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.195",
+        "arXiv:2004.02984"
+      ],
+      "reason": "BERTを教師モデルから知識転移して小型化するモデル設計・学習手法が主題で、LLM推論ランタイム、サービング、KVキャッシュ等の推論基盤ではない。",
+      "first_checked_at": "2026-10-07T21:58:26+00:00",
+      "last_checked_at": "2026-10-07T21:58:29+00:00",
+      "linked_from": [],
+      "title": "MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices"
+    },
+    "arXiv:2107.06641": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.06641",
+      "identity_tokens": [
+        "arXiv:2107.06641"
+      ],
+      "reason": "安全性、公平性、説明可能性、プライバシー等を含む信頼できるAI全般の計算的サーベイで、LLM推論システムの性能・メモリ・実行基盤を主対象としていない。",
+      "first_checked_at": "2026-10-07T21:58:27+00:00",
+      "last_checked_at": "2026-10-07T21:58:27+00:00",
+      "linked_from": [],
+      "title": "Trustworthy AI: A Computational Perspective"
+    },
+    "DOI:10.1145/1024393.1024423": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1024393.1024423",
+      "identity_tokens": [
+        "DOI:10.1145/1024393.1024423"
+      ],
+      "reason": "Multiple Clock Domain CPU一般のDVFSをqueue-domain feedback controlで制御する2004年のprocessor研究で、LLM/Transformer推論を対象としない。",
+      "first_checked_at": "2026-10-07T21:58:27+00:00",
+      "last_checked_at": "2026-10-07T21:58:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "title": "Formal online methods for voltage/frequency control in multiple clock domain microprocessors"
+    },
+    "arXiv:2407.01492": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01492",
+      "identity_tokens": [
+        "arXiv:2407.01492"
+      ],
+      "reason": "LLM事前学習用data mixtureを小型モデル群と回帰で選ぶtraining-data optimization研究で、推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-07T21:58:27+00:00",
+      "last_checked_at": "2026-10-07T21:58:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "RegMix: Data Mixture as Regression for Language Model Pre-training"
+    },
+    "arXiv:2012.15701": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.15701",
+      "identity_tokens": [
+        "arXiv:2012.15701"
+      ],
+      "reason": "BERTの重み二値化と学習手法が主題で、現代LLMの推論基盤・サービングを対象にしない。",
+      "first_checked_at": "2026-10-07T21:58:30+00:00",
+      "last_checked_at": "2026-10-07T21:58:30+00:00",
+      "linked_from": [],
+      "title": "BinaryBERT: Pushing the Limit of BERT Quantization"
+    },
+    "DOI:10.1109/micro50266.2020.00040": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro50266.2020.00040",
+      "identity_tokens": [
+        "DOI:10.1109/micro50266.2020.00040"
+      ],
+      "reason": "汎用機械学習向けDRAM内アクセラレータで、LLM推論固有のシステムではない。",
+      "first_checked_at": "2026-10-07T21:58:31+00:00",
+      "last_checked_at": "2026-10-07T21:58:35+00:00",
+      "linked_from": [],
+      "title": "Newton: A DRAM-maker’s Accelerator-in-Memory (AiM) Architecture for Machine Learning"
+    },
+    "arXiv:2405.16009": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16009",
+      "identity_tokens": [
+        "arXiv:2405.16009"
+      ],
+      "reason": "ストリーミング長動画理解が最終適用先であり、汎用LLM推論基盤ではない。",
+      "first_checked_at": "2026-10-07T21:58:31+00:00",
+      "last_checked_at": "2026-10-07T21:58:31+00:00",
+      "linked_from": [],
+      "title": "Streaming Long Video Understanding with Large Language Models"
+    },
+    "arXiv:2502.21271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.21271",
+      "identity_tokens": [
+        "arXiv:2502.21271"
+      ],
+      "reason": "長動画理解で固定数の映像トークンへ情報を絞るキーフレーム選択が主題で、汎用LLM推論基盤ではない。",
+      "first_checked_at": "2026-10-07T21:58:32+00:00",
+      "last_checked_at": "2026-10-07T21:58:35+00:00",
+      "linked_from": [],
+      "title": "Adaptive Keyframe Sampling for Long Video Understanding"
+    },
+    "arXiv:2307.16449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.16449",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52733.2024.01725",
+        "arXiv:2307.16449"
+      ],
+      "reason": "長動画理解MLLMの視覚token memory機構が主題で、最終適用先はlong-video understanding。汎用LLM推論サービング、KV cache、scheduler等の推論基盤ではない。",
+      "first_checked_at": "2026-10-07T21:58:33+00:00",
+      "last_checked_at": "2026-10-07T21:58:33+00:00",
+      "linked_from": [],
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding"
+    },
+    "DOI:10.18653/v1/2020.acl-main.204": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.204",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.204"
+      ],
+      "reason": "BERT分類器の層ごとの早期終了を学習・適用する研究で、LLM生成推論やサービング基盤を対象にしない。",
+      "first_checked_at": "2026-10-07T21:58:34+00:00",
+      "last_checked_at": "2026-10-07T21:58:34+00:00",
+      "linked_from": [],
+      "title": "DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference"
+    },
+    "DOI:10.1145/3636534.3649379": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3636534.3649379",
+      "identity_tokens": [
+        "DOI:10.1145/3636534.3649379"
+      ],
+      "reason": "Androidアプリのタスク自動化が最終適用先で、LLM推論基盤の性能最適化は主目的ではない。",
+      "first_checked_at": "2026-10-07T21:58:34+00:00",
+      "last_checked_at": "2026-10-07T21:58:34+00:00",
+      "linked_from": [],
+      "title": "AutoDroid: LLM-powered Task Automation in Android"
+    },
+    "arXiv:2409.14485": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14485",
+      "identity_tokens": [
+        "arXiv:2409.14485"
+      ],
+      "reason": "長時間動画理解向けの視覚情報圧縮・MLLM方式で、汎用LLM推論サービング基盤ではない。",
+      "first_checked_at": "2026-10-07T21:58:34+00:00",
+      "last_checked_at": "2026-10-07T21:58:34+00:00",
+      "linked_from": [],
+      "title": "Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding"
+    },
+    "DOI:10.1145/3503222.3507709": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3503222.3507709",
+      "identity_tokens": [
+        "DOI:10.1145/3503222.3507709"
+      ],
+      "reason": "汎用深層学習推論のサーバーレス基盤であり、LLM生成推論固有のKVキャッシュ、デコード、LLMサービングを対象にしない。",
+      "first_checked_at": "2026-10-07T21:58:36+00:00",
+      "last_checked_at": "2026-10-07T21:58:36+00:00",
+      "linked_from": [],
+      "title": "INFless: a native serverless system for low-latency, high-throughput inference"
+    },
+    "arXiv:2108.05036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.05036",
+      "identity_tokens": [
+        "arXiv:2108.05036"
+      ],
+      "reason": "ドメイン別expertを用いるモジュラー言語モデルの学習・適応が主題で、MoE推論基盤やサービング効率を扱わない。",
+      "first_checked_at": "2026-10-07T21:58:36+00:00",
+      "last_checked_at": "2026-10-07T21:58:36+00:00",
+      "linked_from": [],
+      "title": "DEMix Layers: Disentangling Domains for Modular Language Modeling"
     }
   }
 }

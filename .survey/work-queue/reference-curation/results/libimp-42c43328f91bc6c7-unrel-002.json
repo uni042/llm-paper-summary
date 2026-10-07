@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42c43328f91bc6c7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2020.acl-main.195",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2020.acl-main.195",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2020.acl-main.195"
+    ],
+    "reason": "BERTをモバイル向けに小型化する蒸留・アーキテクチャ研究で、LLM生成推論やLLMサービングを対象としない。BERT_BASE比4.3倍小型・5.5倍高速という端末推論結果はあるが、本サーベイのLLM推論系統からは外れる。",
+    "first_checked_at": "2026-10-07T21:58:26+00:00",
+    "last_checked_at": "2026-10-07T21:58:26+00:00",
+    "linked_from": [],
+    "title": "MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices"
+  },
+  "processed_at": "2026-10-07T21:58:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42c43328f91b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

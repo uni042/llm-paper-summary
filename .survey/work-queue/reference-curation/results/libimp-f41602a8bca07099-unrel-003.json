@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f41602a8bca07099-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.14485",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.14485",
+    "identity_tokens": [
+      "arXiv:2409.14485"
+    ],
+    "reason": "長時間動画理解向けの視覚情報圧縮・MLLM方式で、汎用LLM推論サービング基盤ではない。",
+    "first_checked_at": "2026-10-07T21:58:34+00:00",
+    "last_checked_at": "2026-10-07T21:58:34+00:00",
+    "linked_from": [],
+    "title": "Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding"
+  },
+  "processed_at": "2026-10-07T21:58:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f41602a8bca0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

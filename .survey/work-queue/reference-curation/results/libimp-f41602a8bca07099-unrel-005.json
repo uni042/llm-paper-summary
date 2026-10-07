@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f41602a8bca07099-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.19678",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.19678",
+    "identity_tokens": [
+      "arXiv:2504.19678"
+    ],
+    "reason": "LLM推論・エージェントのベンチマーク、フレームワーク、応用、協調プロトコルを整理するレビューで、推論基盤効率のシステム研究ではない。",
+    "first_checked_at": "2026-10-07T21:38:00+00:00",
+    "last_checked_at": "2026-10-07T21:58:35+00:00",
+    "linked_from": [],
+    "title": "From LLM Reasoning to Autonomous AI Agents: A Comprehensive Review"
+  },
+  "processed_at": "2026-10-07T21:58:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f41602a8bca0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-24307e16c8db3c23-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.18997",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.18997",
+    "identity_tokens": [
+      "arXiv:2305.18997"
+    ],
+    "reason": "建設業でのGPT活用・ユースケース検証が最終適用先であり、LLM推論基盤・サービング最適化を扱わない。",
+    "first_checked_at": "2026-10-07T08:53:48+00:00",
+    "last_checked_at": "2026-10-07T21:58:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "GPT Models in Construction Industry: Opportunities, Limitations, and a Use Case Validation"
+  },
+  "processed_at": "2026-10-07T21:58:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-24307e16c8db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
