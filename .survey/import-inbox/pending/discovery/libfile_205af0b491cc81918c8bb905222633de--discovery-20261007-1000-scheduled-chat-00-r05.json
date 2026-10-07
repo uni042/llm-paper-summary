@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1000-scheduled-chat-00/r05",
+  "reference_main_sha": "59bf766305da08d4406e4717db51ac6f612b83fc",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.01705",
+      "identity_tokens": [
+        "arXiv:2404.01705"
+      ],
+      "title": "Samba: Semantic segmentation of remotely sensed images with state space model",
+      "reason": "Mamba/SSMを高解像度remote-sensing画像segmentationへ適用するvision研究。効率性はあるが最終workloadは画像segmentationでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2404.01705",
+      "body_check": "abstract_screen_only: arXiv一次abstractでLoveDA/ISPRS等のremote-sensing semantic segmentationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.12961",
+      "identity_tokens": [
+        "arXiv:2409.12961"
+      ],
+      "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution",
+      "reason": "MLLM入力の画像/動画長に応じてvisual tokenを1x–16x動的圧縮し、長動画は高圧縮、文書理解はnative resolutionと使い分ける。LLMへ渡すtoken budgetを直接削減するためMLLM推論効率の対象。",
+      "source_url": "https://arxiv.org/abs/2409.12961",
+      "body_check": "fulltext_relevance_review: 一次資料でarbitrary-resolution OryxViTとrequest-dependent dynamic compressorを確認。長いvisual contextを低resolution/high compressionで処理し、LLM-friendly visual representationのtoken量を動的制御する。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.11118",
+      "identity_tokens": [
+        "arXiv:2105.11118"
+      ],
+      "title": "Dorylus: Affordable, Scalable, and Accurate GNN Training with Distributed CPU Servers and Serverless Threads",
+      "reason": "distributed CPU/serverless threadsでGNN trainingをscaleするtraining system。推論への最終適用がなくLLM推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2105.11118",
+      "body_check": "abstract_screen_only: 一次書誌/abstractでGNN distributed training、serverless threads、training scalability/costが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md"
+      ],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.04404",
+      "identity_tokens": [
+        "arXiv:2405.04404"
+      ],
+      "title": "Vision Mamba: A Comprehensive Survey and Taxonomy",
+      "reason": "Mamba/state-space modelのcomputer vision応用を整理するsurveyで、最終対象はvision architecture/application。LLM推論systems surveyではない。",
+      "source_url": "https://arxiv.org/abs/2405.04404",
+      "body_check": "abstract_screen_only: 一次abstract/書誌でVision Mamba taxonomyとvision tasksが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.18339",
+      "identity_tokens": [
+        "arXiv:2310.18339"
+      ],
+      "title": "When MOE Meets LLMs: Parameter Efficient Fine-tuning for Multi-task Medical Applications",
+      "reason": "MOELoRAでmedical multi-taskのparameter-efficient fine-tuningを改善する研究。MoE/LLMを扱うが主目的は学習・適応効率と医療task品質で推論systems効率ではない。",
+      "source_url": "https://arxiv.org/abs/2310.18339",
+      "body_check": "abstract_screen_only: 一次資料でLoRA expertsとtask-motivated gateによるmulti-task medical fine-tuningが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.05419",
+      "identity_tokens": [
+        "arXiv:2504.05419"
+      ],
+      "title": "Reasoning Models Know When They're Right: Probing Hidden States for Self-Verification",
+      "reason": "reasoning modelのhidden stateから中間回答の正しさをprobeし、confidence-based early exitへ利用。性能を維持したまま推論token数を24%削減するためreasoning inference efficiencyの直接対象。",
+      "source_url": "https://arxiv.org/abs/2504.05419",
+      "body_check": "fulltext_relevance_review: 一次資料でlast-layer hidden-state probe、calibrated correctness score、intermediate-answer early exitを確認。threshold 0.9等でstatic exitより良いaccuracy-efficiency trade-offを示し、総推論tokenを24%削減。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04040",
+      "identity_tokens": [
+        "arXiv:2512.04040"
+      ],
+      "title": "RELIC: Interactive Video World Model with Long-Horizon Memory",
+      "reason": "圧縮KV memoryやFP8等で14B video world modelを16FPS化するが、最終workloadはinteractive video diffusion/world generationでありLLM/言語モデル推論ではない。",
+      "source_url": "https://arxiv.org/abs/2512.04040",
+      "body_check": "fulltext_relevance_review: 一次資料でcompressed historical latent tokens in KV cache、rolling memory、FlashAttention3/FP8、4×H100で480×832 16FPSを確認。ただし最終適用はvideo world generationのため対象外。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3466752.3480095",
+      "identity_tokens": [
+        "DOI:10.1145/3466752.3480095"
+      ],
+      "title": "EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference",
+      "reason": "BERT edge inferenceへentropy early exit、DVFS、adaptive attention span、pruning、quantizationと専用12nm acceleratorをco-designし、latency制約下のenergyを最大53倍削減するため直接対象。",
+      "source_url": "https://arxiv.org/abs/2011.14203",
+      "body_check": "fulltext_relevance_review: 一次資料でsentence-level early-exit predictionをDVFSへ接続し、attention span/pruning/floating-point quantizationとhardware acceleratorを統合。通常推論比最大7x、latency-unbounded early exit比2.5x、Jetson CUDA比53x lower energyを報告。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2503.17352",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2503.17352"
+      ],
+      "title": "OpenVLThinker: An Early Exploration to Complex Vision-Language Reasoning via Iterative Self-Improvement",
+      "reason": "SFTとRLを反復してLVLMの複雑vision-language reasoning品質を改善するtraining研究。推論systems効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2503.17352",
+      "body_check": "abstract_screen_only: arXiv一次abstractでiterative SFT/RL、MathVista/MathVerse/MathVision reasoning performanceが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "worklist_rank": 56
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3352460.3358256",
+      "identity_tokens": [
+        "DOI:10.1145/3352460.3358256"
+      ],
+      "title": "GraphQ: Scalable PIM-Based Graph Processing",
+      "reason": "processing-in-memoryでgraph processingを高速化するarchitecture研究で、LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1145/3352460.3358256",
+      "body_check": "abstract_screen_only: 一次書誌でPIM-based graph processingが主題と確認。LLM推論への最終適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md"
+      ],
+      "worklist_rank": 57
+    }
+  ]
+}
