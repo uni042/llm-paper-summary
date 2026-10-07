@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1401-scheduled-chat-00/r01",
+  "reference_main_sha": "7dd80c031effb0c4ed7ae37ab8a33699aabf535f",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.07027",
+      "identity_tokens": [
+        "arXiv:2305.07027"
+      ],
+      "title": "EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention",
+      "reason": "Vision Transformerの画像認識向け高速化で、最終評価はImageNet系の視覚モデルthroughput/accuracy。LLM・言語モデル推論が最終workloadではない。",
+      "source_url": "https://arxiv.org/abs/2305.07027",
+      "body_check": "abstract_screen_only: 一次abstractでmemory-efficient Vision Transformer、Cascaded Group Attention、GPU/CPU画像分類throughputが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01392",
+      "identity_tokens": [
+        "arXiv:2407.01392"
+      ],
+      "title": "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
+      "reason": "next-token predictionとfull-sequence diffusionを統合する学習paradigmで、主要適用は動画rollout、decision-making、planning。LLM推論systems効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2407.01392",
+      "body_check": "abstract_screen_only: 一次abstractでper-token noise levelを用いるdiffusion training、video/decision-making/planningが主要評価と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.06709",
+      "identity_tokens": [
+        "arXiv:2202.06709"
+      ],
+      "title": "How Do Vision Transformers Work?",
+      "reason": "Vision TransformerのMSAがloss landscapeや周波数特性へ与える影響を分析しAlterNetを提案するvision研究。LLM推論runtime・memory・servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2202.06709",
+      "body_check": "abstract_screen_only: 一次abstractでViT/MSAの画像認識上の性質とAlterNetが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:93ce8797714ad813aa293ff3d5afab6ce1e13fcb",
+      "identity_tokens": [
+        "SemanticScholar:93ce8797714ad813aa293ff3d5afab6ce1e13fcb"
+      ],
+      "title": "AIS Transactions on Human-Computer Interaction AIS",
+      "reason": "worklistの書誌はAIS Transactions on Human-Computer Interactionに関する不完全・非LLM候補で、LLM推論systemsの論文として識別できる一次資料情報がない。",
+      "source_url": "https://www.semanticscholar.org/paper/93ce8797714ad813aa293ff3d5afab6ce1e13fcb",
+      "body_check": "abstract_screen_only: worklistの書誌タイトル・venue情報からLLM推論systems候補ではないことが明白。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.14125",
+      "identity_tokens": [
+        "arXiv:2312.14125"
+      ],
+      "title": "VideoPoet: A Large Language Model for Zero-Shot Video Generation",
+      "reason": "autoregressive language-modeling frameworkを動画・画像・音声生成へ用いるマルチモーダル生成モデルで、主要目的はzero-shot video generation品質。LLM推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2312.14125",
+      "body_check": "abstract_screen_only: 一次abstractでmultimodal tokenizerとautoregressive decoderによるvideo generation/editingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.08177",
+      "identity_tokens": [
+        "arXiv:2304.08177"
+      ],
+      "title": "Efficient and Effective Text Encoding for Chinese LLaMA and Alpaca",
+      "reason": "中国語語彙を20,000 token拡張しsecondary pre-trainingとinstruction fine-tuningで中国語能力を改善するモデル適応研究。encoding efficiencyは扱うが推論latency・memory・servingのsystems評価が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2304.08177",
+      "body_check": "abstract_screen_only: 一次abstractでChinese vocabulary extension、secondary pre-training、instruction fine-tuning、C-Eval品質が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.13007",
+      "identity_tokens": [
+        "arXiv:2309.13007"
+      ],
+      "title": "ReConcile: Round-Table Conference Improves Reasoning via Consensus among Diverse LLMs",
+      "reason": "複数LLM agentを複数round議論させconfidence-weighted votingで推論精度を上げる方式で、主要評価はreasoning accuracy。計算量削減やserving効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2309.13007",
+      "body_check": "abstract_screen_only: 一次abstractでmulti-model multi-agent discussion、consensus、最大11.4%のreasoning性能改善が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-024-07335-x",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-024-07335-x"
+      ],
+      "title": "Scaling neural machine translation to 200 languages",
+      "reason": "NLLB-200として200言語の翻訳品質と低資源言語coverageを拡大する研究。MoEを使うが目的はmultilingual transfer/interferenceと翻訳品質で、MoE推論systems最適化ではない。",
+      "source_url": "https://doi.org/10.1038/s41586-024-07335-x",
+      "body_check": "abstract_screen_only: Nature一次本文概要でSparsely Gated MoEを用いた200-language NMT、FLORES-200、低資源翻訳品質が主題と確認。推論systems対象外のため深読解省略。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.02485",
+      "identity_tokens": [
+        "arXiv:2407.02485"
+      ],
+      "title": "RankRAG: Unifying Context Ranking with Retrieval-Augmented Generation in LLMs",
+      "reason": "context rankingとanswer generationを単一LLMへinstruction fine-tuningするRAG品質研究。主要評価はknowledge-intensive/biomedical benchmark精度で、推論runtime・memory・serving効率ではない。",
+      "source_url": "https://arxiv.org/abs/2407.02485",
+      "body_check": "abstract_screen_only: 一次abstractでranking dataを混ぜたinstruction fine-tuningとRAG benchmark性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.13788",
+      "identity_tokens": [
+        "arXiv:2309.13788"
+      ],
+      "title": "Can LLM-Generated Misinformation Be Detected?",
+      "reason": "LLM生成misinformationのtaxonomyと検出難易度を人間・detectorで評価する安全性研究。LLM推論systems効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2309.13788",
+      "body_check": "abstract_screen_only: 一次abstractでmisinformation生成・検出difficulty・online safetyが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 30
+    }
+  ]
+}
