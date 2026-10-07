@@ -1090,7 +1090,7 @@
 
 - **2024-06 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
   実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：5  
-  LLM推論アクセラレータを設計するとき、演算器数、メモリ種類・帯域、チップ面積、並列配置を変えるたびにRTL実装や実機評価を行うのは現実的でない。実機との比較では各種演算子・入力 サイズの遅延誤差が平均10.9%、LLM推論全体では平均4.1%。
+  大規模言語モデルの推論アクセラレータを設計するとき、演算器数、オンチップメモリ容量、外部メモリ帯域、チップ面積、装置間接続、並列配置を変えるたびにRTL実装や実機試作を行うのは現実的ではない。実機検証ではNVIDIA A100、AMD MI210、Google TPUv3を使い、演算子遅延の平均誤差10.9%、LLM推論全体の平均遅延誤差4.1%を報告する。
 
 - **2024-03 · [LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md)**  
   実装：[✓](https://llava-prumerge.github.io/) ・ リポジトリ内被引用：5  
