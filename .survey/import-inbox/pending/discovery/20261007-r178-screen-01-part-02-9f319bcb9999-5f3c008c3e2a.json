@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r178-screen-01-part-02-9f319bcb9999",
+  "reference_main_sha": "85e26b943e161cfe557fc0dae0c8b7298dad60e4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11651",
+      "identity_tokens": [
+        "arXiv:2605.11651"
+      ],
+      "title": "Hide to See: Reasoning-prefix Masking for Visual-anchored Thinking in VLM Distillation",
+      "reason": "The paper studies reasoning-prefix masking as a VLM distillation/training objective; its primary abstract frames the contribution as distillation quality, not deployed inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.11651",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07331",
+      "identity_tokens": [
+        "arXiv:2605.07331"
+      ],
+      "title": "Rethinking Importance Sampling in LLM Policy Optimization: A Cumulative Token Perspective",
+      "reason": "The work changes importance sampling for LLM policy optimization during post-training; the primary abstract concerns policy-gradient training, not inference-time compute, memory, latency, or serving.",
+      "source_url": "https://arxiv.org/abs/2605.07331",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMI.2026.3689332",
+      "identity_tokens": [
+        "DOI:10.1109/TMI.2026.3689332"
+      ],
+      "title": "Multi-View Hilbert Curve-Based Hierarchical Information Aggregation for Incomplete Multimodal Alzheimer's Disease Diagnosis",
+      "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1109/TMI.2026.3689332 (server returned Internal Error); no primary abstract/full text was available in the assigned packet. Multimodal medical-diagnosis title alone is insufficient for a final unrelated decision.",
+      "source_url": "https://doi.org/10.1109/TMI.2026.3689332",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21965",
+      "identity_tokens": [
+        "arXiv:2604.21965"
+      ],
+      "title": "Read the Paper, Write the Code: Agentic Reproduction of Social-Science Results",
+      "reason": "The paper evaluates agentic reproduction of social-science findings; the primary abstract describes reproducibility outcomes, not an LLM inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2604.21965",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13977",
+      "identity_tokens": [
+        "arXiv:2604.13977"
+      ],
+      "title": "How Can We Synthesize High-Quality Pretraining Data? A Systematic Study of Prompt Design, Generator Model, and Source Data",
+      "reason": "The full text studies synthetic pretraining-data generation and reports lower data-generation cost (including a 30x figure); the measured savings concern training-data production, not deployed model inference.",
+      "source_url": "https://arxiv.org/abs/2604.13977",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
