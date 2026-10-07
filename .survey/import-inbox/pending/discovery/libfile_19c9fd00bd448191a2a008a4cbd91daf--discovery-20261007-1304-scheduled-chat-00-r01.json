@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1304-scheduled-chat-00/r01",
+  "reference_main_sha": "dbbf2898d087bcbd6abc43dfa364c0824715846d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.02015",
+      "identity_tokens": [
+        "arXiv:2304.02015"
+      ],
+      "title": "How well do Large Language Models perform in Arithmetic tasks?",
+      "reason": "MATH 401を用いてGPT-4、ChatGPT、InstructGPT、Galactica、LLaMAの算術能力を評価する能力ベンチマーク研究。推論runtime・memory・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2304.02015",
+      "body_check": "abstract_screen_only: arXiv一次abstractで算術式の正答能力評価とMATH 401 datasetが主題と確認。推論systems効率化ではないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07616-sere-similarity-expert-rerouting.md"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2103.14636",
+      "identity_tokens": [
+        "arXiv:2103.14636"
+      ],
+      "title": "A Practical Survey on Faster and Lighter Transformers",
+      "reason": "Transformerの計算量・memory footprint削減を中心に、parameter sharing、pruning、mixed precision、knowledge distillation、sparse/factorized attention、architecture changeを実務的に整理する効率化survey。推論節とcompute/memory trade-offを明示的に扱うため対象。",
+      "source_url": "https://arxiv.org/abs/2103.14636",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§1.2–2.4と目次を確認。full attentionのO(n^2)計算・memoryを出発点にgeneral methodsとlower-complexity x-formersを整理し、appendixにInferenceおよびOptimization and Inferenceの実務ガイドを持つ。推論時のcompute/memory削減をsurvey範囲に明示している。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.04087",
+      "identity_tokens": [
+        "arXiv:2307.04087"
+      ],
+      "title": "SVIT: Scaling up Visual Instruction Tuning",
+      "reason": "4.2M件のvisual instruction tuning dataとdata recipeでMLLMの視覚理解・推論品質を高める学習/data研究。推論systems効率化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2307.04087",
+      "body_check": "abstract_screen_only: arXiv一次abstractで1.6M conversation QA、1.6M reasoning QA、1.0M referring QA等のdataset構築とinstruction tuning性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1147/rd.395.0575",
+      "identity_tokens": [
+        "DOI:10.1147/rd.395.0575"
+      ],
+      "title": "A three-dimensional approach to parallel matrix multiplication",
+      "reason": "3次元processor gridによる一般的なparallel matrix multiplicationで2D方式よりcommunicationを削減する古典HPC研究。LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1147/rd.395.0575",
+      "body_check": "abstract_screen_only: 一次書誌および論文概要でIBM POWERparallel SP2上の3D parallel matrix multiplicationが主題と確認。LLM推論への最終適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md"
+      ],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3093336.3037698",
+      "identity_tokens": [
+        "DOI:10.1145/3093336.3037698"
+      ],
+      "title": "Neurosurgeon",
+      "reason": "mobile deviceとdatacenter間でDNN layerを分割しlatency・energy・datacenter throughputを改善するedge/cloud DNN systemだが、対象はvision・speech・NLPを含む一般DNN applicationでLLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1145/3037697.3037698",
+      "body_check": "fulltext_relevance_review: ACM一次abstractを確認。layer-level partitioning schedulerで平均3.1x latency改善、59.5% mobile energy削減、1.5x datacenter throughput改善を報告するが、2017年の一般DNN offloading systemでLLM inference対象ではない。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2607.17415-transition-aware-backend-dispatch-for-edge-llm-inference.md"
+      ],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.02193",
+      "identity_tokens": [
+        "arXiv:2508.02193"
+      ],
+      "title": "Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference",
+      "reason": "離散拡散言語モデルの非逐次・並列生成によりtoken-by-token decodingのlatencyを回避し、H20 GPUで2,146 token/sを報告する。言語モデルの高速度推論そのものが主要貢献なので直接対象。",
+      "source_url": "https://arxiv.org/abs/2508.02193",
+      "body_check": "fulltext_relevance_review: arXiv一次本文/abstractを確認。discrete-state diffusionによるparallel generationをinference latency対策として位置づけ、code benchmarkの品質を維持しながらH20 GPUで2,146 token/s、Mercury/Gemini Diffusionより高速なspeed-quality Paretoを報告。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04206-sangam-diffusion-llm-serving.md"
+      ],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/567806.567810",
+      "identity_tokens": [
+        "DOI:10.1145/567806.567810"
+      ],
+      "title": "An overview of the sparse basic linear algebra subprograms: The new standard from the BLAS technical forum",
+      "reason": "Sparse BLASの標準interface・基本線形代数subprogramを整理する一般数値計算研究。LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1145/567806.567810",
+      "body_check": "abstract_screen_only: 一次書誌情報でSparse BLAS Technical Forumのstandard overviewが主題と確認。LLM推論固有の適用がないため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md"
+      ],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01266",
+      "identity_tokens": [
+        "arXiv:2511.01266"
+      ],
+      "title": "MotionStream: Real-Time Video Generation with Interactive Motion Controls",
+      "reason": "causal student、sliding-window causal attention、attention sink、KV cache rollingで単一GPU最大29 FPSのreal-time video generationを実現するが、最終workloadはvideo diffusion generationでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2511.01266",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmotion-conditioned streaming video generation、sub-second latency、最大29 FPS、infinite-length videoが主題と明確なため本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08278",
+      "identity_tokens": [
+        "arXiv:2310.08278"
+      ],
+      "title": "Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting",
+      "reason": "decoder-only Transformerを確率的時系列予測へ適用するfoundation model研究。主評価はzero/few-shot forecasting品質で、LLM推論systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.08278",
+      "body_check": "abstract_screen_only: arXiv一次abstractでunivariate probabilistic time-series forecastingとdownstream zero-shot generalizationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.12487",
+      "identity_tokens": [
+        "arXiv:2405.12487"
+      ],
+      "title": "3DSS-Mamba: 3D-Spectral-Spatial Mamba for Hyperspectral Image Classification",
+      "reason": "Mamba/SSMの線形計算効率をhyperspectral image classificationへ適用するvision/remote-sensing研究。最終workloadがHSI classificationでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2405.12487",
+      "body_check": "abstract_screen_only: arXiv一次abstractで3D spectral-spatial selective scanningとHSI classification benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T13:04:27+09:00",
+      "last_checked_at": "2026-10-07T13:04:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
+      ],
+      "worklist_rank": 81
+    }
+  ]
+}
