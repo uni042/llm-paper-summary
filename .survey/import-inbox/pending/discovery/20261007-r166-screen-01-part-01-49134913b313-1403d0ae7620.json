@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r166-screen-01-part-01-49134913b313",
+  "reference_main_sha": "8cc816a0043ec7035996ad0be4842466287983d3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.03930",
+      "identity_tokens": [
+        "arXiv:2210.03930"
+      ],
+      "title": "Hierarchical Graph Transformer with Adaptive Node Sampling",
+      "reason": "The method reduces complexity for graph transformers by adaptive node sampling and hierarchical attention over graph nodes; this is not LLM token inference/serving.",
+      "source_url": "https://arxiv.org/abs/2210.03930",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25723",
+      "identity_tokens": [
+        "arXiv:2603.25723"
+      ],
+      "title": "Natural-Language Agent Harnesses",
+      "reason": "Natural-language agent harnesses make policy documents compact, but primary experiments report more model/tool calls or tokens than specialized code harnesses; net inference-resource savings are unproven.",
+      "source_url": "https://arxiv.org/abs/2603.25723",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05125",
+      "identity_tokens": [
+        "arXiv:2602.05125"
+      ],
+      "title": "Rethinking Rubric Generation for Improving LLM Judge and Reward Modeling for Open-ended Tasks",
+      "reason": "Recursive rubric decomposition improves LLM judge/reward-model evaluation quality; it does not optimize inference compute, memory, latency, or serving.",
+      "source_url": "https://arxiv.org/abs/2602.05125",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.06870",
+      "identity_tokens": [
+        "arXiv:2109.06870"
+      ],
+      "title": "Performance-Efficiency Trade-Offs in Unsupervised Pre-Training for Speech Recognition",
+      "reason": "Primary abstract: speech-recognition unsupervised pretraining and training-efficiency trade-offs, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2109.06870",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.18583",
+      "identity_tokens": [
+        "arXiv:2406.18583"
+      ],
+      "title": "Lumina-Next: Making Lumina-T2X Stronger and Faster with Next-DiT",
+      "reason": "Next-DiT accelerates/strengthens text-to-image/video diffusion generation, not LLM language inference or serving.",
+      "source_url": "https://arxiv.org/abs/2406.18583",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    }
+  ]
+}
