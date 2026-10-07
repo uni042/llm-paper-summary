@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T03:58:58+00:00",
-  "record_count": 9988,
+  "updated_at": "2026-10-07T04:52:16+00:00",
+  "record_count": 10003,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -143004,6 +143004,201 @@
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
       "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models"
+    },
+    "arXiv:2305.11172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11172",
+      "identity_tokens": [
+        "arXiv:2305.11172"
+      ],
+      "reason": "vision/audio/languageを統一する4B multimodal representation modelのarchitectureとpretrainingが主題で、推論runtime・memory・serving効率化を主要貢献としない。",
+      "first_checked_at": "2026-10-07T04:52:11+00:00",
+      "last_checked_at": "2026-10-07T04:52:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "ONE-PEACE: Exploring One General Representation Model Toward Unlimited Modalities"
+    },
+    "DOI:10.1109/18.771145": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/18.771145",
+      "identity_tokens": [
+        "DOI:10.1109/18.771145"
+      ],
+      "reason": "block codeのtail-biting trellis表現とstate complexityを扱う符号理論研究で、LLM/Transformer推論を対象としない。",
+      "first_checked_at": "2026-10-07T04:52:11+00:00",
+      "last_checked_at": "2026-10-07T04:52:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ],
+      "title": "Minimal tail-biting trellises: the Golay code and more"
+    },
+    "arXiv:2406.01733": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01733",
+      "identity_tokens": [
+        "arXiv:2406.01733"
+      ],
+      "reason": "layer cachingでdiffusion Transformerのdenoising計算を削減するが、最終workloadは画像生成用diffusion TransformerでありLLM/言語モデル推論ではない。",
+      "first_checked_at": "2026-10-07T04:52:13+00:00",
+      "last_checked_at": "2026-10-07T04:52:13+00:00",
+      "linked_from": [],
+      "title": "Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching"
+    },
+    "arXiv:2601.20552": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20552",
+      "identity_tokens": [
+        "arXiv:2601.20552"
+      ],
+      "reason": "visual tokenを画像semanticに応じて動的並べ替えし2D理解を改善するencoder architecture研究。主目的はvisual causal reasoning/理解品質で、token数・latency・memory等の推論効率削減を主要貢献としない。",
+      "first_checked_at": "2026-10-07T04:52:13+00:00",
+      "last_checked_at": "2026-10-07T04:52:13+00:00",
+      "linked_from": [],
+      "title": "DeepSeek-OCR 2: Visual Causal Flow"
+    },
+    "arXiv:2402.11574": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.11574",
+      "identity_tokens": [
+        "arXiv:2402.11574"
+      ],
+      "reason": "large vision-language modelのvisual in-context learning能力を扱うmultimodal capability研究で、推論runtime・memory・serving効率化を主題としない。",
+      "first_checked_at": "2026-10-07T04:52:13+00:00",
+      "last_checked_at": "2026-10-07T04:52:13+00:00",
+      "linked_from": [],
+      "title": "Visual In-Context Learning for Large Vision-Language Models"
+    },
+    "arXiv:2401.08406": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.08406",
+      "identity_tokens": [
+        "arXiv:2401.08406"
+      ],
+      "reason": "RAGとfine-tuningの品質・実装trade-offを農業QA事例で比較するapplication/methodology研究。LLM推論runtime・memory・serving効率のsystematic optimizationが主目的ではない。",
+      "first_checked_at": "2026-10-07T04:52:14+00:00",
+      "last_checked_at": "2026-10-07T04:52:14+00:00",
+      "linked_from": [],
+      "title": "RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture"
+    },
+    "DOI:10.1145/2541940.2541942": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2541940.2541942",
+      "identity_tokens": [
+        "DOI:10.1145/2541940.2541942"
+      ],
+      "reason": "GPU TLB/page-table walkerとCPU/GPU unified address spaceを扱う一般GPU memory-management研究。LLM/Transformer推論を最終workloadとしない。",
+      "first_checked_at": "2026-10-07T04:52:14+00:00",
+      "last_checked_at": "2026-10-07T04:52:14+00:00",
+      "linked_from": [],
+      "title": "Architectural support for address translation on GPUs: designing memory management units for CPU/GPUs with unified address spaces"
+    },
+    "arXiv:2402.03898": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03898",
+      "identity_tokens": [
+        "arXiv:2402.03898"
+      ],
+      "reason": "LLM knowledge distillationの学習安定性・student性能を改善するdistillation/training研究。小型化の副次効果はあるが推論system最適化を主要評価しない。",
+      "first_checked_at": "2026-10-07T04:52:14+00:00",
+      "last_checked_at": "2026-10-07T04:52:14+00:00",
+      "linked_from": [],
+      "title": "DistiLLM: Towards Streamlined Distillation for Large Language Models"
+    },
+    "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab",
+      "identity_tokens": [
+        "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab"
+      ],
+      "reason": "SIMD-aware weight pruningとnode pruningをhardware parallelismへ合わせる一般DNN pruning研究のretrospective。microcontroller/CPU/GPU上のDNNを対象とし、LLM/Transformer推論を最終workloadとしない。",
+      "first_checked_at": "2026-10-07T04:52:14+00:00",
+      "last_checked_at": "2026-10-07T04:52:14+00:00",
+      "linked_from": [],
+      "title": "Retrospective: Scalpel: Customizing DNN Pruning to the Underlying Hardware Parallelism"
+    },
+    "DOI:10.7873/date.2015.0733": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.7873/date.2015.0733",
+      "identity_tokens": [
+        "DOI:10.7873/date.2015.0733"
+      ],
+      "reason": "SRAM/eDRAM/STT-RAM/ReRAM/PCMの2D/3D cacheをmodelingするmicroarchitecture design-space exploration tool。LLM推論を最終workloadとしない。",
+      "first_checked_at": "2026-10-07T04:52:15+00:00",
+      "last_checked_at": "2026-10-07T04:52:15+00:00",
+      "linked_from": [],
+      "title": "DESTINY: A tool for modeling emerging 3D NVM and eDRAM caches"
+    },
+    "arXiv:2605.00078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00078",
+      "identity_tokens": [
+        "arXiv:2605.00078"
+      ],
+      "reason": "将来frame生成を省いたlatent world-action modelで推論overheadを抑えるが、最終適用先はロボットの視覚言語行動（VLA）policyでありLLM推論systemsではない。",
+      "first_checked_at": "2026-10-07T04:52:15+00:00",
+      "last_checked_at": "2026-10-07T04:52:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Being-H0.7: A Latent World-Action Model from Egocentric Videos"
+    },
+    "arXiv:2406.01125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01125",
+      "identity_tokens": [
+        "arXiv:2406.01125"
+      ],
+      "reason": "cacheでDiffusion Transformerの画像生成を高速化する推論方式だが、最終workloadはPIXART-α/DiT-XLの画像diffusion生成でありLLM推論ではない。",
+      "first_checked_at": "2026-10-07T04:52:16+00:00",
+      "last_checked_at": "2026-10-07T04:52:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Δ-DiT: A Training-Free Acceleration Method Tailored for Diffusion Transformers"
+    },
+    "DOI:10.1109/tit.1953.1188572": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tit.1953.1188572",
+      "identity_tokens": [
+        "DOI:10.1109/tit.1953.1188572"
+      ],
+      "reason": "情報量・情報構造を束理論（lattice theory）で扱う古典的情報理論研究で、LLM/Transformer推論runtime・memory・servingを対象としない。",
+      "first_checked_at": "2026-10-07T04:52:16+00:00",
+      "last_checked_at": "2026-10-07T04:52:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md"
+      ],
+      "title": "The lattice theory of information"
+    },
+    "arXiv:2405.15556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15556",
+      "identity_tokens": [
+        "arXiv:2405.15556"
+      ],
+      "reason": "retrieval corruption攻撃に対するcertifiable robustnessが主目的で、isolate-then-aggregateと安全な応答集約を提案するsecurity/robustness研究。推論runtime・memory・throughput効率化を主要目的としない。",
+      "first_checked_at": "2026-10-07T04:52:16+00:00",
+      "last_checked_at": "2026-10-07T04:52:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+      ],
+      "title": "Certifiably Robust RAG against Retrieval Corruption"
+    },
+    "arXiv:1901.10946": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1901.10946",
+      "identity_tokens": [
+        "arXiv:1901.10946"
+      ],
+      "reason": "非自己回帰の粗密recursive decodingで長系列欠損補完を改善する研究だが、最終workloadは時空間sequence imputationでありLLM/言語モデル推論ではない。",
+      "first_checked_at": "2026-10-07T04:52:16+00:00",
+      "last_checked_at": "2026-10-07T04:52:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "NAOMI: Non-Autoregressive Multiresolution Sequence Imputation"
     }
   }
 }

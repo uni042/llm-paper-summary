@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e32e6feeb4493fee-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab",
+    "identity_tokens": [
+      "SemanticScholar:42c03c4037d113e7491375b6558277c250c3b5ab"
+    ],
+    "reason": "SIMD-aware weight pruningとnode pruningをhardware parallelismへ合わせる一般DNN pruning研究のretrospective。microcontroller/CPU/GPU上のDNNを対象とし、LLM/Transformer推論を最終workloadとしない。",
+    "first_checked_at": "2026-10-07T04:52:14+00:00",
+    "last_checked_at": "2026-10-07T04:52:14+00:00",
+    "linked_from": [],
+    "title": "Retrospective: Scalpel: Customizing DNN Pruning to the Underlying Hardware Parallelism"
+  },
+  "processed_at": "2026-10-07T04:52:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e32e6feeb449",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
