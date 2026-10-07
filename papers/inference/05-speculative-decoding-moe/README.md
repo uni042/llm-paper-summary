@@ -266,7 +266,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-04 · [PARD: Accelerating LLM Inference with Low-Cost PARallel Draft Model Adaptation](2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md)**  
   実装：[✓](https://github.com/AMD-AIG-AIMA/PARD) ・ リポジトリ内被引用：7  
-  小型AR ドラフトをmask-トークン型の並列ドラフトへ変換し、KV整合性を保つConditional Dropで学習費を抑えつつモデル family内で再利用するPARD。
+  PARDは、高精度な小型自己回帰モデルを、1回の順伝播で複数の候補トークンを出す並列下書きモデルへ低コストで適応し、同一モデル系列の複数の対象モデルへ再利用できるようにする投機的復号（投機的復号）方式である。
 
 - **2025-02 · [LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification](2025-2502.17421-longspec-long-context-lossless-speculative-decoding-with-efficient-draft.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
