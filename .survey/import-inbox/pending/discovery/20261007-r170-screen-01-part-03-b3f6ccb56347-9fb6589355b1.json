@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r170-screen-01-part-03-b3f6ccb56347",
+  "reference_main_sha": "c722acacbbf591e325c88350bdbd5c25ada4d0f2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17205",
+      "identity_tokens": [
+        "arXiv:2602.17205"
+      ],
+      "title": "Deeper detection limits in astronomical imaging using self-supervised spatiotemporal denoising",
+      "reason": "primary full textを取得できず、linked attention lineageとの本文上の関係も確認できない。要旨上は天文画像denoisingでLLM推論対象との関連が弱いため、解決不能な確認不足を含めborderlineとする。",
+      "source_url": "https://arxiv.org/abs/2602.17205",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-69715-3",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-69715-3"
+      ],
+      "title": "Extending the range of graph neural networks with global encodings",
+      "reason": "Nature一次要旨はmolecular physics等のgraph neural networksにglobal encodingsを導入する。LLM inference optimizationではない。",
+      "source_url": "https://doi.org/10.1038/s41467-026-69715-3",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12247",
+      "identity_tokens": [
+        "arXiv:2602.12247"
+      ],
+      "title": "ExtractBench: A Benchmark and Evaluation Methodology for Complex Structured Extraction",
+      "reason": "LLM文書抽出の測定benchmarkであり、効率改善機構を実装・評価する論文ではない。",
+      "source_url": "https://arxiv.org/abs/2602.12247",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10693",
+      "identity_tokens": [
+        "arXiv:2602.10693"
+      ],
+      "title": "VESPO: Variational Sequence-Level Soft Policy Optimization for Stable Off-Policy LLM Training",
+      "reason": "技術的焦点はLLM post-trainingのRL lossで、推論時の計算・latency・memory改善ではない。",
+      "source_url": "https://arxiv.org/abs/2602.10693",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06717",
+      "identity_tokens": [
+        "arXiv:2602.06717"
+      ],
+      "title": "F-GRPO: Don't Let Your Policy Learn the Obvious and Forget the Rare",
+      "reason": "本文で扱うのはpolicy learning時のsampling/advantage weightingであり、LLM inferenceの最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.06717",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    }
+  ]
+}
