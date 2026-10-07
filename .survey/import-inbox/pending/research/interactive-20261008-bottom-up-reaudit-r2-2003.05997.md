@@ -1,0 +1,216 @@
+---
+canonical_id: arXiv:2003.05997
+arxiv_id: '2003.05997'
+doi: 10.48550/arxiv.2003.05997
+arxiv_categories:
+  primary: cs.LG
+  cross_list:
+  - cs.CL
+
+
+references:
+- canonical_id: arXiv:1507.05910
+  arxiv_id: '1507.05910'
+- canonical_id: arXiv:1607.06450
+  arxiv_id: '1607.06450'
+- canonical_id: OpenReview:ByxZX20qFQ
+  openreview_id: ByxZX20qFQ
+- canonical_id: arXiv:1308.3432
+  arxiv_id: '1308.3432'
+- canonical_id: arXiv:1904.10509
+  arxiv_id: '1904.10509'
+- canonical_id: OpenReview:Hko85plCW
+  openreview_id: Hko85plCW
+- canonical_id: arXiv:1406.7362
+  arxiv_id: '1406.7362'
+- canonical_id: arXiv:1410.0510
+  arxiv_id: '1410.0510'
+- canonical_id: arXiv:1312.4314
+  arxiv_id: '1312.4314'
+- canonical_id: arXiv:2006.10901
+  arxiv_id: '2006.10901'
+- canonical_id: OpenReview:B184E5qee
+  openreview_id: B184E5qee
+- canonical_id: arXiv:1410.5401
+  arxiv_id: '1410.5401'
+- canonical_id: OpenReview:rygGQyrFvH
+  openreview_id: rygGQyrFvH
+- canonical_id: arXiv:1412.6980
+  arxiv_id: '1412.6980'
+- canonical_id: OpenReview:rkgNKkHtvB
+  openreview_id: rkgNKkHtvB
+- canonical_id: DOI:10.18653/v1/p18-2059
+  doi: 10.18653/v1/p18-2059
+- canonical_id: DOI:10.18653/v1/d17-1036
+  doi: 10.18653/v1/d17-1036
+- canonical_id: arXiv:1803.08240
+  arxiv_id: '1803.08240'
+- canonical_id: OpenReview:Byj72udxe
+  openreview_id: Byj72udxe
+- canonical_id: DOI:10.18653/v1/2020.acl-main.672
+  doi: 10.18653/v1/2020.acl-main.672
+- canonical_id: OpenReview:SylKikSYDH
+  openreview_id: SylKikSYDH
+- canonical_id: OpenReview:B1ckMDqlg
+  openreview_id: B1ckMDqlg
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 55
+title: Efficient Content-Based Sparse Attention with Routing Transformers
+summary: 密な自己注意は系列長nに対してO(n²d)の計算・メモリを要し、局所注意は効率的でも遠距離の内容関連トークンを直接結べない。Routing Transformerは正規化したクエリとキーを球面k平均法のクラスタへ割り当て、同じ内容クラスタ内の過去トークンだけを注意候補にする。k≈√nとするとクラスタ割当O(nkd)とクラスタ内注意O(n²d/k)を合わせてO(n^1.5d)に抑えられる。WikiText-103で困惑度15.8、PG-19で33.2、ImageNet-64で3.43 bits/dimを報告する一方、当時のTPUv3では疎演算支援が弱く、PG-19の学習速度は局所注意の約1/1.7に留まる。
+list_summary: 内容の近いクエリ/キーを球面k平均法で同じクラスタへ経路付けし、同クラスタ内だけ注意することで長距離接続を保ちながら注意計算をO(n²d)からO(n^1.5d)へ下げるRouting Transformer。
+authors:
+- Aurko Roy
+- Mohammad Saffar
+- Ashish Vaswani
+- David Grangier
+published: '2020-03-12'
+publication: arXiv
+publication_type: preprint
+publication_status: Preprint
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率
+source: https://arxiv.org/abs/2003.05997
+sources:
+- https://arxiv.org/abs/2003.05997
+implementation: Google Researchによる公式実装が公開されている。
+last_checked: '2026-09-28'
+code: https://github.com/google-research/google-research/tree/master/routing_transformer
+implementation_status: official-code
+last_audited: '2026-10-08'
+audit_version: 2
+under16kb_reaudit_target_path: papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md
+under16kb_reaudit_source_git_blob_sha: '57d628b18393f8b5b04dfbf94f45950e0bef935a'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r2-2003.05997'
+worker_completed_at: '2026-10-07T22:45:57.690Z'
+
+---
+
+# Efficient Content-Based Sparse Attention with Routing Transformers
+
+> 固定した近傍窓ではなく「内容が近いトークン」をクラスタリングして注意先を決める。局所注意だけでは拾いにくい遠距離依存を残しつつ、各トークンが全系列を見る密な自己注意の二乗コストを削る、初期の内容依存疎注意方式。
+
+## 概要
+
+Transformerの密な自己注意では、系列長をn、隠れ次元をdとすると、各クエリが全キーと内積を取るため計算・メモリがO(n²d)で増える。長文を扱うには注意先を疎にする必要があるが、単純な局所注意では「近くにあるトークン」しか直接参照できない。数千トークン離れていても意味的に関連する語や節を結びたい場合、固定窓は不利になる。
+
+Routing Transformerは、クエリとキーを内容に基づいてクラスタへ経路付けし、同じクラスタに入ったトークンだけを注意候補にする。クラスタは学習中にミニバッチk平均法（mini-batch k-means）で更新される。自己回帰モデルでは未来トークンを参照しない因果マスクを保ったまま、内容的に近い過去トークンへ長距離接続できる。
+
+クラスタ数kをおよそ√nにすると、全トークンをk個の中心へ割り当てる費用O(nkd)と、各クラスタ内で約n/k個の候補へ注意する費用O(n²d/k)の釣り合いが取れ、全体をO(n^1.5d)へ下げられる。論文はWikiText-103、PG-19、enwik-8、CIFAR-10、ImageNet-64で品質を検証し、長系列言語モデルと画像生成で当時の疎注意方式を上回る結果を示した。
+
+## 問題設定
+
+### 局所注意は安いが、接続パターンが内容を見ない
+
+局所注意では各トークンが前後の固定窓だけを見るため、候補数を一定に抑えやすい。しかし「どのトークンが重要か」は入力内容によって変わる。遠く離れた固有名詞の再登場や、長文中で同じ話題へ戻る場面では、距離だけで注意先を決めると必要な接続を落とす。
+
+一方、すべてのトークンから重要候補を厳密に最大内積探索（maximum inner product search, MIPS）するのは、それ自体が高価である。Routing Transformerは、MIPSを近傍探索へ近似できるようクエリとキーを正規化し、クラスタを「重要候補をまとめる索引」として使う。
+
+### 内容依存疎性を並列ハードウェアで扱える形へする必要がある
+
+内容ごとに候補数がばらばらだとGPU/TPUで不規則な処理になりやすい。そのため本論文は、各クラスタのサイズを概ねn/kへ揃える。単に計算量を理論上減らすだけでなく、並列実行時に同程度の大きさのブロックとして扱えることを重視している。
+
+## 手法
+
+### 1. クエリとキーを単位球付近へ正規化する
+
+注意の重要度はクエリQiとキーKjの内積QiᵀKjで決まる。ベクトルのノルムを揃えると、内積が大きい組はユークリッド距離も近くなるため、最大内積探索を近傍探索として近似できる。
+
+実装では通常のL2正規化の代わりに、スケールとバイアスを無効にした層正規化（Layer Normalization）を使ってクエリとキーを整える。これにより球面k平均法（spherical k-means）に近いクラスタリングを行う。
+
+### 2. 同じクラスタのクエリとキーだけを注意候補にする
+
+各クラスタ中心μに対して、クエリとキーを距離で割り当てる。同じ中心へ近いQiとKjは互いの距離も小さく、その結果として内積が大きい可能性が高い。つまり「同クラスタだけを見る」ことで、密な注意行列の中でも大きな重みになりそうな要素を残す。
+
+自己回帰生成では、同じクラスタ内でもj≤iの過去位置だけを参照する。したがって内容ベースの経路付けを導入しても因果性は壊れない。
+
+### 3. クラスタを均等化してO(n^1.5d)へ落とす
+
+単純に最近傍クラスタへ割り当てるだけでは、人気クラスタへトークンが集中し得る。論文では各中心について距離順にトークンを並べ、概ねn/k個ずつを選ぶことでクラスタサイズを揃える。この並べ替えにO(n log n)が掛かるが、主要項O(n^1.5d)より小さいとする。
+
+計算量は、n個のルーティングベクトルをk個の中心と比較するO(nkd)と、各クエリがクラスタ内n/k個のキーを見るO(n²d/k)の和になる。k=√n付近で両者が釣り合い、O(n^1.5d)となる。
+
+### 4. クラスタ中心を学習中にオンライン更新する
+
+クラスタ中心は固定ではない。学習中に割り当てられたクエリとキーから指数移動平均で更新され、モデルの表現空間に合わせて経路が変わる。したがって「トークンIDごとの固定ハッシュ」ではなく、その時点の隠れ表現に基づく内容依存の注意先になる。
+
+### 5. 局所注意とRouting Attentionを混ぜる
+
+多くの実験では、注意ヘッドの半分を局所注意、半分をルーティング注意にする。近距離の逐次依存は局所ヘッドで安定して拾い、遠距離の内容関連はルーティングヘッドで拾う構成である。
+
+著者らは注意分布のJensen-Shannonダイバージェンスも調べ、局所ヘッドとルーティングヘッドの分布が異なることを示している。つまりRouting Attentionは局所注意の単なる近似ではなく、補完的な接続パターンを学習している。
+
+## 評価
+
+### 評価条件
+
+| 項目 | 条件 |
+| --- | --- |
+| 主な課題 | WikiText-103、PG-19、enwik-8の言語モデル、CIFAR-10/ImageNet-64の自己回帰画像生成 |
+| 長系列設定 | PG-19は系列長8192 |
+| 学習ハードウェア | 原則128 TPUv3コア。壁時計比較もTPUv3 |
+| WikiText-103モデル | Routing Transformer 10層、16ヘッド |
+| PG-19比較 | Local Transformer 24層/8ヘッド、Routing Transformer 22層/8ヘッド、注意窓512 |
+| 比較対象 | Local Transformer、Transformer-XL、Sparse Transformer、Compressive Transformerなど |
+| 主な指標 | 困惑度、bits per byte / bits per dimension、学習steps/s、注意分布差 |
+| 評価の主目的 | 長系列での品質とメモリ効率。壁時計速度は副次的評価 |
+
+### 主要結果
+
+| データセット・指標 | 比較対象 | Routing Transformer | 差 | 解釈 |
+| --- | --- | --- | --- | --- |
+| WikiText-103 困惑度 | Transformer-XL 18.3 | 15.8 | 低い方が良い | 内容依存疎注意が固定/再帰的長距離方式より良い言語モデリング性能 |
+| PG-19 困惑度 | 既報33.6級 | 33.2 | 小幅改善 | 系列長8192を直接学習し、長文書籍で品質を維持 |
+| ImageNet-64 bits/dim | Sparse Transformer 3.44 | 3.43 | 小幅改善 | 画像の長系列でも適用可能 |
+| enwik-8 bits/byte | Transformer-XL / Sparse Transformer 0.99 | 0.99 | 同等 | 全課題で一律に品質優位ではない |
+| PG-19 学習速度 | Local Transformer 1.231 steps/s | 0.7236 steps/s | 局所注意が約1.7倍速い | 理論計算量削減が当時のTPU疎演算実装では壁時計高速化へ直結しない |
+| CIFAR-10 学習速度 | Local Transformer | ルーティング構成に依存 | Localが約1.22〜1.76倍速い | クラスタリングと不規則疎注意の実装費用が残る |
+
+結果の読み方で重要なのは、Routing Transformerが「局所注意より高速な方式」として実証されたわけではない点である。論文自身が、TPUv3では疎演算支援が不足しており、PG-19で局所注意の方が約1.7倍速いと報告している。主張の中心は、密な注意より低い漸近計算・メモリ量で、固定局所パターンより長距離の内容依存接続を保ち、品質を改善できることである。
+
+### 評価結果の意味と実装上の反証
+
+WikiText-103の困惑度15.8と比較対象の18.3は、同じ指標において値が小さいほど予測分布の整合が良いことを表す。ただし両者のモデル構造と注意層の数まで完全に同一ではないため、差の全てをクラスタ割当だけに帰属させない。PG-19の33.2も、系列長8192で書籍全体の長い依存を扱う構成の結果であり、現代の指示追従モデルや長文質問応答の精度を直接示すものではない。
+
+画像生成での3.43と3.44は次元あたりのビット数で比較した僅差である。この結果は長い画像トークン列でも内容に依存した接続が破綻しないことを支持するが、画像品質やサンプリング時間を含めて全条件で優越したことにはならない。文字単位の言語モデルでは同等水準の結果もあるため、クラスタによる疎注意の品質改善はタスクごとに評価すべきである。
+
+速度に関しては強い反例が存在する。PG-19で局所注意モデルの1秒当たり約1.231学習ステップに対し、提案方式は約0.724ステップにとどまる。理論計算量は長さの二乗から約1.5乗へ低減される一方、実機ではクラスタ中心との比較、系列の並べ替え、不規則なメモリアクセスなどの費用を払うためである。論文の価値を「当時の実機で最速だった」とする説明は誤りである。
+
+したがって追試では、同じトークン長・バッチ数・注意ヘッド構成を揃え、局所注意との精度だけでなく索引生成も含む時間を分離測定する必要がある。クラスタ数を増やすと候補群の平均長は短くなるが分類コストが増えるため、平方根程度のクラスタ数が理論上の均衡点になる。これをハードウェアに応じて再調整しないと、計算量削減の効果は得られない。
+
+## 既存研究との差
+
+Sparse Transformerなど従来の疎注意は、局所窓、ストライド、固定パターンなど位置に基づく接続を使うことが多い。Routing Transformerは、各層で得られたクエリ/キー表現そのものから注意候補を動的に作る点が異なる。入力内容が変われば、遠距離で接続される相手も変わる。
+
+Reformerの局所性鋭敏ハッシュ（locality-sensitive hashing, LSH）型注意と同様に内容ベースで候補を絞る系統だが、本方式は球面k平均法のクラスタ中心をオンラインで学習し、クラスタ内注意として構成する。さらに局所注意ヘッドと混ぜることで、短距離と長距離の接続を分担させる。
+
+## 限界・実装状況
+
+最大の実装上の限界は、疎性がそのまま壁時計高速化にならないことである。クラスタ割当、距離順の並べ替え、疎な候補の収集には追加処理が必要で、2020年時点のTPUv3では局所注意より遅かった。現在のGPUへ移す場合も、FlashAttention系の密/局所カーネルと比較して、ルーティング・並べ替え・疎アクセスを含むE2E時間を測る必要がある。
+
+クラスタサイズを均等化する近似は並列効率には有利だが、各点が厳密に一つの最近傍クラスタへ所属することを保証する方式ではない。論文も、オンライン環境で使えるより厳密な均衡k平均法を今後の課題に挙げる。
+
+また本研究は現在のLLM推論サービングを直接評価した論文ではなく、自己回帰モデルの学習・生成を対象にした2020年の研究である。KVキャッシュ、FlashAttention、現代GPU上のデコード性能へ数値を直接外挿してはいけない。
+
+公式実装はGoogle Researchリポジトリで公開されている。
+
+## 実装上の含意
+
+この論文から現在の長文LLMへ持ち込める重要な考え方は、「疎注意の候補選択を位置だけでなく内容から作る」ことと、「アルゴリズム上の疎性とハードウェア上の高速性を分けて評価する」ことである。候補数が減っても、索引作成や不規則アクセスが重ければ実時間は短くならない。
+
+そのため現代実装で再検討するなら、注意FLOPsだけではなく、ルーティング時間、並べ替え、メモリ移動、カーネル起動、候補の規則性まで含めたエンドツーエンド測定が必要になる。
+
+## 修正履歴
+
+- 2026-09-28: 一次資料を再読し、汎用GPU最適化テンプレートを削除。球面k平均法と最大内積探索の関係、クラスタ内注意、均等クラスタ化、中心更新、局所ヘッドとの併用、O(nkd+n²d/k)からO(n^1.5d)への導出を具体化した。評価条件・品質結果・TPUv3上の壁時計速度を表へ追加し、「計算量削減=高速化」と誤解しないよう局所注意より約1.7倍遅いPG-19結果も明記。公式コードURLを反映した。
+
+## 一次資料
+
+- https://arxiv.org/abs/2003.05997
+- https://github.com/google-research/google-research/tree/master/routing_transformer
