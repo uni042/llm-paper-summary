@@ -88,6 +88,7 @@ quality_self_review_passed: true
 quality_self_review_version: '2026-10-07-v1'
 worker_run_key: 'interactive-20261008-bottom-up-reaudit-pmkvq'
 
+worker_completed_at: '2026-10-08T07:27:27+09:00'
 ---
 
 # PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs
