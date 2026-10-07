@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T01:54:04+00:00",
-  "record_count": 9987,
+  "updated_at": "2026-10-07T03:58:58+00:00",
+  "record_count": 9988,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -142990,6 +142990,20 @@
         "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
       ],
       "title": "KronA: Parameter Efficient Tuning with Kronecker Adapter"
+    },
+    "arXiv:2411.14499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.14499",
+      "identity_tokens": [
+        "arXiv:2411.14499"
+      ],
+      "reason": "world modelを世界理解の内部表現と将来状態予測に分類し、自動運転・robotics・social simulacra等を整理する一般surveyで、LLM推論runtime・memory・serving効率化を中心対象としない。",
+      "first_checked_at": "2026-10-07T03:58:58+00:00",
+      "last_checked_at": "2026-10-07T03:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models"
     }
   }
 }
