@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1530-scheduled-chat-30/research-prescreen-r01-1",
+  "reference_main_sha": "a1e426e80413fd26c99900f7419814e5774d0655",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.07814",
+      "identity_tokens": [
+        "arXiv:2203.07814"
+      ],
+      "title": "Competition-level code generation with AlphaCode",
+      "reason": "AlphaCodeは競技プログラミング問題に対するコード生成能力を主題とし、主要評価もCodeforcesでの解答品質・順位である。大規模samplingやfilteringは使うが、LLM推論runtime・memory・serving効率化を最終目的としていない。",
+      "source_url": "https://arxiv.org/abs/2203.07814",
+      "body_check": "abstract_screen_only: arXiv一次abstractで競技プログラミング向けcode generation、large-scale sampling、program-behavior filtering、Codeforces上位54.3%相当が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T15:27:08+09:00",
+      "last_checked_at": "2026-10-07T15:27:08+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-397629612972c518",
+      "worklist_rank": 1
+    }
+  ]
+}
