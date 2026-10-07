@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r161-screen-01-part-02-8a25e0b00b16",
+  "reference_main_sha": "2042a01d0113ed9f26d5351119d51317db9da91b",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.03802",
+      "identity_tokens": [
+        "arXiv:2106.03802"
+      ],
+      "title": "Learning to Efficiently Sample from Diffusion Probabilistic Models",
+      "reason": "Full text confirms the method accelerates denoising-diffusion sampling (up to 32 refinement steps for image-generation DDPMs), a distinct generative process. It is not a language-model decoder, LLM serving optimization, or an applicable attention/KV-cache method; shared inference-systems lineage alone does not create a technical connection.",
+      "source_url": "https://arxiv.org/abs/2106.03802",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2005.08700",
+      "identity_tokens": [
+        "arXiv:2005.08700"
+      ],
+      "title": "Mask CTC: Non-Autoregressive End-to-End ASR with CTC and Mask Predict",
+      "reason": "Primary text confirms Mask-CTC is a non-autoregressive speech-recognition decoder with iterative mask prediction and CTC. Parallel sequence decoding is adjacent to decoding-efficiency research, but its speech-recognition model and objective do not establish relevance to LLM inference systems. Keep borderline for possible cross-task decoding-method lineage review.",
+      "source_url": "https://arxiv.org/abs/2005.08700",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.iref.2025.104719",
+      "identity_tokens": [
+        "DOI:10.1016/j.iref.2025.104719"
+      ],
+      "title": "Deep learning for financial forecasting: A review of recent trends",
+      "reason": "The publisher abstract reviews deep-learning architectures and forecasting tasks in finance; the application domain and contribution are forecasting review, not LLM inference.",
+      "source_url": "https://doi.org/10.1016/j.iref.2025.104719",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.08528",
+      "identity_tokens": [
+        "arXiv:2504.08528"
+      ],
+      "title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
+      "reason": "The survey covers spoken-language-model architectures and audio tasks; it does not propose concrete compute/memory/latency optimization for LLM inference.",
+      "source_url": "https://arxiv.org/abs/2504.08528",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.10245",
+      "identity_tokens": [
+        "arXiv:1902.10245"
+      ],
+      "title": "Non-Autoregressive Machine Translation with Auxiliary Regularization",
+      "reason": "Full text confirms non-autoregressive machine translation with an auxiliary regularization/training objective. Parallel decoding for translation is adjacent to inference decoding research, but it is a task-specific MT model and does not demonstrate a transferable LLM serving or inference optimization.",
+      "source_url": "https://arxiv.org/abs/1902.10245",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    }
+  ]
+}
