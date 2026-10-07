@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCRIPTS = REPO_ROOT / ".survey" / "scripts"
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
+
+import refresh_under16kb_reaudit_queue as reaud
+
+
+def paper_text(*, attested: bool, english_heavy: bool = False) -> str:
+    marker = ""
+    if attested:
+        marker = (
+            f'under16kb_reaudit_version: "{reaud.REAUDIT_VERSION}"\n'
+            "under16kb_reaudit_passed: true\n"
+        )
+    overview = ("system serving cache " * 220) if english_heavy else ("概要の日本語説明。" * 180)
+    method = "入力を観測して内部状態を更新し、出力を選択する手法の説明。" * 55
+    evaluation = "比較条件と指標と結果を対応付けて評価する説明。" * 45
+    limitation = "適用範囲と失敗条件を明示する。" * 15
+    return f"""---
+canonical_id: arXiv:2601.00001
+title: Example
+source: https://arxiv.org/abs/2601.00001
+summary: 日本語の概要。
+list_summary: 日本語の一覧要約。
+{marker}---
+# Example
+
+## 概要
+{overview}
+
+## 手法
+{method}
+
+## 評価
+{evaluation}
+
+## 限界
+{limitation}
+"""
+
+
+class Under16KbReauditTests(unittest.TestCase):
+    def test_assignment_is_stable(self) -> None:
+        path = "papers/inference/01-offload-hierarchical-memory/example.md"
+        self.assertEqual(reaud.assigned_worker(path), reaud.assigned_worker(path))
+        self.assertIn(reaud.assigned_worker(path), reaud.WORKERS)
+
+    def test_attested_mechanical_pass_is_removed_from_queue(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/01-offload-hierarchical-memory/example.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(paper_text(attested=True), encoding="utf-8")
+
+            queue = reaud.build_queue(root)
+            self.assertEqual(queue["count"], 0)
+
+    def test_unattested_paper_stays_in_queue(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/01-offload-hierarchical-memory/example.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(paper_text(attested=False), encoding="utf-8")
+
+            queue = reaud.build_queue(root)
+            self.assertEqual(queue["count"], 1)
+            entry = queue["entries"][0]
+            self.assertEqual(entry["semantic_status"], "pending")
+            self.assertGreaterEqual(entry["japanese_ratio"], reaud.MIN_JAPANESE_RATIO)
+
+    def test_japanese_ratio_below_80_percent_is_a_reaudit_failure(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/inference/01-offload-hierarchical-memory/example.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text(
+                paper_text(attested=True, english_heavy=True),
+                encoding="utf-8",
+            )
+
+            queue = reaud.build_queue(root)
+            self.assertEqual(queue["count"], 1)
+            self.assertTrue(
+                any(
+                    "日本語比率" in reason
+                    for reason in queue["entries"][0]["mechanical_failures"]
+                )
+            )
+
+    def test_survey_does_not_require_experimental_evaluation_floor(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            paper = root / "papers/survey/example.md"
+            paper.parent.mkdir(parents=True)
+            text = paper_text(attested=True).replace(
+                "比較条件と指標と結果を対応付けて評価する説明。" * 45,
+                "評価軸の整理。",
+            )
+            paper.write_text(text, encoding="utf-8")
+            audit, meta = reaud.audit_one(paper, root)
+            failures = reaud.reaudit_failures(audit, "papers/survey/example.md")
+            self.assertFalse(any("評価説明量" in reason for reason in failures))
+            self.assertTrue(reaud.semantic_attestation_present(meta))
+
+
+if __name__ == "__main__":
+    unittest.main()
