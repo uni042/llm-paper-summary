@@ -32,6 +32,7 @@ class PaperQualityGateTests(unittest.TestCase):
         self.assertEqual(args.min_component_paragraphs, gate.quality.DEFAULT_MIN_COMPONENT_PARAGRAPHS)
         self.assertEqual(args.min_japanese_ratio, gate.quality.DEFAULT_MIN_JAPANESE_RATIO)
         self.assertEqual(args.warn_japanese_ratio, gate.quality.DEFAULT_WARN_JAPANESE_RATIO)
+        self.assertTrue(args.enforce_explanation_floor)
 
 
     def test_rejects_reused_long_prose_across_papers(self) -> None:
@@ -97,6 +98,71 @@ class PaperQualityGateTests(unittest.TestCase):
             )
             self.assertEqual(result.status, "FAIL")
             self.assertTrue(any("長文定型文の再利用を検出" in x for x in result.failures))
+
+    def _research_markdown(
+        self,
+        *,
+        method_repeats: int = 140,
+        evaluation_repeats: int = 110,
+        self_review: str | None = None,
+    ) -> str:
+        attestation = ""
+        if self_review is not None:
+            attestation = (
+                'quality_self_review_version: "2026-10-07-v1"\n'
+                f"quality_self_review_passed: {self_review}\n"
+            )
+        return (
+            "---\n"
+            "canonical_id: arXiv:2699.99999\n"
+            "title: 品質ゲート検証\n"
+            "source: https://arxiv.org/abs/2699.99999\n"
+            "summary: 新規Researchの説明不足を防ぐ品質ゲート検証用要約。\n"
+            "list_summary: 本研究は具体的な処理と評価条件を説明する検証用論文である。\n"
+            + attestation
+            + "---\n\n"
+            "# 品質ゲート検証\n\n"
+            "## 概要\n\n"
+            + ("この論文固有の問題設定と既存方式の不足を具体的に説明する。" * 90)
+            + "\n\n## 手法\n\n"
+            + ("入力を観測し固有の判断規則で処理して出力を更新する。" * method_repeats)
+            + "\n\n## 評価\n\n"
+            + ("同一条件の比較対象に対して指標を測定し結果の意味を説明する。" * evaluation_repeats)
+            + "\n\n## 限界・実装状況\n\n"
+            + ("資源不足や分布変化では利得が縮小し追加費用が増える。" * 30)
+            + "\n"
+        )
+
+    def test_explanation_floor_rejects_short_method_even_when_body_is_long(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / ".survey").mkdir()
+            content = self._research_markdown(method_repeats=15, evaluation_repeats=110)
+            result = gate.inspect_rendered_paper(root, "papers/inference/candidate.md", content)
+            self.assertEqual(result.status, "FAIL")
+            self.assertGreaterEqual(result.prose_chars, gate.quality.QUALITY_MIN_BODY_CHARS)
+            self.assertLess(result.method_chars, gate.quality.QUALITY_MIN_METHOD_CHARS)
+            self.assertTrue(any("手法説明量" in item for item in result.failures))
+
+    def test_explanation_floor_accepts_sufficient_body_method_and_evaluation(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / ".survey").mkdir()
+            content = self._research_markdown()
+            result = gate.inspect_rendered_paper(root, "papers/inference/candidate.md", content)
+            self.assertFalse(any("説明不足トリガー" in item for item in result.failures))
+            self.assertGreaterEqual(result.prose_chars, gate.quality.QUALITY_MIN_BODY_CHARS)
+            self.assertGreaterEqual(result.method_chars, gate.quality.QUALITY_MIN_METHOD_CHARS)
+            self.assertGreaterEqual(result.evaluation_chars, gate.quality.QUALITY_MIN_EVALUATION_CHARS)
+
+    def test_present_self_review_attestation_must_be_true(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / ".survey").mkdir()
+            content = self._research_markdown(self_review="false")
+            result = gate.inspect_rendered_paper(root, "papers/inference/candidate.md", content)
+            self.assertEqual(result.status, "FAIL")
+            self.assertTrue(any("quality_self_review_passed" in item for item in result.failures))
 
     def test_ignores_shared_headings_tables_and_short_phrases(self) -> None:
         with tempfile.TemporaryDirectory() as td:
