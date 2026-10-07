@@ -54,7 +54,21 @@
 
 3 workerの専用worklistは同じ正規候補列から決定的な3-way round-robinで分割し、十分な候補在庫がある限り相互に重複させない。Library側は共通正本・共通保存先を使い、worker専用の可変台帳は追加しない。
 
-各通常runは最新main HEADを取得し、同じHEADから本書、自分のworklist、必要な系統READMEを読む。Research本文作成時だけ最新templateとLibraryの品質ガイドを読む。
+### 1.1 差し戻しResearchは通常仕事より先に処理する
+
+最新mainの `.survey/repair-queue/returned-research.json` は、GitHub importで `blocked_quality` になったResearchの耐久差し戻しキューである。通常runはResearch / Discoveryのモード判定より先にこのキューを読む。
+
+- 各entryの `assigned_worker` が自分の `worker_id` と一致するものだけを担当する。他workerのentryは触らない。
+- 割当は `sha256(canonical_id)` の先頭byteを3 workerへ割り当てる決定論的方式で、キュー件数が変わっても担当が変わらない。ワーカー同士の情報共有やclaimは不要である。
+- 自分の差し戻しentryが1件以上あれば、**通常のResearch候補・Discovery候補より最優先**で古い `returned_at` から処理する。
+- 作業開始前にLibraryの未転送 `research/*.md` をcanonical identityで確認し、同一 `canonical_id` の修正版が既に待機中なら、そのentryを再修復しない。GitHubへの再転送・再判定を待つ。
+- 修復時は `blocked_path` の旧Markdownを出発点としてよいが、文字を足すだけで済ませず一次資料を再読する。キューの `failures` と `quality_metrics` を最低限の修正箇所として、主要機構6観点、評価条件・比較対象・主要結果・限界を再確認する。
+- 完成した修正版は通常Researchと同じ品質プリフライトを通し、Libraryの `/LLM-paper-summary-library-first/research/` へ新しい一意名で保存する。既存Library成果を上書きしない。
+- 差し戻し修復はResearch完成件数として数えてよい。自分の差し戻しentryを処理し切った後、同じ起動内で通常のモード判定へ進む。
+- GitHub importで同一 `canonical_id` の後続receiptが `imported` または `already_represented` になれば、キュー再構築時に自動で消える。手動削除しない。
+- 修正版が再度 `blocked_quality` になった場合は同一identityのentryとして残り、`return_count` が増える。再差し戻し回数を隠さない。
+
+各通常runは最新main HEADを取得し、同じHEADから本書、`.survey/repair-queue/returned-research.json`、自分のworklist、必要な系統READMEを読む。Research本文作成時だけ最新templateとLibraryの品質ガイドを読む。
 
 ユーザーの明示指示なしにScheduled Taskを停止・無効化・削除せず、schedule・通知設定も変更しない。
 
@@ -95,6 +109,8 @@ Scheduled workerは、無駄な再読解を避けるためGitHub/Libraryの既�
 したがって、Library保存済み成果は「保存時点では未収録だった」ことを証明する必要はない。転送後にmainで既収録と判定された場合はGitHub側で安全にno-op/filteredとして終端する。
 
 ## 4. モード判定
+
+§1.1の自分担当の差し戻しResearchを先に処理した後、通常仕事へ進む場合にだけ以下のResearch / Discoveryモード判定を行う。
 
 通常runの開始時は、**同じ最新main HEADの \`STATUS.md\` を読み、サマリーの \`収録候補論文数\` を探索 / 読解の境界判定にそのまま使う。** この値は非終端Research jobのうち \`canonical_id\` で一意化できる論文数であり、構造化referencesの未処理件数、Discovery判定待ち件数、worklist表示件数で代用しない。
 
