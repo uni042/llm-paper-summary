@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r165-screen-01-part-01-c08815471288",
+  "reference_main_sha": "f3f36070d3eeff791b97b133877782e5a142c3fe",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17259",
+      "identity_tokens": [
+        "arXiv:2602.17259"
+      ],
+      "title": "FRAPPE: Infusing World Modeling into Generalist Policies via Multiple Future Representation Alignment",
+      "reason": "Read the primary paper sections on FRAPPE method, simulation/inference efficiency, and real-world experiments. It trains a diffusion-based vision-language-action robotic policy using future visual representation alignment; the reported efficiency concerns fine-tuning/data use and its evaluated inference is robotic action generation, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2602.17259",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07845",
+      "identity_tokens": [
+        "arXiv:2602.07845"
+      ],
+      "title": "Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning",
+      "reason": "Read the primary paper method, adaptive-computation design, experiments, and limitations. Recurrent-depth VLA allocates iterative latent action-head compute at inference with constant memory, a real test-time compute method; however, it targets continuous robotic actions rather than LLM token generation or serving, leaving transfer to this LLM-inference scope uncertain.",
+      "source_url": "https://arxiv.org/abs/2602.07845",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06556",
+      "identity_tokens": [
+        "arXiv:2602.06556"
+      ],
+      "title": "LIBERO-X: Robustness Litmus for Vision-Language-Action Models",
+      "reason": "LIBERO-X is a robustness benchmark for robotic VLA policies; it evaluates robustness scenarios rather than improving LLM inference compute, memory, latency, or serving.",
+      "source_url": "https://arxiv.org/abs/2602.06556",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22607",
+      "identity_tokens": [
+        "arXiv:2601.22607"
+      ],
+      "title": "From Self-Evolving Synthetic Data to Verifiable-Reward RL: Post-Training Multi-turn Interactive Tool-Using Agents",
+      "reason": "This paper develops post-training synthetic-data and verifiable-reward RL for interactive tool agents; its contribution is agent training, with no inference-serving or inference-resource method in the primary abstract.",
+      "source_url": "https://arxiv.org/abs/2601.22607",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06037",
+      "identity_tokens": [
+        "arXiv:2601.06037"
+      ],
+      "title": "TeleMem: Building Long-Term and Multimodal Memory for Agentic AI",
+      "reason": "Read the primary memory architecture, experiments, and conclusion. TeleMem is a long-term multimodal memory system for agentic AI, but the reviewed contribution is memory organization/recall and the evidence does not establish a concrete improvement to LLM inference latency, serving throughput, or model/KV memory; relevance to the target efficiency lineage is weak.",
+      "source_url": "https://arxiv.org/abs/2601.06037",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
