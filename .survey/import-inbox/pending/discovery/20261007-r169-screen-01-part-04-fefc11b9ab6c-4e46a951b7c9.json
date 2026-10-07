@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r169-screen-01-part-04-fefc11b9ab6c",
+  "reference_main_sha": "816d613bc25a72ef639f82db0286894931a1a8e1",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09066",
+      "identity_tokens": [
+        "arXiv:2604.09066"
+      ],
+      "title": "Anchored Sliding Window: Toward Robust and Imperceptible Linguistic Steganography",
+      "reason": "一次本文のsliding-window contextはLLM生成時のcontext制御に関係するが、目的はsteganographic robustnessで、推論費用・cache利用効率の改善評価がなく、linked KV/cache lineageとの技術接続は弱い。",
+      "source_url": "https://arxiv.org/abs/2604.09066",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05939",
+      "identity_tokens": [
+        "arXiv:2604.05939"
+      ],
+      "title": "Context-Value-Action Architecture for Value-Driven Large Language Model Agents",
+      "reason": "一次本文のCVAはrole-play/social simulation向けの価値駆動agent reasoningであり、性能分析は価値 alignment・行動多様性である。FlashAttentionとのリンクは推論最適化への技術的接続を示さない。",
+      "source_url": "https://arxiv.org/abs/2604.05939",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10960",
+      "identity_tokens": [
+        "arXiv:2603.10960"
+      ],
+      "title": "Ranking Reasoning LLMs under Test-Time Scaling",
+      "reason": "一次本文はtest-time scaling下のreasoning LLM評価・順位づけ手法で、inference resource use自体を改善しない。scaling/compute-efficiency系統との接点は評価基盤としてのみ残る。",
+      "source_url": "https://arxiv.org/abs/2603.10960",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01993",
+      "identity_tokens": [
+        "arXiv:2603.01993"
+      ],
+      "title": "Cultivating Forensic Reasoning for Generalizable Multimodal Manipulation Detection",
+      "reason": "一次資料の要旨はマルチモーダル偽造検出の訓練/評価であり、LLM inference optimizationとの技術的接続は示されない。",
+      "source_url": "https://arxiv.org/abs/2603.01993",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20784",
+      "identity_tokens": [
+        "arXiv:2601.20784"
+      ],
+      "title": "REASON: Accelerating Probabilistic Logical Reasoning for Scalable Neuro-Symbolic Intelligence",
+      "reason": "一次資料の要旨はneuro-symbolic probabilistic logical reasoningのスケーラビリティを扱うが、LLM推論エンジンやLLM servingを改善する方法ではない。",
+      "source_url": "https://arxiv.org/abs/2601.20784",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    }
+  ]
+}
