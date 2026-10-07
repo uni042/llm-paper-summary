@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T05:22:16+00:00",
-  "record_count": 10032,
+  "updated_at": "2026-10-07T05:28:25+00:00",
+  "record_count": 10036,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -18961,20 +18961,6 @@
         "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
       ],
       "title": "Fine-Tuning Language Models from Human Preferences"
-    },
-    "arXiv:2109.00859": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2109.00859",
-      "identity_tokens": [
-        "arXiv:2109.00859"
-      ],
-      "reason": "identifier-aware pretrainingとbimodal generationでcode理解・生成品質を改善する事前学習研究。LLM推論runtime・memory・serving最適化を提案しない。",
-      "first_checked_at": "2026-10-04T21:43:57+00:00",
-      "last_checked_at": "2026-10-04T22:53:07+00:00",
-      "linked_from": [
-        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
-      ],
-      "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
     },
     "arXiv:2201.07207": {
       "classification": "unrelated",
@@ -90406,18 +90392,6 @@
       ],
       "title": "Massively Multilingual Neural Machine Translation"
     },
-    "arXiv:2010.02559": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2010.02559",
-      "identity_tokens": [
-        "arXiv:2010.02559"
-      ],
-      "reason": "法律domain向けBERTの事前学習・domain adaptationと法務NLPタスク性能を比較する研究で、推論runtime/serving効率化を扱わない。",
-      "first_checked_at": "2026-10-05T15:43:15+00:00",
-      "last_checked_at": "2026-10-05T22:23:01+00:00",
-      "linked_from": [],
-      "title": "LEGAL-BERT: The Muppets straight out of Law School"
-    },
     "DOI:10.18653/v1/p17-1080": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/p17-1080",
@@ -100053,20 +100027,6 @@
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
       "title": "Stereotyping Norwegian Salmon: An Inventory of Pitfalls in Fairness Benchmark Datasets"
-    },
-    "arXiv:1902.04094": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1902.04094",
-      "identity_tokens": [
-        "arXiv:1902.04094"
-      ],
-      "reason": "BERT as a Markov random field language model is a modeling/training paper without a relevant inference optimization.",
-      "first_checked_at": "2026-10-06T04:39:20+00:00",
-      "last_checked_at": "2026-10-06T04:39:20+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
-      ],
-      "title": "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model"
     },
     "DOI:10.1137/1032002": {
       "classification": "unrelated",
@@ -143319,29 +143279,18 @@
       ],
       "title": "TimeMixer++: A General Time Series Pattern Machine for Universal Predictive Analysis"
     },
-    "DOI:10.18653/v1/2024.emnlp-main.890": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.890",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2024.emnlp-main.890",
-        "arXiv:2406.16554"
-      ],
-      "reason": "既存LLaMAをMoEへ変換して継続事前学習するモデル構築・training研究。主目的はMoE化と能力維持で、推論runtime/serving効率の独立したsystems最適化ではない。",
-      "first_checked_at": "2026-10-07T05:22:08+00:00",
-      "last_checked_at": "2026-10-07T05:22:08+00:00",
-      "linked_from": [],
-      "title": "LLaMA-MoE: Building Mixture-of-Experts from LLaMA with Continual Pre-Training"
-    },
     "DOI:10.1186/s12943-025-02369-9": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1186/s12943-025-02369-9",
       "identity_tokens": [
         "DOI:10.1186/s12943-025-02369-9"
       ],
-      "reason": "癌診断・治療・drug discovery・robotic surgery等のAI応用を整理するoncology review。LLM推論systems効率を扱わない。",
+      "reason": "癌診断・治療におけるAI技術を扱う医療reviewで、LLM推論systemsのruntime・serving・memory効率化を最終対象としない。",
       "first_checked_at": "2026-10-07T05:22:09+00:00",
-      "last_checked_at": "2026-10-07T05:22:09+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-07T05:28:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
       "title": "Current AI technologies in cancer diagnostics and treatment"
     },
     "arXiv:2512.20848": {
@@ -143619,6 +143568,121 @@
         "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
       ],
       "title": "Learning How to Ask: Querying LMs with Mixtures of Soft Prompts"
+    },
+    "DOI:10.18653/v1/2021.emnlp-main.685": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.685",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.emnlp-main.685",
+        "arXiv:2109.00859"
+      ],
+      "reason": "identifier-aware事前学習とNL/PL双方向生成でコード理解・生成品質を高めるモデル研究で、推論ランタイム・メモリ・サービング効率を主要目的・評価にしていない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-07T05:28:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+      ],
+      "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
+    },
+    "arXiv:2106.00908": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.00908",
+      "identity_tokens": [
+        "arXiv:2106.00908"
+      ],
+      "reason": "Transformerを病理whole-slide imageのmultiple-instance learningへ適用するvision/medical研究で、最終評価はCAMELYON16/TCGAの病理画像分類。LLM推論systems対象外。",
+      "first_checked_at": "2026-10-07T05:28:22+00:00",
+      "last_checked_at": "2026-10-07T05:28:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "TransMIL: Transformer based Correlated Multiple Instance Learning for Whole Slide Image Classification"
+    },
+    "arXiv:2106.09681": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.09681",
+      "identity_tokens": [
+        "arXiv:2106.09681"
+      ],
+      "reason": "token数に線形なcross-covariance attentionで高解像度画像処理を効率化するが、最終workloadはImageNet/COCO/ADE20kのvision tasksでLLM推論ではない。",
+      "first_checked_at": "2026-10-07T05:28:22+00:00",
+      "last_checked_at": "2026-10-07T05:28:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "XCiT: Cross-Covariance Image Transformers"
+    },
+    "DOI:10.18653/v1/2020.findings-emnlp.261": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.261",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.261",
+        "arXiv:2010.02559"
+      ],
+      "reason": "法務domain向けBERTのdomain adaptation/pre-trainingと下流法務NLP品質を扱う研究で、推論runtime・memory・serving最適化が主貢献ではない。",
+      "first_checked_at": "2026-10-05T15:43:15+00:00",
+      "last_checked_at": "2026-10-07T05:28:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "LEGAL-BERT: The Muppets straight out of Law School"
+    },
+    "arXiv:2406.08035": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08035",
+      "identity_tokens": [
+        "arXiv:2406.08035"
+      ],
+      "reason": "数時間級long-video理解のbenchmark構築とMLLM能力評価が主題で、長文脈推論のlatency・memory・serving効率化方式を提案しない。",
+      "first_checked_at": "2026-10-07T05:28:23+00:00",
+      "last_checked_at": "2026-10-07T05:28:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "LVBench: An Extreme Long Video Understanding Benchmark"
+    },
+    "arXiv:2309.11499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.11499",
+      "identity_tokens": [
+        "arXiv:2309.11499"
+      ],
+      "reason": "multimodal comprehensionと画像生成を統合する学習frameworkで、主評価はzero-shot multimodal generalistとしての品質。推論runtime・token/memory・serving効率化を主貢献としない。",
+      "first_checked_at": "2026-10-07T05:28:23+00:00",
+      "last_checked_at": "2026-10-07T05:28:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "DreamLLM: Synergistic Multimodal Comprehension and Creation"
+    },
+    "arXiv:2003.07278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.07278",
+      "identity_tokens": [
+        "arXiv:2003.07278"
+      ],
+      "reason": "ELMo/BERT等のcontextual embedding、cross-lingual pretraining、downstream応用、model compressionを広く整理するNLP surveyで、推論systems効率を中心課題としない。",
+      "first_checked_at": "2026-10-07T05:28:25+00:00",
+      "last_checked_at": "2026-10-07T05:28:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "A Survey on Contextual Embeddings"
+    },
+    "arXiv:2304.06819": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.06819",
+      "identity_tokens": [
+        "arXiv:2304.06819"
+      ],
+      "reason": "memory-efficient multimodal Transformerを用いるが、最終workloadは病理画像とtranscriptomicsを統合した癌患者のsurvival predictionであり、LLM/MLLM推論systemsを対象としない。",
+      "first_checked_at": "2026-10-07T05:28:25+00:00",
+      "last_checked_at": "2026-10-07T05:28:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Modeling Dense Multimodal Interactions Between Biological Pathways and Histology for Survival Prediction"
     }
   }
 }
