@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -206,6 +207,118 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
         "- STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。",
         "",
     ])
+    return lines
+
+
+REAUDIT_QUEUE_PATH = Path(".survey/repair-queue/under-16kb-reaudit.json")
+
+
+def _reaudit_queue_summary(repo_root: Path) -> dict[str, Any]:
+    """Count *pending entries*, never the queue's cached count or old STATUS.
+
+    The durable queue drops successfully re-audited papers; its current entries
+    are the source of truth for remaining work, but not for cumulative completions.
+    """
+    path = repo_root / REAUDIT_QUEUE_PATH
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        return {"available": False, "error": f"{type(exc).__name__}: {exc}"}
+    if not isinstance(payload, dict) or payload.get("queue_kind") != "under_16kb_semantic_reaudit":
+        return {"available": False, "error": "再監査キューの種類が不正"}
+    entries = payload.get("entries")
+    if not isinstance(entries, list):
+        return {"available": False, "error": "entriesが配列ではない"}
+
+    by_worker: dict[str, int] = {}
+    by_mechanical: dict[str, int] = {}
+    seen: set[str] = set()
+    for index, row in enumerate(entries):
+        if not isinstance(row, dict):
+            return {"available": False, "error": f"entries[{index}]が辞書ではない"}
+        paper_path = str(row.get("path") or "").strip()
+        if not paper_path.startswith("papers/") or paper_path in seen:
+            return {"available": False, "error": f"entries[{index}]のpathが重複または不正"}
+        if row.get("semantic_status") != "pending":
+            return {"available": False, "error": f"entries[{index}]がpendingではない"}
+        seen.add(paper_path)
+        worker = str(row.get("assigned_worker") or "未割当")
+        mechanical = str(row.get("mechanical_status") or "UNKNOWN").upper()
+        by_worker[worker] = by_worker.get(worker, 0) + 1
+        by_mechanical[mechanical] = by_mechanical.get(mechanical, 0) + 1
+
+    return {
+        "available": True,
+        "remaining": len(entries),
+        "by_worker": by_worker,
+        "by_mechanical": by_mechanical,
+        "generated_at": evidence._parse_dt(payload.get("generated_at")),
+        "queue_version": str(payload.get("queue_version") or "不明"),
+        "cached_count_mismatch": (
+            isinstance(payload.get("count"), int)
+            and payload["count"] != len(entries)
+        ),
+    }
+
+
+def _render_reaudit_queue(status: dict[str, Any]) -> list[str]:
+    lines = ["## 16KB未満論文サマリーの再監査", ""]
+    lines.append(
+        "- 集計元: [再監査リスト](.survey/repair-queue/under-16kb-reaudit.json) "
+        "の `entries`。リスト掲載中の論文だけを未完了として数えます。"
+    )
+    if status.get("available") is not True:
+        return lines + [
+            f"- **残件数を取得できません**: {status.get('error') or '不明なエラー'}",
+            "- キューが読めない場合、残件数を0件として表示しません。",
+            "",
+        ]
+
+    total = int(status["remaining"])
+    mechanical = status["by_mechanical"]
+    workers = status["by_worker"]
+    fail = mechanical.get("FAIL", 0)
+    pass_or_warn = mechanical.get("PASS", 0) + mechanical.get("WARN", 0)
+    unknown = total - fail - pass_or_warn
+    lines += [
+        "",
+        "| 指標 | 件数 |",
+        "|---|---:|",
+        f"| **再監査残件数** | **{total}** |",
+        f"| 機械検査未達（FAIL） | **{fail}** |",
+        f"| 機械検査適合・警告のみ（PASS/WARN） | **{pass_or_warn}** |",
+    ]
+    if unknown:
+        lines.append(f"| 機械検査状態不明 | **{unknown}** |")
+    for worker, label in (
+        ("scheduled-chat-00", ":00"),
+        ("scheduled-chat-30", ":30"),
+        ("scheduled-chat-45", ":45"),
+    ):
+        lines.append(f"| {label}ワーカー担当残 | **{workers.get(worker, 0)}** |")
+    unassigned = total - sum(
+        workers.get(worker, 0)
+        for worker in ("scheduled-chat-00", "scheduled-chat-30", "scheduled-chat-45")
+    )
+    if unassigned:
+        lines.append(f"| その他・未割当 | **{unassigned}** |")
+    stamp = status.get("generated_at")
+    updated = (
+        stamp.astimezone(evidence.JST).strftime("%Y-%m-%d %H:%M:%S JST")
+        if stamp else "不明"
+    )
+    lines += [
+        "",
+        f"- キュー最終生成: **{updated}** / 再監査版: `{status['queue_version']}`。",
+        "- 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。"
+        "合格した論文はキュー再生成時に除外されます。",
+        "- 残件数と担当別・機械検査別件数は `entries` から再計算し、"
+        "`count`・`worker_counts` の保存値は使いません。"
+        "累計完了件数・完了率は現在の待機リスト単独では算出できません。",
+    ]
+    if status["cached_count_mismatch"]:
+        lines.append("- **注意**: キューヘッダの `count` と `entries` 実数が一致しません。")
+    lines.append("")
     return lines
 
 def _forward_citation_coverage(repo_root: Path) -> dict[str, Any]:
@@ -1013,6 +1126,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "",
     ]
     lines.extend(_render_top_metrics(direct_metrics, now))
+    lines.extend(_render_reaudit_queue(_reaudit_queue_summary(repo_root)))
     lines += [
         "## 現在の収録候補",
         "",
