@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-07T22:34:36.180333+00:00",
+  "generated_at": "2026-10-07T22:41:42.337618+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 638,
+  "count": 633,
   "worker_counts": {
     "scheduled-chat-00": 214,
-    "scheduled-chat-30": 205,
-    "scheduled-chat-45": 219
+    "scheduled-chat-30": 202,
+    "scheduled-chat-45": 217
   },
   "entries": [
     {
@@ -12726,28 +12726,6 @@
       ]
     },
     {
-      "path": "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md",
-      "canonical_id": "arXiv:2409.15355",
-      "title": "Block-Attention for Efficient Prefilling",
-      "file_bytes": 14565,
-      "source_sha256": "804fd58a6a53a9bcec05c134884c789b85194a6611923b600caabda82ba91ea6",
-      "source_git_blob_sha": "523065447791f8d78820b5264b6eba803fd3ba68",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.897294,
-      "quality_metrics": {
-        "body_chars": 3213,
-        "method_chars": 1105,
-        "evaluation_chars": 93,
-        "limitation_chars": 273
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 93 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
       "canonical_id": "arXiv:2411.01142",
       "title": "NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference",
@@ -13118,28 +13096,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
-      "canonical_id": "arXiv:2302.07863",
-      "title": "Speculative Decoding with Big Little Decoder",
-      "file_bytes": 14826,
-      "source_sha256": "b7c1d26f1b4d563f3e4f6b96ea0e8c85b46cd1ab54d64e93563676e4bfce7b95",
-      "source_git_blob_sha": "1a970729709eb401a0305efb6887043b2e00702b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.979763,
-      "quality_metrics": {
-        "body_chars": 2969,
-        "method_chars": 1037,
-        "evaluation_chars": 109,
-        "limitation_chars": 329
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 109 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md",
       "canonical_id": "arXiv:2405.11299",
       "title": "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
@@ -13398,28 +13354,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md",
-      "canonical_id": "arXiv:2605.11186",
-      "title": "CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration",
-      "file_bytes": 15010,
-      "source_sha256": "f3d7c069afa10865489fdafb12485bb068011ed613742963b72ce1137af32622",
-      "source_git_blob_sha": "a83f91de62525f4e76e61e1caa619a0ac8a24ab4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.943281,
-      "quality_metrics": {
-        "body_chars": 4036,
-        "method_chars": 1347,
-        "evaluation_chars": 327,
-        "limitation_chars": 311
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 327 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
       "canonical_id": "arXiv:2305.15805",
       "title": "Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers",
@@ -13521,28 +13455,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md",
-      "canonical_id": "arXiv:2503.05066",
-      "title": "Capacity-Aware Inference: Mitigating the Straggler Effect in Mixture of Experts",
-      "file_bytes": 15159,
-      "source_sha256": "2249905b6f65669ce51e833f90e401301b866228166487ab0404b02b7d03d7be",
-      "source_git_blob_sha": "7025484ef716535d022099bd7e0a352de6bfa0f0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.821312,
-      "quality_metrics": {
-        "body_chars": 3874,
-        "method_chars": 1324,
-        "evaluation_chars": 320,
-        "limitation_chars": 362
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 320 < 500"
-      ],
       "warnings": []
     },
     {
@@ -13895,28 +13807,6 @@
         "limitation_chars": 360
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md",
-      "canonical_id": "arXiv:2507.08771",
-      "title": "BlockFFN: Towards End-Side Acceleration-Friendly Mixture-of-Experts with Chunk-Level Activation Sparsity",
-      "file_bytes": 15452,
-      "source_sha256": "404094a082c59e201c5d8ea1bdd0c1a7d7c481a176238517e0f03044c3dbaf80",
-      "source_git_blob_sha": "7fb09f3ae0da32db4dacecd8ece82a0943662505",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.972877,
-      "quality_metrics": {
-        "body_chars": 3119,
-        "method_chars": 906,
-        "evaluation_chars": 131,
-        "limitation_chars": 381
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 131 < 500"
-      ],
       "warnings": []
     },
     {
