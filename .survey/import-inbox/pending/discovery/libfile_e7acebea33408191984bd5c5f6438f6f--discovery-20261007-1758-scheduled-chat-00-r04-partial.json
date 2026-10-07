@@ -1,0 +1,100 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1758-scheduled-chat-00/r04-partial",
+  "reference_main_sha": "8d17c200c6e231cf5a63362cd6d34038363a988e",
+  "record_count": 6,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.09267",
+      "identity_tokens": [
+        "arXiv:2005.09267"
+      ],
+      "title": "Iterative Pseudo-Labeling for Speech Recognition",
+      "reason": "大量の未ラベル音声をpseudo-labelしてASRをsemi-supervised trainingする手法。subset selectionで学習時間を削減するが、最終目的はspeech recognition trainingでLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2005.09267",
+      "body_check": "abstract_screen_only; 一次資料でiterative pseudo-labelingによるASR trainingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:21:00+09:00",
+      "last_checked_at": "2026-10-07T18:21:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.05231",
+      "identity_tokens": [
+        "arXiv:2403.05231"
+      ],
+      "title": "Tracking Meets LoRA: Faster Training, Larger Model, Stronger Performance",
+      "reason": "LoRAをvision trackingへ適用し大規模ViT trackerのtraining memory/timeとtracking性能を改善する研究。推論FPSも改善するが最終workloadはvisual trackingでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2403.05231",
+      "body_check": "abstract_screen_only; arXiv一次abstractでLoRA-based visual trackingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:21:00+09:00",
+      "last_checked_at": "2026-10-07T18:21:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.13672",
+      "identity_tokens": [
+        "arXiv:2211.13672"
+      ],
+      "title": "A Self-Attention Ansatz for Ab-initio Quantum Chemistry",
+      "reason": "self-attentionを用いるPsiformerで多電子Schrödinger方程式のwavefunction近似精度を高めるquantum chemistry研究。LLM推論systemsとは対象外。",
+      "source_url": "https://arxiv.org/abs/2211.13672",
+      "body_check": "abstract_screen_only; arXiv一次abstractでab-initio quantum chemistryが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:21:00+09:00",
+      "last_checked_at": "2026-10-07T18:21:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.00515",
+      "identity_tokens": [
+        "arXiv:2106.00515"
+      ],
+      "title": "KVT: k-NN Attention for Boosting Vision Transformers",
+      "reason": "top-k類似image patchだけにattentionするk-NN attentionでVision Transformerのtrainingと認識品質を改善する。最終評価はcomputer visionでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2106.00515",
+      "body_check": "abstract_screen_only; arXiv一次abstractでVision Transformer/k-NN attentionが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:21:00+09:00",
+      "last_checked_at": "2026-10-07T18:21:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.10686",
+      "identity_tokens": [
+        "arXiv:2109.10686"
+      ],
+      "title": "Scale Efficiently: Insights from Pre-training and Fine-tuning Transformers",
+      "reason": "Transformerのpre-training/fine-tuning scalingを分析し、T5系を50%少ないparameter・40%速いtrainingへ再設計する研究。主要目的は学習scale設計で推論専用範囲外。",
+      "source_url": "https://arxiv.org/abs/2109.10686",
+      "body_check": "abstract_screen_only; arXiv一次abstractでpretraining/fine-tuning scalingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:21:00+09:00",
+      "last_checked_at": "2026-10-07T18:21:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.05179",
+      "identity_tokens": [
+        "arXiv:2306.05179"
+      ],
+      "title": "M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models",
+      "reason": "9言語・12,317問の実試験問題でLLMのmultilingual/multimodal能力を測るbenchmark。モデル能力評価が主題で、推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2306.05179",
+      "body_check": "abstract_screen_only; arXiv一次abstractでLLM evaluation benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:21:00+09:00",
+      "last_checked_at": "2026-10-07T18:21:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 79
+    }
+  ]
+}
