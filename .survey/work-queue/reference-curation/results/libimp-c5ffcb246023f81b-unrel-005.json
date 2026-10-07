@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ffcb246023f81b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.16793",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.16793",
+    "identity_tokens": [
+      "arXiv:2512.16793"
+    ],
+    "reason": "主な寄与はVLA training data/transfer learningとtask performanceで、LLM推論の計算効率を改善しない。",
+    "first_checked_at": "2026-10-07T10:40:18+00:00",
+    "last_checked_at": "2026-10-07T10:40:18+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "PhysBrain: Human Egocentric Data as a Bridge from Vision Language Models to Physical Intelligence"
+  },
+  "processed_at": "2026-10-07T10:40:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ffcb246023",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

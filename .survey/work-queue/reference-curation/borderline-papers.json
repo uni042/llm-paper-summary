@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T10:30:12+00:00",
-  "record_count": 4346,
+  "updated_at": "2026-10-07T10:40:22+00:00",
+  "record_count": 4360,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -66345,6 +66345,217 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MemIndex: Agentic Event-based Distributed Memory Management for Multi-agent Systems"
+    },
+    "arXiv:2604.22840": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.22840",
+      "identity_tokens": [
+        "arXiv:2604.22840"
+      ],
+      "reason": "推論時のreflection負荷を避ける可能性はあるが、本文で解決策は学習時の審美性報酬であり、推論効率の具体的な改善量や追加コストは確認できない。",
+      "first_checked_at": "2026-10-07T10:40:03+00:00",
+      "last_checked_at": "2026-10-07T10:40:03+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards"
+    },
+    "arXiv:2603.20432": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20432",
+      "identity_tokens": [
+        "arXiv:2603.20432"
+      ],
+      "reason": "長文処理を外部化する設計はlong-context lineageと接続するが、本文のcost analysisではRAGより高コストで、推論効率改善という採用根拠は弱い。",
+      "first_checked_at": "2026-10-07T10:40:03+00:00",
+      "last_checked_at": "2026-10-07T10:40:03+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Coding Agents are Effective Long-Context Processors"
+    },
+    "arXiv:2604.13074": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.13074",
+      "identity_tokens": [
+        "arXiv:2604.13074"
+      ],
+      "reason": "multimodal-memory lineageへの接続はあるが、本文の測定では応答時間が21.1%増えており、推論効率改善候補とは判断できない。",
+      "first_checked_at": "2026-10-07T10:40:04+00:00",
+      "last_checked_at": "2026-10-07T10:40:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PersonaVLM: Long-Term Personalized Multimodal LLMs"
+    },
+    "arXiv:2603.18718": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18718",
+      "identity_tokens": [
+        "arXiv:2603.18718"
+      ],
+      "reason": "bounded memoryへの関心は対象と近いが、本文の中心はmemory品質・回答精度であり、追加multi-agent推論を含むため効率改善の根拠が不足する。",
+      "first_checked_at": "2026-10-07T10:40:04+00:00",
+      "last_checked_at": "2026-10-07T10:40:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemMA: Coordinating the Memory Cycle through Multi-Agent Reasoning and In-Situ Self-Evolution"
+    },
+    "DOI:10.1109/tce.2025.3598007": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tce.2025.3598007",
+      "identity_tokens": [
+        "DOI:10.1109/tce.2025.3598007"
+      ],
+      "reason": "IEEE Xplore primary page fetch failed with internal error after DOI and publisher URL attempts; the packet abstract was not used. Primary abstract/full text could not be examined, so relevance remains unresolved.",
+      "first_checked_at": "2026-10-07T10:40:05+00:00",
+      "last_checked_at": "2026-10-07T10:40:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight Adaptive Deep Learning for Efficient Real-Time Speech Enhancement on Edge Devices"
+    },
+    "DOI:10.1038/s41592-025-02918-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41592-025-02918-6",
+      "identity_tokens": [
+        "DOI:10.1038/s41592-025-02918-6"
+      ],
+      "reason": "Natureのpublisher URL `https://www.nature.com/articles/s41592-025-02918-6` はCodex web fetchがidp.nature.comへredirectし取得不能。一次要旨・本文を確認できず、abstractが空のため判定根拠が不足する。",
+      "first_checked_at": "2026-10-07T10:40:10+00:00",
+      "last_checked_at": "2026-10-07T10:40:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multimodal foundation transformer models for multiscale genomics"
+    },
+    "DOI:10.1109/mlnlp66797.2025.11388500": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mlnlp66797.2025.11388500",
+      "identity_tokens": [
+        "DOI:10.1109/mlnlp66797.2025.11388500"
+      ],
+      "reason": "一次資料abstract/full textを確認できず、タイトルだけでは対象性を確定できないためborderline。次手順はIEEE Xplore/publisher access可能な環境で要旨・本文を確認すること。",
+      "first_checked_at": "2026-10-07T10:40:12+00:00",
+      "last_checked_at": "2026-10-07T10:40:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MeMixFormer: A Speech-Based Memory-Augmented Mixed Attention Transformer Framework for Depression Detection"
+    },
+    "DOI:10.1093/bioinformatics/btae163": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1093/bioinformatics/btae163",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btae163"
+      ],
+      "reason": "linked weight-quantization lineageがあるが、一次本文を確認できないためabstractだけでunrelatedにできない。一次sourceにアクセス可能な環境で要旨・本文を確認する必要がある。",
+      "first_checked_at": "2026-10-07T10:40:12+00:00",
+      "last_checked_at": "2026-10-07T10:40:12+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Advancing entity recognition in biomedicine via instruction tuning of large language models"
+    },
+    "arXiv:2604.19394": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19394",
+      "identity_tokens": [
+        "arXiv:2604.19394"
+      ],
+      "reason": "小さいparameter modelのdomain performanceというresource-efficient接続はあるが、主方法は継続事前学習/mergeで、推論時costの直接計測がない。",
+      "first_checked_at": "2026-10-07T10:40:14+00:00",
+      "last_checked_at": "2026-10-07T10:40:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Can Continual Pre-training Bridge the Performance Gap between General-purpose and Specialized Language Models in the Medical Domain?"
+    },
+    "arXiv:2106.06295": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.06295",
+      "identity_tokens": [
+        "arXiv:2106.06295"
+      ],
+      "reason": "本文のmethod/complexity analysisはlinear-time recurrent architectureの表現力・language modelingと計算特性を調べる一方、現代LLMの推論servingでの実測・移行可能性は示さない。効率アーキテクチャとして関係はあるが対象実証不足でborderline。",
+      "first_checked_at": "2026-10-07T10:40:18+00:00",
+      "last_checked_at": "2026-10-07T10:40:18+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Going Beyond Linear Transformers with Recurrent Fast Weight Programmers"
+    },
+    "arXiv:2604.24396": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.24396",
+      "identity_tokens": [
+        "arXiv:2604.24396"
+      ],
+      "reason": "inference-time decodingには関連するが二経路計算の追加費用を含む効率評価がなく、計算改善候補とは確定できない。",
+      "first_checked_at": "2026-10-07T10:40:20+00:00",
+      "last_checked_at": "2026-10-07T10:40:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Global Context or Local Detail? Adaptive Visual Grounding for Hallucination Mitigation"
+    },
+    "DOI:10.1145/3805621.3807632": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805621.3807632",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807632"
+      ],
+      "reason": "ACM primary DOI landing page fetch returned Internal Error through both doi.org and dl.acm.org attempts; the packet abstract was not used. Primary abstract/full text could not be examined, so relevance remains unresolved.",
+      "first_checked_at": "2026-10-07T10:40:20+00:00",
+      "last_checked_at": "2026-10-07T10:40:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Earl: Efficient Agentic RL Post-Training for LLMs under Dynamic Context Lengths"
+    },
+    "DOI:10.1145/3805621.3807657": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805621.3807657",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807657"
+      ],
+      "reason": "ACM primary DOI landing page fetch returned Internal Error through both doi.org and dl.acm.org attempts; the packet abstract was not used. Primary abstract/full text could not be examined, so relevance remains unresolved.",
+      "first_checked_at": "2026-10-07T10:40:21+00:00",
+      "last_checked_at": "2026-10-07T10:40:21+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DFS: Dynamic Flow Spraying with Bounded Reordering for AI Training Clusters"
+    },
+    "arXiv:2602.17205": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17205",
+      "identity_tokens": [
+        "arXiv:2602.17205"
+      ],
+      "reason": "primary full textを取得できず、linked attention lineageとの本文上の関係も確認できない。要旨上は天文画像denoisingでLLM推論対象との関連が弱いため、解決不能な確認不足を含めborderlineとする。",
+      "first_checked_at": "2026-10-07T10:40:22+00:00",
+      "last_checked_at": "2026-10-07T10:40:22+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deeper detection limits in astronomical imaging using self-supervised spatiotemporal denoising"
     }
   }
 }

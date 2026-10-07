@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fcd10964834a69c3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.06717",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.06717",
+    "identity_tokens": [
+      "arXiv:2602.06717"
+    ],
+    "reason": "本文で扱うのはpolicy learning時のsampling/advantage weightingであり、LLM inferenceの最適化ではない。",
+    "first_checked_at": "2026-10-07T10:40:23+00:00",
+    "last_checked_at": "2026-10-07T10:40:23+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "F-GRPO: Don't Let Your Policy Learn the Obvious and Forget the Rare"
+  },
+  "processed_at": "2026-10-07T10:40:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fcd10964834a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
