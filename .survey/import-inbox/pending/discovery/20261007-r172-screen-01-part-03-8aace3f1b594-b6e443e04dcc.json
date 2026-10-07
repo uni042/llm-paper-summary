@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r172-screen-01-part-03-8aace3f1b594",
+  "reference_main_sha": "599e3c1cd37e6144178b11316a64fa3cef8a6d07",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.10962",
+      "identity_tokens": [
+        "arXiv:2511.10962"
+      ],
+      "title": "LEMUR: Large scale End-to-end MUltimodal Recommendation",
+      "reason": "本文はマルチモーダル推薦のend-to-end modelと推薦精度/学習方法を扱う。DeepSpeed系統への関連が示唆されるが、一次本文でLLM推論・servingの効率改善は確認できない。",
+      "source_url": "https://arxiv.org/abs/2511.10962",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.10523",
+      "identity_tokens": [
+        "arXiv:2511.10523"
+      ],
+      "title": "Convomem Benchmark: Why Your First 150 Conversations Don't Need RAG",
+      "reason": "会話memory benchmark本文は文脈規模ごとのcost trade-off、要約抽出で大規模会話を短縮する構成を扱い、agentic memory系統には近い。一方、中心成果はbenchmark/評価で、一般LLM inference servingの具体的改善は限定的。",
+      "source_url": "https://arxiv.org/abs/2511.10523",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.08206",
+      "identity_tokens": [
+        "arXiv:2511.08206"
+      ],
+      "title": "EHRStruct: A Comprehensive Benchmark Framework for Evaluating Large Language Models on Structured Electronic Health Record Tasks",
+      "reason": "本文要旨は電子カルテ構造化タスクのLLM評価ベンチマークで、推論効率を改善する方法ではない。",
+      "source_url": "https://arxiv.org/abs/2511.08206",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41551-025-01528-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41551-025-01528-z"
+      ],
+      "title": "A pre-trained large generative model for translating single-cell transcriptomes to proteomes",
+      "reason": "出版社Nature本文URLを一次資料として開いたが認証/アクセス失敗となり、要旨/本文を確認できなかった。要旨が入力にもないため本文要件に従ってborderlineとする。",
+      "source_url": "https://doi.org/10.1038/s41551-025-01528-z",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15190",
+      "identity_tokens": [
+        "arXiv:2412.15190"
+      ],
+      "title": "EarthDial: Turning Multi-sensory Earth Observations to Interactive Dialogues",
+      "reason": "本文要旨は地球観測マルチモーダルデータを対話へ変換するデータ/モデルで、LLM inference efficiencyを扱わない。",
+      "source_url": "https://arxiv.org/abs/2412.15190",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ]
+    }
+  ]
+}
