@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T11:10:32+00:00",
-  "record_count": 4388,
+  "updated_at": "2026-10-07T11:20:24+00:00",
+  "record_count": 4406,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -66977,6 +66977,278 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AdaScale: Predictive and Utility-Aware Autoscaling for Serverless AI Inference"
+    },
+    "arXiv:2512.04261": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04261",
+      "identity_tokens": [
+        "arXiv:2512.04261"
+      ],
+      "reason": "The primary full text could not be retrieved in this run, and the efficiency finding is specific to a child-welfare classification benchmark; retain as borderline pending review of the model/runtime cost measurements.",
+      "first_checked_at": "2026-10-07T11:20:10+00:00",
+      "last_checked_at": "2026-10-07T11:20:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research"
+    },
+    "DOI:10.1016/j.eswa.2025.130637": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2025.130637",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2025.130637"
+      ],
+      "reason": "The title indicates a broad LLM survey, but primary-source content was unavailable, so scope cannot be established from title alone.",
+      "first_checked_at": "2026-10-07T11:20:10+00:00",
+      "last_checked_at": "2026-10-07T11:20:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How is language intelligence evolving? A multi-dimensional survey of large language models"
+    },
+    "DOI:10.1016/j.patcog.2025.112893": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patcog.2025.112893",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2025.112893"
+      ],
+      "reason": "The title indicates lightweight surface-defect detection, but primary-source content was unavailable; retain as borderline rather than classify on title alone.",
+      "first_checked_at": "2026-10-07T11:20:10+00:00",
+      "last_checked_at": "2026-10-07T11:20:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Global context guided refinement and aggregation network for lightweight surface defect detection"
+    },
+    "DOI:10.1109/tpami.2025.3635136": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpami.2025.3635136",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2025.3635136"
+      ],
+      "reason": "The topic appears to be visual detection and the MoE lineage is not enough to establish a technical connection; publisher text was unavailable, so retain as borderline.",
+      "first_checked_at": "2026-10-07T11:20:12+00:00",
+      "last_checked_at": "2026-10-07T11:20:12+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VSCode-v2: Dynamic Prompt Learning for General Visual Salient and Camouflaged Object Detection With Two-Stage Optimization"
+    },
+    "arXiv:2606.04621": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.04621",
+      "identity_tokens": [
+        "arXiv:2606.04621"
+      ],
+      "reason": "The speedup is concrete but specific to 3D mesh generation and a change from autoregressive to diffusion generation; transfer to text-LLM inference is uncertain despite the linked attention/kernel lineage.",
+      "first_checked_at": "2026-10-07T11:20:14+00:00",
+      "last_checked_at": "2026-10-07T11:20:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MeshFlow: Efficient Artistic Mesh Generation via MeshVAE and Flow-based Diffusion Transformer"
+    },
+    "arXiv:2605.25430": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25430",
+      "identity_tokens": [
+        "arXiv:2605.25430"
+      ],
+      "reason": "The full text supports agent-memory relevance, but does not report reduced input tokens, latency, or serving cost; retain as borderline due to the linked memory lineage.",
+      "first_checked_at": "2026-10-07T11:20:14+00:00",
+      "last_checked_at": "2026-10-07T11:20:14+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CODESKILL: Learning Self-Evolving Skills for Coding Agents"
+    },
+    "DOI:10.1145/3744916.3787814": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3744916.3787814",
+      "identity_tokens": [
+        "DOI:10.1145/3744916.3787814"
+      ],
+      "reason": "The linked root-cause-analysis lineage makes a body check necessary, but the ACM DOI landing/full-text retrieval failed in the browser (Internal Error) and no publisher-authored full text was available in the packet. The abstract alone cannot establish whether a concrete inference/runtime method exists, so it remains borderline rather than excluded.",
+      "first_checked_at": "2026-10-07T11:20:16+00:00",
+      "last_checked_at": "2026-10-07T11:20:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FoundRoot: Towards Foundation Model for Root Cause Analysis via Structured Deep Thinking"
+    },
+    "DOI:10.1016/j.cosrev.2026.100906": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cosrev.2026.100906",
+      "identity_tokens": [
+        "DOI:10.1016/j.cosrev.2026.100906"
+      ],
+      "reason": "Primary DOI landing page https://doi.org/10.1016/j.cosrev.2026.100906 returned Internal Error in the browser; the packet has no abstract and no accessible publisher full text was found.",
+      "first_checked_at": "2026-10-07T11:20:18+00:00",
+      "last_checked_at": "2026-10-07T11:20:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A survey of large language models for legal tasks: Progress, prospects and challenges"
+    },
+    "arXiv:2106.05093": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.05093",
+      "identity_tokens": [
+        "arXiv:2106.05093"
+      ],
+      "reason": "The method does not alter parallel decoding and is specific to translation training; its relevance to LLM/diffusion decoding is indirect.",
+      "first_checked_at": "2026-10-07T11:20:19+00:00",
+      "last_checked_at": "2026-10-07T11:20:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Order-Agnostic Cross Entropy for Non-Autoregressive Machine Translation"
+    },
+    "DOI:10.5167/uzh-208876": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5167/uzh-208876",
+      "identity_tokens": [
+        "DOI:10.5167/uzh-208876"
+      ],
+      "reason": "The title suggests scheduling language-specific model capacity for translation, but primary text was unavailable.",
+      "first_checked_at": "2026-10-07T11:20:19+00:00",
+      "last_checked_at": "2026-10-07T11:20:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Share or Not? Learning to Schedule Language-Specific Capacity for Multilingual Translation"
+    },
+    "arXiv:2605.08693": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08693",
+      "identity_tokens": [
+        "arXiv:2605.08693"
+      ],
+      "reason": "The full text studies skill-bank quality and agent success, while its utility probes add runtime/training cost; it does not establish inference savings despite the memory-line connection.",
+      "first_checked_at": "2026-10-07T11:20:20+00:00",
+      "last_checked_at": "2026-10-07T11:20:20+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkillMaster: Toward Autonomous Skill Mastery in LLM Agents"
+    },
+    "arXiv:2511.08066": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.08066",
+      "identity_tokens": [
+        "arXiv:2511.08066"
+      ],
+      "reason": "The full text presents an evaluation metric rather than an inference optimization; its relationship to deployed latency, memory, or throughput remains weak.",
+      "first_checked_at": "2026-10-07T11:20:22+00:00",
+      "last_checked_at": "2026-10-07T11:20:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Information Capacity: Evaluating the Efficiency of Large Language Models via Text Compression"
+    },
+    "DOI:10.1145/3774628": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774628",
+      "identity_tokens": [
+        "DOI:10.1145/3774628"
+      ],
+      "reason": "The linked training lineage and the survey topic do not establish an inference optimization, and primary full text was unavailable.",
+      "first_checked_at": "2026-10-07T11:20:22+00:00",
+      "last_checked_at": "2026-10-07T11:20:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Adaptation of Large Language Models to Idea and Hypothesis Generation: Downstream Task Adaptation, Knowledge Distillation Approaches and Challenges"
+    },
+    "DOI:10.1016/j.knosys.2025.114802": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2025.114802",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2025.114802"
+      ],
+      "reason": "The title suggests explainability for time-series forecasting, but primary text was unavailable and title alone is insufficient for a final scope judgment.",
+      "first_checked_at": "2026-10-07T11:20:22+00:00",
+      "last_checked_at": "2026-10-07T11:20:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ChronoSHAP: Revealing temporal patterns from transformers and LTSF-linear models in time series forecasting"
+    },
+    "arXiv:2511.12940": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12940",
+      "identity_tokens": [
+        "arXiv:2511.12940"
+      ],
+      "reason": "The mechanism is a possible long-context memory analogue, but the experiments are video generation and do not show LLM inference savings or transfer.",
+      "first_checked_at": "2026-10-07T11:20:23+00:00",
+      "last_checked_at": "2026-10-07T11:20:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recurrent Autoregressive Diffusion: Global Memory Meets Local Attention"
+    },
+    "DOI:10.1109/jiot.2025.3603073": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jiot.2025.3603073",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2025.3603073"
+      ],
+      "reason": "The available description is an application framework and does not establish efficiency; without primary-source retrieval, retain as borderline.",
+      "first_checked_at": "2026-10-07T11:20:23+00:00",
+      "last_checked_at": "2026-10-07T11:20:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ChatSync: Large-Language-Model-Enabled Spatial–Temporal Knowledge Reasoning for Production Logistics Synchronization"
+    },
+    "DOI:10.1145/3712285.3759891": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3712285.3759891",
+      "identity_tokens": [
+        "DOI:10.1145/3712285.3759891"
+      ],
+      "reason": "The linked lineage is training systems, and the primary body could not be checked; checkpointing is not established as an inference contribution.",
+      "first_checked_at": "2026-10-07T11:20:23+00:00",
+      "last_checked_at": "2026-10-07T11:20:23+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LowDiff: Efficient Frequent Checkpointing via Low-Cost Differential for High-Performance Distributed Training Systems"
+    },
+    "DOI:10.1145/3712285.3759895": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3712285.3759895",
+      "identity_tokens": [
+        "DOI:10.1145/3712285.3759895"
+      ],
+      "reason": "GPU GEMM optimization could transfer to inference kernels, but no primary body was available to establish LLM workload relevance or measured gains.",
+      "first_checked_at": "2026-10-07T11:20:24+00:00",
+      "last_checked_at": "2026-10-07T11:20:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KAMI: Communication-Avoiding General Matrix Multiplication within a Single GPU"
     }
   }
 }

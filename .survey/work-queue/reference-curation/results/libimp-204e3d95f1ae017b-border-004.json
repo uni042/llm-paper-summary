@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-204e3d95f1ae017b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.eswa.2025.130637",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.eswa.2025.130637",
+    "identity_tokens": [
+      "DOI:10.1016/j.eswa.2025.130637"
+    ],
+    "reason": "The title indicates a broad LLM survey, but primary-source content was unavailable, so scope cannot be established from title alone.",
+    "first_checked_at": "2026-10-07T11:20:10+00:00",
+    "last_checked_at": "2026-10-07T11:20:10+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How is language intelligence evolving? A multi-dimensional survey of large language models"
+  },
+  "processed_at": "2026-10-07T11:20:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-204e3d95f1ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5223e446478d6e0-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.08715",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.08715",
+    "identity_tokens": [
+      "arXiv:2605.08715"
+    ],
+    "reason": "Its compact size supports the audit task but the paper focuses on detection accuracy and intervention, not inference efficiency.",
+    "first_checked_at": "2026-10-07T11:20:21+00:00",
+    "last_checked_at": "2026-10-07T11:20:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "AgentForesight: Online Auditing for Early Failure Prediction in Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-07T11:20:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5223e446478",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
