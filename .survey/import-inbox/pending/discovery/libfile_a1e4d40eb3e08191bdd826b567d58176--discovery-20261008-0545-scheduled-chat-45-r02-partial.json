@@ -1,0 +1,131 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261008-0545-scheduled-chat-45/r02-partial",
+  "reference_main_sha": "bf0fdd3a3d0b5e2a11cf7a6a20ae278578410e90",
+  "record_count": 8,
+  "partial": true,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.12674",
+      "identity_tokens": [
+        "arXiv:2205.12674"
+      ],
+      "title": "Training Language Models with Memory Augmentation",
+      "reason": "TRIMEは訓練時にバッチ内例を記憶として使う学習目的関数を提案し、WikiText-103・翻訳のPPL/BLEU改善を評価する。推論サービングのメモリ階層・キャッシュ配置・実行効率を主題としない。",
+      "source_url": "https://arxiv.org/abs/2205.12674",
+      "body_check": "abstract_screen_only: arXiv一次要旨でin-batch memoryを使う訓練目的とPPL/翻訳評価を確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08034",
+      "identity_tokens": [
+        "arXiv:2310.08034"
+      ],
+      "title": "Receive, Reason, and React: Drive as You Say with Large Language Models in Autonomous Vehicles",
+      "reason": "自動運転でのLLMによる乗客指示理解・意思決定とHighwayEnv実験が対象であり、LLM推論サーバーの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.08034",
+      "body_check": "abstract_screen_only: arXiv一次要旨でHighwayEnv・運転行動の言語指示適応を確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3309551",
+      "identity_tokens": [
+        "DOI:10.1145/3309551"
+      ],
+      "title": "Deep Neural Network Approximation for Custom Hardware",
+      "reason": "主として畳み込み・再帰ニューラルネットの近似計算と専用ハードウェアを総説する研究で、LLM/Transformer推論システムに特化した実装・評価ではない。",
+      "source_url": "https://arxiv.org/abs/1901.06955",
+      "body_check": "abstract_screen_only: arXiv一次要旨でCNN/RNN向け近似ハードウェアのサーベイであることを確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.17377",
+      "identity_tokens": [
+        "arXiv:2401.17377"
+      ],
+      "title": "Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
+      "reason": "接尾辞配列で5兆トークン規模の無限長n-gram確率をディスク上で照会する推論エンジン。1.4兆トークン索引を128 CPUで約48時間構築、n-gram計数20ms未満、無限長LM推論200ms程度、索引7byte/tokenを示し、CPU/ディスク階層による低遅延推論システムとして対象。",
+      "source_url": "https://arxiv.org/abs/2401.17377",
+      "body_check": "fulltext_review: arXiv v4本文§3接尾辞配列とディスク上推論、索引構築/クエリ遅延の実測、§5神経LMとの補間を確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.07957",
+      "identity_tokens": [
+        "arXiv:2507.07957"
+      ],
+      "title": "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
+      "reason": "6種のエージェント長期記憶を多エージェントで更新・検索しScreenshotVQA/LOCOMO正答率を高めるアプリケーション記憶基盤であり、LLMモデル内部KVキャッシュや推論資源配置の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2507.07957",
+      "body_check": "abstract_screen_only: arXiv一次要旨でcore/episodic/semantic/procedural等6記憶とScreenshotVQA/LOCOMO評価を確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03236",
+      "identity_tokens": [
+        "arXiv:2601.03236"
+      ],
+      "title": "MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents",
+      "reason": "意味・時間・因果・エンティティの4グラフを用いたエージェント記憶検索で、LoCoMo/LongMemEvalの長期推論品質を評価する。LLM推論基盤の計算・メモリ転送効率を改善する機構ではない。",
+      "source_url": "https://arxiv.org/abs/2601.03236",
+      "body_check": "abstract_screen_only: arXiv一次要旨でpolicy-guided graph traversalとLoCoMo/LongMemEvalを確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/169627.169752",
+      "identity_tokens": [
+        "DOI:10.1145/169627.169752"
+      ],
+      "title": "Runtime compilation techniques for data partitioning and communication schedule reuse",
+      "reason": "1993年のHPF/Fortran 90Dにおける不規則配列分割と通信スケジュール再利用のコンパイラ研究。LLMやTransformer推論・学習の直接対象ではない。",
+      "source_url": "https://surface.syr.edu/npac/10/",
+      "body_check": "abstract_screen_only: 著者所属大学公開の一次研究概要でHPFコンパイラとFortran 90D実装を確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.10136",
+      "identity_tokens": [
+        "arXiv:2404.10136"
+      ],
+      "title": "Language Model Cascades: Token-level uncertainty and beyond",
+      "reason": "小型LMで処理可能な要求を大規模LMへ回さず、トークン単位の不確実性から学習した保留判定を用いて推論費用と生成品質を両立する多モデル推論ルーティング研究。FLAN-T5で単純な系列不確実性集約より良い費用品質トレードオフを報告するため対象。",
+      "source_url": "https://arxiv.org/abs/2404.10136",
+      "body_check": "fulltext_review: arXiv本文の生成系列長バイアス、トークン単位保留ルール、FLAN-T5での費用品質比較を確認。",
+      "first_checked_at": "2026-10-08T05:56:05+09:00",
+      "last_checked_at": "2026-10-08T05:56:05+09:00",
+      "linked_from": [],
+      "worklist_rank": 50
+    }
+  ]
+}
