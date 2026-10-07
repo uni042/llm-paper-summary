@@ -1,0 +1,162 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261007-1148-scheduled-chat-45/r01",
+  "reference_main_sha": "85f1ce83ee43383f37ec8cd38eb17ce2145c8cba",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.12740",
+      "identity_tokens": [
+        "arXiv:2201.12740"
+      ],
+      "title": "FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting",
+      "reason": "長期時系列予測向けに周波数領域分解と線形複雑度Transformerを提案する研究で、最終workloadがtime-series forecastingでありLLM推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2201.12740",
+      "body_check": "abstract_screen_only: arXiv一次abstractでlong-term series forecastingと6時系列benchmarkが主題と確認。本文未読。",
+      "worklist_rank": 2,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.00931",
+      "identity_tokens": [
+        "arXiv:2011.00931"
+      ],
+      "title": "Point Transformer",
+      "reason": "点群のclassification/part segmentation向けlocal-global attentionとSortNetを提案する3D vision研究で、LLM推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2011.00931",
+      "body_check": "abstract_screen_only: arXiv一次abstractでunordered point setsとcomputer vision applicationsが主題と確認。本文未読。",
+      "worklist_rank": 3,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.04378",
+      "identity_tokens": [
+        "arXiv:2102.04378"
+      ],
+      "title": "TransReID: Transformer-based Object Re-Identification",
+      "reason": "person/vehicle re-identification向けpure TransformerとJPM/SIEを提案するvision研究で、LLM推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2102.04378",
+      "body_check": "abstract_screen_only: arXiv一次abstractでobject ReIDとvision benchmarkが主題と確認。本文未読。",
+      "worklist_rank": 6,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.14795",
+      "identity_tokens": [
+        "arXiv:2107.14795"
+      ],
+      "title": "Perceiver IO: A General Architecture for Structured Inputs & Outputs",
+      "reason": "任意モダリティ向け汎用architectureを提案し入力・出力長に線形scaleするが、主目的はmulti-domain capabilityでLLM生成推論runtime/serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2107.14795",
+      "body_check": "abstract_screen_only: arXiv一次abstractでgeneral-purpose multimodal architectureとGLUE/optical-flow/StarCraft II評価が主題と確認。本文未読。",
+      "worklist_rank": 10,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.85",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.emnlp-main.85",
+        "arXiv:2302.06476"
+      ],
+      "title": "Is ChatGPT a General-Purpose Natural Language Processing Task Solver?",
+      "reason": "ChatGPTの各種NLP taskにおけるzero-shot能力と限界を評価する能力評価研究で、推論runtime・memory・serving効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2302.06476",
+      "body_check": "abstract_screen_only: 一次abstractで複数NLP task/dataset上のChatGPT能力評価が主題と確認。本文未読。",
+      "worklist_rank": 11,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.06525",
+      "identity_tokens": [
+        "arXiv:2406.06525"
+      ],
+      "title": "Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation",
+      "reason": "Llama型自己回帰モデルを画像生成へ適用しLLM serving frameworkによる高速化も測るが、最終workloadはvisual image generationであり本サーベイのLLM推論systems範囲外。",
+      "source_url": "https://arxiv.org/abs/2406.06525",
+      "body_check": "abstract_screen_only: arXiv一次abstractでImageNet/text-to-image生成が主題で、serving高速化は画像生成への適用と確認。本文未読。",
+      "worklist_rank": 12,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.13106",
+      "identity_tokens": [
+        "arXiv:2501.13106"
+      ],
+      "title": "VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding",
+      "reason": "画像・動画理解向けvision-centric trainingとtoken compressionを提案するVLM能力研究で、主要評価はimage/video understanding品質。LLM推論systems効率を主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2501.13106",
+      "body_check": "abstract_screen_only: arXiv一次abstractでvision-centric training、video token similarity reduction、multimodal benchmark性能が主題と確認。本文未読。",
+      "worklist_rank": 15,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.07925",
+      "identity_tokens": [
+        "arXiv:2202.07925"
+      ],
+      "title": "ActionFormer: Localizing Moments of Actions with Transformers",
+      "reason": "動画中のtemporal action localization向けTransformerで、THUMOS/ActivityNet/EPIC-Kitchensのvision評価が主題。LLM推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2202.07925",
+      "body_check": "abstract_screen_only: arXiv一次abstractでvideo action localizationとmAP評価が主題と確認。本文未読。",
+      "worklist_rank": 16,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p18-1078",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p18-1078",
+        "arXiv:1710.10723"
+      ],
+      "title": "Simple and Effective Multi-Paragraph Reading Comprehension",
+      "reason": "document QAでparagraph-level confidenceとshared-normalization trainingを用いて回答品質を改善するNLPモデル研究で、推論systems効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1710.10723",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmulti-paragraph reading comprehensionとTriviaQA等のF1改善が主題と確認。本文未読。",
+      "worklist_rank": 17,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.02246",
+      "identity_tokens": [
+        "arXiv:2405.02246"
+      ],
+      "title": "What matters when building vision-language models?",
+      "reason": "VLMのpretrained model・architecture・data・training設計を比較しIdefics2を構築するmultimodal model研究で、主要評価はmultimodal benchmark品質。推論runtime/serving最適化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2405.02246",
+      "body_check": "abstract_screen_only: arXiv一次abstractでVLM design choicesとIdefics2 benchmark性能が主題と確認。本文未読。",
+      "worklist_rank": 19,
+      "first_checked_at": "2026-10-07T11:48:34+09:00",
+      "last_checked_at": "2026-10-07T11:48:34+09:00",
+      "linked_from": []
+    }
+  ]
+}
