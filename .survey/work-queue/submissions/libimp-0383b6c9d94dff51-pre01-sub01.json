@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization",
+      "source_url": "https://arxiv.org/abs/2305.14152",
+      "year": 2023,
+      "published": "2023-05-23",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 157,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face the challenges in fine-tuning and deployment due to their high memory demands and computational costs. While parameter-efficient fine-tuning (PEFT) methods aim to reduce the memory usage of the optimizer state during fine-tuning, the inherent size of pre-trained LLM weights continues to be a pressing concern. Even though quantization techniques are widely proposed to ease memory demands and accelerate LLM inference, most of these techniques are geared towards the deployment phase. To bridge this gap, this paper presents Parameter-Efficient and Quantization-aware Adaptation (PEQA) - a simple yet effective method that combines the advantages of PEFT with quantized LLMs. By updating solely the quantization scales, PEQA can be directly applied to quantized LLMs, ensuring seamless task transitions. Parallel to existing PEFT methods, PEQA significantly reduces the memory overhead associated with the optimizer state. Furthermore, it leverages the advantages of quantization to substantially reduce model sizes. Even after fine-tuning, the quantization structure of a PEQA-tuned LLM remains intact, allowing for accelerated inference on the deployment stage. We employ PEQA-tuning for task-specific adaptation on LLMs with up to 65 billion parameters. To assess the logical reasoning and language comprehension of PEQA-tuned LLMs, we fine-tune low-bit quantized LLMs using a instruction dataset. Our results show that even when LLMs are quantized to below 4-bit precision, their capabilities in language modeling, few-shot in-context learning, and comprehension can be resiliently restored to (or even improved over) their full-precision original performances with PEQA.",
+      "identifiers": [
+        "SemanticScholar:a10843d1349fff8d2a7d9722f800802187fef67f"
+      ],
+      "semantic_scholar_id": "a10843d1349fff8d2a7d9722f800802187fef67f",
+      "canonical_id": "arXiv:2305.14152",
+      "arxiv_id": "2305.14152",
+      "doi": "10.48550/arXiv.2305.14152",
+      "authors": [
+        "Jeonghoon Kim",
+        "J. H. Lee",
+        "Sungdong Kim",
+        "Joonsuk Park",
+        "Kang Min Yoo",
+        "S. Kwon",
+        "Dongsoo Lee"
+      ],
+      "priority": 167,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 157,
+        "citation_count": 157,
+        "total": 167,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1233,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "量子化尺度のみを更新するPEQAにより、4ビット未満の重みを保持したまま学習時の更新対象と最適化器メモリを削減する。最大65B規模LLMの省メモリ微調整を扱うため、学習メモリ効率の収録候補。NeurIPS 2023論文。",
+      "library_body_check": "primary_abstract_review: arXivおよび開催学会の一次要旨から、学習システムの計算・通信・メモリ効率化に直接関係することを確認。全文はResearchで評価する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0383b6c9d94d",
+    "round": "libimp-0383b6c9d94dff51-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0383b6c9d94dff51-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0383b6c9d94dff51-pre01.json",
+    "receipt": "sha256:91664e758e3b658821304d1d605697e08c5ed09f4fcb327e2079cf4afc6d589a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0383b6c9d94d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
