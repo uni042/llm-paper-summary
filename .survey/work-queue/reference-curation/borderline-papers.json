@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T11:00:12+00:00",
-  "record_count": 4379,
+  "updated_at": "2026-10-07T11:10:32+00:00",
+  "record_count": 4388,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -66841,6 +66841,142 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems"
+    },
+    "arXiv:2601.03290": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03290",
+      "identity_tokens": [
+        "arXiv:2601.03290"
+      ],
+      "reason": "The survey gives potentially transferable efficiency evidence, but focuses on compact encoders and edge applications rather than contemporary decoder-only LLM inference.",
+      "first_checked_at": "2026-10-07T11:10:22+00:00",
+      "last_checked_at": "2026-10-07T11:10:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications"
+    },
+    "DOI:10.1080/13658816.2025.2597971": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/13658816.2025.2597971",
+      "identity_tokens": [
+        "DOI:10.1080/13658816.2025.2597971"
+      ],
+      "reason": "The title and packet abstract indicate spatial estimation, but the linked torch.compile lineage makes a primary-body check necessary; unavailable body leaves the relation unresolved.",
+      "first_checked_at": "2026-10-07T11:10:22+00:00",
+      "last_checked_at": "2026-10-07T11:10:22+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A graph neural network for small-area estimation: integrating spatial regularisation, heterogeneous spatial units, and Bayesian inference"
+    },
+    "arXiv:2603.18272": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18272",
+      "identity_tokens": [
+        "arXiv:2603.18272"
+      ],
+      "reason": "The agent-memory connection is plausible, but the inference-only retrieval results do not establish a robust efficiency gain; retain for possible relevance.",
+      "first_checked_at": "2026-10-07T11:10:23+00:00",
+      "last_checked_at": "2026-10-07T11:10:23+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval-Augmented LLM Agents: Learning to Learn from Experience"
+    },
+    "DOI:10.1109/tmi.2026.3674592": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmi.2026.3674592",
+      "identity_tokens": [
+        "DOI:10.1109/tmi.2026.3674592"
+      ],
+      "reason": "A possible state-space-model connection remains, but the primary body was unavailable and the stated target is medical image segmentation.",
+      "first_checked_at": "2026-10-07T11:10:24+00:00",
+      "last_checked_at": "2026-10-07T11:10:24+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Text-Image Co-Alignment for Weakly Supervised Polyp Segmentation"
+    },
+    "arXiv:2603.14807": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.14807",
+      "identity_tokens": [
+        "arXiv:2603.14807"
+      ],
+      "reason": "Memory compression is adjacent to agent context efficiency, but the method is navigation-specific and does not demonstrate LLM inference cost gains.",
+      "first_checked_at": "2026-10-07T11:10:24+00:00",
+      "last_checked_at": "2026-10-07T11:10:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HiMemVLN: Enhancing Reliability of Open-Source Zero-Shot Vision-and-Language Navigation with Hierarchical Memory System"
+    },
+    "arXiv:2603.09297": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.09297",
+      "identity_tokens": [
+        "arXiv:2603.09297"
+      ],
+      "reason": "The memory system is relevant, but its measured token footprint is not competitive enough to establish a clear efficiency advance over existing memory methods.",
+      "first_checked_at": "2026-10-07T11:10:25+00:00",
+      "last_checked_at": "2026-10-07T11:10:25+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TA-Mem: Tool-Augmented Autonomous Memory Retrieval for LLM in Long-Term Conversational QA"
+    },
+    "arXiv:2603.03612": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.03612",
+      "identity_tokens": [
+        "arXiv:2603.03612"
+      ],
+      "reason": "This is a theoretical architecture result without measured inference implementation or performance; retain as potentially useful but not actionable evidence.",
+      "first_checked_at": "2026-10-07T11:10:25+00:00",
+      "last_checked_at": "2026-10-07T11:10:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Why Are Linear RNNs More Parallelizable?"
+    },
+    "arXiv:2602.17692": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17692",
+      "identity_tokens": [
+        "arXiv:2602.17692"
+      ],
+      "reason": "It is adjacent to persistent-agent memory, but its objective and reported resource savings are training/unlearning-oriented rather than inference efficiency.",
+      "first_checked_at": "2026-10-07T11:10:30+00:00",
+      "last_checked_at": "2026-10-07T11:10:30+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Unlearning: When LLM Agent Meets Machine Unlearning"
+    },
+    "DOI:10.1109/aiita69518.2026.11567109": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aiita69518.2026.11567109",
+      "identity_tokens": [
+        "DOI:10.1109/aiita69518.2026.11567109"
+      ],
+      "reason": "The candidate is plausibly relevant to serving/scheduling, but primary-source evidence is unavailable; retain as borderline rather than assert its reported results.",
+      "first_checked_at": "2026-10-07T11:10:32+00:00",
+      "last_checked_at": "2026-10-07T11:10:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AdaScale: Predictive and Utility-Aware Autoscaling for Serverless AI Inference"
     }
   }
 }

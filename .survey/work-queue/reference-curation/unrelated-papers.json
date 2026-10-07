@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T11:00:14+00:00",
-  "record_count": 10526,
+  "updated_at": "2026-10-07T11:10:33+00:00",
+  "record_count": 10556,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -150597,6 +150597,429 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "LiteCoder-Terminal: Scaling Long-Horizon Terminal Environments for Learning Language Agents"
+    },
+    "arXiv:2601.12798": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12798",
+      "identity_tokens": [
+        "arXiv:2601.12798"
+      ],
+      "reason": "The GNSS signal-recognition application does not contribute to LLM inference efficiency; energy efficiency is task-specific.",
+      "first_checked_at": "2026-10-07T11:10:20+00:00",
+      "last_checked_at": "2026-10-07T11:10:20+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "PhyG-MoE: A Physics-Guided Mixture-of-Experts Framework for Energy-Efficient GNSS Interference Recognition"
+    },
+    "arXiv:2601.10201": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10201",
+      "identity_tokens": [
+        "arXiv:2601.10201"
+      ],
+      "reason": "The contribution is RL training, not inference efficiency.",
+      "first_checked_at": "2026-10-07T11:10:20+00:00",
+      "last_checked_at": "2026-10-07T11:10:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "Future-KL Regularized GRPO: Process-Level Credit Assignment from $f$-Divergence Regularization"
+    },
+    "arXiv:2601.05437": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05437",
+      "identity_tokens": [
+        "arXiv:2601.05437"
+      ],
+      "reason": "The paper analyzes model representations and does not propose inference optimization.",
+      "first_checked_at": "2026-10-07T11:10:20+00:00",
+      "last_checked_at": "2026-10-07T11:10:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ],
+      "title": "Tracing Moral Foundations in Large Language Models"
+    },
+    "DOI:10.1080/20964471.2025.2598994": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/20964471.2025.2598994",
+      "identity_tokens": [
+        "DOI:10.1080/20964471.2025.2598994"
+      ],
+      "reason": "The method is remote-sensing segmentation, not LLM inference.",
+      "first_checked_at": "2026-10-07T11:10:21+00:00",
+      "last_checked_at": "2026-10-07T11:10:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "CA-MTransUNet: Cloud-Aware Mixture-of-Experts Linear Transformer U-Net for forest burned area (FBA) mapping using Sentinel-1 and Sentinel-2 images"
+    },
+    "arXiv:2601.04765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04765",
+      "identity_tokens": [
+        "arXiv:2601.04765"
+      ],
+      "reason": "This is representation analysis without an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-07T11:10:21+00:00",
+      "last_checked_at": "2026-10-07T11:10:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ],
+      "title": "Differential syntactic and semantic encoding in LLMs"
+    },
+    "arXiv:2512.23461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23461",
+      "identity_tokens": [
+        "arXiv:2512.23461"
+      ],
+      "reason": "Its experiments concern reward-model training and generalization, not inference execution.",
+      "first_checked_at": "2026-10-07T11:10:23+00:00",
+      "last_checked_at": "2026-10-07T11:10:23+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Eliminating Inductive Bias in Reward Models with Information-Theoretic Guidance"
+    },
+    "arXiv:2512.20308": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20308",
+      "identity_tokens": [
+        "arXiv:2512.20308"
+      ],
+      "reason": "The speedup concerns representation pretraining time, not inference speed or serving cost.",
+      "first_checked_at": "2026-10-07T11:10:23+00:00",
+      "last_checked_at": "2026-10-07T11:10:23+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SpidR: Learning Fast and Stable Linguistic Units for Spoken Language Models Without Supervision"
+    },
+    "arXiv:2603.19191": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19191",
+      "identity_tokens": [
+        "arXiv:2603.19191"
+      ],
+      "reason": "The contribution is reward evaluation and training support, not inference efficiency.",
+      "first_checked_at": "2026-10-07T11:10:24+00:00",
+      "last_checked_at": "2026-10-07T11:10:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "OS-Themis: A Scalable Critic Framework for Generalist GUI Rewards"
+    },
+    "arXiv:2603.13461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13461",
+      "identity_tokens": [
+        "arXiv:2603.13461"
+      ],
+      "reason": "The objective is security/purification, not inference efficiency.",
+      "first_checked_at": "2026-10-07T11:10:25+00:00",
+      "last_checked_at": "2026-10-07T11:10:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Purifying Generative LLMs from Backdoors without Prior Knowledge or Clean Reference"
+    },
+    "arXiv:2603.12247": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12247",
+      "identity_tokens": [
+        "arXiv:2603.12247"
+      ],
+      "reason": "The target is generative image quality and reward robustness, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-07T11:10:26+00:00",
+      "last_checked_at": "2026-10-07T11:10:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation"
+    },
+    "arXiv:2603.01502": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01502",
+      "identity_tokens": [
+        "arXiv:2603.01502"
+      ],
+      "reason": "It is representational analysis and does not propose an inference-efficiency method.",
+      "first_checked_at": "2026-10-07T11:10:26+00:00",
+      "last_checked_at": "2026-10-07T11:10:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "title": "Anatomy of the Modality Gap: Dissecting the Internal States of End-to-End Speech LLMs"
+    },
+    "DOI:10.1016/j.array.2025.100589": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.array.2025.100589",
+      "identity_tokens": [
+        "DOI:10.1016/j.array.2025.100589"
+      ],
+      "reason": "The survey is centered on object detection rather than language-model inference.",
+      "first_checked_at": "2026-10-07T11:10:26+00:00",
+      "last_checked_at": "2026-10-07T11:10:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "A survey of lightweight methods for object detection networks"
+    },
+    "arXiv:2602.01334": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01334",
+      "identity_tokens": [
+        "arXiv:2602.01334"
+      ],
+      "reason": "It studies behavioral/accuracy effects and explicitly leaves efficiency evaluation for future work.",
+      "first_checked_at": "2026-10-07T11:10:26+00:00",
+      "last_checked_at": "2026-10-07T11:10:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "What Does Vision Tool-Use Reinforcement Learning Really Learn? Disentangling Tool-Induced and Intrinsic Effects for Crop-and-Zoom"
+    },
+    "arXiv:2602.00277": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00277",
+      "identity_tokens": [
+        "arXiv:2602.00277"
+      ],
+      "reason": "Training reliability/scaling is distinct from inference efficiency.",
+      "first_checked_at": "2026-10-07T11:10:27+00:00",
+      "last_checked_at": "2026-10-07T11:10:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Training LLMs with Fault Tolerant HSDP on 100,000 GPUs"
+    },
+    "arXiv:2601.21285": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21285",
+      "identity_tokens": [
+        "arXiv:2601.21285"
+      ],
+      "reason": "The paper addresses recommender ranking, not LLM inference.",
+      "first_checked_at": "2026-10-07T11:10:27+00:00",
+      "last_checked_at": "2026-10-07T11:10:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Zenith: Scaling up Ranking Models for Billion-scale Livestreaming Recommendation"
+    },
+    "arXiv:2601.19290": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19290",
+      "identity_tokens": [
+        "arXiv:2601.19290"
+      ],
+      "reason": "It focuses on reasoning framework/capability and does not identify a concrete inference efficiency improvement.",
+      "first_checked_at": "2026-10-07T11:10:27+00:00",
+      "last_checked_at": "2026-10-07T11:10:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "title": "MetaGen: Self-Evolving Roles and Topologies for Multi-Agent LLM Reasoning"
+    },
+    "arXiv:2601.15793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15793",
+      "identity_tokens": [
+        "arXiv:2601.15793"
+      ],
+      "reason": "The social-science simulation application has no technical connection to distributed training efficiency despite the linked lineage.",
+      "first_checked_at": "2026-10-07T11:10:28+00:00",
+      "last_checked_at": "2026-10-07T11:10:28+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "HumanLLM: Towards Personalized Understanding and Simulation of Human Nature"
+    },
+    "arXiv:2602.21655": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21655",
+      "identity_tokens": [
+        "arXiv:2602.21655"
+      ],
+      "reason": "The work targets caption quality and completeness, with no LLM inference optimization.",
+      "first_checked_at": "2026-10-07T11:10:28+00:00",
+      "last_checked_at": "2026-10-07T11:10:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "CCCaption: Dual-Reward Reinforcement Learning for Complete and Correct Image Captioning"
+    },
+    "arXiv:2602.18037": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18037",
+      "identity_tokens": [
+        "arXiv:2602.18037"
+      ],
+      "reason": "Its method addresses post-training reward behavior, not deployed inference efficiency.",
+      "first_checked_at": "2026-10-07T11:10:29+00:00",
+      "last_checked_at": "2026-10-07T11:10:29+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Gradient Regularization Mitigates Reward Hacking in Reinforcement Learning from Human Feedback and Verifiable Rewards"
+    },
+    "arXiv:2602.17807": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17807",
+      "identity_tokens": [
+        "arXiv:2602.17807"
+      ],
+      "reason": "The speedup is specific to video segmentation and does not establish an LLM inference/serving technique.",
+      "first_checked_at": "2026-10-07T11:10:29+00:00",
+      "last_checked_at": "2026-10-07T11:10:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "VidEoMT: Your ViT is Secretly Also a Video Segmentation Model"
+    },
+    "arXiv:2602.16110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16110",
+      "identity_tokens": [
+        "arXiv:2602.16110"
+      ],
+      "reason": "The medical imaging task is outside the LLM inference-efficiency scope.",
+      "first_checked_at": "2026-10-07T11:10:29+00:00",
+      "last_checked_at": "2026-10-07T11:10:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "OmniCT: Towards a Unified Slice-Volume LVLM for Comprehensive CT Analysis"
+    },
+    "arXiv:2602.15322": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15322",
+      "identity_tokens": [
+        "arXiv:2602.15322"
+      ],
+      "reason": "The optimizer changes training updates; no inference-serving benefit is established.",
+      "first_checked_at": "2026-10-07T11:10:30+00:00",
+      "last_checked_at": "2026-10-07T11:10:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "On Surprising Effectiveness of Masking Updates in Adaptive Optimizers"
+    },
+    "arXiv:2602.13540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13540",
+      "identity_tokens": [
+        "arXiv:2602.13540"
+      ],
+      "reason": "Calibration is not an inference efficiency contribution.",
+      "first_checked_at": "2026-10-07T11:10:31+00:00",
+      "last_checked_at": "2026-10-07T11:10:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "On Calibration of Large Language Models: From Response To Capability"
+    },
+    "arXiv:2602.13855": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13855",
+      "identity_tokens": [
+        "arXiv:2602.13855"
+      ],
+      "reason": "The contribution is evidence/audit reliability rather than inference resource efficiency.",
+      "first_checked_at": "2026-10-07T11:10:31+00:00",
+      "last_checked_at": "2026-10-07T11:10:31+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "From Fluent to Verifiable: Claim-Level Auditability for Deep Research Agents"
+    },
+    "arXiv:2602.08048": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08048",
+      "identity_tokens": [
+        "arXiv:2602.08048"
+      ],
+      "reason": "The method is a factuality detector, not a generation-speed or resource optimization; the single-pass detector is not an LLM inference acceleration method.",
+      "first_checked_at": "2026-10-07T11:10:31+00:00",
+      "last_checked_at": "2026-10-07T11:10:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "TDGNet: Hallucination Detection in Diffusion Language Models via Temporal Dynamic Graphs"
+    },
+    "arXiv:2602.03692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03692",
+      "identity_tokens": [
+        "arXiv:2602.03692"
+      ],
+      "reason": "The measured resource changes are small increases for recommendation quality, not an inference efficiency method.",
+      "first_checked_at": "2026-10-07T11:10:32+00:00",
+      "last_checked_at": "2026-10-07T11:10:32+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "Bringing Reasoning to Generative Recommendation Through the Lens of Cascaded Ranking"
+    },
+    "arXiv:2604.18255": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18255",
+      "identity_tokens": [
+        "arXiv:2604.18255"
+      ],
+      "reason": "Wireless signal representation/pretraining is outside the LLM inference efficiency scope despite the linked MoE training lineage.",
+      "first_checked_at": "2026-10-07T11:10:32+00:00",
+      "last_checked_at": "2026-10-07T11:10:32+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "WiFo-MiSAC: A Wireless Foundation Model for Multimodal Sensing and Communication Integration via Synesthesia of Machines (SoM)"
+    },
+    "arXiv:2604.15174": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15174",
+      "identity_tokens": [
+        "arXiv:2604.15174"
+      ],
+      "reason": "The task and evaluation are time-series classification; no LLM inference efficiency method is proposed.",
+      "first_checked_at": "2026-10-07T11:10:33+00:00",
+      "last_checked_at": "2026-10-07T11:10:33+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
+      ],
+      "title": "MambaSL: Exploring Single-Layer Mamba for Time Series Classification"
+    },
+    "arXiv:2604.03976": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03976",
+      "identity_tokens": [
+        "arXiv:2604.03976"
+      ],
+      "reason": "The paper develops a risk/compensation standard and simulation, not an inference optimization; the linked serving lineage is not a technical connection.",
+      "first_checked_at": "2026-10-07T11:10:33+00:00",
+      "last_checked_at": "2026-10-07T11:10:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Quantifying Trust: Financial Risk Management for Trustworthy AI Agents"
+    },
+    "DOI:10.1038/s42256-026-01195-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s42256-026-01195-y",
+      "identity_tokens": [
+        "DOI:10.1038/s42256-026-01195-y"
+      ],
+      "reason": "The attention mechanism is specialized to Euclidean molecular geometry and does not address LLM inference.",
+      "first_checked_at": "2026-10-07T11:10:33+00:00",
+      "last_checked_at": "2026-10-07T11:10:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "Machine learning global atomic representations with Euclidean fast attention"
     }
   }
 }

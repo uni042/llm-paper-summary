@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d5508772ec436d6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1080/20964471.2025.2598994",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1080/20964471.2025.2598994",
+    "identity_tokens": [
+      "DOI:10.1080/20964471.2025.2598994"
+    ],
+    "reason": "The method is remote-sensing segmentation, not LLM inference.",
+    "first_checked_at": "2026-10-07T11:10:21+00:00",
+    "last_checked_at": "2026-10-07T11:10:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "CA-MTransUNet: Cloud-Aware Mixture-of-Experts Linear Transformer U-Net for forest burned area (FBA) mapping using Sentinel-1 and Sentinel-2 images"
+  },
+  "processed_at": "2026-10-07T11:10:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d5508772ec4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
