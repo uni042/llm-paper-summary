@@ -58,6 +58,10 @@ BLOCKED_DISCOVERY_PROVIDER = INBOX / "blocked/discovery-provider"
 RESULT_RESEARCH = INBOX / "results/research"
 RESULT_DISCOVERY = INBOX / "results/discovery"
 
+REPAIR_QUEUE_ROOT = Path(".survey/repair-queue")
+RETURNED_RESEARCH_QUEUE = REPAIR_QUEUE_ROOT / "returned-research.json"
+REPAIR_WORKERS = ("scheduled-chat-00", "scheduled-chat-30", "scheduled-chat-45")
+
 PRECHECK_REQUESTS = Path(".survey/work-queue/discovery-precheck/requests")
 PRECHECK_RESULTS = Path(".survey/work-queue/discovery-precheck/results")
 RELEVANCE_REQUESTS = Path(".survey/work-queue/reference-curation/requests")
@@ -553,6 +557,132 @@ def recover_retryable_precheck_provenance_blocks(repo_root: Path) -> int:
     return recovered
 
 
+def repair_owner(canonical_id: str) -> str:
+    """Assign one returned paper to exactly one Scheduled worker, stably."""
+    digest = hashlib.sha256(canonical_id.encode("utf-8")).digest()
+    return REPAIR_WORKERS[digest[0] % len(REPAIR_WORKERS)]
+
+
+def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
+    """Rebuild the durable returned-Research queue from import receipts.
+
+    The newest terminal Research receipt for each canonical identity wins.
+    Only identities whose newest relevant receipt is blocked_quality remain
+    in the queue. A later imported or already_represented receipt removes the
+    identity automatically.
+    """
+    results_root = repo_root / RESULT_RESEARCH
+    latest: dict[str, tuple[tuple[str, str], dict[str, Any], Path]] = {}
+    return_counts: dict[str, int] = {}
+
+    if results_root.is_dir():
+        for result_path in sorted(results_root.glob("*.json")):
+            try:
+                result = read_json(result_path)
+            except Exception:
+                continue
+            canonical_id = str(result.get("canonical_id") or "").strip()
+            status = str(result.get("status") or "").strip()
+            if not canonical_id or status not in {
+                "blocked_quality",
+                "imported",
+                "already_represented",
+            }:
+                continue
+            if status == "blocked_quality":
+                return_counts[canonical_id] = return_counts.get(canonical_id, 0) + 1
+            processed_at = str(result.get("processed_at") or "")
+            order_key = (processed_at, result_path.name)
+            previous = latest.get(canonical_id)
+            if previous is None or order_key > previous[0]:
+                latest[canonical_id] = (order_key, result, result_path)
+
+    entries: list[dict[str, Any]] = []
+    for canonical_id, (_, result, result_path) in latest.items():
+        if result.get("status") != "blocked_quality":
+            continue
+        blocked_path = str(result.get("blocked_path") or "").strip() or None
+        title = None
+        source_url = None
+        if blocked_path:
+            blocked_file = repo_root / blocked_path
+            if blocked_file.is_file():
+                try:
+                    meta = parse_frontmatter(blocked_file.read_text(encoding="utf-8"))
+                    title = str(meta.get("title") or "").strip() or None
+                    source_url = str(meta.get("source") or "").strip() or None
+                except Exception:
+                    pass
+        entries.append(
+            {
+                "canonical_id": canonical_id,
+                "title": title,
+                "source_url": source_url,
+                "returned_at": result.get("processed_at"),
+                "return_count": return_counts.get(canonical_id, 1),
+                "assigned_worker": repair_owner(canonical_id),
+                "reason": "blocked_quality",
+                "failures": list(result.get("failures") or []),
+                "quality_metrics": result.get("quality_metrics"),
+                "blocked_path": blocked_path,
+                "import_result_path": result_path.relative_to(repo_root).as_posix(),
+                "worker_run_key": result.get("worker_run_key"),
+            }
+        )
+
+    entries.sort(
+        key=lambda row: (
+            str(row.get("returned_at") or ""),
+            str(row.get("canonical_id") or ""),
+        )
+    )
+    policy = {
+        "priority": "before normal Research/Discovery work",
+        "assignment": "sha256(canonical_id)[0] mod 3",
+        "workers": list(REPAIR_WORKERS),
+        "completion": "removed after a later imported/already_represented receipt for the same canonical_id",
+    }
+    queue_path = repo_root / RETURNED_RESEARCH_QUEUE
+    if queue_path.is_file():
+        try:
+            existing = read_json(queue_path)
+        except Exception:
+            existing = {}
+        if (
+            existing.get("schema_version") == 1
+            and existing.get("artifact_type") == "returned_research_queue"
+            and existing.get("policy") == policy
+            and existing.get("count") == len(entries)
+            and existing.get("entries") == entries
+        ):
+            return existing
+
+    payload = {
+        "schema_version": 1,
+        "artifact_type": "returned_research_queue",
+        "generated_at": now(),
+        "policy": policy,
+        "count": len(entries),
+        "entries": entries,
+    }
+    replace_json(queue_path, payload)
+    return payload
+
+
+def research_quality_metrics(audit: Any) -> dict[str, Any]:
+    """Persist the deterministic explanation-floor measurements in receipts."""
+    return {
+        "quality_gate_version": getattr(audit, "quality_gate_version", None),
+        "body_chars": getattr(audit, "prose_chars", 0),
+        "body_paragraphs": getattr(audit, "paragraphs", 0),
+        "method_chars": getattr(audit, "method_chars", 0),
+        "method_paragraphs": getattr(audit, "method_paragraphs", 0),
+        "evaluation_chars": getattr(audit, "evaluation_chars", 0),
+        "limitation_chars": getattr(audit, "limitation_chars", 0),
+        "insufficiency_flags": list(getattr(audit, "insufficiency_flags", []) or []),
+    }
+
+
 def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
     imported = 0
     terminal = 0
@@ -635,6 +765,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         "canonical_id": meta.get("canonical_id"),
                         "worker_completed_at": meta.get("worker_completed_at"),
                         "worker_run_key": meta.get("worker_run_key"),
+                        "quality_metrics": research_quality_metrics(audit),
                         "failures": audit.failures,
                         "processed_at": now(),
                     },
@@ -658,6 +789,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         "paper_path": resolution.get("paper_path"),
                         "worker_completed_at": meta.get("worker_completed_at"),
                         "worker_run_key": meta.get("worker_run_key"),
+                        "quality_metrics": research_quality_metrics(audit),
                         "processed_at": now(),
                     },
                 )
@@ -698,6 +830,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                     "japanese_normalized": japanese_normalized,
                     "worker_completed_at": meta.get("worker_completed_at"),
                     "worker_run_key": meta.get("worker_run_key"),
+                    "quality_metrics": research_quality_metrics(audit),
                     "processed_at": now(),
                 },
             )
@@ -1275,6 +1408,7 @@ def main() -> int:
     repo_root = args.repo_root.resolve()
 
     research_imported, research_terminal = process_research(repo_root, args.max_research)
+    returned_queue = sync_returned_research_queue(repo_root)
     discovery_advanced, discovery_terminal = process_discovery(
         repo_root, args.max_discovery_records
     )
@@ -1284,6 +1418,7 @@ def main() -> int:
         "processed_at": now(),
         "research_imported": research_imported,
         "research_terminal": research_terminal,
+        "returned_research_count": returned_queue["count"],
         "discovery_advanced": discovery_advanced,
         "discovery_terminal": discovery_terminal,
     }

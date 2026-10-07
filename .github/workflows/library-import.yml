@@ -108,6 +108,7 @@ jobs:
             if publish \
               'library-import: checkpoint bounded intake' \
               .survey/import-inbox \
+              .survey/repair-queue \
               .survey/work-queue/discovery-precheck \
               .survey/work-queue/reference-curation \
               .survey/work-queue/jobs \
@@ -248,6 +249,7 @@ jobs:
             if publish \
               'library-import: settle bounded work and refresh STATUS' \
               .survey/import-inbox \
+              .survey/repair-queue \
               .survey/work-queue \
               .survey/survey-state \
               papers \

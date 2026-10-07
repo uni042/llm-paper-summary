@@ -8,6 +8,12 @@ arxiv_categories:
   cross_list: []
 last_audited: null
 audit_version: 0
+quality_self_review_passed: false
+quality_self_review_version: "2026-10-07-v1"
+quality_body_chars: null
+quality_method_chars: null
+quality_evaluation_chars: null
+quality_limitation_chars: null
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -194,6 +200,15 @@ Transformer、混合専門家モデル（Mixture of Experts; MoE）、KVキャ�
 が分かる文章を添える。
 
 ### 文章量
+
+完成Researchでは、frontmatter・参考文献・一次資料・表を除いた説明文について、保存前に少なくとも次の**説明不足トリガー**を確認する。
+
+- 本文説明量: 2,200文字以上
+- 手法説明量: 700文字以上
+- 評価説明量: 500文字以上
+- 限界説明量: 120文字未満なら要再確認
+
+これらは「十分な品質」の合格点ではなく、極端に短い原稿を一次資料へ戻すための下限である。数値を満たすための水増しは禁止する。セルフレビュー後は `quality_self_review_passed: true` とし、実測値を `quality_body_chars`、`quality_method_chars`、`quality_evaluation_chars`、`quality_limitation_chars` に記録する。
 
 **手法は箇条書きのメモではなく、説明文を主体にする。** 機構が複数ある論文では、`## 手法` 全体が数段落だけで終わらないようにする。
 

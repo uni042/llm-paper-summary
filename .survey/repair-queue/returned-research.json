@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "artifact_type": "returned_research_queue",
+  "generated_at": null,
+  "policy": {
+    "priority": "before normal Research/Discovery work",
+    "assignment": "sha256(canonical_id)[0] mod 3",
+    "workers": [
+      "scheduled-chat-00",
+      "scheduled-chat-30",
+      "scheduled-chat-45"
+    ],
+    "completion": "rebuilt by Library import processor; imported/already_represented clears the identity"
+  },
+  "count": 0,
+  "entries": []
+}

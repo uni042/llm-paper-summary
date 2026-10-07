@@ -177,6 +177,122 @@ URL https://example.com/cache and `cache` code must remain unchanged.
             ".survey/import-inbox/pending/research/paper.md",
         )
 
+    def test_returned_research_queue_tracks_latest_quality_outcome(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            blocked = root / ".survey/import-inbox/blocked/research"
+            results.mkdir(parents=True)
+            blocked.mkdir(parents=True)
+
+            paper = blocked / "paper.md"
+            paper.write_text(
+                """---
+canonical_id: arXiv:2609.12345
+title: Returned Paper
+source: https://arxiv.org/abs/2609.12345
+---
+# Returned Paper
+""",
+                encoding="utf-8",
+            )
+
+            (results / "first.json").write_text(
+                json.dumps(
+                    {
+                        "status": "blocked_quality",
+                        "canonical_id": "arXiv:2609.12345",
+                        "blocked_path": ".survey/import-inbox/blocked/research/paper.md",
+                        "processed_at": "2026-10-07T09:00:00+00:00",
+                        "failures": ["説明不足トリガー: 手法説明量 100 < 700"],
+                        "quality_metrics": {"method_chars": 100},
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            queue = inbox.sync_returned_research_queue(root)
+            self.assertEqual(queue["count"], 1)
+            entry = queue["entries"][0]
+            self.assertEqual(entry["title"], "Returned Paper")
+            self.assertEqual(entry["return_count"], 1)
+            self.assertIn(entry["assigned_worker"], inbox.REPAIR_WORKERS)
+
+            (results / "second.json").write_text(
+                json.dumps(
+                    {
+                        "status": "imported",
+                        "canonical_id": "arXiv:2609.12345",
+                        "processed_at": "2026-10-07T10:00:00+00:00",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            queue = inbox.sync_returned_research_queue(root)
+            self.assertEqual(queue["count"], 0)
+            persisted = json.loads(
+                (root / ".survey/repair-queue/returned-research.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            self.assertEqual(persisted["entries"], [])
+
+    def test_returned_research_queue_is_idempotent_when_entries_do_not_change(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            (results / "return.json").write_text(
+                json.dumps(
+                    {
+                        "status": "blocked_quality",
+                        "canonical_id": "arXiv:2609.11111",
+                        "processed_at": "2026-10-07T09:00:00+00:00",
+                        "failures": ["説明不足"],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            first = inbox.sync_returned_research_queue(root)
+            queue_path = root / ".survey/repair-queue/returned-research.json"
+            first_bytes = queue_path.read_bytes()
+            second = inbox.sync_returned_research_queue(root)
+            self.assertEqual(first, second)
+            self.assertEqual(first_bytes, queue_path.read_bytes())
+
+    def test_returned_research_queue_assignment_is_stable(self) -> None:
+        canonical_id = "DOI:10.1000/stable-owner"
+        first = inbox.repair_owner(canonical_id)
+        second = inbox.repair_owner(canonical_id)
+        self.assertEqual(first, second)
+        self.assertIn(first, inbox.REPAIR_WORKERS)
+
+    def test_returned_research_queue_counts_repeat_returns(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            for index, ts in enumerate(
+                ["2026-10-07T09:00:00+00:00", "2026-10-07T10:00:00+00:00"],
+                1,
+            ):
+                (results / f"return-{index}.json").write_text(
+                    json.dumps(
+                        {
+                            "status": "blocked_quality",
+                            "canonical_id": "arXiv:2609.54321",
+                            "processed_at": ts,
+                            "failures": [f"return {index}"],
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+            queue = inbox.sync_returned_research_queue(root)
+            self.assertEqual(queue["count"], 1)
+            self.assertEqual(queue["entries"][0]["return_count"], 2)
+            self.assertEqual(queue["entries"][0]["failures"], ["return 2"])
+
     def test_requeues_discovery_blocked_only_by_precheck_provenance(self) -> None:
         original_cwd = Path.cwd()
         with tempfile.TemporaryDirectory() as tmpdir:

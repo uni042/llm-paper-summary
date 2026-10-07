@@ -40,6 +40,11 @@ It has no cron of its own. `.github/workflows/survey-orchestrator.yml` checks th
    ready Research jobs.
 5. Quality/import failures are moved to \`blocked/research/\`; successful or
    already-represented pending payloads are removed.
+6. \`blocked_quality\` results are reflected into the generated
+   \`.survey/repair-queue/returned-research.json\`. A later successful
+   \`imported\` or \`already_represented\` receipt for the same \`canonical_id\`
+   removes it automatically. Scheduled workers process only their deterministic
+   \`assigned_worker\` entries before normal Research/Discovery work.
 
 The default semantic operation is therefore **insert-if-absent**. Updating an
 already represented paper is a separate explicit maintenance/editing task.
