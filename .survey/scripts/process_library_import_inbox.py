@@ -38,6 +38,7 @@ import audit_metadata_coverage  # noqa: E402
 import audit_paper_quality  # noqa: E402
 import normalize_paper_japanese_terms  # noqa: E402
 import paper_quality_gate  # noqa: E402
+import refresh_under16kb_reaudit_queue as under16_reaudit  # noqa: E402
 import paper_identity  # noqa: E402
 import paper_taxonomy  # noqa: E402
 import research_job_reconciliation  # noqa: E402
@@ -726,6 +727,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                 repo_relative(source, repo_root),
                 raw,
             )
+            reaud_target = str(meta.get("under16kb_reaudit_target_path") or "").strip()
             japanese_normalized = False
             if audit.status == "FAIL" and any(
                 str(reason).startswith("日本語比率 ") for reason in audit.failures
@@ -741,10 +743,32 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                         raw = normalized_raw
                         audit = normalized_audit
                         meta = parse_frontmatter(raw)
+                        reaud_target = str(
+                            meta.get("under16kb_reaudit_target_path") or ""
+                        ).strip()
                         japanese_normalized = True
                         # Persist the GitHub-side mechanical repair so a remaining
                         # block is recoverable from the repaired durable payload.
                         source.write_text(raw, encoding="utf-8")
+
+            if reaud_target:
+                # The dedicated under-16KB lane has a stricter >=80% Japanese
+                # requirement and a survey-aware explanation policy.  Remove only
+                # the generic explanation-floor failures; all publication-integrity
+                # and boilerplate failures stay active.
+                audit.failures = [
+                    reason
+                    for reason in audit.failures
+                    if not str(reason).startswith("説明不足トリガー:")
+                ]
+                for reason in under16_reaudit.reaudit_failures(audit, reaud_target):
+                    if reason not in audit.failures:
+                        audit.failures.append(reason)
+                audit.status = (
+                    "FAIL"
+                    if audit.failures
+                    else ("WARN" if audit.warnings else "PASS")
+                )
 
             if audit.status == "FAIL":
                 blocked_path = block_payload(source, BLOCKED_RESEARCH)
@@ -777,6 +801,76 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
             record.setdefault("source_url", meta.get("source"))
             resolution = resolve_paper_identity.resolve(repo_root, record)
             if resolution["status"] == "represented":
+                if reaud_target:
+                    version = str(meta.get("under16kb_reaudit_version") or "").strip()
+                    if version != under16_reaudit.REAUDIT_VERSION:
+                        raise ValueError(
+                            "under16kb re-audit version mismatch: "
+                            f"{version!r} != {under16_reaudit.REAUDIT_VERSION!r}"
+                        )
+                    if meta.get("under16kb_reaudit_passed") is not True:
+                        raise ValueError("under16kb_reaudit_passed must be true")
+
+                    target_rel = Path(reaud_target).as_posix()
+                    target_parts = Path(target_rel).parts
+                    if (
+                        not target_rel.startswith("papers/")
+                        or ".." in target_parts
+                        or Path(target_rel).is_absolute()
+                    ):
+                        raise ValueError(f"unsafe under16kb re-audit target: {target_rel}")
+                    represented_path = str(resolution.get("paper_path") or "")
+                    if represented_path != target_rel:
+                        raise ValueError(
+                            "under16kb re-audit target does not match represented paper: "
+                            f"{target_rel} != {represented_path}"
+                        )
+
+                    target = repo_root / target_rel
+                    if not target.is_file():
+                        raise ValueError(
+                            f"under16kb re-audit target is missing: {target_rel}"
+                        )
+                    current_hash = sha256_bytes(target.read_bytes())
+                    expected_hash = str(
+                        meta.get("under16kb_reaudit_source_sha256") or ""
+                    ).strip()
+                    if not expected_hash:
+                        raise ValueError(
+                            "under16kb_reaudit_source_sha256 is required"
+                        )
+                    if expected_hash != current_hash:
+                        raise RuntimeError(
+                            "under16kb re-audit source changed since review: "
+                            f"{expected_hash} != {current_hash}"
+                        )
+
+                    target.write_text(raw, encoding="utf-8")
+                    source.unlink()
+                    replace_json(
+                        result_path,
+                        {
+                            "schema_version": 1,
+                            "artifact_type": "research",
+                            "status": "imported",
+                            "source_sha256": payload_hash,
+                            "canonical_id": meta.get("canonical_id"),
+                            "paper_path": target_rel,
+                            "reaudit_update": True,
+                            "reaudit_version": version,
+                            "previous_paper_sha256": current_hash,
+                            "audit_status": audit.status,
+                            "japanese_normalized": japanese_normalized,
+                            "worker_completed_at": meta.get("worker_completed_at"),
+                            "worker_run_key": meta.get("worker_run_key"),
+                            "quality_metrics": research_quality_metrics(audit),
+                            "processed_at": now(),
+                        },
+                    )
+                    imported += 1
+                    terminal += 1
+                    continue
+
                 source.unlink()
                 replace_json(
                     result_path,
@@ -853,6 +947,16 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
             terminal += 1
 
     if imported:
+        try:
+            queue = under16_reaudit.build_queue(repo_root)
+            under16_reaudit.write_queue(repo_root, queue)
+        except Exception as exc:
+            print(
+                "warning: under-16KB re-audit queue refresh failed after durable Research import: "
+                f"{type(exc).__name__}: {exc}",
+                file=sys.stderr,
+            )
+
         # These are derived-view refreshes. A stale README/worklist is repairable,
         # while losing an already validated Library import is not. Keep failures
         # visible on stderr but do not roll back durable inbox progress.
