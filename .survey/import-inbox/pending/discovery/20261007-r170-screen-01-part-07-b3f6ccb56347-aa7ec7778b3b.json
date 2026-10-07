@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r170-screen-01-part-07-b3f6ccb56347",
+  "reference_main_sha": "c722acacbbf591e325c88350bdbd5c25ada4d0f2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.27467",
+      "identity_tokens": [
+        "arXiv:2604.27467"
+      ],
+      "title": "ScaleBox: Enabling High-Fidelity and Scalable Code Verification for Large Language Models",
+      "reason": "arXiv要旨はLLM code training/evaluation用high-concurrency sandbox systemのverification throughputを扱う。model inference servingの改善ではない。",
+      "source_url": "https://arxiv.org/abs/2604.27467",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.24396",
+      "identity_tokens": [
+        "arXiv:2604.24396"
+      ],
+      "title": "Global Context or Local Detail? Adaptive Visual Grounding for Hallucination Mitigation",
+      "reason": "inference-time decodingには関連するが二経路計算の追加費用を含む効率評価がなく、計算改善候補とは確定できない。",
+      "source_url": "https://arxiv.org/abs/2604.24396",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805621.3807632",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807632"
+      ],
+      "title": "Earl: Efficient Agentic RL Post-Training for LLMs under Dynamic Context Lengths",
+      "reason": "ACM primary DOI landing page fetch returned Internal Error through both doi.org and dl.acm.org attempts; the packet abstract was not used. Primary abstract/full text could not be examined, so relevance remains unresolved.",
+      "source_url": "https://doi.org/10.1145/3805621.3807632",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805621.3807657",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807657"
+      ],
+      "title": "DFS: Dynamic Flow Spraying with Bounded Reordering for AI Training Clusters",
+      "reason": "ACM primary DOI landing page fetch returned Internal Error through both doi.org and dl.acm.org attempts; the packet abstract was not used. Primary abstract/full text could not be examined, so relevance remains unresolved.",
+      "source_url": "https://doi.org/10.1145/3805621.3807657",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.19015",
+      "identity_tokens": [
+        "arXiv:2604.19015"
+      ],
+      "title": "FedProxy: Federated Fine-Tuning of LLMs via Proxy SLMs and Heterogeneity-Aware Fusion",
+      "reason": "arXiv要旨はfederated LLM fine-tuningをproxy SLMで実施するtraining/adaptation frameworkで、deployment inference costの評価はない。",
+      "source_url": "https://arxiv.org/abs/2604.19015",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ]
+    }
+  ]
+}
