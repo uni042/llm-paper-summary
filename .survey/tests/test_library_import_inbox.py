@@ -17,6 +17,27 @@ import process_library_import_inbox as inbox
 
 
 class LibraryImportInboxTests(unittest.TestCase):
+    def test_reaudit_source_git_blob_sha_legacy_migration(self) -> None:
+        import hashlib
+        for payload in (b"", b"sample contents\n", "日本語のテスト".encode("utf-8")):
+            with self.subTest(payload=payload):
+                git_hash = inbox.under16_reaudit.git_blob_sha(payload)
+                legacy_header = f"blob {len(payload)}".encode("ascii") + bytes((92, 48))
+                legacy_hash = hashlib.sha1(legacy_header + payload).hexdigest()
+                self.assertNotEqual(git_hash, legacy_hash)
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload, git_hash), (True, False)
+                )
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload, legacy_hash), (True, True)
+                )
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload + b"x", git_hash), (False, False)
+                )
+                self.assertEqual(
+                    inbox.verify_reaudit_blob_sha(payload + b"x", legacy_hash), (False, False)
+                )
+
     def test_research_metadata_gate_rejects_incomplete_frontmatter(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
