@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-07T22:21:18+00:00",
+  "updated_at": "2026-10-07T22:25:15+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3939,6 +3939,45 @@
       "failures": [
         "worker_completed_at"
       ]
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-blockffn-2507.08771.md",
+      "processed_at": "2026-10-07T22:25:15+00:00",
+      "canonical_id": "arXiv:2507.08771",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-chiron-2501.08090.md",
+      "processed_at": "2026-10-07T22:25:15+00:00",
+      "canonical_id": "arXiv:2501.08090",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "deleted_stale_blocked_research",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-comb-2602.01519.md",
+      "processed_at": "2026-10-07T22:25:15+00:00",
+      "canonical_id": "arXiv:2602.01519"
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-memserve-2406.17565.md",
+      "processed_at": "2026-10-07T22:25:15+00:00",
+      "canonical_id": "arXiv:2406.17565",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "deleted_stale_blocked_research",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-moeits-2604.10603.md",
+      "processed_at": "2026-10-07T22:25:15+00:00",
+      "canonical_id": "arXiv:2604.10603"
     }
   ]
 }
