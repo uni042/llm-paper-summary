@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Apply publication-integrity checks to one rendered paper before publication.
+"""Apply publication-integrity and explanation-floor checks before publication.
 
-In addition to the existing language/integrity checks, this gate rejects obvious
-cross-paper boilerplate reuse: long prose paragraphs copied across multiple
-Research summaries.  It intentionally avoids trying to replace semantic review.
+The gate rejects obvious cross-paper boilerplate reuse and sends an obviously
+under-explained Research summary back for primary-source rereading.  The floor is
+one-way: passing it never establishes semantic quality.
 """
 from __future__ import annotations
 
@@ -17,8 +17,8 @@ import audit_paper_quality as quality
 def _default_args() -> argparse.Namespace:
     """Compatibility namespace for callers.
 
-    Only the Japanese-ratio thresholds are active quality thresholds.  The
-    retired quantity/depth thresholds are neutral zeros.
+    Legacy quantity/depth compatibility values remain neutral.  The active
+    Research gate separately enables the conservative explanation-floor trigger.
     """
     return argparse.Namespace(
         min_bytes=quality.DEFAULT_MIN_BYTES,
@@ -28,6 +28,7 @@ def _default_args() -> argparse.Namespace:
         min_component_paragraphs=quality.DEFAULT_MIN_COMPONENT_PARAGRAPHS,
         min_japanese_ratio=quality.DEFAULT_MIN_JAPANESE_RATIO,
         warn_japanese_ratio=quality.DEFAULT_WARN_JAPANESE_RATIO,
+        enforce_explanation_floor=True,
     )
 
 
@@ -172,5 +173,8 @@ def inspect_rendered_paper(repo_root: Path, paper_path: str, content: str) -> qu
 def validate_rendered_paper(repo_root: Path, paper_path: str, content: str) -> quality.PaperResult:
     result = inspect_rendered_paper(repo_root, paper_path, content)
     if result.status == "FAIL":
-        raise ValueError("paper quality gate failed (publication integrity/Japanese ratio): " + "; ".join(result.failures))
+        raise ValueError(
+            "paper quality gate failed (publication integrity/explanation floor/Japanese ratio): "
+            + "; ".join(result.failures)
+        )
     return result
