@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1231-scheduled-chat-30/r01::provider-gap",
+  "reference_main_sha": "97373716aeb1e510306deafa6574986088ad259b",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.00079",
+      "identity_tokens": [
+        "arXiv:2407.00079",
+        "SemanticScholar:ea3126b88dc191200ea0bf275f092cb70cbad319"
+      ],
+      "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+      "reason": "prefill/decode分離、CPU/DRAM/SSDを使う分散KV cache、KV-cache-aware schedulerでLLM serving throughputとSLOを直接最適化するため対象。",
+      "source_url": "https://arxiv.org/abs/2407.00079",
+      "body_check": "fulltext_review: arXiv一次資料とUSENIX FAST一次ページを確認。KVCache-centric disaggregation、global cache、SLO-aware schedulingを実装し、arXiv v4では特定simulationで最大525% throughput増、実負荷でKimiが75%多いrequestを処理すると報告。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.07174",
+      "identity_tokens": [
+        "arXiv:2306.07174"
+      ],
+      "title": "Augmenting Language Models with Long-Term Memory",
+      "reason": "frozen backbone LLMをmemory encoderとし、SideNetで外部memory bankをretrieval/readするLongMemにより固定context制約を回避し、推論時に長期履歴をcache/retrieveするため対象。",
+      "source_url": "https://arxiv.org/abs/2306.07174",
+      "body_check": "fulltext_review: 一次資料を確認。decoupled architectureでbackboneを凍結し、adaptive residual SideNetがmemory retriever/readerとして動作。memory bankは長期contextをcache/updateでき、65k tokenのlong-form memoryとmany-shot in-context learningを評価。",
+      "first_checked_at": "2026-10-07T12:31:24+09:00",
+      "last_checked_at": "2026-10-07T12:31:24+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "worklist_rank": 36
+    }
+  ],
+  "parent_run_key": "20261007-1231-scheduled-chat-30/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_76888b6107f48191a217ddf1663dfc12--discovery-20261007-1231-scheduled-chat-30-r01.json",
+  "provider_gap_ids": [
+    "arXiv:2306.07174",
+    "arXiv:2407.00079"
+  ]
+}
