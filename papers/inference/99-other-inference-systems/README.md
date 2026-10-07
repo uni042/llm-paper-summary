@@ -1048,13 +1048,13 @@
   実装：✓ ・ リポジトリ内被引用：11  
   Jacobi復号は複数の未来位置を仮置きし、対象モデルで全位置を並列更新して固定点まで反復することでこの依存を緩める。論文はドメイン固有・一般ベンチマークで生成品質を保ちながら2.4〜3.4倍の生成高速化を報告する。
 
+- **2024-01 · [Long Context Compression with Activation Beacon](2024-2401.03462-long-context-compression-with-activation-beacon.md)**  
+  実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：11  
+  各層のKV活性をビーコントークンへ漸進圧縮し、128K文脈で非圧縮比2倍の推論高速化とKVキャッシュ8分の1を両立する。
+
 - **2024-04 · [Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing](2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   要求ごとの品質差を予測して小型LLMへの振り分け率を調整し、推論費を削減する。モデル間の品質差が大きいときは無品質低下での削減幅が限られる。
-
-- **2024-01 · [Long Context Compression with Activation Beacon](2024-2401.03462-long-context-compression-with-activation-beacon.md)**  
-  実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：10  
-  各層のKV活性をビーコントークンへ漸進圧縮し、128K文脈で非圧縮比2倍の推論高速化とKVキャッシュ8分の1を両立する。
 
 - **2024-08 · [Harder Task Needs More Experts: Dynamic Routing in MoE Models](unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md)**  
   実装：[✓](https://github.com/ZhenweiAn/Dynamic_MoE) ・ リポジトリ内被引用：9  
@@ -1283,11 +1283,11 @@
   RWKVは、Transformerの並列学習とRNNの軽量な逐次推論を同じモデルで両立させる言語モデルアーキテクチャである。標準自己注意は系列長が伸びると全トークン対の相互作用を扱い、推論では過去の鍵・値を保持する必要がある。論文は最大14Bパラメータまでモデルを拡張し、同規模Transformerと競争力のある言語モデル性能を示す。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：27  
   位置補間（Position Interpolation; PI）は位置番号を訓練範囲へ圧縮してこの問題を緩和するが、すべてのRoPE周波数を同じ比率で縮めるため、短距離の局所位置関係まで必要以上に変形する。
 
 - **2023-08 · [LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models](2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md)**  
-  実装：[✓](https://github.com/Glaciohound/LM-Infinite) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/Glaciohound/LM-Infinite) ・ リポジトリ内被引用：25  
   この設計は全過去トークンへの密注意をやめるため計算量を系列長に対して線形へ落とし、同時に位置表現が未経験距離へ外挿されるのを防ぐ。論文は最大200M トークンまでパープレキシティを保つ極端長実験、Passkey 検索・Qasper、通常の長文生成、速度・メモリを評価し、元モデルに対してデコード約2.7倍高速、メモリ最大7.5倍削減を報告する。
 
 - **2023-10 · [Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning](2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md)**  
@@ -1539,6 +1539,6 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：135  
+  実装：✓ ・ リポジトリ内被引用：136  
   各入力に対して全専門家を実行せず、学習可能なゲートが上位少数だけを選択することで、総容量を大きくしながら一例あたりの計算を限定する。論文は最大1370億パラメータのモデルを構築し、現代のGPUクラスタ上で計算効率の低下を小さく抑えつつ、従来より1000倍超のモデル容量を扱えると報告する。
 <!-- survey:auto:end -->
