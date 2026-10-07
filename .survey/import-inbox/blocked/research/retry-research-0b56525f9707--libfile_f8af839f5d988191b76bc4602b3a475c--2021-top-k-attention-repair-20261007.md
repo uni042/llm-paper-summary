@@ -23,6 +23,8 @@ last_checked: "2026-10-07"
 worker_completed_at: "2026-10-07T20:31:57+09:00"
 worker_run_key: "20261007-2031-scheduled-chat-30/repair-r02"
 reference_main_sha: "27adbfa18053d0a8eaa144fc409e305f37183031"
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要
