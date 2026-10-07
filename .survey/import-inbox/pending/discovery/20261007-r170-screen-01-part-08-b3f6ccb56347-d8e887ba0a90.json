@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r170-screen-01-part-08-b3f6ccb56347",
+  "reference_main_sha": "c722acacbbf591e325c88350bdbd5c25ada4d0f2",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19394",
+      "identity_tokens": [
+        "arXiv:2604.19394"
+      ],
+      "title": "Can Continual Pre-training Bridge the Performance Gap between General-purpose and Specialized Language Models in the Medical Domain?",
+      "reason": "小さいparameter modelのdomain performanceというresource-efficient接続はあるが、主方法は継続事前学習/mergeで、推論時costの直接計測がない。",
+      "source_url": "https://arxiv.org/abs/2604.19394",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11299",
+      "identity_tokens": [
+        "arXiv:2604.11299"
+      ],
+      "title": "Enhancing Multimodal Large Language Models for Ancient Chinese Character Evolution Analysis via Glyph-Driven Fine-Tuning",
+      "reason": "arXiv要旨はancient Chinese character evolution analysis用MLLM benchmarkとglyph-driven fine-tuningを扱い、inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2604.11299",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10159",
+      "identity_tokens": [
+        "arXiv:2604.10159"
+      ],
+      "title": "ODUTQA-MDC: A Task for Open-Domain Underspecified Tabular QA with Multi-turn Dialogue-based Clarification",
+      "reason": "関連元はstructured language model programsだが、本論文はtabular QA benchmarkとtask-level clarificationでありserving/decode/scheduling等の技術的接続がない。",
+      "source_url": "https://arxiv.org/abs/2604.10159",
+      "first_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "last_checked_at": "2026-10-07T10:29:47.859990+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    }
+  ]
+}
