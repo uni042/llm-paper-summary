@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-07T22:13:08.784400+00:00",
+  "generated_at": "2026-10-07T22:34:36.180333+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 640,
+  "count": 638,
   "worker_counts": {
-    "scheduled-chat-00": 216,
+    "scheduled-chat-00": 214,
     "scheduled-chat-30": 205,
     "scheduled-chat-45": 219
   },
@@ -13484,28 +13484,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md",
-      "canonical_id": "arXiv:2606.00946",
-      "title": "Lodestar：オンライン学習によるLLM推論リクエストルータ",
-      "file_bytes": 15091,
-      "source_sha256": "d4ea1e0e41da0e2a58d58bae712287afffb92aa75c1ad1335a17c5a911b87a46",
-      "source_git_blob_sha": "0eb0e765e49aeabf3218232a27f1f35239b6353e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.965109,
-      "quality_metrics": {
-        "body_chars": 2983,
-        "method_chars": 985,
-        "evaluation_chars": 111,
-        "limitation_chars": 307
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 111 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md",
       "canonical_id": "arXiv:2412.00876",
       "title": "Dynamic-LLaVA: Efficient Multimodal Large Language Models via Dynamic Vision-language Context Sparsification",
@@ -13566,30 +13544,6 @@
         "16KB未満再監査: 評価説明量 320 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md",
-      "canonical_id": "arXiv:2502.06888",
-      "title": "Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline",
-      "file_bytes": 15181,
-      "source_sha256": "44c267abdc3eec42c89ffa6b9efb1ccf7355e41f75a923520436dec32bdb6cf2",
-      "source_git_blob_sha": "926692c5631c2b729e1268f1273d8742f0528389",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.79621,
-      "quality_metrics": {
-        "body_chars": 3239,
-        "method_chars": 1412,
-        "evaluation_chars": 1197,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 79.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.6% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md",
