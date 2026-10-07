@@ -1,0 +1,254 @@
+---
+canonical_id: arXiv:2509.23324
+arxiv_id: '2509.23324'
+doi: 10.1145/3767295.3769382
+title: Scaling LLM Test-Time Compute with Mobile NPU on Smartphones
+summary: モバイルNPUの復号時に遊休しやすい行列演算器を、Best-of-Nやビーム探索の並列テスト時計算で埋める端末内推論系。Hexagon向け4ビット細粒度タイル量子化とLUT化したSoftmax・逆量子化を組み合わせ、混合精度GEMM最大19.0倍、Softmax最大2.2倍を達成し、小型モデルのテスト時計算が大型モデルより良い精度・遅延の交換条件を作る。
+list_summary: Hexagon NPUの遊休行列演算器を並列テスト時計算へ転用し、タイル量子化とLUT演算で混合精度GEMM最大19.0倍、Softmax最大2.2倍を実現する。
+publication: EuroSys 2026
+publication_type: conference
+publication_status: Published
+lineage: inference-systems
+topics:
+- LLM推論
+- システム効率
+- エッジ推論
+source: https://arxiv.org/abs/2509.23324
+sources:
+- https://arxiv.org/abs/2509.23324
+- https://doi.org/10.1145/3767295.3769382
+- https://www.microsoft.com/en-us/research/publication/scaling-llm-test-time-compute-with-mobile-npu-on-smartphones/
+last_checked: '2026-10-08'
+authors:
+- Hao, Zixu
+- Wei, Jianyu
+- Wang, Tuowei
+- Huang, Minxing
+- Jiang, Huiqiang
+- Jiang, Shiqi
+- Cao, Ting
+- Ren, Ju
+published: '2025-09-27'
+arxiv_categories:
+  primary: cs.DC
+  cross_list: []
+code: https://github.com/haozixu/llama.cpp-npu
+implementation: llama.cppへHexagon NPUバックエンドを追加した約7千行のC/C++・インラインアセンブリ実装。演算子ライブラリは https://github.com/haozixu/htp-ops-lib でも公開され、Qualcomm QNNには依存しない。
+implementation_status: official-code
+references:
+- canonical_id: arXiv:2407.21787
+  arxiv_id: '2407.21787'
+- canonical_id: arXiv:2307.13304
+- canonical_id: arXiv:2501.19306
+  arxiv_id: '2501.19306'
+- canonical_id: arXiv:2508.00370
+  arxiv_id: '2508.00370'
+- canonical_id: arXiv:2501.14794
+  arxiv_id: '2501.14794'
+- canonical_id: arXiv:2505.10475
+  arxiv_id: '2505.10475'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2305.14314
+  arxiv_id: '2305.14314'
+- canonical_id: arXiv:2306.04509
+  arxiv_id: '2306.04509'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2009.03300
+  arxiv_id: '2009.03300'
+- canonical_id: arXiv:2103.03874
+  arxiv_id: '2103.03874'
+- canonical_id: arXiv:2308.00352
+  arxiv_id: '2308.00352'
+- canonical_id: arXiv:2404.06395
+  arxiv_id: '2404.06395'
+- canonical_id: arXiv:2402.01353
+  arxiv_id: '2402.01353'
+- canonical_id: arXiv:2411.04330
+  arxiv_id: '2411.04330'
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2501.03035
+  arxiv_id: '2501.03035'
+- canonical_id: arXiv:2501.19324
+  arxiv_id: '2501.19324'
+- canonical_id: arXiv:2406.01721
+- canonical_id: arXiv:2504.04823
+  arxiv_id: '2504.04823'
+- canonical_id: arXiv:2502.06703
+  arxiv_id: '2502.06703'
+- canonical_id: arXiv:2405.16406
+  arxiv_id: '2405.16406'
+- canonical_id: arXiv:2401.06706
+- canonical_id: arXiv:2411.10640
+  arxiv_id: '2411.10640'
+- canonical_id: arXiv:1805.02867
+  arxiv_id: '1805.02867'
+- canonical_id: arXiv:2412.16720
+  arxiv_id: '2412.16720'
+- canonical_id: arXiv:2502.05530
+  arxiv_id: '2502.05530'
+- canonical_id: arXiv:2507.16099
+  arxiv_id: '2507.16099'
+- canonical_id: arXiv:2310.00844
+  arxiv_id: '2310.00844'
+- canonical_id: arXiv:1907.10641
+  arxiv_id: '1907.10641'
+- canonical_id: arXiv:2408.03314
+  arxiv_id: '2408.03314'
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+- canonical_id: arXiv:2503.19786
+  arxiv_id: '2503.19786'
+- canonical_id: arXiv:2403.08295
+  arxiv_id: '2403.08295'
+- canonical_id: arXiv:2312.08935
+  arxiv_id: '2312.08935'
+- canonical_id: arXiv:2303.11366
+  arxiv_id: '2303.11366'
+- canonical_id: arXiv:2408.00724
+  arxiv_id: '2408.00724'
+- canonical_id: arXiv:2412.04315
+  arxiv_id: '2412.04315'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2407.05858
+- canonical_id: arXiv:2501.09686
+  arxiv_id: '2501.09686'
+- canonical_id: arXiv:2406.06282
+  arxiv_id: '2406.06282'
+- canonical_id: arXiv:2505.00254
+  arxiv_id: '2505.00254'
+- canonical_id: arXiv:2412.15115
+  arxiv_id: '2412.15115'
+- canonical_id: arXiv:2408.01800
+  arxiv_id: '2408.01800'
+- canonical_id: arXiv:2508.16703
+  arxiv_id: '2508.16703'
+- canonical_id: arXiv:2412.06559
+  arxiv_id: '2412.06559'
+- canonical_id: arXiv:2505.02214
+  arxiv_id: '2505.02214'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 75
+last_audited: '2026-10-08'
+audit_version: 1
+under16kb_reaudit_target_path: papers/inference/08-edge-on-device-llm-systems/2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md
+under16kb_reaudit_source_git_blob_sha: '39a0903ff6d2a077b568ccfa735310067acf92fb'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_body_chars: 5662
+quality_method_chars: 1265
+quality_evaluation_chars: 1858
+quality_limitation_chars: 359
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_completed_at: '2026-10-07T21:48:16.618Z'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-mobile-npu'
+
+---
+
+# Scaling LLM Test-Time Compute with Mobile NPU on Smartphones
+
+> Hexagon NPUの復号時に遊休しやすい行列演算器を、並列テスト時計算へ転用する。4ビット細粒度タイル量子化とルックアップテーブル（Lookup Table; LUT）演算により、混合精度GEMM最大19.0倍、Softmax最大2.2倍を報告する。
+
+## 概要
+
+スマートフォン向けLLMでは、小型モデルは品質が不足しやすく、大型モデルはメモリ容量・帯域・消費電力が重い。そこでモデル自体を大きくする代わりに、Best-of-Nやビーム探索のように生成時の候補数を増やすテスト時計算量拡張を使えば、小型モデルの品質を引き上げられる。しかし通常は「端末は計算資源が少ないので、さらに推論回数を増やすのは不利」と考えられる。
+
+本論文の出発点は、Qualcomm Hexagon NPUの復号時には必ずしも演算器が飽和していないという観察である。Hexagonの行列拡張（Hexagon Matrix eXtension; HMX）は32×32タイルを基本単位とするため、バッチ1の自己回帰復号では実質的なGEMVになり、入力タイル31行分が有効計算に使われない。候補を並列生成してバッチを増やすテスト時計算は、この「余っている行」を有用な計算で埋められる。
+
+ただし、NPUはLLMで一般的な細粒度4ビット群量子化を直接扱いにくく、汎用ベクトル拡張（Hexagon Vector eXtension; HVX）はHMXほど高スループットでも高帯域でもない。そこで著者らは、HMXのタイル配置と両立する4ビット細粒度量子化と、Softmax・逆量子化をLUTへ置き換える実装を設計し、テスト時計算をNPU上で実用化する。
+
+## 問題設定
+
+Hexagon NPUは行列演算に強い一方、LLM復号ではバッチ1の入力が `[1, hidden_dim]` となり、32×32を基本単位とするHMXの大半が空く。論文ではこの遊休計算能力を、複数候補を同時に進めるBest-of-N・自己整合性・ビーム探索へ割り当てる。候補数を増やしても、もともと空いていた行列タイルを埋める範囲ではGEMM遅延の増分が小さい。
+
+難点の一つは精度である。Qualcomm QNNが扱う粗粒度のチャネル単位4ビット量子化をLlama 3.2-1B-Instructへ適用すると、論文の表ではMATH500が15.9から2.1、GSM8Kが32.6から3.4へ落ちる。数学推論でこの基礎精度では、候補を増やしてもテスト時計算の効果を引き出しにくい。そのため、現代LLMで使われる群単位量子化をHMX上で効率よく実装する必要がある。
+
+もう一つは非行列演算である。Hexagon V75で著者らが測ったFP16 GEMMでは、HMXが約12 TFLOPSに達する一方、HVX 1スレッドは約32.9 GFLOPSであり、DDR読出しもDMAの約60 GB/sに対しHVX経路は26 GB/s程度である。バッチを増やすと注意のSoftmaxや4ビット重みの逆量子化がHVX側の律速として表面化する。
+
+## 手法
+
+### HMX配置に合わせた細粒度タイル量子化
+
+まず重みをHMXが要求するタイル順序へ事前に並べ替えてから、並べ替え後の連続領域で4ビット群量子化する。HMXではFP16タイルが32×32で、タイル内にも2行単位の特殊な並び替えがある。通常の論理テンソル順で量子化して後からHMX配置へ変換すると量子化群がメモリ上で分断されるため、著者らは「先にハードウェア配置へ変換し、その配置上で群を作る」順序にする。
+
+さらに既定の配列構造（Array of Structures; AoS）的な量子化群をまとめ、8群をスーパーブロックへ再配置する。これにより、128バイト幅のHVXベクトル命令で量子値と尺度を連続的に読みやすくし、細粒度量子化の精度を保ちながらワイドベクトルのメモリアクセス効率を上げる。
+
+### LUT中心の逆量子化
+
+混合精度GEMMでは、INT4重みをFP16へ戻す処理がHVX側の負担になる。通常の「INT4を展開→整数から浮動小数へ変換→尺度を乗算」という系列をそのまま実行せず、INT4値から対応するFP16値への写像をLUTとして用意し、`vlut16`命令でまとめて変換する。尺度についても複数群をLUT内容へ織り込み、広いベクトル幅を利用する。
+
+この変換はHMX自体を置き換えるのではなく、HMXへ投入するタイルをHVX側で低コストに準備する役割を持つ。行列計算の高速なHMXと、整形・変換を担当するHVXの役割分担を明示している。
+
+### LUT中心のSoftmaxとFlashAttention
+
+長文脈かつバッチ増大時には、注意計算の行列積よりSoftmaxが支配的になる。論文ではQwen2.5-1.5B、プロンプト長4096で、バッチ32になるとSoftmaxがHexagon FlashAttention遅延の84.6%を占める例を示す。指数関数を多項式近似で逐次評価するとVLIW上の命令レベル並列性が下がるため、指数値を事前計算したLUTから取得する。
+
+注意の蓄積など数値的に重要な部分はFP32を残し、それ以外をFP16中心にしたFlashAttentionを実装する。これによりベクトル演算側のSoftmax負担を削り、バッチを増やしてHMXを埋めたときに別の律速へ移るのを防ぐ。
+
+### エンドツーエンド実行系
+
+実装はllama.cppへHexagon NPUバックエンドを追加し、NPU演算子ライブラリとCPU側統合モジュールを分ける。CPUとNPUは共有メモリを使い、FastRPCでNPUセッションを起動した後は共有領域をポーリングして演算を投入する。QNNの固定形状グラフへ依存せず、未実装演算はCPUへフォールバックできる。
+
+テスト時計算ではBest-of-Nや段階的ビーム探索が生成候補を増やし、HMXの空き行へ候補を詰める。候補評価にはSkywork-1.5B-PRMを用い、候補数増加による品質上昇と、端末上の1トークン遅延・電力を同時に測る。
+
+## 評価
+
+### 再監査：性能倍率の適用範囲と測定条件
+
+一次論文表1で比較されるのはLlama 3.2 1Bの同一モデルを、群単位4ビット量子化（AutoAWQ）とQNNのチャネル単位4ビット量子化で実行した場合である。MATH500の正答率は15.9対2.1、GSM8Kでは32.6対3.4となる。これは速度の比較ではなく、粗粒度量子化によって数学推論の基礎精度が大幅に低下することを示す実験であり、細粒度量子化を高効率の行列演算器へ乗せる設計が必要である根拠になる。
+
+一次論文図8はQwen2.5-1.5B、入力文脈4096トークンで注意演算の内訳を確認する。並列候補32件の条件ではSoftmaxの処理が全体の84.6%を占める。行列演算器の遊休部分を候補並列性で埋めると、代わって汎用ベクトル演算が律速になる。そのため指数関数を参照表で置き換える方式には直接の必要性がある。混合精度行列積最大19.0倍とSoftmax最大2.2倍は個々の演算子の測定値であり、モデル全体の回答速度19倍を意味しない。
+
+図10～図12のシステム評価では、MATH500・GSM8Kの正答率、端末上の1トークン復号遅延、電力、エネルギーを分けて測る。候補を増やした小型モデルが、候補を増やさない大型モデルより有利になる領域があるという結果は、モデルやチップ世代を固定した万能の高速化率ではない。候補評価器の精度、端末メモリ制約と発熱、使用するNPU世代を変えれば利得が縮む点に留意する。
+
+
+### 代表的な評価条件
+
+| 項目 | 条件 |
+| --- | --- |
+| 端末 | OnePlus Ace3 / Snapdragon 8 Gen 2・V73、OnePlus 12 / Snapdragon 8 Gen 3・V75、OnePlus Ace5 Pro / Snapdragon 8 Elite・V79 |
+| モデル | Qwen2.5 1.5B/3B/7B、Llama 3.2 1B/3B。主にInstruct版 |
+| テスト時計算 | Best-of-N、段階的ビーム探索。Skywork-1.5B-PRMを候補評価に利用 |
+| 品質 | MATH500・GSM8Kのpass@1、MMLU、WinoGrande、WikiText-2パープレキシティ |
+| 比較実装 | llama.cppのOpenCL GPUバックエンド、QNNは参考値 |
+| 精度形式 | 主重みは4ビット細粒度群量子化。注意はFP16中心、蓄積はFP32 |
+| 補助環境 | 一部の品質測定はNVIDIA RTX 3090サーバー |
+
+### 代表的な評価結果
+
+| 条件 | 指標 | 比較対象 | 提案系 | 改善・差 | 読み取れること |
+| --- | --- | --- | --- | --- | --- |
+| 混合精度GEMM | 演算遅延 | 素朴な実装 | 高速化 | 最大19.0倍 | HMX配置とLUT逆量子化が細粒度4ビットの実装費用を抑える |
+| Softmax | 演算遅延 | 従来実装 | 高速化 | 最大2.2倍 | バッチ増大時に顕在化するHVX側律速を軽減 |
+| Llama 3.2-1B、W4A16 | MATH500 | AutoAWQ 15.9 | QNN 2.1 | 大幅悪化 | 粗粒度QNN量子化では推論品質が崩れ、細粒度量子化が必要 |
+| Best-of-N | 精度・遅延 | 大型モデルの通常復号 | Qwen2.5-1.5B/3Bの拡張 | 3B/7B基準精度を上回る条件あり | 遊休HMXを候補並列へ使うとモデル規模拡大とは別のPareto前線を作れる |
+| OnePlus 12、Qwen2.5 | 消費電力 | バッチ増大前 | 1.5Bは増加 | 端末全体5W未満、3Bは約4.3Wで安定 | 計算量拡張が即座に極端な電力増へ直結しない |
+
+重要なのは最大19.0倍がモデル全体の高速化ではなく、混合精度GEMMという演算子単体の値である点である。システム全体では候補生成・注意・報酬モデルなども含むため、この倍率をそのまま生成速度へ外挿できない。一方、Best-of-NではQwen2.5-1.5Bと3Bの拡張結果がそれぞれ通常の3B・7Bの基準精度を上回る条件があり、論文の中心仮説である「小型モデル+余剰NPU計算」の有効性を示す。
+
+## 既存研究との差
+
+従来のモバイルLLM実装は、モデルを端末へ収めて単一系列をできるだけ速く復号することを主眼に置く。本論文は逆に、復号時に遊休するHMXの計算能力を明示的に測り、そこへ複数候補を流して品質を上げる。テスト時計算をクラウド向けアルゴリズムではなく、モバイルNPUの低利用率を埋めるワークロードとして捉える点が異なる。
+
+また、単にバッチを増やすだけでは、QNNの粗粒度量子化やHVX上のSoftmax・逆量子化が律速になるため、タイル配置、量子化群、LUT、共有メモリまで一体で変更する。アルゴリズム側の候補並列性とNPUマイクロアーキテクチャを接続した共同設計である。
+
+## 限界・実装状況
+
+評価はQualcomm Snapdragon/Hexagonの3世代が中心で、HMXの32×32タイルやHVX/LUT命令へ強く最適化されている。他社NPUではタイル形状・ベクトル幅・メモリ階層が異なるため、同じ配置と倍率は直接移植できない。Snapdragon 8 Gen 2ではNPU仮想アドレス空間が2 GiBに制約され、3B以上の一部モデルを実行できないという実機上の境界もある。
+
+テスト時計算そのものも、候補評価器の品質、生成予算、問題種別に依存する。Best-of-Nで候補数を増やせば常に比例して品質が上がるわけではなく、報酬モデルの実行費用も残る。論文の成果は「端末上でも追加計算を無料で得る」ことではなく、復号で余っていた行列演算能力を品質改善へ再配分できる範囲を示したものと解釈すべきである。
+
+## 一次資料
+
+- arXiv: https://arxiv.org/abs/2509.23324
+- EuroSys 2026 / Microsoft Research: https://www.microsoft.com/en-us/research/publication/scaling-llm-test-time-compute-with-mobile-npu-on-smartphones/
+- 公式コード: https://github.com/haozixu/llama.cpp-npu
+- NPU演算子ライブラリ: https://github.com/haozixu/htp-ops-lib
+
+## 修正履歴
+
+- 2026-09-28（修正済み）: 新しい品質ガイドに合わせ、候補受理率・候補木・接頭辞キャッシュ等の汎用推論テンプレートを削除。HexagonのHMX/HVX構造、復号時32×32タイルの遊休、タイル量子化、量子化群再配置、LUT逆量子化・Softmax、llama.cpp統合の処理関係を一次資料から再構成し、実機条件・品質・演算子速度・電力を評価表へ追加。
