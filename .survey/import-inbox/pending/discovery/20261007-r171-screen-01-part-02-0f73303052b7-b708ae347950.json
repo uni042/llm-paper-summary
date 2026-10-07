@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r171-screen-01-part-02-0f73303052b7",
+  "reference_main_sha": "3fa407c1e70c455c90d1573cfb6aa03f9e0da9f9",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17006",
+      "identity_tokens": [
+        "arXiv:2601.17006"
+      ],
+      "title": "MathMixup: Boosting LLM Mathematical Reasoning with Difficulty-Controllable Data Synthesis and Curriculum Learning",
+      "reason": "提案は学習データ生成・curriculumであり、推論専用効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2601.17006",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.07347",
+      "identity_tokens": [
+        "arXiv:2601.07347"
+      ],
+      "title": "DiffER: Diffusion Entity-Relation Modeling for Reversal Curse in Diffusion Large Language Models",
+      "reason": "本文のmethod/experimentsはdiffusion language modelの関係表現・正答性能を扱う。parallel decodingやservingの高速化、メモリ/計算量改善を実証していない。linked diffusion-LLM系統との対象上の接点は確認したが、技術貢献は範囲外。",
+      "source_url": "https://arxiv.org/abs/2601.07347",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06599",
+      "identity_tokens": [
+        "arXiv:2601.06599"
+      ],
+      "title": "How Context Shapes Truth: Geometric Transformations of Statement-level Truth Representations in LLMs",
+      "reason": "表現解析・真偽識別の研究で、LLM推論の効率やservingの具体的改善ではない。",
+      "source_url": "https://arxiv.org/abs/2601.06599",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14195",
+      "identity_tokens": [
+        "arXiv:2511.14195"
+      ],
+      "title": "N-GLARE: An Non-Generative Latent Representation-Efficient LLM Safety Evaluator",
+      "reason": "本文のN-GLARE/Runtime Costはred-teaming safety evaluationのoffline診断proxyを扱い、通常のLLM回答生成・serving自体を効率化するものではない。費用削減対象は評価pipelineであるためスコープ外。",
+      "source_url": "https://arxiv.org/abs/2511.14195",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.06430",
+      "identity_tokens": [
+        "arXiv:2511.06430"
+      ],
+      "title": "CG-TTRL: Context-Guided Test-Time Reinforcement Learning for On-Device Large Language Models",
+      "reason": "本文はTTRLのon-device適応学習を速める方法で、実験もfew-epoch adaptationとtraining dynamics。生成servingのinference efficiency改善ではなくtest-time model update/trainingが対象。linked長context系統との直接技術接続もない。",
+      "source_url": "https://arxiv.org/abs/2511.06430",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    }
+  ]
+}
