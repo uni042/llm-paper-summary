@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r161-screen-01-part-08-8a25e0b00b16",
+  "reference_main_sha": "2042a01d0113ed9f26d5351119d51317db9da91b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09038",
+      "identity_tokens": [
+        "arXiv:2506.09038"
+      ],
+      "title": "AbstentionBench: Reasoning LLMs Fail on Unanswerable Questions",
+      "reason": "Full text presents AbstentionBench as an evaluation benchmark for whether LLMs decline unanswerable questions and reports reasoning fine-tuning effects on abstention. It does not propose dynamic early exit, adaptive token computation, or inference-resource savings; the conditional-computation lineage is not technically connected.",
+      "source_url": "https://arxiv.org/abs/2506.09038",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ]
+    }
+  ]
+}
