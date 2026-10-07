@@ -103,6 +103,9 @@ jobs:
               --repo-root . \
               --max-research 5 \
               --max-discovery-records 60
+            python .survey/scripts/refresh_under16kb_reaudit_queue.py \
+              --repo-root . \
+              --apply
             python .survey/scripts/render_status_dashboard.py \
               --repo-root . \
               --output STATUS.md
