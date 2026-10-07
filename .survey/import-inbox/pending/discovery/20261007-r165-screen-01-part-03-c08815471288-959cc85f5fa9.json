@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r165-screen-01-part-03-c08815471288",
+  "reference_main_sha": "f3f36070d3eeff791b97b133877782e5a142c3fe",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09107",
+      "identity_tokens": [
+        "arXiv:2604.09107"
+      ],
+      "title": "TensorHub: Scalable and Elastic Weight Transfer for LLM RL Training",
+      "reason": "Read the primary TensorHub design and scale experiments. It reduces stalls and transfer latency when synchronizing weights between LLM RL trainers and rollout workers, including a reported 1T-model transfer comparison; this is training/rollout orchestration rather than general inference serving, so relation to the target throughput lineage is indirect.",
+      "source_url": "https://arxiv.org/abs/2604.09107",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.19969",
+      "identity_tokens": [
+        "arXiv:2602.19969"
+      ],
+      "title": "ReAttn: Improving Attention-based Re-ranking via Attention Re-weighting",
+      "reason": "Read the primary ReAttn method, ranking experiments, and limitations. It is an attention-based LLM reranker intended as an efficient alternative to generation-based reranking and introduces post-hoc cross-document IDF and entropy weighting; however, its contribution is retrieval ranking quality, not optimization of model inference execution/serving, so scope fit is weak.",
+      "source_url": "https://arxiv.org/abs/2602.19969",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18375",
+      "identity_tokens": [
+        "arXiv:2601.18375"
+      ],
+      "title": "Hierarchical Text Classification with LLM-Refined Taxonomies",
+      "reason": "The paper applies LLM-refined taxonomies to hierarchical text classification; its stated contribution is classification quality and taxonomy structure, not model inference cost or serving.",
+      "source_url": "https://arxiv.org/abs/2601.18375",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.11077",
+      "identity_tokens": [
+        "arXiv:2601.11077"
+      ],
+      "title": "ABC-Bench: Benchmarking Agentic Backend Coding in Real-World Development",
+      "reason": "Read the primary benchmark task and evaluation sections. ABC-Bench measures backend coding agents on repository-level tasks; it evaluates agent capability and does not introduce inference efficiency or serving improvements.",
+      "source_url": "https://arxiv.org/abs/2601.11077",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08108",
+      "identity_tokens": [
+        "arXiv:2601.08108"
+      ],
+      "title": "Debiasing Large Language Models via Adaptive Causal Prompting with Sketch-of-Thought",
+      "reason": "Adaptive causal prompting targets debiasing and reasoning behavior; the primary abstract does not propose an inference efficiency, memory, latency, or serving technique.",
+      "source_url": "https://arxiv.org/abs/2601.08108",
+      "first_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "last_checked_at": "2026-10-07T09:43:24.510058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ]
+    }
+  ]
+}
