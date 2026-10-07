@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r182-screen-01-part-05-62e76fe6dd18",
+  "reference_main_sha": "c783ac90a63f989552e8790516edc13970e423c2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12036",
+      "identity_tokens": [
+        "arXiv:2602.12036"
+      ],
+      "title": "Composition-RL: Compose Your Verifiable Prompts for Reinforcement Learning of Large Language Models",
+      "reason": "The abstract proposes prompt construction/selection for reinforcement-learning training of LLMs; the claimed change is training-data utilization, not inference.",
+      "source_url": "https://arxiv.org/abs/2602.12036",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12158",
+      "identity_tokens": [
+        "arXiv:2602.12158"
+      ],
+      "title": "SafeNeuron: Neuron-Level Safety Alignment for Large Language Models",
+      "reason": "The abstract describes neuron-level safety alignment training to improve robustness; it does not present an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2602.12158",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10564",
+      "identity_tokens": [
+        "arXiv:2602.10564"
+      ],
+      "title": "SplitCom: Communication-efficient Split Federated Fine-tuning of LLMs via Temporal Compression",
+      "reason": "The abstract concerns communication compression for federated fine-tuning and partitioning training workloads; its resource target is training communication, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2602.10564",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10161",
+      "identity_tokens": [
+        "arXiv:2602.10161"
+      ],
+      "title": "Omni-Safety under Cross-Modality Conflict: Vulnerabilities, Dynamics Mechanisms and Efficient Alignment",
+      "reason": "The abstract analyzes cross-modal safety vulnerabilities and alignment in omni-modal models; it targets safety behavior, not inference resource use.",
+      "source_url": "https://arxiv.org/abs/2602.10161",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06602",
+      "identity_tokens": [
+        "arXiv:2602.06602"
+      ],
+      "title": "Scaling Speech Tokenizers with Diffusion Autoencoders",
+      "reason": "The abstract scales speech tokenizers using a diffusion autoencoder for speech understanding/reconstruction; it is not an LLM inference system or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2602.06602",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ]
+    }
+  ]
+}
