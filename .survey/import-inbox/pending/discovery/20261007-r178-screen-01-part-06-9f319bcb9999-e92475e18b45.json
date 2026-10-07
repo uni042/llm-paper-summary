@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r178-screen-01-part-06-9f319bcb9999",
+  "reference_main_sha": "85e26b943e161cfe557fc0dae0c8b7298dad60e4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.compag.2026.111443",
+      "identity_tokens": [
+        "DOI:10.1016/j.compag.2026.111443"
+      ],
+      "title": "Intelligent management of crop diseases and pests in multiscale and multimodal complex scenarios: Technologies, applications, and prospects",
+      "reason": "Primary DOI/publisher record could not be retrieved at https://doi.org/10.1016/j.compag.2026.111443 (server returned Internal Error), and the packet contains no abstract. The crop-management survey title does not provide enough primary evidence to close relevance.",
+      "source_url": "https://doi.org/10.1016/j.compag.2026.111443",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23784",
+      "identity_tokens": [
+        "arXiv:2602.23784"
+      ],
+      "title": "TradeFM: A Generative Foundation Model for Trade-flow and Market Microstructure",
+      "reason": "TradeFM is a generative foundation model for trade flows and market microstructure. Its specialized financial forecasting subject is outside language-model inference-efficiency methods.",
+      "source_url": "https://arxiv.org/abs/2602.23784",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23058",
+      "identity_tokens": [
+        "arXiv:2602.23058"
+      ],
+      "title": "GeoWorld: Geometric World Models",
+      "reason": "GeoWorld is a geometric world-modeling contribution; the primary abstract focuses on spatial/world-model capability rather than language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2602.23058",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.18873",
+      "identity_tokens": [
+        "arXiv:2602.18873"
+      ],
+      "title": "BiMotion: B-spline Motion for Text-guided Dynamic 3D Character Generation",
+      "reason": "BiMotion compresses 3D character motion into B-spline tokens and evaluates text-guided motion diffusion. Its efficiency claims concern 3D motion generation, not LLM/VLM inference.",
+      "source_url": "https://arxiv.org/abs/2602.18873",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17547",
+      "identity_tokens": [
+        "arXiv:2602.17547"
+      ],
+      "title": "KLong: Training LLM Agent for Extremely Long-horizon Tasks",
+      "reason": "The arXiv primary record says the paper was withdrawn due to significant data errors; the v3 record has no accessible PDF and full-text HTML retrieval fails. Because it is linked to the agent/memory lineage, relevance cannot be ruled out without reading the body.",
+      "source_url": "https://arxiv.org/abs/2602.17547",
+      "first_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "last_checked_at": "2026-10-07T11:32:46.031674+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
