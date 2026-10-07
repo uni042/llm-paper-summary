@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-babefd3805ffb316-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:69170faf00279bdcdfd91290a3756d539f9fb6e6",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:69170faf00279bdcdfd91290a3756d539f9fb6e6",
+    "identity_tokens": [
+      "SemanticScholar:69170faf00279bdcdfd91290a3756d539f9fb6e6"
+    ],
+    "reason": "The primary arXiv survey concerns communication-efficient distributed deep-learning training, including synchronization and training communication compression; it does not present LLM inference/serving methods.",
+    "first_checked_at": "2026-10-07T09:04:22+00:00",
+    "last_checked_at": "2026-10-07T09:04:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+    ],
+    "title": "Communication-Efficient Distributed Deep Learning: A Comprehensive Survey"
+  },
+  "processed_at": "2026-10-07T09:04:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-babefd3805ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

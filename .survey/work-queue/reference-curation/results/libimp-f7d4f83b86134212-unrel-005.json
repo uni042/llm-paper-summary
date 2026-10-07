@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7d4f83b86134212-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.05510",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.05510",
+    "identity_tokens": [
+      "arXiv:2501.05510"
+    ],
+    "reason": "OVO-Bench is an evaluation benchmark for online video understanding by Video-LLMs; it measures task performance and does not propose an inference optimization.",
+    "first_checked_at": "2026-10-07T09:04:28+00:00",
+    "last_checked_at": "2026-10-07T09:04:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "title": "OVO-Bench: How Far is Your Video-LLMs from Real-World Online Video Understanding?"
+  },
+  "processed_at": "2026-10-07T09:04:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7d4f83b8613",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

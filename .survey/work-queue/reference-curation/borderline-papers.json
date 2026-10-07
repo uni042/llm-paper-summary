@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T08:53:54+00:00",
-  "record_count": 4287,
+  "updated_at": "2026-10-07T09:04:27+00:00",
+  "record_count": 4293,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65445,6 +65445,96 @@
       ],
       "borderline_recheck_count": 0,
       "title": "U-Net-Based Medical Image Segmentation"
+    },
+    "arXiv:2005.08700": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2005.08700",
+      "identity_tokens": [
+        "arXiv:2005.08700"
+      ],
+      "reason": "Primary text confirms Mask-CTC is a non-autoregressive speech-recognition decoder with iterative mask prediction and CTC. Parallel sequence decoding is adjacent to decoding-efficiency research, but its speech-recognition model and objective do not establish relevance to LLM inference systems. Keep borderline for possible cross-task decoding-method lineage review.",
+      "first_checked_at": "2026-10-07T09:04:16+00:00",
+      "last_checked_at": "2026-10-07T09:04:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mask CTC: Non-Autoregressive End-to-End ASR with CTC and Mask Predict"
+    },
+    "arXiv:1902.10245": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.10245",
+      "identity_tokens": [
+        "arXiv:1902.10245"
+      ],
+      "reason": "Full text confirms non-autoregressive machine translation with an auxiliary regularization/training objective. Parallel decoding for translation is adjacent to inference decoding research, but it is a task-specific MT model and does not demonstrate a transferable LLM serving or inference optimization.",
+      "first_checked_at": "2026-10-07T09:04:16+00:00",
+      "last_checked_at": "2026-10-07T09:04:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Non-Autoregressive Machine Translation with Auxiliary Regularization"
+    },
+    "arXiv:2206.00888": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.00888",
+      "identity_tokens": [
+        "arXiv:2206.00888"
+      ],
+      "reason": "Full text presents Squeezeformer, a Transformer architecture for ASR that uses temporal U-Net downsampling to reduce attention cost on long sequences. This is a concrete sequence-model efficiency technique but is specialized to speech recognition; the paper does not establish LLM inference performance or a direct transfer path.",
+      "first_checked_at": "2026-10-07T09:04:17+00:00",
+      "last_checked_at": "2026-10-07T09:04:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Squeezeformer: An Efficient Transformer for Automatic Speech Recognition"
+    },
+    "arXiv:2505.22159": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.22159",
+      "identity_tokens": [
+        "arXiv:2505.22159"
+      ],
+      "reason": "Full text adds force-aware modality routing with an MoE for contact-rich robotic manipulation, but the paper centers on robot control and does not identify sparse-compute, faster inference, lower memory, or reduced latency as an objective. MoE architecture creates only a weak speculative systems connection.",
+      "first_checked_at": "2026-10-07T09:04:20+00:00",
+      "last_checked_at": "2026-10-07T09:04:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation"
+    },
+    "DOI:10.1007/s11831-023-09898-w": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11831-023-09898-w",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-023-09898-w"
+      ],
+      "reason": "The primary Springer page exposes the abstract but gates the article text behind institutional access. The visible abstract describes a CNN medical-image review and mentions large-scale retrieval efficiency, but the linked sparse-attention lineage cannot be resolved responsibly from the abstract alone. Full primary-body evidence is therefore unavailable and the candidate remains borderline.",
+      "first_checked_at": "2026-10-07T09:04:23+00:00",
+      "last_checked_at": "2026-10-07T09:04:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Convolutional Neural Network in Medical Image Analysis: A Review"
+    },
+    "arXiv:2106.00515": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.00515",
+      "identity_tokens": [
+        "arXiv:2106.00515"
+      ],
+      "reason": "The primary full text proposes k-nearest-neighbor attention for Vision Transformers to restrict dense image-patch attention and reduce noise/compute. Attention sparsification is conceptually adjacent to efficient LLM attention, but the technique and evaluations are specifically visual and do not establish language-model behavior or transfer. Keep borderline for lineage review.",
+      "first_checked_at": "2026-10-07T09:04:27+00:00",
+      "last_checked_at": "2026-10-07T09:04:27+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KVT: k-NN Attention for Boosting Vision Transformers"
     }
   }
 }

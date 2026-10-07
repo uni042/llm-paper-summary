@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-300c31b685ba06f7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2206.00888",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2206.00888",
+    "identity_tokens": [
+      "arXiv:2206.00888"
+    ],
+    "reason": "Full text presents Squeezeformer, a Transformer architecture for ASR that uses temporal U-Net downsampling to reduce attention cost on long sequences. This is a concrete sequence-model efficiency technique but is specialized to speech recognition; the paper does not establish LLM inference performance or a direct transfer path.",
+    "first_checked_at": "2026-10-07T09:04:17+00:00",
+    "last_checked_at": "2026-10-07T09:04:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Squeezeformer: An Efficient Transformer for Automatic Speech Recognition"
+  },
+  "processed_at": "2026-10-07T09:04:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-300c31b685ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
