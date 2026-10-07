@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+      "source_url": "https://arxiv.org/abs/2604.27393",
+      "year": 2026,
+      "published": "2026-04-30",
+      "venue": "arXiv.org",
+      "citation_count": 69,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent progress in multimodal large language models (MLLMs) has brought AI capabilities from static offline data processing to real-time streaming interaction, yet they still remain far from human-level multimodal interaction. The key bottlenecks are no longer modality coverage or latency alone, but the interaction paradigm itself. First, perception and response are still separated into alternating phases, preventing models from incorporating new inputs for timely adjustment during generation. Second, most current models remain reactive, responding only to explicit user requests instead of acting proactively in the evolving multimodal environment. We present MiniCPM-o 4.5, our latest effort towards human-like multimodal interaction, which mitigates these gaps by real-time full-duplex omni-modal interaction. It can see, listen, and speak simultaneously in real-time, while also exhibiting proactive behaviors such as issuing reminders or comments based on its continuous understanding of the live scene. The key technique behind MiniCPM-o 4.5 is Omni-Flow, a unified streaming framework that aligns omni-modal inputs and outputs along a shared temporal axis. This formulation converts conventional turn-based interaction into a full-duplex, time-aligned process, enabling simultaneous perception and response and allowing proactive behavior to arise within the same framework. With a total of 9B parameters, MiniCPM-o 4.5 approaches Gemini 2.5 Flash in vision-language capabilities, delivering state-of-the-art open-source performance at its scale. It also surpasses Qwen3-Omni-30B-A3B in omni-modal understanding and delivers better speech generation, with significantly higher computation efficiency. Driven by its efficient architecture design and inference optimization, the model can perform real-time full-duplex omni-modal interaction on edge devices with less than 12GB RAM cost.",
+      "identifiers": [
+        "SemanticScholar:5a62204836ba4210cdb9a22d602312f32a49130c"
+      ],
+      "semantic_scholar_id": "5a62204836ba4210cdb9a22d602312f32a49130c",
+      "canonical_id": "arXiv:2604.27393",
+      "arxiv_id": "2604.27393",
+      "doi": "10.48550/arXiv.2604.27393",
+      "authors": [
+        "Jun-Bo Cui",
+        "Bo-Kai Xu",
+        "Chongyi Wang",
+        "Tianyu Yu",
+        "Wei-Yu Sun",
+        "Yingjin Xu",
+        "Tian-Rui Wang",
+        "Zhihui He",
+        "Wenshuo Ma",
+        "Tianchi Cai",
+        "Jiancheng Gui",
+        "Luo-Yuan Zhang",
+        "Xian Sun",
+        "Fuwei Huang",
+        "Moye Chen",
+        "Zhuohang Lin",
+        "Hanyu Liu",
+        "Qi Gui",
+        "Qing-Yuan Han",
+        "Yuyang Wen",
+        "Huiping Liu",
+        "Rongkang Wang",
+        "Ya-Qi Zhang",
+        "Hong-Rui Wei",
+        "Chi Chen",
+        "You Li",
+        "Kechen Fang",
+        "Jie Zhou",
+        "Yuxuan Li",
+        "Guoyang Zeng",
+        "Chao-Jun Xiao",
+        "Yankai Lin",
+        "Xu Han",
+        "Maosong Sun",
+        "Zhiyuan Liu",
+        "Yuan Yao"
+      ],
+      "priority": 169,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 69,
+        "citation_count": 69,
+        "total": 169,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      },
+      "reason": "9Bのomni-modal LLMをedgeで12GB未満RAMに収め、visual 16x/audio 5x token圧縮、LLM backboneのtext-only低rate decoding、軽量speech decoder分離によりreal-time full-duplex推論を実現する。推論architecture・token budget・latency/memory制約が方式設計の直接対象なので収録対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv HTML本文§1–3を確認。448x448 sliceの1024 visual tokensを64へ圧縮（16x）、audioを50 tokens/sから10 tokens/sへ圧縮（5x）、Qwen3-8B backboneは3–4 text decoding steps/sに限定し約0.3B speech decoderへ音声token生成を委譲。edge RAM <12GBとreal-time full-duplexを明示的に評価・設計目標としている。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
+      "source_url": "https://arxiv.org/abs/2112.06749",
+      "year": 2021,
+      "published": "2021-12-13",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 155,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper we propose a new generative model of text, Step-unrolled Denoising Autoencoder (SUNDAE), that does not rely on autoregressive models. Similarly to denoising diffusion techniques, SUNDAE is repeatedly applied on a sequence of tokens, starting from random inputs and improving them each time until convergence. We present a simple new improvement operator that converges in fewer iterations than diffusion methods, while qualitatively producing better samples on natural language datasets. SUNDAE achieves state-of-the-art results (among non-autoregressive methods) on the WMT'14 English-to-German translation task and good qualitative results on unconditional language modeling on the Colossal Cleaned Common Crawl dataset and a dataset of Python code from GitHub. The non-autoregressive nature of SUNDAE opens up possibilities beyond left-to-right prompted generation, by filling in arbitrary blank patterns in a template.",
+      "identifiers": [
+        "SemanticScholar:2da2a44f78e1bd9735d94fee3bd944d47d45742b"
+      ],
+      "semantic_scholar_id": "2da2a44f78e1bd9735d94fee3bd944d47d45742b",
+      "canonical_id": "arXiv:2112.06749",
+      "arxiv_id": "2112.06749",
+      "authors": [
+        "N. Savinov",
+        "Junyoung Chung",
+        "Mikolaj Binkowski",
+        "Erich Elsen",
+        "Aäron van den Oord"
+      ],
+      "priority": 165,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 155,
+        "citation_count": 155,
+        "total": 165,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1759,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "非自己回帰型SUNDAEが反復denoisingを少数stepへ収束させ、Transformer Baseの自己回帰decodingに対して4 stepで4.7倍、8 stepで2.6倍、10 stepで2.2倍の生成高速化を実測する。言語生成推論のdecoding algorithmを直接高速化するため対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv HTML本文§2.2–3.2を確認。low-temperature、argmax-unrolled、partial-token updateで反復回数を削減し、WMT14 En-DeでAR Transformer Base（attention-state cache付きgreedy decoding）比4-step 4.7x / 8-step 2.6x / 10-step 2.2x / 16-step 1.4x speedupを報告。63M MT modelに加え335M unconditional LMも評価。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "source_url": "https://arxiv.org/abs/2410.03051",
+      "year": 2024,
+      "published": "2024-10-04",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 155,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video detailed captioning is a key task which aims to generate comprehensive and coherent textual descriptions of video content, benefiting both video understanding and generation. In this paper, we propose AuroraCap, a video captioner based on a large multimodal model. We follow the simplest architecture design without additional parameters for temporal modeling. To address the overhead caused by lengthy video sequences, we implement the token merging strategy, reducing the number of input visual tokens. Surprisingly, we found that this strategy results in little performance loss. AuroraCap shows superior performance on various video and image captioning benchmarks, for example, obtaining a CIDEr of 88.9 on Flickr30k, beating GPT-4V (55.3) and Gemini-1.5 Pro (82.2). However, existing video caption benchmarks only include simple descriptions, consisting of a few dozen words, which limits research in this field. Therefore, we develop VDC, a video detailed captioning benchmark with over one thousand carefully annotated structured captions. In addition, we propose a new LLM-assisted metric VDCscore for bettering evaluation, which adopts a divide-and-conquer strategy to transform long caption evaluation into multiple short question-answer pairs. With the help of human Elo ranking, our experiments show that this benchmark better correlates with human judgments of video detailed captioning quality.",
+      "identifiers": [
+        "SemanticScholar:5c048efd1c02937f93de36ccdd7d81cdf222f891"
+      ],
+      "semantic_scholar_id": "5c048efd1c02937f93de36ccdd7d81cdf222f891",
+      "canonical_id": "arXiv:2410.03051",
+      "arxiv_id": "2410.03051",
+      "doi": "10.48550/arXiv.2410.03051",
+      "authors": [
+        "Wen-Hao Chai",
+        "En-Xin Song",
+        "Yi-Lun Du",
+        "Chenlin Meng",
+        "Vashisht Madhavan",
+        "Omer Bar-Tal",
+        "Jenq-Neng Hwang",
+        "Saining Xie",
+        "Christopher D. Manning"
+      ],
+      "priority": 165,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 155,
+        "citation_count": 155,
+        "total": 165,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 733,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "LLMベースvideo captionerでvisual token mergingを推論経路へ適用し、元ViT tokenの10–20%まで削減して長動画入力の計算overheadを抑える。H100上でtoken mergingとSGLang併用のinference timeも直接評価しており、MLLM推論効率の対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv HTML本文§1–2.1とAppendix efficiencyを確認。attention key cosine similarity→bipartite soft matching→weighted mergeでvisual tokensを段階削減し、10–20% tokenでもmarginal performance drop。378x378・8 frames・single H100でvideo QA pair当たり推論時間を比較し、R_vtk=0.1とSGLang併用が最速設定となる。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b26b5ec21365",
+    "round": "libimp-b26b5ec213652119-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b26b5ec213652119-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b26b5ec213652119-pre01.json",
+    "receipt": "sha256:fd69d8f70f0c35e65e134b51d0cda2178f7ed3b684a4072e558aaaa6bfc78cba"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b26b5ec21365",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
