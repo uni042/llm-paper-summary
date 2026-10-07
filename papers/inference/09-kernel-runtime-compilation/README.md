@@ -231,7 +231,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   注意だけでなくFFNまで系列ブロック内で融合して学習時活性を保持しないBPT。A100/TPU v4でメモリ効率型注意より2〜4倍長い文脈を学習可能にし、1B・16Kでは通常Transformer比1.20倍の学習スループットを示す。
 
 - **2023-10 · [Sparse Fine-tuning for Inference Acceleration of Large Language Models](2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/IST-DASLab/SparseFinetuning) ・ リポジトリ内被引用：1  
   本研究は、大規模言語モデル（LLM）を高い重み疎性へ枝刈りしたうえで下流タスクへ微調整し、精度を回復する学習法と、その疎性をCPU/GPUの実際の推論高速化へ変換する実行系を一体で評価する。
 
 ### 5年前（2021-11〜2022-10）

@@ -187,7 +187,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
   実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：10  
-  しかし実際の専門家負荷はゲートの選択、top-k、capacity factor、入力分布によって変動し、論文では同一学習中でも必要専門家 capacityが最大4.38倍変化する。Tutelの中心であるFlexは、MoEパラメータと入力の配置を複数の並列方式で共有できる形へ統一し、テンソル移動なしで並列方式を切り替える。
+  Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
