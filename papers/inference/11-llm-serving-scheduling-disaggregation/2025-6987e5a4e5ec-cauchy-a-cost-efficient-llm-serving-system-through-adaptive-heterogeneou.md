@@ -1,39 +1,79 @@
 ---
-canonical_id: "DOI:10.1145/3772052.3772264"
-doi: "10.1145/3772052.3772264"
-title: "Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment"
-summary: "大規模言語モデルの入力一括処理（prefill）と逐次生成（decode）の計算特性の違いを利用し、異種GPUを組み合わせた配置単位GPU Comboを選択するLLMサービング基盤Cauchyを提案する。GPUの計算性能・メモリ帯域・価格から処理段階別の費用効率を見積もり、サービス品質目標を満たす組合せ数を整数線形計画で決定する。さらに有効処理量で重み付けした組合せ間要求配分、組合せ内の空きGPU活用、要求量に応じた伸縮、KVキャッシュの層別並列転送を統合する。24GPU・Llama-3.1-8Bの評価ではMélange比でTokens/USDを16.4〜38.3%改善し、平均要求遅延を21.2〜59.1%短縮する。"
-list_summary: "prefillとdecodeの特性に合わせて異種GPU組合せを最適配置し、階層スケジューリングと自動伸縮でLLM配信費用を削減する。"
+canonical_id: DOI:10.1145/3772052.3772264
+doi: 10.1145/3772052.3772264
+title: 'Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment'
+summary: 大規模言語モデルの入力一括処理（prefill）と逐次生成（decode）の計算特性の違いを利用し、異種GPUを組み合わせた配置単位GPU Comboを選択するLLMサービング基盤Cauchyを提案する。GPUの計算性能・メモリ帯域・価格から処理段階別の費用効率を見積もり、サービス品質目標を満たす組合せ数を整数線形計画で決定する。さらに有効処理量で重み付けした組合せ間要求配分、組合せ内の空きGPU活用、要求量に応じた伸縮、KVキャッシュの層別並列転送を統合する。24GPU・Llama-3.1-8Bの評価ではMélange比でTokens/USDを16.4〜38.3%改善し、平均要求遅延を21.2〜59.1%短縮する。
+list_summary: prefillとdecodeの特性に合わせて異種GPU組合せを最適配置し、階層スケジューリングと自動伸縮でLLM配信費用を削減する。
 authors:
-  - "Yihui Zhang"
-  - "Han Shen"
-  - "Renyu Yang"
-  - "Di Tian"
-  - "Yuxi Luo"
-  - "Menghao Zhang"
-  - "Li Li"
-  - "Chunming Hu"
-  - "Tianyu Wo"
-  - "Chengru Song"
-  - "Jin Ouyang"
-published: "2025-11"
-publication: "ACM Symposium on Cloud Computing (SoCC 2025), pp. 881–893"
-publication_type: "Conference paper"
-publication_status: "published"
-source: "https://doi.org/10.1145/3772052.3772264"
+- Yihui Zhang
+- Han Shen
+- Renyu Yang
+- Di Tian
+- Yuxi Luo
+- Menghao Zhang
+- Li Li
+- Chunming Hu
+- Tianyu Wo
+- Chengru Song
+- Jin Ouyang
+published: 2025-11
+publication: ACM Symposium on Cloud Computing (SoCC 2025), pp. 881–893
+publication_type: Conference paper
+publication_status: published
+source: https://doi.org/10.1145/3772052.3772264
 sources:
-  - "https://yangrenyu.github.io/paper/socc2025-cauchy.pdf"
-  - "https://doi.org/10.1145/3772052.3772264"
-implementation: "vLLM 0.6.5、Kubernetes 1.16、Gloo TCPを用い、GPU Combo配置最適化、階層要求スケジューラ、コンボ単位の伸縮、層別KV転送を実装。実験はH800/H20/A800各8基の計24GPUクラスタで実施。公式ソースコードの公開先は本文で確認できない。"
+- https://yangrenyu.github.io/paper/socc2025-cauchy.pdf
+- https://doi.org/10.1145/3772052.3772264
+implementation: vLLM 0.6.5、Kubernetes 1.16、Gloo TCPを用い、GPU Combo配置最適化、階層要求スケジューラ、コンボ単位の伸縮、層別KV転送を実装。実験はH800/H20/A800各8基の計24GPUクラスタで実施。公式ソースコードの公開先は本文で確認できない。
 code: null
-last_checked: "2026-10-08"
-worker_completed_at: "2026-10-08T05:04:46+09:00"
-worker_run_key: "20261008-0458-scheduled-chat-00/repair-r01"
-reference_main_sha: "929a86b14a53ef3b0bd0d59a58988db73df2572a"
+last_checked: '2026-10-08'
+worker_completed_at: '2026-10-08T05:04:46+09:00'
+worker_run_key: 20261008-0458-scheduled-chat-00/repair-r01
+reference_main_sha: 929a86b14a53ef3b0bd0d59a58988db73df2572a
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07"
+quality_self_review_version: '2026-10-07'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2309.16609
+  arxiv_id: '2309.16609'
+- canonical_id: arXiv:2408.07055
+  arxiv_id: '2408.07055'
+- canonical_id: arXiv:2504.18154
+  arxiv_id: '2504.18154'
+- canonical_id: arXiv:2408.15792
+  arxiv_id: '2408.15792'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2401.08671
+  arxiv_id: '2401.08671'
+- canonical_id: arXiv:2504.19867
+  arxiv_id: '2504.19867'
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2503.08311
+  arxiv_id: '2503.08311'
+- canonical_id: arXiv:2504.09285
+  arxiv_id: '2504.09285'
+- canonical_id: DOI:10.18653/v1/p17-1099
+  doi: 10.18653/v1/p17-1099
+- canonical_id: arXiv:2401.00588
+- canonical_id: arXiv:2406.03243
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2504.20068
+  arxiv_id: '2504.20068'
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-07'
+references_source: crossref-deposited-reference-metadata
+references_total: 37
 ---
 
 # Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment
