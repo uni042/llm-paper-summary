@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r180-screen-01-part-07-f944135e85ab",
+  "reference_main_sha": "d159f4d80bd7d398abb8da3a16129abdcb4eed71",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07327",
+      "identity_tokens": [
+        "arXiv:2606.07327"
+      ],
+      "title": "Six Open Questions in Machine-Learned Interatomic Potential Foundation Models",
+      "reason": "The survey concerns machine-learning interatomic potentials and atomistic foundation models; it is outside LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2606.07327",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06493",
+      "identity_tokens": [
+        "arXiv:2606.06493"
+      ],
+      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+      "reason": "HANDOFF studies humanoid control and policy transfer; no LLM inference/serving efficiency method is evaluated.",
+      "source_url": "https://arxiv.org/abs/2606.06493",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02522",
+      "identity_tokens": [
+        "arXiv:2606.02522"
+      ],
+      "title": "Moment-Video: Diagnosing Temporal Fidelity of Video MLLMs on Momentary Visual Events",
+      "reason": "Moment-Video is a video understanding benchmark, not an inference optimization method.",
+      "source_url": "https://arxiv.org/abs/2606.02522",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/ai7060198",
+      "identity_tokens": [
+        "DOI:10.3390/ai7060198"
+      ],
+      "title": "GradeAgentOps: A Verification-First Framework for Evidence-Anchored LLM Exam Grading",
+      "reason": "The DOI/MDPI publisher pages and PDF endpoints returned access errors (429/inaccessible); primary abstract/full text could not be verified, so the linked agent-serving relation alone is insufficient for a disposition beyond borderline.",
+      "source_url": "https://doi.org/10.3390/ai7060198",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30341",
+      "identity_tokens": [
+        "arXiv:2605.30341"
+      ],
+      "title": "GPIC: A Giant Permissive Image Corpus for Visual Generation",
+      "reason": "GPIC is a permissively sourced image corpus for visual generation; it is a dataset contribution unrelated to LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.30341",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    }
+  ]
+}
