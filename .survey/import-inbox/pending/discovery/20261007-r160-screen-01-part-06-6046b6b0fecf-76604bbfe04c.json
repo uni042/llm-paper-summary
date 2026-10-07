@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r160-screen-01-part-06-6046b6b0fecf",
+  "reference_main_sha": "96e46e336be8e3716ca9bb21c93a09c05bf96666",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08995",
+      "identity_tokens": [
+        "arXiv:2604.08995"
+      ],
+      "title": "Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory",
+      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "source_url": "https://arxiv.org/abs/2604.08995",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18746",
+      "identity_tokens": [
+        "arXiv:2512.18746"
+      ],
+      "title": "MemEvolve: Meta-Evolution of Agent Memory Systems",
+      "reason": "The full paper evolves LLM-agent memory architectures and improves task performance, but its reported results do not establish reduced inference tokens, latency, or compute; relationship is plausible but not demonstrated.",
+      "source_url": "https://arxiv.org/abs/2512.18746",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.09626",
+      "identity_tokens": [
+        "arXiv:2403.09626"
+      ],
+      "title": "Video Mamba Suite: State Space Model as a Versatile Alternative for Video Understanding",
+      "reason": "Video Mamba Suite measures efficiency for video backbones/temporal encoders, not LLM decoder serving; an LVLM visual-front-end connection is plausible but not shown as a language-inference improvement.",
+      "source_url": "https://arxiv.org/abs/2403.09626",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.05991",
+      "identity_tokens": [
+        "arXiv:2201.05991"
+      ],
+      "title": "Video Transformers: A Survey",
+      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "source_url": "https://arxiv.org/abs/2201.05991",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v36i3.20222",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v36i3.20222"
+      ],
+      "title": "Width & Depth Pruning for Vision Transformers",
+      "reason": "The primary-source abstract identifies a different task or training/application contribution without an LLM-inference efficiency method or a plausible connection to the target lineage.",
+      "source_url": "https://doi.org/10.1609/aaai.v36i3.20222",
+      "first_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "last_checked_at": "2026-10-07T08:44:31.498206+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    }
+  ]
+}
