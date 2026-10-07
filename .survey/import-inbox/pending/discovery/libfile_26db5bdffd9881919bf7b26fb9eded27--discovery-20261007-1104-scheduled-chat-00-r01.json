@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1104-scheduled-chat-00/r01",
+  "reference_main_sha": "d08c55eec6ac36d046ece8682f0e389725ee5412",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.685",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.emnlp-main.685",
+        "arXiv:2109.00859"
+      ],
+      "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation",
+      "reason": "identifier-aware事前学習とNL/PL双方向生成でコード理解・生成品質を高めるモデル研究で、推論ランタイム・メモリ・サービング効率を主要目的・評価にしていない。",
+      "source_url": "https://arxiv.org/abs/2109.00859",
+      "body_check": "abstract_screen_only: arXiv一次abstractでidentifier-aware pre-training、code defect/clone detection、code summarization/generation/translation等の品質改善が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.00908",
+      "identity_tokens": [
+        "arXiv:2106.00908"
+      ],
+      "title": "TransMIL: Transformer based Correlated Multiple Instance Learning for Whole Slide Image Classification",
+      "reason": "Transformerを病理whole-slide imageのmultiple-instance learningへ適用するvision/medical研究で、最終評価はCAMELYON16/TCGAの病理画像分類。LLM推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2106.00908",
+      "body_check": "abstract_screen_only: arXiv一次abstractでcorrelated MIL、morphological/spatial information、whole-slide pathology classificationが主題と明確なため本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.09681",
+      "identity_tokens": [
+        "arXiv:2106.09681"
+      ],
+      "title": "XCiT: Cross-Covariance Image Transformers",
+      "reason": "token数に線形なcross-covariance attentionで高解像度画像処理を効率化するが、最終workloadはImageNet/COCO/ADE20kのvision tasksでLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2106.09681",
+      "body_check": "abstract_screen_only: 一次abstract/書誌でXCAのlinear token complexityとimage classification/object detection/segmentationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.261",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.261",
+        "arXiv:2010.02559"
+      ],
+      "title": "LEGAL-BERT: The Muppets straight out of Law School",
+      "reason": "法務domain向けBERTのdomain adaptation/pre-trainingと下流法務NLP品質を扱う研究で、推論runtime・memory・serving最適化が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2010.02559",
+      "body_check": "abstract_screen_only: 一次資料でlegal-domain BERTのfurther pre-training/from-scratch pre-trainingとlegal NLP downstream performanceが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08035",
+      "identity_tokens": [
+        "arXiv:2406.08035"
+      ],
+      "title": "LVBench: An Extreme Long Video Understanding Benchmark",
+      "reason": "数時間級long-video理解のbenchmark構築とMLLM能力評価が主題で、長文脈推論のlatency・memory・serving効率化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2406.08035",
+      "body_check": "abstract_screen_only: 一次abstractでlong video comprehension/information extraction benchmarkと現行multimodal modelの能力評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2022.findings-naacl.55",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.findings-naacl.55",
+        "arXiv:2112.07916"
+      ],
+      "title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
+      "reason": "T5 encoderのfull attentionをlocal attentionまたはTransient Global attentionへ置換し、長系列のattention計算・メモリ負担を削減しつつsummarization/QAを処理する。言語モデル推論の長文脈計算効率へ直接関係するため収録対象。",
+      "source_url": "https://arxiv.org/abs/2112.07916",
+      "body_check": "fulltext_relevance_review: 一次論文の方式・評価を確認。TGlobalは局所attentionに入力blockから動的生成するglobal tokensを加え、追加side inputなしで長距離情報を伝播する。長入力でT5より高い処理可能長と実用的な計算効率を示し、summarization/QAの言語推論へ最終適用している。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/w19-2304",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w19-2304",
+        "arXiv:1902.04094"
+      ],
+      "title": "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model",
+      "reason": "BERTをMarkov random field language modelとして解釈し反復samplingで文生成する推論アルゴリズムを示すが、主目的は生成可能性・品質/多様性の検証で、latency・throughput・memory効率を最適化しないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/1902.04094",
+      "body_check": "fulltext_relevance_review: 一次論文でBERTのMRF定式化とmasked-token Gibbs samplingによる文生成を確認。推論手順そのものには関係するが、比較は左から右へのLMとの生成品質・多様性が中心でsystems efficiency評価はない。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/hpec58863.2023.10363447",
+      "identity_tokens": [
+        "DOI:10.1109/hpec58863.2023.10363447",
+        "arXiv:2310.03003"
+      ],
+      "title": "From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference",
+      "reason": "LLaMA 7B/13B/65BをV100/A100、Alpaca/GSM8K、最大32 GPUのmodel shardingで実測し、throughputとenergy/token・energy/response等を比較するLLM推論systems benchmark。推論資源・energy効率を直接対象とする。",
+      "source_url": "https://arxiv.org/abs/2310.03003",
+      "body_check": "fulltext_relevance_review: 一次論文でV100/A100上のLLaMA推論、複数model size、multi-node/multi-GPU sharding、Alpaca/GSM8Kを用いたtokens/s・responses/s・energy指標の評価を確認。power capによるenergy/performance trade-offも分析し、LLM inference resource utilizationが主題。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.11499",
+      "identity_tokens": [
+        "arXiv:2309.11499"
+      ],
+      "title": "DreamLLM: Synergistic Multimodal Comprehension and Creation",
+      "reason": "multimodal comprehensionと画像生成を統合する学習frameworkで、主評価はzero-shot multimodal generalistとしての品質。推論runtime・token/memory・serving効率化を主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2309.11499",
+      "body_check": "abstract_screen_only: arXiv一次abstractでraw multimodal generative modeling、interleaved document generation、comprehension/creation synergyと品質評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08234",
+      "identity_tokens": [
+        "arXiv:2602.08234"
+      ],
+      "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
+      "reason": "経験軌跡を階層skillへ蒸留してSkillBankから検索し、raw trajectory memoryよりtoken footprintを減らすagent memory機構は推論時context効率に関係する。一方、中心はRL中のskill/policy共進化とtask successでsystems指標が主評価でないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2602.08234",
+      "body_check": "fulltext_relevance_review: 一次資料でexperience-based skill distillation、general/task-specific skill retrieval、recursive skill evolutionを確認。raw trajectory memoryの冗長性を抑えtoken footprintを削減するが、主要実験はALFWorld/WebShop/search tasksの成功性能で、latency・memory footprint・throughputのsystems評価は中心でない。",
+      "first_checked_at": "2026-10-07T11:04:22+09:00",
+      "last_checked_at": "2026-10-07T11:04:22+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "worklist_rank": 23
+    }
+  ]
+}
