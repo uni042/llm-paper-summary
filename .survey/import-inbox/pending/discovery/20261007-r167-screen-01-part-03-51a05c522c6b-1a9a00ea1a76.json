@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r167-screen-01-part-03-51a05c522c6b",
+  "reference_main_sha": "890e30c030fb7c5b593b3a2beeff7c957f4c15b0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05514",
+      "identity_tokens": [
+        "arXiv:2604.05514"
+      ],
+      "title": "OmniDiagram: Advancing Unified Diagram Code Generation via Visual Interrogation Reward",
+      "reason": "Primary paper addresses diagram-code generation using visual interrogation rewards; its domain method does not improve LLM inference runtime or resources.",
+      "source_url": "https://arxiv.org/abs/2604.05514",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00012",
+      "identity_tokens": [
+        "arXiv:2604.00012"
+      ],
+      "title": "Finding and Reactivating Post-Trained LLMs' Hidden Safety Mechanisms",
+      "reason": "Primary paper identifies/reactivates post-trained safety mechanisms in LLMs; its target is safety capabilities, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.00012",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14615",
+      "identity_tokens": [
+        "arXiv:2601.14615"
+      ],
+      "title": "SearchGym: Bootstrapping Real-World Search Agents via Cost-Effective and High-Fidelity Environment Simulation",
+      "reason": "Primary text proposes a cost-effective simulated environment for training search agents; the cost reduction is in RL/environment interaction during training, not deployed LLM inference.",
+      "source_url": "https://arxiv.org/abs/2601.14615",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14778",
+      "identity_tokens": [
+        "arXiv:2601.14778"
+      ],
+      "title": "STEAD: Robust Provably Secure Linguistic Steganography with Diffusion Language Model",
+      "reason": "Primary text develops a diffusion-language steganography method for secure message encoding; it is a language-model application and does not target inference systems.",
+      "source_url": "https://arxiv.org/abs/2601.14778",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.07422",
+      "identity_tokens": [
+        "arXiv:2601.07422"
+      ],
+      "title": "Two Pathways to Truthfulness: On the Intrinsic Encoding of LLM Hallucinations",
+      "reason": "Primary paper studies internal representations associated with hallucinations/truthfulness and analyzes their origin; it does not propose an inference-resource optimization.",
+      "source_url": "https://arxiv.org/abs/2601.07422",
+      "first_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "last_checked_at": "2026-10-07T10:03:58.335702+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
