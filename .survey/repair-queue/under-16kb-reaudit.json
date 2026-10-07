@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-07T22:41:42.337618+00:00",
+  "generated_at": "2026-10-07T22:46:46.680496+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 633,
+  "count": 628,
   "worker_counts": {
-    "scheduled-chat-00": 214,
-    "scheduled-chat-30": 202,
-    "scheduled-chat-45": 217
+    "scheduled-chat-00": 212,
+    "scheduled-chat-30": 201,
+    "scheduled-chat-45": 215
   },
   "entries": [
     {
@@ -12639,28 +12639,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
-      "canonical_id": "arXiv:2403.09636",
-      "title": "Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference",
-      "file_bytes": 14495,
-      "source_sha256": "4c28c0773a598efce6bd9a07f78f0f69890fa5f0099a7b3cee5512e65ff8697e",
-      "source_git_blob_sha": "b8892625d32eebbe7cb45b1bd8af3deb9eaf0e81",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.977778,
-      "quality_metrics": {
-        "body_chars": 2927,
-        "method_chars": 949,
-        "evaluation_chars": 150,
-        "limitation_chars": 375
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 150 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md",
       "canonical_id": "arXiv:2605.15051",
       "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
@@ -13052,28 +13030,6 @@
       ]
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.27085-crossflow-prefill-decode-elasticity-for-agentic-llm-serving.md",
-      "canonical_id": "arXiv:2609.27085",
-      "title": "Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving",
-      "file_bytes": 14781,
-      "source_sha256": "c5554d3bc6953362d4a0e4a1d05f226562d6d2fe2e310344d34cc5d6925c59f9",
-      "source_git_blob_sha": "ecbca3025c8900c89c9fb778d4ab84fde561ad0d",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.970214,
-      "quality_metrics": {
-        "body_chars": 2295,
-        "method_chars": 944,
-        "evaluation_chars": 253,
-        "limitation_chars": 147
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 253 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
       "canonical_id": "arXiv:2305.05920",
       "title": "FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference",
@@ -13354,28 +13310,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
-      "canonical_id": "arXiv:2305.15805",
-      "title": "Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers",
-      "file_bytes": 15023,
-      "source_sha256": "90a47a7f7e920705dc126c841b663a9859de1556cc7a2fefe81c6f98c1a3eecc",
-      "source_git_blob_sha": "ade30837c8070fc22109c793a3b975bc1c2d7c41",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.930992,
-      "quality_metrics": {
-        "body_chars": 3254,
-        "method_chars": 977,
-        "evaluation_chars": 384,
-        "limitation_chars": 291
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 384 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
       "canonical_id": "arXiv:2306.11222",
       "title": "LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation",
@@ -13476,28 +13410,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 466 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.01519-you-need-an-encoder-for-native-position-independent-caching.md",
-      "canonical_id": "arXiv:2602.01519",
-      "title": "You Need an Encoder for Native Position-Independent Caching",
-      "file_bytes": 15185,
-      "source_sha256": "13268bef35543c1d5b5efee20caf5675f69e5e7a466d101422695096ef81e34b",
-      "source_git_blob_sha": "2c1d97c8911989bd5c701aa41e7a0d3bcbb4465f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.95886,
-      "quality_metrics": {
-        "body_chars": 3679,
-        "method_chars": 1424,
-        "evaluation_chars": 407,
-        "limitation_chars": 253
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 407 < 500"
       ],
       "warnings": []
     },
@@ -13723,28 +13635,6 @@
         "limitation_chars": 381
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.08090-chiron-hierarchical-autoscaling.md",
-      "canonical_id": "arXiv:2501.08090",
-      "title": "Hierarchical Autoscaling for Large Language Model Serving with Chiron",
-      "file_bytes": 15314,
-      "source_sha256": "3f16d93a1ab31a14181a1c802e83778df47c0e4b0b2bd97f47859c7ce219bcac",
-      "source_git_blob_sha": "c219cf12124488dc9620f22c865a8473a5570b8d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.848896,
-      "quality_metrics": {
-        "body_chars": 4216,
-        "method_chars": 1316,
-        "evaluation_chars": 201,
-        "limitation_chars": 297
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 201 < 500"
-      ],
       "warnings": []
     },
     {
