@@ -1,0 +1,162 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1758-scheduled-chat-00/r02",
+  "reference_main_sha": "8d17c200c6e231cf5a63362cd6d34038363a988e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.17399",
+      "identity_tokens": [
+        "arXiv:2501.17399",
+        "DOI:10.18653/v1/2025.findings-acl.958"
+      ],
+      "title": "MultiChallenge: A Realistic Multi-Turn Conversation Evaluation Benchmark Challenging to Frontier LLMs",
+      "reason": "実際的なmulti-turn会話能力を測る評価benchmarkで、主要貢献はinstruction-following/context allocation/in-context reasoningの評価。推論runtime・memory・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2501.17399",
+      "body_check": "abstract_screen_only; arXiv/ACL一次abstractでmulti-turn conversation evaluation benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2024.acl-long.276",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.acl-long.276",
+        "arXiv:2307.01379"
+      ],
+      "title": "Shifting Attention to Relevance: Towards the Predictive Uncertainty Quantification of Free-Form Large Language Models",
+      "reason": "自由生成LLMの不確実性定量化で意味的に重要なtoken/sentenceへ重みを移すSARが主題。信頼性評価の研究であり、推論計算・メモリ・サービング効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2307.01379",
+      "body_check": "abstract_screen_only; arXiv一次abstractでuncertainty quantificationとSARが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/3-540-39965-8_6",
+      "identity_tokens": [
+        "DOI:10.1007/3-540-39965-8_6"
+      ],
+      "title": "A machine translation system from English to American Sign Language",
+      "reason": "2000年の英語からAmerican Sign Languageへの機械翻訳systemで、現代LLM/Transformer推論基盤とは対象・時代とも異なる。",
+      "source_url": "https://aclanthology.org/2000.amta-papers.6/",
+      "body_check": "abstract_screen_only; ACL Anthology一次書誌でEnglish-to-ASL machine translation systemと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.07988",
+      "identity_tokens": [
+        "arXiv:2102.07988"
+      ],
+      "title": "TeraPipe: Token-Level Pipeline Parallelism for Training Large-Scale Language Models",
+      "reason": "Transformer言語モデルの同期model-parallel trainingをtoken-level pipelineで高速化する研究。175B GPT-3のtraining高速化が主要評価で、推論専用サーベイの範囲外。",
+      "source_url": "https://arxiv.org/abs/2102.07988",
+      "body_check": "abstract_screen_only; 一次abstractでtraining用token-level pipeline parallelismと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02896",
+      "identity_tokens": [
+        "arXiv:2306.02896"
+      ],
+      "title": "Representational Strengths and Limitations of Transformers",
+      "reason": "attention層の表現能力をcommunication complexityで解析する理論研究で、width/depth/embedding dimensionの必要条件を扱う。実際のLLM推論runtime・memory・serving最適化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2306.02896",
+      "body_check": "abstract_screen_only; arXiv一次abstractでTransformer representation powerの理論解析と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.13721",
+      "identity_tokens": [
+        "arXiv:2307.13721"
+      ],
+      "title": "Foundational Models Defining a New Era in Vision: A Survey and Outlook",
+      "reason": "computer visionのfoundation modelをmultimodal architecture、training objective、dataset、prompting、applicationで整理するsurvey。最終対象はvisionでLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2307.13721",
+      "body_check": "abstract_screen_only; arXiv一次abstractでvision foundation model surveyと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23705",
+      "identity_tokens": [
+        "arXiv:2505.23705"
+      ],
+      "title": "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better",
+      "reason": "ロボット制御用VLAのaction expertがVLM知識転移とtraining dynamicsへ与える影響を分析しknowledge insulationを提案する。実時間性は動機だが主貢献はVLA training/knowledge transferで、汎用LLM推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2505.23705",
+      "body_check": "abstract_screen_only; arXiv一次abstractでVLA training speed/knowledge transferが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18740",
+      "identity_tokens": [
+        "arXiv:2605.18740"
+      ],
+      "title": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation",
+      "reason": "MLLMの細粒度視覚理解をregional-to-global self-distillationで改善する学習研究。推論時toolを不要にして速いが、主要目的は視覚認識品質の向上でLLM推論systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2605.18740",
+      "body_check": "abstract_screen_only; arXiv一次abstractでfine-grained visual understanding/self-distillationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 47
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18201",
+      "identity_tokens": [
+        "arXiv:2305.18201"
+      ],
+      "title": "A Critical Evaluation of Evaluations for Long-form Question Answering",
+      "reason": "長文QA回答のhuman/automatic evaluationを比較し、factuality/completeness等の多面的評価を提唱する評価研究。推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.18201",
+      "body_check": "abstract_screen_only; arXiv一次abstractでLFQA evaluationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03264",
+      "identity_tokens": [
+        "arXiv:2404.03264"
+      ],
+      "title": "Foundation Model for Advancing Healthcare: Challenges, Opportunities, and Future Directions",
+      "reason": "医療foundation modelのmethods/data/applicationsと課題を整理するhealthcare surveyで、計算基盤も課題の一部だがLLM推論runtime最適化が中心ではない。",
+      "source_url": "https://arxiv.org/abs/2404.03264",
+      "body_check": "abstract_screen_only; arXiv一次abstractでhealthcare foundation model surveyと確認。本文未読。",
+      "first_checked_at": "2026-10-07T18:12:00+09:00",
+      "last_checked_at": "2026-10-07T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 53
+    }
+  ]
+}
