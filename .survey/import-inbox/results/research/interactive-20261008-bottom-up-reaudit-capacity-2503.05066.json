@@ -1,14 +1,28 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_metadata",
-  "source_sha256": "9bd45dc6ef5dc34476f394cbc7105e7876d3a24e33b109523b9328a362fca06d",
-  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-capacity-2503.05066.md",
+  "status": "imported",
+  "source_sha256": "8b79e8b0de4829ad24e85e8a9f5b25333d60e09a45d2b8cd37f5af1662bced33",
   "canonical_id": "arXiv:2503.05066",
-  "worker_completed_at": null,
+  "paper_path": "papers/inference/12-moe-parallelism-communication/2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md",
+  "reaudit_update": true,
+  "reaudit_version": "2026-10-07-v1",
+  "legacy_escaped_git_blob_sha_accepted": false,
+  "previous_paper_sha256": "2249905b6f65669ce51e833f90e401301b866228166487ab0404b02b7d03d7be",
+  "previous_paper_git_blob_sha": "7025484ef716535d022099bd7e0a352de6bfa0f0",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-10-08T07:27:27+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-capacity",
-  "failures": [
-    "worker_completed_at"
-  ],
-  "processed_at": "2026-10-07T22:25:15+00:00"
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4731,
+    "body_paragraphs": 36,
+    "method_chars": 1324,
+    "method_paragraphs": 14,
+    "evaluation_chars": 1124,
+    "limitation_chars": 362,
+    "insufficiency_flags": []
+  },
+  "processed_at": "2026-10-07T22:37:14+00:00"
 }

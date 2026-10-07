@@ -1,14 +1,28 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_metadata",
-  "source_sha256": "de86b1351f4fe8e8e4fa3ee6b259ba12befb9c2b282c0c135cd225170cae67cf",
-  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-bild-2302.07863.md",
+  "status": "imported",
+  "source_sha256": "795f9292cc8192240a8fdd4543ba95a07dd86c45451bdecb6feb943c8afbf045",
   "canonical_id": "arXiv:2302.07863",
-  "worker_completed_at": null,
+  "paper_path": "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+  "reaudit_update": true,
+  "reaudit_version": "2026-10-07-v1",
+  "legacy_escaped_git_blob_sha_accepted": false,
+  "previous_paper_sha256": "b7c1d26f1b4d563f3e4f6b96ea0e8c85b46cd1ab54d64e93563676e4bfce7b95",
+  "previous_paper_git_blob_sha": "1a970729709eb401a0305efb6887043b2e00702b",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-10-08T07:27:27+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-bild",
-  "failures": [
-    "worker_completed_at"
-  ],
-  "processed_at": "2026-10-07T22:25:15+00:00"
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3857,
+    "body_paragraphs": 29,
+    "method_chars": 1037,
+    "method_paragraphs": 10,
+    "evaluation_chars": 946,
+    "limitation_chars": 329,
+    "insufficiency_flags": []
+  },
+  "processed_at": "2026-10-07T22:36:24+00:00"
 }

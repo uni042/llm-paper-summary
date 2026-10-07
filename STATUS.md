@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 07:32:36 JST**
+> 自動生成: **2026-10-08 07:38:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **610** |
 | 未claim Research job | **610** |
-| 直近24hのResearch処理完了 | **17** |
-| 最終Research処理完了 | **10-08 07:27:27 JST** |
+| 直近24hのResearch処理完了 | **22** |
+| 最終Research処理完了 | **10-08 07:32:15 JST** |
 | 最終Discovery探索完了 | **10-08 06:33:00 JST** |
 | 整合性異常 | **0** |
 
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **640** |
-| 機械検査未達（FAIL） | **487** |
+| **再監査残件数** | **633** |
+| 機械検査未達（FAIL） | **480** |
 | 機械検査適合・警告のみ（PASS/WARN） | **153** |
-| :00ワーカー担当残 | **216** |
-| :30ワーカー担当残 | **205** |
-| :45ワーカー担当残 | **219** |
+| :00ワーカー担当残 | **214** |
+| :30ワーカー担当残 | **202** |
+| :45ワーカー担当残 | **217** |
 
-- キュー最終生成: **2026-10-08 07:13:08 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 07:37:38 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -88,7 +88,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **true** |
-| 最終maintenance完了 | **10-08 06:25:07 JST（1時間7分前）** |
+| 最終maintenance完了 | **10-08 06:25:07 JST（1時間13分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -108,16 +108,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **7** |
-| 直近6hのDiscovery run | **11** |
-| 直近6hのDiscovery本文確認・分類 | **77** |
-| 最終Research完了 | **10-08 07:27:27 JST** |
+| 直近6hのResearch完了 | **12** |
+| 直近6hのDiscovery run | **10** |
+| 直近6hのDiscovery本文確認・分類 | **73** |
+| 最終Research完了 | **10-08 07:32:15 JST** |
 | 最終Discovery完了 | **10-08 06:33:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-08 07:27:27 JST** / worker — / run interactive-20261008-bottom-up-reaudit-klotski / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-klotski-2502.06888.json
+- Research: **10-08 07:32:15 JST** / worker — / run interactive-20261008-bottom-up-reaudit-blockattention / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-blockattention-2409.15355.json
 - Discovery: **10-08 06:33:00 JST** / worker scheduled-chat-30 / run 20261008-0633-scheduled-chat-30/r01
   - 本文確認・分類 **10件** / accept **1件** / unrelated+borderline **9件**
   - evidence: .survey/import-inbox/results/discovery/libfile_227aea97a6848191a8aeb5bb329b16d2--corrected-discovery-20261008-0633-scheduled-chat-30-r01.json
