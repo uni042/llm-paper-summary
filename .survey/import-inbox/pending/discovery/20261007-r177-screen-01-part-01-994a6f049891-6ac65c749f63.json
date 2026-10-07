@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r177-screen-01-part-01-994a6f049891",
+  "reference_main_sha": "466fc8d7e56d67d7dfc457fd360767d8dd92edd2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s43681-025-00847-w",
+      "identity_tokens": [
+        "DOI:10.1007/s43681-025-00847-w"
+      ],
+      "title": "Ethical perspectives on deployment of large language model agents in biomedicine: a survey",
+      "reason": "Springer Nature abstract (Introduction/Abstract): interdisciplinary survey of biomedical LLM-agent ethics, risk, governance and mitigation; no runtime/inference optimization method.",
+      "source_url": "https://doi.org/10.1007/s43681-025-00847-w",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.11843",
+      "identity_tokens": [
+        "arXiv:2512.11843"
+      ],
+      "title": "Spiking Manifesto",
+      "reason": "arXiv abstract: proposes a spiking-neural-network coding/brain-inspired representation manifesto; not a method for improving inference of LLMs or serving existing LLMs.",
+      "source_url": "https://arxiv.org/abs/2512.11843",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.02306",
+      "identity_tokens": [
+        "arXiv:2512.02306"
+      ],
+      "title": "OmniGuard: Unified Omni-Modal Guardrails with Deliberate Reasoning",
+      "reason": "arXiv abstract: OmniGuard is a multimodal safeguard/guardrail model and dataset for safety classification/reasoning; its contribution is safety coverage, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.02306",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00694",
+      "identity_tokens": [
+        "arXiv:2512.00694"
+      ],
+      "title": "Affordance-First Decomposition for Continual Learning in Video-Language Understanding",
+      "reason": "arXiv abstract: continual video-language learning separates stable affordance tokens and plastic representations; this is continual-training/representation learning, not runtime efficiency for LLM inference.",
+      "source_url": "https://arxiv.org/abs/2512.00694",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00877",
+      "identity_tokens": [
+        "arXiv:2512.00877"
+      ],
+      "title": "Feed-Forward 3D Gaussian Splatting Compression with Long-Context Modeling",
+      "reason": "The primary text’s method compresses 3D Gaussian Splatting scene attributes using Morton serialization, long-context attention and autoregressive entropy coding; its compression ratio concerns non-language 3D scene representation. The linked lineage does not create a technical connection to LLM inference/cache or serving.",
+      "source_url": "https://arxiv.org/abs/2512.00877",
+      "first_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "last_checked_at": "2026-10-07T11:25:24.139660+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    }
+  ]
+}
