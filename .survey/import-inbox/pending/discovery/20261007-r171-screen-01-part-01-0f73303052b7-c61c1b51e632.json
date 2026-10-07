@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r171-screen-01-part-01-0f73303052b7",
+  "reference_main_sha": "3fa407c1e70c455c90d1573cfb6aa03f9e0da9f9",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14583",
+      "identity_tokens": [
+        "arXiv:2603.14583"
+      ],
+      "title": "Machine-Learning-Driven Intelligent Memory System Design: From On-Chip Caches to Storage",
+      "reason": "機械学習による一般的なhardware memory policyであり、LLM推論モデル、KV cache、servingの具体的改善ではない。",
+      "source_url": "https://arxiv.org/abs/2603.14583",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06007",
+      "identity_tokens": [
+        "arXiv:2603.06007"
+      ],
+      "title": "MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing",
+      "reason": "主題はagent workflow authoring/orchestrationで、LLM推論計算量・メモリ・latency・servingを改善する手法の提示ではない。",
+      "source_url": "https://arxiv.org/abs/2603.06007",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11227-026-08248-4",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08248-4"
+      ],
+      "title": "SENDE: extractive summarization of legal documents by sentence noising-reconstruction and dilated-gated convolutional networks",
+      "reason": "出版社要旨上も法務文書抽出要約のCNNであり、LLM推論・servingの最適化ではない。",
+      "source_url": "https://doi.org/10.1007/s11227-026-08248-4",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15690",
+      "identity_tokens": [
+        "arXiv:2601.15690"
+      ],
+      "title": "From Passive Metric to Active Signal: The Evolving Role of Uncertainty Quantification in Large Language Models",
+      "reason": "一次要旨は研究動向の整理で、LLM推論効率を改善する具体的な実行手法の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2601.15690",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13711",
+      "identity_tokens": [
+        "arXiv:2601.13711"
+      ],
+      "title": "GerAV: Towards New Heights in German Authorship Verification using Fine-Tuned LLMs on a New Benchmark",
+      "reason": "本文のdataset/experimentは著者識別benchmark、fine-tuningとF1評価を扱い、PyTorch compile/LLM推論servingの技術的接続や推論効率改善を示さない。",
+      "source_url": "https://arxiv.org/abs/2601.13711",
+      "first_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "last_checked_at": "2026-10-07T10:37:44.450403+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
