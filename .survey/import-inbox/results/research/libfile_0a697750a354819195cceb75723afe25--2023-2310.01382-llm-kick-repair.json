@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ff3355df93d9e74909a9daa07eb0c1e4dd42ca90529b7a408de2aef5bd2e8a5b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0a697750a354819195cceb75723afe25--2023-2310.01382-llm-kick-repair.md",
+  "canonical_id": "arXiv:2310.01382",
+  "worker_completed_at": "2026-10-08T03:25:58+09:00",
+  "worker_run_key": "20261008-0325-scheduled-chat-30/repair-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 1931,
+    "body_paragraphs": 15,
+    "method_chars": 659,
+    "method_paragraphs": 6,
+    "evaluation_chars": 303,
+    "limitation_chars": 151,
+    "insufficiency_flags": [
+      "本文説明量 1931 < 2200",
+      "手法説明量 659 < 700",
+      "評価説明量 303 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 1931 < 2200",
+    "説明不足トリガー: 手法説明量 659 < 700",
+    "説明不足トリガー: 評価説明量 303 < 500"
+  ],
+  "processed_at": "2026-10-07T21:33:57+00:00"
+}
