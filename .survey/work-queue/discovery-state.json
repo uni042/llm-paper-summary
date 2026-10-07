@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-07T05:50:52+00:00",
-  "last_run_key": "library-import-be1c691b9b58",
-  "last_round": "libimp-be1c691b9b5812c5-pre01",
+  "updated_at": "2026-10-07T05:58:24+00:00",
+  "last_run_key": "library-import-93b4de8607c3",
+  "last_round": "libimp-93b4de8607c348da-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-21T05:01:46+09:00",
-      "round": "round-06",
-      "axis": "OpenAlex recent MoE serving expert cache offloading",
-      "query_summary": null,
-      "provider": "openalex",
-      "source_url": "https://api.openalex.org/works?search=mixture%20experts%20LLM%20serving%20expert%20cache%20offloading&sort=publication_date:desc&per-page=100",
-      "citation_direction": null,
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260921T0517JST-discovery-round-06-openalex-moe.json"
-    },
     {
       "run_key": "2026-09-21T05:01:46+09:00",
       "round": "round-07",
@@ -12788,6 +12767,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-93b4de8607c348da-pre01",
+      "precheck_request_id": "libimp-93b4de8607c348da-pre01",
+      "run_key": "library-import-93b4de8607c3",
+      "round": "libimp-93b4de8607c348da-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-93b4de8607c348da-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-93b4de8607c348da-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21159,16 +21172,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-be1c691b9b58",
-      "rounds": 179,
-      "candidate_count": 471,
+      "last_run_key": "library-import-93b4de8607c3",
+      "rounds": 180,
+      "candidate_count": 472,
       "duplicate_filtered_count": 105,
-      "novel_candidate_count": 366,
+      "novel_candidate_count": 367,
       "final_duplicate_filtered_count": 4,
-      "post_final_dedupe_count": 362,
-      "accepted_count": 362,
-      "duplicate_ratio": 0.2229299363057325,
-      "final_duplicate_ratio": 0.01092896174863388,
+      "post_final_dedupe_count": 363,
+      "accepted_count": 363,
+      "duplicate_ratio": 0.22245762711864406,
+      "final_duplicate_ratio": 0.010899182561307902,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
