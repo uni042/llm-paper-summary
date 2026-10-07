@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f20f8a722c89cf31-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.23254",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.23254",
+    "identity_tokens": [
+      "arXiv:2601.23254"
+    ],
+    "reason": "The publisher abstract evaluates grep-like lexical retrieval for repository-level code completion.",
+    "first_checked_at": "2026-10-07T11:50:59+00:00",
+    "last_checked_at": "2026-10-07T11:50:59+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "Better Call Grep: Evaluating and Improving Grep-Like Lexical Retrieval for Repository-Level Code Completion"
+  },
+  "processed_at": "2026-10-07T11:51:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f20f8a722c89",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

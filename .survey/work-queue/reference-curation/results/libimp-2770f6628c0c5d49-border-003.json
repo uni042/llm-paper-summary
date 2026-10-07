@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2770f6628c0c5d49-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.05859",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.05859",
+    "identity_tokens": [
+      "arXiv:2602.05859"
+    ],
+    "reason": "The full text analyzes DLM features and decoding-order interventions, which connect to diffusion-language-model behavior, but its main contribution is interpretability and it reports no inference-time compute, memory, or latency reduction. The lineage connection is technically plausible but weak for this efficiency collection.",
+    "first_checked_at": "2026-10-07T11:50:50+00:00",
+    "last_checked_at": "2026-10-07T11:50:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DLM-Scope: Mechanistic Interpretability of Diffusion Language Models via Sparse Autoencoders"
+  },
+  "processed_at": "2026-10-07T11:50:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2770f6628c0c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

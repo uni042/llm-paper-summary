@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67cad6ffd19d2ae8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.15300",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.15300",
+    "identity_tokens": [
+      "arXiv:2601.15300"
+    ],
+    "reason": "The arXiv abstract measures degradation in long-context LLMs and estimates critical context thresholds.",
+    "first_checked_at": "2026-10-07T11:50:56+00:00",
+    "last_checked_at": "2026-10-07T11:50:56+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Intelligence Degradation in Long-Context LLMs: Critical Threshold Determination via Natural Length Distribution Analysis"
+  },
+  "processed_at": "2026-10-07T11:50:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67cad6ffd19d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
