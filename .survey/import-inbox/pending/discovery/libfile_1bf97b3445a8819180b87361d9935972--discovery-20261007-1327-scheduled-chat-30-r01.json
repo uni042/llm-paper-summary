@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1327-scheduled-chat-30/r01",
+  "reference_main_sha": "f3f7f81f29a2e66774890933b088d64070496261",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.24601",
+      "identity_tokens": [
+        "arXiv:2512.24601"
+      ],
+      "title": "Recursive Language Models",
+      "reason": "長文promptを外部環境として扱い、LLM自身が部分列をプログラム的に調査・分解し再帰呼出しする推論時スケーリング（inference-time scaling）方式。context windowを大幅に超える入力を同程度のcostで扱うため、agentic inference/runtimeの対象。",
+      "source_url": "https://arxiv.org/abs/2512.24601",
+      "body_check": "fulltext_review: arXiv本文を確認。promptを外部環境変数として保持し、モデルがコード実行を介して部分列を選択し、同一LLMへのrecursive sub-callを行うRLM loopを確認。評価ではcontext windowを最大約2桁超える入力を処理し、複数long-context taskで通常LLM/scaffoldより高品質かつcomparable costを報告。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2602.16284-fast-kv-compaction-via-attention-matching.md"
+      ],
+      "worklist_rank": 67
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.06688",
+      "identity_tokens": [
+        "arXiv:2512.06688"
+      ],
+      "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory",
+      "reason": "長期会話履歴を固定上限の人間可読memoryへ逐次圧縮・更新するagentic memory機構で、32k履歴の代わりに2k memoryを使い入力tokenを16分の1に削減する。長期agentic inferenceのcontext/memory効率へ直接関係する。",
+      "source_url": "https://arxiv.org/abs/2512.06688",
+      "body_check": "fulltext_review: arXiv本文§3.2/§4.3を確認。会話履歴を最大5k-token chunkへ分割し、前memory M_{i-1}とchunk C_iからM_iを更新、memoryを2,048 tokensにcapする。32k contextで8回更新し、full-history方式より16x fewer input tokensながらpersonalization accuracyを改善。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00078",
+      "identity_tokens": [
+        "arXiv:2605.00078"
+      ],
+      "title": "Being-H0.7: A Latent World-Action Model from Egocentric Videos",
+      "reason": "将来frame生成を省いたlatent world-action modelで推論overheadを抑えるが、最終適用先はロボットの視覚言語行動（VLA）policyでありLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2605.00078",
+      "body_check": "abstract_screen_only: arXiv一次abstractでegocentric video、latent future-aware reasoning、simulation/real-world robot controlが主題と明白なため本文未読。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01125",
+      "identity_tokens": [
+        "arXiv:2406.01125"
+      ],
+      "title": "Δ-DiT: A Training-Free Acceleration Method Tailored for Diffusion Transformers",
+      "reason": "cacheでDiffusion Transformerの画像生成を高速化する推論方式だが、最終workloadはPIXART-α/DiT-XLの画像diffusion生成でありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2406.01125",
+      "body_check": "abstract_screen_only: 一次abstractでDiT blockと画像生成段階の相関、Δ-Cache、20-step image generationの1.6x speedupが主題と明白なため本文未読。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.13417",
+      "identity_tokens": [
+        "arXiv:2505.13417"
+      ],
+      "title": "AdaptThink: Reasoning Models Can Learn When to Think",
+      "reason": "問題難度に応じThinking/NoThinkingを選択させ、不要な長いreasoningを回避する推論効率化。学習はRLだが最終目的・評価が推論token/cost削減で、DeepSeek-R1-Distill-Qwen-1.5Bの平均response lengthを53%削減しaccuracyを2.4%改善する。",
+      "source_url": "https://arxiv.org/abs/2505.13417",
+      "body_check": "fulltext_review: 一次論文情報と本文由来の方式説明を確認。constrained objectiveでNoThinking選択を促し、importance samplingでThinking/NoThinking双方を探索する。3 math datasetsで平均response length 53%削減、accuracy +2.4%を報告し、inference overhead削減を主要評価とする。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tit.1953.1188572",
+      "identity_tokens": [
+        "DOI:10.1109/tit.1953.1188572"
+      ],
+      "title": "The lattice theory of information",
+      "reason": "情報量・情報構造を束理論（lattice theory）で扱う古典的情報理論研究で、LLM/Transformer推論runtime・memory・servingを対象としない。",
+      "source_url": "https://doi.org/10.1109/TIT.1953.1188572",
+      "body_check": "abstract_screen_only: 書誌・題目から情報理論の数学的基礎研究であり、LLM推論への最終適用が存在しないことが明白なため本文未読。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arxiv.2404.15159",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.15159"
+      ],
+      "title": "MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts",
+      "reason": "主軸はLoRA-based MoE fine-tuningだが、共有base FFN計算を再利用するhigh-throughput frameworkを明示的に提案し、trainingだけでなくinferenceでもGPU memory 40%削減・token computation latency 30%削減を評価しているため推論効率部分を対象とする。",
+      "source_url": "https://arxiv.org/abs/2404.15159",
+      "body_check": "fulltext_review: 一次論文の方式・評価を確認。frozen dense FFNへ複数LoRA expertとtop-k routerを挿入し、共有W1/W3計算をexpert間で再利用するoptimized executionを提案。training/inference双方でGPU memory consumption 40%、token computation latency 30%削減を報告。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.16056-local-routing-consistency-expert-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15556",
+      "identity_tokens": [
+        "arXiv:2405.15556"
+      ],
+      "title": "Certifiably Robust RAG against Retrieval Corruption",
+      "reason": "retrieval corruption攻撃に対するcertifiable robustnessが主目的で、isolate-then-aggregateと安全な応答集約を提案するsecurity/robustness研究。推論runtime・memory・throughput効率化を主要目的としない。",
+      "source_url": "https://arxiv.org/abs/2405.15556",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmalicious passage injectionへのcertifiable defense、keyword/decoding aggregation、robust accuracyが主題と確認。効率化専論ではないため本文未読。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+      ],
+      "worklist_rank": 83
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1901.10946",
+      "identity_tokens": [
+        "arXiv:1901.10946"
+      ],
+      "title": "NAOMI: Non-Autoregressive Multiresolution Sequence Imputation",
+      "reason": "非自己回帰の粗密recursive decodingで長系列欠損補完を改善する研究だが、最終workloadは時空間sequence imputationでありLLM/言語モデル推論ではない。",
+      "source_url": "https://arxiv.org/abs/1901.10946",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmissing value imputation、multiresolution spatiotemporal data、prediction error削減が主題と明白なため本文未読。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "worklist_rank": 84
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.05737",
+      "identity_tokens": [
+        "arXiv:2302.05737"
+      ],
+      "title": "A Reparameterized Discrete Diffusion Model for Text Generation",
+      "reason": "離散diffusionのsamplingを再パラメータ化し、adaptive routingで少ない反復回数のtext generationを実現するため生成推論効率には関係する。一方、対象は現代的autoregressive LLM servingではなくdiffusion language generation algorithmが中心なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2302.05737",
+      "body_check": "fulltext_review: 一次論文内容を確認。backward transitionをrouting variableで再表現し、confidenceに基づきtokenを段階的にdenoiseするsamplingを採用。machine translation/question generation/paraphrasingで少ないsampling iterationsによる高速化を評価するが、LLM serving/runtime systemではない。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "worklist_rank": 85
+    }
+  ]
+}
