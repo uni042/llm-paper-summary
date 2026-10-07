@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r176-screen-01-part-06-644abba5f434",
+  "reference_main_sha": "0dce19ea6293a4144e53a729af43406cc39e378e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00026",
+      "identity_tokens": [
+        "arXiv:2603.00026"
+      ],
+      "title": "ActMem: Bridging the Gap Between Memory Retrieval and Reasoning in LLM Agents",
+      "reason": "ActMem improves the link between retrieved memory and LLM reasoning in agents, matching the linked agent-memory lineage. The reviewed method/results establish memory-conditioned reasoning benefits but do not provide a concrete inference latency/token/compute reduction, so scope relevance to inference efficiency remains weak.",
+      "source_url": "https://arxiv.org/abs/2603.00026",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03320",
+      "identity_tokens": [
+        "arXiv:2602.03320"
+      ],
+      "title": "MedSAM-Agent: Empowering Interactive Medical Image Segmentation with Multi-turn Agentic Reinforcement Learning",
+      "reason": "MedSAM-Agent uses multi-turn RL to improve interactive medical segmentation. The primary text explicitly notes iterative interaction increases cumulative inference latency and positions efficiency architecture/sampling as future work; this paper does not supply that optimization.",
+      "source_url": "https://arxiv.org/abs/2602.03320",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aiopen.2026.02.002",
+      "identity_tokens": [
+        "DOI:10.1016/j.aiopen.2026.02.002"
+      ],
+      "title": "Knowledge intensive agents",
+      "reason": "Primary DOI landing page https://doi.org/10.1016/j.aiopen.2026.02.002 returned Internal Error in the browser; the packet has no abstract and no accessible publisher full text was found.",
+      "source_url": "https://doi.org/10.1016/j.aiopen.2026.02.002",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cels.2026.101534",
+      "identity_tokens": [
+        "DOI:10.1016/j.cels.2026.101534"
+      ],
+      "title": "From modality-specific to compositional foundation models for cell biology.",
+      "reason": "Primary DOI landing page https://doi.org/10.1016/j.cels.2026.101534 returned Internal Error; the packet abstract is not primary-source evidence and publisher full text was unavailable in this pass.",
+      "source_url": "https://doi.org/10.1016/j.cels.2026.101534",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cma.2025.118517",
+      "identity_tokens": [
+        "DOI:10.1016/j.cma.2025.118517"
+      ],
+      "title": "Rapid Offline Training for Deep Material Networks via a displacement-based laminate formulation and a novel sampling technique for a compliance-based fatigue model",
+      "reason": "Primary DOI landing page https://doi.org/10.1016/j.cma.2025.118517 returned Internal Error in the browser; the packet has no abstract and no accessible publisher full text was found. Its linked training-method lineage cannot be cleared from title alone.",
+      "source_url": "https://doi.org/10.1016/j.cma.2025.118517",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
