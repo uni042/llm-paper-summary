@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-07T13:48:55+00:00",
+  "generated_at": "2026-10-07T13:57:13+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 155,
+  "count": 153,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -45,22 +45,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b10ca3461cc8191b2fed63b2153ca13--2026-2601.06123-latent-kv-cache-alignment.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7b10ca3461cc8191b2fed63b2153ca13--2026-2601.06123-latent-kv-cache-alignment.json",
       "worker_run_key": null
-    },
-    {
-      "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-09-30T07:05:32+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 56.7% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ea86b189f880819185b4cc07b037e195--2021-doi-10.18653-v1-2021.sustainlp-1.5-topk-attention.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ea86b189f880819185b4cc07b037e195--2021-doi-10.18653-v1-2021.sustainlp-1.5-topk-attention.json",
-      "worker_run_key": "20260930-0600-scheduled-chat-00"
     },
     {
       "canonical_id": "arXiv:2503.18989",
@@ -175,22 +159,6 @@
       "worker_run_key": "20261002-0100-scheduled-chat-00"
     },
     {
-      "canonical_id": "arXiv:2402.16775",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T01:51:11+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0c3f56d4314881918b458de3cfd27f7b--2024-2402.16775-quantization-evaluation.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0c3f56d4314881918b458de3cfd27f7b--2024-2402.16775-quantization-evaluation.json",
-      "worker_run_key": "20261003-0630-scheduled-chat-30"
-    },
-    {
       "canonical_id": "arXiv:2309.16354",
       "title": null,
       "source_url": null,
@@ -207,38 +175,6 @@
       "worker_run_key": "20261003-0433-scheduled-chat-30"
     },
     {
-      "canonical_id": "arXiv:2401.04658",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T01:53:06+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1139d49bb18c819183827cb27df21b3c--lightning-attention-2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1139d49bb18c819183827cb27df21b3c--lightning-attention-2.json",
-      "worker_run_key": "20261002-2133-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2312.03414",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T01:54:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_143c32b20c508191b37dc5498085fe56--2023-2312.03414-ccm.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_143c32b20c508191b37dc5498085fe56--2023-2312.03414-ccm.json",
-      "worker_run_key": "20261003-0730-scheduled-chat-30"
-    },
-    {
       "canonical_id": "arXiv:2312.04455",
       "title": null,
       "source_url": null,
@@ -253,22 +189,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_1a36b190ebc88191bf45f3be1c7b4de7--2023-2312.04455-attention-buckets.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_1a36b190ebc88191bf45f3be1c7b4de7--2023-2312.04455-attention-buckets.json",
       "worker_run_key": "20261003-0730-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T01:59:44+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_20fd2621bc808191a212e35b97abc148--2024-llmcompass.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_20fd2621bc808191a212e35b97abc148--2024-llmcompass.json",
-      "worker_run_key": "20261002-2228-scheduled-chat-30"
     },
     {
       "canonical_id": "arXiv:2312.08583",
@@ -2501,8 +2421,8 @@
     },
     {
       "canonical_id": "arXiv:2510.25602",
-      "title": "INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats",
-      "source_url": "https://arxiv.org/abs/2510.25602",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T13:48:33+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2528,8 +2448,8 @@
     },
     {
       "canonical_id": "arXiv:2507.00605",
-      "title": "Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2507.00605",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T13:48:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2555,8 +2475,8 @@
     },
     {
       "canonical_id": "arXiv:2402.17463",
-      "title": "Training-Free Long-Context Scaling of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2402.17463",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T13:48:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2586,8 +2506,8 @@
     },
     {
       "canonical_id": "arXiv:2505.07858",
-      "title": "Scaling Laws for Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2505.07858",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T13:48:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2610,6 +2530,87 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_495913c6c3f48191a046c9a414fa3cd5--2025-2505.07858-scaling-laws-speculative-decoding-repair-20261007.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_495913c6c3f48191a046c9a414fa3cd5--2025-2505.07858-scaling-laws-speculative-decoding-repair-20261007.json",
       "worker_run_key": "20261007-2031-scheduled-chat-30/repair-r01"
+    },
+    {
+      "canonical_id": "arXiv:2402.16775",
+      "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.16775",
+      "returned_at": "2026-10-07T13:54:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 365 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2793,
+        "body_paragraphs": 22,
+        "method_chars": 752,
+        "method_paragraphs": 5,
+        "evaluation_chars": 365,
+        "limitation_chars": 218,
+        "insufficiency_flags": [
+          "評価説明量 365 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_634d7561957081918cf03ac6e66ce70d--2402.16775-quantization-evaluation-repair-20261007-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_634d7561957081918cf03ac6e66ce70d--2402.16775-quantization-evaluation-repair-20261007-v2.json",
+      "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
+      "title": "A Hardware Evaluation Framework for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2312.03134",
+      "returned_at": "2026-10-07T13:56:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 445 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2433,
+        "body_paragraphs": 18,
+        "method_chars": 709,
+        "method_paragraphs": 6,
+        "evaluation_chars": 445,
+        "limitation_chars": 278,
+        "insufficiency_flags": [
+          "評価説明量 445 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e1f1fcc48d4c819185416a2564eb5a28--2312.03134-llmcompass-repair-20261007-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e1f1fcc48d4c819185416a2564eb5a28--2312.03134-llmcompass-repair-20261007-v2.json",
+      "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
+      "title": "Memory-efficient Transformers via Top-k Attention",
+      "source_url": "https://aclanthology.org/2021.sustainlp-1.5/",
+      "returned_at": "2026-10-07T13:56:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 430 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2928,
+        "body_paragraphs": 21,
+        "method_chars": 997,
+        "method_paragraphs": 8,
+        "evaluation_chars": 430,
+        "limitation_chars": 421,
+        "insufficiency_flags": [
+          "評価説明量 430 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f8af839f5d988191b76bc4602b3a475c--2021-top-k-attention-repair-20261007.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f8af839f5d988191b76bc4602b3a475c--2021-top-k-attention-repair-20261007.json",
+      "worker_run_key": "20261007-2031-scheduled-chat-30/repair-r02"
     }
   ]
 }

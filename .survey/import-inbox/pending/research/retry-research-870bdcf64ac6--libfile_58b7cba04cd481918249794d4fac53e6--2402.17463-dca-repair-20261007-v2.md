@@ -35,6 +35,8 @@ quality_method_chars: 764
 quality_evaluation_chars: 610
 quality_limitation_chars: 251
 reference_main_sha: "2bdbc19fb4e7b184d066c9e5240fb1d9707db023"
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要

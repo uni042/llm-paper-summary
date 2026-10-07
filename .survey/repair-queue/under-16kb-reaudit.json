@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-07T13:49:06.392574+00:00",
+  "generated_at": "2026-10-07T13:56:12.776050+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 654,
+  "count": 656,
   "worker_counts": {
-    "scheduled-chat-00": 220,
+    "scheduled-chat-00": 221,
     "scheduled-chat-30": 210,
-    "scheduled-chat-45": 224
+    "scheduled-chat-45": 225
   },
   "entries": [
     {
@@ -2307,6 +2307,26 @@
         "16KB未満再監査: 手法説明量 537 < 700",
         "16KB未満再監査: 評価説明量 339 < 500"
       ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2312.03414-compressed-context-memory-for-online-language-model-interaction.md",
+      "canonical_id": "arXiv:2312.03414",
+      "title": "Compressed Context Memory For Online Language Model Interaction",
+      "file_bytes": 9297,
+      "source_sha256": "d41c79d9d022441d85d843c6af6fa58c1c1d0675b7b8846d06c0b64704f766ce",
+      "source_git_blob_sha": "785aaf28bc5683635aff2048b18195f960fd5b0e",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.980341,
+      "quality_metrics": {
+        "body_chars": 2372,
+        "method_chars": 759,
+        "evaluation_chars": 505,
+        "limitation_chars": 218
+      },
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -7576,6 +7596,26 @@
         "16KB未満再監査: 手法説明量 198 < 700",
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md",
+      "canonical_id": "arXiv:2401.04658",
+      "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
+      "file_bytes": 12086,
+      "source_sha256": "82450e85c943ff1e4d2e93593e7b26e51ce6302cbd581d0e8a03a8e29e63a532",
+      "source_git_blob_sha": "9d9a14601135c253e63fd49cec2e62998af65f90",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.861326,
+      "quality_metrics": {
+        "body_chars": 3448,
+        "method_chars": 1066,
+        "evaluation_chars": 638,
+        "limitation_chars": 476
+      },
+      "mechanical_failures": [],
       "warnings": []
     },
     {

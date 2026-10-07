@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-07T11:09:52+00:00",
+  "updated_at": "2026-10-07T13:54:41+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3727,6 +3727,31 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-d2cb5246d7e7--libfile_1c1a8ebfacec81919bbd5d4cd9fb4f06--2509.17765-qwen3-omni.md",
       "processed_at": "2026-10-07T11:09:52+00:00",
       "canonical_id": "arXiv:2509.17765"
+    },
+    {
+      "status": "deleted_stale_blocked_research",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_017f563dd2e8819186cd57bafe901819--2025-2510.25602-int-vs-fp-repair-20261007.md",
+      "processed_at": "2026-10-07T13:54:41+00:00",
+      "canonical_id": "arXiv:2510.25602"
+    },
+    {
+      "status": "deleted_stale_blocked_research",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_28495848df488191b15c0fec6e6c398d--2507.00605-quantize-sample-verify-repair-20261007-v2.md",
+      "processed_at": "2026-10-07T13:54:41+00:00",
+      "canonical_id": "arXiv:2507.00605"
+    },
+    {
+      "status": "deleted_stale_blocked_research",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_495913c6c3f48191a046c9a414fa3cd5--2025-2505.07858-scaling-laws-speculative-decoding-repair-20261007.md",
+      "processed_at": "2026-10-07T13:54:41+00:00",
+      "canonical_id": "arXiv:2505.07858"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-870bdcf64ac6--libfile_58b7cba04cd481918249794d4fac53e6--2402.17463-dca-repair-20261007-v2.md",
+      "processed_at": "2026-10-07T13:54:41+00:00",
+      "canonical_id": "arXiv:2402.17463",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-870bdcf64ac6--libfile_58b7cba04cd481918249794d4fac53e6--2402.17463-dca-repair-20261007-v2.md"
     }
   ]
 }
