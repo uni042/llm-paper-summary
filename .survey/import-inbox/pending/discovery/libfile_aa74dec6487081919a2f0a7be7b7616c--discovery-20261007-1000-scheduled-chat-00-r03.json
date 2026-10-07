@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1000-scheduled-chat-00/r03",
+  "reference_main_sha": "59bf766305da08d4406e4717db51ac6f612b83fc",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2204.00408",
+      "identity_tokens": [
+        "arXiv:2204.00408"
+      ],
+      "title": "Structured Pruning Learns Compact and Accurate Models",
+      "reason": "CoFiがlayer/head/hidden unitを粗粒度・細粒度で共同pruningし、並列実行可能なcompact language modelを生成。GLUE/SQuADで小さな精度低下のまま10倍超のspeedupを示すため直接対象。",
+      "source_url": "https://arxiv.org/abs/2204.00408",
+      "body_check": "fulltext_relevance_review: 一次資料でcoarse/fine-grained masksとlayerwise distillationを組み合わせるtask-specific structured pruningを確認。model sizeだけでなくlatencyを主要評価し、10x超speedupを報告。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.748",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.748"
+      ],
+      "title": "On Extractive and Abstractive Neural Document Summarization with Transformer Language Models",
+      "reason": "Transformer language modelを文書要約へ適用しextractive/abstractive品質を比較する研究。推論runtime・memory・serving効率を主要目的としない。",
+      "source_url": "https://arxiv.org/abs/1909.03186",
+      "body_check": "abstract_screen_only: 一次abstract/書誌でdocument summarization品質とtransferが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.00332",
+      "identity_tokens": [
+        "arXiv:2405.00332"
+      ],
+      "title": "A Careful Examination of Large Language Model Performance on Grade School Arithmetic",
+      "reason": "GSM8k/GSM1k等でLLM算術性能とdata contamination/overfittingを評価するbenchmark分析。推論systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2405.00332",
+      "body_check": "abstract_screen_only: 一次資料でgrade-school arithmetic能力、contamination、novel problem上のperformance gap分析が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3453483.3454083",
+      "identity_tokens": [
+        "DOI:10.1145/3453483.3454083"
+      ],
+      "title": "DNNFusion: accelerating deep neural networks execution with advanced operator fusion",
+      "reason": "operator fusionで一般DNN実行を高速化するcompiler/runtime研究だが、論文の最終評価は汎用DNN workloadでLLM/言語モデル固有の推論systemを対象としない。",
+      "source_url": "https://arxiv.org/abs/2108.13342",
+      "body_check": "fulltext_relevance_review: 一次資料でoperator graph fusionとruntime accelerationを確認。後続LLM kernel研究には関連するが、本論文自体の最終workload/評価はLLM inferenceではないため対象外。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2604.13327-event-tensor-dynamic-megakernel-generation.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2201.11227",
+      "identity_tokens": [
+        "arXiv:2201.11227"
+      ],
+      "title": "Synchromesh: Reliable code generation from pre-trained language models",
+      "reason": "Constrained Semantic Decodingで推論時に有効なprogramだけを生成するが、主目的はcode generationのcorrectness/runtime-error防止であり、推論latency・throughput・memory効率化を評価しないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2201.11227",
+      "body_check": "fulltext_relevance_review: 一次資料でpartial output constraintsを用いるCSDが再学習なしにGPT-3/Codex decodingを制約することを確認。inference algorithmには関係するが主要評価はSQL/Vega-Lite/SMCalFlowのaccuracy/reliability。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.04670",
+      "identity_tokens": [
+        "arXiv:2511.04670"
+      ],
+      "title": "Cambrian-S: Towards Spatial Supersensing in Video",
+      "reason": "長時間videoのspatial supersensing benchmarkとpredictive sensingによるmemory/event segmentationが主題。MLLMを扱うが主要評価はvisual-spatial cognition能力で推論systems効率ではない。",
+      "source_url": "https://arxiv.org/abs/2511.04670",
+      "body_check": "abstract_screen_only: arXiv一次abstractでVSI-SUPER/VSI-590K、long-horizon visual recall/counting、predictive world modelingが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02474",
+      "identity_tokens": [
+        "arXiv:2602.02474"
+      ],
+      "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+      "reason": "LLM agentの長履歴memoryをextract/consolidate/pruneするskillsをcontrollerが選択し進化させる。agent memory管理には関連するが、主評価はtask performanceでruntime memory footprint・latency・serving効率のsystems評価が不足するため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2602.02474",
+      "body_check": "fulltext_relevance_review: 一次資料でcontroller/executor/designerによるmemory skill selection/evolutionとLoCoMo/LongMemEval/HotpotQA/ALFWorld評価を確認。memory managementは対象近傍だがsystems efficiencyが主要評価ではない。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10348",
+      "identity_tokens": [
+        "arXiv:2310.10348"
+      ],
+      "title": "Attribution Patching Outperforms Automated Circuit Discovery",
+      "reason": "attribution patchingでmodel内部circuitを発見するmechanistic interpretability研究。2 forward+1 backwardで分析を高速化するが、対象は解釈手法の計算効率でLLM serving/inference効率ではない。",
+      "source_url": "https://arxiv.org/abs/2310.10348",
+      "body_check": "abstract_screen_only: 一次abstractでautomated circuit discovery、activation/attribution patching、circuit recovery AUCが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2008.02496",
+      "identity_tokens": [
+        "arXiv:2008.02496"
+      ],
+      "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution",
+      "reason": "self-attention headの一部をspan-based dynamic convolutionへ置換するmixed attentionで計算を削減し、ConvBERT-baseがELECTRA-baseより低training costで高性能、small modelでは推論効率改善を狙うため対象。",
+      "source_url": "https://arxiv.org/abs/2008.02496",
+      "body_check": "fulltext_relevance_review: 一次資料でmixed attention block、span-based dynamic convolution、bottleneck設計を確認。BERT系encoderのattention計算冗長性を減らすarchitectureとして速度/compute効率を直接扱う。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2024.naacl-industry.19",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.naacl-industry.19"
+      ],
+      "title": "Reducing hallucination in structured outputs via Retrieval-Augmented Generation",
+      "reason": "RAGでstructured output hallucinationを減らし、小型retrieverにより15.5B級model相当を3B級modelで狙えるresource benefitも示すが、主要目的は品質・generalizationでsystems efficiencyの厳密評価が中心でないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2404.08189",
+      "body_check": "fulltext_relevance_review: 一次資料でretriever+LLMのenterprise workflow generation、hallucination reduction、small LLM deploymentのresource benefitを確認。効率示唆はあるがlatency/throughput/memoryのsystematic evaluationが主貢献ではない。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 34
+    }
+  ]
+}
