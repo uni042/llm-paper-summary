@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r172-screen-01-part-08-8aace3f1b594",
+  "reference_main_sha": "599e3c1cd37e6144178b11316a64fa3cef8a6d07",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22847",
+      "identity_tokens": [
+        "arXiv:2603.22847"
+      ],
+      "title": "Rethinking Token-Level Policy Optimization for Multimodal Chain-of-Thought",
+      "reason": "本文のPEPOはmultimodal CoTのtoken-level advantageを組み立てるRLVR training objective。関連するattention/CoT用語はあるが、推論カーネルやserving効率改善ではない。",
+      "source_url": "https://arxiv.org/abs/2603.22847",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22341",
+      "identity_tokens": [
+        "arXiv:2603.22341"
+      ],
+      "title": "T-MAP: Red-Teaming LLM Agents with Trajectory-aware Evolutionary Search",
+      "reason": "本文要旨はLLM agentのred-teaming軌跡を進化的に探索する安全性評価で、推論効率改善ではない。",
+      "source_url": "https://arxiv.org/abs/2603.22341",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06495",
+      "identity_tokens": [
+        "arXiv:2603.06495"
+      ],
+      "title": "COLD-Steer: Steering Large Language Models via In-Context One-step Learning Dynamics",
+      "reason": "本文はtraining-freeなinference-time activation steeringで、少数exampleによる制御を2 forward passで近似する。サンプル要求量を大きく下げるが、対象workflowはsteering/alignmentで、LLM runtime compute/memory/latencyの改善は示さない。",
+      "source_url": "https://arxiv.org/abs/2603.06495",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.03781",
+      "identity_tokens": [
+        "arXiv:2603.03781"
+      ],
+      "title": "LifeBench: A Benchmark for Long-Horizon Multi-Source Memory",
+      "reason": "本文は長期multi-source memory evaluation benchmarkで、agent-memory領域として関連するが、主貢献は合成データ/評価であり、既存LLM inference costやmemory footprintを改善するシステムを評価しない。",
+      "source_url": "https://arxiv.org/abs/2603.03781",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02943",
+      "identity_tokens": [
+        "arXiv:2603.02943"
+      ],
+      "title": "TC-Padé: Trajectory-Consistent Padé Approximation for Diffusion Acceleration",
+      "reason": "本文要旨のTC-Padéはimage/video diffusion denoising step feature predictionを加速する視覚生成手法。LLM inference/cacheではない。",
+      "source_url": "https://arxiv.org/abs/2603.02943",
+      "first_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "last_checked_at": "2026-10-07T10:45:21.376790+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    }
+  ]
+}
