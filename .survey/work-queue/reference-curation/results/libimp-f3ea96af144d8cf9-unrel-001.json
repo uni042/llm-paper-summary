@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f3ea96af144d8cf9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.28014",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.28014",
+    "identity_tokens": [
+      "arXiv:2605.28014"
+    ],
+    "reason": "ROSD is an on-policy self-distillation/post-training objective for reasoning quality and stability; it does not reduce inference resource use.",
+    "first_checked_at": "2026-10-07T09:39:29+00:00",
+    "last_checked_at": "2026-10-07T09:39:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Beyond Imitation: Reflective On-Policy Self-Distillation for LLM Reasoning"
+  },
+  "processed_at": "2026-10-07T09:39:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f3ea96af144d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

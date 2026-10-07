@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T09:30:27+00:00",
-  "record_count": 10213,
+  "updated_at": "2026-10-07T09:39:30+00:00",
+  "record_count": 10239,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -146182,6 +146182,375 @@
         "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
       ],
       "title": "MLLM can see? Dynamic Correction Decoding for Hallucination Mitigation"
+    },
+    "arXiv:2604.09967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09967",
+      "identity_tokens": [
+        "arXiv:2604.09967"
+      ],
+      "reason": "Muon2 is an optimizer for large-scale foundation-model pretraining and the number/quality tradeoff of Newton-Schulz iterations. Its efficiency concerns training, not inference or serving.",
+      "first_checked_at": "2026-10-07T09:39:23+00:00",
+      "last_checked_at": "2026-10-07T09:39:23+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Muon2: Boosting Muon via Adaptive Second-Moment Preconditioning"
+    },
+    "DOI:10.48550/arxiv.2604.06132": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2604.06132",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.06132",
+        "arXiv:2604.06132"
+      ],
+      "reason": "Claw-Eval is an autonomous-agent evaluation suite focused on trustworthy grading/safety, not inference efficiency.",
+      "first_checked_at": "2026-10-07T09:39:23+00:00",
+      "last_checked_at": "2026-10-07T09:39:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents"
+    },
+    "arXiv:2603.12746": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12746",
+      "identity_tokens": [
+        "arXiv:2603.12746"
+      ],
+      "reason": "The work evaluates multimodal perception/tracking/reasoning of physical dynamics; it does not propose an LLM efficiency technique.",
+      "first_checked_at": "2026-10-07T09:39:23+00:00",
+      "last_checked_at": "2026-10-07T09:39:23+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Thinking in Dynamics: How Multimodal Large Language Models Perceive, Track, and Reason Dynamics in Physical 4D World"
+    },
+    "arXiv:2603.01919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01919",
+      "identity_tokens": [
+        "arXiv:2603.01919"
+      ],
+      "reason": "The work analyzes third-party shadow model API claims and risks; it is not a model inference optimization.",
+      "first_checked_at": "2026-10-07T09:39:24+00:00",
+      "last_checked_at": "2026-10-07T09:39:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Real Money, Fake Models: Deceptive Model Claims in Shadow APIs"
+    },
+    "arXiv:2010.11745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.11745",
+      "identity_tokens": [
+        "arXiv:2010.11745"
+      ],
+      "reason": "This is an evaluation of cross-dataset robustness for automatic speech recognition, not an LLM inference optimization.",
+      "first_checked_at": "2026-10-07T09:39:25+00:00",
+      "last_checked_at": "2026-10-07T09:39:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Rethinking Evaluation in ASR: Are Our Models Robust Enough?"
+    },
+    "arXiv:2503.00710": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.00710",
+      "identity_tokens": [
+        "arXiv:2503.00710"
+      ],
+      "reason": "Primary text shows protein-backbone generation with flow-based models and protein-specific scaling/training/sampling recipes. The cited compile lineage does not create an LLM inference efficiency contribution.",
+      "first_checked_at": "2026-10-07T09:39:25+00:00",
+      "last_checked_at": "2026-10-07T09:39:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Proteina: Scaling Flow-based Protein Structure Generative Models"
+    },
+    "arXiv:2402.07245": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.07245",
+      "identity_tokens": [
+        "arXiv:2402.07245"
+      ],
+      "reason": "Semi-Mamba-UNet is a medical-image segmentation architecture/training method, outside LLM inference.",
+      "first_checked_at": "2026-10-07T09:39:25+00:00",
+      "last_checked_at": "2026-10-07T09:39:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "Semi-Mamba-UNet: Pixel-level contrastive and cross-supervised visual Mamba-based UNet for semi-supervised medical image segmentation"
+    },
+    "arXiv:2606.05806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05806",
+      "identity_tokens": [
+        "arXiv:2606.05806"
+      ],
+      "reason": "ToolMaze is a benchmark for failure recovery and dynamic replanning in LLM agents; contribution is evaluation, not inference efficiency.",
+      "first_checked_at": "2026-10-07T09:39:26+00:00",
+      "last_checked_at": "2026-10-07T09:39:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents"
+    },
+    "arXiv:2605.20876": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20876",
+      "identity_tokens": [
+        "arXiv:2605.20876"
+      ],
+      "reason": "Terminal-World constructs terminal-agent training environments and training data via skills. It is a benchmark/training pipeline, not inference-cost or serving improvement.",
+      "first_checked_at": "2026-10-07T09:39:26+00:00",
+      "last_checked_at": "2026-10-07T09:39:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Terminal-World: Scaling Terminal-Agent Environments via Agent Skills"
+    },
+    "arXiv:2605.10194": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10194",
+      "identity_tokens": [
+        "arXiv:2605.10194"
+      ],
+      "reason": "STEPS is selective on-policy self-distillation training for reasoning and does not report inference-time optimization.",
+      "first_checked_at": "2026-10-07T09:39:26+00:00",
+      "last_checked_at": "2026-10-07T09:39:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "STEPS: Selective On-Policy Self-Distillation for Reasoning"
+    },
+    "arXiv:2602.00557": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00557",
+      "identity_tokens": [
+        "arXiv:2602.00557"
+      ],
+      "reason": "ConLA learns robotic latent actions from videos to reduce robot demonstration/training burden, not LLM inference cost.",
+      "first_checked_at": "2026-10-07T09:39:26+00:00",
+      "last_checked_at": "2026-10-07T09:39:26+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "ConLA: Contrastive Latent Action Learning from Human Videos for Robotic Manipulation"
+    },
+    "arXiv:2512.21970": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21970",
+      "identity_tokens": [
+        "arXiv:2512.21970"
+      ],
+      "reason": "StereoVLA adds stereo geometry for robotic manipulation capability/robustness; its subject is embodied policy quality rather than LLM inference.",
+      "first_checked_at": "2026-10-07T09:39:26+00:00",
+      "last_checked_at": "2026-10-07T09:39:26+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "StereoVLA: Enhancing Vision-Language-Action Models with Stereo Vision"
+    },
+    "arXiv:2512.17312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.17312",
+      "identity_tokens": [
+        "arXiv:2512.17312"
+      ],
+      "reason": "CodeDance studies executable-code tools for visual reasoning quality/flexibility; it does not present concrete inference-serving improvement.",
+      "first_checked_at": "2026-10-07T09:39:27+00:00",
+      "last_checked_at": "2026-10-07T09:39:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "CodeDance: A Dynamic Tool-integrated MLLM for Executable Visual Reasoning"
+    },
+    "arXiv:2511.20351": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20351",
+      "identity_tokens": [
+        "arXiv:2511.20351"
+      ],
+      "reason": "The paper studies humanoid visual search control in a physical environment; it is robotics perception/control, not LLM inference systems.",
+      "first_checked_at": "2026-10-07T09:39:27+00:00",
+      "last_checked_at": "2026-10-07T09:39:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "Thinking in 360°: Humanoid Visual Search in the Wild"
+    },
+    "arXiv:2511.05007": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05007",
+      "identity_tokens": [
+        "arXiv:2511.05007"
+      ],
+      "reason": "The full text is a robot visuomotor diffusion policy with MoE skill decomposition and inference-time action control. Here inference-time control refers to robotic action sequencing, not LLM inference systems.",
+      "first_checked_at": "2026-10-07T09:39:27+00:00",
+      "last_checked_at": "2026-10-07T09:39:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MoE-DP: An MoE-Enhanced Diffusion Policy for Robust Long-Horizon Robotic Manipulation with Skill Decomposition and Failure Recovery"
+    },
+    "arXiv:2604.11188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11188",
+      "identity_tokens": [
+        "arXiv:2604.11188"
+      ],
+      "reason": "The paper synthesizes mathematical reasoning training data using evolving constraint graphs. Its contribution is training-data generation, not inference-time efficiency or serving.",
+      "first_checked_at": "2026-10-07T09:39:28+00:00",
+      "last_checked_at": "2026-10-07T09:39:28+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "MathAgent: Adversarial Evolution of Constraint Graphs for Mathematical Reasoning Data Synthesis"
+    },
+    "arXiv:2602.21054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21054",
+      "identity_tokens": [
+        "arXiv:2602.21054"
+      ],
+      "reason": "VAUQ evaluates uncertainty calibration/self-evaluation for vision-language models; the contribution is reliability rather than resource reduction.",
+      "first_checked_at": "2026-10-07T09:39:28+00:00",
+      "last_checked_at": "2026-10-07T09:39:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VAUQ: Vision-Aware Uncertainty Quantification for LVLM Self-Evaluation"
+    },
+    "arXiv:2601.06636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06636",
+      "identity_tokens": [
+        "arXiv:2601.06636"
+      ],
+      "reason": "MedEinst is a medical differential-diagnosis benchmark for measuring reasoning bias; it does not propose inference optimization.",
+      "first_checked_at": "2026-10-07T09:39:28+00:00",
+      "last_checked_at": "2026-10-07T09:39:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "title": "MedEinst: Benchmarking the Einstellung Effect in Medical LLMs through Counterfactual Differential Diagnosis"
+    },
+    "arXiv:2511.21974": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21974",
+      "identity_tokens": [
+        "arXiv:2511.21974"
+      ],
+      "reason": "This is an attention specialization/interpretability study, not attention-kernel or inference acceleration.",
+      "first_checked_at": "2026-10-07T09:39:28+00:00",
+      "last_checked_at": "2026-10-07T09:39:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Start Making Sense(s): A Developmental Probe of Attention Specialization Using Lexical Ambiguity"
+    },
+    "arXiv:2511.13993": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13993",
+      "identity_tokens": [
+        "arXiv:2511.13993"
+      ],
+      "reason": "The paper develops transferable video-based human skill assessment and addresses supervision scarcity; it does not improve LLM inference serving.",
+      "first_checked_at": "2026-10-07T09:39:29+00:00",
+      "last_checked_at": "2026-10-07T09:39:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "Learning Skill-Attributes for Transferable Assessment in Video"
+    },
+    "arXiv:2511.08368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.08368",
+      "identity_tokens": [
+        "arXiv:2511.08368"
+      ],
+      "reason": "The paper analyzes RoPE positional equivariance for vision models and provides no language inference optimization.",
+      "first_checked_at": "2026-10-07T09:39:29+00:00",
+      "last_checked_at": "2026-10-07T09:39:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "A Circular Argument : Does RoPE need to be Equivariant for Vision?"
+    },
+    "arXiv:2412.06329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06329",
+      "identity_tokens": [
+        "arXiv:2412.06329"
+      ],
+      "reason": "The full text studies normalizing flows as general continuous-input generative models, not language-model inference efficiency or sparse-attention runtime.",
+      "first_checked_at": "2026-10-07T09:39:29+00:00",
+      "last_checked_at": "2026-10-07T09:39:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Normalizing Flows are Capable Generative Models"
+    },
+    "arXiv:2605.28014": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28014",
+      "identity_tokens": [
+        "arXiv:2605.28014"
+      ],
+      "reason": "ROSD is an on-policy self-distillation/post-training objective for reasoning quality and stability; it does not reduce inference resource use.",
+      "first_checked_at": "2026-10-07T09:39:29+00:00",
+      "last_checked_at": "2026-10-07T09:39:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Beyond Imitation: Reflective On-Policy Self-Distillation for LLM Reasoning"
+    },
+    "arXiv:2604.02190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.02190",
+      "identity_tokens": [
+        "arXiv:2604.02190"
+      ],
+      "reason": "UniDriveVLA develops autonomous-driving perception/action planning; no LLM serving or inference-efficiency method is reported.",
+      "first_checked_at": "2026-10-07T09:39:30+00:00",
+      "last_checked_at": "2026-10-07T09:39:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving"
+    },
+    "arXiv:2603.13366": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13366",
+      "identity_tokens": [
+        "arXiv:2603.13366"
+      ],
+      "reason": "Latent-entropy decoding targets multimodal hallucination mitigation and answer quality; no compute, memory, latency, throughput, or serving reduction is established.",
+      "first_checked_at": "2026-10-07T09:39:30+00:00",
+      "last_checked_at": "2026-10-07T09:39:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Thinking in Uncertainty: Mitigating Hallucinations in MLRMs with Latent Entropy-Aware Decoding"
+    },
+    "arXiv:2602.23452": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23452",
+      "identity_tokens": [
+        "arXiv:2602.23452"
+      ],
+      "reason": "The paper is a citation-integrity benchmark and reference-verification system. Runtime/API-cost measurements concern citation checking, not improving LLM inference or serving.",
+      "first_checked_at": "2026-10-07T09:39:30+00:00",
+      "last_checked_at": "2026-10-07T09:39:30+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "CiteAudit: You Cited It, But Did You Read It? A Benchmark for Verifying Scientific References in the LLM Era"
     }
   }
 }
