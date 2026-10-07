@@ -154,6 +154,7 @@ class PaperQualityGateTests(unittest.TestCase):
             self.assertGreaterEqual(result.prose_chars, gate.quality.QUALITY_MIN_BODY_CHARS)
             self.assertGreaterEqual(result.method_chars, gate.quality.QUALITY_MIN_METHOD_CHARS)
             self.assertGreaterEqual(result.evaluation_chars, gate.quality.QUALITY_MIN_EVALUATION_CHARS)
+            self.assertGreaterEqual(result.limitation_chars, gate.quality.QUALITY_WARN_LIMITATION_CHARS)
 
     def test_present_self_review_attestation_must_be_true(self) -> None:
         with tempfile.TemporaryDirectory() as td:
