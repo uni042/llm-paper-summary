@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r180-screen-01-part-06-f944135e85ab",
+  "reference_main_sha": "d159f4d80bd7d398abb8da3a16129abdcb4eed71",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12087",
+      "identity_tokens": [
+        "arXiv:2606.12087"
+      ],
+      "title": "FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents",
+      "reason": "FORT-Searcher generates tasks for evaluating/search agents; it is task-generation methodology, not an inference efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2606.12087",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11324",
+      "identity_tokens": [
+        "arXiv:2606.11324"
+      ],
+      "title": "Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models",
+      "reason": "Embodied-R1.5 focuses on embodied reasoning model training and capability; it does not report a deployed inference optimization.",
+      "source_url": "https://arxiv.org/abs/2606.11324",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20659",
+      "identity_tokens": [
+        "arXiv:2606.20659"
+      ],
+      "title": "Skill Coverage: A Test Adequacy Metric for Agent Skills",
+      "reason": "Skill Coverage is an evaluation/measurement framework for agent skill coverage, not a compute, memory, or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2606.20659",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09348",
+      "identity_tokens": [
+        "arXiv:2606.09348"
+      ],
+      "title": "PBSD: Privileged Bayesian Self-Distillation for Long-Horizon Credit Assignment",
+      "reason": "PBSD is Bayesian self-distillation during training; the paper does not establish inference cost or latency reduction.",
+      "source_url": "https://arxiv.org/abs/2606.09348",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09821",
+      "identity_tokens": [
+        "arXiv:2606.09821"
+      ],
+      "title": "Rethinking the Divergence Regularization in LLM RL",
+      "reason": "The paper proposes divergence regularization for LLM reinforcement learning; the contribution is post-training objective design, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.09821",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
