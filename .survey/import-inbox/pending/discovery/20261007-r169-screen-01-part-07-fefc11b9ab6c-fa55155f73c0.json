@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r169-screen-01-part-07-fefc11b9ab6c",
+  "reference_main_sha": "816d613bc25a72ef639f82db0286894931a1a8e1",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27377",
+      "identity_tokens": [
+        "arXiv:2606.27377"
+      ],
+      "title": "DanceOPD: On-Policy Generative Field Distillation",
+      "reason": "一次資料の要旨は画像生成向けon-policy generative-field distillationのpost-trainingであり、LLM inference効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2606.27377",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13657",
+      "identity_tokens": [
+        "arXiv:2606.13657"
+      ],
+      "title": "Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation",
+      "reason": "一次資料の要旨はon-policy distillationのpost-training dynamicsを分析する研究であり、servingや推論時resource改善を提案しない。",
+      "source_url": "https://arxiv.org/abs/2606.13657",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11119",
+      "identity_tokens": [
+        "arXiv:2606.11119"
+      ],
+      "title": "TRACE: A Unified Rollout Budget Allocation Framework for Efficient Agentic Reinforcement Learning",
+      "reason": "一次資料の要旨はRLVR学習時のrollout budget allocationとpolicy optimizationを効率化するもので、学習/rollout生成の効率はLLM推論配備の改善とは異なる。",
+      "source_url": "https://arxiv.org/abs/2606.11119",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08432",
+      "identity_tokens": [
+        "arXiv:2606.08432"
+      ],
+      "title": "Trajectory-Refined Distillation",
+      "reason": "一次資料の要旨はLLM post-training向けtrajectory-refined distillationであり、student inference footprintやserving効率は示さない。",
+      "source_url": "https://arxiv.org/abs/2606.08432",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01619",
+      "identity_tokens": [
+        "arXiv:2606.01619"
+      ],
+      "title": "ReSkill: Reconciling Skill Creation with Policy Optimization in Agentic RL",
+      "reason": "一次資料の要旨はagentic reinforcement learningのpolicy trainingとskill creationを統合する方法で、inference-time resource reductionが目的ではない。",
+      "source_url": "https://arxiv.org/abs/2606.01619",
+      "first_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "last_checked_at": "2026-10-07T10:20:48.469686+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
