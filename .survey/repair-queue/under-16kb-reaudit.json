@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T12:36:19.021613+00:00",
+  "generated_at": "2026-10-07T12:40:32.016514+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -1836,8 +1836,8 @@
       "canonical_id": "arXiv:2601.17668",
       "title": "Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction",
       "file_bytes": 8870,
-      "source_sha256": "3e3693b9c593611f909bc8b42d6b8456ad9e30fd81c7c9f345ab7d291751320e",
-      "source_git_blob_sha": "96ab99be47308d8519b9e454bb55bef9efc43ff2",
+      "source_sha256": "278f5535218050572981c591ebaea0b6b83d69b8c5e19b966c90e0671ab77cbd",
+      "source_git_blob_sha": "fa5d7e0d2313a862f223d6e51af3bf51720205af",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
@@ -3497,29 +3497,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md",
-      "canonical_id": "arXiv:2412.03594",
-      "title": "BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching",
-      "file_bytes": 9770,
-      "source_sha256": "210a497e38508ba14d557abd39f620962460b51c25e761b56365b6fa11552f32",
-      "source_git_blob_sha": "6b422ec760e1cd527bcf2b9859e009ce4d991128",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.477134,
-      "quality_metrics": {
-        "body_chars": 3249,
-        "method_chars": 921,
-        "evaluation_chars": 683,
-        "limitation_chars": 255
-      },
-      "mechanical_failures": [
-        "日本語比率 47.7% < 70%",
-        "16KB未満再監査: 日本語比率 47.7% < 80%"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
       "canonical_id": "arXiv:2407.08608",
       "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
@@ -3632,6 +3609,29 @@
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 618 < 700",
         "16KB未満再監査: 評価説明量 398 < 500"
+      ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md",
+      "canonical_id": "arXiv:2412.03594",
+      "title": "BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching",
+      "file_bytes": 9834,
+      "source_sha256": "df2f93643d13de73d303a7d9b2af2a678cf1d3403f10de7d726d1a5f06f8980f",
+      "source_git_blob_sha": "58978cc989a5e90fff9e7a0661abe8bb31f2bb98",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.477134,
+      "quality_metrics": {
+        "body_chars": 3249,
+        "method_chars": 921,
+        "evaluation_chars": 683,
+        "limitation_chars": 255
+      },
+      "mechanical_failures": [
+        "日本語比率 47.7% < 70%",
+        "16KB未満再監査: 日本語比率 47.7% < 80%"
       ],
       "warnings": []
     },
@@ -3798,8 +3798,8 @@
       "canonical_id": "arXiv:2310.06201",
       "title": "Compressing Context to Enhance Inference Efficiency of Large Language Models",
       "file_bytes": 9931,
-      "source_sha256": "6019a99019e4061f910709c36e992ed23e221dbbf47d10bb975e602949ff7692",
-      "source_git_blob_sha": "fb2c5557fc447c28bc1f5cf98fa57832a752e4a0",
+      "source_sha256": "43195633d56dc25032a6cd27b923b14c99c1c7d2b071217613a0015d43bb4686",
+      "source_git_blob_sha": "e60c504be5652dd8a4b611b430ddb188a422a9bb",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -6307,24 +6307,28 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
-      "canonical_id": "arXiv:2305.11860",
-      "title": "Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs",
-      "file_bytes": 11286,
-      "source_sha256": "30cf7fd74592a04e636ae1ff576366889e151d90ccbcc0f769e67bb00c5225f7",
-      "source_git_blob_sha": "94add805cd713baf1c2eeec294ad6db0375c8b41",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
+      "canonical_id": "arXiv:2403.03853",
+      "title": "ShortGPT: Layers in Large Language Models are More Redundant Than You Expect",
+      "file_bytes": 11291,
+      "source_sha256": "fea88b560e1f73a6d81a8d150e2591b3c440ed73dfcd0effccf287c6de99c9d7",
+      "source_git_blob_sha": "93ddd7990a374146cf12f19a6283c3289126f3cc",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.842638,
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.78251,
       "quality_metrics": {
-        "body_chars": 2697,
-        "method_chars": 871,
-        "evaluation_chars": 613,
-        "limitation_chars": 375
+        "body_chars": 3641,
+        "method_chars": 1021,
+        "evaluation_chars": 944,
+        "limitation_chars": 325
       },
-      "mechanical_failures": [],
-      "warnings": []
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 78.3% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 78.3% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
@@ -6437,6 +6441,26 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 156 < 500"
       ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+      "canonical_id": "arXiv:2305.11860",
+      "title": "Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs",
+      "file_bytes": 11385,
+      "source_sha256": "e1a21643a74249c26a7b6e18c40835fe3a2ab125c5b43e265af1b836cc500727",
+      "source_git_blob_sha": "a9d72e54896476d94eacd9d363f998f1ab095d98",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.842638,
+      "quality_metrics": {
+        "body_chars": 2697,
+        "method_chars": 871,
+        "evaluation_chars": 613,
+        "limitation_chars": 375
+      },
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -7208,30 +7232,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
-      "canonical_id": "arXiv:2403.03853",
-      "title": "ShortGPT: Layers in Large Language Models are More Redundant Than You Expect",
-      "file_bytes": 11746,
-      "source_sha256": "d17db43be4532b1b4c9512b005acc84ba6656d18c9de6410eb8de63c5f93d29d",
-      "source_git_blob_sha": "eb4ccb7de7fc35b43342bdd69b55318b785b0363",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.78251,
-      "quality_metrics": {
-        "body_chars": 3641,
-        "method_chars": 1021,
-        "evaluation_chars": 944,
-        "limitation_chars": 325
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.3% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.3% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "canonical_id": "arXiv:2410.06916",
       "title": "SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration",
@@ -7814,8 +7814,8 @@
       "canonical_id": "arXiv:2311.17043",
       "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
       "file_bytes": 12010,
-      "source_sha256": "8eb72140d9ba4c46e9a880e5698af7be37a103cbd2b4e1ffae463389cab40de6",
-      "source_git_blob_sha": "b780bcf80a47a0fdaa68e7d87474833bdb6773ac",
+      "source_sha256": "2e9ffd0941c19043bce8df406890d682b17f41da7924730c00986a4b43ca8081",
+      "source_git_blob_sha": "d56c410e985ddd126d089a20243d9ec0e643ebf0",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -9753,8 +9753,8 @@
       "canonical_id": "arXiv:2409.17422",
       "title": "Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction",
       "file_bytes": 12861,
-      "source_sha256": "cc42133a8261cf97bc4e414031fba3929c8c902307e2307bec0a2867f57b02d2",
-      "source_git_blob_sha": "9efbfa5704c2bc87781d693f01351028104059a4",
+      "source_sha256": "3a0921d7477f5612ef0638194d2e3f984fef5cb1c21fcf272582136fcc415473",
+      "source_git_blob_sha": "0088fe4ad3c170a6b2093e6d7a3317b87fd496ad",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -9873,6 +9873,30 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
+      "canonical_id": "arXiv:2412.04504",
+      "title": "Multi-Bin Batching for Increasing LLM Inference Throughput",
+      "file_bytes": 12945,
+      "source_sha256": "7e708f42131c31fbdb582e66d934820868dcbc140f8a419878998bc59484b4be",
+      "source_git_blob_sha": "c35366c57ad120511decb5e6cd0e343cd1ae28a3",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.784308,
+      "quality_metrics": {
+        "body_chars": 3871,
+        "method_chars": 1064,
+        "evaluation_chars": 864,
+        "limitation_chars": 456
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 78.4% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 78.4% < 警告基準 80%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md",
       "canonical_id": "arXiv:2608.15531",
       "title": "FlashQuant：外れ値認識量子化の疎密融合GPU実行",
@@ -9893,30 +9917,6 @@
         "16KB未満再監査: 評価説明量 130 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
-      "canonical_id": "arXiv:2412.04504",
-      "title": "Multi-Bin Batching for Increasing LLM Inference Throughput",
-      "file_bytes": 12950,
-      "source_sha256": "f29a5d959a1db2fb0d4851af7a2ffb7bab33d55d339c5b095a774c402d1d12b1",
-      "source_git_blob_sha": "4bd270592f1dd1c5d8751208db9712c7715c3e83",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.784308,
-      "quality_metrics": {
-        "body_chars": 3871,
-        "method_chars": 1064,
-        "evaluation_chars": 864,
-        "limitation_chars": 456
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.4% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.4% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md",
@@ -10138,8 +10138,8 @@
       "canonical_id": "arXiv:2512.22195",
       "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
       "file_bytes": 13048,
-      "source_sha256": "22f561d9f9050ba5338f27e14cc780db6835be395f71a0cf8c54338491ba26f5",
-      "source_git_blob_sha": "5281306d5dddeb4948d97b6351ab5372d8d4dfa3",
+      "source_sha256": "89135dd0906d98ff907cc5d17e74c30fb08ec0a25b18b4ef29ef8c84f412ae18",
+      "source_git_blob_sha": "a80cddc1e9ca39ad1dadc625514da3c2ea91c827",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
@@ -10714,26 +10714,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
-      "canonical_id": "arXiv:2411.15024",
-      "title": "DyCoke: Dynamic Compression of Tokens for Fast Video Large Language Models",
-      "file_bytes": 13249,
-      "source_sha256": "be8d25e7dc896c638a8d02c66ac91e941085890c53481c41ec9d80fb45ce8ea5",
-      "source_git_blob_sha": "1186a88f09c429dd956e1298f518a62747570653",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.893443,
-      "quality_metrics": {
-        "body_chars": 3996,
-        "method_chars": 1226,
-        "evaluation_chars": 1513,
-        "limitation_chars": 272
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md",
       "canonical_id": "arXiv:2604.15409",
       "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference",
@@ -10756,6 +10736,26 @@
       "warnings": [
         "日本語比率 73.2% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+      "canonical_id": "arXiv:2411.15024",
+      "title": "DyCoke: Dynamic Compression of Tokens for Fast Video Large Language Models",
+      "file_bytes": 13282,
+      "source_sha256": "fb51ec66f80273d1fafe52b072ad69e68d513c68c575551dd36e35eafebb59c9",
+      "source_git_blob_sha": "40b09ccbca177b7330123c01886a500a2ca4b861",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.893443,
+      "quality_metrics": {
+        "body_chars": 3996,
+        "method_chars": 1226,
+        "evaluation_chars": 1513,
+        "limitation_chars": 272
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md",
@@ -10952,26 +10952,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
-      "canonical_id": "arXiv:2308.16137",
-      "title": "LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models",
-      "file_bytes": 13368,
-      "source_sha256": "096cbd5802d4528a9ab709be7ab5bddb05df1d435885e5d5bbac3282e6cc99d7",
-      "source_git_blob_sha": "ef5afed3a7eb91ba1ec58bb8ae7bb61e5ea3c062",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.92354,
-      "quality_metrics": {
-        "body_chars": 3277,
-        "method_chars": 836,
-        "evaluation_chars": 697,
-        "limitation_chars": 329
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
       "canonical_id": "arXiv:2206.01861",
       "title": "ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers",
@@ -11061,6 +11041,26 @@
       "warnings": [
         "日本語比率 77.4% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+      "canonical_id": "arXiv:2308.16137",
+      "title": "LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models",
+      "file_bytes": 13401,
+      "source_sha256": "7bc6c25663fa756ac5724e0502e73a23df7885242d770a8eb01c9928cf01a83a",
+      "source_git_blob_sha": "9e9f1b3dcebb07d27f819999359805f3a7cd8f3b",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.92354,
+      "quality_metrics": {
+        "body_chars": 3277,
+        "method_chars": 836,
+        "evaluation_chars": 697,
+        "limitation_chars": 329
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
@@ -11539,26 +11539,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
-      "canonical_id": "arXiv:2307.05908",
-      "title": "Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding",
-      "file_bytes": 13701,
-      "source_sha256": "1945d594bda6940e82c668de544c1c71ca2f8927d6568cebb7d30c1f4a9341b2",
-      "source_git_blob_sha": "a2960d1d2645d0f9290ce513e4e60410f4a15b58",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.874961,
-      "quality_metrics": {
-        "body_chars": 4045,
-        "method_chars": 1143,
-        "evaluation_chars": 833,
-        "limitation_chars": 474
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
       "canonical_id": "arXiv:2409.06666",
       "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
@@ -11921,6 +11901,26 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 122 < 500"
       ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+      "canonical_id": "arXiv:2307.05908",
+      "title": "Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding",
+      "file_bytes": 13899,
+      "source_sha256": "17634fb50c46241c0561e09b97c3a88f418198e038c34962396e17fd123f69ff",
+      "source_git_blob_sha": "e733d9042dd7fcccb725e8e96397834e442d3387",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.874961,
+      "quality_metrics": {
+        "body_chars": 4045,
+        "method_chars": 1143,
+        "evaluation_chars": 833,
+        "limitation_chars": 474
+      },
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -12510,29 +12510,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md",
-      "canonical_id": "arXiv:2502.18755",
-      "title": "M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type",
-      "file_bytes": 14195,
-      "source_sha256": "ecf4cefc776911bb47d3292e31b6fff8e0582e2885e729e7ae7efc60b31d8a33",
-      "source_git_blob_sha": "1eb77fc4b18db952b46bc835c0afad514ec763ea",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.544633,
-      "quality_metrics": {
-        "body_chars": 4308,
-        "method_chars": 1312,
-        "evaluation_chars": 932,
-        "limitation_chars": 417
-      },
-      "mechanical_failures": [
-        "日本語比率 54.5% < 70%",
-        "16KB未満再監査: 日本語比率 54.5% < 80%"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md",
       "canonical_id": "arXiv:2502.20969",
       "title": "TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval",
@@ -12713,6 +12690,29 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md",
+      "canonical_id": "arXiv:2502.18755",
+      "title": "M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type",
+      "file_bytes": 14327,
+      "source_sha256": "0812e33851356bc5822bb47e536fd87b5cd66b78a887d3ad8f183082bd0d17a9",
+      "source_git_blob_sha": "403bb0bf7cf7b1a47ebd15599fe0646cd88a05cf",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.544633,
+      "quality_metrics": {
+        "body_chars": 4308,
+        "method_chars": 1312,
+        "evaluation_chars": 932,
+        "limitation_chars": 417
+      },
+      "mechanical_failures": [
+        "日本語比率 54.5% < 70%",
+        "16KB未満再監査: 日本語比率 54.5% < 80%"
+      ],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
       "canonical_id": "arXiv:2407.14679",
       "title": "Compact Language Models via Pruning and Knowledge Distillation",
@@ -12852,8 +12852,8 @@
       "canonical_id": "arXiv:2401.15947",
       "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
       "file_bytes": 14394,
-      "source_sha256": "6432e676c922ad889822b029862c00a33cf2c900b2fd3d2934909c67c9a1c58f",
-      "source_git_blob_sha": "bb17ab5b7403770109c786416e81c6270b57bd6a",
+      "source_sha256": "f26c824461f7a200c7e71d4e8cbcc172965cba0b81e93e62e86524215db3aab0",
+      "source_git_blob_sha": "d1b259e22a7862042dd1113bdbb33b82aa900c63",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -13065,8 +13065,8 @@
       "canonical_id": "arXiv:2310.02170",
       "title": "A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration",
       "file_bytes": 14531,
-      "source_sha256": "76e47ffd0c3410048ac552c4f21ae5efc754d763d1dc9a40988c8779f6d8d1a7",
-      "source_git_blob_sha": "7533905303204367d6fc4eeea7d6a126a7a592cb",
+      "source_sha256": "ab8dea950a75e5baccaba085f72e06970d88663bed73cda944180c14ee6ef871",
+      "source_git_blob_sha": "7e87835de2c50cfee9805a325457bbe33316119d",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -13537,9 +13537,9 @@
       "path": "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
       "canonical_id": "arXiv:2503.04697",
       "title": "L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning",
-      "file_bytes": 14898,
-      "source_sha256": "f378e576ea07920fe690b345faebc437605a4876e1c6a6894d2da38a1e29d197",
-      "source_git_blob_sha": "c3feb164a3d16da63606889f1b5ffdf7571906e4",
+      "file_bytes": 14896,
+      "source_sha256": "5bdbd940034500222b5a6b4e40e555b6e7cbb5877ad0f4ae6e80e635868eaeee",
+      "source_git_blob_sha": "14c80f2ae0554155292d5d3cced6d61d1825ae4c",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -13596,30 +13596,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md",
-      "canonical_id": "arXiv:2609.21672",
-      "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
-      "file_bytes": 14928,
-      "source_sha256": "7f89d06d8c6e50f7213b7d65e8792eccd39a25fe781dbba884f8aa7b13e88840",
-      "source_git_blob_sha": "552de7ed0dfe78b8f0adf4a8b55a9876e1d0a2a5",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.73764,
-      "quality_metrics": {
-        "body_chars": 4608,
-        "method_chars": 1562,
-        "evaluation_chars": 1086,
-        "limitation_chars": 506
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 73.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 73.8% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md",
       "canonical_id": "arXiv:2406.11235",
       "title": "QTIP: Quantization with Trellises and Incoherence Processing",
@@ -13662,6 +13638,30 @@
         "16KB未満再監査: 評価説明量 94 < 500"
       ],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md",
+      "canonical_id": "arXiv:2609.21672",
+      "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
+      "file_bytes": 14956,
+      "source_sha256": "b89a751120a12e2f282f1a1b3ddec84f02b417c09a5f1880f7318d3ce4e9536f",
+      "source_git_blob_sha": "c38c210e8abbfe9f4c019533a801ede146cf64c7",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.73764,
+      "quality_metrics": {
+        "body_chars": 4608,
+        "method_chars": 1562,
+        "evaluation_chars": 1086,
+        "limitation_chars": 506
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 73.8% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 73.8% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
@@ -14958,8 +14958,8 @@
       "canonical_id": "arXiv:2310.06839",
       "title": "LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression",
       "file_bytes": 17260,
-      "source_sha256": "ca0e25014d631e1afcad2cd2b81531928c53b08e56ee401039e980a5a9bff641",
-      "source_git_blob_sha": "d36329e6dc2d3330d7106236195d73f0bf7f75d1",
+      "source_sha256": "f8ece3ae585c456f2fdab967a26711a323aa51dde55aac453480b713edebdaac",
+      "source_git_blob_sha": "4d6d437756ad76965873912f71034f7ef99cc73e",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
