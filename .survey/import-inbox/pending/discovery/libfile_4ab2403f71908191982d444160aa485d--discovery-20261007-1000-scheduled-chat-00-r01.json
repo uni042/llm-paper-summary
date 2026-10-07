@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1000-scheduled-chat-00/r01",
+  "reference_main_sha": "59bf766305da08d4406e4717db51ac6f612b83fc",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.12877",
+      "identity_tokens": [
+        "arXiv:2012.12877"
+      ],
+      "title": "Training data-efficient image transformers & distillation through attention",
+      "reason": "Vision TransformerをImageNetのみで効率よく学習するDeiTとdistillation tokenが主題。最終適用・評価は画像分類/vision transferであり、LLM/言語モデル推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2012.12877",
+      "body_check": "abstract_screen_only: arXiv一次abstractでImageNet画像分類、vision transformerのdata-efficient training、teacher-student distillationが主題と明確なため本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.153",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.emnlp-main.153"
+      ],
+      "title": "G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment",
+      "reason": "GPT-4とChain-of-ThoughtをNLG評価器として用い、人間評価との相関を改善する評価手法研究。推論runtime・memory・serving効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2303.16634",
+      "body_check": "abstract_screen_only: arXiv一次abstractでsummarization/dialogue generationの自動評価とhuman alignmentが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.441",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.441"
+      ],
+      "title": "Adversarial NLI: A New Benchmark for Natural Language Understanding",
+      "reason": "自然言語推論のadversarial benchmark構築とモデル頑健性評価が主題。LLM推論systemsの速度・memory・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1910.14599",
+      "body_check": "abstract_screen_only: 一次書誌/abstractでANLI benchmarkとNLU robustness評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.emnlp-main.340",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.emnlp-main.340"
+      ],
+      "title": "Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks",
+      "reason": "1,616 NLP tasksのinstruction-following benchmarkとTk-Instructのcross-task generalizationが主題。推論systems効率ではない。",
+      "source_url": "https://arxiv.org/abs/2204.07705",
+      "body_check": "abstract_screen_only: arXiv一次abstractでbenchmark構築、instruction tuning、unseen-task generalizationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.07669",
+      "identity_tokens": [
+        "arXiv:2008.07669"
+      ],
+      "title": "HiPPO: Recurrent Memory with Optimal Polynomial Projections",
+      "reason": "オンライン多項式射影で連続信号/時系列の履歴を圧縮する一般recurrent memory framework。高速更新はあるが、最終評価はpermuted MNIST・trajectory classification等でLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2008.07669",
+      "body_check": "abstract_screen_only: arXiv一次abstractでHiPPO-LegS、RNN memory、permuted MNIST/trajectory classificationが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.19645",
+      "identity_tokens": [
+        "arXiv:2502.19645"
+      ],
+      "title": "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success",
+      "reason": "OpenVLAの並列action decoding/action chunkingで26倍のaction generation throughputを実現するが、最終workloadはrobot control/VLA policyであり、現行サーベイのLLM/MLLM推論systems範囲外。",
+      "source_url": "https://arxiv.org/abs/2502.19645",
+      "body_check": "fulltext_relevance_review: 一次資料と詳細本文情報を確認。parallel decoding、action chunking、continuous action representation、L1 regressionによりOpenVLA 3–5Hz問題を改善し109.7Hz級の制御を狙うが、評価はLIBEROとALOHA robot policy executionで、汎用LLM serving/runtimeではない。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.10248",
+      "identity_tokens": [
+        "arXiv:2308.10248"
+      ],
+      "title": "Steering Language Models With Activation Engineering",
+      "reason": "推論時に中間activationへsteering vectorを加算するActAddはLLM forward pathを変更するが、目的・評価はsentiment/toxicity等の出力制御であり、latency・throughput・memory削減を主要評価しないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2308.10248",
+      "body_check": "fulltext_relevance_review: 一次資料でprompt pairの中間activation差からsteering vectorを作りforward pass中に加算するinference-time interventionを確認。追加学習不要で軽量だが、主要成果はoutput property controlでsystems efficiencyではない。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.03411",
+      "identity_tokens": [
+        "arXiv:2012.03411"
+      ],
+      "title": "MLS: A Large-Scale Multilingual Dataset for Speech Research",
+      "reason": "8言語・英語約44.5k時間等からなるMultilingual LibriSpeech datasetとASR/TTS研究基盤が主題。LLM推論systems効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2012.03411",
+      "body_check": "abstract_screen_only: arXiv一次abstractでspeech dataset、ASR baseline、TTS researchが主題と明確なため本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1443",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1443"
+      ],
+      "title": "Bottom-Up Abstractive Summarization",
+      "reason": "content selectorでattentionを制約してabstractive summarization品質を改善するNLG手法。評価はCNN-DM/NYTのROUGEとdomain transferで、推論systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1808.10792",
+      "body_check": "abstract_screen_only: arXiv一次abstractでcontent selection、summarization compression/ROUGE、data-efficient transferが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-1128",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1128"
+      ],
+      "title": "A Large-Scale Study of Response Selection for Dialogue Systems",
+      "reason": "dialogue response selectionのdataset/model比較・応答選択品質を扱う研究で、LLM推論runtime・memory・serving効率を主題としない。",
+      "source_url": "https://aclanthology.org/N19-1128/",
+      "body_check": "abstract_screen_only: 一次書誌/abstract上でdialogue response selectionの大規模評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:00:00+09:00",
+      "last_checked_at": "2026-10-07T10:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 13
+    }
+  ]
+}
