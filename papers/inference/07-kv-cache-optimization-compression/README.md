@@ -25,7 +25,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-07 · [Gemma 4 Technical Report](2026-2607.02770-gemma-4-technical-report.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
-  推論効率の観点では、単に小型モデルを追加したのではなく、密（密）モデルと混合専門家（Mixture-of-Experts; MoE）、長文脈向けKVキャッシュ削減、量子化対応学習（量子化-aware 学習; QAT）を同一familyへ組み込んでいる。
+  推論効率のために、モデル規模だけでなく、局所／大域注意、キー・値キャッシュ（KV キャッシュ）の共有、keys-as-values、部分回転位置埋め込み（partial RoPE; p-RoPE）、量子化対応学習（量子化-aware 学習; QAT）、複数トークン予測（multi-トークン prediction; MTP）ドラフタなどを組み合わせている。
 
 - **2026-03 · [Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction](2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md)**  
   実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：8  

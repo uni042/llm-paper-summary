@@ -232,7 +232,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2023-10 · [Sparse Fine-tuning for Inference Acceleration of Large Language Models](2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  この研究は、LLMの重みを疎にするだけでは実際の高速化にならないという問題を、精度回復と実行系の両側から扱う。T5翻訳、Whisper音声翻訳にも対象を広げ、疎性と量子化の併用も検証する点が、単なる枝刈り精度論文との差である。
+  本研究は、大規模言語モデル（LLM）を高い重み疎性へ枝刈りしたうえで下流タスクへ微調整し、精度を回復する学習法と、その疎性をCPU/GPUの実際の推論高速化へ変換する実行系を一体で評価する。
 
 ### 5年前（2021-11〜2022-10）
 

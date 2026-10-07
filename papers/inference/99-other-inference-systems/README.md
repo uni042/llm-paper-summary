@@ -124,7 +124,7 @@
 
 - **2026-02 · [Effective MoE-based LLM Compression by Exploiting Heterogeneous Inter-Group Experts Routing Frequency and Information Density](2026-2602.09316-effective-moe-based-llm-compression-by-exploiting-heterogeneous-inter-gr.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  SVDによる低ランク圧縮は重み容量を減らせるが、全専門家へ同じランクを割り当てると、頻繁に使われる専門家と情報量の高い専門家を過度に圧縮する。
+  RFID-MoEは、混合専門家（Mixture-of-Experts; MoE）型LLMの全エキスパート重みが占めるメモリを、特異値分解（Singular Value Decomposition; SVD）による低ランク化で削減する事後学習圧縮（post-学習 compression）方式である。
 
 - **2026-01 · [Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems](2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -950,7 +950,7 @@
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
-  複数の将来トークンを同時予測する補助ヘッドを学習し、推論時にそのヘッドを自己投機的復号へ再利用して別ドラフトモデルなしで生成を高速化する。
+  また複数headが予測した未来トークンを一括検証することで、別下書きモデルを常駐させず、7Bでコード生成約3倍・自然言語約2.7倍の推論高速化を得る。
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
   実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：27  
@@ -1254,6 +1254,10 @@
   実装：✓ ・ リポジトリ内被引用：37  
   訓練後量子化（post-学習 量子化; PTQ）は学習済みLLMを再学習せず低bit化できるが、4bit級まで下げると重みだけでなく活性化の外れ値や生成中のKVキャッシュ誤差が品質を大きく崩す。
 
+- **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：31  
+  SparseGPTは、数十億〜数千億パラメータの生成事前学習Transformerを、追加の再学習なしに一回の後処理で大幅に疎化する方式である。単純な絶対値枝刈りでは、巨大モデルでも重みを50%以上落とすと誤差が急増する。
+
 - **2023-07 · [Retentive Network: A Successor to Transformer for Large Language Models](2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：30  
   Retentive Network（RetNet）は、注意と再帰の関係から導いた保持機構（retention）を中心に、同じモデルを三つの計算形式で実行する。
@@ -1261,10 +1265,6 @@
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
   実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：30  
   RWKVは、Transformerの並列学習とRNNの軽量な逐次推論を同じモデルで両立させる言語モデルアーキテクチャである。標準自己注意は系列長が伸びると全トークン対の相互作用を扱い、推論では過去の鍵・値を保持する必要がある。論文は最大14Bパラメータまでモデルを拡張し、同規模Transformerと競争力のある言語モデル性能を示す。
-
-- **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：30  
-  SparseGPTは、数十億〜数千億パラメータの生成事前学習Transformerを、追加の再学習なしに一回の後処理で大幅に疎化する方式である。単純な絶対値枝刈りでは、巨大モデルでも重みを50%以上落とすと誤差が急増する。
 
 - **2023-08 · [LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models](2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：24  
@@ -1290,6 +1290,10 @@
   実装：✓ ・ リポジトリ内被引用：17  
   FrugalGPTは、性能と料金が大きく異なる複数の大規模言語モデル（LLM）APIを、予算制約の中で使い分けるための枠組みである。カスケードでは安価なAPIから順に問い合わせ、生成結果の信頼度が十分高ければそこで終了し、低ければより高価なAPIへ送る。
 
+- **2023-04 · [Outlier Suppression+: Accurate quantization of large language models by equivalent and optimal shifting and scaling](2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md)**  
+  実装：[✓](https://github.com/ModelTC/Outlier_Suppression_Plus) ・ リポジトリ内被引用：16  
+  事後量子化（post-学習 量子化; PTQ）では、活性値のごく大きい外れ値に量子化範囲を合わせると、多数の通常値へ割り当てられる整数段階が粗くなり誤差が増える。
+
 - **2022-12 · [The case for 4-bit precision: k-bit Inference Scaling Laws](2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   量子化では1パラメータ当たりbit数を下げるほど同じメモリへ大きいモデルを置けるが、低精度化そのものが精度を落とす。
@@ -1297,10 +1301,6 @@
 - **2023-10 · [ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models](2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   本論文は、LLMで主流になったSiLU/GELU系活性化をReLUへ戻すことで、品質を大きく落とさず推論時の構造的な活性疎性を得られるかを検証する。ReLUは負の入力を厳密に0へするため、0になったFFNニューロンに対応する重みを実行・転送しない余地が生じる。
-
-- **2023-04 · [Outlier Suppression+: Accurate quantization of large language models by equivalent and optimal shifting and scaling](2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md)**  
-  実装：[✓](https://github.com/ModelTC/Outlier_Suppression_Plus) ・ リポジトリ内被引用：15  
-  事後量子化（post-学習 量子化; PTQ）では、活性値のごく大きい外れ値に量子化範囲を合わせると、多数の通常値へ割り当てられる整数段階が粗くなり誤差が増える。
 
 - **2023-10 · [Compressing Context to Enhance Inference Efficiency of Large Language Models](2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
@@ -1389,7 +1389,7 @@
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   重み・活性化を細粒度に量子化する方式、層単位知識蒸留（層-by-層 knowledge distillation; LKD）、量子化と逆量子化のオーバーヘッドを消す最適化バックエンドを一体化している。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
@@ -1416,11 +1416,11 @@
 
 - **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  非構造枝刈りはパラメータ数を大きく減らせても、ゼロが不規則に散るため通常GPU カーネルでは速度へ変換しにくい。中心となるHybrid方式は、FFNでは完全な隠れ dimensionを、注意機構では32×32 ブロックを徐々に削る。
+  Block Pruningは、事前学習済みTransformerをタスク微調整しながら、重みを1個ずつではなく局所ブロック、FFN次元、注意頭のような構造単位で削る枝刈り法である。特にFFNでは行・列を対応して削って物理的に中間次元を縮小し、注意では32×32程度の小ブロックから始めても学習結果が注意頭全体を空にする傾向を利用して、実際に頭を削除する。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
   実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：3  
-  通常の蒸留では教師と生徒の隠れ次元や注意機構 ヘッド数が異なると中間表現を直接合わせにくい。公式MiniLM公開表ではXLM-R Largeから蒸留した多言語12層・隠れ 384モデルが117Mパラメータで、教師に対して2.7倍の速度向上を示す。
+  MiniLMv2は、大きな事前学習済みTransformerから小さな生徒モデルへ、自己注意内部の関係を蒸留するタスク非依存圧縮法である。
 
 - **2021-01 · [I-BERT: Integer-only BERT Quantization](2021-2101.01321-i-bert-integer-only-bert-quantization.md)**  
   実装：[✓](https://github.com/kssteven418/i-bert) ・ リポジトリ内被引用：2  
@@ -1428,7 +1428,7 @@
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
   実装：[✓](https://github.com/mlpen/Nystromformer) ・ リポジトリ内被引用：1  
-  標準長のGLUEやIMDBで標準自己注意と同等または一部で上回る品質を示し、Long Range Arenaでも効率的注意方式として競争力ある結果を示した。
+  単に完成済み注意機構行列から列をサンプルするのではなく、softmaxを計算する前のquery/keyを少数のlandmarkへ集約し、n×m、m×m、m×n の3つのsoftmax行列の積で元の n×n 注意機構を近似する。
 
 ### 7年前（2019-11〜2020-10）
 
