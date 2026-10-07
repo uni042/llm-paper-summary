@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T21:38:08+00:00",
-  "record_count": 4465,
+  "updated_at": "2026-10-07T21:48:49+00:00",
+  "record_count": 4467,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68145,6 +68145,37 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SPHINX-X: Scaling Data and Parameters for a Family of Multi-modal Large Language Models"
+    },
+    "arXiv:2310.03025": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.03025",
+      "identity_tokens": [
+        "arXiv:2310.03025"
+      ],
+      "reason": "検索拡張と長文コンテキスト拡張の精度・計算量を比較し、Llama2-70Bの4K検索付きが16K長文モデルに近い精度、NarrativeQAで検索付き生成が最大約4倍高速と示す。入力文脈短縮は推論効率に関連する一方、新しいKV管理・サービング基盤・実行カーネルを提案せず、主貢献は検索拡張の下流タスク性能比較であるため境界例として保留する。",
+      "first_checked_at": "2026-10-07T21:48:48+00:00",
+      "last_checked_at": "2026-10-07T21:48:48+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval meets Long Context Large Language Models"
+    },
+    "arXiv:2002.11794": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2002.11794",
+      "identity_tokens": [
+        "arXiv:2002.11794"
+      ],
+      "reason": "大きなTransformerを短時間学習後に圧縮する戦略をRoBERTa・機械翻訳で検証し、学習資源や圧縮後推論容量の交換条件を扱う。新規サービング基盤ではないが、学習・圧縮効率化サーベイの周辺文献となり得るため無関係として除外せず境界候補へ置く。",
+      "first_checked_at": "2026-10-07T21:48:49+00:00",
+      "last_checked_at": "2026-10-07T21:48:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers"
     }
   }
 }

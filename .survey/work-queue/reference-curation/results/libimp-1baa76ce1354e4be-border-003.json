@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1baa76ce1354e4be-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.03025",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.03025",
+    "identity_tokens": [
+      "arXiv:2310.03025"
+    ],
+    "reason": "検索拡張と長文コンテキスト拡張の精度・計算量を比較し、Llama2-70Bの4K検索付きが16K長文モデルに近い精度、NarrativeQAで検索付き生成が最大約4倍高速と示す。入力文脈短縮は推論効率に関連する一方、新しいKV管理・サービング基盤・実行カーネルを提案せず、主貢献は検索拡張の下流タスク性能比較であるため境界例として保留する。",
+    "first_checked_at": "2026-10-07T21:48:48+00:00",
+    "last_checked_at": "2026-10-07T21:48:48+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Retrieval meets Long Context Large Language Models"
+  },
+  "processed_at": "2026-10-07T21:48:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1baa76ce1354",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

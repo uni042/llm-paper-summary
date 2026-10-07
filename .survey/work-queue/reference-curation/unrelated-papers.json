@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T21:38:13+00:00",
-  "record_count": 10825,
+  "updated_at": "2026-10-07T21:48:51+00:00",
+  "record_count": 10837,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -145275,9 +145275,9 @@
       "identity_tokens": [
         "arXiv:2106.03802"
       ],
-      "reason": "Full text confirms the method accelerates denoising-diffusion sampling (up to 32 refinement steps for image-generation DDPMs), a distinct generative process. It is not a language-model decoder, LLM serving optimization, or an applicable attention/KV-cache method; shared inference-systems lineage alone does not create a technical connection.",
+      "reason": "DDPMの推論step scheduleを動的計画法で最適化し4000 stepから32 stepまで減らすが、最終対象は画像・音声のdiffusion generative modelでLLM推論ではない。",
       "first_checked_at": "2026-10-07T09:04:17+00:00",
-      "last_checked_at": "2026-10-07T09:04:17+00:00",
+      "last_checked_at": "2026-10-07T21:48:46+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
         "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
@@ -145290,9 +145290,9 @@
       "identity_tokens": [
         "DOI:10.1016/j.iref.2025.104719"
       ],
-      "reason": "The publisher abstract reviews deep-learning architectures and forecasting tasks in finance; the application domain and contribution are forecasting review, not LLM inference.",
+      "reason": "2020–2024年の金融予測向けdeep learning 187研究を整理するfinance domain surveyで、LLM推論systemsを対象にしない。",
       "first_checked_at": "2026-10-07T09:04:17+00:00",
-      "last_checked_at": "2026-10-07T09:04:17+00:00",
+      "last_checked_at": "2026-10-07T21:48:47+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
@@ -145318,9 +145318,9 @@
       "identity_tokens": [
         "arXiv:2108.12630"
       ],
-      "reason": "The full text shows GroupFormer is a clustered spatial-temporal Transformer for group-activity recognition from video. It is a vision task architecture, not a language model or LLM-serving/inference optimization; its inference-systems lineage link is not technically supported.",
+      "reason": "clustered spatial-temporal Transformerでgroup activity recognitionを改善するcomputer vision研究で、最終workloadはVolleyball/Collective Activityの認識。LLM推論systemsではない。",
       "first_checked_at": "2026-10-07T09:04:18+00:00",
-      "last_checked_at": "2026-10-07T09:04:18+00:00",
+      "last_checked_at": "2026-10-07T21:48:48+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
       ],
@@ -145516,9 +145516,9 @@
       "identity_tokens": [
         "arXiv:2604.02288"
       ],
-      "reason": "Full text describes sample routing between GRPO and self-distillation branches during policy optimization/post-training. It notes shorter output responses can incidentally lower inference cost, but does not propose or measure an inference-time optimization; its core contribution is training convergence and final reasoning quality.",
+      "reason": "RLVRのpost-trainingでcorrect/failed sampleをGRPO/SDPOへroutingするSRPOを提案する学習最適化研究。per-step compute削減も報告するが対象はtraining過程で、推論効率化ではない。",
       "first_checked_at": "2026-10-07T09:04:24+00:00",
-      "last_checked_at": "2026-10-07T09:04:24+00:00",
+      "last_checked_at": "2026-10-07T21:48:47+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
       ],
@@ -154801,6 +154801,166 @@
         "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
       ],
       "title": "Demystifying Graph Databases: Analysis and Taxonomy of Data Organization, System Designs, and Graph Queries"
+    },
+    "arXiv:2206.03126": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.03126",
+      "identity_tokens": [
+        "arXiv:2206.03126"
+      ],
+      "reason": "Transformer初期化時のrank collapseがquery/key勾配消失とtrainingへ与える影響を理論解析し、residual scalingを議論する学習理論研究。推論runtime・serving効率化ではない。",
+      "first_checked_at": "2026-10-07T21:48:45+00:00",
+      "last_checked_at": "2026-10-07T21:48:45+00:00",
+      "linked_from": [],
+      "title": "Signal Propagation in Transformers: Theoretical Perspectives and the Role of Rank Collapse"
+    },
+    "arXiv:2205.12674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.12674",
+      "identity_tokens": [
+        "arXiv:2205.12674"
+      ],
+      "reason": "TRIMEはin-batch memoryを用いるtraining objectiveとbatchingを提案し、memory-augmented LMを学習する研究。推論時memoryは扱うが主要貢献はtraining methodで、外部memory検索はむしろ推論を遅くし得る。",
+      "first_checked_at": "2026-10-07T21:48:46+00:00",
+      "last_checked_at": "2026-10-07T21:48:46+00:00",
+      "linked_from": [],
+      "title": "Training Language Models with Memory Augmentation"
+    },
+    "arXiv:2310.08034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.08034",
+      "identity_tokens": [
+        "arXiv:2310.08034"
+      ],
+      "reason": "LLMとtoolを自動運転の意思決定・自然言語personalizationへ適用するdomain application研究。HighwayEnvでdriving qualityを評価し、LLM推論基盤の効率化は扱わない。",
+      "first_checked_at": "2026-10-07T21:48:46+00:00",
+      "last_checked_at": "2026-10-07T21:48:46+00:00",
+      "linked_from": [],
+      "title": "Receive, Reason, and React: Drive as You Say, With Large Language Models in Autonomous Vehicles"
+    },
+    "DOI:10.1145/3309551": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3309551",
+      "identity_tokens": [
+        "DOI:10.1145/3309551"
+      ],
+      "reason": "custom hardware向けDNN approximationを整理する汎用surveyで、LLM/Transformer推論を特定対象としない。",
+      "first_checked_at": "2026-10-07T21:48:47+00:00",
+      "last_checked_at": "2026-10-07T21:48:47+00:00",
+      "linked_from": [],
+      "title": "Deep Neural Network Approximation for Custom Hardware: Where We've Been, Where We're Going"
+    },
+    "DOI:10.1109/tse.2024.3428972": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tse.2024.3428972",
+      "identity_tokens": [
+        "DOI:10.1109/tse.2024.3428972",
+        "arXiv:2404.10100"
+      ],
+      "reason": "test-driven対話でcode generation accuracyとユーザー評価を改善するsoftware engineering研究。主要指標はpass@1とcognitive loadで、推論runtime・memory・serving効率化ではない。",
+      "first_checked_at": "2026-10-07T21:48:48+00:00",
+      "last_checked_at": "2026-10-07T21:48:48+00:00",
+      "linked_from": [],
+      "title": "LLM-Based Test-Driven Interactive Code Generation: User Study and Empirical Evaluation"
+    },
+    "SemanticScholar:1aa219b2069de522081980d2d9d764958197e545": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:1aa219b2069de522081980d2d9d764958197e545",
+      "identity_tokens": [
+        "SemanticScholar:1aa219b2069de522081980d2d9d764958197e545"
+      ],
+      "reason": "Microsoft Floating Point（MSFP）の独自低精度数値形式をクラウド推論用専用ハードウェアへ実装し、CNN・RNN・Transformerの画像分類、検索、質問応答等を横断評価する2020年の汎用深層学習推論研究。生成LLMの逐次復号、KVキャッシュ、LLMサービング、MoE推論等を対象にした方式ではない。",
+      "first_checked_at": "2026-10-07T21:48:49+00:00",
+      "last_checked_at": "2026-10-07T21:48:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "title": "Pushing the Limits of Narrow Precision Inferencing at Cloud Scale with Microsoft Floating Point"
+    },
+    "arXiv:2105.01898": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.01898",
+      "identity_tokens": [
+        "arXiv:2105.01898"
+      ],
+      "reason": "CoSAは空間型DNNアクセラレータの演算子配置・タイル・ループ順序を混合整数計画で一括最適化する一般DNNスケジューラ。2.5倍の性能と90倍の探索時間短縮は多様なDNNネットワーク上の結果で、LLM生成・復号・サービングを対象にしていない。",
+      "first_checked_at": "2026-10-07T21:48:49+00:00",
+      "last_checked_at": "2026-10-07T21:48:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "CoSA: Scheduling by Constrained Optimization for Spatial Accelerators"
+    },
+    "DOI:10.1145/3637528.3671931": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3637528.3671931",
+      "identity_tokens": [
+        "DOI:10.1145/3637528.3671931",
+        "arXiv:2404.11343"
+      ],
+      "reason": "A-LLMRecは協調フィルタリングの事前学習済みユーザー・商品埋め込みをLLMへ渡し、cold/warm推薦の精度と微調整負担を改善する推薦応用。実験は推薦品質・ジャンル予測が中心で、LLM復号、メモリ、サービング・スケジューリングの効率化を提案しない。",
+      "first_checked_at": "2026-10-07T21:48:50+00:00",
+      "last_checked_at": "2026-10-07T21:48:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md"
+      ],
+      "title": "Large Language Models meet Collaborative Filtering: An Efficient All-round LLM-based Recommender System"
+    },
+    "arXiv:1107.0740": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1107.0740",
+      "identity_tokens": [
+        "arXiv:1107.0740"
+      ],
+      "reason": "量子情報理論のデータ処理不等式を平滑最小エントロピーと量子漸近等分配性から証明する理論論文。フォン・ノイマンエントロピーの証明が目的であり、言語モデル、Transformer、LLM推論・実装のいずれも扱わない。",
+      "first_checked_at": "2026-10-07T21:48:50+00:00",
+      "last_checked_at": "2026-10-07T21:48:50+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md"
+      ],
+      "title": "An intuitive proof of the data processing inequality"
+    },
+    "arXiv:2311.12424": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.12424",
+      "identity_tokens": [
+        "arXiv:2311.12424"
+      ],
+      "reason": "ループ型Transformerが合成的なデータ当てはめ・線形回帰などの学習アルゴリズムを文脈内で模倣できるかを検証するモデル構造・学習能力研究。パラメータ数を標準Transformerの10%未満にしてもデータ当てはめ能力を維持するが、生成LLMサービングの実行効率を対象としない。",
+      "first_checked_at": "2026-10-07T21:48:50+00:00",
+      "last_checked_at": "2026-10-07T21:48:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Looped Transformers are Better at Learning Learning Algorithms"
+    },
+    "arXiv:2012.15833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.15833",
+      "identity_tokens": [
+        "arXiv:2012.15833"
+      ],
+      "reason": "非自己回帰型機械翻訳の品質劣化を学習上の依存関係削減など4方面の工夫で改善する翻訳モデル研究。WMT14英独翻訳で27.49 BLEUと自己回帰翻訳比約16.5倍の推論高速化を報告するが、最終対象は専用の機械翻訳であり生成LLMサービング・推論基盤ではない。",
+      "first_checked_at": "2026-10-07T21:48:51+00:00",
+      "last_checked_at": "2026-10-07T21:48:51+00:00",
+      "linked_from": [
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "title": "Fully Non-autoregressive Neural Machine Translation: Tricks of the Trade"
+    },
+    "arXiv:2410.14157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14157",
+      "identity_tokens": [
+        "arXiv:2410.14157"
+      ],
+      "reason": "複雑な推論・計画課題で自己回帰モデルが難しい部分目標を学びにくい問題に対し、複数粒度の拡散学習で難しい部分目標を重み付けするMDMを提案する。Countdown・Sudoku・SATでの正答率改善が主成果で、復号ランタイム、拡散LLMのサービング、GPU実行効率を改善する研究ではない。",
+      "first_checked_at": "2026-10-07T21:48:51+00:00",
+      "last_checked_at": "2026-10-07T21:48:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08930-blockserve-diffusion-llm-continuous-batching.md"
+      ],
+      "title": "Beyond Autoregression: Discrete Diffusion for Complex Reasoning and Planning"
     }
   }
 }
