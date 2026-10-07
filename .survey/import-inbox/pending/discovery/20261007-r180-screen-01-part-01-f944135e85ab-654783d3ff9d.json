@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r180-screen-01-part-01-f944135e85ab",
+  "reference_main_sha": "d159f4d80bd7d398abb8da3a16129abdcb4eed71",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05124",
+      "identity_tokens": [
+        "arXiv:2511.05124"
+      ],
+      "title": "QuAnTS: Question Answering on Time Series",
+      "reason": "The primary arXiv text presents QuAnTS as a human-motion time-series QA dataset and baselines; it does not introduce LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2511.05124",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00503",
+      "identity_tokens": [
+        "arXiv:2511.00503"
+      ],
+      "title": "Diff4Splat: Controllable 4D Scene Generation with Latent Dynamic Reconstruction Models",
+      "reason": "The primary arXiv paper is a video-latent-transformer method for controllable 4D scene synthesis; its efficiency comparison concerns scene-generation workflow, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2511.00503",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/wcms.70054",
+      "identity_tokens": [
+        "DOI:10.1002/wcms.70054"
+      ],
+      "title": "Advancements in Large Language Models (LLMs): Empowering Drug Discovery",
+      "reason": "The Wiley review covers LLM uses in drug discovery and development; it contributes application taxonomy and future directions, not serving or inference efficiency.",
+      "source_url": "https://doi.org/10.1002/wcms.70054",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.02452",
+      "identity_tokens": [
+        "arXiv:2203.02452"
+      ],
+      "title": "Contextformer: A Transformer with Spatio-Channel Attention for Context Modeling in Learned Image Compression",
+      "reason": "Contextformer is a learned image-compression entropy model using spatio-channel attention; its rate-distortion results do not address LLM serving.",
+      "source_url": "https://arxiv.org/abs/2203.02452",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3490422.3502364",
+      "identity_tokens": [
+        "DOI:10.1145/3490422.3502364"
+      ],
+      "title": "FILM-QNN: Efficient FPGA Acceleration of Deep Neural Networks with Intra-Layer, Mixed-Precision Quantization",
+      "reason": "FILM-QNN targets CNN models such as ResNet/MobileNet on embedded FPGA; mixed-precision quantization and hardware packing are relevant only as a weak hardware-transfer analogy, with no transformer/LLM evaluation.",
+      "source_url": "https://doi.org/10.1145/3490422.3502364",
+      "first_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "last_checked_at": "2026-10-07T11:51:02.561821+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    }
+  ]
+}
