@@ -1,0 +1,225 @@
+---
+canonical_id: arXiv:2505.18610
+arxiv_id: '2505.18610'
+doi: 10.48550/arxiv.2505.18610
+title: 'PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs'
+summary: 長い思考連鎖で数万トークンへ膨らむKVキャッシュを、最初から最低ビットへ落とさず16→8→4→2bitとメモリ逼迫時だけ段階的に縮小し、層ごとの量子化感度で最終ビット幅を配分するPM-KVQ。さらにRoPEの長周期チャネルを短い校正列で観測する位置補間校正を組み合わせ、同一メモリ予算で既存KV量子化法より推論精度を最大8%改善する。
+list_summary: KVを16→8→4→2bitと必要時だけ段階圧縮し、層感度とRoPE位置補間校正で長CoTの累積量子化誤差を抑えるPM-KVQ。
+publication: arXiv
+publication_type: preprint
+publication_status: Preprint
+lineage: inference-systems
+topics:
+- LLM推論
+- KVキャッシュ
+- 量子化
+- Long-CoT
+source: https://arxiv.org/abs/2505.18610
+sources:
+- https://arxiv.org/abs/2505.18610
+- https://arxiv.org/html/2505.18610
+last_checked: '2026-09-28'
+authors:
+- Liu, Tengxuan
+- Li, Shiyao
+- Yang, Jiayi
+- Zhao, Tianchen
+- Zhou, Feng
+- Song, Xiaohui
+- Dai, Guohao
+- Yan, Shengen
+- Yang, Huazhong
+- Wang, Yu
+published: '2025-05-24'
+arxiv_categories:
+  primary: cs.CL
+  cross_list: []
+code: https://github.com/thu-nics/PM-KVQ
+implementation: 事前校正で各Transformer blockのKV量子化感度を測り、整数計画でblockごとの最終ビット幅Fbitを決定する。推論時は高精度KVから開始し、割当メモリが埋まるたびにEquivalent Right Shiftで16→8→4→2bitへ段階縮小する。RoPE位置補間で短い校正列へ長距離の位置分布を埋め込む。
+implementation_status: official-code
+references:
+- canonical_id: arXiv:2305.13245
+  arxiv_id: '2305.13245'
+- canonical_id: arXiv:2306.15595
+  arxiv_id: '2306.15595'
+- canonical_id: arXiv:2405.06219
+  arxiv_id: '2405.06219'
+- canonical_id: arXiv:2406.14909
+  arxiv_id: '2406.14909'
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+- canonical_id: arXiv:2502.15075
+  arxiv_id: '2502.15075'
+- canonical_id: arXiv:2403.07974
+  arxiv_id: '2403.07974'
+- canonical_id: arXiv:2502.04420
+  arxiv_id: '2502.04420'
+- canonical_id: arXiv:2405.04532
+  arxiv_id: '2405.04532'
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  arxiv_id: '2405.04434'
+- canonical_id: arXiv:2402.02750
+  arxiv_id: '2402.02750'
+- canonical_id: arXiv:1911.02150
+  arxiv_id: '1911.02150'
+- canonical_id: arXiv:2501.16383
+  arxiv_id: '2501.16383'
+- canonical_id: arXiv:2406.10774
+  arxiv_id: '2406.10774'
+- canonical_id: arXiv:2309.17453
+  arxiv_id: '2309.17453'
+- canonical_id: arXiv:2402.18096
+  arxiv_id: '2402.18096'
+- canonical_id: arXiv:2402.12065
+  arxiv_id: '2402.12065'
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2311.07911
+  arxiv_id: '2311.07911'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 31
+last_audited: '2026-10-08'
+audit_version: 2
+under16kb_reaudit_target_path: papers/inference/07-kv-cache-optimization-compression/2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md
+under16kb_reaudit_source_git_blob_sha: '6fb81944b705a3c3bc2f76ed633c2d672c6d8c6b'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-pmkvq'
+
+---
+
+# PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs
+
+> KVを16→8→4→2bitと必要時だけ段階圧縮し、層感度とRoPE位置補間校正で長CoTの累積量子化誤差を抑えるPM-KVQ。
+
+## 概要
+
+長い思考連鎖（Long Chain-of-Thought; Long-CoT）を使う推論モデルは、回答前に数万トークン規模の推論過程を生成することがある。自己回帰LLMでは、過去トークンのKey/Valueを各層でKVキャッシュへ保存するため、生成が長いほどGPUメモリ使用量がほぼ線形に増える。論文の32K文脈・batch 16の例では、DeepSeek-LLaMA-8Bは重み16 GBに対してKV 64 GB、Qwen-32Bは重み64 GBに対してKV 128 GB、LLaMA-70Bは重み140 GBに対してKV 160 GBとなり、KVだけでモデル重みを上回る。
+
+KV量子化は、BF16/FP16のKey・Valueを4bitや2bit整数へ変換して容量とメモリ帯域を減らす方法である。しかし従来手法の多くは8K未満の比較的短い文脈で設計され、Long-CoTへそのまま適用すると2つの問題が表面化する。
+
+第一は**累積量子化誤差**である。新しいKVを生成直後から最終2bitへ量子化すると、その近似値が以後の全トークンのattentionで繰り返し参照される。生成が数万step続くLong-CoTでは、この誤差を使った計算が長期間積み重なる。第二は**短い校正列とRoPEの位置分布の不一致**である。Keyには回転位置埋め込み（Rotary Positional Embedding; RoPE）が適用され、チャネルごとに異なる周期のsin/cos回転を受ける。低周波チャネルでは周期が数万トークンに達するため、512〜2K程度の校正列だけでは長距離位置で現れる値域を観測できない。
+
+PM-KVQは、メモリに余裕がある時間までKVを高精度で保持し、容量が埋まるたびに16→8→4→2bitと**段階的に縮小**する。さらに、量子化に弱いTransformer blockほど高い最終ビット幅を割り当て、短い校正列にはRoPEの位置を拡大して長文脈の分布を模擬する。7B〜70BのLong-CoTモデルで、同一メモリ予算の既存KV量子化法より推論ベンチマーク精度を最大8%改善し、16bit KV比で2.73〜5.18倍のスループットを報告する。
+
+## 問題設定
+
+### なぜ最初から2bitにするとLong-CoTで不利なのか
+
+通常のKV量子化は、新しく生成されたKey/Valueをその場で低ビット表現へ変換して保存する。メモリ使用量を最初から小さくできる反面、生成初期はGPUメモリに大量の空きが残っている。それでも最初のトークンから2bitへ落とすため、**使える高精度メモリを捨ててまで早期に誤差を導入している**ことになる。
+
+Long-CoTでは初期KVほど長期間再利用されるため、早い時点で生じた量子化誤差は後続attentionへ何度も入る。最近128トークンなどを高精度に残すsliding windowはこの問題を緩和するが、32K以上を生成すると大部分のKVは長時間低ビットのままになる。
+
+PM-KVQは、ハードウェアのメモリ予算を「最終的に何トークン格納できるか」だけでなく、「生成途中で空いている容量を一時的な高精度保存に使えるか」という時間方向の資源として扱う。
+
+### RoPEが短い校正を難しくする理由
+
+KV量子化では、Keyの特定チャネルに大きな外れ値が集中することがあり、チャネルごとのスケール調整やQuery側への再パラメータ化で誤差を抑える。適切なスケールを決めるには、校正データ上で各Keyチャネルが取り得る最大値を観測する必要がある。
+
+RoPEは位置mに応じてKeyの2チャネルをsin/cosで回転する。高周波チャネルは短い系列でも多くの位相を見るが、低周波チャネルでは数万トークン進まないと1周期を見られない。論文ではDeepSeek-R1-Distill-Qwen-7Bの最も低い周波数の周期が54,410トークンに達する。したがって512〜2K tokenの校正では、Long-CoT中に現れるKey値域を十分観測できず、スケール推定が偏る。
+
+## 手法
+
+### 1. Progressive Quantization — 空きメモリを「高精度でいられる時間」に変える
+
+各Transformer blockについて、最終的に到達すべきビット幅を **Fbit** と定義する。例えばFbit=2、最大文脈32Kなら、そのblockへ割り当てられたメモリ量は最終的に32K分の2bit KVを保存できる大きさになる。
+
+推論開始時、PM-KVQは新しいKVをいきなり2bitへせず16bitで保存する。16bit KVで割当メモリが埋まりそうになると、既存KV全体を8bitへ縮小して空きを作る。さらに埋まれば8→4bit、最後に4→2bitへ落とす。
+
+したがって古いKVでも「生成開始直後からずっと2bit」ではなく、可能な期間は16/8/4bitとして保持される。低ビット状態で後続attentionに使われるstep数が減るため、累積誤差を抑えられる。
+
+### 2. Equivalent Right Shift — 再量子化の変換費用を小さくする
+
+16→8→4→2bitのたびに、整数KVを浮動小数へ逆量子化し、再び低ビットへ量子化すると変換コストが大きい。そこでPM-KVQは **Equivalent Right Shift** を用いる。
+
+これは2b-bitの整数値へ定数加算と右シフトを適用し、zero pointを維持しながらscaleだけを更新することで、「一度dequantizeしてb-bitへrequantizeした結果」と数学的に同等な値を得る方法である。bは8/4/2に対応する。
+
+段階量子化はKV全体へ繰り返し適用されるため、ここを整数演算で処理できることが実装上重要になる。論文のablationでも、他のbit-width shrinking法よりEquivalent Right Shiftが精度を保つ。
+
+### 3. Block-wise Memory Allocation — 全層を同じ2bitへしない
+
+Transformerの全blockがKV量子化に同じ感度を持つわけではない。あるblockのKey/Value誤差は最終lossへ大きく影響する一方、別blockは低ビットでも影響が小さい。
+
+PM-KVQは、各block i・候補bit bについて、量子化前後のK/V差とloss gradientを用いた一次Taylor近似から感度 (s_{i,b}) を計算する。直感的には「このblockをb bitにしたとき、出力lossがどれほど変わりそうか」の近似値である。
+
+その上で、全blockのKVメモリ合計が予算 (mathcal M) 以下という制約の下、感度総和を最小化するbit割当を整数計画として解く。CVXPYで数秒程度の事前計算で済み、例えば一律2bitではメモリが余るが一律4bitではOOMする環境でも、敏感blockだけ4bit、その他を2bitにして余剰容量を品質へ使える。
+
+### 4. Positional Interpolation Calibration — 2K校正列に8K相当の位置位相を埋め込む
+
+長文脈をそのまま校正に使えばRoPEの低周波チャネルを観測できるが、self-attentionは系列長に対して二次的に重くなり、校正コストが大きい。
+
+PM-KVQは校正時だけRoPEの位置index mを (scdot m) に拡大する。例えば2048 tokenの校正列でs=4なら、位置としては8192までの位相を踏むため、計算量・メモリは2048 tokenのまま長距離側のKey分布を観測できる。
+
+主設定ではRedPajama arXiv subsetから512 samples、各2048 tokenを使い、s=4とする。これはモデルの推論文脈そのものを伸ばす処理ではなく、**量子化スケール決定のために長距離位置分布を短い校正データへ埋め込む前処理**である。
+
+### 5. 全体の処理順
+
+推論前に、まず校正データから各block・bit幅のKV感度を測る。次に整数計画を解いてblockごとのFbitを決め、位置補間校正でKeyのチャネル再パラメータ化係数を求める。
+
+実行時には、その割当を変えずにprogressive quantizationだけを行う。各blockは16bitから開始し、自分の割当メモリが埋まるたびに8/4/Fbitへ縮小する。したがってオンラインで重い最適化問題を解く必要はない。
+
+## 評価
+
+### 代表的な評価条件
+
+| 項目 | 内容 |
+|---|---|
+| モデル規模 | 7B〜70BのLong-CoT LLM |
+| 主タスク | AIME 2024/2025、CMIMC 2024、LiveCodeBench |
+| 短文脈確認 | IFEval |
+| 最大生成長 | 32,768 tokens |
+| sampling | temperature 0.6、top-p 0.95 |
+| 校正 | RedPajama arXiv 512 samples × 2048 tokens |
+| 位置補間 | s=4、2048 tokenで8192相当のpositionを観測 |
+| 比較 | RotateKV、KIVI、MiKV、追加実験でKVTuner |
+| 高精度保護 | first token + recent 128 tokensをINT16で保持 |
+
+### 代表結果
+
+| 観点 | 結果 | 読み取り |
+|---|---:|---|
+| 同一メモリ予算の推論精度 | SOTA比 最大+8% | Long-CoT向けの累積誤差・校正対策が品質へ反映 |
+| 16bit KV比 throughput | 2.73〜5.18倍 | KV容量縮小でより大きいbatchを載せられる |
+| Progressive Quantization | 直接Fbit化より高精度 | 空きメモリを初期高精度保存へ使う効果 |
+| Block-wise allocation | uniform bit幅より高精度 | 層ごとの感度差をメモリ配分へ利用 |
+| Positional interpolation | 通常の短文校正より改善 | RoPE長周期チャネルの分布不足を補う |
+
+2.73〜5.18倍という値は、2bit演算自体がBF16より5倍高速という意味ではない。主な利得はKVキャッシュが小さくなることで同じGPUにより大きいbatchを載せられ、メモリ律速のデコードでスループットを上げられる点にある。
+
+また「最大+8%」は16bit元モデルを8ポイント上回るという意味ではなく、同じKVメモリ予算で比較した既存量子化baselineに対する改善である。
+
+### 同一容量比較と校正データの感度（再監査補足）
+
+この方式の主要な比較軸は、同じKVキャッシュ用メモリ予算の中で、長い思考過程をどれだけ正確に保ちながら生成できるかである。既存の方法を単に二ビットへ落とすと、各生成段階で発生する量子化誤差が長い系列で蓄積する。PM-KVQはメモリに余裕がある初期段階では高精度を保ち、キャッシュ使用量が増えた時点で段階的に精度を下げる。さらに注意層ごとの感度を使って必要なビット数を調整する。従って、同じ最終容量の一律量子化との比較には、精度の変換時期と層別ビット配分という二つの差が同時に含まれる。
+
+七十億から七百億パラメータ級の長い推論系列を含む評価では、同じメモリ予算の従来量子化法より数学・コード課題の成績が最大八ポイント程度良くなると報告される。元の十六ビットキャッシュの能力を常に上回るわけではない。計算効率では、元の十六ビット方式に対して二・七三〜五・一八倍のスループット向上が報告される。ただしこれは各注意演算の計算速度が五倍に上がるという意味ではなく、キャッシュ圧縮で同時に処理できる要求を増やす構成の効果を含む。採用するバッチ数や生成長が変われば比較倍率も変動する。
+
+位置補間を用いる校正の有効性は構成要素除去実験でも測られている。短い二〇四八トークンの校正列を用い、位置倍率を四とすると実効的には八一九二トークン相当の位置範囲を模擬できる。DeepSeek-R1-Distill-LLaMA-8BのAIME-2024-Iでは、位置倍率なしの正答率四六・六七に対して倍率四で四八・三三となり、長い八一九二トークン校正の四八・三三と同程度になる。一方、倍率を十六まで広げると四六・六七へ戻り、位置を広く見せれば必ず改善するわけではない。短文校正の負荷を増やさず長距離位相を補う手法だが、実際の長系列データと完全に同じ統計分布にはならない点に注意が要る。出典はICLR 2026公開版の表五と著者公式実装である。
+
+## 既存研究との差
+
+KIVIやRotateKVはKey/Valueの分布特性に応じた量子化形式や外れ値処理を改善する。MiKVは重要tokenを高精度へ残す。これらは主に「どの値を何bitで表すか」を空間的に工夫する。
+
+PM-KVQはそこへ**時間方向**を加える。最終的には同じ2bitへ到達するKVでも、メモリが余っている間は高精度にしておき、長い生成の後半でだけ低ビットへ落とす。また混合精度をtoken重要度ではなくblock感度へ割り当て、さらにRoPEによる長距離の校正分布ずれを別問題として処理する。
+
+## 限界
+
+事前に最大文脈長・対象メモリ予算を決め、それに合わせてFbit配分を解く設計なので、実行環境のメモリ予算や最大生成長が変われば再プロファイルが必要になる。
+
+感度推定は校正データと一次Taylor近似に依存する。モデルやタスク分布が大きく変われば、同じblockが同じ量子化感度を示す保証はない。RoPE位置補間も長距離の位置位相を近似的に見せる方法であり、実際の32K推論データ分布を完全再現するわけではない。
+
+さらにprogressive quantizationは既存KV全体を段階的に縮小する処理を追加する。Equivalent Right Shiftで軽量化しているが、レイテンシ重視の小batch条件では変換オーバーヘッドも別途確認する必要がある。
+
+## 一次資料
+
+- arXiv: https://arxiv.org/abs/2505.18610
+- arXiv HTML: https://arxiv.org/html/2505.18610
+- 公式実装: https://github.com/thu-nics/PM-KVQ
+
+## 修正履歴
+
+- 2026-09-28: 汎用的な資源制御テンプレート文を削除。LLM一般は既知だがKV量子化は詳しくない読者向けに、Long-CoTで累積量子化誤差が増える理由、RoPE長周期チャネルと短文校正の不一致を先に説明し、Progressive Quantization、Equivalent Right Shift、block-wise感度整数計画、位置補間校正、評価条件・結果・適用限界を一次資料から再構成。
+
+- 2026-10-08: 16KB未満の再監査に基づき評価本文を補強。一次資料と照合した条件差・限界・比較結果を日本語で追記。
