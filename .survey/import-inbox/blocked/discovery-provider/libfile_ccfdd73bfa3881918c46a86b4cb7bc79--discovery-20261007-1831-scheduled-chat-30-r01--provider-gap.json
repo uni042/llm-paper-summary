@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1831-scheduled-chat-30/r01::provider-gap",
+  "reference_main_sha": "d6f6dc994262044df893315d6d181235b3b44fb9",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.11665",
+      "identity_tokens": [
+        "arXiv:2302.11665",
+        "arXiv:2302.11665"
+      ],
+      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+      "reason": "大規模モデルの分散推論サービングで、モデル並列化の通信overheadと統計多重化によるqueueing latency低減を共同最適化し、モデル配置・並列戦略を選ぶシステム研究で、LLMサービングに直接つながる基盤技術を扱う。",
+      "source_url": "https://arxiv.org/abs/2302.11665",
+      "body_check": "fulltext_review: 一次本文を確認。AlpaServeはモデル並列性を単一巨大モデルの収容だけでなく複数モデル間のstatistical multiplexingへ使い、bursty workload下のlatency SLOを対象にparallelization/placementを最適化する。production workload評価で99%以上のrequestをlatency制約内に保ちながら最大10倍のrequest rateまたは6倍のburstinessを処理すると報告。",
+      "first_checked_at": "2026-10-07T18:31:07+09:00",
+      "last_checked_at": "2026-10-07T18:31:07+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "worklist_rank": 13
+    }
+  ],
+  "parent_run_key": "20261007-1831-scheduled-chat-30/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_ccfdd73bfa3881918c46a86b4cb7bc79--discovery-20261007-1831-scheduled-chat-30-r01.json",
+  "provider_gap_ids": [
+    "arXiv:2302.11665"
+  ]
+}
