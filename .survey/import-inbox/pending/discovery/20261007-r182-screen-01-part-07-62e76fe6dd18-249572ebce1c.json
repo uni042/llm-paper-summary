@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r182-screen-01-part-07-62e76fe6dd18",
+  "reference_main_sha": "c783ac90a63f989552e8790516edc13970e423c2",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JPROC.2025.3638871",
+      "identity_tokens": [
+        "DOI:10.1109/JPROC.2025.3638871"
+      ],
+      "title": "Hybrid Deep Learning Models for Remote Sensing Image Processing",
+      "reason": "The publisher DOI page could not be retrieved in this review, so the primary article text and direct connection to the linked PyTorch compilation lineage could not be checked. The packet abstract describes remote-sensing image processing, making relevance to LLM inference unclear; retain as borderline instead of inferring from the lineage link.",
+      "source_url": "https://doi.org/10.1109/JPROC.2025.3638871",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00621",
+      "identity_tokens": [
+        "arXiv:2602.00621"
+      ],
+      "title": "Towards Interpretable Hallucination Analysis and Mitigation in LVLMs via Contrastive Neuron Steering",
+      "reason": "The paper intervenes on visual embedding neurons at the LVLM prefilling stage to reduce hallucinations, but its experiments establish output-quality changes rather than lower prefill cost, token count, memory, or latency; direct inference-optimization relevance remains uncertain.",
+      "source_url": "https://arxiv.org/abs/2602.00621",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23188",
+      "identity_tokens": [
+        "arXiv:2601.23188"
+      ],
+      "title": "Deep Search with Hierarchical Meta-Cognitive Monitoring Inspired by Cognitive Neuroscience",
+      "reason": "The full text describes hierarchical monitoring/reflection for LLM deep-search agents and reports task performance/robustness, but does not show an inference-serving or compute reduction; the link to an SGLang serving paper is not itself a technical connection.",
+      "source_url": "https://arxiv.org/abs/2601.23188",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22135",
+      "identity_tokens": [
+        "arXiv:2601.22135"
+      ],
+      "title": "PI-Light: Physics-Inspired Diffusion for Full-Image Relighting",
+      "reason": "The primary paper is a physics-guided diffusion framework for full-image relighting; its attention and fine-tuning components are for image synthesis, not LLM or language-model inference, despite an incidental training-memory lineage link.",
+      "source_url": "https://arxiv.org/abs/2601.22135",
+      "first_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "last_checked_at": "2026-10-07T13:53:09.436085+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
