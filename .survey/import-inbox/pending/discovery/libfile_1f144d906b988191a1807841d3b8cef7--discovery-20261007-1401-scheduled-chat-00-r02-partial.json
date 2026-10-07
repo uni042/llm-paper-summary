@@ -1,0 +1,146 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-1401-scheduled-chat-00/r02-partial",
+  "reference_main_sha": "7dd80c031effb0c4ed7ae37ab8a33699aabf535f",
+  "record_count": 8,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.01136",
+      "identity_tokens": [
+        "arXiv:2206.01136"
+      ],
+      "title": "Transforming medical imaging with Transformers? A comparative review of key properties, current progresses, and future perspectives",
+      "reason": "Transformerのmedical imaging応用をsegmentation・recognition・detection等で整理するcomputer vision survey。LLM推論systemsを対象としない。",
+      "source_url": "https://arxiv.org/abs/2206.01136",
+      "body_check": "abstract_screen_only: 一次abstractでmedical image segmentation/recognition/detection/registration/reconstruction/enhancementのreviewが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.04486",
+      "identity_tokens": [
+        "arXiv:2501.04486"
+      ],
+      "title": "MB-TaylorFormer V2: Improved Multi-branch Linear Transformer Expanded by Taylor Formula for Image Restoration",
+      "reason": "Taylor展開で線形attentionを構成して高速化するが、最終workloadはdehazing/deraining/denoising等のimage restoration。LLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2501.04486",
+      "body_check": "abstract_screen_only: 一次abstractでlinear-complexity attentionとimage restoration benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.03241",
+      "identity_tokens": [
+        "arXiv:2302.03241"
+      ],
+      "title": "Continual Pre-training of Language Models",
+      "reason": "domain corpus列に対するcontinual domain-adaptive pre-trainingとcatastrophic forgetting抑制が主題。推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2302.03241",
+      "body_check": "abstract_screen_only: 一次abstractでsoft-maskingを用いたcontinual DAP-trainingとend-task performanceが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.02495",
+      "identity_tokens": [
+        "arXiv:2504.02495"
+      ],
+      "title": "Inference-Time Scaling for Generalist Reward Modeling",
+      "reason": "推論時のparallel sampling量を増やしてgeneralist reward modelの性能をscaleし、meta reward modelで投票を導くためinference-time compute配分には直接関係する。一方、目的はreward qualityのscalingで、latency・throughput・memory・serving効率の削減が主評価ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2504.02495",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文を確認。DeepSeek-GRMはSPCTでprinciple/critique生成を学習し、推論時にはparallel samplingでcomputeを増やしmeta RMでvotingする。performance-compute scaling自体は扱うが、systems efficiency最適化ではなくreward modeling品質が中心。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.08493",
+      "identity_tokens": [
+        "arXiv:2308.08493"
+      ],
+      "title": "Time Travel in LLMs: Tracing Data Contamination in Large Language Models",
+      "reason": "LLMのbenchmark/data contaminationを時系列で追跡・分析する評価研究で、推論systemsの速度・memory・serving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2308.08493",
+      "body_check": "abstract_screen_only: 一次abstract/書誌でLLM data contamination tracingとbenchmark validityが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2005.7",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2005.7"
+      ],
+      "title": "A dynamic compilation framework for controlling microprocessor energy and performance",
+      "reason": "microprocessor一般の動的コンパイルとenergy/performance制御を扱う2005年のarchitecture研究で、LLM/Transformer推論を最終workloadとしない。",
+      "source_url": "https://doi.org/10.1109/MICRO.2005.7",
+      "body_check": "abstract_screen_only: worklist書誌と一次DOIメタデータからgeneral microprocessor dynamic compilation/energy controlが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.16032",
+      "identity_tokens": [
+        "arXiv:2410.16032"
+      ],
+      "title": "TimeMixer++: A General Time Series Pattern Machine for Universal Predictive Analysis",
+      "reason": "multi-scale time-series pattern modelingによるforecasting/classification等のuniversal predictive analysisが主題。LLM推論systems対象外。",
+      "source_url": "https://arxiv.org/abs/2410.16032",
+      "body_check": "abstract_screen_only: 一次abstractでtime-series predictionのmulti-scale architectureと各種予測taskが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.16009",
+      "identity_tokens": [
+        "arXiv:2405.16009"
+      ],
+      "title": "Streaming Long Video Understanding with Large Language Models",
+      "reason": "長動画をclip単位でstreaming encodingし固定長memoryへ圧縮、質問に応じて関連memoryだけを選びLLMへ投入する。visual token量を固定し、同一動画への複数質問で再encodeを避けるためMLLM推論効率の直接対象。",
+      "source_url": "https://arxiv.org/abs/2405.16009",
+      "body_check": "fulltext_relevance_review: arXiv HTML本文§3–4を確認。各16-frame clipの1024 visual tokensを64 summarization tokensへ16:1圧縮し、履歴memoryを伝播。質問時はV=4 timestampsのmemory、計256 tokensだけをVicuna-7Bへ投入し、任意長videoを固定長memoryで扱う。long-video benchmarkでinference efficiencyも比較。",
+      "first_checked_at": "2026-10-07T14:01:41+09:00",
+      "last_checked_at": "2026-10-07T14:01:41+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "worklist_rank": 47
+    }
+  ]
+}
