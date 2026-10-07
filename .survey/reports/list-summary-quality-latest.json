@@ -466,6 +466,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/01-offload-hierarchical-memory/2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md",
+      "status": "PASS",
+      "summary": "ルータ上位専門家だけ低ランク残差で精度回復し、他専門家を低bitのままオフロードしてMoEのPCIe/NDP帯域を節約する。",
+      "char_count": 62,
+      "japanese_ratio": 0.9387755102040817,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2601.01310-tarragon-resilient-moe-inference.md",
       "status": "PASS",
       "summary": "注意側とエキスパート側を別故障領域に分け、動的エキスパート経路、増分KVチェックポイント、影エキスパートで故障ワーカーだけを自己修復し、MoE推論の全体再起動を避ける。",
@@ -1470,13 +1479,11 @@
     },
     {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md",
-      "status": "FAIL",
-      "summary": "専門家 重みの共有・専門成分をelement単位で分離して疎mergeし、mask情報をbit-packすることでMoE 重み メモリと実行コストを学習不要に削減する。",
-      "char_count": 84,
-      "japanese_ratio": 0.6933333333333334,
-      "failures": [
-        "日本語比率 69.3% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "専門家重みの共有成分と固有成分を要素単位で分離して疎に統合し、マスク情報をビット圧縮することで、学習せずにMoEの重み容量と実行コストを削減する。",
+      "char_count": 73,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {
@@ -3246,13 +3253,11 @@
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-p.md",
-      "status": "FAIL",
-      "summary": "AI PCごとに事前compile済みLLM 層 shardを配置し、OpenVINOのKV 融合・投機的復号・リクエスト interleaveでcommodity ネットワーク上の分散推論を実用化する。",
-      "char_count": 102,
-      "japanese_ratio": 0.5974025974025974,
-      "failures": [
-        "日本語比率 59.7% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "各AI PCに事前コンパイル済みのLLM層断片を配置し、OpenVINOのKV融合・投機的復号・要求の交互実行によって、一般的なネットワーク上で分散推論を実用化する。",
+      "char_count": 83,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {
@@ -4643,11 +4648,29 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md",
+      "status": "PASS",
+      "summary": "可変長のトークン集合を生成単位にし、集合因果注意で各ステップ後のKVキャッシュ更新を可能にして、拡散復号の並列性と自己回帰型キャッシュ再利用を両立する。",
+      "char_count": 76,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
       "status": "PASS",
       "summary": "LynxはKVを上位ビットのAnchorとResidualへ分割し、Anchor到着後に低精度で投機生成、Residual到着後に一括検証して、分離サービングの転送待ちを隠しつつINT8級品質を保つ。",
       "char_count": 100,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md",
+      "status": "PASS",
+      "summary": "密/MoE、KV共有・p-RoPE、量子化対応学習を組み合わせ、長文脈・マルチモーダル性能と推論メモリ効率を同時に改善するGemma世代。",
+      "char_count": 69,
+      "japanese_ratio": 0.9795918367346939,
       "failures": [],
       "warnings": []
     },
@@ -5620,13 +5643,11 @@
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md",
-      "status": "FAIL",
-      "summary": "KVキャッシュ削減、oneCCL分散通信、CPU命令とモデル別カーネル最適化をxFasterTransformerへ統合し、GPUを使わないLLM推論を高速化する。",
-      "char_count": 82,
-      "japanese_ratio": 0.6417910447761194,
-      "failures": [
-        "日本語比率 64.2% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "KVキャッシュ削減、分散通信、CPU命令とモデル別カーネル最適化を推論基盤へ統合し、GPUを使わない大規模言語モデル推論を高速化する。",
+      "char_count": 67,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {
@@ -5739,13 +5760,11 @@
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md",
-      "status": "FAIL",
-      "summary": "MoEの活性値保存・メモリ IO・Grouped GEMM paddingを同時に削り、Hopper GPUでfine-grained/sparse 専門家計算を高速化するカーネル・algorithm協調設計。",
-      "char_count": 105,
-      "japanese_ratio": 0.5352112676056338,
-      "failures": [
-        "日本語比率 53.5% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "MoEの活性値保存、メモリ入出力、グループ行列積の詰め物を同時に減らし、Hopper GPU上の細粒度で疎な専門家計算を高速化するカーネルとアルゴリズムの協調設計。",
+      "char_count": 82,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {
@@ -7804,6 +7823,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+      "status": "PASS",
+      "summary": "生成と学習を完全非同期化し、データ陳腐化を制御するスケジューリングとPPO補正でLLM推論強化学習のGPU待機を削減する。",
+      "char_count": 61,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.04203-cascadia-cascade-serving-routing-deployment.md",
       "status": "PASS",
       "summary": "モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。",
@@ -9856,13 +9884,11 @@
     },
     {
       "path": "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md",
-      "status": "FAIL",
-      "summary": "専門家単位でトークンを分割し、負荷に応じたGEMM選択とSM制限によって全対全通信を計算へ重畳するMoE向けExpert Pipeline Scheduler。",
-      "char_count": 80,
-      "japanese_ratio": 0.6567164179104478,
-      "failures": [
-        "日本語比率 65.7% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "専門家単位でトークンを分割し、負荷に応じた行列積方式の選択と演算資源制限によって全対全通信を計算へ重ねる、MoE向け専門家パイプライン・スケジューラ。",
+      "char_count": 75,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {
@@ -10489,6 +10515,15 @@
       "warnings": [
         "日本語比率 79.2% < 警告基準 80.0%"
       ]
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2604.07815-asynctls-efficient-generative-llm-inference-with-asynchronous-two-level-.md",
+      "status": "PASS",
+      "summary": "ブロック粗選別とトークン細選別を組み合わせ、将来必要なKVを時間局所性から非同期プリフェッチして長文脈デコードの注意機構とオフロードを重ねる。",
+      "char_count": 71,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/13-sparse-attention/2026-2604.16864-hierasparse.md",
@@ -11454,13 +11489,11 @@
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md",
-      "status": "FAIL",
-      "summary": "GEMMをNPU、GEMV型注意をPIMへ分担し、dual 行 バッファとsub-バッチ interleavingで依存を跨いで並列化するLLM推論accelerator。",
-      "char_count": 86,
-      "japanese_ratio": 0.5161290322580645,
-      "failures": [
-        "日本語比率 51.6% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "行列積をNPU、行列ベクトル積型の注意機構をPIMへ分担し、二重行バッファと小分けバッチの交互実行で依存関係をまたいで並列化するLLM推論アクセラレータ。",
+      "char_count": 77,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {
@@ -12181,13 +12214,11 @@
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md",
-      "status": "FAIL",
-      "summary": "粗い共有scaleと小集団のmicroexponentを組み合わせるMX数値形式を設計し、狭いbit幅でも外れ値に強い量子化と単純なshift中心のハードウェア実装を両立する。",
-      "char_count": 88,
-      "japanese_ratio": 0.6904761904761905,
-      "failures": [
-        "日本語比率 69.0% < 70.0%"
-      ],
+      "status": "PASS",
+      "summary": "粗い共有尺度と小集団ごとの微小指数を組み合わせるMX数値形式を設計し、狭いビット幅でも外れ値に強い量子化と、シフト演算中心の単純なハードウェア実装を両立する。",
+      "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
       "warnings": []
     },
     {
@@ -12754,6 +12785,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+      "status": "PASS",
+      "summary": "LLM内の極端な活性値外れ値が入力非依存の暗黙biasとして機能することを示し、低bit推論で外れ値を保護すべき理由を明確化する。",
+      "char_count": 65,
+      "japanese_ratio": 0.8833333333333333,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md",
       "status": "PASS",
       "summary": "重みを{-1,0,1}の三値へ制約して1.58 bit/weight化し、品質を保ちながらLLM推論の重み転送と行列積コストを削減する。",
@@ -12831,6 +12871,24 @@
       "summary": "3種の13B LLMをGPTQ/AWQ量子化または2:4枝刈りし、MMLUとDecodingTrust 8軸を評価。4-bit量子化は複数軸を保つ一方、3-bit GPTQはMMLUの比較的小さな低下の裏で毒性・OOD頑健性を大きく損ねた。",
       "char_count": 120,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+      "status": "PASS",
+      "summary": "出力不変の回転で活性化外れ値を分散し、重み・活性化・KVキャッシュを例外チャネルなしで4bit化する。",
+      "char_count": 51,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md",
+      "status": "PASS",
+      "summary": "各層で上位k トークンだけを注意機構/MLPへ通す固定容量 ルーティングにより、予測可能な計算量のままトークン別に深さを動的配分する。",
+      "char_count": 67,
+      "japanese_ratio": 0.9830508474576272,
       "failures": [],
       "warnings": []
     },
@@ -13049,6 +13107,15 @@
       "summary": "初期層の注意から回答関連トークンを上位k件だけ抽出し、短縮文脈を全モデルへ再入力する二段階推論で、長文脈のプリフィル計算とKVメモリを同時に削減する。",
       "char_count": 75,
       "japanese_ratio": 0.9857142857142858,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+      "status": "PASS",
+      "summary": "RLHFのモデル間制御とモデル内分散実行を分離し、actor再シャーディングとGPU配置を最適化して複数RLHF方式のスループットを高める。",
+      "char_count": 70,
+      "japanese_ratio": 0.9122807017543859,
       "failures": [],
       "warnings": []
     },
@@ -13283,6 +13350,15 @@
       "summary": "活性値再計算・パラメータ退避・オプティマイザ退避を整数線形計画で共同選択し、反復をまたぐ優先度付き処理重畳でCPU/GPU待ちを減らす異種混在LLM学習方式。",
       "char_count": 79,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
+      "status": "PASS",
+      "summary": "正解率と指定思考トークン長を強化学習で同時最適化し、推論時の計算予算とreasoning精度をプロンプトから明示制御する。",
+      "char_count": 61,
+      "japanese_ratio": 0.847457627118644,
       "failures": [],
       "warnings": []
     },
@@ -13662,11 +13738,29 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md",
+      "status": "PASS",
+      "summary": "注意と専門家を別GPU群へ分離し、二段通信・GPU内負荷分散・動的専門家配置でMoE推論資源を独立スケールする。",
+      "char_count": 56,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md",
       "status": "PASS",
       "summary": "拡散言語モデルを並列ドラフト器として対象自己回帰モデルへ二段階整合し、最大32 tokenの候補受理とHumanEvalで5.54倍の高速化を実現する投機的復号。",
       "char_count": 81,
       "japanese_ratio": 0.9206349206349206,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md",
+      "status": "PASS",
+      "summary": "RAG文書のKVを事前計算してflash ストレージへ保存し、再利用時のGPU プリフィルをSSD読出しへ交換して時間・電力を削減する。",
+      "char_count": 68,
+      "japanese_ratio": 0.9056603773584906,
       "failures": [],
       "warnings": []
     },
@@ -13743,6 +13837,17 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2601.17668-fast-kvzip-efficient-and-accurate-llm-inference-with-gated-kv-eviction.md",
+      "status": "WARN",
+      "summary": "軽量なsink-attentionゲートで重要KVを判別し、プリフィルとデコードの双方で最大70%のKVキャッシュを低オーバーヘッドに削除する。",
+      "char_count": 72,
+      "japanese_ratio": 0.7903225806451613,
+      "failures": [],
+      "warnings": [
+        "日本語比率 79.0% < 警告基準 80.0%"
+      ]
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md",
       "status": "PASS",
       "summary": "対象LLM特徴から未来ロジットを1回で並列予測しN-gram木刈り込みを行い、EAGLE3より平均約30%高い投機デコード高速化を得る。",
@@ -13774,6 +13879,15 @@
       "status": "PASS",
       "summary": "チャンク再計算・ページ化KV/勾配・非同期CPUオフロード・疎注意を統合し、Qwen2.5-7Bの4M文脈学習を単一H200で実現する。",
       "char_count": 68,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.06154-mose-mixture-of-slimmable-experts-for-efficient-and-adaptive-language-mo.md",
+      "status": "PASS",
+      "summary": "各MoE専門家を入れ子状の可変幅構造にして、ルータ確信度と計算予算から専門家ごとの実行幅まで動的選択し、単一モデルで連続的な品質・計算交換を実現する。",
+      "char_count": 75,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
