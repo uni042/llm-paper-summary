@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r161-screen-01-part-06-8a25e0b00b16",
+  "reference_main_sha": "2042a01d0113ed9f26d5351119d51317db9da91b",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.22159",
+      "identity_tokens": [
+        "arXiv:2505.22159"
+      ],
+      "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation",
+      "reason": "Full text adds force-aware modality routing with an MoE for contact-rich robotic manipulation, but the paper centers on robot control and does not identify sparse-compute, faster inference, lower memory, or reduced latency as an objective. MoE architecture creates only a weak speculative systems connection.",
+      "source_url": "https://arxiv.org/abs/2505.22159",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.08316",
+      "identity_tokens": [
+        "arXiv:2501.08316"
+      ],
+      "title": "Diffusion Adversarial Post-Training for One-Step Video Generation",
+      "reason": "This paper post-trains a diffusion model for one-step video generation; the method concerns diffusion video generation rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2501.08316",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.06573",
+      "identity_tokens": [
+        "arXiv:2405.06573"
+      ],
+      "title": "An Investigation of Incorporating Mamba For Speech Enhancement",
+      "reason": "The work incorporates Mamba into speech enhancement; it is an audio enhancement model, not LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2405.06573",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00521-022-07467-z",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-022-07467-z"
+      ],
+      "title": "An automatic fire detection system based on deep convolutional neural networks for low-power, resource-constrained devices",
+      "reason": "The publisher paper is a CNN-based fire-detection system for low-power devices. Device constraints are in the application setting, but the method is not LLM inference or a transferable LLM serving technique.",
+      "source_url": "https://doi.org/10.1007/s00521-022-07467-z",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:69170faf00279bdcdfd91290a3756d539f9fb6e6",
+      "identity_tokens": [
+        "SemanticScholar:69170faf00279bdcdfd91290a3756d539f9fb6e6"
+      ],
+      "title": "Communication-Efficient Distributed Deep Learning: A Comprehensive Survey",
+      "reason": "The primary arXiv survey concerns communication-efficient distributed deep-learning training, including synchronization and training communication compression; it does not present LLM inference/serving methods.",
+      "source_url": "https://www.semanticscholar.org/paper/69170faf00279bdcdfd91290a3756d539f9fb6e6",
+      "first_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "last_checked_at": "2026-10-07T08:58:07.678366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ]
+    }
+  ]
+}
