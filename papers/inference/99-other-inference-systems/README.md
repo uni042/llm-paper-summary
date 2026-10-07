@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（370本）
+## 自動生成の論文一覧（373本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1160,6 +1160,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   しかし既存方式はトークンごとに補助MLPで活性集合を予測することが多く、予測計算に加え、毎トークン異なる重み断片を呼び出すため実機では理論疎性ほど速くならない。
 
+- **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：2  
+  従来の音声対話は、音声認識、テキストLLM、音声合成を直列に通すため各段の待ち時間が累積し、話者交替の境界も明示的に決める必要がある。推論効率上の核は、Mimi音声コーデックで音声を12.5 Hzの離散トークンへ圧縮し、時間方向の大きなTransformerと、同一時刻に複数コードブックを生成する小さな深さTransformerへ処理を分ける点にある。
+
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：2  
   Test-Time 学習（TTT）層は、再帰型ニューラルネットワーク（RNN）が長い履歴を固定サイズvectorへ圧縮することで表現力を失う問題に対し、隠れ 状態そのものを「学習するモデル」にする。
@@ -1460,6 +1464,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   BERT系モデルは重みが大きく、推論では演算能力よりDRAMから重みを読む帯域・energyが律速になりやすい。単純な低bit一様量子化は、分布のごく少数の大きな外れ値へ量子化範囲を合わせるため、多数の通常値へ使える分解能を失う。
 
+- **2020-06 · [BERT Loses Patience: Fast and Robust Inference with Early Exit](2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  論文はALBERTを用いた実験で、不要な後段計算を減らすだけでなく、後段で正解から誤答へ変化する「考え過ぎ」を避ける場合があり、精度・頑健性と速度の交換条件が既存早期終了方式より良くなると報告する。
+
 ### 8年前（2018-11〜2019-10）
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -1489,6 +1497,10 @@
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   Q8BERTは、BERTをproductionへ配置するときのパラメータ メモリ、メモリ 帯域、整数演算利用を改善するため、重みと活性値を8bitへ量子化する研究である。論文はBERTの下流 accuracyをほぼ維持しながら約4倍圧縮できることを示し、INT8演算を高速に実行できるハードウェアでは推論速度改善につながるとする。
+
+- **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  標準自己注意は、許可した文脈 window内の全過去位置へ同じ最大範囲で注意機構を計算する。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

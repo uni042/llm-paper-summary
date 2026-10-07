@@ -35,10 +35,15 @@
   "selection_reason": "Moshiはtext LLM backboneと階層型audio language modelを統合し、入力音声と出力音声を並列autoregressive streamとして常時処理するfull-duplex実時間会話LLM。streaming architectureにより理論160 ms、実測約200 msのlatencyを実現し、従来pipelineの数秒latencyを推論architectureそのものから削減するため対象内。",
   "semantic_scholar_id": "ae4aa7b0c5a327dae63ad20e00b58bcc6176b3b8",
   "source_url": "https://arxiv.org/abs/2410.00037",
-  "status": "ready",
+  "status": "superseded",
   "title": "Moshi: a speech-text foundation model for real-time dialogue",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-07T08:51:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+  "represented_canonical_id": "arXiv:2410.00037",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
