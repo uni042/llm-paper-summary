@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-07T14:14:39.550110+00:00",
+  "generated_at": "2026-10-07T14:21:05.539014+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 656,
+  "count": 658,
   "worker_counts": {
-    "scheduled-chat-00": 221,
-    "scheduled-chat-30": 210,
+    "scheduled-chat-00": 222,
+    "scheduled-chat-30": 211,
     "scheduled-chat-45": 225
   },
   "entries": [
@@ -4671,6 +4671,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md",
+      "canonical_id": "arXiv:2402.17463",
+      "title": "Training-Free Long-Context Scaling of Large Language Models",
+      "file_bytes": 10709,
+      "source_sha256": "d8c78dedacba5e6b60c165a6e0b80b95a5c7ee1f5a1af1514347ff248ab5f445",
+      "source_git_blob_sha": "b1ebf951c8486007dadd5dbc32b9603d257f0743",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.992778,
+      "quality_metrics": {
+        "body_chars": 2954,
+        "method_chars": 874,
+        "evaluation_chars": 910,
+        "limitation_chars": 246
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
       "canonical_id": "arXiv:1909.05840",
       "title": "Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT",
@@ -8760,6 +8780,26 @@
         "method_chars": 1301,
         "evaluation_chars": 520,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md",
+      "canonical_id": "arXiv:2402.16775",
+      "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
+      "file_bytes": 12516,
+      "source_sha256": "c01e67bb4b7373f1bc2d7f6774b258936f33056c26c60c311b19d691f583863a",
+      "source_git_blob_sha": "6ab53b1d99161ac2ff3fe815b035adb778f6dc13",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 1.0,
+      "quality_metrics": {
+        "body_chars": 3367,
+        "method_chars": 752,
+        "evaluation_chars": 939,
+        "limitation_chars": 218
       },
       "mechanical_failures": [],
       "warnings": []

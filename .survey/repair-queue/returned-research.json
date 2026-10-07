@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-07T14:03:07+00:00",
+  "generated_at": "2026-10-07T14:22:08+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 153,
+  "count": 151,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -2502,8 +2502,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
-      "title": "Memory-efficient Transformers via Top-k Attention",
-      "source_url": "https://aclanthology.org/2021.sustainlp-1.5/",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T14:03:05+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -2528,40 +2528,9 @@
       "worker_run_key": "20261007-2031-scheduled-chat-30/repair-r02"
     },
     {
-      "canonical_id": "arXiv:2402.17463",
-      "title": "Training-Free Long-Context Scaling of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2402.17463",
-      "returned_at": "2026-10-07T14:03:06+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 本文説明量 2146 < 2200",
-        "説明不足トリガー: 手法説明量 689 < 700",
-        "説明不足トリガー: 評価説明量 287 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2146,
-        "body_paragraphs": 17,
-        "method_chars": 689,
-        "method_paragraphs": 6,
-        "evaluation_chars": 287,
-        "limitation_chars": 246,
-        "insufficiency_flags": [
-          "本文説明量 2146 < 2200",
-          "手法説明量 689 < 700",
-          "評価説明量 287 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-870bdcf64ac6--libfile_58b7cba04cd481918249794d4fac53e6--2402.17463-dca-repair-20261007-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-870bdcf64ac6--libfile_58b7cba04cd481918249794d4fac53e6--2402.17463-dca-repair-20261007-v2.json",
-      "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/ISCA59077.2024.00082",
-      "title": "A Hardware Evaluation Framework for Large Language Model Inference",
-      "source_url": "https://arxiv.org/abs/2312.03134",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T14:03:07+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -2583,33 +2552,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f8b0299f4890--libfile_e1f1fcc48d4c819185416a2564eb5a28--2312.03134-llmcompass-repair-20261007-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f8b0299f4890--libfile_e1f1fcc48d4c819185416a2564eb5a28--2312.03134-llmcompass-repair-20261007-v2.json",
-      "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
-    },
-    {
-      "canonical_id": "arXiv:2402.16775",
-      "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
-      "source_url": "https://arxiv.org/abs/2402.16775",
-      "returned_at": "2026-10-07T14:03:07+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 365 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2793,
-        "body_paragraphs": 22,
-        "method_chars": 752,
-        "method_paragraphs": 5,
-        "evaluation_chars": 365,
-        "limitation_chars": 218,
-        "insufficiency_flags": [
-          "評価説明量 365 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ae47d92569c1--libfile_634d7561957081918cf03ac6e66ce70d--2402.16775-quantization-evaluation-repair-20261007-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ae47d92569c1--libfile_634d7561957081918cf03ac6e66ce70d--2402.16775-quantization-evaluation-repair-20261007-v2.json",
       "worker_run_key": "20261007-2133-scheduled-chat-30/repair-r01"
     }
   ]

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-07 23:05:01 JST**
+> 自動生成: **2026-10-07 23:22:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **596** |
-| 未claim Research job | **596** |
-| 直近24hのResearch処理完了 | **7** |
-| 最終Research処理完了 | **10-07 22:03:10 JST** |
+| 収録候補論文数 | **595** |
+| 未claim Research job | **595** |
+| 直近24hのResearch処理完了 | **9** |
+| 最終Research処理完了 | **10-07 22:52:00 JST** |
 | 最終Discovery探索完了 | **10-07 19:31:00 JST** |
 | 整合性異常 | **0** |
 
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **596** |
+| canonical_id確認済みの一意な候補論文 | **595** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **596** |
+| 非終端Research job合計 | **595** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,16 +35,16 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **97807** |
-| 処理済み | **17264** |
-| 未処理Discovery候補 | **80543** |
-| 収録済み | **1724** |
-| Research / Audit候補へ昇格済み | **443** |
+| 処理済み | **17265** |
+| 未処理Discovery候補 | **80542** |
+| 収録済み | **1726** |
+| Research / Audit候補へ昇格済み | **442** |
 | 無関係として除外 | **10709** |
 | 微妙として除外 | **4388** |
 
 - 消化率: **17.7%**
-- 現在の生在庫: 後方references **49995件** / 前方引用 **31765件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **81274件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **49993件** / 前方引用 **31765件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **81273件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **true** |
-| 最終maintenance完了 | **10-07 14:29:27 JST（8時間35分前）** |
+| 最終maintenance完了 | **10-07 14:29:27 JST（8時間52分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -91,16 +91,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **3** |
+| 直近6hのResearch完了 | **5** |
 | 直近6hのDiscovery run | **5** |
 | 直近6hのDiscovery本文確認・分類 | **37** |
-| 最終Research完了 | **10-07 22:03:10 JST** |
+| 最終Research完了 | **10-07 22:52:00 JST** |
 | 最終Discovery完了 | **10-07 19:31:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-07 22:03:10 JST** / worker — / run 20261007-2203-scheduled-chat-00/repair-r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_8021b4fd52048191a73870ba852e37a0--2024-2401.04658-lightning-attention-2-repair-20261007.json
+- Research: **10-07 22:52:00 JST** / worker — / run 20261007-interactive-repair-v3 / 成果 **2件**
+  - evidence: .survey/import-inbox/results/research/interactive-2402.16775-quantization-repair-20261007-v3.json
 - Discovery: **10-07 19:31:00 JST** / worker scheduled-chat-30 / run 20261007-1931-scheduled-chat-30/r02-partial
   - 本文確認・分類 **4件** / accept **3件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_2cfe0dd222988191addbb6ae50b29774--discovery-20261007-1931-scheduled-chat-30-r02-partial.json
@@ -212,7 +212,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **596** |
+| ready | **595** |
 
 ### 候補の重複・識別情報欠損
 
@@ -232,7 +232,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1725** |
+| inference/training/survey配下の論文Markdown実体 | **1727** |
 
 ### immutable submissionの未照合
 
@@ -240,11 +240,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **302** |
+| 成功result未照合のimmutable submission | **299** |
 | └ Research | **120** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **37** |
+| └ Other/Unknown | **34** |
 
 ### 厳格検証が未成立のcompleted job
 
