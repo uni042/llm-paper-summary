@@ -637,13 +637,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：19  
   鍵値活性のチャネル間依存を利用して複数チャネルを共同量子化し、極低ビットでも品質劣化を抑える連結量子化を提案する。
 
+- **2024-02 · [ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition](2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md)**  
+  実装：✓ ・ リポジトリ内被引用：19  
+  複数利用者へ同じ大規模言語モデル（LLM）を提供すると、システム プロンプトや少数例例のような長い接頭辞が要求間で重複することが多い。A100 80GB、CUDA 11.8の評価では、共有システム プロンプトが1024〜4096トークンの場合、PagedAttention系カーネルに対して注意機構 カーネル スループットを3.2〜4.8倍へ高める。
+
 - **2024-03 · [Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference](2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md)**  
   実装：[✓](https://github.com/NVIDIA/Megatron-LM/tree/DMC) ・ リポジトリ内被引用：18  
   動的メモリ圧縮（動的 メモリ Compression; DMC）は、過去トークンを「残す／捨てる」の二択にせず、各注意ヘッドが新しいキー・値（Key-Value; KV）を新規スロットへ追加するか、直前のスロットへ重み付きで結合するかを学習する。これにより、内容・層・ヘッドごとに必要な時間解像度を変えながらKVキャッシュをオンライン圧縮する。
-
-- **2024-02 · [ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition](2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  複数利用者へ同じ大規模言語モデル（LLM）を提供すると、システム プロンプトや少数例例のような長い接頭辞が要求間で重複することが多い。A100 80GB、CUDA 11.8の評価では、共有システム プロンプトが1024〜4096トークンの場合、PagedAttention系カーネルに対して注意機構 カーネル スループットを3.2〜4.8倍へ高める。
 
 - **2024-05 · [ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification](2024-2405.14256-zipcache.md)**  
   実装：[✓](https://github.com/ThisisBillhe/ZipCache) ・ リポジトリ内被引用：17  

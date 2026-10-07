@@ -102,6 +102,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。
 
+- **2026-02 · [Predicting LLM Output Length via Entropy-Guided Representations](2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  生成長を事前に予測して近い長さの要求をまとめればこの無駄を減らせるが、既存法はDistilBERTのような補助モデルを別途動かすため、追加遅延とGPUメモリを消費する。
+
 - **2026-02 · [DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving](2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md)**  
   実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：3  
   さらに初回トークン時間（time to first トークン; TTFT）のサービス水準目標（service-level objective; SLO）を超えそうな場合だけ負荷優先へ切り替え、ホットスポット時は候補対の中で要求を移し、クラスタ伸縮時は二重ハッシュリングで再写像範囲を局所化する。
@@ -173,10 +177,6 @@
 - **2026-03 · [Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference](2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   多GPU LLM推論でCPUコア不足がトークン化・カーネル発行・NCCL同期・共有メモリ放送を遅らせGPUを遊休させる経路を実機分解し、CPU増強だけでTTFTを最大7.11倍改善できることを示す。
-
-- **2026-02 · [Predicting LLM Output Length via Entropy-Guided Representations](2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  生成長を事前に予測して近い長さの要求をまとめればこの無駄を減らせるが、既存法はDistilBERTのような補助モデルを別途動かすため、追加遅延とGPUメモリを消費する。
 
 - **2026-02 · [Pancake: Hierarchical Memory System for Multi-Agent LLM Serving](2026-2602.21477-pancake-hierarchical-agentic-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
