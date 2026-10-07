@@ -72,7 +72,7 @@
 
 - **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  複数LLMを協調させる通常の方法は、あるモデルの結果をテキスト化し、次のモデルがそのテキストを再びプリフィルする。しかし長いprefixでは同じ文脈をモデルごとに再計算し、テキスト化できない内部表現も失う。各モデルには共有空間へ書くout-translatorと、共有空間から自分のKVへ読むin-translatorを一つずつ持たせる。
+  複数LLMを協調させる通常の方法は、あるモデルの結果をテキスト化し、次のモデルがそのテキストを再びプリフィルする。しかし長い接頭辞では同じ文脈をモデルごとに再計算し、テキスト化できない内部表現も失う。各モデルには共有空間へ書くout-translatorと、共有空間から自分のKVへ読むin-translatorを一つずつ持たせる。基盤LLMの重みは固定する。
 
 - **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -704,7 +704,7 @@
 
 - **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
   実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：18  
-  さらに要求順を並べ替えてデコード トークンと後続プリフィル chunkを混ぜ、固定トークン数ではなくGPU メモリ余裕からバッチを拡大し、共有prefix 注意機構を水平融合する。MLSys 2026版ではvLLM/SGLang比1.3〜10.8倍を報告する。
+  さらに要求順を並べ替えてデコード トークンと後続プリフィル chunkを混ぜ、固定トークン数ではなくGPU メモリ余裕からバッチを拡大し、共有接頭辞 注意機構を水平融合する。MLSys 2026版ではvLLM/SGLang比1.3〜10.8倍を報告する。
 
 - **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
@@ -784,7 +784,7 @@
 
 - **2025-02 · [M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type](2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  M-ANTは、LLMの細粒度group-wise量子化で「同じテンソル内でも64〜128要素程度の小groupごとに値分布が大きく違う」という問題へ、数値型そのものをgroupごとに適応させる方式である。
+  M-ANTは、LLMの細粒度グループ-wise量子化で「同じテンソル内でも64〜128要素程度の小グループごとに値分布が大きく違う」という問題へ、数値型そのものをグループごとに適応させる方式である。
 
 - **2025-02 · [Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies](2025-2502.05202-accelerating-llm-inference-with-lossless-speculative-decoding-algorithms-for-heterogeneous-vocabularies.md)**  
   実装：[✓](https://github.com/keyboardAnt/hf-bench) ・ リポジトリ内被引用：3  
