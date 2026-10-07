@@ -86,6 +86,7 @@ quality_self_review_passed: true
 quality_self_review_version: '2026-10-07-v1'
 worker_run_key: 'interactive-20261008-bottom-up-reaudit-losparse'
 
+worker_completed_at: '2026-10-08T07:27:27+09:00'
 ---
 
 # LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation
