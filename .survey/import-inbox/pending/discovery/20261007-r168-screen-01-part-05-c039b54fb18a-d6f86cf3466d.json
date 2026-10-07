@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r168-screen-01-part-05-c039b54fb18a",
+  "reference_main_sha": "e47361ba7366eb8e9852cda22dd314696eb9e114",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19362",
+      "identity_tokens": [
+        "arXiv:2602.19362"
+      ],
+      "title": "LLMs Can Learn to Reason Via Off-Policy RL",
+      "reason": "一次資料の要旨はoff-policy RLによるreasoning学習法であり、主な貢献は学習時の政策最適化で推論システム効率の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2602.19362",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14833",
+      "identity_tokens": [
+        "arXiv:2602.14833"
+      ],
+      "title": "RF-GPT: Teaching AI to See the Wireless World",
+      "reason": "一次資料の要旨はRF信号理解向けのマルチモーダル応用モデルであり、LLM推論基盤の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.14833",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05547",
+      "identity_tokens": [
+        "arXiv:2602.05547"
+      ],
+      "title": "Multi-Task GRPO: Reliable LLM Reasoning Across Tasks",
+      "reason": "一次資料の要旨は複数タスク間のGRPO学習重み付け・samplerを扱い、推論時の資源効率を改善する方法ではない。",
+      "source_url": "https://arxiv.org/abs/2602.05547",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04877",
+      "identity_tokens": [
+        "arXiv:2602.04877"
+      ],
+      "title": "CoWTracker: Tracking by Warping instead of Correlation",
+      "reason": "一次資料本文の方法・実験は画像点追跡で相関cost volumeをwarpingへ置換するCVモデル。FlashAttentionとの題名上の近さはあるが、LLM attention/inferenceへの適用を示さず対象外。",
+      "source_url": "https://arxiv.org/abs/2602.04877",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20279",
+      "identity_tokens": [
+        "arXiv:2601.20279"
+      ],
+      "title": "Hallucination Begins Where Saliency Drops",
+      "reason": "本文はLVLM推論時のsaliency-guided token rejectionとattention補強を提案するが、評価は主にhallucination/qualityで、計算・メモリ・latency改善の主張がない。linked inference-acceleration系統との技術的接点はattention/visual tokensに限られ、gradient/samplingの追加費用も不明。",
+      "source_url": "https://arxiv.org/abs/2601.20279",
+      "first_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "last_checked_at": "2026-10-07T10:13:14.241285+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ]
+    }
+  ]
+}
