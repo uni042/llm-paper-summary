@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4c25002ab7f5309-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2403.09626",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2403.09626",
+    "identity_tokens": [
+      "arXiv:2403.09626"
+    ],
+    "reason": "Video Mamba Suite measures efficiency for video backbones/temporal encoders, not LLM decoder serving; an LVLM visual-front-end connection is plausible but not shown as a language-inference improvement.",
+    "first_checked_at": "2026-10-07T08:53:53+00:00",
+    "last_checked_at": "2026-10-07T08:53:53+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Video Mamba Suite: State Space Model as a Versatile Alternative for Video Understanding"
+  },
+  "processed_at": "2026-10-07T08:53:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4c25002ab7f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
