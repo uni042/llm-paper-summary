@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1931-scheduled-chat-30/r02-partial",
+  "reference_main_sha": "3fa407c1e70c455c90d1573cfb6aa03f9e0da9f9",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.22098",
+      "identity_tokens": [
+        "arXiv:2609.22098"
+      ],
+      "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
+      "reason": "半自己回帰ドラフターの既存Markov headから親条件付き分布を読み、edge受理確率へ校正して木の展開・停止・負荷適応を統一するlossless投機的復号。chain比で1 round当たり15–25%多くdraft tokenを受理し、単一request wall-clockを8–14%高速化する。",
+      "source_url": "https://arxiv.org/abs/2609.22098",
+      "body_check": "fulltext_review: 一次arXiv本文/要旨を確認。path survivalをbest-first expansion、per-round stopping、load-adaptive serving policyへ用い、高負荷時はtreeをchainへ縮退させる。",
+      "first_checked_at": "2026-10-07T19:31:19+09:00",
+      "last_checked_at": "2026-10-07T19:31:19+09:00",
+      "worklist_rank": 60
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.04074",
+      "identity_tokens": [
+        "arXiv:2608.04074"
+      ],
+      "title": "Spend Bits Where Queries Look: KV Cache Vector Quantization with Attention-Preserving Transforms",
+      "reason": "長文脈decodeの帯域律速KVキャッシュをattention積の歪み基準でtransform codingし、key/valueに最適変換と固定幅vector quantizationを適用する。2 bit/elementで同等throughputのscalar quantizationより長文脈retrieval精度を大きく回復する。",
+      "source_url": "https://arxiv.org/abs/2608.04074",
+      "body_check": "fulltext_review: 一次arXiv本文/要旨を確認。calibration statisticsからclosed-form transformを導出し、key側は非直交変換とgeneralized Parseval relationを使ってattention-aware distortionをtransform-domain MSEへ写す。",
+      "first_checked_at": "2026-10-07T19:31:19+09:00",
+      "last_checked_at": "2026-10-07T19:31:19+09:00",
+      "worklist_rank": 61
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.27791",
+      "identity_tokens": [
+        "arXiv:2606.27791"
+      ],
+      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
+      "reason": "長文脈LLMでfull attentionを残す層を、各層をsliding-window化した際のanswer-token負の対数尤度劣化から選ぶtraining-free適応。Qwen3-4B/LongMemEvalで1/4 full-attention層の64.6%精度を達成し、1/2 periodic baselineの65.0%にほぼ一致しつつ計算予算を半減する。",
+      "source_url": "https://arxiv.org/abs/2606.27791",
+      "body_check": "fulltext_review: 一次arXiv本文/要旨を確認。固定周期やattention heuristicではなくdownstream accuracyへ直結するNLL degradationでlayer importanceを測り、一回約15分のcalibrationのみ必要。",
+      "first_checked_at": "2026-10-07T19:31:19+09:00",
+      "last_checked_at": "2026-10-07T19:31:19+09:00",
+      "worklist_rank": 63
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.07664",
+      "identity_tokens": [
+        "arXiv:2609.07664"
+      ],
+      "title": "Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs",
+      "reason": "量子化LLMの推論配置に関係するが、主貢献はJensen-Shannon divergence等による量子化忠実度評価frameworkであり、推論コスト削減機構そのものではない。対象範囲のbenchmark/analysis扱いに含めるか判断が必要なためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.07664",
+      "body_check": "fulltext_review: 一次arXiv本文/要旨を確認。5 foundation architecture×4 reasoning benchmark、BF16からQ2_Kまで120 runを分析し、Q4_Kが同等memory footprintのQ4_0より低divergence傾向と報告。",
+      "first_checked_at": "2026-10-07T19:31:19+09:00",
+      "last_checked_at": "2026-10-07T19:31:19+09:00",
+      "worklist_rank": 57
+    }
+  ]
+}
