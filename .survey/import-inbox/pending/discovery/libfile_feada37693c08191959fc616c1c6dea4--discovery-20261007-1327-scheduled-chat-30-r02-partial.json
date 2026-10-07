@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1327-scheduled-chat-30/r02-partial",
+  "reference_main_sha": "f3f7f81f29a2e66774890933b088d64070496261",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.11983",
+      "identity_tokens": [
+        "arXiv:2312.11983"
+      ],
+      "title": "Fluctuation-based Adaptive Structured Pruning for Large Language Models",
+      "reason": "再学習不要の構造化pruningでLLMのstorageと実推論速度を直接改善するFLAPを提案し、hardware-friendlyなdense縮小モデルとしてdeployment/inference効率を対象とする。",
+      "source_url": "https://arxiv.org/abs/2312.11983",
+      "body_check": "fulltext_review: 一次論文内容を確認。weighted input feature fluctuationでchannel importanceを測り、global adaptive structure searchとbaseline bias compensationで再学習なしにstructured pruningする。LLaMA系列でpruning後のperplexity/zero-shot品質と実inference speedを評価し、構造化削減がhardware accelerationへ直結することを確認。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "worklist_rank": 87
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11172",
+      "identity_tokens": [
+        "arXiv:2305.11172"
+      ],
+      "title": "ONE-PEACE: Exploring One General Representation Model Toward Unlimited Modalities",
+      "reason": "vision/audio/languageを統一する4B multimodal representation modelのarchitectureとpretrainingが主題で、推論runtime・memory・serving効率化を主要貢献としない。",
+      "source_url": "https://arxiv.org/abs/2305.11172",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmodality adapters、shared self-attention、modality FFNsとcontrastive pretraining、画像・音声・multimodal task性能が主題と明白なため本文未読。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "worklist_rank": 88
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/18.771145",
+      "identity_tokens": [
+        "DOI:10.1109/18.771145"
+      ],
+      "title": "Minimal tail-biting trellises: the Golay code and more",
+      "reason": "block codeのtail-biting trellis表現とstate complexityを扱う符号理論研究で、LLM/Transformer推論を対象としない。",
+      "source_url": "https://doi.org/10.1109/18.771145",
+      "body_check": "abstract_screen_only: IEEE一次abstractでGolay code等のminimal tail-biting trellis構成とstate complexityが主題と明白なため本文未読。",
+      "first_checked_at": "2026-10-07T13:27:40+09:00",
+      "last_checked_at": "2026-10-07T13:27:40+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ],
+      "worklist_rank": 89
+    }
+  ]
+}
