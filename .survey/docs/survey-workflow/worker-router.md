@@ -75,13 +75,13 @@
 - 各entryの `assigned_worker` が自分の `worker_id` と一致するものだけを担当する。割当は `sha256(path)` に基づく決定論的3分割である。
 - キューは `file_bytes ASC, path ASC` に並ぶ。自分担当もこの順序で処理し、短いものから監査する。
 - 1ラウンド5件を目安にし、5件を保存・確認できたら通常runと同様に追加ラウンドを開始する。キューが残る間は通常Research / Discoveryよりこちらを優先する。
-- 作業開始時に対象pathをcurrent mainから再取得し、entryの `source_sha256` と一致することを確認する。不一致なら古い内容を上書きせず、そのentryはskipしてキュー再生成を待つ。
+- 作業開始時に対象pathをcurrent mainから再取得する。entryに `source_sha256` または `source_git_blob_sha` があれば一致を確認し、不一致なら古い内容を上書きせずskipしてキュー再生成を待つ。初期キュー等でhashが無い場合は、その取得時点のGit blob SHAを監査成果の `under16kb_reaudit_source_git_blob_sha` に記録する。
 - 再監査は一次論文へ戻って行う。単なるサイズ検査ではない。主要機構について目的、入力・観測、内部処理、出力・更新対象、なぜ効くか、追加費用・失敗条件を追い、評価は条件・比較対象・指標・主要結果・読み取れることを対応付ける。限界・負の結果・適用範囲も具体化する。
 - 一般の推論/学習論文では、機械的下限として本文2,200文字、手法700文字、評価500文字を満たすことを確認する。ただしこれは意味品質の代替ではない。
 - `papers/survey/**` のサーベイ/レビュー論文には実験論文用の評価500文字を機械適用しない。代わりに調査範囲、分類軸、比較の根拠、カバレッジ、代表研究間の差、限界が十分かを意味監査する。
 - 日本語比率はfrontmatter、参考文献、URL、コード等を除く説明本文で **80%以上を再監査合格条件** とする。70〜80%を「警告だけ」で通さない。英語専門語を本文中で使う場合は、自然な日本語訳を先に置き、必要な場合だけ英語原語を括弧内に併記する。固有のモデル名・論文名・API名・数式等は無理に翻訳しない。
 - 現行本文がすでに十分なら、内容を水増しせず再監査メタデータだけを追加してよい。不足している場合は一次資料から不足箇所を再作成し、同じ監査をもう一度行う。**不合格のままLibraryへ保存しない。合格するまで再作成→再監査を繰り返す。**
-- 合格した完成Markdownには `under16kb_reaudit_target_path`、`under16kb_reaudit_source_sha256`、`under16kb_reaudit_version: "2026-10-07-v1"`、`under16kb_reaudit_passed: true` を追加し、通常Researchと同じ品質セルフレビュー項目も埋める。
+- 合格した完成Markdownには `under16kb_reaudit_target_path`、取得時点を固定する `under16kb_reaudit_source_sha256` または `under16kb_reaudit_source_git_blob_sha`、`under16kb_reaudit_version: "2026-10-07-v1"`、`under16kb_reaudit_passed: true` を追加し、通常Researchと同じ品質セルフレビュー項目も埋める。
 - 完成Markdownは通常Researchと同じ `/LLM-paper-summary-library-first/research/` に新しい一意名で保存する。GitHub importはidentity・target path・source SHA-256・品質ゲートを再確認して既存paperを同じpathで置換する。
 - import成功後は再監査キューが再生成され、合格paperは自動で消える。再度品質FAILになればpaper本体は更新されず、当該entryは再監査キューに残り、さらに通常の `returned-research.json` にも差し戻される。その場合は§1.1が次回最優先になる。
 - 再監査済み印だけを手作業で付けてキューを消してはならない。キュー生成器は印に加えて実測本文量・日本語比率も再検査する。
