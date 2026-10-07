@@ -684,6 +684,23 @@ def research_quality_metrics(audit: Any) -> dict[str, Any]:
     }
 
 
+def verify_reaudit_blob_sha(source_bytes: bytes, expected: str) -> tuple[bool, bool]:
+    """Match Git SHA or the legacy escaped-NUL hash from older re-audit queues.
+
+    The legacy value still hashes the *exact* source bytes. This narrowly scoped
+    compatibility path prevents already completed reviews from being discarded;
+    new queue entries always store genuine Git blob SHAs.
+    Returns (matches_current_bytes, used_legacy_encoding).
+    """
+    if not expected:
+        return False, False
+    if expected == under16_reaudit.git_blob_sha(source_bytes):
+        return True, False
+    legacy_header = f"blob {len(source_bytes)}".encode("ascii") + bytes((92, 48))
+    legacy_hash = hashlib.sha1(legacy_header + source_bytes).hexdigest()
+    return expected == legacy_hash, expected == legacy_hash
+
+
 def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
     imported = 0
     terminal = 0
@@ -849,7 +866,10 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                             "under16kb re-audit source changed since review (SHA-256): "
                             f"{expected_hash} != {current_hash}"
                         )
-                    if expected_blob_sha and expected_blob_sha != current_blob_sha:
+                    blob_matches, legacy_blob_used = verify_reaudit_blob_sha(
+                        current_bytes, expected_blob_sha
+                    )
+                    if expected_blob_sha and not blob_matches:
                         raise RuntimeError(
                             "under16kb re-audit source changed since review (git blob SHA): "
                             f"{expected_blob_sha} != {current_blob_sha}"
@@ -868,6 +888,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                             "paper_path": target_rel,
                             "reaudit_update": True,
                             "reaudit_version": version,
+                            "legacy_escaped_git_blob_sha_accepted": legacy_blob_used,
                             "previous_paper_sha256": current_hash,
                             "previous_paper_git_blob_sha": current_blob_sha,
                             "audit_status": audit.status,
