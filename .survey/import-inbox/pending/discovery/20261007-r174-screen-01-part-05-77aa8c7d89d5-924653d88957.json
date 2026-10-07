@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r174-screen-01-part-05-77aa8c7d89d5",
+  "reference_main_sha": "3a3ec8ff32ecf85c470a77ba3f1765bc356256dd",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13540",
+      "identity_tokens": [
+        "arXiv:2602.13540"
+      ],
+      "title": "On Calibration of Large Language Models: From Response To Capability",
+      "reason": "Calibration is not an inference efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2602.13540",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13855",
+      "identity_tokens": [
+        "arXiv:2602.13855"
+      ],
+      "title": "From Fluent to Verifiable: Claim-Level Auditability for Deep Research Agents",
+      "reason": "The contribution is evidence/audit reliability rather than inference resource efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.13855",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08048",
+      "identity_tokens": [
+        "arXiv:2602.08048"
+      ],
+      "title": "TDGNet: Hallucination Detection in Diffusion Language Models via Temporal Dynamic Graphs",
+      "reason": "The method is a factuality detector, not a generation-speed or resource optimization; the single-pass detector is not an LLM inference acceleration method.",
+      "source_url": "https://arxiv.org/abs/2602.08048",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17692",
+      "identity_tokens": [
+        "arXiv:2602.17692"
+      ],
+      "title": "Agentic Unlearning: When LLM Agent Meets Machine Unlearning",
+      "reason": "It is adjacent to persistent-agent memory, but its objective and reported resource savings are training/unlearning-oriented rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.17692",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03692",
+      "identity_tokens": [
+        "arXiv:2602.03692"
+      ],
+      "title": "Bringing Reasoning to Generative Recommendation Through the Lens of Cascaded Ranking",
+      "reason": "The measured resource changes are small increases for recommendation quality, not an inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2602.03692",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ]
+    }
+  ]
+}
