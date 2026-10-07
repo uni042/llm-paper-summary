@@ -79,6 +79,38 @@ def _dedupe(items: list[str]) -> list[str]:
     return out
 
 
+def previous_queue_paths(repo_root: Path) -> set[str]:
+    """Return current-version pending paths already admitted to the durable lane.
+
+    A paper enters this lane because it was below the size trigger at some point.
+    Once admitted, growing above 16KB must not make it disappear before a current
+    semantic attestation and all deterministic checks pass.
+    """
+    target = repo_root.resolve() / QUEUE_PATH
+    if not target.is_file():
+        return set()
+    try:
+        payload = json.loads(target.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        return set()
+    if (
+        payload.get("queue_kind") != "under_16kb_semantic_reaudit"
+        or payload.get("queue_version") != REAUDIT_VERSION
+    ):
+        return set()
+    entries = payload.get("entries")
+    if not isinstance(entries, list):
+        return set()
+    paths: set[str] = set()
+    for row in entries:
+        if not isinstance(row, dict):
+            continue
+        value = str(row.get("path") or "").strip()
+        if value.startswith("papers/"):
+            paths.add(Path(value).as_posix())
+    return paths
+
+
 def reaudit_failures(audit: quality.PaperResult, path: str) -> list[str]:
     """Return the deterministic failures for the under-16KB semantic re-audit lane.
 
@@ -136,13 +168,14 @@ def audit_one(path: Path, repo_root: Path) -> tuple[quality.PaperResult, dict[st
 def build_queue(repo_root: Path, max_file_bytes: int = MAX_FILE_BYTES) -> dict[str, Any]:
     repo_root = repo_root.resolve()
     entries: list[dict[str, Any]] = []
+    previously_admitted = previous_queue_paths(repo_root)
 
     for path in quality.iter_papers(repo_root):
         raw = path.read_bytes()
         size = len(raw)
-        if size >= max_file_bytes:
-            continue
         rel = path.relative_to(repo_root).as_posix()
+        if size >= max_file_bytes and rel not in previously_admitted:
+            continue
         audit, meta = audit_one(path, repo_root)
         if completed(meta, audit, rel):
             continue
