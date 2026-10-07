@@ -442,7 +442,7 @@
 
 - **2026-08 · [Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching](2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  ループ型言語モデルは同じTransformerブロックを複数回反復し、簡単なトークンは早く退出、難しいトークンは深く反復することで計算量を入力ごとに変えられる。
+  論文はCDBを端から端まで実装し、深度が不揃いになる鍵値キャッシュ（KV キャッシュ）、CPU側スケジューラとGPU側反復の同期、前段・後段をどの頻度で実行するかまで扱う。
 
 - **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
