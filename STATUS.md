@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 00:43:32 JST**
+> 自動生成: **2026-10-08 06:28:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **595** |
 | 直近24hのResearch処理完了 | **9** |
 | 最終Research処理完了 | **10-07 22:52:00 JST** |
-| 最終Discovery探索完了 | **10-07 20:49:00 JST** |
+| 最終Discovery探索完了 | **10-08 05:45:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **658** |
-| 機械検査未達（FAIL） | **496** |
-| 機械検査適合・警告のみ（PASS/WARN） | **162** |
-| :00ワーカー担当残 | **222** |
-| :30ワーカー担当残 | **211** |
-| :45ワーカー担当残 | **225** |
+| **再監査残件数** | **641** |
+| 機械検査未達（FAIL） | **488** |
+| 機械検査適合・警告のみ（PASS/WARN） | **153** |
+| :00ワーカー担当残 | **217** |
+| :30ワーカー担当残 | **205** |
+| :45ワーカー担当残 | **219** |
 
-- キュー最終生成: **2026-10-07 23:21:05 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 06:25:19 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -88,17 +88,17 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-07 23:19:33 JST（1時間23分前）** |
+| 最終maintenance完了 | **10-08 06:25:07 JST（3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
-| health errors / warnings | **3 / 0** |
+| health errors / warnings | **1 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **33** |
+| GC削除件数 | **20** |
 | queue snapshot repaired | **true** |
-| index repairs | **3** |
-| quality regressions | **4** |
+| index repairs | **0** |
+| quality regressions | **0** |
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
@@ -108,19 +108,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **5** |
-| 直近6hのDiscovery run | **4** |
-| 直近6hのDiscovery本文確認・分類 | **22** |
+| 直近6hのResearch完了 | **0** |
+| 直近6hのDiscovery run | **9** |
+| 直近6hのDiscovery本文確認・分類 | **56** |
 | 最終Research完了 | **10-07 22:52:00 JST** |
-| 最終Discovery完了 | **10-07 20:49:00 JST** |
+| 最終Discovery完了 | **10-08 05:45:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-07 22:52:00 JST** / worker — / run 20261007-interactive-repair-v3 / 成果 **2件**
   - evidence: .survey/import-inbox/results/research/interactive-2402.16775-quantization-repair-20261007-v3.json
-- Discovery: **10-07 20:49:00 JST** / worker scheduled-chat-45 / run 20261007-2049-scheduled-chat-45/r02-partial
-  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_746e49606a3c8191b9e1660a14f0a2eb--discovery-20261007-2049-scheduled-chat-45-r02-partial.json
+- Discovery: **10-08 05:45:00 JST** / worker scheduled-chat-45 / run 20261008-0545-scheduled-chat-45/r01
+  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/pending/discovery/libfile_025307d6392c8191b23ddbe2d83239a4--discovery-20261008-0545-scheduled-chat-45-r01.json
 
 ## 件数サマリー（旧immutable transport診断）
 
@@ -257,11 +257,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **299** |
+| 成功result未照合のimmutable submission | **290** |
 | └ Research | **120** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **34** |
+| └ Other/Unknown | **25** |
 
 ### 厳格検証が未成立のcompleted job
 
