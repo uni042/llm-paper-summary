@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r174-screen-01-part-08-77aa8c7d89d5",
+  "reference_main_sha": "3a3ec8ff32ecf85c470a77ba3f1765bc356256dd",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03290",
+      "identity_tokens": [
+        "arXiv:2601.03290"
+      ],
+      "title": "Lightweight Transformer Architectures for Edge Devices in Real-Time Applications",
+      "reason": "The survey gives potentially transferable efficiency evidence, but focuses on compact encoders and edge applications rather than contemporary decoder-only LLM inference.",
+      "source_url": "https://arxiv.org/abs/2601.03290",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23461",
+      "identity_tokens": [
+        "arXiv:2512.23461"
+      ],
+      "title": "Eliminating Inductive Bias in Reward Models with Information-Theoretic Guidance",
+      "reason": "Its experiments concern reward-model training and generalization, not inference execution.",
+      "source_url": "https://arxiv.org/abs/2512.23461",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/13658816.2025.2597971",
+      "identity_tokens": [
+        "DOI:10.1080/13658816.2025.2597971"
+      ],
+      "title": "A graph neural network for small-area estimation: integrating spatial regularisation, heterogeneous spatial units, and Bayesian inference",
+      "reason": "The title and packet abstract indicate spatial estimation, but the linked torch.compile lineage makes a primary-body check necessary; unavailable body leaves the relation unresolved.",
+      "source_url": "https://doi.org/10.1080/13658816.2025.2597971",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20308",
+      "identity_tokens": [
+        "arXiv:2512.20308"
+      ],
+      "title": "SpidR: Learning Fast and Stable Linguistic Units for Spoken Language Models Without Supervision",
+      "reason": "The speedup concerns representation pretraining time, not inference speed or serving cost.",
+      "source_url": "https://arxiv.org/abs/2512.20308",
+      "first_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "last_checked_at": "2026-10-07T11:06:05.598288+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
