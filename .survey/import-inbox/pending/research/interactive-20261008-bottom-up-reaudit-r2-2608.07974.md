@@ -1,0 +1,301 @@
+---
+title: 'ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling'
+summary: モデルを複数chunkへ分け、各chunkを局所目的関数で独立更新することで、下流chunkの逆伝播待ちと長時間のactivation保持をなくし、pipeline並列学習のbubble・memory・通信待ちを減らすBP-free fine-tuning system。
+list_summary: モデルを複数チャンクへ分け、各チャンクを局所目的関数で独立更新して下流の逆伝播待ちと下流更新中の長時間の活性値保持を減らし、パイプライン並列のメモリ・通信・バブルを減らす微調整方式。
+authors_affiliations: Wentao Dai, Xuanran Li, Yuxiang Zhang, Ming Tang（Southern University of Science and Technology）, Chao Huang（Montclair State University）
+published: '2026-08-08'
+publication_status: Preprint
+lineage: Pipeline-Parallel / Modular Training Systems
+topics:
+- Pipeline parallelism
+- LoRA
+- Activation memory
+- Local objective
+- On-device training
+- Failure recovery
+importance: 高
+hardware_evaluation: 実機
+source: https://arxiv.org/abs/2608.07974
+code: https://anonymous.4open.science/r/unlock_trainer-105B
+last_checked: '2026-09-11'
+canonical_id: arXiv:2608.07974
+arxiv_id: '2608.07974'
+arxiv_categories:
+  primary: cs.LG
+  cross_list:
+  - cs.DC
+authors:
+- Wentao Dai
+- Xuanran Li
+- Yuxiang Zhang
+- Ming Tang
+- Chao Huang
+publication: arXiv
+publication_type: preprint
+doi: null
+openreview_id: null
+sources:
+- https://arxiv.org/abs/2608.07974
+implementation: 公式実装あり（URLはcode欄）
+implementation_status: official-code-available
+references:
+- canonical_id: arXiv:2512.23675
+  arxiv_id: '2512.23675'
+- canonical_id: arXiv:2509.19855
+  arxiv_id: '2509.19855'
+- canonical_id: DOI:10.36227/techrxiv.176740426.63642005/v1
+  doi: 10.36227/techrxiv.176740426.63642005/v1
+- canonical_id: DOI:10.52202/075280-2308
+  doi: 10.52202/075280-2308
+- canonical_id: arXiv:2411.12780
+  arxiv_id: '2411.12780'
+- canonical_id: arXiv:2605.04913
+  arxiv_id: '2605.04913'
+references_checked_at: '2026-09-11'
+references_source: arxiv-html-reference-section
+references_total: 31
+
+
+last_audited: '2026-10-08'
+audit_version: 2
+under16kb_reaudit_target_path: papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md
+under16kb_reaudit_source_git_blob_sha: '611d9f257d4b0f946eece5eb52cc50c364cc848e'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r2-2608.07974'
+worker_completed_at: '2026-10-07T22:47:49.848Z'
+
+---
+
+# ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling
+
+> モデルを複数チャンクへ分け、各チャンクを局所目的関数で独立更新して下流の逆伝播待ちと下流更新中の長時間の活性値保持を減らし、パイプライン並列のメモリ・通信・バブルを減らす微調整方式。
+
+## 概要
+
+ZeroLockは、モデルを複数チャンクに分けて各チャンクを局所目的関数で独立更新し、下流チャンクの逆伝播を待つ依存関係と長時間の活性値保持をなくす逆伝播不要の微調整方式である。TinyLlamaを3チャンク・3台のNVIDIA L40で評価した結果、`b=8, m=4` ではPipeDream比でスループット4.9%向上し、PipeDream比で最大段メモリを26.5%削減した。1F1B比ではスループット62.8%向上した。
+
+## 問題設定
+
+通常のパイプライン 並列化では、モデルを連続する層群ごとの段へ分割しても、エンドツーエンドの逆伝播（backpropagation; BP）を使う限り段間には**更新 locking**が残る。上流段は、自分の勾配を得るために下流段の順伝播と逆伝播が進むのを待つ必要があり、その間は順伝播時の活性値も保持し続ける。
+
+このため、
+
+- 段間の待ちによるパイプライン バブル
+- 上流段で長時間残る活性値によるpeak メモリ増加
+- 逆伝播 勾配を段間で返す通信
+
+が生じる。
+
+ZeroLockは、単にスケジューラを工夫してバブルを詰めるのではなく、**chunk間の学習依存そのものを切る**ことでこの問題を扱う。最終目的は微調整自体のメモリ・スループット改善なのでTraining側に分類する。
+
+CPU DRAMやSSD/NVMeへパラメータ・オプティマイザ状態・活性値を退避するオフロード方式ではない。主なメモリ削減源は、下流の逆伝播を待つための活性値保持を不要にすることにある。
+
+## 手法
+
+### 1. モデルをchunkへ分割し、chunkごとに局所目的関数を持たせる
+
+モデルを連続するTransformer 層群からなる複数chunkへ分割する。base 重みは固定し、各層にはLoRA パラメータを入れる。
+
+各chunkの出力隠れ 状態に、事前学習済みモデルの最終normalizationとLM ヘッドを使う読み出し ヘッドを接続し、その時点でトークン予測分布を作る。
+
+各chunkの局所lossは大きく2項からなる。
+
+- **タスク term**: そのchunkの出力をground-truth トークンへ近づける
+- **consistency term**: 直前chunkの出力分布と大きく食い違わないようにする
+
+直前chunk側にはstop-勾配を入れるため、chunk間へ逆伝播 勾配を流さない。
+
+### 2. chunk内ではBP、chunk間では更新を独立化する
+
+ZeroLockは「勾配計算を一切しない」方式ではない。
+
+- 同じchunk内部の層: 通常のBPでLoRAを更新
+- 異なるchunk間: 勾配依存を切り、各chunkが自分の局所 lossだけで更新
+
+という構成である。
+
+これにより、上流chunkは下流chunkの逆伝播完了を待たず、自分の局所 逆伝播へ進める。また、そのchunkの活性値は自分の局所 更新が終われば解放できる。
+
+論文は、局所目的関数を大域 目的関数の更新として写像する解析を行い、一定の仮定の下で収束率が `Õ(1/√T)` となり、通常BPの `O(1/√T)` とpolylogarithmic factorだけ異なると示す。
+
+### 3. Early Forwardingでhidden stateを先に下流へ送る
+
+各段は、
+
+1. 上流から隠れ 状態を受け取る
+2. 順伝播を実行
+3. **局所 逆伝播より先に**出力隠れ 状態を下流へ渡す
+4. 自分の局所 逆伝播と最適化器 更新を続ける
+
+という順に動く。
+
+下流は3の時点で処理を始められるため、上流の局所 逆伝播と下流の順伝播を重ねられる。
+
+### 4. stage間通信はhidden stateだけにする
+
+エンドツーエンド BPでは順伝播 隠れ 状態に加えて逆伝播 勾配も段間で戻す必要がある。
+
+ZeroLockではchunk間勾配依存を切るため、基本的に段間で交換するのは順伝播 隠れ 状態だけでよい。これが低帯域リンクほど有利になる理由の一つである。
+
+### 5. bounded bufferとstage単位checkpointで局所復旧する
+
+各executorは上流から受け取った隠れ 状態をbounded バッファへ保持する。さらに各段がtrainable パラメータ、オプティマイザ状態、進行位置を独立チェックポイントする。
+
+障害時は正常段を大域 rollbackせず、失敗段だけをチェックポイントから戻し、バッファに残る隠れ 状態を使って必要なwindowだけreplayする。
+
+つまりメモリ効率化だけでなく、更新依存を切った構造を障害 回復にも利用している。
+
+### 6. AndroidではExecuTorchを二段階実行へ拡張する
+
+Android prototypeではExecuTorchを使う。通常の学習 PTEは順伝播と逆伝播を1 methodにまとめるため、隠れ 状態が外へ出るのは逆伝播後になりEarly Forwardingができない。
+
+そこで順伝播 隠れ 状態生成後・パラメータ-勾配計算前に軽量markerを入れ、
+
+- phase 1: markerまで実行して隠れ 状態を即時送信
+- phase 2: 同じexecution 状態から再開して局所 逆伝播とAdamW 更新
+
+と分ける。転送と局所 逆伝播を重ね、cross-段 勾配 RPCを不要にする。
+
+## 評価
+
+### まず見るところ
+
+- **multi-GPU実機:** TinyLlamaを3 chunkへ分割し、各chunkをNVIDIA L40 GPU 1台へ配置。
+- **LoRA:** server評価ではrank 4、scale 16。
+- **data:** AG Newsの固定10,000 サンプル subset、系列 length 128。
+- **比較対象:** GPipe、1F1B、PipeDream。
+- **最大段 メモリ:** `b/m = 8/4` 条件でPipeDream比26.5%削減。
+- **スループット:** 同条件でPipeDream比4.9%向上。GPipe比55.8%、1F1B比62.8%向上。
+- **障害 回復:** 1F1Bの大域 rollback/replayに対し、回復 遅延を2381.2 msから2013.1 msへ短縮し、transferを192 MiBから96 MiBへ半減。
+- **Android実機:** TinyLlamaの3 chunkをNX809J、Lenovo L71091、Pixel 10 Pro XLへ配置し、128 サンプルを微調整。総wall-clock 1644.1 s、スループット 0.0779 records/s、各端末のpeak PSSは約3.4–3.8 GiB。
+
+<details>
+<summary>評価条件・詳細を開く</summary>
+
+### server側設定
+
+| 項目 | 条件 |
+|---|---|
+| Model | TinyLlama |
+| Stage数 | 3 |
+| GPU | NVIDIA L40 × 3（各段 1 GPU） |
+| Dataset | AG News 10,000 examples |
+| Sequence length | 128 |
+| LoRA | rank 4, scale 16 |
+| Baseline | GPipe / 1F1B / PipeDream |
+| Repetition | 3 random seeds |
+
+論文中の `b` は1 microbatch callで処理するphysical バッチ数、`m` は最適化器 更新までのmicrobatch call数で、logical バッチは `B=bm`。
+
+### memory
+
+最大段 peak メモリの削減率は、
+
+| Baseline | ZeroLockの削減率 |
+|---|---:|
+| GPipe | 55.3% |
+| 1F1B | 26.6% |
+| PipeDream | 26.5% |
+
+mean per-段 peak メモリでは、それぞれ47.8%、14.7%、14.6%削減。
+
+主因は活性値保持の削減で、平均段あたりの活性値 メモリはGPipe比75.4%、1F1B比40.8%、PipeDream比48.8%減る。
+
+`m=4` では、GPipe / 1F1B / PipeDream / ZeroLockがOOMになる `b` はそれぞれ10 / 20 / 20 / 28で、ZeroLockの方がより大きいバッチを収容できた。
+
+### throughput
+
+defaultの3 段、`b=8, m=4` では、
+
+| Baseline | ZeroLockのスループット改善 |
+|---|---:|
+| GPipe | +55.8% |
+| 1F1B | +62.8% |
+| PipeDream | +4.9% |
+
+PipeDreamとの差は小さいが、ZeroLockは活性値保持と段間勾配通信も減らせる点が異なる。
+
+論文はsender側リンクをWi-Fi相当 `2 ms / 1000 Mbps`、mobile相当 `10 ms / 200 Mbps`、constrained `30 ms / 50 Mbps` として模擬し、リンクが遅いほどZeroLockの相対優位が大きくなることを示す。理由は比較対象が順伝播 隠れ 状態と逆伝播 隠れ 勾配の両方を送るのに対し、ZeroLockは順伝播 隠れ 状態だけを送るためである。
+
+### Android
+
+| Stage / Device | Peak PSS |
+|---|---:|
+| S0 / NX809J | 3423.5 MiB |
+| S1 / Lenovo L71091 | 3408.2 MiB |
+| S2 / Pixel 10 Pro XL | 3824.3 MiB |
+
+Android評価は128 data samples、系列 length 128、`b=1`、LoRA rank 8、scale 16、learning rate `1e-4`。各段は128 最適化器 stepsを実行し、9 チェックポイントを書き出す。
+
+</details>
+
+### 局所更新が性能と記憶量に与える影響
+
+ZeroLockは、段ごとに誤差逆伝播を待つ通常の方法とは異なり、各段の学習目標を局所的に作ることで更新を独立化する。通常のパイプライン学習では後段から来る勾配の到着まで前段が更新を確定できず、誤差逆伝播用の活性値も保持する必要がある。本方式では各段が局所目的に基づいて更新するため、別段の勾配を待つ制約と保存すべき活性値の双方を削減できる。一方、学習目標そのものを変更するため、単に同じ誤差逆伝播計算の実行順を入れ替えた方式と同一視できない。
+
+三台の画像処理装置で言語モデルを三分割した実機評価では、代表条件においてPipeDreamに対し最大段の記憶使用量を26.5%減らし、処理量を4.9%増やした。GPipeや1F1Bとの比較では処理量の改善がさらに大きいが、その差は比較方式の段間依存や並行度にも影響される。したがって全方式を横並びにした最大値だけでなく、最も強い比較対象に対する差を併記する必要がある。
+
+通信帯域の低い端末間接続を模した実験では、各段間で逆方向の勾配を送らなくてよいことが利点になる。これは単に計算を速くしたというより、データを送る向きと量を減らしたことによる改善である。スマートフォン三台を用いた小規模評価は実装可能性の証拠ではあるが、大規模なデータセットと多数の学習更新を通した最終モデル品質まで検証したものではない。短い入力と特定の低ランク微調整構成に限られる。
+
+理論解析では局所目標が大域的な学習目標とどのように対応するかを定め、繰返し回数に応じた収束速度の上界を与えている。ただし数学的な収束率と、実務で求める最終的な言語モデルの正解率・知識保持・破滅的忘却の程度は別の量である。実用的な学習方式として評価するには、記憶量と学習処理量のほかに、同じ更新予算・同じデータで達した性能も比較すべきである。
+
+## 既存研究との差
+
+GPipeや1F1Bは、段実行順を工夫してもエンドツーエンド BPの依存は残る。PipeDreamは重み stashingでパイプラインをより非同期化するが、順伝播と逆伝播の整合を取るため複数versionの重みを保持し、依然として逆伝播 勾配が段間を流れる。
+
+ZeroLockはスケジューラだけでなく**学習目的をchunk-局所へ再構成**し、段間の逆伝播 依存関係をなくす点が異なる。
+
+一方、完全な密 pre-学習を対象にした一般手法というより、LoRAを用いたLLM 微調整とedge / collaborative 学習を主対象としている。
+
+## 一般的な実装上の含意
+
+この論文の重要な含意は、「パイプライン バブルはスケジューラだけの問題ではなく、学習algorithmの依存関係 graphそのものを変えるとメモリ・通信・回復設計まで同時に変えられる」ことにある。
+
+特に、
+
+- 活性値 lifetimeを短くする
+- 逆伝播 勾配のcross-段 transferをなくす
+- 順伝播 transferと局所 逆伝播を重ねる
+- 段-局所 チェックポイントで局所復旧する
+
+という効果が同じdecouplingから得られる。
+
+ただし局所 ヘッドの計算量や、中間representationを最終LM ヘッドで読めるという仮定、局所 目的関数による最終品質差まで含めて評価する必要がある。
+
+## 限界
+
+- arXiv v1時点のpreprintで、最終採択版は確認できない。
+- server実機評価はTinyLlamaと3×L40 GPUが中心で、数十〜数百B級モデルや大規模clusterでのscalingは未検証。
+- 主なタスクはAG Newsで、長文生成・instruction tuning・RL post-学習などへ同じ品質特性が成立するかは未確認。
+- 局所 読み出し ヘッドは中間隠れ 状態が最終ヘッドである程度解釈可能であることを前提とする。論文自身も複雑なgenerative タスクでは成立しない可能性を指摘している。
+- PipeDreamに対するスループット改善はdefault条件で4.9%と比較的小さく、利点の一部はメモリ削減・通信削減・障害 回復側にある。
+- CPU DRAM / SSD / NVMe オフロードは評価していない。
+
+## Code
+
+論文は匿名コード snapshotを公開している。
+
+- https://anonymous.4open.science/r/unlock_trainer-105B
+
+arXiv v1時点では匿名公開であり、恒久的な公式GitHub repositoryへの移行は確認できない。
+
+## 引用関係
+
+ZeroLockはパイプライン 並列化の代表的比較対象としてGPipe、PipeDream、1F1B系を直接参照し、さらにZero Bubble、DAPPLE、Chimeraなどのバブル削減・パイプライン構成研究を関連研究として位置づける。
+
+また、collaborative / edge 学習としてConfidant、CollaPipe、SWARM 並列化、Petalsを参照する。これらに対しZeroLockは、配置やscheduleだけでなくchunk-局所 目的関数で逆伝播 依存関係を切ることを主要差分としている。
+
+repo内では本論文の追加時点でパイプライン-並列 学習専用系統がなかったため、関連研究群の明確な独立性に基づき `03-pipeline-parallel-modular-training/` を新設した。
+
+## 一次資料
+
+- [arXiv:2608.07974](https://arxiv.org/abs/2608.07974)
+- [arXiv HTML本文](https://arxiv.org/html/2608.07974v1)
+- [匿名code snapshot](https://anonymous.4open.science/r/unlock_trainer-105B)
+
+## 更新履歴
+
+- 2026-09-07: arXiv v1本文と公開code情報を確認して新規収録。
