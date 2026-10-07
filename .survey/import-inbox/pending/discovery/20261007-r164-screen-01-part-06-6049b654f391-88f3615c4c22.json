@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r164-screen-01-part-06-6049b654f391",
+  "reference_main_sha": "9dbf3267172ce2e1d2eddbd69381be7b7089fced",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.07245",
+      "identity_tokens": [
+        "arXiv:2402.07245"
+      ],
+      "title": "Semi-Mamba-UNet: Pixel-level contrastive and cross-supervised visual Mamba-based UNet for semi-supervised medical image segmentation",
+      "reason": "Semi-Mamba-UNet is a medical-image segmentation architecture/training method, outside LLM inference.",
+      "source_url": "https://arxiv.org/abs/2402.07245",
+      "first_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "last_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26740",
+      "identity_tokens": [
+        "arXiv:2606.26740"
+      ],
+      "title": "LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing",
+      "reason": "LiveEdit addresses streaming video diffusion and maintains rolling/junction KV caches across prompt changes. The cache method is adjacent to streaming inference memory, but the model is video diffusion rather than an LLM.",
+      "source_url": "https://arxiv.org/abs/2606.26740",
+      "first_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "last_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05806",
+      "identity_tokens": [
+        "arXiv:2606.05806"
+      ],
+      "title": "When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents",
+      "reason": "ToolMaze is a benchmark for failure recovery and dynamic replanning in LLM agents; contribution is evaluation, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.05806",
+      "first_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "last_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20876",
+      "identity_tokens": [
+        "arXiv:2605.20876"
+      ],
+      "title": "Terminal-World: Scaling Terminal-Agent Environments via Agent Skills",
+      "reason": "Terminal-World constructs terminal-agent training environments and training data via skills. It is a benchmark/training pipeline, not inference-cost or serving improvement.",
+      "source_url": "https://arxiv.org/abs/2605.20876",
+      "first_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "last_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10194",
+      "identity_tokens": [
+        "arXiv:2605.10194"
+      ],
+      "title": "STEPS: Selective On-Policy Self-Distillation for Reasoning",
+      "reason": "STEPS is selective on-policy self-distillation training for reasoning and does not report inference-time optimization.",
+      "source_url": "https://arxiv.org/abs/2605.10194",
+      "first_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "last_checked_at": "2026-10-07T09:35:43.888224+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
