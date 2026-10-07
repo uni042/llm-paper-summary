@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-07T21:56:31+00:00",
+  "generated_at": "2026-10-07T22:06:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 151,
+  "count": 153,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -692,23 +692,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e10c1efcdd84819198377afcff1314af--2024-2404.00242-deft.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e10c1efcdd84819198377afcff1314af--2024-2404.00242-deft.json",
       "worker_run_key": "20261002-2345-scheduled-chat-45"
-    },
-    {
-      "canonical_id": "arXiv:2402.11295",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:49:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.title が空",
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e49a049b505c81919ab0a93d1065403b--onebit-2402.11295.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e49a049b505c81919ab0a93d1065403b--onebit-2402.11295.json",
-      "worker_run_key": "20261003-0934-scheduled-chat-30"
     },
     {
       "canonical_id": "arXiv:2510.15312",
@@ -2593,8 +2576,8 @@
     },
     {
       "canonical_id": "arXiv:2509.23324",
-      "title": "Scaling LLM Test-Time Compute with Mobile NPU on Smartphones",
-      "source_url": "https://arxiv.org/abs/2509.23324",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T21:54:16+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2619,8 +2602,8 @@
     },
     {
       "canonical_id": "arXiv:2502.04463",
-      "title": "Training Language Models to Reason Efficiently",
-      "source_url": "https://arxiv.org/abs/2502.04463",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-07T21:55:18+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -2647,6 +2630,83 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_47144823282c81918caf2776e6889cb0--2025-2502.04463-training-language-models-to-reason-efficiently.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_47144823282c81918caf2776e6889cb0--2025-2502.04463-training-language-models-to-reason-efficiently.json",
       "worker_run_key": "20261007-1604-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.08143",
+      "title": "Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores",
+      "source_url": "https://arxiv.org/abs/2507.08143",
+      "returned_at": "2026-10-07T22:05:09+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md と 3 段落 / 679文字 (21.4%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5324,
+        "body_paragraphs": 30,
+        "method_chars": 2352,
+        "method_paragraphs": 14,
+        "evaluation_chars": 1516,
+        "limitation_chars": 225,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-compactor-2507.08143.md",
+      "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-compactor-2507.08143.json",
+      "worker_run_key": "interactive-20261008-bottom-up-reaudit-compactor"
+    },
+    {
+      "canonical_id": "arXiv:2609.26333",
+      "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+      "source_url": "https://arxiv.org/abs/2609.26333",
+      "returned_at": "2026-10-07T22:05:10+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md と 3 段落 / 686文字 (29.7%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4927,
+        "body_paragraphs": 27,
+        "method_chars": 1744,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1368,
+        "limitation_chars": 288,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-dq-2609.26333.md",
+      "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-dq-2609.26333.json",
+      "worker_run_key": "interactive-20261008-bottom-up-reaudit-dq"
+    },
+    {
+      "canonical_id": "arXiv:2402.11295",
+      "title": "OneBit: Towards Extremely Low-bit Large Language Models",
+      "source_url": "https://arxiv.org/abs/2402.11295",
+      "returned_at": "2026-10-07T22:05:31+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 275 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2687,
+        "body_paragraphs": 19,
+        "method_chars": 766,
+        "method_paragraphs": 6,
+        "evaluation_chars": 275,
+        "limitation_chars": 274,
+        "insufficiency_flags": [
+          "評価説明量 275 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4937ba6b798c8191a7a487e8ccfdac95--2402.11295-onebit.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4937ba6b798c8191a7a487e8ccfdac95--2402.11295-onebit.json",
+      "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
     }
   ]
 }
