@@ -47,3 +47,54 @@ padding only to pass the mechanical character floor is not acceptable.  The
 repaired Markdown goes through the normal Research quality preflight and is
 saved to Library under a new unique filename.  The next Library import attempt
 will either clear the queue entry on success or update it with another return.
+
+
+## Under-16KB semantic re-audit queue
+
+`.survey/repair-queue/under-16kb-reaudit.json` is a generated queue for every
+paper summary below 16,000 UTF-8 bytes that has not passed the current semantic
+re-audit version.
+
+The queue is rebuilt by
+`.survey/scripts/refresh_under16kb_reaudit_queue.py` from the current paper
+files. Membership is therefore derived state; do not edit entries by hand.
+
+A paper leaves this queue only when all of the following are true:
+
+- frontmatter has
+  `under16kb_reaudit_version: "2026-10-07-v1"`
+  and `under16kb_reaudit_passed: true`;
+- the deterministic explanation checks pass;
+- prose Japanese ratio is at least 80% after excluding frontmatter,
+  references, URLs, code and other non-explanatory noise.
+
+For inference/training papers the mechanical re-audit floor is body 2,200
+characters, method 700 characters and evaluation 500 characters. Survey/review
+papers are not forced to satisfy the experimental evaluation-length floor; their
+taxonomy, coverage methodology, comparative synthesis and evidence must instead
+be checked semantically by the worker.
+
+Each queue entry is assigned stably from `sha256(path)` to one of the three
+Scheduled workers and sorted by `file_bytes ASC, path ASC`.
+
+Workers must re-read the primary source. If the current summary is already
+semantically sufficient, they may preserve the prose and add the re-audit
+attestation. If it is insufficient, they must rewrite the missing explanation
+from the primary paper and re-run the same audit until it passes. Failed
+intermediate drafts are not published.
+
+The completed Markdown is saved through the normal Library Research lane with
+these extra fields:
+
+- `under16kb_reaudit_target_path`
+- `under16kb_reaudit_source_sha256`
+- `under16kb_reaudit_version`
+- `under16kb_reaudit_passed: true`
+
+The GitHub inbox processor only replaces the already represented paper when the
+target path matches the resolved identity and the source SHA-256 still matches.
+A concurrent edit therefore causes a safe block instead of a stale overwrite.
+After a successful replacement the queue is regenerated immediately and the
+paper disappears. A quality failure remains both in this queue and, through the
+normal `blocked_quality` path, in `returned-research.json` until a corrected
+revision passes.
