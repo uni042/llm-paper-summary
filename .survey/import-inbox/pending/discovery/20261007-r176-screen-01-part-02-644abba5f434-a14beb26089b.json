@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r176-screen-01-part-02-644abba5f434",
+  "reference_main_sha": "0dce19ea6293a4144e53a729af43406cc39e378e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10582",
+      "identity_tokens": [
+        "arXiv:2604.10582"
+      ],
+      "title": "TAPNext++: What's Next for Tracking Any Point (TAP)?",
+      "reason": "arXiv abstract: recurrent transformer tracks visual points in video; efficiency is the tracking model footprint, outside LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2604.10582",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3744916.3787814",
+      "identity_tokens": [
+        "DOI:10.1145/3744916.3787814"
+      ],
+      "title": "FoundRoot: Towards Foundation Model for Root Cause Analysis via Structured Deep Thinking",
+      "reason": "The linked root-cause-analysis lineage makes a body check necessary, but the ACM DOI landing/full-text retrieval failed in the browser (Internal Error) and no publisher-authored full text was available in the packet. The abstract alone cannot establish whether a concrete inference/runtime method exists, so it remains borderline rather than excluded.",
+      "source_url": "https://doi.org/10.1145/3744916.3787814",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07765",
+      "identity_tokens": [
+        "arXiv:2604.07765"
+      ],
+      "title": "RemoteAgent: Bridging Vague Human Intents and Earth Observation With RL-Based Agentic MLLMs",
+      "reason": "arXiv abstract: Earth-observation agent uses RL and specialized vision tools for spatial prediction; no LLM inference efficiency mechanism is evaluated.",
+      "source_url": "https://arxiv.org/abs/2604.07765",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07774",
+      "identity_tokens": [
+        "arXiv:2604.07774"
+      ],
+      "title": "RoboAgent: Chaining Basic Capabilities for Embodied Task Planning",
+      "reason": "arXiv abstract: embodied planning pipeline trains a VLM scheduler/capability system for robotics; the stated contribution is planning capability, not inference resource reduction.",
+      "source_url": "https://arxiv.org/abs/2604.07774",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01591",
+      "identity_tokens": [
+        "arXiv:2604.01591"
+      ],
+      "title": "ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement",
+      "reason": "arXiv abstract and primary HTML §§3–5: ThinkTwice trains reasoning/self-refinement with RL; reported gains and 3% training overhead/16% training-time convergence improvement concern post-training, while test-time self-refinement adds another generation rather than reducing inference cost.",
+      "source_url": "https://arxiv.org/abs/2604.01591",
+      "first_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "last_checked_at": "2026-10-07T11:19:10.509052+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ]
+    }
+  ]
+}
