@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T09:59:52+00:00",
-  "record_count": 10308,
+  "updated_at": "2026-10-07T10:10:02+00:00",
+  "record_count": 10338,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -147514,6 +147514,427 @@
         "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
       ],
       "title": "Linear Recurrent Units for Sequential Recommendation"
+    },
+    "arXiv:2601.04740": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04740",
+      "identity_tokens": [
+        "arXiv:2601.04740"
+      ],
+      "reason": "Primary paper generates harmful prompts through knowledge graphs for risk evaluation; it is a safety red-teaming application, not inference efficiency.",
+      "first_checked_at": "2026-10-07T10:09:50+00:00",
+      "last_checked_at": "2026-10-07T10:09:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation"
+    },
+    "arXiv:2511.07689": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07689",
+      "identity_tokens": [
+        "arXiv:2511.07689"
+      ],
+      "reason": "Primary paper stress-tests factual-consistency metrics for long-document summarization; it is an evaluation/metric study and proposes no LLM serving or inference optimization.",
+      "first_checked_at": "2026-10-07T10:09:51+00:00",
+      "last_checked_at": "2026-10-07T10:09:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md"
+      ],
+      "title": "Stress Testing Factual Consistency Metrics for Long-Document Summarization"
+    },
+    "arXiv:2511.01077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01077",
+      "identity_tokens": [
+        "arXiv:2511.01077"
+      ],
+      "reason": "Primary paper is a position/framework for gradient-guided resource allocation in model development/adaptation (training compute and parameter selection); it does not propose runtime inference efficiency improvements.",
+      "first_checked_at": "2026-10-07T10:09:51+00:00",
+      "last_checked_at": "2026-10-07T10:09:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "title": "AI Progress Should Be Measured by Capability-Per-Resource, Not Scale Alone: A Framework for Gradient-Guided Resource Allocation in LLMs"
+    },
+    "arXiv:2403.00745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00745",
+      "identity_tokens": [
+        "arXiv:2403.00745"
+      ],
+      "reason": "Primary full text frames AtP* as mechanistic interpretability/activation-patching attribution for localizing model components; its speedup applies to offline analysis, not user-facing LLM inference.",
+      "first_checked_at": "2026-10-07T10:09:51+00:00",
+      "last_checked_at": "2026-10-07T10:09:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "AtP*: An efficient and scalable method for localizing LLM behaviour to components"
+    },
+    "arXiv:2601.10684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10684",
+      "identity_tokens": [
+        "arXiv:2601.10684"
+      ],
+      "reason": "Primary paper studies the theoretical origin of neural scaling laws and parameter efficiency in model training; it does not offer a deployed LLM inference improvement.",
+      "first_checked_at": "2026-10-07T10:09:52+00:00",
+      "last_checked_at": "2026-10-07T10:09:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "On the origin of neural scaling laws: from random graphs to natural language"
+    },
+    "arXiv:2512.22983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22983",
+      "identity_tokens": [
+        "arXiv:2512.22983"
+      ],
+      "reason": "Primary paper is a survey of embodied robot manipulation planning/action learning; it is not an LLM serving/inference optimization.",
+      "first_checked_at": "2026-10-07T10:09:52+00:00",
+      "last_checked_at": "2026-10-07T10:09:52+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Embodied Robot Manipulation in the Era of Foundation Models: Planning and Learning Perspectives"
+    },
+    "arXiv:2605.27115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27115",
+      "identity_tokens": [
+        "arXiv:2605.27115"
+      ],
+      "reason": "Primary paper proposes multi-teacher on-policy distillation for recovering model capability; the method is post-training/model training, not inference serving efficiency.",
+      "first_checked_at": "2026-10-07T10:09:53+00:00",
+      "last_checked_at": "2026-10-07T10:09:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Counteraction-Aware Multi-Teacher On-Policy Distillation for General Capability Recovery with Domain Preservation"
+    },
+    "arXiv:2605.11609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11609",
+      "identity_tokens": [
+        "arXiv:2605.11609"
+      ],
+      "reason": "Primary paper proposes anti-self-distillation for reasoning RL; the contribution concerns the RL training objective and does not target inference compute, memory, or serving.",
+      "first_checked_at": "2026-10-07T10:09:53+00:00",
+      "last_checked_at": "2026-10-07T10:09:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information"
+    },
+    "arXiv:2604.15239": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15239",
+      "identity_tokens": [
+        "arXiv:2604.15239"
+      ],
+      "reason": "Primary text identifies its task as feed-forward 3D Gaussian Splatting reconstruction from posed images and proposes learnable Gaussian tokens/3D scene prediction. Its attention/token terminology and test-time optimization refer to 3D vision reconstruction, not language-model attention kernels or inference.",
+      "first_checked_at": "2026-10-07T10:09:53+00:00",
+      "last_checked_at": "2026-10-07T10:09:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens"
+    },
+    "arXiv:2603.26741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26741",
+      "identity_tokens": [
+        "arXiv:2603.26741"
+      ],
+      "reason": "Primary text studies language-conditioned embodied navigation using a diffusion world model/actor-critic and an autoregressive multimodal navigation model. Its inference-time comparison is for visual robot navigation; it does not propose or evaluate the linked LLM post-training quantization/compression technique.",
+      "first_checked_at": "2026-10-07T10:09:54+00:00",
+      "last_checked_at": "2026-10-07T10:09:54+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Language-Conditioned World Modeling for Visual Navigation"
+    },
+    "arXiv:2603.01840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01840",
+      "identity_tokens": [
+        "arXiv:2603.01840"
+      ],
+      "reason": "Primary report describes an OCR model/application and recognition benchmarks; it does not establish a general LLM inference optimization.",
+      "first_checked_at": "2026-10-07T10:09:54+00:00",
+      "last_checked_at": "2026-10-07T10:09:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "FireRed-OCR Technical Report"
+    },
+    "arXiv:2604.05514": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05514",
+      "identity_tokens": [
+        "arXiv:2604.05514"
+      ],
+      "reason": "Primary paper addresses diagram-code generation using visual interrogation rewards; its domain method does not improve LLM inference runtime or resources.",
+      "first_checked_at": "2026-10-07T10:09:54+00:00",
+      "last_checked_at": "2026-10-07T10:09:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "OmniDiagram: Advancing Unified Diagram Code Generation via Visual Interrogation Reward"
+    },
+    "arXiv:2604.00012": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00012",
+      "identity_tokens": [
+        "arXiv:2604.00012"
+      ],
+      "reason": "Primary paper identifies/reactivates post-trained safety mechanisms in LLMs; its target is safety capabilities, not inference efficiency.",
+      "first_checked_at": "2026-10-07T10:09:55+00:00",
+      "last_checked_at": "2026-10-07T10:09:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Finding and Reactivating Post-Trained LLMs' Hidden Safety Mechanisms"
+    },
+    "arXiv:2601.14615": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14615",
+      "identity_tokens": [
+        "arXiv:2601.14615"
+      ],
+      "reason": "Primary text proposes a cost-effective simulated environment for training search agents; the cost reduction is in RL/environment interaction during training, not deployed LLM inference.",
+      "first_checked_at": "2026-10-07T10:09:55+00:00",
+      "last_checked_at": "2026-10-07T10:09:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "SearchGym: Bootstrapping Real-World Search Agents via Cost-Effective and High-Fidelity Environment Simulation"
+    },
+    "arXiv:2601.14778": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14778",
+      "identity_tokens": [
+        "arXiv:2601.14778"
+      ],
+      "reason": "Primary text develops a diffusion-language steganography method for secure message encoding; it is a language-model application and does not target inference systems.",
+      "first_checked_at": "2026-10-07T10:09:55+00:00",
+      "last_checked_at": "2026-10-07T10:09:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "STEAD: Robust Provably Secure Linguistic Steganography with Diffusion Language Model"
+    },
+    "arXiv:2601.07422": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.07422",
+      "identity_tokens": [
+        "arXiv:2601.07422"
+      ],
+      "reason": "Primary paper studies internal representations associated with hallucinations/truthfulness and analyzes their origin; it does not propose an inference-resource optimization.",
+      "first_checked_at": "2026-10-07T10:09:56+00:00",
+      "last_checked_at": "2026-10-07T10:09:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Two Pathways to Truthfulness: On the Intrinsic Encoding of LLM Hallucinations"
+    },
+    "arXiv:2512.20963": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20963",
+      "identity_tokens": [
+        "arXiv:2512.20963"
+      ],
+      "reason": "Primary abstract is about memorization/generalization in diffusion generative models and representation steering; it presents no LLM inference or serving method, despite the input citation route.",
+      "first_checked_at": "2026-10-07T10:09:56+00:00",
+      "last_checked_at": "2026-10-07T10:09:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ],
+      "title": "Generalization of Diffusion Models Arises with a Balanced Representation Space"
+    },
+    "DOI:10.1038/s41467-025-66450-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-025-66450-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-025-66450-z"
+      ],
+      "reason": "Publisher article develops real-space ML correlation density functionals for quantum chemistry using Møller–Plesset/DFT energy densities; its computational efficiency and data-efficiency claims concern chemical simulation/training, not LLM inference or the linked torch.compile serving/compiler lineage.",
+      "first_checked_at": "2026-10-07T10:09:56+00:00",
+      "last_checked_at": "2026-10-07T10:09:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Real-space machine learning of correlation density functionals"
+    },
+    "DOI:10.3390/a18120735": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/a18120735",
+      "identity_tokens": [
+        "DOI:10.3390/a18120735"
+      ],
+      "reason": "Publisher full text concerns cyberbullying/destructive-content classification with a hybrid BiLSTM/RoBERTa/attention/KAN architecture. It is an application classifier, not a general LLM inference optimization; reported added model components do not establish serving improvements.",
+      "first_checked_at": "2026-10-07T10:09:57+00:00",
+      "last_checked_at": "2026-10-07T10:09:57+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "A Hybrid Neural Network Transformer for Detecting and Classifying Destructive Content in Digital Space"
+    },
+    "arXiv:2511.16175": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16175",
+      "identity_tokens": [
+        "arXiv:2511.16175"
+      ],
+      "reason": "Primary abstract concerns VLA visual-future prediction and robot manipulation training; no LLM inference-system optimization is proposed.",
+      "first_checked_at": "2026-10-07T10:09:57+00:00",
+      "last_checked_at": "2026-10-07T10:09:57+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Mantis: A Versatile Vision-Language-Action Model with Disentangled Visual Foresight"
+    },
+    "arXiv:2511.13026": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13026",
+      "identity_tokens": [
+        "arXiv:2511.13026"
+      ],
+      "reason": "Primary abstract concerns multimodal reflection for video understanding; the contribution is reasoning quality, not inference compute/memory/latency optimization.",
+      "first_checked_at": "2026-10-07T10:09:57+00:00",
+      "last_checked_at": "2026-10-07T10:09:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "REVISOR: Beyond Textual Reflection, Towards Multimodal Introspective Reasoning in Long-Form Video Understanding"
+    },
+    "arXiv:2511.06182": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.06182",
+      "identity_tokens": [
+        "arXiv:2511.06182"
+      ],
+      "reason": "Primary abstract is about aerial visual-language navigation and robot data/control; no LLM serving optimization is described.",
+      "first_checked_at": "2026-10-07T10:09:59+00:00",
+      "last_checked_at": "2026-10-07T10:09:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "OpenVLN: Open-world aerial Vision-Language Navigation"
+    },
+    "arXiv:2605.11491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11491",
+      "identity_tokens": [
+        "arXiv:2605.11491"
+      ],
+      "reason": "Primary abstract and paper concern RLVR training entropy collapse and an on-policy training optimization; no deployed inference improvement is claimed.",
+      "first_checked_at": "2026-10-07T10:09:59+00:00",
+      "last_checked_at": "2026-10-07T10:09:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Understanding and Preventing Entropy Collapse in RLVR with On-Policy Entropy Flow Optimization"
+    },
+    "arXiv:2605.23932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23932",
+      "identity_tokens": [
+        "arXiv:2605.23932"
+      ],
+      "reason": "Primary text evaluates resistance to clinical dialogue pressure and multi-turn belief/sycophancy robustness. It proposes stress-test training/evaluation rather than an attention kernel or serving/memory optimization; no technical connection to the linked FlashAttention lineage is established.",
+      "first_checked_at": "2026-10-07T10:09:59+00:00",
+      "last_checked_at": "2026-10-07T10:09:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "When Correct Beliefs Collapse: Epistemic Resilience of LLMs under Clinical Pressure"
+    },
+    "arXiv:2604.18164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18164",
+      "identity_tokens": [
+        "arXiv:2604.18164"
+      ],
+      "reason": "Primary paper is a benchmark for compositional bias in MLLM-as-a-judge, not an inference efficiency technique.",
+      "first_checked_at": "2026-10-07T10:10:00+00:00",
+      "last_checked_at": "2026-10-07T10:10:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "MM-JudgeBias: A Benchmark for Evaluating Compositional Biases in MLLM-as-a-Judge"
+    },
+    "arXiv:2604.10741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10741",
+      "identity_tokens": [
+        "arXiv:2604.10741"
+      ],
+      "reason": "Primary abstract proposes a multimodal deep-research/generation agent and evaluates grounding; no concrete inference serving or token/latency optimization is described.",
+      "first_checked_at": "2026-10-07T10:10:00+00:00",
+      "last_checked_at": "2026-10-07T10:10:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Deep-Reporter: Deep Research for Grounded Multimodal Long-Form Generation"
+    },
+    "arXiv:2105.14217": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.14217",
+      "identity_tokens": [
+        "arXiv:2105.14217"
+      ],
+      "reason": "Primary abstract is about reducing attention in vision transformers for image classification; it does not study language-model inference or serving.",
+      "first_checked_at": "2026-10-07T10:10:01+00:00",
+      "last_checked_at": "2026-10-07T10:10:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Less is More: Pay Less Attention in Vision Transformers"
+    },
+    "arXiv:2505.12434": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12434",
+      "identity_tokens": [
+        "arXiv:2505.12434"
+      ],
+      "reason": "Primary abstract/full conference paper describes VideoRFT reinforcement fine-tuning and video-CoT dataset/reward construction; improvements are model training/reasoning capability, not inference efficiency.",
+      "first_checked_at": "2026-10-07T10:10:01+00:00",
+      "last_checked_at": "2026-10-07T10:10:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
+      ],
+      "title": "VideoRFT: Incentivizing Video Reasoning Capability in MLLMs via Reinforced Fine-Tuning"
+    },
+    "arXiv:2607.10891": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10891",
+      "identity_tokens": [
+        "arXiv:2607.10891"
+      ],
+      "reason": "Primary paper builds/scales terminal-agent task environments for evaluation/training; it is an environment resource, not an LLM inference runtime optimization.",
+      "first_checked_at": "2026-10-07T10:10:02+00:00",
+      "last_checked_at": "2026-10-07T10:10:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md"
+      ],
+      "title": "SETA: Scaling Environments for Terminal Agents"
+    },
+    "arXiv:2605.31490": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31490",
+      "identity_tokens": [
+        "arXiv:2605.31490"
+      ],
+      "reason": "Primary paper asks whether complete rollouts are needed for on-policy distillation and optimizes training data/rollout generation; this concerns training cost rather than serving inference.",
+      "first_checked_at": "2026-10-07T10:10:02+00:00",
+      "last_checked_at": "2026-10-07T10:10:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Are Full Rollouts Necessary for On-Policy Distillation?"
     }
   }
 }

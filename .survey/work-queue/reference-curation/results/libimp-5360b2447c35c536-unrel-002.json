@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5360b2447c35c536-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41467-025-66450-z",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41467-025-66450-z",
+    "identity_tokens": [
+      "DOI:10.1038/s41467-025-66450-z"
+    ],
+    "reason": "Publisher article develops real-space ML correlation density functionals for quantum chemistry using Møller–Plesset/DFT energy densities; its computational efficiency and data-efficiency claims concern chemical simulation/training, not LLM inference or the linked torch.compile serving/compiler lineage.",
+    "first_checked_at": "2026-10-07T10:09:56+00:00",
+    "last_checked_at": "2026-10-07T10:09:56+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Real-space machine learning of correlation density functionals"
+  },
+  "processed_at": "2026-10-07T10:09:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5360b2447c35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

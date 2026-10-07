@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T09:59:52+00:00",
-  "record_count": 4330,
+  "updated_at": "2026-10-07T10:10:01+00:00",
+  "record_count": 4332,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -66103,6 +66103,36 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Step-Audio 2 Technical Report"
+    },
+    "DOI:10.1109/jstars.2024.3464411": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jstars.2024.3464411",
+      "identity_tokens": [
+        "DOI:10.1109/jstars.2024.3464411"
+      ],
+      "reason": "IEEE publisher DOI page for the ConvLSTM–ViT crop-yield paper could not be retrieved (robots denial), so its primary abstract/body cannot be checked. Per scope contract, do not convert the metadata abstract/title into an unrelated finding; retain borderline pending a publisher/author primary copy.",
+      "first_checked_at": "2026-10-07T10:09:50+00:00",
+      "last_checked_at": "2026-10-07T10:09:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ConvLSTM–ViT: A Deep Neural Network for Crop Yield Prediction Using Earth Observations and Remotely Sensed Data"
+    },
+    "DOI:10.1109/pesgm58988.2026.11693417": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/pesgm58988.2026.11693417",
+      "identity_tokens": [
+        "DOI:10.1109/pesgm58988.2026.11693417"
+      ],
+      "reason": "The IEEE PESGM DOI URL could not be retrieved, and no primary publisher/author abstract or body was available in this pass. Final scope cannot be confirmed from primary text, so retain borderline rather than infer from metadata alone.",
+      "first_checked_at": "2026-10-07T10:10:01+00:00",
+      "last_checked_at": "2026-10-07T10:10:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Unified Model for Smart Meter Data Applications"
     }
   }
 }
