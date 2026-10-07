@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T10:20:38+00:00",
-  "record_count": 4336,
+  "updated_at": "2026-10-07T10:30:12+00:00",
+  "record_count": 4346,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -66194,6 +66194,157 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MoE-INR: Implicit Neural Representation with Mixture-of-Experts for Time-Varying Volumetric Data Compression"
+    },
+    "arXiv:2605.13368": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13368",
+      "identity_tokens": [
+        "arXiv:2605.13368"
+      ],
+      "reason": "一次本文はtranslation refinementを複数inference passの方法として分析し品質変化を示すが、推論compute/latencyを減らす機構ではない。serving/schedulingとのリンクは弱く、反復passはむしろ費用増になり得る。",
+      "first_checked_at": "2026-10-07T10:30:00+00:00",
+      "last_checked_at": "2026-10-07T10:30:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Does LLM Refinement Actually Improve? A Systematic Study on Document-Level Literary Translation"
+    },
+    "arXiv:2604.09066": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09066",
+      "identity_tokens": [
+        "arXiv:2604.09066"
+      ],
+      "reason": "一次本文のsliding-window contextはLLM生成時のcontext制御に関係するが、目的はsteganographic robustnessで、推論費用・cache利用効率の改善評価がなく、linked KV/cache lineageとの技術接続は弱い。",
+      "first_checked_at": "2026-10-07T10:30:04+00:00",
+      "last_checked_at": "2026-10-07T10:30:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Anchored Sliding Window: Toward Robust and Imperceptible Linguistic Steganography"
+    },
+    "arXiv:2603.10960": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10960",
+      "identity_tokens": [
+        "arXiv:2603.10960"
+      ],
+      "reason": "一次本文はtest-time scaling下のreasoning LLM評価・順位づけ手法で、inference resource use自体を改善しない。scaling/compute-efficiency系統との接点は評価基盤としてのみ残る。",
+      "first_checked_at": "2026-10-07T10:30:04+00:00",
+      "last_checked_at": "2026-10-07T10:30:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ranking Reasoning LLMs under Test-Time Scaling"
+    },
+    "DOI:10.1109/icipai70034.2026.11605481": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icipai70034.2026.11605481",
+      "identity_tokens": [
+        "DOI:10.1109/icipai70034.2026.11605481"
+      ],
+      "reason": "IEEE primary abstractはmemory-writing gateが低utility/redundant memoryを減らし、token costとaccuracyを改善すると報告するため関連候補である。一方IEEE Xplore本文はJavaScript/anti-bot challengeで読めず、linked agentic-memory lineageへの実験・限界照合を完了できない。",
+      "first_checked_at": "2026-10-07T10:30:05+00:00",
+      "last_checked_at": "2026-10-07T10:30:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evidence-Gated Memory Writing for Personalized Large Language Model Agents"
+    },
+    "arXiv:2604.12944": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.12944",
+      "identity_tokens": [
+        "arXiv:2604.12944"
+      ],
+      "reason": "一次本文はvideo LLM hallucinationの分類・要因を整理するsurveyで、linked streaming/KV lineageと長動画contextの接点はあるが、新しい推論効率手法やcost評価は提示しない。関連性は背景/評価レベルに限られる。",
+      "first_checked_at": "2026-10-07T10:30:09+00:00",
+      "last_checked_at": "2026-10-07T10:30:09+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distorted or Fabricated? A Survey on Hallucination in Video LLMs"
+    },
+    "arXiv:2604.10556": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.10556",
+      "identity_tokens": [
+        "arXiv:2604.10556"
+      ],
+      "reason": "一次本文はdiffusion LLMのhallucination/failure modesを比較分析する研究で、linked diffusion-reasoning lineageとの近さはあるが、推論高速化や資源削減手法が主貢献ではない。",
+      "first_checked_at": "2026-10-07T10:30:10+00:00",
+      "last_checked_at": "2026-10-07T10:30:10+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lost in Diffusion: Uncovering Hallucination Patterns and Failure Modes in Diffusion Large Language Models"
+    },
+    "DOI:10.1109/eccst68196.2025.11441200": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eccst68196.2025.11441200",
+      "identity_tokens": [
+        "DOI:10.1109/eccst68196.2025.11441200"
+      ],
+      "reason": "Primary source unavailable after attempted publisher/author-source access; relevance cannot be resolved from the packet abstract alone.",
+      "first_checked_at": "2026-10-07T10:30:11+00:00",
+      "last_checked_at": "2026-10-07T10:30:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Budgeted Multi-Agent Routing: Adaptive Role Assignment and Communication Compression for Efficient LLM-Agent Collaboration"
+    },
+    "arXiv:2512.05693": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05693",
+      "identity_tokens": [
+        "arXiv:2512.05693"
+      ],
+      "reason": "階層MoE action moduleは関連MoE lineageに接続するが、本文のinference benchmarkではMoE有効化によりdense action moduleよりlatencyが増加し、LLM推論効率改善の根拠にならない。対象もロボットVLAのaction policyであり関連性が弱い。",
+      "first_checked_at": "2026-10-07T10:30:11+00:00",
+      "last_checked_at": "2026-10-07T10:30:11+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HiMoE-VLA: Hierarchical Mixture-of-Experts for Generalist Vision-Language-Action Policies"
+    },
+    "DOI:10.1145/3719027.3765028": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3719027.3765028",
+      "identity_tokens": [
+        "DOI:10.1145/3719027.3765028"
+      ],
+      "reason": "Primary source unavailable after attempted publisher/author-source access; relevance cannot be resolved from the packet abstract alone.",
+      "first_checked_at": "2026-10-07T10:30:11+00:00",
+      "last_checked_at": "2026-10-07T10:30:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mosformer: Maliciously Secure Three-Party Inference Framework for Large Transformers"
+    },
+    "DOI:10.1145/3774946": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774946",
+      "identity_tokens": [
+        "DOI:10.1145/3774946"
+      ],
+      "reason": "Primary source unavailable after attempted publisher/author-source access; relevance cannot be resolved from the packet abstract alone.",
+      "first_checked_at": "2026-10-07T10:30:12+00:00",
+      "last_checked_at": "2026-10-07T10:30:12+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemIndex: Agentic Event-based Distributed Memory Management for Multi-agent Systems"
     }
   }
 }

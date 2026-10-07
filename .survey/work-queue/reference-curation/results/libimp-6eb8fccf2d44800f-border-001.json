@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6eb8fccf2d44800f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.09066",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.09066",
+    "identity_tokens": [
+      "arXiv:2604.09066"
+    ],
+    "reason": "一次本文のsliding-window contextはLLM生成時のcontext制御に関係するが、目的はsteganographic robustnessで、推論費用・cache利用効率の改善評価がなく、linked KV/cache lineageとの技術接続は弱い。",
+    "first_checked_at": "2026-10-07T10:30:04+00:00",
+    "last_checked_at": "2026-10-07T10:30:04+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Anchored Sliding Window: Toward Robust and Imperceptible Linguistic Steganography"
+  },
+  "processed_at": "2026-10-07T10:30:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6eb8fccf2d44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
