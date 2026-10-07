@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bdf88873c272fb19-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.890",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.890",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.emnlp-main.890",
+      "arXiv:2406.16554"
+    ],
+    "reason": "既存LLaMAをMoEへ変換して継続事前学習するモデル構築・training研究。主目的はMoE化と能力維持で、推論runtime/serving効率の独立したsystems最適化ではない。",
+    "first_checked_at": "2026-10-07T05:22:08+00:00",
+    "last_checked_at": "2026-10-07T05:22:08+00:00",
+    "linked_from": [],
+    "title": "LLaMA-MoE: Building Mixture-of-Experts from LLaMA with Continual Pre-Training"
+  },
+  "processed_at": "2026-10-07T05:22:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bdf88873c272",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

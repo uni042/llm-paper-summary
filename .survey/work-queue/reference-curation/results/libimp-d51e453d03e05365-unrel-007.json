@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d51e453d03e05365-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1808.10792",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1808.10792",
+    "identity_tokens": [
+      "DOI:10.18653/v1/d18-1443",
+      "arXiv:1808.10792"
+    ],
+    "reason": "content selectorでsummaryに含めるsource phraseを選び、bottom-up attentionで生成品質を改善する要約モデル研究。CNN-DM/NYTのROUGEとdata efficiencyが主評価で、推論システム効率は主目的ではない。",
+    "first_checked_at": "2026-10-04T19:48:51+00:00",
+    "last_checked_at": "2026-10-07T05:22:15+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+    ],
+    "title": "Bottom-Up Abstractive Summarization"
+  },
+  "processed_at": "2026-10-07T05:22:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d51e453d03e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

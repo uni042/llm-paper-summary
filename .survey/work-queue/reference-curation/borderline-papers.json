@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T04:52:15+00:00",
-  "record_count": 4268,
+  "updated_at": "2026-10-07T05:22:05+00:00",
+  "record_count": 4269,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65148,6 +65148,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A Reparameterized Discrete Diffusion Model for Text Generation"
+    },
+    "arXiv:2504.02495": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.02495",
+      "identity_tokens": [
+        "arXiv:2504.02495"
+      ],
+      "reason": "推論時のparallel sampling量を増やしてgeneralist reward modelの性能をscaleし、meta reward modelで投票を導くためinference-time compute配分には直接関係する。一方、目的はreward qualityのscalingで、latency・throughput・memory・serving効率の削減が主評価ではないため境界扱い。",
+      "first_checked_at": "2026-10-07T05:22:05+00:00",
+      "last_checked_at": "2026-10-07T05:22:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Inference-Time Scaling for Generalist Reward Modeling"
     }
   }
 }
