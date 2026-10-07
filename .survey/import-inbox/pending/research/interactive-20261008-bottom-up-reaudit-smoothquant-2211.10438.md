@@ -85,6 +85,7 @@ quality_self_review_passed: true
 quality_self_review_version: '2026-10-07-v1'
 worker_run_key: 'interactive-20261008-bottom-up-reaudit-smoothquant'
 
+worker_completed_at: '2026-10-08T07:27:27+09:00'
 ---
 
 # SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
