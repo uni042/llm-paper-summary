@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-07T22:44:29+00:00",
+  "generated_at": "2026-10-07T22:49:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2709,29 +2709,29 @@
       "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2604.10603",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T22:21:20+00:00",
+      "canonical_id": "arXiv:2306.11222",
+      "title": "LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation",
+      "source_url": "https://arxiv.org/abs/2306.11222",
+      "returned_at": "2026-10-07T22:48:29+00:00",
       "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md と 8 段落 / 1871文字 (68.3%) が完全一致"
+        "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md と 10 段落 / 2308文字 (100.0%) が完全一致"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3760,
-        "body_paragraphs": 18,
-        "method_chars": 1022,
-        "method_paragraphs": 6,
-        "evaluation_chars": 866,
-        "limitation_chars": 338,
+        "body_chars": 4637,
+        "body_paragraphs": 30,
+        "method_chars": 1281,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1041,
+        "limitation_chars": 393,
         "insufficiency_flags": []
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-moeits-2604.10603.md",
-      "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-moeits-2604.10603.json",
-      "worker_run_key": "interactive-20261008-bottom-up-reaudit-moeits"
+      "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-losparse-2306.11222.json",
+      "worker_run_key": "interactive-20261008-bottom-up-reaudit-losparse"
     }
   ]
 }

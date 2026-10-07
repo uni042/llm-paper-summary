@@ -1,14 +1,28 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_metadata",
-  "source_sha256": "2640efa05ff843186c3db95f698df7e049e126d8685cab35ee1ffed194de1775",
-  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-memserve-2406.17565.md",
+  "status": "imported",
+  "source_sha256": "0cdd5da0a73435dd6478c4f24dea1dcec62206f27cc0088e39f5f8a36e03c2d8",
   "canonical_id": "arXiv:2406.17565",
-  "worker_completed_at": null,
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+  "reaudit_update": true,
+  "reaudit_version": "2026-10-07-v1",
+  "legacy_escaped_git_blob_sha_accepted": false,
+  "previous_paper_sha256": "ffbcc7acb572520a092bb6fbadce0e0605004d7edd48e1417c813d9886c9a639",
+  "previous_paper_git_blob_sha": "37f69c3fdda9b7fecb9ccfb9d2d5825e1e1995b0",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-10-08T07:27:27+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-memserve",
-  "failures": [
-    "worker_completed_at"
-  ],
-  "processed_at": "2026-10-07T22:21:19+00:00"
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4676,
+    "body_paragraphs": 54,
+    "method_chars": 1267,
+    "method_paragraphs": 16,
+    "evaluation_chars": 1052,
+    "limitation_chars": 194,
+    "insufficiency_flags": []
+  },
+  "processed_at": "2026-10-07T22:48:43+00:00"
 }

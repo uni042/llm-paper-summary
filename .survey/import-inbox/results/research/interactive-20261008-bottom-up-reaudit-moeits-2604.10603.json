@@ -1,13 +1,18 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "08a665d9c59fcdefe1fac900cb80cf36731c23649850a5105770d37e27d2b059",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-moeits-2604.10603.md",
+  "status": "imported",
+  "source_sha256": "64e19afeb14e767c14304a957800e5d0dedeadc9ee451bfc44660270dbc176d9",
   "canonical_id": "arXiv:2604.10603",
-  "worker_completed_at": "2026-10-03T23:18:00+09:00",
+  "paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md",
+  "reaudit_update": true,
+  "reaudit_version": "2026-10-07-v1",
+  "legacy_escaped_git_blob_sha_accepted": false,
+  "previous_paper_sha256": "86ebbf9e1e91f9707ce0a28f7a89edffa8cba19019adfa355e417ca9825a7605",
+  "previous_paper_git_blob_sha": "b27ac46f31ea31b33dd229df45e3e76f5d6d2a2d",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-10-08T07:27:27+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-moeits",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
@@ -19,8 +24,5 @@
     "limitation_chars": 338,
     "insufficiency_flags": []
   },
-  "failures": [
-    "長文定型文の再利用を検出: papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md と 8 段落 / 1871文字 (68.3%) が完全一致"
-  ],
-  "processed_at": "2026-10-07T22:21:20+00:00"
+  "processed_at": "2026-10-07T22:48:56+00:00"
 }

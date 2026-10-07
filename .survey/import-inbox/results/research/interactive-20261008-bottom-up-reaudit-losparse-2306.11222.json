@@ -1,14 +1,26 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_metadata",
-  "source_sha256": "20b2645d7cdbd82808f713dcbc3f3043c1b5c135c0ccacf099d47d0403412eba",
+  "status": "blocked_quality",
+  "source_sha256": "11676ea31e307d2fad0f55864d4a90be9859f94d17d575908296be24b01cea72",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
   "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
   "canonical_id": "arXiv:2306.11222",
-  "worker_completed_at": null,
+  "worker_completed_at": "2026-10-08T07:32:15+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-losparse",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4637,
+    "body_paragraphs": 30,
+    "method_chars": 1281,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1041,
+    "limitation_chars": 393,
+    "insufficiency_flags": []
+  },
   "failures": [
-    "worker_completed_at"
+    "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md と 10 段落 / 2308文字 (100.0%) が完全一致"
   ],
-  "processed_at": "2026-10-07T22:29:27+00:00"
+  "processed_at": "2026-10-07T22:48:29+00:00"
 }
