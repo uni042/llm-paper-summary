@@ -45,7 +45,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-05 · [Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management](2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  PBKVは履歴workflowと現在のタスク 文脈から数段階先のagent呼出しを予測し、その予測から各KV entryの将来再利用可能性を算出する。
+  PBKVは、複数のエージェント（agents）が長い共通接頭辞や中間会話を共有するワークフローで、将来どのエージェントが呼び出されるかを予測し、その予測をGPU上のキー・値キャッシュ（KV キャッシュ）の保持、追い出し、プリフェッチ（プリフェッチ）へ使うサービング方式である。
 
 - **2026-01 · [KVzap: Fast, Adaptive, and Faithful KV Cache Pruning](2026-2601.07891-kvzap-fast-adaptive-and-faithful-kv-cache-pruning.md)**  
   実装：[✓](https://github.com/NVIDIA/kvpress) ・ リポジトリ内被引用：5  

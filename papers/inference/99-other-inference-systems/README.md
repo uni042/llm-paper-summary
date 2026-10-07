@@ -962,7 +962,7 @@
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
   実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：25  
-  QuIP#は4 bit/重み以下の極端な圧縮領域を対象とする重み専用の事後学習量子化（post-学習 量子化; PTQ）である。
+  QuIP#は4 bit/重み以下、特に2〜3 bitの極端な圧縮領域を対象とする重み専用の事後学習量子化（PTQ）である。Llama 2 70Bは2 bitなら20GB未満へ収まり、proof-of-concept CUDA カーネルではRTX 4090上でpeak メモリ 帯域の50%超へ到達する。
 
 - **2024-04 · [SEER-MoE: Sparse Expert Efficiency through Regularization for Mixture-of-Experts](2024-2404.05089-seer-moe-sparse-expert-efficiency-through-regularization-for-mixture-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：23  
@@ -1074,7 +1074,7 @@
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
-  大規模視覚言語モデルでは画像が数百個の視覚トークンへ展開され、これらが全Transformer層の自己注意とフィードフォワードネットワーク（FFN）を通るため、深層まで同じトークン数を維持すると推論計算が大きい。FastVは、視覚情報の利用が層間で一様ではなく、初期層で一部の視覚トークンへ注意が集中するという観測を利用する。
+  FastVは、初期層では視覚情報を統合するため画像トークンを残し、指定した層 (K) で注意重みに基づき視覚トークンを順位付けし、重要度の低い下位 (R)% をそれ以降の層から除去する。代表的な (K=2, R=50%) ではLLaVA-1.5-13Bの理論FLOPsを154.6Bから84.6Bへ減らしながら、4種画像ベンチマーク平均73.6を維持する。
 
 - **2023-12 · [Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy](2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -1128,6 +1128,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   層ごとの計算・通信費を使う動的計画法でクライアント/サーバー配置を決め、遅延SLAを守りながらサーバー仕事量を約3分の1削減する協調推論方式。
 
+- **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：3  
+  従来の音声対話は、音声認識、テキストLLM、音声合成を直列に通すため各段の待ち時間が累積し、話者交替の境界も明示的に決める必要がある。推論効率上の核は、Mimi音声コーデックで音声を12.5 Hzの離散トークンへ圧縮し、時間方向の大きなTransformerと、同一時刻に複数コードブックを生成する小さな深さTransformerへ処理を分ける点にある。
+
 - **2024-09 · [Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction](2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   長文脈の自己回帰推論では、生成前のプリフィルで入力全体を全層へ通すため、文脈が128K級になると注意計算と中間状態が大きな負担になる。SnapKVやH2Oは生成時に保持するKVキャッシュを減らすが、長い入力を全層で一度処理するプリフィル自体は残る。第一走査ではフィルタ層rまでだけ長文脈を実行し、最終クエリと全キーの内積から上位kトークンを選ぶ。
@@ -1160,10 +1164,6 @@
   実装：✓ ・ リポジトリ内被引用：2  
   しかし既存方式はトークンごとに補助MLPで活性集合を予測することが多く、予測計算に加え、毎トークン異なる重み断片を呼び出すため実機では理論疎性ほど速くならない。
 
-- **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
-  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：2  
-  従来の音声対話は、音声認識、テキストLLM、音声合成を直列に通すため各段の待ち時間が累積し、話者交替の境界も明示的に決める必要がある。推論効率上の核は、Mimi音声コーデックで音声を12.5 Hzの離散トークンへ圧縮し、時間方向の大きなTransformerと、同一時刻に複数コードブックを生成する小さな深さTransformerへ処理を分ける点にある。
-
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：2  
   Test-Time 学習（TTT）層は、再帰型ニューラルネットワーク（RNN）が長い履歴を固定サイズvectorへ圧縮することで表現力を失う問題に対し、隠れ 状態そのものを「学習するモデル」にする。
@@ -1194,7 +1194,7 @@
 
 - **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
   実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：1  
-  音声対話をASR→LLM→TTSの直列パイプラインで構成すると、文字起こしと音声合成の待ち時間が累積する。LLaMA-Omniは音声表現をLLMへ直接入力し、LLMのテキスト出力と音声unit生成を同時に進めることで低遅延化する。
+  LLaMA-Omniは、音声認識（automatic speech recognition; ASR）→大規模言語モデル（large language モデル; LLM）→音声合成（text-to-speech; TTS）を直列に接続するカスケード構成の遅延を避け…
 
 - **2024-02 · [Efficient Prompt Caching via Embedding Similarity](2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1480,7 +1480,7 @@
 
 - **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
-  LayerDropはTransformerの層全体を学習中に確率的に落とす構造化dropoutである。通常のdropoutが要素単位の正則化なのに対し、LayerDropは「ある層が存在しない」経路を学習中から経験させる。その結果、学習後に層を間引いてもモデルが破綻しにくく、1個の大モデルから推論時の計算予算に応じた複数深度を取り出せる。
+  目的は入力ごとに早期終了を判断することではなく、単一チェックポイントから複数の固定深度モデルを取り出すことである。
 
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
