@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-07T05:26:38+00:00",
+  "updated_at": "2026-10-07T05:39:34+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3650,6 +3650,18 @@
       "processed_at": "2026-10-07T05:26:38+00:00",
       "canonical_id": "arXiv:2603.10087",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-21041f85cbab--libfile_4a96a08b50708191b87e5fb961a1a282--2607.06763-trees-from-marginals.md",
+      "processed_at": "2026-10-07T05:39:34+00:00",
+      "canonical_id": "arXiv:2607.06763"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md",
+      "processed_at": "2026-10-07T05:39:34+00:00",
+      "canonical_id": "arXiv:2603.10087"
     }
   ]
 }
