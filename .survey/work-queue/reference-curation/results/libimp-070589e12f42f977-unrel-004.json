@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-070589e12f42f977-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.15104",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.15104",
+    "identity_tokens": [
+      "arXiv:2605.15104"
+    ],
+    "reason": "The primary paper constructs an audio-converted benchmark and evaluation protocol for tool-calling agents; it reports model accuracy gaps, not a tool-call, latency, memory, or inference optimization.",
+    "first_checked_at": "2026-10-07T13:50:58+00:00",
+    "last_checked_at": "2026-10-07T13:50:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents"
+  },
+  "processed_at": "2026-10-07T13:50:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-070589e12f42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T12:00:57+00:00",
-  "record_count": 10733,
+  "updated_at": "2026-10-07T13:51:11+00:00",
+  "record_count": 10761,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -153530,6 +153530,405 @@
         "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
       ],
       "title": "Rethinking the Divergence Regularization in LLM RL"
+    },
+    "arXiv:2605.14392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14392",
+      "identity_tokens": [
+        "arXiv:2605.14392"
+      ],
+      "reason": "EvoEnv synthesizes executable training environments for reasoning RL and reports post-training capability changes. Its reusable environments alter training data/reward generation, not inference cost.",
+      "first_checked_at": "2026-10-07T13:50:58+00:00",
+      "last_checked_at": "2026-10-07T13:50:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Learning to Build the Environment: Self-Evolving Reasoning RL via Verifiable Environment Synthesis"
+    },
+    "arXiv:2605.15104": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15104",
+      "identity_tokens": [
+        "arXiv:2605.15104"
+      ],
+      "reason": "The primary paper constructs an audio-converted benchmark and evaluation protocol for tool-calling agents; it reports model accuracy gaps, not a tool-call, latency, memory, or inference optimization.",
+      "first_checked_at": "2026-10-07T13:50:58+00:00",
+      "last_checked_at": "2026-10-07T13:50:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents"
+    },
+    "arXiv:2605.12882": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12882",
+      "identity_tokens": [
+        "arXiv:2605.12882"
+      ],
+      "reason": "CiteVQA introduces an evidence-attribution benchmark and scoring metric. Its automated annotation uses MLLMs, but the paper’s contribution is evaluation and reliability auditing rather than reduced inference resources.",
+      "first_checked_at": "2026-10-07T13:50:58+00:00",
+      "last_checked_at": "2026-10-07T13:50:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "CiteVQA: Benchmarking Evidence Attribution for Trustworthy Document Intelligence"
+    },
+    "arXiv:2605.22389": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22389",
+      "identity_tokens": [
+        "arXiv:2605.22389"
+      ],
+      "reason": "The primary arXiv paper proposes High-Entropy Sum data ranking to reduce reasoning-data selection/training overhead (including training on a 20% subset); the measured efficiency is training-time, not model inference or serving.",
+      "first_checked_at": "2026-10-07T13:50:59+00:00",
+      "last_checked_at": "2026-10-07T13:50:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "Unified Data Selection for LLM Reasoning"
+    },
+    "arXiv:2605.17486": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17486",
+      "identity_tokens": [
+        "arXiv:2605.17486"
+      ],
+      "reason": "The primary paper is a VLA reinforcement-learning optimizer for cross-task policy training and success rates; it does not measure inference compute, memory, latency, serving, or token use.",
+      "first_checked_at": "2026-10-07T13:51:00+00:00",
+      "last_checked_at": "2026-10-07T13:51:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "DyGRO-VLA: Cross-Task Scaling of Vision-Language-Action Models via Dynamic Grouped Residual Optimization"
+    },
+    "arXiv:2605.17570": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17570",
+      "identity_tokens": [
+        "arXiv:2605.17570"
+      ],
+      "reason": "Mu-GRPO reduces generation/optimization switching overhead and reports about 2x wall-clock speedup during RL post-training. The improvement is explicitly training-system throughput, not deployed LLM inference.",
+      "first_checked_at": "2026-10-07T13:51:00+00:00",
+      "last_checked_at": "2026-10-07T13:51:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "How Off-Policy Can GRPO Be? Mu-GRPO for Efficient LLM Reinforcement Learning"
+    },
+    "arXiv:2605.01925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.01925",
+      "identity_tokens": [
+        "arXiv:2605.01925"
+      ],
+      "reason": "CADFS is a CAD dataset and code-generation framework. Its use of FlashAttention-2 and Liger-Kernel is a training setup detail, not a method or result for LLM inference optimization.",
+      "first_checked_at": "2026-10-07T13:51:01+00:00",
+      "last_checked_at": "2026-10-07T13:51:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "CADFS: A Big CAD Program Dataset and Framework for Computer-Aided Design with Large Language Models"
+    },
+    "arXiv:2604.27083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.27083",
+      "identity_tokens": [
+        "arXiv:2604.27083"
+      ],
+      "reason": "CoPD is a co-evolving policy-distillation and RL post-training method for integrating expert capabilities. It reports model capability, not lower inference resource use.",
+      "first_checked_at": "2026-10-07T13:51:02+00:00",
+      "last_checked_at": "2026-10-07T13:51:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Co-Evolving Policy Distillation"
+    },
+    "arXiv:2604.26018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.26018",
+      "identity_tokens": [
+        "arXiv:2604.26018"
+      ],
+      "reason": "QERNEL applies mixture-of-experts and grouped-query attention to a many-electron neural wavefunction model; its low-compute claim is in computational physics, not LLM inference or serving. This is a domain mismatch despite architecture overlap.",
+      "first_checked_at": "2026-10-07T13:51:02+00:00",
+      "last_checked_at": "2026-10-07T13:51:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "QERNEL: a Scalable Large Electron Model"
+    },
+    "arXiv:2603.26639": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26639",
+      "identity_tokens": [
+        "arXiv:2603.26639"
+      ],
+      "reason": "GeoSR changes VLM training to encourage use of geometry tokens for spatial reasoning; no reduced inference tokens, memory, latency, or serving cost is demonstrated.",
+      "first_checked_at": "2026-10-07T13:51:03+00:00",
+      "last_checked_at": "2026-10-07T13:51:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Make Geometry Matter for Spatial Reasoning"
+    },
+    "arXiv:2603.25108": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25108",
+      "identity_tokens": [
+        "arXiv:2603.25108"
+      ],
+      "reason": "MSRL is a multi-stage reinforcement-learning and distillation method for multimodal reward-model training; results concern training efficiency/performance, not model serving.",
+      "first_checked_at": "2026-10-07T13:51:04+00:00",
+      "last_checked_at": "2026-10-07T13:51:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "MSRL: Scaling Generative Multimodal Reward Modeling via Multi-Stage Reinforcement Learning"
+    },
+    "arXiv:2603.25739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25739",
+      "identity_tokens": [
+        "arXiv:2603.25739"
+      ],
+      "reason": "MegaFlow is an optical-flow method using pretrained vision features and iterative refinement; the target model is vision, not LLM inference/serving.",
+      "first_checked_at": "2026-10-07T13:51:04+00:00",
+      "last_checked_at": "2026-10-07T13:51:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "MegaFlow: Zero-Shot Large Displacement Optical Flow"
+    },
+    "arXiv:2603.24004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24004",
+      "identity_tokens": [
+        "arXiv:2603.24004"
+      ],
+      "reason": "Thinking with Tables is a program-aided reasoning framework for multimodal tabular QA; it reports accuracy improvements but no measured reduction in LLM tokens, latency, memory, or inference cost.",
+      "first_checked_at": "2026-10-07T13:51:04+00:00",
+      "last_checked_at": "2026-10-07T13:51:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Thinking with Tables: Enhancing Multi-Modal Tabular Understanding via Neuro-Symbolic Reasoning"
+    },
+    "arXiv:2604.12312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12312",
+      "identity_tokens": [
+        "arXiv:2604.12312"
+      ],
+      "reason": "CompliBench is an LLM-judge evaluation benchmark and automated data-generation pipeline. It does not propose runtime cost, latency, memory, or serving optimization.",
+      "first_checked_at": "2026-10-07T13:51:05+00:00",
+      "last_checked_at": "2026-10-07T13:51:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "CompliBench: Benchmarking LLM Judges for Compliance Violation Detection in Dialogue Systems"
+    },
+    "arXiv:2604.13029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13029",
+      "identity_tokens": [
+        "arXiv:2604.13029"
+      ],
+      "reason": "rDPO is an offline/on-policy preference training framework for visual reasoning. Its reported gains concern training and answer quality, not inference efficiency.",
+      "first_checked_at": "2026-10-07T13:51:05+00:00",
+      "last_checked_at": "2026-10-07T13:51:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Visual Preference Optimization with Rubric Rewards"
+    },
+    "arXiv:2604.10866": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10866",
+      "identity_tokens": [
+        "arXiv:2604.10866"
+      ],
+      "reason": "OccuBench is a multi-domain agent benchmark using LLM-simulated environments. Its contribution is evaluation and simulation quality, not deployed inference savings.",
+      "first_checked_at": "2026-10-07T13:51:05+00:00",
+      "last_checked_at": "2026-10-07T13:51:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "OccuBench: Evaluating AI Agents on Real-World Professional Tasks via Language Environment Simulation"
+    },
+    "arXiv:2604.09258": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09258",
+      "identity_tokens": [
+        "arXiv:2604.09258"
+      ],
+      "reason": "Nexus is a pretraining optimizer that improves generalization at similar pretraining loss. The measured changes are training/generalization outcomes, not inference efficiency.",
+      "first_checked_at": "2026-10-07T13:51:06+00:00",
+      "last_checked_at": "2026-10-07T13:51:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Nexus: Same Pretraining Loss, Better Downstream Generalization via Common Minima"
+    },
+    "arXiv:2604.07705": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07705",
+      "identity_tokens": [
+        "arXiv:2604.07705"
+      ],
+      "reason": "The primary paper is an aerial vision-language-navigation survey. It discusses onboard deployment and tradeoffs but contributes a taxonomy/research agenda rather than a concrete measured LLM/VLM inference optimization.",
+      "first_checked_at": "2026-10-07T13:51:06+00:00",
+      "last_checked_at": "2026-10-07T13:51:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Vision-Language Navigation for Aerial Robots: Towards the Era of Large Language Models"
+    },
+    "arXiv:2604.20817": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20817",
+      "identity_tokens": [
+        "arXiv:2604.20817"
+      ],
+      "reason": "The primary study analyzes numerical representations acquired during language-model training; it does not propose runtime or serving optimizations.",
+      "first_checked_at": "2026-10-07T13:51:07+00:00",
+      "last_checked_at": "2026-10-07T13:51:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Convergent Evolution: How Different Language Models Learn Similar Number Representations"
+    },
+    "arXiv:2604.20842": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20842",
+      "identity_tokens": [
+        "arXiv:2604.20842"
+      ],
+      "reason": "SpeechParaling-Bench evaluates paralinguistic speech generation and judge reliability. It introduces no LLM inference efficiency method.",
+      "first_checked_at": "2026-10-07T13:51:08+00:00",
+      "last_checked_at": "2026-10-07T13:51:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "title": "SpeechParaling-Bench: A Comprehensive Benchmark for Paralinguistic-Aware Speech Generation"
+    },
+    "arXiv:2604.15705": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15705",
+      "identity_tokens": [
+        "arXiv:2604.15705"
+      ],
+      "reason": "CPO++ addresses reasoning drift through multimodal preference optimization during reinforcement fine-tuning; it reports robustness/capability, not inference-memory or latency improvements.",
+      "first_checked_at": "2026-10-07T13:51:08+00:00",
+      "last_checked_at": "2026-10-07T13:51:08+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Towards Robust Endogenous Reasoning: Unifying Drift Adaptation in Non-Stationary Tuning"
+    },
+    "arXiv:2605.11960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11960",
+      "identity_tokens": [
+        "arXiv:2605.11960"
+      ],
+      "reason": "Chronicles-OCR is a cross-temporal visual perception benchmark for VLLMs with a new annotation paradigm; it does not propose an inference-cost optimization.",
+      "first_checked_at": "2026-10-07T13:51:09+00:00",
+      "last_checked_at": "2026-10-07T13:51:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Chronicles-OCR: A Cross-Temporal Perception Benchmark for the Evolutionary Trajectory of Chinese Characters"
+    },
+    "arXiv:2605.12070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12070",
+      "identity_tokens": [
+        "arXiv:2605.12070"
+      ],
+      "reason": "The paper analyzes missing logits and exact/approximate correction for asynchronous agentic RL; its results concern post-training rollout throughput and correction, not production inference.",
+      "first_checked_at": "2026-10-07T13:51:09+00:00",
+      "last_checked_at": "2026-10-07T13:51:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Missing Old Logits in Asynchronous Agentic RL: Semantic Mismatch and Repair Methods for Off-Policy Correction"
+    },
+    "arXiv:2605.12571": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12571",
+      "identity_tokens": [
+        "arXiv:2605.12571"
+      ],
+      "reason": "VideoSEAL decouples planning from answer authority for long-video evidence alignment. It improves accuracy and grounding but does not report lower compute, memory, latency, token use, or serving load.",
+      "first_checked_at": "2026-10-07T13:51:09+00:00",
+      "last_checked_at": "2026-10-07T13:51:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VideoSEAL: Mitigating Evidence Misalignment in Agentic Long Video Understanding by Decoupling Answer Authority"
+    },
+    "arXiv:2605.10876": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10876",
+      "identity_tokens": [
+        "arXiv:2605.10876"
+      ],
+      "reason": "AssayBench is a virtual-cell/phenotypic-screen benchmark for LLMs and agents. Fine-tuning, ensembling, and prompt optimization in its evaluation improve task performance, not inference efficiency.",
+      "first_checked_at": "2026-10-07T13:51:09+00:00",
+      "last_checked_at": "2026-10-07T13:51:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "AssayBench: An Assay-Level Virtual Cell Benchmark for LLMs and Agents"
+    },
+    "arXiv:2604.07941": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07941",
+      "identity_tokens": [
+        "arXiv:2604.07941"
+      ],
+      "reason": "This is a post-training survey of off-policy/on-policy behavior and distillation. Its systems-level consolidation framing is training-stage behavior transfer, not a concrete serving or inference optimization.",
+      "first_checked_at": "2026-10-07T13:51:10+00:00",
+      "last_checked_at": "2026-10-07T13:51:10+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Large Language Model Post-Training: A Unified View of Off-Policy and On-Policy Learning"
+    },
+    "arXiv:2604.01569": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01569",
+      "identity_tokens": [
+        "arXiv:2604.01569"
+      ],
+      "reason": "VideoZeroBench is a long-video MLLM grounding benchmark; its contribution is evaluation of spatiotemporal evidence, not inference resource reduction.",
+      "first_checked_at": "2026-10-07T13:51:11+00:00",
+      "last_checked_at": "2026-10-07T13:51:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification"
+    },
+    "arXiv:2604.00513": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00513",
+      "identity_tokens": [
+        "arXiv:2604.00513"
+      ],
+      "reason": "MOON3.0 proposes a multimodal representation model and training objectives for e-commerce product understanding. It reports task performance but no inference cost savings.",
+      "first_checked_at": "2026-10-07T13:51:11+00:00",
+      "last_checked_at": "2026-10-07T13:51:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T12:00:55+00:00",
-  "record_count": 4447,
+  "updated_at": "2026-10-07T13:51:10+00:00",
+  "record_count": 4459,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -67874,6 +67874,189 @@
       ],
       "borderline_recheck_count": 0,
       "title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments"
+    },
+    "arXiv:2605.15710": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15710",
+      "identity_tokens": [
+        "arXiv:2605.15710"
+      ],
+      "reason": "SMMBench is an evaluation benchmark for source-distributed multimodal agent memory. Full text focuses on benchmark tasks and evaluation; it does not provide a memory compression, retrieval-latency, token-cost, or serving optimization method, though the linked memory lineage makes the benchmark potentially useful context.",
+      "first_checked_at": "2026-10-07T13:50:57+00:00",
+      "last_checked_at": "2026-10-07T13:50:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SMMBench: A Benchmark for Source-Distributed Multimodal Agent Memory"
+    },
+    "DOI:10.1109/jsen.2026.3680898": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jsen.2026.3680898",
+      "identity_tokens": [
+        "DOI:10.1109/jsen.2026.3680898"
+      ],
+      "reason": "The IEEE DOI source could not be retrieved through the primary-source endpoint; no publisher/author primary abstract or full text was available to verify scope or efficiency claims.",
+      "first_checked_at": "2026-10-07T13:50:57+00:00",
+      "last_checked_at": "2026-10-07T13:50:57+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AV-DTEC: Self-Supervised Audio–Visual Fusion for Drone 3-D Trajectory Estimation and Classification"
+    },
+    "arXiv:2605.21008": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21008",
+      "identity_tokens": [
+        "arXiv:2605.21008"
+      ],
+      "reason": "The primary paper is a survey, not a new serving method. Its latency section documents the accuracy/latency tension for streaming audio reasoning and says uncompressed long-audio features can create prohibitive sequence lengths, but it does not validate a specific deployable efficiency method; keep as weak adjacent evidence.",
+      "first_checked_at": "2026-10-07T13:50:59+00:00",
+      "last_checked_at": "2026-10-07T13:50:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Audio Reasoning in Multimodal Foundation Models"
+    },
+    "arXiv:2605.21308": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21308",
+      "identity_tokens": [
+        "arXiv:2605.21308"
+      ],
+      "reason": "Deformba is a vision-only state-space architecture. Full text establishes linear input-length computation versus quadratic global attention and estimates FLOPs, but evaluations are 2D/3D visual perception only, with no LLM/VLM serving evidence; transferability remains weak.",
+      "first_checked_at": "2026-10-07T13:50:59+00:00",
+      "last_checked_at": "2026-10-07T13:50:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deformba: Vision State Space Model with Adaptive State Fusion"
+    },
+    "arXiv:2605.11032": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11032",
+      "identity_tokens": [
+        "arXiv:2605.11032"
+      ],
+      "reason": "Portable Agent Memory defines structured persistent-memory transfer and optional CBOR serialization for efficient transport. Full text does not establish fewer model-context tokens, lower inference latency, or serving-resource savings; the possible transport/context benefit is not quantified for LLM inference.",
+      "first_checked_at": "2026-10-07T13:51:01+00:00",
+      "last_checked_at": "2026-10-07T13:51:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Portable Agent Memory: A Protocol for Cryptographically-Verified Memory Transfer Across Heterogeneous AI Agents"
+    },
+    "arXiv:2604.21681": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.21681",
+      "identity_tokens": [
+        "arXiv:2604.21681"
+      ],
+      "reason": "Sapiens2 is a human-vision transformer family (0.4B–5B) with windowed attention for 4K spatial inputs. The paper does not evaluate LLM/VLM workloads or provide comparable inference-cost reductions, leaving only a weak architecture analogy.",
+      "first_checked_at": "2026-10-07T13:51:01+00:00",
+      "last_checked_at": "2026-10-07T13:51:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sapiens2"
+    },
+    "DOI:10.3390/electronics15071395": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15071395",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15071395"
+      ],
+      "reason": "The MDPI DOI/publisher page returned HTTP 429; no primary abstract/full text could be checked. The packet description suggests direct energy measurement of LLM inference, which could be highly relevant, but final classification must remain borderline pending source access.",
+      "first_checked_at": "2026-10-07T13:51:03+00:00",
+      "last_checked_at": "2026-10-07T13:51:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy-Aware Multilingual Evaluation of Large Language Models"
+    },
+    "arXiv:2604.19609": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19609",
+      "identity_tokens": [
+        "arXiv:2604.19609"
+      ],
+      "reason": "Volume Transformer is a 3D scene model that uses full global self-attention and training/data techniques. Its discussion of optimized software/hardware stacks is a motivation, not an LLM inference method or measured serving improvement; keep borderline because it is linked to exact attention-kernel work.",
+      "first_checked_at": "2026-10-07T13:51:07+00:00",
+      "last_checked_at": "2026-10-07T13:51:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Volume Transformer: Revisiting Vanilla Transformers for 3D Scene Understanding"
+    },
+    "arXiv:2604.14475": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14475",
+      "identity_tokens": [
+        "arXiv:2604.14475"
+      ],
+      "reason": "The primary abstract describes an agent memory method that improves medical-agent accuracy but incurs one extra retrieval pass and one reflection call per case. The arXiv HTML full text could not be retrieved, so the cost/quality tradeoff and any further efficiency claims remain unresolved; linked persistent-memory lineage makes this borderline.",
+      "first_checked_at": "2026-10-07T13:51:07+00:00",
+      "last_checked_at": "2026-10-07T13:51:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evo-MedAgent: Beyond One-Shot Diagnosis with Agents That Remember, Reflect, and Improve"
+    },
+    "arXiv:2605.10815": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10815",
+      "identity_tokens": [
+        "arXiv:2605.10815"
+      ],
+      "reason": "The primary study identifies cross-modal sink tokens and proposes training-free hallucination mitigation through reliance on them. The method changes where information is read but does not prune tokens or demonstrate reduced latency/memory; the attention-sink connection is exploratory.",
+      "first_checked_at": "2026-10-07T13:51:08+00:00",
+      "last_checked_at": "2026-10-07T13:51:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Probing Cross-modal Information Hubs in Audio-Visual LLMs"
+    },
+    "arXiv:2604.19790": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19790",
+      "identity_tokens": [
+        "arXiv:2604.19790"
+      ],
+      "reason": "PrecisionDiff detects behavioral divergence between FP/BF and quantized precisions and localizes sensitive layers, but its purpose is safety differential testing, not a compression/latency optimization. The precision findings are relevant to quantized-inference validation but do not establish an efficiency gain, so retain as borderline.",
+      "first_checked_at": "2026-10-07T13:51:10+00:00",
+      "last_checked_at": "2026-10-07T13:51:10+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hidden Reliability Risks in Large Language Models: Systematic Identification of Precision-Induced Output Disagreements"
+    },
+    "DOI:10.1016/j.inffus.2025.103982": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103982",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.103982"
+      ],
+      "reason": "The DOI/publisher article could not be retrieved and no author primary abstract/full text was accessible. The title suggests a non-LLM human-activity classifier, but this cannot be verified from primary text.",
+      "first_checked_at": "2026-10-07T13:51:10+00:00",
+      "last_checked_at": "2026-10-07T13:51:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deep convolutional state space model as human activity recognizer"
     }
   }
 }
