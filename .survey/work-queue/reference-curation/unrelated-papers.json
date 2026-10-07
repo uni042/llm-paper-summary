@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T11:51:00+00:00",
-  "record_count": 10701,
+  "updated_at": "2026-10-07T12:00:57+00:00",
+  "record_count": 10733,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -153076,6 +153076,460 @@
         "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
       ],
       "title": "Shallow-π: Knowledge Distillation for Flow-based VLAs"
+    },
+    "arXiv:2609.30243": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30243",
+      "identity_tokens": [
+        "arXiv:2609.30243"
+      ],
+      "reason": "The primary paper is an adversarial context-manipulation/jailbreak study; it measures attacks and defenses rather than improving inference cost, memory, latency, or serving.",
+      "first_checked_at": "2026-10-07T12:00:46+00:00",
+      "last_checked_at": "2026-10-07T12:00:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+      ],
+      "title": "JevOut: Natural Context Can Flip Decision Models"
+    },
+    "DOI:10.1021/acs.chemrev.6c00154": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/acs.chemrev.6c00154",
+      "identity_tokens": [
+        "DOI:10.1021/acs.chemrev.6c00154"
+      ],
+      "reason": "The ACS review concerns AI-enabled materials-discovery workflows, including scientific models and pipelines; it does not propose LLM inference optimization.",
+      "first_checked_at": "2026-10-07T12:00:46+00:00",
+      "last_checked_at": "2026-10-07T12:00:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "AI for Accelerated Materials Discovery: From Generative Design to Autonomous Realization"
+    },
+    "arXiv:2607.21217": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21217",
+      "identity_tokens": [
+        "arXiv:2607.21217"
+      ],
+      "reason": "ICAE-Bench is an evaluation benchmark for image-conditioned agent environments, not an inference optimization method.",
+      "first_checked_at": "2026-10-07T12:00:46+00:00",
+      "last_checked_at": "2026-10-07T12:00:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders"
+    },
+    "arXiv:2607.21522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21522",
+      "identity_tokens": [
+        "arXiv:2607.21522"
+      ],
+      "reason": "GS-Agent generates interactive physical-world environments and evaluates world modeling; the contribution is environment generation, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-07T12:00:46+00:00",
+      "last_checked_at": "2026-10-07T12:00:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "title": "GS-Agent: Creating 4D Physical Worlds With Generative Simulation"
+    },
+    "arXiv:2607.05029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05029",
+      "identity_tokens": [
+        "arXiv:2607.05029"
+      ],
+      "reason": "The paper studies memory-poisoning/security attacks against LLM agents; its goal is attack analysis rather than reducing inference compute or memory.",
+      "first_checked_at": "2026-10-07T12:00:47+00:00",
+      "last_checked_at": "2026-10-07T12:00:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Your Agent's Memories Are Not Its Own: Forged Reasoning Attacks on LLM Agent Memory and Defenses"
+    },
+    "DOI:10.1038/s41586-026-10574-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-026-10574-9",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-026-10574-9"
+      ],
+      "reason": "The Nature article presents a virtual yeast/cell simulation with LLM orchestration for biological discovery; its system use of LLMs is application research, not LLM inference optimization.",
+      "first_checked_at": "2026-10-07T12:00:47+00:00",
+      "last_checked_at": "2026-10-07T12:00:47+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Towards the construction of a virtual yeast"
+    },
+    "arXiv:2606.27828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27828",
+      "identity_tokens": [
+        "arXiv:2606.27828"
+      ],
+      "reason": "Video-MME-Logical is a video reasoning benchmark; it measures model capability rather than proposing inference efficiency.",
+      "first_checked_at": "2026-10-07T12:00:47+00:00",
+      "last_checked_at": "2026-10-07T12:00:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Video-MME-Logical: A Controlled Diagnostic Benchmark for Video Temporal-Logical Reasoning"
+    },
+    "arXiv:2606.26997": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26997",
+      "identity_tokens": [
+        "arXiv:2606.26997"
+      ],
+      "reason": "RolloutPipe improves rollout-to-training throughput and trainer utilization in online RL post-training; its measured gains are training-pipeline scheduling gains rather than deployed inference efficiency.",
+      "first_checked_at": "2026-10-07T12:00:48+00:00",
+      "last_checked_at": "2026-10-07T12:00:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning"
+    },
+    "arXiv:2606.07327": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07327",
+      "identity_tokens": [
+        "arXiv:2606.07327"
+      ],
+      "reason": "The survey concerns machine-learning interatomic potentials and atomistic foundation models; it is outside LLM inference/serving scope.",
+      "first_checked_at": "2026-10-07T12:00:48+00:00",
+      "last_checked_at": "2026-10-07T12:00:48+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Six Open Questions in Machine-Learned Interatomic Potential Foundation Models"
+    },
+    "arXiv:2606.06493": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06493",
+      "identity_tokens": [
+        "arXiv:2606.06493"
+      ],
+      "reason": "HANDOFF studies humanoid control and policy transfer; no LLM inference/serving efficiency method is evaluated.",
+      "first_checked_at": "2026-10-07T12:00:49+00:00",
+      "last_checked_at": "2026-10-07T12:00:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers"
+    },
+    "arXiv:2606.02522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02522",
+      "identity_tokens": [
+        "arXiv:2606.02522"
+      ],
+      "reason": "Moment-Video is a video understanding benchmark, not an inference optimization method.",
+      "first_checked_at": "2026-10-07T12:00:49+00:00",
+      "last_checked_at": "2026-10-07T12:00:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Moment-Video: Diagnosing Temporal Fidelity of Video MLLMs on Momentary Visual Events"
+    },
+    "arXiv:2605.30341": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30341",
+      "identity_tokens": [
+        "arXiv:2605.30341"
+      ],
+      "reason": "GPIC is a permissively sourced image corpus for visual generation; it is a dataset contribution unrelated to LLM inference efficiency.",
+      "first_checked_at": "2026-10-07T12:00:49+00:00",
+      "last_checked_at": "2026-10-07T12:00:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "GPIC: A Giant Permissive Image Corpus for Visual Generation"
+    },
+    "arXiv:2607.19829": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19829",
+      "identity_tokens": [
+        "arXiv:2607.19829"
+      ],
+      "reason": "DARWIN evaluates jailbreak robustness and attack strategies; it is security evaluation, not an inference-cost reduction.",
+      "first_checked_at": "2026-10-07T12:00:50+00:00",
+      "last_checked_at": "2026-10-07T12:00:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md"
+      ],
+      "title": "DARWIN: Evolving Jailbreak Adversary and Guardrail for LLM Safety Evaluation and Protection"
+    },
+    "arXiv:2607.12477": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.12477",
+      "identity_tokens": [
+        "arXiv:2607.12477"
+      ],
+      "reason": "The paper contributes a UAV spatial reasoning benchmark and task suite; it does not introduce an LLM-serving or inference optimization technique.",
+      "first_checked_at": "2026-10-07T12:00:50+00:00",
+      "last_checked_at": "2026-10-07T12:00:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence"
+    },
+    "arXiv:2607.09322": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09322",
+      "identity_tokens": [
+        "arXiv:2607.09322"
+      ],
+      "reason": "LongMedBench evaluates long-context medical reasoning; it is a benchmark/dataset contribution and does not establish an inference optimization.",
+      "first_checked_at": "2026-10-07T12:00:50+00:00",
+      "last_checked_at": "2026-10-07T12:00:50+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making"
+    },
+    "arXiv:2607.06065": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06065",
+      "identity_tokens": [
+        "arXiv:2607.06065"
+      ],
+      "reason": "SWE-Review evaluates agentic code review tasks and reviewer behavior; it does not propose a concrete model-inference or serving optimization.",
+      "first_checked_at": "2026-10-07T12:00:50+00:00",
+      "last_checked_at": "2026-10-07T12:00:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review"
+    },
+    "arXiv:2605.26579": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26579",
+      "identity_tokens": [
+        "arXiv:2605.26579"
+      ],
+      "reason": "Focal Reward changes the rubric-reward aggregation objective for RL post-training; its metrics concern learned behavior rather than inference cost.",
+      "first_checked_at": "2026-10-07T12:00:51+00:00",
+      "last_checked_at": "2026-10-07T12:00:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Focal Reward: Balanced Reinforcement Learning under Rubric-Based Rewards"
+    },
+    "arXiv:2605.26606": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26606",
+      "identity_tokens": [
+        "arXiv:2605.26606"
+      ],
+      "reason": "Pilot-Commit allocates rollouts more efficiently during RL post-training and reports faster target accuracy in cumulative rollouts; this is training sampling cost, not serving/inference optimization.",
+      "first_checked_at": "2026-10-07T12:00:51+00:00",
+      "last_checked_at": "2026-10-07T12:00:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Spend Your Rollouts Where It Counts: Rollout Allocation for Group-Based RL Post-Training"
+    },
+    "arXiv:2605.26646": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26646",
+      "identity_tokens": [
+        "arXiv:2605.26646"
+      ],
+      "reason": "UnityMAS-O is an RL optimization framework for training multi-agent LLM workflows; it improves post-training workflows rather than inference resource efficiency.",
+      "first_checked_at": "2026-10-07T12:00:52+00:00",
+      "last_checked_at": "2026-10-07T12:00:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "UnityMAS-O: A General RL Optimization Framework for LLM-Based Multi-Agent Systems"
+    },
+    "arXiv:2605.23493": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23493",
+      "identity_tokens": [
+        "arXiv:2605.23493"
+      ],
+      "reason": "EDGE-OPD is an evidence-guided on-policy distillation training method; it does not report lower inference compute, memory, latency, or serving cost.",
+      "first_checked_at": "2026-10-07T12:00:52+00:00",
+      "last_checked_at": "2026-10-07T12:00:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "EDGE-OPD: Internalizing Privileged Context with Evidence Guided On-Policy Distillation"
+    },
+    "arXiv:2511.05124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05124",
+      "identity_tokens": [
+        "arXiv:2511.05124"
+      ],
+      "reason": "The primary arXiv text presents QuAnTS as a human-motion time-series QA dataset and baselines; it does not introduce LLM inference optimization.",
+      "first_checked_at": "2026-10-07T12:00:53+00:00",
+      "last_checked_at": "2026-10-07T12:00:53+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "QuAnTS: Question Answering on Time Series"
+    },
+    "arXiv:2511.00503": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00503",
+      "identity_tokens": [
+        "arXiv:2511.00503"
+      ],
+      "reason": "The primary arXiv paper is a video-latent-transformer method for controllable 4D scene synthesis; its efficiency comparison concerns scene-generation workflow, not LLM inference.",
+      "first_checked_at": "2026-10-07T12:00:53+00:00",
+      "last_checked_at": "2026-10-07T12:00:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Diff4Splat: Controllable 4D Scene Generation with Latent Dynamic Reconstruction Models"
+    },
+    "DOI:10.1002/wcms.70054": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/wcms.70054",
+      "identity_tokens": [
+        "DOI:10.1002/wcms.70054"
+      ],
+      "reason": "The Wiley review covers LLM uses in drug discovery and development; it contributes application taxonomy and future directions, not serving or inference efficiency.",
+      "first_checked_at": "2026-10-07T12:00:53+00:00",
+      "last_checked_at": "2026-10-07T12:00:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Advancements in Large Language Models (LLMs): Empowering Drug Discovery"
+    },
+    "arXiv:2203.02452": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.02452",
+      "identity_tokens": [
+        "arXiv:2203.02452"
+      ],
+      "reason": "Contextformer is a learned image-compression entropy model using spatio-channel attention; its rate-distortion results do not address LLM serving.",
+      "first_checked_at": "2026-10-07T12:00:54+00:00",
+      "last_checked_at": "2026-10-07T12:00:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Contextformer: A Transformer with Spatio-Channel Attention for Context Modeling in Learned Image Compression"
+    },
+    "arXiv:2606.25178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25178",
+      "identity_tokens": [
+        "arXiv:2606.25178"
+      ],
+      "reason": "The paper proposes an RL training curriculum; its contribution changes training sample/order strategy and does not reduce inference resource use.",
+      "first_checked_at": "2026-10-07T12:00:55+00:00",
+      "last_checked_at": "2026-10-07T12:00:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Transferability for General Reasoning: An Automated Curriculum for Multi-Domain RLVR"
+    },
+    "arXiv:2606.22830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22830",
+      "identity_tokens": [
+        "arXiv:2606.22830"
+      ],
+      "reason": "The paper studies evidence-token distillation as a training method; it does not evaluate inference speed, memory, serving throughput, or KV-cache reduction.",
+      "first_checked_at": "2026-10-07T12:00:55+00:00",
+      "last_checked_at": "2026-10-07T12:00:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Finding the Evidence: Discovering Decision-Supporting Tokens for On-Policy Reasoning Distillation"
+    },
+    "arXiv:2606.15609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15609",
+      "identity_tokens": [
+        "arXiv:2606.15609"
+      ],
+      "reason": "FragFuse is an access-control/security attack on tool-using agents; attack execution cost is not an inference optimization contribution.",
+      "first_checked_at": "2026-10-07T12:00:56+00:00",
+      "last_checked_at": "2026-10-07T12:00:56+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "FragFuse: Bypassing Access Control of Large Language Model Agents via Memory-Based Query Fragmentation and Fusion"
+    },
+    "arXiv:2606.12087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12087",
+      "identity_tokens": [
+        "arXiv:2606.12087"
+      ],
+      "reason": "FORT-Searcher generates tasks for evaluating/search agents; it is task-generation methodology, not an inference efficiency technique.",
+      "first_checked_at": "2026-10-07T12:00:56+00:00",
+      "last_checked_at": "2026-10-07T12:00:56+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents"
+    },
+    "arXiv:2606.11324": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11324",
+      "identity_tokens": [
+        "arXiv:2606.11324"
+      ],
+      "reason": "Embodied-R1.5 focuses on embodied reasoning model training and capability; it does not report a deployed inference optimization.",
+      "first_checked_at": "2026-10-07T12:00:56+00:00",
+      "last_checked_at": "2026-10-07T12:00:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models"
+    },
+    "arXiv:2606.20659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20659",
+      "identity_tokens": [
+        "arXiv:2606.20659"
+      ],
+      "reason": "Skill Coverage is an evaluation/measurement framework for agent skill coverage, not a compute, memory, or serving optimization.",
+      "first_checked_at": "2026-10-07T12:00:56+00:00",
+      "last_checked_at": "2026-10-07T12:00:56+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Skill Coverage: A Test Adequacy Metric for Agent Skills"
+    },
+    "arXiv:2606.09348": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09348",
+      "identity_tokens": [
+        "arXiv:2606.09348"
+      ],
+      "reason": "PBSD is Bayesian self-distillation during training; the paper does not establish inference cost or latency reduction.",
+      "first_checked_at": "2026-10-07T12:00:57+00:00",
+      "last_checked_at": "2026-10-07T12:00:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "PBSD: Privileged Bayesian Self-Distillation for Long-Horizon Credit Assignment"
+    },
+    "arXiv:2606.09821": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09821",
+      "identity_tokens": [
+        "arXiv:2606.09821"
+      ],
+      "reason": "The paper proposes divergence regularization for LLM reinforcement learning; the contribution is post-training objective design, not inference efficiency.",
+      "first_checked_at": "2026-10-07T12:00:57+00:00",
+      "last_checked_at": "2026-10-07T12:00:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Rethinking the Divergence Regularization in LLM RL"
     }
   }
 }
