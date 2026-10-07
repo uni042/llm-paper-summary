@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c6436632db6473a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.19941",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.19941",
+    "identity_tokens": [
+      "arXiv:2512.19941"
+    ],
+    "reason": "Vision Transformerの深さ再利用と表現解析で、LLMではなくvision backboneを対象とする。",
+    "first_checked_at": "2026-10-07T09:30:20+00:00",
+    "last_checked_at": "2026-10-07T09:30:20+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "title": "Block-Recurrent Dynamics in Vision Transformers"
+  },
+  "processed_at": "2026-10-07T09:30:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c6436632db6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
