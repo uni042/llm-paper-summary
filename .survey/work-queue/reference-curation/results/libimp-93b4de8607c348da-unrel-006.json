@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93b4de8607c348da-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.24210",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.24210",
+    "identity_tokens": [
+      "arXiv:2410.24210"
+    ],
+    "reason": "複数MLPを大半のparameter共有で模倣する効率的ensembleによりtabular deep learningの性能効率を改善する研究で、最終workloadは表形式データの教師あり学習。LLM推論systems対象外。",
+    "first_checked_at": "2026-10-07T05:57:33+00:00",
+    "last_checked_at": "2026-10-07T05:57:33+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "TabM: Advancing Tabular Deep Learning with Parameter-Efficient Ensembling"
+  },
+  "processed_at": "2026-10-07T05:57:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93b4de8607c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
