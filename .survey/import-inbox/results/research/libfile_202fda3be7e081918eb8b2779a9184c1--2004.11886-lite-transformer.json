@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "fdc5732dde965f39ad66336f2a0cbe9bc9db130f1e9890596629dcd06dc1a187",
+  "normalized_source_sha256": "7a9ce2d0b4dfb431d81795b8c8d8349c2fccf06868c5233b062cf7081a53ef5e",
+  "japanese_normalized": true,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_202fda3be7e081918eb8b2779a9184c1--2004.11886-lite-transformer.md",
+  "canonical_id": "arXiv:2004.11886",
+  "worker_completed_at": "2026-10-07T16:27:33+09:00",
+  "worker_run_key": "20261007-1627-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 807,
+    "body_paragraphs": 7,
+    "method_chars": 211,
+    "method_paragraphs": 2,
+    "evaluation_chars": 112,
+    "limitation_chars": 100,
+    "insufficiency_flags": [
+      "本文説明量 807 < 2200",
+      "手法説明量 211 < 700",
+      "評価説明量 112 < 500",
+      "限界説明量 100 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 807 < 2200",
+    "説明不足トリガー: 手法説明量 211 < 700",
+    "説明不足トリガー: 評価説明量 112 < 500"
+  ],
+  "processed_at": "2026-10-07T10:47:55+00:00"
+}
