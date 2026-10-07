@@ -85,7 +85,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-01 · [ProphetKV: User-Query-Driven Selective Recomputation for Efficient KV Cache Reuse in Retrieval-Augmented Generation](2026-2602.02579-prophetkv-user-query-driven-selective-recomputation-for-efficient-kv-cac.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  意味関連度で候補を作り、層ごとの注意情報を統合する二段階再計算により、20%再計算で全プリフィル精度の96〜101%を維持する。
+  文書ごとに事前計算したキー・値キャッシュ (key-value キャッシュ; KV キャッシュ) を再利用すれば計算は省けるが、各文書を単独で計算したKVには他文書や今回のユーザー質問との交差注意 (cross-注意機構) が入っていない。こうして質問に必要な交差注意を優先的に修復し、20%程度の再計算で全プリフィルに近い品質を狙う。
 
 - **2026-06 · [RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention](2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -97,7 +97,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-04 · [The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference](2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  キー・バリューキャッシュ（KV キャッシュ）はautoregressive推論で過去トークンのkey/valueを再計算しない標準最適化であり、通常はキャッシュを切って全接頭辞を毎段階再計算した場合と数学的に同じ出力になるとみなされる。本論文はFP16実装ではその前提が成立しないことを示す。
+  本論文は、自己回帰推論で標準的に用いられるKVキャッシュ（KV キャッシュ）が、キャッシュを無効化して各stepでprefix全体を再計算する経路と「数学的には同値だから、同じトークン列を返す」とみなされてきた前提をFP16実装で検証する分析論文である。中心的な主張は「KV キャッシュというアルゴリズム自体が近似だから違う」のではない。
 
 - **2026-04 · [IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs](2026-2604.10539-icecache-semantic-kv-offload.md)**  
   実装：[✓](https://github.com/yuzhenmao/IceCache) ・ リポジトリ内被引用：2  
@@ -193,7 +193,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-04 · [Don't Waste Bits! Adaptive KV-Cache Quantization for Lightweight On-Device LLMs](2026-2604.04722-don-t-waste-bits-adaptive-kv-cache-quantization-for-lightweight-on-devic.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  全トークンを同じ低bitへ量子化すると重要トークンまで強く圧縮し、逆に高bit固定では重要でないトークンへbitを浪費する。
+  本論文は、端末上の大規模言語モデル（LLM）で増大するキー・値キャッシュ（KV キャッシュ）を、全トークン同じビット幅で量子化するのではなく、トークンごとの重要度に応じて2/4/8ビットまたはFP16へ動的に振り分ける適応量子化を提案する。
 
 - **2026-03 · [Low-Latency Edge LLM Handover via Joint KV Cache Transfer and Token Prefill](2026-2603.28018-edge-llm-handover-kv-transfer-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -598,8 +598,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意ヘッドごとの集中度に応じて同一層内のKV保持予算を再配分し、既存Top-k圧縮の総容量を変えずに追い出し損失を下げる手法。
 
 - **2024-03 · [GEAR: An Efficient KV Cache Compression Recipe for Near-Lossless Generative Inference of LLM](2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md)**  
-  実装：✓ ・ リポジトリ内被引用：43  
-  KV行列を一様量子化すると外れ値と構造化誤差が自己回帰生成で蓄積する問題に対し、通常成分の低ビット量子化、量子化誤差の低ランク近似、外れ値誤差の疎行列補正を組み合わせる。4ビットKVで近損失品質を保ち、最大2.38倍のスループット、最大2.29倍のピークメモリ削減を報告する。
+  実装：[✓](https://github.com/HaoKang-Timmy/GEAR) ・ リポジトリ内被引用：43  
+  GEARは、自己回帰生成で増え続けるKVキャッシュを高い圧縮率で保持しつつ、単純な低ビット量子化で生じる生成品質の崩壊を抑えるための圧縮法である。
 
 - **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
   実装：[✓](https://github.com/mit-han-lab/duo-attention) ・ リポジトリ内被引用：41  

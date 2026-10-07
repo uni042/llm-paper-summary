@@ -72,7 +72,7 @@
 
 - **2026-02 · [Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems](2026-2602.09721-revealing-the-challenges-of-attention-ffn-disaggregation-for-modern-moe-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  混合専門家（Mixture-of-Experts; MoE）推論では注意機構側と専門家FFN側の資源特性が異なるため、両者を別GPU群へ置く注意機構-FFN分離（注意機構-FFN Disaggregation; AFD）が注目される。
+  本論文は、混合エキスパート（Mixture of エキスパート; MoE）推論で注目される注意機構-FFN分離（注意機構-FFN Disaggregation; AFD）を「分離すれば必ず効率が上がる」方式として扱わず、どのモデル・network・hardware条件で成立し、どこで逆効果になるかを定量化する分析研究である。
 
 - **2026-02 · [OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration](2026-2602.12151-oserve-spatial-temporal-workload-orchestration.md)**  
   実装：[✓](https://anonymous.4open.science/r/LiveServe_Documents-1F54/) ・ リポジトリ内被引用：4  

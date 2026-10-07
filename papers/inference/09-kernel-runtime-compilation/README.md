@@ -209,8 +209,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実運用では、同じ能力系列でも低遅延用・高品質用の複数モデルを切り替えたり、投機的復号で小型ドラフトと大型対象モデルを同時常駐させたりする。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  KVキャッシュ削減、oneCCL分散通信、CPU命令・モデル別カーネル最適化をxFasterTransformerへ統合し、GPUなしのLLM推論を実用化する。
+  実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：2  
+  単一の行列積カーネルだけを高速化するのではなく、IntelのxFasterTransformerへ、CPU向け注意機構SlimAttention、8ビット整数（INT8）KVキャッシュ、oneAPI Collective Communications Library（oneCCL）を用いた分散推論とゼロコピー通信を組み込む。
 
 ### 4年前（2022-11〜2023-10）
 

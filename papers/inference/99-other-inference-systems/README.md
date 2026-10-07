@@ -938,7 +938,7 @@
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：30  
-  統一最大値による非同期ソフトマックス、細長いGEMMの二重バッファ、ハードウェア適応データフローでLLM推論を最適化し、既存推論エンジン比平均1.37倍を報告する。
+  FlashDecoding++は、大規模言語モデル（LLM）の自己回帰復号でGPU利用率が落ちる原因を、注意機構（注意機構）だけでなく細長い一般行列積（GEMM）とハードウェア依存の実行方式まで含めて分解し、それぞれ専用の最適化を施す推論エンジンである。
 
 - **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  
   実装：✓ ・ リポジトリ内被引用：29  
@@ -954,11 +954,11 @@
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
   実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：27  
-  QuaRotはLLMの量子化を難しくする少数の大きな外れ値を、高精度チャネルとして残すのではなく、モデル出力を変えない直交回転で多数次元へ分散する。
+  QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：26  
-  RAGCacheはretrieved knowledgeの中間状態をキャッシュし、再出現したchunkのプリフィルを省くシステムである。
+  再検索された文書列の最長接頭辞を再利用することで、初回トークン時間 (time to first トークン; TTFT) の大部分を占めるプリフィルを省く。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
   実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：25  
@@ -1138,7 +1138,7 @@
 
 - **2024-06 · [Optimised Grouped-Query Attention Mechanism for Transformers](2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  多頭注意（MHA）はquery headごとに独立したkey/value headを持つため、デコード時のKVキャッシュ容量と読み出し帯域が大きい。AsymGQAは校正入力の活性を使い、どのquery headを同じK/Vへまとめるかを探索する。グループサイズを一様に固定しない非対称構成も許し、同じK/V head予算の中でモデル出力の損失を減らす。
+  多頭注意 (multi-head 注意機構; MHA) は各クエリ頭 (query head) に独立したキー・値頭 (key/value head) を持つため、自己回帰デコードでは過去トークン分のキー・値キャッシュ (KV キャッシュ) を全頭について保持・読み出す必要がある。
 
 - **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1154,7 +1154,7 @@
 
 - **2024-10 · [SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference](2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md)**  
   実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：2  
-  SparseVLMは、大規模視覚言語モデル（VLM）で画像・動画由来のvisual トークンが大量に入り、プリフィル計算の大半を占める一方、質問に必要な情報はその一部に偏ることを利用する。追加学習するトークン predictorを置かず、モデル自身の自己注意からテキストとvisualの関連を測って不要トークンを削る。
+  SparseVLMは、大規模視覚言語モデル（VLM）で画像・動画から生成される大量の視覚トークン（visual トークン）のうち、現在の質問へ重要なものだけを残してTransformer後段の計算を減らす、追加学習不要（学習不要）のトークン疎化手法である。
 
 - **2024-10 · [CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation](2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1394,7 +1394,7 @@
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：19  
-  注意行列を保存せず安定な逐次ソフトマックス集約とチャンク化で厳密な自己注意を計算し、16,384トークン推論時の注意メモリを59倍削減する。
+  本論文は、標準的なソフトマックス自己注意（softmax self-注意機構）そのものを近似せず、計算順序と再計算だけを変えることで、通常実装が保持する (n\times n) の注意行列を不要にできることを示す。系列長16,384では、標準実装に比べ注意部分のメモリオーバーヘッドを推論で59倍、微分で32倍削減した。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
@@ -1457,8 +1457,8 @@
   Transformerは大規模な全結合行列を多数持ち、組込み・エッジ向けFPGAでは重み容量と外部メモリ転送がボトルネックになる。同時にBCMの規則構造へ合わせたFPGAデータパスを設計することで、圧縮後の表現を展開せず直接計算する。
 
 - **2020-06 · [Dynamic Tensor Rematerialization](2020-2006.09616-dynamic-tensor-rematerialization.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  活性値 checkpointingは中間テンソルを保持せず必要時に再計算して学習メモリを減らす。しかし従来法は計算グラフを事前に知り、どの活性値を残すか静的に計画する。DTRはこの判断をランタイムへ移し、メモリ pressureが生じた時点で破棄対象を選ぶ。
+  実装：[✓](https://github.com/uwsampl/dtr-prototype) ・ リポジトリ内被引用：2  
+  動的テンソル再実体化（動的 テンソル Rematerialization; DTR）は、深層学習の学習時に中間活性をすべて保持する代わりに、一部を捨てて必要になった時だけ再計算する活性チェックポイント（活性値 checkpointing）をランタイムで自動化する方式である。
 
 - **2020-05 · [GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference](2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
