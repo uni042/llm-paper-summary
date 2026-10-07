@@ -74,6 +74,18 @@ jobs:
             fi
             git commit -m "$message"
 
+            # Re-audit queue regeneration belongs to the final refresh stage.
+            # Defensive cleanup for a stale derived edit left by a stage;
+            # never discard unrelated unstaged changes silently.
+            if ! git diff --quiet -- .survey/repair-queue/under-16kb-reaudit.json; then
+              git restore --worktree -- .survey/repair-queue/under-16kb-reaudit.json
+            fi
+            if ! git diff --quiet; then
+              echo 'Unstaged files remain after Library checkpoint commit:' >&2
+              git diff --name-only >&2
+              return 1
+            fi
+
             # The bounded computation can take long enough for unrelated
             # workflows to advance main. First try to preserve the completed
             # work by rebasing it onto the latest main; only ask the outer
@@ -103,9 +115,9 @@ jobs:
               --repo-root . \
               --max-research 5 \
               --max-discovery-records 60
-            python .survey/scripts/refresh_under16kb_reaudit_queue.py \
-              --repo-root . \
-              --apply
+            # Re-audit hashes are regenerated against current main in the final
+            # stage. Computing them here leaves an unstaged derived-file edit,
+            # making the checkpoint rebase fail on every retry.
             python .survey/scripts/render_status_dashboard.py \
               --repo-root . \
               --output STATUS.md
