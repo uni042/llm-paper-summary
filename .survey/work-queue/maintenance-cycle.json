@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "maintenance_pending": false,
+  "maintenance_pending": true,
   "last_maintenance_completed_at": "2026-10-07T21:25:07.792266+00:00",
   "last_maintenance_status": "issues_found",
   "last_gc_deleted": 20,
@@ -22,6 +22,8 @@
   "last_metadata_incomplete": 0,
   "schedule_owner": "github_actions_schedule",
   "schedule": "daily_0830_jst",
-  "maintenance_requested_at": "2026-10-08T06:10:00+09:00",
-  "maintenance_requested_by": "interactive-library-handoff-bottom-up-reaudit"
+  "maintenance_requested_at": "2026-10-07T21:54:23.695Z",
+  "maintenance_requested_by": "interactive-fix-under16kb-git-blob-sha",
+  "maintenance_request_token": "reaudit-correct-git-blob-sha-20261007T215423695Z",
+  "maintenance_request_reason": "Correct Git blob NUL header; regenerate source hashes from current main, prune completed re-audits, and refresh STATUS."
 }
