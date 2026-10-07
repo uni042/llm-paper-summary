@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r166-screen-01-part-08-49134913b313",
+  "reference_main_sha": "8cc816a0043ec7035996ad0be4842466287983d3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12855",
+      "identity_tokens": [
+        "arXiv:2309.12855"
+      ],
+      "title": "Cross-Modal Translation and Alignment for Survival Analysis",
+      "reason": "Cross-modal alignment for biomedical survival analysis is outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2309.12855",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nar/gkad055",
+      "identity_tokens": [
+        "DOI:10.1093/nar/gkad055"
+      ],
+      "title": "DeepBIO: an automated and interpretable deep-learning platform for high-throughput biological sequence prediction, functional annotation and visualization analysis",
+      "reason": "DeepBIO is a biological-sequence prediction/annotation platform; its high-throughput domain is unrelated to LLM inference.",
+      "source_url": "https://doi.org/10.1093/nar/gkad055",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.01032",
+      "identity_tokens": [
+        "arXiv:2201.01032"
+      ],
+      "title": "Learning Operators with Coupled Attention",
+      "reason": "Coupled attention is applied to scientific operator learning, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2201.01032",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.16632",
+      "identity_tokens": [
+        "arXiv:2507.16632"
+      ],
+      "title": "Step-Audio 2 Technical Report",
+      "reason": "Step-Audio 2 is an end-to-end audio language model, but its report does not give a concrete serving optimization or comparative latency result for this model.",
+      "source_url": "https://arxiv.org/abs/2507.16632",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.02367",
+      "identity_tokens": [
+        "arXiv:2310.02367"
+      ],
+      "title": "Linear Recurrent Units for Sequential Recommendation",
+      "reason": "Linear recurrent units are evaluated for sequential recommendation, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2310.02367",
+      "first_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "last_checked_at": "2026-10-07T09:55:10.401934+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    }
+  ]
+}
