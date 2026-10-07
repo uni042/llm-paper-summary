@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261007-1030-scheduled-chat-30/r01",
+  "reference_main_sha": "209c7f29301925dff5188bd9231ecf4dc5a56d6c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.11477",
+      "identity_tokens": [
+        "arXiv:2006.11477"
+      ],
+      "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+      "reason": "音声の自己教師あり表現学習とASRのラベル効率が主題で、LLM/Transformer推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2006.11477",
+      "body_check": "abstract_screen_only: arXiv一次abstractでlatent speech masking、contrastive task、LibriSpeech WERと少量ラベルでのASR性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.139",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.139"
+      ],
+      "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages",
+      "reason": "プログラミング言語と自然言語のbimodal事前学習モデルを構築し、code search・code documentation generation品質を改善する研究で、推論systems効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2002.08155",
+      "body_check": "abstract_screen_only: arXiv一次abstractでNL-PL表現学習、replaced-token detection事前学習、code search/documentation generation性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.03206",
+      "identity_tokens": [
+        "arXiv:2103.03206"
+      ],
+      "title": "Perceiver: General Perception with Iterative Attention",
+      "reason": "非対称attentionで高次元multimodal inputをlatent bottleneckへ蒸留し線形的にscaleするarchitectureだが、最終評価は画像・点群・音声・動画等のgeneral perceptionでLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2103.03206",
+      "body_check": "abstract_screen_only: arXiv一次abstractで50,000 pixels等の高次元入力、iterative asymmetric attention、ImageNet/AudioSet等のperception taskが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.62",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.62"
+      ],
+      "title": "Language-agnostic BERT Sentence Embedding",
+      "reason": "多言語sentence embeddingをMLM/TLM/dual-encoder ranking等で学習し、112言語のbitext retrievalとNMT data miningを改善する表現学習研究で、推論systems効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2007.01852",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmultilingual sentence embedding、parallel-data効率、Tatoeba retrieval accuracyが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.findings-emnlp.320",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.findings-emnlp.320"
+      ],
+      "title": "Retrieval Augmentation Reduces Hallucination in Conversation",
+      "reason": "neural retrievalをknowledge-grounded dialogueへ組み込みhallucinationを減らす品質改善研究で、retrieval/servingのlatency・memory・throughput最適化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2104.07567",
+      "body_check": "abstract_screen_only: arXiv一次abstractでretriever/ranker/encoder-decoderを用いたknowledge-grounded conversationとhallucination削減、人手評価が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.645",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.645"
+      ],
+      "title": "CamemBERT: a Tasty French Language Model",
+      "reason": "フランス語Transformer言語モデルの事前学習データ規模・sourceを比較し、POS/parsing/NER/NLI品質を評価するpretraining研究で、推論systems効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1911.03894",
+      "body_check": "abstract_screen_only: arXiv一次abstractでFrench monolingual LM training、4GB対130+GB corpus、4 downstream NLP tasksが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-1035",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1035"
+      ],
+      "title": "Utilizing BERT for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence",
+      "reason": "aspect-based sentiment analysisをauxiliary sentenceによるsentence-pair classificationへ変換し精度を改善するtask/model研究で、推論runtime・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1903.09588",
+      "body_check": "abstract_screen_only: arXiv一次abstractでABSA、auxiliary sentence、BERT fine-tuning、SentiHood/SemEval-2014性能が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.15794",
+      "identity_tokens": [
+        "arXiv:2306.15794"
+      ],
+      "title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+      "reason": "Hyena系long-range architectureを単一塩基解像度のゲノム配列modelingへ適用する生物学foundation-model研究で、最終workloadがgenomicsでありLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2306.15794",
+      "body_check": "abstract_screen_only: 一次書誌/abstractでlong-range genomic sequence modeling、single-nucleotide resolution、genomic benchmarkが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.07074",
+      "identity_tokens": [
+        "arXiv:2102.07074"
+      ],
+      "title": "TransGAN: Two Pure Transformers Can Make One Strong GAN, and That Can Scale Up",
+      "reason": "pure TransformerでGAN generator/discriminatorを構成し高解像度画像生成へscaleするvision generative-model研究で、memory-friendly attentionはあるが最終workloadが画像GANでLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2102.07074",
+      "body_check": "abstract_screen_only: arXiv一次abstractでconvolution-free GAN、grid self-attention、STL-10/CelebA-HQ/LSUN-Church画像生成が主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.05392",
+      "identity_tokens": [
+        "arXiv:2106.05392"
+      ],
+      "title": "Keeping Your Eye on the Ball: Trajectory Attention in Video Transformers",
+      "reason": "trajectory attentionでvideo Transformerの動きに沿ったattentionと高解像度/長動画の計算・memory削減を行うが、最終適用先はvideo action recognitionでLLM推論systemsではない。",
+      "source_url": "https://arxiv.org/abs/2106.05392",
+      "body_check": "abstract_screen_only: arXiv一次abstractでmotion-path attention、quadratic compute/memory緩和、Kinetics/Something-Something V2/Epic-Kitchens action recognitionが主題と確認。本文未読。",
+      "first_checked_at": "2026-10-07T10:30:27+09:00",
+      "last_checked_at": "2026-10-07T10:30:27+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "worklist_rank": 20
+    }
+  ]
+}
