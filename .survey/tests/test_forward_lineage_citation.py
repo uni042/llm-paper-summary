@@ -95,6 +95,44 @@ class ForwardLineageCitationTests(unittest.TestCase):
         self.assertEqual(metrics["quota_target_count"], 3)
         self.assertEqual(len(selected), 3)
 
+    def test_forward_edges_survive_backward_first_alias_dedup(self):
+        from unittest.mock import patch
+        import build_worker_worklist as wl
+        import reference_pool
+        import forward_citation_state
+        import citation_graph
+        import candidate_priority
+
+        candidate_id = "arXiv:2601.12345"
+        backward = {
+            "canonical_id": candidate_id, "title": "Mixed source systems",
+            "identity_tokens": [candidate_id], "relation_count": 1,
+            "linked_from": [self.papers[0].path],
+        }
+        forward = {
+            "canonical_id": candidate_id, "title": "Mixed source systems",
+            "forward_seed_ids": [p.canonical_id for p in self.papers[:3]],
+            "linked_from": [p.path for p in self.papers[:3]],
+        }
+
+        def score(row, **_):
+            return {**row, "priority": 100 if "relation_count" in row else 1}
+
+        with patch.object(reference_pool, "build_reference_pool",
+                          return_value={"candidates": [backward]}), \\
+             patch.object(forward_citation_state, "load",
+                          return_value={"candidates": {candidate_id: forward}}), \\
+             patch.object(citation_graph, "load_records", return_value=self.papers), \\
+             patch.object(reference_pool, "_load_ledger_tokens", return_value=set()), \\
+             patch.object(candidate_priority, "load_cache", return_value={}), \\
+             patch.object(candidate_priority, "load_config", return_value={}), \\
+             patch.object(wl, "_score_row", side_effect=score):
+            found, total = wl._discovery_candidates(Path("/unused"))
+        self.assertEqual(total, 1)
+        self.assertEqual(found[0]["source_kind"], "reference_review_candidate")
+        self.assertEqual(found[0]["forward_lineage_citation_max"], 3)
+        self.assertEqual(found[0]["forward_lineage_citation_total"], 3)
+
     def test_turn_off_returns_exact_source_order(self):
         rows = [
             {"canonical_id": "z", "title": "GPU KV Cache Inference", "forward_lineage_citation_max": 4},
