@@ -1,140 +1,17 @@
 {
-  "generated_at": "2026-10-08T14:35:23.677449+00:00",
+  "generated_at": "2026-10-08T15:10:11.586873+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 450,
+  "count": 438,
   "worker_counts": {
-    "scheduled-chat-00": 156,
-    "scheduled-chat-30": 133,
-    "scheduled-chat-45": 161
+    "scheduled-chat-00": 150,
+    "scheduled-chat-30": 129,
+    "scheduled-chat-45": 159
   },
   "entries": [
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03949-vestigekv-the-nope-mla-kv-cache-carries-its-own-eviction-signal-in-a-ves.md",
-      "canonical_id": "arXiv:2609.03949",
-      "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch",
-      "file_bytes": 8320,
-      "source_sha256": "13b78d6a014fe8ae6e5a931311f7564e9faed323ae781a813e90d2c7a9858ffd",
-      "source_git_blob_sha": "009bafed7db0f7abf08fb7a6a88ae8e8a6f2b951",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.928665,
-      "quality_metrics": {
-        "body_chars": 1514,
-        "method_chars": 420,
-        "evaluation_chars": 0,
-        "limitation_chars": 188
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1514 < 2200",
-        "16KB未満再監査: 手法説明量 420 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
-      "canonical_id": "DOI:10.1109/HPCA61900.2025.00103",
-      "title": "throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving",
-      "file_bytes": 8498,
-      "source_sha256": "cf5f07168953436a8e0ff13a4d9d0dcaf3e170559b66ecef525dbec4e9ecbae2",
-      "source_git_blob_sha": "57b7884d34e8bf6e133c07fb030cd7bb833b1194",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.937803,
-      "quality_metrics": {
-        "body_chars": 1342,
-        "method_chars": 349,
-        "evaluation_chars": 101,
-        "limitation_chars": 137
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1342 < 2200",
-        "16KB未満再監査: 手法説明量 349 < 700",
-        "16KB未満再監査: 評価説明量 101 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md",
-      "canonical_id": "arXiv:2411.00841",
-      "title": "A Theoretical Perspective for Speculative Decoding Algorithm",
-      "file_bytes": 8519,
-      "source_sha256": "81bad25794524ca13ac04e24c1daa1e433328a4ec3561aa492c2f766e78da3ba",
-      "source_git_blob_sha": "ddad2b35df41d7a0cded0f3f31dc9395b11f2c61",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.744575,
-      "quality_metrics": {
-        "body_chars": 1585,
-        "method_chars": 588,
-        "evaluation_chars": 225,
-        "limitation_chars": 201
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1585 < 2200",
-        "16KB未満再監査: 手法説明量 588 < 700",
-        "16KB未満再監査: 評価説明量 225 < 500",
-        "16KB未満再監査: 日本語比率 74.5% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.5% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
-      "canonical_id": "arXiv:2304.08467",
-      "title": "Learning to Compress Prompts with Gist Tokens",
-      "file_bytes": 8549,
-      "source_sha256": "ed5cba3a8a15659987ee457fdeb65d0a38b500b61d95c5b22305b8269093162b",
-      "source_git_blob_sha": "9639a4d90b5331cbee75d363c558b3cc7ba2622d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.931234,
-      "quality_metrics": {
-        "body_chars": 1534,
-        "method_chars": 319,
-        "evaluation_chars": 79,
-        "limitation_chars": 143
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1534 < 2200",
-        "16KB未満再監査: 手法説明量 319 < 700",
-        "16KB未満再監査: 評価説明量 79 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
-      "canonical_id": "DOI:10.1145/3620666.3651329",
-      "title": "Characterizing Power Management Opportunities for LLMs in the Cloud",
-      "file_bytes": 8640,
-      "source_sha256": "73cb0271b05c5e2011394fb113a8d314737b5ef20cd621fd783a580a4ba92bd7",
-      "source_git_blob_sha": "c7fe94c3c375903de4b25bcea2582e755b335074",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.959834,
-      "quality_metrics": {
-        "body_chars": 1650,
-        "method_chars": 356,
-        "evaluation_chars": 279,
-        "limitation_chars": 183
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1650 < 2200",
-        "16KB未満再監査: 手法説明量 356 < 700",
-        "16KB未満再監査: 評価説明量 279 < 500"
-      ],
-      "warnings": []
-    },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md",
       "canonical_id": "arXiv:2404.07413",
@@ -155,29 +32,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1715 < 2200",
         "16KB未満再監査: 手法説明量 543 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2409.01366-chess-optimizing-llm-inference-via-channel-wise-thresholding-and-selecti.md",
-      "canonical_id": "arXiv:2409.01366",
-      "title": "CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification",
-      "file_bytes": 8724,
-      "source_sha256": "7073129f38ddc8d21264b8bce726a82a6d22de4a27ad3c005f9e2438363f1323",
-      "source_git_blob_sha": "59128d058fa8ee669612c5f06f48c16bb51d90b4",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.826618,
-      "quality_metrics": {
-        "body_chars": 1728,
-        "method_chars": 721,
-        "evaluation_chars": 0,
-        "limitation_chars": 214
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1728 < 2200",
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
@@ -279,33 +133,6 @@
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
-      "canonical_id": "arXiv:2403.00835",
-      "title": "CLLMs: Consistency Large Language Models",
-      "file_bytes": 8941,
-      "source_sha256": "88cd3066da117206e03f26df6d57d250237f7df2211dedc5b2ee7314dc21e941",
-      "source_git_blob_sha": "7dfb905d53b3a392f5d85964258ac4376a37d99e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.766962,
-      "quality_metrics": {
-        "body_chars": 1609,
-        "method_chars": 460,
-        "evaluation_chars": 127,
-        "limitation_chars": 155
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1609 < 2200",
-        "16KB未満再監査: 手法説明量 460 < 700",
-        "16KB未満再監査: 評価説明量 127 < 500",
-        "16KB未満再監査: 日本語比率 76.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.7% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
@@ -410,30 +237,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2411.02820-droidspeak-kv-cache-sharing-for-cross-llm-communication-and-multi-llm-se.md",
-      "canonical_id": "arXiv:2411.02820",
-      "title": "DroidSpeak: KV Cache Sharing for Cross-LLM Communication and Multi-LLM Serving",
-      "file_bytes": 9111,
-      "source_sha256": "06e2aa674403db0f8d2f03649dd93fc6f6333d6571e4cd281de68170106d2486",
-      "source_git_blob_sha": "3d082c6610ca1de0056df4174b3f2acba8a93aac",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.949945,
-      "quality_metrics": {
-        "body_chars": 1922,
-        "method_chars": 624,
-        "evaluation_chars": 230,
-        "limitation_chars": 198
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1922 < 2200",
-        "16KB未満再監査: 手法説明量 624 < 700",
-        "16KB未満再監査: 評価説明量 230 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
       "canonical_id": "arXiv:2210.17223",
       "title": "Accelerating Distributed MoE Training and Inference with Lina",
@@ -451,28 +254,6 @@
         "limitation_chars": 211
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md",
-      "canonical_id": "arXiv:2403.20306",
-      "title": "Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference",
-      "file_bytes": 9204,
-      "source_sha256": "4ce39af7727b1a49ff06f87347bc13f4186fae0c17145b91513ec74d0c7f759d",
-      "source_git_blob_sha": "d9fdce43c1a78105058def25c238bec72736d16e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.983727,
-      "quality_metrics": {
-        "body_chars": 2601,
-        "method_chars": 639,
-        "evaluation_chars": 841,
-        "limitation_chars": 287
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 639 < 700"
-      ],
       "warnings": []
     },
     {
@@ -525,30 +306,6 @@
       "warnings": [
         "日本語比率 72.0% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
-      "canonical_id": "arXiv:2508.09192",
-      "title": "Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing",
-      "file_bytes": 9269,
-      "source_sha256": "3d2c71f34bf60c62e38324ee32ed10c8d236439f79ec5450617a2fd02ffbddaa",
-      "source_git_blob_sha": "82f63b933d7cb27d28fd08db442cdb6a2c2eefc7",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.945528,
-      "quality_metrics": {
-        "body_chars": 1604,
-        "method_chars": 574,
-        "evaluation_chars": 103,
-        "limitation_chars": 136
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1604 < 2200",
-        "16KB未満再監査: 手法説明量 574 < 700",
-        "16KB未満再監査: 評価説明量 103 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/13-sparse-attention/2026-2609.35629-santa-sampling-attention-through-representative-keys.md",
@@ -2597,30 +2354,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
-      "canonical_id": "arXiv:2407.21018",
-      "title": "ThinK: Thinner Key Cache by Query-Driven Pruning",
-      "file_bytes": 10809,
-      "source_sha256": "3a154295a08334524c6638626b24c37013d69d15f591947951f07977fd4aad44",
-      "source_git_blob_sha": "4669d4f738dc2d10ba97f736dd3de971b04e18ec",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.832137,
-      "quality_metrics": {
-        "body_chars": 2079,
-        "method_chars": 682,
-        "evaluation_chars": 328,
-        "limitation_chars": 189
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2079 < 2200",
-        "16KB未満再監査: 手法説明量 682 < 700",
-        "16KB未満再監査: 評価説明量 328 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
       "canonical_id": "DOI:10.1145/3689031.3696075",
       "title": "HybridFlow: A Flexible and Efficient RLHF Framework",
@@ -2692,30 +2425,6 @@
       "warnings": [
         "日本語比率 79.3% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md",
-      "canonical_id": "arXiv:2602.03560",
-      "title": "HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing",
-      "file_bytes": 10834,
-      "source_sha256": "87f9a81aae22e0d3b66bf2953f5dc77be768680107c638ec844f5609711bf5fa",
-      "source_git_blob_sha": "824980e155da65f4afd60666d561c1f0e1a84742",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.825434,
-      "quality_metrics": {
-        "body_chars": 1714,
-        "method_chars": 666,
-        "evaluation_chars": 99,
-        "limitation_chars": 127
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1714 < 2200",
-        "16KB未満再監査: 手法説明量 666 < 700",
-        "16KB未満再監査: 評価説明量 99 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
