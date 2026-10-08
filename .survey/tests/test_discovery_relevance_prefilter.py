@@ -102,6 +102,27 @@ class RelevancePrefilterTests(unittest.TestCase):
         ]
         self.assertEqual(flagged, [], f"false-positive examples in collected papers: {flagged[:12]}")
 
+
+    def test_expanded_active_stats_and_audit_are_coherent(self):
+        sample = [
+            {"canonical_id": "v1", "title": "Crop phenotyping with transformers"},
+            {"canonical_id": "v2", "title": "Object Detection for Retail Products"},
+            {"canonical_id": "v3", "title": "GPU KV-Cache Offloading for Image Classification"},
+            {"canonical_id": "v4", "title": "Scheduling of GPU Kernels for Transformers"},
+        ]
+        p = {**POLICY, "max_audit_per_build": 0, "expanded_rules": {"enabled": True, "mode": "quarantine"}}
+        selected, stats = mod.triage_worklist(sample, p)
+        self.assertEqual(stats["rule_quarantine_count"], 1)
+        self.assertEqual(stats["expanded_rule_applied_count"], 1)
+        self.assertEqual(stats["quarantine_count"], 2)
+        self.assertEqual(stats["reviewable_count"], 2)
+        self.assertEqual(len(selected), 2)
+        self.assertEqual([r["canonical_id"] for r in selected], ["v3", "v4"])
+        resumed, prior_stats = mod.triage_worklist(sample, {**p, "expanded_rules": {"enabled": True, "mode": "shadow"}})
+        self.assertEqual(prior_stats["expanded_rule_applied_count"], 0)
+        self.assertEqual(prior_stats["expanded_rule_shadow_count"], 1)
+        self.assertEqual(len(resumed), 3)
+
     def test_missing_config_fail_open(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
