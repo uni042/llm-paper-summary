@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import candidate_priority
+import discovery_relevance_prefilter
 import citation_graph
 import claim_state
 import paper_identity
@@ -317,6 +318,7 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
                 "canonical_id": row.get("canonical_id"),
                 "identity_tokens": row.get("identity_tokens"),
                 "title": row.get("title"),
+                "abstract": row.get("abstract"),
                 "source_url": row.get("source_url"),
                 "year": row.get("year"),
                 "published": row.get("published"),
@@ -442,6 +444,11 @@ def build(
         reserved_rows=research_reserved,
     )
     discovery_pending = len(discovery_all)
+    discovery_all, prefilter_stats = discovery_relevance_prefilter.triage_worklist(
+        discovery_all, discovery_relevance_prefilter.load_policy(root)
+    )
+    # Abstracts are used for selection, not persisted in oversized worklists.
+    discovery_all = [{k: v for k, v in row.items() if k != "abstract"} for row in discovery_all]
 
     research = _split(research_all, limit=research_limit)
     discovery = _split(discovery_all, limit=discovery_limit)
@@ -461,7 +468,7 @@ def build(
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
                 "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
                 "Only when the ordinary Discovery pool is exhausted, refill it with up to the configured target count from durable borderline records. For source_kind=borderline_reconsideration, copy origin=borderline_reconsideration and borderline_recheck_count_before from the worklist row into the completed Discovery record regardless of final classification.",
-                "Process both Research and Discovery rows from rank 1 upward. rank 1 has the highest current configurable importance score; ordinary Discovery rows stay ahead of refill rows, while refill rows are ordered by the same score minus the configured repeated-borderline penalty.",
+                "Process Research and nonquarantined Discovery rows from rank 1 upward, with sparse, deterministic audit samples of deferred candidates. Quarantine is not an unrelated verdict. Config may disable filtering.",
             ],
             "research_audit": {
                 "ready_total": research_ready,
@@ -471,6 +478,7 @@ def build(
             },
             "discovery_review": {
                 "pending_total": discovery_pending,
+                "prefilter": prefilter_stats,
                 "displayed": len(discovery[worker]),
                 "rows": discovery[worker],
             },
@@ -533,6 +541,10 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
             "## リスト入り判定待ち Discovery候補",
             "",
             f"未判定総数: **{discovery['pending_total']}** / このworker向け: **{discovery['displayed']}**",
+            f"事前選別: **{discovery.get('prefilter', {}).get('mode', 'off')}** / "
+            f"暫定隔離 **{discovery.get('prefilter', {}).get('quarantine_count', 0)}** / "
+            f"監査再投入 **{discovery.get('prefilter', {}).get('audit_count', 0)}** "
+            "（候補の正本は保持。隔離はunrelated判定ではない）",
             "",
             "| # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |",
             "|---:|---:|---|---|---|---|---:|---:|---|---|",

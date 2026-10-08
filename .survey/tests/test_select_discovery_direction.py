@@ -29,6 +29,11 @@ class SelectDiscoveryDirectionTests(unittest.TestCase):
         second = mod.decide(state, "run-a")
         self.assertEqual(second["next_direction"], "forward")
 
+    def test_off_topic_novelty_does_not_beat_verified_acceptance(self):
+        noisy = {"accepted_count": 0, "novel_candidate_count": 20, "duplicate_ratio": 0.0}
+        relevant = {"accepted_count": 2, "novel_candidate_count": 10, "duplicate_ratio": 0.0}
+        self.assertLess(mod._row_score(noisy), mod._row_score(relevant))
+
     def test_empty_pair_allows_normal_gap_fill(self):
         state = {
             "history": [

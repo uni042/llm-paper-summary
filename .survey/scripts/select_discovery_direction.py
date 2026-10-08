@@ -84,7 +84,8 @@ def _duplicate_ratio(row: dict[str, Any]) -> float:
 
 def _row_score(row: dict[str, Any]) -> float:
     # Route-selection score only. This is deliberately separate from Candidate priority.
-    return (4.0 * _accepted(row)) + (1.0 * _novel(row)) - (2.0 * _duplicate_ratio(row))
+    # Actual acceptance outweighs the sheer volume of unrelated new papers.
+    return (8.0 * _accepted(row)) + (0.15 * _novel(row)) - (2.0 * _duplicate_ratio(row))
 
 
 def _empty_streak(rows: list[dict[str, Any]], direction: str) -> int:
