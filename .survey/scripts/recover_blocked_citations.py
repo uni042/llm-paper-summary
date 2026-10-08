@@ -71,6 +71,12 @@ PRIMARY_PDF_FALLBACKS = {
     "DOI:10.1145/3688351.3689164": [
         "https://jiangs.utasites.cloud/pubs/papers/Yu24-TwinPilots.pdf",
     ],
+    # NSF Public Access Repository hosts a copy of the published HPCA 2022
+    # TransPIM paper (same title, authors, DOI as the IEEE proceeding). The
+    # publisher Crossref record has no usable reference list.
+    "DOI:10.1109/HPCA53966.2022.00082": [
+        "https://par.nsf.gov/servlets/purl/10345536",
+    ],
     "DOI:10.1145/3830422.3830427": [
         "https://lca.ece.utexas.edu/pubs/li_sigopsreview26.pdf",
     ],
