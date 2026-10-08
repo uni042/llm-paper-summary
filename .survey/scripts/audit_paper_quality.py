@@ -78,6 +78,17 @@ LIMITATION_H2_PREFIXES = (
     "limitation", "constraint", "scope",
 )
 
+# Japanese section titles often join 評価/実験/性能 directly with a noun
+# (評価条件と結果, 評価結果と解釈, 実験結果).  Whitespace/punctuation-only
+# matching incorrectly measures such sections as zero characters.
+# Restrict the accepted compounds to evaluation-related nouns rather than
+# using startswith("評価"), which would count 評価上の制約 as evaluation.
+EVALUATION_H2_COMPOUND_SUFFIXES = (
+    "条件", "結果", "指標", "設定", "方法", "実験", "環境",
+    "分析", "比較", "考察", "測定", "概要", "検証",
+)
+EVALUATION_H2_COMPOUND_PREFIXES = ("評価", "実験", "性能", "ベンチマーク")
+
 
 @dataclass
 class TermHit:
@@ -187,6 +198,17 @@ def _heading_matches(title: str, prefixes: tuple[str, ...]) -> bool:
     )
 
 
+def _evaluation_heading_matches(title: str) -> bool:
+    if _heading_matches(title, EVALUATION_H2_PREFIXES):
+        return True
+    normalized = _normalize_heading(title)
+    return any(
+        normalized.startswith(prefix + suffix)
+        for prefix in EVALUATION_H2_COMPOUND_PREFIXES
+        for suffix in EVALUATION_H2_COMPOUND_SUFFIXES
+    )
+
+
 def _excluded_quality_section(title: str) -> bool:
     normalized = _normalize_heading(title)
     return any(
@@ -247,7 +269,7 @@ def _quality_metrics(text: str) -> dict[str, int | str | list[str]]:
                     section = "excluded"
                 elif _heading_matches(title, METHOD_H2_PREFIXES):
                     section = "method"
-                elif _heading_matches(title, EVALUATION_H2_PREFIXES):
+                elif _evaluation_heading_matches(title):
                     section = "evaluation"
                 elif _heading_matches(title, LIMITATION_H2_PREFIXES):
                     section = "limitation"
