@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6907d891857e09ff-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.ins.2026.123289",
+  "reason": "ScienceDirectの一次abstractはsession-based recommender用DT-GATと説明し、LLM/KV-cache/streaming推論とは異なる。一方、候補はKV/streaming lineageに結び付いており本文確認が必要だったが、出版社full-textページは403で全文を得られず、確定的に除外せずborderlineとする。",
+  "title": "Dual-channel time-aware graph attention network for session-based recommendation",
+  "identity_tokens": [
+    "DOI:10.1016/j.ins.2026.123289"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6907d891857e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
