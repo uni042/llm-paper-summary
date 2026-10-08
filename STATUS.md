@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 16:30:04 JST**
+> 自動生成: **2026-10-08 16:32:16 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **610** |
 | 直近24hのResearch処理完了 | **94** |
 | 最終Research処理完了 | **10-08 10:13:00 JST** |
-| 最終Discovery探索完了 | **10-08 06:33:00 JST** |
+| 最終Discovery探索完了 | **10-08 16:32:12 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **558** |
-| 機械検査未達（FAIL） | **405** |
+| **再監査残件数** | **560** |
+| 機械検査未達（FAIL） | **407** |
 | 機械検査適合・警告のみ（PASS/WARN） | **153** |
-| :00ワーカー担当残 | **189** |
+| :00ワーカー担当残 | **191** |
 | :30ワーカー担当残 | **181** |
 | :45ワーカー担当残 | **188** |
 
-- キュー最終生成: **2026-10-08 16:29:09 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 16:24:37 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -52,16 +52,16 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **100512** |
-| 処理済み | **17631** |
-| 未処理Discovery候補 | **82881** |
+| 処理済み | **17690** |
+| 未処理Discovery候補 | **82822** |
 | 収録済み | **1730** |
 | Research / Audit候補へ昇格済み | **456** |
-| 無関係として除外 | **11035** |
-| 微妙として除外 | **4410** |
+| 無関係として除外 | **11093** |
+| 微妙として除外 | **4411** |
 
-- 消化率: **17.5%**
+- 消化率: **17.6%**
 - 現在の生在庫: 後方references **49978件** / 前方引用 **34158件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **83624件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **83565件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -88,7 +88,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（4時間33分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（4時間35分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -109,18 +109,35 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **0** |
-| 直近6hのDiscovery本文確認・分類 | **0** |
+| 直近6hのDiscovery run | **78** |
+| 直近6hのDiscovery本文確認・分類 | **368** |
 | 最終Research完了 | **10-08 10:13:00 JST** |
-| 最終Discovery完了 | **10-08 06:33:00 JST** |
+| 最終Discovery完了 | **10-08 16:32:12 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-08 10:13:00 JST** / worker — / run interactive-20261008-bottom-up-reaudit-r3-adamx-2608.03867 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-r3-adamx-2608.03867.json
-- Discovery: **10-08 06:33:00 JST** / worker scheduled-chat-30 / run 20261008-0633-scheduled-chat-30/r01
-  - 本文確認・分類 **10件** / accept **1件** / unrelated+borderline **9件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_227aea97a6848191a8aeb5bb329b16d2--corrected-discovery-20261008-0633-scheduled-chat-30-r01.json
+- Discovery: **10-08 16:32:12 JST** / worker codex-local-screen-watcher / run 20261008-r309-screen-01-part-07-0be8303ea29c
+  - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
+  - evidence: .survey/import-inbox/results/discovery/20261008-r309-screen-01-part-07-0be8303ea29c-7814cfd388dc.json
+
+### Codex探索成果の反映状況
+
+ここでの件数はGitHub受信箱の成果レコードであり、正規Research候補への新規昇格件数ではありません。取り込み済みは受信箱receipt成功、待機中はまだ後段処理中です。
+
+| 指標 | 件数 |
+|---|---:|
+| Codex成果の取り込み済み（receipt） | **2786ファイル / 13215件** |
+| Codex成果の取り込み待機中 | **7ファイル / 32件** |
+| └ 待機中のaccept | **0件** |
+| └ 待機中のunrelated | **32件** |
+| └ 待機中のborderline | **0件** |
+| Codex成果のblocked（要対処） | **0ファイル** |
+
+- 最終Codex分類・受渡し証拠: **10-08 16:32:12 JST** / results / 20261008-r309-screen-01-part-07-0be8303ea29c
+  - evidence: .survey/import-inbox/results/discovery/20261008-r309-screen-01-part-07-0be8303ea29c-7814cfd388dc.json
+
 
 ## 件数サマリー（旧immutable transport診断）
 
