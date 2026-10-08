@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T11:01:07.486147+00:00",
+  "generated_at": "2026-10-08T11:11:50.920150+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 528,
+  "count": 526,
   "worker_counts": {
-    "scheduled-chat-00": 177,
-    "scheduled-chat-30": 167,
-    "scheduled-chat-45": 184
+    "scheduled-chat-00": 178,
+    "scheduled-chat-30": 166,
+    "scheduled-chat-45": 182
   },
   "entries": [
     {
@@ -160,30 +160,6 @@
       "warnings": [
         "日本語比率 76.4% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md",
-      "canonical_id": "arXiv:2406.13511",
-      "title": "Slice-Level Scheduling for High Throughput and Load Balanced LLM Serving",
-      "file_bytes": 8154,
-      "source_sha256": "3e3508705968d5817ca574e7f69f1dcd5819b4064f50768c9d448ea5492bcef3",
-      "source_git_blob_sha": "a057d2b2366d7034c509b852a1d3f37f7a1676c7",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 1626,
-        "method_chars": 573,
-        "evaluation_chars": 72,
-        "limitation_chars": 126
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1626 < 2200",
-        "16KB未満再監査: 手法説明量 573 < 700",
-        "16KB未満再監査: 評価説明量 72 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md",
@@ -597,30 +573,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
-      "canonical_id": "arXiv:2408.11850",
-      "title": "PEARL: Parallel Speculative Decoding with Adaptive Draft Length",
-      "file_bytes": 8503,
-      "source_sha256": "acfbbb660a33595941c94d13d21604228825d013e52e6bc323f9e782b37c3fb7",
-      "source_git_blob_sha": "daf106afa469b9091219ae9db68a8fe1c602f571",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.886505,
-      "quality_metrics": {
-        "body_chars": 1538,
-        "method_chars": 424,
-        "evaluation_chars": 122,
-        "limitation_chars": 170
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1538 < 2200",
-        "16KB未満再監査: 手法説明量 424 < 700",
-        "16KB未満再監査: 評価説明量 122 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md",
       "canonical_id": "arXiv:2411.00841",
       "title": "A Theoretical Perspective for Speculative Decoding Algorithm",
@@ -719,29 +671,6 @@
       "warnings": [
         "日本語比率 73.6% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
-      "canonical_id": "arXiv:1905.09418",
-      "title": "Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned",
-      "file_bytes": 8582,
-      "source_sha256": "f1e792fecb97e375f5372deaeb36355215d5415a8fa4fb8f128a1d7241c0aa2e",
-      "source_git_blob_sha": "5513d7cc61ba9516998e4f1a0627f4ad46d218a1",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.864626,
-      "quality_metrics": {
-        "body_chars": 1861,
-        "method_chars": 575,
-        "evaluation_chars": 529,
-        "limitation_chars": 159
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1861 < 2200",
-        "16KB未満再監査: 手法説明量 575 < 700"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md",
@@ -10526,6 +10455,26 @@
         "method_chars": 1291,
         "evaluation_chars": 1216,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md",
+      "canonical_id": "arXiv:2402.11960",
+      "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
+      "file_bytes": 14045,
+      "source_sha256": "13ed1832504b21024e47dce5d7b8ec0520295e720403c7a8cd7903d8cff6e639",
+      "source_git_blob_sha": "637ff853e6e2d398f7354f87b825a4c0dd55a026",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.999382,
+      "quality_metrics": {
+        "body_chars": 4288,
+        "method_chars": 1207,
+        "evaluation_chars": 808,
+        "limitation_chars": 472
       },
       "mechanical_failures": [],
       "warnings": []
