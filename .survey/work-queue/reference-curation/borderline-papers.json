@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T19:07:27+00:00",
-  "record_count": 4498,
+  "updated_at": "2026-10-08T19:17:58+00:00",
+  "record_count": 4501,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68621,6 +68621,45 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "A Performance Study of LLM Inference on Mooncake-Based Clusters"
+    },
+    "DOI:10.1145/3769778": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3769778",
+      "identity_tokens": [
+        "DOI:10.1145/3769778"
+      ],
+      "reason": "Official SIGMOD 2026 accepted-paper list confirms title/authors, but ACM DOI page was inaccessible (HTTP 403), so no primary abstract was available to assess its KV-cache method. Retain as borderline with DOI/title and exact retrieval failure.",
+      "first_checked_at": "2026-10-08T19:17:57+00:00",
+      "last_checked_at": "2026-10-08T19:17:57+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DepCache: A KV Cache Management Framework for GraphRAG with Dependency Attention"
+    },
+    "DOI:10.1145/3805621.3807613": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805621.3807613",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807613"
+      ],
+      "reason": "Official EuroMLSys program confirms title/authors but contains no abstract for this item. ACM DOI page was inaccessible (HTTP 403), leaving only a title-level inference-efficiency lead.",
+      "first_checked_at": "2026-10-08T19:17:58+00:00",
+      "last_checked_at": "2026-10-08T19:17:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Dealing with the Elephant in the KV Cache: Video Frame Sampling for Multimodal LLM Inference"
+    },
+    "DOI:10.1109/hpcc67675.2025.00065": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpcc67675.2025.00065",
+      "identity_tokens": [
+        "DOI:10.1109/hpcc67675.2025.00065"
+      ],
+      "reason": "The official HPCC 2025 program confirms this exact title and author list, but IEEE Xplore required JavaScript/robot verification and no primary abstract was retrieved. With only program metadata, retain as borderline pending method evidence.",
+      "first_checked_at": "2026-10-08T19:17:58+00:00",
+      "last_checked_at": "2026-10-08T19:17:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SmartCache: Two-Dimensional KV-Cache Similarity for Efficient Long-Context LLM Decoding"
     }
   }
 }
