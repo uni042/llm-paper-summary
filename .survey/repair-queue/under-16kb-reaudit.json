@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T19:54:01.094046+00:00",
+  "generated_at": "2026-10-08T20:53:21.763925+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 415,
+  "count": 410,
   "worker_counts": {
-    "scheduled-chat-00": 140,
-    "scheduled-chat-30": 119,
+    "scheduled-chat-00": 137,
+    "scheduled-chat-30": 117,
     "scheduled-chat-45": 156
   },
   "entries": [
@@ -236,30 +236,6 @@
       "warnings": [
         "日本語比率 72.0% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2609.35629-santa-sampling-attention-through-representative-keys.md",
-      "canonical_id": "arXiv:2609.35629",
-      "title": "SANTA++: Sampling Attention through Representative Keys",
-      "file_bytes": 9284,
-      "source_sha256": "fa5bbf1fc28dda2069f90540272cc8bd5a77551d2df49646b512aa29ba23334b",
-      "source_git_blob_sha": "968b00a91a4232234cde59c9420f26890a460aea",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.958776,
-      "quality_metrics": {
-        "body_chars": 1891,
-        "method_chars": 537,
-        "evaluation_chars": 339,
-        "limitation_chars": 197
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1891 < 2200",
-        "16KB未満再監査: 手法説明量 537 < 700",
-        "16KB未満再監査: 評価説明量 339 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md",
@@ -918,29 +894,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
-      "canonical_id": "arXiv:2401.03462",
-      "title": "Long Context Compression with Activation Beacon",
-      "file_bytes": 9856,
-      "source_sha256": "707eacbcd7f5402f90f54a2ae7fca6bdabdce5b75f0ee37420f803ce4a483b8c",
-      "source_git_blob_sha": "f90ef1d55f46f97f02eb4914eed1e41ee1a3d9e7",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.950413,
-      "quality_metrics": {
-        "body_chars": 1701,
-        "method_chars": 721,
-        "evaluation_chars": 0,
-        "limitation_chars": 163
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1701 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
       "canonical_id": "arXiv:2312.03134",
       "title": "LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference",
@@ -987,26 +940,6 @@
         "16KB未満再監査: 手法説明量 582 < 700",
         "16KB未満再監査: 評価説明量 176 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
-      "canonical_id": "arXiv:2310.06201",
-      "title": "Compressing Context to Enhance Inference Efficiency of Large Language Models",
-      "file_bytes": 9931,
-      "source_sha256": "43195633d56dc25032a6cd27b923b14c99c1c7d2b071217613a0015d43bb4686",
-      "source_git_blob_sha": "eeca1bb63404a94dbdd3add0d61935e5a8c0eae1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.923332,
-      "quality_metrics": {
-        "body_chars": 2811,
-        "method_chars": 792,
-        "evaluation_chars": 996,
-        "limitation_chars": 236
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1118,26 +1051,6 @@
         "method_chars": 773,
         "evaluation_chars": 551,
         "limitation_chars": 255
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md",
-      "canonical_id": "arXiv:2504.03871",
-      "title": "HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs",
-      "file_bytes": 10036,
-      "source_sha256": "18a7aa4bdfc811523e600eeccdaa6458d5d35ec602a1124c79185ac87d159dd2",
-      "source_git_blob_sha": "325894b0d78d077899e405cf8233a578a109097c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.918286,
-      "quality_metrics": {
-        "body_chars": 2312,
-        "method_chars": 1115,
-        "evaluation_chars": 645,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -3086,28 +2999,6 @@
       "warnings": [
         "日本語比率 78.0% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md",
-      "canonical_id": "arXiv:2403.09919",
-      "title": "Recurrent Drafter for Fast Speculative Decoding in Large Language Models",
-      "file_bytes": 11379,
-      "source_sha256": "6ab287d2f230701685b9c7d18a463649fb7e058b80be0d18bcd904bd45830947",
-      "source_git_blob_sha": "747fe8e3bd3e340085ed6eea9f6576a3574a6630",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.885703,
-      "quality_metrics": {
-        "body_chars": 2484,
-        "method_chars": 1038,
-        "evaluation_chars": 156,
-        "limitation_chars": 267
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 156 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
