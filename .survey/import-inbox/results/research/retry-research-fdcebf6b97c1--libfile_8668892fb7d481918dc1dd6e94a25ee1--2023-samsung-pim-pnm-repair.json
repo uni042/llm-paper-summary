@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d74467528839cec0971da103ffcd1cc0525a45e8d2f68c2eb68cb70030c325c5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fdcebf6b97c1--libfile_8668892fb7d481918dc1dd6e94a25ee1--2023-samsung-pim-pnm-repair.md",
+  "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
+  "worker_completed_at": "2026-10-08T03:25:58+09:00",
+  "worker_run_key": "20261008-0325-scheduled-chat-30/repair-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 1975,
+    "body_paragraphs": 14,
+    "method_chars": 685,
+    "method_paragraphs": 5,
+    "evaluation_chars": 344,
+    "limitation_chars": 186,
+    "insufficiency_flags": [
+      "本文説明量 1975 < 2200",
+      "手法説明量 685 < 700",
+      "評価説明量 344 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 1975 < 2200",
+    "説明不足トリガー: 手法説明量 685 < 700",
+    "説明不足トリガー: 評価説明量 344 < 500"
+  ],
+  "processed_at": "2026-10-08T15:33:54+00:00"
+}
