@@ -1300,7 +1300,7 @@
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
   実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：45  
-  SparseGPTは、数十億〜数千億パラメータの生成事前学習Transformerを、追加の再学習なしに一回後処理（one-shot）で疎化する手法である。単純な絶対値枝刈り（magnitude 枝刈り）は重みの大きさだけで削除対象を決めるため、大規模モデルでも50%前後の疎化で層出力誤差が急増する場合がある。
+  重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
   実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：43  
