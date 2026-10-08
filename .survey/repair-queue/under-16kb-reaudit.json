@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T05:35:32.104140+00:00",
+  "generated_at": "2026-10-08T05:45:55.317203+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 602,
+  "count": 597,
   "worker_counts": {
     "scheduled-chat-00": 202,
-    "scheduled-chat-30": 192,
-    "scheduled-chat-45": 208
+    "scheduled-chat-30": 190,
+    "scheduled-chat-45": 205
   },
   "entries": [
     {
@@ -11333,28 +11333,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
-      "canonical_id": "arXiv:2302.11665",
-      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
-      "file_bytes": 13782,
-      "source_sha256": "8be49720bb45f9f55649cd2b45caa26ee50abcddc7c3dcbc70a27b4b7db33105",
-      "source_git_blob_sha": "bc95e9fcf50d152ce20d4becd37f480775443c87",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.994496,
-      "quality_metrics": {
-        "body_chars": 3374,
-        "method_chars": 1168,
-        "evaluation_chars": 300,
-        "limitation_chars": 219
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 300 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
       "canonical_id": "arXiv:2312.11514",
       "title": "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory",
@@ -11372,28 +11350,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
-      "canonical_id": "arXiv:2303.09752",
-      "title": "CoLT5: Faster Long-Range Transformers with Conditional Computation",
-      "file_bytes": 13790,
-      "source_sha256": "a1d0d640fd2c2f9c2a70d7ea44ab3058e7debb3e618551e8603799c7262af814",
-      "source_git_blob_sha": "bdde0ee867e7905e06c1b09238e83b3c4ed71dcf",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.978863,
-      "quality_metrics": {
-        "body_chars": 2797,
-        "method_chars": 1008,
-        "evaluation_chars": 178,
-        "limitation_chars": 247
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 178 < 500"
-      ],
       "warnings": []
     },
     {
@@ -11670,28 +11626,6 @@
         "limitation_chars": 222
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
-      "canonical_id": "arXiv:2403.12544",
-      "title": "AffineQuant: Affine Transformation Quantization for Large Language Models",
-      "file_bytes": 13967,
-      "source_sha256": "410bab78826f929b9265146bb82c96b0f313b86a6eec5b4adbf5276d3d581b6e",
-      "source_git_blob_sha": "2ad2830906a31c8acc72a9a713a1099bf5f282fc",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.930541,
-      "quality_metrics": {
-        "body_chars": 3459,
-        "method_chars": 1111,
-        "evaluation_chars": 378,
-        "limitation_chars": 343
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 378 < 500"
-      ],
       "warnings": []
     },
     {
@@ -12133,28 +12067,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md",
-      "canonical_id": "arXiv:2608.03867",
-      "title": "AdaMX：異質性を考慮した低ビット・マイクロスケーリング",
-      "file_bytes": 14414,
-      "source_sha256": "872ebe0cd39a1d7726908fdecae0bcaa6333de3a1ac5fb88b7f9ce36d0aacd18",
-      "source_git_blob_sha": "d630b99608169d1ed6a8209db1cde09fa77c43bd",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.979046,
-      "quality_metrics": {
-        "body_chars": 2682,
-        "method_chars": 957,
-        "evaluation_chars": 112,
-        "limitation_chars": 145
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 112 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
       "canonical_id": "arXiv:2608.07974",
       "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
@@ -12344,30 +12256,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.36322-periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression.md",
-      "canonical_id": "arXiv:2609.36322",
-      "title": "Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression",
-      "file_bytes": 14576,
-      "source_sha256": "abfb241eead3edbe161d9ee4c4422d3283545206fb8c6fe6cad93bb75bb33f73",
-      "source_git_blob_sha": "1cc4c8977fa09d6807a96d14756949ff4dd5de5c",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.774069,
-      "quality_metrics": {
-        "body_chars": 3667,
-        "method_chars": 1392,
-        "evaluation_chars": 566,
-        "limitation_chars": 342
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 77.4% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.4% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
