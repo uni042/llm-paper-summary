@@ -686,7 +686,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KとVで異なる量子化誤差伝播を理論化し、注意重要度・外れ値・直近窓からトークン別ビット幅を割り当てるKV量子化。LLaMA2-7B/13Bで1%未満の精度低下時に約6〜9倍圧縮。
 
 - **2024-02 · [GliDe with a CaPE: A Low-Hassle Method to Accelerate Speculative Decoding](2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   速度はドラフトの軽さだけでなく、提案トークンが対象に受理される割合に強く依存する。Vicuna 7B/13B/33BとMistral-7B-Instructを含む評価で、GliDeは従来ドラフトより受理率 率を平均19.9%改善し、実時間でVicunaを最大約2.17倍、CaPE併用で2.50〜2.61倍高速化した。
 
 - **2024-10 · [LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management](2024-2410.00428-layerkv-optimizing-large-language-model-serving-with-layer-wise-kv-cache.md)**  

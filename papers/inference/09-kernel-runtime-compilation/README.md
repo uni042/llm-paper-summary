@@ -223,7 +223,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   しかし推論では、巨大な専門家重みをGPUへ置く容量問題、ルータ出力に従ってトークンを専門家別に並べ替える費用、専門家ごとの小さく不均一な行列積によるGPU利用率低下が生じる。本論文はこれらを一つの推論エンジンで処理し、専門家の重みを4ビット整数へ量子化して容量・帯域を減らす。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：8  
   固定枝刈りでパラメータを削れば帯域を減らせるが、全入力に共通の小ネットワークへ固定すると精度やin-文脈 learningを損なう。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
@@ -243,7 +243,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：6  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
