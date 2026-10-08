@@ -1,0 +1,529 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-9a0b1edad537970b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-9a0b1edad537",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00173",
+    "arXiv:2409.11650",
+    "arXiv:2605.10793",
+    "arXiv:2607.08643",
+    "arXiv:2609.31047"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3164e9d09bc5019a3c6d94b4d9fcd4d0efaa5155",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-08T16:29:25.655435+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00173",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.11650",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.10793",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.08643",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31047",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ConQuR: Corner Aligned Activation Quantization via Optimized Rotations for LLMs",
+      "source_url": "https://arxiv.org/abs/2605.10793",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are costly to deploy due to their large memory footprint and high inference cost. Weight-activation quantization can reduce these costs, but low-bit activation quantization remains difficult because activation outliers induce large quantization error. Recent rotation-based methods address this by applying orthogonal transformations that redistribute activation magnitude across dimensions, but existing approaches either require expensive end-to-end rotation training or rely on stored activation corpora, introducing significant compute or storage overhead. We propose a lightweight post-training rotation calibration method for LLM activation quantization. Our method learns orthogonal rotations that align normalized activations with the corners of an inscribed hypercube, encouraging activation energy to be distributed more evenly across dimensions. This objective admits an efficient closed-form update via the orthogonal Procrustes problem, avoiding gradient-based optimization over the orthogonal group. We further introduce an online calibration procedure that updates rotations as calibration samples are processed, eliminating the need to store activations on disk and allowing rotations to adapt to quantized activation distributions during calibration. Experiments on Llama-2 and Llama-3 models from 3B to 70B parameters show that our method achieves competitive or improved performance across perplexity benchmarks and common sense reasoning tasks while avoiding both costly end-to-end training and large offline activation storage.",
+      "identifiers": [
+        "SemanticScholar:f76ba1d4765b23275e85db00f6957a88df7301cb"
+      ],
+      "semantic_scholar_id": "f76ba1d4765b23275e85db00f6957a88df7301cb",
+      "canonical_id": "arXiv:2605.10793",
+      "arxiv_id": "2605.10793",
+      "doi": "10.48550/arXiv.2605.10793",
+      "authors": [
+        "Chayne Thrash",
+        "Ali Abbasi",
+        "Soheil Kolouri"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Symbiotic MLLM Serving: Dynamically Balancing Parallelism Across GPUs and Resources Within GPUs",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00173",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) present a key serving challenge. Existing systems usually extend text-only LLM stacks. They either co-locate the vision encoder with the decoder on the same GPUs or move it to a fixed GPU pool. Both choices rely on ahead-of-time, static decisions for parallelism and GPU allocation. They ignore a key asymmetry in MLLMs: the encoder has a small memory footprint but inputdependent, often quadratic, compute cost, while the decoder is both memory-and compute-intensive. With mixed highand low-resolution requests, this leads to interference between encoder and decoder, persistent SM and HBM slack, poor GPU utilization, and frequent SLO violations. In this paper, we propose Resonator, an efficient MLLM serving system that uses fine-grained runtime scheduling along two axes. First, an intra-GPU sharing engine manages SM and HBM sharing between encoder and decoder. It exploits stagelevel complementarity and kernel-level slack to run computebound encoder kernels and memory-bound LLM kernels in a work-conserving way on the same GPU. Second, an interGPU parallelism engine selects the encoder's data-parallel and tensor-parallel plan at runtime based on input resolution, batch composition, and a lightweight Performance Atlas, and switches plans with near-zero overhead. Evaluation on three state-of-theart MLLMs against strong baselines shows that Resonator improves mean TTFT by up to $5.1 \\times$, TPOT by up to $3.0 \\times$, mean end-to-end latency by up to $4.9 \\times$, and overall throughput by up to $3.4 \\times$, while adapting efficiently to highly concurrent and dynamic workloads.",
+      "identifiers": [
+        "SemanticScholar:323cec31e2016992ef227a85f986f527c3687cc8"
+      ],
+      "semantic_scholar_id": "323cec31e2016992ef227a85f986f527c3687cc8",
+      "doi": "10.1109/ISCA66397.2026.00173",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00173",
+      "authors": [
+        "Zhi-Cheng Li",
+        "Jia-Cheng Zhao",
+        "Yang-Yu Zhang",
+        "Zhaolin Duan",
+        "Xinyu Liu",
+        "Si-Qi Li",
+        "Shuo-Ming Zhang",
+        "Shuai Li",
+        "Dong Yu",
+        "Yuan Wen",
+        "Chun-Wei Xia",
+        "Xi-Yu Shi",
+        "Hui-Min Cui"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2607.08643",
+      "year": 2026,
+      "published": "2026-07-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly constrained by memory capacity, weight bandwidth, and checkpoint storage during deployment. Existing low-bit compression methods mainly follow two directions. Scalar or group-wise quantization is simple and compatible with efficient low-precision kernels, but its representation capacity becomes limited when the target budget approaches 2 bits per weight. Vector-quantized weight compression provides a richer block-level representation, but usually introduces explicit codebooks, index lookup, and additional storage accounting. This paper presents BiSCo-LLM, a codebook-free binary spherical coding framework for extreme low-bit LLM weight compression. The core pipeline is built on three components. First, local weight chunks are mapped onto a unit hypersphere and binarized into compact spherical codes, so that the main payload is a bit-packed sign stream rather than explicit VQ centroids. Second, a residual BSQ stage encodes the reconstruction error left by the base spherical codec, providing an explicit rate-distortion path without stored codebooks. Third, category-wise recovery distillation is performed after replacing each Transformer module category, reducing the mismatch between local weight reconstruction and assembled model behavior. A small 8-bit protected-channel path is used as an auxiliary stabilization mechanism for sensitive channels and is counted separately from the BSQ payload. The reported storage budget includes binary codes, neural decoders, protected-channel payloads, LoRA adapters, and metadata.",
+      "identifiers": [
+        "SemanticScholar:8c48b98408cd1186ba296ed704e7dd7705ce7f54"
+      ],
+      "semantic_scholar_id": "8c48b98408cd1186ba296ed704e7dd7705ce7f54",
+      "canonical_id": "arXiv:2607.08643",
+      "arxiv_id": "2607.08643",
+      "doi": "10.48550/arXiv.2607.08643",
+      "authors": [
+        "Yuan-Tian Shao",
+        "Peisong Wang",
+        "Zhi-Lei Liu",
+        "Chuang-Yi Li",
+        "Yuan-Teng Chen",
+        "Pengcheng Xie",
+        "Yi-Wu Yao",
+        "Zhi-Hui Wei",
+        "Jian Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 91,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DynBranch: Speculative Subgraph Reuse for Dynamic Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.31047",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic LLM workflows decide their execution paths at runtime. Downstream computation may be predictable, or may have run before, yet it cannot begin until the model or the user resolves the branch. We call this serialization the branch-resolution barrier. Caching alone does not hide it: the key that identifies a reusable result is not known until then. In this paper, we propose DynBranch, which makes an unresolved branch addressable before it resolves. Its stable coordinate lets candidate subgraphs run during resolution and completed subgraph results be reused across later requests. A two-level controller admits this work when its expected benefit exceeds the load price. DynBranch sits at the model-API boundary and requires no changes to agent harnesses or model execution engines. Across four agentic workloads with Qwen3-32B on 4x H200 GPUs, DynBranch reduces mean latency by up to 32% over each workload's strongest prior system and by 46-66% against a no-reuse floor, while preserving workflow results. The benefit persists across backbone families and on a commodity Qwen3-8B/RTX 4090 deployment.",
+      "identifiers": [
+        "SemanticScholar:1c2e95a91e3f38426df9b347b1a33742ad4d52a7"
+      ],
+      "semantic_scholar_id": "1c2e95a91e3f38426df9b347b1a33742ad4d52a7",
+      "canonical_id": "arXiv:2609.31047",
+      "arxiv_id": "2609.31047",
+      "authors": [
+        "Jun-Yi Shen",
+        "Noppanat Wadlom",
+        "Zheng-Yuan Su",
+        "Yao Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Art and Science of Quantizing Large-Scale Models: A Comprehensive Overview",
+      "source_url": "https://arxiv.org/abs/2409.11650",
+      "year": 2024,
+      "published": "2024-09-18",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper provides a comprehensive overview of the principles, challenges, and methodologies associated with quantizing large-scale neural network models. As neural networks have evolved towards larger and more complex architectures to address increasingly sophisticated tasks, the computational and energy costs have escalated significantly. We explore the necessity and impact of model size growth, highlighting the performance benefits as well as the computational challenges and environmental considerations. The core focus is on model quantization as a fundamental approach to mitigate these challenges by reducing model size and improving efficiency without substantially compromising accuracy. We delve into various quantization techniques, including both post-training quantization (PTQ) and quantization-aware training (QAT), and analyze several state-of-the-art algorithms such as LLM-QAT, PEQA(L4Q), ZeroQuant, SmoothQuant, and others. Through comparative analysis, we examine how these methods address issues like outliers, importance weighting, and activation quantization, ultimately contributing to more sustainable and accessible deployment of large-scale models.",
+      "identifiers": [
+        "SemanticScholar:bdb5e0e26ecbfd5693191b9b94f4f759cce14e59"
+      ],
+      "semantic_scholar_id": "bdb5e0e26ecbfd5693191b9b94f4f759cce14e59",
+      "canonical_id": "arXiv:2409.11650",
+      "arxiv_id": "2409.11650",
+      "doi": "10.48550/arXiv.2409.11650",
+      "authors": [
+        "Yan-Shu Wang",
+        "Tong Yang",
+        "Xiyan Liang",
+        "Guo-An Wang",
+        "Hanning Lu",
+        "Xue Zhe",
+        "Yao-Ming Li",
+        "Wei-Tao Li"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 750,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.10793",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.10793",
+        "id:SemanticScholar:f76ba1d4765b23275e85db00f6957a88df7301cb",
+        "id:arXiv:2605.10793",
+        "title:conqur corner aligned activation quantization via optimized rotations for llms",
+        "url:https://arxiv.org/abs/2605.10793"
+      ],
+      "record": {
+        "title": "ConQuR: Corner Aligned Activation Quantization via Optimized Rotations for LLMs",
+        "source_url": "https://arxiv.org/abs/2605.10793",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are costly to deploy due to their large memory footprint and high inference cost. Weight-activation quantization can reduce these costs, but low-bit activation quantization remains difficult because activation outliers induce large quantization error. Recent rotation-based methods address this by applying orthogonal transformations that redistribute activation magnitude across dimensions, but existing approaches either require expensive end-to-end rotation training or rely on stored activation corpora, introducing significant compute or storage overhead. We propose a lightweight post-training rotation calibration method for LLM activation quantization. Our method learns orthogonal rotations that align normalized activations with the corners of an inscribed hypercube, encouraging activation energy to be distributed more evenly across dimensions. This objective admits an efficient closed-form update via the orthogonal Procrustes problem, avoiding gradient-based optimization over the orthogonal group. We further introduce an online calibration procedure that updates rotations as calibration samples are processed, eliminating the need to store activations on disk and allowing rotations to adapt to quantized activation distributions during calibration. Experiments on Llama-2 and Llama-3 models from 3B to 70B parameters show that our method achieves competitive or improved performance across perplexity benchmarks and common sense reasoning tasks while avoiding both costly end-to-end training and large offline activation storage.",
+        "identifiers": [
+          "SemanticScholar:f76ba1d4765b23275e85db00f6957a88df7301cb"
+        ],
+        "semantic_scholar_id": "f76ba1d4765b23275e85db00f6957a88df7301cb",
+        "canonical_id": "arXiv:2605.10793",
+        "arxiv_id": "2605.10793",
+        "doi": "10.48550/arXiv.2605.10793",
+        "authors": [
+          "Chayne Thrash",
+          "Ali Abbasi",
+          "Soheil Kolouri"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 150,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00173",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00173",
+        "id:SemanticScholar:323cec31e2016992ef227a85f986f527c3687cc8",
+        "title:symbiotic mllm serving dynamically balancing parallelism across gpus and resources within gpus",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00173"
+      ],
+      "record": {
+        "title": "Symbiotic MLLM Serving: Dynamically Balancing Parallelism Across GPUs and Resources Within GPUs",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00173",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) present a key serving challenge. Existing systems usually extend text-only LLM stacks. They either co-locate the vision encoder with the decoder on the same GPUs or move it to a fixed GPU pool. Both choices rely on ahead-of-time, static decisions for parallelism and GPU allocation. They ignore a key asymmetry in MLLMs: the encoder has a small memory footprint but inputdependent, often quadratic, compute cost, while the decoder is both memory-and compute-intensive. With mixed highand low-resolution requests, this leads to interference between encoder and decoder, persistent SM and HBM slack, poor GPU utilization, and frequent SLO violations. In this paper, we propose Resonator, an efficient MLLM serving system that uses fine-grained runtime scheduling along two axes. First, an intra-GPU sharing engine manages SM and HBM sharing between encoder and decoder. It exploits stagelevel complementarity and kernel-level slack to run computebound encoder kernels and memory-bound LLM kernels in a work-conserving way on the same GPU. Second, an interGPU parallelism engine selects the encoder's data-parallel and tensor-parallel plan at runtime based on input resolution, batch composition, and a lightweight Performance Atlas, and switches plans with near-zero overhead. Evaluation on three state-of-theart MLLMs against strong baselines shows that Resonator improves mean TTFT by up to $5.1 \\times$, TPOT by up to $3.0 \\times$, mean end-to-end latency by up to $4.9 \\times$, and overall throughput by up to $3.4 \\times$, while adapting efficiently to highly concurrent and dynamic workloads.",
+        "identifiers": [
+          "SemanticScholar:323cec31e2016992ef227a85f986f527c3687cc8"
+        ],
+        "semantic_scholar_id": "323cec31e2016992ef227a85f986f527c3687cc8",
+        "doi": "10.1109/ISCA66397.2026.00173",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00173",
+        "authors": [
+          "Zhi-Cheng Li",
+          "Jia-Cheng Zhao",
+          "Yang-Yu Zhang",
+          "Zhaolin Duan",
+          "Xinyu Liu",
+          "Si-Qi Li",
+          "Shuo-Ming Zhang",
+          "Shuai Li",
+          "Dong Yu",
+          "Yuan Wen",
+          "Chun-Wei Xia",
+          "Xi-Yu Shi",
+          "Hui-Min Cui"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 129,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.08643",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.08643",
+        "id:SemanticScholar:8c48b98408cd1186ba296ed704e7dd7705ce7f54",
+        "id:arXiv:2607.08643",
+        "title:biscollm lookupfree binary spherical coding for extreme lowbit large language model compression",
+        "url:https://arxiv.org/abs/2607.08643"
+      ],
+      "record": {
+        "title": "BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression",
+        "source_url": "https://arxiv.org/abs/2607.08643",
+        "year": 2026,
+        "published": "2026-07-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly constrained by memory capacity, weight bandwidth, and checkpoint storage during deployment. Existing low-bit compression methods mainly follow two directions. Scalar or group-wise quantization is simple and compatible with efficient low-precision kernels, but its representation capacity becomes limited when the target budget approaches 2 bits per weight. Vector-quantized weight compression provides a richer block-level representation, but usually introduces explicit codebooks, index lookup, and additional storage accounting. This paper presents BiSCo-LLM, a codebook-free binary spherical coding framework for extreme low-bit LLM weight compression. The core pipeline is built on three components. First, local weight chunks are mapped onto a unit hypersphere and binarized into compact spherical codes, so that the main payload is a bit-packed sign stream rather than explicit VQ centroids. Second, a residual BSQ stage encodes the reconstruction error left by the base spherical codec, providing an explicit rate-distortion path without stored codebooks. Third, category-wise recovery distillation is performed after replacing each Transformer module category, reducing the mismatch between local weight reconstruction and assembled model behavior. A small 8-bit protected-channel path is used as an auxiliary stabilization mechanism for sensitive channels and is counted separately from the BSQ payload. The reported storage budget includes binary codes, neural decoders, protected-channel payloads, LoRA adapters, and metadata.",
+        "identifiers": [
+          "SemanticScholar:8c48b98408cd1186ba296ed704e7dd7705ce7f54"
+        ],
+        "semantic_scholar_id": "8c48b98408cd1186ba296ed704e7dd7705ce7f54",
+        "canonical_id": "arXiv:2607.08643",
+        "arxiv_id": "2607.08643",
+        "doi": "10.48550/arXiv.2607.08643",
+        "authors": [
+          "Yuan-Tian Shao",
+          "Peisong Wang",
+          "Zhi-Lei Liu",
+          "Chuang-Yi Li",
+          "Yuan-Teng Chen",
+          "Pengcheng Xie",
+          "Yi-Wu Yao",
+          "Zhi-Hui Wei",
+          "Jian Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 91,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31047",
+      "identity_tokens": [
+        "id:SemanticScholar:1c2e95a91e3f38426df9b347b1a33742ad4d52a7",
+        "id:arXiv:2609.31047",
+        "title:dynbranch speculative subgraph reuse for dynamic agentic llm serving",
+        "url:https://arxiv.org/abs/2609.31047"
+      ],
+      "record": {
+        "title": "DynBranch: Speculative Subgraph Reuse for Dynamic Agentic LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.31047",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic LLM workflows decide their execution paths at runtime. Downstream computation may be predictable, or may have run before, yet it cannot begin until the model or the user resolves the branch. We call this serialization the branch-resolution barrier. Caching alone does not hide it: the key that identifies a reusable result is not known until then. In this paper, we propose DynBranch, which makes an unresolved branch addressable before it resolves. Its stable coordinate lets candidate subgraphs run during resolution and completed subgraph results be reused across later requests. A two-level controller admits this work when its expected benefit exceeds the load price. DynBranch sits at the model-API boundary and requires no changes to agent harnesses or model execution engines. Across four agentic workloads with Qwen3-32B on 4x H200 GPUs, DynBranch reduces mean latency by up to 32% over each workload's strongest prior system and by 46-66% against a no-reuse floor, while preserving workflow results. The benefit persists across backbone families and on a commodity Qwen3-8B/RTX 4090 deployment.",
+        "identifiers": [
+          "SemanticScholar:1c2e95a91e3f38426df9b347b1a33742ad4d52a7"
+        ],
+        "semantic_scholar_id": "1c2e95a91e3f38426df9b347b1a33742ad4d52a7",
+        "canonical_id": "arXiv:2609.31047",
+        "arxiv_id": "2609.31047",
+        "authors": [
+          "Jun-Yi Shen",
+          "Noppanat Wadlom",
+          "Zheng-Yuan Su",
+          "Yao Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.11650",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.11650",
+        "id:SemanticScholar:bdb5e0e26ecbfd5693191b9b94f4f759cce14e59",
+        "id:arXiv:2409.11650",
+        "title:art and science of quantizing largescale models a comprehensive overview",
+        "url:https://arxiv.org/abs/2409.11650"
+      ],
+      "record": {
+        "title": "Art and Science of Quantizing Large-Scale Models: A Comprehensive Overview",
+        "source_url": "https://arxiv.org/abs/2409.11650",
+        "year": 2024,
+        "published": "2024-09-18",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper provides a comprehensive overview of the principles, challenges, and methodologies associated with quantizing large-scale neural network models. As neural networks have evolved towards larger and more complex architectures to address increasingly sophisticated tasks, the computational and energy costs have escalated significantly. We explore the necessity and impact of model size growth, highlighting the performance benefits as well as the computational challenges and environmental considerations. The core focus is on model quantization as a fundamental approach to mitigate these challenges by reducing model size and improving efficiency without substantially compromising accuracy. We delve into various quantization techniques, including both post-training quantization (PTQ) and quantization-aware training (QAT), and analyze several state-of-the-art algorithms such as LLM-QAT, PEQA(L4Q), ZeroQuant, SmoothQuant, and others. Through comparative analysis, we examine how these methods address issues like outliers, importance weighting, and activation quantization, ultimately contributing to more sustainable and accessible deployment of large-scale models.",
+        "identifiers": [
+          "SemanticScholar:bdb5e0e26ecbfd5693191b9b94f4f759cce14e59"
+        ],
+        "semantic_scholar_id": "bdb5e0e26ecbfd5693191b9b94f4f759cce14e59",
+        "canonical_id": "arXiv:2409.11650",
+        "arxiv_id": "2409.11650",
+        "doi": "10.48550/arXiv.2409.11650",
+        "authors": [
+          "Yan-Shu Wang",
+          "Tong Yang",
+          "Xiyan Liang",
+          "Guo-An Wang",
+          "Hanning Lu",
+          "Xue Zhe",
+          "Yao-Ming Li",
+          "Wei-Tao Li"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 750,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4f0db6654a22f0f609ca39fc7a85b6dd6e70c82812f48cfe2aefb480b8f70a14",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
