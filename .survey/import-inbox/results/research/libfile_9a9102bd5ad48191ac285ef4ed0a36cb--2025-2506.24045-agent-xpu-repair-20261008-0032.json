@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "66582c853ef878a863419d5c984fb81b0b14f127e94d79f445687a4fe0a81560",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a9102bd5ad48191ac285ef4ed0a36cb--2025-2506.24045-agent-xpu-repair-20261008-0032.md",
+  "canonical_id": "arXiv:2506.24045",
+  "worker_completed_at": "2026-10-08T00:32:44+09:00",
+  "worker_run_key": "20261008-0032-scheduled-chat-30/repair-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2414,
+    "body_paragraphs": 17,
+    "method_chars": 850,
+    "method_paragraphs": 6,
+    "evaluation_chars": 368,
+    "limitation_chars": 159,
+    "insufficiency_flags": [
+      "評価説明量 368 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 368 < 500"
+  ],
+  "processed_at": "2026-10-08T12:11:38+00:00"
+}

@@ -82,6 +82,8 @@ quality_method_chars: 2260
 quality_evaluation_chars: 2570
 quality_eval_chars: 2570
 quality_limitation_chars: 872
+last_audited: null
+audit_version: 0
 ---
 
 # FastBERT: a Self-distilling BERT with Adaptive Inference Time

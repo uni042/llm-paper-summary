@@ -35,10 +35,15 @@
   "selection_reason": "大規模視覚言語モデルの深層ほど増えるvisual token冗長性を利用し、stageごとに類似度でimage tokenを段階的にdropする。LLaVA-NeXTで推論FLOPsを55%削減し、training-free inference accelerationとしても機能するためMLLM推論効率化の対象。",
   "semantic_scholar_id": "260f54bc42934cb85c71318863b5f3b2c042d92f",
   "source_url": "https://arxiv.org/abs/2410.17247",
-  "status": "ready",
+  "status": "superseded",
   "title": "PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-08T12:14:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md",
+  "represented_canonical_id": "arXiv:2410.17247",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
