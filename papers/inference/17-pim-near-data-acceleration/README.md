@@ -37,7 +37,7 @@
 
 - **2026-03 · [Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator](2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  既存の近メモリ処理（NMP）はDRAM近傍へ演算器を置くが、注意機構 ヘッド単位など粗いKV配置と固定的な実行流では、要求長・到着率が変動するオンライン負荷で処理エンジン間の不均衡が生じる。
+  Heliosは、動的な大規模言語モデルの推論提供に適した三次元積層DRAM型の近メモリ処理装置を、記憶管理・演算・通信の三層から共同設計する研究である。Heliosは鍵・値キャッシュを64トークンなどの細粒度ブロックに分割し、4×4個の処理エンジンへ分散配置する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 

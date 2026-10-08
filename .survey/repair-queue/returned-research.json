@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T09:03:36+00:00",
+  "generated_at": "2026-10-08T09:12:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 166,
+  "count": 165,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -644,22 +644,6 @@
       "worker_run_key": "20261002-2345-scheduled-chat-45"
     },
     {
-      "canonical_id": "arXiv:2402.17985",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:55:47+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ff65adc991308191bbab813cdb7af65b--2024-2402.17985-flattenquant.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ff65adc991308191bbab813cdb7af65b--2024-2402.17985-flattenquant.json",
-      "worker_run_key": "20261003-0128-scheduled-chat-30"
-    },
-    {
       "canonical_id": "arXiv:2608.21952",
       "title": null,
       "source_url": null,
@@ -1154,22 +1138,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f2d18772ee5c8191939296f406b7aedd--2026-2609.39329-patchkv.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f2d18772ee5c8191939296f406b7aedd--2026-2609.39329-patchkv.json",
       "worker_run_key": "20261004-1630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2401.06118",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T11:52:28+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md と 6 段落 / 1257文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8f8d8ce3db148191822546e448b91109--2024-2401.06118-aqlm.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8f8d8ce3db148191822546e448b91109--2024-2401.06118-aqlm.json",
-      "worker_run_key": "20261004-1700-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2402.12374",
@@ -3078,8 +3046,8 @@
     },
     {
       "canonical_id": "arXiv:2609.02108",
-      "title": "Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models",
-      "source_url": "https://arxiv.org/abs/2609.02108",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T09:02:28+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -3105,8 +3073,8 @@
     },
     {
       "canonical_id": "arXiv:2401.08294",
-      "title": "Inferflow: an Efficient and Highly Configurable Inference Engine for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2401.08294",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T09:02:29+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -3133,8 +3101,8 @@
     },
     {
       "canonical_id": "arXiv:2403.09054",
-      "title": "Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference",
-      "source_url": "https://proceedings.mlsys.org/paper_files/paper/2024/hash/48fecef47b19fe501d27d338b6d52582-Abstract-Conference.html",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T09:02:30+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -3160,8 +3128,8 @@
     },
     {
       "canonical_id": "arXiv:2410.10819",
-      "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
-      "source_url": "https://arxiv.org/abs/2410.10819",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T09:02:30+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -3184,6 +3152,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_225f945b70c88191b1e0abbb322d45c5--2024-2410.10819-duoattention-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_225f945b70c88191b1e0abbb322d45c5--2024-2410.10819-duoattention-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2509.11815",
+      "title": "SpecVLM: Fast Speculative Decoding in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.11815",
+      "returned_at": "2026-10-08T09:09:48+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4170,
+        "body_paragraphs": 24,
+        "method_chars": 1719,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 201,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_257f590f15108191855a2de836f101a2--specvlm-2509.11815-under16kb-reaudit-20261008-0927-scheduled-chat-30.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_257f590f15108191855a2de836f101a2--specvlm-2509.11815-under16kb-reaudit-20261008-0927-scheduled-chat-30.json",
+      "worker_run_key": "20261008-0927-scheduled-chat-30/r01"
     }
   ]
 }
