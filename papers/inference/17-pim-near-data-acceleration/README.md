@@ -110,7 +110,7 @@
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   一方、注意機構のKV読出しは生成トークンごとに過去KVを走査するGEMV寄りの処理となり、メモリ帯域が支配的になる。GPU-only比3倍、NPU-only比約2.4倍、単純統合比1.6倍のスループット改善を報告する。
 
 ### 5年前（2021-11〜2022-10）
