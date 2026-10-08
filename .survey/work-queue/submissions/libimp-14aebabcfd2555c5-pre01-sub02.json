@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Momentum Transformer: Closing the Performance Gap Between Self-attention and Its Linearization",
+      "source_url": "https://arxiv.org/abs/2208.00579",
+      "year": 2022,
+      "published": "2022-08-01",
+      "venue": "Mathematical and Scientific Machine Learning",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have achieved remarkable success in sequence modeling and beyond but suffer from quadratic computational and memory complexities with respect to the length of the input sequence. Leveraging techniques include sparse and linear attention and hashing tricks; efficient transformers have been proposed to reduce the quadratic complexity of transformers but significantly degrade the accuracy. In response, we first interpret the linear attention and residual connections in computing the attention map as gradient descent steps. We then introduce momentum into these components and propose the \\emph{momentum transformer}, which utilizes momentum to improve the accuracy of linear transformers while maintaining linear memory and computational complexities. Furthermore, we develop an adaptive strategy to compute the momentum value for our model based on the optimal momentum for quadratic optimization. This adaptive momentum eliminates the need to search for the optimal momentum value and further enhances the performance of the momentum transformer. A range of experiments on both autoregressive and non-autoregressive tasks, including image generation and machine translation, demonstrate that the momentum transformer outperforms popular linear transformers in training efficiency and accuracy.",
+      "identifiers": [
+        "SemanticScholar:260b9388c90b497218b591a9a0e2742b7e0951e5"
+      ],
+      "semantic_scholar_id": "260b9388c90b497218b591a9a0e2742b7e0951e5",
+      "canonical_id": "arXiv:2208.00579",
+      "arxiv_id": "2208.00579",
+      "doi": "10.48550/arXiv.2208.00579",
+      "authors": [
+        "T. Nguyen",
+        "Richard Baraniuk",
+        "Robert M. Kirby",
+        "S. Osher",
+        "Bao Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1529,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes a linearized attention Transformer with linear memory/compute behavior for autoregressive tasks, a directly relevant efficient-attention foundation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Qift: Shift-Friendly No-Zero W2 Post-Training Quantization for Rotated W2A4/KV4 LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.02823",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Two-bit weight quantization is attractive for memory-efficient LLM inference, but the standard W2 level set {-2,-1,0,+1} often collapses under aggressive W2A4/KV4 settings. We study the scalar level-set geometry of two-bit weights in a Hadamard-rotated quantization pipeline. Conventional asymmetric W2 substantially improves over the standard level set, indicating that W2A4 failure is not only a bit-width problem but also a reconstruction-level problem. Across all 224 linear modules in each of LLaMA-2-7B and LLaMA-3.1-8B, pretrained weights are already nearly zero-centered, while Hadamard rotation primarily Gaussianizes their standardized shape: excess kurtosis and Q-Q error drop by orders of magnitude. Based on this approximate zero-centered Gaussian-like source model, we propose Qift, a fixed no-zero W2 level set for rotated W2A4/KV4 inference. The main level set is {+/-0.5, +/-1.5}, equivalently {+/-1, +/-3} under a half-scale reparameterization; a power-of-two variant uses {+/-1, +/-4} for sign-and-shift decoded weight application. Qift redesigns the fixed two-bit code-to-level mapping and is training-free, learned-codebook-free, group-grid-free, and zero-point-free, retaining the standard per-channel scale. A scale-invariant ratio analysis identifies an effective inner/outer centroid ratio range of 0.25 to 0.33, explaining why mirror no-zero (MNZ), Lloyd, NF2, and PoT-MNZ perform well while {+/-1, +/-2} does not. On both models, the no-zero level sets consistently improve pure W2A4 perplexity, L-layer mixed W2/W4 perplexity, downstream accuracy, and GPTQ residual behavior over the standard W2 level set. At L=16 mixed precision, they substantially narrow the gap to W3A4 while keeping half of the transformer layers at two-bit precision, giving a simple, source-aware, and deployment-friendly alternative to more complex learned W2 codebooks.",
+      "identifiers": [
+        "SemanticScholar:aca553bdbd4d36c5033fc742f044692f83bd985d"
+      ],
+      "semantic_scholar_id": "aca553bdbd4d36c5033fc742f044692f83bd985d",
+      "canonical_id": "arXiv:2606.02823",
+      "arxiv_id": "2606.02823",
+      "doi": "10.48550/arXiv.2606.02823",
+      "authors": [
+        "Chin-Wei Huang",
+        "Chia-Chi Tsai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents post-training low-bit weight/activation/KV quantization for LLM inference, directly targeting memory and computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A JoLT for the KV cache: Near-Lossless KV Cache Compression via Joint Rank-bit Allocation",
+      "source_url": "https://arxiv.org/abs/2607.12550",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache is the dominant memory bottleneck in long-context language model inference. Existing compression methods apply low-rank factorization or quantization independently, without jointly allocating rank and precision under a shared storage budget. We introduce JoLT, a training-free compressor that treats grouped prefill caches as fourth-order tensors and applies partial Tucker decomposition along the token and feature modes, the two axes that carry low-rank structure, while leaving the head and layer modes intact. A rotated low-bit quantizer captures the truncation residual, and a single Lagrangian dual allocates per-group Tucker ranks and residual bit-widths under a global byte constraint. FlashJoLT replaces the exact token-mode SVD with a randomized approximation that matches JoLT within the free zone at a fraction of the compression cost, and a fused Triton decode kernel evaluates attention directly over the stored factors without materializing dense KV tensors. Across five models from four architecture families, covering multi-head attention, grouped-query attention, and mixture-of-experts architecture, JoLT achieves 2 - 3x compression with less than 0.2% perplexity degradation, without retraining. On RULER at 64K context with LLaMA-3.1-8B, retrieval accuracy remains near-lossless through 3x and declines by only 0.90 and 2.40pp at 4x and 5x, respectively. JoLT demonstrates that tensor-aware low-rank decomposition and quantized residuals, unified under a single storage budget, achieve near-lossless KV-cache compression across diverse model architectures without retraining.",
+      "identifiers": [
+        "SemanticScholar:987db28d690bb277289c0472809dba523e438619"
+      ],
+      "semantic_scholar_id": "987db28d690bb277289c0472809dba523e438619",
+      "canonical_id": "arXiv:2607.12550",
+      "arxiv_id": "2607.12550",
+      "authors": [
+        "Rahul G. Krishnan",
+        "Volker Schulz"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 86,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract for arXiv:2607.12550 confirms same work under a revised title and proposes near-lossless KV-cache compression with rank/bit allocation, directly relevant to LLM inference memory.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Learning What Matters: Supervising Global Context Pruning with Causal Evidence Sets",
+      "source_url": "https://arxiv.org/abs/2607.21692",
+      "year": 2026,
+      "published": "2026-07-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning a long context means committing to the blocks a model will keep, and the usual selector is distilled from a dense teacher's attention. That assumes attention shows which context the answer depends on. We test the assumption on retrieval tasks where the evidence is known exactly, by masking context and measuring whether the answer changes. Attention and causal dependence disagree. Teachers attend to outdated facts that the answer does not depend on, and they attend differently across training runs that use the same evidence. Selectors trained on that attention copy both failures. On a multi-hop retrieval task, a selector distilled from attention routes at 36% to 98% depending on the training run. The same selector trained on causal evidence sets reaches 99% or better on every run. Dense accuracy does not tell the teachers apart. Masking the frozen teacher recovers the causal sets of these tasks without annotations. Frozen pretrained models show the same conflict, and selectors supervised with known evidence labels beat attention-based eviction through 32B when context must be pruned before the question arrives.",
+      "identifiers": [
+        "SemanticScholar:76d507f5ea0bc5d568e0689e2f612fab1b0e12c8"
+      ],
+      "semantic_scholar_id": "76d507f5ea0bc5d568e0689e2f612fab1b0e12c8",
+      "canonical_id": "arXiv:2607.21692",
+      "arxiv_id": "2607.21692",
+      "doi": "10.48550/arXiv.2607.21692",
+      "authors": [
+        "Jim Allchin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 77,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official arXiv record under the same candidate work identifies a title revision; its abstract evaluates sparse context pruning and causal-evidence routers that improve long-context inference routing.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accurate Block Quantization in LLMs with Outliers",
+      "source_url": "https://arxiv.org/abs/2403.20137",
+      "year": 2024,
+      "published": "2024-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The demand for inference on extremely large scale LLMs has seen enormous growth in the recent months. It made evident the colossal shortage of dedicated hardware capable of efficient and fast processing of the involved compute and memory movement. The problem is aggravated by the exploding raise in the lengths of the sequences being processed, since those require efficient on-chip storage of the KV-cache of size proportional to the sequence length. To make the required compute feasible and fit the involved data into available memory, numerous quantization techniques have been proposed that allow accurate quantization for both weights and activations. One of the main recent breakthroughs in this direction was introduction of the family of Block Floating Point (BFP) formats characterized by a block of mantissas with a shared scale factor. These enable memory- power-, and compute- efficient hardware support of the tensor operations and provide extremely good quantization accuracy. The main issues preventing widespread application of block formats is caused by the presence of outliers in weights and activations since those affect the accuracy of the other values in the same block. In this paper, we focus on the most critical problem of limited KV-cache storage. We propose a novel approach enabling usage of low precision BFP formats without compromising the resulting model accuracy. We exploit the common channel-wise patterns exhibited by the outliers to rearrange them in such a way, that their quantization quality is significantly improved. The methodology yields 2x savings in the memory footprint without significant degradation of the model's accuracy. Importantly, the rearrangement of channels happens at the compile time and thus has no impact on the inference latency.",
+      "identifiers": [
+        "SemanticScholar:4ad6072e03202e6210698ee34ca41aa75ca295d7"
+      ],
+      "semantic_scholar_id": "4ad6072e03202e6210698ee34ca41aa75ca295d7",
+      "canonical_id": "arXiv:2403.20137",
+      "arxiv_id": "2403.20137",
+      "doi": "10.48550/arXiv.2403.20137",
+      "authors": [
+        "Nikita Trukhanov",
+        "I. Soloveychik"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 923,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes block quantization of LLM weights, activations and KV cache, reducing memory while maintaining inference performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-14aebabcfd25",
+    "round": "libimp-14aebabcfd2555c5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-14aebabcfd2555c5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-14aebabcfd2555c5-pre01.json",
+    "receipt": "sha256:9131f03f5e05af97510c1aa0651fadb3b1320923d55bf765669f548b8c082f64"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-14aebabcfd25",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

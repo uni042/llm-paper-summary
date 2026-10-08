@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Mixture-of-Depths Attention",
+      "source_url": "https://arxiv.org/abs/2603.15619",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling depth is a key driver for large language models (LLMs). Yet, as LLMs become deeper, they often suffer from signal degradation: informative features formed in shallow layers are gradually diluted by repeated residual updates, making them harder to recover in deeper layers. We introduce mixture-of-depths attention (MoDA), a mechanism that allows each attention head to attend to sequence KV pairs at the current layer and depth KV pairs from preceding layers. We further describe a hardware-efficient algorithm for MoDA that resolves non-contiguous memory-access patterns, achieving 97.3% of FlashAttention-2's efficiency at a sequence length of 64K. Experiments on 1.5B-parameter models demonstrate that MoDA consistently outperforms strong baselines. Notably, it improves average perplexity by 0.2 across 10 validation benchmarks and increases average performance by 2.11% on 10 downstream tasks, with a negligible 3.7% FLOPs computational overhead. We also find that combining MoDA with post-norm yields better performance than using it with pre-norm. These results suggest that MoDA is a promising primitive for depth scaling. Code is released at https://github.com/hustvl/MoDA .",
+      "identifiers": [
+        "SemanticScholar:b56e962d573de2dc8cb3c46c19423bb352a92d43"
+      ],
+      "semantic_scholar_id": "b56e962d573de2dc8cb3c46c19423bb352a92d43",
+      "canonical_id": "arXiv:2603.15619",
+      "arxiv_id": "2603.15619",
+      "doi": "10.48550/arXiv.2603.15619",
+      "authors": [
+        "Liang-Hui Zhu",
+        "Yuxin Fang",
+        "Ben-Cheng Liao",
+        "Shijie Wang",
+        "Tian-Heng Cheng",
+        "Zilong Huang",
+        "Chen Chen",
+        "Lai Wei",
+        "Yutao Zeng",
+        "Ya Wang",
+        "Yi Lin",
+        "Yu Li",
+        "Xing-Gang Wang"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 206,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents hardware-efficient depth attention and reports high FlashAttention2 efficiency at long contexts, directly targeting LLM attention cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Prompt Compression in Production Task Orchestration: A Pre-Registered Randomized Trial",
+      "source_url": "https://arxiv.org/abs/2603.23525",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The economics of prompt compression depend not only on reducing input tokens but on how compression changes output length, which is typically priced several times higher. We evaluate this in a pre-registered six-arm randomized controlled trial of prompt compression on production multi-agent task-orchestration, analyzing 358 successful Claude Sonnet 4.5 runs (59-61 per arm) drawn from a randomized corpus of 1,199 real orchestration instructions. We compare an uncompressed control with three uniform retention rates (r=0.8, 0.5, 0.2) and two structure-aware strategies (entropy-adaptive and recency-weighted), measuring total inference cost (input+output) and embedding-based response similarity. Moderate compression (r=0.5) reduced mean total cost by 27.9%, while aggressive compression (r=0.2) increased mean cost by 1.8% despite substantial input reduction, consistent with small mean output expansion (1.03x vs. control) and heavy-tailed uncertainty. Recency-weighted compression achieved 23.5% savings and, together with moderate compression, occupied the empirical cost-similarity Pareto frontier, whereas aggressive compression was dominated on both cost and similarity. These results show that\"compress more\"is not a reliable production heuristic and that output tokens must be treated as a first-class outcome when designing compression policies.",
+      "identifiers": [
+        "SemanticScholar:389e00c608c5fc20ca5385b8862963d3cbb76ca2"
+      ],
+      "semantic_scholar_id": "389e00c608c5fc20ca5385b8862963d3cbb76ca2",
+      "canonical_id": "arXiv:2603.23525",
+      "arxiv_id": "2603.23525",
+      "doi": "10.48550/arXiv.2603.23525",
+      "authors": [
+        "Warren Johnson",
+        "Charles Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract reports a production randomized trial where prompt compression reduces total inference cost, directly relevant to LLM systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling Speculative Decoding with Lookahead Reasoning",
+      "source_url": "https://arxiv.org/abs/2506.19830",
+      "year": 2025,
+      "published": "2025-06-24",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models excel by generating long chain-of-thoughts, but decoding the resulting thousands of tokens is slow. Token-level speculative decoding (SD) helps, but its benefit is capped, because the chance that an entire $\\gamma$-token guess is correct falls exponentially as $\\gamma$ grows. This means allocating more compute for longer token drafts faces an algorithmic ceiling -- making the speedup modest and hardware-agnostic. We raise this ceiling with Lookahead Reasoning, which exploits a second, step-level layer of parallelism. Our key insight is that reasoning models generate step-by-step, and each step needs only to be semantically correct, not exact token matching. In Lookahead Reasoning, a lightweight draft model proposes several future steps; the target model expands each proposal in one batched pass, and a verifier keeps semantically correct steps while letting the target regenerate any that fail. Token-level SD still operates within each reasoning step, so the two layers of parallelism multiply. We show Lookahead Reasoning lifts the peak speedup of SD both theoretically and empirically. Across GSM8K, AIME, and other benchmarks, Lookahead Reasoning improves the speedup of SD from 1.4x to 2.1x while preserving answer quality, and its speedup scales better with additional GPU throughput. Our code is available at https://github.com/hao-ai-lab/LookaheadReasoning",
+      "identifiers": [
+        "SemanticScholar:0472ec6c89f0216f9c5901a1a3a79b24fee248bc"
+      ],
+      "semantic_scholar_id": "0472ec6c89f0216f9c5901a1a3a79b24fee248bc",
+      "canonical_id": "arXiv:2506.19830",
+      "arxiv_id": "2506.19830",
+      "doi": "10.48550/arXiv.2506.19830",
+      "authors": [
+        "Yi-Chao Fu",
+        "Rui Ge",
+        "Zelei Shao",
+        "Zhi-Jie Deng",
+        "Hao Zhang"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 471,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The abstract adds step-level parallelism to speculative decoding and reports inference speedups, directly relevant to efficient LLM generation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Performance Aware LLM Load Balancer for Mixed Workloads",
+      "source_url": "https://doi.org/10.1145/3721146.3721947",
+      "year": 2025,
+      "published": "2025-03-30",
+      "venue": "EuroMLSys",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) workloads consist of distinct prefill and decode phases, each with unique compute and memory requirements that should be considered when routing input queries across cluster instances. However, existing load-balancing algorithms treat these workloads as monolithic jobs, ignoring the differences between the two phases. This oversight leads to suboptimal query distribution and increased response latency. In our work, we first characterize the factors affecting response latency during LLM inference. We show that balancing inference requests across available LLM instances can improve end-to-end latency more than simply optimizing the instance-level scheduler. Motivated by these findings, we propose a heuristic-guided, reinforcement learning-based router for data-driven, workload-aware scheduling. Our router distributes queries across LLM instances by using a trainable response-length predictor and a novel formulation for estimating the impact of mixing different workloads, achieving over 11% lower end-to-end latency than existing methods on mixed public datasets. Our framework represents a first step toward a holistic optimization framework and serves as a benchmark for deriving optimal load balancing strategies tailored to different reward functions and requirements. Beyond latency, we can extend the proposed framework to optimize for various performance criteria ensuring that the system meets diverse operational objectives.",
+      "identifiers": [
+        "SemanticScholar:a041e2a094c038d305adf702f4b7b038b4ad5631"
+      ],
+      "semantic_scholar_id": "a041e2a094c038d305adf702f4b7b038b4ad5631",
+      "doi": "10.1145/3721146.3721947",
+      "canonical_id": "DOI:10.1145/3721146.3721947",
+      "authors": [
+        "Kunal Jain",
+        "Anjaly Parayil",
+        "Ankur Mallick",
+        "Esha Choukse",
+        "X. Qin",
+        "Jue Zhang",
+        "Íñigo Goiri",
+        "Ru-Jia Wang",
+        "Chetan Bansal",
+        "Victor Rühle",
+        "Anoop Kulkarni",
+        "Steve Kofsky",
+        "Saravan Rajmohan"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 557,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official Microsoft Research publication abstract describes phase-aware workload routing across LLM instances and reports lower end-to-end inference latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TransMLA: Migrating GQA Models to MLA with Full DeepSeek Compatibility and Speedup",
+      "source_url": "https://doi.org/10.52202/085713-2741",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large-language models often face communication bottlenecks on current hardware rather than computational limitations. Multi-head latent attention ( MLA ) addresses this by compressing the key-value cache using low-rank matrices, while the Absorb operation prevents the KV cache from reverting to its original size, significantly boosting both training and inference speed. Despite the success of DeepSeek V2/V3/R1, most model vendors have heavily invested in optimizing GQA-based models and therefore lack strong incentives to retrain MLA-based models from scratch. In this paper, we introduce TransMLA, a framework that seamlessly converts any GQA-based pre-trained model (e.g., LLaMA, Qwen, Mixtral) into an MLA-based model. For the first time, our method enables direct conversion of these models into a format compatible with DeepSeek’s codebase , allowing them to fully leverage DeepSeek-specific optimizations such as vLLM and SGlang. By compressing 93% of the KV cache in LLaMA-2-7B, we achieve a 10.6x speedup with an 8K context length while maintaining meaningful output. Moreover, the model requires only 6B tokens for fine-tuning to recover comparable performance across multiple benchmarks. TransMLA provides a practical path for migrating GQA-based models to the MLA structure, and when combined with DeepSeek’s advanced optimizations—such as FP8 quantization and Multi-Token Prediction—further inference acceleration can be achieved.",
+      "identifiers": [
+        "SemanticScholar:7c371ce3406a97b6abccec3bfd5436dd3758709c"
+      ],
+      "semantic_scholar_id": "7c371ce3406a97b6abccec3bfd5436dd3758709c",
+      "doi": "10.52202/085713-2741",
+      "canonical_id": "DOI:10.52202/085713-2741",
+      "authors": [
+        "Fan-Xu Meng",
+        "Pingzhi Tang",
+        "Zeng-Wei Yao",
+        "Xing Sun",
+        "Mu-Han Zhang"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 464,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The official OpenReview conference abstract describes migrating GQA to MLA for large KV-cache compression and serving speedups; the stable DOI/worklist record resolves to this paper.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-14aebabcfd25",
+    "round": "libimp-14aebabcfd2555c5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-14aebabcfd2555c5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-14aebabcfd2555c5-pre01.json",
+    "receipt": "sha256:9131f03f5e05af97510c1aa0651fadb3b1320923d55bf765669f548b8c082f64"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-14aebabcfd25",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
