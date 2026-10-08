@@ -135,12 +135,14 @@ canonical_id: arXiv:2306.11222
             blocked = root / ".survey/import-inbox/blocked/research"
             blocked.mkdir(parents=True)
             source = blocked / "prefixbench.md"
-            original = (
-                "---\\ncanonical_id: arXiv:2609.19657\\n"
-                "under16kb_reaudit_target_path: papers/inference/prefixbench.md\\n"
-                "under16kb_reaudit_passed: true\\n"
-                "title: PrefixBench\\n---\\n# Verified paper revision\\n"
-            )
+            original = """---
+canonical_id: arXiv:2609.19657
+under16kb_reaudit_target_path: papers/inference/prefixbench.md
+under16kb_reaudit_passed: true
+title: PrefixBench
+---
+# Verified paper revision
+"""
             source.write_text(original, encoding="utf-8")
             # A historical success for the original represented identity does
             # not mean this newer pinned re-audit was imported.
