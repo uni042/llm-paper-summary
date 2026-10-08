@@ -38,7 +38,17 @@ def _read(path: Path, default: Any = None) -> Any:
 
 def _write(path: Path, value: Any) -> bool:
     path.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    # This state includes tens of thousands of citation candidates. Pretty
+    # printing caused GitHub to reject updates above its 100 MiB blob limit.
+    # Serialize compactly without discarding seeds, candidates, or provenance.
+    text = json.dumps(value, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n"
+    encoded_size = len(text.encode("utf-8"))
+    max_github_blob_bytes = 90 * 1024 * 1024
+    if encoded_size >= max_github_blob_bytes:
+        raise ValueError(
+            f"forward citation state is {encoded_size} bytes after compaction; "
+            "refusing to create an unpublishable git blob (90 MiB safety limit)"
+        )
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
     with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as tmp:
