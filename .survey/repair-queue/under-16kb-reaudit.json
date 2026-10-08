@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T10:32:03.668407+00:00",
+  "generated_at": "2026-10-08T10:39:52.369954+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 539,
+  "count": 535,
   "worker_counts": {
-    "scheduled-chat-00": 181,
-    "scheduled-chat-30": 173,
+    "scheduled-chat-00": 180,
+    "scheduled-chat-30": 170,
     "scheduled-chat-45": 185
   },
   "entries": [
@@ -101,13 +101,13 @@
       "quality_metrics": {
         "body_chars": 1292,
         "method_chars": 455,
-        "evaluation_chars": 0,
+        "evaluation_chars": 135,
         "limitation_chars": 106
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1292 < 2200",
         "16KB未満再監査: 手法説明量 455 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 135 < 500"
       ],
       "warnings": []
     },
@@ -149,12 +149,12 @@
       "quality_metrics": {
         "body_chars": 1786,
         "method_chars": 705,
-        "evaluation_chars": 260,
+        "evaluation_chars": 375,
         "limitation_chars": 150
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1786 < 2200",
-        "16KB未満再監査: 評価説明量 260 < 500",
+        "16KB未満再監査: 評価説明量 375 < 500",
         "16KB未満再監査: 日本語比率 76.4% < 80%"
       ],
       "warnings": [
@@ -186,33 +186,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
-      "canonical_id": "arXiv:2007.08563",
-      "title": "FTRANS: Energy-Efficient Acceleration of Transformers using FPGA",
-      "file_bytes": 8155,
-      "source_sha256": "206f1126573feaebd57b3b85e27bf28bdcbba7db46bf55355a779b365e93f716",
-      "source_git_blob_sha": "2642c84fac3c7c367615d7b4d7df00d732266f6a",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.725319,
-      "quality_metrics": {
-        "body_chars": 1522,
-        "method_chars": 477,
-        "evaluation_chars": 108,
-        "limitation_chars": 199
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1522 < 2200",
-        "16KB未満再監査: 手法説明量 477 < 700",
-        "16KB未満再監査: 評価説明量 108 < 500",
-        "16KB未満再監査: 日本語比率 72.5% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.5% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md",
       "canonical_id": "arXiv:2411.01783",
       "title": "Context Parallelism for Scalable Million-Token Inference",
@@ -226,13 +199,13 @@
       "quality_metrics": {
         "body_chars": 1429,
         "method_chars": 463,
-        "evaluation_chars": 0,
+        "evaluation_chars": 109,
         "limitation_chars": 144
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1429 < 2200",
         "16KB未満再監査: 手法説明量 463 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 109 < 500"
       ],
       "warnings": []
     },
@@ -273,7 +246,7 @@
       "quality_metrics": {
         "body_chars": 2651,
         "method_chars": 700,
-        "evaluation_chars": 624,
+        "evaluation_chars": 902,
         "limitation_chars": 284
       },
       "mechanical_failures": [
@@ -321,13 +294,13 @@
       "quality_metrics": {
         "body_chars": 1268,
         "method_chars": 373,
-        "evaluation_chars": 0,
+        "evaluation_chars": 185,
         "limitation_chars": 105
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1268 < 2200",
         "16KB未満再監査: 手法説明量 373 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 185 < 500"
       ],
       "warnings": []
     },
@@ -444,13 +417,13 @@
       "quality_metrics": {
         "body_chars": 1378,
         "method_chars": 385,
-        "evaluation_chars": 0,
+        "evaluation_chars": 130,
         "limitation_chars": 145
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1378 < 2200",
         "16KB未満再監査: 手法説明量 385 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 130 < 500"
       ],
       "warnings": []
     },
@@ -468,13 +441,13 @@
       "quality_metrics": {
         "body_chars": 1181,
         "method_chars": 327,
-        "evaluation_chars": 0,
+        "evaluation_chars": 99,
         "limitation_chars": 140
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1181 < 2200",
         "16KB未満再監査: 手法説明量 327 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 99 < 500"
       ],
       "warnings": []
     },
@@ -541,17 +514,15 @@
       "source_git_blob_sha": "5bcf731d8442488e1e6dd7f46b83ae5ebfa7c0c5",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.941915,
       "quality_metrics": {
         "body_chars": 2279,
         "method_chars": 841,
-        "evaluation_chars": 341,
+        "evaluation_chars": 538,
         "limitation_chars": 253
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 341 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -568,12 +539,12 @@
       "quality_metrics": {
         "body_chars": 1835,
         "method_chars": 806,
-        "evaluation_chars": 0,
+        "evaluation_chars": 88,
         "limitation_chars": 172
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1835 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 88 < 500"
       ],
       "warnings": []
     },
@@ -639,13 +610,13 @@
       "quality_metrics": {
         "body_chars": 1342,
         "method_chars": 349,
-        "evaluation_chars": 0,
+        "evaluation_chars": 101,
         "limitation_chars": 137
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1342 < 2200",
         "16KB未満再監査: 手法説明量 349 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 101 < 500"
       ],
       "warnings": []
     },
@@ -714,12 +685,12 @@
       "quality_metrics": {
         "body_chars": 1661,
         "method_chars": 705,
-        "evaluation_chars": 0,
+        "evaluation_chars": 104,
         "limitation_chars": 153
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1661 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 104 < 500"
       ],
       "warnings": []
     },
@@ -811,13 +782,12 @@
       "quality_metrics": {
         "body_chars": 1861,
         "method_chars": 575,
-        "evaluation_chars": 352,
+        "evaluation_chars": 529,
         "limitation_chars": 159
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1861 < 2200",
-        "16KB未満再監査: 手法説明量 575 < 700",
-        "16KB未満再監査: 評価説明量 352 < 500"
+        "16KB未満再監査: 手法説明量 575 < 700"
       ],
       "warnings": []
     },
@@ -940,33 +910,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md",
-      "canonical_id": "arXiv:2302.08007",
-      "title": "With Shared Microexponents, A Little Shifting Goes a Long Way",
-      "file_bytes": 8710,
-      "source_sha256": "74294f22d29e8202367dcebe6af3a6bfadd3a140297931d15e75063337081ede",
-      "source_git_blob_sha": "67e54755f54669813ebf6d116f769c7bd18740ad",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.726227,
-      "quality_metrics": {
-        "body_chars": 1622,
-        "method_chars": 456,
-        "evaluation_chars": 262,
-        "limitation_chars": 129
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1622 < 2200",
-        "16KB未満再監査: 手法説明量 456 < 700",
-        "16KB未満再監査: 評価説明量 262 < 500",
-        "16KB未満再監査: 日本語比率 72.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.6% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2602.01469-p-eagle-parallel-drafting-eagle-with-scalable-training.md",
       "canonical_id": "arXiv:2602.01469",
       "title": "P-EAGLE: Parallel-Drafting EAGLE with Scalable Training",
@@ -1030,13 +973,13 @@
       "quality_metrics": {
         "body_chars": 1494,
         "method_chars": 388,
-        "evaluation_chars": 0,
+        "evaluation_chars": 297,
         "limitation_chars": 106
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1494 < 2200",
         "16KB未満再監査: 手法説明量 388 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 297 < 500"
       ],
       "warnings": []
     },
@@ -1104,12 +1047,12 @@
       "quality_metrics": {
         "body_chars": 1730,
         "method_chars": 766,
-        "evaluation_chars": 0,
+        "evaluation_chars": 92,
         "limitation_chars": 164
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1730 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 92 < 500"
       ],
       "warnings": []
     },
@@ -1247,13 +1190,13 @@
       "quality_metrics": {
         "body_chars": 1647,
         "method_chars": 503,
-        "evaluation_chars": 250,
+        "evaluation_chars": 387,
         "limitation_chars": 135
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1647 < 2200",
         "16KB未満再監査: 手法説明量 503 < 700",
-        "16KB未満再監査: 評価説明量 250 < 500"
+        "16KB未満再監査: 評価説明量 387 < 500"
       ],
       "warnings": []
     },
@@ -1369,12 +1312,11 @@
       "quality_metrics": {
         "body_chars": 2271,
         "method_chars": 638,
-        "evaluation_chars": 442,
+        "evaluation_chars": 676,
         "limitation_chars": 217
       },
       "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 638 < 700",
-        "16KB未満再監査: 評価説明量 442 < 500"
+        "16KB未満再監査: 手法説明量 638 < 700"
       ],
       "warnings": []
     },
@@ -1539,17 +1481,15 @@
       "source_git_blob_sha": "d63365bda21918db0a2a718b912fe53ebe05c6ba",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.971594,
       "quality_metrics": {
         "body_chars": 2373,
         "method_chars": 733,
-        "evaluation_chars": 394,
+        "evaluation_chars": 642,
         "limitation_chars": 202
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 394 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1665,13 +1605,13 @@
       "quality_metrics": {
         "body_chars": 2001,
         "method_chars": 421,
-        "evaluation_chars": 0,
+        "evaluation_chars": 409,
         "limitation_chars": 168
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 2001 < 2200",
         "16KB未満再監査: 手法説明量 421 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500",
+        "16KB未満再監査: 評価説明量 409 < 500",
         "16KB未満再監査: 日本語比率 77.7% < 80%"
       ],
       "warnings": [
@@ -1726,30 +1666,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.01336-hispec-hierarchical-speculative-decoding-for-llms.md",
-      "canonical_id": "arXiv:2510.01336",
-      "title": "HiSpec: Hierarchical Speculative Decoding for LLMs",
-      "file_bytes": 9122,
-      "source_sha256": "2dd036970e0b29e978f736f42fc14901fd4eb8ff1a4057e8c1c44ad9e8682e50",
-      "source_git_blob_sha": "7446bd37599adb4719866e80d3ae204d9c5ec762",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.994969,
-      "quality_metrics": {
-        "body_chars": 1607,
-        "method_chars": 538,
-        "evaluation_chars": 76,
-        "limitation_chars": 188
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1607 < 2200",
-        "16KB未満再監査: 手法説明量 538 < 700",
-        "16KB未満再監査: 評価説明量 76 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md",
       "canonical_id": "arXiv:2609.15810",
       "title": "VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention",
@@ -1777,30 +1693,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.01518-infinipot-infinite-context-processing-on-memory-constrained-llms.md",
-      "canonical_id": "arXiv:2410.01518",
-      "title": "InfiniPot: Infinite Context Processing on Memory-Constrained LLMs",
-      "file_bytes": 9171,
-      "source_sha256": "afff0e69889b7e1ea698696aad33aead276669447710d708251df6258a701279",
-      "source_git_blob_sha": "98a125603f2f0d4c7a0450082bbd61437571e3c7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 1683,
-        "method_chars": 680,
-        "evaluation_chars": 0,
-        "limitation_chars": 116
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1683 < 2200",
-        "16KB未満再監査: 手法説明量 680 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
       "canonical_id": "arXiv:2210.17223",
       "title": "Accelerating Distributed MoE Training and Inference with Lina",
@@ -1809,17 +1701,15 @@
       "source_git_blob_sha": "63d784de72c6af026a67ab965f8cc8789f940917",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.814106,
       "quality_metrics": {
         "body_chars": 2641,
         "method_chars": 834,
-        "evaluation_chars": 416,
+        "evaluation_chars": 699,
         "limitation_chars": 211
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 416 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1836,7 +1726,7 @@
       "quality_metrics": {
         "body_chars": 2601,
         "method_chars": 639,
-        "evaluation_chars": 627,
+        "evaluation_chars": 841,
         "limitation_chars": 287
       },
       "mechanical_failures": [
@@ -1882,13 +1772,13 @@
       "quality_metrics": {
         "body_chars": 1662,
         "method_chars": 626,
-        "evaluation_chars": 241,
+        "evaluation_chars": 382,
         "limitation_chars": 170
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1662 < 2200",
         "16KB未満再監査: 手法説明量 626 < 700",
-        "16KB未満再監査: 評価説明量 241 < 500"
+        "16KB未満再監査: 評価説明量 382 < 500"
       ],
       "warnings": []
     },
@@ -2052,7 +1942,7 @@
       "quality_metrics": {
         "body_chars": 2535,
         "method_chars": 619,
-        "evaluation_chars": 553,
+        "evaluation_chars": 884,
         "limitation_chars": 193
       },
       "mechanical_failures": [
@@ -2100,13 +1990,13 @@
       "quality_metrics": {
         "body_chars": 1697,
         "method_chars": 542,
-        "evaluation_chars": 0,
+        "evaluation_chars": 136,
         "limitation_chars": 130
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1697 < 2200",
         "16KB未満再監査: 手法説明量 542 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 136 < 500"
       ],
       "warnings": []
     },
@@ -2147,12 +2037,11 @@
       "quality_metrics": {
         "body_chars": 2411,
         "method_chars": 692,
-        "evaluation_chars": 451,
+        "evaluation_chars": 723,
         "limitation_chars": 249
       },
       "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 692 < 700",
-        "16KB未満再監査: 評価説明量 451 < 500"
+        "16KB未満再監査: 手法説明量 692 < 700"
       ],
       "warnings": []
     },
@@ -2294,7 +2183,7 @@
       "quality_metrics": {
         "body_chars": 2506,
         "method_chars": 576,
-        "evaluation_chars": 565,
+        "evaluation_chars": 1030,
         "limitation_chars": 176
       },
       "mechanical_failures": [
@@ -2460,7 +2349,7 @@
       "quality_metrics": {
         "body_chars": 2675,
         "method_chars": 812,
-        "evaluation_chars": 609,
+        "evaluation_chars": 851,
         "limitation_chars": 237
       },
       "mechanical_failures": [],
@@ -2600,7 +2489,7 @@
       "quality_metrics": {
         "body_chars": 2722,
         "method_chars": 849,
-        "evaluation_chars": 519,
+        "evaluation_chars": 796,
         "limitation_chars": 234
       },
       "mechanical_failures": [],
@@ -2644,13 +2533,13 @@
       "quality_metrics": {
         "body_chars": 1752,
         "method_chars": 601,
-        "evaluation_chars": 0,
+        "evaluation_chars": 112,
         "limitation_chars": 169
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1752 < 2200",
         "16KB未満再監査: 手法説明量 601 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 112 < 500"
       ],
       "warnings": []
     },
@@ -2694,7 +2583,7 @@
       "quality_metrics": {
         "body_chars": 2700,
         "method_chars": 633,
-        "evaluation_chars": 557,
+        "evaluation_chars": 738,
         "limitation_chars": 179
       },
       "mechanical_failures": [
@@ -2763,13 +2652,13 @@
       "quality_metrics": {
         "body_chars": 2150,
         "method_chars": 592,
-        "evaluation_chars": 261,
+        "evaluation_chars": 487,
         "limitation_chars": 195
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 2150 < 2200",
         "16KB未満再監査: 手法説明量 592 < 700",
-        "16KB未満再監査: 評価説明量 261 < 500"
+        "16KB未満再監査: 評価説明量 487 < 500"
       ],
       "warnings": []
     },
@@ -2858,11 +2747,10 @@
       "quality_metrics": {
         "body_chars": 2553,
         "method_chars": 799,
-        "evaluation_chars": 401,
+        "evaluation_chars": 725,
         "limitation_chars": 139
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 401 < 500",
         "16KB未満再監査: 日本語比率 75.6% < 80%"
       ],
       "warnings": [
@@ -2951,12 +2839,11 @@
       "quality_metrics": {
         "body_chars": 2244,
         "method_chars": 618,
-        "evaluation_chars": 398,
+        "evaluation_chars": 553,
         "limitation_chars": 196
       },
       "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 618 < 700",
-        "16KB未満再監査: 評価説明量 398 < 500"
+        "16KB未満再監査: 手法説明量 618 < 700"
       ],
       "warnings": []
     },
@@ -3112,7 +2999,7 @@
       "quality_metrics": {
         "body_chars": 2811,
         "method_chars": 792,
-        "evaluation_chars": 665,
+        "evaluation_chars": 996,
         "limitation_chars": 236
       },
       "mechanical_failures": [],
@@ -3155,7 +3042,7 @@
       "quality_metrics": {
         "body_chars": 2663,
         "method_chars": 553,
-        "evaluation_chars": 504,
+        "evaluation_chars": 712,
         "limitation_chars": 186
       },
       "mechanical_failures": [
@@ -3177,13 +3064,13 @@
       "quality_metrics": {
         "body_chars": 889,
         "method_chars": 252,
-        "evaluation_chars": 0,
+        "evaluation_chars": 55,
         "limitation_chars": 98
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 889 < 2200",
         "16KB未満再監査: 手法説明量 252 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 55 < 500"
       ],
       "warnings": []
     },
@@ -3220,17 +3107,15 @@
       "source_git_blob_sha": "519fefb94d036e4746382872d609ed4a1ec29ad0",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.924675,
       "quality_metrics": {
         "body_chars": 2485,
         "method_chars": 773,
-        "evaluation_chars": 400,
+        "evaluation_chars": 551,
         "limitation_chars": 255
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 400 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -3500,7 +3385,7 @@
       "quality_metrics": {
         "body_chars": 3358,
         "method_chars": 1373,
-        "evaluation_chars": 549,
+        "evaluation_chars": 770,
         "limitation_chars": 267
       },
       "mechanical_failures": [],
@@ -3678,7 +3563,7 @@
       "quality_metrics": {
         "body_chars": 2905,
         "method_chars": 791,
-        "evaluation_chars": 625,
+        "evaluation_chars": 979,
         "limitation_chars": 228
       },
       "mechanical_failures": [],
@@ -4005,13 +3890,13 @@
       "quality_metrics": {
         "body_chars": 1316,
         "method_chars": 546,
-        "evaluation_chars": 0,
+        "evaluation_chars": 154,
         "limitation_chars": 115
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1316 < 2200",
         "16KB未満再監査: 手法説明量 546 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 154 < 500"
       ],
       "warnings": []
     },
@@ -4024,17 +3909,15 @@
       "source_git_blob_sha": "341c18f921f6b25a138f7660128e58ab09ec451f",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.996701,
       "quality_metrics": {
         "body_chars": 2586,
         "method_chars": 857,
-        "evaluation_chars": 353,
+        "evaluation_chars": 681,
         "limitation_chars": 301
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 353 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -4099,12 +3982,12 @@
       "quality_metrics": {
         "body_chars": 1880,
         "method_chars": 789,
-        "evaluation_chars": 0,
+        "evaluation_chars": 85,
         "limitation_chars": 153
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1880 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 85 < 500"
       ],
       "warnings": []
     },
@@ -4210,7 +4093,7 @@
       "quality_metrics": {
         "body_chars": 2643,
         "method_chars": 738,
-        "evaluation_chars": 508,
+        "evaluation_chars": 924,
         "limitation_chars": 243
       },
       "mechanical_failures": [],
@@ -4274,12 +4157,12 @@
       "quality_metrics": {
         "body_chars": 2925,
         "method_chars": 566,
-        "evaluation_chars": 0,
+        "evaluation_chars": 421,
         "limitation_chars": 267
       },
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 566 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 421 < 500"
       ],
       "warnings": []
     },
@@ -4292,17 +4175,15 @@
       "source_git_blob_sha": "12331a0bcb9e46558435fd7f862e2830ee89b2a2",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.86611,
       "quality_metrics": {
         "body_chars": 2982,
         "method_chars": 995,
-        "evaluation_chars": 0,
+        "evaluation_chars": 678,
         "limitation_chars": 336
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -4319,13 +4200,12 @@
       "quality_metrics": {
         "body_chars": 2185,
         "method_chars": 457,
-        "evaluation_chars": 486,
+        "evaluation_chars": 635,
         "limitation_chars": 149
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 2185 < 2200",
-        "16KB未満再監査: 手法説明量 457 < 700",
-        "16KB未満再監査: 評価説明量 486 < 500"
+        "16KB未満再監査: 手法説明量 457 < 700"
       ],
       "warnings": []
     },
@@ -4391,7 +4271,7 @@
       "quality_metrics": {
         "body_chars": 2957,
         "method_chars": 819,
-        "evaluation_chars": 641,
+        "evaluation_chars": 1052,
         "limitation_chars": 232
       },
       "mechanical_failures": [
@@ -4435,11 +4315,11 @@
       "quality_metrics": {
         "body_chars": 2388,
         "method_chars": 1047,
-        "evaluation_chars": 0,
+        "evaluation_chars": 244,
         "limitation_chars": 119
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 244 < 500"
       ],
       "warnings": []
     },
@@ -4502,7 +4382,7 @@
       "quality_metrics": {
         "body_chars": 3220,
         "method_chars": 1117,
-        "evaluation_chars": 695,
+        "evaluation_chars": 946,
         "limitation_chars": 312
       },
       "mechanical_failures": [
@@ -4526,7 +4406,7 @@
       "quality_metrics": {
         "body_chars": 3175,
         "method_chars": 823,
-        "evaluation_chars": 765,
+        "evaluation_chars": 1001,
         "limitation_chars": 282
       },
       "mechanical_failures": [
@@ -4646,7 +4526,7 @@
       "quality_metrics": {
         "body_chars": 3239,
         "method_chars": 1107,
-        "evaluation_chars": 688,
+        "evaluation_chars": 945,
         "limitation_chars": 252
       },
       "mechanical_failures": [
@@ -4721,7 +4601,7 @@
       "quality_metrics": {
         "body_chars": 3304,
         "method_chars": 933,
-        "evaluation_chars": 688,
+        "evaluation_chars": 1063,
         "limitation_chars": 277
       },
       "mechanical_failures": [],
@@ -4936,12 +4816,11 @@
       "quality_metrics": {
         "body_chars": 2608,
         "method_chars": 660,
-        "evaluation_chars": 483,
+        "evaluation_chars": 691,
         "limitation_chars": 189
       },
       "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 660 < 700",
-        "16KB未満再監査: 評価説明量 483 < 500"
+        "16KB未満再監査: 手法説明量 660 < 700"
       ],
       "warnings": []
     },
@@ -5043,17 +4922,15 @@
       "source_git_blob_sha": "a70a2d34f2294bf99050fb6053f2d5b435c82d3e",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.949656,
       "quality_metrics": {
         "body_chars": 2897,
         "method_chars": 808,
-        "evaluation_chars": 493,
+        "evaluation_chars": 834,
         "limitation_chars": 297
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 493 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -5070,7 +4947,7 @@
       "quality_metrics": {
         "body_chars": 3171,
         "method_chars": 924,
-        "evaluation_chars": 838,
+        "evaluation_chars": 1222,
         "limitation_chars": 248
       },
       "mechanical_failures": [
@@ -5114,13 +4991,13 @@
       "quality_metrics": {
         "body_chars": 1731,
         "method_chars": 698,
-        "evaluation_chars": 0,
+        "evaluation_chars": 134,
         "limitation_chars": 184
       },
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1731 < 2200",
         "16KB未満再監査: 手法説明量 698 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 134 < 500"
       ],
       "warnings": []
     },
@@ -5293,11 +5170,11 @@
       "quality_metrics": {
         "body_chars": 2368,
         "method_chars": 796,
-        "evaluation_chars": 0,
+        "evaluation_chars": 449,
         "limitation_chars": 166
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 449 < 500"
       ],
       "warnings": []
     },
@@ -5645,7 +5522,7 @@
       "quality_metrics": {
         "body_chars": 3659,
         "method_chars": 772,
-        "evaluation_chars": 1005,
+        "evaluation_chars": 1485,
         "limitation_chars": 478
       },
       "mechanical_failures": [
@@ -5669,7 +5546,7 @@
       "quality_metrics": {
         "body_chars": 3641,
         "method_chars": 1021,
-        "evaluation_chars": 944,
+        "evaluation_chars": 1239,
         "limitation_chars": 325
       },
       "mechanical_failures": [
@@ -5693,7 +5570,7 @@
       "quality_metrics": {
         "body_chars": 3208,
         "method_chars": 702,
-        "evaluation_chars": 654,
+        "evaluation_chars": 1163,
         "limitation_chars": 221
       },
       "mechanical_failures": [],
@@ -5983,7 +5860,7 @@
       "quality_metrics": {
         "body_chars": 2705,
         "method_chars": 679,
-        "evaluation_chars": 589,
+        "evaluation_chars": 842,
         "limitation_chars": 229
       },
       "mechanical_failures": [
@@ -6168,17 +6045,15 @@
       "source_git_blob_sha": "d8dfa8a089775a0b260ae3a9fa90a5bb9263e1d9",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 1.0,
       "quality_metrics": {
         "body_chars": 2328,
         "method_chars": 971,
-        "evaluation_chars": 267,
+        "evaluation_chars": 530,
         "limitation_chars": 0
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 267 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -6217,7 +6092,7 @@
       "quality_metrics": {
         "body_chars": 2595,
         "method_chars": 640,
-        "evaluation_chars": 514,
+        "evaluation_chars": 702,
         "limitation_chars": 143
       },
       "mechanical_failures": [
@@ -6259,11 +6134,10 @@
       "quality_metrics": {
         "body_chars": 3071,
         "method_chars": 1053,
-        "evaluation_chars": 368,
+        "evaluation_chars": 677,
         "limitation_chars": 330
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 368 < 500",
         "16KB未満再監査: 日本語比率 73.8% < 80%"
       ],
       "warnings": [
@@ -6284,11 +6158,11 @@
       "quality_metrics": {
         "body_chars": 2524,
         "method_chars": 1023,
-        "evaluation_chars": 0,
+        "evaluation_chars": 316,
         "limitation_chars": 137
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 316 < 500"
       ],
       "warnings": []
     },
@@ -6441,7 +6315,7 @@
       "quality_metrics": {
         "body_chars": 3031,
         "method_chars": 685,
-        "evaluation_chars": 557,
+        "evaluation_chars": 788,
         "limitation_chars": 197
       },
       "mechanical_failures": [
@@ -6932,7 +6806,7 @@
       "quality_metrics": {
         "body_chars": 3399,
         "method_chars": 946,
-        "evaluation_chars": 566,
+        "evaluation_chars": 923,
         "limitation_chars": 322
       },
       "mechanical_failures": [],
@@ -7038,7 +6912,7 @@
       "quality_metrics": {
         "body_chars": 3802,
         "method_chars": 1352,
-        "evaluation_chars": 797,
+        "evaluation_chars": 1238,
         "limitation_chars": 381
       },
       "mechanical_failures": [
@@ -7146,7 +7020,7 @@
       "quality_metrics": {
         "body_chars": 3870,
         "method_chars": 1020,
-        "evaluation_chars": 801,
+        "evaluation_chars": 1271,
         "limitation_chars": 435
       },
       "mechanical_failures": [],
@@ -7317,12 +7191,12 @@
       "quality_metrics": {
         "body_chars": 3326,
         "method_chars": 666,
-        "evaluation_chars": 256,
+        "evaluation_chars": 438,
         "limitation_chars": 217
       },
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 666 < 700",
-        "16KB未満再監査: 評価説明量 256 < 500"
+        "16KB未満再監査: 評価説明量 438 < 500"
       ],
       "warnings": []
     },
@@ -7340,7 +7214,7 @@
       "quality_metrics": {
         "body_chars": 3073,
         "method_chars": 1020,
-        "evaluation_chars": 503,
+        "evaluation_chars": 833,
         "limitation_chars": 295
       },
       "mechanical_failures": [],
@@ -7554,7 +7428,7 @@
       "quality_metrics": {
         "body_chars": 4071,
         "method_chars": 1251,
-        "evaluation_chars": 702,
+        "evaluation_chars": 1123,
         "limitation_chars": 321
       },
       "mechanical_failures": [
@@ -7705,17 +7579,15 @@
       "source_git_blob_sha": "2f203a052a2d6d30d752dbf52c091eab1184acd6",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.861878,
       "quality_metrics": {
         "body_chars": 3513,
         "method_chars": 1099,
-        "evaluation_chars": 320,
+        "evaluation_chars": 542,
         "limitation_chars": 269
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 320 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -7796,11 +7668,11 @@
       "quality_metrics": {
         "body_chars": 2491,
         "method_chars": 1118,
-        "evaluation_chars": 0,
+        "evaluation_chars": 263,
         "limitation_chars": 125
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 263 < 500"
       ],
       "warnings": []
     },
@@ -7903,17 +7775,15 @@
       "source_git_blob_sha": "7b03d92cf803506749f792ff50af3347e4c653ba",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.929873,
       "quality_metrics": {
         "body_chars": 2926,
         "method_chars": 839,
-        "evaluation_chars": 489,
+        "evaluation_chars": 810,
         "limitation_chars": 312
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 489 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -7952,7 +7822,7 @@
       "quality_metrics": {
         "body_chars": 4049,
         "method_chars": 1254,
-        "evaluation_chars": 801,
+        "evaluation_chars": 1320,
         "limitation_chars": 449
       },
       "mechanical_failures": [
@@ -7976,11 +7846,11 @@
       "quality_metrics": {
         "body_chars": 3417,
         "method_chars": 1076,
-        "evaluation_chars": 0,
+        "evaluation_chars": 280,
         "limitation_chars": 287
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 280 < 500"
       ],
       "warnings": []
     },
@@ -8064,11 +7934,11 @@
       "quality_metrics": {
         "body_chars": 3179,
         "method_chars": 933,
-        "evaluation_chars": 147,
+        "evaluation_chars": 291,
         "limitation_chars": 165
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 147 < 500"
+        "16KB未満再監査: 評価説明量 291 < 500"
       ],
       "warnings": []
     },
@@ -8106,7 +7976,7 @@
       "quality_metrics": {
         "body_chars": 3790,
         "method_chars": 895,
-        "evaluation_chars": 510,
+        "evaluation_chars": 833,
         "limitation_chars": 318
       },
       "mechanical_failures": [],
@@ -8148,7 +8018,7 @@
       "quality_metrics": {
         "body_chars": 3967,
         "method_chars": 1106,
-        "evaluation_chars": 811,
+        "evaluation_chars": 1181,
         "limitation_chars": 445
       },
       "mechanical_failures": [
@@ -8238,11 +8108,11 @@
       "quality_metrics": {
         "body_chars": 2848,
         "method_chars": 1215,
-        "evaluation_chars": 0,
+        "evaluation_chars": 294,
         "limitation_chars": 154
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 評価説明量 294 < 500"
       ],
       "warnings": []
     },
@@ -8480,7 +8350,7 @@
       "quality_metrics": {
         "body_chars": 3686,
         "method_chars": 972,
-        "evaluation_chars": 982,
+        "evaluation_chars": 1421,
         "limitation_chars": 265
       },
       "mechanical_failures": [],
@@ -8500,7 +8370,7 @@
       "quality_metrics": {
         "body_chars": 4376,
         "method_chars": 1132,
-        "evaluation_chars": 1247,
+        "evaluation_chars": 1667,
         "limitation_chars": 427
       },
       "mechanical_failures": [
@@ -8567,17 +8437,15 @@
       "source_git_blob_sha": "e0776aac4fa2104c66f312f04b2caba9d7fe0671",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.845276,
       "quality_metrics": {
         "body_chars": 3194,
         "method_chars": 1251,
-        "evaluation_chars": 458,
+        "evaluation_chars": 612,
         "limitation_chars": 214
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 458 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -8875,11 +8743,11 @@
       "quality_metrics": {
         "body_chars": 2895,
         "method_chars": 996,
-        "evaluation_chars": 203,
+        "evaluation_chars": 292,
         "limitation_chars": 334
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 203 < 500"
+        "16KB未満再監査: 評価説明量 292 < 500"
       ],
       "warnings": []
     },
@@ -9312,17 +9180,15 @@
       "source_git_blob_sha": "5166ab3aea106a5261f0e4caeea36b7bb9205d47",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.990361,
       "quality_metrics": {
         "body_chars": 2413,
         "method_chars": 1072,
-        "evaluation_chars": 229,
+        "evaluation_chars": 505,
         "limitation_chars": 0
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 229 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -9380,17 +9246,15 @@
       "source_git_blob_sha": "aa0bedc7dc165da0e038c1a357139ebbd3a2bbc7",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.889895,
       "quality_metrics": {
         "body_chars": 3920,
         "method_chars": 1175,
-        "evaluation_chars": 385,
+        "evaluation_chars": 702,
         "limitation_chars": 329
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 385 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -9449,12 +9313,11 @@
       "quality_metrics": {
         "body_chars": 2278,
         "method_chars": 624,
-        "evaluation_chars": 0,
+        "evaluation_chars": 752,
         "limitation_chars": 185
       },
       "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 624 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "16KB未満再監査: 手法説明量 624 < 700"
       ],
       "warnings": []
     },
@@ -9518,11 +9381,11 @@
       "quality_metrics": {
         "body_chars": 3336,
         "method_chars": 1001,
-        "evaluation_chars": 270,
+        "evaluation_chars": 408,
         "limitation_chars": 210
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 270 < 500"
+        "16KB未満再監査: 評価説明量 408 < 500"
       ],
       "warnings": []
     },
@@ -9694,11 +9557,11 @@
       "quality_metrics": {
         "body_chars": 2233,
         "method_chars": 919,
-        "evaluation_chars": 264,
+        "evaluation_chars": 490,
         "limitation_chars": 0
       },
       "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 264 < 500"
+        "16KB未満再監査: 評価説明量 490 < 500"
       ],
       "warnings": []
     },
@@ -9716,7 +9579,7 @@
       "quality_metrics": {
         "body_chars": 4573,
         "method_chars": 1514,
-        "evaluation_chars": 1316,
+        "evaluation_chars": 1604,
         "limitation_chars": 481
       },
       "mechanical_failures": [
@@ -9780,17 +9643,15 @@
       "source_git_blob_sha": "556ac12fd4bbddcf02175297b3674fcdc5d99e2f",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.99489,
       "quality_metrics": {
         "body_chars": 2309,
         "method_chars": 985,
-        "evaluation_chars": 260,
+        "evaluation_chars": 501,
         "limitation_chars": 148
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 260 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -9824,17 +9685,15 @@
       "source_git_blob_sha": "af720a76727ebffce25c35bafcdf964ba587b251",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.853726,
       "quality_metrics": {
         "body_chars": 3886,
         "method_chars": 1253,
-        "evaluation_chars": 417,
+        "evaluation_chars": 692,
         "limitation_chars": 345
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 417 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -9983,7 +9842,7 @@
       "quality_metrics": {
         "body_chars": 4476,
         "method_chars": 1213,
-        "evaluation_chars": 1290,
+        "evaluation_chars": 1624,
         "limitation_chars": 519
       },
       "mechanical_failures": [
@@ -10153,7 +10012,7 @@
       "quality_metrics": {
         "body_chars": 3209,
         "method_chars": 608,
-        "evaluation_chars": 606,
+        "evaluation_chars": 1124,
         "limitation_chars": 242
       },
       "mechanical_failures": [
@@ -10202,7 +10061,7 @@
       "quality_metrics": {
         "body_chars": 3277,
         "method_chars": 836,
-        "evaluation_chars": 697,
+        "evaluation_chars": 1080,
         "limitation_chars": 329
       },
       "mechanical_failures": [],
@@ -10242,7 +10101,7 @@
       "quality_metrics": {
         "body_chars": 4293,
         "method_chars": 1507,
-        "evaluation_chars": 1015,
+        "evaluation_chars": 1355,
         "limitation_chars": 382
       },
       "mechanical_failures": [],
@@ -10304,7 +10163,7 @@
       "quality_metrics": {
         "body_chars": 4291,
         "method_chars": 1075,
-        "evaluation_chars": 1410,
+        "evaluation_chars": 1825,
         "limitation_chars": 415
       },
       "mechanical_failures": [
@@ -10414,7 +10273,7 @@
       "quality_metrics": {
         "body_chars": 3990,
         "method_chars": 1333,
-        "evaluation_chars": 702,
+        "evaluation_chars": 1035,
         "limitation_chars": 485
       },
       "mechanical_failures": [],
@@ -10434,7 +10293,7 @@
       "quality_metrics": {
         "body_chars": 3696,
         "method_chars": 893,
-        "evaluation_chars": 827,
+        "evaluation_chars": 1505,
         "limitation_chars": 292
       },
       "mechanical_failures": [],
@@ -10498,7 +10357,7 @@
       "quality_metrics": {
         "body_chars": 4186,
         "method_chars": 1234,
-        "evaluation_chars": 1001,
+        "evaluation_chars": 1382,
         "limitation_chars": 408
       },
       "mechanical_failures": [
@@ -10626,7 +10485,7 @@
       "quality_metrics": {
         "body_chars": 4212,
         "method_chars": 1316,
-        "evaluation_chars": 934,
+        "evaluation_chars": 1240,
         "limitation_chars": 403
       },
       "mechanical_failures": [],
@@ -10690,7 +10549,7 @@
       "quality_metrics": {
         "body_chars": 4284,
         "method_chars": 1113,
-        "evaluation_chars": 1089,
+        "evaluation_chars": 1567,
         "limitation_chars": 425
       },
       "mechanical_failures": [],
@@ -10710,7 +10569,7 @@
       "quality_metrics": {
         "body_chars": 4045,
         "method_chars": 1143,
-        "evaluation_chars": 833,
+        "evaluation_chars": 1281,
         "limitation_chars": 474
       },
       "mechanical_failures": [],
@@ -10877,7 +10736,7 @@
       "quality_metrics": {
         "body_chars": 4427,
         "method_chars": 1231,
-        "evaluation_chars": 1388,
+        "evaluation_chars": 1702,
         "limitation_chars": 452
       },
       "mechanical_failures": [
@@ -10901,7 +10760,7 @@
       "quality_metrics": {
         "body_chars": 4479,
         "method_chars": 1494,
-        "evaluation_chars": 785,
+        "evaluation_chars": 1222,
         "limitation_chars": 327
       },
       "mechanical_failures": [],
@@ -10941,7 +10800,7 @@
       "quality_metrics": {
         "body_chars": 4653,
         "method_chars": 1468,
-        "evaluation_chars": 794,
+        "evaluation_chars": 1346,
         "limitation_chars": 490
       },
       "mechanical_failures": [
@@ -11056,7 +10915,7 @@
       "quality_metrics": {
         "body_chars": 3613,
         "method_chars": 1164,
-        "evaluation_chars": 778,
+        "evaluation_chars": 1110,
         "limitation_chars": 329
       },
       "mechanical_failures": [],
@@ -11140,7 +10999,7 @@
       "quality_metrics": {
         "body_chars": 4050,
         "method_chars": 1034,
-        "evaluation_chars": 870,
+        "evaluation_chars": 1205,
         "limitation_chars": 243
       },
       "mechanical_failures": [],
@@ -11245,7 +11104,7 @@
       "quality_metrics": {
         "body_chars": 4275,
         "method_chars": 1064,
-        "evaluation_chars": 581,
+        "evaluation_chars": 1002,
         "limitation_chars": 429
       },
       "mechanical_failures": [],
@@ -11369,7 +11228,7 @@
       "quality_metrics": {
         "body_chars": 5228,
         "method_chars": 1694,
-        "evaluation_chars": 1578,
+        "evaluation_chars": 1958,
         "limitation_chars": 570
       },
       "mechanical_failures": [
@@ -11430,17 +11289,15 @@
       "source_git_blob_sha": "9a27a552ae34780a0972b2b27bdb16c7481dd812",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.808019,
       "quality_metrics": {
         "body_chars": 4159,
         "method_chars": 1131,
-        "evaluation_chars": 0,
+        "evaluation_chars": 539,
         "limitation_chars": 0
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -11501,7 +11358,7 @@
       "quality_metrics": {
         "body_chars": 4392,
         "method_chars": 1031,
-        "evaluation_chars": 1056,
+        "evaluation_chars": 1607,
         "limitation_chars": 458
       },
       "mechanical_failures": [],
@@ -11541,7 +11398,7 @@
       "quality_metrics": {
         "body_chars": 4608,
         "method_chars": 1562,
-        "evaluation_chars": 1086,
+        "evaluation_chars": 1428,
         "limitation_chars": 506
       },
       "mechanical_failures": [
@@ -11647,7 +11504,7 @@
       "quality_metrics": {
         "body_chars": 4901,
         "method_chars": 1357,
-        "evaluation_chars": 1137,
+        "evaluation_chars": 1756,
         "limitation_chars": 397
       },
       "mechanical_failures": [],
@@ -11817,17 +11674,15 @@
       "source_git_blob_sha": "0aa1dd73608a773aff406492bf64e6e672ec2eac",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
+      "mechanical_status": "PASS",
       "japanese_ratio": 0.969516,
       "quality_metrics": {
         "body_chars": 4595,
         "method_chars": 1830,
-        "evaluation_chars": 249,
+        "evaluation_chars": 517,
         "limitation_chars": 341
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 249 < 500"
-      ],
+      "mechanical_failures": [],
       "warnings": []
     },
     {
