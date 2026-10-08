@@ -59,6 +59,15 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
     def test_human_guides_are_absent_from_main(self):
         self.assertFalse((ROOT / ".survey/docs/survey-workflow").exists())
         self.assertFalse((ROOT / "docs/superpowers").exists())
+        # Historical implementations and developer/worker prose are archived, not live.
+        self.assertFalse((ROOT / ".survey/legacy").exists())
+        for rel in (
+            ".survey/import-inbox/README.md",
+            ".survey/repair-queue/README.md",
+            ".survey/survey-state/identity-deltas/README.md",
+        ):
+            with self.subTest(retired=rel):
+                self.assertFalse((ROOT / rel).exists(), rel)
         self.assertNotIn("](.survey/docs/survey-workflow/", (ROOT / "README.md").read_text(encoding="utf-8"))
 
     def test_retired_compatibility_and_one_shot_repair_files_are_absent(self):
