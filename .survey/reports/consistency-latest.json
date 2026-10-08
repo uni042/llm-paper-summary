@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-08T08:25:09.781325+00:00",
-  "status": "passed",
+  "checked_at": "2026-10-08T08:55:50.612457+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 51119,
-  "checked_file_count": 51119,
+  "inventory_file_count": 51204,
+  "checked_file_count": 51204,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,6 +25,17 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 3110,
-  "findings": []
+  "external_url_count": 3116,
+  "findings": [
+    {
+      "code": "broken_local_link",
+      "path": ".survey/import-inbox/pending/research/interactive-reaudit-20261008-moe-spac-2603.09983.md",
+      "detail": "../01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": ".survey/import-inbox/pending/research/interactive-reaudit-20261008-moe-spac-2603.09983.md",
+      "detail": "2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md"
+    }
+  ]
 }
