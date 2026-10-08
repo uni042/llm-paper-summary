@@ -164,6 +164,6 @@
   LLMワークフローをDAG演算子へ分解し、完全一致の重複排除・実行互換バッチ化・異種GPU配置・無状態ワーカーを一体化して、金銭コスト1.8〜3.8倍、エネルギー1.3〜2.0倍の改善を示す。
 
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
-  実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：4  
   CPU、統合GPU、ニューラル処理装置を持つ異種SoCには複数の計算資源があるが、従来の端末推論エンジンは静的な単発推論を想定し、優先度の異なるフローを協調実行しにくい。
 <!-- survey:auto:end -->

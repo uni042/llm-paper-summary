@@ -223,7 +223,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   しかし推論では、巨大な専門家重みをGPUへ置く容量問題、ルータ出力に従ってトークンを専門家別に並べ替える費用、専門家ごとの小さく不均一な行列積によるGPU利用率低下が生じる。本論文はこれらを一つの推論エンジンで処理し、専門家の重みを4ビット整数へ量子化して容量・帯域を減らす。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：9  
   固定枝刈りでパラメータを削れば帯域を減らせるが、全入力に共通の小ネットワークへ固定すると精度やin-文脈 learningを損なう。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
@@ -263,7 +263,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   FLOP（Factorized Low-rank Pruning）は、非構造疎性のように0位置を大量に持つ行列を作るのではなく、重み行列を低ランク因子へ分解し、不要なrank-1成分を学習で削る構造枝刈り法である。100Mパラメータ級word LMでは50%圧縮でPPL 24.5から25.3程度に留め、論文全体として学習・推論とも2倍超の高速化を報告する。
 
 ### 9年前（2017-11〜2018-10）
