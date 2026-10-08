@@ -1,35 +1,68 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261007T1408-mistral-large4",
+  "attempt_id": "library-import-maint-20261008T1736-framework-6",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "llm-releases/mistral.md",
-      "expected_blob_sha": "f2571da0e43a7b9d92f8334cffb64d3d22ea35bb",
+      "path": "framework-updates/inference-engines/exllama/README.md",
+      "expected_blob_sha": "c2f82efb7d757afafb6d7f216f3f10b2473e1cab",
       "edits": [
         {
           "op": "insert_after_once",
-          "anchor": "|---|---|---|---|",
-          "text": "\n| 2026-10-06 | Mistral Large 4 | 1T total / 49B activeのnative multimodal flagship。2026-10-07時点ではAPIのpublic previewが利用可能で、model weightsは10月末公開予定のためopen-weight配布済みとは扱わない。coding、agentic workflows、multimodal understandingを重点化。 | https://mistral.ai/news/mistral-large-4/ |"
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-10-08 JST — ExLlamaV3 v1.6.0（正式公開、UTC 2026-10-07）\n\n- **CPU退避とメモリ使用量を改善**: AVX2対応CPUでの重み・専門家のCPU退避（offloading）を高速化し、CPUコアの割当・固定（pinning）を既定で最適化。システムRAMの追加使用量も削減した。比較可能な公式速度倍率・RAM削減量はリリースノートに記載されていないため断定しない。\n- **ROCm対応は初期段階**: ROCm 10、gfx1100以降のGPUで暫定対応を追加。安定版CUDA経路と同等の互換性を保証する記載ではない。GLM4とQwen3-VLの画像処理部分も修正。\n- 一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.0\n\n### 2026-10-04 JST — ExLlamaV3 v1.5.4（正式公開、UTC 2026-10-03）\n\n- **埋め込み層の量子化・ディスク逐次読込**: トークン埋め込み（token embedding）の量子化とディスク逐次読込（disk streaming）の選択肢を追加し、モデル読み込みを高速化。量子化精度を改善し、システムRAMとVRAMの使用量を削減した。具体的な削減率は公式ノートにない。\n- **Transformers 5連携**: Hugging Face Transformers 5向け統合モジュールを更新し、EXL3層を包んだモデルで逆伝播（backpropagation）を追加。\n- 一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.5.4\n\n"
         }
       ]
     },
     {
-      "path": "llm-releases/README.md",
-      "expected_blob_sha": "2c7d330afdd0bd702535c3c6278577844f3b5338",
+      "path": "framework-updates/inference-engines/vllm-omni/README.md",
+      "expected_blob_sha": "b42b4584f7c6fb1372403a7cfa240c7702342fb4",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-10-06 — vLLM-Omni v0.31.0rc1（公開候補版・pre-release）\n\n- **多ノード推論**: Ray実行器を任意選択で追加し、段階ごとのGPUをクラスタ全体へ割り当て、環境情報を伝播できるようにした。vLLM本体0.31.0へ追随。\n- **多段階転送・双方向実行**: V1とModel Runner V2の混在段階を扱う共有実行、チャンク転送のバイト単位バックプレッシャー（byte backpressure）、双方向出力と中断処理の上限制御を追加。Qwen3-TTSの単一GPU・単一段階音声生成、Qwen3-Omniのリアルタイム提供、MiniCPM-oのKVスライディングウィンドウも改善。\n- **互換性・検証上の注意**: 出力型の旧別名を拒否し、`text`、`image`、`audio`、`latent`、`token_ids` の正規名を要求する。公式nightlyは54 passed / 3 failed / 4 brokenで全テスト成功ではなく、MiniCPM-o長時間音声の失敗が残る。安定版v0.30.0と混同しない。\n- 一次資料: https://github.com/vllm-project/vllm-omni/releases/tag/v0.31.0rc1\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "27d886299ea73d5e1af72e1533c470c41ff175b1",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "## 主要更新\n\n",
+          "text": "### 2026-09-25 — Ollama v0.40.0（正式公開、過去確認漏れの補完）\n\n- **Apple Siliconの既定推論経路を変更**: MLXに対応するモデル構造は自動的にMLXで動くようになった。対象例はQwen3.8、Gemma4、Qwen3.6、Qwen3.5、判定モデルClef系、埋め込みモデルembeddinggemma-2。利用者が別途MLXエンジンを選ばなくても対応モデルでMLXを使う。**Apple Silicon向け変更であり、Windows/NVIDIAのCUDA経路がMLXへ切り替わるわけではない**。\n- 既存ページは同機能をv0.40.0-rc0の公開候補版としてのみ掲載していたため、正式版への昇格を明記する。\n- 一次資料: https://github.com/ollama/ollama/releases/tag/v0.40.0\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/llama-cpp/README.md",
+      "expected_blob_sha": "fd2250d285988c5b7fc1b537033ae483aeb2784e",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 2026-10-05\n\n",
+          "text": "## 2026-10-07 — llama.cpp b11476 / b11474（開発ビルド、正式版v0.6.0とは区別）\n\n- **b11476: Metalの少行列積（few-row MMA）対応形式拡大**: BF16、Q1_0、Q2_0、MXFP4、Q2_K、Q3_K、TQ2_0、IQ系を16重み逆量子化器で処理する汎用カーネルへ追加。M3 Ultra・`MUL_MAT`・m=4096、k=14336の測定では、各型の適用閾値から8行までの実行時間比が旧実装の0.23〜0.98倍、9〜16行では0.24〜0.33倍。1行・512行では0.99〜1.01倍で、全行数で高速化するわけではない。**Metal固有の結果でWindows CUDAには直接適用できない**。[一次資料](https://github.com/ggml-org/llama.cpp/releases/tag/b11476)\n- **b11474: GLM5-Nextの複数トークン予測（MTP）グラフ**: NextN層を本体と分離したGGUFから読み込めるようにし、MTPのdraft経路で使用可能にした。出力行に合わせたグラフ縮約により、4トークンの追いつき処理（catch-up）のカーネル時間が6.9→2.9 ms（同一実装比較）となり、greedy出力ハッシュは不変。モデル全体の生成速度改善率とは解釈しない。[一次資料](https://github.com/ggml-org/llama.cpp/releases/tag/b11474)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/README.md",
+      "expected_blob_sha": "f4e44212fb0ac54fb6fc29df9593bfd1a3251d20",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-09-24**",
-          "new": "- リリース情報の最終確認: **2026-10-07**"
+          "old": "- フレームワーク差分の最終確認: **2026-10-06**",
+          "new": "- フレームワーク差分の最終確認: **2026-10-08**"
         },
         {
-          "op": "replace_once",
-          "old": "| 2026-04-28 | Mistral Medium 3.5 | Mistral | 256K context、multimodal対応、open weightsを持ち、coding / tool利用を主対象とするMistral系モデル。 | [Mistral系](mistral.md) |",
-          "new": "| 2026-10-06 | Mistral Large 4 | Mistral | 1T total / 49B activeのnative multimodal flagship。APIはpublic preview、weightsは2026年10月末公開予定で、現時点ではopen-weight配布済みではない。 | [Mistral系](mistral.md) |"
+          "op": "insert_after_once",
+          "anchor": "## 最新更新\n\n",
+          "text": "### 2026-10-08 — 日次調査で確認した実質更新（モデル新規0件、推論基盤6件）\n\n- **ExLlamaV3 v1.6.0（UTC 10/07）**: AVX2 CPUへの退避高速化、CPUコア割当改善、システムRAM削減、暫定ROCm 10対応（gfx1100+）。[一次資料](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.0)\n- **ExLlamaV3 v1.5.4（UTC 10/03）**: 埋め込み層の量子化・ディスク逐次読込、読み込みとRAM/VRAM効率改善、Transformers 5連携。[一次資料](https://github.com/turboderp-org/exllamav3/releases/tag/v1.5.4)\n- **vLLM-Omni v0.31.0rc1（UTC 10/06、公開候補版）**: Rayによる多ノード・段階別GPU配置、転送バックプレッシャー、リアルタイム音声経路を追加。公式nightlyに未解決失敗あり。[一次資料](https://github.com/vllm-project/vllm-omni/releases/tag/v0.31.0rc1)\n- **Ollama v0.40.0（UTC 09/25、過去確認漏れ）**: Apple Silicon対応モデルのMLX既定実行を公開候補版から正式版へ更新。[一次資料](https://github.com/ollama/ollama/releases/tag/v0.40.0)\n- **llama.cpp b11474 / b11476（UTC 10/07、開発ビルド）**: GLM5-Next MTPグラフ・分割GGUF読込、Metal少行列積の低ビット形式拡張。[b11474](https://github.com/ggml-org/llama.cpp/releases/tag/b11474) / [b11476](https://github.com/ggml-org/llama.cpp/releases/tag/b11476)\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-07 08:30 maintenance: Mistral Large 4 public previewをLLMリリース一覧へ反映。vLLM v0.31.0 / llama.cpp v0.6.0は既反映、EmbeddingGemma 2は生成LLM一覧の対象外として未追加。"
+  "summary": "2026-10-08 08:30 framework update: ExLlamaV3, vLLM-Omni, Ollama, llama.cpp six verified releases."
 }
