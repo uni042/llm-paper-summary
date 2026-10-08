@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c308298b56b3f7f44e071261b557bf1708b0e5ac3cf08ed4e1ea7363f0ac9620",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-97b554551359--interactive-20261008-bottom-up-reaudit-r2-2312.11462.md",
+  "canonical_id": "arXiv:2312.11462",
+  "worker_completed_at": "2026-10-07T22:46:12.988Z",
+  "worker_run_key": "interactive-20261008-bottom-up-reaudit-r2-2312.11462",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5791,
+    "body_paragraphs": 45,
+    "method_chars": 1403,
+    "method_paragraphs": 13,
+    "evaluation_chars": 1925,
+    "limitation_chars": 377,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "16KB未満再監査: 日本語比率 77.7% < 80%"
+  ],
+  "processed_at": "2026-10-08T14:09:50+00:00"
+}

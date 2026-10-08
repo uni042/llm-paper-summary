@@ -1,351 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T13:50:38+00:00",
+  "updated_at": "2026-10-08T14:09:49+00:00",
   "events": [
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_d2c7976fcde08191bd856ffca3cff03e--lln-attention-2311.13541.md",
-      "processed_at": "2026-10-05T11:15:05+00:00",
-      "canonical_id": "arXiv:2311.13541",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources",
-        "title"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_d3f0f95112e88191bb6ecb65fff4eabc--2024-2403.05821-relational-llm-query-optimization.md",
-      "processed_at": "2026-10-05T11:15:12+00:00",
-      "canonical_id": "arXiv:2403.05821",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_d4781c96afa481919dc33725be77cdaa--2024-2402.13499-hopper-benchmark.md",
-      "processed_at": "2026-10-05T11:15:19+00:00",
-      "canonical_id": "arXiv:2402.13499",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_d5fdf94e59708191840e132c81f377d0--2026-cauchy-cost-efficient-llm-serving.md",
-      "processed_at": "2026-10-05T11:15:26+00:00",
-      "canonical_id": "DOI:10.1145/3772052.3772264",
-      "failures": [
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_d774e2f61c8c819192a3ce176e1db420--2023-2310.06201-selective-context.md",
-      "processed_at": "2026-10-05T11:15:26+00:00",
-      "canonical_id": "arXiv:2310.06201"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_d8d3e9401a008191a3a61351a2b1c7f2--2024-2407.21018-think.md",
-      "processed_at": "2026-10-05T11:15:26+00:00",
-      "canonical_id": "arXiv:2407.21018"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_da821fa106888191a9239b37cfff885e--2026-2609.33184-specstream.md",
-      "processed_at": "2026-10-05T11:15:34+00:00",
-      "canonical_id": "arXiv:2609.33184",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_quality",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_daefc319f8e08191a4487b5637ecd9a5--2026-2609.07786-srr.md",
-      "processed_at": "2026-10-05T11:15:41+00:00",
-      "canonical_id": "arXiv:2609.07786",
-      "failures": [
-        "日本語比率 50.0% < 70%"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_db95f4c2d9948191b5e2d62ae912168b--2025-2509.09420-hd-moe.md",
-      "processed_at": "2026-10-05T11:15:48+00:00",
-      "canonical_id": "arXiv:2509.09420",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_dc09ed5ddc5481918ae2cccdffc7c443--2025-2511.08923-tidar.md",
-      "processed_at": "2026-10-05T11:15:48+00:00",
-      "canonical_id": "arXiv:2511.08923"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_dd99fc1d1efc8191ba5910a267386b71--2025-2507.00605-quantize-sample-verify.md",
-      "processed_at": "2026-10-05T11:15:48+00:00",
-      "canonical_id": "arXiv:2507.00605"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e092023ec3ac8191909169b9a945b6aa--matryoshkakv.md",
-      "processed_at": "2026-10-05T11:15:56+00:00",
-      "canonical_id": "arXiv:2410.14731",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e0d22cd3bca48191b56b39d9ca4c04ca--2023-2308.16137-lm-infinite.md",
-      "processed_at": "2026-10-05T11:15:56+00:00",
-      "canonical_id": "arXiv:2308.16137"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e10c1efcdd84819198377afcff1314af--2024-2404.00242-deft.md",
-      "processed_at": "2026-10-05T11:16:03+00:00",
-      "canonical_id": "arXiv:2404.00242",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e2999df65d7c8191b147c0a7d554d7e1--2025-2508.19373-hap.md",
-      "processed_at": "2026-10-05T11:16:03+00:00",
-      "canonical_id": "arXiv:2508.19373"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e29b793e50908191a37ab5e38b05e95b--2025-2508.18572-strata-hierarchical-context-caching.md",
-      "processed_at": "2026-10-05T11:16:03+00:00",
-      "canonical_id": "arXiv:2508.18572"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e2ae475bcb188191ac30f1c82afa9e45--2025-2502.11089-native-sparse-attention.md",
-      "processed_at": "2026-10-05T11:16:03+00:00",
-      "canonical_id": "arXiv:2502.11089"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e49a049b505c81919ab0a93d1065403b--onebit-2402.11295.md",
-      "processed_at": "2026-10-05T11:16:10+00:00",
-      "canonical_id": "arXiv:2402.11295",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources",
-        "title"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e4a6bc2cfe088191aeadda6b714c8daa--2025-2507.19635-agentic-heterogeneous-systems.md",
-      "processed_at": "2026-10-05T11:16:17+00:00",
-      "canonical_id": "arXiv:2507.19635",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors:list",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e5b13341a7cc8191aeb887899529c9d5--sd-npu.md",
-      "processed_at": "2026-10-05T11:16:24+00:00",
-      "canonical_id": "arXiv:2510.15312",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e6e5196d51ac81918a368960705e3536--2024-2409.12514-tinyvla.md",
-      "processed_at": "2026-10-05T11:16:24+00:00",
-      "canonical_id": "arXiv:2409.12514"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e6ee17c2161081918aa356a9ce16e25a--2025-2510.03215-cache-to-cache.md",
-      "processed_at": "2026-10-05T11:16:24+00:00",
-      "canonical_id": "arXiv:2510.03215"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e7a9de9b88788191a409cbab30882c76--2025-2503.18989-hat.md",
-      "processed_at": "2026-10-05T11:16:32+00:00",
-      "canonical_id": "arXiv:2503.18989",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors:list",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e8be4e415814819192eeb8802fa71689--2024-2405.19325-nest.md",
-      "processed_at": "2026-10-05T11:16:32+00:00",
-      "canonical_id": "arXiv:2405.19325"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_e9d8a88fbeb88191bea674a48a3043a7--2025-2508.15919-hfx.md",
-      "processed_at": "2026-10-05T11:16:32+00:00",
-      "canonical_id": "arXiv:2508.15919"
-    },
-    {
-      "status": "discarded_blocked_research_quality",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_ea41c6d15e448191ba9c3272b336db73--2026-2606.13126-minipic.md",
-      "processed_at": "2026-10-05T11:16:39+00:00",
-      "canonical_id": "arXiv:2606.13126",
-      "failures": [
-        "日本語比率 64.5% < 70%"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_ea86b189f880819185b4cc07b037e195--2021-doi-10.18653-v1-2021.sustainlp-1.5-topk-attention.md",
-      "processed_at": "2026-10-05T11:16:47+00:00",
-      "canonical_id": "DOI:10.18653/v1/2021.sustainlp-1.5",
-      "failures": [
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_type",
-        "sources"
-      ]
-    },
     {
       "status": "deleted_stale_blocked_research",
       "source_path": ".survey/import-inbox/blocked/research/libfile_ebafe5e3af8481918318ecfa914234d6--2023-2307.06945-icae.md",
@@ -3961,6 +3618,190 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-2efdb786f1d4--libfile_e6b792fb057881919594549507e0261f--2023-2311.01282-flashdecoding-repaired-20261008-1930-scheduled-chat-30-r01.md",
       "processed_at": "2026-10-08T13:50:38+00:00",
       "canonical_id": "arXiv:2311.01282"
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-9fa2fc387673--libfile_f9b0c3b41f088191ac4a15c61bde8043--2023-2312.08583-zeroquant4plus2-repair-20261008-0032.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2312.08583",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-9fa2fc387673--libfile_f9b0c3b41f088191ac4a15c61bde8043--2023-2312.08583-zeroquant4plus2-repair-20261008-0032.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-fd364571b423--libfile_faeaa141def881919cb396f289949b4c--2026-2606.23581-kamera-returned-research-repair-20261008-1404-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2606.23581",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-fd364571b423--libfile_faeaa141def881919cb396f289949b4c--2026-2606.23581-kamera-returned-research-repair-20261008-1404-scheduled-chat-00-r01.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-0e84fe39498e--libfile_fe9bf5ab63f0819196df16d8ef0593c5--2024-2405.13792-xrag.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2405.13792",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-0e84fe39498e--libfile_fe9bf5ab63f0819196df16d8ef0593c5--2024-2405.13792-xrag.md"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-05afa4819ade--libfile_ff40361990e88191aaa532c0d33a0174--2024-2403.15388-prumerge-under16kb-reaudit-20261008-1812-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2403.15388"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2306.11222"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-36e760ee9405--libfile_2af302282cd481918124011c23a43318--2025-2508.04462-card-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2508.04462"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-3cb4da9ae1a6--libfile_0611c1ecbca8819186393fbda4bf4a32--2021-2111.00396-s4-under16kb-reaudit-20261008-1812-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2111.00396"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-3ed01f2beb37--libfile_accd6a0a68ec81919671aa96fa485e55--2024-2409.01366-chess-under16kb-reaudit-20261008-1645-scheduled-chat-45-r01-partial.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2409.01366"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-48559931eae7--libfile_1a0dc460f0288191925d45e91687628d--2024-2403.04643-qaq-under16kb-reaudit-20261008-1812-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2403.04643"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-54f8e924817c--libfile_10b53b359b588191bd39e29a78eca0fd--pill-2609.02108-under16kb-reaudit-20261008-1032-scheduled-chat-30.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2609.02108"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-5b2399303abf--libfile_b74042d4aed88191aa90e7c3ea89c1c0--2025-throttllem-hpca-under16kb-reaudit-20261008-1234-scheduled-chat-00.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "DOI:10.1109/HPCA61900.2025.00103"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-6123bbd36b57--interactive-20261008-bottom-up-reaudit-mobile-npu-2509.23324.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2509.23324"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-630c1da794b7--libfile_fbbbf3151244819195e9a5eeae2500cf--kvcomp-2509.00579-under16kb-reaudit-20261008-0927-scheduled-chat-30.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2509.00579"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-70709481b3ac--libfile_245f92f7df308191bfad588b7efee6dc--2018-1805.02867-online-softmax-under16kb-reaudit-20261008-1200.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:1805.02867"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-791874de63f4--interactive-20261008-bottom-up-reaudit-r2-2608.07974.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2608.07974"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-818928449446--libfile_25dc63c4af40819199f0fcd53de56e50--2024-asplos-polca-under16kb-reaudit-20261008-1303-scheduled-chat-00.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "DOI:10.1145/3620666.3651329"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-85c12439a979--libfile_dc6e357e6768819185bedf0faba4ee30--2020-2004.02178-fastbert-under16kb-reaudit-20261008-0800.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2004.02178"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-8ec0d9e362e3--libfile_e0c1b099ff208191afb2340f4d5b9bfd--2024-2404.08856-multimodal-speculative-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2404.08856"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-9444579aed8d--libfile_1f34005e4a888191b99f971c637b1c2d--nest-2405.19325-under16kb-reaudit-20261008-1032-scheduled-chat-30-r02.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2405.19325"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-95001d50ad83--libfile_4b34d386a4c081919853174e2cbdff82--2024-2404.05892-eagle-finch-under16kb-reaudit-20261008-0759.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:2404.05892"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-96c274caf992--libfile_baff15f8d36c819185346eab1ee27166--2019-1911.02150-multi-query-attention-under16kb-reaudit-20261008-0901.md",
+      "processed_at": "2026-10-08T14:09:49+00:00",
+      "canonical_id": "arXiv:1911.02150"
     }
   ]
 }

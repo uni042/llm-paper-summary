@@ -269,6 +269,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
-  本論文は、数値安定なソフトマックス（softmax）で通常別々に行う「最大値探索」と「指数和の計算」を一回の走査へまとめるオンライン正規化子（online normalizer）を提案する。NVIDIA Tesla V100のFP32実装では、ソフトマックス単体を最大約1.3倍、上位K選択（TopK）まで融合した処理を条件により最大約5倍高速化した。
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：26  
+  本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->

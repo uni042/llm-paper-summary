@@ -286,7 +286,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-09 · [SpecVLM: Fast Speculative Decoding in Vision-Language Models](2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  SpecVLMはこのVLM固有の律速へ、EAGLE-2型のEagleVLM、弾力的視覚圧縮器、オンラインlogit蒸留を組み合わせる。対象モデルによる最終検証は維持するため、投機部分は対象分布を変えない。
+  視覚言語モデルの投機的復号で、画像トークンが候補モデルの初期処理と鍵・値キャッシュを膨張させる問題を、質問適応型の視覚圧縮器とオンライン蒸留で解く。EAGLE-2型候補モデルを基礎に、LLaVA系列で最大2.5～2.9倍の端から端までの高速化を報告する。
 
 - **2025-03 · [ML-SpecQD: Multi-Level Speculative Decoding with Quantized Drafts](2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
