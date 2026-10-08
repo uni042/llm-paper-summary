@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r304-screen-01-part-02-def3bcd89e98",
+  "reference_main_sha": "14de2d64584c63ef0c5ff753e5bb7fccc08c6bc7",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09748",
+      "identity_tokens": [
+        "arXiv:2604.09748"
+      ],
+      "title": "Backdoors in RLVR: Jailbreak Backdoors in LLMs From Verifiable Reward",
+      "reason": "The paper studies/verifies RLVR jailbreak backdoors and safety behavior, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.09748",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24176",
+      "identity_tokens": [
+        "arXiv:2512.24176"
+      ],
+      "title": "Guiding a Diffusion Transformer with the Internal Dynamics of Itself",
+      "reason": "Internal Guidance trains and guides diffusion transformers for image generation and reports image FID/training-resource gains. The architecture and evaluated workload are image diffusion transformers, not LLM inference, KV/cache, quantization, or serving.",
+      "source_url": "https://arxiv.org/abs/2512.24176",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16881",
+      "identity_tokens": [
+        "arXiv:2604.16881"
+      ],
+      "title": "Incentivizing Parametric Knowledge via Reinforcement Learning with Verifiable Rewards for Cross-Cultural Entity Translation",
+      "reason": "The contribution is reward-based cross-cultural entity translation post-training and translation quality; no inference-time efficiency technique is described.",
+      "source_url": "https://arxiv.org/abs/2604.16881",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06636",
+      "identity_tokens": [
+        "arXiv:2604.06636"
+      ],
+      "title": "SHAPE: Stage-aware Hierarchical Advantage via Potential Estimation for LLM Reasoning",
+      "reason": "The paper proposes stage-aware process supervision for LLM reasoning training; its target is training signals, not inference cost or serving.",
+      "source_url": "https://arxiv.org/abs/2604.06636",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21016",
+      "identity_tokens": [
+        "arXiv:2603.21016"
+      ],
+      "title": "Mitigating Selection Bias in Large Language Models via Permutation-Aware GRPO",
+      "reason": "Permutation-aware GRPO addresses option-position selection bias during model training/evaluation, not inference compute or serving.",
+      "source_url": "https://arxiv.org/abs/2603.21016",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
