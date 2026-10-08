@@ -1065,7 +1065,7 @@
   通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
 
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/microsoft/Samba) ・ リポジトリ内被引用：8  
   Sambaは、選択的状態空間モデル（Selective State Space モデル; SSM）で遠い過去を固定サイズ状態へ畳み込み、スライディング窓注意（Sliding Window 注意機構; SWA）で直近トークンを正確に参照する。
 
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
