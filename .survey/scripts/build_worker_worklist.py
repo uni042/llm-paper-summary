@@ -23,6 +23,7 @@ import citation_graph
 import claim_state
 import paper_identity
 import reference_pool
+import forward_citation_state
 import research_job_reconciliation
 
 DEFAULT_RESEARCH_LIMIT = 200
@@ -246,7 +247,7 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     source = pool.get("candidates")
     backward = source if isinstance(source, list) else []
 
-    forward_state = _read(root / ".survey/work-queue/forward-citation-sweep.json", {})
+    forward_state = forward_citation_state.load(root / ".survey/work-queue/forward-citation-sweep.json", {})
     forward_source = forward_state.get("candidates") if isinstance(forward_state, dict) else {}
     forward = list(forward_source.values()) if isinstance(forward_source, dict) else []
 
