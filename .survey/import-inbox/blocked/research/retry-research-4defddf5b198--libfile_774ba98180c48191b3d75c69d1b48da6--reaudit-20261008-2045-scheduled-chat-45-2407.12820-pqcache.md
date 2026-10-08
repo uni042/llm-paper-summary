@@ -83,6 +83,8 @@ quality_method_chars: 2103
 quality_eval_chars: 1790
 quality_evaluation_chars: 1790
 quality_limitation_chars: 595
+last_audited: null
+audit_version: 0
 ---
 
 # PQCache: Product Quantization-based KVCache for Long Context LLM Inference

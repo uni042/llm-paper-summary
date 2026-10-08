@@ -285,8 +285,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   Cloud 対象の早期出口から暫定トークンを返し、edge ドラフトを最終検証と並行して先行生成することで待ち時間を隠し、Jetson Nano＋A100でpre-drafting単体最大11%級の追加改善を示す。
 
 - **2025-09 · [SpecVLM: Fast Speculative Decoding in Vision-Language Models](2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  視覚言語モデルの投機的復号で、画像トークンが候補モデルの初期処理と鍵・値キャッシュを膨張させる問題を、質問適応型の視覚圧縮器とオンライン蒸留で解く。EAGLE-2型候補モデルを基礎に、LLaVA系列で最大2.5～2.9倍の端から端までの高速化を報告する。
+  実装：[✓](https://github.com/haiduo/SpecVLM) ・ リポジトリ内被引用：3  
+  SpecVLMは、この視覚特有の律速に対して、EAGLE-2型の軽量候補生成器EagleVLM、質問内容に応じて視覚圧縮方式を選ぶ弾力的視覚圧縮器、対象モデルのロジットと最終直前特徴をその場で教師にするオンライン蒸留を組み合わせる。対象モデルによる並列検証と投機的サンプリングを維持するため、正しい受理・棄却処理を行う限り対象モデルの出力分布を保つ。
 
 - **2025-03 · [ML-SpecQD: Multi-Level Speculative Decoding with Quantized Drafts](2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

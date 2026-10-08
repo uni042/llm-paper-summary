@@ -60,7 +60,7 @@
 
 - **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
   実装：[✓](https://github.com/MiniMax-AI/MSA) ・ リポジトリ内被引用：3  
-  MiniMax Sparse 注意機構（MSA）はGQAを維持したまま、軽量な索引分岐で関連する鍵・値ブロックだけを選び、主分岐で選択範囲内の正確なソフトマックス注意を計算する。
+  対象：100万トークン級の長文脈推論・学習における、GQA対応の学習可能なブロック疎注意。一次論文は2026年6月12日改訂の第2版。速度の値は「モデル全体の推論速度」ではなく、論文の注意演算実装をH800で測った値として読む。
 
 - **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
   実装：[✓](https://github.com/longcheng-nv/GVR_TopK_supplementaty_materials) ・ リポジトリ内被引用：3  
