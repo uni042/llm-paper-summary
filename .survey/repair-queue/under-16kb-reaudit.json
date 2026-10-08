@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T21:54:15.074987+00:00",
+  "generated_at": "2026-10-08T22:51:44.418929+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 405,
+  "count": 400,
   "worker_counts": {
-    "scheduled-chat-00": 133,
-    "scheduled-chat-30": 116,
+    "scheduled-chat-00": 130,
+    "scheduled-chat-30": 114,
     "scheduled-chat-45": 156
   },
   "entries": [
@@ -1305,26 +1305,6 @@
       ]
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md",
-      "canonical_id": "arXiv:2607.02980",
-      "title": "Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling",
-      "file_bytes": 10360,
-      "source_sha256": "c06432966afc24b249014959638a67c4c8e79d6506751eb0c17cc00ebaa01ff8",
-      "source_git_blob_sha": "800d9306b4f7086993690a5c9ccf5f6b93612bd6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.834838,
-      "quality_metrics": {
-        "body_chars": 2981,
-        "method_chars": 757,
-        "evaluation_chars": 792,
-        "limitation_chars": 237
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md",
       "canonical_id": "arXiv:2408.05646",
       "title": "Eigen Attention: Attention in Low-Rank Space for KV Cache Compression",
@@ -1347,30 +1327,6 @@
         "16KB未満再監査: 評価説明量 105 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md",
-      "canonical_id": "arXiv:2311.15436",
-      "title": "Learning to Skip for Language Modeling",
-      "file_bytes": 10389,
-      "source_sha256": "5eef24e16d7a5fa76301d16270f7c98dfd85da600d87d0149036c358ebde8f18",
-      "source_git_blob_sha": "319443de76f5a6c31284c5eaeb50424511c82d2e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.741455,
-      "quality_metrics": {
-        "body_chars": 2531,
-        "method_chars": 705,
-        "evaluation_chars": 768,
-        "limitation_chars": 271
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 74.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.1% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2312.03414-compressed-context-memory-for-online-language-model-interaction.md",
@@ -1600,26 +1556,6 @@
         "method_chars": 1239,
         "evaluation_chars": 660,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md",
-      "canonical_id": "arXiv:2006.09616",
-      "title": "Dynamic Tensor Rematerialization",
-      "file_bytes": 10573,
-      "source_sha256": "ce7c4786422a663564caf75e9b93148b45a9a6222b30fcc5d77a19f0c95621e4",
-      "source_git_blob_sha": "0426440644cb34065cc57784c1843a0765d4fa96",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.955744,
-      "quality_metrics": {
-        "body_chars": 2643,
-        "method_chars": 738,
-        "evaluation_chars": 924,
-        "limitation_chars": 243
       },
       "mechanical_failures": [],
       "warnings": []
@@ -3388,28 +3324,6 @@
       ]
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2608.15567-schurquant.md",
-      "canonical_id": "arXiv:2608.15567",
-      "title": "SchurQuant: Groupwise Discrete Optimization for Layer-Wise LLM Quantization",
-      "file_bytes": 11630,
-      "source_sha256": "5a1b978bb6a7ae9ecdff9d51fe5d3299fdf5a555f8a183e5b4c8f49d804ff8e3",
-      "source_git_blob_sha": "d2141a0ac92c21fa02cb253b37fb8ac389cf22d4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.976401,
-      "quality_metrics": {
-        "body_chars": 2524,
-        "method_chars": 1023,
-        "evaluation_chars": 316,
-        "limitation_chars": 137
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 316 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
       "canonical_id": "arXiv:2407.15891",
       "title": "RazorAttention: Efficient KV Cache Compression Through Retrieval Heads",
@@ -3474,28 +3388,6 @@
       "warnings": [
         "日本語比率 79.6% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
-      "canonical_id": "arXiv:2401.03868",
-      "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
-      "file_bytes": 11667,
-      "source_sha256": "fc1d9f26a82ac191f8450949a2aa4bc95a98aabb8749f41eee2167295d096149",
-      "source_git_blob_sha": "315cf8111e55a9aca531fb2ae08afac982f8008c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.867127,
-      "quality_metrics": {
-        "body_chars": 2519,
-        "method_chars": 1134,
-        "evaluation_chars": 128,
-        "limitation_chars": 188
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 128 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md",
