@@ -25,6 +25,7 @@ import claim_state
 import paper_identity
 import reference_pool
 import forward_citation_state
+import forward_lineage_citation
 import research_job_reconciliation
 
 DEFAULT_RESEARCH_LIMIT = 200
@@ -262,9 +263,11 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     forward_source = forward_state.get("candidates") if isinstance(forward_state, dict) else {}
     forward = list(forward_source.values()) if isinstance(forward_source, dict) else []
 
+    papers = citation_graph.load_records(root)
+    seed_lineages, seed_paths = forward_lineage_citation.seed_indexes(papers)
     represented = {
         identifier
-        for paper in citation_graph.load_records(root)
+        for paper in papers
         for identifier in paper.identifiers
     }
     unrelated = reference_pool._load_ledger_tokens(
@@ -293,6 +296,13 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
                     continue
             scored = _score_row(row, root=root, cache=cache, config=config)
             scored["source_kind"] = source_kind
+            if source_kind == "forward_citation_candidate":
+                counts = forward_lineage_citation.forward_lineage_counts(
+                    row, seed_lineages, seed_paths, source_kind=source_kind
+                )
+                scored["forward_lineage_citation_counts"] = counts
+                scored["forward_lineage_citation_max"] = max(counts.values(), default=0)
+                scored["forward_lineage_citation_total"] = sum(counts.values())
             rows.append(scored)
 
     # Put the strongest representation of an alias-equivalent paper first, then
@@ -339,6 +349,9 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
                 "linked_from_lineages": row.get("linked_from_lineages"),
                 "linked_from": row.get("linked_from"),
                 "discovery_routes": row.get("discovery_routes"),
+                "forward_lineage_citation_counts": row.get("forward_lineage_citation_counts"),
+                "forward_lineage_citation_max": row.get("forward_lineage_citation_max", 0),
+                "forward_lineage_citation_total": row.get("forward_lineage_citation_total", 0),
             }
         )
     return out, len(out)
