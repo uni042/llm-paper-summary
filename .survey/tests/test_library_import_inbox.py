@@ -102,7 +102,10 @@ worker_run_key: 20261008-1645-scheduled-chat-45/r01-partial
             root = Path(td)
             source = root / ".survey/import-inbox/pending/research/paper.md"
             source.parent.mkdir(parents=True)
-            source.write_text("---\\nworker_completed_at: 2026-10-08T16:49:14+09:00\\n---\\n", encoding="utf-8")
+            source.write_text("""---
+worker_completed_at: 2026-10-08T16:49:14+09:00
+---
+""", encoding="utf-8")
             try:
                 os.chdir(root)
                 with (
