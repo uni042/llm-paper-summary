@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T16:12:44+00:00",
+  "generated_at": "2026-10-08T16:20:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 138,
+  "count": 139,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2761,6 +2761,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fd364571b423--libfile_faeaa141def881919cb396f289949b4c--2026-2606.23581-kamera-returned-research-repair-20261008-1404-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fd364571b423--libfile_faeaa141def881919cb396f289949b4c--2026-2606.23581-kamera-returned-research-repair-20261008-1404-scheduled-chat-00-r01.json",
       "worker_run_key": "20261008-1404-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.16419",
+      "title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2503.16419",
+      "returned_at": "2026-10-08T16:20:35+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700",
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5121,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 538,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8a1e51a60949--libfile_9d20329326608191bbac5ff6e7abe6c8--2025-2503.16419-stop-overthinking-under16kb-reaudit-20261009-0100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8a1e51a60949--libfile_9d20329326608191bbac5ff6e7abe6c8--2025-2503.16419-stop-overthinking-under16kb-reaudit-20261009-0100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261009-0100-scheduled-chat-00/r01"
     }
   ]
 }
