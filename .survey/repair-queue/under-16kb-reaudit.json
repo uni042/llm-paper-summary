@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-07T22:52:36.739105+00:00",
+  "generated_at": "2026-10-08T04:59:07.458124+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 624,
+  "count": 620,
   "worker_counts": {
-    "scheduled-chat-00": 211,
-    "scheduled-chat-30": 199,
+    "scheduled-chat-00": 209,
+    "scheduled-chat-30": 197,
     "scheduled-chat-45": 214
   },
   "entries": [
@@ -12402,28 +12402,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.13319-pipesd.md",
-      "canonical_id": "arXiv:2605.13319",
-      "title": "PipeSD: An Efficient Cloud-Edge Collaborative Pipeline Inference Framework with Speculative Decoding",
-      "file_bytes": 14383,
-      "source_sha256": "8a816200fb88717a50b3532865397a6533968f57fdfe05bb43ec63c337acda80",
-      "source_git_blob_sha": "8c9099b23743c970630231ea76dbb6a20208b9c4",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.979958,
-      "quality_metrics": {
-        "body_chars": 2928,
-        "method_chars": 1051,
-        "evaluation_chars": 380,
-        "limitation_chars": 232
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 380 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2601.07353-talon-confidence-aware-speculative-decoding-with-adaptive-draft-length.md",
       "canonical_id": "arXiv:2601.07353",
       "title": "TALON: Confidence-Aware Speculative Decoding with Adaptive Token Trees",
@@ -13156,28 +13134,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md",
-      "canonical_id": "arXiv:2406.11235",
-      "title": "QTIP: Quantization with Trellises and Incoherence Processing",
-      "file_bytes": 14934,
-      "source_sha256": "9409f86ad163cb13999bcf320a6d87a7cec6afb5e81964b613b2bde7083079d8",
-      "source_git_blob_sha": "e5f53b9b1a404b07ab2b2a314498fdf4ac8a5ad5",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.871505,
-      "quality_metrics": {
-        "body_chars": 3722,
-        "method_chars": 1118,
-        "evaluation_chars": 350,
-        "limitation_chars": 326
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 350 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
       "canonical_id": "arXiv:2503.06881",
       "title": "ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration",
@@ -13416,31 +13372,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md",
-      "canonical_id": "arXiv:2505.18610",
-      "title": "PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs",
-      "file_bytes": 15203,
-      "source_sha256": "9c91f3139e172f55471e6bfa2fdc586f50a572bf9a3be5e344252b00b5e8343a",
-      "source_git_blob_sha": "6fb81944b705a3c3bc2f76ed633c2d672c6d8c6b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.781055,
-      "quality_metrics": {
-        "body_chars": 4197,
-        "method_chars": 1576,
-        "evaluation_chars": 191,
-        "limitation_chars": 324
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 191 < 500",
-        "16KB未満再監査: 日本語比率 78.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.1% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/16-weight-quantization-compression/2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md",
       "canonical_id": "arXiv:2509.16989",
       "title": "PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models",
@@ -13483,28 +13414,6 @@
       "warnings": [
         "日本語比率 75.2% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md",
-      "canonical_id": "arxiv:2405.16646",
-      "title": "A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts",
-      "file_bytes": 15252,
-      "source_sha256": "67466beed3333535347cf543d6e6b43b394564f77fa7d713e74d12d003228ae2",
-      "source_git_blob_sha": "c55e36eaa82b3e2e9d2bb0c73c48d84500f295bd",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.989843,
-      "quality_metrics": {
-        "body_chars": 3227,
-        "method_chars": 1009,
-        "evaluation_chars": 268,
-        "limitation_chars": 300
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 268 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/08-edge-on-device-llm-systems/2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md",
