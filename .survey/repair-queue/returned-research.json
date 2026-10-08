@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T08:33:00+00:00",
+  "generated_at": "2026-10-08T08:42:13+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1058,22 +1058,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c5111e6923688191908871713b8acfe4--2026-simthesizer.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c5111e6923688191908871713b8acfe4--2026-simthesizer.json",
       "worker_run_key": "20261004-0700-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.30854",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:12:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 68.9% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd08b162814081919a5eeb7d56a39233--2026-2609.30854-kv-cache-memory-wall.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cd08b162814081919a5eeb7d56a39233--2026-2609.30854-kv-cache-memory-wall.json",
-      "worker_run_key": "20261004-0730-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.07786",
@@ -2985,8 +2969,8 @@
     },
     {
       "canonical_id": "arXiv:2206.13947",
-      "title": "Long Range Language Modeling via Gated State Spaces",
-      "source_url": "https://arxiv.org/abs/2206.13947",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T08:32:18+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -3012,8 +2996,8 @@
     },
     {
       "canonical_id": "arXiv:2601.06123",
-      "title": "Latent Space Communication via K-V Cache Alignment",
-      "source_url": "https://arxiv.org/abs/2601.06123",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T08:32:18+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -3040,8 +3024,8 @@
     },
     {
       "canonical_id": "arXiv:2504.03871",
-      "title": "HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs",
-      "source_url": "https://arxiv.org/abs/2504.03871",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T08:32:19+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -3064,6 +3048,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_05a93cc32a68819198fcc0eaeb4aa348--2025-2504.03871-hetermoe-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_05a93cc32a68819198fcc0eaeb4aa348--2025-2504.03871-hetermoe-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.19258",
+      "title": "Not All Heads Matter: A Head-Level KV Cache Compression Method with Integrated Retrieval and Reasoning",
+      "source_url": "https://arxiv.org/html/2410.19258v4",
+      "returned_at": "2026-10-08T08:40:22+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6391,
+        "body_paragraphs": 34,
+        "method_chars": 1966,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 737,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_06e45ccb24248191b679d0a8cce43f63--2024-2410.19258-headkv-under16kb-reaudit-20261008-1600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_06e45ccb24248191b679d0a8cce43f63--2024-2410.19258-headkv-under16kb-reaudit-20261008-1600-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261008-1555-scheduled-chat-00/r01"
     }
   ]
 }

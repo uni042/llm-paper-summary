@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 17:36:49 JST**
+> 自動生成: **2026-10-08 17:42:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **605** |
-| 未claim Research job | **605** |
-| 直近24hのResearch処理完了 | **108** |
-| 最終Research処理完了 | **10-08 17:17:38 JST** |
+| 収録候補論文数 | **604** |
+| 未claim Research job | **604** |
+| 直近24hのResearch処理完了 | **112** |
+| 最終Research処理完了 | **10-08 17:38:54 JST** |
 | 最終Discovery探索完了 | **10-08 16:47:03 JST** |
 | 整合性異常 | **0** |
 
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **552** |
-| 機械検査未達（FAIL） | **401** |
-| 機械検査適合・警告のみ（PASS/WARN） | **151** |
-| :00ワーカー担当残 | **188** |
-| :30ワーカー担当残 | **178** |
+| **再監査残件数** | **549** |
+| 機械検査未達（FAIL） | **399** |
+| 機械検査適合・警告のみ（PASS/WARN） | **150** |
+| :00ワーカー担当残 | **186** |
+| :30ワーカー担当残 | **177** |
 | :45ワーカー担当残 | **186** |
 
-- キュー最終生成: **2026-10-08 17:35:34 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 17:41:11 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **605** |
+| canonical_id確認済みの一意な候補論文 | **604** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **605** |
+| 非終端Research job合計 | **604** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -51,26 +51,26 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **101615** |
+| 探索候補総数 | **101610** |
 | 処理済み | **17723** |
-| 未処理Discovery候補 | **83892** |
-| 収録済み | **1736** |
+| 未処理Discovery候補 | **83887** |
+| 収録済み | **1737** |
 | Research / Audit候補へ昇格済み | **453** |
 | 無関係として除外 | **11124** |
-| 微妙として除外 | **4410** |
+| 微妙として除外 | **4409** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **83892** |
+| 未処理候補（フィルタ前） | **83887** |
 | 規則による暫定隔離 | **794** |
 | 分類器による追加隔離 | **0** |
 | 暫定隔離合計 | **794** |
 | 監査用に復活 | **30** |
-| **読解可能候補（隔離後）** | **83128** |
+| **読解可能候補（隔離後）** | **83123** |
 | 分類器判定済み | **0** |
-| 分類器未判定 | **83892** |
+| 分類器未判定 | **83887** |
 
 ### 拡張規則の試算（既存フィルタにはまだ適用しない）
 
@@ -84,8 +84,8 @@
 - 全数との差は隔離候補から監査復活分を引いた値。元候補は削除せず、分類器未判定分は通常候補に残す。集計は現在の候補identityから再計算する。
 
 - 消化率: **17.4%**
-- 現在の生在庫: 後方references **49985件** / 前方引用 **35082件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **84633件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **49980件** / 前方引用 **35082件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **84628件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -112,7 +112,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（5時間40分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（5時間45分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -132,16 +132,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **9** |
+| 直近6hのResearch完了 | **10** |
 | 直近6hのDiscovery run | **78** |
 | 直近6hのDiscovery本文確認・分類 | **368** |
-| 最終Research完了 | **10-08 17:17:38 JST** |
+| 最終Research完了 | **10-08 17:38:54 JST** |
 | 最終Discovery完了 | **10-08 16:47:03 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-08 17:17:38 JST** / worker — / run 20261008-1706-interactive-bottom-up-reaudit/r03 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-innerq-2602.23200.json
+- Research: **10-08 17:38:54 JST** / worker — / run 20261008-interactive-bottom-up-reaudit/qmoe / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/interactive-reaudit-20261008-qmoe-2310.16795.json
 - Discovery: **10-08 16:47:03 JST** / worker codex-local-screen-watcher / run 20261008-r311-screen-01-part-03-cc055bb3f9bc
   - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
   - evidence: .survey/import-inbox/results/discovery/20261008-r311-screen-01-part-03-cc055bb3f9bc-448a9d75517a.json
@@ -270,7 +270,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **605** |
+| ready | **604** |
 
 ### 候補の重複・識別情報欠損
 
@@ -290,7 +290,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1737** |
+| inference/training/survey配下の論文Markdown実体 | **1738** |
 
 ### immutable submissionの未照合
 
