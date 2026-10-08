@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T05:41:54+00:00",
+  "generated_at": "2026-10-08T05:59:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 156,
+  "count": 157,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -2782,6 +2782,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r2-2608.07974.md",
       "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-r2-2608.07974.json",
       "worker_run_key": "interactive-20261008-bottom-up-reaudit-r2-2608.07974"
+    },
+    {
+      "canonical_id": "arXiv:2506.10470",
+      "title": "TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference",
+      "source_url": "https://arxiv.org/html/2506.10470v1",
+      "returned_at": "2026-10-08T05:56:32+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5191,
+        "body_paragraphs": 28,
+        "method_chars": 1953,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 698,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/file_000000005478820c9b3cafb94dd22f8e--2025-2506.10470-tdpipe-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/file_000000005478820c9b3cafb94dd22f8e--2025-2506.10470-tdpipe-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261008-1433-scheduled-chat-30/r01"
     }
   ]
 }

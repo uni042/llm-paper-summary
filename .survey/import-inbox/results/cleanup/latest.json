@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T05:49:04+00:00",
+  "updated_at": "2026-10-08T05:56:30+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -4176,6 +4176,33 @@
       "canonical_id": "arXiv:2609.19657",
       "failures": [
         "worker_completed_at"
+      ]
+    },
+    {
+      "status": "deferred_blocked_research_retry_collision",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "processed_at": "2026-10-08T05:56:30+00:00",
+      "canonical_id": "arXiv:2306.11222",
+      "existing_retry_path": ".survey/import-inbox/pending/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "blocked_normalized_sha256": "11676ea31e307d2fad0f55864d4a90be9859f94d17d575908296be24b01cea72",
+      "pending_sha256": "0b11814c7daaebcd8a35e04d219064d12815dbc36d17bb3f6ac71b484c0e0dd6"
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T05:56:30+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T05:56:30+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
       ]
     }
   ]
