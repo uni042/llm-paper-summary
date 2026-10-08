@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 03:54:32 JST**
+> 自動生成: **2026-10-09 03:59:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **682** |
-| 未claim Research job | **682** |
+| 収録候補論文数 | **717** |
+| 未claim Research job | **717** |
 | 直近24hのResearch処理完了 | **268** |
 | 最終Research処理完了 | **10-09 03:49:00 JST** |
-| 最終Discovery探索完了 | **10-09 03:49:05 JST** |
+| 最終Discovery探索完了 | **10-09 03:59:08 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **682** |
+| canonical_id確認済みの一意な候補論文 | **717** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **682** |
+| 非終端Research job合計 | **717** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,29 +52,29 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **111779** |
-| 処理済み | **17833** |
-| 未処理Discovery候補 | **93946** |
+| 処理済み | **17869** |
+| 未処理Discovery候補 | **93910** |
 | 収録済み | **1758** |
-| Research / Audit候補へ昇格済み | **532** |
-| 無関係として除外 | **11128** |
+| Research / Audit候補へ昇格済み | **567** |
+| 無関係として除外 | **11129** |
 | 微妙として除外 | **4415** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **93946** |
+| 未処理候補（フィルタ前） | **93910** |
 | 機械規則による暫定隔離 | **1231** |
 | 拡張機械規則による追加隔離 | **841** |
-| 機械規則通過後 | **91874** |
-| 系統内前方引用スコアによる選抜保留 | **87280** |
-| 暫定隔離合計 | **89352** |
-| **読解可能候補（隔離後）** | **4594** |
-| 前方引用が同一系統で2本以上の候補 | **11102** |
-| 前方引用が同一系統で3本以上の候補 | **5748** |
+| 機械規則通過後 | **91838** |
+| 系統内前方引用スコアによる選抜保留 | **87246** |
+| 暫定隔離合計 | **89318** |
+| **読解可能候補（隔離後）** | **4592** |
+| 前方引用が同一系統で2本以上の候補 | **11066** |
+| 前方引用が同一系統で3本以上の候補 | **5712** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4594件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4592件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -89,7 +89,7 @@
 
 - 消化率: **16.0%**
 - 現在の生在庫: 後方references **50019件** / 前方引用 **45199件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **94776件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **94775件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（15時間57分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（16時間2分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **32** |
-| 直近6hのDiscovery run | **9** |
-| 直近6hのDiscovery本文確認・分類 | **145** |
+| 直近6hのDiscovery run | **10** |
+| 直近6hのDiscovery本文確認・分類 | **164** |
 | 最終Research完了 | **10-09 03:49:00 JST** |
-| 最終Discovery完了 | **10-09 03:49:05 JST** |
+| 最終Discovery完了 | **10-09 03:59:08 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-09 03:49:00 JST** / worker — / run 20261009-0330-scheduled-chat-30/r01 / 成果 **2件**
   - evidence: .survey/import-inbox/results/research/libfile_49d6ed7eb16881919a6d3d55043565f3--2023-2301.00774-sparsegpt-under16kb-reaudit-20261009-0330-scheduled-chat-30-r01.json
-- Discovery: **10-09 03:49:05 JST** / worker codex-luna / run codex-backfill-r316-b13-main-893d2f32
-  - 本文確認・分類 **19件** / accept **17件** / unrelated+borderline **2件**
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
+- Discovery: **10-09 03:59:08 JST** / worker codex-luna / run codex-backfill-r316-b14-main-1213c372
+  - 本文確認・分類 **18件** / accept **17件** / unrelated+borderline **1件**
+  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r316-b14-main-1213c372--8578fce4487f489e86e8e7ae992e052445adaff2ca1a8f9d05c34215f93aad47--codex-backfill-r316-b14-main-1213c372.json
 
 ### Codex探索成果の反映状況
 
@@ -156,15 +156,15 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| Codex成果の取り込み済み（receipt） | **2800ファイル / 13355件** |
-| Codex成果の取り込み待機中 | **2ファイル / 37件** |
-| └ 待機中のaccept | **35件** |
-| └ 待機中のunrelated | **2件** |
-| └ 待機中のborderline | **0件** |
+| Codex成果の取り込み済み（receipt） | **2802ファイル / 13392件** |
+| Codex成果の取り込み待機中 | **1ファイル / 19件** |
+| └ 待機中のaccept | **18件** |
+| └ 待機中のunrelated | **0件** |
+| └ 待機中のborderline | **1件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-09 03:49:05 JST** / results / codex-backfill-r316-b13-main-893d2f32
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
+- 最終Codex分類・受渡し証拠: **10-09 03:59:08 JST** / results / codex-backfill-r316-b14-main-1213c372
+  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r316-b14-main-1213c372--8578fce4487f489e86e8e7ae992e052445adaff2ca1a8f9d05c34215f93aad47--codex-backfill-r316-b14-main-1213c372.json
 
 
 ## 件数サマリー（旧immutable transport診断）
@@ -274,7 +274,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **682** |
+| ready | **717** |
 
 ### 候補の重複・識別情報欠損
 
