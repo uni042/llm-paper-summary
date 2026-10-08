@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LoPA: Scaling dLLM Inference via Lookahead Parallel Decoding",
+      "source_url": "https://arxiv.org/abs/2512.16229",
+      "year": 2025,
+      "published": "2025-12-18",
+      "venue": "arXiv.org",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) have demonstrated significant potential for high-speed inference. However, current confidence-driven decoding strategies are constrained by limited parallelism, typically achieving only 1--3 tokens per forward pass (TPF). In this work, we identify that the degree of parallelism during dLLM inference is highly sensitive to the Token Filling Order (TFO). Then, we introduce Lookahead PArallel Decoding LoPA, a training-free, plug-and-play algorithm, to identify a superior TFO and hence accelerate inference. LoPA concurrently explores distinct candidate TFOs via parallel branches, and selects the one with the highest potential for future parallelism based on branch confidence. We apply LoPA to the state-of-the-art D2F model and observe a substantial enhancement in decoding efficiency. Notably, LoPA increases the TPF of D2F-Dream to 10.1 on the GSM8K while maintaining performance superior to the Dream baseline. Furthermore, to facilitate this unprecedented degree of parallelism, we develop a specialized multi-device inference system featuring Branch Parallelism (BP), which achieves a single-sample throughput of 1073.9 tokens per second under multi-GPU deployment. The code is available at https://github.com/zhijie-group/LoPA.",
+      "identifiers": [
+        "SemanticScholar:8377b602308090b307dfcf45015457f715ce269a"
+      ],
+      "semantic_scholar_id": "8377b602308090b307dfcf45015457f715ce269a",
+      "canonical_id": "arXiv:2512.16229",
+      "arxiv_id": "2512.16229",
+      "doi": "10.48550/arXiv.2512.16229",
+      "authors": [
+        "Chenkai Xu",
+        "Yijie Jin",
+        "Jia-Jun Li",
+        "Yi Tu",
+        "Guo-Ping Long",
+        "Dandan Tu",
+        "Ming-Cong Song",
+        "Hong-Jie Si",
+        "Tianqi Hou",
+        "Junchi Yan",
+        "Zhi-Jie Deng"
+      ],
+      "priority": 117,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 117,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoPA uses lookahead parallel decoding for diffusion LLMs and targets higher multi-device inference throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Multi-Drafter Speculative Decoding with Alignment Feedback",
+      "source_url": "https://arxiv.org/abs/2604.05417",
+      "year": 2026,
+      "published": "2026-04-07",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates large language model (LLM) inference by using a smaller model to draft future tokens, which are then verified by the target LLM. This preserves generation quality by accepting only aligned tokens. However, individual drafters, often trained for specific tasks or domains, exhibit limited effectiveness across diverse applications. To address this, we introduce \\textsc{MetaSD}, a unified framework that integrates multiple drafters into the SD process. MetaSD dynamically allocates computational resources to heterogeneous drafters by leveraging alignment feedback and framing drafter selection as a multi-armed bandit problem. Extensive experiments show MetaSD consistently outperforms single-drafter approaches.",
+      "identifiers": [
+        "SemanticScholar:fccdad1cad87cbfea52866f36286126fa8886b58"
+      ],
+      "semantic_scholar_id": "fccdad1cad87cbfea52866f36286126fa8886b58",
+      "canonical_id": "arXiv:2604.05417",
+      "arxiv_id": "2604.05417",
+      "doi": "10.48550/arXiv.2604.05417",
+      "authors": [
+        "Taehyeong Kim",
+        "Hojung Jung",
+        "Se-young Yun"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Multi-Drafter speculative decoding combines multiple drafts with alignment feedback and dynamic computation allocation to improve inference decoding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DiRL: An Efficient Post-Training Framework for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2512.22234",
+      "year": 2025,
+      "published": "2025-12-23",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (dLLMs) have emerged as promising alternatives to Auto-Regressive (AR) models. While recent efforts have validated their pre-training potential and accelerated inference speeds, the post-training landscape for dLLMs remains underdeveloped. Existing methods suffer from computational inefficiency and objective mismatches between training and inference, severely limiting performance on complex reasoning tasks such as mathematics. To address this, we introduce DiRL, an efficient post-training framework that tightly integrates FlexAttention-accelerated blockwise training with LMDeploy-optimized inference. This architecture enables a streamlined online model update loop, facilitating efficient two-stage post-training (Supervised Fine-Tuning followed by Reinforcement Learning). Building on this framework, we propose DiPO, the first unbiased Group Relative Policy Optimization (GRPO) implementation tailored for dLLMs. We validate our approach by training DiRL-8B-Instruct on high-quality math data. Our model achieves state-of-the-art math performance among dLLMs and surpasses comparable models in the Qwen2.5 series on several benchmarks.",
+      "identifiers": [
+        "SemanticScholar:7354fb2d3a227b800fc20ca67f1077a4b1ad29eb"
+      ],
+      "semantic_scholar_id": "7354fb2d3a227b800fc20ca67f1077a4b1ad29eb",
+      "canonical_id": "arXiv:2512.22234",
+      "arxiv_id": "2512.22234",
+      "doi": "10.48550/arXiv.2512.22234",
+      "authors": [
+        "Ying Zhu",
+        "Jiaxin Wan",
+        "Xiaoran Liu",
+        "Si-Yang He",
+        "Qiqi Wang",
+        "Xu Guo",
+        "Tianyi Liang",
+        "Zengfeng Huang",
+        "Zi-Wei He",
+        "Xi-Peng Qiu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 289,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DiRL combines diffusion-LLM post-training with FlexAttention and an LMDeploy-optimized inference route; the abstract explicitly connects training framework and efficient inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion",
+      "source_url": "https://arxiv.org/abs/2604.05688",
+      "year": 2026,
+      "published": "2026-04-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) cache memory and bandwidth increasingly dominate large language model inference cost in long-context and long-generation regimes. Architectures such as multi-head latent attention (MLA) and hybrid sliding-window attention (SWA) can alleviate this bound, but integrating them into existing models remains difficult. Prior methods impose fine-grained structural requirements on both source and target attention modules, which cannot meet the feasible requirement in practical deployment. We present Attention Editing, a practical framework for converting already-trained large language models (LLMs) with new attention architectures without re-pretraining from scratch. Attention editing replaces the original attention with a learnable target module and trains it using progressive distillation, consisting of (1) layer-wise teacher-forced optimization with intermediate activation supervision to prevent cold-start error accumulation, and (2) model-level distillation on next-token distributions, optionally regularized by weak feature matching. We instantiate the framework on two different target--MLA and GateSWA, a gated hybrid SWA design, and apply it to Qwen3-8B and Qwen3-30B-A3B. The resulting models maintain competitive performance while delivering substantial efficiency improvements, demonstrating that large-scale attention conversion is both feasible and robust. Notably, experiments are conducted on an Ascend 910B clusters, offering a practical training case study on domestic hardware.",
+      "identifiers": [
+        "SemanticScholar:c008912e095eb4f5369c591399e3dacffa0d829c"
+      ],
+      "semantic_scholar_id": "c008912e095eb4f5369c591399e3dacffa0d829c",
+      "canonical_id": "arXiv:2604.05688",
+      "arxiv_id": "2604.05688",
+      "doi": "10.48550/arXiv.2604.05688",
+      "authors": [
+        "Zhen-Ku Cheng",
+        "Haodong Yang",
+        "Wanaiu Huang",
+        "Jinlong Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Attention Editing converts attention layers toward MLA/sliding-window structures for reduced KV-cache memory and efficient attention.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Role-Based Fault Tolerance System for LLM RL Post-Training",
+      "source_url": "https://arxiv.org/abs/2512.22492",
+      "year": 2025,
+      "published": "2025-12-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "RL post-training for LLMs has been widely scaled to enhance reasoning and tool-using capabilities. However, RL post-training interleaves training and inference workloads, exposing the system to faults from both sides. Existing fault tolerance frameworks for LLMs target either training or inference, leaving the optimization potential in the asynchronous execution unexplored for RL. Our key insight is role-based fault isolation so the failure in one machine does not affect the others. We treat trainer, rollout, and other management roles in RL training as distinct distributed sub-tasks. Instead of restarting the entire RL task in ByteRobust, we recover only the failed role and reconnect it to living ones, thereby eliminating the full-restart overhead including rollout replay and initialization delay. We present RobustRL, the first comprehensive robust system to handle GPU machine errors for RL post-training Effective Training Time Ratio improvement. (1) \\textit{Detect}. We implement role-aware monitoring to distinguish actual failures from role-specific behaviors to avoid the false positive and delayed detection. (2) \\textit{Restart}. For trainers, we implement a non-disruptive recovery where rollouts persist state and continue trajectory generation, while the trainer is rapidly restored via rollout warm standbys. For rollout, we perform isolated machine replacement without interrupting the RL task. (3) \\textit{Reconnect}. We replace static collective communication with dynamic, UCX-based (Unified Communication X) point-to-point communication, enabling immediate weight synchronization between recovered roles. In an RL training task on a 256-GPU cluster with Qwen3-8B-Math workload under 10\\% failure injection frequency, RobustRL can achieve an ETTR of over 80\\% compared with the 60\\% in ByteRobust and achieves 8.4\\%-17.4\\% faster in end-to-end training time.",
+      "identifiers": [
+        "SemanticScholar:1b21f17301e6589279bb0790feb1831dd7fa256d"
+      ],
+      "semantic_scholar_id": "1b21f17301e6589279bb0790feb1831dd7fa256d",
+      "canonical_id": "arXiv:2512.22492",
+      "arxiv_id": "2512.22492",
+      "doi": "10.48550/arXiv.2512.22492",
+      "authors": [
+        "Zhen-Qian Chen",
+        "Bao-Quan Zhong",
+        "Xiang Li",
+        "Qi Dai",
+        "Xin-Kui Zhao",
+        "Miao Ye",
+        "Ren Cheng",
+        "Lu-Fei Zhang",
+        "Jian-Wei Yin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract targets an RL post-training system that interleaves training and inference, isolates trainer/rollout failures, and avoids full restart/replay overhead; it reports improved effective training-time ratio and end-to-end time.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c450aa448f89",
+    "round": "libimp-c450aa448f898fd9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c450aa448f898fd9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c450aa448f898fd9-pre01.json",
+    "receipt": "sha256:873a00e5d8e7321be7c6d1a7326c59151774af614e9e5e7cf166c482ecac7237"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c450aa448f89",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

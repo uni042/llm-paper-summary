@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ART: Attention Run-time Termination for Efficient Large Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2606.00024",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding in Large Language Models (LLMs) is constrained by the cost of accessing and processing the Key-Value (KV) cache. Despite evidence that attention outputs depend jointly on keys and values, most existing KV management methods rely on key-only pruning, since incorporating values incurs prohibitive overhead. In this paper, we propose Attention Run-time Termination (ART), a lightweight run-time mechanism that tracks accumulated attention outputs during kernel execution and terminates subsequent KV block accesses once further contributions become negligible. Rather than replacing KV selection, ART dynamically terminates redundant KV traversal on top of existing dense or sparse attention policies. We introduce a stability-based criterion that monitors both magnitude and directional changes of intermediate attention outputs and provideds a theoretical characterization of the resulting truncation error. Experiments on the LongBench and RULER Needle-in-a-Haystack tasks show that ART increases the generation throughput of existing KV-cache methods by up to 20%, without compromising the result quality.",
+      "identifiers": [
+        "SemanticScholar:f0a407bcb36f8aa9d6b19dfc230cac7230ecee8b"
+      ],
+      "semantic_scholar_id": "f0a407bcb36f8aa9d6b19dfc230cac7230ecee8b",
+      "canonical_id": "arXiv:2606.00024",
+      "arxiv_id": "2606.00024",
+      "doi": "10.48550/arXiv.2606.00024",
+      "authors": [
+        "Chen Qiu",
+        "Guozhong Li",
+        "Cristian McGee",
+        "Aritra Dutta",
+        "P. Kalnis"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ART terminates redundant attention/KV blocks at decode time and reports throughput improvement; direct LLM decoding acceleration.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures",
+      "source_url": "https://doi.org/10.18267/j.aip.313",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "Acta Informatica Pragensia",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a15f1f1f3298e8f8fd3234baafe477d2886985ca"
+      ],
+      "semantic_scholar_id": "a15f1f1f3298e8f8fd3234baafe477d2886985ca",
+      "doi": "10.18267/j.aip.313",
+      "canonical_id": "DOI:10.18267/j.aip.313",
+      "authors": [
+        "Mateusz Ploskonka"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official journal publisher PDF compares serverless and BYOC LLM deployments across inference cost, availability, and observability; it identifies system trade-offs relevant to production LLM serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hot–Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.25782",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "IEEE computer architecture letters",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving is increasingly agentic, with multi-turn sessions that idle between actions yet must retain their full context. Limited GPU memory capacity forces inactive KV states to be evicted, so resuming a session incurs either costly recomputation or slow interconnect transfers. To address this, high bandwidth flash (HBF)—an on-package 3D-NAND memory offering orders-of-magnitude greater capacity than high bandwidth memory (HBM) at comparable read bandwidth—has emerged as a strong candidate. However, its high read energy and limited write endurance make it impractical to serve <italic>all</italic> KV traffic. Fortunately, our analysis shows that agentic KV states exhibit distinct access patterns: a small hot set is read for every decoding step, while a large cold pool is read only when a paused session resumes. Exploiting this, we place the hot set in HBM and the cold pool in HBF, forming a hot–cold KV hierarchy within the GPU memory tier. On agentic workloads with Qwen3-Coder-30B-A3B, our design delivers 14 ms time-between-tokens (TBT) and adds only <inline-formula><tex-math notation=\"LaTeX\">$\\approx \\!0.1$</tex-math><alternatives><mml:math><mml:mrow><mml:mo>≈</mml:mo><mml:mspace width=\"-0.166667em\"/><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math><inline-graphic xlink:href=\"kim-ieq1-3729099.gif\"/></alternatives></inline-formula> ms of resume latency on top of prefill, while hosting <inline-formula><tex-math notation=\"LaTeX\">$24\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>24</mml:mn><mml:mo>×</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"kim-ieq2-3729099.gif\"/></alternatives></inline-formula> more concurrent sessions per GPU. By confining HBM to the hot set, our design also cuts read power by 7.6 kW per 8-GPU node relative to serving all KV from flash—establishing HBF as a cold-tier complement to HBM rather than its replacement.",
+      "identifiers": [
+        "SemanticScholar:8e224a113dc50bb07f14d0e189fb7995f1d21027"
+      ],
+      "semantic_scholar_id": "8e224a113dc50bb07f14d0e189fb7995f1d21027",
+      "canonical_id": "arXiv:2609.25782",
+      "arxiv_id": "2609.25782",
+      "doi": "10.1109/LCA.2026.3729099",
+      "authors": [
+        "Jongjin Baek",
+        "Won Ji",
+        "Seungjae Yoo",
+        "Joo-Young Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Hot/cold HBM/HBF tiering moves KV state across memory tiers for agentic LLM serving, increasing concurrent sessions per GPU.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Advancing Decoding Strategies: Enhancements in Locally Typical Sampling for LLMs",
+      "source_url": "https://arxiv.org/abs/2506.05387",
+      "year": 2025,
+      "published": "2025-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This chapter explores advancements in decoding strategies for large language models (LLMs), focusing on enhancing the Locally Typical Sampling (LTS) algorithm. Traditional decoding methods, such as top-k and nucleus sampling, often struggle to balance fluency, diversity, and coherence in text generation. To address these challenges, Adaptive Semantic-Aware Typicality Sampling (ASTS) is proposed as an improved version of LTS, incorporating dynamic entropy thresholding, multi-objective scoring, and reward-penalty adjustments. ASTS ensures contextually coherent and diverse text generation while maintaining computational efficiency. Its performance is evaluated across multiple benchmarks, including story generation and abstractive summarization, using metrics such as perplexity, MAUVE, and diversity scores. Experimental results demonstrate that ASTS outperforms existing sampling techniques by reducing repetition, enhancing semantic alignment, and improving fluency.",
+      "identifiers": [
+        "SemanticScholar:134d928d2a0ec6d71095cae3a30436924516adbb"
+      ],
+      "semantic_scholar_id": "134d928d2a0ec6d71095cae3a30436924516adbb",
+      "canonical_id": "arXiv:2506.05387",
+      "arxiv_id": "2506.05387",
+      "doi": "10.1007/978-3-032-13497-4_17",
+      "authors": [
+        "Jaydip Sen",
+        "Saptarshi Sengupta",
+        "Subhasis Dasgupta"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 492,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes an adaptive LLM decoding/sampling algorithm and explicitly frames computational efficiency alongside generation quality; direct decoding-method connection, though system-speed evidence is limited.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CCQ: Convolutional Code for Extreme Low-bit Quantization in LLMs",
+      "source_url": "https://arxiv.org/abs/2507.07145",
+      "year": 2025,
+      "published": "2025-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid scaling of Large Language Models (LLMs) elevates inference costs and compounds substantial deployment barriers. While quantization to 8 or 4 bits mitigates this, sub-3-bit methods face severe accuracy, scalability, and efficiency degradation. We propose Convolutional Code Quantization (CCQ), an inference-optimized quantization approach compressing LLMs to 2.0-2.75 bits with minimal accuracy loss. Departing from error-prone scalar quantization or slow vector quantization, CCQ integrates a hardware-aware bit-shift encoding and decoding solution with Convolutional Code, Hybrid Encoding, and Code Cluster, jointly overcoming accuracy-speed bottlenecks. We construct a lookup-free encoding space, enabling a linear mapping between the codebook and weight vectors, thereby optimizing inference performance. Meanwhile, by drawing on the concept of data mapping from vector quantization, we minimize the performance degradation of the model under extremely low-bit conditions. Experiments demonstrate that CCQ achieves outstanding performance on LLMs across various benchmarks. We compress DeepSeek-V3 (671B total parameters) to 184GB and ERNIE-4.5-300B-A47B to 89GB, enabling single-GPU deployment of ERNIE 4.5 and eliminating inter-card communication. The 2-bit ERNIE-4.5-300B-A47B model and inference engine have been open-sourced.",
+      "identifiers": [
+        "SemanticScholar:c866d124be8decd3fba3d1bbf5e1ffbe4b3780e7"
+      ],
+      "semantic_scholar_id": "c866d124be8decd3fba3d1bbf5e1ffbe4b3780e7",
+      "canonical_id": "arXiv:2507.07145",
+      "arxiv_id": "2507.07145",
+      "doi": "10.48550/arXiv.2507.07145",
+      "authors": [
+        "Zhaojing Zhou",
+        "Xunchao Li",
+        "Ming-Hao Li",
+        "Han-Di Zhang",
+        "Hongya Wang",
+        "Wenbin Chang",
+        "Yiqun Liu",
+        "Qing-Qing Dang",
+        "Dian-Hai Yu",
+        "Yanjun Ma",
+        "Haifeng Wang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CCQ uses convolutional coding for extreme low-bit LLM quantization, reducing model memory while preserving inference quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c450aa448f89",
+    "round": "libimp-c450aa448f898fd9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c450aa448f898fd9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c450aa448f898fd9-pre01.json",
+    "receipt": "sha256:873a00e5d8e7321be7c6d1a7326c59151774af614e9e5e7cf166c482ecac7237"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c450aa448f89",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

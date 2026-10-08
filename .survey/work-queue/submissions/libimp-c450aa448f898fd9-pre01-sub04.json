@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Boost Post-Training Quantization via Null Space Optimization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.11044",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing post-training quantization methods for large language models (LLMs) offer remarkable success. However, the increasingly marginal performance gains suggest that existing quantization strategies are insufficient to support the development of more compressed models. To inspire new directions for future research, this paper introduces the concept of null space into LLMs quantization. We argue that the quantization error can be effectively alleviated by constraining the post-quantization weight perturbation to lie within the null space of input activations. To prove this idea, we propose a plug-and-play null space projection module for existing milestone PTQ baselines named Q2N. Specifically, we first design an efficient and accurate null space projection approximation method tailored to the characteristics of LLMs. Subsequently, we theoretically derive a closed-form solution for an equivalent vector of the obtained projection matrix, which satisfies practical inference condition while avoiding additional memory overhead. Extensive experiments are conducted on various state-of-the-art LLMs (LLaMA3, DeepSeek, Qwen3) and baselines, demonstrating the effectiveness of both our Q2N and the perspective of null space optimization for LLMs quantization. We view this paper the first step to further alleviate the quantization error based on the insights of null space, hoping it inspiring future researchers to design more advanced quantization methods. Codes are available at https://github.com/zjq0455/q2n.",
+      "identifiers": [
+        "SemanticScholar:9caf6305a724217645593a060308a5694a3c2c1e"
+      ],
+      "semantic_scholar_id": "9caf6305a724217645593a060308a5694a3c2c1e",
+      "canonical_id": "arXiv:2506.11044",
+      "arxiv_id": "2506.11044",
+      "doi": "10.48550/arXiv.2506.11044",
+      "authors": [
+        "Jia-Qi Zhao",
+        "Miao Zhang",
+        "Deng Xiang",
+        "Ming Li",
+        "Wei-Li Guan",
+        "Liqiang Nie"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Null-space optimization improves post-training LLM quantization while avoiding added inference-time overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PromptDistill: Query-based Selective Token Retention in Intermediate Layers for Efficient Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2503.23274",
+      "year": 2025,
+      "published": "2025-03-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) tackle increasingly complex tasks and longer documents, their computational and memory costs during inference become a major bottleneck. To address this, we propose PromptDistill, a novel, training-free method that improves inference efficiency while preserving generation quality. PromptDistill identifies and retains the most informative tokens by leveraging attention interactions in early layers, preserving their hidden states while reducing the computational burden in later layers. This allows the model to focus on essential contextual information without fully processing all tokens. Unlike previous methods such as H2O and SnapKV, which perform compression only after processing the entire input, or GemFilter, which selects a fixed portion of the initial prompt without considering contextual dependencies, PromptDistill dynamically allocates computational resources to the most relevant tokens while maintaining a global awareness of the input. Experiments using our method and baseline approaches with base models such as LLaMA 3.1 8B Instruct, Phi 3.5 Mini Instruct, and Qwen2 7B Instruct on benchmarks including LongBench, InfBench, and Needle in a Haystack demonstrate that PromptDistill significantly improves efficiency while having minimal impact on output quality compared to the original models. With a single-stage selection strategy, PromptDistill effectively balances performance and efficiency, outperforming prior methods like GemFilter, H2O, and SnapKV due to its superior ability to retain essential information. Specifically, compared to GemFilter, PromptDistill achieves an overall $1\\%$ to $5\\%$ performance improvement while also offering better time efficiency. Additionally, we explore multi-stage selection, which further improves efficiency while maintaining strong generation performance.",
+      "identifiers": [
+        "SemanticScholar:c9b0dfe4982d12fa1a32506da4f4d55be93dfaa0"
+      ],
+      "semantic_scholar_id": "c9b0dfe4982d12fa1a32506da4f4d55be93dfaa0",
+      "canonical_id": "arXiv:2503.23274",
+      "arxiv_id": "2503.23274",
+      "doi": "10.48550/arXiv.2503.23274",
+      "authors": [
+        "Weisheng Jin",
+        "Maojia Song",
+        "Tej Deep Pala",
+        "Yew Ken Chia",
+        "Amir Zadeh",
+        "Chuan Li",
+        "Soujanya Poria"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 557,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PromptDistill dynamically retains salient intermediate tokens without training to reduce LLM inference computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c450aa448f89",
+    "round": "libimp-c450aa448f898fd9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c450aa448f898fd9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c450aa448f898fd9-pre01.json",
+    "receipt": "sha256:873a00e5d8e7321be7c6d1a7326c59151774af614e9e5e7cf166c482ecac7237"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c450aa448f89",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
