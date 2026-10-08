@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T08:46:21.651608+00:00",
+  "generated_at": "2026-10-08T08:56:28.670079+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 549,
+  "count": 545,
   "worker_counts": {
-    "scheduled-chat-00": 186,
-    "scheduled-chat-30": 177,
+    "scheduled-chat-00": 184,
+    "scheduled-chat-30": 175,
     "scheduled-chat-45": 186
   },
   "entries": [
@@ -841,30 +841,6 @@
         "16KB未満再監査: 本文説明量 1534 < 2200",
         "16KB未満再監査: 手法説明量 319 < 700",
         "16KB未満再監査: 評価説明量 79 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
-      "canonical_id": "arXiv:2311.03285",
-      "title": "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
-      "file_bytes": 8573,
-      "source_sha256": "d415447152d4af720a85d59ecf82f313af31dff58a0f117a5606a79194d33794",
-      "source_git_blob_sha": "8b1aebb6169d8dfab704481df8c847c2e291360e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.95727,
-      "quality_metrics": {
-        "body_chars": 1661,
-        "method_chars": 566,
-        "evaluation_chars": 110,
-        "limitation_chars": 147
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1661 < 2200",
-        "16KB未満再監査: 手法説明量 566 < 700",
-        "16KB未満再監査: 評価説明量 110 < 500"
       ],
       "warnings": []
     },
@@ -11929,30 +11905,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md",
-      "canonical_id": "arXiv:2603.09983",
-      "title": "MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios",
-      "file_bytes": 15246,
-      "source_sha256": "9e8091f936b3bfa62cbbcdb09de0c0320f1e1f79d4b4b601b755ad6c11f67f0c",
-      "source_git_blob_sha": "8373cee30280c19cc58e5148e927b80644ad3677",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.752327,
-      "quality_metrics": {
-        "body_chars": 3642,
-        "method_chars": 1901,
-        "evaluation_chars": 729,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 75.2% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 75.2% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/08-edge-on-device-llm-systems/2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md",
       "canonical_id": "arXiv:2503.13421",
       "title": "Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge",
@@ -11972,50 +11924,6 @@
       "mechanical_failures": [
         "日本語比率 59.5% < 70%",
         "16KB未満再監査: 日本語比率 59.5% < 80%"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md",
-      "canonical_id": "arXiv:2406.02532",
-      "title": "SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices",
-      "file_bytes": 15453,
-      "source_sha256": "2db7e81a89200cbf95e13928fa3bef3665a8d08f31ee9b99367a32bc8834fc5c",
-      "source_git_blob_sha": "a68cf5a2e7a2f4f33bc450a08e666b4bf93a4aa2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.942909,
-      "quality_metrics": {
-        "body_chars": 3280,
-        "method_chars": 1084,
-        "evaluation_chars": 276,
-        "limitation_chars": 296
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 276 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.19657-prefixbench-h100-prefix-reuse-ttft.md",
-      "canonical_id": "arXiv:2609.19657",
-      "title": "PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving",
-      "file_bytes": 15456,
-      "source_sha256": "12cb1397ad5208c0f8c8358ab9778818329d8d84eb7a549c585a0bf757de9363",
-      "source_git_blob_sha": "11510c84f6032320d1f7831ec4dab1a2be923938",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.980027,
-      "quality_metrics": {
-        "body_chars": 3599,
-        "method_chars": 906,
-        "evaluation_chars": 429,
-        "limitation_chars": 303
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 429 < 500"
       ],
       "warnings": []
     },
