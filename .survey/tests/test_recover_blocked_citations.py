@@ -77,6 +77,7 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
 
     def test_transpim_has_verified_nsf_primary_pdf_fallback(self) -> None:
         urls = recovery.primary_pdf_urls("DOI:10.1109/HPCA53966.2022.00082")
+        self.assertEqual(urls[0], "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=9773212")
         self.assertIn("https://par.nsf.gov/servlets/purl/10345536", urls)
 
     def test_crossref_reference_entries_preserve_doi_and_title_metadata(self) -> None:
