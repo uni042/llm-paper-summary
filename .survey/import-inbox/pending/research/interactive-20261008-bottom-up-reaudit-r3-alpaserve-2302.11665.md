@@ -27,7 +27,6 @@ source: https://www.usenix.org/conference/osdi23/presentation/li-zhouhan
 code: https://github.com/alpa-projects/mms
 last_checked: '2026-09-10'
 last_verified: '2026-09-10'
-last_audited: '2026-09-10'
 audit_version: 1
 evaluation_type: real-hardware
 implementation_status: official-code-available
