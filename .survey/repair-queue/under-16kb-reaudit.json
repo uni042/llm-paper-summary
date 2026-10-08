@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-08T15:30:20.166596+00:00",
+  "generated_at": "2026-10-08T15:56:51.935838+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 437,
+  "count": 436,
   "worker_counts": {
-    "scheduled-chat-00": 149,
+    "scheduled-chat-00": 148,
     "scheduled-chat-30": 128,
     "scheduled-chat-45": 160
   },
@@ -494,30 +494,6 @@
         "16KB未満再監査: 本文説明量 1915 < 2200",
         "16KB未満再監査: 手法説明量 447 < 700",
         "16KB未満再監査: 評価説明量 144 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
-      "canonical_id": "arXiv:2410.00037",
-      "title": "Moshi: a speech-text foundation model for real-time dialogue",
-      "file_bytes": 9393,
-      "source_sha256": "b982af2f4e2080e3ec553eafa6185d06412565be619353e3aeffef967eea4598",
-      "source_git_blob_sha": "ee27adbfc5f37eab55020cd233baa7900e063d08",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.849097,
-      "quality_metrics": {
-        "body_chars": 1374,
-        "method_chars": 476,
-        "evaluation_chars": 136,
-        "limitation_chars": 144
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1374 < 2200",
-        "16KB未満再監査: 手法説明量 476 < 700",
-        "16KB未満再監査: 評価説明量 136 < 500"
       ],
       "warnings": []
     },
@@ -2102,26 +2078,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 132 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md",
-      "canonical_id": "arXiv:2312.08583",
-      "title": "ZeroQuant(4+2): Redefining LLMs Quantization with a New FP6-Centric Strategy for Diverse Generative Tasks",
-      "file_bytes": 10644,
-      "source_sha256": "3e43a41dcb9a05764038b81d170691978be69293f16c997f65457ea4ff51aecc",
-      "source_git_blob_sha": "060c52ad7cd8d37667bf9012894b582d05735efd",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 2928,
-        "method_chars": 758,
-        "evaluation_chars": 1018,
-        "limitation_chars": 185
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -8031,6 +7987,26 @@
         "method_chars": 1372,
         "evaluation_chars": 528,
         "limitation_chars": 386
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md",
+      "canonical_id": "arXiv:2312.08583",
+      "title": "ZeroQuant(4+2): Redefining LLMs Quantization with a New FP6-Centric Strategy for Diverse Generative Tasks",
+      "file_bytes": 13512,
+      "source_sha256": "6a34fe511c6182487837a6cdad656711d9e88c56b4cda533d9639093e989dd9f",
+      "source_git_blob_sha": "374b08f9db3de3351ba1d24645c0f2b07aa09e99",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 1.0,
+      "quality_metrics": {
+        "body_chars": 2928,
+        "method_chars": 758,
+        "evaluation_chars": 1018,
+        "limitation_chars": 185
       },
       "mechanical_failures": [],
       "warnings": []
