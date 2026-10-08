@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r306-screen-01-part-06-fa841b9a9035",
+  "reference_main_sha": "c1139f8bc469be2a436e1892e2d2316dc0247703",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01630",
+      "identity_tokens": [
+        "arXiv:2602.01630"
+      ],
+      "title": "Research on World Models Is Not Merely Injecting World Knowledge into Specific Tasks",
+      "reason": "The paper discusses and organizes world-model research without presenting a concrete LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2602.01630",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123242",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123242"
+      ],
+      "title": "Mamba-STR: Efficient context-aware scene text recognition framework with selective state space modeling",
+      "reason": "Mamba-STR is selective-SSM scene text recognition; reported compute, GPU-memory, and speed gains are visual OCR model results, not a demonstrated LLM inference method.",
+      "source_url": "https://doi.org/10.1016/j.ins.2026.123242",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00865",
+      "identity_tokens": [
+        "arXiv:2602.00865"
+      ],
+      "title": "Distill3R: A Pipeline for Democratizing 3D Foundation Models on Commodity Hardware",
+      "reason": "Distill3R distills a 3D reconstruction vision model for commodity hardware; its size/speed results are task-specific, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2602.00865",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.01224",
+      "identity_tokens": [
+        "arXiv:2601.01224"
+      ],
+      "title": "Improved Object-Centric Diffusion Learning with Registers and Contrastive Alignment",
+      "reason": "The paper improves object-centric image learning with diffusion registers/contrastive alignment and does not report LLM-serving gains.",
+      "source_url": "https://arxiv.org/abs/2601.01224",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSVT.2025.3595896",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2025.3595896"
+      ],
+      "title": "Feature Responsive LoRA: Toward Parameter-Efficient Transfer Learning for Self-Supervised Visual Models",
+      "reason": "Tried the primary IEEE DOI/publisher page, which was inaccessible in the available reader; only abstract/metadata-level material was available, so primary methods/results could not be checked. The candidate is retained as borderline because its linked lineage makes the exact method relevant to resolve.",
+      "source_url": "https://doi.org/10.1109/TCSVT.2025.3595896",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    }
+  ]
+}
