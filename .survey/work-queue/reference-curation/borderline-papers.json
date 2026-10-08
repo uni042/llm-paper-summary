@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-07T22:08:55+00:00",
-  "record_count": 4465,
+  "updated_at": "2026-10-08T06:23:32+00:00",
+  "record_count": 4468,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68142,6 +68142,51 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers"
+    },
+    "DOI:10.1109/tai.2025.3597580": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tai.2025.3597580",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2025.3597580"
+      ],
+      "reason": "The candidate has no cached abstract in the input and the official IEEE DOI/publisher page could not be retrieved, so its primary-source contents could not be verified. Do not infer scope from title or secondary abstracts; retry only if IEEE/author primary text becomes accessible.",
+      "first_checked_at": "2026-10-08T06:23:19+00:00",
+      "last_checked_at": "2026-10-08T06:23:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PipeMamba: State Space Model for Efficient Video-Based Sewer Defect Classification"
+    },
+    "DOI:10.1109/tce.2025.3601582": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tce.2025.3601582",
+      "identity_tokens": [
+        "DOI:10.1109/tce.2025.3601582"
+      ],
+      "reason": "The arXiv primary abstract describes instance-aware visual-language maps for consumer robot navigation and reports navigation accuracy, but the linked primary paper body could not be fetched: arXiv HTML returned 404 and the 10.9 MB PDF exceeded the reader limit; the IEEE DOI page was inaccessible. Because this candidate is linked and body review is required, do not clear it from the abstract alone.",
+      "first_checked_at": "2026-10-08T06:23:20+00:00",
+      "last_checked_at": "2026-10-08T06:23:20+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Instance-Aware Visual Language Grounding for Consumer Robot Navigation"
+    },
+    "DOI:10.1007/s11227-026-08256-4": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08256-4",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08256-4"
+      ],
+      "reason": "The publisher abstract identifies MARS-ASR for code-switched speech recognition and reports a multi-resolution Conformer with lower inference cost, but the Springer page offers the full PDF only via paid/institutional access. The candidate is linked, so without the primary article body the method’s connection cannot be fully screened.",
+      "first_checked_at": "2026-10-08T06:23:32+00:00",
+      "last_checked_at": "2026-10-08T06:23:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scalable RL-based data generation and multi-resolution architecture for code-switched speech recognition: a high-performance computing approach"
     }
   }
 }

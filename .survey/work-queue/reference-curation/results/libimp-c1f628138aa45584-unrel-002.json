@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c1f628138aa45584-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.06204",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.06204",
+    "identity_tokens": [
+      "arXiv:2602.06204"
+    ],
+    "reason": "The paper studies learning-rate scaling and transfer between LoRA ranks and full fine-tuning. It reports training-time memory differences (including full fine-tuning over 2x LoRA memory), but no inference-time optimization; this is outside the project’s inference-only target.",
+    "first_checked_at": "2026-10-08T06:23:33+00:00",
+    "last_checked_at": "2026-10-08T06:23:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Learning Rate Scaling across LoRA Ranks and Transfer to Full Finetuning"
+  },
+  "processed_at": "2026-10-08T06:23:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1f628138aa4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

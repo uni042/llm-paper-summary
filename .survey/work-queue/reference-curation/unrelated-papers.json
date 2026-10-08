@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T06:13:07+00:00",
-  "record_count": 10909,
+  "updated_at": "2026-10-08T06:23:34+00:00",
+  "record_count": 10949,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -155948,6 +155948,566 @@
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
       ],
       "title": "Head-to-Tail: How Knowledgeable are Large Language Models (LLMs)? A.K.A. Will LLMs Replace Knowledge Graphs?"
+    },
+    "arXiv:2310.10021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10021",
+      "identity_tokens": [
+        "arXiv:2310.10021"
+      ],
+      "reason": "BOSS uses LLM calls to propose/label skill chains during a robot-policy bootstrapping phase, then trains a language-conditioned policy and grows a skill library. It is an agent/robot learning workflow, not an optimization of LLM inference or a measured reduction in deployed LLM serving.",
+      "first_checked_at": "2026-10-08T06:23:19+00:00",
+      "last_checked_at": "2026-10-08T06:23:19+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Bootstrap Your Own Skills: Learning to Solve New Tasks with Large Language Model Guidance"
+    },
+    "arXiv:2604.23747": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23747",
+      "identity_tokens": [
+        "arXiv:2604.23747"
+      ],
+      "reason": "SFT-then-RL compares post-training schedules for reasoning quality; it does not propose an inference-time efficiency technique.",
+      "first_checked_at": "2026-10-08T06:23:19+00:00",
+      "last_checked_at": "2026-10-08T06:23:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "SFT-then-RL Outperforms Mixed-Policy Methods for LLM Reasoning"
+    },
+    "arXiv:2604.09059": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09059",
+      "identity_tokens": [
+        "arXiv:2604.09059"
+      ],
+      "reason": "This VLA paper concerns autonomous-driving perception/reasoning/control capabilities, without an abstract-level inference resource optimization.",
+      "first_checked_at": "2026-10-08T06:23:20+00:00",
+      "last_checked_at": "2026-10-08T06:23:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Learning Vision-Language-Action World Models for Autonomous Driving"
+    },
+    "arXiv:2604.00698": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00698",
+      "identity_tokens": [
+        "arXiv:2604.00698"
+      ],
+      "reason": "Learning to Hint addresses advantage collapse in GRPO training; it does not target deployed inference efficiency.",
+      "first_checked_at": "2026-10-08T06:23:20+00:00",
+      "last_checked_at": "2026-10-08T06:23:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Learning to Hint for Reinforcement Learning"
+    },
+    "arXiv:2602.08658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08658",
+      "identity_tokens": [
+        "arXiv:2602.08658"
+      ],
+      "reason": "The paper induces deduction/induction/abduction behavior through fine-tuning, model upscaling, and MoE upcycling and measures out-of-domain reasoning. It targets training-time capability/generalization, not inference efficiency; capacity expansion is not a serving reduction.",
+      "first_checked_at": "2026-10-08T06:23:21+00:00",
+      "last_checked_at": "2026-10-08T06:23:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Fundamental Reasoning Paradigms Induce Out-of-Domain Generalization in Language Models"
+    },
+    "arXiv:2601.12499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12499",
+      "identity_tokens": [
+        "arXiv:2601.12499"
+      ],
+      "reason": "The paper diagnoses weakest-link and recognition bottlenecks in multi-hop QA, with experiments across context positions, datasets, and model scales. It analyzes reasoning failure modes rather than proposing a compute-, KV-cache-, memory-, or latency-saving inference method.",
+      "first_checked_at": "2026-10-08T06:23:21+00:00",
+      "last_checked_at": "2026-10-08T06:23:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Failure Modes in Multi-Hop QA: The Weakest Link Effect and the Recognition Bottleneck"
+    },
+    "arXiv:2604.04917": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04917",
+      "identity_tokens": [
+        "arXiv:2604.04917"
+      ],
+      "reason": "Vero builds a general visual reasoning model and evaluates reasoning capability; no direct LLM inference resource optimization appears in the abstract.",
+      "first_checked_at": "2026-10-08T06:23:21+00:00",
+      "last_checked_at": "2026-10-08T06:23:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Vero: An Open RL Recipe for General Visual Reasoning"
+    },
+    "arXiv:2603.25184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25184",
+      "identity_tokens": [
+        "arXiv:2603.25184"
+      ],
+      "reason": "The paper explicitly targets efficient RL training via prompt selection; training-only efficiency is outside this screening scope.",
+      "first_checked_at": "2026-10-08T06:23:22+00:00",
+      "last_checked_at": "2026-10-08T06:23:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Train at Moving Edge: Online-Verified Prompt Selection for Efficient RL Training of Large Reasoning Model"
+    },
+    "arXiv:2604.09748": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09748",
+      "identity_tokens": [
+        "arXiv:2604.09748"
+      ],
+      "reason": "The paper studies/verifies RLVR jailbreak backdoors and safety behavior, not inference efficiency.",
+      "first_checked_at": "2026-10-08T06:23:22+00:00",
+      "last_checked_at": "2026-10-08T06:23:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Backdoors in RLVR: Jailbreak Backdoors in LLMs From Verifiable Reward"
+    },
+    "arXiv:2512.24176": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24176",
+      "identity_tokens": [
+        "arXiv:2512.24176"
+      ],
+      "reason": "Internal Guidance trains and guides diffusion transformers for image generation and reports image FID/training-resource gains. The architecture and evaluated workload are image diffusion transformers, not LLM inference, KV/cache, quantization, or serving.",
+      "first_checked_at": "2026-10-08T06:23:23+00:00",
+      "last_checked_at": "2026-10-08T06:23:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Guiding a Diffusion Transformer with the Internal Dynamics of Itself"
+    },
+    "arXiv:2604.16881": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16881",
+      "identity_tokens": [
+        "arXiv:2604.16881"
+      ],
+      "reason": "The contribution is reward-based cross-cultural entity translation post-training and translation quality; no inference-time efficiency technique is described.",
+      "first_checked_at": "2026-10-08T06:23:23+00:00",
+      "last_checked_at": "2026-10-08T06:23:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Incentivizing Parametric Knowledge via Reinforcement Learning with Verifiable Rewards for Cross-Cultural Entity Translation"
+    },
+    "arXiv:2604.06636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06636",
+      "identity_tokens": [
+        "arXiv:2604.06636"
+      ],
+      "reason": "The paper proposes stage-aware process supervision for LLM reasoning training; its target is training signals, not inference cost or serving.",
+      "first_checked_at": "2026-10-08T06:23:23+00:00",
+      "last_checked_at": "2026-10-08T06:23:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "SHAPE: Stage-aware Hierarchical Advantage via Potential Estimation for LLM Reasoning"
+    },
+    "arXiv:2603.21016": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21016",
+      "identity_tokens": [
+        "arXiv:2603.21016"
+      ],
+      "reason": "Permutation-aware GRPO addresses option-position selection bias during model training/evaluation, not inference compute or serving.",
+      "first_checked_at": "2026-10-08T06:23:24+00:00",
+      "last_checked_at": "2026-10-08T06:23:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Mitigating Selection Bias in Large Language Models via Permutation-Aware GRPO"
+    },
+    "arXiv:2305.12281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.12281",
+      "identity_tokens": [
+        "arXiv:2305.12281"
+      ],
+      "reason": "The paper concerns lifelong language pretraining and distribution-specialized experts; its method is a training/data adaptation approach rather than inference optimization.",
+      "first_checked_at": "2026-10-08T06:23:24+00:00",
+      "last_checked_at": "2026-10-08T06:23:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Lifelong Language Pretraining with Distribution-Specialized Experts"
+    },
+    "arXiv:2604.16830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16830",
+      "identity_tokens": [
+        "arXiv:2604.16830"
+      ],
+      "reason": "This work studies calibration in on-policy distillation and scaling effects; it does not describe a serving or inference-cost reduction.",
+      "first_checked_at": "2026-10-08T06:23:24+00:00",
+      "last_checked_at": "2026-10-08T06:23:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "The Illusion of Certainty: Decoupling Capability and Calibration in On-Policy Distillation"
+    },
+    "arXiv:2604.10701": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10701",
+      "identity_tokens": [
+        "arXiv:2604.10701"
+      ],
+      "reason": "Generative critics address value modeling/credit assignment for LLM reinforcement learning; this is training-time method development, not inference efficiency.",
+      "first_checked_at": "2026-10-08T06:23:25+00:00",
+      "last_checked_at": "2026-10-08T06:23:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Bringing Value Models Back: Generative Critics for Value Modeling in LLM Reinforcement Learning"
+    },
+    "arXiv:2604.06268": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06268",
+      "identity_tokens": [
+        "arXiv:2604.06268"
+      ],
+      "reason": "RAGEN-2 proposes reward-variance prompt filtering to improve agent RL training and reasoning quality; it does not reduce deployed inference compute, memory, tokens, or latency.",
+      "first_checked_at": "2026-10-08T06:23:25+00:00",
+      "last_checked_at": "2026-10-08T06:23:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "RAGEN-2: Reasoning Collapse in Agentic RL"
+    },
+    "arXiv:2603.23183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.23183",
+      "identity_tokens": [
+        "arXiv:2603.23183"
+      ],
+      "reason": "The paper formulates sequential recommendation as autoregressive generation over semantic IDs and targets recommendation quality; the abstract gives no inference-efficiency method or serving measurement.",
+      "first_checked_at": "2026-10-08T06:23:25+00:00",
+      "last_checked_at": "2026-10-08T06:23:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Reasoning over Semantic IDs Enhances Generative Recommendation"
+    },
+    "arXiv:2601.02993": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02993",
+      "identity_tokens": [
+        "arXiv:2601.02993"
+      ],
+      "reason": "The method executes all 5! retrieved-document permutations to collect final-layer states and clusters them, then decodes representatives. Its contribution is RAG answer stability/accuracy via permutation analysis and DPO, not reducing normal LLM serving cost; the 120-permutation pass is itself substantial inference work.",
+      "first_checked_at": "2026-10-08T06:23:26+00:00",
+      "last_checked_at": "2026-10-08T06:23:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Stable-RAG: Mitigating Retrieval-Permutation-Induced Hallucinations in Retrieval-Augmented Generation"
+    },
+    "arXiv:2302.06706": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.06706",
+      "identity_tokens": [
+        "arXiv:2302.06706"
+      ],
+      "reason": "This is a planning-capability benchmark and critical investigation, not an inference optimization method.",
+      "first_checked_at": "2026-10-08T06:23:26+00:00",
+      "last_checked_at": "2026-10-08T06:23:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "On the Planning Abilities of Large Language Models (A Critical Investigation with a Proposed Benchmark)"
+    },
+    "arXiv:2604.11784": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11784",
+      "identity_tokens": [
+        "arXiv:2604.11784"
+      ],
+      "reason": "ClawGUI is a training/evaluation/deployment framework for GUI agents; its abstract describes interface interaction and framework construction, with no concrete inference-compute or serving reduction.",
+      "first_checked_at": "2026-10-08T06:23:26+00:00",
+      "last_checked_at": "2026-10-08T06:23:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents"
+    },
+    "arXiv:2601.06189": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06189",
+      "identity_tokens": [
+        "arXiv:2601.06189"
+      ],
+      "reason": "GroupQA manipulates evidence quantity, redundancy, order, and conflict to study answer behavior. It contributes a dataset/behavior analysis and suggests deduplication or order randomization, but does not implement or evaluate a direct inference compute, memory, latency, or serving reduction.",
+      "first_checked_at": "2026-10-08T06:23:27+00:00",
+      "last_checked_at": "2026-10-08T06:23:27+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Rational Synthesizers or Heuristic Followers? Analyzing LLMs in RAG-based Question-Answering"
+    },
+    "arXiv:2601.03448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03448",
+      "identity_tokens": [
+        "arXiv:2601.03448"
+      ],
+      "reason": "L2T adds structured language-learning tasks during pretraining to accelerate linguistic competence acquisition. The reported effects concern pretraining and task performance; it supplies no inference-time compute, memory, token, or serving optimization.",
+      "first_checked_at": "2026-10-08T06:23:27+00:00",
+      "last_checked_at": "2026-10-08T06:23:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Enhancing Linguistic Competence of Language Models through Pre-training with Language Learning Tasks"
+    },
+    "arXiv:2604.21327": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21327",
+      "identity_tokens": [
+        "arXiv:2604.21327"
+      ],
+      "reason": "TTRL adapts models at inference using pseudo-labels and studies noisy optimization signals; this adds test-time adaptation rather than providing an inference-saving mechanism.",
+      "first_checked_at": "2026-10-08T06:23:28+00:00",
+      "last_checked_at": "2026-10-08T06:23:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Understanding and Mitigating Spurious Signal Amplification in Test-Time Reinforcement Learning for Math Reasoning"
+    },
+    "arXiv:2604.14646": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14646",
+      "identity_tokens": [
+        "arXiv:2604.14646"
+      ],
+      "reason": "Unified entropy control is an RL exploration/training method for reasoning models; the abstract does not present inference compute or memory savings.",
+      "first_checked_at": "2026-10-08T06:23:28+00:00",
+      "last_checked_at": "2026-10-08T06:23:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Targeted Exploration via Unified Entropy Control for Reinforcement Learning"
+    },
+    "arXiv:2604.14258": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14258",
+      "identity_tokens": [
+        "arXiv:2604.14258"
+      ],
+      "reason": "GFT combines imitation and reward fine-tuning for knowledge injection; the efficiency described is post-training/optimization, not deployed inference.",
+      "first_checked_at": "2026-10-08T06:23:28+00:00",
+      "last_checked_at": "2026-10-08T06:23:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "GFT: From Imitation to Reward Fine-Tuning with Unbiased Group Advantages and Dynamic Coefficient Rectification"
+    },
+    "arXiv:2604.25011": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.25011",
+      "identity_tokens": [
+        "arXiv:2604.25011"
+      ],
+      "reason": "This is a mechanistic study of why RL post-training generalizes; it analyzes training effects rather than proposing inference efficiency.",
+      "first_checked_at": "2026-10-08T06:23:29+00:00",
+      "last_checked_at": "2026-10-08T06:23:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Why Does Reinforcement Learning Generalize? A Feature-Level Mechanistic Study of Post-Training in Large Language Models"
+    },
+    "arXiv:2604.17293": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17293",
+      "identity_tokens": [
+        "arXiv:2604.17293"
+      ],
+      "reason": "The paper evaluates LLM uncertainty/self-awareness and abstention behavior; no concrete serving, latency, cache, or compute reduction is described.",
+      "first_checked_at": "2026-10-08T06:23:29+00:00",
+      "last_checked_at": "2026-10-08T06:23:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Beyond \"I Don't Know\": Evaluating LLM Self-Awareness in Discriminating Data and Model Uncertainty"
+    },
+    "arXiv:2604.16896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16896",
+      "identity_tokens": [
+        "arXiv:2604.16896"
+      ],
+      "reason": "The work is a tool-augmented protein-design planning system for a domain task, without an inference-engine efficiency contribution.",
+      "first_checked_at": "2026-10-08T06:23:29+00:00",
+      "last_checked_at": "2026-10-08T06:23:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "ProtoCycle: Reflective Tool-Augmented Planning for Text-Guided Protein Design"
+    },
+    "arXiv:2409.11169": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.11169",
+      "identity_tokens": [
+        "arXiv:2409.11169"
+      ],
+      "reason": "MAISI combines CT volume compression, diffusion, and tensor-splitting parallelism for high-resolution medical-image synthesis. Its compression/parallelism is for 3D imaging networks, not LLM inference or PyTorch LLM serving.",
+      "first_checked_at": "2026-10-08T06:23:30+00:00",
+      "last_checked_at": "2026-10-08T06:23:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "MAISI: Medical AI for Synthetic Imaging"
+    },
+    "arXiv:2406.03949": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03949",
+      "identity_tokens": [
+        "arXiv:2406.03949"
+      ],
+      "reason": "UltraMedical builds biomedical model capabilities/specialization; the abstract does not describe inference-time compute or serving optimization.",
+      "first_checked_at": "2026-10-08T06:23:30+00:00",
+      "last_checked_at": "2026-10-08T06:23:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "UltraMedical: Building Specialized Generalists in Biomedicine"
+    },
+    "arXiv:2308.10462": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.10462",
+      "identity_tokens": [
+        "arXiv:2308.10462"
+      ],
+      "reason": "The paper compares LoRA, IA3, prompt/prefix tuning, and QLoRA for code-generation fine-tuning under limited resources. Its efficiency claims concern parameter-efficient training, not lower inference cost or serving.",
+      "first_checked_at": "2026-10-08T06:23:31+00:00",
+      "last_checked_at": "2026-10-08T06:23:31+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Exploring Parameter-Efficient Fine-Tuning Techniques for Code Generation with Large Language Models"
+    },
+    "arXiv:2604.18401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18401",
+      "identity_tokens": [
+        "arXiv:2604.18401"
+      ],
+      "reason": "CAPO is a critic-guided policy optimization method for LLM agent training; the abstract concerns policy capability/training, not lower inference cost.",
+      "first_checked_at": "2026-10-08T06:23:31+00:00",
+      "last_checked_at": "2026-10-08T06:23:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "CAPO: Critic-Guided Action-Aligned Policy Optimization for Advancing LLM Agent Capabilities"
+    },
+    "arXiv:2604.15148": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15148",
+      "identity_tokens": [
+        "arXiv:2604.15148"
+      ],
+      "reason": "IG-Search uses information-gain rewards to train search-augmented reasoning; its primary abstract explicitly says inference latency is unchanged and discusses only training overhead, so it is out of the inference-efficiency scope.",
+      "first_checked_at": "2026-10-08T06:23:31+00:00",
+      "last_checked_at": "2026-10-08T06:23:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "IG-Search: Step-Level Information Gain Rewards for Search-Augmented Reasoning"
+    },
+    "arXiv:2604.08706": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08706",
+      "identity_tokens": [
+        "arXiv:2604.08706"
+      ],
+      "reason": "The paper explicitly investigates experience replay for efficient LLM RL training; training efficiency is outside the target.",
+      "first_checked_at": "2026-10-08T06:23:32+00:00",
+      "last_checked_at": "2026-10-08T06:23:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Efficient RL Training for LLMs with Experience Replay"
+    },
+    "arXiv:2603.19329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19329",
+      "identity_tokens": [
+        "arXiv:2603.19329"
+      ],
+      "reason": "Goedel-Code-Prover improves code verification through hierarchical proof search; the abstract proposes reasoning/search capability, not a reduction in inference resources.",
+      "first_checked_at": "2026-10-08T06:23:32+00:00",
+      "last_checked_at": "2026-10-08T06:23:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Goedel-Code-Prover: Hierarchical Proof Search for Open State-of-the-Art Code Verification"
+    },
+    "DOI:10.1038/s41467-026-71794-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-71794-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-71794-1"
+      ],
+      "reason": "EMReady2 improves cryo-EM/cryo-ET map quality using Mamba for an imaging task; it is not an LLM inference method.",
+      "first_checked_at": "2026-10-08T06:23:33+00:00",
+      "last_checked_at": "2026-10-08T06:23:33+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "EMReady2: improvement of cryo-EM and cryo-ET maps by local quality-aware deep learning with Mamba"
+    },
+    "arXiv:2602.06204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06204",
+      "identity_tokens": [
+        "arXiv:2602.06204"
+      ],
+      "reason": "The paper studies learning-rate scaling and transfer between LoRA ranks and full fine-tuning. It reports training-time memory differences (including full fine-tuning over 2x LoRA memory), but no inference-time optimization; this is outside the project’s inference-only target.",
+      "first_checked_at": "2026-10-08T06:23:33+00:00",
+      "last_checked_at": "2026-10-08T06:23:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Learning Rate Scaling across LoRA Ranks and Transfer to Full Finetuning"
+    },
+    "arXiv:2604.17928": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17928",
+      "identity_tokens": [
+        "arXiv:2604.17928"
+      ],
+      "reason": "HEALing Entropy Collapse modifies exploration during few-shot RLVR training; the contribution is training-time reasoning optimization, not inference efficiency.",
+      "first_checked_at": "2026-10-08T06:23:33+00:00",
+      "last_checked_at": "2026-10-08T06:23:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "HEALing Entropy Collapse: Enhancing Exploration in Few-Shot RLVR via Hybrid-Domain Entropy Dynamics Alignment"
+    },
+    "arXiv:2604.07655": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07655",
+      "identity_tokens": [
+        "arXiv:2604.07655"
+      ],
+      "reason": "Guardian-as-an-Advisor concerns LLM safety/guardian checking and trustworthiness; no inference-efficiency method is stated.",
+      "first_checked_at": "2026-10-08T06:23:34+00:00",
+      "last_checked_at": "2026-10-08T06:23:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Guardian-as-an-Advisor: Advancing Next-Generation Guardian Models for Trustworthy LLMs"
     }
   }
 }

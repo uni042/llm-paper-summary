@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29412abe2a116227-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.08658",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.08658",
+    "identity_tokens": [
+      "arXiv:2602.08658"
+    ],
+    "reason": "The paper induces deduction/induction/abduction behavior through fine-tuning, model upscaling, and MoE upcycling and measures out-of-domain reasoning. It targets training-time capability/generalization, not inference efficiency; capacity expansion is not a serving reduction.",
+    "first_checked_at": "2026-10-08T06:23:21+00:00",
+    "last_checked_at": "2026-10-08T06:23:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Fundamental Reasoning Paradigms Induce Out-of-Domain Generalization in Language Models"
+  },
+  "processed_at": "2026-10-08T06:23:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29412abe2a11",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

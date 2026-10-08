@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6a8926425329967b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.06189",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.06189",
+    "identity_tokens": [
+      "arXiv:2601.06189"
+    ],
+    "reason": "GroupQA manipulates evidence quantity, redundancy, order, and conflict to study answer behavior. It contributes a dataset/behavior analysis and suggests deduplication or order randomization, but does not implement or evaluate a direct inference compute, memory, latency, or serving reduction.",
+    "first_checked_at": "2026-10-08T06:23:27+00:00",
+    "last_checked_at": "2026-10-08T06:23:27+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "Rational Synthesizers or Heuristic Followers? Analyzing LLMs in RAG-based Question-Answering"
+  },
+  "processed_at": "2026-10-08T06:23:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a8926425329",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
