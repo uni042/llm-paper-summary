@@ -1,6 +1,12 @@
 name: Library import processor
 
 on:
+  # User/App uploads automatically start intake; GITHUB_TOKEN self-dispatches.
+  push:
+    branches: [main]
+    paths:
+      - '.survey/import-inbox/pending/research/**'
+      - '.github/workflows/library-import.yml'
   workflow_dispatch:
     inputs:
       drain_generation:
@@ -107,8 +113,7 @@ jobs:
             return 1
           }
 
-          # Stage 1: intake is bounded by actual work volume, not file count.
-          # Research: at most 5 papers. Discovery: at most 60 records.
+          # Stage 1: 20 semantic re-audits + 5 ordinary Research + 60 Discovery.
           stage1_ok=0
           for attempt in $(seq 1 6); do
             sync_main
@@ -116,6 +121,8 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --max-research 5 \
+              --max-reaudit 20 \
+              --defer-reaudit-queue-refresh \
               --max-discovery-records 60
             # Re-audit hashes are regenerated against current main in the final
             # stage. Computing them here leaves an unstaged derived-file edit,
@@ -429,9 +436,7 @@ jobs:
           echo "Library backlog after this run: research=${research_backlog}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}, generation=${generation}"
 
           if [ "$backlog_total" -gt 0 ] && [ "${unsettled_library_prechecks:-0}" -gt 0 ]; then
-            # Stage 3 can create a fresh precheck after the earlier dispatch check.
-            # Recheck liveness here so a just-finished precheck run cannot leave
-            # Library waiting work with no workflow responsible for it.
+            # Discovery validation cannot block independent Research intake.
             active_precheck_runs="$(gh run list \
               --repo "${GITHUB_REPOSITORY}" \
               --workflow discovery-precheck.yml \
@@ -439,22 +444,28 @@ jobs:
               --json status \
               --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
             if [ "${active_precheck_runs:-0}" -eq 0 ]; then
-              echo "Library backlog is waiting on ${unsettled_library_prechecks} precheck result(s); dispatching the dedicated gate."
+              echo "Library Discovery awaiting ${unsettled_library_prechecks} precheck result(s); dispatching dedicated gate."
               gh workflow run discovery-precheck.yml \
                 --repo "${GITHUB_REPOSITORY}" \
                 --ref main
             else
-              echo "Library backlog is waiting on ${unsettled_library_prechecks} precheck result(s); Discovery precheck is already active."
+              echo "Discovery precheck already active (${active_precheck_runs} run(s))."
             fi
-          elif [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 96 ]; then
+          fi
+
+          # Self-drain Research independently of Discovery precheck results.
+          if [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 96 ] &&
+             { [ "$research_backlog" -gt 0 ] || [ "${unsettled_library_prechecks:-0}" -eq 0 ]; }; then
             next_generation=$((generation + 1))
-            echo "Queueing bounded Library import continuation generation ${next_generation}."
+            echo "Queueing Library continuation ${next_generation} (research priority; precheck independent)."
             GH_TOKEN="${{ github.token }}" gh workflow run library-import.yml \
               --repo "${GITHUB_REPOSITORY}" \
               --ref main \
               -f drain_generation="${next_generation}"
+          elif [ "$backlog_total" -gt 0 ] && [ "$generation" -ge 96 ]; then
+            echo "Backlog remains after bounded generation cap; next user upload or kick resumes it." >&2
           elif [ "$backlog_total" -gt 0 ]; then
-            echo "Backlog remains after generation cap; a later batch kick or central dispatch will resume it." >&2
+            echo 'Discovery-only backlog is waiting for its dedicated precheck.'
           else
             echo 'Library import backlog is drained.'
           fi
