@@ -141,7 +141,7 @@ run中に在庫が変化してもモードは固定する。
 
 ### 4.1 通常runの反復ラウンド（必須）
 
-通常のResearch / Discoveryでは、従来のノルマ1回分を**1ラウンド**とする。Researchは完成5件、Discoveryは最終分類10件で1ラウンド完了とする。Discoveryでは、タイトル・abstract・書誌情報だけで**明らかに対象外**と確定できた候補は本文確認を省略して `unrelated` として完了件数へ数えてよい。`accept` / `borderline` および対象外か判断不能な候補は本文確認を必須とする。08:30 JSTのmaintenance専用runにはこの反復規則を適用しない。 Researchモードで `borderline` / `unrelated` に終端した候補はLibraryへ耐久記録するが、完成Research 5件のノルマには数えず、同じworklistの次rankへ進む。
+通常のResearch / Discoveryでは、従来のノルマ1回分を**1ラウンド**とする。Researchは完成5件、Discoveryは最終分類10件で1ラウンド完了とする。Discoveryでは、一次資料のabstract・タイトル・書誌情報による論文固有の根拠があれば `accept` / `unrelated` / `borderline` のいずれも本文未読で最終分類してよい。情報不足の場合は分類未確定として保留し、推測で `accept` にしない。Researchでの本文読解・再監査は従来どおり必須である。08:30 JSTのmaintenance専用runにはこの反復規則を適用しない。 Researchモードで `borderline` / `unrelated` に終端した候補はLibraryへ耐久記録するが、完成Research 5件のノルマには数えず、同じworklistの次rankへ進む。
 
 1. 第1ラウンドが所定ノルマを達成したら、まずそのラウンドの完成成果をLibraryへ保存し、再取得して内容・件数・identity一意性等の所定確認を完了する。
 2. 保存・再取得確認まで成功した場合、**同じScheduled起動の中で次ラウンドを必ず開始する。** 「ノルマ達成済み」「残り時間が少ない」「追加ラウンドを完遂できる保証がない」ことだけを終了理由にしてはならない。
@@ -203,7 +203,7 @@ Discoveryは**1ラウンドにつき**新規canonical identity 10件を1候補�
 
 各候補はまずタイトル・abstract・書誌情報で軽量pre-screenする。そこで、このサーベイの対象外であることが**論文固有の根拠付きで明白**なら、その時点で \`unrelated\` を確定し、本文読解を省略してよい。このabstract-only除外も10件へ数える。\`reason\` にはabstract上の具体的な除外根拠を記録し、\`body_check\` には \`abstract_screen_only\` と本文未読であることを明記する。
 
-一方、\`accept\` / \`borderline\`、または対象外か少しでも判断が残る候補は本文確認必須とする。曖昧な候補をabstractだけで捨てない。本文取得不能で判定未完了の候補は10件へ数えず補充する。acceptだけを10件集めるために基準を緩めない。複数候補をまとめて要旨だけで一括分類せず、1候補ずつpre-screenまたは本文確認による最終分類を完了してから次へ進む。
+Discoveryでは一次資料のabstract・タイトル・書誌情報を個別確認し、技術対象・システムへの適用先・新規性を論文固有の根拠で判断できれば `accept` / `borderline` / `unrelated` を確定してよい。`accept` はLLM推論基盤・サービング・オフロード・階層メモリ・KVキャッシュ・MoE推論・量子化・デコード・カーネル・分散推論・これらに直接関係する基盤手法を対象とする。`borderline` は関連性が限定的な場合、`unrelated` は明白な異分野応用・モデル能力だけの評価等とする。学習単独の高速化など凍結範囲を、推論への明確な最終適用なしに `accept` にしない。abstractが欠ける・一次資料確認ができない・安定IDを解決できない場合は未確定として保留し、無理に三分類を確定しない。分類済みrecordの `reason` には論文固有のabstractの根拠を記し、`body_check: abstract_screen_only; body_not_read` のように確認範囲を正確に残す。本文読解はDiscoveryでは必須ではないがResearchでは必須。タイトルのみで明白に無関係とした候補は先行除外の別枠として通常10件ノルマに含めない。複数候補のテンプレート一括判定は禁止する。
 
 ### 5.2 Library保存形式
 
@@ -213,7 +213,7 @@ v12以降のDiscovery通常runは、**1ラウンド = 1 immutable JSON**だけ�
 
 \`/LLM-paper-summary-library-first/discovery/discovery-YYYYMMDD-HHMM-<worker_id>-rNN.json\`
 
-各完了ラウンドは1ファイルに10件すべてを \`records[]\` として含める。最後のpartialラウンドはpre-screenまたは本文確認で最終分類まで完了したrecordだけを含め、\`record_count\` を実数に合わせる。accept / unrelated / borderlineを別Library台帳へ分割しない。
+各完了ラウンドは1ファイルに10件すべてを \`records[]\` として含める。最後のpartialラウンドは一次要旨等の確認で最終分類まで完了したrecordだけを含め、\`record_count\` を実数に合わせる。accept / unrelated / borderlineを別Library台帳へ分割しない。
 
 必須top-level:
 
