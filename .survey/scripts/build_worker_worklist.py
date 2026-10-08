@@ -243,6 +243,16 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
     return out, len(ready), [dict(row) for row in ready]
 
 
+def _current_research_reservations(root: Path) -> list[dict[str, Any]]:
+    """Follow the STATUS nonterminal research identity exclusion."""
+    terminal = {"completed", "rejected", "superseded", "blocked_permanent"}
+    return [
+        row for row in _jobs(root)
+        if row.get("type") in {"research", "audit"}
+        and str(row.get("status") or "").strip().lower() not in terminal
+    ]
+
+
 def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     pool = reference_pool.build_reference_pool(root)
     source = pool.get("candidates")
@@ -441,11 +451,11 @@ def build(
     research_all = _dedupe_rows_by_identity(research_all)
     discovery_all = _exclude_reserved_identities(
         discovery_all,
-        reserved_rows=research_reserved,
+        reserved_rows=research_reserved + _current_research_reservations(root),
     )
     discovery_pending = len(discovery_all)
     discovery_all, prefilter_stats = discovery_relevance_prefilter.triage_worklist(
-        discovery_all, discovery_relevance_prefilter.load_policy(root)
+        discovery_all, discovery_relevance_prefilter.load_policy(root), root=root
     )
     # Abstracts are used for selection, not persisted in oversized worklists.
     discovery_all = [{k: v for k, v in row.items() if k != "abstract"} for row in discovery_all]
@@ -544,6 +554,8 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
             f"事前選別: **{discovery.get('prefilter', {}).get('mode', 'off')}** / "
             f"暫定隔離 **{discovery.get('prefilter', {}).get('quarantine_count', 0)}** / "
             f"監査再投入 **{discovery.get('prefilter', {}).get('audit_count', 0)}** "
+            f"/ 分類器判定済 **{discovery.get('prefilter', {}).get('classifier_scanned_count', 0)}** "
+            f"/ 分類器未判定 **{discovery.get('prefilter', {}).get('classifier_pending_count', 0)}** "
             "（候補の正本は保持。隔離はunrelated判定ではない）",
             "",
             "| # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |",
