@@ -42,7 +42,6 @@ arxiv_categories:
   cross_list:
   - cs.AI
   - cs.LG
-worker_completed_at: '2026-10-08T04:32:57+09:00'
 worker_run_key: 20261008-0428-scheduled-chat-30/r01
 reference_main_sha: 55fc170f98736092545d48085ae4b4f60a3bb2bc
 quality_self_review_passed: true
