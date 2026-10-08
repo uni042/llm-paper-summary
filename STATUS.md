@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 03:32:22 JST**
+> 自動生成: **2026-10-09 03:35:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（15時間35分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（15時間38分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/libfile_17b7002664ac8191a31eb41fed13890b--2024-2410.10819-duoattention-under16kb-reaudit-20261009-0130-scheduled-chat-30-r01.json
 - Discovery: **10-09 03:27:48 JST** / worker codex-luna / run codex-backfill-r316-b13-main-893d2f32
   - 本文確認・分類 **19件** / accept **17件** / unrelated+borderline **2件**
-  - evidence: .survey/import-inbox/pending/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
+  - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
 
 ### Codex探索成果の反映状況
 
@@ -163,8 +163,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | └ 待機中のborderline | **3件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-09 03:27:48 JST** / pending / codex-backfill-r316-b13-main-893d2f32
-  - evidence: .survey/import-inbox/pending/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
+- 最終Codex分類・受渡し証拠: **10-09 03:27:48 JST** / waiting / codex-backfill-r316-b13-main-893d2f32
+  - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
 
 
 ## 件数サマリー（旧immutable transport診断）
@@ -302,11 +302,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **297** |
+| 成功result未照合のimmutable submission | **301** |
 | └ Research | **120** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **32** |
+| └ Other/Unknown | **36** |
 
 ### 厳格検証が未成立のcompleted job
 

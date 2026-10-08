@@ -1,54 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T18:27:03+00:00",
+  "updated_at": "2026-10-08T18:35:25+00:00",
   "events": [
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-c1d981775657--libfile_e808c16ae02c8191b84a77ff92ec1b20--2006.02464-clockwork.md",
-      "processed_at": "2026-10-06T16:08:05+00:00",
-      "canonical_id": "arXiv:2006.02464",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-c1d981775657--libfile_e808c16ae02c8191b84a77ff92ec1b20--2006.02464-clockwork.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-f2c9bec8de1b--libfile_f1932cebc31081918c7f8c1568e943a0--2406.11816-videollm-online.md",
-      "processed_at": "2026-10-06T16:08:05+00:00",
-      "canonical_id": "arXiv:2406.11816",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-f2c9bec8de1b--libfile_f1932cebc31081918c7f8c1568e943a0--2406.11816-videollm-online.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-3a10c924655e--libfile_f50698d7f78c8191b958f74063ebdeff--2609.22098-treespark.md",
-      "processed_at": "2026-10-06T16:13:05+00:00",
-      "canonical_id": "arXiv:2609.22098",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-3a10c924655e--libfile_f50698d7f78c8191b958f74063ebdeff--2609.22098-treespark.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md",
-      "processed_at": "2026-10-06T16:13:05+00:00",
-      "canonical_id": "arXiv:2603.10087",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-00dda5d36d91--libfile_0dca008279cc819185c8fbbcf094a81b--2602.22603-sidequest.md",
-      "processed_at": "2026-10-06T16:13:05+00:00",
-      "canonical_id": "arXiv:2602.22603"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-105345b9454a--libfile_6e30e3a4c1008191b843d92e2269351d--2202.10447-flash.md",
-      "processed_at": "2026-10-06T16:13:05+00:00",
-      "canonical_id": "arXiv:2202.10447"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-10a7202db378--libfile_c5cebc769e48819186ae2805c2ae1100--2502.04463-efficient-reasoning.md",
-      "processed_at": "2026-10-06T16:13:05+00:00",
-      "canonical_id": "arXiv:2502.04463"
-    },
     {
       "status": "discarded_research_after_retry",
       "source_path": ".survey/import-inbox/blocked/research/retry-research-1ad75fa1ea58--libfile_0b4ab164d46481918d75e94fb9b83f19--2509.17765-qwen3-omni.md",
@@ -3965,6 +3919,70 @@
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
       "processed_at": "2026-10-08T18:27:03+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T18:35:25+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T18:35:25+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-08T18:35:25+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-08T18:35:25+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-certaindex-2412.20993.md",
+      "processed_at": "2026-10-08T18:35:25+00:00",
+      "canonical_id": "arXiv:2412.20993",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-08T18:35:25+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-08T18:35:25+00:00",
       "canonical_id": "arXiv:1905.07799",
       "failures": [
         "arxiv_categories.cross_list",
