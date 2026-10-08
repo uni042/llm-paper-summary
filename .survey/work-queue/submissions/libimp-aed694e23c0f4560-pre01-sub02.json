@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "What Can We Learn from State Space Models for Machine Learning on Graphs?",
+      "source_url": "https://arxiv.org/abs/2406.05815",
+      "year": 2024,
+      "published": "2024-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Machine learning on graphs has recently found extensive applications across domains. However, the commonly used Message Passing Neural Networks (MPNNs) suffer from limited expressive power and struggle to capture long-range dependencies. Graph transformers offer a strong alternative due to their global attention mechanism, but they come with great computational overheads, especially for large graphs. In recent years, State Space Models (SSMs) have emerged as a compelling approach to replace full attention in transformers to model sequential data. It blends the strengths of RNNs and CNNs, offering a) efficient computation, b) the ability to capture long-range dependencies, and c) good generalization across sequences of various lengths. However, extending SSMs to graph-structured data presents unique challenges due to the lack of canonical node ordering in graphs. In this work, we propose Graph State Space Convolution (GSSC) as a principled extension of SSMs to graph-structured data. By leveraging global permutation-equivariant set aggregation and factorizable graph kernels that rely on relative node distances as the convolution kernels, GSSC preserves all three advantages of SSMs. We demonstrate the provably stronger expressiveness of GSSC than MPNNs in counting graph substructures and show its effectiveness across 11 real-world, widely used benchmark datasets. GSSC achieves the best results on 6 out of 11 datasets with all significant improvements compared to the state-of-the-art baselines and second-best results on the other 5 datasets. Our findings highlight the potential of GSSC as a powerful and scalable model for graph machine learning. Our code is available at https://github.com/Graph-COM/GSSC.",
+      "identifiers": [
+        "SemanticScholar:93a9b7940e902f989e27f94061d3b699a2fc4d13"
+      ],
+      "semantic_scholar_id": "93a9b7940e902f989e27f94061d3b699a2fc4d13",
+      "canonical_id": "arXiv:2406.05815",
+      "arxiv_id": "2406.05815",
+      "doi": "10.48550/arXiv.2406.05815",
+      "authors": [
+        "Yinan Huang",
+        "Siqi Miao",
+        "Pan Li"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 851,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract presents Graph State Space Convolution as an SSM extension for graph data, aimed at capturing long-range dependencies with efficient computation where graph transformers incur high computational overhead. It is a concrete sequence-architecture efficiency contribution, although its demonstrated application is graph learning rather than LLM serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MAS-Attention: Memory-Aware Stream Processing for Attention Acceleration on Resource-Constrained Edge Devices",
+      "source_url": "https://arxiv.org/abs/2411.17720",
+      "year": 2024,
+      "published": "2024-11-20",
+      "venue": "Conference on Machine Learning and Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The advent of foundation models have revolutionized various fields, enabling unprecedented task accuracy and flexibility in computational linguistics, computer vision and other domains. Attention mechanism has become an essential component of foundation models, due to their superb capability of capturing correlations in a sequence. However, attention results in quadratic complexity in memory and compute as the context length grows. Although many fusion-based exact attention acceleration algorithms have been developed for datacenter-grade GPUs and accelerators leveraging multi-core parallelism and data locality, yet it remains a significant challenge to accelerate attention on resource-constrained edge neural accelerators with limited compute units and stringent on-chip caches. In this paper, we propose a scheme for exact attention inference acceleration on memory-constrained edge accelerators, by parallelizing the utilization of heterogeneous compute units, i.e., vector processing units and matrix processing units. Our method involves scheduling workloads onto these different compute units in a multi-tiered tiling scheme to process tiled vector workloads and matrix workloads in attention as two streams, respecting the workload dependencies. We search for tiling factors to maximize the parallelization of both compute units while considering I/O overhead, and propose a proactive cache overwrite strategy to avoid undesirable cache spills in reality. Extensive results based on open-sourced simulation frameworks show up to 2.75x speedup and 54% reduction in energy consumption as compared to the state-of-the-art attention fusion method (FLAT) in the edge computing scenario. Further experiments on a real-world edge neural processing unit demonstrate speedup of up to 1.76x for attention as compared to FLAT, without affecting model output accuracy.",
+      "identifiers": [
+        "SemanticScholar:b49a350d5127933abf9d8d7fdf0cba437f3864e1"
+      ],
+      "semantic_scholar_id": "b49a350d5127933abf9d8d7fdf0cba437f3864e1",
+      "canonical_id": "arXiv:2411.17720",
+      "arxiv_id": "2411.17720",
+      "doi": "10.48550/arXiv.2411.17720",
+      "authors": [
+        "Mohammadali Shakerdargah",
+        "Shan Lu",
+        "Chao Gao",
+        "Di Niu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 687,
+        "matched_prestigious_venue": "Machine Learning and Systems"
+      },
+      "reason": "The abstract describes memory-aware attention streaming and heterogeneous vector/matrix computation for constrained edge devices, including measured acceleration on an NPU. This is a concrete attention inference memory/latency optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent",
+      "source_url": "https://arxiv.org/abs/2604.06296",
+      "year": 2026,
+      "published": "2026-04-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI agents are increasingly deployed in real-world applications, including systems such as Manus, OpenClaw, and coding agents. Existing research has primarily focused on server-side efficiency, proposing methods such as caching, speculative execution, traffic scheduling, and load balancing to reduce the cost of serving agentic workloads. However, as users increasingly construct agents by composing local tools, remote APIs, and diverse models, an equally important optimization problem arises on the client side. Client-side optimization asks how developers should allocate the resources available to them, including model choice, local tools, and API budget across pipeline stages, subject to application-specific quality, cost, and latency constraints. Because these objectives depend on the task and deployment setting, they cannot be determined by server-side systems alone. We introduce AgentOpt, the first framework-agnostic Python package for client-side agent optimization. We first study model selection, a high-impact optimization lever in multi-step agent pipelines. Given a pipeline and a small evaluation set, the goal is to find the most cost-effective assignment of models to pipeline roles. This problem is consequential in practice: at matched accuracy, the cost gap between the best and worst model combinations can reach 13-32x in our experiments. To efficiently explore the exponentially growing combination space, AgentOpt implements ten search algorithms, including UCB-E, UCB-E with Low-Rank Factorization, Arm Elimination, Epsilon-LUCB, Threshold Successive Elimination, and Bayesian Optimization. Across four benchmarks, UCB-E recovers near-optimal accuracy while reducing evaluation budget by 62-76\\% relative to brute-force search. Code and benchmark results available at https://agentoptimizer.github.io/agentopt/.",
+      "identifiers": [
+        "SemanticScholar:69a5692d9304e71146749c6dcf51489e5b993492"
+      ],
+      "semantic_scholar_id": "69a5692d9304e71146749c6dcf51489e5b993492",
+      "canonical_id": "arXiv:2604.06296",
+      "arxiv_id": "2604.06296",
+      "doi": "10.48550/arXiv.2604.06296",
+      "authors": [
+        "Wenyue Hua",
+        "Sripad Karne",
+        "Qian Xie",
+        "A. Agrawal",
+        "Nikos Pagonas",
+        "Kostis Kaffes",
+        "Tian-Yi Peng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract formulates client-side model selection for LLM agent pipelines under quality, latency, and cost constraints, using search procedures to reduce evaluation overhead. This is directly about efficient execution of LLM-based agents.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.05933",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid growth of interactive applications in large language model (LLM) online services, maintaining high system throughput while ensuring user-perceived latency has become a key issue in inference scheduling. Existing LLM service systems rely on coarse-grained output constraints, making it difficult to effectively handle resource contention among multiple requests, resulting in low resource utilization efficiency and limited support for fine-grained quality of service (QoS) differentiation. We present SlidingServe, a sliding-window-driven SLO-Aware scheduling system for online LLM inference. SlidingServe designed a lightweight batch latency predictor to estimate the execution time of a batch. Based on this, SlidingServe uses SlidingChunker to combine information from the current iteration and the next iteration to achieve dynamic chunking and improve the overall system throughput while maintaining strict QoS guarantees. SlidingServe introduces Multi-Level Priority Sorter to sort candidate requests in order to balance fairness and efficiency. Additionally, when multiple requests within the same batch are at risk of SLO violating,SlidingServe introduces BatchConstructor, which uses dynamic programming to select the set of requests to execute in the current round, mitigating the SLO violation risk of critical requests.Our evaluation demonstrates that SlidingServe can improve service capacity by up to 30% compared to advanced scheduling systems under various load conditions, and further reduces the rate of SLO violation by 16%-53% under heavy-load inference mode.",
+      "identifiers": [
+        "SemanticScholar:ce84d5eaa0b6dd70bd9212a3df293b28ac3506fa"
+      ],
+      "semantic_scholar_id": "ce84d5eaa0b6dd70bd9212a3df293b28ac3506fa",
+      "canonical_id": "arXiv:2606.05933",
+      "arxiv_id": "2606.05933",
+      "doi": "10.48550/arXiv.2606.05933",
+      "authors": [
+        "Yuan Chen",
+        "Yue Zhang",
+        "Xuan Mo",
+        "Wei-Gang Wu",
+        "Jia-Lun Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 126,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents a sliding-window scheduler that adapts LLM inference chunking to service-level objectives, reporting increased capacity and fewer SLO violations. The mechanism targets serving throughput and latency directly.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GRAFT: Adaptive DLM-Based Draft Tree Construction with Target-Distilled Edge Scoring",
+      "source_url": "https://arxiv.org/abs/2608.20375",
+      "year": 2026,
+      "published": "2026-06-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tree-based speculative decoding raises the mean accepted tokens of standard speculative decoding by verifying multiple draft paths, and existing tree builders typically construct these paths through parent-conditioned expansion, where each child token is generated conditioned on its parent path. This construction is incompatible with diffusion language model (DLM) drafters such as DFlash, which produces all future-position distributions in a single forward pass. DDTree bridges this gap by treating high-probability tokens from each future-position distribution as candidate nodes and selecting edges between consecutive positions under a fixed node budget. However, its edge selection relies on token probability alone without modeling parent--child compatibility, so target-compatible tokens can be attached to wrong parents; moreover, its fixed budget ignores that the throughput-optimal tree size varies with the decoding state. We propose GRAFT, a draft-tree construction framework for DLM-based speculative decoding. GRAFT introduces Target-Distilled Edge Scoring (TDES), which distills parent--child preferences from target-model traces to select target-compatible edges, and State-Aware Budget Allocation (SABA), which sets the per-round tree budget by balancing expected draft gain against verification cost. Across multiple models and tasks, GRAFT achieves $2.13\\times$--$6.36\\times$ end-to-end speedup over autoregressive decoding while adding less than $0.5$\\,ms of overhead per round, approximately $1.4\\%$ of the target-model verification latency.",
+      "identifiers": [
+        "SemanticScholar:dd0e6305374de820ddeec7f7a0315a50aa8c97fb"
+      ],
+      "semantic_scholar_id": "dd0e6305374de820ddeec7f7a0315a50aa8c97fb",
+      "canonical_id": "arXiv:2608.20375",
+      "arxiv_id": "2608.20375",
+      "authors": [
+        "Xuming Ye",
+        "Zeming Ma",
+        "Run-Jie Yu",
+        "Yuan Liu",
+        "Tian-Le Li",
+        "Shu-ren Bai",
+        "Jian Zhou",
+        "Fei Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes adaptive draft-tree construction for diffusion language-model speculative decoding, distilling target-model edge scores to guide expansion and improve serving speed. This directly targets inference latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-aed694e23c0f",
+    "round": "libimp-aed694e23c0f4560-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-aed694e23c0f4560-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-aed694e23c0f4560-pre01.json",
+    "receipt": "sha256:ee8a6c2b4bac0db1b261b1a6507f2811b1a17b7ff1f4e43edc77bf0bc1df0b79"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-aed694e23c0f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

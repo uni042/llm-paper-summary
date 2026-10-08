@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Half the Experts, All the Code: One-Shot Domain Pruning of Mixture-of-Experts LLMs for Coding",
+      "source_url": "https://arxiv.org/abs/2607.16721",
+      "year": 2026,
+      "published": "2026-07-18",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The strongest open-weight coding models are mixture-of-experts (MoE) networks: most of their size comes from large pools of\"expert\"subnetworks, of which only a few act on any token. That pool is why these models do not fit on the machines most developers own, yet for a user who only wants coding help, most experts encode abilities that will never be invoked. We ask how many experts can be removed, and which, by pruning two recent open-weight MoE models from different families (Qwen3.6-35B-A3B and Gemma-4-26B-A4B) under five selection strategies, judged the way a user would: by whether the model still writes correct code. Half the experts can be removed from either model with no statistically detectable loss on the primary code benchmark, and the damage lands almost entirely on abilities outside coding, the intended trade. But the winning strategy flips between the two models, so a recipe validated on one family cannot be assumed to work on another. We further show that perplexity, the metric much of the pruning literature leans on, can rate a broken model above an intact one; that a lightweight fine-tune recovers about half of what aggressive pruning loses; and that against quantizing the full model to the same memory, pruning wins only where quantization would have to drop below 3 bits per weight. Five attempts to overturn that crossover, with failure criteria fixed in advance (better calibration, guarded selection, causal expert importance, failure attribution, and an agentic evaluation letting each model repair its failures from execution feedback), all leave it standing; the last shows single-shot benchmarks overstate compression penalties broadly, as one repair turn erases the 2-bit quantization penalty entirely. Expert pruning works, but it demands per-model validation on the task the model will actually serve.",
+      "identifiers": [
+        "SemanticScholar:cb09a7e2a5a53146b9f4a9a51eb6231aa5041362"
+      ],
+      "semantic_scholar_id": "cb09a7e2a5a53146b9f4a9a51eb6231aa5041362",
+      "canonical_id": "arXiv:2607.16721",
+      "arxiv_id": "2607.16721",
+      "doi": "10.48550/arXiv.2607.16721",
+      "authors": [
+        "Anik Jha"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 82,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes one-shot domain pruning that removes about half the MoE experts while retaining coding performance, directly reducing deployed LLM model footprint and inference cost for a target domain.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Absorber LLM: Harnessing Causal Synchronization for Test-Time Training",
+      "source_url": "https://arxiv.org/abs/2604.20915",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers suffer from a high computational cost that grows with sequence length for self-attention, making inference in long streams prohibited by memory consumption. Constant-memory alternatives such as RNNs and SSMs compress history into states with fixed size and thus lose long-tail dependencies, while methods that memorize contexts into parameters, such as Test-Time Training (TTT), are prone to overfitting token-level projection and fail to preserve the causal effect of context in pretrained LLMs. We propose Absorber LLM, which formulates long-context retention as a self-supervised causal synchronization: after absorbing historical contexts into parameters, a contextless model should match the original model with full context on future generations. We optimize this objective by synchronizing internal behaviors of the updated model with the original one, ensuring context absorption and generalization. Experiments on long-context and streaming benchmarks show that Absorber LLM reduces inference memory and improves accuracy over prior parameter-as-memory baselines.",
+      "identifiers": [
+        "SemanticScholar:5aee6464412cb5a3967a07aa93b655cde66d9383"
+      ],
+      "semantic_scholar_id": "5aee6464412cb5a3967a07aa93b655cde66d9383",
+      "canonical_id": "arXiv:2604.20915",
+      "arxiv_id": "2604.20915",
+      "doi": "10.48550/arXiv.2604.20915",
+      "authors": [
+        "Zhi-Xin Zhang",
+        "Shabo Zhang",
+        "Chengcan Wu",
+        "Zeming Wei",
+        "Meng Sun"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes absorbing historical context into model parameters through causal synchronization for test-time training, with the stated objective of reducing inference memory while retaining long-context capability. This is a concrete memory-efficiency proposal for LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FG2-GDN: Enhancing Long-Context Gated Delta Networks with Doubly Fine-Grained Control",
+      "source_url": "https://arxiv.org/abs/2604.19021",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention mechanisms have emerged as promising alternatives to softmax attention, offering linear-time complexity during inference. Recent advances such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA) have demonstrated that the delta rule, an online gradient descent update, enables superior associative recall compared to simple additive updates. While KDA refined the coarse head-wise decay gate into channel-wise decay, the learning rate $\\beta_t$ in the delta update remains a scalar, limiting the model's capacity for dimension-specific adaptation. We introduce FG$^2$-GDN, which replaces the scalar $\\beta_t$ with a channel-wise vector analogous to the transition from SGD to per-coordinate adaptive optimizers such as AdaGrad and Adam. We further propose FG$^2$-GDN+, which decouples the scaling for keys and values, enabling independent control of erasure strength and write strength. Experiments on synthetic and real-world benchmarks show that FG$^2$-GDN and its variant improve associative recall and long-context understanding over GDN and KDA, with comparable computational efficiency.",
+      "identifiers": [
+        "SemanticScholar:d0a36495b0a587f283baefc81c44e14ff5946791"
+      ],
+      "semantic_scholar_id": "d0a36495b0a587f283baefc81c44e14ff5946791",
+      "canonical_id": "arXiv:2604.19021",
+      "arxiv_id": "2604.19021",
+      "doi": "10.48550/arXiv.2604.19021",
+      "authors": [
+        "Ping-Wei Sun",
+        "Yuxuan Hu",
+        "Jian-Chao Tan",
+        "Xue Wang",
+        "Jiaqi Zhang",
+        "Yifan Lu",
+        "Yerui Sun",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract introduces channel-wise delta updates and decoupled key/value scaling for gated delta networks, a linear-attention alternative with linear-time inference. It reports stronger associative recall and long-context understanding at comparable compute.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs",
+      "source_url": "https://arxiv.org/abs/2604.20937",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video Large Language Models (Video LLMs) incur high inference latency due to a large number of visual tokens provided to LLMs. To address this, training-free visual token pruning has emerged as a solution to reduce computational costs; however, existing methods are primarily validated on Multiple-Choice Question Answering (MCQA) benchmarks, where coarse-grained cues often suffice. In this work, we reveal that these methods suffer a sharp performance collapse on fine-grained understanding tasks requiring precise visual grounding, such as hallucination evaluation. To explore this gap, we conduct a systematic analysis and identify sink tokens--semantically uninformative tokens that attract excessive attention--as a key obstacle to fine-grained video understanding. When these sink tokens survive pruning, they distort the model's visual evidence and hinder fine-grained understanding. Motivated by these insights, we propose Sink-Token-aware Pruning (SToP), a simple yet effective plug-and-play method that introduces a sink score to quantify each token's tendency to behave as a sink and applies this score to existing spatial and temporal pruning methods to suppress them, thereby enhancing video understanding. To validate the effectiveness of SToP, we apply it to state-of-the-art pruning methods (VisionZip, FastVid, and Holitom) and evaluate it across diverse benchmarks covering hallucination, open-ended generation, compositional reasoning, and MCQA. Our results demonstrate that SToP significantly boosts performance, even when pruning up to 90% of visual tokens.",
+      "identifiers": [
+        "SemanticScholar:fdefe7fbfca15c2910b7441178366e198b1b449e"
+      ],
+      "semantic_scholar_id": "fdefe7fbfca15c2910b7441178366e198b1b449e",
+      "canonical_id": "arXiv:2604.20937",
+      "arxiv_id": "2604.20937",
+      "doi": "10.48550/arXiv.2604.20937",
+      "authors": [
+        "Kibum Kim",
+        "Jiwan Kim",
+        "Kyle Min",
+        "Yueqi Wang",
+        "Jinyoung Moon",
+        "Julian J. McAuley",
+        "Chanyoung Park"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes sink-token-aware visual-token pruning for video LLMs and evaluates preserving fine-grained video understanding under aggressive token reduction. It directly addresses multimodal LLM inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compressing Pre-trained Models of Code into 3 MB",
+      "source_url": "https://arxiv.org/abs/2208.07120",
+      "year": 2022,
+      "published": "2022-08-15",
+      "venue": "International Conference on Automated Software Engineering",
+      "citation_count": 63,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large pre-trained models of code have delivered significant advancements in various code processing tasks, there is an impediment to the wide and fluent adoption of these powerful models in software developers’ daily workflow: these large models consume hundreds of megabytes of memory and run slowly on personal devices, which causes problems in model deployment and greatly degrades the user experience. It motivates us to propose Compressor, a novel approach that can compress the pre-trained models of code into extremely small models with negligible performance sacrifice. Our proposed method formulates the design of tiny models as simplifying the pre-trained model architecture: searching for a significantly smaller model that follows an architectural design similar to the original pre-trained model. Compressor proposes a genetic algorithm (GA)-based strategy to guide the simplification process. Prior studies found that a model with higher computational cost tends to be more powerful. Inspired by this insight, the GA algorithm is designed to maximize a model’s Giga floating-point operations (GFLOPs), an indicator of the model computational cost, to satisfy the constraint of the target model size. Then, we use the knowledge distillation technique to train the small model: unlabelled data is fed into the large model and the outputs are used as labels to train the small model. We evaluate Compressor with two state-of-the-art pre-trained models, i.e., CodeBERT and GraphCodeBERT, on two important tasks, i.e., vulnerability prediction and clone detection. We use our method to compress pre-trained models to a size (3 MB), which is 160 × smaller than the original size. The results show that compressed CodeBERT and GraphCodeBERT are 4.31 × and 4.15 × faster than the original model at inference, respectively. More importantly, they maintain and of the original performance on the vulnerability prediction task. They even maintain higher ratios ( and ) of the original performance on the clone detection task.",
+      "identifiers": [
+        "SemanticScholar:eed359a8a3ffdc45253e698b352443f0271a9666"
+      ],
+      "semantic_scholar_id": "eed359a8a3ffdc45253e698b352443f0271a9666",
+      "canonical_id": "arXiv:2208.07120",
+      "arxiv_id": "2208.07120",
+      "doi": "10.1145/3551349.3556964",
+      "authors": [
+        "Jie-Ke Shi",
+        "Zhou Yang",
+        "Bo-Wen Xu",
+        "Hong-Jin Kang",
+        "David Lo"
+      ],
+      "priority": 63,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 63,
+        "citation_count": 63,
+        "total": 63,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1515,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents a compact architecture that compresses pretrained code models to 3 MB and reports substantially smaller and faster inference than CodeBERT/GraphCodeBERT baselines. It directly addresses model footprint and inference latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-aed694e23c0f",
+    "round": "libimp-aed694e23c0f4560-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-aed694e23c0f4560-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-aed694e23c0f4560-pre01.json",
+    "receipt": "sha256:ee8a6c2b4bac0db1b261b1a6507f2811b1a17b7ff1f4e43edc77bf0bc1df0b79"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-aed694e23c0f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
