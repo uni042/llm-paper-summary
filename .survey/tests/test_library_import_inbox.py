@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import json
+from datetime import date, datetime, timezone
+from types import SimpleNamespace
+from unittest import mock
 import os
 import sys
 import tempfile
@@ -17,6 +20,104 @@ import process_library_import_inbox as inbox
 
 
 class LibraryImportInboxTests(unittest.TestCase):
+    def test_unquoted_yaml_dates_are_strings_not_datetime_objects(self) -> None:
+        raw = """---
+published: 2024-10-17
+last_checked: 2026-10-08
+worker_completed_at: 2026-10-08T16:49:14+09:00
+under16kb_reaudit_passed: true
+audit_version: 2
+references:
+  - checked_at: 2026-10-07
+---
+# Example
+"""
+        meta = inbox.parse_frontmatter(raw)
+        self.assertEqual(meta["published"], "2024-10-17")
+        self.assertEqual(meta["last_checked"], "2026-10-08")
+        self.assertEqual(meta["worker_completed_at"], "2026-10-08T16:49:14+09:00")
+        self.assertEqual(meta["references"][0]["checked_at"], "2026-10-07")
+        self.assertIs(meta["under16kb_reaudit_passed"], True)
+        self.assertEqual(meta["audit_version"], 2)
+
+    def test_receipt_serializes_legacy_nested_date_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "receipt.json"
+            inbox.replace_json(
+                path,
+                {
+                    "worker_completed_at": datetime(2026, 10, 8, 16, 49, tzinfo=timezone.utc),
+                    "nested": [{"checked_at": date(2026, 10, 8)}],
+                },
+            )
+            recorded = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(recorded["worker_completed_at"], "2026-10-08T16:49:00+00:00")
+            self.assertEqual(recorded["nested"], [{"checked_at": "2026-10-08"}])
+            self.assertRaises(TypeError, inbox.receipt_json, {"unrelated": object()})
+
+    def test_research_quality_block_with_unquoted_timestamp_completes(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/lighttransfer.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                """---
+canonical_id: arXiv:2410.13846
+published: 2024-10-17
+worker_completed_at: 2026-10-08T16:49:14+09:00
+worker_run_key: 20261008-1645-scheduled-chat-45/r01-partial
+---
+# Example
+""",
+                encoding="utf-8",
+            )
+            audit = SimpleNamespace(
+                status="FAIL",
+                failures=["insufficient evaluation evidence"],
+                warnings=[],
+                japanese_ratio=1.0,
+            )
+            try:
+                os.chdir(root)
+                with (
+                    mock.patch.object(inbox, "research_metadata_failures", return_value=[]),
+                    mock.patch.object(inbox.paper_quality_gate, "inspect_rendered_paper", return_value=audit),
+                ):
+                    self.assertEqual(inbox.process_research(root, 1), (0, 1))
+                receipt = root / ".survey/import-inbox/results/research/lighttransfer.json"
+                result = json.loads(receipt.read_text(encoding="utf-8"))
+                self.assertEqual(result["status"], "blocked_quality")
+                self.assertEqual(result["worker_completed_at"], "2026-10-08T16:49:14+09:00")
+                self.assertTrue(
+                    (root / ".survey/import-inbox/blocked/research/lighttransfer.md").exists()
+                )
+                self.assertFalse(source.exists())
+            finally:
+                os.chdir(original_cwd)
+
+    def test_failed_receipt_write_does_not_mask_error_with_second_move(self) -> None:
+        original_cwd = Path.cwd()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            source = root / ".survey/import-inbox/pending/research/paper.md"
+            source.parent.mkdir(parents=True)
+            source.write_text("---\\nworker_completed_at: 2026-10-08T16:49:14+09:00\\n---\\n", encoding="utf-8")
+            try:
+                os.chdir(root)
+                with (
+                    mock.patch.object(inbox, "research_metadata_failures", return_value=["missing"]),
+                    mock.patch.object(inbox, "replace_json", side_effect=OSError("simulated receipt failure")),
+                    self.assertRaisesRegex(RuntimeError, "original error: OSError: simulated receipt failure") as caught,
+                ):
+                    inbox.process_research(root, 1)
+                self.assertIsInstance(caught.exception.__cause__, OSError)
+                self.assertTrue(
+                    (root / ".survey/import-inbox/blocked/research/paper.md").is_file()
+                )
+            finally:
+                os.chdir(original_cwd)
+
     def test_reaudit_source_git_blob_sha_legacy_migration(self) -> None:
         import hashlib
         for payload in (b"", b"sample contents\n", "日本語のテスト".encode("utf-8")):
