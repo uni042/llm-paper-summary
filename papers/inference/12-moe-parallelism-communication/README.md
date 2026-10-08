@@ -199,7 +199,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  学習ではエキスパート 並列の全対全通信とdata 並列の全削減通信（全削減通信）が帯域競合し、競合時の全対全通信は中央値1.83倍、最悪4.14倍遅くなる。推論では入力依存のエキスパート 人気度 偏りを前層ルーティングから予測し、人気エキスパートを複数GPUへreplicate、低人気エキスパートをpackしてstragglerを減らす。
+  Linaは、分散した混合専門家モデル（Mixture of エキスパート、MoE）の通信を、学習と推論で異なる原因に分解して高速化するシステムである。論文の事前計測では、全対全通信が処理段階時間の平均34.1%、ある層の順伝播時間の74.9%を占め、通信中のGPU演算器利用率は平均3.7%にとどまった。
 
 ### 6年前（2020-11〜2021-10）
 

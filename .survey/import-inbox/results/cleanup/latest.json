@@ -1,48 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T15:50:29+00:00",
+  "updated_at": "2026-10-08T16:09:04+00:00",
   "events": [
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-cd2a0c817a3f--libfile_d2556087f8ec819189c8b4d13ef7aa64--2408.10188-longvila.md",
-      "processed_at": "2026-10-06T06:58:56+00:00",
-      "canonical_id": "arXiv:2408.10188",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-cd2a0c817a3f--libfile_d2556087f8ec819189c8b4d13ef7aa64--2408.10188-longvila.md"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-3bd9c15809c5--libfile_223bf4fb39ac81919a6863674cd916f6--2004.11886-lite-transformer.md",
-      "processed_at": "2026-10-06T07:09:14+00:00",
-      "canonical_id": "arXiv:2004.11886"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-cd2a0c817a3f--libfile_d2556087f8ec819189c8b4d13ef7aa64--2408.10188-longvila.md",
-      "processed_at": "2026-10-06T07:09:14+00:00",
-      "canonical_id": "arXiv:2408.10188"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-907b42bd5dea--libfile_7c329b5aed908191b692e04f242ce7fe--2606.23581-kamera.md",
-      "processed_at": "2026-10-06T07:45:45+00:00",
-      "canonical_id": "arXiv:2606.23581",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-907b42bd5dea--libfile_7c329b5aed908191b692e04f242ce7fe--2606.23581-kamera.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-b06cd32a1ff4--libfile_9437abfdc1288191bf20ec07af657bef--2605.06676-lkv.md",
-      "processed_at": "2026-10-06T07:45:45+00:00",
-      "canonical_id": "arXiv:2605.06676",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-b06cd32a1ff4--libfile_9437abfdc1288191bf20ec07af657bef--2605.06676-lkv.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-6d70d111f6d9--libfile_b334b20e1f108191a61b415107b268f7--2601.05109-nalar.md",
-      "processed_at": "2026-10-06T07:45:45+00:00",
-      "canonical_id": "arXiv:2601.05109",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-6d70d111f6d9--libfile_b334b20e1f108191a61b415107b268f7--2601.05109-nalar.md"
-    },
     {
       "status": "discarded_research_after_retry",
       "source_path": ".survey/import-inbox/blocked/research/retry-research-6d70d111f6d9--libfile_b334b20e1f108191a61b415107b268f7--2601.05109-nalar.md",
@@ -3822,6 +3782,61 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-fdcebf6b97c1--libfile_8668892fb7d481918dc1dd6e94a25ee1--2023-samsung-pim-pnm-repair.md",
       "processed_at": "2026-10-08T15:50:29+00:00",
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711"
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T16:09:04+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T16:09:04+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-08T16:09:04+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-08T16:09:04+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-08T16:09:04+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-08T16:09:04+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
     }
   ]
 }

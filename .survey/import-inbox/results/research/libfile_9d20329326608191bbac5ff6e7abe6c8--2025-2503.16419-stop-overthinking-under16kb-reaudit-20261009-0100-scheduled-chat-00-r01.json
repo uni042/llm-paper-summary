@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "405529ab15da5bb27ec2055b7011bde1ac84d6379d41fc5ae03dc8dc6752e9ef",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d20329326608191bbac5ff6e7abe6c8--2025-2503.16419-stop-overthinking-under16kb-reaudit-20261009-0100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2503.16419",
+  "worker_completed_at": "2026-10-09T01:07:41+09:00",
+  "worker_run_key": "20261009-0100-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5121,
+    "body_paragraphs": 29,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 538,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700",
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-08T16:10:37+00:00"
+}

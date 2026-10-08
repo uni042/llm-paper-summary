@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T15:51:55+00:00",
+  "generated_at": "2026-10-08T16:12:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 139,
+  "count": 138,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2274,33 +2274,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a04d2a28d2f4--libfile_225f945b70c88191b1e0abbb322d45c5--2024-2410.10819-duoattention-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a04d2a28d2f4--libfile_225f945b70c88191b1e0abbb322d45c5--2024-2410.10819-duoattention-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2404.07413",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T14:12:19+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4722,
-        "body_paragraphs": 22,
-        "method_chars": 2161,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 412,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c159666e90a1--libfile_f5ab09fe82048191bdd7bb95856bc18f--2024-2404.07413-jetmoe-under16kb-reaudit-20261008-1303-scheduled-chat-00.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c159666e90a1--libfile_f5ab09fe82048191bdd7bb95856bc18f--2024-2404.07413-jetmoe-under16kb-reaudit-20261008-1303-scheduled-chat-00.json",
-      "worker_run_key": "20261008-1303-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2509.23324",

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 00:54:25 JST**
+> 自動生成: **2026-10-09 01:12:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **607** |
 | 未claim Research job | **607** |
-| 直近24hのResearch処理完了 | **254** |
-| 最終Research処理完了 | **10-09 00:28:00 JST** |
+| 直近24hのResearch処理完了 | **267** |
+| 最終Research処理完了 | **10-09 01:04:07 JST** |
 | 最終Discovery探索完了 | **10-09 00:50:00 JST** |
 | 整合性異常 | **0** |
 
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **437** |
-| 機械検査未達（FAIL） | **278** |
+| **再監査残件数** | **436** |
+| 機械検査未達（FAIL） | **277** |
 | 機械検査適合・警告のみ（PASS/WARN） | **159** |
-| :00ワーカー担当残 | **149** |
+| :00ワーカー担当残 | **148** |
 | :30ワーカー担当残 | **128** |
 | :45ワーカー担当残 | **160** |
 
-- キュー最終生成: **2026-10-09 00:30:20 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-09 00:56:51 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（12時間57分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（13時間15分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **47** |
+| 直近6hのResearch完了 | **55** |
 | 直近6hのDiscovery run | **3** |
 | 直近6hのDiscovery本文確認・分類 | **44** |
-| 最終Research完了 | **10-09 00:28:00 JST** |
+| 最終Research完了 | **10-09 01:04:07 JST** |
 | 最終Discovery完了 | **10-09 00:50:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-09 00:28:00 JST** / worker — / run 20261009-0000-scheduled-chat-00/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_fdd6722bc73c8191abef800887448daf--2024-2410.00037-moshi-under16kb-reaudit-20261009-0000-scheduled-chat-00-r01.json
+- Research: **10-09 01:04:07 JST** / worker — / run 20261009-0100-scheduled-chat-00/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_bad41845b9d08191a6ef6b6387f07372--2024-2404.07413-jetmoe-under16kb-reaudit-20261009-0100-scheduled-chat-00-r01.json
 - Discovery: **10-09 00:50:00 JST** / worker codex-discovery-backfill / run codex-backfill-r312-b03
   - 本文確認・分類 **20件** / accept **18件** / unrelated+borderline **2件**
   - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r312-b03-main-c0d7ad5b.json
@@ -302,11 +302,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **288** |
+| 成功result未照合のimmutable submission | **292** |
 | └ Research | **120** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **23** |
+| └ Other/Unknown | **27** |
 
 ### 厳格検証が未成立のcompleted job
 
