@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T04:59:07.458124+00:00",
+  "generated_at": "2026-10-08T05:10:33.481701+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 620,
+  "count": 616,
   "worker_counts": {
-    "scheduled-chat-00": 209,
-    "scheduled-chat-30": 197,
-    "scheduled-chat-45": 214
+    "scheduled-chat-00": 208,
+    "scheduled-chat-30": 196,
+    "scheduled-chat-45": 212
   },
   "entries": [
     {
@@ -11868,50 +11868,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
-      "canonical_id": "arXiv:2406.02542",
-      "title": "Loki: Low-Rank Keys for Efficient Sparse Attention",
-      "file_bytes": 14095,
-      "source_sha256": "9e5047ade24ad0ded4b2ffe02fe9d90171394b8ab9ef29b8ae87942632a8a6f3",
-      "source_git_blob_sha": "3512af5a20dcba3f71225234431178e6c36643b0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.921087,
-      "quality_metrics": {
-        "body_chars": 3385,
-        "method_chars": 1350,
-        "evaluation_chars": 239,
-        "limitation_chars": 252
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 239 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
-      "canonical_id": "arXiv:2310.16836",
-      "title": "LLM-FP4: 4-Bit Floating-Point Quantized Transformers",
-      "file_bytes": 14100,
-      "source_sha256": "f77439c805b7e6ff02d04d3aaf9b8f8dab63451729b8c8740afe9233b4f0d337",
-      "source_git_blob_sha": "36f12094774312920f51509d3ac2596d44e24497",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.962162,
-      "quality_metrics": {
-        "body_chars": 3410,
-        "method_chars": 917,
-        "evaluation_chars": 440,
-        "limitation_chars": 316
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 440 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
       "canonical_id": "arXiv:2507.10524",
       "title": "Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation",
@@ -11976,28 +11932,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 227 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
-      "canonical_id": "arXiv:2310.00034",
-      "title": "PB-LLM: Partially Binarized Large Language Models",
-      "file_bytes": 14145,
-      "source_sha256": "7e1b816aa56a25bc0a78c2a5a6b1576c3e243919b7efe5d1b705e80bd133a63a",
-      "source_git_blob_sha": "3664c6022b5b75140720d85470a6a9a63234b298",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.952466,
-      "quality_metrics": {
-        "body_chars": 3414,
-        "method_chars": 1158,
-        "evaluation_chars": 326,
-        "limitation_chars": 318
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 326 < 500"
       ],
       "warnings": []
     },
@@ -12916,28 +12850,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 91 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
-      "canonical_id": "arXiv:2003.05997",
-      "title": "Efficient Content-Based Sparse Attention with Routing Transformers",
-      "file_bytes": 14728,
-      "source_sha256": "25f9241affe6c8e579500cfd91ee532fa2522c0df59dcf308d21e950c86e264b",
-      "source_git_blob_sha": "57d628b18393f8b5b04dfbf94f45950e0bef935a",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.846336,
-      "quality_metrics": {
-        "body_chars": 3275,
-        "method_chars": 936,
-        "evaluation_chars": 182,
-        "limitation_chars": 420
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 182 < 500"
       ],
       "warnings": []
     },
