@@ -311,6 +311,32 @@ jobs:
             exit 1
           }
 
+          # STATUS must reflect the final, authoritative under-16KB queue.
+          # Stage 5 rendered an older queue snapshot. GITHUB_TOKEN pushes do not
+          # trigger status-dashboard.yml, so regenerate from the latest main.
+          status_after_reaudit_ok=0
+          for attempt in $(seq 1 5); do
+            sync_main
+            python .survey/scripts/render_status_dashboard.py \
+              --repo-root . \
+              --output STATUS.md
+            git add STATUS.md
+            if git diff --cached --quiet; then
+              status_after_reaudit_ok=1
+              break
+            fi
+            git commit -m 'library-import: sync STATUS after re-audit refresh'
+            if git push origin HEAD:main; then
+              status_after_reaudit_ok=1
+              break
+            fi
+            echo "Post-re-audit STATUS push race on attempt ${attempt}; regenerating."
+          done
+          [ "$status_after_reaudit_ok" -eq 1 ] || {
+            echo 'STATUS refresh after under-16KB queue publication failed.' >&2
+            exit 1
+          }
+
           if [ "${relevance_rc:-0}" -ne 0 ]; then
             echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
           fi
