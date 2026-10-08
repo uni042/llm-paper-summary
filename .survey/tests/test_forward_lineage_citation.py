@@ -33,7 +33,7 @@ class ForwardLineageCitationTests(unittest.TestCase):
 
     def test_distinct_same_folder_forward_seeds(self):
         row = {
-            "forward_seed_ids": ["arXiv:2501.00001", "DOI:10.10/2", "arXiv:2501.00003", "arXiv:2401.10000"],
+            "forward_seed_ids": ["arXiv:2501.00001", "DOI:10.10/1", "DOI:10.10/2", "arXiv:2501.00003", "arXiv:2401.10000"],
         }
         counts = graph.forward_lineage_counts(
             row, self.ids, self.paths, source_kind="forward_citation_candidate",
