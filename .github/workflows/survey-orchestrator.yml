@@ -10,6 +10,11 @@ on:
     branches: [main]
     paths:
       - '.survey/scheduler/library-import-kick.json'
+      # Library uploads are the durable trigger. Cron/watchdog are recovery only.
+      - '.survey/import-inbox/pending/research/**'
+      - '.survey/import-inbox/pending/discovery/**'
+      - '.survey/import-inbox/waiting/discovery/**'
+      - '.github/workflows/survey-orchestrator.yml'
   workflow_dispatch:
 
 permissions:
@@ -48,12 +53,30 @@ jobs:
 
           count_dir() {
             local path="$1"
-            local payload
-            if ! payload="$(gh api "repos/${GITHUB_REPOSITORY}/contents/${path}?ref=main" 2>/dev/null)"; then
-              printf '0\n'
-              return 0
-            fi
-            jq -r 'if type == "array" then length else 0 end' <<< "$payload"
+            local payload error_file
+            error_file="$(mktemp)"
+            local attempt
+
+            # Never interpret transport/API failures as an empty inbox. A genuinely
+            # absent optional directory (HTTP 404) is the only allowed zero fallback.
+            for attempt in 1 2 3; do
+              if payload="$(gh api "repos/${GITHUB_REPOSITORY}/contents/${path}?ref=main" 2>"$error_file")"; then
+                rm -f "$error_file"
+                jq -er 'if type == "array" then length else error("unexpected inbox response") end' <<< "$payload"
+                return 0
+              fi
+              if grep -q '(HTTP 404)' "$error_file"; then
+                rm -f "$error_file"
+                printf '0\n'
+                return 0
+              fi
+              echo "Inbox lookup failed for ${path}, attempt ${attempt}/3: $(cat "$error_file")" >&2
+              if [ "$attempt" -lt 3 ]; then sleep $((attempt * 2)); fi
+            done
+
+            rm -f "$error_file"
+            echo "FATAL: Cannot determine inbox backlog for ${path}; refusing to report zero." >&2
+            return 1
           }
 
           # The import processor is comparatively heavy (checkout, Python setup,
