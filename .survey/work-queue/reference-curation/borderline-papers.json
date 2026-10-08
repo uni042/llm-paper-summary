@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T18:28:49+00:00",
-  "record_count": 4496,
+  "updated_at": "2026-10-08T18:37:10+00:00",
+  "record_count": 4497,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68595,6 +68595,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "It Takes Two: Embracing Sparsity and Speculative Decoding for Efficient LLM Inference"
+    },
+    "DOI:10.1109/caibda70336.2026.11621553": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/caibda70336.2026.11621553",
+      "identity_tokens": [
+        "DOI:10.1109/caibda70336.2026.11621553"
+      ],
+      "reason": "source-unavailable borderline: DOI and candidate title are stable, but the official IEEE DOI/Xplore page returned “URL https://doi.org/10.1109/CAIBDA70336.2026.11621553 is not accessible via this tool.” Only secondary metadata/abstract results were discoverable and were not used for classification.",
+      "first_checked_at": "2026-10-08T18:37:10+00:00",
+      "last_checked_at": "2026-10-08T18:37:10+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Memory-Efficient Chunked Tropical Attention for Long Sequences"
     }
   }
 }

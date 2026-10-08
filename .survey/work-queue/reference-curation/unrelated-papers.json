@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T18:28:49+00:00",
-  "record_count": 11215,
+  "updated_at": "2026-10-08T18:37:10+00:00",
+  "record_count": 11216,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160233,6 +160233,19 @@
       "last_checked_at": "2026-10-08T18:28:49+00:00",
       "linked_from": [],
       "title": "TNT: Improving Chunkwise Training for Test-Time Memorization"
+    },
+    "arXiv:2605.07569": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07569",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.07569",
+        "arXiv:2605.07569"
+      ],
+      "reason": "Root-owned title-only prefilter: title explicitly concerns long-context LLM training and identifies no inference, serving, or deployment-efficiency connection. Abstract was not read.",
+      "first_checked_at": "2026-10-08T18:37:10+00:00",
+      "last_checked_at": "2026-10-08T18:37:10+00:00",
+      "linked_from": [],
+      "title": "HexiSeq: Accommodating Long Context Training of LLMs over Heterogeneous Hardware"
     }
   }
 }
