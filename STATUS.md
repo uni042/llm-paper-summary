@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 16:44:54 JST**
+> 自動生成: **2026-10-08 16:47:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **608** |
 | 直近24hのResearch処理完了 | **97** |
 | 最終Research処理完了 | **10-08 12:17:50 JST** |
-| 最終Discovery探索完了 | **10-08 16:32:12 JST** |
+| 最終Discovery探索完了 | **10-08 16:47:03 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **557** |
-| 機械検査未達（FAIL） | **404** |
+| **再監査残件数** | **558** |
+| 機械検査未達（FAIL） | **405** |
 | 機械検査適合・警告のみ（PASS/WARN） | **153** |
-| :00ワーカー担当残 | **188** |
+| :00ワーカー担当残 | **189** |
 | :30ワーカー担当残 | **181** |
 | :45ワーカー担当残 | **188** |
 
-- キュー最終生成: **2026-10-08 16:43:52 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 16:34:04 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -52,16 +52,16 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **100512** |
-| 処理済み | **17690** |
-| 未処理Discovery候補 | **82822** |
+| 処理済み | **17722** |
+| 未処理Discovery候補 | **82790** |
 | 収録済み | **1732** |
 | Research / Audit候補へ昇格済み | **456** |
-| 無関係として除外 | **11092** |
+| 無関係として除外 | **11124** |
 | 微妙として除外 | **4410** |
 
 - 消化率: **17.6%**
 - 現在の生在庫: 後方references **49978件** / 前方引用 **34158件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **83565件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **83533件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -88,7 +88,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（4時間48分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（4時間50分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -112,15 +112,15 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 直近6hのDiscovery run | **78** |
 | 直近6hのDiscovery本文確認・分類 | **368** |
 | 最終Research完了 | **10-08 12:17:50 JST** |
-| 最終Discovery完了 | **10-08 16:32:12 JST** |
+| 最終Discovery完了 | **10-08 16:47:03 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-08 12:17:50 JST** / worker — / run 20261008-1214-scheduled-chat-00/repair-r01 / 成果 **2件**
   - evidence: .survey/import-inbox/results/research/libfile_2ceb47f13198819186e723a34ddbb2e7--2022-2202.10447-flash-repair-20261008-1218-scheduled-chat-00.json
-- Discovery: **10-08 16:32:12 JST** / worker codex-local-screen-watcher / run 20261008-r309-screen-01-part-07-0be8303ea29c
+- Discovery: **10-08 16:47:03 JST** / worker codex-local-screen-watcher / run 20261008-r311-screen-01-part-03-cc055bb3f9bc
   - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
-  - evidence: .survey/import-inbox/results/discovery/20261008-r309-screen-01-part-07-0be8303ea29c-7814cfd388dc.json
+  - evidence: .survey/import-inbox/results/discovery/20261008-r311-screen-01-part-03-cc055bb3f9bc-448a9d75517a.json
 
 ### Codex探索成果の反映状況
 
@@ -128,15 +128,15 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| Codex成果の取り込み済み（receipt） | **2786ファイル / 13215件** |
-| Codex成果の取り込み待機中 | **7ファイル / 32件** |
+| Codex成果の取り込み済み（receipt） | **2793ファイル / 13247件** |
+| Codex成果の取り込み待機中 | **0ファイル / 0件** |
 | └ 待機中のaccept | **0件** |
-| └ 待機中のunrelated | **32件** |
+| └ 待機中のunrelated | **0件** |
 | └ 待機中のborderline | **0件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-08 16:32:12 JST** / results / 20261008-r309-screen-01-part-07-0be8303ea29c
-  - evidence: .survey/import-inbox/results/discovery/20261008-r309-screen-01-part-07-0be8303ea29c-7814cfd388dc.json
+- 最終Codex分類・受渡し証拠: **10-08 16:47:03 JST** / results / 20261008-r311-screen-01-part-03-cc055bb3f9bc
+  - evidence: .survey/import-inbox/results/discovery/20261008-r311-screen-01-part-03-cc055bb3f9bc-448a9d75517a.json
 
 
 ## 件数サマリー（旧immutable transport診断）
