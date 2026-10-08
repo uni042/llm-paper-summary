@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T07:08:09+00:00",
-  "record_count": 4482,
+  "updated_at": "2026-10-08T07:22:25+00:00",
+  "record_count": 4487,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68397,6 +68397,84 @@
       ],
       "borderline_recheck_count": 0,
       "title": "OGRA-YOLOv8: Overlapping Gridded and Rhombus Attention for Underwater Object Detection"
+    },
+    "arXiv:2602.05258": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05258",
+      "identity_tokens": [
+        "arXiv:2602.05258"
+      ],
+      "reason": "全文はLLM RoPEのsoft clippingで最大256k contextの品質を改善するpositional-encoding方法。long-context系統への直接の接点はあるが、attention計算量/KV cache/latencyを削減する証拠はなく、現在のresource-focused scopeとの適合は弱い。",
+      "first_checked_at": "2026-10-08T07:22:12+00:00",
+      "last_checked_at": "2026-10-08T07:22:12+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoPE: Clipped RoPE as A Scalable Free Lunch for Long Context LLMs"
+    },
+    "DOI:10.1016/j.ins.2026.123289": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123289",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123289"
+      ],
+      "reason": "ScienceDirectの一次abstractはsession-based recommender用DT-GATと説明し、LLM/KV-cache/streaming推論とは異なる。一方、候補はKV/streaming lineageに結び付いており本文確認が必要だったが、出版社full-textページは403で全文を得られず、確定的に除外せずborderlineとする。",
+      "first_checked_at": "2026-10-08T07:22:12+00:00",
+      "last_checked_at": "2026-10-08T07:22:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dual-channel time-aware graph attention network for session-based recommendation"
+    },
+    "arXiv:2603.00270": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00270",
+      "identity_tokens": [
+        "arXiv:2603.00270"
+      ],
+      "reason": "本文は39モデルのcontext-interference benchmarkを行い、結論でrecency-aware attention reweighting等を将来のmitigationとして挙げる。KV/streaming/long-context系統には関連する診断だが、論文自体は推論最適化や資源削減を実証しないため現時点の適合は弱い。",
+      "first_checked_at": "2026-10-08T07:22:16+00:00",
+      "last_checked_at": "2026-10-08T07:22:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLMs Remember First, Forget Last: Dual-Process Interference in Large Language Models"
+    },
+    "DOI:10.1101/2022.05.19.492714": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1101/2022.05.19.492714",
+      "identity_tokens": [
+        "DOI:10.1101/2022.05.19.492714"
+      ],
+      "reason": "abstractは蛋白配列用CNN言語モデルがTransformerより線形時間/メモリで長い配列を扱うと述べ、sparse-attention/long-context系との概念接点がある。ただし一次本文を取得できず、内容・条件・推論効率評価を確認できないため本文ゲートを満たせずborderline。",
+      "first_checked_at": "2026-10-08T07:22:18+00:00",
+      "last_checked_at": "2026-10-08T07:22:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Convolutions are competitive with transformers for protein sequence pretraining"
+    },
+    "arXiv:2411.02571": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.02571",
+      "identity_tokens": [
+        "arXiv:2411.02571"
+      ],
+      "reason": "本文はMLLMをbi-encoder retrieverとしてfine-tuneする情報検索研究で、appendixにretrieval latency/storageの実測がある一方、MM-Embed自体はCLIP/BLIPより大きく遅い。結論で小型retrieverへのdistillationを将来課題として示すが、本論文はLLM inference最適化手法ではなく、適用範囲との接続は弱い。",
+      "first_checked_at": "2026-10-08T07:22:25+00:00",
+      "last_checked_at": "2026-10-08T07:22:25+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MM-Embed: Universal Multimodal Retrieval with Multimodal LLMs"
     }
   }
 }

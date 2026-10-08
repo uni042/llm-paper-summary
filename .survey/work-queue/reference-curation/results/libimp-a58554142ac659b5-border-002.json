@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a58554142ac659b5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.00270",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.00270",
+    "identity_tokens": [
+      "arXiv:2603.00270"
+    ],
+    "reason": "本文は39モデルのcontext-interference benchmarkを行い、結論でrecency-aware attention reweighting等を将来のmitigationとして挙げる。KV/streaming/long-context系統には関連する診断だが、論文自体は推論最適化や資源削減を実証しないため現時点の適合は弱い。",
+    "first_checked_at": "2026-10-08T07:22:16+00:00",
+    "last_checked_at": "2026-10-08T07:22:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LLMs Remember First, Forget Last: Dual-Process Interference in Large Language Models"
+  },
+  "processed_at": "2026-10-08T07:22:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a58554142ac6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
