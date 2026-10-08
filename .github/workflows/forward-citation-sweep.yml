@@ -9,6 +9,7 @@ on:
       - '.survey/scripts/refresh_due.py'
       - '.survey/scripts/discovery_provider_adapter.py'
       - '.survey/scripts/forward_citation_sweep.py'
+      - '.survey/scripts/forward_citation_state.py'
       - '.survey/tests/test_forward_citation_sweep.py'
       - '.survey/tests/test_discovery_provider_adapter.py'
   schedule:
@@ -74,7 +75,10 @@ jobs:
           # are resolved by rebasing this generated state, never by re-querying.
           python .survey/scripts/forward_citation_sweep.py --repo-root . | tee /tmp/forward-citation-sweep.json
 
-          git add -A .survey/work-queue/forward-citation-sweep.json
+          git add -A -- .survey/work-queue/forward-citation-sweep.json
+          if [ -d .survey/work-queue/forward-citation-sweep-shards ]; then
+            git add -A -- .survey/work-queue/forward-citation-sweep-shards
+          fi
           if git diff --cached --quiet; then
             echo 'Forward-citation coverage state already current.'
             exit 0
