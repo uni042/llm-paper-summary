@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-08T07:24:37.316143+00:00",
+  "generated_at": "2026-10-08T07:34:04.750799+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 560,
+  "count": 558,
   "worker_counts": {
-    "scheduled-chat-00": 191,
+    "scheduled-chat-00": 189,
     "scheduled-chat-30": 181,
     "scheduled-chat-45": 188
   },
@@ -423,30 +423,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1514 < 2200",
         "16KB未満再監査: 手法説明量 420 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md",
-      "canonical_id": "arXiv:2510.06126",
-      "title": "lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models",
-      "file_bytes": 8330,
-      "source_sha256": "387c34bf55023e82c71c6b976723e563d4a651d61222ea4d0b4ba6513bb9f509",
-      "source_git_blob_sha": "303217da665bbf64cbc239734424ab4b8f030f3f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.830872,
-      "quality_metrics": {
-        "body_chars": 1431,
-        "method_chars": 541,
-        "evaluation_chars": 0,
-        "limitation_chars": 143
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1431 < 2200",
-        "16KB未満再監査: 手法説明量 541 < 700",
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
@@ -11654,28 +11630,6 @@
         "limitation_chars": 244
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md",
-      "canonical_id": "arXiv:2503.18893",
-      "title": "xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction",
-      "file_bytes": 14726,
-      "source_sha256": "ac050f669904e698c50b4a3addac0bb14f008cd9ea391acdd77197cbecbe393c",
-      "source_git_blob_sha": "fa584b78fcb2843c824d72f1b68472610367cb04",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.947793,
-      "quality_metrics": {
-        "body_chars": 3027,
-        "method_chars": 944,
-        "evaluation_chars": 91,
-        "limitation_chars": 203
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 91 < 500"
-      ],
       "warnings": []
     },
     {
