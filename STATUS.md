@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 18:59:23 JST**
+> 自動生成: **2026-10-08 19:12:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -67,15 +67,14 @@
 | 機械規則による暫定隔離 | **874** |
 | 拡張機械規則による追加隔離 | **594** |
 | 機械規則通過後 | **84704** |
-| 系統内前方引用スコアによる選抜保留 | **80498** |
-| 暫定隔離合計 | **81966** |
-| 監査用に復活 | **30** |
+| 系統内前方引用スコアによる選抜保留 | **80468** |
+| 暫定隔離合計 | **81936** |
 | **読解可能候補（隔離後）** | **4236** |
 | 前方引用が同一系統で2本以上の候補 | **9507** |
 | 前方引用が同一系統で3本以上の候補 | **5091** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4236件**（監査復活枠を含む）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4236件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -83,10 +82,10 @@
 - 拡張規則に一致した候補: **594件**（基本規則との重複を除去）
 - 実際の追加隔離: **594件**
 - 分野別内訳: **{'expanded_domain:clinical_applications': 37, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 11, 'expanded_domain:environmental_applications': 3, 'expanded_domain:financial_applications': 34, 'expanded_domain:geoscience_applications': 32, 'expanded_domain:materials_applications': 11, 'expanded_domain:vision_applications': 459}**
-- 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の監査再投入も継続する。
+- 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
-- 全数との差は隔離候補から監査復活分を引いた値。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
+- 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **17.1%**
 - 現在の生在庫: 後方references **49989件** / 前方引用 **37328件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
@@ -117,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（7時間2分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（7時間16分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
