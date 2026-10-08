@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 18:39:08 JST**
+> 自動生成: **2026-10-08 18:51:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **102958** |
+| 探索候補総数 | **103895** |
 | 処理済み | **17723** |
-| 未処理Discovery候補 | **85235** |
+| 未処理Discovery候補 | **86172** |
 | 収録済み | **1740** |
 | Research / Audit候補へ昇格済み | **450** |
 | 無関係として除外 | **11124** |
@@ -63,33 +63,34 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **85235** |
-| 規則による暫定隔離 | **834** |
-| 分類器による追加隔離 | **127** |
-| 拡張規則による追加隔離 | **556** |
-| 上位25%選抜による保留 | **62439** |
-| 暫定隔離合計 | **63956** |
+| 未処理候補（フィルタ前） | **86172** |
+| 機械規則による暫定隔離 | **874** |
+| 拡張機械規則による追加隔離 | **594** |
+| 機械規則通過後 | **84704** |
+| 系統内前方引用スコアによる選抜保留 | **80498** |
+| 暫定隔離合計 | **81966** |
 | 監査用に復活 | **30** |
-| **読解可能候補（隔離後）** | **21309** |
-| 分類器判定済み | **3986** |
-| 分類器未判定 | **81249** |
+| **読解可能候補（隔離後）** | **4236** |
+| 前方引用が同一系統で2本以上の候補 | **9507** |
+| 前方引用が同一系統で3本以上の候補 | **5091** |
 
-- 関連度選抜: **quarantine** / 通常処理枠 **25%** / 目標 **21309件**（監査復活枠を含む）。選抜保留は無関係確定ではない。
+- 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4236件**（監査復活枠を含む）。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **556件**（既存の規則・分類器との重複を除去）
-- 実際の追加隔離: **556件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 36, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 11, 'expanded_domain:environmental_applications': 3, 'expanded_domain:financial_applications': 30, 'expanded_domain:geoscience_applications': 30, 'expanded_domain:materials_applications': 11, 'expanded_domain:vision_applications': 428}**
+- 拡張規則に一致した候補: **594件**（基本規則との重複を除去）
+- 実際の追加隔離: **594件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 37, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 11, 'expanded_domain:environmental_applications': 3, 'expanded_domain:financial_applications': 34, 'expanded_domain:geoscience_applications': 32, 'expanded_domain:materials_applications': 11, 'expanded_domain:vision_applications': 459}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の監査再投入も継続する。
 
-- モード: 規則 **quarantine** / 分類器 **quarantine**。
-- 全数との差は隔離候補から監査復活分を引いた値。元候補は削除せず、分類器未判定分は通常候補に残す。集計は現在の候補identityから再計算する。
+- モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
+- 全数との差は隔離候補から監査復活分を引いた値。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
-- 消化率: **17.2%**
-- 現在の生在庫: 後方references **49989件** / 前方引用 **36389件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **85973件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 消化率: **17.1%**
+- 現在の生在庫: 後方references **49989件** / 前方引用 **37328件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **86910件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -97,18 +98,18 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **1737** |
-| provider巡回可能 | **1733** |
+| 収録論文seed台帳 | **1741** |
+| provider巡回可能 | **1737** |
 | provider巡回不能 | **4** |
-| 1周以上完了 | **1693** |
-| 巡回中 | **40** |
+| 1周以上完了 | **1699** |
+| 巡回中 | **38** |
 | 未巡回 | **0** |
-| 今回run開始時due | **46** |
-| 前方引用から保持中の未処理候補 | **36389** |
-| エラー状態保持seed | **11** |
+| 今回run開始時due | **44** |
+| 前方引用から保持中の未処理候補 | **37328** |
+| エラー状態保持seed | **12** |
 
-- 初回カバレッジ完了率: **97.7%**
-- state最終更新: **10-08 17:41:09 JST**
+- 初回カバレッジ完了率: **97.8%**
+- state最終更新: **10-08 18:39:13 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +117,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（6時間42分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（6時間54分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
