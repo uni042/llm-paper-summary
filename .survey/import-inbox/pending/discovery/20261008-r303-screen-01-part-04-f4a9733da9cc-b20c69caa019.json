@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r303-screen-01-part-04-f4a9733da9cc",
+  "reference_main_sha": "b3f655f54bc1ed9caf3c32522105abae7432c000",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41746-025-02005-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41746-025-02005-2"
+      ],
+      "title": "Evaluating clinical AI summaries with large language models as judges",
+      "reason": "臨床記録要約の品質をLLM-as-a-Judgeで採点する評価研究。22秒という値は人手との評価時間比較で、モデル推論を効率化する手法ではない。",
+      "source_url": "https://doi.org/10.1038/s41746-025-02005-2",
+      "first_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "last_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.03303",
+      "identity_tokens": [
+        "arXiv:2308.03303"
+      ],
+      "title": "LoRA-FA: Efficient and Effective Low Rank Representation Fine-tuning",
+      "reason": "本文のactivation memory削減はLoRA fine-tuning時の勾配/学習メモリ。推論時最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.03303",
+      "first_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "last_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.09042",
+      "identity_tokens": [
+        "arXiv:2307.09042"
+      ],
+      "title": "Emotional intelligence of Large Language Models",
+      "reason": "LLM emotional-intelligence評価尺度の研究で、efficiency/servingは扱わない。",
+      "source_url": "https://arxiv.org/abs/2307.09042",
+      "first_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "last_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.15771",
+      "identity_tokens": [
+        "arXiv:2307.15771"
+      ],
+      "title": "The Hydra Effect: Emergent Self-repair in Language Model Computations",
+      "reason": "言語モデル内の層アブレーション後に起きる補償を因果分析する研究であり、推論効率化や圧縮を提案しない。",
+      "source_url": "https://arxiv.org/abs/2307.15771",
+      "first_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "last_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.14918",
+      "identity_tokens": [
+        "arXiv:2405.14918"
+      ],
+      "title": "AnalogCoder: Analog Circuit Design via Training-Free Code Generation",
+      "reason": "アナログ回路設計をLLM code generation/feedbackで行うapplicationであり、inference engine improvementではない。",
+      "source_url": "https://arxiv.org/abs/2405.14918",
+      "first_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "last_checked_at": "2026-10-08T06:05:19.274765+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
