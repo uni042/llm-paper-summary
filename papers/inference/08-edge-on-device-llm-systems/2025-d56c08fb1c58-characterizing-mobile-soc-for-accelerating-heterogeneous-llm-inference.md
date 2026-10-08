@@ -33,6 +33,8 @@ quality_body_chars: 7163
 quality_method_chars: 2748
 quality_evaluation_chars: 2574
 quality_limitation_chars: 721
+last_audited: null
+audit_version: 0
 ---
 
 # Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference

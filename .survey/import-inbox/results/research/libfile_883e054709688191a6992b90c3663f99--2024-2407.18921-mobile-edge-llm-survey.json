@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1aafbca6be5a6eee517b5af7bb4fdd63c1bf9e80b4e36a255e9ce98fb4b4d451",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_883e054709688191a6992b90c3663f99--2024-2407.18921-mobile-edge-llm-survey.md",
+  "canonical_id": "arXiv:2407.18921",
+  "worker_completed_at": "2026-10-07T16:57:10+09:00",
+  "worker_run_key": "20261007-1657-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 1413,
+    "body_paragraphs": 11,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 153,
+    "limitation_chars": 140,
+    "insufficiency_flags": [
+      "本文説明量 1413 < 2200",
+      "手法説明量 0 < 700",
+      "評価説明量 153 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 1413 < 2200",
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 153 < 500"
+  ],
+  "processed_at": "2026-10-08T11:39:41+00:00"
+}

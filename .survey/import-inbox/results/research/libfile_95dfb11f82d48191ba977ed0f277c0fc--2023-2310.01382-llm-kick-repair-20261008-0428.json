@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ef37beafdf5ac8c9a7e35d909f64ebe60d12dc1fffaa0ebf03f8654690cba0a1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_95dfb11f82d48191ba977ed0f277c0fc--2023-2310.01382-llm-kick-repair-20261008-0428.md",
+  "canonical_id": "arXiv:2310.01382",
+  "worker_completed_at": "2026-10-08T04:31:07+09:00",
+  "worker_run_key": "20261008-0428-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3188,
+    "body_paragraphs": 17,
+    "method_chars": 1248,
+    "method_paragraphs": 7,
+    "evaluation_chars": 491,
+    "limitation_chars": 340,
+    "insufficiency_flags": [
+      "評価説明量 491 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 491 < 500"
+  ],
+  "processed_at": "2026-10-08T11:41:01+00:00"
+}

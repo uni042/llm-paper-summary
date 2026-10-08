@@ -45,8 +45,8 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   Alloc-MoEは全層・全トークンの専門家実行回数を総予算として、層の重要度とルータ確信度に応じて配分し、固定Top-kより少ない計算で品質を保つ。
 
 - **2026-03 · [EvoESAP: Non-Uniform Expert Pruning for Sparse MoE](2026-2603.06003-evoesap-non-uniform-expert-pruning-for-sparse-moe.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  疎な混合専門家モデル（Sparse Mixture-of-Experts; SMoE）は1トークン当たりの実行専門家を少数にしても、配備時には専門家プール全体を保持するためメモリ負担が残る。専門家枝刈りはこの総容量を直接減らせるが、従来研究の多くは「各層でどの専門家を消すか」に集中し、層ごとの削除割合は一様に置いてきた。
+  実装：[✓](https://github.com/ZongfangLiu/EvoESAP) ・ リポジトリ内被引用：3  
+  EvoESAPは、疎な混合専門家モデル（MoE）の推論に必要な総重み容量を減らすため、どの専門家を削るかだけでなく、層ごとに何個の専門家を削るかを最適化する手法である。OLMoE、DeepSeek-V2-Lite、ERNIE-4.5、Qwen3-30Bなどの疎MoEに対し、総枝刈り率25%と50%で評価する。
 
 - **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
   実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：3  
@@ -216,7 +216,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2026-06 · [FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models](2026-2606.27866-flexmoe-one-for-all-nested-intra-expert-pruning-for-moe-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  従来の圧縮は「40%削減版」「50%削減版」のように目標予算ごとに枝刈り・回復処理をやり直すことが多く、異なるGPUメモリ量やサービス負荷へ柔軟に切り替えにくい。
+  FlexMoEは、事前学習済みの混合専門家（Mixture-of-Experts、MoE）言語モデルを、複数のメモリ・計算予算に合わせて動かせる入れ子状の小型モデル族へ変換する手法である。従来の専門家枝刈りや低ランク分解は、例えば40%削減版を一つ作り、別の予算では再度圧縮や回復を行う固定予算方式が多い。
 
 - **2026-06 · [Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking](2026-2608.13565-depth-aware-moe-sensitivity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
