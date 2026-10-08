@@ -14,7 +14,6 @@ title: 'ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-co
 list_summary: 'ScoutAttentionはGPUにない重要KVの注意をCPUで計算し、次層のCPU注意を一層先に開始して、KV転送とCPU計算をGPU層処理へ重ねる方式。'
 summary: 長contextのKV cacheの大部分をCPU DRAMへ置きながら、GPUにある重要blockはGPU、CPUにしかない重要blockだけはCPUでattentionを計算し、さらに**次layerでCPUが担当するattentionを1 layer早く開始する**ことで、KV転送待ちとCPU計算待ちの両方を減らす。
 source: https://arxiv.org/abs/2603.27138
-last_audited: null
 audit_version: 0
 storage_targets: []
 bottlenecks: []
