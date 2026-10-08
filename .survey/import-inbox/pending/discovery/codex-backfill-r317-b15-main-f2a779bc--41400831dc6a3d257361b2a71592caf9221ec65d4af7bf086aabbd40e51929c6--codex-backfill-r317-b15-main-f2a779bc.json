@@ -1,0 +1,295 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna",
+  "run_key": "codex-backfill-r317-b15-main-f2a779bc",
+  "reference_main_sha": "f2a779bcb2539327ff7568e335387500b7f4abdd",
+  "record_count": 19,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.15153",
+      "identity_tokens": [
+        "arXiv:2404.15153",
+        "DOI:10.48550/arXiv.2404.15153"
+      ],
+      "title": "Performance Characterization of Expert Router for Scalable LLM Inference",
+      "reason": "The arXiv abstract introduces Expert Router, which sends prompts to specialized expert LLMs; it characterizes quantized and non-quantized Llama 3 setups under up to 1,000 concurrent users and reports throughput/latency behavior for scalable deployment.",
+      "source_url": "https://arxiv.org/abs/2404.15153",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08894",
+      "identity_tokens": [
+        "arXiv:2605.08894",
+        "DOI:10.48550/arXiv.2605.08894"
+      ],
+      "title": "Fitting Is Not Enough: Smoothness in Extremely Quantized LLMs",
+      "reason": "The abstract identifies smoothness degradation beyond numerical error in extremely low-bit LLM quantization and proposes smoothness-preserving PTQ and QAT principles; it connects quantization to decoding-tree sparsity and generation quality.",
+      "source_url": "https://arxiv.org/abs/2605.08894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03485",
+      "identity_tokens": [
+        "arXiv:2508.03485",
+        "DOI:10.48550/arXiv.2508.03485"
+      ],
+      "title": "LRQ-DiT: Log-Rotation Post-Training Quantization of Diffusion Transformers for Image and Video Generation",
+      "reason": "The primary abstract confines the method to quantizing Diffusion Transformers for text-to-image/text-to-video generation, describing log quantization and activation-outlier rotations. It establishes image/video generation as the application and no LLM inference or serving connection.",
+      "source_url": "https://arxiv.org/abs/2508.03485",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.05376",
+      "identity_tokens": [
+        "arXiv:2502.05376",
+        "DOI:10.48550/arXiv.2502.05376"
+      ],
+      "title": "LO-BCQ: Block Clustered Quantization for 4-bit (W4A4) LLM Inference",
+      "reason": "The arXiv primary record uses the title prefix “LO-BCQ” (the worklist says “BCQ”) under the same arXiv ID. Its abstract presents block-statistics clustering and per-cluster codebooks for weight-and-activation W4A4 PTQ, reporting under 1% inference-accuracy loss across LLMs.",
+      "source_url": "https://arxiv.org/abs/2502.05376",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.21927",
+      "identity_tokens": [
+        "arXiv:2601.21927",
+        "DOI:10.48550/arXiv.2601.21927"
+      ],
+      "title": "SONIC: Segmented Optimized Nexus for Information Compression in Key-Value Caching",
+      "reason": "The primary abstract targets the growing KV cache in multi-turn LLM deployment, compressing dialogue history into reusable Nexus tokens with dynamic budgets; it reports improved cache-compression benchmarks and faster inference than full-context generation.",
+      "source_url": "https://arxiv.org/abs/2601.21927",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.eacl-long.309",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.eacl-long.309",
+        "ACL:2026.eacl-long.309"
+      ],
+      "title": "CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks",
+      "reason": "The ACL Anthology publisher abstract introduces task-conditioned Compression-Planning-Tokens and a reusable compressed KV cache for LLM inference; it reports lower latency and improved QA over RAG at 20x compression.",
+      "source_url": "https://aclanthology.org/2026.eacl-long.309/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.22442",
+      "identity_tokens": [
+        "arXiv:2604.22442",
+        "DOI:10.48550/arXiv.2604.22442"
+      ],
+      "title": "HubRouter: A Pluggable Sub-Quadratic Routing Primitive for Hybrid Sequence Models",
+      "reason": "The abstract replaces quadratic attention with learned-hub routing at O(nM), reports training-throughput and perplexity results on hybrid and Transformer architectures, and explicitly describes a negative retrofit case; this is a concrete attention-compute systems contribution.",
+      "source_url": "https://arxiv.org/abs/2604.22442",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.13519",
+      "identity_tokens": [
+        "arXiv:2604.13519",
+        "DOI:10.48550/arXiv.2604.13519"
+      ],
+      "title": "ToolSpec: Accelerating Tool Calling via Schema-Aware and Retrieval-Augmented Speculative Decoding",
+      "reason": "The primary abstract addresses tool-call latency in real-time LLM serving with schema-constrained, retrieval-augmented speculative decoding and reports up to 4.2x speedup.",
+      "source_url": "https://arxiv.org/abs/2604.13519",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.27819",
+      "identity_tokens": [
+        "arXiv:2603.27819",
+        "DOI:10.48550/arXiv.2603.27819"
+      ],
+      "title": "KVSculpt: KV Cache Compression as Distillation",
+      "reason": "The abstract optimizes a smaller set of unconstrained KV pairs to preserve layer attention behavior, with adaptive compression-budget allocation; the measured target is long-context LLM inference cache compression.",
+      "source_url": "https://arxiv.org/abs/2603.27819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.22883",
+      "identity_tokens": [
+        "arXiv:2608.22883",
+        "DOI:10.48550/arXiv.2608.22883"
+      ],
+      "title": "FOVEA: Focused On-Demand Visual Evidence Adaptation for Cache-Friendly Multimodal Speculative Decoding",
+      "reason": "The abstract accelerates speculative decoding for vision-language models by reusing visual memory and selecting bounded task/state-specific evidence for the draft model, explicitly balancing visual grounding against context overhead.",
+      "source_url": "https://arxiv.org/abs/2608.22883",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01247",
+      "identity_tokens": [
+        "arXiv:2608.01247",
+        "DOI:10.48550/arXiv.2608.01247"
+      ],
+      "title": "RestoreKV: Recovering Full-Cache Behavior Under Aggressive Query-Agnostic KV Cache Eviction",
+      "reason": "The primary abstract restores quality after query-agnostic KV eviction using a compact learned restore cache under the same KV budget; it evaluates long-context LLM benchmarks and reports minimal one-time construction overhead.",
+      "source_url": "https://arxiv.org/abs/2608.01247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.18890",
+      "identity_tokens": [
+        "arXiv:2511.18890",
+        "DOI:10.48550/arXiv.2511.18890"
+      ],
+      "title": "Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models",
+      "reason": "The abstract optimizes real-device SLM latency through depth-width choices and operator search, then reports latency and throughput improvements against Qwen models; this directly targets deployment efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.18890",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.10064",
+      "identity_tokens": [
+        "arXiv:2604.10064",
+        "DOI:10.48550/arXiv.2604.10064"
+      ],
+      "title": "On The Application of Linear Attention in Multimodal Transformers",
+      "reason": "The primary abstract identifies quadratic attention cost as a scalability barrier in vision-language backbones and evaluates linear attention in multimodal transformer architectures, reporting reduced sequence-length compute with competitive performance.",
+      "source_url": "https://arxiv.org/abs/2604.10064",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.18350",
+      "identity_tokens": [
+        "arXiv:2505.18350",
+        "DOI:10.48550/arXiv.2505.18350"
+      ],
+      "title": "How Many Parameters Does Your Task Really Need? Task Specific Pruning with LLM-Sieve",
+      "reason": "The abstract prunes task-irrelevant LLM weights via output-aligned low-rank projections and adaptive search, retaining task performance while removing 20–75% of weights; it explicitly targets resource-constrained deployment and integrates with quantization.",
+      "source_url": "https://arxiv.org/abs/2505.18350",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.04766",
+      "identity_tokens": [
+        "arXiv:2601.04766",
+        "DOI:10.48550/arXiv.2601.04766"
+      ],
+      "title": "JuDi: Revisiting Judge Decoding from First Principles via Training-Free Distributional Divergence",
+      "reason": "The abstract replaces costly/noisy judge supervision in speculative decoding with training-free draft-target KL-divergence verification, a direct LLM inference acceleration mechanism.",
+      "source_url": "https://arxiv.org/abs/2601.04766",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.17316",
+      "identity_tokens": [
+        "arXiv:2608.17316",
+        "DOI:10.48550/arXiv.2608.17316"
+      ],
+      "title": "Empowering Compact LLMs with Fusion of Layer-wise Exits for Recommendation",
+      "reason": "The abstract targets computationally unsustainable LLM recommenders and uses adaptive layer exits/router for efficient full-corpus ranking; the contribution is inference-side adaptive compute for compact LLMs.",
+      "source_url": "https://arxiv.org/abs/2608.17316",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.26083",
+      "identity_tokens": [
+        "arXiv:2510.26083",
+        "DOI:10.48550/arXiv.2510.26083"
+      ],
+      "title": "Nirvana: A Specialized Generalist Model With Task-Aware Memory Mechanism",
+      "reason": "The abstract describes an LLM specialized-generalist model with task-aware memory and linear-time complexity. Its test-time task extraction and dynamic context consolidation provide a concrete model-memory and inference-cost connection.",
+      "source_url": "https://arxiv.org/abs/2510.26083",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.25223",
+      "identity_tokens": [
+        "arXiv:2509.25223",
+        "DOI:10.48550/arXiv.2509.25223"
+      ],
+      "title": "Enhancing Linear Attention with Residual Learning",
+      "reason": "The abstract adds a recurrent residual-correction state to linear attention and reports language-modeling results while retaining linear time and memory; it also cites optimized linear-attention kernels.",
+      "source_url": "https://arxiv.org/abs/2509.25223",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.00292",
+      "identity_tokens": [
+        "arXiv:2605.00292",
+        "DOI:10.48550/arXiv.2605.00292"
+      ],
+      "title": "Caracal: Causal Architecture via Spectral Mixing",
+      "reason": "The primary abstract replaces quadratic attention with causal FFT-based O(L log L) sequence mixing, targeting long-context LLM scalability and portable deployment without hardware-specific kernels.",
+      "source_url": "https://arxiv.org/abs/2605.00292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:42:28Z",
+      "last_checked_at": "2026-10-08T18:42:28Z",
+      "linked_from": []
+    }
+  ]
+}
