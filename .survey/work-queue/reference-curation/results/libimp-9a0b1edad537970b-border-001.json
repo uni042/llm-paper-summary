@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a0b1edad537970b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.29494",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.29494",
+    "identity_tokens": [
+      "arXiv:2603.29494"
+    ],
+    "reason": "一次資料で題名・ID・著者・要旨を確認。abstract evaluates vector-wise sparse attention for long-context video models, not LLMs; attention sparsity and memory-access efficiency may transfer, but direct LLM evidence is absent。arXiv page title, ID, authors, and abstract verified。本文未読。",
+    "first_checked_at": "2026-10-08T16:32:15+00:00",
+    "last_checked_at": "2026-10-08T16:32:15+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "VecAttention: Vector-wise Sparse Attention for Accelerating Long Context Inference"
+  },
+  "processed_at": "2026-10-08T16:32:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a0b1edad537",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

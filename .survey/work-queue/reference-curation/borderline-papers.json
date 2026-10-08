@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T15:54:17+00:00",
-  "record_count": 4491,
+  "updated_at": "2026-10-08T16:32:15+00:00",
+  "record_count": 4492,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68529,6 +68529,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "A Systematic Review on Language Model Compression: Perspectives for Efficiency and Sustainability in Information Systems"
+    },
+    "arXiv:2603.29494": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.29494",
+      "identity_tokens": [
+        "arXiv:2603.29494"
+      ],
+      "reason": "一次資料で題名・ID・著者・要旨を確認。abstract evaluates vector-wise sparse attention for long-context video models, not LLMs; attention sparsity and memory-access efficiency may transfer, but direct LLM evidence is absent。arXiv page title, ID, authors, and abstract verified。本文未読。",
+      "first_checked_at": "2026-10-08T16:32:15+00:00",
+      "last_checked_at": "2026-10-08T16:32:15+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VecAttention: Vector-wise Sparse Attention for Accelerating Long Context Inference"
     }
   }
 }
