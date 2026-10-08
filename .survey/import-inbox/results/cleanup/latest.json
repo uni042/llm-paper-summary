@@ -1,57 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T18:04:02+00:00",
+  "updated_at": "2026-10-08T18:27:03+00:00",
   "events": [
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-d9bae9be63f7--libfile_7fbe1f1d99388191962b43f85790415a--2607.10987-aaflow-plus.md",
-      "processed_at": "2026-10-06T14:39:09+00:00",
-      "canonical_id": "arXiv:2607.10987",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-d9bae9be63f7--libfile_7fbe1f1d99388191962b43f85790415a--2607.10987-aaflow-plus.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-8821fd6dd5d1--libfile_81a491feac048191b3588fc4099b3abb--2204.09656-fast-post-training-pruning.md",
-      "processed_at": "2026-10-06T14:39:09+00:00",
-      "canonical_id": "arXiv:2204.09656",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-8821fd6dd5d1--libfile_81a491feac048191b3588fc4099b3abb--2204.09656-fast-post-training-pruning.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-4f71a46b2c49--libfile_83bf42cc3aa08191b70ced95a7bb283b--2607.29591-reskv.md",
-      "processed_at": "2026-10-06T15:03:41+00:00",
-      "canonical_id": "arXiv:2607.29591",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-4f71a46b2c49--libfile_83bf42cc3aa08191b70ced95a7bb283b--2607.29591-reskv.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-b6078c5b82a5--libfile_b00ccca5e30081919c571415ddc9cbd4--2603.02217-router-kd.md",
-      "processed_at": "2026-10-06T15:46:39+00:00",
-      "canonical_id": "arXiv:2603.02217",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-b6078c5b82a5--libfile_b00ccca5e30081919c571415ddc9cbd4--2603.02217-router-kd.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-72589b5b28d8--libfile_baa83eb325988191b0dbd975758b652e--2511.00606-specdiff2.md",
-      "processed_at": "2026-10-06T15:46:39+00:00",
-      "canonical_id": "arXiv:2511.00606",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-72589b5b28d8--libfile_baa83eb325988191b0dbd975758b652e--2511.00606-specdiff2.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-10a7202db378--libfile_c5cebc769e48819186ae2805c2ae1100--2502.04463-efficient-reasoning.md",
-      "processed_at": "2026-10-06T15:59:52+00:00",
-      "canonical_id": "arXiv:2502.04463",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-10a7202db378--libfile_c5cebc769e48819186ae2805c2ae1100--2502.04463-efficient-reasoning.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-3600a1a12c37--libfile_dcca1fcdb9d4819180aa81bab630e2c3--2510.00615-acon.md",
-      "processed_at": "2026-10-06T15:59:52+00:00",
-      "canonical_id": "arXiv:2510.00615",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-3600a1a12c37--libfile_dcca1fcdb9d4819180aa81bab630e2c3--2510.00615-acon.md"
-    },
     {
       "status": "requeued_blocked_research",
       "source_path": ".survey/import-inbox/pending/research/retry-research-c1d981775657--libfile_e808c16ae02c8191b84a77ff92ec1b20--2006.02464-clockwork.md",
@@ -3950,6 +3901,70 @@
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
       "processed_at": "2026-10-08T18:04:02+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T18:27:03+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T18:27:03+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-08T18:27:03+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-08T18:27:03+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-certaindex-2412.20993.md",
+      "processed_at": "2026-10-08T18:27:03+00:00",
+      "canonical_id": "arXiv:2412.20993",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-08T18:27:03+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-08T18:27:03+00:00",
       "canonical_id": "arXiv:1905.07799",
       "failures": [
         "arxiv_categories.cross_list",
