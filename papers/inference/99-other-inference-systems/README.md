@@ -1016,6 +1016,10 @@
   実装：[✓](https://github.com/sustcsonglin/flash-linear-attention) ・ リポジトリ内被引用：13  
   第一に、線形注意をGPU向けにchunk化してHBM往復を減らすFLASHLINEARATTENTIONを設計する。
 
+- **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
+  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts) ・ リポジトリ内被引用：13  
+  一方で専門家間の負荷偏り、全対全通信通信、専門家配置、メモリ容量が実システムの律速になる。
+
 - **2024-04 · [JetMoE: Reaching Llama2 Performance with 0.1M Dollars](2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md)**  
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：13  
   JetMoEはFFNだけでなく注意機構にも専門家 ルーティングを導入し、総8Bパラメータを持ちながら1 トークンで実行するのは約2Bに抑える。これによりLlama2-7Bより総パラメータは多いが、推論計算量を約70%減らす。
@@ -1035,10 +1039,6 @@
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
   実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：12  
   通常の分散学習と違い、各モデル内部ではテンソル並列・パイプライン並列・データ並列を使う一方、モデル間では生成結果、log probability、value、rewardなどを別の分割形状へ再配置して渡す必要がある。評価では既存RLHFシステムに対し1.53〜20.57倍のスループット改善を報告する。
-
-- **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
-  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts) ・ リポジトリ内被引用：12  
-  一方で専門家間の負荷偏り、全対全通信通信、専門家配置、メモリ容量が実システムの律速になる。
 
 - **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
