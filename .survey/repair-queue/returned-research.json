@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T06:10:59+00:00",
+  "generated_at": "2026-10-08T07:30:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 157,
+  "count": 158,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -76,22 +76,6 @@
       "quality_metrics": null,
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_89ea6752667081918d6b31bb8fe194f1--2024-2410.18311-coreinfer.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_89ea6752667081918d6b31bb8fe194f1--2024-2410.18311-coreinfer.json",
-      "worker_run_key": "20261001-1258-scheduled-chat-00"
-    },
-    {
-      "canonical_id": "arXiv:2412.04504",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-01T07:03:01+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 36.9% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_897049c33dd08191bdc67b564451a508--2024-2412.04504-multi-bin-batching.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_897049c33dd08191bdc67b564451a508--2024-2412.04504-multi-bin-batching.json",
       "worker_run_key": "20261001-1258-scheduled-chat-00"
     },
     {
@@ -2809,6 +2793,60 @@
       "blocked_path": ".survey/import-inbox/blocked/research/file_000000005478820c9b3cafb94dd22f8e--2025-2506.10470-tdpipe-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/file_000000005478820c9b3cafb94dd22f8e--2025-2506.10470-tdpipe-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.json",
       "worker_run_key": "20261008-1433-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:1805.02867",
+      "title": "Online normalizer calculation for softmax",
+      "source_url": "https://arxiv.org/abs/1805.02867",
+      "returned_at": "2026-10-08T07:29:01+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 390 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3171,
+        "body_paragraphs": 20,
+        "method_chars": 992,
+        "method_paragraphs": 6,
+        "evaluation_chars": 390,
+        "limitation_chars": 528,
+        "insufficiency_flags": [
+          "評価説明量 390 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_245f92f7df308191bfad588b7efee6dc--2018-1805.02867-online-softmax-under16kb-reaudit-20261008-1200.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_245f92f7df308191bfad588b7efee6dc--2018-1805.02867-online-softmax-under16kb-reaudit-20261008-1200.json",
+      "worker_run_key": "20261008-1203-scheduled-chat-00/under16kb-r01"
+    },
+    {
+      "canonical_id": "arXiv:2405.19325",
+      "title": "Nearest Neighbor Speculative Decoding for LLM Generation and Attribution",
+      "source_url": "https://arxiv.org/abs/2405.19325",
+      "returned_at": "2026-10-08T07:29:01+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3244,
+        "body_paragraphs": 19,
+        "method_chars": 1431,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 210,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1f34005e4a888191b99f971c637b1c2d--nest-2405.19325-under16kb-reaudit-20261008-1032-scheduled-chat-30-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1f34005e4a888191b99f971c637b1c2d--nest-2405.19325-under16kb-reaudit-20261008-1032-scheduled-chat-30-r02.json",
+      "worker_run_key": "20261008-1032-scheduled-chat-30/reaudit-r02"
     }
   ]
 }

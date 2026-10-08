@@ -171,8 +171,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   DFloat11は量子化ではなく、BFloat16重みの情報エントロピーを利用する可逆圧縮方式である。
 
 - **2025-10 · [lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models](2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  端末内LLMでは、GPUのピーク性能だけでなく動的周波数制御、熱、限られたメモリ、閉じたGPUドライバが実行時間を左右する。しかし通常のアプリケーション側計測は推論全体しか見えず、オフラインGPUプロファイラは外部ホストへのログ転送や後処理を必要とする。
+  実装：[✓](https://github.com/amai-gsu/LM-Meter) ・ リポジトリ内被引用：2  
+  さらにモバイルGPUではドライバが非公開で、カーネル単位の実行時間、キュー待機、ホスト側の発行遅延をアプリケーションから直接見ることが難しい。また量子化Gemma-2-2B-itの短い復号ではGPUの遊休時間が21%を超え、行列積カーネル群が実行時間の60%超を占める。
 
 ### 3年前（2023-11〜2024-10）
 
