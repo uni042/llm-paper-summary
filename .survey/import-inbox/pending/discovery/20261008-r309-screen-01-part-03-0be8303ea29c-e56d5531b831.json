@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r309-screen-01-part-03-0be8303ea29c",
+  "reference_main_sha": "09e281f7ccc3deb08cc67cb3905800c62d2d9970",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.11207",
+      "identity_tokens": [
+        "arXiv:2004.11207"
+      ],
+      "title": "Self-Attention Attribution: Interpreting Information Interactions Inside Transformer",
+      "reason": "Transformer attention attributionによる解釈可能性分析。compute/memory/latency削減手法を扱わない。",
+      "source_url": "https://arxiv.org/abs/2004.11207",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.16775",
+      "identity_tokens": [
+        "arXiv:2103.16775"
+      ],
+      "title": "Attention, please! A survey of neural attention models in deep learning",
+      "reason": "neural attention modelsのsurveyで、対象となる特定のLLM推論resource optimizerを提案しない。",
+      "source_url": "https://arxiv.org/abs/2103.16775",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.08383",
+      "identity_tokens": [
+        "arXiv:2201.08383"
+      ],
+      "title": "MeMViT: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video Recognition",
+      "reason": "MeMViTはvision-only video recognition用multiscale Transformer。video-memoryは扱うがLLM/LMM servingへの言語モデル改善がない。",
+      "source_url": "https://arxiv.org/abs/2201.08383",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12125",
+      "identity_tokens": [
+        "arXiv:2602.12125"
+      ],
+      "title": "Learning beyond Teacher: Generalized On-Policy Distillation with Reward Extrapolation",
+      "reason": "on-policy distillationのreward/reference設計を通じたstudent能力向上が主題。abstractに推論資源削減やgeneration latency/token数改善はなく、追加計算 overheadへの言及もtraining側。",
+      "source_url": "https://arxiv.org/abs/2602.12125",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07079",
+      "identity_tokens": [
+        "arXiv:2603.07079"
+      ],
+      "title": "Entropy-Aware On-Policy Distillation of Language Models",
+      "reason": "entropy-aware on-policy distillationによるtraining stability/diversity/accuracyの改善で、inference-time resource reductionは主張・測定されない。",
+      "source_url": "https://arxiv.org/abs/2603.07079",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
