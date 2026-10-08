@@ -150,7 +150,12 @@ def recover_blocked_research(repo_root: Path) -> dict[str, int]:
             counts["hard_deleted"] += 1
             continue
 
-        if canonical_id in success_ids:
+        # An older successful submission with the same canonical identity does
+        # not prove this *revision* was incorporated. Re-audit drafts have a
+        # pinned target/source and must never be deleted by identity alone.
+        if canonical_id in success_ids and not normalized_meta.get(
+            "under16kb_reaudit_target_path"
+        ):
             _record_cleanup(
                 repo_root,
                 source,
