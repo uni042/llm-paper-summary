@@ -749,7 +749,7 @@ def is_reaudit_research_source(source: Path) -> bool:
             for line in stream:
                 if line.strip() == "---":
                     break
-                if re.match(r"^\\s*under16kb_reaudit_target_path\\s*:\\s*\\S", line):
+                if re.match(r"^\s*under16kb_reaudit_target_path\s*:\s*\S", line):
                     return True
     except (OSError, UnicodeError):
         return False
