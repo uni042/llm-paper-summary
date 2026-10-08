@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment",
+      "source_url": "https://arxiv.org/abs/2505.12215",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable performance across a wide range of Natural Language Processing (NLP) tasks. However, in long-context scenarios, they face two challenges: high computational cost and information redundancy. To address these challenges, we propose GMSA, an encoder-decoder context compression framework that generates a compact sequence of soft tokens for downstream tasks. GMSA introduces Group Merging to achieve more uniform aggregation, mitigating semantic dominance during autoencoder pretraining, and Layer Semantic Alignment (LSA) to bridge the semantic gap between high-level abstract semantics and low-level input semantics. We first pretrain GMSA as an autoencoder and then fine-tune it for downstream tasks. Experiments demonstrate that GMSA improves context reconstruction compared to existing soft prompt compression paradigm and outperforms baselines on multiple long-context question answering and summarization benchmarks across two backbone models, while maintaining low end-to-end latency.",
+      "identifiers": [
+        "SemanticScholar:fb8891088089924708d1a8d094baceef278cd9bb"
+      ],
+      "semantic_scholar_id": "fb8891088089924708d1a8d094baceef278cd9bb",
+      "canonical_id": "arXiv:2505.12215",
+      "arxiv_id": "2505.12215",
+      "doi": "10.48550/arXiv.2505.12215",
+      "authors": [
+        "Jiwei Tang",
+        "Zhicheng Zhang",
+        "Shun-Long Wu",
+        "Jingheng Ye",
+        "Lichen Bai",
+        "Zitai Wang",
+        "Tingwei Lu",
+        "Jia-Qi Chen",
+        "Hai Lin",
+        "Hai-Tao Zheng",
+        "Hong-Gee Kim"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "The abstract describes soft-token context compression for encoder-decoder models and low-latency long-context QA/summarization, directly relevant to inference context/memory cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Attention-aware Post-training Quantization without Backpropagation",
+      "source_url": "https://arxiv.org/abs/2406.13474",
+      "year": 2024,
+      "published": "2024-06-19",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a promising solution for deploying large language models (LLMs) on resource-constrained devices. Early methods developed for small-scale networks, such as ResNet, rely on gradient-based optimization, which becomes impractical for hyper-scale LLMs with billions of parameters. While recently proposed backpropagation-free or transformation-based methods alleviate this issue, they ignore inter-layer interactions or use the naive nearest-rounding-based quantized weight assignment to save the heavy computational cost of weight optimization. In this paper, we introduce a novel backpropagation-free PTQ algorithm that optimizes quantized weights by considering inter-layer dependencies. The key innovation is the development of attention-aware Hessian matrices that capture inter-layer interactions within the attention module. Extensive experiments demonstrate that our approach not only outperforms existing weight quantization methods but also shows good synergy with conventional methods to suppress activation outliers, leading to state-of-the-art weight-activation quantization performance. The code will be available at https://github.com/SamsungLabs/BoA.",
+      "identifiers": [
+        "SemanticScholar:c9e77deb53e23e81824b660c092fa303a64d5863"
+      ],
+      "semantic_scholar_id": "c9e77deb53e23e81824b660c092fa303a64d5863",
+      "canonical_id": "arXiv:2406.13474",
+      "arxiv_id": "2406.13474",
+      "doi": "10.48550/arXiv.2406.13474",
+      "authors": [
+        "Junhan Kim",
+        "Ho-Young Kim",
+        "Eulrang Cho",
+        "Chung-Kuei Lee",
+        "Joonyoung Kim",
+        "Yongkweon Jeon"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 841,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "The abstract introduces attention-aware post-training quantization for LLM deployment without backpropagation, directly connected to model quantization and inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gating is Weighting: Understanding Gated Linear Attention through In-context Learning",
+      "source_url": "https://arxiv.org/abs/2504.04308",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention methods offer a compelling alternative to softmax attention due to their efficiency in recurrent decoding. Recent research has focused on enhancing standard linear attention by incorporating gating while retaining its computational benefits. Such Gated Linear Attention (GLA) architectures include competitive models such as Mamba and RWKV. In this work, we investigate the in-context learning capabilities of the GLA model and make the following contributions. We show that a multilayer GLA can implement a general class of Weighted Preconditioned Gradient Descent (WPGD) algorithms with data-dependent weights. These weights are induced by the gating mechanism and the input, enabling the model to control the contribution of individual tokens to prediction. To further understand the mechanics of this weighting, we introduce a novel data model with multitask prompts and characterize the optimization landscape of learning a WPGD algorithm. Under mild conditions, we establish the existence and uniqueness (up to scaling) of a global minimum, corresponding to a unique WPGD solution. Finally, we translate these findings to explore the optimization landscape of GLA and shed light on how gating facilitates context-aware learning and when it is provably better than vanilla linear attention.",
+      "identifiers": [
+        "SemanticScholar:3ecc9c4df941d08dc396ad4736d4ab0da8f6d7ab"
+      ],
+      "semantic_scholar_id": "3ecc9c4df941d08dc396ad4736d4ab0da8f6d7ab",
+      "canonical_id": "arXiv:2504.04308",
+      "arxiv_id": "2504.04308",
+      "doi": "10.48550/arXiv.2504.04308",
+      "authors": [
+        "Ying-Cong Li",
+        "Davoud Ataee Tarzanagh",
+        "A. Rawat",
+        "Maryam Fazel",
+        "Samet Oymak"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract analyzes gated linear attention and its efficient recurrent-decoding connection, a plausible attention/inference systems lineage.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2603.03333",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by proposing tokens with a lightweight draft model and selectively accepting them using a target model. This work introduces DropMatch, a novel approach that matches draft tokens to the predictive distribution of the target model via Monte Carlo dropout applied exclusively to the LM head, enabling sampling-based acceptance decisions. By generating multiple decoding paths, our method forms an empirical token distribution against which draft tokens are evaluated for consistency. This acceptance mechanism enables the model to adaptively control the size of decoding paths under an appropriate dropout probability, preventing substantial distortion of the target model predictive distribution. The proposed method operates in a training-free, data-free, and calibration-free manner, requires no architectural modification to pretrained models, and can be orthogonally integrated with a wide range of existing speculative decoding and inference acceleration techniques. Experiments across multiple benchmarks demonstrate that our approach increases acceptance length while maintaining competitive task performance, yielding inference speedups ranging from 1.09x to 1.33x over the standard baseline, and up to an additional 1.09x speedup when applied on top of EAGLE3.",
+      "identifiers": [
+        "SemanticScholar:522a0e9b1726f0946cf235e2b2deb1b55e000b3e"
+      ],
+      "semantic_scholar_id": "522a0e9b1726f0946cf235e2b2deb1b55e000b3e",
+      "canonical_id": "arXiv:2603.03333",
+      "arxiv_id": "2603.03333",
+      "doi": "10.48550/arXiv.2603.03333",
+      "authors": [
+        "Jeongtae Lee",
+        "Minjung Jo",
+        "H. Jeong",
+        "Gunho Park",
+        "Sunghyeon Woo",
+        "Joo-Young Kim",
+        "S. Kwon",
+        "Dongsoo Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents dropout sampling for semantic acceptance in speculative decoding and reports decoding speedups, directly relevant to LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Two-dimensional early exit optimisation of LLM inference",
+      "source_url": "https://arxiv.org/abs/2604.18592",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a two-dimensional (2D) early exit strategy that coordinates layer-wise and sentence-wise exiting for classification tasks in large language models. By processing input incrementally sentence-by-sentence while progressively activating deeper layers, our method achieves multiplicative computational savings that exceed those from optimizing either dimension independently. Experimental evaluation across four state-of-the-art LLMs (Llama 3.1, Llama 3.2, Gemma, Qwen; 3B-8B parameters) on three sentiment classification datasets demonstrates additional speed-ups of 1.4--2.3$\\times$ over optimal layer-wise early exit for simpler tasks with vanilla models, with graceful degradation on complex multi-class problems. Fine-tuning reduces but does not eliminate this advantage. The approach is model-agnostic, requires only lightweight classification adapters, and is orthogonal to complementary efficiency methods such as quantization and pruning. Our findings indicate that 2D early exit strategies excel when semantic information accumulates predictably across input structure, suggesting possible applicability to sequence-processing tasks beyond sentiment classification.",
+      "identifiers": [
+        "SemanticScholar:98ddc0792131a211d8d40d507ccc156ab573944a"
+      ],
+      "semantic_scholar_id": "98ddc0792131a211d8d40d507ccc156ab573944a",
+      "canonical_id": "arXiv:2604.18592",
+      "arxiv_id": "2604.18592",
+      "doi": "10.48550/arXiv.2604.18592",
+      "authors": [
+        "Jan Hůla",
+        "D. Adamczyk",
+        "Tomás Filip",
+        "M. Pavlíček",
+        "Petr Sosík"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract evaluates two-dimensional early exit for LLM inference and reports 1.4–2.3x speedups, directly targeting inference compute.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d389cf460e57",
+    "round": "libimp-d389cf460e570711-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d389cf460e570711-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d389cf460e570711-pre01.json",
+    "receipt": "sha256:c9f9494cd5b8f4e8f6271621d4849c619678a5c38479e393e0d676c6f474aae7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d389cf460e57",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

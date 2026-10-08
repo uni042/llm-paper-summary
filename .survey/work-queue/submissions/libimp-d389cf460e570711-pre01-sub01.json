@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Prune-then-Quantize or Quantize-then-Prune? Understanding the Impact of Compression Order in Joint Model Compression",
+      "source_url": "https://arxiv.org/abs/2603.18426",
+      "year": 2026,
+      "published": "2026-03-19",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "What happens when multiple compression methods are combined-does the order in which they are applied matter? Joint model compression has emerged as a powerful strategy to achieve higher efficiency by combining multiple methods such as pruning and quantization. A central but underexplored factor in joint model compression is the compression order, or the sequence of different methods within the compression pipeline. Most prior studies have either sidestepped the issue by assuming orthogonality between techniques, while a few have examined them only in highly constrained cases. Consequently, the broader role of compression order in shaping model performance remains poorly understood. In this paper, we address the overlooked problem of compression order and provide both theoretical and empirical analysis. We formulate the problem of optimizing the compression order and introduce the Progressive Intensity Hypothesis, which states that weaker perturbations should precede stronger ones. We provide theoretical guarantees showing that the relative benefit of one order increases with the underlying performance gap. Extensive experiments on both language and vision models validate the hypothesis, and further show its generality to broader setups such as multi-stage compression and mixed-precision quantization.",
+      "identifiers": [
+        "SemanticScholar:2916d16f178825381c0e92c70176e1bc8d680390"
+      ],
+      "semantic_scholar_id": "2916d16f178825381c0e92c70176e1bc8d680390",
+      "canonical_id": "arXiv:2603.18426",
+      "arxiv_id": "2603.18426",
+      "doi": "10.48550/arXiv.2603.18426",
+      "authors": [
+        "Minjun Kim",
+        "Jaehyeon Choi",
+        "H. Yang",
+        "Jongjin Kim",
+        "Jinho Song",
+        "U. Kang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract evaluates how pruning/quantization order affects joint compression of language and vision models, directly within model compression.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Attention Needs to Focus: A Unified Perspective on Attention Allocation",
+      "source_url": "https://arxiv.org/abs/2601.00919",
+      "year": 2026,
+      "published": "2026-01-01",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture, a cornerstone of modern Large Language Models (LLMs), has achieved extraordinary success in sequence modeling, primarily due to its attention mechanism. However, despite its power, the standard attention mechanism is plagued by well-documented issues: representational collapse and attention sink. Although prior work has proposed approaches for these issues, they are often studied in isolation, obscuring their deeper connection. In this paper, we present a unified perspective, arguing that both can be traced to a common root -- improper attention allocation. We identify two failure modes: 1) Attention Overload, where tokens receive comparable high weights, blurring semantic features that lead to representational collapse; 2) Attention Underload, where no token is semantically relevant, yet attention is still forced to distribute, resulting in spurious focus such as attention sink. Building on this insight, we introduce Lazy Attention, a novel mechanism designed for a more focused attention distribution. To mitigate overload, it employs positional discrimination across both heads and dimensions to sharpen token distinctions. To counteract underload, it incorporates Elastic-Softmax, a modified normalization function that relaxes the standard softmax constraint to suppress attention on irrelevant tokens. Experiments on the FineWeb-Edu corpus, evaluated across nine diverse benchmarks, demonstrate that Lazy Attention successfully mitigates attention sink and achieves competitive performance compared to both standard attention and modern architectures, while reaching up to 59.58% attention sparsity.",
+      "identifiers": [
+        "SemanticScholar:677e49df983cd212ba26d75086df6ad029f7968b"
+      ],
+      "semantic_scholar_id": "677e49df983cd212ba26d75086df6ad029f7968b",
+      "canonical_id": "arXiv:2601.00919",
+      "arxiv_id": "2601.00919",
+      "doi": "10.48550/arXiv.2601.00919",
+      "authors": [
+        "Zi-Chuan Fu",
+        "Wentao Song",
+        "Guo-Jing Li",
+        "Yejing Wang",
+        "Xian Wu",
+        "Yimin Deng",
+        "Hanyu Yan",
+        "Yefeng Zheng",
+        "Xiang-Yu Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes Lazy Attention and reports substantial sparse attention in LLM Transformers, a direct attention-computation efficiency connection.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits",
+      "source_url": "https://arxiv.org/abs/2511.18868",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-performance GPU kernels are critical for efficient LLM serving, yet their optimization remains a bottleneck requiring deep system expertise. While code LLMs show promise in generating functionally correct code, kernel optimization is intrinsically a search problem over a vast optimization space. The fundamental mismatch prevents existing LLM agents from efficiently exploring the optimization space for diverse hardware and compute patterns. To bridge the gap, we present KernelBand, a framework that formulates kernel optimization as a Multi-Armed Bandit (MAB) problem, explicitly balancing exploration and exploitation to unlock the potential of code LLMs. To navigate the infinite arm space of optimization strategies applied to candidate kernels, we design two key mechanisms: a hardware-aware pruning strategy via profiling bounds and a trace-driven clustering algorithm that leverages Lipschitz continuity. Theoretically, we prove that KernelBand reduces the regret bound to depend on the compact covering number of runtime clusters, ensuring sample-efficient discovery of high-performance kernels. Extensive experiments on TritonBench-G with three GPU architectures and four code LLMs show that KernelBand consistently and substantially outperforms state-of-the-art methods with over 33% average improvement.",
+      "identifiers": [
+        "SemanticScholar:1f411fe8db82ee468d8eedf0737a0d4b41fb11fa"
+      ],
+      "semantic_scholar_id": "1f411fe8db82ee468d8eedf0737a0d4b41fb11fa",
+      "canonical_id": "arXiv:2511.18868",
+      "arxiv_id": "2511.18868",
+      "authors": [
+        "De-Zhi Ran",
+        "Shu-Xiao Xie",
+        "Mingfang Ji",
+        "Anmin Liu",
+        "Meng-Zhou Wu",
+        "Yuan Cao",
+        "Yu-Zhe Guo",
+        "Hao Yu",
+        "Lin-Yi Li",
+        "Yi-Tao Hu",
+        "Wei Yang",
+        "Tao Xie"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 318,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract targets GPU-kernel optimization for efficient LLM serving using hardware-aware exploration and reports improved kernel performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation",
+      "source_url": "https://arxiv.org/abs/2606.11690",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Every public LLM cost calculator we surveyed treats GPU utilization as a fixed input -- entered by the user, baked in as a preset, or silently assumed at 100% -- never measured against the operator's actual load. We show that this assumption is the dominant source of error: on identical H100 hardware, effective cost spans \\$0.21 to \\$15.25 per million output tokens, an underutilization penalty of 2.5-24x across low-to-moderate enterprise loads (1-10 rps) and up to 36.3x near idle -- driven by one operator-controlled variable, offered request rate lambda, which sets in-flight concurrency via Little's Law and which no open-source calculator exposes. Because calculators take utilization as a user-supplied input, any utilization-naive estimate understates true cost by exactly 1/U, systematically mispricing self-hosting -- most severely over-selling it for low-traffic workloads. We propose a measurement methodology that parameterizes the relationship as C_eff = f(H, M, Q, lambda, L), validate it with 42 benchmarks across dense, ultra-sparse MoE, and sparse MoE models, and release vllm-cost-meter, an open-source cost meter that attaches to a live vLLM server and reports real \\$/M-tokens against the operator's own traffic. We further show that FP8 quantization benefits the MoE architectures we tested roughly 2.2-2.4x more than the dense model (+69 to +74% vs. +31% peak throughput; n=3, broader validation needed), and our data are consistent with active parameter count, not total model size, being a primary predictor of saturation economics. To rule out single-hardware confounding we repeat the core sweep on A100 80GB PCIe (56 runs): the load-driven spread reproduces at 7.0-11.4x, the active-parameters ordering survives at FP8, and the dense-FP8 advantage inverts on silicon without native FP8 tensor cores -- a hardware-conditional caveat the framework already accommodates.",
+      "identifiers": [
+        "SemanticScholar:8ca0c343e86cb77b539a58dffb019bb4bc40ab41"
+      ],
+      "semantic_scholar_id": "8ca0c343e86cb77b539a58dffb019bb4bc40ab41",
+      "canonical_id": "arXiv:2606.11690",
+      "arxiv_id": "2606.11690",
+      "doi": "10.48550/arXiv.2606.11690",
+      "authors": [
+        "Chitral Patil"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes concurrency-aware infrastructure cost measurement for LLM serving and evaluates throughput/cost under dense and MoE serving; directly related to inference system performance measurement.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
+      "source_url": "https://arxiv.org/abs/2603.21096",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers lack an explicit architectural mechanism for storing and organizing knowledge acquired during training. We introduce learnable sparse memory banks: a set of latent tokens, randomly initialized and trained end-to-end, that transformer layers query via cross-attention to retrieve stored knowledge. To scale memory capacity without prohibitive attention costs, we propose chapter-based routing inspired by Mixture-of-Experts architectures, partitioning the memory bank into chapters and training a router to select relevant subsets per input. This enables scaling to 262K memory tokens while maintaining tractable computation. We evaluate our approach against standard transformers (in iso-FLOP settings) on pre-training and instruction fine-tuning across relevant benchmarks. Our models surpass iso-FLOP baselines suggesting scope for a new axis of scaling, demonstrating that explicit associative memory provides complementary capacity to what is captured implicitly in model parameters. Additionally, we observe improved knowledge retention under continued training, with robustness to forgetting when transitioning between training phases (e.g., pretraining to instruction fine-tuning).",
+      "identifiers": [
+        "SemanticScholar:768d45e915c3de59ea780d61c9612ba4aa106635"
+      ],
+      "semantic_scholar_id": "768d45e915c3de59ea780d61c9612ba4aa106635",
+      "canonical_id": "arXiv:2603.21096",
+      "arxiv_id": "2603.21096",
+      "doi": "10.48550/arXiv.2603.21096",
+      "authors": [
+        "Tasmay Pankaj Tibrewal",
+        "Pritish Saha",
+        "Ankit Meda",
+        "Kunal Singh",
+        "Pradeep Moturi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 200,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes sparse learned memory banks and a chapter router for long-context Transformer use, scaling context to 262K tokens; this is a plausible memory-system branch relevant to long-context inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d389cf460e57",
+    "round": "libimp-d389cf460e570711-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d389cf460e570711-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d389cf460e570711-pre01.json",
+    "receipt": "sha256:c9f9494cd5b8f4e8f6271621d4849c619678a5c38479e393e0d676c6f474aae7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d389cf460e57",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

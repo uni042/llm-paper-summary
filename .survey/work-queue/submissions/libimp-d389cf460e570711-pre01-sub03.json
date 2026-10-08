@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Hamiltonian-Inspired Local-Operator Ansatz for Slimming Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.25344",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dense linear maps carry much of the parameter and computational burden of modern neural networks, yet their dense form leaves the organization of learned couplings implicit. Quantum many-body physics organizes exponentially large operators by writing a global Hamiltonian as a sum of local terms, \\(\\hat H=\\sum_k\\hat h_k\\). Whether the same structural principle can carry learned neural maps is unknown. We introduce Tensor Mixture (MixT), which represents a dense map as a natively executable sum of overlapping local tensor operators without imposing an explicit matrix-rank constraint. The local-term count \\(N_T\\) sets the effective nonlocality and operator complexity, while the number of replaced Transformer blocks \\(N_B\\) extends this structural coordinate across network depth. Tests on Qwen3-8B and LLaMA2-7B reveal a broad recoverable regime followed by an abrupt, model-specific boundary that is remarkably stable against changes in \\(N_T\\). Accuracy and output-distribution statistics reorganize together across the boundary; in LLaMA2-7B, the same depth separates two scaling regimes of inter-layer geometry drift. The directly executed structure also reduces parameters, arithmetic, storage, and memory. These results establish the local-sum structure as a viable organizing principle for learned linear maps at billion-parameter scale and expose a sharp boundary in their tolerance to structural simplification.",
+      "identifiers": [
+        "SemanticScholar:37730136505c94951dfd65f4ccd676b78b8842a9"
+      ],
+      "semantic_scholar_id": "37730136505c94951dfd65f4ccd676b78b8842a9",
+      "canonical_id": "arXiv:2605.25344",
+      "arxiv_id": "2605.25344",
+      "authors": [
+        "Yingjing Lu",
+        "P. Zhou",
+        "Qianru Fang",
+        "Pan Zhang",
+        "Shi-Ju Ran",
+        "Gang Su"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes a parameter-, arithmetic-, storage- and memory-reducing operator ansatz applied to LLMs, a direct compression/model-efficiency method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Read Less, Solve More: Token-Efficient Sparse Reading for AI Agents",
+      "source_url": "https://arxiv.org/abs/2608.22237",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon agents increasingly rely on repeated access to external artifacts, yet current reading interfaces often expose entire objects even when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute task-relevant evidence, while existing context-reduction methods mainly intervene after broad content has already entered the trajectory. We present SparseRead, a training-free, model-transparent reading layer that controls content admission before unnecessary evidence reaches the model context. SparseRead combines a regime-aware Read Gate, extensible Reader Backends, and a stateful protocol for bounded, source-anchored evidence acquisition with explicit refinement, verification, stopping, and fallback. Across six frontier models, including Claude Opus 5, and five workload scenarios, SparseRead reduces token volume by up to 92.9% and wall time by up to 89.0%, while preserving or improving task quality. Its consistent gains across three agent frameworks further demonstrate broad portability.",
+      "identifiers": [
+        "SemanticScholar:85de89762aa36e70c995c4005d2bd3a121c4c832"
+      ],
+      "semantic_scholar_id": "85de89762aa36e70c995c4005d2bd3a121c4c832",
+      "canonical_id": "arXiv:2608.22237",
+      "arxiv_id": "2608.22237",
+      "authors": [
+        "Ze-Dong Liu",
+        "Jiaan Wu",
+        "Xin-Yang Ma",
+        "Lewei Xu",
+        "Kai Wang",
+        "Yuan-Chao Hu",
+        "Ding-Wen Tao",
+        "Guang-Ming Tan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract reports sparse reading that preserves task quality while reducing token use and wall time substantially, directly targeting agent inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accurate Sublayer Pruning for Large Language Models by Exploiting Latency and Tunability Information",
+      "source_url": "https://arxiv.org/abs/2506.03510",
+      "year": 2025,
+      "published": "2025-06-04",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How can we accelerate large language models (LLMs) without sacrificing accuracy? The slow inference speed of LLMs hinders us to benefit from their remarkable performance in diverse applications. This is mainly because numerous sublayers are stacked together in LLMs. Sublayer pruning compresses and expedites LLMs via removing unnecessary sublayers. However, existing sublayer pruning algorithms are limited in accuracy since they naively select sublayers to prune, overlooking the different characteristics of each sublayer.\n\nIn this paper, we propose SPRINT (Sublayer Pruning with Latency and Tunability Information), an accurate sublayer pruning method for LLMs. SPRINT accurately selects a target sublayer to prune by considering 1) the amount of latency reduction after pruning and 2) the tunability of sublayers. SPRINT iteratively prunes redundant sublayers and swiftly tunes the parameters of remaining sublayers. Experiments show that SPRINT achieves the best accuracy-speedup trade-off, exhibiting up to 23.88%p higher accuracy on zero-shot commonsense reasoning benchmarks compared to existing pruning algorithms.",
+      "identifiers": [
+        "SemanticScholar:17f28465a8b9666629d9a72352c2c45e374b29d9"
+      ],
+      "semantic_scholar_id": "17f28465a8b9666629d9a72352c2c45e374b29d9",
+      "canonical_id": "arXiv:2506.03510",
+      "arxiv_id": "2506.03510",
+      "doi": "10.48550/arXiv.2506.03510",
+      "authors": [
+        "Seungcheol Park",
+        "Sojin Lee",
+        "Jongjin Kim",
+        "Jinsik Lee",
+        "Hyunjik Jo",
+        "U. Kang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 491,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract describes SPRINT selecting sublayers using latency reduction and tunability information to improve the LLM speed/quality trade-off.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery",
+      "source_url": "https://arxiv.org/abs/2502.12594",
+      "year": 2025,
+      "published": "2025-02-18",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model pruning is an effective approach for compressing large language models (LLMs). However, this process often leads to significant degradation of model capabilities. While post-training techniques such as instruction tuning are commonly employed to recover model performance, existing methods often overlook the uneven deterioration of model capabilities and incur high computational costs. Moreover, some irrelevant instructions may also introduce negative effects to model capacity recovery. To address these challenges, we propose the \\textbf{P}ost-training d\\textbf{A}ta \\textbf{S}election method for \\textbf{E}fficient pruned large language model \\textbf{R}ecovery (\\textbf{PASER}). PASER aims to identify instructions to recover the most compromised model capacities with a certain data budget. Our approach first applies manifold learning and spectral clustering to group recovery instructions in the semantic space, revealing capability-specific instruction sets. Then, the data budget is adaptively allocated across clusters by the degree of corresponding model capability degradation. In each cluster, we prioritize data samples that lead to the most decline of model performance. To mitigate potential negative tuning effects, we also detect and filter out conflicting or irrelevant recovery data. Extensive experiments demonstrate that PASER significantly outperforms conventional baselines, effectively recovering the general capabilities of pruned LLMs while utilizing merely 4\\%-20\\% of the original post-training data. We provide the code repository in \\href{https://github.com/BokwaiHo/PASER}{Link}.",
+      "identifiers": [
+        "SemanticScholar:457dc36422faf1f978129419a6b506a98a9f01d1"
+      ],
+      "semantic_scholar_id": "457dc36422faf1f978129419a6b506a98a9f01d1",
+      "canonical_id": "arXiv:2502.12594",
+      "arxiv_id": "2502.12594",
+      "doi": "10.48550/arXiv.2502.12594",
+      "authors": [
+        "Bowei He",
+        "Lihao Yin",
+        "Hui-Ling Zhen",
+        "Xiao-Kun Zhang",
+        "Ming-Xuan Yuan",
+        "Chen Ma"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents selective post-training data for recovering pruned LLMs, enabling compressed models to regain capability with less recovery data/compute; directly connected to pruning/compression deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PASS: Pruning Attention Heads with Almost-sure Sparsity Targets",
+      "source_url": "https://www.semanticscholar.org/paper/e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "year": 2024,
+      "published": null,
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146"
+      ],
+      "semantic_scholar_id": "e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "canonical_id": "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "authors": [
+        "Dujian Ding",
+        "Ganesh Jawahar",
+        "L. Lakshmanan"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 829,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official OpenReview/TMLR abstract describes attention-head pruning with explicit sparsity targets and reports attention speedups; directly relevant to efficient Transformer inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d389cf460e57",
+    "round": "libimp-d389cf460e570711-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d389cf460e570711-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d389cf460e570711-pre01.json",
+    "receipt": "sha256:c9f9494cd5b8f4e8f6271621d4849c619678a5c38479e393e0d676c6f474aae7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d389cf460e57",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
