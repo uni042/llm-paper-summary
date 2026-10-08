@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T05:45:55.317203+00:00",
+  "generated_at": "2026-10-08T05:53:50.322561+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 597,
+  "count": 593,
   "worker_counts": {
-    "scheduled-chat-00": 202,
+    "scheduled-chat-00": 200,
     "scheduled-chat-30": 190,
-    "scheduled-chat-45": 205
+    "scheduled-chat-45": 203
   },
   "entries": [
     {
@@ -10273,29 +10273,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
-      "canonical_id": "arXiv:2401.08671",
-      "title": "DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference",
-      "file_bytes": 13201,
-      "source_sha256": "bd5d4b3a07b37637dae4fd88ba9c1ec3745076f9291f477c2831a0edf4d9931a",
-      "source_git_blob_sha": "b2cfa3711990c21742362750744cc55f1eaca1fa",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.96359,
-      "quality_metrics": {
-        "body_chars": 3375,
-        "method_chars": 642,
-        "evaluation_chars": 404,
-        "limitation_chars": 292
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 642 < 700",
-        "16KB未満再監査: 評価説明量 404 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02640-metronome.md",
       "canonical_id": "arXiv:2607.02640",
       "title": "Metronome: Bound the Cache, Keep the Beat for Real-Time Interaction Model Serving",
@@ -11269,28 +11246,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md",
-      "canonical_id": "arXiv:2403.01876",
-      "title": "DéjàVu：KVキャッシュ・ストリーミングによる高速・耐障害LLM配信",
-      "file_bytes": 13711,
-      "source_sha256": "a5c70473138e9eae154599a5e1d979b794cda8f12cb5ed6f75fd8adc3c64b1f4",
-      "source_git_blob_sha": "4367dac1f3744b37340746fa03d5b7f0ce507e82",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.97655,
-      "quality_metrics": {
-        "body_chars": 3009,
-        "method_chars": 1224,
-        "evaluation_chars": 113,
-        "limitation_chars": 153
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 113 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
       "canonical_id": "arXiv:2307.02628",
       "title": "SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference",
@@ -11350,28 +11305,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14312-locality-aware-fair-scheduling-dlpm.md",
-      "canonical_id": "arXiv:2501.14312",
-      "title": "Locality-aware Fair Scheduling in LLM Serving",
-      "file_bytes": 13799,
-      "source_sha256": "7644d495696435c7c6cd7317adee0f0759caffa726c9e5e2f57374d98afc88ad",
-      "source_git_blob_sha": "1449f336d13b0c04c4296d6fef6411bdc07992ff",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.960133,
-      "quality_metrics": {
-        "body_chars": 3396,
-        "method_chars": 1071,
-        "evaluation_chars": 0,
-        "limitation_chars": 213
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
       "warnings": []
     },
     {
@@ -11583,28 +11516,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 431 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2604.12989-accelerating-speculative-decoding-with-block-diffusion-draft-trees.md",
-      "canonical_id": "arXiv:2604.12989",
-      "title": "Accelerating Speculative Decoding with Block Diffusion Draft Trees",
-      "file_bytes": 13928,
-      "source_sha256": "982f9daba88c351204398d30e50763943b348e1b7e16aba2eb3ff35537ddc156",
-      "source_git_blob_sha": "ec15b242953fd70cefc220b9ebfe9c8904d8de3f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.973066,
-      "quality_metrics": {
-        "body_chars": 3308,
-        "method_chars": 997,
-        "evaluation_chars": 171,
-        "limitation_chars": 212
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 171 < 500"
       ],
       "warnings": []
     },
@@ -12128,26 +12039,6 @@
         "method_chars": 1014,
         "evaluation_chars": 509,
         "limitation_chars": 374
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
-      "canonical_id": "DOI:10.1109/HPCA53966.2022.00082",
-      "title": "TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer",
-      "file_bytes": 14480,
-      "source_sha256": "a0ff3c5b4845f99c1497e3b44dfb522158c307b391b9362d9983d1da8f73c648",
-      "source_git_blob_sha": "966855cd085cb536de021f27bf529efec430f8ac",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.932575,
-      "quality_metrics": {
-        "body_chars": 4901,
-        "method_chars": 1357,
-        "evaluation_chars": 1137,
-        "limitation_chars": 397
       },
       "mechanical_failures": [],
       "warnings": []
@@ -12763,6 +12654,26 @@
         "method_chars": 1334,
         "evaluation_chars": 1096,
         "limitation_chars": 360
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "canonical_id": "DOI:10.1109/HPCA53966.2022.00082",
+      "title": "TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer",
+      "file_bytes": 15113,
+      "source_sha256": "ba7814c44293c9f2325e06dafe0b7a261984c35bba96597eed22bfedc373a705",
+      "source_git_blob_sha": "63440b8bb9efae19bd439e386da0e024ec5e6c83",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.932575,
+      "quality_metrics": {
+        "body_chars": 4901,
+        "method_chars": 1357,
+        "evaluation_chars": 1137,
+        "limitation_chars": 397
       },
       "mechanical_failures": [],
       "warnings": []
