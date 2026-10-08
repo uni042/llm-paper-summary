@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding",
+      "source_url": "https://arxiv.org/abs/2604.12358",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, visual token pruning has been studied to handle the vast number of visual tokens in Multimodal Large Language Models. However, we observe that while existing pruning methods perform reliably on simple visual understanding, they struggle to effectively generalize to complex visual reasoning tasks, a critical gap underexplored in previous studies. Through a systematic analysis, we identify Relevant Visual Information Shift (RVIS) during decoding as the primary failure driver. To address this, we propose Decoding-stage Shift-aware Token Pruning (DSTP), a training-free add-on framework that enables existing pruning methods to align visual tokens with shifting reasoning requirements during the decoding stage. Extensive experiments demonstrate that DSTP significantly mitigates performance degradation of pruning methods in complex reasoning tasks, while consistently yielding performance gains even across visual understanding benchmarks. Furthermore, DSTP demonstrates effectiveness across diverse state-of-the-art architectures, highlighting its generalizability and efficiency with minimal computational overhead.",
+      "identifiers": [
+        "SemanticScholar:321943dd9f4bcfeffbd7017e8e3c3b7ae6d40f76"
+      ],
+      "semantic_scholar_id": "321943dd9f4bcfeffbd7017e8e3c3b7ae6d40f76",
+      "canonical_id": "arXiv:2604.12358",
+      "arxiv_id": "2604.12358",
+      "doi": "10.48550/arXiv.2604.12358",
+      "authors": [
+        "Jiwan Kim",
+        "Kibum Kim",
+        "Wonjoong Kim",
+        "Byung-Kwan Lee",
+        "Chanyoung Park"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract analyzes visual-token pruning failure in MLLM decoding and introduces a low-overhead pruning approach preserving relevant information; directly concerns inference token/pruning efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2512.00805",
+      "year": 2025,
+      "published": "2025-11-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long video understanding is essential for human-like intelligence, enabling coherent perception and reasoning over extended temporal contexts. While the emerging thinking-with-frames paradigm, which alternates between global temporal reasoning and local frame examination, has advanced the reasoning capabilities of video multi-modal large language models (MLLMs), it suffers from a significant efficiency bottleneck due to the progressively growing and redundant multi-modal context. To address this, we propose SpecTemp, a reinforcement learning-based Speculative Temporal reasoning framework that decouples temporal perception from reasoning via a cooperative dual-model design. In SpecTemp, a lightweight draft MLLM rapidly explores and proposes salient frames from densely sampled temporal regions, while a powerful target MLLM focuses on temporal reasoning and verifies the draft's proposals, iteratively refining its attention until convergence. This design mirrors the collaborative pathways of the human brain, balancing efficiency with accuracy. To support training, we construct the SpecTemp-80K dataset, featuring synchronized dual-level annotations for coarse evidence spans and fine-grained frame-level evidence. Experiments across multiple video understanding benchmarks demonstrate that SpecTemp not only maintains competitive accuracy but also significantly accelerates inference compared with existing thinking-with-frames methods.",
+      "identifiers": [
+        "SemanticScholar:7fbea8dc26aed5e0bbde0dc8f9af685254d43c15"
+      ],
+      "semantic_scholar_id": "7fbea8dc26aed5e0bbde0dc8f9af685254d43c15",
+      "canonical_id": "arXiv:2512.00805",
+      "arxiv_id": "2512.00805",
+      "doi": "10.48550/arXiv.2512.00805",
+      "authors": [
+        "Pengfei Hu",
+        "Meng Cao",
+        "Yingyao Wang",
+        "Yi Wang",
+        "Jia-Hua Dong",
+        "Jun Song",
+        "Yu Cheng",
+        "Bo Zheng",
+        "Xiaodan Liang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 312,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Thinking with Drafts applies speculative temporal reasoning to long-video MLLM inference and reports faster generation/understanding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Attention Once Is All You Need: Efficient Streaming Inference with Stateful Transformers",
+      "source_url": "https://arxiv.org/abs/2605.13784",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conventional transformer inference engines are request-driven, paying an O(n) prefill cost on every query. In streaming workloads, where data arrives continuously and queries probe an ever-growing context, this cost is prohibitive. We introduce a data-driven computational model centred on stateful sessions: a persistent KV cache advanced incrementally as new data arrives, so prefill is moved off the critical path and query latency becomes O(|q|), independent of accumulated context size. Building on this, Flash Queries reclaim idle GPU cycles between data arrivals to pre-evaluate registered questions and return cached answers before the user asks, a pattern that is structurally impossible in stateless engines because they discard intermediate state between requests. A multi-tenant continuous-batching scheduler with cell-budget admission and prefix-aware grouped prefill lets dozens of stateful sessions coexist on a single GPU while preserving full quadratic self-attention. On streaming market-data benchmarks the reference implementation achieves up to 5.9x speedup over conventional inference engines (vLLM, SGLang, TensorRT-LLM, llama.cpp), holding query latency constant as accumulated context grows.",
+      "identifiers": [
+        "SemanticScholar:c2027bf0da92b2192a798954be89bcbdca2ffd2a"
+      ],
+      "semantic_scholar_id": "c2027bf0da92b2192a798954be89bcbdca2ffd2a",
+      "canonical_id": "arXiv:2605.13784",
+      "arxiv_id": "2605.13784",
+      "doi": "10.48550/arXiv.2605.13784",
+      "authors": [
+        "Victor Norgren"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Attention Once uses a persistent state and incremental prefill for streaming Transformer inference, reducing repeated attention work and enabling more concurrent sessions.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Self Speculative Decoding for Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.04147",
+      "year": 2025,
+      "published": "2025-10-05",
+      "venue": "arXiv.org",
+      "citation_count": 30,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based Large Language Models (dLLMs) have emerged as a competitive alternative to autoregressive models, offering unique advantages through bidirectional attention and parallel generation paradigms. However, the generation results of current parallel decoding methods deviate from stepwise decoding, introducing potential performance degradation, which limits their practical deployment. To address this problem, we propose \\textbf{S}elf \\textbf{S}peculative \\textbf{D}ecoding (SSD), a lossless inference acceleration method that leverages the dLLM itself as both speculative decoding drafter and verifier without auxiliary modules. SSD introduces a self-drafting mechanism where the model generates predictions for multiple positions, then verifies them through hierarchical verification trees in a single forward pass. Unlike traditional speculative decoding that requires separate draft models, SSD eliminates model redundancy and memory overhead by exploiting the dLLM's inherent parallel prediction capability for multiple positions. This self-speculative approach allows the model to progressively verify and accept multiple tokens in a single forward pass. Our experiments demonstrate that SSD achieves up to 3.46$\\times$ speedup while keeping the output identical to stepwise decoding on open source models such as LLaDA and Dream. Code will be made publicly available on GitHub.",
+      "identifiers": [
+        "SemanticScholar:39f0f4d7ad0ad8b792d8e4cdd441a6fc38ed9f1f"
+      ],
+      "semantic_scholar_id": "39f0f4d7ad0ad8b792d8e4cdd441a6fc38ed9f1f",
+      "canonical_id": "arXiv:2510.04147",
+      "arxiv_id": "2510.04147",
+      "doi": "10.48550/arXiv.2510.04147",
+      "authors": [
+        "Yifeng Gao",
+        "Ziang Ji",
+        "Yuxuan Wang",
+        "Biqing Qi",
+        "Hanlin Xu",
+        "Linfeng Zhang"
+      ],
+      "priority": 30,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 30,
+        "citation_count": 30,
+        "total": 30,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 368,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents self-speculative decoding for diffusion LLMs, preserving output quality while accelerating inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Jina-OCR-v1: Efficient Document Parsing with Speculative Decoding and Dense Verifiable Rewards",
+      "source_url": "https://arxiv.org/abs/2609.03181",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Jina-OCR-v1, an end-to-end document parsing model built to serve on low-budget GPUs. It combines the compressed-vision encoder and the 3B mixture-of-experts decoder of DeepSeek-OCR, which activates about 570M parameters per token, with a FastMTP speculative decoding head that shares a single draft block recursively across K=3 prediction steps. Greedy verification makes decoding lossless. Post-training combines instruction alignment, robustness fine-tuning on difficult documents, and GRPO under dense verifiable rewards: deterministic formula, table, and structural checks that award partial credit. The training data mixes cleaned public corpora with targeted synthetic pages. At the default dynamic-resolution setting, Jina-OCR-v1 scores 91.14 on OmniDocBench v1.6 and 83.4 on olmOCR-Bench, and reaches the highest page throughput in our comparison at 2.57 pages per second. On a low-budget GPU such as the NVIDIA L4, FastMTP doubles decoding speed over greedy autoregressive decoding. The model is publicly available at https://huggingface.co/jinaai/jina-ocr-v1.",
+      "identifiers": [
+        "SemanticScholar:bab286b446548db1c258cbc895f4fd95e62e8625"
+      ],
+      "semantic_scholar_id": "bab286b446548db1c258cbc895f4fd95e62e8625",
+      "canonical_id": "arXiv:2609.03181",
+      "arxiv_id": "2609.03181",
+      "authors": [
+        "Alejandro Barón García",
+        "Feng Wang",
+        "Emília Garcia Casademont",
+        "Han Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Jina-OCR-v1 uses speculative decoding for document parsing on constrained hardware and reports higher inference throughput; direct specialized inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6cb6eae40b5d",
+    "round": "libimp-6cb6eae40b5d9319-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6cb6eae40b5d9319-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6cb6eae40b5d9319-pre01.json",
+    "receipt": "sha256:ee1bee0a21b41697566793438b535ebf4f49cce381402b9a0813848469a26e13"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6cb6eae40b5d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
