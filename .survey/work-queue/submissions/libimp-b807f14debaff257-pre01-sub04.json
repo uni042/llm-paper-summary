@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Cerberus: Efficient Inference with Adaptive Parallel Decoding and Sequential Knowledge Enhancement",
+      "source_url": "https://arxiv.org/abs/2410.13344",
+      "year": 2024,
+      "published": "2024-10-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) often face a bottleneck in inference speed due to their reliance on auto-regressive decoding. Recently, parallel decoding has shown significant promise in enhancing inference efficiency. However, we have identified two key issues with existing parallel decoding frameworks: (1) decoding heads fail to balance prediction accuracy and the parallelism of execution, and (2) parallel decoding is not a universal solution, as it can bring unnecessary overheads at some challenging decoding steps. To address these issues, we propose Cerberus, an adaptive parallel decoding framework introduces the gating mechanism to enable the LLMs to adaptively choose appropriate decoding approaches at each decoding step, along with introducing a new paradigm of decoding heads that introduce the sequential knowledge while maintaining execution parallelism. The experiment results demonstrate that the Cerberus can achieve up to 2.12x speed up compared to auto-regressive decoding, and outperforms one of the leading parallel decoding frameworks, Medusa, with a 10% - 30% increase in acceleration and superior generation quality.",
+      "identifiers": [
+        "SemanticScholar:366f31f00df26f704a58005a1fab5d561dd8861b"
+      ],
+      "semantic_scholar_id": "366f31f00df26f704a58005a1fab5d561dd8861b",
+      "canonical_id": "arXiv:2410.13344",
+      "arxiv_id": "2410.13344",
+      "doi": "10.48550/arXiv.2410.13344",
+      "authors": [
+        "Yuxuan Liu",
+        "Wenyuan Li",
+        "Lai-Zhong Cui",
+        "Hailiang Yang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 721,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Cerberus adaptively selects parallel decoding per step and adds sequential knowledge while retaining parallel execution; abstract reports up to 2.12x speedup over autoregressive decoding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HybridServe: Stall-Free Distributed Disaggregated LLM Inference with Hybrid KVCache Buffering",
+      "source_url": "https://doi.org/10.5220/0014919900004039",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Cloud Computing and Services Science",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": Disaggregated LLM inference, which separates compute-bound prefill and memory-bound decoding, is essential for maximizing cloud resource efficiency and ensuring responsive services. However, in distributed cloud environments, this paradigm suffers from critical system-level inhibitors. We analyze dominant communication patterns–Push-mode and Pull-mode–and identify two fundamental bottlenecks: saturated VRAM buffers that stall prefill computation, leading to resource underutilization, and significant cross-node communication overhead. We propose HybridServe, a novel system featuring a hybrid KVCache buffering strategy. Hybrid-Serve utilizes the decode worker’s high-capacity CPU memory as an elastic secondary buffer to eliminate stalls and leverages decode-side memory locality to minimize inter-node latency. Our evaluation demonstrates that HybridServe effectively mitigates buffer constraints, achieving up to 1 . 76 × TTFT speedup and 1 . 57 × throughput improvement over the baseline disaggregated push/pull modes.",
+      "identifiers": [
+        "SemanticScholar:8fbf9e1b0d5308c4314683532b70287720bf39f3"
+      ],
+      "semantic_scholar_id": "8fbf9e1b0d5308c4314683532b70287720bf39f3",
+      "doi": "10.5220/0014919900004039",
+      "canonical_id": "DOI:10.5220/0014919900004039",
+      "authors": [
+        "Yi-Syuan Ke",
+        "Zhan-Wei Wu",
+        "Chih-Ta Tsai",
+        "Sao-Hsuan Lin",
+        "Jerry Chou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Official CLOSER/INSTICC abstract describes disaggregated LLM inference and HybridServe CPU-memory KV buffering to reduce stalls and inter-node latency; it reports TTFT and throughput improvement.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b807f14debaf",
+    "round": "libimp-b807f14debaff257-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b807f14debaff257-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b807f14debaff257-pre01.json",
+    "receipt": "sha256:dd49c64ced7a8bc5f943dbdd49b976208a6d4ffcd689d397cb127ff646f062fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b807f14debaf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.26587",
+      "year": 2026,
+      "published": "2026-06-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit floating-point formats and semi-structured sparsity are increasingly supported by modern accelerators, yet combining them for LLM activation compression remains challenging: activations contain input-dependent outliers that dominate block scales in FP4 quantization, and directly applying N:M sparsity masks discards moderate values, coupling sparsification loss with quantization error. We introduce SharQ, a training-free inference method that bridges activation sparsity and FP4 quantization through an online sparse--dense decomposition. For each activation tensor, SharQ generates an input-adaptive N:M mask to extract an outlier-dominated sparse backbone, quantizes it to FP4, and defines a dense residual relative to the quantized sparse backbone rather than the unquantized sparse values. A sparse FP4 GEMM processes the backbone while a dense FP4 GEMM compensates for both mask-induced activation loss and sparse-path quantization error. The two paths share a single FP4 weight payload with path-specific scale views, and a fused preparation kernel absorbs mask generation, residual construction, and layer normalization into one operator. SharQ requires no calibration data, retraining, or model-specific tuning. Evaluated on Llama-3.1-8B, Qwen2.5-7B, Qwen3-30B-A3B, and Qwen3-VL-8B, SharQ recovers 43--63% of the NVFP4-to-FP16 accuracy gap across language and vision-language tasks, and generalizes across NVFP4, HiF4, and MXFP4 formats. On an RTX 5090, SharQ delivers 2.2--2.4$\\times$ latency reduction over FP16 and 1.2--1.4$\\times$ throughput improvement over FP8 in language model serving, and up to 1.58$\\times$ speedup on Wan2.2-T2V-A14B video generation when combined with SageAttention. Our code is available at https://github.com/actypedef/SharQ.",
+      "identifiers": [
+        "SemanticScholar:2949e49eba52a1504d0c4b8c5a11bf4905fad88e"
+      ],
+      "semantic_scholar_id": "2949e49eba52a1504d0c4b8c5a11bf4905fad88e",
+      "canonical_id": "arXiv:2606.26587",
+      "arxiv_id": "2606.26587",
+      "doi": "10.48550/arXiv.2606.26587",
+      "authors": [
+        "Haoqian Meng",
+        "Yilun Luo",
+        "Ya-Fei Zhao",
+        "Wen-Yuan Liu",
+        "Hua Zheng",
+        "Xindian Ma",
+        "Peng Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 105,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SharQ combines input-adaptive activation sparsity with FP4 quantization and fused inference kernels; its abstract reports lower latency and higher serving throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A rigor-matched audit of periodic-step layer skipping for efficient llm inference: conflayers versus swift, with a supplemental analysis of trained routing alternatives",
+      "source_url": "https://arxiv.org/abs/2608.28846",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Layer-skipping methods for efficient LLM inference decide, at some granularity, which transformer layers to execute for a given input. We present a rigor-matched, three-seed audit of two periodic-step, search-based methods that make this decision online at inference time and re-evaluate it every few generation steps: a confidence-gated early-exit baseline (ConfLayers) and genuine self-speculative decoding (SWIFT, Xia et al. 2024), together with vanilla autoregressive decoding, across Qwen2.5-0.5B and Qwen2.5-1.5B (Yang et al. 2024) on GSM8K (Cobbe et al. 2021) and CNN/DailyMail (Nallapati et al. 2016; See et al. 2017). SWIFT is strongest on accuracy in three of four cells, while ConfLayers is dominated everywhere, with particularly large deficits on GSM8K at 1.5B. Separating online-search overhead from pure inference cost, we find that SWIFT's true inference speed is faster than ConfLayers's in all four cells (5-21%), reversing the naive wall-clock ranking in three; ConfLayers's search overhead is small and stable (1-2% of cost), whereas SWIFT's is larger and more variable across seeds (up to 28.7%). We additionally examine two trained routing methods, LayerRoute (Sikdar, 2026), a per-sequence, input-conditioned hard gate, and LayerDrop (Fan et al. 2020), a fixed, input-independent pruning pattern, as a supplemental analysis rather than a head-to-head comparison because both operate at a coarser decision granularity. Under a verified protocol with genuine per-input gating, a genuine full-model baseline, and genuine inference-time compute skipping, both show modest real speedups (1.08-1.33x) but accuracy well below the periodic-step methods, including near-total LayerRoute collapse on GSM8K at 1.5B (0.003 mean exact-match across three seeds). We release the full audit protocol as a template for rigor-matched efficiency comparisons.",
+      "identifiers": [
+        "SemanticScholar:df3129d12bd0e95d53582e8aeaa6067c1b2342dc"
+      ],
+      "semantic_scholar_id": "df3129d12bd0e95d53582e8aeaa6067c1b2342dc",
+      "canonical_id": "arXiv:2608.28846",
+      "arxiv_id": "2608.28846",
+      "authors": [
+        "Prateek Kumar Sikdar"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract audits inference-time layer skipping and self-speculative decoding under matched protocols, quantifying actual speedups and overhead; directly relevant to inference efficiency evaluation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KVCMAS: Efficient KV cache Correction for Shared Context in Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2609.34060",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prompt-specialized multi-agent systems enable multiple agents to share a model while performing complementary roles to solve complex tasks. However, agent-specific prefixes change the KV cache generated for the same shared context, causing each agent to repeatedly prefill the growing context and construct a separate cache with high computation and memory overhead. Selective recomputation reduces this redundancy but still retains substantial model execution, while existing delta correction methods either support only recurring context relations or maintain memory-intensive online correction states for dynamically changing context. For first seen shared context, these methods also construct a reference cache outside the agent workflow, and an approximate correction at the first agent affects the outputs passed to subsequent agents. We present KVCMAS, an online KV cache correction framework that represents cross-agent cache deviations using compact low-rank states and seamlessly chains corrections along the agent workflow without an additional reference prefill. This design supports dynamically changing shared context while preserving an exact first-agent cache. Across multiple language and vision-language workloads, KVCMAS matches or improves the accuracy of prior KV cache sharing methods while achieving the lowest TTFT under highly concurrent serving. Under controlled serving traces, it provides a 2.0x TTFT speedup over inference without KV cache sharing and reduces peak GPU memory by up to 3.7x relative to a prior KV cache correction method. These results establish KVCMAS as an accurate and scalable KV cache sharing approach for prompt-specialized multi-agent serving.",
+      "identifiers": [
+        "SemanticScholar:cb9b5775e8d6be746645659d79e139a5d53622dc"
+      ],
+      "semantic_scholar_id": "cb9b5775e8d6be746645659d79e139a5d53622dc",
+      "canonical_id": "arXiv:2609.34060",
+      "arxiv_id": "2609.34060",
+      "authors": [
+        "Hyesung Jeon",
+        "Hyeongju Ha",
+        "Seoyoun Lee",
+        "Beomseok Kang",
+        "Jae-Joon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVCMAS uses compact low-rank online KV-cache correction across agents sharing context; abstract reports lower TTFT and reduced peak GPU memory under concurrent serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Adamas: Hadamard Sparse Attention for Efficient Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2510.18413",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) now support context windows of hundreds of thousands to millions of tokens, enabling applications such as long-document summarization, large-scale code synthesis, multi-document question answering and persistent multi-turn dialogue. However, such extended contexts exacerbate the quadratic cost of self-attention, leading to severe latency in autoregressive decoding. Existing sparse attention methods alleviate these costs but rely on heuristic patterns that struggle to recall critical key-value (KV) pairs for each query, resulting in accuracy degradation. We introduce Adamas, a lightweight yet highly accurate sparse attention mechanism designed for long-context inference. Adamas applies the Hadamard transform, bucketization and 2-bit compression to produce compact representations, and leverages Manhattan-distance estimation for efficient top-k selections. Experiments show that Adamas matches the accuracy of full attention with only a 64-token budget, achieves near-lossless performance at 128, and supports up to 8x higher sparsity than prior state-of-the-art (SOTA) methods while delivering up to 4.4x self-attention and 1.5x end-to-end speedups on 32K-length sequences. Remarkably, Adamas attains comparable or even lower perplexity than full attention, underscoring its effectiveness in maintaining accuracy under aggressive sparsity.",
+      "identifiers": [
+        "SemanticScholar:50de02f07420586ecba5cd8fb8df15368bce1235"
+      ],
+      "semantic_scholar_id": "50de02f07420586ecba5cd8fb8df15368bce1235",
+      "canonical_id": "arXiv:2510.18413",
+      "arxiv_id": "2510.18413",
+      "doi": "10.48550/arXiv.2510.18413",
+      "authors": [
+        "Siyuan Yan",
+        "Guo-qing Jiang",
+        "Yu-Chen Zhang",
+        "Xiaoxing Ma",
+        "Ran Zhu",
+        "Chun Cao",
+        "Jingwei Xu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 352,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Adamas applies Hadamard transform, bucketization, 2-bit compact representations, and top-k selection for sparse long-context inference; abstract reports up to 4.4x self-attention and 1.5x end-to-end speedups.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Semantic Retention and Extreme Compression in LLMs: Can We Have Both?",
+      "source_url": "https://arxiv.org/abs/2505.07289",
+      "year": 2025,
+      "published": "2025-05-12",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The exponential growth in Large Language Model (LLM) deployment has intensified the need for efficient model compression techniques to reduce computational and memory costs. While pruning and quantization have shown promise, their combined potential remains largely unexplored. In this paper, we examine joint compression and how strategically combining pruning and quantization could yield superior performance-to-compression ratios compared to single-method approaches. Recognizing the challenges in accurately assessing LLM performance, we address key limitations of previous evaluation frameworks and introduce the Semantic Retention Compression Rate (SrCr), a novel metric that quantifies the trade-off between model compression and semantic preservation, facilitating the optimization of pruning-quantization configurations. Experiments demonstrate that our recommended combination achieves, on average, a 20% performance increase compared to an equivalent quantization-only model at the same theoretical compression rate.",
+      "identifiers": [
+        "SemanticScholar:0d6fb493a4c32d60d6be0ce5d02dc147ea06bf58"
+      ],
+      "semantic_scholar_id": "0d6fb493a4c32d60d6be0ce5d02dc147ea06bf58",
+      "canonical_id": "arXiv:2505.07289",
+      "arxiv_id": "2505.07289",
+      "doi": "10.1109/IJCNN64981.2025.11227279",
+      "authors": [
+        "Stanislas Laborde",
+        "Martin Cousseau",
+        "Antoun Yaacoub",
+        "Lionel Prevost"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract evaluates joint LLM pruning and quantization against compression/semantic-retention tradeoffs, a direct model compression and deployment-efficiency topic.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b807f14debaf",
+    "round": "libimp-b807f14debaff257-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b807f14debaff257-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b807f14debaff257-pre01.json",
+    "receipt": "sha256:dd49c64ced7a8bc5f943dbdd49b976208a6d4ffcd689d397cb127ff646f062fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b807f14debaf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

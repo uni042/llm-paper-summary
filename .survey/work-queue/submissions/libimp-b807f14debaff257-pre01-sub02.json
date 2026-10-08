@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2510.16292",
+      "year": 2025,
+      "published": "2025-10-18",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are integral to tasks such as image captioning and visual question answering, but their high computational cost, driven by large memory footprints and processing time, limits their scalability and real-time applicability. In this work, we propose leveraging Singular-Value Decomposition (SVD) over the joint query (Q), key (K), and value (V) weight matrices to reduce KV cache size and computational overhead. We in addition introduce an efficient rank allocation strategy that dynamically adjusts the SVD rank based on its impact on VLM accuracy, achieving a significant reduction in both memory usage and computational cost. Finally, we extend this approach by applying quantization to both VLM weights and activations, resulting in a highly efficient VLM. Our method outperforms previous approaches that rely solely on quantization or SVD by achieving more than $10\\%$ accuracy improvement while consuming less hardware cost, making it better for real-time deployment on resource-constrained devices. We open source our code at \\href{https://github.com/SAI-Lab-NYU/QSVD}{\\texttt{https://github.com/SAI-Lab-NYU/QSVD}}.",
+      "identifiers": [
+        "SemanticScholar:0266895a8db1a2b2973e97dffbb79fc3754f69aa"
+      ],
+      "semantic_scholar_id": "0266895a8db1a2b2973e97dffbb79fc3754f69aa",
+      "canonical_id": "arXiv:2510.16292",
+      "arxiv_id": "2510.16292",
+      "doi": "10.48550/arXiv.2510.16292",
+      "authors": [
+        "Yu-Tong Wang",
+        "Hai-Yu Wang",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 355,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "QSVD reduces VLM KV-cache size and compute using joint Q/K/V low-rank approximation, rank allocation, and low-bit weight/activation quantization; abstract states resource-constrained real-time deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MXFFP: Microscaling Flexible Floating Point Format for Large-Scale AI Model Acceleration",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00175",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of AI/ML applications has reignited interest in floating-point formats beyond the IEEE 754 standard, leading to innovations such as Microscaling Floating-Point (MXFP). MXFP groups values into blocks that share a common exponent, allowing them to be represented as scaled FP values. This enables a reduced memory footprint and efficient hardware execution. However, due to the trend of shrinking bit-widths and increasing block sizes, MXFP faces growing inter-block and intra-block value diversity. The limited number of exponent and mantissa bits forces a tradeoff between range and precision across blocks, while packing more values into a block amplifies the variation within each block. As a result, fewer bits with larger blocks often lead to precision loss and degraded model accuracy. In this paper, we observe that these limitations can be addressed by flexibly assigning exponent and mantissa bits to match the value distribution of each block or element within a block, rather than relying on a single fixed MXFP configuration. Based on this observation, we propose MXFFP, a flexible numeric format that leverages diverse exponent-mantissa configurations at both the block and sub-block levels. This diversity allows MXFFP to better preserve the original value distribution, leading to higher inference accuracy for ML models even with larger block sizes. To support this format, we introduce efficient conversion mechanisms that transform FP16/BF16 values into MXFFP with a minimal runtime overhead and design a Tensor Core based hardware architecture that interprets and executes MXFFP using only a single configuration bit per block. Our evaluation shows that MXFFP significantly improves numerical accuracy, reducing perplexity by $\\mathrm{2}-\\mathrm{5} \\times$ in 4-bit settings across multiple LLMs, while maintaining hardware performance comparable to MXFP.",
+      "identifiers": [
+        "SemanticScholar:b5b879550e1354bfb7e62861cd4f947fef23806b"
+      ],
+      "semantic_scholar_id": "b5b879550e1354bfb7e62861cd4f947fef23806b",
+      "doi": "10.1109/ISCA66397.2026.00175",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00175",
+      "authors": [
+        "Sungwoo Kim",
+        "Sungbin Kim",
+        "Dongho Ha",
+        "Hyunwuk Lee",
+        "Junsung Kim",
+        "Seunghyun Lee",
+        "Mingu Jung",
+        "Murali Annavaram",
+        "Won Woo Ro"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "Official IEEE abstract introduces flexible microscaling exponent/mantissa layouts and Tensor Core execution for large AI models; it explicitly evaluates LLM inference accuracy and maintains hardware performance comparable to MXFP.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "La RoSA: Enhancing LLM Efficiency via Layerwise Rotated Sparse Activation",
+      "source_url": "https://arxiv.org/abs/2507.01299",
+      "year": 2025,
+      "published": "2025-07-02",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Activation sparsity can reduce the computational overhead and memory transfers during the forward pass of Large Language Model (LLM) inference. Existing methods face limitations, either demanding time-consuming recovery training that hinders real-world adoption, or relying on empirical magnitude-based pruning, which causes fluctuating sparsity and unstable inference speed-up. This paper introduces LaRoSA (Layerwise Rotated Sparse Activation), a novel method for activation sparsification designed to improve LLM efficiency without requiring additional training or magnitude-based pruning. We leverage layerwise orthogonal rotations to transform input activations into rotated forms that are more suitable for sparsification. By employing a Top-K selection approach within the rotated activations, we achieve consistent model-level sparsity and reliable wall-clock time speed-up. LaRoSA is effective across various sizes and types of LLMs, demonstrating minimal performance degradation and robust inference acceleration. Specifically, for LLaMA2-7B at 40% sparsity, LaRoSA achieves a mere 0.17 perplexity gap with a consistent 1.30x wall-clock time speed-up, and reduces the accuracy gap in zero-shot tasks compared to the dense model to just 0.54%, while surpassing TEAL by 1.77% and CATS by 17.14%.",
+      "identifiers": [
+        "SemanticScholar:7da878db35f8ac27c8fc8cf4236b63e878758ce9"
+      ],
+      "semantic_scholar_id": "7da878db35f8ac27c8fc8cf4236b63e878758ce9",
+      "canonical_id": "arXiv:2507.01299",
+      "arxiv_id": "2507.01299",
+      "doi": "10.48550/arXiv.2507.01299",
+      "authors": [
+        "Kai Liu",
+        "Bowen Xu",
+        "Shaoyu Wu",
+        "Xin Chen",
+        "Hao Zhou",
+        "Yongliang Tao",
+        "Lulu Hu"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 463,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "La RoSA uses layerwise rotations and top-k selection to create stable LLM activation sparsity without additional recovery training; abstract reports wall-clock inference speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness",
+      "source_url": "https://doi.org/10.52202/085713-0097",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) agents are capable of task execution across various domains by autonomously interacting with environments and refining LLM responses based on feedback. However, existing model serving systems are not optimized for the unique demands of serving agents. Compared to classic model serving, agent serving has different characteristics: predictable request pattern, increasing quality requirement, and unique prompt formatting. We identify a key problem for agent serving: LLM serving systems lack session-awareness. They neither perform effective KV cache management nor precisely select the cheapest yet competent model in each round. This leads to a cost-quality tradeoff, and we identify an opportunity to surpass it in an agent serving system. To this end, we introduce A G S ERVE for AG ile AG ent SERVing . A G S ERVE features a session-aware server that boosts KV cache reuse via Estimated-Time-of-Arrival-based eviction and in-place positional embedding calibration, a quality-aware client that performs session-aware model cascading through real-time quality assessment, and a dynamic resource scheduler that maximizes GPU utilization. With A G S ERVE , we allow agents to select and upgrade models during the session lifetime, and to achieve similar quality at much lower costs, effectively transcending the tradeoff. Extensive experiments on real testbeds demonstrate that A G S ERVE (1) achieves comparable response quality to GPT-4o at a 16.5% cost. (2) delivers 1.8 × improvement in quality relative to the tradeoff curve.",
+      "identifiers": [
+        "SemanticScholar:81258951d1efeb7b5f8addc8ee98da9ebb32d5dd"
+      ],
+      "semantic_scholar_id": "81258951d1efeb7b5f8addc8ee98da9ebb32d5dd",
+      "doi": "10.52202/085713-0097",
+      "canonical_id": "DOI:10.52202/085713-0097",
+      "authors": [
+        "Yanyu Ren",
+        "Li Chen",
+        "Dan Li",
+        "Xizheng Wang",
+        "Zhiyuan Wu",
+        "Yukai Miao",
+        "Yu Bai"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 464,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Official NeurIPS abstract presents AGServe session-aware LLM agent serving with KV-cache reuse, model cascading, and a dynamic resource scheduler, directly addressing serving cost and GPU utilization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Optimized Speculative Sampling for GPU Hardware Accelerators",
+      "source_url": "https://arxiv.org/abs/2406.11016",
+      "year": 2024,
+      "published": "2024-06-16",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we optimize speculative sampling for parallel hardware accelerators to improve sampling speed. We notice that substantial portions of the intermediate matrices necessary for speculative sampling can be computed concurrently. This allows us to distribute the workload across multiple GPU threads, enabling simultaneous operations on matrix segments within thread blocks. This results in profiling time improvements ranging from 6% to 13% relative to the baseline implementation, without compromising accuracy. To further accelerate speculative sampling, probability distributions parameterized by softmax are approximated by sigmoid. This approximation approach results in significantly greater relative improvements in profiling time, ranging from 37% to 94%, with a minor decline in accuracy. We conduct extensive experiments on both automatic speech recognition and summarization tasks to validate the effectiveness of our optimization methods.",
+      "identifiers": [
+        "SemanticScholar:d613e92a30f19029d842d8ef7d73f8ad4dbbd3ae"
+      ],
+      "semantic_scholar_id": "d613e92a30f19029d842d8ef7d73f8ad4dbbd3ae",
+      "canonical_id": "arXiv:2406.11016",
+      "arxiv_id": "2406.11016",
+      "doi": "10.48550/arXiv.2406.11016",
+      "authors": [
+        "Dominik Wagner",
+        "Seanie Lee",
+        "Ilja Baumann",
+        "Philipp Seeberger",
+        "Korbinian Riedhammer",
+        "Tobias Bocklet"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 844,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Primary abstract parallelizes speculative-sampling matrix work across GPU threads and reports sampling profiling-time improvement. Although experiments include ASR and summarization, the method is a plausible systems-efficiency contribution to speculative decoding/inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b807f14debaf",
+    "round": "libimp-b807f14debaff257-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b807f14debaff257-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b807f14debaff257-pre01.json",
+    "receipt": "sha256:dd49c64ced7a8bc5f943dbdd49b976208a6d4ffcd689d397cb127ff646f062fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b807f14debaf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
