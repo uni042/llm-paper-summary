@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Optimizing Native Sparse Attention with Latent Attention and Local Global Alternating Strategies",
+      "source_url": "https://arxiv.org/abs/2511.00819",
+      "year": 2025,
+      "published": "2025-11-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we conduct a systematic analysis of Native Sparse Attention (NSA) and propose targeted improvements that enhance long-context modeling. A key insight is that alternating between local (sliding-window) and global (compression, selective) attention across layers, rather than using fixed patterns, enables more effective propagation of long-range dependencies and substantially boosts performance on long-sequence tasks. Meanwhile, we further refine NSA's branches with Latent Attention that the sliding-window branch is enhanced with Multi-head Latent Attention (MLA) while compression and selective branches adopt Group-head Latent Attention (GLA). These changes reduce KV-cache memory by 50\\% versus NSA while improving the model's common-sense reasoning and long-text understanding capabilities. Experiments on models from 340M to 1.3B parameters (trained on 15B and 100B tokens) show our method matches or exceeds full attention and native sparse attention in both common-sense reasoning and long-context understanding tasks.",
+      "identifiers": [
+        "SemanticScholar:b41e67714c5b23cc03e381daba2fe775f32ac9a3"
+      ],
+      "semantic_scholar_id": "b41e67714c5b23cc03e381daba2fe775f32ac9a3",
+      "canonical_id": "arXiv:2511.00819",
+      "arxiv_id": "2511.00819",
+      "doi": "10.48550/arXiv.2511.00819",
+      "authors": [
+        "Yuxuan Hu",
+        "Jian-Chao Tan",
+        "Jiaqi Zhang",
+        "Wen Zan",
+        "Ping-Wei Sun",
+        "Yifan Lu",
+        "Yerui Sun",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai",
+        "Jing Zhang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "The abstract combines Native Sparse Attention with latent attention/local-global alternation to reduce attention and KV-cache cost for LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Stem: Rethinking Causal Information Flow in Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2603.06274",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic computational complexity of self-attention remains a fundamental bottleneck for scaling Large Language Models (LLMs) to long contexts, particularly during the pre-filling phase. In this paper, we rethink the causal attention mechanism from the perspective of information flow. Due to causal constraints, tokens at initial positions participate in the aggregation of every subsequent token. However, existing sparse methods typically apply a uniform top-k selection across all token positions within a layer, ignoring the cumulative dependency of token information inherent in causal architectures. To address this, we propose Stem, a novel, plug-and-play sparsity module aligned with information flow. First, Stem employs the Token Position-Decay strategy, applying position-dependent top-k within each layer to retain initial tokens for recursive dependencies. Second, to preserve information-rich tokens, Stem utilizes the Output-Aware Metric. It prioritizes high-impact tokens based on approximate output magnitude. Extensive evaluations demonstrate that Stem achieves superior accuracy with reduced computation and pre-filling latency.",
+      "identifiers": [
+        "SemanticScholar:eb73f6049610e0d147145fd1f4aa11788fa9783c"
+      ],
+      "semantic_scholar_id": "eb73f6049610e0d147145fd1f4aa11788fa9783c",
+      "canonical_id": "arXiv:2603.06274",
+      "arxiv_id": "2603.06274",
+      "doi": "10.48550/arXiv.2603.06274",
+      "authors": [
+        "Lin Niu",
+        "Xin Luo",
+        "Li Xie",
+        "Yi-Fu Sun",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "S. K. Zhou"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Stem is a causal sparse-attention method for Transformers/LLMs and reduces attention computation and prefill latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scout Before You Attend: Sketch-and-Walk Sparse Attention for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.07397",
+      "year": 2026,
+      "published": "2026-02-07",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention dominates the computational and memory cost of long-context LLM inference across both prefill and decode phases. To address this challenge, we introduce Sketch&Walk Attention, a training-free sparse attention method that determines sparsity with lightweight sketches and deterministic walk. Sketch&Walk applies Hadamard sketching to get inexpensive approximations of attention scores, then aggregates these estimates across layers via a walk mechanism that captures attention influence beyond direct interactions between tokens. The accumulated walk scores are used to select top-k attention blocks, enabling dynamic sparsity with a single training-free algorithm that applies uniformly to both the prefill and decode phases, together with custom sparse attention kernels. Across a wide range of models and tasks, Sketch&Walk maintains near-lossless accuracy at 20% attention density and can slightly outperform dense attention in some settings, while achieving up to 6x inference speedup.",
+      "identifiers": [
+        "SemanticScholar:c9ac949d2b48373349d7fcfb2103d05cd256315b"
+      ],
+      "semantic_scholar_id": "c9ac949d2b48373349d7fcfb2103d05cd256315b",
+      "canonical_id": "arXiv:2602.07397",
+      "arxiv_id": "2602.07397",
+      "doi": "10.48550/arXiv.2602.07397",
+      "authors": [
+        "H. Le",
+        "Sahil Joshi",
+        "Zeyu Yang",
+        "Zhao-Zhuo Xu",
+        "Anshumali Shrivastava"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract introduces Sketch-and-Walk sparse attention for LLM inference, reducing attention work at 20% density and reporting up to 6x inference speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KVBuffer: IO-aware Serving for Linear Attention",
+      "source_url": "https://arxiv.org/abs/2605.19049",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention has recently gained significant attention for long-context inference due to its constant decoding cost with respect to context length. However, existing serving systems typically serve linear attention by recurrently computing and updating a large linear attention state in every decoding step. Since the state is much larger than the per-token key and value, recurrent decoding incurs substantial memory access and becomes inefficient for serving linear attention. In this paper, we propose KVBuffer, an IO-aware serving mechanism for linear attention. By buffering recent keys and values, KVBuffer enables serving systems to compute linear attention outputs in more flexible and memory-efficient ways. For decoding, KVBuffer enables chunkwise computation, which reduces average memory access and decoding latency by deferring state updates and applying them in batch. For speculative decoding, KVBuffer verifies draft tokens in parallel and avoids storing temporary states. For short contexts, KVBuffer computes attention outputs directly from buffered keys and values, without creating or updating the linear attention state. We implement KVBuffer in SGLang for Qwen3-Next. Our evaluations show that KVBuffer can reduce linear attention decoding latency by up to 45.17% and increase the maximum number of serving requests by 5x for speculative decoding when verifying four draft tokens.",
+      "identifiers": [
+        "SemanticScholar:0ae02271452be978c48b046420702db63b01aec9"
+      ],
+      "semantic_scholar_id": "0ae02271452be978c48b046420702db63b01aec9",
+      "canonical_id": "arXiv:2605.19049",
+      "arxiv_id": "2605.19049",
+      "doi": "10.48550/arXiv.2605.19049",
+      "authors": [
+        "Longwei Zou",
+        "Lin Zhong"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes KVBuffer, an IO-aware cache strategy for serving linear attention, reducing serving latency and raising request throughput in speculative verification.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations",
+      "source_url": "https://arxiv.org/abs/2605.31035",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models continue to scale, fine-grained block-scaled low-precision formats such as NVFP4 are increasingly adopted for their substantial throughput and memory benefits. However, a single FP4 micro-format often mismatches heterogeneous block-level tensor statistics. To address this without changing the standard block-scaled MMA/GEMM execution path, we propose MixFP4, a mixed micro-format extension to NVFP4 that selects between two stored FP4 micro-formats (E2M1 and E1M2) per block. MixFP4 reuses NVFP4's scale hierarchy and encodes the format choice with zero additional metadata by repurposing the sign bit of the FP8 E4M3 block scale. By decoding both micro-formats into a unified internal E2M2 compute representation, MixFP4 avoids datapath duplication. Across representative LLM families, MixFP4 improves FP4 quantization robustness and accuracy over NVFP4 baselines with modest tensor-core overhead (3.1\\% area, 1.5\\% power).",
+      "identifiers": [
+        "SemanticScholar:5f8e4c5605534eeacc6d66ee2c4b13c02d3d8672"
+      ],
+      "semantic_scholar_id": "5f8e4c5605534eeacc6d66ee2c4b13c02d3d8672",
+      "canonical_id": "arXiv:2605.31035",
+      "arxiv_id": "2605.31035",
+      "doi": "10.48550/arXiv.2605.31035",
+      "authors": [
+        "Jiaxiang Zou",
+        "Yonghao Chen",
+        "Ruilong Wu",
+        "Xinyu Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 132,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract describes adaptive FP4/INT4 block representations for NVFP4 LLM weights, quantization robustness, and inference throughput/memory efficiency; this directly targets LLM quantization and inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-33cf0035c596",
+    "round": "libimp-33cf0035c59697d3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-33cf0035c59697d3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-33cf0035c59697d3-pre01.json",
+    "receipt": "sha256:df9ed33e73aa29a08213270de3dd256940d5fd9bb955b4fdc9d6c03dcebde05a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-33cf0035c596",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
