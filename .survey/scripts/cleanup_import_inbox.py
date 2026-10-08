@@ -128,7 +128,7 @@ def cleanup_pending_research_junk(repo_root: Path) -> int:
 def recover_blocked_research(repo_root: Path) -> dict[str, int]:
     root = repo_root / inbox.BLOCKED_RESEARCH
     pending = repo_root / inbox.PENDING_RESEARCH
-    counts = {"stale_deleted": 0, "requeued": 0, "hard_deleted": 0, "collision_deferred": 0}
+    counts = {"stale_deleted": 0, "requeued": 0, "hard_deleted": 0, "collision_deferred": 0, "metadata_retained": 0}
     if not root.is_dir():
         return counts
 
@@ -174,6 +174,19 @@ def recover_blocked_research(repo_root: Path) -> dict[str, int]:
 
         failures = inbox.research_metadata_failures(source, normalized_meta, repo_root)
         if failures:
+            # Semantic re-audits are expensive primary-source revisions. The
+            # Library original may already have been deleted after a verified
+            # GitHub handoff. Never delete a repair solely for missing metadata:
+            # preserve the blocked full text for a worker to correct explicitly.
+            if normalized_meta.get("under16kb_reaudit_target_path"):
+                _record_cleanup(
+                    repo_root,
+                    source,
+                    "retained_blocked_reaudit_metadata",
+                    {"canonical_id": canonical_id, "failures": failures},
+                )
+                counts["metadata_retained"] += 1
+                continue
             _record_cleanup(
                 repo_root,
                 source,
