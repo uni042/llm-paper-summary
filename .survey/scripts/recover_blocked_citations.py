@@ -59,6 +59,7 @@ PRIMARY_PDF_OVERRIDES = {
     "DOI:10.1109/TPDS.2025.3590014": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11082562",
     "DOI:10.1109/LCA.2024.3406038": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10540202",
     "DOI:10.1109/HPCA61900.2025.00103": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10946751",
+    "DOI:10.1109/HPCA53966.2022.00082": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=9773212",
     "AAAI:39816": "https://ojs.aaai.org/index.php/AAAI/article/download/39816/43777",
     "AAAI:39454": "https://ojs.aaai.org/index.php/AAAI/article/download/39454/43415",
     "AAAI:39106": "https://ojs.aaai.org/index.php/AAAI/article/download/39106/43068",
