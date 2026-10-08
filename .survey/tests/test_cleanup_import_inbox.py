@@ -129,6 +129,34 @@ canonical_id: arXiv:2306.11222
             self.assertEqual(events[-1]["status"], "deferred_blocked_research_retry_collision")
             self.assertEqual(events[-1]["canonical_id"], "arXiv:2306.11222")
 
+    def test_preserves_blocked_reaudit_on_missing_completion_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            blocked = root / ".survey/import-inbox/blocked/research"
+            blocked.mkdir(parents=True)
+            source = blocked / "prefixbench.md"
+            original = (
+                "---\\ncanonical_id: arXiv:2609.19657\\n"
+                "under16kb_reaudit_target_path: papers/inference/prefixbench.md\\n"
+                "under16kb_reaudit_passed: true\\n"
+                "title: PrefixBench\\n---\\n# Verified paper revision\\n"
+            )
+            source.write_text(original, encoding="utf-8")
+            with mock.patch.object(
+                cleanup.inbox, "research_metadata_failures", return_value=["worker_completed_at"]
+            ):
+                counts = cleanup.recover_blocked_research(root)
+            self.assertEqual(counts["metadata_retained"], 1)
+            self.assertEqual(counts["hard_deleted"], 0)
+            self.assertEqual(source.read_text(encoding="utf-8"), original)
+            events = json.loads(
+                (root / ".survey/import-inbox/results/cleanup/latest.json").read_text(
+                    encoding="utf-8"
+                )
+            )["events"]
+            self.assertEqual(events[-1]["status"], "retained_blocked_reaudit_metadata")
+            self.assertEqual(events[-1]["failures"], ["worker_completed_at"])
+
     def test_requeues_legacy_blocked_discovery(self) -> None:
         original_cwd = Path.cwd()
         with tempfile.TemporaryDirectory() as td:
