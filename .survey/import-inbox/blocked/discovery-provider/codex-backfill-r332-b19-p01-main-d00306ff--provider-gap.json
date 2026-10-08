@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill-luna",
+  "run_key": "codex-backfill-r332-b19-p01-main-d00306ff::provider-gap",
+  "reference_main_sha": "d00306ff4d07d4d1610c1c84002c18064d53cc30",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f",
+      "identity_tokens": [
+        "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f",
+        "DOI:10.12142/ZTETJ.202402003"
+      ],
+      "title": "Review of the Evolution of Large Language Model Algorithms",
+      "reason": "The official ZTE publisher abstract surveys LLM methods and specifically includes distributed inference, compute and memory-access optimization, and quantization; the candidate resolves to DOI 10.12142/ZTETJ.202402003.",
+      "source_url": "https://www.zte.com.cn/content/dam/zte-site/res-www-zte-com-cn/mediares/magazine/publication/com_cn/article/202402/3.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    }
+  ],
+  "parent_run_key": "codex-backfill-r332-b19-p01-main-d00306ff",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/codex-backfill-r332-b19-p01-main-d00306ff.json",
+  "provider_gap_ids": [
+    "DOI:10.12142/ztetj.202402003"
+  ]
+}
