@@ -133,6 +133,20 @@ class ForwardLineageCitationTests(unittest.TestCase):
         self.assertEqual(found[0]["forward_lineage_citation_max"], 3)
         self.assertEqual(found[0]["forward_lineage_citation_total"], 3)
 
+    def test_percentage_limit_includes_audit_without_shrinking_shortlist(self):
+        rows = [{"canonical_id": f"n{i}", "title": f"Baseline Technical Method {i}"} for i in range(100)]
+        policy = {
+            "enabled": True, "mode": "quarantine",
+            "audit_stride": 50, "max_audit_per_build": 30,
+            "relevance_quota": {"enabled": True, "mode": "quarantine",
+                                "retain_percent": 5, "min_candidates": 0},
+        }
+        selected, stats = filter_rules.triage_worklist(rows, policy)
+        self.assertEqual(len(selected), 5)
+        self.assertEqual(stats["audit_count"], 1)
+        self.assertEqual(stats["quota_target_count"], 5)
+        self.assertEqual(stats["reviewable_count"], 5)
+
     def test_turn_off_returns_exact_source_order(self):
         rows = [
             {"canonical_id": "z", "title": "GPU KV Cache Inference", "forward_lineage_citation_max": 4},
