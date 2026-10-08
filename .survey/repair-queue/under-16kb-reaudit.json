@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T10:51:13.629833+00:00",
+  "generated_at": "2026-10-08T11:01:07.486147+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 531,
+  "count": 528,
   "worker_counts": {
-    "scheduled-chat-00": 178,
-    "scheduled-chat-30": 168,
-    "scheduled-chat-45": 185
+    "scheduled-chat-00": 177,
+    "scheduled-chat-30": 167,
+    "scheduled-chat-45": 184
   },
   "entries": [
     {
@@ -962,29 +962,6 @@
       ]
     },
     {
-      "path": "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
-      "canonical_id": "arXiv:2206.09557",
-      "title": "LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models",
-      "file_bytes": 8749,
-      "source_sha256": "8ef32e145c7bcec6afe5f8571d086603335f5af7e092350a4320e36141f4ab18",
-      "source_git_blob_sha": "4c6fefa44d4bdcb0aa807f7f4ca11e66b059dad4",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.984652,
-      "quality_metrics": {
-        "body_chars": 1730,
-        "method_chars": 766,
-        "evaluation_chars": 92,
-        "limitation_chars": 164
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1730 < 2200",
-        "16KB未満再監査: 評価説明量 92 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md",
       "canonical_id": "arXiv:2609.33614",
       "title": "EAT: Expert Account Tracker for Efficient MoE Inference",
@@ -1324,32 +1301,6 @@
       ],
       "warnings": [
         "日本語比率 76.7% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md",
-      "canonical_id": "arXiv:2406.10181",
-      "title": "Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors",
-      "file_bytes": 8943,
-      "source_sha256": "d567e4413043f8bf577a93dbde427d0eb7da7f3bb6e23e9d7ebbea500b3f3f9a",
-      "source_git_blob_sha": "9ed820aa55c8d59bb60301037803ff17da0a763b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.768814,
-      "quality_metrics": {
-        "body_chars": 1825,
-        "method_chars": 864,
-        "evaluation_chars": 480,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1825 < 2200",
-        "16KB未満再監査: 評価説明量 480 < 500",
-        "16KB未満再監査: 日本語比率 76.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.9% < 警告基準 80%"
       ]
     },
     {
@@ -3872,29 +3823,6 @@
       "warnings": [
         "日本語比率 76.4% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
-      "canonical_id": "arXiv:2203.16487",
-      "title": "Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation",
-      "file_bytes": 10473,
-      "source_sha256": "87f3f87bb2c17e74a1feddadb5a8050fad49498c0426530d9510897164863ab9",
-      "source_git_blob_sha": "45d757b50a6bda547e37e576b59ac90707f317d9",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.976289,
-      "quality_metrics": {
-        "body_chars": 1880,
-        "method_chars": 789,
-        "evaluation_chars": 85,
-        "limitation_chars": 153
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1880 < 2200",
-        "16KB未満再監査: 評価説明量 85 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
