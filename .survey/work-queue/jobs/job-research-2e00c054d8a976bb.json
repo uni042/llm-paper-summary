@@ -33,10 +33,15 @@
   "selection_reason": "MoE expert parallelismのall-to-all通信をNCCL APIとして最適化する推論・学習共通の通信基盤で、MoE推論に直接有用。",
   "semantic_scholar_id": "0aec57ea0216938b6d147e825466f3d1a7306710",
   "source_url": "https://arxiv.org/abs/2603.13606",
-  "status": "ready",
+  "status": "superseded",
   "title": "NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-08T10:58:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2026-2603.13606-nccl-ep-towards-a-unified-expert-parallel-communication-api-for-nccl.md",
+  "represented_canonical_id": "arXiv:2603.13606",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

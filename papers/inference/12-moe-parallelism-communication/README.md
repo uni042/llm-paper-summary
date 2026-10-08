@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（39本）
+## 自動生成の論文一覧（40本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -38,6 +38,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   遠隔GPUへ返すMoE出力を先にタイル計算し、完成した行帯を専用通信カーネルが即時転送することで、第2の全対全通信の大半を専門家計算中へ隠し、4基A100でMoE層を最大2.74倍高速化する。
+
+- **2026-03 · [NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL](2026-2603.13606-nccl-ep-towards-a-unified-expert-parallel-communication-api-for-nccl.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  大規模言語モデルの混合専門家（MoE）層では、ルータが各トークンを担当する専門家へ割り当て、専門家計算の後に結果を元の順序へ集約する。一方、実際にvLLMへ組み込んでQwen3-30B-A3Bを実行した場合は、DeepEPより出力トークン処理量が7〜10%低く、トークン間遅延も7〜9%長かった。
 
 - **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

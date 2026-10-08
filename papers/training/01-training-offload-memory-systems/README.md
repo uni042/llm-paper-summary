@@ -60,7 +60,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2024-06 · [Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors](2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md)**  
   実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：2  
-  大きな勾配・更新行列を低次元表現へ圧縮してCPUへ送り、学習中に圧縮方向を切り替えて更新の偏りを抑え、民生GPUでのLLM微調整のPCIe転送量を減らす方式。
+  特徴は、単に固定の低ランク更新を使うのではなく、射影器の非零位置と係数を少量のデータで学習し、勾配の推定誤差が大きくなった場合に部分空間を更新することである。原論文は4GBのノートPC GPUで13億パラメータ級、24GBのRTX 4090で67億パラメータ級の微調整を示す。
 
 ### 4年前（2022-11〜2023-10）
 

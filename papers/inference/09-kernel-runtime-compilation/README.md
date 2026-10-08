@@ -238,7 +238,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
   実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：30  
-  重みのみを3～4ビットへ量子化するとメモリ転送量は減るが、多くの既存GPU実装は行列積の直前に低ビット重みをFP16へ戻す逆量子化を行う。OPT-175Bの3ビット量子化では、逆量子化を行うOPTQ実装に対して生成遅延を約2.1倍高速化した。
+  重みを3～4ビットへ圧縮すればGPUメモリへの転送量を減らせるが、既存の重みのみ量子化の多くは、積和を行う直前に重みを半精度へ展開する逆量子化処理を必要とする。
 
 ### 6年前（2020-11〜2021-10）
 

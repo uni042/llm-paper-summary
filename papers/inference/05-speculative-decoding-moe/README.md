@@ -484,5 +484,5 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  
   実装：[✓](https://github.com/hemingkx/SpecDec) ・ リポジトリ内被引用：15  
-  論文の特徴は、ドラフトモデルを単純に小さくするのではなく、系列変換モデルの構造に合わせて設計した点にある。機械翻訳と抽象型要約などで、通常のビーム探索と同程度の品質を保ちながら約5倍の高速化を報告した。
+  提案の中核は、入力を読むエンコーダを深く、反復生成するデコーダを浅くした独立の候補生成モデル「Spec-Drafter」と、候補を対象モデルでまとめて確かめる「Spec-検証」である。
 <!-- survey:auto:end -->
