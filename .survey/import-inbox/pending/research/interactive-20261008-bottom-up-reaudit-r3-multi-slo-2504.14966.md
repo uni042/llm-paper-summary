@@ -39,7 +39,6 @@ publication: arXiv
 code: null
 implementation: 実装形態の詳細は既存本文の手法・評価記述を参照。公式コードURLはメタデータ確認時点で確認できず。
 implementation_status: official-code-not-confirmed
-last_audited: '2026-09-28'
 audit_version: 1
 references:
 - canonical_id: arXiv:2403.02310
