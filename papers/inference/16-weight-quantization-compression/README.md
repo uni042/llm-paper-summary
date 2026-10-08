@@ -64,7 +64,7 @@
 
 - **2026-08 · [SchurQuant: Groupwise Discrete Optimization for Layer-Wise LLM Quantization](2026-2608.15567-schurquant.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  重み専用の事後量子化（Post-学習 量子化; PTQ）は、再学習せずにLLMのメモリ量と重み帯域を減らせる。8つのLlama/Qwenモデルで逆伝播不要の比較法中最高の平均ゼロショット精度となり、2ビットでは最強比較法を9.65ポイント上回った。
+  重みを4ビットから2〜3ビットへ縮めると、量子化格子の段数が少なくなり、各層の誤差が累積して言語モデルの予測を壊す。Llama2、Llama3、Qwen3の計8モデルを比較した2ビットの六課題平均ゼロショット精度は、SchurQuantが50.83%、GPTQが39.25%、QEPが41.18%である。
 
 - **2026-08 · [SandwichQuant: Which Parameters Matter Before and After Quantization?](2026-2608.24173-sandwichquant-which-parameters-matter-before-and-after-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

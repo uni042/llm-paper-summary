@@ -446,7 +446,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2024-01 · [FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs](2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md)**  
   実装：[✓](https://zenodo.org/doi/10.5281/zenodo.10422477) ・ リポジトリ内被引用：7  
-  さらに枝刈りや低ビット量子化で理論演算量を減らしても、GPUの固定的な疎形式やキャッシュ構造がその不規則性を効率良く処理できなければ実時間は縮まらない。U280実機ではV100S GPUに対して平均6.0倍のエネルギー効率と1.8倍のコスト効率を報告し、より新しいVHK158ではA100 GPUより1.2倍高いスループットを示す。
+  復号時は演算量に比べて大量の重みを毎回読み出すため、メモリ帯域と小粒度I/Oが律速しやすい。圧縮により理論上の演算量・容量を減らしても、実ハードウェアが不規則な疎パターンや異なるビット幅を効率的に扱えなければ処理時間は縮まらない。
 
 - **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](2024-2405.02842-iceformer.md)**  
   実装：[✓](https://yuzhenmao.github.io/IceFormer/) ・ リポジトリ内被引用：4  
