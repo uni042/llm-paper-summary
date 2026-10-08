@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 17:44:17 JST**
+> 自動生成: **2026-10-08 17:46:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **552** |
-| 機械検査未達（FAIL） | **401** |
-| 機械検査適合・警告のみ（PASS/WARN） | **151** |
-| :00ワーカー担当残 | **188** |
-| :30ワーカー担当残 | **178** |
+| **再監査残件数** | **549** |
+| 機械検査未達（FAIL） | **399** |
+| 機械検査適合・警告のみ（PASS/WARN） | **150** |
+| :00ワーカー担当残 | **186** |
+| :30ワーカー担当残 | **177** |
 | :45ワーカー担当残 | **186** |
 
-- キュー最終生成: **2026-10-08 17:35:34 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 17:46:21 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **101610** |
+| 探索候補総数 | **102947** |
 | 処理済み | **17723** |
-| 未処理Discovery候補 | **83887** |
+| 未処理Discovery候補 | **85224** |
 | 収録済み | **1737** |
 | Research / Audit候補へ昇格済み | **453** |
 | 無関係として除外 | **11124** |
@@ -63,30 +63,30 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **83887** |
-| 規則による暫定隔離 | **794** |
+| 未処理候補（フィルタ前） | **85224** |
+| 規則による暫定隔離 | **834** |
 | 分類器による追加隔離 | **0** |
-| 拡張規則による追加隔離 | **540** |
-| 暫定隔離合計 | **1334** |
+| 拡張規則による追加隔離 | **562** |
+| 暫定隔離合計 | **1396** |
 | 監査用に復活 | **30** |
-| **読解可能候補（隔離後）** | **82583** |
+| **読解可能候補（隔離後）** | **83858** |
 | 分類器判定済み | **0** |
-| 分類器未判定 | **83887** |
+| 分類器未判定 | **85224** |
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **540件**（既存の規則・分類器との重複を除去）
-- 実際の追加隔離: **540件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 35, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 10, 'expanded_domain:environmental_applications': 3, 'expanded_domain:financial_applications': 27, 'expanded_domain:geoscience_applications': 29, 'expanded_domain:materials_applications': 11, 'expanded_domain:vision_applications': 418}**
+- 拡張規則に一致した候補: **562件**（既存の規則・分類器との重複を除去）
+- 実際の追加隔離: **562件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 36, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 11, 'expanded_domain:environmental_applications': 3, 'expanded_domain:financial_applications': 30, 'expanded_domain:geoscience_applications': 30, 'expanded_domain:materials_applications': 11, 'expanded_domain:vision_applications': 434}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の監査再投入も継続する。
 
 - モード: 規則 **quarantine** / 分類器 **pending_model**。
 - 全数との差は隔離候補から監査復活分を引いた値。元候補は削除せず、分類器未判定分は通常候補に残す。集計は現在の候補identityから再計算する。
 
-- 消化率: **17.4%**
-- 現在の生在庫: 後方references **49980件** / 前方引用 **35082件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **84628件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 消化率: **17.2%**
+- 現在の生在庫: 後方references **49980件** / 前方引用 **36389件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **85965件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -94,18 +94,18 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **1731** |
-| provider巡回可能 | **1727** |
+| 収録論文seed台帳 | **1737** |
+| provider巡回可能 | **1733** |
 | provider巡回不能 | **4** |
-| 1周以上完了 | **1687** |
+| 1周以上完了 | **1693** |
 | 巡回中 | **40** |
 | 未巡回 | **0** |
-| 今回run開始時due | **44** |
-| 前方引用から保持中の未処理候補 | **35082** |
+| 今回run開始時due | **46** |
+| 前方引用から保持中の未処理候補 | **36389** |
 | エラー状態保持seed | **11** |
 
 - 初回カバレッジ完了率: **97.7%**
-- state最終更新: **10-08 16:44:20 JST**
+- state最終更新: **10-08 17:41:09 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -113,7 +113,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（5時間47分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（5時間49分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
