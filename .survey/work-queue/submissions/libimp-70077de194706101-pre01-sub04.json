@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Performance Characterization of Expert Router for Scalable LLM Inference",
+      "source_url": "https://arxiv.org/abs/2404.15153",
+      "year": 2024,
+      "published": "2024-04-22",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have experienced widespread adoption across scientific and industrial domains due to their versatility and utility for diverse tasks. Nevertheless, deploying and serving these models at scale with optimal throughput and latency remains a significant challenge, primarily because of LLMs’ high computational and memory demands. Specialized models optimized for specific tasks can be combined through a routing mechanism to address these challenges, creating a modular inference system. This paper introduces Expert Router, a scalable routing architecture that directs prompts to specialized expert models. We characterize multiple Expert Router configurations, including different LLama 3 models with quantized and non-quantized weights under up to 1,000 concurrent users. Our findings reveal that Expert Router introduces minimal latency overhead, with the configuration of expert models being a dominating factor in performance outcomes. High-parameter expert models deliver stable throughput and latency under moderate concurrency levels. In contrast, smaller expert models maintain competitive performance across a wider range of concurrent users compared to tensor-parallelized baseline models. This highlights the potential of Expert Router for efficient and scalable LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:b7b36137309c0b4f60a1f339fb3b2ce1c1e9b2a8"
+      ],
+      "semantic_scholar_id": "b7b36137309c0b4f60a1f339fb3b2ce1c1e9b2a8",
+      "canonical_id": "arXiv:2404.15153",
+      "arxiv_id": "2404.15153",
+      "doi": "10.1109/BigData62323.2024.10826121",
+      "authors": [
+        "Josef Pichlmeier",
+        "Philipp Ross",
+        "André Luckow"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 899,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The arXiv abstract introduces Expert Router, which sends prompts to specialized expert LLMs; it characterizes quantized and non-quantized Llama 3 setups under up to 1,000 concurrent users and reports throughput/latency behavior for scalable deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "How Many Parameters Does Your Task Really Need? Task Specific Pruning with LLM-Sieve",
+      "source_url": "https://arxiv.org/abs/2505.18350",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) are increasingly deployed for narrow tasks in resource-constrained settings, a central question arises: how much of an LLM is truly necessary for a given task? We present LLM-Sieve, a framework that prunes LLMs down to the minimal parameter subset needed to preserve task performance. Our approach introduces two innovations: (i) output-aligned non-orthogonal projections, which yield more faithful low-rank approximations than traditional PCA/SVD by aligning directly with layer outputs; and (ii) adaptive pruning via a Genetic Algorithm, which automatically discovers matrix-specific pruning levels and exposes the uneven distribution of task-relevant knowledge. Across models from 3.8B to 70B parameters, LLM-Sieve removes 20-75% of weights with only 1-5% accuracy loss-substantially ahead of prior pruning methods. Beyond efficiency, our framework reveals bottleneck matrices that concentrate critical knowledge, suggesting architectural implications for future LLM design. LLM-Sieve integrates seamlessly with LoRA fine-tuning and quantization, enabling both efficient deployment and deeper understanding of knowledge organization in LLMs.",
+      "identifiers": [
+        "SemanticScholar:a8acd216f04da2ded237463ae0e65998421aa4cf"
+      ],
+      "semantic_scholar_id": "a8acd216f04da2ded237463ae0e65998421aa4cf",
+      "canonical_id": "arXiv:2505.18350",
+      "arxiv_id": "2505.18350",
+      "authors": [
+        "W. Reda",
+        "Abhinav Jangda",
+        "Krishna Chintalapudi"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract prunes task-irrelevant LLM weights via output-aligned low-rank projections and adaptive search, retaining task performance while removing 20–75% of weights; it explicitly targets resource-constrained deployment and integrates with quantization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Enhancing Linear Attention with Residual Learning",
+      "source_url": "https://arxiv.org/abs/2509.25223",
+      "year": 2025,
+      "published": "2025-09-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention offers a linear-time alternative to self-attention but often struggles to capture long-range patterns. We revisit linear attention through a prediction-correction lens and show that prevalent variants can be written as a combination of a historical prediction and a single-token correction, which creates an expressivity bottleneck. To address this bottleneck, we introduce Residual Linear Attention (RLA), a framework that equips linear attention with an explicit residual-fitting mechanism. RLA maintains an auxiliary recurrent state that learns to accumulate residual errors over time and correct the base prediction. We further instantiate a delta-rule version, Residual Delta Net (RDN), incorporating adaptive gating and residual clipping for enhanced correction control and stability. Our implementation leverages highly optimized linear attention kernels and preserves linear time and memory. Across language modeling and recall-intensive evaluations, RLA and RDN consistently outperform their respective baselines and other modern linear-attention methods, narrowing the gap to standard Transformers while retaining linear scaling.",
+      "identifiers": [
+        "SemanticScholar:65fcb7fcb722e3b18c04a495014793baa0067484"
+      ],
+      "semantic_scholar_id": "65fcb7fcb722e3b18c04a495014793baa0067484",
+      "canonical_id": "arXiv:2509.25223",
+      "arxiv_id": "2509.25223",
+      "doi": "10.48550/arXiv.2509.25223",
+      "authors": [
+        "Xunhao Lai",
+        "Jia-Liang Kang",
+        "Jianqiao Lu",
+        "Tong Lin",
+        "Pengyu Zhao"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract adds a recurrent residual-correction state to linear attention and reports language-modeling results while retaining linear time and memory; it also cites optimized linear-attention kernels.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-70077de19470",
+    "round": "libimp-70077de194706101-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-70077de194706101-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-70077de194706101-pre01.json",
+    "receipt": "sha256:02d12b8b9684347d7d61a8b7a538c6ccbf6c8fc41a6df70607fb498ec64e2354"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-70077de19470",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

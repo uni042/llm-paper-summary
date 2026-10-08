@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Where the Time Goes: Analysis of a Public LLM Serving System",
+      "source_url": "https://doi.org/10.1145/3805621.3807650",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this study, we present a characterization of serving traces collected from Public Al's serving of Apertus, an open source Large Language Model (LLM). The trace spans roughly five months (September 2025-January 2026) and contains 337K requests. We analyzed request sizes, token and timing behaviour, latency, model-size effects, and temporal patterns. Our findings show insights that do not align with common assumptions; (1) time-to-first-token is often driven by queuing rather than prefill compute, especially for small requests; (2) the 8B and 70B models show nearly the same user-perceived latency despite a 9× parameter gap; (3) a substantial fraction of requests are prefill/queuing-dominated rather than decode-dominated; and; (4) observable input features are weak predictors of output, which makes size-aware scheduling difficult at arrival time. As a contribution to the research community, we will publish this anonymized trace along with its analysis.",
+      "identifiers": [
+        "SemanticScholar:dc6d661c59e396865ced31c72a788068788c184e"
+      ],
+      "semantic_scholar_id": "dc6d661c59e396865ced31c72a788068788c184e",
+      "doi": "10.1145/3805621.3807650",
+      "canonical_id": "DOI:10.1145/3805621.3807650",
+      "authors": [
+        "Büşra Karatay Demiray",
+        "Ehsan Yousefzadeh-Asl-Miandoab",
+        "B. Garbinato",
+        "Pınar Tözün",
+        "Pamela Delgado"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": "EuroSys"
+      },
+      "reason": "The author-affiliated IT University of Copenhagen record provides the paper abstract: analysis of 337K public LLM-serving requests finds queuing often drives TTFT, large/small models can have similar user latency, and request features poorly predict outputs, constraining arrival-time scheduling. Direct ACM DOI page returned 403; the institution record is first-party metadata and abstract.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Context-Aware Assistant Selection for Improved Inference Acceleration with Large Language Models",
+      "source_url": "https://arxiv.org/abs/2408.08470",
+      "year": 2024,
+      "published": "2024-08-16",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite their widespread adoption, large language models (LLMs) remain prohibitive to use under resource constraints, with their ever growing sizes only increasing the barrier for use. One particular issue stems from the high latency associated with auto-regressive generation in LLMs, rendering the largest LLMs difficult to use without advanced computing infrastructure. Assisted decoding, where a smaller draft model guides a larger expert model’s generation, has helped alleviate this concern, but remains dependent on alignment between the two models. Thus if the draft model is insufficiently capable on some domain of interest relative to the target model, performance can degrade. Alternatively, one can leverage multiple draft models to better cover the expertise of the target, but when multiple black-box draft models are available, selecting an assistant without details about its construction can be difficult. To better understand this decision making problem, we observe it as a contextual bandit, where a policy must choose a draft model based on a context. We show that even without prior knowledge of the draft models, creating an offline dataset from only outputs of independent draft/target models and training a policy over the alignment of these outputs can accelerate performance on multiple domains as long as an individual draft model is effective. We observe these results hold on various settings with multiple assisted decoding candidates, highlighting its flexibility and the advantageous role that such decision making can play.",
+      "identifiers": [
+        "SemanticScholar:1fb76e69ee4180204f9480853abc8c7bc5d4ddcf"
+      ],
+      "semantic_scholar_id": "1fb76e69ee4180204f9480853abc8c7bc5d4ddcf",
+      "canonical_id": "arXiv:2408.08470",
+      "arxiv_id": "2408.08470",
+      "doi": "10.48550/arXiv.2408.08470",
+      "authors": [
+        "Jerry Huang",
+        "Prasanna Parthasarathi",
+        "Mehdi Rezagholizadeh",
+        "Sarath Chandar"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 783,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "The primary arXiv abstract frames assistant-model selection as a contextual bandit and reports accelerated LLM generation from choosing aligned draft models across domains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Joint Fine-tuning and Conversion of Pretrained Speech and Language Models towards Linear Complexity",
+      "source_url": "https://arxiv.org/abs/2410.06846",
+      "year": 2024,
+      "published": "2024-10-09",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Architectures such as Linformer and Mamba have recently emerged as competitive linear time replacements for transformers. However, corresponding large pretrained models are often unavailable, especially in non-text domains. To remedy this, we present a Cross-Architecture Layerwise Distillation (CALD) approach that jointly converts a transformer model to a linear time substitute and fine-tunes it to a target task. We also compare several means to guide the fine-tuning to optimally retain the desired inference capability from the original model. The methods differ in their use of the target model and the trajectory of the parameters. In a series of empirical studies on language processing, language modeling, and speech processing, we show that CALD can effectively recover the result of the original model, and that the guiding strategy contributes to the result. Some reasons for the variation are suggested.",
+      "identifiers": [
+        "SemanticScholar:9d4e300ba4e5fe36489d1b547677987cc2face3d"
+      ],
+      "semantic_scholar_id": "9d4e300ba4e5fe36489d1b547677987cc2face3d",
+      "canonical_id": "arXiv:2410.06846",
+      "arxiv_id": "2410.06846",
+      "doi": "10.48550/arXiv.2410.06846",
+      "authors": [
+        "Mutian He",
+        "Philip N. Garner"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 729,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "The primary arXiv abstract converts pretrained transformer speech/language models toward linear-time architectures through cross-architecture distillation and evaluates retention of inference capability on language and speech tasks.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2504.05598",
+      "year": 2025,
+      "published": "2025-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) is a widely used approach to accelerate the inference of large language models (LLMs) without reducing generation quality. It operates by first using a compact model to draft multiple tokens efficiently, followed by parallel verification using the target LLM. This approach leads to faster inference compared to auto-regressive decoding. While there are multiple approaches to create a draft model, one promising approach is to use early-exit methods. These methods draft candidate tokens by using a subset of layers of the primary model and applying the remaining layers for verification, allowing a single model to handle both drafting and verification. While this technique reduces memory usage and computational cost, its performance relies on the choice of the exit layer for drafting and the number of tokens drafted (speculation length) in each SD round. Prior works use hyperparameter exploration to statically select these values. However, our evaluations show that these hyperparameter values are task-specific, and even within a task they are dependent on the current sequence context. We introduce DEL (Dynamic Exit Layer), a plug-and-play method that adaptively selects the exit layer and speculation length during inference. DEL dynamically tracks the token acceptance rate if the tokens are drafted at each layer of an LLM and uses that knowledge to heuristically select the optimal exit layer and speculation length. Our experiments across a broad range of models and downstream tasks show that DEL achieves overall speedups of $2.16\\times$$\\sim$$2.62\\times$ over vanilla auto-regressive decoding and improves upon state-of-the-art SD methods, which peak at $2.43\\times$, by up to $0.19\\times$. The code is available at https://github.com/hoenza/DEL.",
+      "identifiers": [
+        "SemanticScholar:fc9d2213a8c550077973534f5adbcb94a726e094"
+      ],
+      "semantic_scholar_id": "fc9d2213a8c550077973534f5adbcb94a726e094",
+      "canonical_id": "arXiv:2504.05598",
+      "arxiv_id": "2504.05598",
+      "doi": "10.48550/arXiv.2504.05598",
+      "authors": [
+        "Hossein Entezari Zarch",
+        "Lei Gao",
+        "Chaoyi Jiang",
+        "Murali Annavaram"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 548,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract introduces context-aware dynamic exit-layer/speculation-length selection for self-speculative decoding and reports 2.16x–2.62x speedups over autoregressive decoding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Privacy-Aware Split Inference with Speculative Decoding for Large Language Models over Wide-Area Networks",
+      "source_url": "https://arxiv.org/abs/2602.16760",
+      "year": 2026,
+      "published": "2026-02-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a practical system for privacy-aware large language model (LLM) inference that splits a transformer between a trusted local GPU and an untrusted cloud GPU, communicating only intermediate activations over the network. Our system addresses the unique challenges of autoregressive LLM decoding over high-latency wide-area networks (WANs), contributing: (1) an asymmetric layer split where embedding and unembedding layers remain local, ensuring raw tokens never leave the trusted device; (2) the first application of lookahead decoding to split inference over WANs, amortizing network round-trip latency across multiple tokens per iteration; (3) an empirical inversion attack evaluation showing that split depth provides a tunable privacy-performance tradeoff -- an attacker can recover ~59%% of tokens at a 2-layer split but only ~35%% at an 8-layer split, with minimal throughput impact; (4) ablation experiments showing that n-gram speculation accepts 1.2-1.3 tokens per decoding step on average (peak of 7 observed on code), with acceptance rates consistent across model scales; (5) formal verification that lookahead decoding produces token-identical output to sequential decoding under greedy argmax, with zero quality degradation; and (6) scaling validation on Mistral NeMo 12B (40 layers), demonstrating that the system generalizes to larger models with only 4.9 GB local VRAM and matching 7B throughput. Evaluated on Mistral 7B and NeMo 12B over a ~80ms WAN link, our system achieves 8.7-9.3 tok/s (7B) and 7.8-8.7 tok/s (12B) with lookahead decoding, with an RTT decomposition model (validated at<6.2%% cross-validation error) projecting 15-19 tok/s at 20ms RTT.",
+      "identifiers": [
+        "SemanticScholar:e5cd3f85837673b8d8df2da0f88f251421a9d22f"
+      ],
+      "semantic_scholar_id": "e5cd3f85837673b8d8df2da0f88f251421a9d22f",
+      "canonical_id": "arXiv:2602.16760",
+      "arxiv_id": "2602.16760",
+      "doi": "10.48550/arXiv.2602.16760",
+      "authors": [
+        "M. Cunningham"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 232,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract presents privacy-aware split LLM inference over WANs with lookahead speculative decoding, reporting measured throughput and local-memory requirements.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-95aad811c5de",
+    "round": "libimp-95aad811c5dec7bb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-95aad811c5dec7bb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-95aad811c5dec7bb-pre01.json",
+    "receipt": "sha256:0abe00df0cbe70226c51b53b383650f00ce6aa5c43d3396671e44085ca379323"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-95aad811c5de",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

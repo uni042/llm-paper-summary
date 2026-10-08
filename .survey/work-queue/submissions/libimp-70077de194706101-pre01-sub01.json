@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models",
+      "source_url": "https://arxiv.org/abs/2511.18890",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient deployment of small language models (SLMs) is essential for numerous real-world applications with stringent latency constraints. While previous work on SLM design has primarily focused on reducing the number of parameters to achieve parameter-optimal SLMs, parameter efficiency does not necessarily translate into proportional real-device speed-ups. This work aims to identify the key determinants of SLMs'real-device latency and offer generalizable principles and methodologies for SLM design and training when real-device latency is the primary consideration. Specifically, we identify two central architectural factors: depth-width ratios and operator choices. The former is crucial for small-batch-size latency, while the latter affects both latency and large-batch-size throughput. In light of this, we first study latency-optimal depth-width ratios, with the key finding that although deep-thin models generally achieve better accuracy under the same parameter budget, they may not lie on the accuracy-latency trade-off frontier. Next, we explore emerging efficient attention alternatives to evaluate their potential as candidate building operators. Using the identified promising operators, we construct an evolutionary search framework to automatically discover latency-optimal combinations of these operators within hybrid SLMs, thereby advancing the accuracy-latency frontier. In addition to architectural improvements, we further enhance SLM training using a weight normalization technique that enables more effective weight updates and improves final convergence. Combining these methods, we introduce a new family of hybrid SLMs, called Nemotron-Flash, which significantly advances the accuracy-efficiency frontier of state-of-the-art SLMs, e.g., achieving over +5.5% average accuracy, 1.3x/1.9x lower latency, and 18.7x/45.6x higher throughput compared to Qwen3-1.7B/0.6B, respectively.",
+      "identifiers": [
+        "SemanticScholar:ea14b98deadfe9aa0039f3221c293412d7bb9645"
+      ],
+      "semantic_scholar_id": "ea14b98deadfe9aa0039f3221c293412d7bb9645",
+      "canonical_id": "arXiv:2511.18890",
+      "arxiv_id": "2511.18890",
+      "doi": "10.48550/arXiv.2511.18890",
+      "authors": [
+        "Yong-Gan Fu",
+        "Xin Dong",
+        "Shi-Zhe Diao",
+        "Matthijs Van Keirsbilck",
+        "Han-Rong Ye",
+        "Wonmin Byeon",
+        "Yashaswi Karnati",
+        "Lucas Liebenwein",
+        "Hannah Zhang",
+        "Nikolaus Binder",
+        "Maksim Khadkevich",
+        "Alexander Keller",
+        "Jan Kautz",
+        "Y. Lin",
+        "Pavlo Molchanov"
+      ],
+      "priority": 129,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 129,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 318,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The abstract optimizes real-device SLM latency through depth-width choices and operator search, then reports latency and throughput improvements against Qwen models; this directly targets deployment efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SONIC: Segmented Optimized Nexus for Information Compression in Key-Value Caching",
+      "source_url": "https://arxiv.org/abs/2601.21927",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The linear growth of Key-Value (KV) cache remains a bottleneck for multi-turn LLM deployment. Existing KV cache compression methods often fail to account for the structural properties of multi-turn dialogues, relying on heuristic eviction that risks losing critical context. We propose \\textbf{SONIC}, a learning-based framework that compresses historical segments into compact and semantically rich \\textbf{Nexus} tokens. By integrating dynamic budget training, SONIC allows flexible adaptation to varying memory constraints without retraining. Experiments show that at compression ratios of 80\\% and 50\\%, SONIC consistently outperforms baselines such as H2O and StreamingLLM on four diverse multi-turn benchmarks. Specifically, on the widely used MTBench101 benchmark, SONIC achieves an average score improvement of 35.55\\% over state-of-the-art baselines, validating its effectiveness in sustaining coherent multi-turn dialogues. Furthermore, SONIC enhances deployment efficiency, accelerating the overall inference process by 50.1\\% compared to full-context generation.",
+      "identifiers": [
+        "SemanticScholar:35f58d346dfb06b6018023e3ca96baca0b220e7e"
+      ],
+      "semantic_scholar_id": "35f58d346dfb06b6018023e3ca96baca0b220e7e",
+      "canonical_id": "arXiv:2601.21927",
+      "arxiv_id": "2601.21927",
+      "doi": "10.48550/arXiv.2601.21927",
+      "authors": [
+        "Hong Chen",
+        "Xiang Liu",
+        "Bo Wang",
+        "Yuxuan Fan",
+        "Yuan-Lin Chu",
+        "Zongluo Li",
+        "Xiaowen Chu",
+        "Xu-Ming Hu"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract targets the growing KV cache in multi-turn LLM deployment, compressing dialogue history into reusable Nexus tokens with dynamic budgets; it reports improved cache-compression benchmarks and faster inference than full-context generation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ToolSpec: Accelerating Tool Calling via Schema-Aware and Retrieval-Augmented Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2604.13519",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tool calling has greatly expanded the practical utility of large language models (LLMs) by enabling them to interact with external applications. As LLM capabilities advance, effective tool use increasingly involves multi-step, multi-turn interactions to solve complex tasks. However, the resulting growth in tool interactions incurs substantial latency, posing a key challenge for real-time LLM serving. Through empirical analysis, we find that tool-calling traces are highly structured, conform to constrained schemas, and often exhibit recurring invocation patterns. Motivated by this, we propose ToolSpec, a schema-aware, retrieval-augmented speculative decoding method for accelerating tool calling. ToolSpec exploits predefined tool schemas to generate accurate drafts, using a finite-state machine to alternate between deterministic schema token filling and speculative generation for variable fields. In addition, ToolSpec retrieves similar historical tool invocations and reuses them as drafts to further improve efficiency. ToolSpec presents a plug-and-play solution that can be seamlessly integrated into existing LLM workflows. Experiments across multiple benchmarks demonstrate that ToolSpec achieves up to a 4.2x speedup, substantially outperforming existing training-free speculative decoding methods.",
+      "identifiers": [
+        "SemanticScholar:c8a0ba00622b0541895ae17e776830e255e47007"
+      ],
+      "semantic_scholar_id": "c8a0ba00622b0541895ae17e776830e255e47007",
+      "canonical_id": "arXiv:2604.13519",
+      "arxiv_id": "2604.13519",
+      "doi": "10.48550/arXiv.2604.13519",
+      "authors": [
+        "He-Ming Xia",
+        "Yong-Qi Li",
+        "Cun-Xiao Du",
+        "M. Song",
+        "Wen-Jie Li"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract addresses tool-call latency in real-time LLM serving with schema-constrained, retrieval-augmented speculative decoding and reports up to 4.2x speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Revisiting Judge Decoding from First Principles via Training-Free Distributional Divergence",
+      "source_url": "https://arxiv.org/abs/2601.04766",
+      "year": 2026,
+      "published": "2026-01-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Judge Decoding accelerates LLM inference by relaxing the strict verification of Speculative Decoding, yet it typically relies on expensive and noisy supervision. In this work, we revisit this paradigm from first principles, revealing that the ``criticality''scores learned via costly supervision are intrinsically encoded in the draft-target distributional divergence. We theoretically prove a structural correspondence between learned linear judges and Kullback-Leibler (KL) divergence, demonstrating they rely on the same underlying logit primitives. Guided by this, we propose a simple, training-free verification mechanism based on KL divergence. Extensive experiments across reasoning and coding benchmarks show that our method matches or outperforms complex trained judges (e.g., AutoJudge), offering superior robustness to domain shifts and eliminating the supervision bottleneck entirely. Code is available at https://github.com/sunshy-1/JuDi",
+      "identifiers": [
+        "SemanticScholar:3a62147bd34204ac88227dd8b54970978c202a0e"
+      ],
+      "semantic_scholar_id": "3a62147bd34204ac88227dd8b54970978c202a0e",
+      "canonical_id": "arXiv:2601.04766",
+      "arxiv_id": "2601.04766",
+      "doi": "10.48550/arXiv.2601.04766",
+      "authors": [
+        "Sheng-Yin Sun",
+        "Yiming Li",
+        "Ren-Xi Liu",
+        "Wei-Zhe Lin",
+        "Hui-Ling Zhen",
+        "Xian-Zhi Yu",
+        "Ming-Xuan Yuan",
+        "Chen Ma"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract replaces costly/noisy judge supervision in speculative decoding with training-free draft-target KL-divergence verification, a direct LLM inference acceleration mechanism.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KVSculpt: KV Cache Compression as Distillation",
+      "source_url": "https://arxiv.org/abs/2603.27819",
+      "year": 2026,
+      "published": "2026-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache compression is critical for efficient long-context LLM inference. Approaches that reduce the per-pair footprint -- quantization and low-rank decomposition -- are orthogonal to those that reduce the sequence length of the cache. Along the sequence-length dimension, existing methods range from pure eviction -- selecting which KV pairs to keep -- to merging, which combines similar pairs into fewer ones. Both remain anchored to the original cache entries. We propose KVSculpt, which moves to the other end of this spectrum: instead of selecting or combining original pairs, we optimize a smaller set of unconstrained KV pairs in continuous embedding space to preserve each layer's attention behavior. Keys are optimized via L-BFGS and values are solved in closed form via least squares, alternating every few steps. On top of this, we introduce adaptive budget allocation, which uses a cheap pilot compression run to redistribute the compression budget across layers and KV heads based on per-component difficulty. On Qwen2.5-1.5B-Instruct with 2048-token contexts, KVSculpt reduces KL divergence by 3.5-4.1x compared to Select+Fit -- attention-score eviction with least-squares value fitting -- across compression ratios r in {0.3, 0.5, 0.7}. Adaptive allocation provides an additional 1.3x KL reduction at no extra inference cost. Analysis reveals that compression difficulty is highly non-uniform: per-layer pilot MSE varies by up to 100x across layers, and the two KV heads within a single layer can differ by up to 467x -- demonstrating that fine-grained budget allocation is essential.",
+      "identifiers": [
+        "SemanticScholar:084ad797780e4430605f741274a3ced5b06af697"
+      ],
+      "semantic_scholar_id": "084ad797780e4430605f741274a3ced5b06af697",
+      "canonical_id": "arXiv:2603.27819",
+      "arxiv_id": "2603.27819",
+      "doi": "10.48550/arXiv.2603.27819",
+      "authors": [
+        "Bo Jiang",
+        "Sian Jin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract optimizes a smaller set of unconstrained KV pairs to preserve layer attention behavior, with adaptive compression-budget allocation; the measured target is long-context LLM inference cache compression.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-70077de19470",
+    "round": "libimp-70077de194706101-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-70077de194706101-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-70077de194706101-pre01.json",
+    "receipt": "sha256:02d12b8b9684347d7d61a8b7a538c6ccbf6c8fc41a6df70607fb498ec64e2354"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-70077de19470",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

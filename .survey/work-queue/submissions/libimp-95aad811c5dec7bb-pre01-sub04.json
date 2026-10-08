@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SpinOut: Enhanced Rotation-Based Quantization for LLM by Outlier Injection",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3664084",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is a crucial technique for deploying Large Language Models (LLMs) in resource-constrained environments. However, minimizing performance degradation due to outliers in activation distributions remains a significant challenge, especially in low-precision quantization. Rotation-based quantization methods have emerged as promising approaches to mitigate outlier effects by transforming the distribution of weights and activations. However, existing methods either suffer from high performance variance due to random rotations or performance degradation when the calibration sample is not sufficient. In this paper, we propose SpinOut, a novel method that enhances rotation-matrix training for LLM quantization by selectively injecting outliers into outlier-sensitive layers. We introduce a method to score layer sensitivity that quantitatively measures each layer’s responsiveness to outliers using Kurtosis and performance metrics, and propose a search algorithm to determine the best subset of layers for outlier injection. By intentionally injecting artificial outliers during training, SpinOut makes rotation matrices more robust to outliers, leading to improved quantization performance. Experimental results on the Llama-2 7B and the Llama-3.2 1B/3B models demonstrate that SpinOut outperforms existing rotation-based quantization methods across various bit configurations. In the W4A4KV4 quantization setting, SpinOut achieves 0.09, 0.83, and 0.12 lower WikiText2 perplexity compared to widely-known SpinQuant, QuaRot, and AMXFP4, respectively, on Llama-2 7B. Furthermore, SpinOut reduces the required number of training samples and the iteration counts by 75% and 50% compared to SpinQuant while achieving a lower performance variance (0.23 vs. 0.3), demonstrating both efficiency and stability. Our method achieves state-of-the-art performance in most experimental settings, including W4A4KV16 quantization, and in the W4A8KV16 configuration, it even surpasses weight-only quantization methods.",
+      "identifiers": [
+        "SemanticScholar:dbf75af952ffe5c26dc56321ac277bbd97860ba4"
+      ],
+      "semantic_scholar_id": "dbf75af952ffe5c26dc56321ac277bbd97860ba4",
+      "doi": "10.1109/ACCESS.2026.3664084",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3664084",
+      "authors": [
+        "Sangki Park",
+        "Ki-Seok Chung"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official IEEE Xplore abstract describes SpinOut rotation-matrix training with selective outlier injection for LLM quantization; it reports improved quantization quality and reduced calibration samples/iterations. Publisher search result exposed the abstract; direct page required JavaScript verification.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "NIKA: Optimal KV Cache Transfer for Minimizing the Latency of Disaggregated LLM Inference",
+      "source_url": "https://doi.org/10.5220/0014920900004039",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Cloud Computing and Services Science",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": In disaggregated Large Language Model (LLM) inference systems, the transfer of the KV cache between the prefill and decode stages often becomes a significant latency bottleneck, increasing the Time to First Token (TTFT). In cloud environments, where inference components are often distributed across nodes to optimize resource costs, this issue is further exacerbated by limited inter-node network bandwidth. This paper proposes an optimal KV cache transfer method that mitigates this bottleneck by utilizing the residual capacity of the decode GPU to minimize TTFT without sacrificing throughput. We introduce an analytical performance model to determine the optimal ratio of KV cache to transfer versus recompute, based on profiled compute resources and network conditions. Experimental results demonstrate that our approach achieves a reduction of up to 54% in TTFT. Importantly, these latency gains are achieved without compromising system throughput, ensuring high resource utilization in disaggregated inference environments.",
+      "identifiers": [
+        "SemanticScholar:e59d8bf0fa6023b5d8a929c925efa65a9253b198"
+      ],
+      "semantic_scholar_id": "e59d8bf0fa6023b5d8a929c925efa65a9253b198",
+      "doi": "10.5220/0014920900004039",
+      "canonical_id": "DOI:10.5220/0014920900004039",
+      "authors": [
+        "Chih-Ta Tsai",
+        "Zhan-Wei Wu",
+        "Yi-Syuan Ke",
+        "Sao-Hsuan Lin",
+        "Jerry Chou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 99,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official SciTePress abstract proposes using decode-GPU residual capacity to trade KV-cache transfer for recomputation in disaggregated LLM inference; it reports up to 54% lower TTFT without throughput loss.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-95aad811c5de",
+    "round": "libimp-95aad811c5dec7bb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-95aad811c5dec7bb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-95aad811c5dec7bb-pre01.json",
+    "receipt": "sha256:0abe00df0cbe70226c51b53b383650f00ce6aa5c43d3396671e44085ca379323"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-95aad811c5de",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

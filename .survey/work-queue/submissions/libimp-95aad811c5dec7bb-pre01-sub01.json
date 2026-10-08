@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Why Attention Patterns Exist: A Unifying Temporal Perspective Analysis",
+      "source_url": "https://arxiv.org/abs/2601.21709",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention patterns play a crucial role in both training and inference of large language models (LLMs). Prior works have identified individual patterns such as retrieval heads, sink heads, and diagonal traces, yet these observations remain fragmented and lack a unifying explanation. To bridge this gap, we introduce \\textbf{Temporal Attention Pattern Predictability Analysis (TAPPA), a unifying framework that explains diverse attention patterns by analyzing their underlying mathematical formulations} from a temporally continuous perspective. TAPPA both deepens the understanding of attention behavior and guides inference acceleration approaches. Specifically, TAPPA characterizes attention patterns as predictable patterns with clear regularities and unpredictable patterns that appear effectively random. Our analysis further reveals that this distinction can be explained by the degree of query self-similarity along the temporal dimension. Focusing on the predictable patterns, we further provide a detailed mathematical analysis of three representative cases through the joint effect of queries, keys, and Rotary Positional Embeddings (RoPE). We validate TAPPA by applying its insights to KV cache compression and LLM pruning tasks. Across these tasks, a simple metric motivated by TAPPA consistently improves performance over baseline methods. The code is available at https://github.com/MIRALab-USTC/LLM-TAPPA.",
+      "identifiers": [
+        "SemanticScholar:a83a39fd58e91bab953771846afbba2bccc3a2d9"
+      ],
+      "semantic_scholar_id": "a83a39fd58e91bab953771846afbba2bccc3a2d9",
+      "canonical_id": "arXiv:2601.21709",
+      "arxiv_id": "2601.21709",
+      "doi": "10.48550/arXiv.2601.21709",
+      "authors": [
+        "Qingyue Yang",
+        "Jie Wang",
+        "Xing Li",
+        "Yinqi Bai",
+        "Xia-Liang Tong",
+        "Hui-Ling Zhen",
+        "Jian-Ye Hao",
+        "Ming-Hu Yuan",
+        "Bin Li"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract analyzes temporal attention patterns in LLMs and applies its insight to KV-cache compression and pruning, with improved performance over baselines.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Screening Is Enough",
+      "source_url": "https://arxiv.org/abs/2604.01178",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We call query--key relevance absolute when its values lie on a fixed bounded scale, depend on neither competing keys nor sequence length, require no sequence-length-dependent calibration, and can all be zero. To realize this notion, we introduce screening, whose explicit threshold transforms bounded query--key similarities into relevance values, enabling exact rejection, empty selection, and direct inspection on a common scale. In a controlled comparison of 12 attention mechanisms on a matched Transformer backbone, only screening maintains both low long-context perplexity and robust retrieval beyond the training context; notably, it does so without inference-time scaling. Building on screening, we introduce Multiscreen, a language-model architecture composed of parallel gated screening tiles. Multiscreen retains these long-context gains while achieving greater parameter efficiency, stronger general zero-shot downstream performance, lower training cost at larger scales, and lower model-side time to first token than Transformer baselines. We further develop a normalization design that keeps Multiscreen training stable even at a learning rate of $1$ and show that an adapted version likewise stabilizes Transformer at the same learning rate.",
+      "identifiers": [
+        "SemanticScholar:1b0ce347db427a016aa2ee81f56d7c582c7205e2"
+      ],
+      "semantic_scholar_id": "1b0ce347db427a016aa2ee81f56d7c582c7205e2",
+      "canonical_id": "arXiv:2604.01178",
+      "arxiv_id": "2604.01178",
+      "doi": "10.48550/arXiv.2604.01178",
+      "authors": [
+        "K. Nakanishi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract proposes threshold-based screening attention; it reports robust long-context retrieval and lower model-side time-to-first-token with greater parameter efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2605.25203",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We apply the influence-adaptive Walsh geometry of a companion theory paper (arXiv:2605.01637) to extreme low-bit weight-only LLM quantization. The recipe is one math-invariant transformation: WHT-rotate each linear layer's weight matrix and rescale its columns by per-coordinate Walsh-basis activation energy before handing off to a reconstruction-error quantizer (Intel auto-round). This biases per-group integer rounding toward high-spectral-energy channels. On four pretrained decoder-only models from 135M to 1.5B parameters, BBT-spectral reduces wikitext-2 perplexity by 15-58% relative to vanilla auto-round at W2A16; we also report a TinyLlama-1.1B auxiliary data point. Three extensions transfer the recipe to families it failed on: a per-head PCA matrix-Gamma replacement of q_norm/k_norm for Qwen3 attention (PPL 136.76 ->88.99 on Qwen3-0.6B); an SO(2) per-pair rotation that commutes with RoPE (PPL 36.93 ->21.84 on Qwen2.5-1.5B); and an MoE-aware input-side absorption fix identified by architectural fuzzing of Laguna-style fused-expert layouts. A W2-vs-W4 ablation gives a deliberate negative control: the redistribution payoff falls within the +/-0.5 PPL noise floor at W4, consistent with the Schur-convexity intuition that the cost of unconcentrated influence vanishes as the noise budget shrinks. All quantized weights export to OpenVINO IR and run on Intel NPU + Arc dGPU + CPU with PPL invariant to device within +/-0.1. We do not claim a formal Boolean-to-real-valued transfer of the theory paper's majorization argument: the WHT activation energy used here is not the Boolean influence of the theory paper, the link is intuitive, and the contribution is engineering value rather than a transferred theorem. Head-to-head benchmarks against SpinQuant, QuaRot, QuIP-sharp, AQLM, OmniQuant, and ButterflyQuant at matched calibration are the main future-work item.",
+      "identifiers": [
+        "SemanticScholar:d02f1f49b96cea46436e95a7b46fbc0ead146a93"
+      ],
+      "semantic_scholar_id": "d02f1f49b96cea46436e95a7b46fbc0ead146a93",
+      "canonical_id": "arXiv:2605.25203",
+      "arxiv_id": "2605.25203",
+      "doi": "10.48550/arXiv.2605.25203",
+      "authors": [
+        "G. Pavlov"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract applies influence-inspired spectral rotations and reconstruction-error quantization to low-bit LLM weights, reports perplexity gains at W2A16, and exports quantized weights for NPU/GPU/CPU execution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield",
+      "source_url": "https://arxiv.org/abs/2606.31796",
+      "year": 2026,
+      "published": "2026-06-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Frontier language capability is usually bought with frontier compute; CHERRY shows a different trade. It is a sovereign Korean model family built on one principle: supervise the tokens that decide the answer, and let shared weights carry the rest. Under matched compute this exposes a sharp, reproducible dissociation---selected-token supervision preserves held-out discrimination yet collapses free generation, and a full-sequence anchor recovers only part of the gap. The same signal drives a heal-after-merge recurrent-representational-yield loop that collapses 48 layers to 6 unique blocks at near-dense parity (227M at loss 2.934 vs a 566M dense model at 2.926) and composes them by MoEE fusion (2.789)---a recurrent-compression direction independently pursued by concurrent frontier looped-MoE work, which we project (not yet measure) to frontier scale. It also installs metacognition from two-token supervision (200 held-out KO prompts/type, kappa>0.82, +/-6.9pp): self-correction 12->47% and jailbreak 23->4% at 97.6% loss-retention on 1.2B, with a pre-registered 1B->13.7B ablation localising the operand-binding limit to capacity (1B lookup vs 13.7B H-PRESERVE); and it specializes a 1.8B model to reported human-expert level on CyberMetric (75.0% vs a 30-expert average 72.24%). The released 1.8B tokenizer is 9.2% more Korean-efficient than Gemma-4; the from-scratch 12B adds a sovereign Korean tokenizer (vocab 131,037). On the government-operated K-AI Korean-LLM leaderboard the released 1.8B leads the HLE(Ko) column (0.123 vs 0.077; overall 51/78). At the frontier we fine-tune and serve an adapted 122B model on one 120GB accelerator (83GB measured peak). Provenance differs by member and we state it exactly; the architecture and recipe are ours throughout, and every claim is bound to a released curated measurement.",
+      "identifiers": [
+        "SemanticScholar:6001593b17998092eaf9b132b70612e30fd66717"
+      ],
+      "semantic_scholar_id": "6001593b17998092eaf9b132b70612e30fd66717",
+      "canonical_id": "arXiv:2606.31796",
+      "arxiv_id": "2606.31796",
+      "doi": "10.48550/arXiv.2606.31796",
+      "authors": [
+        "Dohyeon Kwon",
+        "Youngjin Park"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract describes recurrent representation reuse/compression that reduces a 48-layer model to six unique blocks near dense-model parity and reports serving a 122B adapted model on one 120GB accelerator.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Rope to Nope and Back Again: A New Hybrid Attention Strategy",
+      "source_url": "https://arxiv.org/abs/2501.18795",
+      "year": 2025,
+      "published": "2025-01-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 51,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language models (LLMs) have achieved remarkable advancements, driven by techniques like Rotary Position Embedding (RoPE) (Su et al., 2023) and its extensions (Chen et al., 2023; Liu et al., 2024c; Peng et al., 2023). By adjusting RoPE parameters and incorporating training data with extended contexts, we can train performant models with considerably longer input sequences. However, existing RoPE-based methods exhibit performance limitations when applied to extended context lengths. This paper presents a comprehensive analysis of various attention mechanisms, including RoPE, No Positional Embedding (NoPE), and Query-Key Normalization (QK-Norm), identifying their strengths and shortcomings in long-context modeling. Our investigation identifies distinctive attention patterns in these methods and highlights their impact on long-context performance, providing valuable insights for architectural design. Building on these findings, we propose a novel architecture featuring a hybrid attention mechanism that integrates global and local attention spans. This design not only surpasses conventional RoPE-based transformer models with full attention in both long and short context tasks but also delivers substantial efficiency gains during training and inference.",
+      "identifiers": [
+        "SemanticScholar:e6b867fd81eb90c67ee64d9a768d3c5c867c9ab4"
+      ],
+      "semantic_scholar_id": "e6b867fd81eb90c67ee64d9a768d3c5c867c9ab4",
+      "canonical_id": "arXiv:2501.18795",
+      "arxiv_id": "2501.18795",
+      "doi": "10.48550/arXiv.2501.18795",
+      "authors": [
+        "Bowen Yang",
+        "Bharat Venkitesh",
+        "Dwarak Talupuru",
+        "Hangyu Lin",
+        "David Cairuz",
+        "P. Blunsom",
+        "Acyr F. Locatelli"
+      ],
+      "priority": 61,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 51,
+        "citation_count": 51,
+        "total": 61,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 616,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The primary arXiv abstract proposes hybrid local/global attention for long-context language models and reports efficiency gains during both training and inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-95aad811c5de",
+    "round": "libimp-95aad811c5dec7bb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-95aad811c5dec7bb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-95aad811c5dec7bb-pre01.json",
+    "receipt": "sha256:0abe00df0cbe70226c51b53b383650f00ce6aa5c43d3396671e44085ca379323"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-95aad811c5de",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
