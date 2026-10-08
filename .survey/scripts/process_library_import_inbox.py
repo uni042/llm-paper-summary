@@ -736,14 +736,65 @@ def verify_reaudit_blob_sha(source_bytes: bytes, expected: str) -> tuple[bool, b
     return expected == legacy_hash, expected == legacy_hash
 
 
-def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int, int]:
+def is_reaudit_research_source(source: Path) -> bool:
+    """Prioritize semantic re-audits without bypassing the normal import gates.
+
+    Only inspect frontmatter for scheduling. Full YAML parsing, identity,
+    content hashes and quality checks still run inside process_research().
+    """
+    try:
+        with source.open("r", encoding="utf-8") as stream:
+            if stream.readline().strip() != "---":
+                return False
+            for line in stream:
+                if line.strip() == "---":
+                    break
+                if re.match(r"^\\s*under16kb_reaudit_target_path\\s*:\\s*\\S", line):
+                    return True
+    except (OSError, UnicodeError):
+        return False
+    return False
+
+
+def select_research_sources(
+    sources: list[Path],
+    max_items: int | None,
+    max_reaudit: int | None,
+) -> list[Path]:
+    """Reserve independent slots for re-audits and ordinary Research intake.
+
+    With max_reaudit=None retain the historical global cap (API compatibility).
+    With an explicit quota, process up to max_reaudit re-audits plus max_items
+    ordinary papers. Neither queue can starve the other.
+    """
+    sources = sorted(sources)
+    if max_reaudit is None:
+        return sources[:max(0, max_items)] if max_items is not None else sources
+    if max_reaudit < 0:
+        raise ValueError("max_reaudit must be non-negative")
+    reaudit = []
+    ordinary = []
+    for source in sources:
+        (reaudit if is_reaudit_research_source(source) else ordinary).append(source)
+    if max_items is not None:
+        ordinary = ordinary[:max(0, max_items)]
+    return reaudit[:max_reaudit] + ordinary
+
+
+def process_research(
+    repo_root: Path,
+    max_items: int | None = None,
+    *,
+    max_reaudit: int | None = None,
+    defer_reaudit_queue_refresh: bool = False,
+) -> tuple[int, int]:
     imported = 0
     terminal = 0
     PENDING_RESEARCH.mkdir(parents=True, exist_ok=True)
 
-    sources = sorted(PENDING_RESEARCH.glob("*.md"))
-    if max_items is not None:
-        sources = sources[:max(0, max_items)]
+    sources = select_research_sources(
+        list(PENDING_RESEARCH.glob("*.md")), max_items, max_reaudit
+    )
     for source in sources:
         token = source_token(source)
         result_path = RESULT_RESEARCH / result_filename(source)
@@ -1022,15 +1073,16 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
             terminal += 1
 
     if imported:
-        try:
-            queue = under16_reaudit.build_queue(repo_root)
-            under16_reaudit.write_queue(repo_root, queue)
-        except Exception as exc:
-            print(
-                "warning: under-16KB re-audit queue refresh failed after durable Research import: "
-                f"{type(exc).__name__}: {exc}",
-                file=sys.stderr,
-            )
+        if not defer_reaudit_queue_refresh:
+            try:
+                queue = under16_reaudit.build_queue(repo_root)
+                under16_reaudit.write_queue(repo_root, queue)
+            except Exception as exc:
+                print(
+                    "warning: under-16KB re-audit queue refresh failed after durable Research import: "
+                    f"{type(exc).__name__}: {exc}",
+                    file=sys.stderr,
+                )
 
         # These are derived-view refreshes. A stale README/worklist is repairable,
         # while losing an already validated Library import is not. Keep failures
@@ -1582,11 +1634,24 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--max-research", type=int, default=None)
+    parser.add_argument(
+        "--max-reaudit", type=int, default=None,
+        help="Additional prioritized under-16KB re-audit slots, separate from --max-research",
+    )
+    parser.add_argument(
+        "--defer-reaudit-queue-refresh", action="store_true",
+        help="Rebuild the hash-pinned re-audit queue from final main after the checkpoint",
+    )
     parser.add_argument("--max-discovery-records", type=int, default=None)
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
 
-    research_imported, research_terminal = process_research(repo_root, args.max_research)
+    research_imported, research_terminal = process_research(
+        repo_root,
+        args.max_research,
+        max_reaudit=args.max_reaudit,
+        defer_reaudit_queue_refresh=args.defer_reaudit_queue_refresh,
+    )
     returned_queue = sync_returned_research_queue(repo_root)
     discovery_advanced, discovery_terminal = process_discovery(
         repo_root, args.max_discovery_records
