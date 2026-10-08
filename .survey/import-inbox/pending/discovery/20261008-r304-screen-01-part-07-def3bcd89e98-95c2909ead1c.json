@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r304-screen-01-part-07-def3bcd89e98",
+  "reference_main_sha": "14de2d64584c63ef0c5ff753e5bb7fccc08c6bc7",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.10462",
+      "identity_tokens": [
+        "arXiv:2308.10462"
+      ],
+      "title": "Exploring Parameter-Efficient Fine-Tuning Techniques for Code Generation with Large Language Models",
+      "reason": "The paper compares LoRA, IA3, prompt/prefix tuning, and QLoRA for code-generation fine-tuning under limited resources. Its efficiency claims concern parameter-efficient training, not lower inference cost or serving.",
+      "source_url": "https://arxiv.org/abs/2308.10462",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18401",
+      "identity_tokens": [
+        "arXiv:2604.18401"
+      ],
+      "title": "CAPO: Critic-Guided Action-Aligned Policy Optimization for Advancing LLM Agent Capabilities",
+      "reason": "CAPO is a critic-guided policy optimization method for LLM agent training; the abstract concerns policy capability/training, not lower inference cost.",
+      "source_url": "https://arxiv.org/abs/2604.18401",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15148",
+      "identity_tokens": [
+        "arXiv:2604.15148"
+      ],
+      "title": "IG-Search: Step-Level Information Gain Rewards for Search-Augmented Reasoning",
+      "reason": "IG-Search uses information-gain rewards to train search-augmented reasoning; its primary abstract explicitly says inference latency is unchanged and discusses only training overhead, so it is out of the inference-efficiency scope.",
+      "source_url": "https://arxiv.org/abs/2604.15148",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08706",
+      "identity_tokens": [
+        "arXiv:2604.08706"
+      ],
+      "title": "Efficient RL Training for LLMs with Experience Replay",
+      "reason": "The paper explicitly investigates experience replay for efficient LLM RL training; training efficiency is outside the target.",
+      "source_url": "https://arxiv.org/abs/2604.08706",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19329",
+      "identity_tokens": [
+        "arXiv:2603.19329"
+      ],
+      "title": "Goedel-Code-Prover: Hierarchical Proof Search for Open State-of-the-Art Code Verification",
+      "reason": "Goedel-Code-Prover improves code verification through hierarchical proof search; the abstract proposes reasoning/search capability, not a reduction in inference resources.",
+      "source_url": "https://arxiv.org/abs/2603.19329",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
