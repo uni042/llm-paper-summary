@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import discovery_relevance_classifier as classifier
+import forward_lineage_citation
 import json
 import math
 import re
@@ -184,6 +185,11 @@ def _relevance_rank(row: dict[str, Any]) -> tuple[Any, ...]:
     breakdown = row.get("priority_breakdown")
     recent = bool(isinstance(breakdown, dict) and breakdown.get("is_fresh"))
     score += citations + (6 if recent else 0)
+    # Only forward edges to distinct curated seeds in the SAME fine-grained
+    # directory count. A single widely cited generic method adds no points.
+    score += forward_lineage_citation.forward_lineage_bonus(
+        row.get("forward_lineage_citation_max")
+    )
     try:
         priority = int(row.get("priority") or 0)
     except (TypeError, ValueError):
@@ -303,6 +309,15 @@ def triage_worklist(
         "quota_mode": quota_mode if enabled else "off",
         "quota_retain_percent": quota_percent,
         "quota_eligible_count": quota_eligible_count,
+        "forward_lineage_2plus_count": sum(
+            int(row.get("forward_lineage_citation_max") or 0) >= 2 for row in rows
+        ),
+        "forward_lineage_3plus_count": sum(
+            int(row.get("forward_lineage_citation_max") or 0) >= 3 for row in rows
+        ),
+        "forward_lineage_2plus_kept": sum(
+            int(row.get("forward_lineage_citation_max") or 0) >= 2 for row in kept
+        ),
         "rule_quarantine_count": rule_count,
         "classifier_quarantine_count": ml_count,
         "expanded_rule_mode": extra_mode if enabled else "off",
