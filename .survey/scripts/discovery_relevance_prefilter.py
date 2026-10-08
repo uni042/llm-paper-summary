@@ -192,7 +192,7 @@ def _relevance_rank(row: dict[str, Any]) -> tuple[Any, ...]:
     identity = str(row.get("canonical_id") or row.get("source_url") or row.get("title") or "")
     return (-same, -total, -_fallback_topic_score(row), -priority, identity)
 
-def _quota_policy(policy: dict[str, Any]) -> tuple[str, int, int]:
+def _quota_policy(policy: dict[str, Any]) -> tuple[str, float, int]:
     config = policy.get("relevance_quota")
     if not isinstance(config, dict) or not config.get("enabled"):
         return "off", 100, 0
@@ -257,6 +257,7 @@ def triage_worklist(
     quota_eligible_count = len(kept)
     quota_target = math.ceil(quota_eligible_count * quota_percent / 100)
     quota_removed_count = 0
+    audit_budget = 0
     try:
         stride = max(int(policy.get("audit_stride", 50)), 2)
         max_audit = max(int(policy.get("max_audit_per_build", 30)), 0)
@@ -264,8 +265,10 @@ def triage_worklist(
         stride, max_audit = 50, 30
 
     if enabled and mode == "quarantine" and quota_mode == "quarantine" and quota_eligible_count >= quota_minimum:
-        # The audit sample is included in the requested percentage, not added beyond it.
-        regular_budget = max(quota_target - max_audit, 0)
+        # Preserve the requested percentage even when it is a tiny shortlist.
+        # Reserve at most one small-list audit slot, never the entire shortlist.
+        audit_budget = min(max_audit, max(1, quota_target // stride)) if quota_target > 2 else 0
+        regular_budget = max(quota_target - audit_budget, 0)
         if len(kept) > regular_budget:
             mandatory = {
                 i for i, row in enumerate(kept)
@@ -314,7 +317,8 @@ def triage_worklist(
     if not enabled or mode == "shadow":
         return rows, stats
     kept.sort(key=_relevance_rank)
-    audit_count = min(len(deferred), max_audit, len(kept) // stride + (1 if not kept else 0))
+    audit_count = min(len(deferred), audit_budget if quota_mode == "quarantine" else max_audit,
+                      len(kept) // stride + (1 if not kept else 1) if quota_mode != "quarantine" else len(deferred))
     audit_rows = [
         dict(row, prefilter_audit=True, prefilter_reason=classify(row, policy)["reason"])
         for row in sorted(deferred, key=_audit_key)[:audit_count]
