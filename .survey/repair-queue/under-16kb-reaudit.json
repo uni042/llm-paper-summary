@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T06:38:07.378080+00:00",
+  "generated_at": "2026-10-08T06:48:19.802313+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 574,
+  "count": 569,
   "worker_counts": {
-    "scheduled-chat-00": 194,
+    "scheduled-chat-00": 193,
     "scheduled-chat-30": 183,
-    "scheduled-chat-45": 197
+    "scheduled-chat-45": 193
   },
   "entries": [
     {
@@ -10483,28 +10483,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2607.08780-sticky-routing-memory-efficient-inference.md",
-      "canonical_id": "arXiv:2607.08780",
-      "title": "Sticky Routing: Training MoE Models for Memory-Efficient Inference",
-      "file_bytes": 13375,
-      "source_sha256": "510977997a639b1cea85cb2bfb7de576314b4bc33e04939a2f789d0fe49ba355",
-      "source_git_blob_sha": "9e43bcef37b99fb76cd0152657e4802a06b1d472",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.979548,
-      "quality_metrics": {
-        "body_chars": 3093,
-        "method_chars": 782,
-        "evaluation_chars": 348,
-        "limitation_chars": 246
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 348 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md",
       "canonical_id": "arXiv:2411.16102",
       "title": "BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching",
@@ -10746,28 +10724,6 @@
       ]
     },
     {
-      "path": "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md",
-      "canonical_id": "arXiv:2406.05955",
-      "title": "Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters",
-      "file_bytes": 13561,
-      "source_sha256": "56182360a540d3cecbcbf62352e8b39fefc7f8a1a40d0ec12f677da98cc1c22d",
-      "source_git_blob_sha": "641cca0e31a6508bba62e5a13858bed6a34b6ade",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.906339,
-      "quality_metrics": {
-        "body_chars": 3176,
-        "method_chars": 1124,
-        "evaluation_chars": 288,
-        "limitation_chars": 283
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 288 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/06-moe-quantization-compression/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md",
       "canonical_id": "arXiv:2607.16184",
       "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
@@ -10845,28 +10801,6 @@
         "limitation_chars": 393
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md",
-      "canonical_id": "arXiv:2606.09441",
-      "title": "SIFT — 注意不変性を利用したRAG入力処理の選択索引",
-      "file_bytes": 13652,
-      "source_sha256": "a2d7fc289a56b8f9721afda4cc3702a346925de90ac4713f3c615547428fcbbb",
-      "source_git_blob_sha": "4a3aa488e7c6116e6a4e028786baffacaa22fdb5",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 2669,
-        "method_chars": 1231,
-        "evaluation_chars": 283,
-        "limitation_chars": 269
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 283 < 500"
-      ],
       "warnings": []
     },
     {
@@ -11039,28 +10973,6 @@
         "limitation_chars": 403
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
-      "canonical_id": "arXiv:2503.20313",
-      "title": "TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives",
-      "file_bytes": 13826,
-      "source_sha256": "7bcadba33c27f71b0f3322bc66db1ae1e7aba32b29c11a2de4c963e92f4aae4a",
-      "source_git_blob_sha": "0bf7cb21e5d67afe4df00ea77f1a194717e18c44",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.956365,
-      "quality_metrics": {
-        "body_chars": 2895,
-        "method_chars": 966,
-        "evaluation_chars": 264,
-        "limitation_chars": 223
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 264 < 500"
-      ],
       "warnings": []
     },
     {
@@ -11358,28 +11270,6 @@
         "limitation_chars": 327
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.04921-triattention-efficient-long-reasoning-with-trigonometric-kv-compression.md",
-      "canonical_id": "arXiv:2604.04921",
-      "title": "TriAttention: Efficient Long Reasoning with Trigonometric KV Compression",
-      "file_bytes": 14163,
-      "source_sha256": "0839963252517220ce2f1880abd69cfc1db92f617d9a9348d8be35150fcec352",
-      "source_git_blob_sha": "84e3fe18a8874418514dcc0acfb1911ee5ae3364",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.965781,
-      "quality_metrics": {
-        "body_chars": 3515,
-        "method_chars": 1134,
-        "evaluation_chars": 337,
-        "limitation_chars": 274
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 337 < 500"
-      ],
       "warnings": []
     },
     {
