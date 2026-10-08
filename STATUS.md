@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 03:28:57 JST**
+> 自動生成: **2026-10-09 03:32:22 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **649** |
 | 直近24hのResearch処理完了 | **266** |
 | 最終Research処理完了 | **10-09 01:30:00 JST** |
-| 最終Discovery探索完了 | **10-09 03:21:43 JST** |
+| 最終Discovery探索完了 | **10-09 03:27:48 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（15時間32分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（15時間35分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **35** |
-| 直近6hのDiscovery run | **6** |
-| 直近6hのDiscovery本文確認・分類 | **89** |
+| 直近6hのDiscovery run | **7** |
+| 直近6hのDiscovery本文確認・分類 | **108** |
 | 最終Research完了 | **10-09 01:30:00 JST** |
-| 最終Discovery完了 | **10-09 03:21:43 JST** |
+| 最終Discovery完了 | **10-09 03:27:48 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-09 01:30:00 JST** / worker — / run 20261009-0130-scheduled-chat-30/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_17b7002664ac8191a31eb41fed13890b--2024-2410.10819-duoattention-under16kb-reaudit-20261009-0130-scheduled-chat-30-r01.json
-- Discovery: **10-09 03:21:43 JST** / worker codex-luna / run codex-backfill-r315-r316-b12-main-d43422c9
-  - 本文確認・分類 **19件** / accept **16件** / unrelated+borderline **3件**
-  - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r315-r316-b12-main-d43422c9--6d5d489a74995861b716fce956d2246fc3247374b2049705642085d89c78abb8--codex-backfill-r315-r316-b12-main-d43422c9.json
+- Discovery: **10-09 03:27:48 JST** / worker codex-luna / run codex-backfill-r316-b13-main-893d2f32
+  - 本文確認・分類 **19件** / accept **17件** / unrelated+borderline **2件**
+  - evidence: .survey/import-inbox/pending/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
 
 ### Codex探索成果の反映状況
 
@@ -157,14 +157,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **2798ファイル / 13317件** |
-| Codex成果の取り込み待機中 | **1ファイル / 19件** |
-| └ 待機中のaccept | **16件** |
-| └ 待機中のunrelated | **1件** |
-| └ 待機中のborderline | **2件** |
+| Codex成果の取り込み待機中 | **2ファイル / 38件** |
+| └ 待機中のaccept | **33件** |
+| └ 待機中のunrelated | **2件** |
+| └ 待機中のborderline | **3件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-09 03:21:43 JST** / waiting / codex-backfill-r315-r316-b12-main-d43422c9
-  - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r315-r316-b12-main-d43422c9--6d5d489a74995861b716fce956d2246fc3247374b2049705642085d89c78abb8--codex-backfill-r315-r316-b12-main-d43422c9.json
+- 最終Codex分類・受渡し証拠: **10-09 03:27:48 JST** / pending / codex-backfill-r316-b13-main-893d2f32
+  - evidence: .survey/import-inbox/pending/discovery/codex-backfill-r316-b13-main-893d2f32--66eb5c6a49e9442d8decfb2a06b36c304dcf781d331972bcee9dac2cc21d3824--codex-backfill-r316-b13-main-893d2f32.json
 
 
 ## 件数サマリー（旧immutable transport診断）
