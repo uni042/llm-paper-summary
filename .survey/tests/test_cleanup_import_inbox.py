@@ -102,13 +102,19 @@ title: Example
             blocked.mkdir(parents=True)
             pending.mkdir(parents=True)
             source = blocked / "losparse.md"
-            blocked_bytes = b"---\\ncanonical_id: arXiv:2306.11222\\ntitle: LoSparse\\n---\\n# Original blocked revision\\n"
-            # Use real newlines, not escaped backslash sequences.
-            blocked_bytes = blocked_bytes.replace(b"\\\\n", b"\\n")
+            blocked_bytes = """---
+canonical_id: arXiv:2306.11222
+title: LoSparse
+---
+# Original blocked revision
+""".encode("utf-8")
             source.write_bytes(blocked_bytes)
             retry = pending / cleanup._safe_retry_name(cleanup.RESEARCH_RETRY_PREFIX, source)
-            new_revision = b"---\\ncanonical_id: arXiv:2306.11222\\n---\\n# Newer pending revision\\n"
-            new_revision = new_revision.replace(b"\\\\n", b"\\n")
+            new_revision = """---
+canonical_id: arXiv:2306.11222
+---
+# Newer pending revision
+""".encode("utf-8")
             retry.write_bytes(new_revision)
 
             with mock.patch.object(cleanup.inbox, "research_metadata_failures", return_value=[]):
