@@ -46,4 +46,4 @@ class PrefilterCountsTests(unittest.TestCase):
         self.assertEqual(result["remaining"], 1)
         self.assertEqual(result["prefilter"]["unfiltered_count"], 1)
         self.assertEqual(result["prefilter"]["reviewable_count"], 1)
-        self.assertEqual(result["prefilter"]["classifier_pending_count"], 1)
+        self.assertEqual(result["prefilter"]["quota_eligible_count"], 1)
