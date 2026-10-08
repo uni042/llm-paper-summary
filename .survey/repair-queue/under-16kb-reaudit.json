@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T16:17:11.043152+00:00",
+  "generated_at": "2026-10-08T16:53:30.503477+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 421,
+  "count": 419,
   "worker_counts": {
-    "scheduled-chat-00": 141,
-    "scheduled-chat-30": 124,
+    "scheduled-chat-00": 140,
+    "scheduled-chat-30": 123,
     "scheduled-chat-45": 156
   },
   "entries": [
@@ -426,32 +426,6 @@
         "16KB未満再監査: 評価説明量 144 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md",
-      "canonical_id": "arXiv:2606.05538",
-      "title": "Less is MoE: Trimming Experts in Domain-Specialist Language Models",
-      "file_bytes": 9500,
-      "source_sha256": "d7525d26a7970a56cfc942513bff9930aff89ccdc32308a3c2facec955e82ad1",
-      "source_git_blob_sha": "ab6a7e095fa7d105ad51fc984f1b8086398c4343",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.787879,
-      "quality_metrics": {
-        "body_chars": 2035,
-        "method_chars": 728,
-        "evaluation_chars": 125,
-        "limitation_chars": 220
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2035 < 2200",
-        "16KB未満再監査: 評価説明量 125 < 500",
-        "16KB未満再監査: 日本語比率 78.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.8% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md",
@@ -990,28 +964,6 @@
       "warnings": [
         "日本語比率 72.3% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md",
-      "canonical_id": "arXiv:2410.10819",
-      "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
-      "file_bytes": 9871,
-      "source_sha256": "3a7fadf6020c066e52d13d8561ec0e927b40cf7adbb821436a04410dd77ceb7a",
-      "source_git_blob_sha": "06c56ace192b0a20d80dac57c650682522606c51",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.816198,
-      "quality_metrics": {
-        "body_chars": 2208,
-        "method_chars": 842,
-        "evaluation_chars": 258,
-        "limitation_chars": 188
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 258 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.22158-stepkv-step-aware-kv-cache-compression-for-llm-agents.md",
