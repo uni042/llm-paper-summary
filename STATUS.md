@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 18:14:29 JST**
+> 自動生成: **2026-10-08 18:20:25 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **544** |
-| 機械検査未達（FAIL） | **394** |
+| **再監査残件数** | **542** |
+| 機械検査未達（FAIL） | **392** |
 | 機械検査適合・警告のみ（PASS/WARN） | **150** |
-| :00ワーカー担当残 | **184** |
+| :00ワーカー担当残 | **183** |
 | :30ワーカー担当残 | **174** |
-| :45ワーカー担当残 | **186** |
+| :45ワーカー担当残 | **185** |
 
-- キュー最終生成: **2026-10-08 18:06:37 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 18:16:31 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -65,20 +65,23 @@
 |---|---:|
 | 未処理候補（フィルタ前） | **85219** |
 | 規則による暫定隔離 | **834** |
-| 分類器による追加隔離 | **63** |
-| 拡張規則による追加隔離 | **559** |
-| 暫定隔離合計 | **1456** |
+| 分類器による追加隔離 | **127** |
+| 拡張規則による追加隔離 | **556** |
+| 上位25%選抜による保留 | **62427** |
+| 暫定隔離合計 | **63944** |
 | 監査用に復活 | **30** |
-| **読解可能候補（隔離後）** | **83793** |
-| 分類器判定済み | **1992** |
-| 分類器未判定 | **83227** |
+| **読解可能候補（隔離後）** | **21305** |
+| 分類器判定済み | **3987** |
+| 分類器未判定 | **81232** |
+
+- 関連度選抜: **quarantine** / 通常処理枠 **25%** / 目標 **21305件**（監査復活枠を含む）。選抜保留は無関係確定ではない。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **559件**（既存の規則・分類器との重複を除去）
-- 実際の追加隔離: **559件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 36, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 11, 'expanded_domain:environmental_applications': 3, 'expanded_domain:financial_applications': 30, 'expanded_domain:geoscience_applications': 30, 'expanded_domain:materials_applications': 11, 'expanded_domain:vision_applications': 431}**
+- 拡張規則に一致した候補: **556件**（既存の規則・分類器との重複を除去）
+- 実際の追加隔離: **556件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 36, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 11, 'expanded_domain:environmental_applications': 3, 'expanded_domain:financial_applications': 30, 'expanded_domain:geoscience_applications': 30, 'expanded_domain:materials_applications': 11, 'expanded_domain:vision_applications': 428}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の監査再投入も継続する。
 
 - モード: 規則 **quarantine** / 分類器 **quarantine**。
@@ -113,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（6時間17分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（6時間23分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -133,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **14** |
+| 直近6hのResearch完了 | **12** |
 | 直近6hのDiscovery run | **78** |
 | 直近6hのDiscovery本文確認・分類 | **368** |
 | 最終Research完了 | **10-08 17:42:46 JST** |
