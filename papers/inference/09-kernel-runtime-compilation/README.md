@@ -181,8 +181,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
-  しかしサービングでは、アダプタ数が増えるほど「小さいから全部GPUへ置く」という前提が崩れ、異なるrank・異なる要求長のアダプタとKVキャッシュがGPUメモリを断片化する。スケジューラが実行する要求に必要なアダプタだけをGPUへ取り込み、LoRA重みとKVキャッシュをUnified Pagingで統合管理する。
+  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：19  
+  しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
   実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：6  

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 17:46:23 JST**
+> 自動生成: **2026-10-08 17:52:26 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **604** |
 | 未claim Research job | **604** |
-| 直近24hのResearch処理完了 | **112** |
-| 最終Research処理完了 | **10-08 17:38:54 JST** |
+| 直近24hのResearch処理完了 | **116** |
+| 最終Research処理完了 | **10-08 17:42:46 JST** |
 | 最終Discovery探索完了 | **10-08 16:47:03 JST** |
 | 整合性異常 | **0** |
 
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **549** |
-| 機械検査未達（FAIL） | **399** |
+| **再監査残件数** | **545** |
+| 機械検査未達（FAIL） | **395** |
 | 機械検査適合・警告のみ（PASS/WARN） | **150** |
-| :00ワーカー担当残 | **186** |
-| :30ワーカー担当残 | **177** |
+| :00ワーカー担当残 | **184** |
+| :30ワーカー担当残 | **175** |
 | :45ワーカー担当残 | **186** |
 
-- キュー最終生成: **2026-10-08 17:46:21 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-08 17:51:23 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -113,7 +113,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（5時間49分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（5時間55分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -133,16 +133,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **10** |
+| 直近6hのResearch完了 | **13** |
 | 直近6hのDiscovery run | **78** |
 | 直近6hのDiscovery本文確認・分類 | **368** |
-| 最終Research完了 | **10-08 17:38:54 JST** |
+| 最終Research完了 | **10-08 17:42:46 JST** |
 | 最終Discovery完了 | **10-08 16:47:03 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-08 17:38:54 JST** / worker — / run 20261008-interactive-bottom-up-reaudit/qmoe / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/interactive-reaudit-20261008-qmoe-2310.16795.json
+- Research: **10-08 17:42:46 JST** / worker — / run 20261008-interactive-bottom-up-reaudit/moe-spac / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/interactive-reaudit-20261008-moe-spac-2603.09983.json
 - Discovery: **10-08 16:47:03 JST** / worker codex-local-screen-watcher / run 20261008-r311-screen-01-part-03-cc055bb3f9bc
   - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
   - evidence: .survey/import-inbox/results/discovery/20261008-r311-screen-01-part-03-cc055bb3f9bc-448a9d75517a.json
