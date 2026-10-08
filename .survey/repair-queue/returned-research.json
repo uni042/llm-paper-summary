@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T08:52:25+00:00",
+  "generated_at": "2026-10-08T09:03:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 162,
+  "count": 166,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -3075,6 +3075,115 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_06e45ccb24248191b679d0a8cce43f63--2024-2410.19258-headkv-under16kb-reaudit-20261008-1600-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_06e45ccb24248191b679d0a8cce43f63--2024-2410.19258-headkv-under16kb-reaudit-20261008-1600-scheduled-chat-00-r01.json",
       "worker_run_key": "20261008-1555-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.02108",
+      "title": "Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.02108",
+      "returned_at": "2026-10-08T09:02:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3271,
+        "body_paragraphs": 17,
+        "method_chars": 1460,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 242,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_10b53b359b588191bd39e29a78eca0fd--pill-2609.02108-under16kb-reaudit-20261008-1032-scheduled-chat-30.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_10b53b359b588191bd39e29a78eca0fd--pill-2609.02108-under16kb-reaudit-20261008-1032-scheduled-chat-30.json",
+      "worker_run_key": "20261008-1032-scheduled-chat-30/reaudit-r01"
+    },
+    {
+      "canonical_id": "arXiv:2401.08294",
+      "title": "Inferflow: an Efficient and Highly Configurable Inference Engine for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2401.08294",
+      "returned_at": "2026-10-08T09:02:29+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5291,
+        "body_paragraphs": 28,
+        "method_chars": 2293,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1446742c09d081919d633338ab959367--2024-2401.08294-inferflow-under16kb-reaudit-20261008-0755.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1446742c09d081919d633338ab959367--2024-2401.08294-inferflow-under16kb-reaudit-20261008-0755.json",
+      "worker_run_key": "20261008-0745-scheduled-chat-45/reaudit-r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.09054",
+      "title": "Keyformer: KV Cache Reduction through Key Tokens Selection for Efficient Generative Inference",
+      "source_url": "https://proceedings.mlsys.org/paper_files/paper/2024/hash/48fecef47b19fe501d27d338b6d52582-Abstract-Conference.html",
+      "returned_at": "2026-10-08T09:02:30+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7717,
+        "body_paragraphs": 39,
+        "method_chars": 2254,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 1193,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_18eba1f04b308191bd9c02458104774a--2024-2403.09054-keyformer-under16kb-reaudit-20261008-1455-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_18eba1f04b308191bd9c02458104774a--2024-2403.09054-keyformer-under16kb-reaudit-20261008-1455-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261008-1455-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.10819",
+      "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
+      "source_url": "https://arxiv.org/abs/2410.10819",
+      "returned_at": "2026-10-08T09:02:30+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5859,
+        "body_paragraphs": 28,
+        "method_chars": 2256,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 730,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_225f945b70c88191b1e0abbb322d45c5--2024-2410.10819-duoattention-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_225f945b70c88191b1e0abbb322d45c5--2024-2410.10819-duoattention-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
     }
   ]
 }

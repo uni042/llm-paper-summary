@@ -101,7 +101,7 @@
 
 - **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  LLM復号では全結合層の重み読み出しが大きいためメモリ内処理（Processing-In-メモリ; PIM）が有効と考えられてきた。一方、注意機構は増え続けるKVキャッシュを読むため、並列度が変わってもメモリ律速が残りやすい。
+  PAPIは、大規模言語モデルの復号時に生じる同じ全結合層でも並列度によって計算律速とメモリ律速が入れ替わる現象を、実行先の動的選択へ結び付けたメモリ内処理（Processing-in-メモリ、PIM）型の異種計算機構である。
 
 ### 3年前（2023-11〜2024-10）
 
