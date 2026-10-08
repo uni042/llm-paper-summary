@@ -1,0 +1,308 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill-luna",
+  "run_key": "codex-backfill-r332-b19-p02-main-d00306ff",
+  "reference_main_sha": "d00306ff4d07d4d1610c1c84002c18064d53cc30",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00024",
+      "identity_tokens": [
+        "arXiv:2606.00024",
+        "DOI:10.48550/arXiv.2606.00024"
+      ],
+      "title": "ART: Attention Run-time Termination for Efficient Large Language Model Decoding",
+      "reason": "ART terminates redundant attention/KV blocks at decode time and reports throughput improvement; direct LLM decoding acceleration.",
+      "source_url": "https://arxiv.org/abs/2606.00024",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.23274",
+      "identity_tokens": [
+        "arXiv:2503.23274",
+        "DOI:10.48550/arXiv.2503.23274"
+      ],
+      "title": "PromptDistill: Query-based Selective Token Retention in Intermediate Layers for Efficient Large Language Model Inference",
+      "reason": "PromptDistill dynamically retains salient intermediate tokens without training to reduce LLM inference computation.",
+      "source_url": "https://arxiv.org/abs/2503.23274",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.22234",
+      "identity_tokens": [
+        "arXiv:2512.22234",
+        "DOI:10.48550/arXiv.2512.22234"
+      ],
+      "title": "DiRL: An Efficient Post-Training Framework for Diffusion Language Models",
+      "reason": "DiRL combines diffusion-LLM post-training with FlexAttention and an LMDeploy-optimized inference route; the abstract explicitly connects training framework and efficient inference.",
+      "source_url": "https://arxiv.org/abs/2512.22234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.01240",
+      "identity_tokens": [
+        "arXiv:2510.01240",
+        "DOI:10.48550/arXiv.2510.01240"
+      ],
+      "title": "RSAVQ: Riemannian Sensitivity-Aware Vector Quantization for Large Language Models",
+      "reason": "RSAVQ applies sensitivity-aware vector quantization to LLM weights for smaller, deployable models; direct post-training compression.",
+      "source_url": "https://arxiv.org/abs/2510.01240",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.11044",
+      "identity_tokens": [
+        "arXiv:2506.11044",
+        "DOI:10.48550/arXiv.2506.11044"
+      ],
+      "title": "Boost Post-Training Quantization via Null Space Optimization for Large Language Models",
+      "reason": "Null-space optimization improves post-training LLM quantization while avoiding added inference-time overhead.",
+      "source_url": "https://arxiv.org/abs/2506.11044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.05688",
+      "identity_tokens": [
+        "arXiv:2604.05688",
+        "DOI:10.48550/arXiv.2604.05688"
+      ],
+      "title": "Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion",
+      "reason": "Attention Editing converts attention layers toward MLA/sliding-window structures for reduced KV-cache memory and efficient attention.",
+      "source_url": "https://arxiv.org/abs/2604.05688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03979",
+      "identity_tokens": [
+        "arXiv:2606.03979",
+        "DOI:10.48550/arXiv.2606.03979"
+      ],
+      "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories",
+      "reason": "The primary abstract is about continual learning, distilling short-term knowledge into parameters, and RL-driven self-improvement. It does not describe serving, decoding, inference efficiency, or inference-state compression.",
+      "source_url": "https://arxiv.org/abs/2606.03979",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.16229",
+      "identity_tokens": [
+        "arXiv:2512.16229",
+        "DOI:10.48550/arXiv.2512.16229"
+      ],
+      "title": "LoPA: Scaling dLLM Inference via Lookahead Parallel Decoding",
+      "reason": "LoPA uses lookahead parallel decoding for diffusion LLMs and targets higher multi-device inference throughput.",
+      "source_url": "https://arxiv.org/abs/2512.16229",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10165",
+      "identity_tokens": [
+        "arXiv:2410.10165",
+        "DOI:10.48550/arXiv.2410.10165"
+      ],
+      "title": "HSR-Enhanced Sparse Attention Acceleration",
+      "reason": "HSR-Enhanced Sparse Attention targets faster Transformer/LLM prefill and decode through sparse attention acceleration.",
+      "source_url": "https://arxiv.org/abs/2410.10165",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.02780",
+      "identity_tokens": [
+        "arXiv:2606.02780",
+        "DOI:10.48550/arXiv.2606.02780"
+      ],
+      "title": "Do Value Vectors in Deep Layers Need Context from the Residual Stream?",
+      "reason": "The abstract proposes context-free value-vector lookups to avoid repeated computation and cache storage in deep layers; this is a concrete compute/memory optimization for Transformer inference.",
+      "source_url": "https://arxiv.org/abs/2606.02780",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.05417",
+      "identity_tokens": [
+        "arXiv:2604.05417",
+        "DOI:10.48550/arXiv.2604.05417"
+      ],
+      "title": "Multi-Drafter Speculative Decoding with Alignment Feedback",
+      "reason": "Multi-Drafter speculative decoding combines multiple drafts with alignment feedback and dynamic computation allocation to improve inference decoding.",
+      "source_url": "https://arxiv.org/abs/2604.05417",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.25782",
+      "identity_tokens": [
+        "arXiv:2609.25782",
+        "DOI:10.48550/arXiv.2609.25782"
+      ],
+      "title": "Hot–Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving",
+      "reason": "Hot/cold HBM/HBF tiering moves KV state across memory tiers for agentic LLM serving, increasing concurrent sessions per GPU.",
+      "source_url": "https://arxiv.org/abs/2609.25782",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JETCAS.2026.3660689",
+      "identity_tokens": [
+        "DOI:10.1109/JETCAS.2026.3660689"
+      ],
+      "title": "Scalable Sparse Transformer Accelerator With In-Memory Butterfly Zero Skipper and Local Attention Reusable Engine for Semi-Structured-Pruned NN",
+      "reason": "The stable DOI and exact title are in the pinned worklist. Official IEEE DOI/Xplore could not be opened (non-retryable internal error); other accessible catalogues were secondary and not used for abstract classification. Retain as source-unavailable borderline.",
+      "source_url": "https://doi.org/10.1109/JETCAS.2026.3660689",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.07145",
+      "identity_tokens": [
+        "arXiv:2507.07145",
+        "DOI:10.48550/arXiv.2507.07145"
+      ],
+      "title": "CCQ: Convolutional Code for Extreme Low-bit Quantization in LLMs",
+      "reason": "CCQ uses convolutional coding for extreme low-bit LLM quantization, reducing model memory while preserving inference quality.",
+      "source_url": "https://arxiv.org/abs/2507.07145",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18267/j.aip.313",
+      "identity_tokens": [
+        "DOI:10.18267/j.aip.313"
+      ],
+      "title": "Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures",
+      "reason": "The official journal publisher PDF compares serverless and BYOC LLM deployments across inference cost, availability, and observability; it identifies system trade-offs relevant to production LLM serving.",
+      "source_url": "https://exemplum.actavia.vse.cz/getrevsrc.php?identification=public&mag=aip&raid=1464&type=fin&ver=1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.22492",
+      "identity_tokens": [
+        "arXiv:2512.22492",
+        "DOI:10.48550/arXiv.2512.22492"
+      ],
+      "title": "Role-Based Fault Tolerance System for LLM RL Post-Training",
+      "reason": "The abstract targets an RL post-training system that interleaves training and inference, isolates trainer/rollout failures, and avoids full restart/replay overhead; it reports improved effective training-time ratio and end-to-end time.",
+      "source_url": "https://arxiv.org/abs/2512.22492",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27686",
+      "identity_tokens": [
+        "arXiv:2605.27686",
+        "DOI:10.48550/arXiv.2605.27686"
+      ],
+      "title": "Tensor Memory: Fixed-Size Recurrent State for Long-Horizon Transformers",
+      "reason": "The primary abstract proposes a fixed-size recurrent 3D state mainly for long-horizon video/spatial reasoning. It notes KV-cache state growth and benchmarks language/image/video, but does not establish an LLM inference-efficiency benefit; retain as a weakly connected borderline.",
+      "source_url": "https://arxiv.org/abs/2605.27686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39223",
+      "identity_tokens": [
+        "arXiv:2609.39223",
+        "DOI:10.48550/arXiv.2609.39223"
+      ],
+      "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+      "reason": "QATFactory aligns quantization-aware training/distillation with deployment engines and exports quantized LLMs for efficient production inference.",
+      "source_url": "https://arxiv.org/abs/2609.39223",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.05387",
+      "identity_tokens": [
+        "arXiv:2506.05387",
+        "DOI:10.48550/arXiv.2506.05387"
+      ],
+      "title": "Advancing Decoding Strategies: Enhancements in Locally Typical Sampling for LLMs",
+      "reason": "The abstract proposes an adaptive LLM decoding/sampling algorithm and explicitly frames computational efficiency alongside generation quality; direct decoding-method connection, though system-speed evidence is limited.",
+      "source_url": "https://arxiv.org/abs/2506.05387",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2410.23918",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2410.23918",
+        "arXiv:2410.23918"
+      ],
+      "title": "BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments",
+      "reason": "The arXiv page confirms DOI 10.48550/arXiv.2410.23918 and the current primary title “BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments” (the worklist title differs). Its abstract describes training-free, dynamically adjustable weight compression for variable-memory deployment.",
+      "source_url": "https://arxiv.org/abs/2410.23918",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:34:41Z",
+      "last_checked_at": "2026-10-08T19:34:41Z",
+      "linked_from": []
+    }
+  ]
+}
