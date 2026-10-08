@@ -10,12 +10,13 @@ from __future__ import annotations
 import hashlib
 import discovery_relevance_classifier as classifier
 import json
+import math
 import re
 from pathlib import Path
 from typing import Any
 
 CONFIG_PATH = Path(".survey/config/discovery-relevance-prefilter.json")
-POLICY_VERSION = "2026-10-08-v2-shadow"
+POLICY_VERSION = "2026-10-08-v3-top-quartile"
 
 # Require an unambiguous *application topic in the title*. Never quarantine
 # solely because a negative-domain keyword happens to appear in the abstract.
@@ -130,6 +131,83 @@ def classify_expansion(row: dict[str, Any], policy: dict[str, Any]) -> dict[str,
     return answer
 
 
+
+# Reversible shortlist quota: never write a permanent "unrelated" decision.
+# Specialized technical evidence dominates application-domain citations/recency.
+TARGET_MODEL = re.compile(
+    r"\b(?:llms?|large language models?|foundation models?|language models?|"
+    r"transformers?|mixture[- ]of[- ]experts?|moe|diffusion models?|"
+    r"neural networks?|deep learning)\b", re.I
+)
+TARGET_SYSTEMS = re.compile(
+    r"\b(?:inference|serving|decod(?:e|er|ing)|training|finetun(?:e|ing)|fine[- ]tun(?:e|ing)|"
+    r"pre[- ]?training|parallel(?:ism)?|distributed|accelerat\w*|kernel|"
+    r"gpu|cuda|tpu|memory|bandwidth|offload\w*|quantiz\w*|"
+    r"compression|prun(?:e|ing)|sparsity|latency|throughput|"
+    r"batching|scheduler?|checkpointing|attention)\b", re.I
+)
+TARGET_SPECIFIC = re.compile(
+    r"\b(?:flashattention|pagedattention|vllm|sglang|tensor(rt)?[- ]llm|"
+    r"llama[.]cpp|ollama|tensorrt|gptq|awq|"
+    r"speculative decoding|kv[- ]?cache|mixture[- ]of[- ]experts|"
+    r"expert (?:routing|parallelism|load balancing)|"
+    r"training[- ]free acceleration|memory hierarchy|"
+    r"cpu[- ]gpu offload\w*|parameter[- ]efficient finetun\w*)\b", re.I
+)
+
+
+def _relevance_rank(row: dict[str, Any]) -> tuple[Any, ...]:
+    """Prefer systems papers; break ties by priority and stable identity."""
+    title = str(row.get("title") or "")
+    abstract = str(row.get("abstract") or "")
+    topical = bool(TARGET_MODEL.search(title))
+    technical = bool(TARGET_SYSTEMS.search(title))
+    special = bool(TARGET_SPECIFIC.search(title))
+    systems_title = any(pattern.search(title) for pattern in COMPILED_SYSTEMS)
+    score = (
+        (130 if special else 0)
+        + (100 if systems_title else 0)
+        + (65 if topical and technical else 0)
+        + (23 if topical else 0)
+        + (22 if technical else 0)
+    )
+    # Abstracts are supporting, not dominating, signals.
+    if topical or technical:
+        if any(pattern.search(abstract) for pattern in COMPILED_SYSTEMS):
+            score += 21
+        elif TARGET_MODEL.search(abstract) and TARGET_SYSTEMS.search(abstract):
+            score += 10
+    try:
+        citations = min(18.0, math.log2(max(int(row.get("citation_count") or 0), 0) + 1) * 2)
+    except (TypeError, ValueError):
+        citations = 0.0
+    breakdown = row.get("priority_breakdown")
+    recent = bool(isinstance(breakdown, dict) and breakdown.get("is_fresh"))
+    score += citations + (6 if recent else 0)
+    try:
+        priority = int(row.get("priority") or 0)
+    except (TypeError, ValueError):
+        priority = 0
+    return (-score, -priority, -citations, classifier.identity_key(row))
+
+
+def _quota_policy(policy: dict[str, Any]) -> tuple[str, int, int]:
+    config = policy.get("relevance_quota")
+    if not isinstance(config, dict) or not config.get("enabled"):
+        return "off", 100, 0
+    mode = str(config.get("mode") or "off")
+    if mode not in ("off", "shadow", "quarantine"):
+        return "off", 100, 0
+    try:
+        percent = int(config.get("retain_percent", 25))
+        minimum = max(int(config.get("min_candidates", 100)), 0)
+    except (TypeError, ValueError):
+        return "off", 100, 0
+    if not 1 <= percent <= 100:
+        return "off", 100, 0
+    return mode, percent, minimum
+
+
 def _audit_key(row: dict[str, Any]) -> bytes:
     identity = str(row.get("canonical_id") or row.get("title") or row.get("source_url") or "")
     return hashlib.sha256(identity.encode("utf-8")).digest()
@@ -168,7 +246,8 @@ def triage_worklist(
         decision = decisions.get(classifier.identity_key(row)) if model_id else None
         if decision is not None:
             scanned += 1
-        ml_reject = decision == "q" and model_mode == "quarantine"
+        forced_allow = bool(row.get("canonical_id") and str(row.get("canonical_id")) in policy.get("allow_canonical_ids", []))
+        ml_reject = decision == "q" and model_mode == "quarantine" and not forced_allow
         if rule_reject:
             rule_count += 1
         elif ml_reject:
@@ -186,12 +265,44 @@ def triage_worklist(
             deferred.append(row)
         else:
             kept.append(row)
+    quota_mode, quota_percent, quota_minimum = _quota_policy(policy)
+    quota_target = (len(rows) * quota_percent + 99) // 100
+    quota_removed_count = 0
+    quota_eligible_count = len(kept)
+    try:
+        stride = max(int(policy.get("audit_stride", 50)), 2)
+        max_audit = max(int(policy.get("max_audit_per_build", 30)), 0)
+    except (TypeError, ValueError):
+        stride, max_audit = 50, 30
+
+    if enabled and mode == "quarantine" and quota_mode == "quarantine" and len(rows) >= quota_minimum:
+        # The audit sample is included in the requested 25% shortlist.
+        regular_budget = max(quota_target - max_audit, 0)
+        if len(kept) > regular_budget:
+            mandatory = {
+                i for i, row in enumerate(kept)
+                if str(row.get("canonical_id") or "") in policy.get("allow_canonical_ids", [])
+            }
+            ranked = sorted(
+                (i for i in range(len(kept)) if i not in mandatory),
+                key=lambda i: _relevance_rank(kept[i]),
+            )
+            selected = mandatory | set(ranked[:max(regular_budget - len(mandatory), 0)])
+            deferred.extend(row for i, row in enumerate(kept) if i not in selected)
+            quota_removed_count = len(kept) - len(selected)
+            kept = [row for i, row in enumerate(kept) if i in selected]
+
     stats: dict[str, Any] = {
         "policy_version": POLICY_VERSION,
         "enabled": enabled,
         "mode": mode if enabled else "off",
         "unfiltered_count": len(rows),
         "quarantine_count": len(deferred),
+        "quota_quarantine_count": quota_removed_count,
+        "quota_target_count": quota_target,
+        "quota_mode": quota_mode if enabled else "off",
+        "quota_retain_percent": quota_percent,
+        "quota_eligible_count": quota_eligible_count,
         "rule_quarantine_count": rule_count,
         "classifier_quarantine_count": ml_count,
         "expanded_rule_mode": extra_mode if enabled else "off",
@@ -209,11 +320,6 @@ def triage_worklist(
     }
     if not enabled or mode == "shadow":
         return rows, stats
-    try:
-        stride = max(int(policy.get("audit_stride", 50)), 2)
-        max_audit = max(int(policy.get("max_audit_per_build", 30)), 0)
-    except (TypeError, ValueError):
-        stride, max_audit = 50, 30
     audit_count = min(len(deferred), max_audit, len(kept) // stride + (1 if not kept else 0))
     audit_rows = [
         dict(row, prefilter_audit=True, prefilter_reason=classify(row, policy)["reason"])
