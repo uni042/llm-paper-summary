@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r304-screen-01-part-06-def3bcd89e98",
+  "reference_main_sha": "14de2d64584c63ef0c5ff753e5bb7fccc08c6bc7",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-71794-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-71794-1"
+      ],
+      "title": "EMReady2: improvement of cryo-EM and cryo-ET maps by local quality-aware deep learning with Mamba",
+      "reason": "EMReady2 improves cryo-EM/cryo-ET map quality using Mamba for an imaging task; it is not an LLM inference method.",
+      "source_url": "https://doi.org/10.1038/s41467-026-71794-1",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06204",
+      "identity_tokens": [
+        "arXiv:2602.06204"
+      ],
+      "title": "Learning Rate Scaling across LoRA Ranks and Transfer to Full Finetuning",
+      "reason": "The paper studies learning-rate scaling and transfer between LoRA ranks and full fine-tuning. It reports training-time memory differences (including full fine-tuning over 2x LoRA memory), but no inference-time optimization; this is outside the project’s inference-only target.",
+      "source_url": "https://arxiv.org/abs/2602.06204",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17928",
+      "identity_tokens": [
+        "arXiv:2604.17928"
+      ],
+      "title": "HEALing Entropy Collapse: Enhancing Exploration in Few-Shot RLVR via Hybrid-Domain Entropy Dynamics Alignment",
+      "reason": "HEALing Entropy Collapse modifies exploration during few-shot RLVR training; the contribution is training-time reasoning optimization, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.17928",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07655",
+      "identity_tokens": [
+        "arXiv:2604.07655"
+      ],
+      "title": "Guardian-as-an-Advisor: Advancing Next-Generation Guardian Models for Trustworthy LLMs",
+      "reason": "Guardian-as-an-Advisor concerns LLM safety/guardian checking and trustworthiness; no inference-efficiency method is stated.",
+      "source_url": "https://arxiv.org/abs/2604.07655",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08256-4",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08256-4"
+      ],
+      "title": "Scalable RL-based data generation and multi-resolution architecture for code-switched speech recognition: a high-performance computing approach",
+      "reason": "The publisher abstract identifies MARS-ASR for code-switched speech recognition and reports a multi-resolution Conformer with lower inference cost, but the Springer page offers the full PDF only via paid/institutional access. The candidate is linked, so without the primary article body the method’s connection cannot be fully screened.",
+      "source_url": "https://doi.org/10.1007/s11227-026-08256-4",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
