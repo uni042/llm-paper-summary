@@ -14,8 +14,6 @@ arxiv_id: '2411.15997'
 doi: 10.48550/arxiv.2411.15997
 arxiv_categories:
   primary: cs.LG
-last_audited: '2026-09-28'
-audit_version: 1
 title: Ensuring Fair LLM Serving Amid Diverse Applications
 summary: 複数利用者・複数アプリケーションが同じLLM配信基盤を共有すると、単純な要求数制限や全利用者への同量トークン配分では、アプリごとに異なる入力・出力長や、一つの利用者応答を作る途中で複数回LLMを呼ぶ構造を扱えない。FairServeは、過負荷かつ対話途中ではない時だけ制限する過負荷・対話駆動スロットリング（Overload and Interaction-driven Throttling, OIT）と、アプリ特性で重み付けした受益量を追跡する重み付きサービスカウンタ（Weighted Service Counter, WSC）を組み合わせる。Microsoft Copilotの34アプリ・数百万要求の実トレースを用いた評価では、遅延利用者率をVTC比10.67倍、RPM比93倍低減し、アプリ別スループットをVTC比1.03〜1.75倍へ改善した。
 list_summary: アプリごとのトークン長と複数LLM呼出しを考慮し、過負荷時だけ対話単位で制限するOITと重み付き受益量で選ぶWSCを組み合わせ、実トレースで待ち行列・資源浪費・公平性を改善するFairServe。
