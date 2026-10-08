@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T15:10:11.586873+00:00",
+  "generated_at": "2026-10-08T15:30:20.166596+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 438,
+  "count": 437,
   "worker_counts": {
-    "scheduled-chat-00": 150,
-    "scheduled-chat-30": 129,
-    "scheduled-chat-45": 159
+    "scheduled-chat-00": 149,
+    "scheduled-chat-30": 128,
+    "scheduled-chat-45": 160
   },
   "entries": [
     {
@@ -2102,6 +2102,26 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 132 < 500"
       ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md",
+      "canonical_id": "arXiv:2312.08583",
+      "title": "ZeroQuant(4+2): Redefining LLMs Quantization with a New FP6-Centric Strategy for Diverse Generative Tasks",
+      "file_bytes": 10644,
+      "source_sha256": "3e43a41dcb9a05764038b81d170691978be69293f16c997f65457ea4ff51aecc",
+      "source_git_blob_sha": "060c52ad7cd8d37667bf9012894b582d05735efd",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 1.0,
+      "quality_metrics": {
+        "body_chars": 2928,
+        "method_chars": 758,
+        "evaluation_chars": 1018,
+        "limitation_chars": 185
+      },
+      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -9600,46 +9620,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 337 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2601.10155-lookat-lookup-optimized-key-attention-for-memory-efficient-transformers.md",
-      "canonical_id": "arXiv:2601.10155",
-      "title": "LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers",
-      "file_bytes": 16874,
-      "source_sha256": "4e04353239aeb77ff871659b12d41f128582e3e48b8549eaa02722116debf56b",
-      "source_git_blob_sha": "aeafe05eae4e9f33a7460b608d20b3830b52bf08",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.966205,
-      "quality_metrics": {
-        "body_chars": 4195,
-        "method_chars": 1141,
-        "evaluation_chars": 775,
-        "limitation_chars": 645
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md",
-      "canonical_id": "arXiv:2510.13602",
-      "title": "NOSA: Native and Offloadable Sparse Attention",
-      "file_bytes": 16949,
-      "source_sha256": "d4cccdbf829dff8b895368b8e14f4d33515e403c28407477759339bb962aab04",
-      "source_git_blob_sha": "a2c962ff25c986bed4a6a0309b2276fb27041ba9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.971132,
-      "quality_metrics": {
-        "body_chars": 3873,
-        "method_chars": 1573,
-        "evaluation_chars": 639,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
