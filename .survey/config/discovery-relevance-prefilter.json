@@ -17,5 +17,13 @@
     "enabled": true,
     "mode": "quarantine",
     "note": "Validated against all accepted paper titles (0 quarantines); retained papers and audit samples; set shadow to roll back"
+  },
+  "relevance_quota": {
+    "enabled": true,
+    "mode": "quarantine",
+    "retain_percent": 25,
+    "min_candidates": 100,
+    "selection": "systems-first-topic-score-with-priority-citations-freshness",
+    "note": "Shortlist includes audit sample. Keep all source records; mode=off restores candidates on regeneration."
   }
 }
