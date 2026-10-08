@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T05:22:02.408612+00:00",
+  "generated_at": "2026-10-08T05:28:57.712919+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 611,
+  "count": 606,
   "worker_counts": {
-    "scheduled-chat-00": 206,
-    "scheduled-chat-30": 195,
-    "scheduled-chat-45": 210
+    "scheduled-chat-00": 204,
+    "scheduled-chat-30": 193,
+    "scheduled-chat-45": 209
   },
   "entries": [
     {
@@ -11868,28 +11868,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
-      "canonical_id": "arXiv:2507.10524",
-      "title": "Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation",
-      "file_bytes": 14112,
-      "source_sha256": "99f8826872865bec04981ca8cd4ac9d6d41a97ad054816cda9f26177d9668e6e",
-      "source_git_blob_sha": "5b6a2d3cd52d1be67a947d8e43146ac9a4d5342f",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.949162,
-      "quality_metrics": {
-        "body_chars": 2718,
-        "method_chars": 586,
-        "evaluation_chars": 815,
-        "limitation_chars": 232
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 586 < 700"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
       "canonical_id": "arXiv:2312.05821",
       "title": "ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models",
@@ -11912,28 +11890,6 @@
       "warnings": [
         "日本語比率 72.7% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
-      "canonical_id": "arXiv:2509.07506",
-      "title": "Astra: A Multi-Agent System for GPU Kernel Performance Optimization",
-      "file_bytes": 14141,
-      "source_sha256": "34412aec6357dc148d40a53a375301278f362d1394f0b0f172396f2935eb6566",
-      "source_git_blob_sha": "29fb0efc9ec51f1375f98d54ad99dd8b73259228",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.820683,
-      "quality_metrics": {
-        "body_chars": 3380,
-        "method_chars": 1176,
-        "evaluation_chars": 227,
-        "limitation_chars": 305
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 227 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md",
@@ -12066,28 +12022,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md",
-      "canonical_id": "arXiv:2502.20969",
-      "title": "TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval",
-      "file_bytes": 14207,
-      "source_sha256": "b8b8c6cdf5150f101bbed9c8589f13cfad039681bfd03e566b8cd4f4b857d283",
-      "source_git_blob_sha": "7777f78c863f16d48865c1d3858088e6dafa6c6d",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.950203,
-      "quality_metrics": {
-        "body_chars": 2994,
-        "method_chars": 899,
-        "evaluation_chars": 144,
-        "limitation_chars": 212
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 144 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
       "canonical_id": "arXiv:2510.10302",
       "title": "SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference",
@@ -12110,28 +12044,6 @@
       "warnings": [
         "日本語比率 79.9% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md",
-      "canonical_id": "arXiv:2506.13329",
-      "title": "EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization",
-      "file_bytes": 14221,
-      "source_sha256": "db23a35d24c1e97771bd6bb28bc27d10d64aa41d994d6ca6e3718be7f28121fd",
-      "source_git_blob_sha": "77eff3ec8af3bfba4c6304d3e74f6afd336a885e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.98522,
-      "quality_metrics": {
-        "body_chars": 3500,
-        "method_chars": 1180,
-        "evaluation_chars": 367,
-        "limitation_chars": 302
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 367 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md",
@@ -12283,29 +12195,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 112 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md",
-      "canonical_id": "arXiv:2504.17577",
-      "title": "TileLang: A Composable Tiled Programming Model for AI Systems",
-      "file_bytes": 14424,
-      "source_sha256": "60fc2efad674f913c5e435bb83250686454af3716024b47ae8221c7372f79fc5",
-      "source_git_blob_sha": "e9e0211e1ee3ed0fef446b5ae10974de0c2c8e14",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.893963,
-      "quality_metrics": {
-        "body_chars": 3525,
-        "method_chars": 0,
-        "evaluation_chars": 126,
-        "limitation_chars": 328
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 126 < 500"
       ],
       "warnings": []
     },
