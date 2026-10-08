@@ -27,17 +27,17 @@ class LibraryImportInboxTests(unittest.TestCase):
             ordinary_b = root / "b-ordinary.md"
             reaud_a = root / "y-reaudit.md"
             reaud_b = root / "z-reaudit.md"
-            ordinary_a.write_text("---\\ntitle: Ordinary\\n---\\n", encoding="utf-8")
+            ordinary_a.write_text("---\ntitle: Ordinary\n---\n", encoding="utf-8")
             ordinary_b.write_text(
-                "---\\ntitle: Ordinary\\n---\\nunder16kb_reaudit_target_path: papers/fake.md\\n",
+                "---\ntitle: Ordinary\n---\nunder16kb_reaudit_target_path: papers/fake.md\n",
                 encoding="utf-8",
             )
             reaud_a.write_text(
-                "---\\nunder16kb_reaudit_target_path: papers/a.md\\n---\\n",
+                "---\nunder16kb_reaudit_target_path: papers/a.md\n---\n",
                 encoding="utf-8",
             )
             reaud_b.write_text(
-                "---\\nunder16kb_reaudit_target_path: papers/b.md\\n---\\n",
+                "---\nunder16kb_reaudit_target_path: papers/b.md\n---\n",
                 encoding="utf-8",
             )
             sources = [reaud_b, ordinary_b, reaud_a, ordinary_a]
