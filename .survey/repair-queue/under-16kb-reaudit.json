@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T18:50:50.020397+00:00",
+  "generated_at": "2026-10-08T19:00:35.337502+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 418,
+  "count": 417,
   "worker_counts": {
     "scheduled-chat-00": 140,
-    "scheduled-chat-30": 122,
+    "scheduled-chat-30": 121,
     "scheduled-chat-45": 156
   },
   "entries": [
@@ -2792,26 +2792,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 247 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md",
-      "canonical_id": "arXiv:2401.10480",
-      "title": "Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning",
-      "file_bytes": 11165,
-      "source_sha256": "22191576a870c21cec6c8fbead445ef0390cc35fa265da15dba388ac339146c4",
-      "source_git_blob_sha": "405f80ad4becf5123e98d05fdabc6221b2b54d30",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.905442,
-      "quality_metrics": {
-        "body_chars": 2935,
-        "method_chars": 840,
-        "evaluation_chars": 931,
-        "limitation_chars": 289
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
