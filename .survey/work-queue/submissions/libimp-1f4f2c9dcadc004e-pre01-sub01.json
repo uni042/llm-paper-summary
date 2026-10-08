@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Probe-and-Fetch: Dynamic KV Cache Pruning for Accelerated Long-Context Inference in Web-Scale AI Search",
+      "source_url": "https://doi.org/10.1145/3774904.3792794",
+      "year": 2026,
+      "published": "2026-04-12",
+      "venue": "The Web Conference",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative inference with Large Language Models (LLMs) is the cornerstone of web-scale AI search, where queries are answered using vast, heterogeneous documents retrieved via Retrieval-Augmented Generation (RAG). This paradigm is critically bottlenecked by the cost of self-attention mechanism on long context. The sheer diversity of retrieved web content (multi-sourced, multi-lingual, multi-faceted) makes simple Key-Value (KV) cache optimizations with pre-fixed subsets ineffective, demanding a dynamic, content-aware approach. This challenge, however, introduces a classic chicken-and-egg problem: the model cannot foresee the necessary KV entries for attention without first inferring on the content, yet doing so on the full context is prohibitively expensive. This paper introduces P&F, a unified framework that resolves this dilemma through a core ''probe-and-fetch'' mechanism, which ingeniously integrates with speculative decoding -- an acceleration approach already adopted in web-scale AI search. The probe step repurposes the speculative draft model: while generating candidate tokens, it simultaneously probes the context to predict the most salient KV entries the large model will need for attention. The fetch step immediately acts on this prediction, asynchronously fetching these sparse entries from memory. This synergistic design piggybacks the probing step onto the drafting process, allowing the expensive gathering of a sparse KV cache to be fully masked. Crucially, this co-design breaks the sequential dependency bottleneck that cripples naive integrations of speculative decoding and prefetching due to synchronization issues. Extensive experiments show P&F significantly outperforms state-of-the-art methods in throughput and scalability, offering a practical, drop-in solution. Extensive offline evaluations across various settings and datasets demonstrate that P&F yields superior throughput and scalability compared to advanced baselines, while maintaining model quality across diverse models and scales. In online settings, P&F delivers substantial gains in throughput improvements while preserving response quality, making it well-suited for large-scale industrial deployment in real-time AI Search services.",
+      "identifiers": [
+        "SemanticScholar:ac6b23c5e9c3a7e0b71df759d7b2b2a30de82880"
+      ],
+      "semantic_scholar_id": "ac6b23c5e9c3a7e0b71df759d7b2b2a30de82880",
+      "doi": "10.1145/3774904.3792794",
+      "canonical_id": "DOI:10.1145/3774904.3792794",
+      "authors": [
+        "Yuchen Li",
+        "Rui Kong",
+        "Xin-Ran Chen",
+        "Cheng-Zhe Zhang",
+        "Jiamin Chen",
+        "Cheng Deng",
+        "Xin-Yu Ma",
+        "Haojie Zhang",
+        "Tianhao Peng",
+        "Hengyi Cai",
+        "Shuai-Qiang Wang",
+        "Jia-Shu Zhao",
+        "Yong-Qi Zhang",
+        "Haoyi Xiong",
+        "J. Huang",
+        "Lei Chen",
+        "Jun Wang",
+        "Dawei Yin"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official publisher abstract describes dynamic KV-cache pruning and probe/fetch for accelerated long-context inference in web-scale AI search.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
+      "source_url": "https://arxiv.org/abs/2605.23081",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient attention algorithms are critical to mitigate the quadratic cost of attention in long-context workloads. Prior work utilises block-scaled quantisation techniques on Blackwell GPUs to move attention computation to 4-bit precision to accelerate inference. However, these techniques result in significant quality degradation in long-context settings. We show that the output impact of quantisation error is highly non-uniform and increases with the importance of each query-key interaction, concentrating functionally relevant error in a small number of attention blocks that contain the most important tokens. We propose ThriftAttention, a low-bit attention variant that delivers near-FP16 long-context quality at FP4 inference efficiency. This approach proceeds in two stages. First, a heuristic rapidly selects a small number of important query-key block pairs for FP16 precision. Second, the selected blocks are computed in FP16 and the remaining blocks in FP4, with both paths merged via online softmax into a single output. We demonstrate across long-context benchmarks and model families that by computing only 5% of query-key blocks in FP16, ThriftAttention recovers on average 89.1% of the FP4-to-FP16 performance gap. We show ThriftAttention's advantage grows with sequence length, mitigating the systematic FP4 quality degradation observed at longer contexts. The code is available at https://github.com/joesharratt1229/ThriftAttention.",
+      "identifiers": [
+        "SemanticScholar:c12304e8592dc35d2239a4bde2c15f0985e14e54"
+      ],
+      "semantic_scholar_id": "c12304e8592dc35d2239a4bde2c15f0985e14e54",
+      "canonical_id": "arXiv:2605.23081",
+      "arxiv_id": "2605.23081",
+      "doi": "10.48550/arXiv.2605.23081",
+      "authors": [
+        "Joe Sharratt"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract studies mixed-precision FP4 attention for long-context inference, reducing attention memory/compute while recovering quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LoSA: Locality Aware Sparse Attention for Block-Wise Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.12056",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-wise diffusion language models (DLMs) generate multiple tokens in any order, offering a promising alternative to the autoregressive decoding pipeline. However, they still remain bottlenecked by memory-bound attention in long-context scenarios. Naive sparse attention fails on DLMs due to a KV Inflation problem, where different queries select different prefix positions, making the union of accessed KV pages large. To address this, we observe that between consecutive denoising steps, only a small fraction of active tokens exhibit significant hidden-state changes, while the majority of stable tokens remain nearly constant. Based on this insight, we propose LOSA (Locality-aware Sparse Attention), which reuses cached prefix-attention results for stable tokens and applies sparse attention only to active tokens. This substantially shrinks the number of KV indices that must be loaded, yielding both higher speedup and higher accuracy. Across multiple block-wise DLMs and benchmarks, LOSA preserves near-dense accuracy while significantly improving efficiency, achieving up to +9 points in average accuracy at aggressive sparsity levels while maintaining 1.54x lower attention density. It also achieves up to 4.14x attention speedup on RTX A6000 GPUs, demonstrating the effectiveness of the proposed method.",
+      "identifiers": [
+        "SemanticScholar:4ae666c6601d80470259eb03a7babe201af5228c"
+      ],
+      "semantic_scholar_id": "4ae666c6601d80470259eb03a7babe201af5228c",
+      "canonical_id": "arXiv:2604.12056",
+      "arxiv_id": "2604.12056",
+      "doi": "10.48550/arXiv.2604.12056",
+      "authors": [
+        "Hao-Cheng Xi",
+        "Harman Singh",
+        "Yuezhou Hu",
+        "C. Hooper",
+        "Rishabh Tiwari",
+        "Aditya Tomar",
+        "Minjae Lee",
+        "Wonjun Kang",
+        "Michael W. Mahoney",
+        "Chen-Feng Xu",
+        "Kurt Keutzer",
+        "Amir Gholami"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract presents locality-aware sparse attention to reduce active-token attention work in diffusion language models.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "High Throughput and Low Latency LLM Serving via Adaptive KV Caching",
+      "source_url": "https://doi.org/10.1145/3767295.3803570",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The substantial memory demands of model weights and key-value (KV) caches often lead to severe memory bottlenecks in LLM serving. Existing systems address this by offloading KV caches to host memory and rapidly restoring them on demand before decoding. However, these approaches are too coarse-grained and fail to fully exploit the combined computational and storage capabilities of GPUs. In this paper, we introduce eLLM, a novel LLM serving system designed to achieve high throughput and low latency through fine-grained KV caching. The core innovation lies in adaptively storing partial tokens with KV caches while dynamically recomputing non-cached tokens in parallel with decoding, thereby balancing memory usage and computational efficiency. This new mechanism enables dual-level optimizations: At the request level, eLLM employs token-wise caching to adaptively adjust batch sizes and uncached token ratios in real time. At the layer level, eLLM leverages communication-computation overlap and kernel fusion for resource-complementary operations to further enhance throughput and reduce latency. Experiments demonstrate that eLLM achieves 3.03x higher throughput while satisfying strict per-output-token latency SLOs. It also reduces first-token latency by 2.63x compared to state-of-the-art systems.",
+      "identifiers": [
+        "SemanticScholar:0829e2ae094de9deb40f4037f64295afdb43d94e"
+      ],
+      "semantic_scholar_id": "0829e2ae094de9deb40f4037f64295afdb43d94e",
+      "doi": "10.1145/3767295.3803570",
+      "canonical_id": "DOI:10.1145/3767295.3803570",
+      "authors": [
+        "Wenyan Chen",
+        "Cheng-Zhi Lu",
+        "Huan-Le Xu",
+        "Ke-Jiang Ye",
+        "Cheng-Zhong Xu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official ACM primary abstract describes adaptive KV caching to improve LLM serving throughput and first-token latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GoodSpeed: Optimizing Fair Goodput with Adaptive Speculative Decoding in Distributed Edge Inference",
+      "source_url": "https://arxiv.org/abs/2512.09963",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have revolutionized natural language processing, yet their high computational demands pose significant challenges for real-time inference, especially in multi-user and resource-constrained environments. Speculative decoding has emerged as a promising technique to accelerate LLM inference by using lightweight draft models to generate candidate tokens, which are subsequently verified by a larger, more accurate model. However, ensuring both high goodput—the effective rate of accepted tokens—and fairness across multiple draft servers cooperating with a central verification server remains an open challenge. This paper introduces GoodSpeed, a novel distributed inference framework that optimizes goodput through adaptive speculative decoding. GoodSpeed employs a central verification server that coordinates a set of heterogeneous draft servers, each running a small language model to generate speculative tokens. To manage resource allocation effectively, GoodSpeed incorporates a gradient scheduling algorithm that dynamically assigns token verification tasks, maximizing a logarithmic utility function to ensure proportional fairness across servers. By processing speculative outputs from all draft servers in parallel, the framework enables efficient collaboration between the verification server and distributed draft generators, streamlining both latency and throughput. Through rigorous fluid sample path analysis, we show that GoodSpeed converges to the optimal goodput allocation in steady-state conditions and maintains nearoptimal performance with provably bounded error under dynamic workloads. These results demonstrate that GoodSpeed provides a scalable, fair, and efficient solution for multi-server speculative decoding in distributed LLM inference systems.",
+      "identifiers": [
+        "SemanticScholar:3af15d52f3b08aa30b9e387aaf69eee4cf252546"
+      ],
+      "semantic_scholar_id": "3af15d52f3b08aa30b9e387aaf69eee4cf252546",
+      "canonical_id": "arXiv:2512.09963",
+      "arxiv_id": "2512.09963",
+      "doi": "10.1109/INFOCOM59046.2026.11571335",
+      "authors": [
+        "Phuong-Nam Tran",
+        "Tzu-Hao Liu",
+        "Long-Tan Le",
+        "Tung-Anh Nguyen",
+        "Van Quan La",
+        "Eason Yu",
+        "Han Shu",
+        "Choong Seon Hong",
+        "Nguyen H. Tran"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 302,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract presents adaptive speculative decoding and scheduling for distributed edge inference goodput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1f4f2c9dcadc",
+    "round": "libimp-1f4f2c9dcadc004e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1f4f2c9dcadc004e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1f4f2c9dcadc004e-pre01.json",
+    "receipt": "sha256:350767fc29aaec62d5d6d10f1b1822e2cfc83fd3c8086736c4c65d2e7d870ccb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1f4f2c9dcadc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

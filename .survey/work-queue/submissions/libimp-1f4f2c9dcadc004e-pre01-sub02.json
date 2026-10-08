@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.23193",
+      "year": 2026,
+      "published": "2026-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing token compression methods for omnimodal large language models typically rely on one modality to determine what to retain in the other. We show that this assumption often breaks down: for the same query, audio and video relevance often peaks at different moments. This cross-modal salience mismatch makes unidirectional guidance prone to discarding answer-critical cues under aggressive compression. We propose OmniScope, a training-free token compression framework that uses the query as a shared semantic anchor while estimating relevance separately for audio and video. OmniScope allocates modality-specific token budgets, prunes visual tokens with an anchor-delta strategy that preserves both global context and temporal changes, and merges audio tokens within each second to reduce redundancy while maintaining temporal continuity. Across four audio-video benchmarks and two Qwen2.5-Omni model scales, OmniScope achieves the best average accuracy across all compression settings. At 25% overall token retention, it delivers up to 3.53x prefill speedup and more than 15% GPU memory reduction, with only a 0.35-point drop in average accuracy. These results suggest a simple design principle for OmniLLM inference: share the query across modalities, but not the salience estimates. The code is available at https://github.com/MAC-AutoML/OmniScope.",
+      "identifiers": [
+        "SemanticScholar:d3dde4669e74e43e4d89d939404e2e483f983271"
+      ],
+      "semantic_scholar_id": "d3dde4669e74e43e4d89d939404e2e483f983271",
+      "canonical_id": "arXiv:2607.23193",
+      "arxiv_id": "2607.23193",
+      "doi": "10.48550/arXiv.2607.23193",
+      "authors": [
+        "Jin-Sen Su",
+        "Yong-Dong Luo",
+        "Yue-Xiao Ma",
+        "Yi-Bo Hu",
+        "Mei-Guang Jin",
+        "Xiao-Wu Zheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract describes modality-decoupled token compression and reports lower prefill compute/memory cost for omnimodal LLMs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RheoSampling: Resolving the One-Hot Dilemma in Stochastic Dynamic-Tree Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.21827",
+      "year": 2026,
+      "published": "2026-09-18",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by drafting multiple tokens in parallel, with tree-based methods further improving efficiency through hierarchical structures. Dynamic-tree methods such as EAGLE-3 perform well under greedy decoding via deterministic top-K expansion and global pruning. However, in stochastic decoding (T>0), this mechanism collapses the draft distribution into one-hot probabilities, causing a severe drop in acceptance rate. This creates a dilemma: dynamic-tree methods sacrifice stochastic sampling to preserve context-aware topology, while static-tree methods preserve stochastic sampling with context-agnostic structures. The issue arises because the same probability distribution is used for two conflicting tasks: constructing the tree and verifying tokens. This coupling makes direct injection of randomness challenging due to the resulting stochastic process. We resolve this by decoupling these roles: RheoSampling assigns a token sampled from the draft distribution a proxy probability for tree expansion and pruning alongside its true sampling probability for verification. Specifically, we inject a sampled token among the deterministic top-K slots and treat it with different probabilities during construction and verification, making RheoSampling the first dynamic-tree method with both context-aware top-K construction and stochastic sampling while maintaining losslessness. We establish the lossless guarantee through an equivalence-class analysis that compresses the stochastic tree space into tractable classes. An OT-based verification strategy and a sparse draft mechanism ensure that theoretical gains translate into practical efficiency. Experiments across LLMs and benchmarks demonstrate improvements in acceptance rate and speedup over state-of-the-art dynamic tree methods. This framework may provide a template for analyzing stochastic tree structures.",
+      "identifiers": [
+        "SemanticScholar:2e4e464ffe50644d2787694b1f304d111bf83c01"
+      ],
+      "semantic_scholar_id": "2e4e464ffe50644d2787694b1f304d111bf83c01",
+      "canonical_id": "arXiv:2609.21827",
+      "arxiv_id": "2609.21827",
+      "authors": [
+        "Qiao Hu",
+        "Yepeng Weng",
+        "Bo Zhang",
+        "T. Yairi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract describes stochastic dynamic-tree speculative decoding that reduces verification overhead while preserving exact output distribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CFSP: An Efficient Structured Pruning Framework for LLMs with Coarse-to-Fine Activation Information",
+      "source_url": "https://arxiv.org/abs/2409.13199",
+      "year": 2024,
+      "published": "2024-09-20",
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The colossal parameters and computational overhead of Large Language Models (LLMs) challenge their real-world applications. Network pruning, which targets unstructured or structured sparsity by removing redundant parameters, has recently been explored for LLM acceleration. Existing LLM pruning works focus on unstructured pruning, which typically requires special hardware support for a practical speed-up. In contrast, structured pruning can reduce latency on general devices. However, it remains a challenge to perform structured pruning efficiently and maintain performance, especially at high sparsity ratios. To this end, we introduce an efficient structured pruning framework named CFSP, which leverages both Coarse (interblock) and Fine-grained (intrablock) activation information as an importance criterion to guide pruning. The pruning is highly efficient, as it only requires one forward pass to compute feature activations. Specifically, we first allocate the sparsity budget across blocks based on their importance and then retain important weights within each block. In addition, we introduce a recovery fine-tuning strategy that adaptively allocates training overhead based on coarse-grained importance to further improve performance. Experimental results demonstrate that CFSP outperforms existing methods on diverse models across various sparsity budgets. Our code will be available at https://github.com/wyxscir/CFSP.",
+      "identifiers": [
+        "SemanticScholar:1e6a1ea16441f2084a9c2c3b9c3535084307470b"
+      ],
+      "semantic_scholar_id": "1e6a1ea16441f2084a9c2c3b9c3535084307470b",
+      "canonical_id": "arXiv:2409.13199",
+      "arxiv_id": "2409.13199",
+      "doi": "10.48550/arXiv.2409.13199",
+      "authors": [
+        "Yuxin Wang",
+        "Ming Ma",
+        "Zekun Wang",
+        "Jing-Chang Chen",
+        "Huiming Fan",
+        "Liping Shan",
+        "Qing Yang",
+        "Dongliang Xu",
+        "Ming Liu",
+        "Bing Qin"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 748,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract presents structured LLM pruning using activation information to reduce model cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RAT: Bridging RNN Efficiency and Attention Accuracy via Chunk-based Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2507.04416",
+      "year": 2025,
+      "published": "2025-07-06",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become the cornerstone of modern large-scale language models, but their reliance on softmax attention poses a computational bottleneck at both training and inference. Recurrent models offer high efficiency, but compressing the full sequence into a fixed-size and holistic representation can suffer from memory degradation in long contexts and limit fine-grained retrieval. To address this, we propose RAT, an intermediate design that bridges the efficiency of RNNs and capacity of attention. RAT partitions the input into chunks, applies recurrence within each chunk for local dependencies, and softmax-based attention across chunks for long-range interactions. This design mitigates memory degradation and enables direct access to distant tokens, while retaining computational efficiency. Empirically, with a chunk size of 16, the RAT block achieves a 7$\\times$ improvement in training speed for 100K sequence length and 9$times$ in generation at the 4K position, while maintaining similar performance compared to standard attention. We demonstrate this by training 1.3B parameter models from scratch and performing large-scale evaluations, including short- and long-context benchmarks, as well as supervised fine-tuning~(SFT). We further propose a hybrid architecture that interleaves RAT with local attention. By combining efficient long-range modeling with strong local interactions, this hybrid design not only improves inference speed and reduces cache memory usage, but also consistently enhances performance and shows the overall best results. Code is available at https://github.com/CLAIRE-Labo/RAT.",
+      "identifiers": [
+        "SemanticScholar:d6b4f9d82d7cb59ed39ba20bc7f711e0e6e93dc5"
+      ],
+      "semantic_scholar_id": "d6b4f9d82d7cb59ed39ba20bc7f711e0e6e93dc5",
+      "canonical_id": "arXiv:2507.04416",
+      "arxiv_id": "2507.04416",
+      "doi": "10.52202/085713-1165",
+      "authors": [
+        "Xiuying Wei",
+        "Anunay Yadav",
+        "Razvan Pascanu",
+        "Caglar Gulcehre"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 459,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The primary arXiv abstract presents chunk-based recurrent/attention sequence modeling aimed at retaining attention accuracy with improved memory efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ICQuant: Index Coding enables Low-bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2505.00850",
+      "year": 2025,
+      "published": "2025-05-01",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid deployment of Large Language Models (LLMs) highlights the need for efficient low-bit post-training quantization (PTQ), due to their high memory costs. A key challenge in weight quantization is the presence of outliers, which inflate quantization ranges and lead to large errors. While a number of outlier suppression techniques have been proposed, they either: fail to effectively shrink the quantization range, or incur (relatively) high bit overhead. In this paper, we present ICQuant, a novel framework that leverages outlier statistics to design an efficient index coding scheme for outlier-aware weight-only quantization. Compared to existing outlier suppression techniques requiring $\\approx 1$ bit overhead to halve the quantization range, ICQuant requires only $\\approx 0.3$ bits; a significant saving in extreme compression regimes (e.g., 2-3 bits per weight). ICQuant can be used on top of any existing quantizers to eliminate outliers, improving the quantization quality. Using just 2.3 bits per weight and simple scalar quantizers, ICQuant improves the zero-shot accuracy of the 2-bit Llama3-70B model by up to 130% and 150% relative to QTIP and QuIP#; and it achieves comparable performance to the best-known fine-tuned quantizer (PV-tuning) without fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:83b71910fb1dc07af6988b4ce6ef2215d20cc0be"
+      ],
+      "semantic_scholar_id": "83b71910fb1dc07af6988b4ce6ef2215d20cc0be",
+      "canonical_id": "arXiv:2505.00850",
+      "arxiv_id": "2505.00850",
+      "doi": "10.48550/arXiv.2505.00850",
+      "authors": [
+        "Xinlin Li",
+        "Osama A. Hanna",
+        "Christina Fragouli",
+        "S. Diggavi"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 525,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract describes index coding for low-bit LLM weight quantization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1f4f2c9dcadc",
+    "round": "libimp-1f4f2c9dcadc004e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1f4f2c9dcadc004e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1f4f2c9dcadc004e-pre01.json",
+    "receipt": "sha256:350767fc29aaec62d5d6d10f1b1822e2cfc83fd3c8086736c4c65d2e7d870ccb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1f4f2c9dcadc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

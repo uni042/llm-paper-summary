@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Symbiosis: Multi-Adapter Inference and Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2507.03220",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parameter-efficient fine-tuning (PEFT) allows model builders to capture the task-specific parameters into adapters, which are a fraction of the size of the original base model. Popularity of PEFT technique for fine-tuning has led to the creation of a large number of adapters for popular Large Language Models (LLMs). However, existing frameworks fall short in supporting inference or fine-tuning with multiple adapters in the following ways. 1) For fine-tuning, each job needs to deploy its dedicated base model instance, which results in excessive GPU memory consumption and poor GPU utilization. 2) While popular inference platforms can serve multiple PEFT adapters, they do not allow independent resource management or mixing of different PEFT methods. 3) They cannot make effective use of heterogeneous accelerators. 4) They do not provide privacy to users who may not wish to expose their fine-tuned parameters to service providers. In Symbiosis, we address the above problems by enabling the as-a-service deployment of the base model. The base model layers can be shared across multiple inference or fine-tuning processes. Our split-execution technique decouples the execution of client-specific adapters and layers from the frozen base model layers offering them flexibility to manage their resources, to select their fine-tuning method, to achieve their performance goals. Our approach is transparent to models and works out-of-the-box for most models in the transformers library. We demonstrate the use of Symbiosis to simultaneously fine-tune 20 Gemma2-27B LoRA adapters on 8 GPUs.",
+      "identifiers": [
+        "SemanticScholar:51c017a3979985eb087f983dcb0f6f3f43a58419"
+      ],
+      "semantic_scholar_id": "51c017a3979985eb087f983dcb0f6f3f43a58419",
+      "canonical_id": "arXiv:2507.03220",
+      "arxiv_id": "2507.03220",
+      "doi": "10.1145/3772052.3772230",
+      "authors": [
+        "Saransh Gupta",
+        "Umesh Deshpande",
+        "Travis Janssen",
+        "S. Sundararaman"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 462,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract describes multi-adapter inference and fine-tuning with shared base-model resources and improved GPU utilization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1f4f2c9dcadc",
+    "round": "libimp-1f4f2c9dcadc004e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1f4f2c9dcadc004e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1f4f2c9dcadc004e-pre01.json",
+    "receipt": "sha256:350767fc29aaec62d5d6d10f1b1822e2cfc83fd3c8086736c4c65d2e7d870ccb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1f4f2c9dcadc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
