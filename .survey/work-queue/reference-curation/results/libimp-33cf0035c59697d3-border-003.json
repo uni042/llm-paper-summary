@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-33cf0035c59697d3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/hipc66333.2025.00027",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/hipc66333.2025.00027",
+    "identity_tokens": [
+      "DOI:10.1109/hipc66333.2025.00027"
+    ],
+    "reason": "The pinned worklist and official HiPC program establish the stable DOI/title, but DOI/IEEE primary abstract retrieval failed; official program material exposes title/authors only. The title suggests LLM inference optimization, but without the primary abstract it is not accepted.",
+    "first_checked_at": "2026-10-08T20:04:55+00:00",
+    "last_checked_at": "2026-10-08T20:04:55+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "IMBPS - Iterative MLP Blocks with Parameter Splits for Improving LLM Inference"
+  },
+  "processed_at": "2026-10-08T20:04:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-33cf0035c596",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
