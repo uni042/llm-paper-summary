@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 CONFIG_PATH = Path(".survey/config/discovery-relevance-prefilter.json")
-POLICY_VERSION = "2026-10-08-v1"
+POLICY_VERSION = "2026-10-08-v2-shadow"
 
 # Require an unambiguous *application topic in the title*. Never quarantine
 # solely because a negative-domain keyword happens to appear in the abstract.
@@ -85,6 +85,51 @@ def classify(row: dict[str, Any], policy: dict[str, Any]) -> dict[str, str]:
     return result
 
 
+
+# Experimental v2 rules: require an application *phrase*, never a generic term
+# such as image, finance, model, audio, transformer, or robotics alone.
+# V2 starts in shadow mode; STATUS estimates incremental impact without hiding
+# a single additional candidate until holdout and audit are reviewed.
+EXPANSION_DOMAIN_PATTERNS = (
+    ("vision_applications", r"\b(?:object detection|face recognition|facial emotion recognition|image (?:segmentation|classification|captioning|restoration|super[- ]resolution|retrieval)|visual question answering|video summarization)\b"),
+    ("clinical_applications", r"\b(?:disease (?:detection|diagnosis|prediction)|clinical (?:decision support|prediction|notes)|healthcare (?:chatbot|application|question answering)|biomedical (?:entity recognition|text mining)|patient (?:outcome|monitoring|record\w*))\b"),
+    ("financial_applications", r"\b(?:stock (?:price|market) prediction|credit (?:risk|scoring)|financial (?:sentiment|fraud|forecasting)|fraud detection|portfolio optimization|trading strategy)\b"),
+    ("educational_legal_applications", r"\b(?:automated essay scoring|student performance prediction|educational (?:question answering|chatbot)|legal (?:case prediction|judgment prediction|document classification)|court judgment prediction)\b"),
+    ("geoscience_applications", r"\b(?:weather forecasting|climate (?:projection|prediction)|seismic (?:event|prediction)|flood (?:prediction|mapping)|land cover (?:mapping|classification)|urban traffic (?:forecasting|prediction)|traffic flow prediction)\b"),
+    ("content_moderation", r"\b(?:fake news (?:detection|classification)|hate speech detection|cyberbullying detection|phishing (?:email|website) detection|spam (?:message|email) detection)\b"),
+    ("materials_applications", r"\b(?:material(?:s)? discovery|battery (?:capacity|life|degradation) prediction|protein (?:structure|function) prediction|drug (?:repositioning|repurposing|discovery)|molecule generation)\b"),
+    ("environmental_applications", r"\b(?:bird species classification|animal behavior recognition|forest fire detection|wildfire risk prediction|pest detection)\b"),
+)
+COMPILED_EXPANSION = tuple((name, re.compile(expression, re.I)) for name, expression in EXPANSION_DOMAIN_PATTERNS)
+
+
+def classify_expansion(row: dict[str, Any], policy: dict[str, Any]) -> dict[str, str]:
+    """Conservative v2 assessment, independent of the active v1 verdict."""
+    answer = {"verdict": "review", "reason": "not_explicitly_off_domain"}
+    extra = policy.get("expanded_rules")
+    if not isinstance(extra, dict) or not extra.get("enabled") or extra.get("mode") not in ("shadow", "quarantine"):
+        answer["reason"] = "disabled"
+        return answer
+    identity = str(row.get("canonical_id") or "")
+    if identity and identity in policy.get("allow_canonical_ids", []):
+        answer["reason"] = "explicit_allowlist"
+        return answer
+    title = str(row.get("title") or "").strip()
+    if not title:
+        answer["reason"] = "missing_title"
+        return answer
+    match = next((name for name, pattern in COMPILED_EXPANSION if pattern.search(title)), None)
+    if match is None:
+        return answer
+    description = title + " " + str(row.get("abstract") or "")
+    if any(pattern.search(description) for pattern in COMPILED_SYSTEMS):
+        answer["reason"] = "system_mechanism_rescue"
+        return answer
+    answer["verdict"] = "quarantine"
+    answer["reason"] = "expanded_domain:" + match
+    return answer
+
+
 def _audit_key(row: dict[str, Any]) -> bytes:
     identity = str(row.get("canonical_id") or row.get("title") or row.get("source_url") or "")
     return hashlib.sha256(identity.encode("utf-8")).digest()
@@ -105,10 +150,15 @@ def triage_worklist(
     model_id = str(model.get("model_id") or "") if model.get("approved") else ""
     decisions = classifier.load_decisions(root, model_id) if root is not None and model_id else {}
     model_mode = str(classifier_policy.get("mode") or "shadow")
+    extra_config = policy.get("expanded_rules")
+    extra_mode = str(extra_config.get("mode") or "off") if isinstance(extra_config, dict) and extra_config.get("enabled") else "off"
     kept: list[dict[str, Any]] = []
     deferred: list[dict[str, Any]] = []
     rule_count = 0
     ml_count = 0
+    expanded_count = 0
+    expanded_applied_count = 0
+    expanded_reasons: dict[str, int] = {}
     scanned = 0
     for row in rows:
         if not enabled:
@@ -123,7 +173,16 @@ def triage_worklist(
             rule_count += 1
         elif ml_reject:
             ml_count += 1
-        if rule_reject or ml_reject:
+        expansion_reject = False
+        if not rule_reject and not ml_reject and extra_mode in ("shadow", "quarantine"):
+            extra = classify_expansion(row, policy)
+            expansion_reject = extra["verdict"] == "quarantine"
+            if expansion_reject:
+                expanded_count += 1
+                expanded_reasons[extra["reason"]] = expanded_reasons.get(extra["reason"], 0) + 1
+        if expansion_reject and extra_mode == "quarantine":
+            expanded_applied_count += 1
+        if rule_reject or ml_reject or (expansion_reject and extra_mode == "quarantine"):
             deferred.append(row)
         else:
             kept.append(row)
@@ -135,6 +194,10 @@ def triage_worklist(
         "quarantine_count": len(deferred),
         "rule_quarantine_count": rule_count,
         "classifier_quarantine_count": ml_count,
+        "expanded_rule_mode": extra_mode if enabled else "off",
+        "expanded_rule_shadow_count": expanded_count,
+        "expanded_rule_applied_count": expanded_applied_count,
+        "expanded_rule_reason_counts": dict(sorted(expanded_reasons.items())),
         "classifier_scanned_count": scanned,
         "classifier_pending_count": max(len(rows) - scanned, 0),
         "classifier_model_id": model_id,

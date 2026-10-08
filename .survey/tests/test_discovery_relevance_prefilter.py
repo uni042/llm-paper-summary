@@ -53,6 +53,55 @@ class RelevancePrefilterTests(unittest.TestCase):
         self.assertEqual(selected, rows)
         self.assertEqual(stats["quarantine_count"], 1)
 
+
+    def test_expanded_rules_shadow_does_not_remove_candidates(self):
+        extended = {**POLICY, "expanded_rules": {"enabled": True, "mode": "shadow"}}
+        rows = [
+            {"title": "Stock Price Prediction with Machine Learning", "canonical_id": "market"},
+            {"title": "FlashAttention: Faster GPU Memory-Efficient Inference", "canonical_id": "flash"},
+            {"title": "Low-Latency GPU Offloading for Clinical Decision Support", "canonical_id": "medical"},
+        ]
+        chosen, stats = mod.triage_worklist(rows, extended)
+        self.assertEqual(chosen, rows)
+        self.assertEqual(stats["expanded_rule_shadow_count"], 1)
+        self.assertEqual(stats["expanded_rule_applied_count"], 0)
+        self.assertEqual(stats["expanded_rule_reason_counts"]["expanded_domain:financial_applications"], 1)
+
+    def test_expanded_rules_reversible(self):
+        rows = [{"title": "Weather Forecasting with Neural Networks", "canonical_id": "climate"}]
+        extended = {**POLICY, "max_audit_per_build": 0, "expanded_rules": {"enabled": True, "mode": "quarantine"}}
+        chosen, stats = mod.triage_worklist(rows, extended)
+        self.assertEqual(chosen, [])
+        self.assertEqual(stats["expanded_rule_applied_count"], 1)
+        restored, _ = mod.triage_worklist(rows, {**extended, "expanded_rules": {"enabled": True, "mode": "shadow"}})
+        self.assertEqual(restored, rows)
+
+    def test_cross_domain_systems_evidence_rescued(self):
+        extended = {**POLICY, "expanded_rules": {"enabled": True, "mode": "shadow"}}
+        for title in (
+            "KV-Cache Offloading for Video Summarization at Scale",
+            "Distributed Training of GPU Models for Traffic Flow Prediction",
+            "Optimizing LLM Inference Latency for Autonomous Driving",
+        ):
+            self.assertEqual(mod.classify_expansion({"title": title}, extended)["verdict"], "review")
+
+    def test_expanded_rules_do_not_quarantine_published_title_corpus(self):
+        import sys
+        scripts = Path(__file__).resolve().parents[1] / "scripts"
+        if str(scripts) not in sys.path:
+            sys.path.insert(0, str(scripts))
+        import citation_graph
+        root = Path(__file__).resolve().parents[2]
+        papers = citation_graph.load_records(root)
+        if not papers:
+            self.skipTest("no published papers in fixture")
+        extended = {**POLICY, "expanded_rules": {"enabled": True, "mode": "shadow"}}
+        flagged = [
+            (p.canonical_id, p.meta.get("title")) for p in papers
+            if mod.classify_expansion({"title": p.meta.get("title")}, extended)["verdict"] == "quarantine"
+        ]
+        self.assertEqual(flagged, [], f"false-positive examples in collected papers: {flagged[:12]}")
+
     def test_missing_config_fail_open(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)

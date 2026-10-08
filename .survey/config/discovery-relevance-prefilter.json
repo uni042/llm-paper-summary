@@ -12,5 +12,10 @@
     "batch_size": 2000,
     "validation_policy": "zero_positive_holdout_errors",
     "model_training": "frozen_until_explicit_retraining"
+  },
+  "expanded_rules": {
+    "enabled": true,
+    "mode": "shadow",
+    "note": "measure only; require positive-sample audit before switching to quarantine"
   }
 }
