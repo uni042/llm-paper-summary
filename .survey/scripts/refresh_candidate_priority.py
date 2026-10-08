@@ -22,6 +22,7 @@ import candidate_priority
 import discovery_provider_adapter
 import paper_identity
 import reference_pool
+import forward_citation_state
 
 CACHE_PATH = Path(".survey/work-queue/candidate-priority-cache.json")
 FORWARD_SWEEP_PATH = Path(".survey/work-queue/forward-citation-sweep.json")
@@ -90,7 +91,7 @@ def _candidate_records(root: Path) -> list[dict[str, Any]]:
     if isinstance(source, list):
         rows.extend(dict(row) for row in source if isinstance(row, dict))
 
-    forward = _read(root / FORWARD_SWEEP_PATH, {})
+    forward = forward_citation_state.load(root / FORWARD_SWEEP_PATH, {})
     candidates = forward.get("candidates") if isinstance(forward, dict) else None
     if isinstance(candidates, dict):
         rows.extend(dict(row) for row in candidates.values() if isinstance(row, dict))
