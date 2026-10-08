@@ -1,87 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T10:27:35+00:00",
+  "updated_at": "2026-10-08T10:35:47+00:00",
   "events": [
-    {
-      "status": "discarded_blocked_research_quality",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_6716de5a80cc81918d69875bca5f7a83--2026-2609.33184-specstream.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2609.33184",
-      "failures": [
-        "日本語比率 67.8% < 70%"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_68e03f2c31448191ad1221da71b27ef1--2024-2412.03594-batchllm.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2412.03594"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_6989e36b1a288191b40f34cccb525451--2024-2412.15605-cag.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2412.15605"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_698d7e476954819191eb18d894768498--2024-2411.08982-lynx.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2411.08982"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_69a6d8a37c7081919d1b19ea4246e347--2024-2408.11049-magicdec.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2408.11049"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_69ff3ee31df48191a5a2f0c106cb7af5--2025-2505.07858-scaling-laws-speculative-decoding.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2505.07858"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_6a7d689b9e00819185b2f6f4eef33e39--2024-2403.05527-gear.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2403.05527"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_6a86fa8ad3cc8191b6e3d58dabd1c36c--2025-2509.11815-specvlm.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2509.11815"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_6b0347f42f648191b3f69e76151aa0e2--2024-2411.19379-marconi-prefix-caching-hybrid-llms.md",
-      "processed_at": "2026-10-05T11:08:48+00:00",
-      "canonical_id": "arXiv:2411.19379"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_6b0abf702d4c8191b6a747f52bdcc78c--lqer-2402.02446.md",
-      "processed_at": "2026-10-05T11:08:55+00:00",
-      "canonical_id": "arXiv:2402.02446",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources",
-        "title"
-      ]
-    },
     {
       "status": "discarded_blocked_research_quality",
       "source_path": ".survey/import-inbox/blocked/research/libfile_6c0e22379a78819182b2518ee4dc062e--2026-kbbq.md",
@@ -4162,6 +4083,87 @@
       "processed_at": "2026-10-08T10:27:35+00:00",
       "canonical_id": "arXiv:2311.01282",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-16779e5565ea--libfile_31f10609621c8191b2794a04ec342eca--2023-2311.01282-flashdecoding-under16kb-reaudit-20261008-1433-scheduled-chat-30-r02.md"
+    },
+    {
+      "status": "deferred_blocked_research_retry_collision",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "processed_at": "2026-10-08T10:35:46+00:00",
+      "canonical_id": "arXiv:2306.11222",
+      "existing_retry_path": ".survey/import-inbox/pending/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "blocked_normalized_sha256": "11676ea31e307d2fad0f55864d4a90be9859f94d17d575908296be24b01cea72",
+      "pending_sha256": "0b11814c7daaebcd8a35e04d219064d12815dbc36d17bb3f6ac71b484c0e0dd6"
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T10:35:46+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T10:35:46+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-08T10:35:46+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-08T10:35:46+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-08T10:35:46+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-3cb4da9ae1a6--libfile_0611c1ecbca8819186393fbda4bf4a32--2021-2111.00396-s4-under16kb-reaudit-20261008-1812-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T10:35:46+00:00",
+      "canonical_id": "arXiv:2111.00396",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-3cb4da9ae1a6--libfile_0611c1ecbca8819186393fbda4bf4a32--2021-2111.00396-s4-under16kb-reaudit-20261008-1812-scheduled-chat-00-r01.md"
+    },
+    {
+      "status": "deleted_stale_blocked_research",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_418ce13049508191bf62ab2cc87dfe58--2025-2511.08923-tidar-repair-20261008-0945.md",
+      "processed_at": "2026-10-08T10:35:47+00:00",
+      "canonical_id": "arXiv:2511.08923"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-c0e2015de5b8--libfile_489aa667cd408191b3b9146d0b122ca8--2024-2410.13846-lighttransfer-under16kb-reaudit-20261008-1645-scheduled-chat-45-r01-partial.md",
+      "processed_at": "2026-10-08T10:35:47+00:00",
+      "canonical_id": "arXiv:2410.13846",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-c0e2015de5b8--libfile_489aa667cd408191b3b9146d0b122ca8--2024-2410.13846-lighttransfer-under16kb-reaudit-20261008-1645-scheduled-chat-45-r01-partial.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-345127e9a447--libfile_4c5c4bc680c88191b54f1894037b8713--2024-doi-10.1145-3642970.3655835-fineinfer-repair-20261008-0725.md",
+      "processed_at": "2026-10-08T10:35:47+00:00",
+      "canonical_id": "DOI:10.1145/3642970.3655835",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-345127e9a447--libfile_4c5c4bc680c88191b54f1894037b8713--2024-doi-10.1145-3642970.3655835-fineinfer-repair-20261008-0725.md"
     }
   ]
 }

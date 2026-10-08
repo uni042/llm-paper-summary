@@ -298,7 +298,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-10 · [HiSpec: Hierarchical Speculative Decoding for LLMs](2025-2510.01336-hispec-hierarchical-speculative-decoding-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  早期退出モデルの浅層をドラフト、中間層を安価な検証器、全層を最終検証器として階層化し、KVと隠れ状態を再利用して投機的復号の検証費用を減らす。
+  HiSpecは、投機的復号の律速が候補トークンの作成ではなく巨大な対象モデルによる検証に移っていることを踏まえ、同じ早期退出モデルの浅い層・中間層・最終層をそれぞれドラフト生成・中間検証・最終検証へ割り当てる階層型の復号方式である。
 
 - **2025-09 · [Communication-Efficient Collaborative LLM Inference via Distributed Speculative Decoding](2025-2509.04576-communication-efficient-distributed-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

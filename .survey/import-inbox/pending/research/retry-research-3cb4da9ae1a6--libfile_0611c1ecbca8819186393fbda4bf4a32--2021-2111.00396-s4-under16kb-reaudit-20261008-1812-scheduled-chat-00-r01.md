@@ -43,6 +43,8 @@ quality_limitation_chars: 788
 references_checked_at: '2026-10-05'
 references_source: 'arxiv-source-bibtex'
 references_total: 158
+last_audited: null
+audit_version: 0
 ---
 
 # Efficiently Modeling Long Sequences with Structured State Spaces

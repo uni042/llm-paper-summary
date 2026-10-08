@@ -1412,7 +1412,7 @@
 
 - **2023-02 · [With Shared Microexponents, A Little Shifting Goes a Long Way](2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  本研究はこの設計空間をブロックデータ表現（Block Data Representation; BDR）として整理し、その中から共有microexponent（MX）形式を提案する。
+  Rouhaniらは、ブロックデータ表現（Block Data Representation; BDR）という共通の設計枠を用意し、ブロックサイズ、尺度の階層、尺度を保存するビット数、各要素の仮数幅を変えて比較した。
 
 - **2023-10 · [A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration](2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md)**  
   実装：[✓](https://github.com/SALT-NLP/DyLAN) ・ リポジトリ内被引用：0  
@@ -1506,7 +1506,7 @@
 
 - **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  Transformerは大規模な全結合行列を多数持ち、組込み・エッジ向けFPGAでは重み容量と外部メモリ転送がボトルネックになる。同時にBCMの規則構造へ合わせたFPGAデータパスを設計することで、圧縮後の表現を展開せず直接計算する。
+  FTRANSは、Transformerの重み行列を拡張ブロック循環行列（enhanced block-circulant matrix; BCM）に置き換える構造化圧縮と、その圧縮表現を直接計算する再構成可能論理回路（field-programmable gate array; FPGA）の専用構成を同時設計した研究である。
 
 - **2020-06 · [Dynamic Tensor Rematerialization](2020-2006.09616-dynamic-tensor-rematerialization.md)**  
   実装：[✓](https://github.com/uwsampl/dtr-prototype) ・ リポジトリ内被引用：2  
