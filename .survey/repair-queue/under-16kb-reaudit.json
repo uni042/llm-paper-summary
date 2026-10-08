@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T06:48:19.802313+00:00",
+  "generated_at": "2026-10-08T07:10:14.291194+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 569,
+  "count": 564,
   "worker_counts": {
-    "scheduled-chat-00": 193,
+    "scheduled-chat-00": 191,
     "scheduled-chat-30": 183,
-    "scheduled-chat-45": 193
+    "scheduled-chat-45": 190
   },
   "entries": [
     {
@@ -10271,28 +10271,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
-      "canonical_id": "arXiv:2406.12335",
-      "title": "Attention Score is not All You Need for Token Importance Indicator in KV Cache Reduction: Value Also Matters",
-      "file_bytes": 13244,
-      "source_sha256": "03d917eda14bed61ec350f2ed71af2f437643c07ba508e19ef281dfaa4cfdb36",
-      "source_git_blob_sha": "0da5573b6b098807fb382a1392efb613e76c3b4c",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.907727,
-      "quality_metrics": {
-        "body_chars": 2809,
-        "method_chars": 961,
-        "evaluation_chars": 91,
-        "limitation_chars": 297
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 91 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md",
       "canonical_id": "arXiv:2401.04658",
       "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
@@ -11207,28 +11185,6 @@
       ]
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.04827-voltanallm-feedback-driven-frequency-control-and-state-space-routing-for-energy-efficient-llm-serving.md",
-      "canonical_id": "arXiv:2509.04827",
-      "title": "VoltanaLLM: Feedback-Driven Frequency Control and State-Space Routing for Energy-Efficient LLM Serving",
-      "file_bytes": 14095,
-      "source_sha256": "59ee80bea14241f5c0df0b7c81268ebfb4415c1df4cc8961145a0436a7e16c5f",
-      "source_git_blob_sha": "ca13ae58d0ee1f8b1a88c1bd05a34b96eee5ea4f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.899932,
-      "quality_metrics": {
-        "body_chars": 3548,
-        "method_chars": 1279,
-        "evaluation_chars": 148,
-        "limitation_chars": 299
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 148 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
       "canonical_id": "arXiv:2312.05821",
       "title": "ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models",
@@ -11981,28 +11937,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
-      "canonical_id": "arXiv:2503.06881",
-      "title": "ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration",
-      "file_bytes": 14938,
-      "source_sha256": "d2e7b86cd56bc657c829857535c797874693c6b76c528d879ed45bbc1546eb0f",
-      "source_git_blob_sha": "57e0285297575e9ce4923293176c647265284b0f",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.875815,
-      "quality_metrics": {
-        "body_chars": 2779,
-        "method_chars": 806,
-        "evaluation_chars": 94,
-        "limitation_chars": 205
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 94 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md",
       "canonical_id": "arXiv:2609.21672",
       "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
@@ -12326,28 +12260,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md",
-      "canonical_id": "arXiv:2408.13510",
-      "title": "Intelligent Router for LLM Workloads: Improving Performance Through Workload-Aware Load Balancing",
-      "file_bytes": 15319,
-      "source_sha256": "f26a0bdc2f119d44f6139ac6381e27d3bc3c52ca3ecd7b77542e7233f40c6555",
-      "source_git_blob_sha": "d38fe6623aef379066cd687a4856185a4d43ea6b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.911629,
-      "quality_metrics": {
-        "body_chars": 3337,
-        "method_chars": 980,
-        "evaluation_chars": 311,
-        "limitation_chars": 333
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 311 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
       "canonical_id": "arXiv:2601.10729",
       "title": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
@@ -12449,28 +12361,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
-      "canonical_id": "DOI:10.1145/3745756.3809243",
-      "title": "VLMCache: Efficient On-Device Vision-Language Model Inference",
-      "file_bytes": 15498,
-      "source_sha256": "6554353d521207a44a55cea891af38b2057198d20635d59f957d06714255fa5e",
-      "source_git_blob_sha": "82abfe6acd753bf3c0f04cbfbb9ce73e307fee39",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.983906,
-      "quality_metrics": {
-        "body_chars": 2568,
-        "method_chars": 1057,
-        "evaluation_chars": 282,
-        "limitation_chars": 263
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 282 < 500"
-      ],
       "warnings": []
     },
     {
