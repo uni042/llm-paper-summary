@@ -240,7 +240,7 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
         f"- 分野別内訳: **{progress.get('prefilter', {}).get('expanded_rule_reason_counts', {})}**",
         "- シャドー件数は試算であり、読解可能候補の削減には計上しない。一次論文の正例チェック・監査を経てから有効化する。",
         "",
-        f"- モード: 規則 **{progress.get('prefilter', {}).get('mode', 'off')}** / 分類器 **{progress.get('prefilter', {}).get('classifier_mode', 'pending_model')}**。
+        f"- モード: 規則 **{progress.get('prefilter', {}).get('mode', 'off')}** / 分類器 **{progress.get('prefilter', {}).get('classifier_mode', 'pending_model')}**。",
         "- 全数との差は隔離候補から監査復活分を引いた値。元候補は削除せず、分類器未判定分は通常候補に残す。集計は現在の候補identityから再計算する。",
         "",
         f"- 消化率: **{ratio:.1f}%**",
