@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-08T14:31:55+00:00",
+  "checked_at": "2026-10-08T14:35:07+00:00",
   "summary": {
-    "total": 1755,
+    "total": 1756,
     "complete": 1755,
-    "incomplete": 0
+    "incomplete": 1
   },
   "families": {
     "inference": {
-      "total": 1716,
+      "total": 1717,
       "complete": 1716
     },
     "training": {
@@ -21,5 +21,11 @@
       "complete": 14
     }
   },
-  "incomplete": []
+  "incomplete": [
+    {
+      "path": "papers/inference/17-pim-near-data-acceleration/2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md",
+      "canonical_id": "DOI:10.1109/hcs59251.2023.10254711",
+      "reason": "missing structured reference audit metadata"
+    }
+  ]
 }
