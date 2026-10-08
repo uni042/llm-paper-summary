@@ -13,7 +13,6 @@ arxiv_id: null
 doi: "10.1109/CCGrid68966.2026.00023"
 openreview_id: null
 arxiv_categories: {primary: null, cross_list: []}
-last_audited: "2026-10-01"
 audit_version: 1
 storage_targets: ["GPU HBM", "CPU DRAM", "EBS/NVMe-class storage", "remote attention GPU"]
 bottlenecks: ["KV cache capacity", "PCIe/storage bandwidth", "network bandwidth", "cloud VM cost"]
@@ -41,8 +40,6 @@ source: "https://doi.org/10.1109/CCGrid68966.2026.00023"
 sources: ["https://discos.sogang.ac.kr/file/2026/intl_conf/CCGRID_2026_J_Kim.pdf"]
 code: ""
 implementation: "分析性能モデルと探索器。KVO/AO/単一GPU/Multi-passを統一モデル化。"
-worker_completed_at: "2026-10-01T15:51:00Z"
-worker_run_key: "scheduled-chat-45-20261001-1545"
 last_checked: "2026-10-01"
 ---
 
