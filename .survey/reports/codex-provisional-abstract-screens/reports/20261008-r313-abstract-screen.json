@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "batch_id": "r313",
+  "source_main_sha": "e9a312ce8518008fe60fa986d507cd466dbd2b56",
+  "input_path": "reports\\20261008-r313-selected.json",
+  "candidate_count": 50,
+  "accepted_for_reading_count": 49,
+  "clear_out_of_scope_count": 0,
+  "primary_abstract_retrieved_count": 46,
+  "primary_abstract_unavailable_or_unresolved_count": 4,
+  "full_text_read_count": 0,
+  "full_text_not_read_count": 50,
+  "screen_acceptance_rate": 0.98,
+  "blockers": [
+    {
+      "rank": 58,
+      "canonical_id": "SemanticScholar:387dd3f727a00598400bc9d3fe59ac585b691082",
+      "blocker": "Candidate title is a generic OSDI proceedings footer; its underlying paper/primary URL could not be identified in this pass. Keep accepted for reading pending identity resolution.",
+      "resolution_attempts": [
+        "Tried the supplied Semantic Scholar record URL; web fetch reported that the URL was not accessible.",
+        "Searched the exact Semantic Scholar paper ID with general and USENIX-scoped queries; no result identified the paper.",
+        "Consulted the official USENIX OSDI 2024 technical-sessions/proceedings index; it exposed multiple plausible LLM-serving papers but did not map this Semantic Scholar ID to one exact record."
+      ],
+      "next_step": "Resolve the supplied Semantic Scholar paper ID against an authoritative metadata record or the specific USENIX paper page before primary full-text review."
+    },
+    {
+      "rank": 71,
+      "canonical_id": "DOI:10.1109/ICDE65706.2026.00082",
+      "blocker": "IEEE primary abstract page was inaccessible in this pass; recommendation is based on the direct title and lineage fit."
+    },
+    {
+      "rank": 77,
+      "canonical_id": "DOI:10.1145/3767295.3769345",
+      "blocker": "ACM primary abstract page was inaccessible in this pass; recommendation is based on the direct title and lineage fit."
+    },
+    {
+      "rank": 95,
+      "canonical_id": "arXiv:2605.13190",
+      "blocker": "Direct arXiv abstract page returned HTTP 503; abstract summary was available from indexed arXiv metadata."
+    }
+  ],
+  "results": [
+    {
+      "rank": 51,
+      "canonical_id": "arXiv:2605.18165",
+      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.18165",
+      "abstract_evidence": "Abstract describes position-preserving masked-token compression that removes redundant diffusion-LLM computation and accelerates decoding.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 52,
+      "canonical_id": "arXiv:2606.30265",
+      "title": "When Is a Draft Accepted? A Theory of Acceptance in Speculative Decoding",
+      "primary_abstract_url": "https://arxiv.org/abs/2606.30265",
+      "abstract_evidence": "Abstract develops acceptance guarantees for greedy, relaxed, and tree speculative decoding, with evaluations on Qwen3.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 53,
+      "canonical_id": "arXiv:2410.13166",
+      "title": "An Evolved Universal Transformer Memory",
+      "primary_abstract_url": "https://arxiv.org/abs/2410.13166",
+      "abstract_evidence": "Abstract proposes learned neural attention memory management that cuts input context while improving long-context transformer performance.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 54,
+      "canonical_id": "arXiv:2510.02329",
+      "title": "SelfJudge: Faster Speculative Decoding via Self-Supervised Judge Verification",
+      "primary_abstract_url": "https://arxiv.org/abs/2510.02329",
+      "abstract_evidence": "Abstract trains self-supervised speculative-decoding verifiers and reports improved inference-accuracy trade-offs across NLP tasks.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 55,
+      "canonical_id": "arXiv:2512.14069",
+      "title": "RADAR: Accelerate Large Language Model Inference With RL-Based Dynamic Draft Trees",
+      "primary_abstract_url": "https://arxiv.org/abs/2512.14069",
+      "abstract_evidence": "Abstract uses offline reinforcement learning to adjust draft-tree calls dynamically and reduce speculative inference work.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 56,
+      "canonical_id": "arXiv:2608.03839",
+      "title": "Oilbird: Training-Free Speculative Decoding with Keys the Verifier Already Computes",
+      "primary_abstract_url": "https://arxiv.org/abs/2608.03839",
+      "abstract_evidence": "Abstract reuses verifier hidden states as semantic keys for training-free draft lookup and reports longer accepted drafts and faster decoding.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 57,
+      "canonical_id": "arXiv:2603.27027",
+      "title": "TAPS: Task Aware Proposal Distributions for Speculative Sampling",
+      "primary_abstract_url": "https://arxiv.org/abs/2603.27027",
+      "abstract_evidence": "Abstract studies task-specific speculative drafter training and confidence-based routing/merged-tree verification.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 58,
+      "canonical_id": "SemanticScholar:387dd3f727a00598400bc9d3fe59ac585b691082",
+      "title": "This paper is included in the Proceedings of the 18th USENIX Symposium on Operating Systems Design and Implementation.",
+      "primary_abstract_url": null,
+      "abstract_evidence": "Selection title is only a USENIX OSDI proceedings footer. Primary paper identity and abstract remain unresolved; linked metadata spans serving, KV cache, offload, runtime, and quantization lineages.",
+      "recommendation": "identity_unresolved",
+      "reason": "The candidate metadata links to multiple relevant inference-system lineages, but the displayed title is only an OSDI proceedings footer and the primary record could not be identified. Keep in the 50-candidate denominator, exclude from the clean acceptance numerator, and resolve identity before reading.",
+      "full_text_read": false
+    },
+    {
+      "rank": 59,
+      "canonical_id": "arXiv:2609.36938",
+      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+      "primary_abstract_url": "https://arxiv.org/abs/2609.36938",
+      "abstract_evidence": "Abstract presents SSD-backed sparse KV storage and predicted reads to reduce agent-serving time-to-first-token.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 60,
+      "canonical_id": "arXiv:2605.05899",
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.05899",
+      "abstract_evidence": "Abstract combines visual-token compression, MoE expert prediction, and cache/pipeline orchestration for memory-constrained VLM inference.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 61,
+      "canonical_id": "arXiv:2609.35263",
+      "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+      "primary_abstract_url": "https://arxiv.org/abs/2609.35263",
+      "abstract_evidence": "Abstract presents prefix-aware pipeline scheduling and dynamic chunk planning to improve LLM prefill throughput.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 62,
+      "canonical_id": "SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+      "title": "From Static Inference to Dynamic Interaction: Navigating the Landscape of Streaming Large Language Models",
+      "primary_abstract_url": "https://arxiv.org/abs/2603.04592",
+      "abstract_evidence": "Abstract surveys streaming LLM definitions and methods for dynamic, real-time interaction and streaming inference.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 63,
+      "canonical_id": "arXiv:2503.16257",
+      "title": "Plug-and-Play 1.x-Bit KV Cache Quantization for Video Large Language Models",
+      "primary_abstract_url": "https://arxiv.org/abs/2503.16257",
+      "abstract_evidence": "Abstract proposes sub-2-bit video-LLM KV-cache quantization with mixed precision and selective visual-token preservation.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 64,
+      "canonical_id": "arXiv:2608.00902",
+      "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+      "primary_abstract_url": "https://arxiv.org/abs/2608.00902",
+      "abstract_evidence": "Abstract studies online KV-cache compaction for agents; delayed compaction preserves accuracy while cutting cache and improving throughput.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 65,
+      "canonical_id": "arXiv:2407.10032",
+      "title": "LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid",
+      "primary_abstract_url": "https://arxiv.org/abs/2407.10032",
+      "abstract_evidence": "Abstract proposes scalable loss-error-aware post-training quantization for lower memory and decoding latency across LLM sizes.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 66,
+      "canonical_id": "arXiv:2506.04985",
+      "title": "FPTQuant: Function-Preserving Transforms for LLM Quantization",
+      "primary_abstract_url": "https://arxiv.org/abs/2506.04985",
+      "abstract_evidence": "Abstract uses lightweight function-preserving transforms to enable INT4 quantization without custom kernels and with inference speedups.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 67,
+      "canonical_id": "arXiv:2510.11234",
+      "title": "Neural Weight Compression for Language Models",
+      "primary_abstract_url": "https://arxiv.org/abs/2510.11234",
+      "abstract_evidence": "Abstract formulates language-model weight compression as neural codec learning and reports strong accuracy-compression trade-offs.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 68,
+      "canonical_id": "arXiv:2605.05602",
+      "title": "Nearly Optimal Attention Coresets",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.05602",
+      "abstract_evidence": "Abstract proves near-optimal coreset bounds for approximating attention with a smaller key-value set.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 69,
+      "canonical_id": "arXiv:2510.16807",
+      "title": "Improving Model Representation and Reducing KV Cache via Skip Connections with First Value Heads",
+      "primary_abstract_url": "https://arxiv.org/abs/2510.16807",
+      "abstract_evidence": "Abstract proposes first-value-head skip connections that reduce KV-cache size while improving model representation.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 70,
+      "canonical_id": "arXiv:2405.01943",
+      "title": "Dependency-Aware Semi-Structured Sparsity of GLU Variants in Large Language Models",
+      "primary_abstract_url": "https://arxiv.org/abs/2405.01943",
+      "abstract_evidence": "Abstract introduces dependency-aware semi-structured pruning for GLU LLMs, targeting hardware-friendly sparsity and inference latency.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 71,
+      "canonical_id": "DOI:10.1109/ICDE65706.2026.00082",
+      "title": "EC-RAG: Towards Efficient Edge-Cloud Retrieval-Augmented Generation Systems",
+      "primary_abstract_url": "https://doi.org/10.1109/ICDE65706.2026.00082",
+      "abstract_evidence": "Candidate title identifies an edge-cloud RAG system; the official IEEE abstract page was inaccessible in this pass. Retain by clear inference-serving relevance.",
+      "recommendation": "accept_for_reading",
+      "reason": "The title directly places the work in LLM inference serving; primary abstract retrieval remains unresolved, so retain for reading rather than screen it out.",
+      "full_text_read": false
+    },
+    {
+      "rank": 72,
+      "canonical_id": "arXiv:2603.20616",
+      "title": "Beyond Token Eviction: Mixed-Dimension Budget Allocation for Efficient KV Cache Compression",
+      "primary_abstract_url": "https://arxiv.org/abs/2603.20616",
+      "abstract_evidence": "Abstract allocates KV dimensions across tokens and heads, substantially reducing cache memory on long-context tasks.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 73,
+      "canonical_id": "arXiv:2607.16488",
+      "title": "Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving",
+      "primary_abstract_url": "https://arxiv.org/abs/2607.16488",
+      "abstract_evidence": "Abstract presents auto-scaling for heterogeneous NPU resources to improve LLM-serving cost efficiency and SLO satisfaction.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 74,
+      "canonical_id": "arXiv:2608.01672",
+      "title": "Learning What to Remember: Test-Time Training via Context Distillation",
+      "primary_abstract_url": "https://arxiv.org/abs/2608.01672",
+      "abstract_evidence": "Abstract distills long-context utility into limited memory with a test-time training method for language models.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 75,
+      "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.1169",
+      "title": "Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk",
+      "primary_abstract_url": "https://aclanthology.org/2024.emnlp-main.1169/",
+      "abstract_evidence": "Primary ACL abstract proposes growing incremental memory and shrinking prefill chunks; reports faster long-context prefill with lower GPU memory.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 76,
+      "canonical_id": "arXiv:2604.02047",
+      "title": "Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding",
+      "primary_abstract_url": "https://arxiv.org/abs/2604.02047",
+      "abstract_evidence": "Abstract proves and implements anisotropic speculative trees, reporting lossless speedups over balanced-tree baselines.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 77,
+      "canonical_id": "DOI:10.1145/3767295.3769345",
+      "title": "AdaGen: Workload-Adaptive Cluster Scheduler for Latency-Optimal LLM Inference Serving",
+      "primary_abstract_url": "https://dl.acm.org/doi/10.1145/3767295.3769345",
+      "abstract_evidence": "Candidate title identifies a workload-adaptive LLM serving scheduler; ACM abstract page was inaccessible in this pass. Retain by direct serving/latency scope.",
+      "recommendation": "accept_for_reading",
+      "reason": "The title directly places the work in LLM inference serving; primary abstract retrieval remains unresolved, so retain for reading rather than screen it out.",
+      "full_text_read": false
+    },
+    {
+      "rank": 78,
+      "canonical_id": "arXiv:2606.20591",
+      "title": "Delay-Adaptive Speculation Control for Low-Latency Edge-Cloud LLM Inference",
+      "primary_abstract_url": "https://arxiv.org/abs/2606.20591",
+      "abstract_evidence": "Abstract selects speculative draft length online according to edge-cloud delay to reduce per-token latency.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 79,
+      "canonical_id": "arXiv:2604.22782",
+      "title": "Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing",
+      "primary_abstract_url": "https://arxiv.org/abs/2604.22782",
+      "abstract_evidence": "Abstract enables depth-wise cache sharing through stochastic cross-layer attention, reducing KV memory for serving.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 80,
+      "canonical_id": "arXiv:2507.18181",
+      "title": "SpecASR: Accelerating LLM-based Automatic Speech Recognition via Speculative Decoding",
+      "primary_abstract_url": "https://arxiv.org/abs/2507.18181",
+      "abstract_evidence": "Abstract specializes speculative decoding to ASR with adaptive drafts, draft reuse, and sparse token trees to reduce latency.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 81,
+      "canonical_id": "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "title": "Verification: Exploiting Information Gain for Speculative Decoding",
+      "primary_abstract_url": "https://aclanthology.org/2026.findings-acl.1809/",
+      "abstract_evidence": "Primary ACL abstract proposes information-gain-guided speculative verification length to reduce wasted verification and raise throughput.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 82,
+      "canonical_id": "arXiv:2303.04185",
+      "title": "Gradient-Free Structured Pruning with Unlabeled Data",
+      "primary_abstract_url": "https://arxiv.org/abs/2303.04185",
+      "abstract_evidence": "Abstract proposes gradient-free structured pruning for LLMs with unlabeled data, reducing FLOPs with limited accuracy loss.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 83,
+      "canonical_id": "arXiv:2605.06946",
+      "title": "Adaptive Memory Decay for Log-Linear Attention",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.06946",
+      "abstract_evidence": "Abstract makes log-linear attention memory decay content-adaptive while preserving log-linear compute complexity.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 84,
+      "canonical_id": "arXiv:2606.01019",
+      "title": "Hybrid Verified Decoding: Learning to Allocate Verification in Speculative Decoding",
+      "primary_abstract_url": "https://arxiv.org/abs/2606.01019",
+      "abstract_evidence": "Abstract predicts speculative-draft payoff to choose between cache and model drafters, reducing sequential decoding work.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 85,
+      "canonical_id": "arXiv:2604.24380",
+      "title": "Structural Pruning of Large Vision Language Models: A Comprehensive Study on Pruning Dynamics, Recovery, and Data Efficiency",
+      "primary_abstract_url": "https://arxiv.org/abs/2604.24380",
+      "abstract_evidence": "Abstract studies structured pruning and lightweight recovery for vision-language LLMs, reducing model size and deployment resource needs.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 86,
+      "canonical_id": "SemanticScholar:459b34447952feebacc2f12778c539618e8a299f",
+      "title": "A Survey on Model Compression for Natural Language Processing",
+      "primary_abstract_url": "https://arxiv.org/abs/2202.07105",
+      "abstract_evidence": "Primary arXiv abstract surveys pretrained-language-model inference compression and acceleration; the selection title differs from the current arXiv title.",
+      "recommendation": "accept_for_reading",
+      "reason": "Primary abstract is relevant to pretrained-model inference optimization; resolve the selection/current-title variation during identity review.",
+      "full_text_read": false
+    },
+    {
+      "rank": 87,
+      "canonical_id": "arXiv:2506.05333",
+      "title": "Kinetics: Rethinking Test-Time Scaling Laws",
+      "primary_abstract_url": "https://arxiv.org/abs/2506.05333",
+      "abstract_evidence": "Abstract accounts for memory-access and attention costs in test-time scaling and proposes sparse attention to improve efficiency.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 88,
+      "canonical_id": "arXiv:2605.09281",
+      "title": "TileQ: Efficient Low-Rank Quantization of Mixture-of-Experts with 2D Tiling",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.09281",
+      "abstract_evidence": "Abstract proposes low-rank MoE quantization with fused expert computation to reduce memory overhead and inference latency.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 89,
+      "canonical_id": "arXiv:2602.05145",
+      "title": "TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference",
+      "primary_abstract_url": "https://arxiv.org/abs/2602.05145",
+      "abstract_evidence": "Abstract integrates online draft adaptation into serving, reusing inference states to raise workload-aware throughput.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 90,
+      "canonical_id": "arXiv:2512.20573",
+      "title": "Fail Fast, Win Big: Rethinking the Drafting Strategy in Speculative Decoding via Diffusion LLMs",
+      "primary_abstract_url": "https://arxiv.org/abs/2512.20573",
+      "abstract_evidence": "Abstract uses parallel diffusion-LLM drafting with adaptive speculative lengths for lossless autoregressive acceleration.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 91,
+      "canonical_id": "arXiv:2510.25600",
+      "title": "PureKV: Plug-and-Play KV Cache Optimization with Spatial-Temporal Sparse Attention for Vision-Language Large Models",
+      "primary_abstract_url": "https://arxiv.org/abs/2510.25600",
+      "abstract_evidence": "Abstract jointly optimizes sparse attention and KV-cache compression for efficient vision-language inference.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 92,
+      "canonical_id": "arXiv:2605.12471",
+      "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.12471",
+      "abstract_evidence": "Abstract presents a training-free chunk recurrence using accumulated KV cache for long-context inference.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 93,
+      "canonical_id": "arXiv:2509.18344",
+      "title": "Speculate Deep and Accurate: Lossless and Training-Free Acceleration for Offloaded LLMs via Substitute Speculative Decoding",
+      "primary_abstract_url": "https://arxiv.org/abs/2509.18344",
+      "abstract_evidence": "Abstract builds quantized substitute draft layers from offloaded model layers to accelerate memory-limited inference losslessly.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 94,
+      "canonical_id": "arXiv:2607.25380",
+      "title": "Memory for Large Language Models",
+      "primary_abstract_url": "https://arxiv.org/abs/2607.25380",
+      "abstract_evidence": "Abstract is an LLM-memory survey covering memory representations, updates, persistence, and system-level efficiency trade-offs.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 95,
+      "canonical_id": "arXiv:2605.13190",
+      "title": "N-vium: Mixture-of-Exits Transformer for Accelerated Exact Generation",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.13190",
+      "abstract_evidence": "Indexed arXiv abstract describes mixture-of-exits generation that parallelizes depth computation while preserving exact sampling; direct arXiv page returned 503.",
+      "recommendation": "accept_for_reading",
+      "reason": "Indexed abstract indicates a direct generation-efficiency method; retain for focused reading. Direct primary arXiv retrieval returned HTTP 503 in this pass.",
+      "full_text_read": false
+    },
+    {
+      "rank": 96,
+      "canonical_id": "DOI:10.48550/arXiv.2407.15176",
+      "title": "Farewell to Length Extrapolation, a Training-Free Infinite Context with Finite Attention Scope",
+      "primary_abstract_url": "https://arxiv.org/abs/2407.15176",
+      "abstract_evidence": "Primary arXiv page identifies the work under its revised title ReAttention and describes training-free finite-scope long-context cache selection.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 97,
+      "canonical_id": "arXiv:2411.17426",
+      "title": "CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning",
+      "primary_abstract_url": "https://arxiv.org/abs/2411.17426",
+      "abstract_evidence": "Abstract applies cross-layer orthogonal-vector pruning/fine-tuning to reduce attention costs and improve model compression.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 98,
+      "canonical_id": "arXiv:2502.15763",
+      "title": "Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization",
+      "primary_abstract_url": "https://arxiv.org/abs/2502.15763",
+      "abstract_evidence": "Abstract combines offline placement and online prefill/decode scheduling to raise serving utilization and reduce inference time.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 99,
+      "canonical_id": "arXiv:2503.01820",
+      "title": "RSQ: Learning from Important Tokens Leads to Better Quantized LLMs",
+      "primary_abstract_url": "https://arxiv.org/abs/2503.01820",
+      "abstract_evidence": "Abstract proposes token-importance-aware rotations/scaling for better quantized LLMs across models and tasks.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    },
+    {
+      "rank": 100,
+      "canonical_id": "arXiv:2605.18226",
+      "title": "Context Memorization for Efficient Long Context Generation",
+      "primary_abstract_url": "https://arxiv.org/abs/2605.18226",
+      "abstract_evidence": "Abstract proposes lookup-based attention-state memory to reduce long-prefix attention latency and memory for long-context generation.",
+      "recommendation": "accept_for_reading",
+      "reason": "Abstract/topic evidence supports a plausible inference-efficiency, KV/cache/memory, quantization, attention, speculative-decoding, or serving lineage; retain for focused reading. This is a provisional reading recommendation, not final inclusion.",
+      "full_text_read": false
+    }
+  ],
+  "identity_unresolved_count": 1
+}
