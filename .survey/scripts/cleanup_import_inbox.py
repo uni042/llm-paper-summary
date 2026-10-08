@@ -128,7 +128,7 @@ def cleanup_pending_research_junk(repo_root: Path) -> int:
 def recover_blocked_research(repo_root: Path) -> dict[str, int]:
     root = repo_root / inbox.BLOCKED_RESEARCH
     pending = repo_root / inbox.PENDING_RESEARCH
-    counts = {"stale_deleted": 0, "requeued": 0, "hard_deleted": 0}
+    counts = {"stale_deleted": 0, "requeued": 0, "hard_deleted": 0, "collision_deferred": 0}
     if not root.is_dir():
         return counts
 
@@ -189,6 +189,27 @@ def recover_blocked_research(repo_root: Path) -> dict[str, int]:
         # canonical importer then performs identity resolution, normalization and
         # the full quality gate. If it blocks again, the retry-prefix rule above
         # discards it on the next cleanup pass.
+        # The retry is keyed by the blocked source path, not the content hash.
+        # A worker may have already put a newer correction at that same retry
+        # path. Such collisions must not abort the entire Library import or
+        # overwrite/delete either durable manuscript.
+        retry_path = pending / _safe_retry_name(RESEARCH_RETRY_PREFIX, source)
+        normalized_bytes = normalized_raw.encode("utf-8")
+        if retry_path.is_file() and retry_path.read_bytes() != normalized_bytes:
+            _record_cleanup(
+                repo_root,
+                source,
+                "deferred_blocked_research_retry_collision",
+                {
+                    "canonical_id": canonical_id,
+                    "existing_retry_path": inbox.repo_relative(retry_path, repo_root),
+                    "blocked_normalized_sha256": hashlib.sha256(normalized_bytes).hexdigest(),
+                    "pending_sha256": hashlib.sha256(retry_path.read_bytes()).hexdigest(),
+                },
+            )
+            counts["collision_deferred"] += 1
+            continue
+
         source.write_text(normalized_raw, encoding="utf-8")
         target = _move_retry(source, pending, RESEARCH_RETRY_PREFIX)
         _record_cleanup(
