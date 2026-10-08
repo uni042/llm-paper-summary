@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b9b4975291d5575-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.14167",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.14167",
+    "identity_tokens": [
+      "arXiv:2607.14167"
+    ],
+    "reason": "VeriHarness caps agent repair at four calls and improves success at a fixed compute budget; no fewer calls/tokens or lower latency are reported.",
+    "first_checked_at": "2026-10-08T06:46:07+00:00",
+    "last_checked_at": "2026-10-08T06:46:07+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Structured Feedback Improves Repair in an LLM Agent Loop"
+  },
+  "processed_at": "2026-10-08T06:46:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b9b4975291d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

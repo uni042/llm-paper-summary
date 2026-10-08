@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T06:35:41+00:00",
-  "record_count": 10985,
+  "updated_at": "2026-10-08T06:46:15+00:00",
+  "record_count": 11020,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -157012,6 +157012,496 @@
         "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
       ],
       "title": "When control meets large language models: From words to dynamics"
+    },
+    "arXiv:2608.26607": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26607",
+      "identity_tokens": [
+        "arXiv:2608.26607"
+      ],
+      "reason": "FU-Mamba uses dynamic scanning for oral image segmentation; efficiency results are specific to medical-image SSM inference.",
+      "first_checked_at": "2026-10-08T06:46:01+00:00",
+      "last_checked_at": "2026-10-08T06:46:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "FU-Mamba: A frequency-enhanced dynamic scanning framework for oralscan image segmentation"
+    },
+    "arXiv:2605.12438": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12438",
+      "identity_tokens": [
+        "arXiv:2605.12438"
+      ],
+      "reason": "CLM-then-MLM continued pretraining improves encoder downstream scores; it addresses training rather than inference compute.",
+      "first_checked_at": "2026-10-08T06:46:01+00:00",
+      "last_checked_at": "2026-10-08T06:46:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "A Causal Language Modeling Detour Improves Encoder Continued Pretraining"
+    },
+    "DOI:10.1631/jzus.b2500647": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1631/jzus.b2500647",
+      "identity_tokens": [
+        "DOI:10.1631/jzus.b2500647"
+      ],
+      "reason": "YOLO tomato phenotyping trades parameters and accuracy for agricultural vision; it does not improve LLM inference.",
+      "first_checked_at": "2026-10-08T06:46:02+00:00",
+      "last_checked_at": "2026-10-08T06:46:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Embedding of ripening topology into one-stage detection for tomato cluster phenotyping"
+    },
+    "arXiv:2604.03004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03004",
+      "identity_tokens": [
+        "arXiv:2604.03004"
+      ],
+      "reason": "Abstract studies reasoning/revision for open-ended writing without a concrete compute, token, memory, or latency reduction.",
+      "first_checked_at": "2026-10-08T06:46:02+00:00",
+      "last_checked_at": "2026-10-08T06:46:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "R2-Write: Reflection and Revision for Open-Ended Writing with Deep Reasoning"
+    },
+    "arXiv:2604.19773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.19773",
+      "identity_tokens": [
+        "arXiv:2604.19773"
+      ],
+      "reason": "Abstract concerns an LLM text-to-CAD application and states no direct inference-resource optimization.",
+      "first_checked_at": "2026-10-08T06:46:03+00:00",
+      "last_checked_at": "2026-10-08T06:46:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "PR-CAD: Progressive Refinement for Unified Controllable and Faithful Text-to-CAD Generation with Large Language Models"
+    },
+    "DOI:10.1109/tcsvt.2025.3617529": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3617529",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3617529"
+      ],
+      "reason": "Abstract concerns Mamba-based pedestrian-trajectory prediction, a non-language task.",
+      "first_checked_at": "2026-10-08T06:46:03+00:00",
+      "last_checked_at": "2026-10-08T06:46:03+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "MambaPTP: Exploring the Potential of Mamba for Pedestrian Trajectory Prediction"
+    },
+    "DOI:10.1109/tkde.2025.3650739": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tkde.2025.3650739",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2025.3650739"
+      ],
+      "reason": "Abstract concerns diffusion generation of industrial time series, not LLM inference.",
+      "first_checked_at": "2026-10-08T06:46:03+00:00",
+      "last_checked_at": "2026-10-08T06:46:03+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "DLTTS: Diffusion Model for Long-Tailed Time Series Generation in Industrial Scenarios"
+    },
+    "arXiv:2602.01630": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01630",
+      "identity_tokens": [
+        "arXiv:2602.01630"
+      ],
+      "reason": "The paper discusses and organizes world-model research without presenting a concrete LLM inference optimization.",
+      "first_checked_at": "2026-10-08T06:46:04+00:00",
+      "last_checked_at": "2026-10-08T06:46:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Research on World Models Is Not Merely Injecting World Knowledge into Specific Tasks"
+    },
+    "DOI:10.1016/j.ins.2026.123242": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123242",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123242"
+      ],
+      "reason": "Mamba-STR is selective-SSM scene text recognition; reported compute, GPU-memory, and speed gains are visual OCR model results, not a demonstrated LLM inference method.",
+      "first_checked_at": "2026-10-08T06:46:04+00:00",
+      "last_checked_at": "2026-10-08T06:46:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Mamba-STR: Efficient context-aware scene text recognition framework with selective state space modeling"
+    },
+    "arXiv:2602.00865": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00865",
+      "identity_tokens": [
+        "arXiv:2602.00865"
+      ],
+      "reason": "Distill3R distills a 3D reconstruction vision model for commodity hardware; its size/speed results are task-specific, not LLM inference.",
+      "first_checked_at": "2026-10-08T06:46:05+00:00",
+      "last_checked_at": "2026-10-08T06:46:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Distill3R: A Pipeline for Democratizing 3D Foundation Models on Commodity Hardware"
+    },
+    "arXiv:2601.01224": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.01224",
+      "identity_tokens": [
+        "arXiv:2601.01224"
+      ],
+      "reason": "The paper improves object-centric image learning with diffusion registers/contrastive alignment and does not report LLM-serving gains.",
+      "first_checked_at": "2026-10-08T06:46:05+00:00",
+      "last_checked_at": "2026-10-08T06:46:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Improved Object-Centric Diffusion Learning with Registers and Contrastive Alignment"
+    },
+    "arXiv:2601.00848": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.00848",
+      "identity_tokens": [
+        "arXiv:2601.00848"
+      ],
+      "reason": "The framework fine-tunes language models on agent security traces, including QLoRA; contribution is training/detection, not inference-serving efficiency.",
+      "first_checked_at": "2026-10-08T06:46:06+00:00",
+      "last_checked_at": "2026-10-08T06:46:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Temporal Attack Pattern Detection in Multi-Agent AI Workflows: An Open Framework for Training Trace-Based Security Models"
+    },
+    "arXiv:2607.25987": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25987",
+      "identity_tokens": [
+        "arXiv:2607.25987"
+      ],
+      "reason": "IH-Benchmark measures instruction-hierarchy robustness in LLM applications; it is a benchmark without compute/memory/latency optimization.",
+      "first_checked_at": "2026-10-08T06:46:06+00:00",
+      "last_checked_at": "2026-10-08T06:46:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "IH-Benchmark: A Conflict-Centered Benchmark for Instruction-Hierarchy Robustness in LLM Applications"
+    },
+    "arXiv:2607.17900": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17900",
+      "identity_tokens": [
+        "arXiv:2607.17900"
+      ],
+      "reason": "Harness TTS wraps a speech engine and reports an LLM planner latency measurement, but no method lowers planner resources or serving cost.",
+      "first_checked_at": "2026-10-08T06:46:07+00:00",
+      "last_checked_at": "2026-10-08T06:46:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Harness TTS: Towards Context-Aware Expressive Speech Synthesis with Harness Layer"
+    },
+    "arXiv:2607.14167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14167",
+      "identity_tokens": [
+        "arXiv:2607.14167"
+      ],
+      "reason": "VeriHarness caps agent repair at four calls and improves success at a fixed compute budget; no fewer calls/tokens or lower latency are reported.",
+      "first_checked_at": "2026-10-08T06:46:07+00:00",
+      "last_checked_at": "2026-10-08T06:46:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Structured Feedback Improves Repair in an LLM Agent Loop"
+    },
+    "DOI:10.1016/j.neucom.2026.133361": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133361",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133361"
+      ],
+      "reason": "Publisher abstract describes wavelet/Kolmogorov-Arnold time-series forecasting; no LLM inference or serving contribution.",
+      "first_checked_at": "2026-10-08T06:46:08+00:00",
+      "last_checked_at": "2026-10-08T06:46:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "WaveKAN: Adaptive wavelet decomposition and Kolmogorov-Arnold network for long-term time series forecasting"
+    },
+    "DOI:10.1109/tai.2025.3595115": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tai.2025.3595115",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2025.3595115"
+      ],
+      "reason": "Abstract describes a visual Mamba image-enhancement framework; its efficiency target is image processing, not LLM inference.",
+      "first_checked_at": "2026-10-08T06:46:08+00:00",
+      "last_checked_at": "2026-10-08T06:46:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "ILVMamba: Illumination-Aware Lightweight Visual Mamba Framework for Efficient High-Resolution Image Enhancement"
+    },
+    "DOI:10.1073/pnas.2524201123": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1073/pnas.2524201123",
+      "identity_tokens": [
+        "DOI:10.1073/pnas.2524201123"
+      ],
+      "reason": "ProteomeLM uses protein-language embeddings and proteome context for biological interaction/essentiality prediction. No LLM token-serving optimization is presented.",
+      "first_checked_at": "2026-10-08T06:46:08+00:00",
+      "last_checked_at": "2026-10-08T06:46:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "ProteomeLM: A proteome-scale language model enables accurate and rapid prediction of protein–protein interactions and gene essentiality across taxa"
+    },
+    "arXiv:2602.11902": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11902",
+      "identity_tokens": [
+        "arXiv:2602.11902"
+      ],
+      "reason": "HyPO changes preference-training gradients and explicitly preserves DPO computational cost; it improves alignment metrics, not deployed inference resources.",
+      "first_checked_at": "2026-10-08T06:46:09+00:00",
+      "last_checked_at": "2026-10-08T06:46:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Mitigating Mismatch within Reference-based Preference Optimization"
+    },
+    "DOI:10.1038/s41597-026-06684-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41597-026-06684-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41597-026-06684-8"
+      ],
+      "reason": "The primary paper presents a cataract image/report dataset and domain-specific MLLM diagnosis framework; it does not propose general inference efficiency.",
+      "first_checked_at": "2026-10-08T06:46:09+00:00",
+      "last_checked_at": "2026-10-08T06:46:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "A fine-grained fundus image dataset for cataract severity assessment and diagnosis"
+    },
+    "arXiv:2602.11229": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11229",
+      "identity_tokens": [
+        "arXiv:2602.11229"
+      ],
+      "reason": "The method reduces recurrent compute for long-horizon PDE/physics simulation, not language-model serving.",
+      "first_checked_at": "2026-10-08T06:46:09+00:00",
+      "last_checked_at": "2026-10-08T06:46:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Latent Generative Solvers for Generalizable Long-Term Physics Simulation"
+    },
+    "arXiv:2602.04102": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04102",
+      "identity_tokens": [
+        "arXiv:2602.04102"
+      ],
+      "reason": "Abstract concerns Mamba-based hyperspectral anomaly detection, not LLM serving.",
+      "first_checked_at": "2026-10-08T06:46:10+00:00",
+      "last_checked_at": "2026-10-08T06:46:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "DMS2F-HAD: A Dual-branch Mamba-based Spatial–Spectral Fusion Network for Hyperspectral Anomaly Detection"
+    },
+    "arXiv:2602.04195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04195",
+      "identity_tokens": [
+        "arXiv:2602.04195"
+      ],
+      "reason": "Semantic Consensus Decoding is a multi-sample inference-time backdoor defense for Verilog; consensus adds checks rather than reducing compute.",
+      "first_checked_at": "2026-10-08T06:46:10+00:00",
+      "last_checked_at": "2026-10-08T06:46:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Semantic Consensus Decoding: Backdoor Defense for Verilog Code Generation"
+    },
+    "arXiv:2602.04517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04517",
+      "identity_tokens": [
+        "arXiv:2602.04517"
+      ],
+      "reason": "Sliding windows address memory in multi-view 3D reconstruction; the memory method is vision-specific, not LLM serving.",
+      "first_checked_at": "2026-10-08T06:46:10+00:00",
+      "last_checked_at": "2026-10-08T06:46:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "S-MUSt3R: Sliding Multi-view 3D Reconstruction"
+    },
+    "arXiv:2602.04725": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04725",
+      "identity_tokens": [
+        "arXiv:2602.04725"
+      ],
+      "reason": "Abstract is a PPG blood-pressure benchmark, with no LLM inference optimization.",
+      "first_checked_at": "2026-10-08T06:46:11+00:00",
+      "last_checked_at": "2026-10-08T06:46:11+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Benchmarking and Enhancing PPG-Based Cuffless Blood Pressure Estimation Methods"
+    },
+    "DOI:10.3390/ijgi15030096": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ijgi15030096",
+      "identity_tokens": [
+        "DOI:10.3390/ijgi15030096"
+      ],
+      "reason": "Abstract concerns remote-sensing building segmentation, a vision task without LLM inference.",
+      "first_checked_at": "2026-10-08T06:46:12+00:00",
+      "last_checked_at": "2026-10-08T06:46:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "A High-Resolution Remote Sensing Building Extraction Network Integrating Multi-Scale Sequence Modeling and Spatial Adaptive Enhancement"
+    },
+    "arXiv:2602.17998": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17998",
+      "identity_tokens": [
+        "arXiv:2602.17998"
+      ],
+      "reason": "Abstract proposes physical-system forecasting architecture, outside language-model inference.",
+      "first_checked_at": "2026-10-08T06:46:12+00:00",
+      "last_checked_at": "2026-10-08T06:46:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "PHAST: Port-Hamiltonian Architecture for Structured Temporal Dynamics Forecasting"
+    },
+    "arXiv:2603.06610": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06610",
+      "identity_tokens": [
+        "arXiv:2603.06610"
+      ],
+      "reason": "CapTrack evaluates forgetting caused by LLM post-training; it is an evaluation contribution, not inference optimization.",
+      "first_checked_at": "2026-10-08T06:46:12+00:00",
+      "last_checked_at": "2026-10-08T06:46:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "CapTrack: Multifaceted Evaluation of Forgetting in LLM Post-Training"
+    },
+    "arXiv:2602.16837": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16837",
+      "identity_tokens": [
+        "arXiv:2602.16837"
+      ],
+      "reason": "The paper analyzes transformer positional bias but proposes no KV-cache or inference-cost reduction.",
+      "first_checked_at": "2026-10-08T06:46:13+00:00",
+      "last_checked_at": "2026-10-08T06:46:13+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "A Structural Theory of Position Bias in Transformers"
+    },
+    "arXiv:2602.13136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13136",
+      "identity_tokens": [
+        "arXiv:2602.13136"
+      ],
+      "reason": "Reaction-center-guided discrete flow matching targets retrosynthesis; sampling results concern chemistry generation, not LLM inference.",
+      "first_checked_at": "2026-10-08T06:46:13+00:00",
+      "last_checked_at": "2026-10-08T06:46:13+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Order Matters in Retrosynthesis: Structure-aware Generation via Reaction-Center-Guided Discrete Flow Matching"
+    },
+    "arXiv:2602.03978": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03978",
+      "identity_tokens": [
+        "arXiv:2602.03978"
+      ],
+      "reason": "The study measures reasoning-trace monitorability after RLVR and training-time alignment; it provides no serving or inference-cost reduction method.",
+      "first_checked_at": "2026-10-08T06:46:14+00:00",
+      "last_checked_at": "2026-10-08T06:46:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Monitorability as a Free Gift: How RLVR Spontaneously Aligns Reasoning"
+    },
+    "DOI:10.1016/j.xgen.2025.101130": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.xgen.2025.101130",
+      "identity_tokens": [
+        "DOI:10.1016/j.xgen.2025.101130"
+      ],
+      "reason": "ChromBERT models genomic ChIP-seq transcription-regulator tracks for biology tasks; it does not optimize LLM inference or serving.",
+      "first_checked_at": "2026-10-08T06:46:14+00:00",
+      "last_checked_at": "2026-10-08T06:46:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "ChromBERT: A foundation model for learning interpretable representations for context-specific transcriptional regulatory networks"
+    },
+    "DOI:10.1016/j.cacaie.2026.100152": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.cacaie.2026.100152",
+      "identity_tokens": [
+        "DOI:10.1016/j.cacaie.2026.100152"
+      ],
+      "reason": "The article applies diffusion reconstruction to distributed acoustic sensing for rail degradation monitoring; SSM/diffusion terminology is domain-specific, not LLM inference.",
+      "first_checked_at": "2026-10-08T06:46:14+00:00",
+      "last_checked_at": "2026-10-08T06:46:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Diffusion-based unsupervised distributed acoustic sensing for rail condition monitoring and degradation assessment"
+    },
+    "arXiv:2604.07864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07864",
+      "identity_tokens": [
+        "arXiv:2604.07864"
+      ],
+      "reason": "Abstract concerns RLVR training supervision for code generation, not deployed inference resource optimization.",
+      "first_checked_at": "2026-10-08T06:46:15+00:00",
+      "last_checked_at": "2026-10-08T06:46:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "ZeroCoder: Can LLMs Improve Code Generation Without Ground-Truth Supervision?"
+    },
+    "arXiv:2604.08322": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08322",
+      "identity_tokens": [
+        "arXiv:2604.08322"
+      ],
+      "reason": "Abstract concerns a domain-specific fundus-reading MLLM training/reasoning study, not inference efficiency.",
+      "first_checked_at": "2026-10-08T06:46:15+00:00",
+      "last_checked_at": "2026-10-08T06:46:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Fundus-R1: Training a Fundus-Reading MLLM with Knowledge-Aware Reasoning on Public Data"
     }
   }
 }

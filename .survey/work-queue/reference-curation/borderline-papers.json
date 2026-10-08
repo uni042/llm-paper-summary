@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T06:35:36+00:00",
-  "record_count": 4470,
+  "updated_at": "2026-10-08T06:46:06+00:00",
+  "record_count": 4475,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68217,6 +68217,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AI-Powered Text Screening: A Generative Approach to Identifying Sensitive Information"
+    },
+    "DOI:10.1109/cai68641.2026.11536230": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cai68641.2026.11536230",
+      "identity_tokens": [
+        "DOI:10.1109/cai68641.2026.11536230"
+      ],
+      "reason": "Tried the primary IEEE proceedings DOI/publisher page; it was inaccessible in the available reader and no primary paper text was obtained. The candidate is retained as borderline because its linked lineage makes the exact method relevant to resolve.",
+      "first_checked_at": "2026-10-08T06:46:00+00:00",
+      "last_checked_at": "2026-10-08T06:46:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DynaFormer: A Dynamic Dual-Attention Transformer with Linear-Complexity Fusion for Medical Image Segmentation"
+    },
+    "DOI:10.1109/jiot.2026.3661976": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jiot.2026.3661976",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3661976"
+      ],
+      "reason": "Tried the primary IEEE DOI/publisher page; it was inaccessible in the available reader and no primary paper text was obtained. The candidate is retained as borderline because its linked lineage makes the exact method relevant to resolve.",
+      "first_checked_at": "2026-10-08T06:46:00+00:00",
+      "last_checked_at": "2026-10-08T06:46:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Spatio–Temporal Feature Graph Convolutional Network Prediction Model With Edge Computing Integration"
+    },
+    "DOI:10.1016/j.aej.2026.02.008": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aej.2026.02.008",
+      "identity_tokens": [
+        "DOI:10.1016/j.aej.2026.02.008"
+      ],
+      "reason": "The packet has no abstract and the primary DOI/publisher page could not be retrieved after an attempt; retain as borderline because primary-source evidence is unavailable.",
+      "first_checked_at": "2026-10-08T06:46:02+00:00",
+      "last_checked_at": "2026-10-08T06:46:02+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DuMambaformer: Hybrid state-space model with dual-branch architecture for predicting soccer match outcomes"
+    },
+    "DOI:10.1109/tcsvt.2025.3595896": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3595896",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3595896"
+      ],
+      "reason": "Tried the primary IEEE DOI/publisher page, which was inaccessible in the available reader; only abstract/metadata-level material was available, so primary methods/results could not be checked. The candidate is retained as borderline because its linked lineage makes the exact method relevant to resolve.",
+      "first_checked_at": "2026-10-08T06:46:04+00:00",
+      "last_checked_at": "2026-10-08T06:46:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Feature Responsive LoRA: Toward Parameter-Efficient Transfer Learning for Self-Supervised Visual Models"
+    },
+    "DOI:10.1109/jsen.2025.3613704": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jsen.2025.3613704",
+      "identity_tokens": [
+        "DOI:10.1109/jsen.2025.3613704"
+      ],
+      "reason": "Tried the primary IEEE DOI/publisher page, which was inaccessible in the available reader; only abstract/metadata-level material was available, so primary methods/results could not be checked. The candidate is retained as borderline because its linked lineage makes the exact method relevant to resolve.",
+      "first_checked_at": "2026-10-08T06:46:06+00:00",
+      "last_checked_at": "2026-10-08T06:46:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge-Guided Multiscale Feature Fusion Network for Infrared Small Target Detection"
     }
   }
 }

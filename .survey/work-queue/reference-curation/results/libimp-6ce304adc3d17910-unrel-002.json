@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ce304adc3d17910-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tai.2025.3595115",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tai.2025.3595115",
+    "identity_tokens": [
+      "DOI:10.1109/tai.2025.3595115"
+    ],
+    "reason": "Abstract describes a visual Mamba image-enhancement framework; its efficiency target is image processing, not LLM inference.",
+    "first_checked_at": "2026-10-08T06:46:08+00:00",
+    "last_checked_at": "2026-10-08T06:46:08+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "title": "ILVMamba: Illumination-Aware Lightweight Visual Mamba Framework for Efficient High-Resolution Image Enhancement"
+  },
+  "processed_at": "2026-10-08T06:46:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ce304adc3d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
