@@ -118,7 +118,6 @@ references:
 references_checked_at: '2026-09-27'
 references_source: arxiv-html-reference-section
 references_total: 66
-last_audited: null
 audit_version: 0
 title: AdaMX：異質性を考慮した低ビット・マイクロスケーリング
 ---
