@@ -14,7 +14,6 @@ title: Locality-aware Fair Scheduling in LLM Serving
 list_summary: 'クライアントごとのサービス量を公平に保ちつつ、公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じ接頭辞を持つリクエストを続けて処理しKV再利用を増やすスケジューラ。複数GPUでは負荷分散も同時に調整する。'
 summary: clientごとのGPU利用量を公平に保ちつつ、**公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じprefixを持つrequestを続けて処理しKV再利用を増やす**scheduler。複数GPUではさらにprefix localityとGPU間load balanceも同時に調整する。
 source: https://arxiv.org/abs/2501.14312
-last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
