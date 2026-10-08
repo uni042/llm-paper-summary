@@ -129,10 +129,14 @@ jobs:
 
           metadata_max_age_seconds=3000
           force_metadata=0
-          # A watchdog-triggered workflow_dispatch is a normal clock tick, not a
-          # request to bypass freshness gates. Only a repository push is treated
-          # as an implementation/configuration change that forces validation.
-          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+          # An inbox handoff should dispatch import, not force unrelated metadata
+          # refreshes for every new paper. Only explicit kick/configuration pushes
+          # retain the old metadata bypass; watchdog ticks use freshness gates.
+          if [ "$GITHUB_EVENT_NAME" = "push" ] && jq -e '
+            [.commits[]? | (.added[]?, .modified[]?, .removed[]?)]
+            | any(. == ".survey/scheduler/library-import-kick.json"
+                  or . == ".github/workflows/survey-orchestrator.yml")
+          ' "$GITHUB_EVENT_PATH" >/dev/null; then
             force_metadata=1
           fi
 
