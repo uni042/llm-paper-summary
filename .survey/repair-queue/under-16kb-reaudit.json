@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T07:49:11.887788+00:00",
+  "generated_at": "2026-10-08T08:12:10.155965+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -7,8 +7,8 @@
   "minimum_japanese_ratio": 0.8,
   "count": 557,
   "worker_counts": {
-    "scheduled-chat-00": 188,
-    "scheduled-chat-30": 181,
+    "scheduled-chat-00": 189,
+    "scheduled-chat-30": 180,
     "scheduled-chat-45": 188
   },
   "entries": [
@@ -1547,30 +1547,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 638 < 700",
         "16KB未満再監査: 評価説明量 442 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2601.17668-fast-kvzip-efficient-and-accurate-llm-inference-with-gated-kv-eviction.md",
-      "canonical_id": "arXiv:2601.17668",
-      "title": "Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction",
-      "file_bytes": 8870,
-      "source_sha256": "278f5535218050572981c591ebaea0b6b83d69b8c5e19b966c90e0671ab77cbd",
-      "source_git_blob_sha": "ba554e0103836776979c598fab23e505fda43a14",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.965909,
-      "quality_metrics": {
-        "body_chars": 2012,
-        "method_chars": 481,
-        "evaluation_chars": 331,
-        "limitation_chars": 207
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2012 < 2200",
-        "16KB未満再監査: 手法説明量 481 < 700",
-        "16KB未満再監査: 評価説明量 331 < 500"
       ],
       "warnings": []
     },
@@ -5236,6 +5212,26 @@
         "16KB未満再監査: 手法説明量 660 < 700",
         "16KB未満再監査: 評価説明量 483 < 500"
       ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md",
+      "canonical_id": "arXiv:2506.24045",
+      "title": "Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC",
+      "file_bytes": 11002,
+      "source_sha256": "47a81ad09d2d210b618407df7d51837bc9002a2568ff7a3a20a0bdf192291c6c",
+      "source_git_blob_sha": "f6253e947e6c16454aa2cf295eb84fe9222bd9a0",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.954802,
+      "quality_metrics": {
+        "body_chars": 3074,
+        "method_chars": 850,
+        "evaluation_chars": 1028,
+        "limitation_chars": 159
+      },
+      "mechanical_failures": [],
       "warnings": []
     },
     {
