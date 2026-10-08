@@ -1,40 +1,84 @@
 ---
-canonical_id: "DOI:10.1145/3731569.3764808"
-doi: "10.1145/3731569.3764808"
-title: "Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference"
-summary: "携帯端末のGPUとNPUの性能特性、メモリ帯域、同期費用を実測し、前処理・復号の段階や行列形状に応じて重み・活性化を分割するHeteroInferを提案する。固定形状しか受け付けないNPUと動的形状に強いGPUを組み合わせ、共有メモリと予測待機・短時間ポーリングでGPU-NPU同期を高速化し、事前プロファイルと最適化器で実行計画を決める。Snapdragon 8 Gen 3の実機評価では既存モバイル推論系に対しエンドツーエンド1.34〜6.02倍、Llama-8Bの前処理247.9トークン/秒、InternLM-1.8Bの前処理1092トークン/秒を報告する。"
-list_summary: "携帯SoCのGPU・NPUの形状依存性能と共有メモリ帯域を測り、重み・活性化の異種分割と高速同期でLLM前処理・復号を並列化する。"
+canonical_id: DOI:10.1145/3731569.3764808
+doi: 10.1145/3731569.3764808
+title: Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference
+summary: 携帯端末のGPUとNPUの性能特性、メモリ帯域、同期費用を実測し、前処理・復号の段階や行列形状に応じて重み・活性化を分割するHeteroInferを提案する。固定形状しか受け付けないNPUと動的形状に強いGPUを組み合わせ、共有メモリと予測待機・短時間ポーリングでGPU-NPU同期を高速化し、事前プロファイルと最適化器で実行計画を決める。Snapdragon 8 Gen 3の実機評価では既存モバイル推論系に対しエンドツーエンド1.34〜6.02倍、Llama-8Bの前処理247.9トークン/秒、InternLM-1.8Bの前処理1092トークン/秒を報告する。
+list_summary: 携帯SoCのGPU・NPUの形状依存性能と共有メモリ帯域を測り、重み・活性化の異種分割と高速同期でLLM前処理・復号を並列化する。
 authors:
-  - Le Chen
-  - Dahu Feng
-  - Erhu Feng
-  - Yingrui Wang
-  - Rong Zhao
-  - Yubin Xia
-  - Pinjie Xu
-  - Haibo Chen
-published: "2025-10"
-publication: "ACM SIGOPS 31st Symposium on Operating Systems Principles (SOSP 2025)"
-publication_type: "Conference paper"
-publication_status: "Published"
-source: "https://ipads.se.sjtu.edu.cn/zh/publications/sosp25-chen.pdf"
+- Le Chen
+- Dahu Feng
+- Erhu Feng
+- Yingrui Wang
+- Rong Zhao
+- Yubin Xia
+- Pinjie Xu
+- Haibo Chen
+published: 2025-10
+publication: ACM SIGOPS 31st Symposium on Operating Systems Principles (SOSP 2025)
+publication_type: Conference paper
+publication_status: Published
+source: https://ipads.se.sjtu.edu.cn/zh/publications/sosp25-chen.pdf
 sources:
-  - "https://ipads.se.sjtu.edu.cn/zh/publications/sosp25-chen.pdf"
-  - "https://doi.org/10.1145/3731569.3764808"
-implementation: "OpenCLによるGPUカーネルとQualcomm QNNのNPU演算子を組み合わせた携帯端末用推論エンジンを実装。Snapdragon 8 Gen 3を主実機、8 Eliteを一部比較に使用。W4A16の重みのみ量子化を採用し、公式コード公開URLは一次資料から特定できない。"
+- https://ipads.se.sjtu.edu.cn/zh/publications/sosp25-chen.pdf
+- https://doi.org/10.1145/3731569.3764808
+implementation: OpenCLによるGPUカーネルとQualcomm QNNのNPU演算子を組み合わせた携帯端末用推論エンジンを実装。Snapdragon 8 Gen 3を主実機、8 Eliteを一部比較に使用。W4A16の重みのみ量子化を採用し、公式コード公開URLは一次資料から特定できない。
 code: null
-last_checked: "2026-10-08"
-worker_completed_at: "2026-10-08T06:04:28+09:00"
-worker_run_key: "20261008-0558-scheduled-chat-00/repair-r01"
-reference_main_sha: "bf0fdd3a3d0b5e2a11cf7a6a20ae278578410e90"
+last_checked: '2026-10-08'
+worker_completed_at: '2026-10-08T06:04:28+09:00'
+worker_run_key: 20261008-0558-scheduled-chat-00/repair-r01
+reference_main_sha: bf0fdd3a3d0b5e2a11cf7a6a20ae278578410e90
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07"
+quality_self_review_version: '2026-10-07'
 quality_body_chars: 7163
 quality_method_chars: 2748
 quality_evaluation_chars: 2574
 quality_limitation_chars: 721
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2310.10944
+  arxiv_id: '2310.10944'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2401.14351
+- canonical_id: arXiv:2205.15868
+  arxiv_id: '2205.15868'
+- canonical_id: DOI:10.1145/3626793
+  doi: 10.1145/3626793
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2410.04466
+  arxiv_id: '2410.04466'
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2312.10868
+  arxiv_id: '2312.10868'
+- canonical_id: arXiv:2206.09557
+  arxiv_id: '2206.09557'
+- canonical_id: arXiv:2311.18677
+- canonical_id: DOI:10.1145/2499370.2462176
+  doi: 10.1145/2499370.2462176
+- canonical_id: arXiv:1605.02688
+  arxiv_id: '1605.02688'
+- canonical_id: arXiv:2406.01014
+  arxiv_id: '2406.01014'
+- canonical_id: arXiv:2401.16158
+  arxiv_id: '2401.16158'
+- canonical_id: arXiv:2409.12191
+  arxiv_id: '2409.12191'
+- canonical_id: arXiv:2506.10443
+- canonical_id: arXiv:2407.05858
+- canonical_id: arXiv:2408.04104
+  arxiv_id: '2408.04104'
+- canonical_id: arXiv:2406.06282
+- canonical_id: arXiv:2408.06072
+  arxiv_id: '2408.06072'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2407.03320
+  arxiv_id: '2407.03320'
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-08'
+references_source: crossref-deposited-reference-metadata
+references_total: 69
 ---
 
 # Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference
