@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r306-screen-01-part-01-fa841b9a9035",
+  "reference_main_sha": "c1139f8bc469be2a436e1892e2d2316dc0247703",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133361",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133361"
+      ],
+      "title": "WaveKAN: Adaptive wavelet decomposition and Kolmogorov-Arnold network for long-term time series forecasting",
+      "reason": "Publisher abstract describes wavelet/Kolmogorov-Arnold time-series forecasting; no LLM inference or serving contribution.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.133361",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TAI.2025.3595115",
+      "identity_tokens": [
+        "DOI:10.1109/TAI.2025.3595115"
+      ],
+      "title": "ILVMamba: Illumination-Aware Lightweight Visual Mamba Framework for Efficient High-Resolution Image Enhancement",
+      "reason": "Abstract describes a visual Mamba image-enhancement framework; its efficiency target is image processing, not LLM inference.",
+      "source_url": "https://doi.org/10.1109/TAI.2025.3595115",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1073/pnas.2524201123",
+      "identity_tokens": [
+        "DOI:10.1073/pnas.2524201123"
+      ],
+      "title": "ProteomeLM: A proteome-scale language model enables accurate and rapid prediction of protein–protein interactions and gene essentiality across taxa",
+      "reason": "ProteomeLM uses protein-language embeddings and proteome context for biological interaction/essentiality prediction. No LLM token-serving optimization is presented.",
+      "source_url": "https://doi.org/10.1073/pnas.2524201123",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11902",
+      "identity_tokens": [
+        "arXiv:2602.11902"
+      ],
+      "title": "Mitigating Mismatch within Reference-based Preference Optimization",
+      "reason": "HyPO changes preference-training gradients and explicitly preserves DPO computational cost; it improves alignment metrics, not deployed inference resources.",
+      "source_url": "https://arxiv.org/abs/2602.11902",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41597-026-06684-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41597-026-06684-8"
+      ],
+      "title": "A fine-grained fundus image dataset for cataract severity assessment and diagnosis",
+      "reason": "The primary paper presents a cataract image/report dataset and domain-specific MLLM diagnosis framework; it does not propose general inference efficiency.",
+      "source_url": "https://doi.org/10.1038/s41597-026-06684-8",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
