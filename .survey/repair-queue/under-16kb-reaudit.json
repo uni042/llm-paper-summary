@@ -1,67 +1,17 @@
 {
-  "generated_at": "2026-10-08T15:56:51.935838+00:00",
+  "generated_at": "2026-10-08T16:17:11.043152+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 436,
+  "count": 421,
   "worker_counts": {
-    "scheduled-chat-00": 148,
-    "scheduled-chat-30": 128,
-    "scheduled-chat-45": 160
+    "scheduled-chat-00": 141,
+    "scheduled-chat-30": 124,
+    "scheduled-chat-45": 156
   },
   "entries": [
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md",
-      "canonical_id": "arXiv:2404.07413",
-      "title": "JetMoE: Reaching Llama2 Performance with 0.1M Dollars",
-      "file_bytes": 8648,
-      "source_sha256": "21ac6907b6fbbf73ec7a49c684576819bab5b1cd61b144be02d158dc4a7dca98",
-      "source_git_blob_sha": "9ce894a8a6e53eae7928f0a5957e4fafc5523dcc",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.84807,
-      "quality_metrics": {
-        "body_chars": 1715,
-        "method_chars": 543,
-        "evaluation_chars": 0,
-        "limitation_chars": 164
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1715 < 2200",
-        "16KB未満再監査: 手法説明量 543 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.15919-hfx-joint-design-of-algorithms-and-systems-for-multi-slo-serving-and-fas.md",
-      "canonical_id": "arXiv:2508.15919",
-      "title": "HFX: Joint Design of Algorithms and Systems for Multi-SLO Serving and Fast Scaling",
-      "file_bytes": 8739,
-      "source_sha256": "d6888d5c0176fc9609944deb7de770a6a9931e24e012fd5476383aa9cad25ca2",
-      "source_git_blob_sha": "d99e7d645929b08e9e1647b917f7a9b86ec36b43",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.756605,
-      "quality_metrics": {
-        "body_chars": 1782,
-        "method_chars": 762,
-        "evaluation_chars": 86,
-        "limitation_chars": 140
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1782 < 2200",
-        "16KB未満再監査: 評価説明量 86 < 500",
-        "16KB未満再監査: 日本語比率 75.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 75.7% < 警告基準 80%"
-      ]
-    },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md",
       "canonical_id": "arXiv:2609.33614",
@@ -235,26 +185,6 @@
       "warnings": [
         "日本語比率 77.7% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
-      "canonical_id": "arXiv:2210.17223",
-      "title": "Accelerating Distributed MoE Training and Inference with Lina",
-      "file_bytes": 9178,
-      "source_sha256": "9f0fb811097554704d37ce88206b01ae91e91582066e160a6b6261c1fdfeeb0e",
-      "source_git_blob_sha": "63d784de72c6af026a67ab965f8cc8789f940917",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.814106,
-      "quality_metrics": {
-        "body_chars": 2641,
-        "method_chars": 834,
-        "evaluation_chars": 699,
-        "limitation_chars": 211
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
@@ -498,33 +428,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
-      "canonical_id": "arXiv:2503.16419",
-      "title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
-      "file_bytes": 9423,
-      "source_sha256": "a16539d4ee0827d210eb7e20c576237918cd186226957a38df14e93df06530e1",
-      "source_git_blob_sha": "0392c54998e5c6223ba4ac96b44590b57bcd6550",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.766744,
-      "quality_metrics": {
-        "body_chars": 1090,
-        "method_chars": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 134
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1090 < 2200",
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500",
-        "16KB未満再監査: 日本語比率 76.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.7% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md",
       "canonical_id": "arXiv:2606.05538",
       "title": "Less is MoE: Trimming Experts in Domain-Specialist Language Models",
@@ -551,53 +454,6 @@
       ]
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
-      "canonical_id": "arXiv:2308.04623",
-      "title": "Accelerating LLM Inference with Staged Speculative Decoding",
-      "file_bytes": 9507,
-      "source_sha256": "f8fa88df6c9aac471ef7b8566f253b660175129f8ddf86e430af3d8c279dfee8",
-      "source_git_blob_sha": "6b6781893a871380121c062993748c14405d7a53",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.883973,
-      "quality_metrics": {
-        "body_chars": 2281,
-        "method_chars": 764,
-        "evaluation_chars": 130,
-        "limitation_chars": 152
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 130 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md",
-      "canonical_id": "arXiv:2602.06502",
-      "title": "DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving",
-      "file_bytes": 9534,
-      "source_sha256": "f7af41115e3c7fa623cba3791538363938c0c66a0419e33194e2b8454afba7c3",
-      "source_git_blob_sha": "4fe8d17e0d7a8d823f405cb34a8e4dabbec866a3",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.707721,
-      "quality_metrics": {
-        "body_chars": 2292,
-        "method_chars": 773,
-        "evaluation_chars": 295,
-        "limitation_chars": 199
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 295 < 500",
-        "16KB未満再監査: 日本語比率 70.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 70.8% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md",
       "canonical_id": "arXiv:2501.09410",
       "title": "MoE²: Optimizing Collaborative Inference for Edge Large Language Models",
@@ -619,26 +475,6 @@
         "16KB未満再監査: 手法説明量 480 < 700",
         "16KB未満再監査: 評価説明量 123 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.04722-don-t-waste-bits-adaptive-kv-cache-quantization-for-lightweight-on-devic.md",
-      "canonical_id": "arXiv:2604.04722",
-      "title": "Don't Waste Bits! Adaptive KV-Cache Quantization for Lightweight On-Device LLMs",
-      "file_bytes": 9615,
-      "source_sha256": "642e10e4153843cfeb925eb11023b47f4fc4dc4e3ee9f37cec3c2bbab35ab8e8",
-      "source_git_blob_sha": "adae33d187fb6aeefeaa0f1d29a1680b6f74a99b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.969239,
-      "quality_metrics": {
-        "body_chars": 2675,
-        "method_chars": 812,
-        "evaluation_chars": 851,
-        "limitation_chars": 237
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -2124,30 +1960,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
-      "canonical_id": "arXiv:2602.15763",
-      "title": "GLM-5: from Vibe Coding to Agentic Engineering",
-      "file_bytes": 10717,
-      "source_sha256": "49f7954fc1e0318d5e5cbc600007b425ab9e9b69f9dce0d8b79b1909dd3e5b36",
-      "source_git_blob_sha": "fa08d423753128ea4909a7f433b02c6c36bb51b2",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.970951,
-      "quality_metrics": {
-        "body_chars": 1176,
-        "method_chars": 416,
-        "evaluation_chars": 94,
-        "limitation_chars": 112
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1176 < 2200",
-        "16KB未満再監査: 手法説明量 416 < 700",
-        "16KB未満再監査: 評価説明量 94 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md",
       "canonical_id": "arXiv:2412.03594",
       "title": "BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching",
@@ -2259,30 +2071,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
-      "canonical_id": "arXiv:1802.06901",
-      "title": "Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement",
-      "file_bytes": 10766,
-      "source_sha256": "adc979206712886b4eff0035c3d2ab2a4a163a82f20ad6090747adaee12116b8",
-      "source_git_blob_sha": "5c648cc2c5ce7636858acae4a130f71aabc55011",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.757044,
-      "quality_metrics": {
-        "body_chars": 3220,
-        "method_chars": 1117,
-        "evaluation_chars": 946,
-        "limitation_chars": 312
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 75.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 75.7% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
       "canonical_id": "arXiv:2404.07904",
       "title": "HGRN2: Gated Linear RNNs with State Expansion",
@@ -2330,31 +2118,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
-      "canonical_id": "DOI:10.1145/3689031.3696075",
-      "title": "HybridFlow: A Flexible and Efficient RLHF Framework",
-      "file_bytes": 10809,
-      "source_sha256": "a9745f2a9aa47b38d961a8f39fa6959a16f91b7b91fb9c134418a58684995af0",
-      "source_git_blob_sha": "30194ef85e72d077455eecf45e4526e0f416d7b4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.720696,
-      "quality_metrics": {
-        "body_chars": 2590,
-        "method_chars": 871,
-        "evaluation_chars": 324,
-        "limitation_chars": 203
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 324 < 500",
-        "16KB未満再監査: 日本語比率 72.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.1% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
       "canonical_id": "arXiv:2103.02143",
       "title": "Random Feature Attention",
@@ -2400,33 +2163,6 @@
       ],
       "warnings": [
         "日本語比率 79.3% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
-      "canonical_id": "arXiv:2304.09145",
-      "title": "Outlier Suppression+: Accurate quantization of large language models by equivalent and optimal shifting and scaling",
-      "file_bytes": 10842,
-      "source_sha256": "18b5375fb9a45904bc980c9910b76c3448b4003c5a45ef8f12e7f3387a7f0b74",
-      "source_git_blob_sha": "999e8f44b45abc7ce43b1058f057a7593a4b2a41",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.701651,
-      "quality_metrics": {
-        "body_chars": 1816,
-        "method_chars": 581,
-        "evaluation_chars": 288,
-        "limitation_chars": 198
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1816 < 2200",
-        "16KB未満再監査: 手法説明量 581 < 700",
-        "16KB未満再監査: 評価説明量 288 < 500",
-        "16KB未満再監査: 日本語比率 70.2% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 70.2% < 警告基準 80%"
       ]
     },
     {
@@ -9491,26 +9227,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md",
-      "canonical_id": "arXiv:2402.11960",
-      "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
-      "file_bytes": 15834,
-      "source_sha256": "c1ad0d8d1f18fc3441dd607d87a3ac57b54bb5df714b59265e4d682f217af387",
-      "source_git_blob_sha": "28e1436255ba4c56ef8c844d7d8c547da7bc6d78",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.999382,
-      "quality_metrics": {
-        "body_chars": 4288,
-        "method_chars": 1207,
-        "evaluation_chars": 808,
-        "limitation_chars": 472
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md",
       "canonical_id": "arXiv:2412.20993",
       "title": "Efficiently Serving LLM Reasoning Programs with Certaindex",
@@ -9529,72 +9245,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 95 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md",
-      "canonical_id": "arxiv:2512.03416",
-      "title": "TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity",
-      "file_bytes": 16382,
-      "source_sha256": "bbd17b9490c987554bbc1673b0bdfef292004e9b62a6734e19c43a2cb65c357c",
-      "source_git_blob_sha": "2ddfef73c3c656449f0fd09200b23ec6c7189fd0",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.997443,
-      "quality_metrics": {
-        "body_chars": 3528,
-        "method_chars": 1049,
-        "evaluation_chars": 359,
-        "limitation_chars": 328
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 359 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
-      "canonical_id": "arXiv:2408.05235",
-      "title": "SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving",
-      "file_bytes": 16404,
-      "source_sha256": "9b3d3967fd4778cece4129be55220e1df408b080eba402c4e67ab3e7e4d17bfe",
-      "source_git_blob_sha": "9a999059ec9d606ac4b42721a6be41ba1916dc58",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.953375,
-      "quality_metrics": {
-        "body_chars": 3011,
-        "method_chars": 1155,
-        "evaluation_chars": 0,
-        "limitation_chars": 259
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
-      "canonical_id": "arXiv:2511.00330",
-      "title": "Sherlock: Reliable and Efficient Agentic Workflow Execution",
-      "file_bytes": 16413,
-      "source_sha256": "423a36fa39c3349718ae5555258f7d55640be6133faedf2ebbde7a495cfb871b",
-      "source_git_blob_sha": "b5bb9eab6be2bbc61343d633d9696bc3df1ad77c",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.932845,
-      "quality_metrics": {
-        "body_chars": 3537,
-        "method_chars": 1239,
-        "evaluation_chars": 337,
-        "limitation_chars": 383
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 337 < 500"
       ],
       "warnings": []
     },
