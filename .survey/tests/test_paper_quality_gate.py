@@ -219,7 +219,7 @@ class PaperQualityGateTests(unittest.TestCase):
                 "---\n\n# 同一論文\n\n"
             )
             pending_path = ".survey/import-inbox/pending/research/revision.md"
-            revision = meta + body + ("修正後の一次資料に基づく新規評価の説明。" * 30)
+            revision = meta + body + "\n\n" + ("修正後の一次資料に基づく新規評価の説明。" * 30)
             self.assertEqual(gate._boilerplate_reuse_failures(root, pending_path, revision), [])
 
             # A false source blob must not bypass the shared-paragraph check.
