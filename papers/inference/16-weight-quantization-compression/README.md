@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（40本）
+## 自動生成の論文一覧（41本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -154,6 +154,10 @@
   実装：[✓](https://github.com/DD-DuDa/BitDistiller) ・ リポジトリ内被引用：3  
   BitDistillerは、4bit未満、とくに2bit・3bitの重み量子化で急激に悪化するLLM品質を、量子化認識学習（Quantization-Aware 学習; QAT）と自己蒸留（self-distillation）で回復する枠組みである。
 
+- **2024-02 · [DB-LLM: Accurate Dual-Binarization for Efficient LLMs](2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデルの重み量子化は、16ビット浮動小数点の重みを数ビットの離散値へ置き換え、モデル保存量と重み読み出し量を減らす。LLaMA-1-7Bでは平均重み疎性が62.8%となり、著者らの計算量モデルでは32トークン入力のFLOPsが通常2ビット量子化の37.3Gから29.8Gへ減る。
+
 ### 4年前（2022-11〜2023-10）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
@@ -173,11 +177,11 @@
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
-  実装：✓ ・ リポジトリ内被引用：43  
+  実装：✓ ・ リポジトリ内被引用：42  
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-10 · [Atom: Low-bit Quantization for Efficient and Accurate LLM Serving](2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md)**  
-  実装：[✓](https://github.com/efeslab/Atom) ・ リポジトリ内被引用：34  
+  実装：[✓](https://github.com/efeslab/Atom) ・ リポジトリ内被引用：33  
   外れ値チャネルだけ高精度に残して重み・活性・KVキャッシュを低ビット化し、再配置と融合カーネルで4ビットGPU演算器を直接使ってLLM配信を高速化する。
 
 - **2023-09 · [PB-LLM: Partially Binarized Large Language Models](2023-2310.00034-pb-llm-partially-binarized-large-language-models.md)**  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T10:58:19+00:00",
+  "generated_at": "2026-10-08T11:08:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 164,
+  "count": 162,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -221,22 +221,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4717524bf0588191b03cde2c82b80c28--2025-awq-on-device.json",
       "worker_run_key": "20261003-0531-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2402.11960",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:07:30+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4b3839781f988191a9b4c50a500ac895--2024-2402.11960-db-llm.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4b3839781f988191a9b4c50a500ac895--2024-2402.11960-db-llm.json",
-      "worker_run_key": "20261003-0128-scheduled-chat-30"
     },
     {
       "canonical_id": "arXiv:2502.02770",
@@ -2851,34 +2835,6 @@
       "worker_run_key": "20261008-1032-scheduled-chat-30/reaudit-r01"
     },
     {
-      "canonical_id": "arXiv:2601.06123",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T08:32:18+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7535,
-        "body_paragraphs": 41,
-        "method_chars": 2506,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_04b4a9eada808191b45f85612083261d--2026-2601.06123-latent-kv-cache-alignment-repair-20261008-1228-scheduled-chat-00.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_04b4a9eada808191b45f85612083261d--2026-2601.06123-latent-kv-cache-alignment-repair-20261008-1228-scheduled-chat-00.json",
-      "worker_run_key": "20261008-1226-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2504.03871",
       "title": null,
       "source_url": null,
@@ -3207,8 +3163,8 @@
     },
     {
       "canonical_id": "arXiv:2407.06204",
-      "title": "A Survey on Mixture of Experts in Large Language Models",
-      "source_url": "https://arxiv.org/abs/2407.06204",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T10:57:07+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
