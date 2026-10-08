@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Survey on Model Compression and Acceleration for Pretrained Language Models",
+      "source_url": "https://arxiv.org/abs/2202.07105",
+      "year": 2022,
+      "published": "2022-02-15",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 104,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite achieving state-of-the-art performance on many NLP tasks, the high energy cost and long inference delay prevent Transformer-based pretrained language models (PLMs) from seeing broader adoption including for edge and mobile computing. Efficient NLP research aims to comprehensively consider computation, time and carbon emission for the entire life-cycle of NLP, including data preparation, model training and inference. In this survey, we focus on the inference stage and review the current state of model compression and acceleration for pretrained language models, including benchmarks, metrics and methodology.",
+      "identifiers": [
+        "SemanticScholar:c546e5447f412bf4f274e490996718641b211aa6"
+      ],
+      "semantic_scholar_id": "c546e5447f412bf4f274e490996718641b211aa6",
+      "canonical_id": "arXiv:2202.07105",
+      "arxiv_id": "2202.07105",
+      "doi": "10.1609/aaai.v37i9.26255",
+      "authors": [
+        "Can-Wen Xu",
+        "Julian McAuley"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 104,
+        "citation_count": 104,
+        "total": 104,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1696,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary arXiv abstract surveys compression and acceleration specifically for pretrained-language-model inference. The R313 row supplied a Semantic Scholar identifier and a different title wording; the exact stable arXiv URL resolves the primary record and current title/authors.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fail Fast, Win Big: Rethinking the Drafting Strategy in Speculative Decoding via Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2512.20573",
+      "year": 2025,
+      "published": "2025-12-23",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) offer fast, parallel token generation, but their standalone use is plagued by an inherent efficiency-quality tradeoff. We show that, if carefully applied, the attributes of dLLMs can actually be a strength for drafters in speculative decoding with autoregressive (AR) verifiers. Our core insight is that dLLM's speed from parallel decoding drastically lowers the risk of costly rejections, providing a practical mechanism to effectively realize the (elusive) lengthy drafts that lead to large speedups with speculative decoding. We present FailFast, a dLLM-based speculative decoding framework that realizes this approach by dynamically adapting its speculation length. It\"fails fast\"by spending minimal compute in hard-to-speculate regions to shrink speculation latency and\"wins big\"by aggressively extending draft lengths in easier regions to reduce verification latency (in many cases, speculating and accepting 70 tokens at a time!). Without any fine-tuning, FailFast delivers lossless acceleration of AR LLMs and achieves up to 4.9$\\times$ speedup over vanilla decoding, 1.7$\\times$ over the best naive dLLM drafter, and 1.7$\\times$ over EAGLE-3 across diverse models and workloads. We open-source FailFast at https://github.com/ruipeterpan/failfast.",
+      "identifiers": [
+        "SemanticScholar:fa3fa343eccf90cae47f5dcd1f639e774a8c28c3"
+      ],
+      "semantic_scholar_id": "fa3fa343eccf90cae47f5dcd1f639e774a8c28c3",
+      "canonical_id": "arXiv:2512.20573",
+      "arxiv_id": "2512.20573",
+      "doi": "10.48550/arXiv.2512.20573",
+      "authors": [
+        "Rui Pan",
+        "Zhuofu Chen",
+        "Hong-Yi Liu",
+        "Arvind Krishnamurthy",
+        "Ravi Netravali"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 289,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FailFast uses a diffusion LLM to draft adaptive-length speculative continuations; the abstract reports lossless autoregressive acceleration up to 4.9x.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2604.22782",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving transformer language models with high throughput requires caching Key-Values (KVs) to avoid redundant computation during autoregressive generation. The memory footprint of KV caching is significant and heavily impacts serving costs. This work proposes to lessen these memory requirements. While recent work has largely addressed KV cache reduction via compression and eviction along the temporal axis, we argue that the \\emph{depth} dimension offers an orthogonal and robust avenue for optimization. Although prior research suggests that a full cache for every layer is redundant, implementing cross-layer cache sharing remains a practical challenge; existing methods typically suffer from reduced throughput or increased time-to-first-token. In this paper, we demonstrate that dropping a layer's cache offers efficient optimization without information loss. We propose a simple training approach: random cross-layer attention. During training, layers randomly choose to attend either to their own KV states or those of a preceding layer. This stochastic process adapts the model to be robust to various depth-wise cache sharing strategies, ensuring flexibility for unknown hardware constraints at deployment time. Our evaluations show that applying this scheme during pre-training or fine-tuning enables depth-wise cache sharing for various model families. Furthermore, for larger models in data-constrained settings, this approach is suggestive of a regularization-like effect, frequently preserving or improving performance while significantly reducing the cache's memory footprint.",
+      "identifiers": [
+        "SemanticScholar:f06dbcc935e6cad2807496fdc1906182105739c3"
+      ],
+      "semantic_scholar_id": "f06dbcc935e6cad2807496fdc1906182105739c3",
+      "canonical_id": "arXiv:2604.22782",
+      "arxiv_id": "2604.22782",
+      "doi": "10.48550/arXiv.2604.22782",
+      "authors": [
+        "A. Filippova",
+        "David Grangier",
+        "Marco Cuturi",
+        "Joao Monteiro"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract trains random cross-layer attention so layers can share KV states, reducing cache memory while preserving model performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2604.02047",
+      "year": 2026,
+      "published": "2026-04-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by drafting multiple candidate tokens and verifying them in a single forward pass. Candidates are organized as a tree: deeper trees accept more tokens per step, but adding depth requires sacrificing breadth (fallback options) under a fixed verification budget. Existing training-free methods draft from a single token source and shape their trees without distinguishing candidate quality across origins. We observe that two common training-free token sources -- n-gram matches copied from the input context, and statistical predictions from prior forward passes -- differ sharply in acceptance rate (~6x median gap, range 2-18x across five models and five benchmarks). We prove that when such a quality gap exists, the optimal tree is anisotropic (asymmetric): reliable tokens should form a deep chain while unreliable tokens spread as wide branches, raising the depth ceiling of balanced trees. We realize this structure in GOOSE, a training-free framework that builds an adaptive spine tree: a deep chain of high-acceptance context-matched tokens with wide branches of low-acceptance alternatives at each node. The resulting tree provably accepts at least as many tokens per step as either source alone. On five LLMs (7B-33B) and five benchmarks, GOOSE achieves 1.9-4.3x lossless speedup, outperforming balanced-tree baselines by 12-33% under the same budget.",
+      "identifiers": [
+        "SemanticScholar:0e46532d6e535321564fdd3461fc8e04ce76b97c"
+      ],
+      "semantic_scholar_id": "0e46532d6e535321564fdd3461fc8e04ce76b97c",
+      "canonical_id": "arXiv:2604.02047",
+      "arxiv_id": "2604.02047",
+      "doi": "10.48550/arXiv.2604.02047",
+      "authors": [
+        "Tao Jin",
+        "P. Nguyen",
+        "Naoya Inoue"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GOOSE uses a deep chain for reliable draft tokens and broad branches for less reliable candidates; the abstract reports 1.9–4.3x lossless speedup over autoregressive decoding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Structural Pruning of Large Vision Language Models: A Comprehensive Study on Pruning Dynamics, Recovery, and Data Efficiency",
+      "source_url": "https://arxiv.org/abs/2604.24380",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "International Journal of Computer Vision",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Vision Language Models (LVLMs) demonstrate impressive capabilities, their substantial computational and memory requirements pose deployment challenges on resource-constrained edge devices. Current parameter reduction techniques primarily involve training LVLMs from small language models, but these methods offer limited flexibility and remain computationally intensive. We study a complementary route: compressing existing LVLMs by applying structured pruning to the language model backbone, followed by lightweight recovery training. Specifically, we investigate two structural pruning paradigms: layerwise and widthwise pruning, and pair them with supervised finetuning and knowledge distillation on logits and hidden states. Additionally, we assess the feasibility of conducting recovery training with only a small fraction of the available data. Our results show that widthwise pruning generally maintains better performance in low-resource scenarios, where computational resources are limited or there is insufficient finetuning data. As for the recovery training, finetuning only the multimodal projector is sufficient at small compression levels. Furthermore, a combination of supervised finetuning and hidden-state distillation yields optimal recovery across various pruning levels. Notably, effective recovery can be achieved using just 5% of the original data, while retaining over 95% of the original performance. Through empirical study on three representative LVLM families ranging from 3B to 7B parameters, this study offers actionable insights for practitioners to compress LVLMs without extensive computation resources or sufficient data.",
+      "identifiers": [
+        "SemanticScholar:8740937e36aa5973e2306f8451c020e8814642c6"
+      ],
+      "semantic_scholar_id": "8740937e36aa5973e2306f8451c020e8814642c6",
+      "canonical_id": "arXiv:2604.24380",
+      "arxiv_id": "2604.24380",
+      "doi": "10.1007/s11263-026-02865-5",
+      "authors": [
+        "Yi-Ran Huang",
+        "Lukas Thede",
+        "Massimiliano Mancini",
+        "Wenjian Xu",
+        "Zeynep Akata"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract studies layerwise/widthwise pruning with lightweight recovery for LVLM deployment; it reports over 95% performance retained using 5% of recovery data.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fde44093db57",
+    "round": "libimp-fde44093db579ba8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fde44093db579ba8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fde44093db579ba8-pre01.json",
+    "receipt": "sha256:55234ae307dc7c2e69e48d170e4edf23639dde801f11411d0d1cf3ed0df440db"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fde44093db57",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

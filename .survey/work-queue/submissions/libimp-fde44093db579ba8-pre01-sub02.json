@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.05145",
+      "year": 2026,
+      "published": "2026-02-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding can substantially accelerate LLM inference, but realizing its benefits in practice is challenging due to evolving workloads. We present TIDE (Temporal Incremental Draft Engine), a serving-engine-native framework that integrates online draft adaptation directly into high-performance LLM inference systems. TIDE reuses target model's intermediate hidden states generated during inference as training signals for draft adaptation, thereby avoiding additional target model computation and serving-time overhead. It employs adaptive runtime control to activate speculation and draft model training only when beneficial. TIDE exploits heterogeneous clusters by mapping inference and training to appropriate GPU classes. Across diverse real-world workloads, TIDE achieves up to 1.66$\\times$ throughput over no-speculation baselines while recovering performance on misaligned workloads where static draft models degrade throughput. TIDE also reduces training time by up to 3.02$\\times$ and storage requirements by 24$\\times$ compared to existing draft training approaches, and improves system throughput by up to 1.22$\\times$ on heterogeneous GPU clusters.",
+      "identifiers": [
+        "SemanticScholar:3b0375d7784230665b4a05f74f02dfb36c55ade4"
+      ],
+      "semantic_scholar_id": "3b0375d7784230665b4a05f74f02dfb36c55ade4",
+      "canonical_id": "arXiv:2602.05145",
+      "arxiv_id": "2602.05145",
+      "doi": "10.48550/arXiv.2602.05145",
+      "authors": [
+        "Jiyoung Park",
+        "Hankyu Jang",
+        "Changseok Song",
+        "W. Jung"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 245,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TIDE adapts speculative drafts within a serving engine using target-model hidden states without extra target computation; the abstract reports increased workload throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Delay-Adaptive Speculation Control for Low-Latency Edge-Cloud LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.20591",
+      "year": 2026,
+      "published": "2026-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight draft model to propose tokens and a larger target model to verify them in parallel. In distributed edge-cloud inference, however, draft length must be controlled online: longer drafts amortize communication delay but reduce token acceptance, whereas shorter drafts preserve acceptance but trigger more communication rounds. We formulate this tradeoff as a ratio-type optimal stopping problem and prove that the optimal draft length is a finite delay-monotone threshold. The analysis identifies a critical delay below which single-token speculation is optimal and shows that the optimal length grows only logarithmically with communication delay. For time-varying networks, we extend the model to Markov-modulated channels and establish, under a bounded horizon and monotone stopping-region conditions, a state-dependent threshold policy. For unknown environments, we propose UCB-SpecStop, an online control algorithm with gap-free and gap-dependent expected regret bounds of $O(L_{\\max}\\sqrt{K_{\\max}T\\log(K_{\\max}T)})$ and $O(\\sum_{k:\\Delta_k>0}L_{\\max}^2\\log(K_{\\max}T)/\\Delta_k)$. We implement the method on a real edge-cloud testbed with a Jetson Orin Nano Super edge node and an RTX~3090 Ti cloud node, using Qwen and Llama draft--target pairs. Experiments validate the predicted phase transition, with transition points near 83~ms and 111~ms. Qwen matches the geometric prediction, while Llama requires empirical-prefix calibration due to heavy-head acceptance. Across the tested delay grid, UCB-SpecStop reduces per-token latency over SpecDec++ by up to 22.4\\%, approaches an offline oracle within 0.2--2.4\\% in communication-dominated regimes, improves over naive UCB by up to 7.5\\%, removes the 14.0--18.7\\% gap caused by static tuning under delay drift, and gains 3.0--6.8\\% with contextual channel-state information.",
+      "identifiers": [
+        "SemanticScholar:a8ed94804b700c494a2bfe1bdd4b97af40b7a969"
+      ],
+      "semantic_scholar_id": "a8ed94804b700c494a2bfe1bdd4b97af40b7a969",
+      "canonical_id": "arXiv:2606.20591",
+      "arxiv_id": "2606.20591",
+      "doi": "10.48550/arXiv.2606.20591",
+      "authors": [
+        "Kangkang Sun",
+        "Jianhua Li",
+        "Xiuzhen Chen",
+        "Junyi He",
+        "Minyi Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract models edge-cloud speculative draft length as a delay-dependent stopping threshold and reports up to 22.4% per-token latency reduction over SpecDec++.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Learning What to Remember: Test-Time Training via Context Distillation",
+      "source_url": "https://arxiv.org/abs/2608.01672",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Effective long-context modeling is not merely about retaining more of the past, but about preserving the information that may prove relevant later. Test-time training (TTT) is an appealing approach that performs online parameter updates for long-context modeling, yet existing TTT methods only optimize either reconstruction or online adaptation objectives without considering the future utility of retained information. In this work, we propose \\textbf{T}est-\\textbf{T}ime \\textbf{C}ontext \\textbf{D}istillation (TTCD), a TTT framework that introduces a self-supervised objective for allocating limited memory capacity for future use. Specifically, TTCD uses a long-window teacher to supervise the fast weights of a short-window student, where the hidden-state discrepancy between them offers a dense, self-supervised signal guiding the model to memorize the contextual information crucial for future token predictions. We focus on an in-place variant: In-Place TTCD (IP-TTCD), which uses the existing MLP parameters as the fast weights. Experiments on long-context language modeling tasks show IP-TTCD consistently outperforms DeltaNet, Gated DeltaNet, sliding-window attention, and TTT when pre-trained from scratch. Furthermore, IP-TTCD allows pre-trained transformer models to adapt their parameters during inference through continual pre-training, gaining long-context capabilities with only a lightweight architectural augmentation. Our results position TTCD as a step toward architectural continual learning.",
+      "identifiers": [
+        "SemanticScholar:7091c769bf6317008fa75468c072819dad59020d"
+      ],
+      "semantic_scholar_id": "7091c769bf6317008fa75468c072819dad59020d",
+      "canonical_id": "arXiv:2608.01672",
+      "arxiv_id": "2608.01672",
+      "authors": [
+        "Zi-Xuan Wang",
+        "Xing-Yu Dang",
+        "Ruiming Zhu",
+        "Zixin Wen",
+        "Heng-Yu Fu",
+        "Wen-Hao Chai",
+        "Jason D. Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TTCD allocates limited memory for future context using a long-window teacher and short-window student; the abstract describes inference-time adaptation of pretrained transformers with lightweight architectural augmentation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gradient-Free Structured Pruning with Unlabeled Data",
+      "source_url": "https://arxiv.org/abs/2303.04185",
+      "year": 2023,
+      "published": "2023-03-07",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 40,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved great success in solving difficult tasks across many domains, but such success comes with a high computation cost, and inference latency. As developers and third parties customize these models, the need to provide efficient inference has increased. Many efforts have attempted to reduce inference cost through model compression techniques such as pruning and distillation. However, these techniques either require labeled data, or are time-consuming as they require the compressed model to be retrained to regain accuracy. In this paper, we propose a gradient-free structured pruning framework that uses only unlabeled data. An evaluation on the GLUE and SQuAD benchmarks using BERT$_{BASE}$ and DistilBERT illustrates the effectiveness of the proposed approach. By only using the weights of the pre-trained model and unlabeled data, in a matter of a few minutes on a single GPU, up to 40% of the original FLOP count can be reduced with less than a 4% accuracy loss across all tasks considered.",
+      "identifiers": [
+        "SemanticScholar:3d60a54a47b346608430344ff37935d897a14c09"
+      ],
+      "semantic_scholar_id": "3d60a54a47b346608430344ff37935d897a14c09",
+      "canonical_id": "arXiv:2303.04185",
+      "arxiv_id": "2303.04185",
+      "doi": "10.48550/arXiv.2303.04185",
+      "authors": [
+        "Azade Nova",
+        "Han-Jun Dai",
+        "Dale Schuurmans"
+      ],
+      "priority": 50,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 40,
+        "citation_count": 40,
+        "total": 50,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1311,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "The abstract proposes gradient-free structured pruning for pretrained language models using unlabeled data, reporting up to 40% fewer FLOPs with less than 4% accuracy loss.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Memorize Step by Step: Efficient Long-Context Prefilling with Incremental Memory and Decremental Chunk",
+      "source_url": "https://doi.org/10.18653/v1/2024.emnlp-main.1169",
+      "year": 2024,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The evolution of Large Language Models (LLMs) has led to significant advancements, with models like Claude and Gemini capable of processing contexts up to 1 million tokens. However, efficiently handling long sequences remains challenging, particularly during the prefilling stage when input lengths exceed GPU memory capacity. Traditional methods often segment sequence into chunks and compress them iteratively with fixed-size memory. However, our empirical analysis shows that the fixed-size memory results in wasted computational and GPU memory resources. Therefore, we introduces Incremental Memory (IM), a method that starts with a small memory size and gradually increases it, optimizing computational efficiency. Additionally, we propose Decremental Chunk based on Incremental Memory (IMDC), which reduces chunk size while increasing memory size, ensuring stable and lower GPU memory usage. Our experiments demonstrate that IMDC is consistently faster (1.45x) and reduces GPU memory consumption by 23.3% compared to fixed-size memory, achieving comparable performance on the LongBench Benchmark.",
+      "identifiers": [
+        "SemanticScholar:73a8e44af924fa6f54cf797224655d18b14e26e3"
+      ],
+      "semantic_scholar_id": "73a8e44af924fa6f54cf797224655d18b14e26e3",
+      "doi": "10.18653/v1/2024.emnlp-main.1169",
+      "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.1169",
+      "authors": [
+        "Zhi-Yuan Zeng",
+        "Qipeng Guo",
+        "Xiaoran Liu",
+        "Zhangyue Yin",
+        "Wentao Shu",
+        "Mian-Qiu Huang",
+        "Bo Wang",
+        "Yunhua Zhou",
+        "Linlin Li",
+        "Qun Liu",
+        "Xi-Peng Qiu"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 829,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "The ACL abstract introduces incremental memory and decremental chunks for long-context prefill, reporting 1.45x faster processing and 23.3% lower GPU memory than fixed-size memory.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fde44093db57",
+    "round": "libimp-fde44093db579ba8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fde44093db579ba8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fde44093db579ba8-pre01.json",
+    "receipt": "sha256:55234ae307dc7c2e69e48d170e4edf23639dde801f11411d0d1cf3ed0df440db"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fde44093db57",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
