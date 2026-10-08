@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 07:04:40 JST**
+> 自動生成: **2026-10-09 07:33:36 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **782** |
 | 未claim Research job | **782** |
-| 直近24hのResearch処理完了 | **265** |
+| 直近24hのResearch処理完了 | **234** |
 | 最終Research処理完了 | **10-09 06:36:15 JST** |
 | 最終Discovery探索完了 | **10-09 04:52:38 JST** |
 | 整合性異常 | **0** |
@@ -65,9 +65,9 @@
 |---|---:|
 | 未処理候補（フィルタ前） | **95085** |
 | 機械規則による暫定隔離 | **1300** |
-| 拡張機械規則による追加隔離 | **876** |
-| 機械規則通過後 | **92909** |
-| 系統内前方引用スコアによる選抜保留 | **88263** |
+| 拡張機械規則による追加隔離 | **875** |
+| 機械規則通過後 | **92910** |
+| 系統内前方引用スコアによる選抜保留 | **88264** |
 | 暫定隔離合計 | **90439** |
 | **読解可能候補（隔離後）** | **4646** |
 | 前方引用が同一系統で2本以上の候補 | **11224** |
@@ -79,9 +79,9 @@
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **876件**（基本規則との重複を除去）
-- 実際の追加隔離: **876件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 63, 'expanded_domain:content_moderation': 9, 'expanded_domain:educational_legal_applications': 20, 'expanded_domain:environmental_applications': 6, 'expanded_domain:financial_applications': 42, 'expanded_domain:geoscience_applications': 45, 'expanded_domain:materials_applications': 21, 'expanded_domain:vision_applications': 670}**
+- 拡張規則に一致した候補: **875件**（基本規則との重複を除去）
+- 実際の追加隔離: **875件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 62, 'expanded_domain:content_moderation': 9, 'expanded_domain:educational_legal_applications': 20, 'expanded_domain:environmental_applications': 6, 'expanded_domain:financial_applications': 42, 'expanded_domain:geoscience_applications': 45, 'expanded_domain:materials_applications': 21, 'expanded_domain:vision_applications': 670}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（19時間7分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（19時間36分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,9 +136,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **16** |
-| 直近6hのDiscovery run | **10** |
-| 直近6hのDiscovery本文確認・分類 | **177** |
+| 直近6hのResearch完了 | **14** |
+| 直近6hのDiscovery run | **8** |
+| 直近6hのDiscovery本文確認・分類 | **151** |
 | 最終Research完了 | **10-09 06:36:15 JST** |
 | 最終Discovery完了 | **10-09 04:52:38 JST** |
 
