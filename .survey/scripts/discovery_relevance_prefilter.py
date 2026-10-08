@@ -8,7 +8,6 @@ and regenerate worklists to restore the exact original candidate ordering.
 from __future__ import annotations
 
 import hashlib
-import forward_lineage_citation
 import json
 import math
 import re
@@ -201,11 +200,11 @@ def _quota_policy(policy: dict[str, Any]) -> tuple[str, int, int]:
     if mode not in ("off", "shadow", "quarantine"):
         return "off", 100, 0
     try:
-        percent = int(config.get("retain_percent", 25))
+        percent = float(config.get("retain_percent", 25))
         minimum = max(int(config.get("min_candidates", 100)), 0)
     except (TypeError, ValueError):
         return "off", 100, 0
-    if not 1 <= percent <= 100:
+    if not math.isfinite(percent) or not 0 < percent <= 100:
         return "off", 100, 0
     return mode, percent, minimum
 
@@ -238,7 +237,6 @@ def triage_worklist(
             kept.append(row)
             continue
         rule_reject = classify(row, policy)["verdict"] == "quarantine"
-        forced_allow = bool(row.get("canonical_id") and str(row.get("canonical_id")) in policy.get("allow_canonical_ids", []))
         if rule_reject:
             rule_count += 1
         expansion_reject = False
@@ -257,7 +255,7 @@ def triage_worklist(
     quota_mode, quota_percent, quota_minimum = _quota_policy(policy)
     # Percentage is applied AFTER the mechanical domain rules, not before.
     quota_eligible_count = len(kept)
-    quota_target = (quota_eligible_count * quota_percent + 99) // 100
+    quota_target = math.ceil(quota_eligible_count * quota_percent / 100)
     quota_removed_count = 0
     try:
         stride = max(int(policy.get("audit_stride", 50)), 2)
