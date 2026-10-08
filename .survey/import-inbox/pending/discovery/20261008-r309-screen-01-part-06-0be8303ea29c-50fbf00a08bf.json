@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r309-screen-01-part-06-0be8303ea29c",
+  "reference_main_sha": "09e281f7ccc3deb08cc67cb3905800c62d2d9970",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.07304",
+      "identity_tokens": [
+        "arXiv:2202.07304"
+      ],
+      "title": "XAI for Transformers: Better Explanations through Conservative Propagation",
+      "reason": "Transformer explanationのconservative propagation/XAI手法で、推論resource削減を扱わない。",
+      "source_url": "https://arxiv.org/abs/2202.07304",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00131",
+      "identity_tokens": [
+        "arXiv:2403.00131"
+      ],
+      "title": "UniTS: A Unified Multi-Task Time Series Model",
+      "reason": "UniTSはtask-tokenized time-series predictive/generative modelの統合・forecasting performanceが主題で、LLM inference serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2403.00131",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1101/2022.05.19.492714",
+      "identity_tokens": [
+        "DOI:10.1101/2022.05.19.492714"
+      ],
+      "title": "Convolutions are competitive with transformers for protein sequence pretraining",
+      "reason": "abstractは蛋白配列用CNN言語モデルがTransformerより線形時間/メモリで長い配列を扱うと述べ、sparse-attention/long-context系との概念接点がある。ただし一次本文を取得できず、内容・条件・推論効率評価を確認できないため本文ゲートを満たせずborderline。",
+      "source_url": "https://doi.org/10.1101/2022.05.19.492714",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.03090",
+      "identity_tokens": [
+        "arXiv:1911.03090"
+      ],
+      "title": "What Would Elsa Do? Freezing Layers During Transformer Fine-Tuning",
+      "reason": "凍結層fine-tuningによるdownstream adaptation training costの削減。inference architecture/推論時computeは変えない。",
+      "source_url": "https://arxiv.org/abs/1911.03090",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15260",
+      "identity_tokens": [
+        "arXiv:2602.15260"
+      ],
+      "title": "Fast and Effective On-policy Distillation from Reasoning Prefixes",
+      "reason": "reasoning-prefix on-policy distillationがstudent rolloutを短縮しtraining FLOPsを下げる研究。本文/abstractの対象は訓練中の計算量であり、配布後の推論改善ではない。",
+      "source_url": "https://arxiv.org/abs/2602.15260",
+      "first_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "last_checked_at": "2026-10-08T07:01:08.579416+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    }
+  ]
+}
