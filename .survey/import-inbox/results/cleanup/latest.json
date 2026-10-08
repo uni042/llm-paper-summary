@@ -1,93 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T07:52:17+00:00",
+  "updated_at": "2026-10-08T07:59:10+00:00",
   "events": [
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_1772469ca7c8819189042c83f56175f8--2026-2603.11504-longflow.md",
-      "processed_at": "2026-10-05T11:05:21+00:00",
-      "canonical_id": "arXiv:2603.11504"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_17d56c0e28bc8191aee339460eb17aab--2024-2410.00428-layerkv.md",
-      "processed_at": "2026-10-05T11:05:21+00:00",
-      "canonical_id": "arXiv:2410.00428"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_1877d02723cc8191abc19317dc3fa637--2024-2406.12335-vatp.md",
-      "processed_at": "2026-10-05T11:05:21+00:00",
-      "canonical_id": "arXiv:2406.12335"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_1a36b190ebc88191bf45f3be1c7b4de7--2023-2312.04455-attention-buckets.md",
-      "processed_at": "2026-10-05T11:05:28+00:00",
-      "canonical_id": "arXiv:2312.04455",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_1b0b25c9aca08191a9913af2340cac58--2025-2505.05286-hexgen-flow.md",
-      "processed_at": "2026-10-05T11:05:28+00:00",
-      "canonical_id": "arXiv:2505.05286"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_1b1aaf7d01008191889c58f03c35fb46--2024-2402.17463-dca.md",
-      "processed_at": "2026-10-05T11:05:35+00:00",
-      "canonical_id": "arXiv:2402.17463",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_1cd28d0e55708191acce8f4e7853b50b--2025-2510.15312-sdnpu.md",
-      "processed_at": "2026-10-05T11:05:42+00:00",
-      "canonical_id": "arXiv:2510.15312",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors:list",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_type",
-        "published",
-        "sources"
-      ]
-    },
     {
       "status": "discarded_blocked_research_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_1cfd8b36d3988191a2f2d0181b982882--2025-2505.24133-r-kv.md",
@@ -4261,6 +4176,63 @@
       "processed_at": "2026-10-08T07:52:17+00:00",
       "canonical_id": "arXiv:1805.02867",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-e5af549171a9--libfile_3940f7c4fbe8819185eea4f45c608ee8--2018-1805.02867-online-softmax-under16kb-reaudit-20261008-1455-scheduled-chat-00-r01.md"
+    },
+    {
+      "status": "deferred_blocked_research_retry_collision",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "processed_at": "2026-10-08T07:59:10+00:00",
+      "canonical_id": "arXiv:2306.11222",
+      "existing_retry_path": ".survey/import-inbox/pending/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+      "blocked_normalized_sha256": "11676ea31e307d2fad0f55864d4a90be9859f94d17d575908296be24b01cea72",
+      "pending_sha256": "0b11814c7daaebcd8a35e04d219064d12815dbc36d17bb3f6ac71b484c0e0dd6"
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T07:59:10+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T07:59:10+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-08T07:59:10+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-98ed9aa8900d--libfile_2f5ea57df84c81918c9d83dd076d5745--2021-2112.06905-glam-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "processed_at": "2026-10-08T07:59:10+00:00",
+      "canonical_id": "arXiv:2112.06905",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-98ed9aa8900d--libfile_2f5ea57df84c81918c9d83dd076d5745--2021-2112.06905-glam-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-95001d50ad83--libfile_4b34d386a4c081919853174e2cbdff82--2024-2404.05892-eagle-finch-under16kb-reaudit-20261008-0759.md",
+      "processed_at": "2026-10-08T07:59:10+00:00",
+      "canonical_id": "arXiv:2404.05892",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-95001d50ad83--libfile_4b34d386a4c081919853174e2cbdff82--2024-2404.05892-eagle-finch-under16kb-reaudit-20261008-0759.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-2a376d723581--libfile_4d75e73e07248191aaaddb973f4aa8bc--2025-2510.13602-nosa-repair-20261008-0428.md",
+      "processed_at": "2026-10-08T07:59:10+00:00",
+      "canonical_id": "arXiv:2510.13602",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-2a376d723581--libfile_4d75e73e07248191aaaddb973f4aa8bc--2025-2510.13602-nosa-repair-20261008-0428.md"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T07:53:36+00:00",
+  "generated_at": "2026-10-08T07:59:13+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 157,
+  "count": 161,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -2451,33 +2451,6 @@
       "worker_run_key": "20261008-0428-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2510.14557",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T21:45:20+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 368 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2211,
-        "body_paragraphs": 18,
-        "method_chars": 910,
-        "method_paragraphs": 8,
-        "evaluation_chars": 368,
-        "limitation_chars": 161,
-        "insufficiency_flags": [
-          "評価説明量 368 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2b16c39665d88191b08b0fca1eefb411--2025-2510.14557-mx-plus-repair-20261008-0032.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2b16c39665d88191b08b0fca1eefb411--2025-2510.14557-mx-plus-repair-20261008-0032.json",
-      "worker_run_key": "20261008-0032-scheduled-chat-30/repair-r01"
-    },
-    {
       "canonical_id": "arXiv:2509.23324",
       "title": null,
       "source_url": null,
@@ -2796,8 +2769,8 @@
     },
     {
       "canonical_id": "arXiv:2112.06905",
-      "title": "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts",
-      "source_url": "https://arxiv.org/abs/2112.06905",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:52:17+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2823,8 +2796,8 @@
     },
     {
       "canonical_id": "arXiv:2404.05892",
-      "title": "Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence",
-      "source_url": "https://arxiv.org/pdf/2404.05892",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:52:38+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2851,8 +2824,8 @@
     },
     {
       "canonical_id": "arXiv:2510.13602",
-      "title": "NOSA: Native and Offloadable Sparse Attention",
-      "source_url": "https://arxiv.org/abs/2510.13602",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:52:59+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2876,6 +2849,150 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4d75e73e07248191aaaddb973f4aa8bc--2025-2510.13602-nosa-repair-20261008-0428.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4d75e73e07248191aaaddb973f4aa8bc--2025-2510.13602-nosa-repair-20261008-0428.json",
       "worker_run_key": "20261008-0428-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.14557",
+      "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2510.14557",
+      "returned_at": "2026-10-08T07:59:11+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3277,
+        "body_paragraphs": 17,
+        "method_chars": 1455,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4e17fe7dd04c819192690613e5081157--2025-2510.14557-mx-plus-repair-20261008-0428.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4e17fe7dd04c819192690613e5081157--2025-2510.14557-mx-plus-repair-20261008-0428.json",
+      "worker_run_key": "20261008-0428-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.05451",
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "source_url": "https://arxiv.org/abs/2603.05451",
+      "returned_at": "2026-10-08T07:59:11+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 310 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4179,
+        "body_paragraphs": 21,
+        "method_chars": 1929,
+        "method_paragraphs": 10,
+        "evaluation_chars": 310,
+        "limitation_chars": 296,
+        "insufficiency_flags": [
+          "評価説明量 310 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_51b1eb3826dc81919a365ec08ff0ca90--2603.05451-flashattention-4.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_51b1eb3826dc81919a365ec08ff0ca90--2603.05451-flashattention-4.json",
+      "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2411.01783",
+      "title": "Context Parallelism for Scalable Million-Token Inference",
+      "source_url": "https://arxiv.org/pdf/2411.01783",
+      "returned_at": "2026-10-08T07:59:12+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5491,
+        "body_paragraphs": 28,
+        "method_chars": 2291,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_535dd3cb0f08819185e586981db9f2cb--2024-2411.01783-context-parallelism-under16kb-reaudit-20261008-0755.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_535dd3cb0f08819185e586981db9f2cb--2024-2411.01783-context-parallelism-under16kb-reaudit-20261008-0755.json",
+      "worker_run_key": "20261008-0745-scheduled-chat-45/reaudit-r01"
+    },
+    {
+      "canonical_id": "arXiv:2411.00841",
+      "title": "A Theoretical Perspective for Speculative Decoding Algorithm",
+      "source_url": "https://arxiv.org/abs/2411.00841",
+      "returned_at": "2026-10-08T07:59:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700",
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5769,
+        "body_paragraphs": 42,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_603fb89247c08191be1387f984cba9e4--2024-2411.00841-speculative-decoding-theory-under16kb-reaudit-20261008-1235-scheduled-chat-00.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_603fb89247c08191be1387f984cba9e4--2024-2411.00841-speculative-decoding-theory-under16kb-reaudit-20261008-1235-scheduled-chat-00.json",
+      "worker_run_key": "20261008-1226-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2501.03895",
+      "title": "LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token",
+      "source_url": "https://arxiv.org/abs/2501.03895",
+      "returned_at": "2026-10-08T07:59:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 本文説明量 1458 < 2200",
+        "説明不足トリガー: 手法説明量 423 < 700",
+        "説明不足トリガー: 評価説明量 105 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 1458,
+        "body_paragraphs": 12,
+        "method_chars": 423,
+        "method_paragraphs": 4,
+        "evaluation_chars": 105,
+        "limitation_chars": 177,
+        "insufficiency_flags": [
+          "本文説明量 1458 < 2200",
+          "手法説明量 423 < 700",
+          "評価説明量 105 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5deca8d57b6c8191bc35433fc7c90273--2025-2501.03895-llava-mini.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5deca8d57b6c8191bc35433fc7c90273--2025-2501.03895-llava-mini.json",
+      "worker_run_key": "20261007-1657-scheduled-chat-00/r01"
     }
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ff1e10baa2fa7ea7ca77684b1043fef2d02f4671e1d23bb9d64ee54c5ec3253a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_535dd3cb0f08819185e586981db9f2cb--2024-2411.01783-context-parallelism-under16kb-reaudit-20261008-0755.md",
+  "canonical_id": "arXiv:2411.01783",
+  "worker_completed_at": "2026-10-08T07:54:33+09:00",
+  "worker_run_key": "20261008-0745-scheduled-chat-45/reaudit-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5491,
+    "body_paragraphs": 28,
+    "method_chars": 2291,
+    "method_paragraphs": 12,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-08T07:59:12+00:00"
+}

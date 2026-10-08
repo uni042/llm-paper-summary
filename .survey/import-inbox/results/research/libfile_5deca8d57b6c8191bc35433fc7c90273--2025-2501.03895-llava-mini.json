@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "44e83d43b0c3683442b0ac0a2b8783a90a33987417b6264e8bb114194cf308fc",
+  "normalized_source_sha256": "ba6fcb4624541dcb01d6123cd66ae116fdf8b60926302a41d94a33a019749c24",
+  "japanese_normalized": true,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_5deca8d57b6c8191bc35433fc7c90273--2025-2501.03895-llava-mini.md",
+  "canonical_id": "arXiv:2501.03895",
+  "worker_completed_at": "2026-10-07T16:57:10+09:00",
+  "worker_run_key": "20261007-1657-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 1458,
+    "body_paragraphs": 12,
+    "method_chars": 423,
+    "method_paragraphs": 4,
+    "evaluation_chars": 105,
+    "limitation_chars": 177,
+    "insufficiency_flags": [
+      "本文説明量 1458 < 2200",
+      "手法説明量 423 < 700",
+      "評価説明量 105 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 本文説明量 1458 < 2200",
+    "説明不足トリガー: 手法説明量 423 < 700",
+    "説明不足トリガー: 評価説明量 105 < 500"
+  ],
+  "processed_at": "2026-10-08T07:59:13+00:00"
+}
