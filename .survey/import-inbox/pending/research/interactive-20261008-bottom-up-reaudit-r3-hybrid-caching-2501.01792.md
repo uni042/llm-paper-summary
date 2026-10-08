@@ -10,7 +10,6 @@ worker_run_key: 'interactive-20261008-bottom-up-reaudit-r3-hybrid-caching-2501.0
 worker_completed_at: '2026-10-08T10:13:00+09:00'
 canonical_id: arXiv:2501.01792
 arxiv_id: '2501.01792'
-last_audited: null
 audit_version: 0
 storage_targets: []
 bottlenecks: []
