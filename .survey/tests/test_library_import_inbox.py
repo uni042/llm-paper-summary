@@ -20,6 +20,48 @@ import process_library_import_inbox as inbox
 
 
 class LibraryImportInboxTests(unittest.TestCase):
+    def test_reaudit_priority_has_separate_bounded_quota(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            ordinary_a = root / "a-ordinary.md"
+            ordinary_b = root / "b-ordinary.md"
+            reaud_a = root / "y-reaudit.md"
+            reaud_b = root / "z-reaudit.md"
+            ordinary_a.write_text("---\\ntitle: Ordinary\\n---\\n", encoding="utf-8")
+            ordinary_b.write_text(
+                "---\\ntitle: Ordinary\\n---\\nunder16kb_reaudit_target_path: papers/fake.md\\n",
+                encoding="utf-8",
+            )
+            reaud_a.write_text(
+                "---\\nunder16kb_reaudit_target_path: papers/a.md\\n---\\n",
+                encoding="utf-8",
+            )
+            reaud_b.write_text(
+                "---\\nunder16kb_reaudit_target_path: papers/b.md\\n---\\n",
+                encoding="utf-8",
+            )
+            sources = [reaud_b, ordinary_b, reaud_a, ordinary_a]
+            self.assertTrue(inbox.is_reaudit_research_source(reaud_a))
+            self.assertFalse(inbox.is_reaudit_research_source(ordinary_b))
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=2),
+                [reaud_a, reaud_b, ordinary_a],
+            )
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=1),
+                [reaud_a, ordinary_a],
+            )
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=0, max_reaudit=1),
+                [reaud_a],
+            )
+            self.assertEqual(
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=None),
+                [ordinary_a],
+            )
+            with self.assertRaises(ValueError):
+                inbox.select_research_sources(sources, max_items=1, max_reaudit=-1)
+
     def test_unquoted_yaml_dates_are_strings_not_datetime_objects(self) -> None:
         raw = """---
 published: 2024-10-17
