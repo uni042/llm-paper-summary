@@ -14,6 +14,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import build_status_dashboard as evidence
+import forward_citation_state
 
 
 KINDS = ("research", "audit", "discovery")
@@ -136,8 +137,8 @@ def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
         )
         total_count = processed_count + pending_count
         backward_pool = reference_pool.build_reference_pool(repo_root)
-        forward_state = evidence._load_json(
-            repo_root / ".survey/work-queue/forward-citation-sweep.json"
+        forward_state = forward_citation_state.load(
+            repo_root / ".survey/work-queue/forward-citation-sweep.json", {}
         )
         forward_candidates = (
             forward_state.get("candidates")
@@ -324,7 +325,7 @@ def _render_reaudit_queue(status: dict[str, Any]) -> list[str]:
 def _forward_citation_coverage(repo_root: Path) -> dict[str, Any]:
     """Read the durable all-paper forward-citation sweep state without inference."""
     path = repo_root / ".survey/work-queue/forward-citation-sweep.json"
-    payload = evidence._load_json(path)
+    payload = forward_citation_state.load(path, {})
     if not isinstance(payload, dict) or payload.get("schema_version") != 1:
         return {"available": False, "path": path}
 
