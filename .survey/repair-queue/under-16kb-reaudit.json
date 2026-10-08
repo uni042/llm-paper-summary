@@ -1,41 +1,17 @@
 {
-  "generated_at": "2026-10-08T13:27:46.070732+00:00",
+  "generated_at": "2026-10-08T13:41:37.649965+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 463,
+  "count": 456,
   "worker_counts": {
-    "scheduled-chat-00": 157,
-    "scheduled-chat-30": 141,
-    "scheduled-chat-45": 165
+    "scheduled-chat-00": 156,
+    "scheduled-chat-30": 136,
+    "scheduled-chat-45": 164
   },
   "entries": [
-    {
-      "path": "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
-      "canonical_id": "arXiv:2009.14794",
-      "title": "Rethinking Attention with Performers",
-      "file_bytes": 8079,
-      "source_sha256": "c0583ccf86348e42b22338de5c5eb00033353aa4467408fe5ebc26421650e8e7",
-      "source_git_blob_sha": "f3c896ff4b52c44ce765cc3d2c904ce6b0bbcb3d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.927393,
-      "quality_metrics": {
-        "body_chars": 1292,
-        "method_chars": 455,
-        "evaluation_chars": 135,
-        "limitation_chars": 106
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1292 < 2200",
-        "16KB未満再監査: 手法説明量 455 < 700",
-        "16KB未満再監査: 評価説明量 135 < 500"
-      ],
-      "warnings": []
-    },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md",
       "canonical_id": "arXiv:2509.11815",
@@ -106,57 +82,6 @@
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md",
-      "canonical_id": "arXiv:2606.13392",
-      "title": "MiniMax Sparse Attention",
-      "file_bytes": 8347,
-      "source_sha256": "49272f5729ba14df3aa6211249d671e6df61fac0ec6086ddad3f1823dfe40ddc",
-      "source_git_blob_sha": "fc485ed4302e22184e2275d401df3fcc5b4650c1",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.951503,
-      "quality_metrics": {
-        "body_chars": 1181,
-        "method_chars": 327,
-        "evaluation_chars": 99,
-        "limitation_chars": 140
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1181 < 2200",
-        "16KB未満再監査: 手法説明量 327 < 700",
-        "16KB未満再監査: 評価説明量 99 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
-      "canonical_id": "arXiv:2206.13947",
-      "title": "Long Range Language Modeling via Gated State Spaces",
-      "file_bytes": 8353,
-      "source_sha256": "87e385f61367bddf4d1d9235d38a2426a0d57118720b8dbc47f9af1c241acbd4",
-      "source_git_blob_sha": "ef41b99cd71d34bf8c662cc297bba2b405f456ec",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.771213,
-      "quality_metrics": {
-        "body_chars": 1668,
-        "method_chars": 435,
-        "evaluation_chars": 268,
-        "limitation_chars": 131
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1668 < 2200",
-        "16KB未満再監査: 手法説明量 435 < 700",
-        "16KB未満再監査: 評価説明量 268 < 500",
-        "16KB未満再監査: 日本語比率 77.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.1% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md",
@@ -422,30 +347,6 @@
         "16KB未満再監査: 本文説明量 1718 < 2200",
         "16KB未満再監査: 手法説明量 580 < 700",
         "16KB未満再監査: 評価説明量 155 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
-      "canonical_id": "arXiv:2410.19258",
-      "title": "Not All Heads Matter: A Head-Level KV Cache Compression Method with Integrated Retrieval and Reasoning",
-      "file_bytes": 8787,
-      "source_sha256": "edb2b026128f07d4f73c9b47f2ccd8039b2085b0d6cc5fffd274674094d1c47b",
-      "source_git_blob_sha": "907c08b84d3b8a6b36224ae50673db2158540555",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.93932,
-      "quality_metrics": {
-        "body_chars": 1446,
-        "method_chars": 384,
-        "evaluation_chars": 115,
-        "limitation_chars": 172
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1446 < 2200",
-        "16KB未満再監査: 手法説明量 384 < 700",
-        "16KB未満再監査: 評価説明量 115 < 500"
       ],
       "warnings": []
     },
@@ -1902,28 +1803,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 632 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
-      "canonical_id": "arXiv:2409.12514",
-      "title": "TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
-      "file_bytes": 10073,
-      "source_sha256": "428fdbf74bf85a711526b841e825076d402efb097e186e8f93a394ea0bb30dd7",
-      "source_git_blob_sha": "7d161c4cbd69e38e323eb1681b008b85aa6290b3",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.985096,
-      "quality_metrics": {
-        "body_chars": 2245,
-        "method_chars": 812,
-        "evaluation_chars": 359,
-        "limitation_chars": 231
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 359 < 500"
       ],
       "warnings": []
     },
@@ -9807,28 +9686,6 @@
       ]
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
-      "canonical_id": "arXiv:2306.11222",
-      "title": "LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation",
-      "file_bytes": 15058,
-      "source_sha256": "2a3ab300023bbd98962dfd5d86725600af8e4d967d751c3cd6d885d94b45d24b",
-      "source_git_blob_sha": "f83cbb256eac7963c81ce9a09b5646c3bc6a3380",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.907692,
-      "quality_metrics": {
-        "body_chars": 3765,
-        "method_chars": 1281,
-        "evaluation_chars": 222,
-        "limitation_chars": 393
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 222 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
       "canonical_id": "DOI:10.1109/HPCA53966.2022.00082",
       "title": "TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer",
@@ -10065,28 +9922,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 179 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md",
-      "canonical_id": "arXiv:2609.26333",
-      "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode",
-      "file_bytes": 15682,
-      "source_sha256": "fb3561fc1e43789e59632525a1b0196f7c5d12b8c42a69bca4bed593b5e08bf7",
-      "source_git_blob_sha": "7211ae3b00224c586123d3cfad1a2fa3352d41e4",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.948726,
-      "quality_metrics": {
-        "body_chars": 3307,
-        "method_chars": 1282,
-        "evaluation_chars": 210,
-        "limitation_chars": 288
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 210 < 500"
       ],
       "warnings": []
     },
