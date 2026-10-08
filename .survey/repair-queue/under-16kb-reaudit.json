@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T16:53:30.503477+00:00",
+  "generated_at": "2026-10-08T18:50:50.020397+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 419,
+  "count": 418,
   "worker_counts": {
     "scheduled-chat-00": 140,
-    "scheduled-chat-30": 123,
+    "scheduled-chat-30": 122,
     "scheduled-chat-45": 156
   },
   "entries": [
@@ -4091,26 +4091,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 93 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
-      "canonical_id": "arXiv:2301.00774",
-      "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
-      "file_bytes": 11829,
-      "source_sha256": "67d0f18be04e6fda02dbb8eb3f2f0fb14e581d44bfedaeb2fa4fa79279087133",
-      "source_git_blob_sha": "fac2a0be267226ea38930adfa6e3eba8e59ad51c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.897517,
-      "quality_metrics": {
-        "body_chars": 3303,
-        "method_chars": 1019,
-        "evaluation_chars": 915,
-        "limitation_chars": 318
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
