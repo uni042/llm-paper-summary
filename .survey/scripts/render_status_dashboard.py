@@ -579,11 +579,11 @@ def _render_library_first_activity_section(repo_root: Path, now) -> str:
         "| 指標 | 現在値 |",
         "|---|---:|",
         f"| 直近{_core.evidence.RECENT_HOURS}hのResearch完了 | **{len(recent_research)}** |",
-        f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery成果run | **{len(recent_discovery)}** |",
+        f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery run | **{len(recent_discovery)}** |",
         f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery本文確認・分類 | "
         f"**{sum(int(row.get('record_count') or 0) for row in recent_discovery)}** |",
         f"| 最終Research完了 | **{_core.evidence._fmt_time(latest_research['completed_at']) if latest_research else '—'}** |",
-        f"| 最終Discovery成果確認 | **{_core.evidence._fmt_time(latest_discovery['completed_at']) if latest_discovery else '—'}** |",
+        f"| 最終Discovery完了 | **{_core.evidence._fmt_time(latest_discovery['completed_at']) if latest_discovery else '—'}** |",
         "",
         "### 最新Library-first run",
         "",
