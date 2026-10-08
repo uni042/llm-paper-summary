@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r307-screen-01-part-04-90ec7ba58f20",
+  "reference_main_sha": "5c18fc6e26f9820ff555f0c60e9af187bd627a48",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/LRA.2025.3643327",
+      "identity_tokens": [
+        "DOI:10.1109/LRA.2025.3643327"
+      ],
+      "title": "SS-VIO: A Novel Cross Modal State Space Visual Inertial Odometry",
+      "reason": "一次要旨は視覚・慣性センサ融合によるvisual-inertial odometryである。ロボット状態推定でありLLM inference optimizationではない。",
+      "source_url": "https://doi.org/10.1109/LRA.2025.3643327",
+      "first_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "last_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19019",
+      "identity_tokens": [
+        "arXiv:2601.19019"
+      ],
+      "title": "Embedding of low-dimensional sensory dynamics in recurrent networks: Implications for the geometry of neural representation",
+      "reason": "一次要旨および題名は感覚皮質ダイナミクスを再帰ネットワークで埋め込む理論研究である。LLM推論やservingの対象ではない。",
+      "source_url": "https://arxiv.org/abs/2601.19019",
+      "first_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "last_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.16603",
+      "identity_tokens": [
+        "arXiv:2601.16603"
+      ],
+      "title": "Omni-directional attention mechanism based on Mamba for speech separation",
+      "reason": "全文の手法・実験はMamba系を用いた音声信号分離であり、音源分離精度とその計算構成を対象とする。LLM autoregressive inferenceやserving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2601.16603",
+      "first_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "last_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03858",
+      "identity_tokens": [
+        "arXiv:2602.03858"
+      ],
+      "title": "PENGUIN: General Vital Sign Reconstruction from PPG with Flow Matching State Space Model",
+      "reason": "本文の方法・評価・結論はPPGからのvital-sign再構成である。状態空間モデルを使うが、モデルは生体信号推定用で、LLM推論コストを扱わない。",
+      "source_url": "https://arxiv.org/abs/2602.03858",
+      "first_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "last_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15250",
+      "identity_tokens": [
+        "arXiv:2601.15250"
+      ],
+      "title": "FlowSSC: Universal Generative Monocular Semantic Scene Completion via One-Step Latent Diffusion",
+      "reason": "全文は単眼画像から3D semantic scene completionを行うone-step latent diffusionである。推論ステップ数の削減は画像生成モデルの技術で、LLM inferenceには適用・評価されていない。",
+      "source_url": "https://arxiv.org/abs/2601.15250",
+      "first_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "last_checked_at": "2026-10-08T06:48:01.081171+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
