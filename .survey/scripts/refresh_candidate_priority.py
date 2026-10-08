@@ -23,6 +23,7 @@ import discovery_provider_adapter
 import paper_identity
 import reference_pool
 import forward_citation_state
+import candidate_priority_state
 
 CACHE_PATH = Path(".survey/work-queue/candidate-priority-cache.json")
 FORWARD_SWEEP_PATH = Path(".survey/work-queue/forward-citation-sweep.json")
@@ -461,7 +462,7 @@ def refresh(root: Path, *, max_papers: int | None = None, sleep_fn=time.sleep) -
     cache["updated_at"] = now.replace(microsecond=0).isoformat()
     cache["candidate_count_seen"] = len(rows)
     cache["due_count_before_run"] = len(due)
-    cache_changed = _write(root / CACHE_PATH, cache)
+    cache_changed = candidate_priority_state.write(root / CACHE_PATH, cache)
     jobs_changed = _refresh_ready_jobs(root, cache, config, now)
     return {
         "candidate_count_seen": len(rows),
