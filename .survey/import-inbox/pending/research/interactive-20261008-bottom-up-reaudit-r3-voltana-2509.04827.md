@@ -11,7 +11,6 @@ worker_completed_at: '2026-10-08T10:13:00+09:00'
 canonical_id: arXiv:2509.04827
 arxiv_id: '2509.04827'
 doi: 10.48550/arxiv.2509.04827
-last_audited: '2026-09-28'
 audit_version: 2
 title: 'VoltanaLLM: Feedback-Driven Frequency Control and State-Space Routing for Energy-Efficient LLM Serving'
 summary: プリフィル／デコード分離型LLM配信で、各段階のGPU周波数をSLO余裕に合わせて反復ごとに制御するEcoFreq、負荷・KV量から遅延を予測するEcoPred、GEMMタイル境界による「frequency cliff」を避けてデコード要求を配置するEcoRouteを組み合わせ、最大36.3%のE2Eエネルギー削減を達成する。
