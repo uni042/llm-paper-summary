@@ -11,7 +11,6 @@ worker_completed_at: '2026-10-08T10:13:00+09:00'
 canonical_id: arXiv:2403.12544
 arxiv_id: '2403.12544'
 doi: 10.48550/arxiv.2403.12544
-last_audited: 2026-09-27
 audit_version: 1
 title: 'AffineQuant: Affine Transformation Quantization for Large Language Models'
 summary: スケーリングだけで分布を整える事後量子化は変換空間が狭く、4ビット重み・4ビット活性値の厳しい設定で誤差が残る。 線形層の前後へ互いに打ち消すアフィン変換と逆変換を入れ、元関数と等価なまま量子化誤差が小さくなる行列を学習する。可逆性維持のため対角から非対角へ段階的に最適化する。 LLaMA2-7BのW4A4でC4パープレキシティ15.76を達成しOmniQuantの18.02より2.26改善した。LLaMA-30Bのゼロショット平均は58.61。
