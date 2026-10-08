@@ -1,0 +1,311 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill-luna",
+  "run_key": "codex-backfill-r382-b20-p01-main-fbf9a09a",
+  "reference_main_sha": "fbf9a09a0e8cbbf3a146719b26ba34c8e9e2a9ed",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.03510",
+      "identity_tokens": [
+        "arXiv:2506.03510",
+        "DOI:10.48550/arXiv.2506.03510"
+      ],
+      "title": "Accurate Sublayer Pruning for Large Language Models by Exploiting Latency and Tunability Information",
+      "reason": "The arXiv abstract describes SPRINT selecting sublayers using latency reduction and tunability information to improve the LLM speed/quality trade-off.",
+      "source_url": "https://arxiv.org/abs/2506.03510",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.05664",
+      "identity_tokens": [
+        "arXiv:2506.05664",
+        "DOI:10.48550/arXiv.2506.05664"
+      ],
+      "title": "BAQ: Efficient Bit Allocation Quantization for Large Language Models",
+      "reason": "The arXiv abstract presents sensitivity-guided adaptive bit allocation for LLM quantization, directly reducing model representation cost.",
+      "source_url": "https://arxiv.org/abs/2506.05664",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.21096",
+      "identity_tokens": [
+        "arXiv:2603.21096",
+        "DOI:10.48550/arXiv.2603.21096"
+      ],
+      "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
+      "reason": "The abstract describes sparse learned memory banks and a chapter router for long-context Transformer use, scaling context to 262K tokens; this is a plausible memory-system branch relevant to long-context inference.",
+      "source_url": "https://arxiv.org/abs/2603.21096",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.18592",
+      "identity_tokens": [
+        "arXiv:2604.18592",
+        "DOI:10.48550/arXiv.2604.18592"
+      ],
+      "title": "Two-dimensional early exit optimisation of LLM inference",
+      "reason": "The abstract evaluates two-dimensional early exit for LLM inference and reports 1.4–2.3x speedups, directly targeting inference compute.",
+      "source_url": "https://arxiv.org/abs/2604.18592",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.12594",
+      "identity_tokens": [
+        "arXiv:2502.12594",
+        "DOI:10.48550/arXiv.2502.12594"
+      ],
+      "title": "PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery",
+      "reason": "The abstract presents selective post-training data for recovering pruned LLMs, enabling compressed models to regain capability with less recovery data/compute; directly connected to pruning/compression deployment.",
+      "source_url": "https://arxiv.org/abs/2502.12594",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19269",
+      "identity_tokens": [
+        "arXiv:2605.19269",
+        "DOI:10.48550/arXiv.2605.19269"
+      ],
+      "title": "CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs",
+      "reason": "The abstract targets Transformer forward/backward training workloads and training-kernel fusion; it does not establish an inference/serving efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2605.19269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.13474",
+      "identity_tokens": [
+        "arXiv:2406.13474",
+        "DOI:10.48550/arXiv.2406.13474"
+      ],
+      "title": "Attention-aware Post-training Quantization without Backpropagation",
+      "reason": "The abstract introduces attention-aware post-training quantization for LLM deployment without backpropagation, directly connected to model quantization and inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2406.13474",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.11690",
+      "identity_tokens": [
+        "arXiv:2606.11690",
+        "DOI:10.48550/arXiv.2606.11690"
+      ],
+      "title": "Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation",
+      "reason": "The abstract proposes concurrency-aware infrastructure cost measurement for LLM serving and evaluates throughput/cost under dense and MoE serving; directly related to inference system performance measurement.",
+      "source_url": "https://arxiv.org/abs/2606.11690",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.25344",
+      "identity_tokens": [
+        "arXiv:2605.25344",
+        "DOI:10.48550/arXiv.2605.25344"
+      ],
+      "title": "A Hamiltonian-Inspired Local-Operator Ansatz for Slimming Large Language Models",
+      "reason": "The abstract describes a parameter-, arithmetic-, storage- and memory-reducing operator ansatz applied to LLMs, a direct compression/model-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2605.25344",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.00919",
+      "identity_tokens": [
+        "arXiv:2601.00919",
+        "DOI:10.48550/arXiv.2601.00919"
+      ],
+      "title": "Attention Needs to Focus: A Unified Perspective on Attention Allocation",
+      "reason": "The abstract proposes Lazy Attention and reports substantial sparse attention in LLM Transformers, a direct attention-computation efficiency connection.",
+      "source_url": "https://arxiv.org/abs/2601.00919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.12215",
+      "identity_tokens": [
+        "arXiv:2505.12215",
+        "DOI:10.48550/arXiv.2505.12215"
+      ],
+      "title": "GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment",
+      "reason": "The abstract describes soft-token context compression for encoder-decoder models and low-latency long-context QA/summarization, directly relevant to inference context/memory cost.",
+      "source_url": "https://arxiv.org/abs/2505.12215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.04211",
+      "identity_tokens": [
+        "arXiv:2501.04211",
+        "DOI:10.48550/arXiv.2501.04211"
+      ],
+      "title": "CURing Large Models: Compression via CUR Decomposition",
+      "reason": "The abstract applies CUR decomposition to compress LLM weights, reducing model size and improving compression runtime.",
+      "source_url": "https://arxiv.org/abs/2501.04211",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.18426",
+      "identity_tokens": [
+        "arXiv:2603.18426",
+        "DOI:10.48550/arXiv.2603.18426"
+      ],
+      "title": "Prune-then-Quantize or Quantize-then-Prune? Understanding the Impact of Compression Order in Joint Model Compression",
+      "reason": "The abstract evaluates how pruning/quantization order affects joint compression of language and vision models, directly within model compression.",
+      "source_url": "https://arxiv.org/abs/2603.18426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.04308",
+      "identity_tokens": [
+        "arXiv:2504.04308",
+        "DOI:10.48550/arXiv.2504.04308"
+      ],
+      "title": "Gating is Weighting: Understanding Gated Linear Attention through In-context Learning",
+      "reason": "The abstract analyzes gated linear attention and its efficient recurrent-decoding connection, a plausible attention/inference systems lineage.",
+      "source_url": "https://arxiv.org/abs/2504.04308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+      "identity_tokens": [
+        "SemanticScholar:e673d258703cc317b3714bc7da0d9d9b02ebc146",
+        "OpenReview:S4duStTKGL"
+      ],
+      "title": "PASS: Pruning Attention Heads with Almost-sure Sparsity Targets",
+      "reason": "The official OpenReview/TMLR abstract describes attention-head pruning with explicit sparsity targets and reports attention speedups; directly relevant to efficient Transformer inference.",
+      "source_url": "https://openreview.net/pdf?id=S4duStTKGL",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.22237",
+      "identity_tokens": [
+        "arXiv:2608.22237",
+        "DOI:10.48550/arXiv.2608.22237"
+      ],
+      "title": "Read Less, Solve More: Token-Efficient Sparse Reading for AI Agents",
+      "reason": "The arXiv abstract reports sparse reading that preserves task quality while reducing token use and wall time substantially, directly targeting agent inference cost.",
+      "source_url": "https://arxiv.org/abs/2608.22237",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc",
+      "identity_tokens": [
+        "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc",
+        "arXiv:2410.05911",
+        "DOI:10.48550/arXiv.2410.05911"
+      ],
+      "title": "Accelerating Error Correction Code Transformers",
+      "reason": "The official arXiv abstract confirms this is a transformer decoder for error-correction codes in communication systems, not LLM inference; its quantization/energy results belong to a separate application.",
+      "source_url": "https://arxiv.org/abs/2410.05911",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.03333",
+      "identity_tokens": [
+        "arXiv:2603.03333",
+        "DOI:10.48550/arXiv.2603.03333"
+      ],
+      "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
+      "reason": "The abstract presents dropout sampling for semantic acceptance in speculative decoding and reports decoding speedups, directly relevant to LLM inference.",
+      "source_url": "https://arxiv.org/abs/2603.03333",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.04678",
+      "identity_tokens": [
+        "arXiv:2408.04678",
+        "DOI:10.48550/arXiv.2408.04678"
+      ],
+      "title": "CREST: Effectively Compacting a Datastore For Retrieval-Based Speculative Decoding",
+      "reason": "The abstract compacts the retrieval datastore used by speculative decoding, reducing storage while improving draft acceptance; direct inference memory/latency connection.",
+      "source_url": "https://arxiv.org/abs/2408.04678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2511.18868",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2511.18868",
+        "arXiv:2511.18868"
+      ],
+      "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits",
+      "reason": "The arXiv abstract targets GPU-kernel optimization for efficient LLM serving using hardware-aware exploration and reports improved kernel performance.",
+      "source_url": "https://arxiv.org/abs/2511.18868",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    }
+  ]
+}
