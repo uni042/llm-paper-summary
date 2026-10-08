@@ -43,6 +43,9 @@ quality_body_chars: 5609
 quality_method_chars: 1493
 quality_evaluation_chars: 1513
 quality_limitation_chars: 306
+worker_id: interactive-audit
+worker_completed_at: '2026-10-08T11:29:35.878Z'
+worker_run_key: '20261008-bottom-up-interactive/ml-specqd-r01'
 references:
 - canonical_id: arXiv:2303.08774
   arxiv_id: '2303.08774'
