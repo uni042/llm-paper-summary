@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r304-screen-01-part-08-def3bcd89e98",
+  "reference_main_sha": "14de2d64584c63ef0c5ff753e5bb7fccc08c6bc7",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10021",
+      "identity_tokens": [
+        "arXiv:2310.10021"
+      ],
+      "title": "Bootstrap Your Own Skills: Learning to Solve New Tasks with Large Language Model Guidance",
+      "reason": "BOSS uses LLM calls to propose/label skill chains during a robot-policy bootstrapping phase, then trains a language-conditioned policy and grows a skill library. It is an agent/robot learning workflow, not an optimization of LLM inference or a measured reduction in deployed LLM serving.",
+      "source_url": "https://arxiv.org/abs/2310.10021",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23747",
+      "identity_tokens": [
+        "arXiv:2604.23747"
+      ],
+      "title": "SFT-then-RL Outperforms Mixed-Policy Methods for LLM Reasoning",
+      "reason": "SFT-then-RL compares post-training schedules for reasoning quality; it does not propose an inference-time efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2604.23747",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09059",
+      "identity_tokens": [
+        "arXiv:2604.09059"
+      ],
+      "title": "Learning Vision-Language-Action World Models for Autonomous Driving",
+      "reason": "This VLA paper concerns autonomous-driving perception/reasoning/control capabilities, without an abstract-level inference resource optimization.",
+      "source_url": "https://arxiv.org/abs/2604.09059",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00698",
+      "identity_tokens": [
+        "arXiv:2604.00698"
+      ],
+      "title": "Learning to Hint for Reinforcement Learning",
+      "reason": "Learning to Hint addresses advantage collapse in GRPO training; it does not target deployed inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.00698",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TAI.2025.3597580",
+      "identity_tokens": [
+        "DOI:10.1109/TAI.2025.3597580"
+      ],
+      "title": "PipeMamba: State Space Model for Efficient Video-Based Sewer Defect Classification",
+      "reason": "The candidate has no cached abstract in the input and the official IEEE DOI/publisher page could not be retrieved, so its primary-source contents could not be verified. Do not infer scope from title or secondary abstracts; retry only if IEEE/author primary text becomes accessible.",
+      "source_url": "https://doi.org/10.1109/TAI.2025.3597580",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    }
+  ]
+}
