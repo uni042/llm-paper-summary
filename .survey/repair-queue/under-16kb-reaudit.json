@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T08:35:34.820646+00:00",
+  "generated_at": "2026-10-08T08:46:21.651608+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 552,
+  "count": 549,
   "worker_counts": {
-    "scheduled-chat-00": 188,
-    "scheduled-chat-30": 178,
+    "scheduled-chat-00": 186,
+    "scheduled-chat-30": 177,
     "scheduled-chat-45": 186
   },
   "entries": [
@@ -211,30 +211,6 @@
       "warnings": [
         "日本語比率 72.5% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
-      "canonical_id": "arXiv:2402.17762",
-      "title": "Massive Activations in Large Language Models",
-      "file_bytes": 8177,
-      "source_sha256": "d6f10e09d914f4d7235d00399d689980b244bbd53ec75f555fd5523825ba9a2d",
-      "source_git_blob_sha": "6271d5ffb93b3d7e547f5549dfe2e69c51fa95a7",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.866812,
-      "quality_metrics": {
-        "body_chars": 1376,
-        "method_chars": 369,
-        "evaluation_chars": 245,
-        "limitation_chars": 121
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1376 < 2200",
-        "16KB未満再監査: 手法説明量 369 < 700",
-        "16KB未満再監査: 評価説明量 245 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md",
@@ -1546,33 +1522,6 @@
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
-      "canonical_id": "DOI:10.1145/3341301.3359646",
-      "title": "PipeDream: Generalized Pipeline Parallelism for DNN Training",
-      "file_bytes": 8907,
-      "source_sha256": "d8383a9c1417879235f7596fe95e0cd3fd5a89e3127767f9c48eca9af705521c",
-      "source_git_blob_sha": "57659f0e5c789ce55d799f78646c4d7ecbd1e994",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.78935,
-      "quality_metrics": {
-        "body_chars": 1818,
-        "method_chars": 572,
-        "evaluation_chars": 250,
-        "limitation_chars": 164
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1818 < 2200",
-        "16KB未満再監査: 手法説明量 572 < 700",
-        "16KB未満再監査: 評価説明量 250 < 500",
-        "16KB未満再監査: 日本語比率 78.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.9% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.25624-accelerating-the-mitigation-of-llm-inference-nondeterminism-across-gpu-a.md",
@@ -12068,26 +12017,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 429 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
-      "canonical_id": "arXiv:2310.16795",
-      "title": "QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models",
-      "file_bytes": 15476,
-      "source_sha256": "9f01f7fff0a65caf8d7ef2a211bbf3cadcf19a78c7046b2fd1a5f7cb57c73baa",
-      "source_git_blob_sha": "06cd99d4b9088addaec49c95e869606a4281a05d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.912606,
-      "quality_metrics": {
-        "body_chars": 3585,
-        "method_chars": 1313,
-        "evaluation_chars": 737,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
