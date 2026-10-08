@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r304-screen-01-part-04-def3bcd89e98",
+  "reference_main_sha": "14de2d64584c63ef0c5ff753e5bb7fccc08c6bc7",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08658",
+      "identity_tokens": [
+        "arXiv:2602.08658"
+      ],
+      "title": "Fundamental Reasoning Paradigms Induce Out-of-Domain Generalization in Language Models",
+      "reason": "The paper induces deduction/induction/abduction behavior through fine-tuning, model upscaling, and MoE upcycling and measures out-of-domain reasoning. It targets training-time capability/generalization, not inference efficiency; capacity expansion is not a serving reduction.",
+      "source_url": "https://arxiv.org/abs/2602.08658",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12499",
+      "identity_tokens": [
+        "arXiv:2601.12499"
+      ],
+      "title": "Failure Modes in Multi-Hop QA: The Weakest Link Effect and the Recognition Bottleneck",
+      "reason": "The paper diagnoses weakest-link and recognition bottlenecks in multi-hop QA, with experiments across context positions, datasets, and model scales. It analyzes reasoning failure modes rather than proposing a compute-, KV-cache-, memory-, or latency-saving inference method.",
+      "source_url": "https://arxiv.org/abs/2601.12499",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04917",
+      "identity_tokens": [
+        "arXiv:2604.04917"
+      ],
+      "title": "Vero: An Open RL Recipe for General Visual Reasoning",
+      "reason": "Vero builds a general visual reasoning model and evaluates reasoning capability; no direct LLM inference resource optimization appears in the abstract.",
+      "source_url": "https://arxiv.org/abs/2604.04917",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25184",
+      "identity_tokens": [
+        "arXiv:2603.25184"
+      ],
+      "title": "Train at Moving Edge: Online-Verified Prompt Selection for Efficient RL Training of Large Reasoning Model",
+      "reason": "The paper explicitly targets efficient RL training via prompt selection; training-only efficiency is outside this screening scope.",
+      "source_url": "https://arxiv.org/abs/2603.25184",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCE.2025.3601582",
+      "identity_tokens": [
+        "DOI:10.1109/TCE.2025.3601582"
+      ],
+      "title": "Instance-Aware Visual Language Grounding for Consumer Robot Navigation",
+      "reason": "The arXiv primary abstract describes instance-aware visual-language maps for consumer robot navigation and reports navigation accuracy, but the linked primary paper body could not be fetched: arXiv HTML returned 404 and the 10.9 MB PDF exceeded the reader limit; the IEEE DOI page was inaccessible. Because this candidate is linked and body review is required, do not clear it from the abstract alone.",
+      "source_url": "https://doi.org/10.1109/TCE.2025.3601582",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    }
+  ]
+}
