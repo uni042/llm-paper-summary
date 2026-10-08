@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f08980b1fa378f93f5d71e0741c34c0ad100d03381e15b05b7e5f4bd1e6e57f3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9fa2fc387673--libfile_f9b0c3b41f088191ac4a15c61bde8043--2023-2312.08583-zeroquant4plus2-repair-20261008-0032.md",
+  "canonical_id": "arXiv:2312.08583",
+  "worker_completed_at": "2026-10-08T00:32:44+09:00",
+  "worker_run_key": "20261008-0032-scheduled-chat-30/repair-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2267,
+    "body_paragraphs": 14,
+    "method_chars": 776,
+    "method_paragraphs": 5,
+    "evaluation_chars": 339,
+    "limitation_chars": 185,
+    "insufficiency_flags": [
+      "評価説明量 339 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 339 < 500",
+    "長文定型文の再利用を検出: .survey/import-inbox/pending/research/retry-research-f4027d781b73--libfile_b896aca903d48191be3760a8ad2848f5--corrected-2023-2312.08583-zeroquant4plus2-repair.md と 3 段落 / 578文字 (73.6%) が完全一致"
+  ],
+  "processed_at": "2026-10-08T15:05:27+00:00"
+}
