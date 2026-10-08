@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T06:25:41.078751+00:00",
+  "generated_at": "2026-10-08T06:38:07.378080+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 579,
+  "count": 574,
   "worker_counts": {
-    "scheduled-chat-00": 195,
-    "scheduled-chat-30": 186,
-    "scheduled-chat-45": 198
+    "scheduled-chat-00": 194,
+    "scheduled-chat-30": 183,
+    "scheduled-chat-45": 197
   },
   "entries": [
     {
@@ -10293,28 +10293,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2608.24173-sandwichquant-which-parameters-matter-before-and-after-quantization.md",
-      "canonical_id": "arXiv:2608.24173",
-      "title": "SandwichQuant: Which Parameters Matter Before and After Quantization?",
-      "file_bytes": 13246,
-      "source_sha256": "9c40234596a52bebf4dd2abbed5eb7e5cbfe850c98044ee7473446a62f89dd02",
-      "source_git_blob_sha": "ad253cab793655a47ed86d2a94a7c7a00705aa2d",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.991325,
-      "quality_metrics": {
-        "body_chars": 3208,
-        "method_chars": 1287,
-        "evaluation_chars": 0,
-        "limitation_chars": 235
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md",
       "canonical_id": "arXiv:2401.04658",
       "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
@@ -10658,28 +10636,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.24411-resispec-enhancing-multi-candidate-speculative-sampling-via-residual-distribution-shaping.md",
-      "canonical_id": "arXiv:2608.24411",
-      "title": "ResiSpec：残差分布整形による複数候補投機サンプリング",
-      "file_bytes": 13506,
-      "source_sha256": "bec98792acc8da1f1ac02d2291341c7dfd0258c625389236563e4a746d024f0c",
-      "source_git_blob_sha": "cb840dc70625dfb0248a916bc95974032fc3741f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.988756,
-      "quality_metrics": {
-        "body_chars": 2759,
-        "method_chars": 918,
-        "evaluation_chars": 361,
-        "limitation_chars": 128
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 361 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/15-inference-simulation-emulation/2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md",
       "canonical_id": "arXiv:2503.16893",
       "title": "Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation",
@@ -10741,28 +10697,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
-      "canonical_id": "arXiv:2401.14351",
-      "title": "ServerlessLLM: Low-Latency Serverless Inference for Large Language Models",
-      "file_bytes": 13526,
-      "source_sha256": "8b080150665599a4cbaab5c23b0bb51cc594befc467b52754117cc25a9789687",
-      "source_git_blob_sha": "b9d4e7ff1ae17085e0ae6d95874d5df2fff27801",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.979781,
-      "quality_metrics": {
-        "body_chars": 3456,
-        "method_chars": 892,
-        "evaluation_chars": 431,
-        "limitation_chars": 303
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 431 < 500"
-      ],
       "warnings": []
     },
     {
@@ -10911,28 +10845,6 @@
         "limitation_chars": 393
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md",
-      "canonical_id": "arXiv:2606.06256",
-      "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
-      "file_bytes": 13645,
-      "source_sha256": "ac24ab397bca4680c6d46a5775efaf4cca20ec1794df2a610992c1ca66452247",
-      "source_git_blob_sha": "7d28f87f75118eb7a31fd33c8d84d9db1421b730",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.986403,
-      "quality_metrics": {
-        "body_chars": 2480,
-        "method_chars": 994,
-        "evaluation_chars": 346,
-        "limitation_chars": 144
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 346 < 500"
-      ],
       "warnings": []
     },
     {
@@ -11107,28 +11019,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md",
-      "canonical_id": "arXiv:2603.27138",
-      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
-      "file_bytes": 13811,
-      "source_sha256": "ef266fb2b76549e0f82a100e32c5046338b1349c136174494f545dd293c6ce59",
-      "source_git_blob_sha": "58615e1fc970369fe8a392646549fb8db1bf61bc",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.949071,
-      "quality_metrics": {
-        "body_chars": 4032,
-        "method_chars": 1211,
-        "evaluation_chars": 277,
-        "limitation_chars": 312
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 277 < 500"
-      ],
       "warnings": []
     },
     {
