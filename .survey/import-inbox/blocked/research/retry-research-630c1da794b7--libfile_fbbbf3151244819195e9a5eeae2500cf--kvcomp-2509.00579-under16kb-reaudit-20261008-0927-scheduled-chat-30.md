@@ -50,6 +50,8 @@ quality_method_chars: 2476
 quality_eval_chars: 1571
 quality_evaluation_chars: 1571
 quality_limitation_chars: 687
+last_audited: null
+audit_version: 0
 ---
 
 # KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 22:41:40 JST**
+> 自動生成: **2026-10-08 22:55:08 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **592** |
-| 未claim Research job | **592** |
-| 直近24hのResearch処理完了 | **226** |
-| 最終Research処理完了 | **10-08 21:08:38 JST** |
+| 収録候補論文数 | **591** |
+| 未claim Research job | **591** |
+| 直近24hのResearch処理完了 | **227** |
+| 最終Research処理完了 | **10-08 22:30:30 JST** |
 | 最終Discovery探索完了 | **10-08 16:47:03 JST** |
 | 整合性異常 | **0** |
 
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **592** |
+| canonical_id確認済みの一意な候補論文 | **591** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **592** |
+| 非終端Research job合計 | **591** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -51,11 +51,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **107399** |
-| 処理済み | **17724** |
-| 未処理Discovery候補 | **89675** |
-| 収録済み | **1751** |
-| Research / Audit候補へ昇格済み | **443** |
+| 探索候補総数 | **108503** |
+| 処理済み | **17725** |
+| 未処理Discovery候補 | **90778** |
+| 収録済み | **1753** |
+| Research / Audit候補へ昇格済み | **442** |
 | 無関係として除外 | **11124** |
 | 微妙として除外 | **4406** |
 
@@ -63,33 +63,33 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **89675** |
-| 機械規則による暫定隔離 | **1003** |
-| 拡張機械規則による追加隔離 | **675** |
-| 機械規則通過後 | **87997** |
-| 系統内前方引用スコアによる選抜保留 | **83597** |
-| 暫定隔離合計 | **85275** |
-| **読解可能候補（隔離後）** | **4400** |
-| 前方引用が同一系統で2本以上の候補 | **10332** |
-| 前方引用が同一系統で3本以上の候補 | **5433** |
+| 未処理候補（フィルタ前） | **90778** |
+| 機械規則による暫定隔離 | **1057** |
+| 拡張機械規則による追加隔離 | **707** |
+| 機械規則通過後 | **89014** |
+| 系統内前方引用スコアによる選抜保留 | **84563** |
+| 暫定隔離合計 | **86327** |
+| **読解可能候補（隔離後）** | **4451** |
+| 前方引用が同一系統で2本以上の候補 | **10548** |
+| 前方引用が同一系統で3本以上の候補 | **5522** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4400件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4451件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **675件**（基本規則との重複を除去）
-- 実際の追加隔離: **675件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 45, 'expanded_domain:content_moderation': 7, 'expanded_domain:educational_legal_applications': 18, 'expanded_domain:environmental_applications': 4, 'expanded_domain:financial_applications': 35, 'expanded_domain:geoscience_applications': 37, 'expanded_domain:materials_applications': 14, 'expanded_domain:vision_applications': 515}**
+- 拡張規則に一致した候補: **707件**（基本規則との重複を除去）
+- 実際の追加隔離: **707件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 47, 'expanded_domain:content_moderation': 8, 'expanded_domain:educational_legal_applications': 19, 'expanded_domain:environmental_applications': 6, 'expanded_domain:financial_applications': 36, 'expanded_domain:geoscience_applications': 40, 'expanded_domain:materials_applications': 14, 'expanded_domain:vision_applications': 537}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
-- 消化率: **16.5%**
-- 現在の生在庫: 後方references **49969件** / 前方引用 **40867件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **90410件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 消化率: **16.3%**
+- 現在の生在庫: 後方references **49994件** / 前方引用 **41948件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **91513件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -97,18 +97,18 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **1749** |
-| provider巡回可能 | **1744** |
+| 収録論文seed台帳 | **1752** |
+| provider巡回可能 | **1747** |
 | provider巡回不能 | **5** |
-| 1周以上完了 | **1714** |
-| 巡回中 | **30** |
+| 1周以上完了 | **1720** |
+| 巡回中 | **27** |
 | 未巡回 | **0** |
-| 今回run開始時due | **36** |
-| 前方引用から保持中の未処理候補 | **40867** |
-| エラー状態保持seed | **12** |
+| 今回run開始時due | **33** |
+| 前方引用から保持中の未処理候補 | **41948** |
+| エラー状態保持seed | **11** |
 
-- 初回カバレッジ完了率: **98.3%**
-- state最終更新: **10-08 21:40:18 JST**
+- 初回カバレッジ完了率: **98.5%**
+- state最終更新: **10-08 22:40:55 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（10時間44分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（10時間58分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **55** |
-| 直近6hのDiscovery run | **7** |
-| 直近6hのDiscovery本文確認・分類 | **32** |
-| 最終Research完了 | **10-08 21:08:38 JST** |
+| 直近6hのResearch完了 | **56** |
+| 直近6hのDiscovery run | **0** |
+| 直近6hのDiscovery本文確認・分類 | **0** |
+| 最終Research完了 | **10-08 22:30:30 JST** |
 | 最終Discovery完了 | **10-08 16:47:03 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-08 21:08:38 JST** / worker — / run 20261008-2100-scheduled-chat-00/r01 / 成果 **2件**
-  - evidence: .survey/import-inbox/results/research/libfile_87e67dfc01788191ab66480a6208e055--reaudit-20261008-2100-scheduled-chat-00-2603.19172-dymoe-r01.json
+- Research: **10-08 22:30:30 JST** / worker — / run 20261008-2230-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_6da532948b14819190363b3cb756f6c1--2024-2405.19325-nest-under16kb-reaudit-20261008-2230-scheduled-chat-30-r01.json
 - Discovery: **10-08 16:47:03 JST** / worker codex-local-screen-watcher / run 20261008-r311-screen-01-part-03-cc055bb3f9bc
   - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
   - evidence: .survey/import-inbox/results/discovery/20261008-r311-screen-01-part-03-cc055bb3f9bc-448a9d75517a.json
@@ -274,7 +274,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **592** |
+| ready | **591** |
 
 ### 候補の重複・識別情報欠損
 
@@ -294,7 +294,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1752** |
+| inference/training/survey配下の論文Markdown実体 | **1754** |
 
 ### immutable submissionの未照合
 

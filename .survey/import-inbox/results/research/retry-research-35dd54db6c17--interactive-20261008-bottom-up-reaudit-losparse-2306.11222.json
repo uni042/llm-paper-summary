@@ -1,18 +1,13 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
-  "source_sha256": "0b11814c7daaebcd8a35e04d219064d12815dbc36d17bb3f6ac71b484c0e0dd6",
-  "canonical_id": "arXiv:2306.11222",
-  "paper_path": "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
-  "reaudit_update": true,
-  "reaudit_version": "2026-10-07-v1",
-  "legacy_escaped_git_blob_sha_accepted": false,
-  "previous_paper_sha256": "2a3ab300023bbd98962dfd5d86725600af8e4d967d751c3cd6d885d94b45d24b",
-  "previous_paper_git_blob_sha": "f83cbb256eac7963c81ce9a09b5646c3bc6a3380",
-  "audit_status": "PASS",
+  "status": "blocked_quality",
+  "source_sha256": "11676ea31e307d2fad0f55864d4a90be9859f94d17d575908296be24b01cea72",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
-  "worker_completed_at": "2026-10-08T07:27:27+09:00",
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
+  "canonical_id": "arXiv:2306.11222",
+  "worker_completed_at": "2026-10-08T07:32:15+09:00",
   "worker_run_key": "interactive-20261008-bottom-up-reaudit-losparse",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
@@ -24,5 +19,8 @@
     "limitation_chars": 393,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-08T13:36:00+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md と 10 段落 / 2308文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-08T13:51:08+00:00"
 }
