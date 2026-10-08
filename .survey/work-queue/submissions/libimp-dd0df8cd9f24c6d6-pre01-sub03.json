@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SANE: State Anomaly Neutralization for Stable Extreme-Context Delta-Rule Models",
+      "source_url": "https://arxiv.org/abs/2608.22354",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Delta-Rule recurrent models maintain a fixed-size state, enabling $O(1)$ inference memory but potentially becoming unstable under extreme-context extrapolation. By tracking RWKV-7 over sequences of up to 100M tokens, we empirically identify a distinct failure pattern: \\textbf{localized norm explosion atop a relatively sparse substrate}, rather than global state saturation. Analysis of the recurrent update suggests that persistent decay keeps weakly updated entries small, whereas uneven injections allow a few channels to accumulate extreme values. Motivated by this diagnosis, we propose \\textbf{State Anomaly Neutralization (SANE)}, which applies adaptive $\\tanh$ compression at chunk boundaries while preserving the intra-chunk parallel structure. Within a safe threshold range ($3 \\le \\alpha \\le 5$), SANE matches the baseline on 11 short-context reasoning benchmarks with no statistically significant degradation. After a 100M-token prefix, which exceeds the training length by over $24{,}000\\times$, SANE retains functional reasoning ($33.46$--$35.56$) while the baseline encounters numerical overflow. In contrast, overly permissive thresholds ($\\alpha \\ge 8$) remain numerically stable but lose reasoning capability entirely, showing that numerical stabilization alone does not guarantee functional reasoning and revealing a capacity--stability trade-off in state compression.",
+      "identifiers": [
+        "SemanticScholar:932fefbb047ef32ef1ab1e02d51374e525a48fa0"
+      ],
+      "semantic_scholar_id": "932fefbb047ef32ef1ab1e02d51374e525a48fa0",
+      "canonical_id": "arXiv:2608.22354",
+      "arxiv_id": "2608.22354",
+      "authors": [
+        "Qingwen Lin",
+        "Boyan Xu",
+        "Xiao Liu",
+        "Zhifeng Hao",
+        "Rui-Chu Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract studies RWKV-7 delta-rule recurrent models with fixed-size O(1) inference memory and extreme contexts, then proposes chunk-boundary state compression to avoid numerical failure while retaining reasoning. It is directly relevant to long-context recurrent LLM inference stability and memory.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching",
+      "source_url": "https://arxiv.org/abs/2609.36760",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-Head Latent Attention (MLA) enables expressive multi-head attention with compact caches for its content and decoupled RoPE paths, yet cache memory still scales linearly with context length and batch size. In this work, we establish a systematic model of MLA's dual-path quantization errors, characterizing their distinct effects on attention-output distortion and explaining the pronounced amplification of RoPE-path errors. Guided by this analysis, we introduce QuantMLA, a function-aligned framework for low-bit dual-path quantization. We derive path-specific transformation spaces that preserve full-precision computation while remaining fully fusible into model parameters offline, eliminating online transformation overhead. Within these spaces, QuantMLA learns path-specific transformations with function-aligned objectives: attention-output reconstruction captures the content path's coupled matching and aggregation errors, while positional QK reconstruction preserves the RoPE-induced component of the attention logits and admits a theoretical bound on output distortion. Across four MLA model families, QuantMLA enables, to our knowledge, the first reported joint INT4 caching of the content and RoPE caches with minimal accuracy degradation. Further compressing the content cache to INT2 while retaining the RoPE key cache at INT4 maintains competitive performance on challenging reasoning and code benchmarks. We develop a native low-bit MLA attention kernel that integrates unpacking and dequantization directly into attention computation. The physical cache layout provides 3.59x compression at 128K context, while a cache-pressure serving workload achieves 5.168x higher whole-job output throughput than BF16. The code will be released upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:020ad6a8f8ee8d4dd27c68fb7e01dfb01ffd243c"
+      ],
+      "semantic_scholar_id": "020ad6a8f8ee8d4dd27c68fb7e01dfb01ffd243c",
+      "canonical_id": "arXiv:2609.36760",
+      "arxiv_id": "2609.36760",
+      "authors": [
+        "Zun-Hai Su",
+        "Yuxuan Sun",
+        "Jian-Chao Tan",
+        "Tao Zhang",
+        "Rui-Han Hu",
+        "Yu-Chen Xie",
+        "Xun-Liang Cai",
+        "Ngai Wong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes dual-path low-bit quantization for MLA KV caches, offline-fusible transforms and a native low-bit attention kernel; it targets cache memory that scales with context and batch size while preserving model quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Recurrent Context Compression: Efficiently Expanding the Context Window of LLM",
+      "source_url": "https://arxiv.org/abs/2406.06110",
+      "year": 2024,
+      "published": "2024-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To extend the context length of Transformer-based large language models (LLMs) and improve comprehension capabilities, we often face limitations due to computational resources and bounded memory storage capacity. This work introduces a method called Recurrent Context Compression (RCC), designed to efficiently expand the context window length of LLMs within constrained storage space. We also investigate the issue of poor model responses when both instructions and context are compressed in downstream tasks, and propose an instruction reconstruction method to mitigate this problem. We validated the effectiveness of our approach on multiple tasks, achieving a compression rate of up to 32x on text reconstruction tasks with a BLEU4 score close to 0.95, and nearly 100\\% accuracy on a passkey retrieval task with a sequence length of 1M. Finally, our method demonstrated competitive performance in long-text question-answering tasks compared to non-compressed methods, while significantly saving storage resources in long-text inference tasks. Our code, models, and demo are available at https://github.com/WUHU-G/RCC_Transformer",
+      "identifiers": [
+        "SemanticScholar:1102088716730adc1dea06cfa1741f91bb6fa0e9"
+      ],
+      "semantic_scholar_id": "1102088716730adc1dea06cfa1741f91bb6fa0e9",
+      "canonical_id": "arXiv:2406.06110",
+      "arxiv_id": "2406.06110",
+      "doi": "10.48550/arXiv.2406.06110",
+      "authors": [
+        "Chensen Huang",
+        "Gui-Bo Zhu",
+        "Xuepeng Wang",
+        "Yifei Luo",
+        "Guojing Ge",
+        "Hao-Ran Chen",
+        "Dong Yi",
+        "Jinqiao Wang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 850,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract says recurrent context compression expands LLM context under compute and bounded-memory constraints, with compression up to 32x and reduced storage in long-text inference. This directly addresses inference memory/context capacity.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ExpertWeave: Efficiently Serving Expert-Specialized Fine-Tuned Adapters at Scale",
+      "source_url": "https://arxiv.org/abs/2508.17624",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Expert-Specialized Fine-Tuning (ESFT) adapts Mixture-of-Experts (MoE) large language models to enhance their task-specific performance by selectively tuning the top-activated experts for the task. Serving these fine-tuned models at scale is challenging: deploying merged models in isolation is prohibitively resource-hungry, while existing multi-adapter serving systems with LoRA-style additive updates are incompatible with ESFT's expert-oriented paradigm. We present ExpertWeave, a system that serves multiple ESFT adapters concurrently over a single shared MoE base model, drastically reducing the memory footprint and improving resource utilization. To seamlessly integrate into existing inference pipelines for MoE models with non-intrusive modifications and minimal latency overhead, ExpertWeave introduces a virtual-memory-assisted expert weight manager that co-locates base-model and adapter experts without incurring memory overhead from fragmentation, and a fused kernel for batched rerouting to enable lightweight redirection of tokens to the appropriate experts at runtime. Our evaluations show that ExpertWeave can simultaneously serve multiple adapters of a 16B MoE model on a single accelerator where the baseline runs out of memory, or provides up to 94x more KV cache capacity and achieves up to 18% higher throughput while using comparable resources, all without compromising model accuracy. ExpertWeave maintains low overhead even when scaling to 20 adapters, with a 4-11% latency increase compared with serving the base model alone. Source code will be released soon.",
+      "identifiers": [
+        "SemanticScholar:cb00fc1bbdfff12abe1e51375cab91220240620f"
+      ],
+      "semantic_scholar_id": "cb00fc1bbdfff12abe1e51375cab91220240620f",
+      "canonical_id": "arXiv:2508.17624",
+      "arxiv_id": "2508.17624",
+      "doi": "10.48550/arXiv.2508.17624",
+      "authors": [
+        "Ge Shi",
+        "Hanieh Sadri",
+        "Qian Wang",
+        "Yu Zhang",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhe-Nan Fan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 409,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract describes serving multiple MoE expert-specialized adapters over a shared base model using virtual-memory-assisted expert placement and fused rerouting; it targets accelerator memory and throughput, reporting higher KV-cache capacity and throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dd0df8cd9f24",
+    "round": "libimp-dd0df8cd9f24c6d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dd0df8cd9f24c6d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dd0df8cd9f24c6d6-pre01.json",
+    "receipt": "sha256:ec4347a1a3a99cb143ab9771ddc6ff98a34e512fe486f2d31b3638b572311eb4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dd0df8cd9f24",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

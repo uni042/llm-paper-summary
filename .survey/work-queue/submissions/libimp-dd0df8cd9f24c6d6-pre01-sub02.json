@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Parallel Vision Token Scheduling for Fast and Accurate Multimodal LMMs Inference",
+      "source_url": "https://arxiv.org/abs/2511.18875",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) deliver impressive vision-language reasoning but suffer steep inference latency because self-attention scales quadratically with sequence length and thousands of visual tokens contributed by high-resolution images. Naively pruning less-informative visual tokens reduces this burden, yet indiscriminate removal can strip away contextual cues essential for background or fine-grained questions, undermining accuracy. In this paper, we present ParVTS (Parallel Vision Token Scheduling), a training-free scheduling framework that partitions visual tokens into subject and non-subject groups, processes them in parallel to transfer their semantics into question tokens, and discards the non-subject path mid-inference to reduce computation. This scheduling reduces computational complexity, requires no heuristics or additional modules, and is compatible with diverse existing MLLM architectures. Experiments across multiple MLLM backbones show that ParVTS prunes up to 88.9% of visual tokens with minimal performance drop, achieving 1.77x speedup and 70% FLOPs reduction.",
+      "identifiers": [
+        "SemanticScholar:3a8ca742db852bcd89756a511b67b22603d1b53b"
+      ],
+      "semantic_scholar_id": "3a8ca742db852bcd89756a511b67b22603d1b53b",
+      "canonical_id": "arXiv:2511.18875",
+      "arxiv_id": "2511.18875",
+      "doi": "10.48550/arXiv.2511.18875",
+      "authors": [
+        "Wengyi Zhan",
+        "Mingbao Lin",
+        "Zhihang Lin",
+        "Rongrong Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 318,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents training-free parallel scheduling of subject/non-subject visual tokens, dropping one path mid-inference; reports up to 88.9% token pruning, 1.77x speedup and 70% FLOP reduction in MLLMs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast Cross-Operator Optimization of Attention Dataflow",
+      "source_url": "https://arxiv.org/abs/2604.03446",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention is a fundamental computational kernel that accounts for the majority of the workload in transformer and LLM computing. Optimizing dataflow is crucial for enhancing both performance and energy efficiency in attention computation. This optimization involves a range of decisions, such as tiling, computation ordering and buffer management, and can be applied at both intra-operator and inter-operator levels, resulting in a highly complex decision space. We propose a new approach to cross-operator dataflow optimization. Its centerpiece is an analytical performance model that spans a large decision space and enables matrix-based encoding of multiple candidate solutions. Built on this foundation, a vast number of solutions can be evaluated rapidly, and with the aid of an effective pruning technique, the optimal solution can be identified through exhaustive enumeration. We refer to our method as MMEE (Matrix Multiplication Encoded Enumeration). The ability to efficiently enumerate a large design space allows MMEE to deliver higher-quality solutions at a substantially faster speed compared to prior approaches. The MMEE approach is evaluated across various test cases for different accelerator configurations. For energy-driven optimization, MMEE reduces energy consumption by 48%-50% and latency by 31%-69%, compared to state-of-the-art methods. For latency-driven optimization, MMEE achieves simultaneous reductions of 40%-50% in energy consumption and 40%-69% in latency, respectively. Additionally, MMEE is $64\\times$ to $343\\times$ faster than previous works.",
+      "identifiers": [
+        "SemanticScholar:16a229911213ffc75d021a7638bf042fb096be4a"
+      ],
+      "semantic_scholar_id": "16a229911213ffc75d021a7638bf042fb096be4a",
+      "canonical_id": "arXiv:2604.03446",
+      "arxiv_id": "2604.03446",
+      "doi": "10.48550/arXiv.2604.03446",
+      "authors": [
+        "Haodong Chang",
+        "Hailiang Hu",
+        "Zhenrui Wang",
+        "Yu Gong",
+        "Rongjian Liang",
+        "Zhe-Xiang Tang",
+        "Bo Yuan",
+        "Jiang Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract treats attention as a dominant Transformer/LLM compute kernel and proposes cross-operator dataflow enumeration to optimize accelerator execution; it reports 31–69% latency reductions and much faster design-space exploration. This is directly relevant to inference kernels and hardware.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Computational Challenges in Token Economics: Bridging Economic Theory and AI System Design",
+      "source_url": "https://arxiv.org/abs/2605.17410",
+      "year": 2026,
+      "published": "2026-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token economics has emerged as a useful lens for understanding resource allocation, value creation, and pricing in large language model systems. While recent work has increasingly treated tokens as economic primitives, there remains a substantial gap between high-level economic theory and the computational realities of modern AI infrastructure. This paper identifies and analyzes the key computational challenges that arise when token-economic principles are implemented in real-time inference systems. We argue that computational feasibility is not merely one dimension of token economics, but its governing constraint: these challenges are driven by fundamental tensions among fine-grained valuation, low-latency execution, and allocation optimality under uncertainty. To structure this problem space, we introduce the notion of \\textbf{Computational Token Economics} and propose the \\textbf{Token Economics Trilemma} -- a conditional no-free-lunch principle that captures the inherent trade-offs among granularity, real-time performance, and optimality. We further categorize the main technical challenges into three areas: real-time value accounting, constrained resource allocation, and economic-aware system architecture. Rather than presenting a complete solution, this paper aims to define a research agenda for bridging token economics and AI system design, highlighting open problems at the intersection of computational economics, machine learning systems, and AI infrastructure.",
+      "identifiers": [
+        "SemanticScholar:ac583c2e61bc9dbc4e9a2fc78a2b564c3076e583"
+      ],
+      "semantic_scholar_id": "ac583c2e61bc9dbc4e9a2fc78a2b564c3076e583",
+      "canonical_id": "arXiv:2605.17410",
+      "arxiv_id": "2605.17410",
+      "doi": "10.48550/arXiv.2605.17410",
+      "authors": [
+        "Ou Wu",
+        "Yingjun Deng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract explicitly frames computational feasibility in real-time LLM inference, including low-latency execution, uncertain resource allocation, and economic-aware system architecture. Although it outlines a research agenda rather than a complete method, it is concretely within inference-system design and is retained broadly for downstream reading.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.20813",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference in diffusion large language models (dLLMs) is computationally expensive, as full self-attention must be repeatedly executed at each step of the denoising process without KV cache. Recent sparse attention methods for dLLMs mitigate this cost via block-sparse computation, which is applied only in later iterations when model performance is less sensitive to coarse-grained sparse approximation, but yields limited improvements in computational efficiency and acceleration. This motivates a finer-grained sparsification strategy that can be applied from earlier iterations and leverages reusable sparsity patterns, enabling further efficiency gains. In this work, we introduce PulseCol, a periodically refreshed column-sparse attention method for accelerating diffusion language models. PulseCol replaces coarse block-level sparsity with a finer-grained column-sparse structure, allowing important attention interactions to be retained more precisely while exposing greater sparsity. Built on this column-level formulation, PulseCol further identifies sparse patterns at the early denoising step and reuses them across subsequent iterations, refreshing them only at a small number of intermediate steps to track the evolution of sparse attention patterns during denoising. Experiments show that PulseCol achieves higher sparsity and greater practical speedup than prior sparse attention methods for dLLMs, while maintaining model quality. Enabled by optimized GPU kernels for column-sparse attention, PulseCol delivers up to 1.95$\\times$ end-to-end speedup over FlashAttention across several context lengths.",
+      "identifiers": [
+        "SemanticScholar:bcabd87a86df290ae127714686c2816bad7a1281"
+      ],
+      "semantic_scholar_id": "bcabd87a86df290ae127714686c2816bad7a1281",
+      "canonical_id": "arXiv:2605.20813",
+      "arxiv_id": "2605.20813",
+      "doi": "10.48550/arXiv.2605.20813",
+      "authors": [
+        "Yanyi Lyu",
+        "Le-Tian Chen",
+        "Futing Sun",
+        "Miao Zhang",
+        "Wei-Li Guan",
+        "Liqiang Nie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract targets repeated full-attention cost in diffusion LLM inference and proposes reusable, periodically refreshed column-sparse attention patterns, improving sparsity and practical speedup while maintaining model quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WA-SpecDec: World-Aware Speculative Decoding for Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/abs/2608.08725",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language-action (VLA) policies generate robot controls autoregressively, making closed-loop latency dominated by repeated target-model forward passes. Speculative decoding reduces this cost by verifying blocks of draft action tokens in parallel, and recent VLA methods further relax token-level acceptance because small differences in action-token space often map to similar continuous controls. However, this relaxation remains scene-agnostic. A fixed token-distance tolerance treats the same action-token deviation as equally safe across states, although deviations that are harmless in free space can cause collisions or grasp failures near contact. We propose WA-SpecDec, a world-aware speculative decoding framework that injects world-model-derived physical scene awareness during the VLA prefill stage, producing shared world-aware prefill states for draft proposal and target verification without changing the relaxed acceptance rule. Across three state-of-the-art relaxed acceptance schemes, WA-SpecDec preserves higher task success under looser relaxation and enables longer accepted prefixes. At comparable-success operating points, WA-SpecDec achieves a 1.5x matched-success speedup over VLA speculative decoding alone and reduces near-contact failure (NCF) by 18.6% on average relative to the corresponding speculative baselines.",
+      "identifiers": [
+        "SemanticScholar:931110ff627c618d02e4505627fe4bb4ccc84d51"
+      ],
+      "semantic_scholar_id": "931110ff627c618d02e4505627fe4bb4ccc84d51",
+      "canonical_id": "arXiv:2608.08725",
+      "arxiv_id": "2608.08725",
+      "authors": [
+        "Zikang Wen",
+        "Yuning Zhang",
+        "Dong Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 60,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract identifies repeated target-model forward passes as the closed-loop latency bottleneck in autoregressive VLA policies and adds world-aware prefill to speculative decoding; it reports 1.5x matched-success speedup. The deployment domain is robotics/VLA, but the concrete method is LLM-style speculative inference acceleration.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dd0df8cd9f24",
+    "round": "libimp-dd0df8cd9f24c6d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dd0df8cd9f24c6d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dd0df8cd9f24c6d6-pre01.json",
+    "receipt": "sha256:ec4347a1a3a99cb143ab9771ddc6ff98a34e512fe486f2d31b3638b572311eb4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dd0df8cd9f24",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
