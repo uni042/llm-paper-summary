@@ -1,210 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-08T14:09:49+00:00",
+  "updated_at": "2026-10-08T14:26:31+00:00",
   "events": [
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_ebafe5e3af8481918318ecfa914234d6--2023-2307.06945-icae.md",
-      "processed_at": "2026-10-05T11:16:47+00:00",
-      "canonical_id": "arXiv:2307.06945"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_ebf57ce45b4c8191837b7a42ebebe147--2025-2504.08378-activeflow-dram-flash-swapping.md",
-      "processed_at": "2026-10-05T11:16:54+00:00",
-      "canonical_id": "arXiv:2504.08378",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_eec6ed535bf88191b6a34e0854a17281--2025-2508.18572-strata.md",
-      "processed_at": "2026-10-05T11:16:54+00:00",
-      "canonical_id": "arXiv:2508.18572"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_efe3359c418081919d3c5ea3ee3c2adc--2026-2605.03375-tutti.md",
-      "processed_at": "2026-10-05T11:16:54+00:00",
-      "canonical_id": "arXiv:2605.03375"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f157752f3b9c8191a9318d39ee2a996e--2026-2601.04719-int8-kv-cache-quantization.md",
-      "processed_at": "2026-10-05T11:17:01+00:00",
-      "canonical_id": "arXiv:2601.04719",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f25ffa797a3c8191ad484a2fba56b7df--2026-2603.13606-nccl-ep.md",
-      "processed_at": "2026-10-05T11:17:08+00:00",
-      "canonical_id": "arXiv:2603.13606",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_quality",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f2d18772ee5c8191939296f406b7aedd--2026-2609.39329-patchkv.md",
-      "processed_at": "2026-10-05T11:17:16+00:00",
-      "canonical_id": "arXiv:2609.39329",
-      "failures": [
-        "日本語比率 64.2% < 70%"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_quality",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f2e8d59ed9f481918e6eb57971ab05a3--2026-2609.22106-prquant.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2609.22106",
-      "failures": [
-        "日本語比率 59.0% < 70%"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f4636450a99c8191b705c5f7d6e1c37a--2025-2506.10470-td-pipe.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2506.10470"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f47345e7a1548191b52cd7a8c099a591--2025-2508.15919-hfx.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2508.15919"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f51ba41341e88191949b27f7e1c5415f--2025-2502.00722-heterogeneous-gpus.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2502.00722"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f550db76947c81918f52c63156e1cd76--2024-2407.08608-flashattention-3.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2407.08608"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f573745d26bc81919cb3d64a8be8ff2f--2024-2412.03594-batchllm.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2412.03594"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f574c15576ec81919f28744f6a66013b--2024-2408.07092-post-training-sparse-attention-double-sparsity.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2408.07092"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f6abadd7ed208191912a9697dbb9bf79--2023-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2311.03285"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f7a8d81637748191ae4f421e9ef14c35--2024-2402.14160-rsd.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2402.14160"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_f8e7e3d7ced081918532c33d8a85be0c--2025-2504.03648-aibrix.md",
-      "processed_at": "2026-10-05T11:17:24+00:00",
-      "canonical_id": "arXiv:2504.03648"
-    },
-    {
-      "status": "discarded_blocked_research_quality",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_fd1b5cc030dc819195eaf3bcd8ef8ffd--2026-2608.15299-maple-layer-wise-expert-allocation.md",
-      "processed_at": "2026-10-05T11:17:31+00:00",
-      "canonical_id": "arXiv:2608.15299",
-      "failures": [
-        "日本語比率 57.1% < 70%"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_fdc23252c6b48191960a7340523546c0--2024-2403.05527-gear.md",
-      "processed_at": "2026-10-05T11:17:31+00:00",
-      "canonical_id": "arXiv:2403.05527"
-    },
-    {
-      "status": "discarded_blocked_research_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_ff65adc991308191bbab813cdb7af65b--2024-2402.17985-flattenquant.md",
-      "processed_at": "2026-10-05T11:17:39+00:00",
-      "canonical_id": "arXiv:2402.17985",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "arxiv_id",
-        "authors",
-        "code",
-        "implementation",
-        "last_checked",
-        "publication",
-        "publication_status",
-        "publication_type",
-        "published",
-        "source",
-        "sources"
-      ]
-    },
-    {
-      "status": "discarded_blocked_research_quality",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_ffa5bb26dd388191b4bfea923751e3de--2026-2609.15810-vc-attention.md",
-      "processed_at": "2026-10-05T11:17:46+00:00",
-      "canonical_id": "arXiv:2609.15810",
-      "failures": [
-        "日本語比率 60.2% < 70%"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/local-batch-20261003-178c5a5ec357a780--arxiv-2608-21952.md",
-      "processed_at": "2026-10-05T11:17:46+00:00",
-      "canonical_id": "arXiv:2608.21952"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/local-batch-20261003-7fe47673fb75ecf3--doi-10-1109-hpca68181-2026-11408592.md",
-      "processed_at": "2026-10-05T11:17:53+00:00",
-      "canonical_id": "DOI:10.1109/hpca68181.2026.11408592"
-    },
     {
       "status": "deleted_stale_blocked_research",
       "source_path": ".survey/import-inbox/blocked/research/local-batch-20261003-809c0ae0ecc939a3--arxiv-2605-29707.md",
@@ -3802,6 +3600,163 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-96c274caf992--libfile_baff15f8d36c819185346eab1ee27166--2019-1911.02150-multi-query-attention-under16kb-reaudit-20261008-0901.md",
       "processed_at": "2026-10-08T14:09:49+00:00",
       "canonical_id": "arXiv:1911.02150"
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-04d49d1a5116--libfile_5deca8d57b6c8191bc35433fc7c90273--2025-2501.03895-llava-mini.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2501.03895"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-0e84fe39498e--libfile_fe9bf5ab63f0819196df16d8ef0593c5--2024-2405.13792-xrag.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2405.13792"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-1153d9f9e0b7--libfile_4937ba6b798c8191a7a487e8ccfdac95--2402.11295-onebit.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2402.11295"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-20d8e699e9f5--libfile_2b16c39665d88191b08b0fca1eefb411--2025-2510.14557-mx-plus-repair-20261008-0032.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2510.14557"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-97b554551359--interactive-20261008-bottom-up-reaudit-r2-2312.11462.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2312.11462"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-98ed9aa8900d--libfile_2f5ea57df84c81918c9d83dd076d5745--2021-2112.06905-glam-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2112.06905"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-9a8e4de3fe4c--libfile_3b104d3a16fc8191802197c24a6794b2--reaudit-20261008-2045-scheduled-chat-45-2404.05892-eagle-finch.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2404.05892"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-a04d2a28d2f4--libfile_225f945b70c88191b1e0abbb322d45c5--2024-2410.10819-duoattention-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2410.10819"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-a8133f6d84a1--libfile_18eba1f04b308191bd9c02458104774a--2024-2403.09054-keyformer-under16kb-reaudit-20261008-1455-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2403.09054"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-b1276e2b13d4--libfile_f7e3613029348191a529b4c25c310803--deer-2512.15176-under16kb-reaudit-20261008-0927-scheduled-chat-30.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2512.15176"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-c0231cec699f--libfile_f72504682ae481919e6f87afffedb224--2024-2411.18462-svip-under16kb-reaudit-20261008-1455-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2411.18462"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-c159666e90a1--libfile_f5ab09fe82048191bdd7bb95856bc18f--2024-2404.07413-jetmoe-under16kb-reaudit-20261008-1303-scheduled-chat-00.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2404.07413"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-c52dfa19a7ef--libfile_caad010b24488191b68cc62c79c40e21--2020-2007.08563-ftrans-under16kb-reaudit-20261008-1800-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2007.08563"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-d142fdf53fd9--libfile_1ea4346c3698819196ebf8e29fe0e0e7--2020-2004.02178-fastbert-under16kb-reaudit-20261008-1800-scheduled-chat-00-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2004.02178"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-d3edc1b9a947--libfile_8f758418b770819188a064396191bb9b--2024-2403.20306-greener-llms-under16kb-reaudit-20261008-1230-scheduled-chat-30-r01.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2403.20306"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-db9b64083a25--libfile_22d1ae4caed48191bfba38e18a29126f--2025-2509.23324-under16kb-reaudit-20261008-0047.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2509.23324"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-f8a4b6df5fee--libfile_535dd3cb0f08819185e586981db9f2cb--2024-2411.01783-context-parallelism-under16kb-reaudit-20261008-0755.md",
+      "processed_at": "2026-10-08T14:26:31+00:00",
+      "canonical_id": "arXiv:2411.01783"
     }
   ]
 }

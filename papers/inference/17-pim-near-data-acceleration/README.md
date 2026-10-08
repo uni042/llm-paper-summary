@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（20本）
+## 自動生成の論文一覧（21本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -112,6 +112,12 @@
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
   実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：3  
   NeuPIMsは、複数の大規模言語モデル（LLM）推論要求をまとめて処理するとき、行列積中心の計算と注意機構のメモリ帯域中心の計算が交互に現れる問題を、ニューラル処理装置（NPU）とメモリ内処理（PIM）の異種構成で改善するシステム研究である。
+
+### 4年前（2022-11〜2023-10）
+
+- **2023-08 · [Samsung PIM/PNM for Transformer based AI: Energy Efficiency on PIM/PNM Cluster](2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  本発表は、Transformerを用いた言語生成で重み行列を繰り返し読み出す負担を、メモリ側に演算器を配置して削減する設計を、異なるメモリ階層にわたって示す。単体HBM-PIMではGPT-J 6Bの生成を通常HBM搭載MI100比で2.16～2.33倍に高速化し、エネルギー効率も1.79～2.24倍と報告する。
 
 ### 5年前（2021-11〜2022-10）
 
