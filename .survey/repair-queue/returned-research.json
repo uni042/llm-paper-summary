@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T08:18:47+00:00",
+  "generated_at": "2026-10-08T08:33:00+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 160,
+  "count": 162,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -29,22 +29,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_2a4f938bc43c819185442964dd572754--2025-openreview-ulCAPXYXfa-omnikv.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_2a4f938bc43c819185442964dd572754--2025-openreview-ulCAPXYXfa-omnikv.json",
       "worker_run_key": "20260930-0600-scheduled-chat-00"
-    },
-    {
-      "canonical_id": "arXiv:2601.06123",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-09-30T06:44:58+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 55.3% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b10ca3461cc8191b2fed63b2153ca13--2026-2601.06123-latent-kv-cache-alignment.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7b10ca3461cc8191b2fed63b2153ca13--2026-2601.06123-latent-kv-cache-alignment.json",
-      "worker_run_key": null
     },
     {
       "canonical_id": "arXiv:2503.18989",
@@ -2974,8 +2958,8 @@
     },
     {
       "canonical_id": "arXiv:2508.04462",
-      "title": "CARD: A Cache-Assisted Parallel Speculative Decoding Framework via Query-and-Correct Paradigm for Accelerating LLM Inference",
-      "source_url": "https://arxiv.org/abs/2508.04462",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T08:17:14+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2997,6 +2981,88 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_2af302282cd481918124011c23a43318--2025-2508.04462-card-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_2af302282cd481918124011c23a43318--2025-2508.04462-card-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2206.13947",
+      "title": "Long Range Language Modeling via Gated State Spaces",
+      "source_url": "https://arxiv.org/abs/2206.13947",
+      "returned_at": "2026-10-08T08:32:18+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3179,
+        "body_paragraphs": 17,
+        "method_chars": 1405,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 225,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_00714372e5548191a00ae7fba5291b2b--gss-2206.13947-under16kb-reaudit-20261008-1032-scheduled-chat-30.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_00714372e5548191a00ae7fba5291b2b--gss-2206.13947-under16kb-reaudit-20261008-1032-scheduled-chat-30.json",
+      "worker_run_key": "20261008-1032-scheduled-chat-30/reaudit-r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.06123",
+      "title": "Latent Space Communication via K-V Cache Alignment",
+      "source_url": "https://arxiv.org/abs/2601.06123",
+      "returned_at": "2026-10-08T08:32:18+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7535,
+        "body_paragraphs": 41,
+        "method_chars": 2506,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_04b4a9eada808191b45f85612083261d--2026-2601.06123-latent-kv-cache-alignment-repair-20261008-1228-scheduled-chat-00.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_04b4a9eada808191b45f85612083261d--2026-2601.06123-latent-kv-cache-alignment-repair-20261008-1228-scheduled-chat-00.json",
+      "worker_run_key": "20261008-1226-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.03871",
+      "title": "HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2504.03871",
+      "returned_at": "2026-10-08T08:32:19+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5303,
+        "body_paragraphs": 28,
+        "method_chars": 1895,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 624,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_05a93cc32a68819198fcc0eaeb4aa348--2025-2504.03871-hetermoe-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_05a93cc32a68819198fcc0eaeb4aa348--2025-2504.03871-hetermoe-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
     }
   ]
