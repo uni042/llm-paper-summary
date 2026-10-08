@@ -1,0 +1,179 @@
+---
+canonical_id: arXiv:2608.02691
+title: Output-Aware Rotation for INT2 KV-Cache Quantization
+summary: OptRは、長文脈推論でKVキャッシュを2ビット整数へ量子化したとき、キーや値そのものの再構成誤差が小さくても、注意重みと出力射影を通過した後のモデル内部表現には大きな誤差が残り得る問題を扱う。従来の回転量子化は固定変換やキャッシュ統計など、最終的にモデルが受け取る量より前段の代理目的を最適化するため、同じINT2表現でも推論品質に直結する誤差を十分に抑えられない。
+list_summary: INT2 KVキャッシュの再構成誤差ではなく出力射影後の注意出力誤差を直接最小化するヘッド別直交回転を学習し、Qwen3-8BのAIME25をQuaRotの17.33%から66.67%へ回復しつつ実行時オーバーヘッドを2%以内に抑える。
+lineage: 07-kv-cache-optimization-compression
+source: https://arxiv.org/abs/2608.02691
+arxiv_id: '2608.02691'
+authors:
+- Yun, Vincent-Daniel
+- Lim, Woosang
+- Cheong, Minsoo
+- Lee, Sunwoo
+- Annavaram, Murali
+- Karimireddy, Sai Praneeth
+- Yoo, Sungjoo
+published: '2026-08-03'
+arxiv_categories:
+  primary: cs.LG
+  cross_list: []
+publication: arXiv
+publication_type: プレプリント
+publication_status: arXiv preprint
+sources:
+- https://arxiv.org/abs/2608.02691
+- https://arxiv.org/pdf/2608.02691
+- https://arxiv.org/html/2608.02691v4
+code: https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization
+implementation: 著者公式リポジトリの校正・SGLangベース推論・5課題の評価コードを確認。INT2 KVキャッシュへの回転・中心化を融合して実装。
+implementation_status: official-code-confirmed
+last_checked: '2026-10-08'
+references:
+- canonical_id: arXiv:2504.21318
+  arxiv_id: '2504.21318'
+- canonical_id: OpenReview:xrk9g5vcXR
+  openreview_id: xrk9g5vcXR
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2401.18079
+- canonical_id: OpenReview:kIoBbc76Sy
+  openreview_id: kIoBbc76Sy
+- canonical_id: OpenReview:chfJJYC3iL
+  openreview_id: chfJJYC3iL
+- canonical_id: arXiv:1412.6980
+  arxiv_id: '1412.6980'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: OpenReview:1qvx610Cu7
+  openreview_id: 1qvx610Cu7
+- canonical_id: arXiv:2402.02750
+- canonical_id: OpenReview:Ti67584b98
+  openreview_id: Ti67584b98
+- canonical_id: OpenReview:r3mQiuYKIN
+  openreview_id: r3mQiuYKIN
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: OpenReview:tO3ASKZlok
+  openreview_id: tO3ASKZlok
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2605.17757
+  arxiv_id: '2605.17757'
+references_checked_at: '2026-09-26'
+references_source: arxiv-html-reference-section
+references_total: 23
+worker_completed_at: '2026-10-08T17:15:00+09:00'
+worker_run_key: 20261008-1706-interactive-bottom-up-reaudit/r01
+worker_id: interactive-bottom-up
+under16kb_reaudit_target_path: papers/inference/07-kv-cache-optimization-compression/2026-2608.02691-output-aware-rotation-int2-kv-cache.md
+under16kb_reaudit_source_git_blob_sha: 0d38c485c93b3955d70f81e8f5b882cafacb470f
+under16kb_reaudit_version: 2026-10-07-v1
+under16kb_reaudit_passed: true
+quality_body_chars: 5688
+quality_method_chars: 1297
+quality_eval_chars: 2182
+quality_evaluation_chars: 2182
+quality_limitation_chars: 376
+quality_self_review_passed: true
+quality_self_review_version: 2026-10-07-v1
+last_audited: '2026-10-08'
+audit_version: 0
+---
+
+# Output-Aware Rotation for INT2 KV-Cache Quantization
+
+## 書誌情報
+Vincent-Daniel Yun、Woosang Lim、Minsoo Cheong、Sunwoo Lee、Murali Annavaram、Sai Praneeth Karimireddy、Sungjoo Yoo。arXiv:2608.02691v4、2026年8月3日初版、2026年9月23日改訂。主分類は機械学習（Machine Learning; cs.LG）、副分類は人工知能（Artificial Intelligence; cs.AI）。公式実装は https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization 。
+
+## 概要
+OptRは、長文脈推論でKVキャッシュを2ビット整数へ量子化したとき、キーや値そのものの再構成誤差が小さくても、注意重みと出力射影を通過した後のモデル内部表現には大きな誤差が残り得る問題を扱う。従来の回転量子化は固定変換やキャッシュ統計など、最終的にモデルが受け取る量より前段の代理目的を最適化するため、同じINT2表現でも推論品質に直結する誤差を十分に抑えられない。
+
+提案手法は、キー量子化が注意分布を変えることで生じる誤差と、値量子化が注意加重和を変えることで生じる誤差を、出力射影行列を通過した空間で分離して測る。校正時にモデル重みを固定したまま、KVヘッドごとの直交回転補正だけを学習する。Qwen3-8BのAIME25ではQuaRot-INT2の17.33%を66.67%へ、OSCARの54.67%を66.00%へ改善し、BF16の68.00%に近づけた。実行時は既存INT2基盤に対してデコード遅延、エンドツーエンドスループット、プリフィル時間の差を2%以内に抑える。
+
+## 問題設定
+自己回帰デコードでは各層が過去トークンのキーと値を保存し、生成ステップごとに読み直すため、文脈長、バッチ数、層数に比例してKVキャッシュ容量とメモリ通信量が増える。INT2ならBF16の8分の1、INT4の2分の1まで保存量を縮められるが、4段階しか表現値がないため、量子化グループ内の少数の外れ値が尺度を広げ、その他の値の丸め誤差を大きくする。
+
+直交回転は外れ値を複数次元へ分散し、テンソル形状やページ化キャッシュの規則的配置を保ったまま量子化しやすい座標系へ変換できる。しかし「量子化前後のK/Vが近い」ことと「量子化後の注意出力が近い」ことは同じではない。キー誤差は問い合わせとの内積を通じてソフトマックス分布を変え、値誤差はその分布で重み付けされた後、さらに出力射影を通る。OptRはこの最終影響を目的関数にする。
+
+## 手法
+第一の機構は、注意出力誤差の分解である。量子化キーによる誤差は注意ロジットとソフトマックス確率を変え、その確率差で元の値を加重した後に出力射影される。一方、量子化値による誤差は量子化キーから得た注意確率で値誤差を加重し、同じ出力射影を通る。両者を別項として扱うことで、単純なK/V再構成誤差では見えない「後段へ伝わる誤差」を直接測る。
+
+この分解では、同じ大きさのキャッシュ誤差でも注意されないトークンや出力射影で弱まる方向は重要度が低くなる。逆に小さいキャッシュ誤差でも注意分布を大きく変えたり、出力射影後に強く残る方向は重く評価される。したがって回転選択をモデルの実際の計算経路へ合わせられる。
+
+第二の機構は、注意等価なキー再パラメータ化である。校正データからキーのチャネル別平均を求め、全キーから同じ平均を引いてから回転・量子化する。同一問い合わせに対して全キーへ同じベクトルを引くと注意ロジットには共通定数が加わるだけなので、完全精度のソフトマックス分布は変わらない。一方でチャネルごとの大きなオフセットを除けるため、INT2の狭い表現範囲を有効に使える。
+
+値に同じ平行移動を適用すると注意出力自体が変わるため、再パラメータ化はキーだけへ適用する。注意シンク64トークンと直近256トークンはBF16のまま残すが、そのキーにも同じ中心化を適用して注意計算上の整合性を保つ。長い履歴だけをINT2へ落とし、局所的に重要な窓は高精度で保持する構成である。
+
+第三の機構は、KVヘッドごとの直交回転補正である。QuaRotやOSCARなど任意の基底回転から開始し、自由行列とその転置の差で反対称行列を作り、その行列指数関数を基底回転へ掛ける。反対称行列の指数関数は直交行列になるため、最適化中も回転の直交性を壊さず、既存回転を出力誤差の小さい方向へ微調整できる。
+
+キー回転は先に校正する。量子化キーが決める注意分布をBF16の分布へ近づけるKLダイバージェンスと、出力射影後のキー誘発誤差を組み合わせて最適化する。キーを固定した後、その量子化キーが作る注意分布の下で値回転を校正し、注意加重・出力射影後の値誘発誤差を最小化する。これによりキーと値の役割を混同せず順序依存性を扱う。
+
+第四の機構は、実際のINT2量子化経路を通した校正である。回転、クリッピング、グループ化、INT2丸め、逆量子化、逆回転を校正ループ内で実行し、非微分な丸めには直通推定器を使う。モデル重みは凍結し、各層・KVヘッドの回転補正だけを80 Adamステップ、学習率0.02で調整するため、モデル全体の再学習は不要である。
+
+推論時は校正で得た回転を固定する。キー側の平均減算は回転済み平均を事前計算し、Tritonのキャッシュ書込みカーネルへ回転・クリップ・量子化・パックとともに融合する。値側の回転と逆回転は値射影と出力射影の重みへ吸収できるため、追加の値回転カーネルを必要としない。グループ化問い合わせ注意では、各問い合わせヘッドへ対応するKVヘッドの回転を適用する専用カーネルを使う。
+
+## 評価
+Qwen3-4B-Thinking-2507、Qwen3-8B、Phi4-14B-reasoning-plusを対象に、AIME24、AIME25、GPQA-Diamond、MBPP+、LiveCodeBench v6を5乱数種で評価する。長文脈検索にはRULERのNeedle-in-a-Haystackを使い、Qwen3系は64K、Phi4は32Kまで、付録では128Kまで測定する。量子化はグループサイズ128、キーのクリップ率0.96、値0.92で、64K文脈時のメタデータとBF16窓を含む実効容量は2.32ビット/要素である。
+
+### 代表的な評価条件
+
+| 項目 | 条件 |
+|---|---|
+| モデル | Qwen3-4B-Thinking-2507、Qwen3-8B、Phi-4-reasoning-plus |
+| 推論課題 | AIME24、AIME25、GPQA-Diamond、MBPP+、LiveCodeBench v6 |
+| 反復 | 5乱数種 |
+| 長文検索 | RULER Needle-in-a-Haystack。Qwen3系64K、Phi-4 32K、付録128K |
+| KV量子化 | INT2、グループサイズ128、キーclip 0.96、値clip 0.92 |
+| 実効容量 | 64KでメタデータとBF16窓込み2.32 bit/element |
+| 校正 | 各層・KVヘッドの回転を80 Adamステップ、学習率0.02 |
+| 効率GPU | NVIDIA A100 40 GB |
+| 効率条件 | 1K〜128Kバッチ1デコード、2K入力/4K出力スループット、2K入力プリフィル |
+
+### 代表的な評価結果
+
+| 条件 | 指標 | 比較対象 | OptR追加後 | 改善・差 | 読み取れること |
+|---|---|---|---|---|---|
+| Qwen3-8B、5課題平均 | 平均得点 | QuaRot-INT2 25.96 | 64.13 | +38.17ポイント | キャッシュ再構成誤差より最終出力空間を合わせる回転が品質へ大きく効く |
+| Qwen3-8B、5課題平均 | 平均得点 | OSCAR 61.34、BF16 65.66 | 65.68 | OSCAR比+4.34 | この集約条件ではBF16とほぼ同水準まで回復する |
+| Qwen3-8B、64K検索 | 検索精度 | QuaRot-INT2 0.04% | 70.02% | 大幅改善 | 長文ほど回転方向の不整合がINT2品質を強く壊す |
+| Qwen3-8B、64K検索 | 検索精度 | OSCAR 57.54%、BF16 84.22% | 68.65% | OSCAR比+11.11ポイント | 改善しても完全精度との差は残る |
+| Qwen3-4B、AIME25 | 正答率 | OSCAR 63.33%、キー再パラメータ化のみ66.00% | 70.67% | +7.34 / +4.67ポイント | 中心化と出力整合回転が相補的に効く |
+| A100効率評価 | 速度 | 基底INT2基盤 | 差2%以内 | 実行時負担は小さい | 品質改善を追加の大きなオンライン計算なしで得る |
+| バッチ128、2K/4K | GPUメモリ | 36,205 MiB | 36,223 MiB | +18 MiB | 回転補正の追加状態はメモリ容量をほぼ変えない |
+
+
+
+Qwen3-8BではQuaRot-INT2の5課題平均25.96がOptR追加で64.13へ上がり、OSCARの61.34は65.68へ上がる。BF16平均65.66に対してOSCAR+OptRは65.68で、少なくともこの5課題平均ではほぼ同水準である。Qwen3-4BでもOSCARの62.71から65.38へ改善し、BF16の67.58との差を縮める。
+
+長文脈ではQwen3-8Bの64K検索精度がQuaRot-INT2の0.04%からOptR追加で70.02%へ改善し、OSCARも57.54%から68.65%へ改善する。完全精度84.22%には届かないためINT2の品質損失は残るが、文脈が長くなるほど回転の出力整合性が重要になることを示す。
+
+構成要素除去ではQwen3-4B AIME25でOSCAR 63.33%、キー再パラメータ化のみ66.00%、完全なOptR 70.67%となる。またキャッシュ再構成誤差を目的にした校正は65.33%、出力射影前の注意読出し誤差は62.67%、出力射影後を直接最小化するOptRは70.67%であり、最終出力空間を目的にする設計の寄与を分離して確認している。
+
+効率評価はNVIDIA A100 40GBで行い、1K〜128Kのバッチ1デコード、2K入力・4K出力のエンドツーエンドスループット、2K入力のプリフィルを測る。OptR追加後も基底INT2基盤との差は2%以内で、最大バッチ数も同じである。バッチ128の2K入力・4K出力条件ではGPUメモリが36,205MiBから36,223MiBへ18MiB増えるだけだった。
+
+## 既存研究との差
+QuaRotは固定Hadamard回転、RotateKVはヘッド別外れ値と注意シンク、OSCARはオフラインの注意共分散統計から回転を求める。これらに対してOptRは、既存回転を捨てず初期値として利用し、その上に出力射影後の誤差を最小化するヘッド別直交補正を重ねる。そのためQuaRotとOSCARの両方へ適用でき、特定の回転生成法へ依存しない。
+
+KIVIやKVQuantなどの量子化方式は細粒度尺度、高精度残差、特殊配置を使う場合があり、ページ化KVキャッシュや融合カーネルへの統合が複雑になり得る。OptRはキャッシュのテンソル形状と規則的なページ配置を変えず、回転と中心化を既存カーネルや射影重みへ吸収することで、SGLangのページ化・接頭辞キャッシュ機構との互換性を維持する。
+
+## 限界・実装状況
+校正にはモデルごとのBF16 QKVトレースが必要で、30KトークンのGPQAトレースから校正・選択用の分離集合を作る。したがって完全な校正不要方式ではなく、モデル変更や分布変化に応じて回転を再校正する費用がある。またINT2品質を大幅に回復しても長文脈ではBF16との差が残り、特に64K以上の検索精度は完全精度へ一致しない。
+
+公式実装はSGLangベースのINT2基盤として公開され、Qwen3-4B-Thinking-2507、Qwen3-8B、Phi-4-reasoning-plusの校正・サービング・評価コードを含む。値回転の重み吸収とキー側融合カーネルにより実行時負担は小さいが、他のランタイムや異なる注意構造へ移植する場合は、問い合わせ回転、ページ化キャッシュ書込み、射影重み吸収を同等に実装する必要がある。
+
+## 一次資料
+- arXiv: https://arxiv.org/abs/2608.02691
+- arXiv HTML v4: https://arxiv.org/html/2608.02691v4
+- 公式実装: https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization
+
+
+## 修整履歴
+
+- 2026-09-28: 現行の論文品質ガイドに合わせ、モデル・長文長・量子化条件・校正・A100効率条件を表に整理し、品質回復とオンライン性能負担を同一の結果表で分離した。
+
+## 再監査で確認した注意点（2026-10-08）
+
+一次資料は2026年9月23日改訂の第4版とし、表1の推論・コード生成5課題、表2の長文脈検索、表3・4の構成要素除去、図6のA100での実行時費用を照合した。AIME25のQwen3-8Bでは、QuaRot-INT2の17.33%がOptR追加で66.67%へ、OSCARの54.67%が66.00%へ上がる。ただし両者が同じ性能に達するのではなく、基底回転と課題によって順位は変わる。Qwen3-4Bの長文脈64K検索はOSCAR+OptRでも69.58%で、BF16の88.76%との差が大きい。したがって「INT2でも完全精度と常に同等」とは結論できない。
+
+モデル全体の重みは凍結される一方、校正にはGPQA由来の30KトークンのBF16 QKVトレースを使用する。4基のA100 40GBで評価した論文のオンライン性能結果と、単一A100で計測したモデル別のオフライン校正時間は区別する。補足表では80最適化ステップに対しQwen3-4Bが6.25分、Qwen3-8Bが7.05分、Phi4-14Bが11.03分であり、トレース収集時間は含まれない。実行時の2%以内という比較結果には、この校正費用を含めない。
+
+著者の公式実装先は https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization であり、原稿のcode:nullおよび「公式コード未確認」という旧書誌情報を訂正した。GitHub受信箱へ提出する修復原稿は元の本文・構造化参考文献を保持し、適用時には固定Git blob SHA照合を必須とする。
