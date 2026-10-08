@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-08T09:16:31.575021+00:00",
+  "generated_at": "2026-10-08T09:28:19.705837+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 542,
+  "count": 540,
   "worker_counts": {
-    "scheduled-chat-00": 183,
+    "scheduled-chat-00": 181,
     "scheduled-chat-30": 174,
     "scheduled-chat-45": 185
   },
@@ -479,30 +479,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
-      "canonical_id": "arXiv:2305.01625",
-      "title": "Unlimiformer: Long-Range Transformers with Unlimited Length Input",
-      "file_bytes": 8352,
-      "source_sha256": "9612a62818454ff9c6853876edddee44a499ab8a1d74c6e969f5be8a904bda94",
-      "source_git_blob_sha": "df18efc893928419b2b284b107d98a2e095730c5",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.813187,
-      "quality_metrics": {
-        "body_chars": 1041,
-        "method_chars": 250,
-        "evaluation_chars": 0,
-        "limitation_chars": 132
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1041 < 2200",
-        "16KB未満再監査: 手法説明量 250 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
       "canonical_id": "arXiv:2206.13947",
       "title": "Long Range Language Modeling via Gated State Spaces",
@@ -554,31 +530,6 @@
       ],
       "warnings": [
         "日本語比率 79.6% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
-      "canonical_id": "arXiv:2312.06635",
-      "title": "Gated Linear Attention Transformers with Hardware-Efficient Training",
-      "file_bytes": 8409,
-      "source_sha256": "2d58d014759377e78dab851d501e01ee72db45cad2ce3b215245d46dec0ea440",
-      "source_git_blob_sha": "ef328023c921bc7f02d258bd548e53396c5c5e6b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.7014,
-      "quality_metrics": {
-        "body_chars": 2245,
-        "method_chars": 744,
-        "evaluation_chars": 344,
-        "limitation_chars": 187
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 344 < 500",
-        "16KB未満再監査: 日本語比率 70.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 70.1% < 警告基準 80%"
       ]
     },
     {
