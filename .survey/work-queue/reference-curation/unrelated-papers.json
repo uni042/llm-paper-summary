@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T18:46:59+00:00",
-  "record_count": 11217,
+  "updated_at": "2026-10-08T18:55:56+00:00",
+  "record_count": 11218,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160259,6 +160259,19 @@
       "last_checked_at": "2026-10-08T18:46:59+00:00",
       "linked_from": [],
       "title": "Do Vision Transformers Need All-to-All Attention? Global Communication Through Elastic Learned Cores"
+    },
+    "arXiv:2508.03485": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03485",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.03485",
+        "arXiv:2508.03485"
+      ],
+      "reason": "The primary abstract confines the method to quantizing Diffusion Transformers for text-to-image/text-to-video generation, describing log quantization and activation-outlier rotations. It establishes image/video generation as the application and no LLM inference or serving connection.",
+      "first_checked_at": "2026-10-08T18:55:56+00:00",
+      "last_checked_at": "2026-10-08T18:55:56+00:00",
+      "linked_from": [],
+      "title": "LRQ-DiT: Log-Rotation Post-Training Quantization of Diffusion Transformers for Image and Video Generation"
     }
   }
 }

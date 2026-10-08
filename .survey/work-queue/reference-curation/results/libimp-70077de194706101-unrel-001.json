@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70077de194706101-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.03485",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.03485",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.03485",
+      "arXiv:2508.03485"
+    ],
+    "reason": "The primary abstract confines the method to quantizing Diffusion Transformers for text-to-image/text-to-video generation, describing log quantization and activation-outlier rotations. It establishes image/video generation as the application and no LLM inference or serving connection.",
+    "first_checked_at": "2026-10-08T18:55:56+00:00",
+    "last_checked_at": "2026-10-08T18:55:56+00:00",
+    "linked_from": [],
+    "title": "LRQ-DiT: Log-Rotation Post-Training Quantization of Diffusion Transformers for Image and Video Generation"
+  },
+  "processed_at": "2026-10-08T18:55:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70077de19470",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
