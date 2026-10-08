@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-08T14:48:20+00:00",
+  "checked_at": "2026-10-08T15:37:43+00:00",
   "summary": {
-    "total": 1756,
+    "total": 1759,
     "complete": 1755,
-    "incomplete": 1
+    "incomplete": 4
   },
   "families": {
     "inference": {
-      "total": 1717,
+      "total": 1720,
       "complete": 1716
     },
     "training": {
@@ -23,8 +23,23 @@
   },
   "incomplete": [
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-cd0254f5f44d-deferred-continuous-batching-in-resource-efficient-large-language-model-.md",
+      "canonical_id": "DOI:10.1145/3642970.3655835",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00103",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
       "path": "papers/inference/17-pim-near-data-acceleration/2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md",
       "canonical_id": "DOI:10.1109/hcs59251.2023.10254711",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+      "canonical_id": "DOI:10.1145/3620666.3651329",
       "reason": "missing structured reference audit metadata"
     }
   ]
