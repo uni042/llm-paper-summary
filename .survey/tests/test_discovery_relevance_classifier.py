@@ -68,7 +68,7 @@ class ClassifierTests(unittest.TestCase):
             source = []
             i = 0
             while len(source) < 8:
-                row = {"canonical_id": f"arXiv:2601.{i:05d}", "title": "Tomato phenotyping"}
+                row = {"canonical_id": f"arXiv:2601.{i:05d}", "title": f"Tomato phenotyping case {i:05d}"}
                 if ml.shard_for(ml.identity_key(row)) == 0:
                     source.append(row)
                 i += 1
