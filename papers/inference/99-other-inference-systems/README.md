@@ -1166,7 +1166,7 @@
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
   実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：3  
-  従来の音声対話は、音声認識、テキストLLM、音声合成を直列に通すため各段の待ち時間が累積し、話者交替の境界も明示的に決める必要がある。推論効率上の核は、Mimi音声コーデックで音声を12.5 Hzの離散トークンへ圧縮し、時間方向の大きなTransformerと、同一時刻に複数コードブックを生成する小さな深さTransformerへ処理を分ける点にある。
+  Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
 
 - **2024-09 · [Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction](2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/GemFilter) ・ リポジトリ内被引用：3  
