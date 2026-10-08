@@ -1,29 +1,22 @@
 {
   "schema_version": 1,
-  "policy_name": "conservative-discovery-worklist-triage-v1",
+  "policy_name": "mechanical-rules-then-forward-lineage-percent-v1",
   "enabled": true,
   "mode": "quarantine",
   "audit_stride": 50,
   "max_audit_per_build": 30,
   "allow_canonical_ids": [],
-  "classifier": {
-    "enabled": true,
-    "mode": "quarantine",
-    "batch_size": 2000,
-    "validation_policy": "zero_positive_holdout_errors",
-    "model_training": "frozen_until_explicit_retraining"
-  },
   "expanded_rules": {
     "enabled": true,
     "mode": "quarantine",
-    "note": "Validated against all accepted paper titles (0 quarantines); retained papers and audit samples; set shadow to roll back"
+    "note": "Active mechanical application-domain filter with system-mechanism rescues."
   },
   "relevance_quota": {
     "enabled": true,
     "mode": "quarantine",
-    "retain_percent": 25,
+    "retain_percent": 5,
     "min_candidates": 100,
-    "selection": "systems-first-topic-score-with-priority-citations-freshness",
-    "note": "Shortlist includes audit sample. Keep all source records; mode=off restores candidates on regeneration."
+    "selection": "same-lineage-forward-citation-count-then-topic-then-priority",
+    "note": "5% of candidates remaining AFTER mechanical quarantine; change retain_percent (1..100) freely. Historical classifier retired; all source records remain untouched."
   }
 }
