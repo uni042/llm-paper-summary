@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T22:56:37+00:00",
-  "record_count": 11220,
+  "updated_at": "2026-10-08T23:27:25+00:00",
+  "record_count": 11221,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -131614,20 +131614,6 @@
       ],
       "title": "Convolutional Neural Network Acceleration Techniques Based on FPGA Platforms: Principles, Methods, and Challenges"
     },
-    "arXiv:2410.05911": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2410.05911",
-      "identity_tokens": [
-        "arXiv:2410.05911"
-      ],
-      "reason": "Error-correction-code transformer workloads are the target, rather than LLM generation or language-model serving.",
-      "first_checked_at": "2026-10-06T18:35:23+00:00",
-      "last_checked_at": "2026-10-06T18:35:23+00:00",
-      "linked_from": [
-        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
-      ],
-      "title": "Accelerating Error Correction Code Transformers"
-    },
     "arXiv:2408.17428": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2408.17428",
@@ -160298,6 +160284,35 @@
       "last_checked_at": "2026-10-08T22:56:37+00:00",
       "linked_from": [],
       "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories"
+    },
+    "arXiv:2605.19269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19269",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.19269",
+        "arXiv:2605.19269"
+      ],
+      "reason": "The abstract targets Transformer forward/backward training workloads and training-kernel fusion; it does not establish an inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-08T23:27:24+00:00",
+      "last_checked_at": "2026-10-08T23:27:24+00:00",
+      "linked_from": [],
+      "title": "CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs"
+    },
+    "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.05911",
+        "SemanticScholar:ad3359c5259b6a5cb0fd58a9e2a79c273630c2dc",
+        "arXiv:2410.05911"
+      ],
+      "reason": "The official arXiv abstract confirms this is a transformer decoder for error-correction codes in communication systems, not LLM inference; its quantization/energy results belong to a separate application.",
+      "first_checked_at": "2026-10-06T18:35:23+00:00",
+      "last_checked_at": "2026-10-08T23:27:25+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "title": "Accelerating Error Correction Code Transformers"
     }
   }
 }
