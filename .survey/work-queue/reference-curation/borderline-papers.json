@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T18:37:10+00:00",
-  "record_count": 4497,
+  "updated_at": "2026-10-08T19:07:27+00:00",
+  "record_count": 4498,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68608,6 +68608,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Memory-Efficient Chunked Tropical Attention for Long Sequences"
+    },
+    "DOI:10.1109/icce-asia67487.2025.11263536": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icce-asia67487.2025.11263536",
+      "identity_tokens": [
+        "DOI:10.1109/icce-asia67487.2025.11263536"
+      ],
+      "reason": "The official ICCE-Asia 2025 program book confirms this exact title and authors, but no primary abstract was retrieved. The official IEEE Xplore document page for DOI 10.1109/ICCE-Asia67487.2025.11263536 returned a JavaScript-disabled / robot-verification page, and the DOI resolver led to that page; the available primary program entry contains metadata only. Keep as borderline pending abstract-level scope evidence.",
+      "first_checked_at": "2026-10-08T19:07:27+00:00",
+      "last_checked_at": "2026-10-08T19:07:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Performance Study of LLM Inference on Mooncake-Based Clusters"
     }
   }
 }
