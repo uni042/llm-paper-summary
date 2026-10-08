@@ -6,10 +6,6 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
-- **2026-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  提案するServeGenは負荷全体へ単一分布を当てず、顧客ごとに到着過程と入出力データ分布をモデル化して最後に合成する。
-
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   従来の複数LLMエージェントは、各エージェントが推論結果をテキストへデコードし、次のエージェントがそのテキストをtokenizeして再びプリフィルする。LatentMASはこの離散テキスト境界を外し、エージェント内部の連続表現を直接共有する。次のエージェントはその表現を再エンコードせず受け取る。
@@ -45,6 +41,10 @@
   vLLM、H2O、InfiniGenをH100実機で比較し、GPUメモリを最大約70%減らすH2O、初期事実を保ちやすいInfiniGen、速度に優れるvLLMの条件別の使い分けを明らかにする。
 
 ### 2年前（2024-11〜2025-10）
+
+- **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
+  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：17  
+  4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
@@ -105,6 +105,6 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：16  
-  S4（Structured State Space Sequence モデル）は、長系列で自己注意の計算量とメモリ量が系列長の二乗に増える問題に対し、状態空間モデルを実用的な系列層として再設計する。Long Range Arenaでは平均86%台の精度を報告し、当時のTransformer系・効率的注意系を大きく上回った。
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：15  
+  自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->

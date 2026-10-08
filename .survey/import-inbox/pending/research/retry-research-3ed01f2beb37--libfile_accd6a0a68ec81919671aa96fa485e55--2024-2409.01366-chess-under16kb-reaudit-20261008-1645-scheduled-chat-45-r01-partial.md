@@ -69,6 +69,8 @@ quality_method_chars: 2206
 quality_eval_chars: 3108
 quality_evaluation_chars: 3108
 quality_limitation_chars: 740
+last_audited: null
+audit_version: 0
 ---
 
 # CHESS：チャネル別閾値と注意投影の選択的疎化によるCPU推論の高速化

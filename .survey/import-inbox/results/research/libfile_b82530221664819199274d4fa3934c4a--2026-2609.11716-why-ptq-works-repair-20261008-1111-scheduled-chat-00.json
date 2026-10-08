@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3f8e710833b0d5a1373dc031d8f8bbb47a516448ad781e575a64739e0335f5cc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b82530221664819199274d4fa3934c4a--2026-2609.11716-why-ptq-works-repair-20261008-1111-scheduled-chat-00.md",
+  "canonical_id": "arXiv:2609.11716",
+  "worker_completed_at": "2026-10-08T11:11:00+09:00",
+  "worker_run_key": "20261008-1111-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5826,
+    "body_paragraphs": 32,
+    "method_chars": 2323,
+    "method_paragraphs": 13,
+    "evaluation_chars": 213,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 213 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 213 < 500"
+  ],
+  "processed_at": "2026-10-08T12:36:59+00:00"
+}

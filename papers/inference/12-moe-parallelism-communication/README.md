@@ -95,7 +95,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2026-08 · [EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference](2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md)**  
   実装：[✓](https://github.com/yize-wu/EasyInfra) ・ リポジトリ内被引用：0  
-  ルーティングが偏ると、軽いGPUも最重負荷GPUの終了を待つため、専門家数を均等配置しても実行時間は最大負荷に支配される。8×A800-SXM4 80GB上でQwen3-30B-A3B、Moonlight-16B-A3B、Qwen3-235B-A22BをLongBenchで評価する。
+  EasyBalanceが対象とするのは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家並列（専門家 parallelism; EP）推論で、GPU間に配った専門家の処理量が入力ごとに偏る問題である。各バッチ内の層順序は保持するため、専門家選択やモデルの数値演算を近似する方式ではない。
 
 - **2026-08 · [AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge](2026-2608.22932-airmoe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

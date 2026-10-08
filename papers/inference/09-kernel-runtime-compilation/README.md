@@ -54,7 +54,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2026-09 · [VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention](2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  動画Diffusion Transformerでは数万トークンの時空間系列へ注意を掛けるため、注意機構が生成時間の大きな割合を占める。
+  VC-注意機構は、動画拡散変換器（Diffusion Transformer、DiT）の長い時空間系列に対して、低ビット注意機構の値行列Vの量子化誤差と高精度ソフトマックス演算の律速を同時に減らす、追加学習不要のGPUカーネル方式である。
 
 - **2026-09 · [Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights](2026-2609.02652-unfolding-the-leech-lattice-fused-multi-shell-decoding-and-vram-layouts-.md)**  
   実装：[✓](https://github.com/pjmalandrino/llvq) ・ リポジトリ内被引用：0  
@@ -237,7 +237,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
-  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：30  
   重みを3～4ビットへ圧縮すればGPUメモリへの転送量を減らせるが、既存の重みのみ量子化の多くは、積和を行う直前に重みを半精度へ展開する逆量子化処理を必要とする。
 
 ### 6年前（2020-11〜2021-10）
