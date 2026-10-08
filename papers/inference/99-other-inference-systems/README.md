@@ -754,13 +754,13 @@
   実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：6  
   GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
 
+- **2025-04 · [OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs](2025-6264cfc484ad-omnikv-dynamic-context-selection-for-efficient-long-context-llms.md)**  
+  実装：[✓](https://github.com/antgroup/OmniKV) ・ リポジトリ内被引用：6  
+  OmniKVは、長文脈の大規模言語モデルで、鍵・値キャッシュ（KVキャッシュ）をGPUにすべて置くと容量不足になる一方、CPUに退避した全量を各層で読み直すと転送が律速になる問題を扱う。単一A100 80GB、128K文脈で退避なしの復号は毎秒21.0トークン、完全注意比1.68倍である。
+
 - **2025-02 · [Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation](2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   通常の接頭辞 キャッシュは先頭から同一な接頭辞しか再利用できず、chunkだけ同じでも再計算が必要になる。一方、過去のKVを無条件に使うと注意機構文脈が欠落して生成品質が落ちる。
-
-- **2025-04 · [OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs](2025-6264cfc484ad-omnikv-dynamic-context-selection-for-efficient-long-context-llms.md)**  
-  実装：[✓](https://github.com/antgroup/OmniKV) ・ リポジトリ内被引用：5  
-  OmniKVは、長文脈の大規模言語モデルで、鍵・値キャッシュ（KVキャッシュ）をGPUにすべて置くと容量不足になる一方、CPUに退避した全量を各層で読み直すと転送が律速になる問題を扱う。単一A100 80GB、128K文脈で退避なしの復号は毎秒21.0トークン、完全注意比1.68倍である。
 
 - **2024-11 · [Context Parallelism for Scalable Million-Token Inference](2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1461,7 +1461,7 @@
   ZeroQuantは、大規模Transformerを量子化後学習（post-学習 量子化; PTQ）で低ビット化しながら、単なるモデル容量削減ではなく実測推論速度まで改善するためのエンドツーエンド設計である。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   GLaM（Generalist Language モデル）は、密モデルの全パラメータを毎トークン実行する代わりに、混合専門家モデル（MoE）のルータで一部専門家だけを活性化することで、総モデル容量と実際の計算量を分離する。最大構成は1.2兆パラメータでGPT-3の約7倍の総パラメータを持つが、論文は推論FLOPsをGPT-3の約半分と報告する。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
@@ -1487,7 +1487,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [I-BERT: Integer-only BERT Quantization](2021-2101.01321-i-bert-integer-only-bert-quantization.md)**  
-  実装：[✓](https://github.com/kssteven418/i-bert) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/kssteven418/i-bert) ・ リポジトリ内被引用：9  
   INT8量子化したTransformerでも、GELU、Softmax、層 Normalizationのために途中でFP32へ戻す方式では、整数専用演算器の利点を推論全体へ広げられない。Tesla T4上の予備実装ではFP32推論に対しINT8が2.42〜4.00倍、平均ではBase 3.08倍、Large 3.56倍高速になる。
 
 - **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  

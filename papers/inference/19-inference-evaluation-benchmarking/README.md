@@ -93,7 +93,7 @@
   量子化は重みや活性値を少ないビット数で表し、GPUメモリ容量とデータ転送量を減らす代表的なLLM圧縮手法である。結果として、4ビット量子化は多くの条件で非量子化モデルに近い下流性能を維持する。
 
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
-  実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：2  
   自己整合性（自己整合性; SC）は、同じ問題から複数の思考連鎖（chain-of-thought; CoT）を標本化し、最終回答を多数決することで単一生成の偶然性を抑える。
 
 ### 4年前（2022-11〜2023-10）
