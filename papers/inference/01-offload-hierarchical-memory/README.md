@@ -23,7 +23,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   市販SmartSSD上で自己注意をKVの近くへ移し、X-キャッシュと遅延KV書戻しを組み合わせることで、長文脈オフライン推論を通常SSD型オフロード比で最大7.86倍高速化する。
 
 - **2026-08 · [HBF Sucks? A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving](2026-2608.11668-high-bandwidth-flash-kv-serving-characterization.md)**  
-  実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/pku-lemonade/TokenSim) ・ リポジトリ内被引用：4  
   SSD型KV退避の保存先だけをHBFへ置換すると、近接メモリ減少・書込主体化・熱／耐久制約が利点を上回り、遅延が2〜5.5倍悪化することを本番トレースで示す。
 
 - **2025-11 · [In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading](2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md)**  
@@ -413,7 +413,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoE-Infinityはルーティング履歴から次に再利用される専門家を予測し、GPUキャッシュへ先読みして個人PCのMoEオフロード転送待ちを減らす。
 
 - **2023-12 · [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：75  
+  実装：✓ ・ リポジトリ内被引用：76  
   LLM in a Flashは直近で使ったFFN重みをDRAMに残し、ニューロン単位でFlash上の重みをまとめて必要部分だけ読み出して大規模モデルを限られたメモリで生成する。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
@@ -467,7 +467,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：333  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：334  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）

@@ -35,7 +35,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実GPUで測った演算・通信性能から複数のLLMサービング構成をCPU上で予測し、並列化やバッチ、プリフィル・デコード分離を探索して遅延目標を満たす候補を選ぶ。
 
 - **2026-02 · [LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure](2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md)**  
-  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：6  
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
 
 - **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  

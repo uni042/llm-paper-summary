@@ -78,6 +78,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   カーネル境界で中間テンソルが高帯域メモリへ書き戻され、次のカーネルが再び読む。さらに、一般命令主体のCTAとテンソル演算主体のCTAを同じストリーミングマルチプロセッサ（SM）へ配置できるようグリッドスケジューラを拡張する。
 
+- **2025-12 · [HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference](2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  GPUとNVMe SSDをGDSで直結し、pSLCと順次KVブロック配置でDRAMなしのKV交換を実現し、長文脈推論の性能を保ちながら容量費用を削減する。
+
 - **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   DEERは、投機的復号の候補生成器を、左から右へ逐次生成する小型自己回帰モデルから、複数位置をまとめて予測できる離散拡散言語モデル（discrete diffusion language モデル）へ置き換える方式である。
@@ -141,10 +145,6 @@
 - **2026-01 · [ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management](2026-2601.13631-contiguouskv-accelerating-llm-prefill-with-granularity-aligned-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   KV 枝刈りとI/Oの粒度をContiguousChunkへ統一し、二段非同期プリフェッチでSSD KV読み込みを計算と重ねてRe-プリフィルを最大3.85倍高速化する。
-
-- **2025-12 · [HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference](2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  GPUとNVMe SSDをGDSで直結し、pSLCと順次KVブロック配置でDRAMなしのKV交換を実現し、長文脈推論の性能を保ちながら容量費用を削減する。
 
 - **2025-11 · [LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs](2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md)**  
   実装：[✓](https://github.com/LUT-FPGA/LUT-LLM) ・ リポジトリ内被引用：1  
@@ -996,13 +996,13 @@
   実装：✓ ・ リポジトリ内被引用：20  
   PQCacheはこの処理を「問い合わせに対する埋め込み検索」と見なし、データベース分野の積量子化（Product Quantization; PQ）でkeyを小さなコードへ圧縮し、現在問い合わせとの最大内積探索（Maximum Inner-Product Search; MIPS）で重要トークンだけを選ぶ。
 
+- **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
+  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：20  
+  活性認識特異値分解（活性値-考慮型 特異値分解; ASVD）は、学習済みLLMの線形 重みを再学習なしで低ランク化するpost-学習 圧縮である。LLaMA/LLaMA-2 7B〜13Bで10〜30%のモデル圧縮を示し、K/V 射影にも同じ低ランク構造を適用して中間の低次元活性値をキャッシュすることで、KV キャッシュを50%までほぼ品質低下なしに削減する。
+
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：19  
   InfLLMは、数千〜数万トークンの文脈で学習された既存LLMを追加学習せず極長系列へ拡張する文脈メモリ方式である。
-
-- **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
-  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：19  
-  活性認識特異値分解（活性値-考慮型 特異値分解; ASVD）は、学習済みLLMの線形 重みを再学習なしで低ランク化するpost-学習 圧縮である。LLaMA/LLaMA-2 7B〜13Bで10〜30%のモデル圧縮を示し、K/V 射影にも同じ低ランク構造を適用して中間の低次元活性値をキャッシュすることで、KV キャッシュを50%までほぼ品質低下なしに削減する。
 
 - **2024-02 · [Decoding Speculative Decoding](2024-2402.01528-decoding-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
@@ -1048,6 +1048,10 @@
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：13  
   JetMoEはFFNだけでなく注意機構にも専門家 ルーティングを導入し、総8Bパラメータを持ちながら1 トークンで実行するのは約2Bに抑える。これによりLlama2-7Bより総パラメータは多いが、推論計算量を約70%減らす。
 
+- **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  Jacobi復号は複数の未来位置を仮置きし、対象モデルで全位置を並列更新して固定点まで反復することでこの依存を緩める。論文はドメイン固有・一般ベンチマークで生成品質を保ちながら2.4〜3.4倍の生成高速化を報告する。
+
 - **2024-01 · [Multi-Candidate Speculative Decoding](2024-2401.06706-multi-candidate-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   各投機位置で複数候補をサンプリングして木として一括検証し、ターゲット分布を保ったまま単一路の投機的復号より受理率を高める。
@@ -1059,10 +1063,6 @@
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
   実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：12  
   通常の分散学習と違い、各モデル内部ではテンソル並列・パイプライン並列・データ並列を使う一方、モデル間では生成結果、log probability、value、rewardなどを別の分割形状へ再配置して渡す必要がある。評価では既存RLHFシステムに対し1.53〜20.57倍のスループット改善を報告する。
-
-- **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  Jacobi復号は複数の未来位置を仮置きし、対象モデルで全位置を並列更新して固定点まで反復することでこの依存を緩める。論文はドメイン固有・一般ベンチマークで生成品質を保ちながら2.4〜3.4倍の生成高速化を報告する。
 
 - **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
   実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：12  
@@ -1271,7 +1271,7 @@
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：157  
+  実装：✓ ・ リポジトリ内被引用：159  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
@@ -1453,7 +1453,7 @@
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：42  
   ZeroQuantは、大規模Transformerを量子化後学習（post-学習 量子化; PTQ）で低ビット化しながら、単なるモデル容量削減ではなく実測推論速度まで改善するためのエンドツーエンド設計である。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
