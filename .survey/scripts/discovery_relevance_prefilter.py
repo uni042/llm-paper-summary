@@ -8,7 +8,6 @@ and regenerate worklists to restore the exact original candidate ordering.
 from __future__ import annotations
 
 import hashlib
-import discovery_relevance_classifier as classifier
 import forward_lineage_citation
 import json
 import math
@@ -17,7 +16,7 @@ from pathlib import Path
 from typing import Any
 
 CONFIG_PATH = Path(".survey/config/discovery-relevance-prefilter.json")
-POLICY_VERSION = "2026-10-08-v3-top-quartile"
+POLICY_VERSION = "2026-10-08-v4-forward-lineage-percentile"
 
 # Require an unambiguous *application topic in the title*. Never quarantine
 # solely because a negative-domain keyword happens to appear in the abstract.
@@ -157,45 +156,42 @@ TARGET_SPECIFIC = re.compile(
 )
 
 
-def _relevance_rank(row: dict[str, Any]) -> tuple[Any, ...]:
-    """Prefer systems papers; break ties by priority and stable identity."""
+def _fallback_topic_score(row: dict[str, Any]) -> float:
+    """Tie-break zero/one-edge candidates without overpowering direct citations."""
     title = str(row.get("title") or "")
     abstract = str(row.get("abstract") or "")
     topical = bool(TARGET_MODEL.search(title))
     technical = bool(TARGET_SYSTEMS.search(title))
-    special = bool(TARGET_SPECIFIC.search(title))
-    systems_title = any(pattern.search(title) for pattern in COMPILED_SYSTEMS)
     score = (
-        (130 if special else 0)
-        + (100 if systems_title else 0)
+        (130 if TARGET_SPECIFIC.search(title) else 0)
+        + (100 if any(regex.search(title) for regex in COMPILED_SYSTEMS) else 0)
         + (65 if topical and technical else 0)
         + (23 if topical else 0)
         + (22 if technical else 0)
     )
-    # Abstracts are supporting, not dominating, signals.
     if topical or technical:
-        if any(pattern.search(abstract) for pattern in COMPILED_SYSTEMS):
+        if any(regex.search(abstract) for regex in COMPILED_SYSTEMS):
             score += 21
         elif TARGET_MODEL.search(abstract) and TARGET_SYSTEMS.search(abstract):
             score += 10
+    return float(score)
+
+
+def _relevance_rank(row: dict[str, Any]) -> tuple[Any, ...]:
+    """Forward same-lineage citations rank FIRST; topic/importance only break ties.
+
+    Citation count means the number of DISTINCT curated papers a candidate
+    *itself cites*, counted inside the same fine-grained survey directory.
+    The global citation_count is never substituted for this evidence.
+    """
     try:
-        citations = min(18.0, math.log2(max(int(row.get("citation_count") or 0), 0) + 1) * 2)
-    except (TypeError, ValueError):
-        citations = 0.0
-    breakdown = row.get("priority_breakdown")
-    recent = bool(isinstance(breakdown, dict) and breakdown.get("is_fresh"))
-    score += citations + (6 if recent else 0)
-    # Only forward edges to distinct curated seeds in the SAME fine-grained
-    # directory count. A single widely cited generic method adds no points.
-    score += forward_lineage_citation.forward_lineage_bonus(
-        row.get("forward_lineage_citation_max")
-    )
-    try:
+        same = max(int(row.get("forward_lineage_citation_max") or 0), 0)
+        total = max(int(row.get("forward_lineage_citation_total") or 0), 0)
         priority = int(row.get("priority") or 0)
     except (TypeError, ValueError):
-        priority = 0
-    return (-score, -priority, -citations, classifier.identity_key(row))
-
+        same, total, priority = 0, 0, 0
+    identity = str(row.get("canonical_id") or row.get("source_url") or row.get("title") or "")
+    return (-same, -total, -_fallback_topic_score(row), -priority, identity)
 
 def _quota_policy(policy: dict[str, Any]) -> tuple[str, int, int]:
     config = policy.get("relevance_quota")
@@ -229,37 +225,24 @@ def triage_worklist(
     """
     mode = str(policy.get("mode") or "off")
     enabled = bool(policy.get("enabled")) and mode in ("shadow", "quarantine")
-    classifier_policy = policy.get("classifier") if isinstance(policy.get("classifier"), dict) else {}
-    model = classifier.load_model(root) if root is not None and enabled and classifier_policy.get("enabled") else {}
-    model_id = str(model.get("model_id") or "") if model.get("approved") else ""
-    decisions = classifier.load_decisions(root, model_id) if root is not None and model_id else {}
-    model_mode = str(classifier_policy.get("mode") or "shadow")
     extra_config = policy.get("expanded_rules")
     extra_mode = str(extra_config.get("mode") or "off") if isinstance(extra_config, dict) and extra_config.get("enabled") else "off"
     kept: list[dict[str, Any]] = []
     deferred: list[dict[str, Any]] = []
     rule_count = 0
-    ml_count = 0
     expanded_count = 0
     expanded_applied_count = 0
     expanded_reasons: dict[str, int] = {}
-    scanned = 0
     for row in rows:
         if not enabled:
             kept.append(row)
             continue
         rule_reject = classify(row, policy)["verdict"] == "quarantine"
-        decision = decisions.get(classifier.identity_key(row)) if model_id else None
-        if decision is not None:
-            scanned += 1
         forced_allow = bool(row.get("canonical_id") and str(row.get("canonical_id")) in policy.get("allow_canonical_ids", []))
-        ml_reject = decision == "q" and model_mode == "quarantine" and not forced_allow
         if rule_reject:
             rule_count += 1
-        elif ml_reject:
-            ml_count += 1
         expansion_reject = False
-        if not rule_reject and not ml_reject and extra_mode in ("shadow", "quarantine"):
+        if not rule_reject and extra_mode in ("shadow", "quarantine"):
             extra = classify_expansion(row, policy)
             expansion_reject = extra["verdict"] == "quarantine"
             if expansion_reject:
@@ -267,22 +250,23 @@ def triage_worklist(
                 expanded_reasons[extra["reason"]] = expanded_reasons.get(extra["reason"], 0) + 1
         if expansion_reject and extra_mode == "quarantine":
             expanded_applied_count += 1
-        if rule_reject or ml_reject or (expansion_reject and extra_mode == "quarantine"):
+        if rule_reject or (expansion_reject and extra_mode == "quarantine"):
             deferred.append(row)
         else:
             kept.append(row)
     quota_mode, quota_percent, quota_minimum = _quota_policy(policy)
-    quota_target = (len(rows) * quota_percent + 99) // 100
-    quota_removed_count = 0
+    # Percentage is applied AFTER the mechanical domain rules, not before.
     quota_eligible_count = len(kept)
+    quota_target = (quota_eligible_count * quota_percent + 99) // 100
+    quota_removed_count = 0
     try:
         stride = max(int(policy.get("audit_stride", 50)), 2)
         max_audit = max(int(policy.get("max_audit_per_build", 30)), 0)
     except (TypeError, ValueError):
         stride, max_audit = 50, 30
 
-    if enabled and mode == "quarantine" and quota_mode == "quarantine" and len(rows) >= quota_minimum:
-        # The audit sample is included in the requested 25% shortlist.
+    if enabled and mode == "quarantine" and quota_mode == "quarantine" and quota_eligible_count >= quota_minimum:
+        # The audit sample is included in the requested percentage, not added beyond it.
         regular_budget = max(quota_target - max_audit, 0)
         if len(kept) > regular_budget:
             mandatory = {
@@ -318,23 +302,20 @@ def triage_worklist(
         "forward_lineage_2plus_kept": sum(
             int(row.get("forward_lineage_citation_max") or 0) >= 2 for row in kept
         ),
+        "forward_lineage_nonzero_eligible": sum(
+            int(row.get("forward_lineage_citation_max") or 0) > 0 for row in kept
+        ),
         "rule_quarantine_count": rule_count,
-        "classifier_quarantine_count": ml_count,
         "expanded_rule_mode": extra_mode if enabled else "off",
         "expanded_rule_shadow_count": expanded_count,
         "expanded_rule_applied_count": expanded_applied_count,
         "expanded_rule_reason_counts": dict(sorted(expanded_reasons.items())),
-        "classifier_scanned_count": scanned,
-        "classifier_pending_count": max(len(rows) - scanned, 0),
-        "classifier_model_id": model_id,
-        "classifier_mode": model_mode if model_id else "pending_model",
-        "classifier_validation_positive_recall": model.get("validation_positive_recall"),
-        "classifier_validation_negative_quarantine_rate": model.get("validation_negative_quarantine_rate"),
         "audit_count": 0,
         "reviewable_count": len(rows),
     }
     if not enabled or mode == "shadow":
         return rows, stats
+    kept.sort(key=_relevance_rank)
     audit_count = min(len(deferred), max_audit, len(kept) // stride + (1 if not kept else 0))
     audit_rows = [
         dict(row, prefilter_audit=True, prefilter_reason=classify(row, policy)["reason"])
