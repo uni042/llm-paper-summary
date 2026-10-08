@@ -35,10 +35,15 @@
   "selection_reason": "LLM配備向け圧縮でcomponent単位のpruning/quantization判断を行い、attention componentの大幅疎化と大部分parameterのint8化を可能にする推論向け圧縮研究。",
   "semantic_scholar_id": "61a76cdf1778ce280cabdc972adb7aebea9d45da",
   "source_url": "https://arxiv.org/abs/2311.01544",
-  "status": "ready",
+  "status": "superseded",
   "title": "Divergent Token Metrics: Measuring degradation to prune away LLM components – and optimize quantization",
   "type": "research",
   "venue": "North American Chapter of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-08T07:53:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md",
+  "represented_canonical_id": "arXiv:2311.01544",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

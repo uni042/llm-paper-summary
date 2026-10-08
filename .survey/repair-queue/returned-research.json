@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T07:44:54+00:00",
+  "generated_at": "2026-10-08T07:53:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -417,22 +417,6 @@
       "worker_run_key": "20261003-0531-scheduled-chat-30"
     },
     {
-      "canonical_id": "arXiv:2505.24133",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:28:57+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a6109ed7785081919ef1527b7e9c41ca--2025-2505.24133-r-kv.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a6109ed7785081919ef1527b7e9c41ca--2025-2505.24133-r-kv.json",
-      "worker_run_key": "20261003-0035-scheduled-chat-30"
-    },
-    {
       "canonical_id": "arXiv:2408.01803",
       "title": null,
       "source_url": null,
@@ -463,39 +447,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b07e6471af2881918388c15021757958--2025-2507.19635-heterogeneous-agentic-ai.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b07e6471af2881918388c15021757958--2025-2507.19635-heterogeneous-agentic-ai.json",
       "worker_run_key": "20261002-2228-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2510.13602",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:34:15+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 61.3% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b48b2ad336cc81919f90422251602e0c--2025-2510.13602-nosa.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b48b2ad336cc81919f90422251602e0c--2025-2510.13602-nosa.json",
-      "worker_run_key": "20261003-0245-scheduled-chat-45"
-    },
-    {
-      "canonical_id": "arXiv:2311.01544",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:34:16+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空",
-        "日本語比率 55.5% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b59850d35c508191b001e148d6f76bb4--2023-2311.01544-dtm.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b59850d35c508191b001e148d6f76bb4--2023-2311.01544-dtm.json",
-      "worker_run_key": "20261003-0730-scheduled-chat-30"
     },
     {
       "canonical_id": "DOI:10.1145/3777466",
@@ -2791,8 +2742,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3620666.3651329",
-      "title": "Characterizing Power Management Opportunities for LLMs in the Cloud",
-      "source_url": "https://doi.org/10.1145/3620666.3651329",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:42:04+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2818,8 +2769,8 @@
     },
     {
       "canonical_id": "arXiv:1805.02867",
-      "title": "Online normalizer calculation for softmax",
-      "source_url": "https://arxiv.org/abs/1805.02867",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:42:44+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2842,6 +2793,89 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3940f7c4fbe8819185eea4f45c608ee8--2018-1805.02867-online-softmax-under16kb-reaudit-20261008-1455-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3940f7c4fbe8819185eea4f45c608ee8--2018-1805.02867-online-softmax-under16kb-reaudit-20261008-1455-scheduled-chat-00-r01.json",
       "worker_run_key": "20261008-1455-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2112.06905",
+      "title": "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2112.06905",
+      "returned_at": "2026-10-08T07:52:17+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5522,
+        "body_paragraphs": 29,
+        "method_chars": 1862,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 818,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2f5ea57df84c81918c9d83dd076d5745--2021-2112.06905-glam-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2f5ea57df84c81918c9d83dd076d5745--2021-2112.06905-glam-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.05892",
+      "title": "Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence",
+      "source_url": "https://arxiv.org/pdf/2404.05892",
+      "returned_at": "2026-10-08T07:52:38+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4953,
+        "body_paragraphs": 28,
+        "method_chars": 2011,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4b34d386a4c081919853174e2cbdff82--2024-2404.05892-eagle-finch-under16kb-reaudit-20261008-0759.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4b34d386a4c081919853174e2cbdff82--2024-2404.05892-eagle-finch-under16kb-reaudit-20261008-0759.json",
+      "worker_run_key": "20261008-0745-scheduled-chat-45/reaudit-r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.13602",
+      "title": "NOSA: Native and Offloadable Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2510.13602",
+      "returned_at": "2026-10-08T07:52:59+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3873,
+        "body_paragraphs": 19,
+        "method_chars": 1573,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4d75e73e07248191aaaddb973f4aa8bc--2025-2510.13602-nosa-repair-20261008-0428.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4d75e73e07248191aaaddb973f4aa8bc--2025-2510.13602-nosa-repair-20261008-0428.json",
+      "worker_run_key": "20261008-0428-scheduled-chat-30/r01"
     }
   ]
 }

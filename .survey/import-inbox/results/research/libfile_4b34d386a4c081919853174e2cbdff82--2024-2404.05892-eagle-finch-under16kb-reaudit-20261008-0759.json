@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "bf33509d8186645c5f46d86d5af8c6f9695612d8863fbffbecb56a951d9693f9",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_4b34d386a4c081919853174e2cbdff82--2024-2404.05892-eagle-finch-under16kb-reaudit-20261008-0759.md",
+  "canonical_id": "arXiv:2404.05892",
+  "worker_completed_at": "2026-10-08T07:59:37+09:00",
+  "worker_run_key": "20261008-0745-scheduled-chat-45/reaudit-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4953,
+    "body_paragraphs": 28,
+    "method_chars": 2011,
+    "method_paragraphs": 12,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-08T07:52:38+00:00"
+}
