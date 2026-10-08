@@ -24,11 +24,27 @@ import json
 import re
 import shutil
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+
+class LibraryFrontmatterLoader(yaml.SafeLoader):
+    """Keep YAML dates/timestamps as strings, without altering bool/number tags.
+
+    A bare `worker_completed_at` is a valid YAML timestamp and PyYAML otherwise
+    converts it into datetime, which cannot be written into JSON receipts.
+    Apply this loader only to Library Research metadata (not globally to YAML).
+    """
+
+
+LibraryFrontmatterLoader.add_constructor(
+    "tag:yaml.org,2002:timestamp",
+    lambda loader, node: loader.construct_scalar(node),
+)
+
 
 HERE = Path(__file__).resolve().parent
 if str(HERE) not in sys.path:
@@ -155,10 +171,29 @@ def write_text_if_absent(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
+def _receipt_json_default(value: Any) -> str:
+    """Serialize dated metadata defensively, including nested YAML metadata.
+
+    LibraryFrontmatterLoader avoids datetime objects on Research input. This
+    boundary also protects results from legacy metadata or future callers.
+    Unknown objects still fail instead of being silently stringified.
+    """
+    if isinstance(value, (datetime, date)):
+        return value.isoformat()
+    raise TypeError(f"Object of type {type(value).__name__} is not JSON serializable")
+
+
+def receipt_json(payload: dict[str, Any]) -> str:
+    return json.dumps(
+        payload, ensure_ascii=False, indent=2, sort_keys=False,
+        default=_receipt_json_default,
+    ) + "\n"
+
+
 def write_json_if_absent(path: Path, payload: dict[str, Any]) -> None:
     write_text_if_absent(
         path,
-        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
+        receipt_json(payload),
     )
 
 
@@ -166,7 +201,7 @@ def replace_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
+        receipt_json(payload),
         encoding="utf-8",
     )
     tmp.replace(path)
@@ -202,7 +237,7 @@ def parse_frontmatter(text: str) -> dict[str, Any]:
     parts = text.split("---", 2)
     if len(parts) < 3:
         raise ValueError("Research Markdown frontmatter is not closed")
-    meta = yaml.safe_load(parts[1])
+    meta = yaml.load(parts[1], Loader=LibraryFrontmatterLoader)
     if not isinstance(meta, dict):
         raise ValueError("Research Markdown frontmatter must be a mapping")
     return meta
@@ -963,6 +998,14 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
             imported += 1
             terminal += 1
         except Exception as exc:
+            # An earlier branch may already have moved the source to blocked/ or
+            # published a paper. Never hide that exception by trying to move a
+            # now-missing source a second time (or invent a misleading receipt).
+            if not source.is_file():
+                raise RuntimeError(
+                    f"Research import failed after source moved: {source}; "
+                    f"original error: {type(exc).__name__}: {exc}"
+                ) from exc
             blocked_path = block_payload(source, BLOCKED_RESEARCH)
             replace_json(
                 result_path,
