@@ -23,6 +23,7 @@ import citation_graph
 import discovery_provider_adapter
 import paper_identity
 import reference_pool
+import forward_citation_state
 
 CONFIG_PATH = Path(".survey/config/forward-citation-sweep.json")
 STATE_PATH = Path(".survey/work-queue/forward-citation-sweep.json")
@@ -37,25 +38,7 @@ def _read(path: Path, default: Any = None) -> Any:
 
 
 def _write(path: Path, value: Any) -> bool:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    # This state includes tens of thousands of citation candidates. Pretty
-    # printing caused GitHub to reject updates above its 100 MiB blob limit.
-    # Serialize compactly without discarding seeds, candidates, or provenance.
-    text = json.dumps(value, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n"
-    encoded_size = len(text.encode("utf-8"))
-    max_github_blob_bytes = 90 * 1024 * 1024
-    if encoded_size >= max_github_blob_bytes:
-        raise ValueError(
-            f"forward citation state is {encoded_size} bytes after compaction; "
-            "refusing to create an unpublishable git blob (90 MiB safety limit)"
-        )
-    if path.exists() and path.read_text(encoding="utf-8") == text:
-        return False
-    with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as tmp:
-        tmp.write(text)
-        name = tmp.name
-    Path(name).replace(path)
-    return True
+    return forward_citation_state.write(path, value)
 
 
 def _now() -> dt.datetime:
@@ -307,7 +290,7 @@ def sweep(root: Path, *, now: dt.datetime | None = None, sleep_fn=time.sleep) ->
             if isinstance(candidate, dict):
                 backward_tokens.update(_candidate_match_tokens(candidate))
 
-    state = _read(root / STATE_PATH, {})
+    state = forward_citation_state.load(root / STATE_PATH, {})
     if not isinstance(state, dict) or state.get("schema_version") != 1:
         state = {"schema_version": 1, "seeds": {}, "candidates": {}, "candidate_aliases": {}}
     seeds = state.setdefault("seeds", {})
