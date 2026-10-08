@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 06:35:04 JST**
+> 自動生成: **2026-10-09 06:49:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **782** |
 | 未claim Research job | **782** |
-| 直近24hのResearch処理完了 | **265** |
-| 最終Research処理完了 | **10-09 05:38:10 JST** |
+| 直近24hのResearch処理完了 | **268** |
+| 最終Research処理完了 | **10-09 06:36:15 JST** |
 | 最終Discovery探索完了 | **10-09 04:52:38 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（18時間38分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（18時間52分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **19** |
+| 直近6hのResearch完了 | **21** |
 | 直近6hのDiscovery run | **10** |
 | 直近6hのDiscovery本文確認・分類 | **177** |
-| 最終Research完了 | **10-09 05:38:10 JST** |
+| 最終Research完了 | **10-09 06:36:15 JST** |
 | 最終Discovery完了 | **10-09 04:52:38 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-09 05:38:10 JST** / worker — / run 20261009-0530-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_7dc361ec96b481919da0ce46efcf5ed6--2024-2403.09919-recurrent-drafter-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.json
+- Research: **10-09 06:36:15 JST** / worker — / run 20261009-0630-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_49c6554fa9d88191885fd14fd3aa35c2--2026-2609.27040-ema-under16kb-reaudit-20261009-0630-scheduled-chat-30-r01.json
 - Discovery: **10-09 04:52:38 JST** / worker codex-discovery-backfill-luna / run codex-backfill-r312-b18-main-e4ab16ec
   - 本文確認・分類 **17件** / accept **14件** / unrelated+borderline **3件**
   - evidence: .survey/import-inbox/results/discovery/codex-backfill-r312-b18-main-e4ab16ec.json

@@ -133,8 +133,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   適応的検証は、下書き木の各枝の受理見込みと追加される専門家・検証時間を測り、費用対効果の低い枝を捨てて、MoEの検証計算と重み読出しを減らす。
 
 - **2026-05 · [Component-Aware Self-Speculative Decoding in Hybrid Language Models](2026-2605.01106-component-aware-self-speculative-decoding-in-hybrid-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  投機的復号（投機的復号）は、軽いドラフトモデルで複数トークンを先に生成し、対象モデルが一括検証することで自己回帰の逐次性を緩和する。WikiText-2、greedy復号、ドラフト長k=2でFalcon-H1-0.5Bは全トークン受理率0.680、Qwen3.5-0.8Bは0.038となり約18倍の差が出た。
+  実装：[✓](https://github.com/hecboar/hybrid-speculative-decoding) ・ リポジトリ内被引用：1  
+  状態空間モデル（SSM）と通常の注意を組み合わせるハイブリッドLLMで、既存モデルの内部成分だけを候補生成器に使う自己投機的復号を検証する。並列構成Falcon-H1では候補2トークンの一括受理率0.680だが、逐次構成Qwen3.5では0.038に落ちる。
 
 - **2026-03 · [A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference](2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
