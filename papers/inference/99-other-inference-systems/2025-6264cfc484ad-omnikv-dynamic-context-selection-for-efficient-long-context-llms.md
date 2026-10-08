@@ -1,36 +1,60 @@
 ---
-canonical_id: 'OpenReview:ulCAPXYXfa'
+canonical_id: OpenReview:ulCAPXYXfa
 title: 'OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs'
-summary: 'OmniKVは、長文脈推論の鍵・値キャッシュを削除せずCPUへ退避し、少数の選別層で求めた重要トークン位置を後続層へ共有する方式である。生成ステップごとに選択を更新することで多段推論に必要な過去情報の再利用を保ち、連続層間の注意対象の類似性を利用して転送回数を最大3群へまとめる。Llama-3-8BをA100 80GBで実行した128K文脈の実験では、退避不要時に完全注意より1.68倍の復号処理率、退避時には450K文脈を単一GPUで扱い毎秒7.5トークンを報告する。'
-list_summary: '少数の選別層が生成ステップごとに重要な過去トークンを選び、後続層へ同じ位置を共有してCPU退避KVの転送・注意計算を削減する。'
+summary: OmniKVは、長文脈推論の鍵・値キャッシュを削除せずCPUへ退避し、少数の選別層で求めた重要トークン位置を後続層へ共有する方式である。生成ステップごとに選択を更新することで多段推論に必要な過去情報の再利用を保ち、連続層間の注意対象の類似性を利用して転送回数を最大3群へまとめる。Llama-3-8BをA100 80GBで実行した128K文脈の実験では、退避不要時に完全注意より1.68倍の復号処理率、退避時には450K文脈を単一GPUで扱い毎秒7.5トークンを報告する。
+list_summary: 少数の選別層が生成ステップごとに重要な過去トークンを選び、後続層へ同じ位置を共有してCPU退避KVの転送・注意計算を削減する。
 authors:
-  - Jitai Hao
-  - Yuke Zhu
-  - Tian Wang
-  - Jun Yu
-  - Xin Xin
-  - Bo Zheng
-  - Zhaochun Ren
-  - Sheng Guo
-published: '2025-04'
-publication: 'The Thirteenth International Conference on Learning Representations (ICLR 2025)'
-publication_type: 'conference'
-publication_status: 'published'
-source: 'https://proceedings.iclr.cc/paper_files/paper/2025/file/da1131a86ac3c70e0b7cae89c3d4df22-Paper-Conference.pdf'
+- Jitai Hao
+- Yuke Zhu
+- Tian Wang
+- Jun Yu
+- Xin Xin
+- Bo Zheng
+- Zhaochun Ren
+- Sheng Guo
+published: 2025-04
+publication: The Thirteenth International Conference on Learning Representations (ICLR 2025)
+publication_type: conference
+publication_status: published
+source: https://proceedings.iclr.cc/paper_files/paper/2025/file/da1131a86ac3c70e0b7cae89c3d4df22-Paper-Conference.pdf
 sources:
-  - 'https://proceedings.iclr.cc/paper_files/paper/2025/file/da1131a86ac3c70e0b7cae89c3d4df22-Paper-Conference.pdf'
-  - 'https://proceedings.iclr.cc/paper_files/paper/2025/hash/da1131a86ac3c70e0b7cae89c3d4df22-Abstract-Conference.html'
-  - 'https://openreview.net/forum?id=ulCAPXYXfa'
-implementation: '著者らはHugging Face Transformersに変更を加え、A100 80GBとIntel Xeon Platinum 8369BのCPUメモリ退避環境で実測した。公式実装はantgroup/OmniKVに公開され、READMEでは対応モデル・推論モードに制限がある。'
-code: 'https://github.com/antgroup/OmniKV'
+- https://proceedings.iclr.cc/paper_files/paper/2025/file/da1131a86ac3c70e0b7cae89c3d4df22-Paper-Conference.pdf
+- https://proceedings.iclr.cc/paper_files/paper/2025/hash/da1131a86ac3c70e0b7cae89c3d4df22-Abstract-Conference.html
+- https://openreview.net/forum?id=ulCAPXYXfa
+implementation: 著者らはHugging Face Transformersに変更を加え、A100 80GBとIntel Xeon Platinum 8369BのCPUメモリ退避環境で実測した。公式実装はantgroup/OmniKVに公開され、READMEでは対応モデル・推論モードに制限がある。
+code: https://github.com/antgroup/OmniKV
 last_checked: '2026-10-08'
 worker_completed_at: '2026-10-08T08:50:37+09:00'
-worker_run_key: '20261008-0845-scheduled-chat-45/returned-research-r01'
-reference_main_sha: '03f4b6376d74e429c4d56354e686027cec83f763'
+worker_run_key: 20261008-0845-scheduled-chat-45/returned-research-r01
+reference_main_sha: 03f4b6376d74e429c4d56354e686027cec83f763
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2406.19707
+- canonical_id: arXiv:2407.02490
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2402.04617
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2012.09852
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2306.14048
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2307.06945
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2309.00071
+- canonical_id: arXiv:2310.17157
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2304.08467
+references_checked_at: '2026-10-08'
+references_source: primary-pdf-reference-section
+references_total: 4
 ---
 
 # OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs
