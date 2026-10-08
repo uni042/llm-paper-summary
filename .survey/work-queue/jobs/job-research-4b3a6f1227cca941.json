@@ -33,10 +33,15 @@
   "selection_reason": "LLM推論の大バッチ・長系列で生じる計算律速を、INT4/INT8のテンソル単位量子化と低ビットGEMMで直接高速化する推論向け量子化研究。",
   "semantic_scholar_id": "bc391ed688f3f9debd4b33d3e79ecb4ddbf07910",
   "source_url": "https://arxiv.org/abs/2402.17985",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlattenQuant: Breaking through the Inference Compute-bound for Large Language Models with Per-tensor Quantization",
   "type": "research",
   "venue": "International Conference on Language Resources and Evaluation",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-08T09:12:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2402.17985-flattenquant-breaking-through-the-inference-compute-bound-for-large-lang.md",
+  "represented_canonical_id": "arXiv:2402.17985",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

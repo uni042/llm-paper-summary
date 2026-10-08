@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T09:06:37.068204+00:00",
+  "generated_at": "2026-10-08T09:16:31.575021+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 544,
+  "count": 542,
   "worker_counts": {
-    "scheduled-chat-00": 184,
+    "scheduled-chat-00": 183,
     "scheduled-chat-30": 174,
-    "scheduled-chat-45": 186
+    "scheduled-chat-45": 185
   },
   "entries": [
     {
@@ -404,30 +404,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
-      "canonical_id": "arXiv:2403.15388",
-      "title": "LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models",
-      "file_bytes": 8330,
-      "source_sha256": "5b756ddede91b92f9bdde9e5dc2a2b6faa5807846ea663180f7d29667a2562be",
-      "source_git_blob_sha": "b05fd484008572d3e98bd564d71cb3100413e690",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.977163,
-      "quality_metrics": {
-        "body_chars": 1666,
-        "method_chars": 416,
-        "evaluation_chars": 0,
-        "limitation_chars": 181
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1666 < 2200",
-        "16KB未満再監査: 手法説明量 416 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
       "canonical_id": "arXiv:2310.06694",
       "title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
@@ -647,30 +623,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1835 < 2200",
         "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/17-pim-near-data-acceleration/2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md",
-      "canonical_id": "arXiv:2603.04797",
-      "title": "Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator",
-      "file_bytes": 8446,
-      "source_sha256": "ed8bc1f0711a19bfcf915b1bdcfafd62de4774998eb7bb677dc8ac02c8841851",
-      "source_git_blob_sha": "036d98322ca564dae47a0d3d7d1f433e56d836f5",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.823964,
-      "quality_metrics": {
-        "body_chars": 1517,
-        "method_chars": 480,
-        "evaluation_chars": 194,
-        "limitation_chars": 127
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1517 < 2200",
-        "16KB未満再監査: 手法説明量 480 < 700",
-        "16KB未満再監査: 評価説明量 194 < 500"
       ],
       "warnings": []
     },

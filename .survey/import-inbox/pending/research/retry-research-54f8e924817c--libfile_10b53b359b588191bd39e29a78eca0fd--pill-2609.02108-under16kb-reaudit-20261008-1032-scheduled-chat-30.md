@@ -31,6 +31,8 @@ quality_evaluation_chars: 1025
 quality_limitation_chars: 245
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07-v1'
+last_audited: null
+audit_version: 0
 ---
 
 # PILL：拡散言語モデルの補完長を予測して並列生成する
