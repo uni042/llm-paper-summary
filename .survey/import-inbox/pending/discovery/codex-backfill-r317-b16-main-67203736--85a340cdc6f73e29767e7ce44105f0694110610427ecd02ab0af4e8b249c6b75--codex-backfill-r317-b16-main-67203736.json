@@ -1,0 +1,295 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill-luna",
+  "run_key": "codex-backfill-r317-b16-main-67203736",
+  "reference_main_sha": "67203736a3151afd83b966312e143361b603b3e9",
+  "record_count": 19,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.05815",
+      "identity_tokens": [
+        "arXiv:2406.05815",
+        "DOI:10.48550/arXiv.2406.05815"
+      ],
+      "title": "What Can We Learn from State Space Models for Machine Learning on Graphs?",
+      "reason": "The primary abstract presents Graph State Space Convolution as an SSM extension for graph data, aimed at capturing long-range dependencies with efficient computation where graph transformers incur high computational overhead. It is a concrete sequence-architecture efficiency contribution, although its demonstrated application is graph learning rather than LLM serving.",
+      "source_url": "https://arxiv.org/abs/2406.05815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34832",
+      "identity_tokens": [
+        "arXiv:2609.34832",
+        "DOI:10.48550/arXiv.2609.34832"
+      ],
+      "title": "BV Loss: Block Verification-Aware Loss for Block Diffusion Speculative Decoding",
+      "reason": "The abstract derives a drafter training objective from block-verification acceptance and reports 13–21% more accepted tokens per verification call for diffusion speculative decoding. This directly targets inference work per verification call.",
+      "source_url": "https://arxiv.org/abs/2609.34832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.16721",
+      "identity_tokens": [
+        "arXiv:2607.16721",
+        "DOI:10.48550/arXiv.2607.16721"
+      ],
+      "title": "Half the Experts, All the Code: One-Shot Domain Pruning of Mixture-of-Experts LLMs for Coding",
+      "reason": "The abstract describes one-shot domain pruning that removes about half the MoE experts while retaining coding performance, directly reducing deployed LLM model footprint and inference cost for a target domain.",
+      "source_url": "https://arxiv.org/abs/2607.16721",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.20937",
+      "identity_tokens": [
+        "arXiv:2604.20937",
+        "DOI:10.48550/arXiv.2604.20937"
+      ],
+      "title": "Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs",
+      "reason": "The abstract proposes sink-token-aware visual-token pruning for video LLMs and evaluates preserving fine-grained video understanding under aggressive token reduction. It directly addresses multimodal LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.20937",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TMC.2025.3629756",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2025.3629756",
+        "arXiv:2501.15255",
+        "DOI:10.48550/arXiv.2501.15255"
+      ],
+      "title": "Lightweight and Post-Training Structured Pruning for On-Device Large Language Models",
+      "reason": "The arXiv primary manuscript (whose title contains the typographic form “Lanaguage”) describes COMP, hybrid layer/neuron structured pruning with mask tuning for on-device LLMs, reporting an 80% memory reduction for Llama-2 7B. The author’s official site lists the matching corrected title, authors, and IEEE TMC publication; the DOI URL itself did not resolve in the browser. This supports the DOI-to-manuscript identity via the primary author publication record and matching manuscript metadata.",
+      "source_url": "https://doi.org/10.1109/TMC.2025.3629756",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.05933",
+      "identity_tokens": [
+        "arXiv:2606.05933",
+        "DOI:10.48550/arXiv.2606.05933"
+      ],
+      "title": "Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference",
+      "reason": "The abstract presents a sliding-window scheduler that adapts LLM inference chunking to service-level objectives, reporting increased capacity and fewer SLO violations. The mechanism targets serving throughput and latency directly.",
+      "source_url": "https://arxiv.org/abs/2606.05933",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.17720",
+      "identity_tokens": [
+        "arXiv:2411.17720",
+        "DOI:10.48550/arXiv.2411.17720"
+      ],
+      "title": "MAS-Attention: Memory-Aware Stream Processing for Attention Acceleration on Resource-Constrained Edge Devices",
+      "reason": "The abstract describes memory-aware attention streaming and heterogeneous vector/matrix computation for constrained edge devices, including measured acceleration on an NPU. This is a concrete attention inference memory/latency optimization.",
+      "source_url": "https://arxiv.org/abs/2411.17720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.12526",
+      "identity_tokens": [
+        "arXiv:2408.12526",
+        "DOI:10.48550/arXiv.2408.12526"
+      ],
+      "title": "Exploiting Student Parallelism for Efficient GPU Inference of BERT-like Models in Online Services",
+      "reason": "The abstract applies student parallelism and adaptive pruning to BERT-like models in online services and reports latency/throughput improvements. It directly concerns deployed language-model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2408.12526",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.06296",
+      "identity_tokens": [
+        "arXiv:2604.06296",
+        "DOI:10.48550/arXiv.2604.06296"
+      ],
+      "title": "AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent",
+      "reason": "The abstract formulates client-side model selection for LLM agent pipelines under quality, latency, and cost constraints, using search procedures to reduce evaluation overhead. This is directly about efficient execution of LLM-based agents.",
+      "source_url": "https://arxiv.org/abs/2604.06296",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.17092",
+      "identity_tokens": [
+        "arXiv:2409.17092",
+        "DOI:10.48550/arXiv.2409.17092"
+      ],
+      "title": "Accumulator-Aware Post-Training Quantization for Large Language Models",
+      "reason": "The primary title and abstract identify accumulator-aware low-precision post-training quantization for LLMs. The method addresses accumulator overflow while retaining model quality at low precision, targeting practical inference datapath efficiency.",
+      "source_url": "https://arxiv.org/abs/2409.17092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.19021",
+      "identity_tokens": [
+        "arXiv:2604.19021",
+        "DOI:10.48550/arXiv.2604.19021"
+      ],
+      "title": "FG²-GDN: Enhancing Long-Context Gated Delta Networks with Doubly Fine-Grained Control",
+      "reason": "The abstract introduces channel-wise delta updates and decoupled key/value scaling for gated delta networks, a linear-attention alternative with linear-time inference. It reports stronger associative recall and long-context understanding at comparable compute.",
+      "source_url": "https://arxiv.org/abs/2604.19021",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20698",
+      "identity_tokens": [
+        "arXiv:2505.20698",
+        "DOI:10.48550/arXiv.2505.20698"
+      ],
+      "title": "Sparsified State-Space Models are Efficient Highway Networks",
+      "reason": "The abstract introduces token pruning in state-space sequence models and reports improved tasks at the same FLOPs, with better information flow over long sequences. This is a specific efficiency method for a sequence-model architecture.",
+      "source_url": "https://arxiv.org/abs/2505.20698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.30738",
+      "identity_tokens": [
+        "arXiv:2609.30738",
+        "DOI:10.48550/arXiv.2609.30738"
+      ],
+      "title": "Beyond Mean Attention: Diversity-Aware, Layer-Wise Scoring for KV Cache Eviction",
+      "reason": "The abstract adds attention dispersion and redundancy to KV-cache eviction scoring without extra forward passes, then evaluates retained quality across LongBench. This directly optimizes LLM inference memory use.",
+      "source_url": "https://arxiv.org/abs/2609.30738",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCE-Asia67487.2025.11263536",
+      "identity_tokens": [
+        "DOI:10.1109/ICCE-Asia67487.2025.11263536"
+      ],
+      "title": "A Performance Study of LLM Inference on Mooncake-Based Clusters",
+      "reason": "The official ICCE-Asia 2025 program book confirms this exact title and authors, but no primary abstract was retrieved. The official IEEE Xplore document page for DOI 10.1109/ICCE-Asia67487.2025.11263536 returned a JavaScript-disabled / robot-verification page, and the DOI resolver led to that page; the available primary program entry contains metadata only. Keep as borderline pending abstract-level scope evidence.",
+      "source_url": "https://doi.org/10.1109/ICCE-Asia67487.2025.11263536",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.20915",
+      "identity_tokens": [
+        "arXiv:2604.20915",
+        "DOI:10.48550/arXiv.2604.20915"
+      ],
+      "title": "Absorber LLM: Harnessing Causal Synchronization for Test-Time Training",
+      "reason": "The abstract describes absorbing historical context into model parameters through causal synchronization for test-time training, with the stated objective of reducing inference memory while retaining long-context capability. This is a concrete memory-efficiency proposal for LLM inference.",
+      "source_url": "https://arxiv.org/abs/2604.20915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.08289",
+      "identity_tokens": [
+        "arXiv:2508.08289",
+        "DOI:10.48550/arXiv.2508.08289"
+      ],
+      "title": "Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers",
+      "reason": "The abstract analyzes linear-transformer state updates as associative conditioning and studies their memory and in-context retrieval properties. The work directly concerns the computation and state representation of a linear sequence architecture, a plausible efficiency lineage for inference systems.",
+      "source_url": "https://arxiv.org/abs/2508.08289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2208.07120",
+      "identity_tokens": [
+        "arXiv:2208.07120",
+        "DOI:10.48550/arXiv.2208.07120"
+      ],
+      "title": "Compressing Pre-trained Models of Code into 3 MB",
+      "reason": "The abstract presents a compact architecture that compresses pretrained code models to 3 MB and reports substantially smaller and faster inference than CodeBERT/GraphCodeBERT baselines. It directly addresses model footprint and inference latency.",
+      "source_url": "https://arxiv.org/abs/2208.07120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.20375",
+      "identity_tokens": [
+        "arXiv:2608.20375",
+        "DOI:10.48550/arXiv.2608.20375"
+      ],
+      "title": "GRAFT: Adaptive DLM-Based Draft Tree Construction with Target-Distilled Edge Scoring",
+      "reason": "The abstract describes adaptive draft-tree construction for diffusion language-model speculative decoding, distilling target-model edge scores to guide expansion and improve serving speed. This directly targets inference latency.",
+      "source_url": "https://arxiv.org/abs/2608.20375",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.00195",
+      "identity_tokens": [
+        "arXiv:2509.00195",
+        "DOI:10.48550/arXiv.2509.00195"
+      ],
+      "title": "FastTTS: Accelerating Test-Time Scaling for Edge LLM Reasoning",
+      "reason": "The abstract proposes speculative beam extension, asymmetric memory allocation, and prefix-aware scheduling/KV reuse for edge LLM reasoning; it reports higher goodput and lower latency. These mechanisms directly target edge inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2509.00195",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:51:10Z",
+      "last_checked_at": "2026-10-08T18:51:10Z",
+      "linked_from": []
+    }
+  ]
+}
