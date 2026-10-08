@@ -40,7 +40,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 
 - **2025-04 · [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  新旧GPUの性能差に合わせて注意機構を新GPU、エキスパート計算を旧GPUへ主に割り当て、処理を重ねて異種GPUクラスタの待ち時間を減らすMoE学習方式。
+  異なる世代のGPUを「一律に遅い／速い装置」とみなさず、注意計算と専門家計算の世代差を別々に測って配置するMoE学習システム。以下の速度値は学習処理率であり、生成時のトークン速度や推論待ち時間ではない。
 
 - **2025-08 · [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/X-MoE) ・ リポジトリ内被引用：1  

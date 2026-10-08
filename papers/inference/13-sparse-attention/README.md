@@ -97,8 +97,8 @@
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-09 · [SANTA++: Sampling Attention through Representative Keys](2026-2609.35629-santa-sampling-attention-through-representative-keys.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  全キー走査を避け、代表キーでチームを確率選択して包含確率補正する学習不要疎注意。32K文脈でKV読み出し16〜22%に抑え、Triton実装はFlash SDPA比1.69倍高速。
+  実装：[✓](https://github.com/OPUSLab/santapp-kernel-demo) ・ リポジトリ内被引用：0  
+  代表キーを使う確率的な疎注意。長文脈の全キー走査を避けつつ、選ばれたチームの注意寄与を包含確率で補正する。
 
 - **2026-09 · [RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention](2026-2609.07306-routerelay-cross-layer-route-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

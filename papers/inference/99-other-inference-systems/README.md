@@ -1074,7 +1074,7 @@
 
 - **2024-01 · [Long Context Compression with Activation Beacon](2024-2401.03462-long-context-compression-with-activation-beacon.md)**  
   実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：11  
-  各層のKV活性をビーコントークンへ漸進圧縮し、128K文脈で非圧縮比2倍の推論高速化とKVキャッシュ8分の1を両立する。
+  活性値 Beaconは、文章そのものを短く書き換えるのではなく、Transformerの各層に生じる鍵・値活性を、追加したビーコントークンの活性へ直接圧縮する。圧縮率を8倍にした128K文脈の実験では、非圧縮で同じデータにより微調整した比較モデルに対し、推論時間を約半分、KVキャッシュを約8分の1にした。
 
 - **2024-04 · [Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing](2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
@@ -1360,7 +1360,7 @@
 
 - **2023-10 · [Compressing Context to Enhance Inference Efficiency of Large Language Models](2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md)**  
   実装：[✓](https://github.com/liyucheng09/Selective_Context) ・ リポジトリ内被引用：15  
-  Selective Contextは、長い文書や会話を大規模言語モデル（LLM）へそのまま渡す前に、入力中の「予測しやすく情報量の低い語句」を削除して文脈自体を短くする前処理方式である。
+  長い文書や会話を大規模言語モデル（LLM）へ入力すると、初回入力処理と鍵・値キャッシュに多くの時間・メモリが必要になる。Selective Contextは、下流モデルの構造や重みを変更する代わりに、入力文脈に含まれる予測しやすい語句を事前に削り、残った自然言語テキストだけを渡す。
 
 - **2023-03 · [ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md)**  
   実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：14  

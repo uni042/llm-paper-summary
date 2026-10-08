@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "da99a2e5788f46bc0d658780775d3f6eda0d6b03072f35c6b46706528f8d0069",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e1cbcb04f7388191bf6cfa953143083d--2024-2406.07056-effectively-compress-kv-heads-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2406.07056",
+  "worker_completed_at": "2026-10-09T05:35:39+09:00",
+  "worker_run_key": "20261009-0530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6681,
+    "body_paragraphs": 35,
+    "method_chars": 2185,
+    "method_paragraphs": 12,
+    "evaluation_chars": 146,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 146 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 146 < 500"
+  ],
+  "processed_at": "2026-10-08T20:49:40+00:00"
+}

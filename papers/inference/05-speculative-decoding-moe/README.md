@@ -384,7 +384,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-03 · [Recurrent Drafter for Fast Speculative Decoding in Large Language Models](2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md)**  
   実装：[✓](https://github.com/apple/ml-recurrent-drafter) ・ リポジトリ内被引用：13  
-  投機的復号では、小さいドラフトモデルが将来の複数トークンを先に提案し、対象LLMが一度の前向き計算でまとめて検証する。一方、ドラフト自身が重い、候補を増やし過ぎて検証計算が膨らむ、あるいは独立な将来予測の精度が低い場合は、投機の追加計算が高速化を相殺する。
+  軽量再帰型の下書きモデル、ビーム探索、動的な共有接頭辞除去、対象モデルからの知識蒸留を組み合わせる。受理トークン数が多くても処理率が上がるとは限らないことを、実測の正負両結果から検証する。
 
 - **2023-12 · [Cascade Speculative Drafting for Even Faster LLM Inference](2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md)**  
   実装：[✓](https://github.com/lfsszd/CS-Drafting) ・ リポジトリ内被引用：13  
