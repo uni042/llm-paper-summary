@@ -21,22 +21,26 @@ def lineage_from_path(path: Any) -> str | None:
     return "/".join(parts[1:3])
 
 
-def seed_indexes(papers: Iterable[Any]) -> tuple[dict[str, str], dict[str, str]]:
+def seed_indexes(papers: Iterable[Any]) -> tuple[dict[str, tuple[str, str]], dict[str, str]]:
     """Map exact curated canonical IDs and paper paths to fine-grained folders."""
-    by_id: dict[str, str] = {}
+    by_id: dict[str, tuple[str, str]] = {}
     by_path: dict[str, str] = {}
     for paper in papers:
         lineage = lineage_from_path(paper.path)
         if lineage is None:
             continue
-        by_id[str(paper.canonical_id)] = lineage
+        canonical = str(paper.canonical_id)
+        by_id[canonical] = (canonical, lineage)
+        for alias in getattr(paper, "identifiers", ()):
+            if alias:
+                by_id[str(alias)] = (canonical, lineage)
         by_path[str(paper.path)] = lineage
     return by_id, by_path
 
 
 def forward_lineage_counts(
     row: dict[str, Any],
-    by_id: dict[str, str],
+    by_id: dict[str, tuple[str, str]],
     by_path: dict[str, str],
     *,
     source_kind: str,
@@ -52,21 +56,11 @@ def forward_lineage_counts(
     source_ids = row.get("forward_seed_ids")
     seeds = {str(v) for v in source_ids if v} if isinstance(source_ids, list) else set()
     if seeds:
-        counts = Counter(by_id[seed] for seed in seeds if seed in by_id)
+        # Multiple aliases of ONE collected paper must count exactly once.
+        canonical_to_lineage = {by_id[seed][0]: by_id[seed][1] for seed in seeds if seed in by_id}
+        counts = Counter(canonical_to_lineage.values())
     else:
         linked = row.get("linked_from")
         paths = {str(v) for v in linked if v} if isinstance(linked, list) else set()
         counts = Counter(by_path[path] for path in paths if path in by_path)
     return dict(sorted(counts.items()))
-
-
-def forward_lineage_bonus(max_same_lineage: Any) -> int:
-    """A single generic citation has no bonus; 2+ corroborating seeds do.
-
-    Cap protects other relevance signals from citation-only domination.
-    """
-    try:
-        n = max(int(max_same_lineage), 0)
-    except (TypeError, ValueError):
-        return 0
-    return min(120, 25 * max(n - 1, 0))
