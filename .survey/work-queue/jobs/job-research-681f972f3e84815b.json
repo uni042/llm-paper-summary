@@ -35,10 +35,15 @@
   "selection_reason": "Gated Attention Unitとアクセラレータ親和的な線形注意近似を組み合わせたFLASHを提案し、自己回帰言語モデルで長系列の計算量を線形化する。8K文脈を含む言語モデル評価でTransformer品質を維持しつつ大幅な実行高速化を示しており、長文脈推論効率化へ直接つながるため対象内。",
   "semantic_scholar_id": "dc0102a51a9d33e104a4a3808a18cf17f057228c",
   "source_url": "https://arxiv.org/abs/2202.10447",
-  "status": "ready",
+  "status": "superseded",
   "title": "Transformer Quality in Linear Time",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-08T07:44:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+  "represented_canonical_id": "arXiv:2202.10447",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

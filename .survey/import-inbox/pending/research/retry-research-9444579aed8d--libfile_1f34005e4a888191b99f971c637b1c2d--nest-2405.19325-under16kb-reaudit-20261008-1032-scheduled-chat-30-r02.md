@@ -31,6 +31,8 @@ quality_evaluation_chars: 868
 quality_limitation_chars: 213
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07-v1'
+last_audited: null
+audit_version: 0
 ---
 
 # NEST：検索文書の連続断片を使う近傍投機的復号

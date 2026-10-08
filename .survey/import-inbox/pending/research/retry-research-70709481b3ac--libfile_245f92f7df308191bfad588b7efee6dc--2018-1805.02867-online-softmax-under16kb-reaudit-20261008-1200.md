@@ -42,6 +42,8 @@ references:
 references_checked_at: '2026-10-04'
 references_source: arxiv-html-reference-section
 references_total: 18
+last_audited: null
+audit_version: 0
 ---
 
 # Online normalizer calculation for softmax

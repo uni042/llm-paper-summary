@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5f49dbf2a752900b88c4d8b8f826bae67e80edbadefbebf9e6524e9346e270d6",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_25dc63c4af40819199f0fcd53de56e50--2024-asplos-polca-under16kb-reaudit-20261008-1303-scheduled-chat-00.md",
+  "canonical_id": "DOI:10.1145/3620666.3651329",
+  "worker_completed_at": "2026-10-08T13:11:05+09:00",
+  "worker_run_key": "20261008-1303-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4448,
+    "body_paragraphs": 20,
+    "method_chars": 1683,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 398,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-08T07:42:04+00:00"
+}
