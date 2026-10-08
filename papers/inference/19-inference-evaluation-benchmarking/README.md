@@ -66,13 +66,13 @@
   実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：4  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
+- **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
+  実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：4  
+  キャッシュ拡張生成（キャッシュ拡張生成; CAG）は、知識集合が限定的かつ長文脈モデルの文脈 ウィンドウへ収まる用途で、質問時の検索を丸ごと省く設計である。
+
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   単に小型モデル化する研究だけでなく、推論中に思考長を動的に減らす方式や、プロンプト側から必要計算量を制御する方式まで同じ地図に置く。
-
-- **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
-  実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：3  
-  キャッシュ拡張生成（キャッシュ拡張生成; CAG）は、知識集合が限定的かつ長文脈モデルの文脈 ウィンドウへ収まる用途で、質問時の検索を丸ごと省く設計である。
 
 ### 3年前（2023-11〜2024-10）
 
