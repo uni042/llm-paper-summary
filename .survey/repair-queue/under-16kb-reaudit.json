@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T05:28:57.712919+00:00",
+  "generated_at": "2026-10-08T05:35:32.104140+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 606,
+  "count": 602,
   "worker_counts": {
-    "scheduled-chat-00": 204,
-    "scheduled-chat-30": 193,
-    "scheduled-chat-45": 209
+    "scheduled-chat-00": 202,
+    "scheduled-chat-30": 192,
+    "scheduled-chat-45": 208
   },
   "entries": [
     {
@@ -11824,28 +11824,6 @@
       ]
     },
     {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md",
-      "canonical_id": "arXiv:2603.12645",
-      "title": "LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing",
-      "file_bytes": 14091,
-      "source_sha256": "ad029957f985ff25c13928c916463b1e8af16c6ed0c54ce07252d4fac6baa964",
-      "source_git_blob_sha": "8ad288e5658e7decbe683a6d30e2aa534a15273c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.995545,
-      "quality_metrics": {
-        "body_chars": 2962,
-        "method_chars": 1214,
-        "evaluation_chars": 238,
-        "limitation_chars": 291
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 238 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.04827-voltanallm-feedback-driven-frequency-control-and-state-space-routing-for-energy-efficient-llm-serving.md",
       "canonical_id": "arXiv:2509.04827",
       "title": "VoltanaLLM: Feedback-Driven Frequency Control and State-Space Routing for Energy-Efficient LLM Serving",
@@ -12111,28 +12089,6 @@
       "warnings": [
         "日本語比率 74.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md",
-      "canonical_id": "arXiv:2606.15716",
-      "title": "How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle",
-      "file_bytes": 14342,
-      "source_sha256": "94e77dc5b79d1ebc0ef70010379ed3ad6a19c24810439eb5abebf9070ff08a36",
-      "source_git_blob_sha": "8e72aa2111a1f1135751fcd01a970b7465cbe0bf",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.827542,
-      "quality_metrics": {
-        "body_chars": 3722,
-        "method_chars": 1122,
-        "evaluation_chars": 493,
-        "limitation_chars": 304
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 493 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2601.07353-talon-confidence-aware-speculative-decoding-with-adaptive-draft-length.md",
@@ -12432,54 +12388,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.02652-unfolding-the-leech-lattice-fused-multi-shell-decoding-and-vram-layouts-.md",
-      "canonical_id": "arXiv:2609.02652",
-      "title": "Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights",
-      "file_bytes": 14602,
-      "source_sha256": "99f4c559e8f963bc33930f4374956375b85550d348d0cf829bb7af51299a4052",
-      "source_git_blob_sha": "30f01f0aec10ed0f4d8ab23fd318852450819b9b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.723471,
-      "quality_metrics": {
-        "body_chars": 4873,
-        "method_chars": 1483,
-        "evaluation_chars": 946,
-        "limitation_chars": 556
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 72.3% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.3% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md",
-      "canonical_id": "arXiv:2604.27085",
-      "title": "Efficient Training on Multiple Consumer GPUs with RoundPipe",
-      "file_bytes": 14629,
-      "source_sha256": "881b24f756959537e46866f8d5daf768b39d47310218958f4b8899ecddfbe765",
-      "source_git_blob_sha": "bf11203a285b15d4986f0a4d9a12ba5b591a6c44",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.770435,
-      "quality_metrics": {
-        "body_chars": 3531,
-        "method_chars": 1760,
-        "evaluation_chars": 900,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 77.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.0% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
