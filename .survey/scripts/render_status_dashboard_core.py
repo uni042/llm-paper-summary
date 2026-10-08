@@ -107,13 +107,6 @@ def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
             discovery_all,
             reserved_rows=research_rows,
         )
-        import discovery_relevance_prefilter
-        _worklist_rows, prefilter_metrics = discovery_relevance_prefilter.triage_worklist(
-            pending_rows, discovery_relevance_prefilter.load_policy(repo_root),
-            root=repo_root,
-        )
-        del _worklist_rows
-
         seen: set[str] = set()
 
         def count_new(rows: list[dict[str, Any]]) -> int:
@@ -133,7 +126,28 @@ def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
         unrelated_count = count_new(unrelated_rows)
         borderline_count = count_new(borderline_rows)
         research_count = count_new(research_rows)
-        pending_count = count_new(pending_rows)
+        # Filter exactly the same unique, unprocessed identities counted in
+        # STATUS, not the larger worklist presentation pool. Otherwise a
+        # candidate already represented by a title/DOI alias inflates the
+        # prefilter denominator and makes the apparent reduction inconsistent.
+        unique_pending_rows: list[dict[str, Any]] = []
+        for row in pending_rows:
+            tokens = build_worker_worklist._worklist_identity_tokens(row)
+            if not tokens:
+                continue
+            duplicate = bool(seen.intersection(tokens))
+            seen.update(tokens)
+            if not duplicate:
+                unique_pending_rows.append(row)
+        pending_count = len(unique_pending_rows)
+
+        import discovery_relevance_prefilter
+        _worklist_rows, prefilter_metrics = discovery_relevance_prefilter.triage_worklist(
+            unique_pending_rows,
+            discovery_relevance_prefilter.load_policy(repo_root),
+            root=repo_root,
+        )
+        del _worklist_rows
 
         processed_count = (
             represented_count
