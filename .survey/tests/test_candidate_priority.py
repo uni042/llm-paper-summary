@@ -178,6 +178,48 @@ class CandidatePriorityTest(unittest.TestCase):
             self.assertEqual(len(rows), 1)
             self.assertEqual(rows[0]["_lookup_id"], "arXiv:2609.77777")
 
+    def test_priority_cache_shards_roundtrip_without_losing_metadata(self):
+        import json
+        import tempfile
+        from unittest.mock import patch
+        import candidate_priority_state
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            target = root / ".survey/work-queue/candidate-priority-cache.json"
+            state = {
+                "schema_version": 1,
+                "updated_at": "2026-10-08T05:40:00+00:00",
+                "records": {
+                    "paper-1": {"citation_count": 30, "source_url": "https://doi.org/a"},
+                    "paper-2": {"citation_count": 70, "venue": "OSDI"},
+                },
+                "aliases": {"doi-a": "paper-1", "doi-b": "paper-2"},
+                "lookup_failures": {"missing": {"status": "error", "checked_at": "2026-10-08"}},
+            }
+            with patch.object(candidate_priority_state, "INLINE_LIMIT", 1):
+                self.assertTrue(candidate_priority_state.write(target, state))
+                manifest = json.loads(target.read_text(encoding="utf-8"))
+                self.assertEqual(len(manifest["cache_shards"]), 32)
+                self.assertNotIn("records", manifest)
+                self.assertEqual(candidate_priority.load_cache(root), state)
+                self.assertFalse(candidate_priority_state.write(target, state))
+                shard = target.parent / "candidate-priority-cache-shards" / manifest["cache_shards"][0]
+                shard.unlink()
+                with self.assertRaises(FileNotFoundError):
+                    candidate_priority.load_cache(root)
+
+    def test_priority_cache_keeps_small_legacy_format(self):
+        import tempfile
+        import candidate_priority_state
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            target = root / candidate_priority.CACHE_PATH
+            state = {"schema_version": 1, "records": {}, "aliases": {}, "lookup_failures": {}}
+            self.assertTrue(candidate_priority_state.write(target, state))
+            self.assertEqual(candidate_priority.load_cache(root), state)
+
     def test_weights_are_configuration_driven(self):
         policy = self.policy()
         policy["freshness"]["score"] = 7
