@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T20:50:27+00:00",
+  "generated_at": "2026-10-08T20:55:51+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2739,38 +2739,11 @@
       "worker_run_key": "20261009-0400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2511.03475",
-      "title": "ContextPilot: Fast Long-Context Inference via Context Reuse",
-      "source_url": "https://arxiv.org/abs/2511.03475",
-      "returned_at": "2026-10-08T20:48:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 138 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6307,
-        "body_paragraphs": 36,
-        "method_chars": 2179,
-        "method_paragraphs": 13,
-        "evaluation_chars": 138,
-        "limitation_chars": 626,
-        "insufficiency_flags": [
-          "評価説明量 138 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2d4e05dee79881919135b03b6ebf0749--2025-2511.03475-contextpilot-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2d4e05dee79881919135b03b6ebf0749--2025-2511.03475-contextpilot-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261009-0530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2406.07056",
       "title": "Effectively Compress KV Heads for LLM",
       "source_url": "https://arxiv.org/abs/2406.07056",
-      "returned_at": "2026-10-08T20:49:40+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-08T20:55:51+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2789,8 +2762,35 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e1cbcb04f7388191bf6cfa953143083d--2024-2406.07056-effectively-compress-kv-heads-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e1cbcb04f7388191bf6cfa953143083d--2024-2406.07056-effectively-compress-kv-heads-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fbf667ca67ec--libfile_e1cbcb04f7388191bf6cfa953143083d--2024-2406.07056-effectively-compress-kv-heads-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-fbf667ca67ec--libfile_e1cbcb04f7388191bf6cfa953143083d--2024-2406.07056-effectively-compress-kv-heads-under16kb-reaudit-20261009-0530-scheduled-c.json",
+      "worker_run_key": "20261009-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.03475",
+      "title": "ContextPilot: Fast Long-Context Inference via Context Reuse",
+      "source_url": "https://arxiv.org/abs/2511.03475",
+      "returned_at": "2026-10-08T20:55:51+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 138 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6307,
+        "body_paragraphs": 36,
+        "method_chars": 2179,
+        "method_paragraphs": 13,
+        "evaluation_chars": 138,
+        "limitation_chars": 626,
+        "insufficiency_flags": [
+          "評価説明量 138 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7270979f0517--libfile_2d4e05dee79881919135b03b6ebf0749--2025-2511.03475-contextpilot-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7270979f0517--libfile_2d4e05dee79881919135b03b6ebf0749--2025-2511.03475-contextpilot-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261009-0530-scheduled-chat-30/r01"
     }
   ]
