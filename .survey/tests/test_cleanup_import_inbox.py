@@ -94,6 +94,35 @@ title: Example
             self.assertEqual(len(retries), 1)
             self.assertFalse(source.exists())
 
+    def test_defers_conflicting_research_retry_without_data_loss(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            blocked = root / ".survey/import-inbox/blocked/research"
+            pending = root / ".survey/import-inbox/pending/research"
+            blocked.mkdir(parents=True)
+            pending.mkdir(parents=True)
+            source = blocked / "losparse.md"
+            blocked_bytes = b"---\\ncanonical_id: arXiv:2306.11222\\ntitle: LoSparse\\n---\\n# Original blocked revision\\n"
+            # Use real newlines, not escaped backslash sequences.
+            blocked_bytes = blocked_bytes.replace(b"\\\\n", b"\\n")
+            source.write_bytes(blocked_bytes)
+            retry = pending / cleanup._safe_retry_name(cleanup.RESEARCH_RETRY_PREFIX, source)
+            new_revision = b"---\\ncanonical_id: arXiv:2306.11222\\n---\\n# Newer pending revision\\n"
+            new_revision = new_revision.replace(b"\\\\n", b"\\n")
+            retry.write_bytes(new_revision)
+
+            with mock.patch.object(cleanup.inbox, "research_metadata_failures", return_value=[]):
+                counts = cleanup.recover_blocked_research(root)
+
+            self.assertEqual(counts["collision_deferred"], 1)
+            self.assertEqual(counts["requeued"], 0)
+            self.assertEqual(source.read_bytes(), blocked_bytes)
+            self.assertEqual(retry.read_bytes(), new_revision)
+            receipt = root / ".survey/import-inbox/results/cleanup/latest.json"
+            events = json.loads(receipt.read_text(encoding="utf-8"))["events"]
+            self.assertEqual(events[-1]["status"], "deferred_blocked_research_retry_collision")
+            self.assertEqual(events[-1]["canonical_id"], "arXiv:2306.11222")
+
     def test_requeues_legacy_blocked_discovery(self) -> None:
         original_cwd = Path.cwd()
         with tempfile.TemporaryDirectory() as td:
