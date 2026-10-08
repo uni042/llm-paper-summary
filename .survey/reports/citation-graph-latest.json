@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-08T05:43:22+00:00",
+  "generated_at": "2026-10-08T05:46:06+00:00",
   "paper_count": 1731,
-  "edge_count": 19715,
+  "edge_count": 19716,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 19,
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 329,
@@ -1133,7 +1133,7 @@
     "papers/inference/12-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md": 0,
     "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md": 19,
-    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md": 56,
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md": 57,
     "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md": 23,
     "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md": 11,
     "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md": 11,
@@ -19724,7 +19724,9 @@
       "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
       "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
     ],
-    "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md": [],
+    "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
     "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md": [
       "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",

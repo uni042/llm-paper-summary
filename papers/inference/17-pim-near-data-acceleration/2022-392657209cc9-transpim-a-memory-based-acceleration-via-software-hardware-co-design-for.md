@@ -1,22 +1,49 @@
 ---
-canonical_id: "DOI:10.1109/HPCA53966.2022.00082"
-title: "TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer"
-summary: "TransPIMはTransformerの低データ再利用と大きなメモリ占有量に対し、トークン単位 データフローで層間データ移動を減らし、HBMへ軽量なPIM/NMC機構を追加してメモリ近傍で演算するソフトウェア・ハードウェア共同設計である。評価では既存メモリ基盤 アクセラレータ比3.7–9.1倍、GPU比22.1–114.9倍、既存ASIC比2.0倍スループットを報告する。"
-list_summary: "トークン単位データフローとHBM内PIM・ニアメモリ処理を協調させ、Transformerの低再利用なメモリ 通信量を削減する専用アクセラレータ。"
-authors: ["Minxuan Zhou","Weihong Xu","Jaeyoung Kang","Tajana Rosing"]
-published: "2022-04"
-publication: "IEEE International Symposium on High-Performance Computer Architecture (HPCA 2022)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://doi.org/10.1109/HPCA53966.2022.00082"
-sources: ["https://doi.org/10.1109/HPCA53966.2022.00082"]
-implementation: "HBMを基盤とするPIM/NMC hybrid アクセラレータをarchitecture simulationで評価し、Transformer ワークロードをGPU、既存メモリ基盤 アクセラレータ、ASIC アクセラレータと比較。確認済み一次資料から公式コードURLは特定できなかった。"
+canonical_id: DOI:10.1109/HPCA53966.2022.00082
+title: 'TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer'
+summary: TransPIMはTransformerの低データ再利用と大きなメモリ占有量に対し、トークン単位 データフローで層間データ移動を減らし、HBMへ軽量なPIM/NMC機構を追加してメモリ近傍で演算するソフトウェア・ハードウェア共同設計である。評価では既存メモリ基盤 アクセラレータ比3.7–9.1倍、GPU比22.1–114.9倍、既存ASIC比2.0倍スループットを報告する。
+list_summary: トークン単位データフローとHBM内PIM・ニアメモリ処理を協調させ、Transformerの低再利用なメモリ 通信量を削減する専用アクセラレータ。
+authors:
+- Minxuan Zhou
+- Weihong Xu
+- Jaeyoung Kang
+- Tajana Rosing
+published: 2022-04
+publication: IEEE International Symposium on High-Performance Computer Architecture (HPCA 2022)
+publication_type: conference
+publication_status: published
+source: https://doi.org/10.1109/HPCA53966.2022.00082
+sources:
+- https://doi.org/10.1109/HPCA53966.2022.00082
+implementation: HBMを基盤とするPIM/NMC hybrid アクセラレータをarchitecture simulationで評価し、Transformer ワークロードをGPU、既存メモリ基盤 アクセラレータ、ASIC アクセラレータと比較。確認済み一次資料から公式コードURLは特定できなかった。
 code: null
-last_checked: "2026-10-04"
-worker_completed_at: "2026-10-04T17:27:00+09:00"
-worker_run_key: "20261004-1700-scheduled-chat-00/r01"
+last_checked: '2026-10-04'
+worker_completed_at: '2026-10-04T17:27:00+09:00'
+worker_run_key: 20261004-1700-scheduled-chat-00/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2102.05095
+  arxiv_id: '2102.05095'
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:1506.00019
+  arxiv_id: '1506.00019'
+- canonical_id: arXiv:1907.11692
+  arxiv_id: '1907.11692'
+- canonical_id: arXiv:1706.03762
+  arxiv_id: '1706.03762'
+- canonical_id: arXiv:2007.14062
+  arxiv_id: '2007.14062'
+- canonical_id: DOI:10.1145/3287624.3287711
+  doi: 10.1145/3287624.3287711
+references_checked_at: '2026-10-08'
+references_source: primary-pdf-reference-section
+references_total: 51
 ---
 # TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer
 
