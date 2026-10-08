@@ -14,6 +14,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+import candidate_priority_state
+
 CONFIG_PATH = Path(".survey/config/candidate-priority.json")
 CACHE_PATH = Path(".survey/work-queue/candidate-priority-cache.json")
 
@@ -40,7 +42,7 @@ def load_config(repo_root: Path) -> dict[str, Any]:
 
 
 def load_cache(repo_root: Path) -> dict[str, Any]:
-    value = _read_json(Path(repo_root) / CACHE_PATH, {})
+    value = candidate_priority_state.load(Path(repo_root) / CACHE_PATH, {})
     if not isinstance(value, dict):
         return {"schema_version": 1, "records": {}, "aliases": {}}
     records = value.get("records")
