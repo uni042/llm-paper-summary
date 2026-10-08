@@ -1,0 +1,293 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-luna",
+  "run_key": "codex-backfill-r316-b13-main-893d2f32",
+  "reference_main_sha": "893d2f32ea1b0a25423d39da4daa8d3472e2f357",
+  "record_count": 19,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.16292",
+      "identity_tokens": [
+        "arXiv:2510.16292",
+        "DOI:10.48550/arXiv.2510.16292"
+      ],
+      "title": "QSVD: Efficient Low-rank Approximation for Unified Query-Key-Value Weight Compression in Low-Precision Vision-Language Models",
+      "reason": "QSVD reduces VLM KV-cache size and compute using joint Q/K/V low-rank approximation, rank allocation, and low-bit weight/activation quantization; abstract states resource-constrained real-time deployment.",
+      "source_url": "https://arxiv.org/abs/2510.16292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.20191",
+      "identity_tokens": [
+        "arXiv:2602.20191",
+        "DOI:10.48550/arXiv.2602.20191"
+      ],
+      "title": "MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM",
+      "reason": "MoBiQuant dynamically chooses token-sensitive quantization precision for elastic LLM inference; abstract reports memory savings and throughput gains. The official arXiv title includes “Any-Precision”, a title wording difference under the same arXiv ID.",
+      "source_url": "https://arxiv.org/abs/2602.20191",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-0097",
+      "identity_tokens": [
+        "DOI:10.52202/085713-0097",
+        "NeurIPS 2025:04132e28265a355456f86a1c3fec3bcd"
+      ],
+      "title": "Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness",
+      "reason": "Official NeurIPS abstract presents AGServe session-aware LLM agent serving with KV-cache reuse, model cascading, and a dynamic resource scheduler, directly addressing serving cost and GPU utilization.",
+      "source_url": "https://papers.neurips.cc/paper_files/paper/2025/hash/04132e28265a355456f86a1c3fec3bcd-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.18413",
+      "identity_tokens": [
+        "arXiv:2510.18413",
+        "DOI:10.48550/arXiv.2510.18413"
+      ],
+      "title": "Adamas: Hadamard Sparse Attention for Efficient Long-Context Inference",
+      "reason": "Adamas applies Hadamard transform, bucketization, 2-bit compact representations, and top-k selection for sparse long-context inference; abstract reports up to 4.4x self-attention and 1.5x end-to-end speedups.",
+      "source_url": "https://arxiv.org/abs/2510.18413",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.11016",
+      "identity_tokens": [
+        "arXiv:2406.11016",
+        "DOI:10.48550/arXiv.2406.11016"
+      ],
+      "title": "Optimized Speculative Sampling for GPU Hardware Accelerators",
+      "reason": "Primary abstract parallelizes speculative-sampling matrix work across GPU threads and reports sampling profiling-time improvement. Although experiments include ASR and summarization, the method is a plausible systems-efficiency contribution to speculative decoding/inference.",
+      "source_url": "https://arxiv.org/abs/2406.11016",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2408.06003",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2408.06003",
+        "arXiv:2408.06003",
+        "DOI:10.1145/3695053.3731057"
+      ],
+      "title": "LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference",
+      "reason": "Official arXiv record describes LUT Tensor Core software/hardware co-design and compiler/instruction support for low-bit LLM inference. Its current arXiv title differs from the report wording under the same ID; the official record also links the ISCA DOI.",
+      "source_url": "https://arxiv.org/abs/2408.06003",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.26587",
+      "identity_tokens": [
+        "arXiv:2606.26587",
+        "DOI:10.48550/arXiv.2606.26587"
+      ],
+      "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+      "reason": "SharQ combines input-adaptive activation sparsity with FP4 quantization and fused inference kernels; its abstract reports lower latency and higher serving throughput.",
+      "source_url": "https://arxiv.org/abs/2606.26587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07569",
+      "identity_tokens": [
+        "arXiv:2605.07569",
+        "DOI:10.48550/arXiv.2605.07569"
+      ],
+      "title": "HexiSeq: Accommodating Long Context Training of LLMs over Heterogeneous Hardware",
+      "reason": "Root-owned title-only prefilter: title explicitly concerns long-context LLM training and identifies no inference, serving, or deployment-efficiency connection. Abstract was not read.",
+      "source_url": "https://arxiv.org/abs/2605.07569",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.01299",
+      "identity_tokens": [
+        "arXiv:2507.01299",
+        "DOI:10.48550/arXiv.2507.01299"
+      ],
+      "title": "La RoSA: Enhancing LLM Efficiency via Layerwise Rotated Sparse Activation",
+      "reason": "La RoSA uses layerwise rotations and top-k selection to create stable LLM activation sparsity without additional recovery training; abstract reports wall-clock inference speedup.",
+      "source_url": "https://arxiv.org/abs/2507.01299",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.20888",
+      "identity_tokens": [
+        "arXiv:2609.20888",
+        "DOI:10.48550/arXiv.2609.20888"
+      ],
+      "title": "Elastic Threshold Attention: Learned Contextual Sparsity for Long-Context Decoding",
+      "reason": "ETA learns contextual thresholds for block-sparse long-context decoding, prunes KV cache at inference, and provides a fused Triton kernel; abstract reports up to 2.15x end-to-end speedup.",
+      "source_url": "https://arxiv.org/abs/2609.20888",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.13344",
+      "identity_tokens": [
+        "arXiv:2410.13344",
+        "DOI:10.48550/arXiv.2410.13344"
+      ],
+      "title": "Cerberus: Efficient Inference with Adaptive Parallel Decoding and Sequential Knowledge Enhancement",
+      "reason": "Cerberus adaptively selects parallel decoding per step and adds sequential knowledge while retaining parallel execution; abstract reports up to 2.12x speedup over autoregressive decoding.",
+      "source_url": "https://arxiv.org/abs/2410.13344",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00175",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00175"
+      ],
+      "title": "MXFFP: Microscaling Flexible Floating Point Format for Large-Scale AI Model Acceleration",
+      "reason": "Official IEEE abstract introduces flexible microscaling exponent/mantissa layouts and Tensor Core execution for large AI models; it explicitly evaluates LLM inference accuracy and maintains hardware performance comparable to MXFP.",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CAIBDA70336.2026.11621553",
+      "identity_tokens": [
+        "DOI:10.1109/CAIBDA70336.2026.11621553"
+      ],
+      "title": "Memory-Efficient Chunked Tropical Attention for Long Sequences",
+      "reason": "source-unavailable borderline: DOI and candidate title are stable, but the official IEEE DOI/Xplore page returned “URL https://doi.org/10.1109/CAIBDA70336.2026.11621553 is not accessible via this tool.” Only secondary metadata/abstract results were discoverable and were not used for classification.",
+      "source_url": "https://doi.org/10.1109/CAIBDA70336.2026.11621553",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34060",
+      "identity_tokens": [
+        "arXiv:2609.34060",
+        "DOI:10.48550/arXiv.2609.34060"
+      ],
+      "title": "KVCMAS: Efficient KV cache Correction for Shared Context in Multi-Agent Systems",
+      "reason": "KVCMAS uses compact low-rank online KV-cache correction across agents sharing context; abstract reports lower TTFT and reduced peak GPU memory under concurrent serving.",
+      "source_url": "https://arxiv.org/abs/2609.34060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28846",
+      "identity_tokens": [
+        "arXiv:2608.28846",
+        "DOI:10.48550/arXiv.2608.28846"
+      ],
+      "title": "A rigor-matched audit of periodic-step layer skipping for efficient llm inference: conflayers versus swift, with a supplemental analysis of trained routing alternatives",
+      "reason": "The primary abstract audits inference-time layer skipping and self-speculative decoding under matched protocols, quantifying actual speedups and overhead; directly relevant to inference efficiency evaluation.",
+      "source_url": "https://arxiv.org/abs/2608.28846",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.04048",
+      "identity_tokens": [
+        "arXiv:2608.04048",
+        "DOI:10.48550/arXiv.2608.04048"
+      ],
+      "title": "Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs",
+      "reason": "RRQ provides multiple effective LLM weight precisions from one checkpoint using a low-bit base and residuals; abstract compares construction time and accuracy across bit widths, relevant to memory/throughput deployment tradeoffs.",
+      "source_url": "https://arxiv.org/abs/2608.04048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.07289",
+      "identity_tokens": [
+        "arXiv:2505.07289",
+        "DOI:10.48550/arXiv.2505.07289"
+      ],
+      "title": "Semantic Retention and Extreme Compression in LLMs: Can We Have Both?",
+      "reason": "The primary abstract evaluates joint LLM pruning and quantization against compression/semantic-retention tradeoffs, a direct model compression and deployment-efficiency topic.",
+      "source_url": "https://arxiv.org/abs/2505.07289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.09329",
+      "identity_tokens": [
+        "arXiv:2605.09329",
+        "DOI:10.48550/arXiv.2605.09329"
+      ],
+      "title": "Test-Time Speculation",
+      "reason": "Test-Time Speculation adapts a draft model online using target verification signals to sustain speculative-decoding acceptance length on long generations; primary abstract reports gains over existing speculators.",
+      "source_url": "https://arxiv.org/abs/2605.09329",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.5220/0014919900004039",
+      "identity_tokens": [
+        "DOI:10.5220/0014919900004039"
+      ],
+      "title": "HybridServe: Stall-Free Distributed Disaggregated LLM Inference with Hybrid KVCache Buffering",
+      "reason": "Official CLOSER/INSTICC abstract describes disaggregated LLM inference and HybridServe CPU-memory KV buffering to reduce stalls and inter-node latency; it reports TTFT and throughput improvement.",
+      "source_url": "https://www.insticc.org/node/TechnicalProgram/closer/2026/presentationDetails/149199",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T18:27:48Z",
+      "last_checked_at": "2026-10-08T18:27:48Z",
+      "linked_from": []
+    }
+  ]
+}
