@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T08:22:52.665604+00:00",
+  "generated_at": "2026-10-08T08:35:34.820646+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 553,
+  "count": 552,
   "worker_counts": {
     "scheduled-chat-00": 188,
     "scheduled-chat-30": 178,
-    "scheduled-chat-45": 187
+    "scheduled-chat-45": 186
   },
   "entries": [
     {
@@ -12024,26 +12024,6 @@
         "日本語比率 59.5% < 70%",
         "16KB未満再監査: 日本語比率 59.5% < 80%"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.23200-innerq-hardware-aware-tuning-free-quantization-of-kv-cache-for-large-lan.md",
-      "canonical_id": "arXiv:2602.23200",
-      "title": "InnerQ: Hardware-Aware Tuning-Free Quantization of KV Cache for Large Language Models",
-      "file_bytes": 15297,
-      "source_sha256": "f1a01f6d583450449e46c3ed1eacaa7474e6db3563cabb569fc3af86585bfabc",
-      "source_git_blob_sha": "cb2efdf46ec75d734c04c3a05c1fdbfa6ab82f7c",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.865285,
-      "quality_metrics": {
-        "body_chars": 4713,
-        "method_chars": 1732,
-        "evaluation_chars": 1008,
-        "limitation_chars": 381
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
