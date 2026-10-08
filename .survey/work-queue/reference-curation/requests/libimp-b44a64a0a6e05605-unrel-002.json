@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b44a64a0a6e05605-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2308.03303",
+  "reason": "本文のactivation memory削減はLoRA fine-tuning時の勾配/学習メモリ。推論時最適化ではない。",
+  "title": "LoRA-FA: Efficient and Effective Low Rank Representation Fine-tuning",
+  "identity_tokens": [
+    "arXiv:2308.03303"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b44a64a0a6e0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,10 +1,18 @@
 ---
+last_audited: '2026-10-08'
+under16kb_reaudit_target_path: papers/inference/10-kv-cache-offload-recomputation/2026-25a73d593e80-llm-pilot-slo-aware-and-cost-efficient-llm-serving-on-public-cloud-vm-cl.md
+under16kb_reaudit_source_git_blob_sha: '1e99d4fd88c7d3bb22d89314661b79f39922ee35'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r3-llm-pilot-38023'
+worker_completed_at: '2026-10-08T10:13:00+09:00'
 canonical_id: "DOI:10.1109/CCGrid68966.2026.00023"
 arxiv_id: null
 doi: "10.1109/CCGrid68966.2026.00023"
 openreview_id: null
 arxiv_categories: {primary: null, cross_list: []}
-last_audited: "2026-10-01"
 audit_version: 1
 storage_targets: ["GPU HBM", "CPU DRAM", "EBS/NVMe-class storage", "remote attention GPU"]
 bottlenecks: ["KV cache capacity", "PCIe/storage bandwidth", "network bandwidth", "cloud VM cost"]
@@ -32,8 +40,6 @@ source: "https://doi.org/10.1109/CCGrid68966.2026.00023"
 sources: ["https://discos.sogang.ac.kr/file/2026/intl_conf/CCGRID_2026_J_Kim.pdf"]
 code: ""
 implementation: "分析性能モデルと探索器。KVO/AO/単一GPU/Multi-passを統一モデル化。"
-worker_completed_at: "2026-10-01T15:51:00Z"
-worker_run_key: "scheduled-chat-45-20261001-1545"
 last_checked: "2026-10-01"
 ---
 
@@ -110,6 +116,14 @@ AOは1:1だけでなく、K組を並列にしてバッチを分割する構成�
 | 構成最適化 | 費用効率 | 既存方式比最大2.31倍 | オフロード方式とVMを同時選択する効果 |
 
 B=32の実測/予測例では、High-End生成ワークロードが39.4秒/38.5秒、1:1 AOが68.5秒/65.2秒、ストレージKVOが368.5秒/335.2秒だった。KVOは容量を大きく拡張できるが、長い生成では蓄積KVのI/Oが支配的になり、単純に「安価な外部容量を使えば得」とはならない。一方AOは長文脈で転送量の系列長依存を抑えられるが、ネットワーク帯域と共有時の待ち行列がSLOを決める。
+
+### 予測誤差と費用効率の改善を対応付ける
+
+クラウドの仮想計算機はGPUの演算能力だけを独立に購入できるわけではなく、GPUメモリ、ホストメモリ、通信帯域と料金が一体になっている。このため鍵と値のキャッシュを外部へ移すとき、安価な装置が常に最も費用効率のよい選択になるとは限らない。外部ストレージを使う退避方式は容量を確保しやすい一方、逐次生成のたびに読み込むデータが増え、待ち時間が長くなる。別のGPUへ注意計算を渡す方式ではネットワーク転送と補助GPUの料金が増える。提案法は各方式を同一の遅延・処理量目標に照らし、目標を満たす構成だけの費用効率を比較する。
+
+評価では計算中心の単一GPU条件で決定係数〇・九九、平均絶対百分率誤差が二・三パーセント以下となった一方、ストレージ退避の予測誤差は八・二〜一一・二パーセントに広がる。ここから、解析モデルを一度作ればすべての入出力装置を同じ精度で予測できるわけではないと分かる。ストレージの遅延変動や共有する注意処理装置の待ち行列を考慮せずに計画すると、安いが遅延目標を満たさない構成を誤って選ぶ可能性がある。
+
+原著では高性能GPUだけを使う方式に対して費用効率二・〇五倍、従来の最良比較方式に対して最大二・三一倍を報告している。ここでの効率改善はモデルの演算カーネルが二・三一倍速くなったという意味ではなく、同じサービス目標を満たすための計算機構成と外部容量の使い方を選び直した結果である。評価はAWSの料金・インスタンス特性を前提とするため、別のクラウドや料金改定後には最適構成を再探索する必要がある。
 
 ## 既存研究との差
 
