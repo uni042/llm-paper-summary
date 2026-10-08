@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r306-screen-01-part-07-fa841b9a9035",
+  "reference_main_sha": "c1139f8bc469be2a436e1892e2d2316dc0247703",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.00848",
+      "identity_tokens": [
+        "arXiv:2601.00848"
+      ],
+      "title": "Temporal Attack Pattern Detection in Multi-Agent AI Workflows: An Open Framework for Training Trace-Based Security Models",
+      "reason": "The framework fine-tunes language models on agent security traces, including QLoRA; contribution is training/detection, not inference-serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.00848",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JSEN.2025.3613704",
+      "identity_tokens": [
+        "DOI:10.1109/JSEN.2025.3613704"
+      ],
+      "title": "Edge-Guided Multiscale Feature Fusion Network for Infrared Small Target Detection",
+      "reason": "Tried the primary IEEE DOI/publisher page, which was inaccessible in the available reader; only abstract/metadata-level material was available, so primary methods/results could not be checked. The candidate is retained as borderline because its linked lineage makes the exact method relevant to resolve.",
+      "source_url": "https://doi.org/10.1109/JSEN.2025.3613704",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25987",
+      "identity_tokens": [
+        "arXiv:2607.25987"
+      ],
+      "title": "IH-Benchmark: A Conflict-Centered Benchmark for Instruction-Hierarchy Robustness in LLM Applications",
+      "reason": "IH-Benchmark measures instruction-hierarchy robustness in LLM applications; it is a benchmark without compute/memory/latency optimization.",
+      "source_url": "https://arxiv.org/abs/2607.25987",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17900",
+      "identity_tokens": [
+        "arXiv:2607.17900"
+      ],
+      "title": "Harness TTS: Towards Context-Aware Expressive Speech Synthesis with Harness Layer",
+      "reason": "Harness TTS wraps a speech engine and reports an LLM planner latency measurement, but no method lowers planner resources or serving cost.",
+      "source_url": "https://arxiv.org/abs/2607.17900",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14167",
+      "identity_tokens": [
+        "arXiv:2607.14167"
+      ],
+      "title": "Structured Feedback Improves Repair in an LLM Agent Loop",
+      "reason": "VeriHarness caps agent repair at four calls and improves success at a fixed compute budget; no fewer calls/tokens or lower latency are reported.",
+      "source_url": "https://arxiv.org/abs/2607.14167",
+      "first_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "last_checked_at": "2026-10-08T06:36:17.746884+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
