@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T13:41:37.649965+00:00",
+  "generated_at": "2026-10-08T13:58:39.926844+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 456,
+  "count": 454,
   "worker_counts": {
     "scheduled-chat-00": 156,
-    "scheduled-chat-30": 136,
-    "scheduled-chat-45": 164
+    "scheduled-chat-30": 135,
+    "scheduled-chat-45": 163
   },
   "entries": [
     {
@@ -37,29 +37,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.08294-inferflow-an-efficient-and-highly-configurable-inference-engine-for-larg.md",
-      "canonical_id": "arXiv:2401.08294",
-      "title": "Inferflow: an Efficient and Highly Configurable Inference Engine for Large Language Models",
-      "file_bytes": 8195,
-      "source_sha256": "9455072e26fbb6be8b19efeafe26d717c2691754988a3117ced14688465ed0c7",
-      "source_git_blob_sha": "9f13b2d98f7e5ea876e60514a54efc2ebbc5930e",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.875614,
-      "quality_metrics": {
-        "body_chars": 2012,
-        "method_chars": 701,
-        "evaluation_chars": 0,
-        "limitation_chars": 191
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2012 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03949-vestigekv-the-nope-mla-kv-cache-carries-its-own-eviction-signal-in-a-ves.md",
       "canonical_id": "arXiv:2609.03949",
       "title": "VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch",
@@ -82,33 +59,6 @@
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md",
-      "canonical_id": "arXiv:2405.19325",
-      "title": "Nearest Neighbor Speculative Decoding for LLM Generation and Attribution",
-      "file_bytes": 8386,
-      "source_sha256": "fb25fe3f34a12e0c891b959bfaa3b4b1fbdb0a4b3b7fd8e2414dcda10efd5e56",
-      "source_git_blob_sha": "817faac12e9a2aa943e72a844d19566fe481a903",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.796217,
-      "quality_metrics": {
-        "body_chars": 1799,
-        "method_chars": 602,
-        "evaluation_chars": 248,
-        "limitation_chars": 196
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1799 < 2200",
-        "16KB未満再監査: 手法説明量 602 < 700",
-        "16KB未満再監査: 評価説明量 248 < 500",
-        "16KB未満再監査: 日本語比率 79.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.6% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
