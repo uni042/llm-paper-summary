@@ -243,7 +243,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：5  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
@@ -253,7 +253,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 7年前（2019-11〜2020-10）
 
 - **2020-10 · [LightSeq: A High Performance Inference Library for Transformers](2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md)**  
-  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：13  
   モデルが大きくても、特に小バッチや自己回帰復号ではカーネル起動とGPUメモリ往復が相対的に大きくなり、理論FLOPsほどGPUを使い切れない。中心機構は三つある。標準機械翻訳ベンチマークではTensorFlow実装に対して最大14倍、同時期のCUDA専用FasterTransformerに対して最大1.4倍の高速化を報告する。
 
 ### 8年前（2018-11〜2019-10）

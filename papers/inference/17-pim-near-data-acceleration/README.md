@@ -110,12 +110,12 @@
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   一方、注意機構のKV読出しは生成トークンごとに過去KVを走査するGEMV寄りの処理となり、メモリ帯域が支配的になる。GPU-only比3倍、NPU-only比約2.4倍、単純統合比1.6倍のスループット改善を報告する。
 
 ### 5年前（2021-11〜2022-10）
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   TransPIMは、Transformerを高帯域メモリ（High Bandwidth メモリ; HBM）上のメモリ内処理（Processing-in-メモリ; PIM）とニアメモリ計算（Near-メモリ Computing; NMC）で高速化するため、データ配置・実行順とHBM内部ハードウェアを一体で設計したアクセラレータである。
 <!-- survey:auto:end -->
