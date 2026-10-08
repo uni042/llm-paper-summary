@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 10663)
-Total output lines: 671
-
 {
   "schema_version": 1,
   "artifact_type": "abstract_screen_provisional",
@@ -323,7 +320,48 @@ Total output lines: 671
       "canonical_id": "arXiv:2505.03803",
       "title": "RWKVQuant: Quantizing the RWKV Family with Proxy Guided Hybrid of Scalar and Vector Quantization",
       "source_url": "https://arxiv.org/abs/2505.03803",
-      "primary_a…663 tokens truncated…ract_evidence": "arXiv abstract describes cluster scheduling and phase multiplexing for disaggregated RL post-training to reduce idle dependency bubbles.",
+      "primary_abstract_url": "https://arxiv.org/abs/2505.03803",
+      "primary_abstract_retrieved": true,
+      "abstract_evidence": "arXiv abstract presents proxy-guided hybrid scalar/vector post-training quantization for RWKV, targeting smaller models and faster inference.",
+      "retrieval_issue": null,
+      "recommendation": "accept_for_reading",
+      "reason": "The primary abstract describes a plausible model-efficiency, inference, serving, compression, attention, decoding, or deployment contribution; retain for full-text screening.",
+      "full_text_read": false
+    },
+    {
+      "rank": 278,
+      "canonical_id": "DOI:10.1145/3711896.3736949",
+      "title": "Exploiting Student Parallelism for Low-latency GPU Inference of BERT-like Models in Online Services",
+      "source_url": "https://doi.org/10.1145/3711896.3736949",
+      "primary_abstract_url": "https://doi.org/10.1145/3711896.3736949",
+      "primary_abstract_retrieved": false,
+      "abstract_evidence": null,
+      "retrieval_issue": "ACM DOI/publisher page was inaccessible to the retrieval tool, and no primary abstract was retrieved. Author-hosted full text was not opened because abstract screening did not require full-text review.",
+      "recommendation": "identity_unresolved",
+      "reason": "The candidate may be relevant, but the primary abstract or stable paper identity could not be established from the available source; retain unresolved for source-level resolution.",
+      "full_text_read": false
+    },
+    {
+      "rank": 279,
+      "canonical_id": "arXiv:2402.17512",
+      "title": "Unifying Linear-Time Attention via Latent Probabilistic Modelling",
+      "source_url": "https://arxiv.org/abs/2402.17512",
+      "primary_abstract_url": "https://arxiv.org/abs/2402.17512",
+      "primary_abstract_retrieved": true,
+      "abstract_evidence": "arXiv abstract proposes a directed latent probabilistic formulation for linear-time attention and evaluates it on language modeling.",
+      "retrieval_issue": null,
+      "recommendation": "accept_for_reading",
+      "reason": "The primary abstract describes a plausible model-efficiency, inference, serving, compression, attention, decoding, or deployment contribution; retain for full-text screening.",
+      "full_text_read": false
+    },
+    {
+      "rank": 280,
+      "canonical_id": "arXiv:2512.11306",
+      "title": "RollMux: Phase-Level Multiplexing for Disaggregated RL Post-Training",
+      "source_url": "https://arxiv.org/abs/2512.11306",
+      "primary_abstract_url": "https://arxiv.org/abs/2512.11306",
+      "primary_abstract_retrieved": true,
+      "abstract_evidence": "arXiv abstract describes cluster scheduling and phase multiplexing for disaggregated RL post-training to reduce idle dependency bubbles.",
       "retrieval_issue": null,
       "recommendation": "accept_for_reading",
       "reason": "The primary abstract describes a plausible model-efficiency, inference, serving, compression, attention, decoding, or deployment contribution; retain for full-text screening.",
