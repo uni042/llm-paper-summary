@@ -28,3 +28,9 @@
 - status-dashboardは同一の現在候補集合に対してフィルタ前件数、規則隔離、分類器追加隔離、監査復活、最終読解可能件数、分類器処理済・未処理を直接再計算してSTATUSに表示する。
 - 再実行はGitHub Actionsの Incremental Discovery relevance classifier を使用する。30分ごとに1バッチを試みるがGitHubスケジューラはbest-effortであり遅延・欠落があり得る。
 - 緊急復旧は設定 enabled=false。分類器のみ無効化したければ classifier.enabled=false。
+
+## 拡張規則v2（2026-10-08・シャドー評価）
+
+対象分野と応用タスクの複合タイトル条件を追加。画像認識、疾病診断、金融予測、ロボット制御、教育/法律応用、地球科学、コンテンツ監視、創薬/材料、生態系など。システム機構（KV cache, offloading, 量子化, GPUメモリ, 推論サービング、分散訓練）の証拠がタイトル・概要にあれば救済する。
+
+設定 expanded_rules.enabled=true / mode=shadow の間は**候補を一件も追加隔離せず**、STATUSに現在有効な規則・分類器の後に残った候補について追加隔離見込み件数と分野別内訳を表示する。実際の追加隔離数と混同しない。全既収録論文タイトルに対する誤隔離がゼロの回帰テストを含め、一次資料の監査前にmode=quarantineへ切替えない。オフはexpanded_rules.enabled=false。
