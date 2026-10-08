@@ -109,7 +109,9 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
 
     def test_repository_checker_requires_only_current_worker_docs(self):
         checker = (ROOT / ".survey/scripts/check_repository.py").read_text(encoding="utf-8")
-        self.assertIn(".survey/docs/survey-workflow/worker-router.md", checker)
+        self.assertIn("REQUIRED_RUNTIME_PATHS", checker)
+        self.assertNotIn('".survey/docs/survey-workflow/worker-router.md"', checker)
+        self.assertIn("retired_human_guide_on_main", checker)
         self.assertNotIn(".survey/docs/survey-workflow/fallback-routing.md", checker)
         self.assertNotIn(".survey/docs/survey-workflow/backlog-resilience.md", checker)
 
