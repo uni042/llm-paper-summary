@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T05:18:06+00:00",
+  "generated_at": "2026-10-08T05:33:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 155,
+  "count": 156,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -2757,6 +2757,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r2-2312.11462.md",
       "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-r2-2312.11462.json",
       "worker_run_key": "interactive-20261008-bottom-up-reaudit-r2-2312.11462"
+    },
+    {
+      "canonical_id": "arXiv:2608.07974",
+      "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
+      "source_url": "https://arxiv.org/abs/2608.07974",
+      "returned_at": "2026-10-08T05:32:37+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 日本語比率 78.4% < 80%"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5243,
+        "body_paragraphs": 68,
+        "method_chars": 1235,
+        "method_paragraphs": 23,
+        "evaluation_chars": 2018,
+        "limitation_chars": 350,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r2-2608.07974.md",
+      "import_result_path": ".survey/import-inbox/results/research/interactive-20261008-bottom-up-reaudit-r2-2608.07974.json",
+      "worker_run_key": "interactive-20261008-bottom-up-reaudit-r2-2608.07974"
     }
   ]
 }

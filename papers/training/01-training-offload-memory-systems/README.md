@@ -19,7 +19,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-04 · [Efficient Training on Multiple Consumer GPUs with RoundPipe](2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md)**  
-  実装：[✓](https://github.com/ITcarrot/RoundPipe) ・ リポジトリ内被引用：0  
+  実装：[✓](https://github.com/thustorage/RoundPipe) ・ リポジトリ内被引用：0  
   GPUに層を固定所有させず、空いたGPUへ処理段階を動的に割り当て、実測負荷に応じた不均等分割と転送優先度制御で、民生GPU間のパイプライン待ちを減らす微調整方式。
 
 - **2026-02 · [Horizon-LM: A RAM-Centric Architecture for LLM Training](2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md)**  
