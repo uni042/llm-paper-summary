@@ -319,7 +319,7 @@ def triage_worklist(
     if enabled and mode == "quarantine" and quota_mode == "quarantine" and quota_eligible_count >= quota_minimum:
         kept.sort(key=_relevance_rank)
     audit_count = min(len(deferred), audit_budget if quota_mode == "quarantine" else max_audit,
-                      len(kept) // stride + (1 if not kept else 1) if quota_mode != "quarantine" else len(deferred))
+                      len(kept) // stride + (1 if not kept else 0) if quota_mode != "quarantine" else len(deferred))
     audit_rows = [
         dict(row, prefilter_audit=True, prefilter_reason=classify(row, policy)["reason"])
         for row in sorted(deferred, key=_audit_key)[:audit_count]
