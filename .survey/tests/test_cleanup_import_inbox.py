@@ -142,6 +142,14 @@ canonical_id: arXiv:2306.11222
                 "title: PrefixBench\\n---\\n# Verified paper revision\\n"
             )
             source.write_text(original, encoding="utf-8")
+            # A historical success for the original represented identity does
+            # not mean this newer pinned re-audit was imported.
+            success = root / ".survey/import-inbox/results/research/old-paper.json"
+            success.parent.mkdir(parents=True)
+            success.write_text(
+                json.dumps({"status": "imported", "canonical_id": "arXiv:2609.19657"}),
+                encoding="utf-8",
+            )
             with mock.patch.object(
                 cleanup.inbox, "research_metadata_failures", return_value=["worker_completed_at"]
             ):
