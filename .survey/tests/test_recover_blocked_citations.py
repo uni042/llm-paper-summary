@@ -75,6 +75,10 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
         self.assertEqual(urls[0], "https://dl.acm.org/doi/pdf/10.1145/3688351.3689164")
         self.assertIn("https://jiangs.utasites.cloud/pubs/papers/Yu24-TwinPilots.pdf", urls)
 
+    def test_transpim_has_verified_nsf_primary_pdf_fallback(self) -> None:
+        urls = recovery.primary_pdf_urls("DOI:10.1109/HPCA53966.2022.00082")
+        self.assertIn("https://par.nsf.gov/servlets/purl/10345536", urls)
+
     def test_crossref_reference_entries_preserve_doi_and_title_metadata(self) -> None:
         payload = {
             "message": {
