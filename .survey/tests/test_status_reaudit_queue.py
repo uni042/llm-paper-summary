@@ -86,5 +86,16 @@ class StatusReauditQueueTests(unittest.TestCase):
         )
 
 
+    def test_library_import_renders_status_after_publishing_reaudit_queue(self):
+        workflow = (ROOT / ".github/workflows/library-import.yml").read_text(
+            encoding="utf-8"
+        )
+        queue_push = workflow.index("git commit -m 'library-import: refresh under-16KB re-audit queue'")
+        final_status = workflow.index("git commit -m 'library-import: sync STATUS after re-audit refresh'")
+        self.assertLess(queue_push, final_status)
+        self.assertIn("status_after_reaudit_ok=0", workflow)
+        self.assertIn("Post-re-audit STATUS push race", workflow)
+
+
 if __name__ == "__main__":
     unittest.main()
