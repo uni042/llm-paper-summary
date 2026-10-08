@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T22:56:37+00:00",
-  "record_count": 4508,
+  "updated_at": "2026-10-08T23:07:48+00:00",
+  "record_count": 4510,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68752,6 +68752,33 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Tensor Memory: Fixed-Size Recurrent State for Long-Horizon Transformers"
+    },
+    "DOI:10.1109/ictai66417.2025.00144": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ictai66417.2025.00144",
+      "identity_tokens": [
+        "DOI:10.1109/ictai66417.2025.00144"
+      ],
+      "reason": "The pinned stable IEEE DOI/title and official ICTAI program metadata identify the work, but the IEEE primary abstract could not be retrieved; the program exposes title/authors only. No title-only acceptance.",
+      "first_checked_at": "2026-10-08T23:07:48+00:00",
+      "last_checked_at": "2026-10-08T23:07:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Model Training with Sparsity Loss for Compressed Attention"
+    },
+    "arXiv:2507.06415": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.06415",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.06415",
+        "arXiv:2507.06415"
+      ],
+      "reason": "PERK's primary abstract uses test-time gradient updates in LoRA as a memory module for long-context reasoning and reports quality gains. It does not establish serving or inference-efficiency gains; the long-context/memory connection is indirect.",
+      "first_checked_at": "2026-10-08T23:07:48+00:00",
+      "last_checked_at": "2026-10-08T23:07:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PERK: Long-Context Reasoning as Test-Time Learning"
     }
   }
 }
