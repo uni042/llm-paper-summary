@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T07:10:14.291194+00:00",
+  "generated_at": "2026-10-08T07:24:37.316143+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 564,
+  "count": 560,
   "worker_counts": {
     "scheduled-chat-00": 191,
-    "scheduled-chat-30": 183,
-    "scheduled-chat-45": 190
+    "scheduled-chat-30": 181,
+    "scheduled-chat-45": 188
   },
   "entries": [
     {
@@ -11364,28 +11364,6 @@
       ]
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2601.07353-talon-confidence-aware-speculative-decoding-with-adaptive-draft-length.md",
-      "canonical_id": "arXiv:2601.07353",
-      "title": "TALON: Confidence-Aware Speculative Decoding with Adaptive Token Trees",
-      "file_bytes": 14389,
-      "source_sha256": "2d33cdb7c6a1572df5b9e1687f9ff72f4955fa94cf8c6bb1af07e0d81e24909b",
-      "source_git_blob_sha": "216cfb27563995065fea81d24297d8a205a7a743",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.937393,
-      "quality_metrics": {
-        "body_chars": 2682,
-        "method_chars": 838,
-        "evaluation_chars": 301,
-        "limitation_chars": 218
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 301 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
       "canonical_id": "arXiv:2401.15947",
       "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
@@ -11428,28 +11406,6 @@
       "warnings": [
         "日本語比率 73.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md",
-      "canonical_id": "arXiv:2106.06899",
-      "title": "Memory-efficient Transformers via Top-k Attention",
-      "file_bytes": 14471,
-      "source_sha256": "c2f1ac8ad0c4d0c72147dedc1c76163c4efdfb3805acc97fdd20a9257e877c08",
-      "source_git_blob_sha": "fdfb3d2d1d22badc3565563055d24a8cd41a2ef7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.924513,
-      "quality_metrics": {
-        "body_chars": 3521,
-        "method_chars": 1438,
-        "evaluation_chars": 131,
-        "limitation_chars": 243
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 131 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
@@ -11594,28 +11550,6 @@
         "limitation_chars": 277
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
-      "canonical_id": "arXiv:2311.18677",
-      "title": "Splitwise: Efficient Generative LLM Inference Using Phase Splitting",
-      "file_bytes": 14654,
-      "source_sha256": "79ef834b1a8b04c7c332cda6341dcbbfcffb00a7c3506086eb4058aa64ec89ee",
-      "source_git_blob_sha": "db36a5ea2db424200ffa3ecb0204f15e63eea86c",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.957898,
-      "quality_metrics": {
-        "body_chars": 3683,
-        "method_chars": 1604,
-        "evaluation_chars": 258,
-        "limitation_chars": 152
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 258 < 500"
-      ],
       "warnings": []
     },
     {
@@ -11959,28 +11893,6 @@
       "warnings": [
         "日本語比率 73.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
-      "canonical_id": "arXiv:2211.10438",
-      "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
-      "file_bytes": 14964,
-      "source_sha256": "840d92e83a109bd77ae3f4b852bb58a70d26dc05f674c54ba92c864f757f36ba",
-      "source_git_blob_sha": "6ba1f0fbec068376934d2cb7d5ebb5a179c90c3a",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.991573,
-      "quality_metrics": {
-        "body_chars": 3327,
-        "method_chars": 1215,
-        "evaluation_chars": 141,
-        "limitation_chars": 260
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 141 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/12-moe-parallelism-communication/2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md",
