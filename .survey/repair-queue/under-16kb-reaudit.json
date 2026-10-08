@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T06:15:15.507216+00:00",
+  "generated_at": "2026-10-08T06:25:41.078751+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 584,
+  "count": 579,
   "worker_counts": {
-    "scheduled-chat-00": 196,
-    "scheduled-chat-30": 188,
-    "scheduled-chat-45": 200
+    "scheduled-chat-00": 195,
+    "scheduled-chat-30": 186,
+    "scheduled-chat-45": 198
   },
   "entries": [
     {
@@ -10465,28 +10465,6 @@
       ]
     },
     {
-      "path": "papers/inference/18-pipeline-native-cpu-inference/2026-2608.23841-pipeline-native-transformers.md",
-      "canonical_id": "arXiv:2608.23841",
-      "title": "Pipeline-Native Transformers: Co-Designing Model Architecture and CPU Inference for Bandwidth-Efficient Autoregressive Decode",
-      "file_bytes": 13341,
-      "source_sha256": "209e790ff788e5de3c90996e294dc4c8d2c687ef8c34803a98e721e69c23e96b",
-      "source_git_blob_sha": "e5dc6e5bec830369b99181f9833f5806c9082b1b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.818386,
-      "quality_metrics": {
-        "body_chars": 3504,
-        "method_chars": 1318,
-        "evaluation_chars": 0,
-        "limitation_chars": 389
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
       "canonical_id": "arXiv:2310.04564",
       "title": "ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models",
@@ -10638,28 +10616,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md",
-      "canonical_id": "arXiv:2510.05497",
-      "title": "Patterns behind Chaos：大規模MoEのデータ移動予測",
-      "file_bytes": 13450,
-      "source_sha256": "edcdcdfc62e5da5a70436f1868343db2e08919372e681ea6b77c7c94484cf086",
-      "source_git_blob_sha": "7f1489080004ce386c1a13220afe102749107747",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.992739,
-      "quality_metrics": {
-        "body_chars": 2802,
-        "method_chars": 1119,
-        "evaluation_chars": 123,
-        "limitation_chars": 148
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 123 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
       "canonical_id": "arXiv:2405.05803",
       "title": "Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference",
@@ -10766,28 +10722,6 @@
       "warnings": [
         "日本語比率 76.7% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.31519-rabitqcache.md",
-      "canonical_id": "arXiv:2606.31519",
-      "title": "RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference",
-      "file_bytes": 13520,
-      "source_sha256": "c184d8fb0192237311c9d3c1eb0948e269c4fcdfda448f736486750aef1f4221",
-      "source_git_blob_sha": "4f016bbb3a0ae5e9c85519da64bea3b4b160e237",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.975593,
-      "quality_metrics": {
-        "body_chars": 3029,
-        "method_chars": 1288,
-        "evaluation_chars": 406,
-        "limitation_chars": 212
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 406 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md",
@@ -11304,28 +11238,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md",
-      "canonical_id": "arXiv:2503.22562",
-      "title": "Niyama: Breaking the Silos of LLM Inference Serving",
-      "file_bytes": 13893,
-      "source_sha256": "ec65b016b588d5b4cfa3fdd932c3efe57ad2dc658b226d6e39bb04b2eae77c16",
-      "source_git_blob_sha": "b65516285556669e1f7438b3442789d74dda05a9",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.939278,
-      "quality_metrics": {
-        "body_chars": 3330,
-        "method_chars": 1174,
-        "evaluation_chars": 122,
-        "limitation_chars": 302
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 122 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
       "canonical_id": "arXiv:2307.05908",
       "title": "Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding",
@@ -11465,28 +11377,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md",
-      "canonical_id": "arXiv:2504.14966",
-      "title": "SLO-Aware Scheduling for Large Language Model Inferences",
-      "file_bytes": 14066,
-      "source_sha256": "85d7e6eeb92be14437024f69425750a8e896d9f2e84a5f42ea40216ede4b8944",
-      "source_git_blob_sha": "e1efcc88b6da565a47a5076b2faf6526c436b9b4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.935431,
-      "quality_metrics": {
-        "body_chars": 3431,
-        "method_chars": 1053,
-        "evaluation_chars": 321,
-        "limitation_chars": 257
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 321 < 500"
-      ],
       "warnings": []
     },
     {
