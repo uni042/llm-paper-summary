@@ -34,13 +34,10 @@ class WorkerQuotaPolicyTests(unittest.TestCase):
         ])
 
     def test_canonical_sources_do_not_reintroduce_old_run_quota_language(self):
-        router = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
         continuation = (SCRIPTS / "continuation_gate.py").read_text(encoding="utf-8")
         finalization = (SCRIPTS / "run_finalization_gate.py").read_text(encoding="utf-8")
         derived = (SCRIPTS / "derive_worker_run_state.py").read_text(encoding="utf-8")
 
-        self.assertNotIn("Research / Audit 合計3件ノルマ", router)
-        self.assertNotIn("research_audit_completed_this_invocation < 3", router)
         self.assertNotIn("three-completion quota", continuation)
         self.assertNotIn("three-completion floor", continuation)
         self.assertNotIn("four-round floor", continuation)

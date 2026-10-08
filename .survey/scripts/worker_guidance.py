@@ -63,7 +63,7 @@ PROFILES = {
         "next": [
             ".survey/work-queue/next-jobs.json の counts / next_jobs を確認する。",
             "ready Research/Audit がある場合も固定work_modeを確認する。Research/Audit runだけmax_jobs=1でclaimし、Discovery runではqueue反映確認後に探索を続ける。",
-            "Research/Audit が0件でも固定work_modeを変えない。Research/Audit runは固定時間sleepせず、worker-router.md第7.0節の待機ミクロタスクを1件処理して最新queue/run-stateを再確認し、Discovery runだけ新しい探索軸を schema v3 process_discovery_precheck.py から開始する。",
+            "Research/Audit が0件でも固定work_modeを変えない。Research/Audit runは固定時間sleepせず、Library正本に沿った安全な待機・進行作業を1件処理して最新queue/run-stateを再確認し、Discovery runだけ新しい探索軸を schema v3 process_discovery_precheck.py から開始する。",
             "next-jobs.json を直接編集してResearch jobを追加・選択しない。",
         ],
         "recovery": [
@@ -78,7 +78,7 @@ PROFILES = {
             ".survey/work-queue/results/ に今回の未処理submissionと同名のresultが生成されたか確認する。",
             "submit_discovery_round result では ok=true / research_jobs_added / final_duplicate_filtered_count / next_action を確認する。",
             ".survey/work-queue/next-jobs.json の next_jobs と counts を確認する。",
-            "固定work_modeを確認する。Research/Audit runでready jobがあればclaim_worker_with_banks.pyからmax_jobs=1で取得し、0件なら固定時間sleepせずworker-router.md第7.0節の待機ミクロタスクを1件処理して最新queue/run-stateを再確認する。Discovery runではready Research/Auditがあってもclaimしない。",
+            "固定work_modeを確認する。Research/Audit runでready jobがあればclaim_worker_with_banks.pyからmax_jobs=1で取得し、0件なら固定時間sleepせずLibrary正本に沿った安全な待機・進行作業を1件処理して最新queue/run-stateを再確認する。Discovery runではready Research/Auditがあってもclaimしない。",
             "Discovery runだけ、次の探索軸を process_discovery_precheck.py の schema v3 経路から開始する。next-jobs.json や state.json を直接編集しない。",
         ],
         "recovery": [
@@ -121,7 +121,7 @@ PROFILES = {
             "生成された run-state result の ok / work_mode / pending state / gate.required_action に加え、next_scheduled_task_at / seconds_to_next_scheduled_task（固定Scheduled Chat）または seconds_to_run_deadline（adhoc）、stop_permit.issued / stop_permit.category / run_termination_allowed / next_action / next_work_packet を確認する。時間窓を終了理由に使えるのは今回run identityと一致する最新snapshotで stop_permit.category=time_window かつ stop_permit.issued=true かつ run_termination_allowed=true の場合だけ。",
             "同じrun内で状態が変化して再判定する場合は、run_key / worker_id / scheduled_slot / actual_invocation_startを維持しつつ、新しい一意なrequest_idで新しいsnapshot requestを作る。",
             "resultが既に存在するrequest_idを再利用して最新状態を得ようとしない。既存resultは不変snapshotとして扱う。",
-            "requestはあるがresultがまだ無い場合は別requestへ逃げず、同じrequest_idを追跡する。claim pendingでは request age と gate.required_action を確認し、最初の60秒は MONITOR_CLAIM_FAST_LANE としてActions run/job/step、同一workerの未解決submission・retryable repair・active claim整合を確認し、worker-router.md第7.0節の待機ミクロタスクを1件処理してから同じrequest_idを再確認する。",
+            "requestはあるがresultがまだ無い場合は別requestへ逃げず、同じrequest_idを追跡する。claim pendingでは request age と gate.required_action を確認し、最初の60秒は MONITOR_CLAIM_FAST_LANE としてActions run/job/step、同一workerの未解決submission・retryable repair・active claim整合を確認し、Library正本に沿った安全な待機・進行作業を1件処理してから同じrequest_idを再確認する。",
         ],
         "recovery": [
             "ok=false resultではfailed request/resultを上書きせず証跡として残す。",
@@ -135,7 +135,7 @@ PROFILES = {
             "出力の decision / finalization_allowed / required_action / next_action_message を確認する。",
             "required_action=CLAIM_NEXT_RESEARCH_AUDIT なら、status-only終端・最低成功件数未達・submission pendingをrun終了理由にせず、next_work_packetを最優先する。kind=research_direct_take なら通常claim resultがpendingでも別の通常claim requestを追加せず、指定take_pathをcreate-only確保して直ちに本文読解を開始する。packetが無い場合だけ最新queue/claim stateから既確保standby昇格または通常claim補充へ進む。直前attemptのdescriptorが耐久保存済みなら、旧claimがactive表示でもclaim fast laneの正規解放に任せる。",
             "Research/Auditのsubmission pendingは観測状態として保持するが、新規claim上限には使わない。--pipeline-ahead-count が渡される場合もテレメトリとして扱い、値の大小で読解を止めない。",
-            "decision=CONTINUE では required_action を最優先する。submission pendingが存在しても、required_action=CLAIM_NEXT_RESEARCH_AUDIT なら先に次の1件を処理する。required_action=MONITOR_CLAIM_FAST_LANE なら新claimを出さずActions/transport監視とworker-router.md第7.0節の待機ミクロタスクを1件行ってから同じrequest_idを再確認する。MONITOR_SUBMISSION_RESULTS は残り600秒以下の開始禁止窓でのみ、待機ミクロタスクを挟みながら既存submission resultを前景監視する。",
+            "decision=CONTINUE では required_action を最優先する。submission pendingが存在しても、required_action=CLAIM_NEXT_RESEARCH_AUDIT なら先に次の1件を処理する。required_action=MONITOR_CLAIM_FAST_LANE なら新claimを出さずActions/transport監視とLibrary正本に沿った安全な待機・進行作業を1件行ってから同じrequest_idを再確認する。MONITOR_SUBMISSION_RESULTS は残り600秒以下の開始禁止窓でのみ、待機ミクロタスクを挟みながら既存submission resultを前景監視する。",
             "decision=STOP_RUN の場合も直接終了せず、その出力値と今回runの work_mode / 成功件数またはDiscovery round数を run_finalization_gate.py に渡す。",
             "最終応答は run_finalization_gate.py が明示的に許可するまで出さない。",
         ],

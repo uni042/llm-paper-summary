@@ -240,12 +240,8 @@ class ResearchBlockedRetryPolicyTest(unittest.TestCase):
                 AT + timedelta(days=7),
             )
 
-    def test_router_keeps_flexible_primary_source_retrieval_policy(self) -> None:
-        text = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("固定された4経路を各1回だけ試して打ち切る方式は使わない", text)
-        self.assertIn("合理的に利用可能な一次資料経路を尽くしても", text)
-        self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", text)
-        self.assertNotIn("全文取得経路はワーカーの気分で増減させず", text)
+    def test_retired_worker_router_is_not_shipped_on_main(self) -> None:
+        self.assertFalse((ROOT / ".survey/docs/survey-workflow/worker-router.md").exists())
 
     def test_helper_is_manual_recovery_for_blocked_retry(self) -> None:
         workflow = (

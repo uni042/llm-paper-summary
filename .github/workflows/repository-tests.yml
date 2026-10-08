@@ -6,16 +6,12 @@ on:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
-      - '.survey/docs/survey-workflow/worker-router.md'
-      - '.survey/docs/survey-workflow/*.md'
       - '.github/workflows/*.yml'
   pull_request:
     paths:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
-      - '.survey/docs/survey-workflow/worker-router.md'
-      - '.survey/docs/survey-workflow/*.md'
       - '.github/workflows/*.yml'
       - 'papers/**/*.md'
   workflow_dispatch:

@@ -186,7 +186,7 @@ def decide(state: dict[str, Any], run_key: str) -> dict[str, Any]:
         ),
         "rule": (
             "This selector controls Discovery route order only. It does not score Candidate quality. "
-            "Candidate base/lineage/recency/venue judgement remains governed by worker-router.md."
+            "Candidate base/lineage/recency/venue judgement remains governed by Library WORKER-LIBRARY-PROCEDURES.md."
         ),
     }
 

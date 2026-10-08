@@ -12,10 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 import yaml
 
-REQUIRED_V10_PATHS = (
-    ".survey/docs/survey-workflow/worker-router.md",
-    ".survey/docs/survey-workflow/queue-v10.md",
-    ".survey/docs/survey-workflow/suggestion-box.md",
+REQUIRED_RUNTIME_PATHS = (
     ".survey/config/candidate-priority.json",
     ".survey/config/forward-citation-sweep.json",
     ".survey/scripts/candidate_priority.py",
@@ -87,9 +84,12 @@ def check(root, inventory):
     for path in expected:
         if path not in files:
             issue("missing_file", path, "Present in inventory but unavailable locally")
-    for path in REQUIRED_V10_PATHS:
+    for path in REQUIRED_RUNTIME_PATHS:
         if path not in files:
-            issue("required_v10_path_missing", path, "Required by the current workflow v10")
+            issue("required_runtime_path_missing", path, "Required by current runtime")
+    for name in files:
+        if name.startswith(".survey/docs/") or name.startswith("docs/superpowers/"):
+            issue("retired_human_guide_on_main", name, "Human-facing procedures belong in Library")
     json_objects = {}
     canonical_ids = {}
     scanned = []
@@ -208,7 +208,7 @@ def check(root, inventory):
         "checked_file_count": len(scanned),
         "missing_files": sorted(set(expected) - set(files)),
         "working_changes": sorted(n for n, p in files.items() if n not in expected or blob_hash(p) != expected[n]),
-        "checks": ["inventory_coverage", "required_v10_paths", "all_json_yaml", "markdown_file_links", "symlink_targets", "training_membership", "paper_metadata_and_identity", "maintenance_cycle"],
+        "checks": ["inventory_coverage", "required_runtime_paths", "retired_human_guides_absent", "all_json_yaml", "markdown_file_links", "symlink_targets", "training_membership", "paper_metadata_and_identity", "maintenance_cycle"],
         "not_checked": ["External URL reachability", "Fragment anchors", "Scientific validity / full paper audits", "Scheduler startup guarantees", "Runtime execution of arbitrary repository code"],
         "external_url_count": len(external),
         "findings": findings,

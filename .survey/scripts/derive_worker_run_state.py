@@ -2164,7 +2164,7 @@ def derive(root: Path, request: dict[str, Any], *, force_canonical: bool = False
             "A finalization_permit alone never authorizes paper-worker termination: stop_permit.issued=true is additionally required and is restricted to router-approved stop categories. "
             "The incremental cache is only an index; missing, corrupt, or fact-generation-stale cache state is rebuilt from canonical durable facts. "
             "Every durable run-state snapshot embeds the finalization gate result for continuation and stopping decisions. "
-            "Run-state does not suppress user-facing reports; termination reporting is governed by worker-router.md."
+            "Run-state does not suppress user-facing reports; termination reporting is governed by Library WORKER-LIBRARY-PROCEDURES.md."
         ),
     }
 

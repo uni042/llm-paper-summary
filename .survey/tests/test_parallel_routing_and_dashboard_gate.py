@@ -17,28 +17,14 @@ LEGACY_RENDER = "build_status_dashboard.py --repo-root . --output STATUS.md"
 
 
 class CommonThresholdRoutingTests(unittest.TestCase):
-    def test_canonical_router_uses_status_candidate_inventory_for_all_workers(self):
-        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
-        self.assertIn("収録候補論文数 > 600", router)
-        self.assertIn("収録候補論文数 <= 600", router)
-        self.assertIn("run中に在庫が変化してもモードは固定する", router)
-        self.assertIn("scheduled-chat-00", router)
-        self.assertIn("scheduled-chat-30", router)
-        self.assertIn("scheduled-chat-45", router)
-        self.assertIn("3-way round-robin", router)
-        self.assertIn("Researchは**1ラウンドにつき**新規完成Research Markdownを5件Libraryへ保存する", router)
-        self.assertIn("Discoveryは**1ラウンドにつき**新規canonical identity 10件を1候補ずつ確認し", router)
-        self.assertNotIn("E = G + D - R", router)
-        self.assertNotIn("candidate_inventory >= RESEARCH_DISCOVERY_THRESHOLD", router)
+    def test_human_guide_is_external_to_repository(self):
+        self.assertFalse(DOCS.exists())
 
-    def test_repository_tests_watch_single_worker_router(self):
+    def test_repository_tests_watch_scripts_not_legacy_guides(self):
         text = REPOSITORY_TESTS.read_text(encoding="utf-8")
-        self.assertGreaterEqual(text.count(".survey/docs/survey-workflow/worker-router.md"), 2)
-        self.assertNotIn(".survey/docs/survey-workflow/discovery-specialist-worker.md", text)
-        self.assertNotIn(".survey/docs/survey-workflow/candidate-buffer-policy.md", text)
+        self.assertIn(".survey/scripts/**/*.py", text)
+        self.assertNotIn(".survey/docs/survey-workflow", text)
 
-
-class StatusPublishGateTests(unittest.TestCase):
     def run_gate(self, paths, message="survey: worker update"):
         self.assertTrue(GATE.is_file(), "status_publish_gate.py must exist")
         proc = subprocess.run(

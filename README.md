@@ -6,7 +6,7 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 
 > このリポジトリの内容作成・要約・継続更新には、リポジトリ所有者の依頼に基づいてOpenAIのChatGPTを使用しています。生成AIによる整理を含むため、論文の数値・model仕様・release状態など重要な判断では、各ページに記載した一次資料も確認してください。
 
-[運用ダッシュボード](STATUS.md) ／ [ワークリスト :00](.survey/work-queue/WORKLIST-00.md) ／ [ワークリスト :30](.survey/work-queue/WORKLIST-30.md) ／ [進捗](.survey/reports/metadata-coverage-latest.json) ／ [研究の横断比較](papers/inference/comparison.md) ／ [運用手順](.survey/docs/survey-workflow/README.md) ／ [全体点検](.survey/reports/consistency-latest.json)
+[運用ダッシュボード](STATUS.md) ／ [ワークリスト :00](.survey/work-queue/WORKLIST-00.md) ／ [ワークリスト :30](.survey/work-queue/WORKLIST-30.md) ／ [進捗](.survey/reports/metadata-coverage-latest.json) ／ [研究の横断比較](papers/inference/comparison.md) ／ 運用手順：ChatGPT Libraryの`/LLM-paper-summary-library-first/` ／ [全体点検](.survey/reports/consistency-latest.json)
 
 ## リポジトリ構成
 
@@ -16,7 +16,7 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
   - [Survey / サーベイ](papers/survey/) — **14本**
 - [framework-updates/](framework-updates/) — 主要runtime / frameworkの重要機能更新
 - [llm-releases/](llm-releases/) — 主要model familyのrelease情報
-- [.survey/](.survey/) — 運用手順・状態・補助スクリプト・テスト・templateなどの管理用領域
+- [.survey/](.survey/) — 処理状態・補助スクリプト・テスト・templateなどの管理用領域（実行手順はLibraryに集約）
 
 現在の論文収録数: **1755本**（推論1716本 + 学習25本 + サーベイ14本）
 

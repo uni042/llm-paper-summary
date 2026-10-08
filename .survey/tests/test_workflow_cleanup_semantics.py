@@ -56,47 +56,10 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
         self.assertNotIn("reconcile_legacy_identity_deltas", worker)
 
-    def test_worker_router_is_single_worker_policy(self):
-        readme = (ROOT / ".survey/docs/survey-workflow/README.md").read_text(encoding="utf-8")
-        router = (ROOT / ".survey/docs/survey-workflow/worker-router.md").read_text(encoding="utf-8")
-        queue = (ROOT / ".survey/docs/survey-workflow/queue-v10.md").read_text(encoding="utf-8")
-
-        self.assertIn("唯一の人間向け正本", readme)
-        self.assertIn("手順書ではなく入力データ", readme)
-        self.assertIn("LLM論文ワーカー :00", readme)
-        self.assertIn(":30", readme)
-        self.assertIn(":45", readme)
-        self.assertIn("収録候補論文数 > 600", router)
-        self.assertIn("収録候補論文数 <= 600", router)
-        self.assertIn("Researchは**1ラウンドにつき**新規完成Research Markdownを5件Libraryへ保存する", router)
-        self.assertIn("Discoveryは**1ラウンドにつき**新規canonical identity 10件", router)
-        self.assertIn("旧direct-GitHub worker運用は履歴資料", router)
-        self.assertIn("これはワーカー実行手順ではない", queue)
-        self.assertIn("実装の所在だけ", queue)
-
-        retired_worker_surfaces = [
-            ".survey/docs/survey-workflow/always-on-worker.md",
-            ".survey/docs/survey-workflow/backlog-resilience.md",
-            ".survey/docs/survey-workflow/candidate-buffer-policy.md",
-            ".survey/docs/survey-workflow/claim-serial-policy.md",
-            ".survey/docs/survey-workflow/discovery-continuation-policy.md",
-            ".survey/docs/survey-workflow/continuation-policy.json",
-            ".survey/docs/survey-workflow/discovery-exhaustive-run-policy.md",
-            ".survey/docs/survey-workflow/discovery-search-filter.md",
-            ".survey/docs/survey-workflow/discovery-search-loop.md",
-            ".survey/docs/survey-workflow/discovery-specialist-worker.md",
-            ".survey/docs/survey-workflow/fallback-routing.md",
-            ".survey/docs/survey-workflow/run-liveness-policy.md",
-            ".github/workflows/manual-library-recovery.yml",
-            ".github/workflows/manual-serverlesslora-library-recovery.yml",
-            ".github/workflows/library-fallback-bundle-replay.yml",
-            "docs/superpowers/plans/2026-09-14-parallel-submission-batch.md",
-            "docs/superpowers/plans/2026-09-15-fallback-recovery-loop.md",
-            "docs/superpowers/plans/2026-09-17-claim-fast-wait.md",
-        ]
-        for rel in retired_worker_surfaces:
-            with self.subTest(path=rel):
-                self.assertFalse((ROOT / rel).exists(), rel)
+    def test_human_guides_are_absent_from_main(self):
+        self.assertFalse((ROOT / ".survey/docs/survey-workflow").exists())
+        self.assertFalse((ROOT / "docs/superpowers").exists())
+        self.assertNotIn("](.survey/docs/survey-workflow/", (ROOT / "README.md").read_text(encoding="utf-8"))
 
     def test_retired_compatibility_and_one_shot_repair_files_are_absent(self):
         retired = [

@@ -29,24 +29,10 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Verify worker router preflight contract
-        shell: bash
+      - name: Verify retired GitHub procedure files remain absent
         run: |
-          set -euo pipefail
-          python - <<'PY'
-          from pathlib import Path
-          text = Path('.survey/docs/survey-workflow/worker-router.md').read_text(encoding='utf-8')
-          required = (
-              '.survey/work-queue/research-preflight/requests/<request_id>.json',
-              'preflight_passed=false',
-              'preflight_result',
-              'exact blob fingerprint',
-              'completed-submission-failures',
-          )
-          missing = [item for item in required if item not in text]
-          if missing:
-              raise SystemExit('worker-router preflight contract missing: ' + ', '.join(missing))
-          PY
+          test ! -e .survey/docs/survey-workflow/worker-router.md
+          test ! -e docs/superpowers/plans/2026-09-27-candidate-id-intake-and-upload.md
 
       - name: Recover legacy completed requests without queue-wide blocking
         shell: bash
