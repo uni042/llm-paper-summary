@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T23:27:25+00:00",
-  "record_count": 11221,
+  "updated_at": "2026-10-08T23:47:37+00:00",
+  "record_count": 11223,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160313,6 +160313,32 @@
         "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
       ],
       "title": "Accelerating Error Correction Code Transformers"
+    },
+    "arXiv:2412.16112": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.16112",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.16112",
+        "arXiv:2412.16112"
+      ],
+      "reason": "The abstract applies linearized attention to image-generation diffusion Transformers; the independent image-generation application has no direct LLM inference connection.",
+      "first_checked_at": "2026-10-08T23:47:37+00:00",
+      "last_checked_at": "2026-10-08T23:47:37+00:00",
+      "linked_from": [],
+      "title": "CLEAR: Conv-Like Linearization Revs Pre-Trained Diffusion Transformers Up"
+    },
+    "arXiv:2411.01537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01537",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2411.01537",
+        "arXiv:2411.01537"
+      ],
+      "reason": "The abstract applies linear attention to sequential recommender systems; this is a separate recommendation application with no direct LLM inference/system connection.",
+      "first_checked_at": "2026-10-08T23:47:37+00:00",
+      "last_checked_at": "2026-10-08T23:47:37+00:00",
+      "linked_from": [],
+      "title": "LinRec: Linear Attention Mechanism for Long-term Sequential Recommender Systems"
     }
   }
 }

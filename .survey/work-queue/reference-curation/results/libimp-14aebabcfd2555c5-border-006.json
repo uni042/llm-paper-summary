@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-14aebabcfd2555c5-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.21896",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.21896",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.21896",
+      "arXiv:2601.21896"
+    ],
+    "reason": "The abstract proposes a KV-cache policy for autoregressive video diffusion inference, but application is video-generation rather than LLM; retain as a neighboring cache-management method with limited transfer evidence.",
+    "first_checked_at": "2026-10-08T23:47:37+00:00",
+    "last_checked_at": "2026-10-08T23:47:37+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Past- and Future-Informed KV Cache Policy with Salience Estimation in Autoregressive Video Diffusion"
+  },
+  "processed_at": "2026-10-08T23:47:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-14aebabcfd25",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

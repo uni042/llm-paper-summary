@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T23:07:48+00:00",
-  "record_count": 4510,
+  "updated_at": "2026-10-08T23:47:37+00:00",
+  "record_count": 4514,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68779,6 +68779,61 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PERK: Long-Context Reasoning as Test-Time Learning"
+    },
+    "DOI:10.1109/tnse.2026.3704855": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnse.2026.3704855",
+      "identity_tokens": [
+        "DOI:10.1109/tnse.2026.3704855"
+      ],
+      "reason": "The worklist provides a stable IEEE DOI and title, but primary abstract retrieval failed. No abstract-based relevance claim is made.",
+      "first_checked_at": "2026-10-08T23:47:36+00:00",
+      "last_checked_at": "2026-10-08T23:47:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Power-Aware Orchestration for Geo-Distributed LLM Inference via Quantum Optimization"
+    },
+    "arXiv:2601.13228": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.13228",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.13228",
+        "arXiv:2601.13228"
+      ],
+      "reason": "The abstract introduces any-order autoregressive generation with two-stream attention, but does not establish an inference-efficiency or systems-performance gain; retain as a generation architecture with a limited efficiency connection.",
+      "first_checked_at": "2026-10-08T23:47:36+00:00",
+      "last_checked_at": "2026-10-08T23:47:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Autoregressive Models Rival Diffusion Models at ANY-ORDER Generation"
+    },
+    "arXiv:2402.03009": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.03009",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.03009",
+        "arXiv:2402.03009"
+      ],
+      "reason": "The abstract concerns long-context LLM memory and introduces a unified memory view, but the evidence retrieved does not establish a concrete inference-efficiency benefit.",
+      "first_checked_at": "2026-10-08T23:47:37+00:00",
+      "last_checked_at": "2026-10-08T23:47:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "UniMem: Towards a Unified View of Long-Context Large Language Models"
+    },
+    "arXiv:2601.21896": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21896",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.21896",
+        "arXiv:2601.21896"
+      ],
+      "reason": "The abstract proposes a KV-cache policy for autoregressive video diffusion inference, but application is video-generation rather than LLM; retain as a neighboring cache-management method with limited transfer evidence.",
+      "first_checked_at": "2026-10-08T23:47:37+00:00",
+      "last_checked_at": "2026-10-08T23:47:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Past- and Future-Informed KV Cache Policy with Salience Estimation in Autoregressive Video Diffusion"
     }
   }
 }
