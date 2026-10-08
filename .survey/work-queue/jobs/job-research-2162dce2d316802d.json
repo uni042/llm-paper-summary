@@ -35,10 +35,15 @@
   "selection_reason": "長文脈VLM向けMulti-Modal Sequence Parallelismをtrainingとinferenceの双方へ適用し、modalityの不均衡と通信topologyを考慮して長動画処理を分散並列化するfull-stack system。2M contextを扱い、ring-style sequence parallelism比2.1–5.7倍、Megatronのhybrid context/tensor parallelism比1.1–1.4倍の高速化を報告し、長文脈推論systemにも直接適用するため対象内。",
   "semantic_scholar_id": "3f03876b23b491bdc161816024044e13b02b46e5",
   "source_url": "https://arxiv.org/abs/2408.10188",
-  "status": "ready",
+  "status": "superseded",
   "title": "LongVILA: Scaling Long-Context Visual Language Models for Long Videos",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-08T13:38:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+  "represented_canonical_id": "arXiv:2408.10188",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

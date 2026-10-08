@@ -93,6 +93,8 @@ quality_method_chars: 2190
 quality_eval_chars: 1661
 quality_evaluation_chars: 1661
 quality_limitation_chars: 580
+last_audited: null
+audit_version: 0
 ---
 
 # Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence
