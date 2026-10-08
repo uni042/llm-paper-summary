@@ -34,7 +34,6 @@ publication_status: published
 code: https://github.com/microsoft/sarathi-serve/tree/niyama_asplos2026
 implementation: ASPLOS 2026 artifactとしてSarathi-Serveのniyama_asplos2026ブランチが公開されている。
 implementation_status: official-code-available
-last_audited: '2026-09-28'
 audit_version: 1
 references:
 - canonical_id: DOI:10.1145/2465351.2465355
