@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T06:46:06+00:00",
-  "record_count": 4475,
+  "updated_at": "2026-10-08T07:08:09+00:00",
+  "record_count": 4482,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68292,6 +68292,111 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Edge-Guided Multiscale Feature Fusion Network for Infrared Small Target Detection"
+    },
+    "DOI:10.1145/3769102.3774639": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3769102.3774639",
+      "identity_tokens": [
+        "DOI:10.1145/3769102.3774639"
+      ],
+      "reason": "関連系統に量子化/edge LLMがあり、一次要旨も圧縮Mistralを車載Jetsonで評価するため本文確認が必要だった。",
+      "first_checked_at": "2026-10-08T07:07:56+00:00",
+      "last_checked_at": "2026-10-08T07:07:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge-Deployable LLMs for Autonomous Vehicle Intelligence"
+    },
+    "DOI:10.1145/3830085": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830085",
+      "identity_tokens": [
+        "DOI:10.1145/3830085"
+      ],
+      "reason": "一次要旨はLLM code completionの第三者library API compatibilityの検出と修復を扱う。serving効率改善への関係は要旨上弱いが、linked lineageがあり、契約上本文を確認してから確定する必要がある。",
+      "first_checked_at": "2026-10-08T07:08:03+00:00",
+      "last_checked_at": "2026-10-08T07:08:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating Incompatible Third-party Library API Usage in LLM-based Code Completion"
+    },
+    "DOI:10.1016/j.measurement.2026.122455": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.measurement.2026.122455",
+      "identity_tokens": [
+        "DOI:10.1016/j.measurement.2026.122455"
+      ],
+      "reason": "出版社の一次要旨は混合ガス測定にselective state-space/Mambaを用い、センサー応答の最初の8秒だけで定量を行う。信号処理モデルでありLLMとの直接関係は薄いが、linked SSM lineageがあるため全文を確認する必要がある。",
+      "first_checked_at": "2026-10-08T07:08:04+00:00",
+      "last_checked_at": "2026-10-08T07:08:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast quantification of mixed gas based on sensor dynamic response with small datasets"
+    },
+    "DOI:10.1109/tcsvt.2026.3668110": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3668110",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3668110"
+      ],
+      "reason": "タイトルと公開一次metadataからはonline video frame interpolationにおける冗長処理削減が示唆され、SSM/recurrent lineageとの接点もある。画像ストリーム専用技術の可能性が高いが、本文取得なしに適用可能性を確定しない。",
+      "first_checked_at": "2026-10-08T07:08:04+00:00",
+      "last_checked_at": "2026-10-08T07:08:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "IMEVSI: Online Adaptive Video Stream Interpolation via Inertia-Aware Motion Estimation"
+    },
+    "DOI:10.1109/tfuzz.2026.3659832": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tfuzz.2026.3659832",
+      "identity_tokens": [
+        "DOI:10.1109/tfuzz.2026.3659832"
+      ],
+      "reason": "入力の一次要旨は医療画像translation向けdiffusion transformer/FMoE/EASPであり、LLM servingとは異なるタスクを示す。FlashAttention/attention lineageがあるので本文確認が必要だが取得できず、断定的な除外を避ける。",
+      "first_checked_at": "2026-10-08T07:08:05+00:00",
+      "last_checked_at": "2026-10-08T07:08:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "General Diffusion Transformer for Arbitrary Medical Image Translation"
+    },
+    "DOI:10.1109/cscwd68734.2026.11582639": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cscwd68734.2026.11582639",
+      "identity_tokens": [
+        "DOI:10.1109/cscwd68734.2026.11582639"
+      ],
+      "reason": "一次出版社要旨はLLMをAndroid malware classifier/explanation engineとして用いるstatic detection frameworkである。効率改善には見えにくいが、attention-kernel lineageが明示されているため本文確認が必要。",
+      "first_checked_at": "2026-10-08T07:08:08+00:00",
+      "last_checked_at": "2026-10-08T07:08:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AndroSem: Semantics-Guided, LLM-based Interpretable Static Android Malware Detection"
+    },
+    "DOI:10.1109/icassp55912.2026.11463298": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463298",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463298"
+      ],
+      "reason": "出版社/会議の記録でunderwater object detection題名が確認でき、FlashAttention系統の候補として本文確認を試みた。視覚物体検出と推測されるが一次本文を未取得のまま対象外と確定しない。",
+      "first_checked_at": "2026-10-08T07:08:09+00:00",
+      "last_checked_at": "2026-10-08T07:08:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OGRA-YOLOv8: Overlapping Gridded and Rhombus Attention for Underwater Object Detection"
     }
   }
 }

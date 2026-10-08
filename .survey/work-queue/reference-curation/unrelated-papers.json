@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T06:46:15+00:00",
-  "record_count": 11020,
+  "updated_at": "2026-10-08T07:08:17+00:00",
+  "record_count": 11072,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -157502,6 +157502,738 @@
         "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
       ],
       "title": "Fundus-R1: Training a Fundus-Reading MLLM with Knowledge-Aware Reasoning on Public Data"
+    },
+    "arXiv:2601.12083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.12083",
+      "identity_tokens": [
+        "arXiv:2601.12083"
+      ],
+      "reason": "本文は普遍的な時系列foundation modelの因子分解/適応である。パラメータや推論速度の比較は時系列予測モデルについてで、LLM推論やservingへの直接的な改善ではない。",
+      "first_checked_at": "2026-10-08T07:07:57+00:00",
+      "last_checked_at": "2026-10-08T07:07:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Learning to Factorize and Adapt: A Versatile Approach Toward Universal Spatio-Temporal Foundation Models"
+    },
+    "arXiv:2601.08225": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08225",
+      "identity_tokens": [
+        "arXiv:2601.08225"
+      ],
+      "reason": "本文はmulti-turn tool-use対話用のデータ/学習生成とbenchmark評価であり、serving・推論資源削減技術ではない。",
+      "first_checked_at": "2026-10-08T07:07:57+00:00",
+      "last_checked_at": "2026-10-08T07:07:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "User-Oriented Multi-Turn Dialogue Generation with Tool Use at scale"
+    },
+    "arXiv:2601.04098": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04098",
+      "identity_tokens": [
+        "arXiv:2601.04098"
+      ],
+      "reason": "全文はshort-context LMのlayer-wise attribution/positional-bias診断で、長文context拡張の計算量が限界として述べられるだけで推論最適化を提案しない。",
+      "first_checked_at": "2026-10-08T07:07:57+00:00",
+      "last_checked_at": "2026-10-08T07:07:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Layer-wise Positional Bias in Short-Context Language Modeling"
+    },
+    "arXiv:2607.26160": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26160",
+      "identity_tokens": [
+        "arXiv:2607.26160"
+      ],
+      "reason": "本文は臨床ガイドラインを実行可能スキルとして外部実行するagent frameworkである。正確性・診断性能の評価であり、LLM inference compute/memory/servingの最適化ではない。",
+      "first_checked_at": "2026-10-08T07:07:58+00:00",
+      "last_checked_at": "2026-10-08T07:07:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "GuideSkill: Evolving Executable LLM Agent Skills for Guideline-Grounded Clinical Reasoning"
+    },
+    "DOI:10.1016/j.knosys.2026.115716": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115716",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115716"
+      ],
+      "reason": "出版社の一次要旨は拡散過程中のattention consistencyを用いた多変量時系列異常検出で、LLMの自己回帰推論・推論時資源最適化を対象としていない。",
+      "first_checked_at": "2026-10-08T07:07:58+00:00",
+      "last_checked_at": "2026-10-08T07:07:58+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Diffusion-step attention consistency for multivariate time series anomaly detection"
+    },
+    "DOI:10.1016/j.neucom.2025.132560": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.132560",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.132560"
+      ],
+      "reason": "出版社の一次資料は知識ハイパーグラフ補完のmemory-transformer表現学習である。LLM推論モデルのserving・推論時コスト改善ではない。",
+      "first_checked_at": "2026-10-08T07:07:58+00:00",
+      "last_checked_at": "2026-10-08T07:07:58+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "HMTE: Memory-transformer representation learning for knowledge hypergraph completion"
+    },
+    "DOI:10.1016/j.patcog.2026.113462": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patcog.2026.113462",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2026.113462"
+      ],
+      "reason": "出版社の一次要旨はhyperspectral image fusion super-resolution向けのspatial-spectral sparse Mamba networkであり、画像処理モデルの計算量を扱う。LLM推論やLLM servingへの直接改善ではない。",
+      "first_checked_at": "2026-10-08T07:07:59+00:00",
+      "last_checked_at": "2026-10-08T07:07:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "SSSMN: Spatial-spectral sparse Mamba network for efficient hyperspectral fusion super-resolution"
+    },
+    "DOI:10.1016/j.rse.2025.115214": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.rse.2025.115214",
+      "identity_tokens": [
+        "DOI:10.1016/j.rse.2025.115214"
+      ],
+      "reason": "出版社の一次要旨は衛星画像のmulti-source fusionモデルである。地球観測画像処理で、LLM推論コスト・servingの改善対象ではない。",
+      "first_checked_at": "2026-10-08T07:07:59+00:00",
+      "last_checked_at": "2026-10-08T07:07:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Spatial-X fusion for multi-source satellite imageries"
+    },
+    "DOI:10.1109/jstsp.2026.3657243": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jstsp.2026.3657243",
+      "identity_tokens": [
+        "DOI:10.1109/jstsp.2026.3657243"
+      ],
+      "reason": "一次要旨はhyperspectral image classification用Mambaの線形計算量と小さいFLOPsを評価する。これは画像分類モデルの効率であって、LLMの推論・serving方法ではない。",
+      "first_checked_at": "2026-10-08T07:07:59+00:00",
+      "last_checked_at": "2026-10-08T07:07:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "OmniMamba: Omnidirectional Scanning Meets State Space Models for Efficient Hyperspectral Image Classification"
+    },
+    "arXiv:2604.17284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17284",
+      "identity_tokens": [
+        "arXiv:2604.17284"
+      ],
+      "reason": "一次資料の要旨はGUIエージェントの幻覚評価・軽量な継続post-trainingによる行動信頼性を扱う。推論時のLLM compute/memory/latency/throughputやserving手法は提案対象ではない。",
+      "first_checked_at": "2026-10-08T07:08:00+00:00",
+      "last_checked_at": "2026-10-08T07:08:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "HalluClear: Diagnosing, Evaluating and Mitigating Hallucinations in GUI Agents"
+    },
+    "arXiv:2604.03472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03472",
+      "identity_tokens": [
+        "arXiv:2604.03472"
+      ],
+      "reason": "一次資料の要旨に記載されたlogit maskingはproposerのpolicy training/curriculum generationで使う学習介入で、推論時のコストやservingを改善する手法ではない。",
+      "first_checked_at": "2026-10-08T07:08:00+00:00",
+      "last_checked_at": "2026-10-08T07:08:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Vocabulary Dropout for Curriculum Diversity in LLM Co-Evolution"
+    },
+    "arXiv:2603.27977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.27977",
+      "identity_tokens": [
+        "arXiv:2603.27977"
+      ],
+      "reason": "一次資料は推論軌跡の構造を報酬化するRL学習方法を検討している。推論時の実行資源を削減する主張・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:01+00:00",
+      "last_checked_at": "2026-10-08T07:08:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "SARL: Label-Free Reinforcement Learning by Rewarding Reasoning Topology"
+    },
+    "arXiv:2603.18363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18363",
+      "identity_tokens": [
+        "arXiv:2603.18363"
+      ],
+      "reason": "一次資料の対象はLLMのunsupervised fine-tuning/RLIFである。length biasを学習目的で扱うが、配備時の生成速度やメモリを改善する方法ではない。",
+      "first_checked_at": "2026-10-08T07:08:01+00:00",
+      "last_checked_at": "2026-10-08T07:08:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "PowerFlow: Unlocking the Dual Nature of LLMs via Principled Distribution Matching"
+    },
+    "arXiv:2603.06720": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06720",
+      "identity_tokens": [
+        "arXiv:2603.06720"
+      ],
+      "reason": "一次資料は合成EHR患者軌跡の生成と臨床監査を扱い、LLMは監査用途で使われる。LLM推論効率・servingの手法ではない。",
+      "first_checked_at": "2026-10-08T07:08:01+00:00",
+      "last_checked_at": "2026-10-08T07:08:01+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "From Statistical Fidelity to Clinical Consistency: Scalable Generation and Auditing of Synthetic Patient Trajectories"
+    },
+    "arXiv:2604.18574": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18574",
+      "identity_tokens": [
+        "arXiv:2604.18574"
+      ],
+      "reason": "一次資料の主対象は「When Can LLMs Learn to Reason with Weak Supervision?」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:02+00:00",
+      "last_checked_at": "2026-10-08T07:08:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "When Can LLMs Learn to Reason with Weak Supervision?"
+    },
+    "arXiv:2604.17456": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17456",
+      "identity_tokens": [
+        "arXiv:2604.17456"
+      ],
+      "reason": "一次資料の主対象は「TrafficClaw: A Generalizable LLM Agent in the Unified Physical Environment for Urban Traffic Control」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:02+00:00",
+      "last_checked_at": "2026-10-08T07:08:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "TrafficClaw: A Generalizable LLM Agent in the Unified Physical Environment for Urban Traffic Control"
+    },
+    "arXiv:2604.16893": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16893",
+      "identity_tokens": [
+        "arXiv:2604.16893"
+      ],
+      "reason": "一次資料の主対象は「EasyVideoR1: Easier RL for Video Understanding」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:02+00:00",
+      "last_checked_at": "2026-10-08T07:08:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "EasyVideoR1: Easier RL for Video Understanding"
+    },
+    "arXiv:2604.14051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14051",
+      "identity_tokens": [
+        "arXiv:2604.14051"
+      ],
+      "reason": "一次資料の主対象は「Enhancing Local Life Service Recommendation with Agentic Reasoning in Large Language Model」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:03+00:00",
+      "last_checked_at": "2026-10-08T07:08:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Enhancing Local Life Service Recommendation with Agentic Reasoning in Large Language Model"
+    },
+    "arXiv:2604.11297": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11297",
+      "identity_tokens": [
+        "arXiv:2604.11297"
+      ],
+      "reason": "一次資料の主対象は「The Past Is Not Past: Memory-Enhanced Dynamic Reward Shaping」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:03+00:00",
+      "last_checked_at": "2026-10-08T07:08:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "The Past Is Not Past: Memory-Enhanced Dynamic Reward Shaping"
+    },
+    "arXiv:2607.21019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21019",
+      "identity_tokens": [
+        "arXiv:2607.21019"
+      ],
+      "reason": "全文はウェアラブル健康データを扱うself-hosted agent platformとreal-time trigger integrationである。ローカルモデルを配置することは示すが、LLM本体の推論コストを減らす技法ではない。",
+      "first_checked_at": "2026-10-08T07:08:04+00:00",
+      "last_checked_at": "2026-10-08T07:08:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "HiMe: Real-Time Self-Hosted Personal Agent Platform for Health Insights with Wearable Devices"
+    },
+    "arXiv:2607.19865": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19865",
+      "identity_tokens": [
+        "arXiv:2607.19865"
+      ],
+      "reason": "本文はdocument-operation agentのbenchmarkで、skill/token costを評価する項目はあるが、測定可能なLLM推論最適化方法を提案する論文ではない。",
+      "first_checked_at": "2026-10-08T07:08:05+00:00",
+      "last_checked_at": "2026-10-08T07:08:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations"
+    },
+    "arXiv:2604.26326": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.26326",
+      "identity_tokens": [
+        "arXiv:2604.26326"
+      ],
+      "reason": "一次要旨のEntrocraftはadvantage distributionを調整するLLM reinforcement-learning training方法である。学習持続性と性能を改善するが、推論時のコスト・memory・servingを対象としない。",
+      "first_checked_at": "2026-10-08T07:08:05+00:00",
+      "last_checked_at": "2026-10-08T07:08:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Addressing Performance Saturation for LLM RL via Precise Entropy Curve Control"
+    },
+    "arXiv:2604.20146": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20146",
+      "identity_tokens": [
+        "arXiv:2604.20146"
+      ],
+      "reason": "一次要旨はmultimodal named entity recognition用のagentic search、SFTおよびRL学習を提案する。推論時serving効率の改善ではない。",
+      "first_checked_at": "2026-10-08T07:08:06+00:00",
+      "last_checked_at": "2026-10-08T07:08:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "SAKE: Self-aware Knowledge Exploitation-Exploration for Grounded Multimodal Named Entity Recognition"
+    },
+    "arXiv:2604.18027": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18027",
+      "identity_tokens": [
+        "arXiv:2604.18027"
+      ],
+      "reason": "一次要旨はPython中間表現とrewardを用いたLLM transpilationのRL trainingである。学習後性能の改善を示すが、推論時の資源・serving手法ではない。",
+      "first_checked_at": "2026-10-08T07:08:06+00:00",
+      "last_checked_at": "2026-10-08T07:08:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "CodePivot: Bootstrapping Multilingual Transpilation in LLMs via Reinforcement Learning without Parallel Corpora"
+    },
+    "arXiv:2602.14498": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14498",
+      "identity_tokens": [
+        "arXiv:2602.14498"
+      ],
+      "reason": "全文は医療画像segmentationのためのvision-language fusionであり、text encoderとvisual attentionを含むが、一般LLM推論最適化やserving手法は扱わない。",
+      "first_checked_at": "2026-10-08T07:08:07+00:00",
+      "last_checked_at": "2026-10-08T07:08:07+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Uncertainty-Aware Vision-Language Segmentation for Medical Imaging"
+    },
+    "DOI:10.1109/jiot.2025.3637176": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2025.3637176",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2025.3637176"
+      ],
+      "reason": "一次要旨はIoT医療画像のMambaベースsegmentationを扱う。資源制約端末という適用先でも、LLM推論やLLM servingに対する改善ではない。",
+      "first_checked_at": "2026-10-08T07:08:07+00:00",
+      "last_checked_at": "2026-10-08T07:08:07+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Residual Mamba-Driven Multiscale Attentive Network With Boundary Enhancement for IoT-Enabled Medical Image Segmentation"
+    },
+    "arXiv:2602.10956": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10956",
+      "identity_tokens": [
+        "arXiv:2602.10956"
+      ],
+      "reason": "全文の理論・実験対象は時系列attentionを持つspatio-temporal予測モデルのdiagonal sinkである。因果LLMのattention sinkへの転用可能性はあるが、本文でLLMや言語生成・servingを評価していないため、直接の既存LLM系統としては対象外。",
+      "first_checked_at": "2026-10-08T07:08:08+00:00",
+      "last_checked_at": "2026-10-08T07:08:08+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Stochastic Parroting in Temporal Attention - Regulating the Diagonal Sink"
+    },
+    "arXiv:2602.10978": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10978",
+      "identity_tokens": [
+        "arXiv:2602.10978"
+      ],
+      "reason": "一次要旨のVFGS-Netは網膜血管のtopology-preserving segmentation向けである。視覚タスクのモデル効率でありLLM推論ではない。",
+      "first_checked_at": "2026-10-08T07:08:08+00:00",
+      "last_checked_at": "2026-10-08T07:08:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "VFGS-Net: Frequency-Guided State-Space Learning for Topology-Preserving Retinal Vessel Segmentation"
+    },
+    "arXiv:2602.09081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09081",
+      "identity_tokens": [
+        "arXiv:2602.09081"
+      ],
+      "reason": "一次要旨は多変量時系列forecasting向けにMambaへ分解モジュールを組み込む。対象は時系列予測で、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-08T07:08:08+00:00",
+      "last_checked_at": "2026-10-08T07:08:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "DMamba: Decomposition-enhanced Mamba for Time Series Forecasting"
+    },
+    "DOI:10.3390/a19070532": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/a19070532",
+      "identity_tokens": [
+        "DOI:10.3390/a19070532"
+      ],
+      "reason": "出版社MDPIの全文method/results/conclusionは通信信号のmodulation recognitionに特化し、Mamba branchの計算量を削減する。LLM token decoding、KV cache、servingは対象外。",
+      "first_checked_at": "2026-10-08T07:08:09+00:00",
+      "last_checked_at": "2026-10-08T07:08:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "LM-GDMAF: A Lightweight Mamba Multimodal Fusion Algorithm for Small-Sample Modulation Recognition"
+    },
+    "DOI:10.3390/jcm15145508": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/jcm15145508",
+      "identity_tokens": [
+        "DOI:10.3390/jcm15145508"
+      ],
+      "reason": "出版社MDPIの本文は脳腫瘍segmentationのtraining augmentationを提案し、結論でaugmentationは推論時costを追加せずdeployed networkを変えないと明記する。LLM推論改善ではない。",
+      "first_checked_at": "2026-10-08T07:08:09+00:00",
+      "last_checked_at": "2026-10-08T07:08:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Region-Wise Bézier Intensity Augmentation for Domain-Generalized Brain Tumor Segmentation with a Mamba U-Net"
+    },
+    "DOI:10.1145/3785353.3815086": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3785353.3815086",
+      "identity_tokens": [
+        "DOI:10.1145/3785353.3815086"
+      ],
+      "reason": "一次要旨は複合攻撃下でのLLM black-box fingerprinting/identity authenticationの頑健性を評価する。モデル識別とセキュリティであり、LLM推論資源やservingの改善ではない。",
+      "first_checked_at": "2026-10-08T07:08:10+00:00",
+      "last_checked_at": "2026-10-08T07:08:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md"
+      ],
+      "title": "Robust Black-Box Fingerprinting for Large Language Models Against Composite Attacks via LLM Self-Evaluation and ArcFace"
+    },
+    "arXiv:2604.11742": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11742",
+      "identity_tokens": [
+        "arXiv:2604.11742"
+      ],
+      "reason": "一次資料の主対象は「Discourse Diversity in Multi-Turn Empathic Dialogue」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:10+00:00",
+      "last_checked_at": "2026-10-08T07:08:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Discourse Diversity in Multi-Turn Empathic Dialogue"
+    },
+    "DOI:10.1145/3774904.3792662": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774904.3792662",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792662"
+      ],
+      "reason": "一次資料の主対象は「Incentivizing Agentic Reasoning Capability with Outcome Supervision for Knowledge Base Question Answering」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:11+00:00",
+      "last_checked_at": "2026-10-08T07:08:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Incentivizing Agentic Reasoning Capability with Outcome Supervision for Knowledge Base Question Answering"
+    },
+    "arXiv:2604.08990": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08990",
+      "identity_tokens": [
+        "arXiv:2604.08990"
+      ],
+      "reason": "一次資料の主対象は「ActFER: Agentic Facial Expression Recognition via Active Tool-Augmented Visual Reasoning」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:11+00:00",
+      "last_checked_at": "2026-10-08T07:08:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "ActFER: Agentic Facial Expression Recognition via Active Tool-Augmented Visual Reasoning"
+    },
+    "arXiv:2604.08209": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08209",
+      "identity_tokens": [
+        "arXiv:2604.08209"
+      ],
+      "reason": "一次資料の主対象は「OmniJigsaw: Enhancing Omni-Modal Reasoning via Modality-Orchestrated Reordering」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:11+00:00",
+      "last_checked_at": "2026-10-08T07:08:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "OmniJigsaw: Enhancing Omni-Modal Reasoning via Modality-Orchestrated Reordering"
+    },
+    "arXiv:2604.08454": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08454",
+      "identity_tokens": [
+        "arXiv:2604.08454"
+      ],
+      "reason": "一次資料の主対象は「Less Data Approximates More: Earning Faithful Confidence in High-Stakes Domains」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:12+00:00",
+      "last_checked_at": "2026-10-08T07:08:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Less Data Approximates More: Earning Faithful Confidence in High-Stakes Domains"
+    },
+    "arXiv:2604.08801": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08801",
+      "identity_tokens": [
+        "arXiv:2604.08801"
+      ],
+      "reason": "一次資料の主対象は「p1: Better Prompt Optimization with Fewer Prompts」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:12+00:00",
+      "last_checked_at": "2026-10-08T07:08:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "p1: Better Prompt Optimization with Fewer Prompts"
+    },
+    "arXiv:2604.04894": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04894",
+      "identity_tokens": [
+        "arXiv:2604.04894"
+      ],
+      "reason": "一次資料の主対象は「Asymmetric Advantage Modulation Calibrates Entropy Dynamics in RLVR」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:12+00:00",
+      "last_checked_at": "2026-10-08T07:08:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Asymmetric Advantage Modulation Calibrates Entropy Dynamics in RLVR"
+    },
+    "arXiv:2604.01799": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01799",
+      "identity_tokens": [
+        "arXiv:2604.01799"
+      ],
+      "reason": "一次資料の主対象は「TestDecision: Sequential Test Suite Generation via Greedy Optimization and Reinforcement Learning」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:13+00:00",
+      "last_checked_at": "2026-10-08T07:08:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "TestDecision: Sequential Test Suite Generation via Greedy Optimization and Reinforcement Learning"
+    },
+    "arXiv:2604.00790": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00790",
+      "identity_tokens": [
+        "arXiv:2604.00790"
+      ],
+      "reason": "一次資料の主対象は「RefineRL: Advancing Competitive Programming with Self-Refinement Reinforcement Learning」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:13+00:00",
+      "last_checked_at": "2026-10-08T07:08:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "RefineRL: Advancing Competitive Programming with Self-Refinement Reinforcement Learning"
+    },
+    "arXiv:2603.29957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.29957",
+      "identity_tokens": [
+        "arXiv:2603.29957"
+      ],
+      "reason": "一次資料の主対象は「Think Anywhere in Code Generation」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:13+00:00",
+      "last_checked_at": "2026-10-08T07:08:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Think Anywhere in Code Generation"
+    },
+    "arXiv:2603.27375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.27375",
+      "identity_tokens": [
+        "arXiv:2603.27375"
+      ],
+      "reason": "一次資料の主対象は「Bridging Visual Representation and Reinforcement Learning from Verifiable Rewards in Large Vision-Language Models」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:14+00:00",
+      "last_checked_at": "2026-10-08T07:08:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+      ],
+      "title": "Bridging Visual Representation and Reinforcement Learning from Verifiable Rewards in Large Vision-Language Models"
+    },
+    "arXiv:2603.25118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25118",
+      "identity_tokens": [
+        "arXiv:2603.25118"
+      ],
+      "reason": "一次資料の主対象は「AnyDoc: Enhancing Document Generation via Large-Scale HTML/CSS Data Synthesis and Height-Aware Reinforcement Optimization」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:14+00:00",
+      "last_checked_at": "2026-10-08T07:08:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "AnyDoc: Enhancing Document Generation via Large-Scale HTML/CSS Data Synthesis and Height-Aware Reinforcement Optimization"
+    },
+    "arXiv:2603.25405": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25405",
+      "identity_tokens": [
+        "arXiv:2603.25405"
+      ],
+      "reason": "一次資料の主対象は「System Design for Maintaining Internal State Consistency in Long-Horizon Robotic Tabletop Games」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:14+00:00",
+      "last_checked_at": "2026-10-08T07:08:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "System Design for Maintaining Internal State Consistency in Long-Horizon Robotic Tabletop Games"
+    },
+    "arXiv:2603.24709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24709",
+      "identity_tokens": [
+        "arXiv:2603.24709"
+      ],
+      "reason": "一次資料の主対象は「Training LLMs for Multi-Step Tool Orchestration with Constrained Data Synthesis and Graduated Rewards」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:15+00:00",
+      "last_checked_at": "2026-10-08T07:08:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Training LLMs for Multi-Step Tool Orchestration with Constrained Data Synthesis and Graduated Rewards"
+    },
+    "arXiv:2603.21719": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21719",
+      "identity_tokens": [
+        "arXiv:2603.21719"
+      ],
+      "reason": "一次資料の主対象は「Probing How Scalable Table Data Enhances General Long-Context Reasoning」であり、報告される成果はその固有タスク/モデルに関する。LLM推論時のcompute、memory、latency、throughput、KV cache、quantization、offloadまたはservingを直接改善する方法・測定ではない。",
+      "first_checked_at": "2026-10-08T07:08:15+00:00",
+      "last_checked_at": "2026-10-08T07:08:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Probing How Scalable Table Data Enhances General Long-Context Reasoning"
+    },
+    "DOI:10.1109/lra.2025.3643327": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/lra.2025.3643327",
+      "identity_tokens": [
+        "DOI:10.1109/lra.2025.3643327"
+      ],
+      "reason": "一次要旨は視覚・慣性センサ融合によるvisual-inertial odometryである。ロボット状態推定でありLLM inference optimizationではない。",
+      "first_checked_at": "2026-10-08T07:08:15+00:00",
+      "last_checked_at": "2026-10-08T07:08:15+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "SS-VIO: A Novel Cross Modal State Space Visual Inertial Odometry"
+    },
+    "arXiv:2601.19019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19019",
+      "identity_tokens": [
+        "arXiv:2601.19019"
+      ],
+      "reason": "一次要旨および題名は感覚皮質ダイナミクスを再帰ネットワークで埋め込む理論研究である。LLM推論やservingの対象ではない。",
+      "first_checked_at": "2026-10-08T07:08:16+00:00",
+      "last_checked_at": "2026-10-08T07:08:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Embedding of low-dimensional sensory dynamics in recurrent networks: Implications for the geometry of neural representation"
+    },
+    "arXiv:2601.16603": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.16603",
+      "identity_tokens": [
+        "arXiv:2601.16603"
+      ],
+      "reason": "全文の手法・実験はMamba系を用いた音声信号分離であり、音源分離精度とその計算構成を対象とする。LLM autoregressive inferenceやserving最適化ではない。",
+      "first_checked_at": "2026-10-08T07:08:16+00:00",
+      "last_checked_at": "2026-10-08T07:08:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Omni-directional attention mechanism based on Mamba for speech separation"
+    },
+    "arXiv:2602.03858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03858",
+      "identity_tokens": [
+        "arXiv:2602.03858"
+      ],
+      "reason": "本文の方法・評価・結論はPPGからのvital-sign再構成である。状態空間モデルを使うが、モデルは生体信号推定用で、LLM推論コストを扱わない。",
+      "first_checked_at": "2026-10-08T07:08:16+00:00",
+      "last_checked_at": "2026-10-08T07:08:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "PENGUIN: General Vital Sign Reconstruction from PPG with Flow Matching State Space Model"
+    },
+    "arXiv:2601.15250": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15250",
+      "identity_tokens": [
+        "arXiv:2601.15250"
+      ],
+      "reason": "全文は単眼画像から3D semantic scene completionを行うone-step latent diffusionである。推論ステップ数の削減は画像生成モデルの技術で、LLM inferenceには適用・評価されていない。",
+      "first_checked_at": "2026-10-08T07:08:17+00:00",
+      "last_checked_at": "2026-10-08T07:08:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "FlowSSC: Universal Generative Monocular Semantic Scene Completion via One-Step Latent Diffusion"
     }
   }
 }
