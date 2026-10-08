@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ReST-KV: Robust KV Cache Eviction with Layer-wise Output Reconstruction and Spatial-Temporal Smoothing",
+      "source_url": "https://arxiv.org/abs/2605.08840",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face growing challenges in efficient generative inference due to the increasing memory demands of Key-Value (KV) caches, especially for long sequences. Existing eviction methods typically retain KV pairs with high attention weights but overlook the impact of attention redistribution caused by token removal, as well as the spatial-temporal dynamics in KV selection. In this paper, we propose ReST-KV, a robust KV eviction method that combines layer-wise output Reconstruction and Spatial-Temporal smoothing to provide a more comprehensive perspective for the KV cache eviction task. Specifically, ReST-KV formulates KV cache eviction as an optimization problem that minimizes output discrepancies through efficient layer-wise reconstruction. By directly modeling how each token's removal affects the model output, our method naturally captures attention redistribution effects, going beyond simplistic reliance on raw attention weights. To further enhance robustness, we design exponential moving average smoothing to handle temporal variations and an adaptive window-based mechanism to capture spatial patterns. Our method, ReST-KV, significantly advances performance on long-context benchmarks. It surpasses state-of-the-art baselines by 2.58% on LongBench and 15.2% on RULER. Additionally, ReST-KV consistently outperforms existing methods on Needle-in-a-Haystack and InfiniteBench, all while achieving a remarkable 10.61$\\times$ reduction in decoding latency at 128k context length. The code is publicly available at https://github.com/an-yongqi/rest-kv to facilitate reproducibility and further research.",
+      "identifiers": [
+        "SemanticScholar:865a8c39abb5491bd666f9359f194ecad2760e07"
+      ],
+      "semantic_scholar_id": "865a8c39abb5491bd666f9359f194ecad2760e07",
+      "canonical_id": "arXiv:2605.08840",
+      "arxiv_id": "2605.08840",
+      "doi": "10.48550/arXiv.2605.08840",
+      "authors": [
+        "Yongqi An",
+        "Chang-Tien Lu",
+        "Kuan Zhu",
+        "Tao Yu",
+        "Chao-Yang Zhao",
+        "Hong Wu",
+        "Ming Tang",
+        "Jin-Qiao Wang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でlayer-wise output reconstructionとspatial-temporal smoothingを用いてKV-cache eviction後の出力頑健性を扱う手法を確認。長文LLMのcache削減と品質trade-offに直結するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "M2RNN: Non-Linear RNNs with Matrix-Valued States for Scalable Language Modeling",
+      "source_url": "https://arxiv.org/abs/2603.14360",
+      "year": 2026,
+      "published": "2026-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are highly parallel but are limited to computations in the TC$^0$ complexity class, excluding tasks such as entity tracking and code execution that provably require greater expressive power. Motivated by this limitation, we revisit non-linear Recurrent Neural Networks (RNNs) for language modeling and introduce Matrix-to-Matrix RNN (M$^2$RNN): an architecture with matrix-valued hidden states and expressive non-linear state transitions. We demonstrate that the language modeling performance of non-linear RNNs is limited by their state size, and show how the state size expansion mechanism enables efficient use of tensor cores. Empirically, M$^2$RNN achieves perfect state tracking generalization at sequence lengths not seen during training. These benefits also translate to large-scale language modeling. In hybrid settings that interleave recurrent layers with attention, Hybrid M$^2$RNN outperforms equivalent Gated DeltaNet hybrids by $0.4$-$0.5$ perplexity points on a 7B MoE model, while using $3\\times$ smaller state sizes for the recurrent layers. Notably, replacing even a single recurrent layer with M$^2$RNN in an existing hybrid architecture yields accuracy gains comparable to Hybrid M$^2$RNN with minimal impact on training throughput. Further, the Hybrid Gated DeltaNet models with a single M$^2$RNN layer also achieve superior long-context generalization, outperforming state-of-the-art hybrid linear attention architectures by up to $8$ points on LongBench. Together, these results establish non-linear RNN layers as a compelling building block for efficient and scalable language models.",
+      "identifiers": [
+        "SemanticScholar:8bb9b5311624766457ad8aed2ff8215609686d23"
+      ],
+      "semantic_scholar_id": "8bb9b5311624766457ad8aed2ff8215609686d23",
+      "canonical_id": "arXiv:2603.14360",
+      "arxiv_id": "2603.14360",
+      "doi": "10.48550/arXiv.2603.14360",
+      "authors": [
+        "Mayank Mishra",
+        "Shawn Tan",
+        "Ion Stoica",
+        "Joseph Gonzalez",
+        "Tri Dao"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でmatrix-state RNNによるscalable language modelingを示し、tensor-coreを活かすstate expansionやhybridでの小さいstate使用を報告。LLMの計算・状態表現効率に接点があるarchitectureとして広くacceptに残す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cactus: Accelerating Auto-Regressive Decoding with Constrained Acceptance Speculative Sampling",
+      "source_url": "https://arxiv.org/abs/2604.04987",
+      "year": 2026,
+      "published": "2026-04-05",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative sampling (SpS) has been successful in accelerating the decoding throughput of auto-regressive large language models by leveraging smaller draft models. SpS strictly enforces the generated distribution to match that of the verifier LLM. This is unnecessarily restrictive as slight variations of the verifier's distribution, such as sampling with top-$k$ or temperature, would also be acceptable. Typical acceptance sampling (TAS) alleviates this issue by accepting more tokens using entropy-based heuristics. However, this approach distorts the verifier distribution, potentially degrading output quality when the verifier encodes critical information. In this work, we formalize the speculative sampling algorithm through the lens of constrained optimization. Based on this formulation, we propose Cactus (constrained acceptance speculative sampling), a method that guarantees controlled divergence from the verifier distribution and increasing acceptance rates. Empirical results across a wide range of benchmarks confirm the effectiveness of our approach.",
+      "identifiers": [
+        "SemanticScholar:e3ba32aaf55c978cf4c3067859f99c966e70d842"
+      ],
+      "semantic_scholar_id": "e3ba32aaf55c978cf4c3067859f99c966e70d842",
+      "canonical_id": "arXiv:2604.04987",
+      "arxiv_id": "2604.04987",
+      "doi": "10.48550/arXiv.2604.04987",
+      "authors": [
+        "Yong-Chang Hao",
+        "Li-Li Mou"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 186,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でverifier分布とのcontrolled divergenceを保証しつつspeculative draft token acceptanceを高める手法と確認。autoregressive LLM decoding throughputに直結するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Towards efficient language giants: A comprehensive survey on structural optimizations and compression techniques for large language models",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.108900",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "Neural Networks",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The impressive success of large language models (LLMs) across a broad spectrum of NLP tasks has attracted considerable attention in both academia and industry. However, their inference incurs substantial computational and memory overhead, making it challenging to efficiently deploy them in latency-sensitive or resource-constrained environments. This survey provides a comprehensive overview of model-level optimization techniques developed to address these issues. Specifically, we examine efficient module designs for core Transformer components-including multi-head attention, feed-forward networks, normalization, and positional encoding-and summarize representative compression methods such as quantization, pruning, knowledge distillation, approximation, and parameter sharing. We categorize recent advances in each area, analyzing their algorithmic principles, empirical trade-offs, and impact on inference efficiency. Furthermore, we propose practical design strategies that effectively combine efficient modules with compression techniques to significantly reduce inference costs while meeting application-specific accuracy and latency requirements.",
+      "identifiers": [
+        "SemanticScholar:f2eeaea59df66d27d789c17e85c0872d470cfe7a"
+      ],
+      "semantic_scholar_id": "f2eeaea59df66d27d789c17e85c0872d470cfe7a",
+      "doi": "10.1016/j.neunet.2026.108900",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.108900",
+      "authors": [
+        "Gi-Min Lee",
+        "Seonggeun Kim",
+        "Dongjun Lee",
+        "Kyungmin Goh",
+        "Hyun Kim"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 221,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ScienceDirect一次要旨でLLM推論の計算・メモリ負荷に対するTransformer構造最適化と量子化・枝刈り等の圧縮調査を確認。推論効率改善の技術系統を広く残すためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Does Accuracy Equal Evidence? Reasoning Faithfulness under KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2608.01631",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache compression is commonly evaluated by final-answer accuracy, implicitly assuming that preserving the answer also preserves the reasoning that supports it. We test this assumption for large reasoning models and show that it can fail: under compression, correct answers and the validity of their visible supporting rationales can be preserved at different rates. We study this failure with a controlled fixed-trace replay protocol, which holds reasoning content fixed and isolates whether compression preserves usable information from an already available trace. We evaluate ten token-eviction KV compression methods and one quantization method on three models across mathematical reasoning, scientific QA, clinical calculation, and long-context retrieval. We measure final accuracy, answer-chain consistency, and perturbation faithfulness. Across tasks, token-eviction methods can preserve competitive final-answer accuracy while substantially degrading chain support or perturbation faithfulness. We call this the answer-evidence gap. A coverage-preserving quantization control is substantially less affected, suggesting that the failure is tied less to KV memory reduction itself than to losing access to parts of the reasoning trace. Code is available at https://github.com/famous-blue-raincoat/Safe_KV_Compress.",
+      "identifiers": [
+        "SemanticScholar:d6c4a2f5ff33cad9f1e982117fde469a514f5549"
+      ],
+      "semantic_scholar_id": "d6c4a2f5ff33cad9f1e982117fde469a514f5549",
+      "canonical_id": "arXiv:2608.01631",
+      "arxiv_id": "2608.01631",
+      "authors": [
+        "Meng-Ting Ai",
+        "Jing-Rui He",
+        "Yue Guo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨でKV圧縮時に最終回答精度とreasoning rationaleのfaithfulnessが異なることを複数手法で評価。KV-cache compressionの品質評価と限界に直接関わるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2dbec66bd3ad",
+    "round": "libimp-2dbec66bd3ad06ff-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2dbec66bd3ad06ff-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2dbec66bd3ad06ff-pre01.json",
+    "receipt": "sha256:5566941423c96e424f91381d2cc334e99858b2318bf72491508b1641c9e6ccd8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2dbec66bd3ad",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
