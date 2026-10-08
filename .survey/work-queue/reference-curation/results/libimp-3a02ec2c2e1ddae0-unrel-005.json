@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a02ec2c2e1ddae0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.17669",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.17669",
+    "identity_tokens": [
+      "arXiv:2604.17669"
+    ],
+    "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Low Light Image Enhancement Challenge at NTIRE 2026)",
+    "first_checked_at": "2026-10-08T07:31:52+00:00",
+    "last_checked_at": "2026-10-08T07:31:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "title": "Low Light Image Enhancement Challenge at NTIRE 2026"
+  },
+  "processed_at": "2026-10-08T07:31:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a02ec2c2e1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

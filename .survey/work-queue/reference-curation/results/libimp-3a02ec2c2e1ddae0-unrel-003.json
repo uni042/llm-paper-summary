@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a02ec2c2e1ddae0-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.15693",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.15693",
+    "identity_tokens": [
+      "arXiv:2512.15693"
+    ],
+    "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Skyra: AI-Generated Video Detection via Grounded Artifact Reasoning)",
+    "first_checked_at": "2026-10-08T07:31:51+00:00",
+    "last_checked_at": "2026-10-08T07:31:51+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "title": "Skyra: AI-Generated Video Detection via Grounded Artifact Reasoning"
+  },
+  "processed_at": "2026-10-08T07:31:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a02ec2c2e1d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

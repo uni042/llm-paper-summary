@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97b78591d29b4617-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2005.07310",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2005.07310",
+    "identity_tokens": [
+      "arXiv:2005.07310"
+    ],
+    "reason": "pretrained vision-language modelの内部挙動を評価する解釈性benchmark/analysisで、推論資源改善ではない。",
+    "first_checked_at": "2026-10-08T07:31:57+00:00",
+    "last_checked_at": "2026-10-08T07:31:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+    ],
+    "title": "Behind the Scene: Revealing the Secrets of Pre-trained Vision-and-Language Models"
+  },
+  "processed_at": "2026-10-08T07:31:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97b78591d29b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

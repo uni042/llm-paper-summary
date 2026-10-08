@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T07:22:26+00:00",
-  "record_count": 11123,
+  "updated_at": "2026-10-08T07:32:08+00:00",
+  "record_count": 11181,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -158948,6 +158948,818 @@
         "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
       ],
       "title": "One Country, 700+ Languages: NLP Challenges for Underrepresented Languages and Dialects in Indonesia"
+    },
+    "arXiv:2603.01162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01162",
+      "identity_tokens": [
+        "arXiv:2603.01162"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: Demystifying Group Relative Policy Optimization: Its Policy Gradient is a U-Statistic)",
+      "first_checked_at": "2026-10-08T07:31:46+00:00",
+      "last_checked_at": "2026-10-08T07:31:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Demystifying Group Relative Policy Optimization: Its Policy Gradient is a U-Statistic"
+    },
+    "arXiv:2602.07055": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07055",
+      "identity_tokens": [
+        "arXiv:2602.07055"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?)",
+      "first_checked_at": "2026-10-08T07:31:47+00:00",
+      "last_checked_at": "2026-10-08T07:31:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?"
+    },
+    "arXiv:2512.16584": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16584",
+      "identity_tokens": [
+        "arXiv:2512.16584"
+      ],
+      "reason": "SkiLaはvisual sketchをlatent tokenとしてautoregressive reasoning中に生成するMLLM機構。本文の狙いはvisual imagination/benchmark性能で、従来CoTに対するtoken数、計算量、latency削減の主張や比較は見当たらない。",
+      "first_checked_at": "2026-10-08T07:31:47+00:00",
+      "last_checked_at": "2026-10-08T07:31:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Sketch-in-Latents: Eliciting Unified Reasoning in MLLMs"
+    },
+    "arXiv:2106.16163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.16163",
+      "identity_tokens": [
+        "arXiv:2106.16163"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: The MultiBERTs: BERT Reproductions for Robustness Analysis)",
+      "first_checked_at": "2026-10-08T07:31:48+00:00",
+      "last_checked_at": "2026-10-08T07:31:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "The MultiBERTs: BERT Reproductions for Robustness Analysis"
+    },
+    "arXiv:2601.15668": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15668",
+      "identity_tokens": [
+        "arXiv:2601.15668"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: EmotionThinker: Prosody-Aware Reinforcement Learning for Explainable Speech Emotion Reasoning)",
+      "first_checked_at": "2026-10-08T07:31:48+00:00",
+      "last_checked_at": "2026-10-08T07:31:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "EmotionThinker: Prosody-Aware Reinforcement Learning for Explainable Speech Emotion Reasoning"
+    },
+    "arXiv:2601.05563": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05563",
+      "identity_tokens": [
+        "arXiv:2601.05563"
+      ],
+      "reason": "multimodal news previewの誤解検出/修正とsafety benchmarkが主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:31:49+00:00",
+      "last_checked_at": "2026-10-08T07:31:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "What's Left Unsaid? Detecting and Correcting Misleading Omissions in Multimodal News Previews"
+    },
+    "arXiv:2601.06165": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06165",
+      "identity_tokens": [
+        "arXiv:2601.06165"
+      ],
+      "reason": "underspecified visual queriesに関するVLM benchmark・能力分析が主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:31:49+00:00",
+      "last_checked_at": "2026-10-08T07:31:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "What Users Leave Unsaid: Under-Specified Queries Limit Vision-Language Models"
+    },
+    "arXiv:2601.00887": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.00887",
+      "identity_tokens": [
+        "arXiv:2601.00887"
+      ],
+      "reason": "VideoLLMのcurriculum RL data/training methodが主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:31:49+00:00",
+      "last_checked_at": "2026-10-08T07:31:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VideoCuRL: Video Curriculum Reinforcement Learning with Orthogonal Difficulty Decomposition"
+    },
+    "arXiv:2603.10887": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.10887",
+      "identity_tokens": [
+        "arXiv:2603.10887"
+      ],
+      "reason": "reasoning LLMのRL fine-tuning用training data selectionが主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:31:50+00:00",
+      "last_checked_at": "2026-10-08T07:31:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Dynamics-Predictive Sampling for Active RL Finetuning of Large Reasoning Models"
+    },
+    "arXiv:2603.07084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07084",
+      "identity_tokens": [
+        "arXiv:2603.07084"
+      ],
+      "reason": "RLVRのreward hackingに関するtestbed/measurementが主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:31:50+00:00",
+      "last_checked_at": "2026-10-08T07:31:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Countdown-Code: A Testbed for Studying The Emergence and Generalization of Reward Hacking in RLVR"
+    },
+    "arXiv:2602.17550": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17550",
+      "identity_tokens": [
+        "arXiv:2602.17550"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: MASPO: Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning)",
+      "first_checked_at": "2026-10-08T07:31:50+00:00",
+      "last_checked_at": "2026-10-08T07:31:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "MASPO: Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning"
+    },
+    "arXiv:2104.06951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.06951",
+      "identity_tokens": [
+        "arXiv:2104.06951"
+      ],
+      "reason": "survey/benchmarkを中心とし、新しいLLM推論資源削減手法を提案・評価しない。 (題名: Domain Adaptation and Multi-Domain Adaptation for Neural Machine Translation: A Survey)",
+      "first_checked_at": "2026-10-08T07:31:51+00:00",
+      "last_checked_at": "2026-10-08T07:31:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Domain Adaptation and Multi-Domain Adaptation for Neural Machine Translation: A Survey"
+    },
+    "arXiv:2512.15693": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15693",
+      "identity_tokens": [
+        "arXiv:2512.15693"
+      ],
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Skyra: AI-Generated Video Detection via Grounded Artifact Reasoning)",
+      "first_checked_at": "2026-10-08T07:31:51+00:00",
+      "last_checked_at": "2026-10-08T07:31:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Skyra: AI-Generated Video Detection via Grounded Artifact Reasoning"
+    },
+    "arXiv:2607.02234": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02234",
+      "identity_tokens": [
+        "arXiv:2607.02234"
+      ],
+      "reason": "本論文はOPSDによるLLM post-trainingの失敗要因をteacher supervision signalで分析し、reference-induced/inference-transferable成分を分解する。inference-transferableは学習信号の呼称であり、推論時compute/memory/latencyを改善する方法・評価はない。",
+      "first_checked_at": "2026-10-08T07:31:51+00:00",
+      "last_checked_at": "2026-10-08T07:31:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Purified OPSD: On-Policy Self-Distillation Without Losing How to Think"
+    },
+    "arXiv:2604.17669": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17669",
+      "identity_tokens": [
+        "arXiv:2604.17669"
+      ],
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Low Light Image Enhancement Challenge at NTIRE 2026)",
+      "first_checked_at": "2026-10-08T07:31:52+00:00",
+      "last_checked_at": "2026-10-08T07:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Low Light Image Enhancement Challenge at NTIRE 2026"
+    },
+    "arXiv:2312.15235": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.15235",
+      "identity_tokens": [
+        "arXiv:2312.15235"
+      ],
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: MASTER: Market-Guided Stock Transformer for Stock Price Forecasting)",
+      "first_checked_at": "2026-10-08T07:31:52+00:00",
+      "last_checked_at": "2026-10-08T07:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "MASTER: Market-Guided Stock Transformer for Stock Price Forecasting"
+    },
+    "arXiv:2402.12694": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12694",
+      "identity_tokens": [
+        "arXiv:2402.12694"
+      ],
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Revitalizing Multivariate Time Series Forecasting: Learnable Decomposition with Inter-Series Dependencies and Intra-Series Variations Modeling)",
+      "first_checked_at": "2026-10-08T07:31:52+00:00",
+      "last_checked_at": "2026-10-08T07:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Revitalizing Multivariate Time Series Forecasting: Learnable Decomposition with Inter-Series Dependencies and Intra-Series Variations Modeling"
+    },
+    "arXiv:2603.01050": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01050",
+      "identity_tokens": [
+        "arXiv:2603.01050"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: MM-DeepResearch: A Simple and Effective Multimodal Agentic Search Baseline)",
+      "first_checked_at": "2026-10-08T07:31:53+00:00",
+      "last_checked_at": "2026-10-08T07:31:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "MM-DeepResearch: A Simple and Effective Multimodal Agentic Search Baseline"
+    },
+    "arXiv:2601.03590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03590",
+      "identity_tokens": [
+        "arXiv:2601.03590"
+      ],
+      "reason": "survey/benchmarkを中心とし、新しいLLM推論資源削減手法を提案・評価しない。 (題名: Can LLMs See Without Pixels? Benchmarking Spatial Intelligence from Textual Descriptions)",
+      "first_checked_at": "2026-10-08T07:31:53+00:00",
+      "last_checked_at": "2026-10-08T07:31:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Can LLMs See Without Pixels? Benchmarking Spatial Intelligence from Textual Descriptions"
+    },
+    "arXiv:2206.04301": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.04301",
+      "identity_tokens": [
+        "arXiv:2206.04301"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: Unveiling Transformers with LEGO: a synthetic reasoning task)",
+      "first_checked_at": "2026-10-08T07:31:53+00:00",
+      "last_checked_at": "2026-10-08T07:31:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Unveiling Transformers with LEGO: a synthetic reasoning task"
+    },
+    "arXiv:2604.04847": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04847",
+      "identity_tokens": [
+        "arXiv:2604.04847"
+      ],
+      "reason": "voice agent latency/turn-taking benchmarking datasetで、model serving optimizerではなく比較評価が主題。",
+      "first_checked_at": "2026-10-08T07:31:54+00:00",
+      "last_checked_at": "2026-10-08T07:31:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Full-Duplex-Bench-v3: Benchmarking Tool Use for Full-Duplex Voice Agents Under Real-World Disfluency"
+    },
+    "DOI:10.1007/s41095-021-0247-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s41095-021-0247-3",
+      "identity_tokens": [
+        "DOI:10.1007/s41095-021-0247-3"
+      ],
+      "reason": "computational visual media transformerのsurveyで、LLM servingや推論改善の個別手法を提示しない。",
+      "first_checked_at": "2026-10-08T07:31:55+00:00",
+      "last_checked_at": "2026-10-08T07:31:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Transformers in computational visual media: A survey"
+    },
+    "arXiv:2402.10635": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.10635",
+      "identity_tokens": [
+        "arXiv:2402.10635"
+      ],
+      "reason": "irregular time-series用continuous-time Transformerで、時系列予測/method performanceが主題であり、LLM inference resource optimizationではない。",
+      "first_checked_at": "2026-10-08T07:31:55+00:00",
+      "last_checked_at": "2026-10-08T07:31:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "ContiFormer: Continuous-Time Transformer for Irregular Time Series Modeling"
+    },
+    "arXiv:2511.07317": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07317",
+      "identity_tokens": [
+        "arXiv:2511.07317"
+      ],
+      "reason": "本文はadaptive difficultyをもつverifiable environmentsを用いてLLMのreinforcement-learning trainingを効率化する研究。性能差/計算量はtraining-stageの比較であり、推論時compute、memory、latency、serving最適化ではない。",
+      "first_checked_at": "2026-10-08T07:31:55+00:00",
+      "last_checked_at": "2026-10-08T07:31:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments"
+    },
+    "arXiv:2104.09340": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.09340",
+      "identity_tokens": [
+        "arXiv:2104.09340"
+      ],
+      "reason": "source-code summarizationのstructure-aware Transformerでgeneration accuracy改善が主題。推論計算/latency/serving改善を示さない。",
+      "first_checked_at": "2026-10-08T07:31:56+00:00",
+      "last_checked_at": "2026-10-08T07:31:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Code Structure–Guided Transformer for Source Code Summarization"
+    },
+    "arXiv:2601.03309": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03309",
+      "identity_tokens": [
+        "arXiv:2601.03309"
+      ],
+      "reason": "VLM-to-VLA adaptation/embodied task capabilitiesの比較・fine-tuningで、language model inference efficiencyの提案や評価ではない。",
+      "first_checked_at": "2026-10-08T07:31:56+00:00",
+      "last_checked_at": "2026-10-08T07:31:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VLM4VLA: Revisiting Vision-Language-Models in Vision-Language-Action Models"
+    },
+    "arXiv:2311.01933": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.01933",
+      "identity_tokens": [
+        "arXiv:2311.01933"
+      ],
+      "reason": "ForecastPFNはsynthetically-trained zero-shot time-series forecasterで、LLM inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-08T07:31:56+00:00",
+      "last_checked_at": "2026-10-08T07:31:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "ForecastPFN: Synthetically-Trained Zero-Shot Forecasting"
+    },
+    "arXiv:2602.10090": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10090",
+      "identity_tokens": [
+        "arXiv:2602.10090"
+      ],
+      "reason": "Agent World ModelはLLM agent向けsynthetic RL training environmentsであり、環境生成/学習効率は推論実行の最適化ではない。",
+      "first_checked_at": "2026-10-08T07:31:57+00:00",
+      "last_checked_at": "2026-10-08T07:31:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning"
+    },
+    "arXiv:2512.07826": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07826",
+      "identity_tokens": [
+        "arXiv:2512.07826"
+      ],
+      "reason": "video-editing training dataset/resource paperであり、model inference cost/latency optimizationを提案しない。",
+      "first_checked_at": "2026-10-08T07:31:57+00:00",
+      "last_checked_at": "2026-10-08T07:31:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "OpenVE-3M: A Large-Scale High-Quality Dataset for Instruction-Guided Video Editing"
+    },
+    "arXiv:2005.07310": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.07310",
+      "identity_tokens": [
+        "arXiv:2005.07310"
+      ],
+      "reason": "pretrained vision-language modelの内部挙動を評価する解釈性benchmark/analysisで、推論資源改善ではない。",
+      "first_checked_at": "2026-10-08T07:31:57+00:00",
+      "last_checked_at": "2026-10-08T07:31:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Behind the Scene: Revealing the Secrets of Pre-trained Vision-and-Language Models"
+    },
+    "arXiv:2406.08552": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08552",
+      "identity_tokens": [
+        "arXiv:2406.08552"
+      ],
+      "reason": "DiTFastAttnはimage/video diffusion transformerのattention compressionで、対象はdiffusion image-generation inference。LLM/autoregressive language inferenceとの技術的接続はない。",
+      "first_checked_at": "2026-10-08T07:31:58+00:00",
+      "last_checked_at": "2026-10-08T07:31:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "DiTFastAttn: Attention Compression for Diffusion Transformer Models"
+    },
+    "arXiv:2404.08531": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08531",
+      "identity_tokens": [
+        "arXiv:2404.08531"
+      ],
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Text Prompt with Normality Guidance for Weakly Supervised Video Anomaly Detection)",
+      "first_checked_at": "2026-10-08T07:31:58+00:00",
+      "last_checked_at": "2026-10-08T07:31:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md"
+      ],
+      "title": "Text Prompt with Normality Guidance for Weakly Supervised Video Anomaly Detection"
+    },
+    "arXiv:2603.03303": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03303",
+      "identity_tokens": [
+        "arXiv:2603.03303"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: HumanLM: Simulating Users with State Alignment Beats Response Imitation)",
+      "first_checked_at": "2026-10-08T07:31:59+00:00",
+      "last_checked_at": "2026-10-08T07:31:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "HumanLM: Simulating Users with State Alignment Beats Response Imitation"
+    },
+    "arXiv:2512.24330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24330",
+      "identity_tokens": [
+        "arXiv:2512.24330"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning)",
+      "first_checked_at": "2026-10-08T07:31:59+00:00",
+      "last_checked_at": "2026-10-08T07:31:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning"
+    },
+    "arXiv:2602.19208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19208",
+      "identity_tokens": [
+        "arXiv:2602.19208"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: How to Allocate, How to Learn? Dynamic Rollout Allocation and Advantage Modulation for Policy Optimization)",
+      "first_checked_at": "2026-10-08T07:31:59+00:00",
+      "last_checked_at": "2026-10-08T07:31:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "How to Allocate, How to Learn? Dynamic Rollout Allocation and Advantage Modulation for Policy Optimization"
+    },
+    "arXiv:2604.23632": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23632",
+      "identity_tokens": [
+        "arXiv:2604.23632"
+      ],
+      "reason": "Hallo-Liveはdual-stream diffusionのstudentをstreaming化し、Future-Expanding Attention、autoregressive audio-video KV cache、few-step DMDを使う。実験は2x H200で20.38 FPS/0.94s、teacher比16x throughput・99.3x lower latencyを報告。ただし対象はtext-conditioned avatar diffusionでありLLM token decode/LLM serving最適化ではない。",
+      "first_checked_at": "2026-10-08T07:32:00+00:00",
+      "last_checked_at": "2026-10-08T07:32:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Hallo-Live: Real-Time Streaming Joint Audio-Video Avatar Generation with Asynchronous Dual-Stream and Human-Centric Preference Distillation"
+    },
+    "arXiv:2604.21406": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21406",
+      "identity_tokens": [
+        "arXiv:2604.21406"
+      ],
+      "reason": "full-duplex dialogue challengeのdataset/benchmark構築と評価が主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:32:00+00:00",
+      "last_checked_at": "2026-10-08T07:32:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Full-Duplex Interaction in Spoken Dialogue Systems: A Comprehensive Study from the ICASSP 2026 HumDial Challenge"
+    },
+    "arXiv:2603.24596": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24596",
+      "identity_tokens": [
+        "arXiv:2603.24596"
+      ],
+      "reason": "Speech LLM capability alignmentのon-policy distillation trainingが主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:32:01+00:00",
+      "last_checked_at": "2026-10-08T07:32:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "X-OPD: Cross-Modal On-Policy Distillation for Capability Alignment in Speech LLMs"
+    },
+    "arXiv:2602.17497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17497",
+      "identity_tokens": [
+        "arXiv:2602.17497"
+      ],
+      "reason": "self-evolving agentのtemporal credit assignmentとsample-efficient RL trainingが主題。要旨はLLM/VLMを利用する可能性を示しても、対象LLM inference compute/memory/latency/throughput/KV-cache/servingを直接改善する手法・評価を示さない。",
+      "first_checked_at": "2026-10-08T07:32:01+00:00",
+      "last_checked_at": "2026-10-08T07:32:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Retrospective In-Context Learning for Temporal Credit Assignment with Large Language Models"
+    },
+    "arXiv:2601.13942": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13942",
+      "identity_tokens": [
+        "arXiv:2601.13942"
+      ],
+      "reason": "GoGはLMMのvisual searchでglobal contextから重要領域を選ぶSelective Gazeを訓練し、主たる評価はsearch/QA benchmark性能とcomplexity-adaptive RL。本文にinput token、encoder FLOPs、latency削減結果はなく、効率より検索精度/能力が主眼。",
+      "first_checked_at": "2026-10-08T07:32:01+00:00",
+      "last_checked_at": "2026-10-08T07:32:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Glance-or-Gaze: Incentivizing LMMs to Adaptively Focus Search via Reinforcement Learning"
+    },
+    "arXiv:2602.21172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21172",
+      "identity_tokens": [
+        "arXiv:2602.21172"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: NoRD: A Data-Efficient Vision-Language-Action Model that Drives without Reasoning)",
+      "first_checked_at": "2026-10-08T07:32:02+00:00",
+      "last_checked_at": "2026-10-08T07:32:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "NoRD: A Data-Efficient Vision-Language-Action Model that Drives without Reasoning"
+    },
+    "arXiv:2602.07038": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07038",
+      "identity_tokens": [
+        "arXiv:2602.07038"
+      ],
+      "reason": "survey/benchmarkを中心とし、新しいLLM推論資源削減手法を提案・評価しない。 (題名: UNIKIE-BENCH: Benchmarking Large Multimodal Models for Key Information Extraction in Visual Documents)",
+      "first_checked_at": "2026-10-08T07:32:02+00:00",
+      "last_checked_at": "2026-10-08T07:32:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "UNIKIE-BENCH: Benchmarking Large Multimodal Models for Key Information Extraction in Visual Documents"
+    },
+    "arXiv:2602.04118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04118",
+      "identity_tokens": [
+        "arXiv:2602.04118"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: Learning to Reason in 13 Parameters)",
+      "first_checked_at": "2026-10-08T07:32:02+00:00",
+      "last_checked_at": "2026-10-08T07:32:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Learning to Reason in 13 Parameters"
+    },
+    "arXiv:2512.13080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13080",
+      "identity_tokens": [
+        "arXiv:2512.13080"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: Spatial-Aware VLA Pretraining through Visual-Physical Alignment from Human Videos)",
+      "first_checked_at": "2026-10-08T07:32:03+00:00",
+      "last_checked_at": "2026-10-08T07:32:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Spatial-Aware VLA Pretraining through Visual-Physical Alignment from Human Videos"
+    },
+    "arXiv:2604.16042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16042",
+      "identity_tokens": [
+        "arXiv:2604.16042"
+      ],
+      "reason": "survey/benchmarkを中心とし、新しいLLM推論資源削減手法を提案・評価しない。 (題名: Towards Intrinsic Interpretability of Large Language Models:A Survey of Design Principles and Architectures)",
+      "first_checked_at": "2026-10-08T07:32:03+00:00",
+      "last_checked_at": "2026-10-08T07:32:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Towards Intrinsic Interpretability of Large Language Models:A Survey of Design Principles and Architectures"
+    },
+    "arXiv:2603.11226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11226",
+      "identity_tokens": [
+        "arXiv:2603.11226"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: ExecVerify: White-Box RL with Verifiable Stepwise Rewards for Code Execution Reasoning)",
+      "first_checked_at": "2026-10-08T07:32:03+00:00",
+      "last_checked_at": "2026-10-08T07:32:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "ExecVerify: White-Box RL with Verifiable Stepwise Rewards for Code Execution Reasoning"
+    },
+    "arXiv:2601.19063": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19063",
+      "identity_tokens": [
+        "arXiv:2601.19063"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: Optimizing Conversational Quality in Spoken Dialogue Systems with Reinforcement Learning from AI Feedback)",
+      "first_checked_at": "2026-10-08T07:32:04+00:00",
+      "last_checked_at": "2026-10-08T07:32:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Optimizing Conversational Quality in Spoken Dialogue Systems with Reinforcement Learning from AI Feedback"
+    },
+    "arXiv:2601.06559": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06559",
+      "identity_tokens": [
+        "arXiv:2601.06559"
+      ],
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: ArrowGEV: Grounding Events in Video via Learning the Arrow of Time)",
+      "first_checked_at": "2026-10-08T07:32:04+00:00",
+      "last_checked_at": "2026-10-08T07:32:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "ArrowGEV: Grounding Events in Video via Learning the Arrow of Time"
+    },
+    "arXiv:2604.07430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07430",
+      "identity_tokens": [
+        "arXiv:2604.07430"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents)",
+      "first_checked_at": "2026-10-08T07:32:04+00:00",
+      "last_checked_at": "2026-10-08T07:32:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents"
+    },
+    "arXiv:2602.23008": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23008",
+      "identity_tokens": [
+        "arXiv:2602.23008"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: Exploratory Memory-Augmented LLM Agent via Hybrid On- and Off-Policy Optimization)",
+      "first_checked_at": "2026-10-08T07:32:05+00:00",
+      "last_checked_at": "2026-10-08T07:32:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Exploratory Memory-Augmented LLM Agent via Hybrid On- and Off-Policy Optimization"
+    },
+    "arXiv:2601.13024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13024",
+      "identity_tokens": [
+        "arXiv:2601.13024"
+      ],
+      "reason": "survey/benchmarkを中心とし、新しいLLM推論資源削減手法を提案・評価しない。 (題名: Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses)",
+      "first_checked_at": "2026-10-08T07:32:05+00:00",
+      "last_checked_at": "2026-10-08T07:32:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Tears or Cheers? Benchmarking LLMs via Culturally Elicited Distinct Affective Responses"
+    },
+    "arXiv:2604.14920": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14920",
+      "identity_tokens": [
+        "arXiv:2604.14920"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: Dual-Axis Generative Reward Model Toward Semantic and Turn-taking Robustness in Interactive Spoken Dialogue Models)",
+      "first_checked_at": "2026-10-08T07:32:05+00:00",
+      "last_checked_at": "2026-10-08T07:32:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Dual-Axis Generative Reward Model Toward Semantic and Turn-taking Robustness in Interactive Spoken Dialogue Models"
+    },
+    "arXiv:2602.23636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23636",
+      "identity_tokens": [
+        "arXiv:2602.23636"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: FlexGuard: Continuous Risk Scoring for Strictness-Adaptive LLM Content Moderation)",
+      "first_checked_at": "2026-10-08T07:32:06+00:00",
+      "last_checked_at": "2026-10-08T07:32:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "FlexGuard: Continuous Risk Scoring for Strictness-Adaptive LLM Content Moderation"
+    },
+    "arXiv:2603.22293": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22293",
+      "identity_tokens": [
+        "arXiv:2603.22293"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: TIPS: Turn-Level Information-Potential Reward Shaping for Search-Augmented LLMs)",
+      "first_checked_at": "2026-10-08T07:32:06+00:00",
+      "last_checked_at": "2026-10-08T07:32:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "TIPS: Turn-Level Information-Potential Reward Shaping for Search-Augmented LLMs"
+    },
+    "arXiv:2602.03828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03828",
+      "identity_tokens": [
+        "arXiv:2602.03828"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: AutoFigure: Generating and Refining Publication-Ready Scientific Illustrations)",
+      "first_checked_at": "2026-10-08T07:32:07+00:00",
+      "last_checked_at": "2026-10-08T07:32:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "AutoFigure: Generating and Refining Publication-Ready Scientific Illustrations"
+    },
+    "arXiv:2512.23032": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23032",
+      "identity_tokens": [
+        "arXiv:2512.23032"
+      ],
+      "reason": "本文はCoT faithfulness評価とtoken budgetによるhint verbalizationの差を調べ、推論時token budgetを操作するが、推論処理を効率化する方法を提案しない。中心は解釈可能性/faithfulness評価。",
+      "first_checked_at": "2026-10-08T07:32:07+00:00",
+      "last_checked_at": "2026-10-08T07:32:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Is Chain-of-Thought Really Not Explainability? Chain-of-Thought Can Be Faithful without Hint Verbalization"
+    },
+    "arXiv:2603.12228": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12228",
+      "identity_tokens": [
+        "arXiv:2603.12228"
+      ],
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights)",
+      "first_checked_at": "2026-10-08T07:32:07+00:00",
+      "last_checked_at": "2026-10-08T07:32:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights"
+    },
+    "arXiv:2603.11178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11178",
+      "identity_tokens": [
+        "arXiv:2603.11178"
+      ],
+      "reason": "要旨上の中心は訓練・post-training・学習データ/報酬設計であり、推論時の資源削減・serving改善を報告しない。 (題名: PACED: Distillation and On-Policy Self-Distillation at the Frontier of Student Competence)",
+      "first_checked_at": "2026-10-08T07:32:08+00:00",
+      "last_checked_at": "2026-10-08T07:32:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "PACED: Distillation and On-Policy Self-Distillation at the Frontier of Student Competence"
     }
   }
 }

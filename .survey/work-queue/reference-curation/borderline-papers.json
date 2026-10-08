@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T07:22:25+00:00",
-  "record_count": 4487,
+  "updated_at": "2026-10-08T07:31:58+00:00",
+  "record_count": 4488,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68475,6 +68475,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MM-Embed: Universal Multimodal Retrieval with Multimodal LLMs"
+    },
+    "DOI:10.1109/iccv48922.2021.00208": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccv48922.2021.00208",
+      "identity_tokens": [
+        "DOI:10.1109/iccv48922.2021.00208"
+      ],
+      "reason": "対象は視覚質問応答のvisual Transformerで、注意範囲routingは推論計算に関係しうる。一方、正本CVF HTML/PDFはいずれも403で全文確認できず、検索indexの抜粋だけではLLM/VLMへの適用範囲や効率実験を最終判定できない。",
+      "first_checked_at": "2026-10-08T07:31:58+00:00",
+      "last_checked_at": "2026-10-08T07:31:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TRAR: Routing the Attention Spans in Transformer for Visual Question Answering"
     }
   }
 }
