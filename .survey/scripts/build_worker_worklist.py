@@ -305,11 +305,44 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
                 scored["forward_lineage_citation_total"] = sum(counts.values())
             rows.append(scored)
 
-    # Put the strongest representation of an alias-equivalent paper first, then
-    # reuse the existing exact identity deduper. This avoids forcing a paper to
-    # appear twice merely because it was found by backward and forward citation.
+    # Keep exact identity deduplication, but do not lose forward citation evidence
+    # when the backward record of the SAME paper won the original priority sort.
     rows.sort(key=_priority_sort_key)
     rows = _dedupe_rows_by_identity(rows)
+    alias_to_row: dict[str, int] = {}
+    for index, item in enumerate(rows):
+        for token in _worklist_identity_tokens(item):
+            alias_to_row[token] = index
+    forward_seeds: dict[int, set[str]] = {}
+    forward_paths: dict[int, set[str]] = {}
+    for item in forward:
+        if not isinstance(item, dict):
+            continue
+        indices = {alias_to_row[token] for token in _worklist_identity_tokens(item) if token in alias_to_row}
+        if not indices:
+            continue
+        index = min(indices)
+        # Use forward_seed_ids as authority. Legacy forward rows use their
+        # OWN linked_from paths. Never interpret backward linked_from as this edge.
+        source_ids = item.get("forward_seed_ids")
+        if isinstance(source_ids, list):
+            forward_seeds.setdefault(index, set()).update(str(x) for x in source_ids if x)
+        source_paths = item.get("linked_from")
+        if isinstance(source_paths, list):
+            forward_paths.setdefault(index, set()).update(str(x) for x in source_paths if x)
+    for index in sorted(set(forward_seeds) | set(forward_paths)):
+        item = rows[index]
+        counts = forward_lineage_citation.forward_lineage_counts(
+            {"forward_seed_ids": sorted(forward_seeds.get(index, set())),
+             "linked_from": sorted(forward_paths.get(index, set()))},
+            seed_lineages, seed_paths, source_kind="forward_citation_candidate",
+        )
+        item["forward_lineage_citation_counts"] = counts
+        item["forward_lineage_citation_max"] = max(counts.values(), default=0)
+        item["forward_lineage_citation_total"] = sum(counts.values())
+        item["discovery_routes"] = sorted(
+            set(item.get("discovery_routes") or []) | {"forward_citation_sweep"}
+        )
 
     refill_target, _repeat_penalty = _borderline_policy(config)
     if not rows and refill_target > 0:
@@ -491,7 +524,7 @@ def build(
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
                 "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
                 "Only when the ordinary Discovery pool is exhausted, refill it with up to the configured target count from durable borderline records. For source_kind=borderline_reconsideration, copy origin=borderline_reconsideration and borderline_recheck_count_before from the worklist row into the completed Discovery record regardless of final classification.",
-                "Process Research and nonquarantined Discovery rows from rank 1 upward, with sparse, deterministic audit samples of deferred candidates. Quarantine is not an unrelated verdict. Config may disable filtering.",
+                "Apply mechanical domain rules first, then retain configurable percent ranked by same-lineage forward citations. Read selected ranks in this order and audit deferred candidates; quarantine is reversible.",
             ],
             "research_audit": {
                 "ready_total": research_ready,
@@ -567,20 +600,22 @@ def render_markdown(payload: dict[str, Any], worker: str) -> str:
             f"事前選別: **{discovery.get('prefilter', {}).get('mode', 'off')}** / "
             f"暫定隔離 **{discovery.get('prefilter', {}).get('quarantine_count', 0)}** / "
             f"監査再投入 **{discovery.get('prefilter', {}).get('audit_count', 0)}** "
-            f"/ 分類器判定済 **{discovery.get('prefilter', {}).get('classifier_scanned_count', 0)}** "
-            f"/ 分類器未判定 **{discovery.get('prefilter', {}).get('classifier_pending_count', 0)}** "
+            f"/ 機械規則適用後 **{discovery.get('prefilter', {}).get('quota_eligible_count', 0)}** "
+            f"/ 選抜率 **{discovery.get('prefilter', {}).get('quota_retain_percent', 100)}%** "
             "（候補の正本は保持。隔離はunrelated判定ではない）",
             "",
-            "| # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |",
-            "|---:|---:|---|---|---|---|---:|---:|---|---|",
+            "| # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |",
+            "|---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|",
         ]
     )
     for row in discovery["rows"]:
         lineages = ", ".join(row.get("linked_from_lineages") or [])
         out.append(
-            "| {rank} | {score} | {identity} | {title} | {published} | {venue} | {citations} | {relations} | {lineages} | {source} |".format(
+            "| {rank} | {score} | {same} | {same_total} | {identity} | {title} | {published} | {venue} | {citations} | {relations} | {lineages} | {source} |".format(
                 rank=row["rank"],
                 score=_esc(row.get("priority")),
+                same=_esc(row.get("forward_lineage_citation_max", 0)),
+                same_total=_esc(row.get("forward_lineage_citation_total", 0)),
                 identity=_esc(row.get("canonical_id")),
                 title=_esc(row.get("title")),
                 published=_esc(row.get("published") or row.get("year")),
