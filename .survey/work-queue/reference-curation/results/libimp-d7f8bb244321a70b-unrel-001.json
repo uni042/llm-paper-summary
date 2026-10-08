@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7f8bb244321a70b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.00333",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.00333",
+    "identity_tokens": [
+      "arXiv:2602.00333"
+    ],
+    "reason": "Adds/subtracts learned activation directions during inference for behavior steering; no compute reduction is proposed.",
+    "first_checked_at": "2026-10-08T06:35:37+00:00",
+    "last_checked_at": "2026-10-08T06:35:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "Efficient and accurate steering of Large Language Models through attention-guided feature learning"
+  },
+  "processed_at": "2026-10-08T06:35:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7f8bb244321",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

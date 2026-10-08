@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T06:23:32+00:00",
-  "record_count": 4468,
+  "updated_at": "2026-10-08T06:35:36+00:00",
+  "record_count": 4470,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68187,6 +68187,36 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Scalable RL-based data generation and multi-resolution architecture for code-switched speech recognition: a high-performance computing approach"
+    },
+    "DOI:10.1016/j.patcog.2025.112120": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patcog.2025.112120",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2025.112120"
+      ],
+      "reason": "A linked inference/SSM lineage suggests possible adjacency, but primary text was unavailable; relevance cannot be ruled out. The publisher search result exposed article metadata, abstract, and an introduction excerpt; opening the ScienceDirect full article returned HTTP 403 Forbidden. Primary full text could not be inspected.",
+      "first_checked_at": "2026-10-08T06:35:34+00:00",
+      "last_checked_at": "2026-10-08T06:35:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mamba-Stereo: Mamba Regularization for Stereo matching"
+    },
+    "DOI:10.1109/iccc68654.2025.11437858": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccc68654.2025.11437858",
+      "identity_tokens": [
+        "DOI:10.1109/iccc68654.2025.11437858"
+      ],
+      "reason": "A linked inference/SSM lineage suggests possible adjacency, but primary text was unavailable; relevance cannot be ruled out. Opening the direct DOI/publisher URL failed as inaccessible. The conference listing/bibliographic record was available, but primary full text could not be retrieved.",
+      "first_checked_at": "2026-10-08T06:35:36+00:00",
+      "last_checked_at": "2026-10-08T06:35:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI-Powered Text Screening: A Generative Approach to Identifying Sensitive Information"
     }
   }
 }
