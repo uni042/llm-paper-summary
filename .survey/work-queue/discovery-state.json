@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-08T19:09:45+00:00",
-  "last_run_key": "library-import-aed694e23c0f",
-  "last_round": "libimp-aed694e23c0f4560-pre01",
+  "updated_at": "2026-10-08T19:28:38+00:00",
+  "last_run_key": "library-import-21951cc27785",
+  "last_round": "libimp-21951cc277854984-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-21T05:29:37+09:00",
-      "round": "round-08",
-      "axis": "recent KV cache compression quantization long-context inference",
-      "query_summary": null,
-      "provider": "openalex",
-      "source_url": "https://api.openalex.org/works?search=LLM%20KV%20cache%20compression%20quantization%20long%20context%20inference&sort=publication_date:desc&per-page=100",
-      "citation_direction": null,
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260921T0547JST-discovery-kv-compress-08.json"
-    },
     {
       "run_key": "2026-09-21T05:29:37+09:00",
       "round": "round-09",
@@ -13120,6 +13099,46 @@
       "duplicate_ratio": 0.8333333333333334,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-21951cc277854984-pre01",
+      "precheck_request_id": "libimp-21951cc277854984-pre01",
+      "run_key": "library-import-21951cc27785",
+      "round": "libimp-21951cc277854984-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 17,
+      "duplicate_filtered_count": 15,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-21951cc277854984-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-21951cc277854984-pre01-sub01.json",
+        "work-queue/submissions/libimp-21951cc277854984-pre01-sub02.json",
+        "work-queue/submissions/libimp-21951cc277854984-pre01-sub03.json",
+        "work-queue/submissions/libimp-21951cc277854984-pre01-sub04.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "round_submission_count": 4,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.8823529411764706,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21491,16 +21510,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-aed694e23c0f",
-      "rounds": 201,
-      "candidate_count": 638,
-      "duplicate_filtered_count": 220,
-      "novel_candidate_count": 418,
+      "last_run_key": "library-import-21951cc27785",
+      "rounds": 202,
+      "candidate_count": 655,
+      "duplicate_filtered_count": 235,
+      "novel_candidate_count": 420,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 413,
-      "accepted_count": 413,
-      "duplicate_ratio": 0.3448275862068966,
-      "final_duplicate_ratio": 0.011961722488038277,
+      "post_final_dedupe_count": 415,
+      "accepted_count": 415,
+      "duplicate_ratio": 0.35877862595419846,
+      "final_duplicate_ratio": 0.011904761904761904,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
