@@ -16,6 +16,9 @@ quality_body_chars: 5593
 quality_method_chars: 1172
 quality_evaluation_chars: 1822
 quality_limitation_chars: 292
+worker_id: interactive-audit
+worker_completed_at: '2026-10-08T11:29:39.473Z'
+worker_run_key: '20261008-bottom-up-interactive/findep-r01'
 references:
 - canonical_id: arXiv:2311.16867
   arxiv_id: '2311.16867'
