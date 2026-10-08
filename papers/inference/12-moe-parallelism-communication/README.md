@@ -32,7 +32,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
-  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：4  
   NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
 
 - **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
@@ -190,7 +190,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
-  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：13  
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
