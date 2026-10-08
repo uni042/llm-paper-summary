@@ -70,6 +70,31 @@ class FastLaneTriggerSemanticsTests(unittest.TestCase):
         self.assertIn(".survey/scheduler/library-import-kick.json", trigger)
         self.assertIn("dispatch_if_idle library-import.yml", orchestrator)
 
+    def test_library_inbox_writes_trigger_orchestrator(self):
+        orchestrator = (ROOT / ".github/workflows/survey-orchestrator.yml").read_text(
+            encoding="utf-8"
+        )
+        triggers = orchestrator.split("permissions:", 1)[0]
+        for path in (
+            ".survey/scheduler/library-import-kick.json",
+            ".survey/import-inbox/pending/research/**",
+            ".survey/import-inbox/pending/discovery/**",
+            ".survey/import-inbox/waiting/discovery/**",
+            ".github/workflows/survey-orchestrator.yml",
+        ):
+            with self.subTest(path=path):
+                self.assertIn(path, triggers)
+        self.assertIn("dispatch_if_idle library-import.yml", orchestrator)
+
+    def test_library_inbox_api_errors_are_not_reported_as_empty(self):
+        orchestrator = (ROOT / ".github/workflows/survey-orchestrator.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("for attempt in 1 2 3; do", orchestrator)
+        self.assertIn("if grep -q '(HTTP 404)'", orchestrator)
+        self.assertIn("FATAL: Cannot determine inbox backlog", orchestrator)
+        self.assertIn("return 1", orchestrator)
+
     def test_submission_fast_is_manual_only(self):
         text = (ROOT / ".github/workflows/survey-submission-fast.yml").read_text(encoding="utf-8")
         trigger = text.split("permissions:", 1)[0]
