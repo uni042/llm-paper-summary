@@ -154,6 +154,13 @@ run中に在庫が変化してもモードは固定する。
 
 ## 5. Discovery
 
+### 関連性事前フィルタ（可逆・試験運用）
+
+GitHub ActionsのDiscovery worklist生成時、.survey/config/discovery-relevance-prefilter.jsonを読み、明確な異分野応用の候補を暫定隔離する。論文・参考文献・引用候補の正本や採否台帳には一切書き込まない。これは無関係の確定ではない。隔離候補は定期的にサンプルを抽出して監査する。
+
+enabled=false または mode=off を設定しワーカー一覧を再生成すると元の並びに復旧する。仕様は .survey/docs/survey-workflow/discovery-relevance-prefilter.md を参照。
+
+
 ### 5.0 引用探索の二層構成
 
 前方引用（forward citation）は二層で追跡する。
