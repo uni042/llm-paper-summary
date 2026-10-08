@@ -41,7 +41,6 @@ arxiv_categories:
 code: https://github.com/WeianMao/triattention
 implementation: 著者公開のTriAttention実装を参照。TensorRT-LLM・SGLang連携も公開。
 implementation_status: official-code-available
-last_audited: '2026-09-28'
 audit_version: 1
 references:
 - canonical_id: arXiv:2305.13245
