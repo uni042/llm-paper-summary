@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling",
+      "source_url": "https://arxiv.org/abs/2604.18556",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has become a standard tool for efficient LLM deployment, especially for local inference, where models are now routinely served at 2-3 bits per parameter. The state of the art is currently split into simple scalar quantization techniques, such as GPTQ or AWQ, which are widely deployed but plateau in accuracy at 3-4 bits per parameter (bpp), and\"second-generation\"vector- or trellis-quantized methods, such as QTIP, GPTVQ and AQLM, which push the accuracy frontier but are notoriously hard to implement and to scale. In this paper, we ask whether this gap is fundamental, or whether a carefully optimized $\\textit{scalar}$ quantizer can recover most of it. We answer in the affirmative, by introducing GSQ (Gumbel-Softmax Quantization), a post-training scalar quantization method which jointly learns the per-coordinate grid assignments and the per-group scales using a Gumbel-Softmax relaxation of the discrete grid. GSQ matches the cardinality of the relaxation to the small number of levels available in the target bit-width regime (e.g., 3-8 levels for ternary and 3 bpp, respectively), making optimization tractable. Practically, on the standard Llama-3.1-8B/70B-Instruct models, GSQ closes most of the gap between scalar quantization and the QTIP frontier at 2 and 3 bits, while using a symmetric scalar grid with group-wise quantization, and thus remains compatible with existing scalar inference kernels. We further show that the same discrete-assignment optimization can be applied to practical GGUF K-Quant checkpoints: starting from publicly released GGUF models, GSQ improves accuracy while projecting the result back into the same deployment format. Finally, GSQ scales to trillion-scale Mixture-of-Experts models such as Kimi-K2.5, where vector-quantized methods are difficult to apply. The source code is publicly available at https://github.com/IST-DASLab/GSQ.",
+      "identifiers": [
+        "SemanticScholar:c8b509a32e5bb1f138db9b33b5422d3173eddee9"
+      ],
+      "semantic_scholar_id": "c8b509a32e5bb1f138db9b33b5422d3173eddee9",
+      "canonical_id": "arXiv:2604.18556",
+      "arxiv_id": "2604.18556",
+      "doi": "10.48550/arXiv.2604.18556",
+      "authors": [
+        "Alireza Dadgarnia",
+        "Soroush Tabesh",
+        "Mahdi Nikdan",
+        "Michael A. Helcig",
+        "Eldar Kurtic",
+        "Maximilian Kleinegger",
+        "Dan Alistarh"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gumbel-Softmax relaxationで座標ごとのquantization grid割当とgroup scaleを共同最適化するpost-training scalar量子化。既存scalar推論kernelとの互換性とGGUF K-Quant形式への再投影を一次要旨で確認でき、低bit LLM実行のmemory効率改善へ直接つながるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Verification-Aware Training for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.30135",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by using a draft model to generate candidate tokens, which are verified by the target model in a single forward pass. Verification proceeds sequentially and discards every position from the first rejection onward, yet existing draft training relies on token-level imitation of the target with a fixed per-position weighting that reflects neither property. We introduce Verification-Aware Training (VAT), a plug-in framework that simulates verification at every training step and turns the resulting accept and reject patterns into supervision. VAT consists of two components: (i) a verification head, a lightweight jointly trained binary classifier that supervises the draft model on whether each position survives sequential verification; (ii) verification-adaptive weighting, which replaces the fixed weighting schedule by keeping full weight up to each sample's first rejection point and re-anchoring the decay to start there. VAT modifies only the training objective, so it can be layered on top of existing methods without changing the draft architecture, the target model, or the inference procedure. Applied to EAGLE-3 and DFlash on Qwen3-4B, Qwen3-8B, and LLaMA-3.1-8B, VAT improves average acceptance length by up to 11.4% and wall-clock speedup by up to 8.7%, with consistent gains across math, code, and chat benchmarks. Code will be available at https://github.com/naver-ai/vat",
+      "identifiers": [
+        "SemanticScholar:2d1ad40dfe5086102d7d742ac6d2b7ed23e10514"
+      ],
+      "semantic_scholar_id": "2d1ad40dfe5086102d7d742ac6d2b7ed23e10514",
+      "canonical_id": "arXiv:2608.30135",
+      "arxiv_id": "2608.30135",
+      "authors": [
+        "Geonmo Gu",
+        "Byeongho Heo",
+        "HeeJae Jun",
+        "Yoohoon Kang",
+        "Sangmin Lee",
+        "Sangdoo Yun",
+        "Dongyoon Han"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "各学習stepで逐次verificationを模擬し、verification headと最初のreject位置に応じた重み付けでdraftを訓練する。一次要旨はdraft architecture・target・推論手順を変更せず受理長とwall-clock speedupを改善すると説明し、学習の最終適用がLLM speculative inferenceなのでaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlashEVA: Accelerating LLM inference via Efficient Attention",
+      "source_url": "https://arxiv.org/abs/2511.00576",
+      "year": 2025,
+      "published": "2025-11-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have revolutionized natural language processing, achieving state-of-the-art performance and demonstrating remarkable scalability. However, their memory demands, particularly due to maintaining full context in memory, pose significant challenges for inference. In this paper, we present FlashEVA, an efficient implementation of EVA (Efficient Attention via Control Variates), and demonstrate how to finetune transformers to adapt to FlashEVA attention. Our method enables fine-tuning of Transformer models with as few as 1.5B tokens while preserving effectiveness across various downstream tasks. Notably, FlashEVA achieves up to 6.7x higher throughput and 5x lower peak GPU memory usage during inference compared to standard Transformer implementations. Despite these improvements, we observe limitations in retrieval-focused tasks. Our implementation offers control over the trade-off between throughput and accuracy through adjustable hyperparameters, providing flexibility for diverse use cases. This work represents a significant step towards more efficient and adaptable Transformer-based models for inference.",
+      "identifiers": [
+        "SemanticScholar:131a6031f2eaa21fa58fb8f42e3cc2cde005e20d"
+      ],
+      "semantic_scholar_id": "131a6031f2eaa21fa58fb8f42e3cc2cde005e20d",
+      "canonical_id": "arXiv:2511.00576",
+      "arxiv_id": "2511.00576",
+      "doi": "10.48550/arXiv.2511.00576",
+      "authors": [
+        "Juan Gabriel Kostelec",
+        "Qinghai Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 341,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EVAのcontrol variates attentionを効率実装し、Transformerを少量トークンで適応させて推論時のメモリ要求とthroughputを改善する。一次要旨はretrievalタスクでの限界と精度・速度の調整も示すため、LLM attention実行効率の読解候補としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Multi-Head Low-Rank Attention",
+      "source_url": "https://arxiv.org/abs/2603.02188",
+      "year": 2026,
+      "published": "2026-03-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference in large language models is bottlenecked by Key--Value (KV) cache loading during the decoding stage, where the sequential nature of generation requires repeatedly transferring the KV cache from off-chip High-Bandwidth Memory (HBM) to on-chip Static Random-Access Memory (SRAM) at each step. While Multi-Head Latent Attention (MLA) significantly reduces the total KV cache size, it suffers from a sharding bottleneck during distributed decoding via Tensor Parallelism (TP). Since its single latent head cannot be partitioned, each device is forced to redundantly load the complete KV cache for every token, consuming excessive memory traffic and diminishing TP benefits like weight sharding. In this work, we propose Multi-Head Low-Rank Attention (MLRA), which enables partitionable latent states for efficient 4-way TP decoding. Extensive experiments show that MLRA achieves state-of-the-art perplexity and downstream task performance, while also delivering a 2.8$\\times$ decoding speedup over MLA. Code is available at https://github.com/SongtaoLiu0823/MLRA. Pretrained weights, along with the training and evaluation data, are available at https://huggingface.co/Soughing/MLRA.",
+      "identifiers": [
+        "SemanticScholar:a1b9042defdecc4fcd3d2a8dcb597dee86a4de30"
+      ],
+      "semantic_scholar_id": "a1b9042defdecc4fcd3d2a8dcb597dee86a4de30",
+      "canonical_id": "arXiv:2603.02188",
+      "arxiv_id": "2603.02188",
+      "doi": "10.48550/arXiv.2603.02188",
+      "authors": [
+        "Songtao Liu",
+        "Hong-Wu Peng",
+        "Zhiwei Zhang",
+        "Zheng-Yu Chen",
+        "Yue Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 220,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MLAの単一latent headをtensor parallelで分割できず各GPUがKV全体を重複ロードする律速に対し、MLRAは分割可能なlatent stateを導入する。一次要旨で長文LLM decodeのHBM-SRAM trafficと4-way TP効率を改善する機構が確認できるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "POSS: Position Specialist Generates Better Draft for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2506.03566",
+      "year": 2025,
+      "published": "2025-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates Large Language Model (LLM) inference by using a small draft model to predict multiple tokens, and a large target model to verify these tokens in parallel. Recent studies leverage the hidden state of the target model to enhance draft model prediction accuracy. However, existing methods suffer from the degrading quality of draft token predictions at later positions, due to error accumulation in draft model generated features. In this paper, we propose Position Specialists (PosS), which consist of multiple position-specialized draft layers to generate tokens at assigned position(s). Position specialists greatly improve token acceptance rate at later positions per drafting round, as each specialist only needs to focus on handling a certain level of draft model feature deviation. Experiment results on Llama-3-8B-Instruct and Llama-2-13B-chat across six datasets demonstrate that PosS effectively improves over baselines on average acceptance length and speed-up ratio. Our codebase is available at https://github.com/shrango/PosS.",
+      "identifiers": [
+        "SemanticScholar:b1a140c885ba3346ec2670e4bd48ca33120067c2"
+      ],
+      "semantic_scholar_id": "b1a140c885ba3346ec2670e4bd48ca33120067c2",
+      "canonical_id": "arXiv:2506.03566",
+      "arxiv_id": "2506.03566",
+      "doi": "10.48550/arXiv.2506.03566",
+      "authors": [
+        "Lang-Lin Huang",
+        "Chengsong Huang",
+        "Jixuan Leng",
+        "Di Huang",
+        "Jia-Xin Huang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 491,
+        "matched_prestigious_venue": null
+      },
+      "reason": "draft生成後半で蓄積するfeature誤差に対し、位置ごとのspecialist draft layerを割り当てて後方tokenの受理率を改善する。targetで並列検証するspeculative decodingの受理長と推論速度を改善する具体的機構が一次要旨にあるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ca99a18ffa3a",
+    "round": "libimp-ca99a18ffa3a09fe-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ca99a18ffa3a09fe-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ca99a18ffa3a09fe-pre01.json",
+    "receipt": "sha256:08eb63d7df6d20157a4e546009f7efefd64c6af77946d08321dbd000407cc569"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ca99a18ffa3a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
