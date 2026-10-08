@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T08:12:10.155965+00:00",
+  "generated_at": "2026-10-08T08:22:52.665604+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 557,
+  "count": 553,
   "worker_counts": {
-    "scheduled-chat-00": 189,
-    "scheduled-chat-30": 180,
-    "scheduled-chat-45": 188
+    "scheduled-chat-00": 188,
+    "scheduled-chat-30": 178,
+    "scheduled-chat-45": 187
   },
   "entries": [
     {
@@ -1451,33 +1451,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2602.16284-fast-kv-compaction-via-attention-matching.md",
-      "canonical_id": "arXiv:2602.16284",
-      "title": "Fast KV Compaction via Attention Matching",
-      "file_bytes": 8821,
-      "source_sha256": "39504e01aca1d8bd36fd91f28fd5070ded176429ee405a10d876b8cd8d3eeae3",
-      "source_git_blob_sha": "8c6f2cca52dd538d82901138b9a9105c2ac01d8d",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.750747,
-      "quality_metrics": {
-        "body_chars": 1765,
-        "method_chars": 577,
-        "evaluation_chars": 265,
-        "limitation_chars": 160
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1765 < 2200",
-        "16KB未満再監査: 手法説明量 577 < 700",
-        "16KB未満再監査: 評価説明量 265 < 500",
-        "16KB未満再監査: 日本語比率 75.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 75.1% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md",
       "canonical_id": "arXiv:2505.09999",
       "title": "ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production",
@@ -2141,30 +2114,6 @@
       "warnings": [
         "日本語比率 72.0% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md",
-      "canonical_id": "arXiv:2411.08982",
-      "title": "Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection",
-      "file_bytes": 9236,
-      "source_sha256": "7248d89108b868067cf51b451be6265ee2ee70c4c1f567d68d51126f3331ee20",
-      "source_git_blob_sha": "d9972c246f563efd8f24e045770e0e38c8aef80d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.809141,
-      "quality_metrics": {
-        "body_chars": 1550,
-        "method_chars": 477,
-        "evaluation_chars": 0,
-        "limitation_chars": 138
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1550 < 2200",
-        "16KB未満再監査: 手法説明量 477 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md",
@@ -5212,26 +5161,6 @@
         "16KB未満再監査: 手法説明量 660 < 700",
         "16KB未満再監査: 評価説明量 483 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md",
-      "canonical_id": "arXiv:2506.24045",
-      "title": "Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC",
-      "file_bytes": 11002,
-      "source_sha256": "47a81ad09d2d210b618407df7d51837bc9002a2568ff7a3a20a0bdf192291c6c",
-      "source_git_blob_sha": "f6253e947e6c16454aa2cf295eb84fe9222bd9a0",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.954802,
-      "quality_metrics": {
-        "body_chars": 3074,
-        "method_chars": 850,
-        "evaluation_chars": 1028,
-        "limitation_chars": 159
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -8892,6 +8821,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md",
+      "canonical_id": "arXiv:2506.24045",
+      "title": "Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC",
+      "file_bytes": 12609,
+      "source_sha256": "fc9968ca1b46eed7403416854fa3cdaed911fa5e08a53dd283b3ffe8ca5e041b",
+      "source_git_blob_sha": "cdecefacc1e5ecc284769503d74e367520cce3a7",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.954802,
+      "quality_metrics": {
+        "body_chars": 3074,
+        "method_chars": 850,
+        "evaluation_chars": 1028,
+        "limitation_chars": 159
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
       "canonical_id": "arXiv:2403.11421",
       "title": "FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines",
@@ -12093,46 +12042,6 @@
         "method_chars": 1732,
         "evaluation_chars": 1008,
         "limitation_chars": 381
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
-      "canonical_id": "arXiv:2601.10729",
-      "title": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
-      "file_bytes": 15390,
-      "source_sha256": "0b35e6b70213b7c9e90f5ee87ed51ab991bd6dc1524625cb095ce6f9af850d84",
-      "source_git_blob_sha": "5e788a3196550529913001db9189218f94d5117d",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.99236,
-      "quality_metrics": {
-        "body_chars": 4287,
-        "method_chars": 1164,
-        "evaluation_chars": 862,
-        "limitation_chars": 147
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.02691-output-aware-rotation-int2-kv-cache.md",
-      "canonical_id": "arXiv:2608.02691",
-      "title": "Output-Aware Rotation for INT2 KV-Cache Quantization",
-      "file_bytes": 15391,
-      "source_sha256": "2adf6c9efe162f954bef7e92cc216c60cff1cfbdf2aee6b94b1c23363fbf7f3d",
-      "source_git_blob_sha": "0d38c485c93b3955d70f81e8f5b882cafacb470f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.980586,
-      "quality_metrics": {
-        "body_chars": 3810,
-        "method_chars": 1274,
-        "evaluation_chars": 949,
-        "limitation_chars": 360
       },
       "mechanical_failures": [],
       "warnings": []
