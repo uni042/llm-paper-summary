@@ -7,7 +7,6 @@ and regenerate worklists to restore the exact original candidate ordering.
 """
 from __future__ import annotations
 
-import hashlib
 import json
 import math
 import re
@@ -15,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 CONFIG_PATH = Path(".survey/config/discovery-relevance-prefilter.json")
-POLICY_VERSION = "2026-10-08-v4-forward-lineage-percentile"
+POLICY_VERSION = "2026-10-08-v5-forward-lineage-percentile-no-audit"
 
 # Require an unambiguous *application topic in the title*. Never quarantine
 # solely because a negative-domain keyword happens to appear in the abstract.
@@ -209,18 +208,13 @@ def _quota_policy(policy: dict[str, Any]) -> tuple[str, float, int]:
     return mode, percent, minimum
 
 
-def _audit_key(row: dict[str, Any]) -> bytes:
-    identity = str(row.get("canonical_id") or row.get("title") or row.get("source_url") or "")
-    return hashlib.sha256(identity.encode("utf-8")).digest()
-
-
 def triage_worklist(
     rows: list[dict[str, Any]], policy: dict[str, Any], *, root: Path | None = None
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Partition presentation only, keeping original pool and identity untouched.
 
     Shadow mode counts probable quarantines but returns *all* original rows in
-    original order. Quarantine mode returns allowed + deterministic audit sample.
+    original order. Quarantine mode returns only eligible, ranked candidates.
     """
     mode = str(policy.get("mode") or "off")
     enabled = bool(policy.get("enabled")) and mode in ("shadow", "quarantine")
@@ -257,19 +251,8 @@ def triage_worklist(
     quota_eligible_count = len(kept)
     quota_target = math.ceil(quota_eligible_count * quota_percent / 100)
     quota_removed_count = 0
-    audit_budget = 0
-    try:
-        stride = max(int(policy.get("audit_stride", 50)), 2)
-        max_audit = max(int(policy.get("max_audit_per_build", 30)), 0)
-    except (TypeError, ValueError):
-        stride, max_audit = 50, 30
-
     if enabled and mode == "quarantine" and quota_mode == "quarantine" and quota_eligible_count >= quota_minimum:
-        # Preserve the requested percentage even when it is a tiny shortlist.
-        # Reserve at most one small-list audit slot, never the entire shortlist.
-        audit_budget = min(max_audit, max(1, quota_target // stride)) if quota_target > 2 else 0
-        regular_budget = max(quota_target - audit_budget, 0)
-        if len(kept) > regular_budget:
+        if len(kept) > quota_target:
             mandatory = {
                 i for i, row in enumerate(kept)
                 if str(row.get("canonical_id") or "") in policy.get("allow_canonical_ids", [])
@@ -278,7 +261,7 @@ def triage_worklist(
                 (i for i in range(len(kept)) if i not in mandatory),
                 key=lambda i: _relevance_rank(kept[i]),
             )
-            selected = mandatory | set(ranked[:max(regular_budget - len(mandatory), 0)])
+            selected = mandatory | set(ranked[:max(quota_target - len(mandatory), 0)])
             deferred.extend(row for i, row in enumerate(kept) if i not in selected)
             quota_removed_count = len(kept) - len(selected)
             kept = [row for i, row in enumerate(kept) if i in selected]
@@ -311,27 +294,11 @@ def triage_worklist(
         "expanded_rule_shadow_count": expanded_count,
         "expanded_rule_applied_count": expanded_applied_count,
         "expanded_rule_reason_counts": dict(sorted(expanded_reasons.items())),
-        "audit_count": 0,
         "reviewable_count": len(rows),
     }
     if not enabled or mode == "shadow":
         return rows, stats
     if enabled and mode == "quarantine" and quota_mode == "quarantine" and quota_eligible_count >= quota_minimum:
         kept.sort(key=_relevance_rank)
-    audit_count = min(len(deferred), audit_budget if quota_mode == "quarantine" else max_audit,
-                      len(kept) // stride + (1 if not kept else 0) if quota_mode != "quarantine" else len(deferred))
-    audit_rows = [
-        dict(row, prefilter_audit=True, prefilter_reason=classify(row, policy)["reason"])
-        for row in sorted(deferred, key=_audit_key)[:audit_count]
-    ]
-    result: list[dict[str, Any]] = []
-    audit_index = 0
-    for row in kept:
-        result.append(row)
-        if audit_index < audit_count and len(result) % stride == stride - 1:
-            result.append(audit_rows[audit_index])
-            audit_index += 1
-    result.extend(audit_rows[audit_index:])
-    stats["audit_count"] = audit_count
-    stats["reviewable_count"] = len(result)
-    return result, stats
+    stats["reviewable_count"] = len(kept)
+    return kept, stats

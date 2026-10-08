@@ -10,7 +10,7 @@ spec = importlib.util.spec_from_file_location("discovery_relevance_prefilter", S
 mod = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
 spec.loader.exec_module(mod)
-POLICY = {"enabled": True, "mode": "quarantine", "audit_stride": 3, "max_audit_per_build": 2}
+POLICY = {"enabled": True, "mode": "quarantine"}
 
 
 class RelevancePrefilterTests(unittest.TestCase):
@@ -39,9 +39,9 @@ class RelevancePrefilterTests(unittest.TestCase):
         original = json.dumps(rows, sort_keys=True)
         selected, stats = mod.triage_worklist(rows, POLICY)
         self.assertEqual(stats["quarantine_count"], 6)
-        self.assertEqual(stats["audit_count"], 2)
-        self.assertEqual(len(selected), 12)
-        self.assertEqual(sum(bool(x.get("prefilter_audit")) for x in selected), 2)
+        self.assertNotIn("audit_count", stats)
+        self.assertEqual(len(selected), 10)
+        self.assertFalse(any(x.get("prefilter_audit") for x in selected))
         self.assertEqual(json.dumps(rows, sort_keys=True), original)
         restored, _ = mod.triage_worklist(rows, {"enabled": False, "mode": "off"})
         self.assertEqual(restored, rows)
@@ -168,14 +168,20 @@ class RelevancePrefilterTests(unittest.TestCase):
         self.assertEqual(stats["quota_quarantine_count"], 0)
         self.assertEqual(stats["quota_target_count"], 10)
 
-    def test_quartile_audit_sample_is_inside_quota(self):
-        rows = [{"canonical_id": f"id-{i}", "title": f"Generic Paper Number {i}"} for i in range(100)]
-        q = {**POLICY, "audit_stride": 3, "max_audit_per_build": 5, "relevance_quota": {"enabled": True, "mode": "quarantine", "retain_percent": 25, "min_candidates": 0}}
+    def test_quartile_never_reinjects_deferred_even_with_legacy_audit_keys(self):
+        rows = [
+            {"canonical_id": f"id-{i}", "title": f"Generic Paper Number {i}", "priority": i}
+            for i in range(100)
+        ]
+        q = {**POLICY, "audit_stride": 3, "max_audit_per_build": 5,
+             "relevance_quota": {"enabled": True, "mode": "quarantine",
+                                 "retain_percent": 25, "min_candidates": 0}}
         selected, stats = mod.triage_worklist(rows, q)
         self.assertEqual(len(selected), 25)
-        self.assertEqual(stats["audit_count"], 5)
-        self.assertEqual(stats["quota_quarantine_count"], 80)
-        self.assertEqual(sum(bool(x.get("prefilter_audit")) for x in selected), 5)
+        self.assertEqual(stats["quota_quarantine_count"], 75)
+        self.assertNotIn("audit_count", stats)
+        self.assertFalse(any(x.get("prefilter_audit") for x in selected))
+        self.assertEqual([r["priority"] for r in selected], list(range(99, 74, -1)))
 
     def test_missing_config_fail_open(self):
         with tempfile.TemporaryDirectory() as d:

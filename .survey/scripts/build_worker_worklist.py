@@ -524,7 +524,7 @@ def build(
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
                 "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
                 "Only when the ordinary Discovery pool is exhausted, refill it with up to the configured target count from durable borderline records. For source_kind=borderline_reconsideration, copy origin=borderline_reconsideration and borderline_recheck_count_before from the worklist row into the completed Discovery record regardless of final classification.",
-                "Apply mechanical domain rules first, then retain configurable percent ranked by same-lineage forward citations. Read selected ranks in this order and audit deferred candidates; quarantine is reversible.",
+                "Apply mechanical domain rules first, then retain configurable percent ranked by same-lineage forward citations. Read selected ranks in this order; deferred candidates are not automatically reintroduced, and quarantine is reversible.",
             ],
             "research_audit": {
                 "ready_total": research_ready,

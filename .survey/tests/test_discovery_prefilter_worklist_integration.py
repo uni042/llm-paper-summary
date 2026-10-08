@@ -24,7 +24,7 @@ class PrefilterWorklistTests(unittest.TestCase):
             root = Path(d)
             cfg = root / ".survey/config/discovery-relevance-prefilter.json"
             cfg.parent.mkdir(parents=True)
-            cfg.write_text(json.dumps({"schema_version": 1, "enabled": True, "mode": "quarantine", "audit_stride": 50, "max_audit_per_build": 2}), encoding="utf-8")
+            cfg.write_text(json.dumps({"schema_version": 1, "enabled": True, "mode": "quarantine"}), encoding="utf-8")
             with mock.patch.object(mod, "_research_candidates", return_value=([], 0, [])), mock.patch.object(mod, "_discovery_candidates", return_value=([good, other], 2)):
                 result = mod.build(root, limit=5)
             self.assertEqual(result["00"]["discovery_review"]["pending_total"], 2)

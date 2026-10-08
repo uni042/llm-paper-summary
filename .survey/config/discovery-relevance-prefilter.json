@@ -1,10 +1,8 @@
 {
   "schema_version": 1,
-  "policy_name": "mechanical-rules-then-forward-lineage-percent-v1",
+  "policy_name": "mechanical-rules-then-forward-lineage-percent-v2-no-audit",
   "enabled": true,
   "mode": "quarantine",
-  "audit_stride": 50,
-  "max_audit_per_build": 30,
   "allow_canonical_ids": [],
   "expanded_rules": {
     "enabled": true,
@@ -17,6 +15,6 @@
     "retain_percent": 5,
     "min_candidates": 100,
     "selection": "same-lineage-forward-citation-count-then-topic-then-priority",
-    "note": "5% of candidates remaining AFTER mechanical quarantine; change retain_percent (1..100) freely. Historical classifier retired; all source records remain untouched."
+    "note": "5% of candidates remaining AFTER mechanical quarantine; change retain_percent (1..100) freely. No automatic audit revival; all source records remain untouched."
   }
 }
