@@ -375,6 +375,24 @@ _core._discovery_round_identity = _discovery_round_identity
 _core._direct_evidence_metrics = _direct_evidence_metrics
 _core._render_direct_metric_details = _render_direct_metric_details
 
+def _discovery_observed_at(payload: dict[str, Any], run_key: str):
+    """Recover Codex timestamps from durable per-record evidence, not a date-only run key."""
+    stamp = _discovery_run_time_from_key(run_key)
+    if stamp is not None:
+        return stamp
+    records = payload.get("records")
+    if isinstance(records, list):
+        observed = [
+            _core.evidence._parse_dt(record.get("last_checked_at") or record.get("first_checked_at"))
+            for record in records
+            if isinstance(record, dict)
+        ]
+        observed = [value for value in observed if value is not None]
+        if observed:
+            return max(observed)
+    return _core.evidence._parse_dt(payload.get("processed_at"))
+
+
 def _import_progress_activity(repo_root: Path, now):
     """Return current Library-first progress from GitHub-resident import receipts."""
     research = []
@@ -403,11 +421,12 @@ def _import_progress_activity(repo_root: Path, now):
         })
 
     seen = set()
+    # Prefer a successful import receipt over an in-flight copy of the same run.
     roots = [
-        repo_root / ".survey/import-inbox/pending/discovery",
-        repo_root / ".survey/import-inbox/waiting/discovery",
-        repo_root / ".survey/import-inbox/blocked/discovery",
         repo_root / ".survey/import-inbox/results/discovery",
+        repo_root / ".survey/import-inbox/waiting/discovery",
+        repo_root / ".survey/import-inbox/pending/discovery",
+        repo_root / ".survey/import-inbox/blocked/discovery",
     ]
     for root in roots:
         for path, payload in _core.evidence._iter_json(root):
@@ -415,17 +434,23 @@ def _import_progress_activity(repo_root: Path, now):
             if root.name == "results" and status not in {"imported", "already_represented"}:
                 continue
             run_key = str(payload.get("run_key") or "").strip()
-            stamp = _discovery_run_time_from_key(run_key)
+            stamp = _discovery_observed_at(payload, run_key)
             count = int(payload.get("record_count") or 0)
             if not run_key:
-                stamp = _core.evidence._parse_dt(payload.get("processed_at"))
                 run_key = "legacy:" + str(path)
-            if count <= 0:
-                records = payload.get("records")
-                if isinstance(records, list):
-                    count = len(records)
+            records = payload.get("records")
+            if count <= 0 and isinstance(records, list):
+                count = len(records)
             if stamp is None or stamp > now or count <= 0 or run_key in seen:
                 continue
+            classifications = [
+                str(record.get("classification") or "").strip()
+                for record in records if isinstance(record, dict)
+            ] if isinstance(records, list) else []
+            accept_count = int(payload.get("accept_count") or classifications.count("accept"))
+            relevance_count = int(payload.get("relevance_count") or (
+                classifications.count("unrelated") + classifications.count("borderline")
+            ))
             seen.add(run_key)
             discovery.append({
                 "path": path,
@@ -435,8 +460,11 @@ def _import_progress_activity(repo_root: Path, now):
                 "worker_id": str(payload.get("worker_id") or "").strip()
                     or _worker_from_run_key(run_key),
                 "record_count": count,
-                "accept_count": int(payload.get("accept_count") or 0),
-                "relevance_count": int(payload.get("relevance_count") or 0),
+                "accept_count": accept_count,
+                "relevance_count": relevance_count,
+                "unrelated_count": classifications.count("unrelated"),
+                "borderline_count": classifications.count("borderline"),
+                "stage": root.name,
                 "status": status,
             })
 
@@ -551,15 +579,51 @@ def _render_library_first_activity_section(repo_root: Path, now) -> str:
         "| 指標 | 現在値 |",
         "|---|---:|",
         f"| 直近{_core.evidence.RECENT_HOURS}hのResearch完了 | **{len(recent_research)}** |",
-        f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery run | **{len(recent_discovery)}** |",
+        f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery成果run | **{len(recent_discovery)}** |",
         f"| 直近{_core.evidence.RECENT_HOURS}hのDiscovery本文確認・分類 | "
         f"**{sum(int(row.get('record_count') or 0) for row in recent_discovery)}** |",
         f"| 最終Research完了 | **{_core.evidence._fmt_time(latest_research['completed_at']) if latest_research else '—'}** |",
-        f"| 最終Discovery完了 | **{_core.evidence._fmt_time(latest_discovery['completed_at']) if latest_discovery else '—'}** |",
+        f"| 最終Discovery成果確認 | **{_core.evidence._fmt_time(latest_discovery['completed_at']) if latest_discovery else '—'}** |",
         "",
         "### 最新Library-first run",
         "",
     ]
+
+    # Codex uses date-only run keys. Its pending classifications and successful
+    # import receipts are distinct evidence; do not equate either with new Research jobs.
+    codex = [row for row in discovery if row["worker_id"].startswith("codex-")]
+    codex_waiting = [row for row in codex if row["stage"] in {"pending", "waiting"}]
+    codex_imported = [row for row in codex if row["stage"] == "results"]
+    codex_blocked = [row for row in codex if row["stage"] == "blocked"]
+    if codex:
+        waiting_count = sum(row["record_count"] for row in codex_waiting)
+        waiting_accept = sum(row["accept_count"] for row in codex_waiting)
+        waiting_unrelated = sum(row["unrelated_count"] for row in codex_waiting)
+        waiting_borderline = sum(row["borderline_count"] for row in codex_waiting)
+        lines.extend([
+            "",
+            "### Codex探索成果の反映状況",
+            "",
+            "ここでの件数はGitHub受信箱の成果レコードであり、正規Research候補への新規昇格件数ではありません。"
+            "取り込み済みは受信箱receipt成功、待機中はまだ後段処理中です。",
+            "",
+            "| 指標 | 件数 |",
+            "|---|---:|",
+            f"| Codex成果の取り込み済み（receipt） | **{len(codex_imported)}ファイル / {sum(row['record_count'] for row in codex_imported)}件** |",
+            f"| Codex成果の取り込み待機中 | **{len(codex_waiting)}ファイル / {waiting_count}件** |",
+            f"| └ 待機中のaccept | **{waiting_accept}件** |",
+            f"| └ 待機中のunrelated | **{waiting_unrelated}件** |",
+            f"| └ 待機中のborderline | **{waiting_borderline}件** |",
+            f"| Codex成果のblocked（要対処） | **{len(codex_blocked)}ファイル** |",
+            "",
+        ])
+        latest_codex = codex[0]
+        lines.append(
+            f"- 最終Codex分類・受渡し証拠: **{_core.evidence._fmt_time(latest_codex['completed_at'])}**"
+            f" / {latest_codex['stage']} / {latest_codex['run_key']}"
+        )
+        lines.append(f"  - evidence: {_core.evidence._rel(repo_root, latest_codex['path'])}")
+        lines.append("")
 
     if latest_research is None:
         lines.append("- Research: GitHubへ到達済みの成功receiptなし。")
