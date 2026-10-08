@@ -70,10 +70,46 @@ lineage: test-lineage
         with tempfile.TemporaryDirectory() as td:
             path = Path(td) / "state.json"
             path.write_text("original", encoding="utf-8")
-            with patch.object(forward_citation_sweep.json, "dumps", return_value="x" * (90 * 1024 * 1024)):
+            state = {
+                "schema_version": 1,
+                "candidates": {"paper": {"canonical_id": "arXiv:1234.56789", "title": "x" * 300}},
+                "candidate_aliases": {},
+            }
+            with patch.object(forward_citation_sweep.forward_citation_state, "INLINE_MAX_BYTES", 1), \
+                 patch.object(forward_citation_sweep.forward_citation_state, "SHARD_MAX_BYTES", 150):
                 with self.assertRaisesRegex(ValueError, "unpublishable git blob"):
-                    forward_citation_sweep._write(path, {"schema_version": 1})
+                    forward_citation_sweep._write(path, state)
             self.assertEqual(path.read_text(encoding="utf-8"), "original")
+            self.assertFalse((path.parent / "state-shards").exists())
+
+    def test_sharded_state_preserves_every_candidate_and_seed_cursor(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / ".survey/work-queue/forward-citation-sweep.json"
+            state = {
+                "schema_version": 1,
+                "updated_at": "2026-10-08T05:00:00+00:00",
+                "seeds": {"arXiv:2303.06865": {"next_cursor": "300", "cycle_started_at": "2026-10-07"}},
+                "candidates": {
+                    "paper1": {"canonical_id": "arXiv:2601.00001", "linked_from": ["a", "b"]},
+                    "paper2": {"canonical_id": "arXiv:2601.00002", "linked_from": ["c"]},
+                    "paper3": {"canonical_id": "arXiv:2601.00003", "linked_from": ["d", "e"]},
+                },
+                "candidate_aliases": {
+                    "DOI:10.1234/a": "paper1",
+                    "arXiv:2601.00002": "paper2",
+                },
+                "candidate_count": 3,
+            }
+            with patch.object(forward_citation_sweep.forward_citation_state, "INLINE_MAX_BYTES", 1):
+                self.assertTrue(forward_citation_sweep._write(path, state))
+                manifest = json.loads(path.read_text(encoding="utf-8"))
+                self.assertEqual(len(manifest["candidate_shards"]), 32)
+                self.assertNotIn("candidates", manifest)
+                self.assertEqual(forward_citation_sweep.forward_citation_state.load(path), state)
+                self.assertFalse(forward_citation_sweep._write(path, state))
+                (path.parent / "forward-citation-sweep-shards" / manifest["candidate_shards"][0]).unlink()
+                with self.assertRaises(FileNotFoundError):
+                    forward_citation_sweep.forward_citation_state.load(path)
 
     def test_url_seed_is_used_only_for_semantic_scholar_supported_hosts(self) -> None:
         record = forward_citation_sweep.citation_graph.PaperRecord(
