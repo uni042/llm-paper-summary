@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T16:48:35+00:00",
+  "generated_at": "2026-10-08T19:50:03+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 138,
+  "count": 137,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -1927,33 +1927,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_dfb8c9521e788191b0e213d5af8edaf8--2024-2403.00579-neupims.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_dfb8c9521e788191b0e213d5af8edaf8--2024-2403.00579-neupims.json",
       "worker_run_key": "20261007-1657-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.06154",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T13:34:44+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4818,
-        "body_paragraphs": 27,
-        "method_chars": 1738,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 625,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-009aa00b08a5--libfile_f27173e1fb0c8191a649a6617dc3c9f4--2026-2602.06154-mose-under16kb-reaudit-20261008-1630-scheduled-chat-30-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-009aa00b08a5--libfile_f27173e1fb0c8191a649a6617dc3c9f4--2026-2602.06154-mose-under16kb-reaudit-20261008-1630-scheduled-chat-30-r02.json",
-      "worker_run_key": "20261008-1630-scheduled-chat-30/r02"
     },
     {
       "canonical_id": "arXiv:2402.14160",

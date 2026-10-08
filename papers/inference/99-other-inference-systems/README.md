@@ -127,8 +127,8 @@
   チャンク再計算・ページ化KV/勾配・非同期CPUオフロード・疎注意を統合し、Qwen2.5-7Bの4M文脈学習を単一H200で実現する。
 
 - **2026-02 · [MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models](2026-2602.06154-mose-mixture-of-slimmable-experts-for-efficient-and-adaptive-language-mo.md)**  
-  実装：[✓](https://github.com/nurbektastan/mose) ・ リポジトリ内被引用：1  
-  しかし一度選ばれた専門家は通常その全中間幅を実行するため、計算量を変えるにはtop-kを変えるなど粗い選択しかなく、品質とFLOPsの交換曲線が段階的になる。各専門家の中間チャネルを入れ子状に並べ、幅25%、50%、75%、100%のような部分ネットワークとして実行できる「可変幅専門家」にする。
+  実装：[✓](https://github.com/tnurbek/mose) ・ リポジトリ内被引用：1  
+  MoSEは、混合専門家モデル（Mixture-of-Experts; MoE）の「専門家を何個選ぶか」に加え、「選んだ各専門家を何割の中間幅で実行するか」を推論時に変える研究である。主指標は一トークン当たり浮動小数点演算量（FLOPs/トークン）と品質であり、実機処理率は補助的な検証である。
 
 - **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

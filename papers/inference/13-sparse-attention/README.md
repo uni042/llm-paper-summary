@@ -183,8 +183,8 @@
   近似レバレッジスコアで質問非依存にKVを選別し、文脈別の圧縮耐性を校正してLongBenchで完全KV相当の性能を保ちながら平均68%のKVメモリを削減する。
 
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  長動画や画像列を扱う視覚言語モデル（Vision-Language モデル; VLM）では、最初の出力を生成する前のプリフィルで全入力トークン間の注意を計算するため、入力長が100万トークン級になると二乗計算量が支配的になる。テキストLLM向け疎注意をそのまま使うと、動画トークンの時空間構造や、テキストと映像の境界で注意パターンが変わる性質を取り逃す。
+  実装：[✓](https://aka.ms/MMInference) ・ リポジトリ内被引用：4  
+  MMInferenceは、長い動画や動画とテキストが混在する視覚言語モデル（Vision-Language モデル; VLM）の入力処理段階を、モダリティごとの疎注意パターンに合わせて高速化する。報告される8.3倍は1Mトークンでのプリフィル時間に関する値であり、生成段階の一トークン時間ではない。
 
 - **2025-10 · [NOSA: Native and Offloadable Sparse Attention](2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md)**  
   実装：[✓](https://github.com/thunlp/NOSA) ・ リポジトリ内被引用：3  

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 04:45:29 JST**
+> 自動生成: **2026-10-09 04:50:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **752** |
 | 未claim Research job | **752** |
-| 直近24hのResearch処理完了 | **266** |
-| 最終Research処理完了 | **10-09 03:49:00 JST** |
+| 直近24hのResearch処理完了 | **268** |
+| 最終Research処理完了 | **10-09 04:38:08 JST** |
 | 最終Discovery探索完了 | **10-09 04:28:41 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（16時間48分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（16時間53分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **29** |
+| 直近6hのResearch完了 | **30** |
 | 直近6hのDiscovery run | **12** |
 | 直近6hのDiscovery本文確認・分類 | **201** |
-| 最終Research完了 | **10-09 03:49:00 JST** |
+| 最終Research完了 | **10-09 04:38:08 JST** |
 | 最終Discovery完了 | **10-09 04:28:41 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-09 03:49:00 JST** / worker — / run 20261009-0330-scheduled-chat-30/r01 / 成果 **2件**
-  - evidence: .survey/import-inbox/results/research/libfile_49d6ed7eb16881919a6d3d55043565f3--2023-2301.00774-sparsegpt-under16kb-reaudit-20261009-0330-scheduled-chat-30-r01.json
+- Research: **10-09 04:38:08 JST** / worker — / run 20261009-0430-scheduled-chat-30/r01 / 成果 **2件**
+  - evidence: .survey/import-inbox/results/research/libfile_08ecaa2b0b5081919235ec059f99fba2--2025-2504.16083-mminference-under16kb-reaudit-20261009-0430-scheduled-chat-30-r01-corrected.json
 - Discovery: **10-09 04:28:41 JST** / worker codex-discovery-backfill-luna / run codex-backfill-r317-b17-main-f24de222
   - 本文確認・分類 **20件** / accept **17件** / unrelated+borderline **3件**
   - evidence: .survey/import-inbox/results/discovery/codex-backfill-r317-b17-main-f24de222.json
@@ -302,11 +302,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **321** |
+| 成功result未照合のimmutable submission | **324** |
 | └ Research | **120** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **56** |
+| └ Other/Unknown | **59** |
 
 ### 厳格検証が未成立のcompleted job
 
