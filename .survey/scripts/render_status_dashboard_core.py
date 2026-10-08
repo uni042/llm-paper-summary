@@ -107,6 +107,12 @@ def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
             discovery_all,
             reserved_rows=research_rows,
         )
+        import discovery_relevance_prefilter
+        _worklist_rows, prefilter_metrics = discovery_relevance_prefilter.triage_worklist(
+            pending_rows, discovery_relevance_prefilter.load_policy(repo_root),
+            root=repo_root,
+        )
+        del _worklist_rows
 
         seen: set[str] = set()
 
@@ -170,6 +176,7 @@ def _structured_reference_progress(repo_root: Path) -> dict[str, Any]:
         "forward_pending_raw": forward_pending,
         "combined_pending_before_research_exclusion": len(discovery_all),
         "paper_count": len(papers),
+        "prefilter": prefilter_metrics,
     }
 
 
@@ -197,6 +204,22 @@ def _render_structured_reference_progress(progress: dict[str, Any]) -> list[str]
         f"| Research / Audit候補へ昇格済み | **{progress['research']}** |",
         f"| 無関係として除外 | **{progress['unrelated']}** |",
         f"| 微妙として除外 | **{progress['borderline']}** |",
+        "",
+        "### 探索候補の事前フィルタリング（可逆）",
+        "",
+        "| 判定段階 | 件数 |",
+        "|---|---:|",
+        f"| 未処理候補（フィルタ前） | **{remaining}** |",
+        f"| 規則による暫定隔離 | **{progress.get('prefilter', {}).get('rule_quarantine_count', 0)}** |",
+        f"| 分類器による追加隔離 | **{progress.get('prefilter', {}).get('classifier_quarantine_count', 0)}** |",
+        f"| 暫定隔離合計 | **{progress.get('prefilter', {}).get('quarantine_count', 0)}** |",
+        f"| 監査用に復活 | **{progress.get('prefilter', {}).get('audit_count', 0)}** |",
+        f"| **読解可能候補（隔離後）** | **{progress.get('prefilter', {}).get('reviewable_count', remaining)}** |",
+        f"| 分類器判定済み | **{progress.get('prefilter', {}).get('classifier_scanned_count', 0)}** |",
+        f"| 分類器未判定 | **{progress.get('prefilter', {}).get('classifier_pending_count', remaining)}** |",
+        "",
+        f"- モード: 規則 **{progress.get('prefilter', {}).get('mode', 'off')}** / 分類器 **{progress.get('prefilter', {}).get('classifier_mode', 'pending_model')}**。",
+        "- 全数との差は隔離候補から監査復活分を引いた値。元候補は削除せず、分類器未判定分は通常候補に残す。集計は現在の候補identityから再計算する。",
         "",
         f"- 消化率: **{ratio:.1f}%**",
         f"- 現在の生在庫: 後方references **{progress['backward_pending_raw']}件** / "

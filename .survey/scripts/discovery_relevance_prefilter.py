@@ -8,6 +8,7 @@ and regenerate worklists to restore the exact original candidate ordering.
 from __future__ import annotations
 
 import hashlib
+import discovery_relevance_classifier as classifier
 import json
 import re
 from pathlib import Path
@@ -90,7 +91,7 @@ def _audit_key(row: dict[str, Any]) -> bytes:
 
 
 def triage_worklist(
-    rows: list[dict[str, Any]], policy: dict[str, Any]
+    rows: list[dict[str, Any]], policy: dict[str, Any], *, root: Path | None = None
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Partition presentation only, keeping original pool and identity untouched.
 
@@ -99,12 +100,30 @@ def triage_worklist(
     """
     mode = str(policy.get("mode") or "off")
     enabled = bool(policy.get("enabled")) and mode in ("shadow", "quarantine")
+    classifier_policy = policy.get("classifier") if isinstance(policy.get("classifier"), dict) else {}
+    model = classifier.load_model(root) if root is not None and enabled and classifier_policy.get("enabled") else {}
+    model_id = str(model.get("model_id") or "") if model.get("approved") else ""
+    decisions = classifier.load_decisions(root, model_id) if root is not None and model_id else {}
+    model_mode = str(classifier_policy.get("mode") or "shadow")
     kept: list[dict[str, Any]] = []
     deferred: list[dict[str, Any]] = []
+    rule_count = 0
+    ml_count = 0
+    scanned = 0
     for row in rows:
         if not enabled:
             kept.append(row)
-        elif classify(row, policy)["verdict"] == "quarantine":
+            continue
+        rule_reject = classify(row, policy)["verdict"] == "quarantine"
+        decision = decisions.get(classifier.identity_key(row)) if model_id else None
+        if decision is not None:
+            scanned += 1
+        ml_reject = decision == "q" and model_mode == "quarantine"
+        if rule_reject:
+            rule_count += 1
+        elif ml_reject:
+            ml_count += 1
+        if rule_reject or ml_reject:
             deferred.append(row)
         else:
             kept.append(row)
@@ -114,6 +133,14 @@ def triage_worklist(
         "mode": mode if enabled else "off",
         "unfiltered_count": len(rows),
         "quarantine_count": len(deferred),
+        "rule_quarantine_count": rule_count,
+        "classifier_quarantine_count": ml_count,
+        "classifier_scanned_count": scanned,
+        "classifier_pending_count": max(len(rows) - scanned, 0),
+        "classifier_model_id": model_id,
+        "classifier_mode": model_mode if model_id else "pending_model",
+        "classifier_validation_positive_recall": model.get("validation_positive_recall"),
+        "classifier_validation_negative_quarantine_rate": model.get("validation_negative_quarantine_rate"),
         "audit_count": 0,
         "reviewable_count": len(rows),
     }

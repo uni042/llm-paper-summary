@@ -5,5 +5,12 @@
   "mode": "quarantine",
   "audit_stride": 50,
   "max_audit_per_build": 30,
-  "allow_canonical_ids": []
+  "allow_canonical_ids": [],
+  "classifier": {
+    "enabled": true,
+    "mode": "quarantine",
+    "batch_size": 2000,
+    "validation_policy": "zero_positive_holdout_errors",
+    "model_training": "frozen_until_explicit_retraining"
+  }
 }

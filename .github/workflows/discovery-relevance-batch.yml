@@ -1,0 +1,60 @@
+name: Incremental Discovery relevance classifier
+
+on:
+  # Best-effort GitHub cron. Every invocation handles at most one batch.
+  schedule:
+    - cron: '19,49 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/discovery-relevance-batch.yml'
+      - '.survey/scripts/discovery_relevance_classifier.py'
+      - '.survey/scripts/discovery_relevance_batch.py'
+      - '.survey/config/discovery-relevance-prefilter.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: incremental-discovery-relevance-main
+  cancel-in-progress: false
+
+jobs:
+  advance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install metadata dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+      - name: Continue bounded classifier batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/discovery_relevance_batch.py --repo-root . --batch-size 2000
+            git add -A .survey/work-queue/discovery-prefilter/
+            if git diff --cached --quiet; then
+              echo 'No new classifier decisions to publish.'
+              exit 0
+            fi
+            git commit -m 'chore: advance bounded Discovery classifier'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Concurrent push on attempt $attempt; reloading latest canonical state."
+            sleep $((attempt * 2))
+          done
+          echo 'Failed classifier progress push after three retries' >&2
+          exit 1
