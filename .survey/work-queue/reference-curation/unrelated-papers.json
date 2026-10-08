@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-08T20:04:55+00:00",
-  "record_count": 11219,
+  "updated_at": "2026-10-08T22:56:37+00:00",
+  "record_count": 11220,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160285,6 +160285,19 @@
       "last_checked_at": "2026-10-08T20:04:55+00:00",
       "linked_from": [],
       "title": "AdaHOP: Fast and Accurate Low-Precision Training via Outlier-Pattern-Aware Rotation"
+    },
+    "arXiv:2606.03979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03979",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.03979",
+        "arXiv:2606.03979"
+      ],
+      "reason": "The primary abstract is about continual learning, distilling short-term knowledge into parameters, and RL-driven self-improvement. It does not describe serving, decoding, inference efficiency, or inference-state compression.",
+      "first_checked_at": "2026-10-08T22:56:37+00:00",
+      "last_checked_at": "2026-10-08T22:56:37+00:00",
+      "linked_from": [],
+      "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories"
     }
   }
 }
