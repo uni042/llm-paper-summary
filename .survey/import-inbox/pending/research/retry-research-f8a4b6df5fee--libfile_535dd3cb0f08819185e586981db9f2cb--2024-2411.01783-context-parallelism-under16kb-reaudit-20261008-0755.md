@@ -41,6 +41,8 @@ quality_evaluation_chars: 2033
 quality_limitation_chars: 733
 quality_self_review_passed: true
 quality_self_review_version: "2026-10-07-v1"
+last_audited: null
+audit_version: 0
 ---
 
 # Context Parallelism for Scalable Million-Token Inference

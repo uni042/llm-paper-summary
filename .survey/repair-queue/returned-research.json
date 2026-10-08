@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T07:59:13+00:00",
+  "generated_at": "2026-10-08T08:08:08+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 161,
+  "count": 159,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -320,22 +320,6 @@
       "worker_run_key": "20261003-1030-scheduled-chat-30"
     },
     {
-      "canonical_id": "arXiv:2506.24045",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:14:18+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 63.5% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_649abc01c464819184badaab5efd3f57--2025-2506.24045-agent-xpu.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_649abc01c464819184badaab5efd3f57--2025-2506.24045-agent-xpu.json",
-      "worker_run_key": "20261003-0245-scheduled-chat-45"
-    },
-    {
       "canonical_id": "arXiv:2402.02446",
       "title": null,
       "source_url": null,
@@ -480,23 +464,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_bec8828966ec81919fc96ed05e921881--2023-2307.08621-retnet.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_bec8828966ec81919fc96ed05e921881--2023-2307.08621-retnet.json",
       "worker_run_key": "20261003-1030-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2306.09539",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:38:17+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.title が空",
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c2597292ec248191b0eabee525af9a24--block-state-transformers-2306.09539.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c2597292ec248191b0eabee525af9a24--block-state-transformers-2306.09539.json",
-      "worker_run_key": "20261003-0934-scheduled-chat-30"
     },
     {
       "canonical_id": "DOI:10.1145/3642970.3655835",
@@ -2021,22 +1988,6 @@
       "worker_run_key": "20261006-2000-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2603.10087",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-07T05:26:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 66.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.json",
-      "worker_run_key": "20261006-1330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2312.06742",
       "title": null,
       "source_url": null,
@@ -2852,8 +2803,8 @@
     },
     {
       "canonical_id": "arXiv:2510.14557",
-      "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
-      "source_url": "https://arxiv.org/abs/2510.14557",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:59:11+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -2880,8 +2831,8 @@
     },
     {
       "canonical_id": "arXiv:2603.05451",
-      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
-      "source_url": "https://arxiv.org/abs/2603.05451",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:59:11+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2907,8 +2858,8 @@
     },
     {
       "canonical_id": "arXiv:2411.01783",
-      "title": "Context Parallelism for Scalable Million-Token Inference",
-      "source_url": "https://arxiv.org/pdf/2411.01783",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:59:12+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2935,8 +2886,8 @@
     },
     {
       "canonical_id": "arXiv:2411.00841",
-      "title": "A Theoretical Perspective for Speculative Decoding Algorithm",
-      "source_url": "https://arxiv.org/abs/2411.00841",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:59:13+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2965,8 +2916,8 @@
     },
     {
       "canonical_id": "arXiv:2501.03895",
-      "title": "LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token",
-      "source_url": "https://arxiv.org/abs/2501.03895",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T07:59:13+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2993,6 +2944,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_5deca8d57b6c8191bc35433fc7c90273--2025-2501.03895-llava-mini.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_5deca8d57b6c8191bc35433fc7c90273--2025-2501.03895-llava-mini.json",
       "worker_run_key": "20261007-1657-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.10087",
+      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
+      "source_url": "https://arxiv.org/abs/2603.10087",
+      "returned_at": "2026-10-08T08:04:59+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 279 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2816,
+        "body_paragraphs": 19,
+        "method_chars": 807,
+        "method_paragraphs": 6,
+        "evaluation_chars": 279,
+        "limitation_chars": 309,
+        "insufficiency_flags": [
+          "評価説明量 279 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_609cefc875e08191880ef28d9d03d2fd--2603.10087-pooling-engram-cxl.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_609cefc875e08191880ef28d9d03d2fd--2603.10087-pooling-engram-cxl.json",
+      "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
     }
   ]
 }
