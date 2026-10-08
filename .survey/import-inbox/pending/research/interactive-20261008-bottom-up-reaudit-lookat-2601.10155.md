@@ -29,7 +29,6 @@ sources:
 code: null
 implementation: GPT-2の第1注意層からキー・値を抽出し、キーを2〜16部分空間へ積量子化して参照表で注意得点を近似。自然文、Pythonコード、技術文の3サンプルでコサイン類似度・注意分布KL距離・順位相関・上位5トークン一致率を測定。一次資料から公式コード公開URLは確認できない。
 last_checked: '2026-10-08'
-worker_completed_at: '2026-10-08T12:19:59+09:00'
 worker_run_key: 20261008-1214-scheduled-chat-00/repair-r01
 reference_main_sha: 9eaed25c09bdfca056192986515f10b0ff5ab79c
 quality_self_review_passed: true
