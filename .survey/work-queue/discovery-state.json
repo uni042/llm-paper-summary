@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-08T19:52:35+00:00",
-  "last_run_key": "library-import-dd0df8cd9f24",
-  "last_round": "libimp-dd0df8cd9f24c6d6-pre01",
+  "updated_at": "2026-10-08T20:07:01+00:00",
+  "last_run_key": "library-import-33cf0035c596",
+  "last_round": "libimp-33cf0035c59697d3-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-21T05:32:01+09:00",
-      "round": "round-07",
-      "axis": "recent MoE expert prefetch prediction offload inference alternate provider",
-      "query_summary": null,
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/search?query=MoE%20expert%20prefetch%20prediction%20offload%20inference&fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-      "citation_direction": null,
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260921T0548JST-worker30-discovery-round-07-expert-prefetch.json"
-    },
     {
       "run_key": "2026-09-21T05:32:01+09:00",
       "round": "round-08",
@@ -13156,6 +13135,46 @@
       "duplicate_ratio": 0.7142857142857143,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-33cf0035c59697d3-pre01",
+      "precheck_request_id": "libimp-33cf0035c59697d3-pre01",
+      "run_key": "library-import-33cf0035c596",
+      "round": "libimp-33cf0035c59697d3-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 16,
+      "duplicate_filtered_count": 15,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-33cf0035c59697d3-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-33cf0035c59697d3-pre01-sub01.json",
+        "work-queue/submissions/libimp-33cf0035c59697d3-pre01-sub02.json",
+        "work-queue/submissions/libimp-33cf0035c59697d3-pre01-sub03.json",
+        "work-queue/submissions/libimp-33cf0035c59697d3-pre01-sub04.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "round_submission_count": 4,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.9375,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21527,16 +21546,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-dd0df8cd9f24",
-      "rounds": 203,
-      "candidate_count": 669,
-      "duplicate_filtered_count": 245,
-      "novel_candidate_count": 424,
+      "last_run_key": "library-import-33cf0035c596",
+      "rounds": 204,
+      "candidate_count": 685,
+      "duplicate_filtered_count": 260,
+      "novel_candidate_count": 425,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 419,
-      "accepted_count": 419,
-      "duplicate_ratio": 0.3662182361733931,
-      "final_duplicate_ratio": 0.01179245283018868,
+      "post_final_dedupe_count": 420,
+      "accepted_count": 420,
+      "duplicate_ratio": 0.3795620437956204,
+      "final_duplicate_ratio": 0.011764705882352941,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
