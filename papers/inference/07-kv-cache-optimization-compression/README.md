@@ -623,7 +623,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
   実装：[✓](https://github.com/mit-han-lab/duo-attention) ・ リポジトリ内被引用：43  
-  長文脈LLMでは全注意機構 ヘッドが全トークン分のKV キャッシュを保持するのが標準だが、実際に遠い過去から情報を取り出すヘッドは一部しかない。MHA モデルではメモリを最大2.55倍削減し、デコードを最大2.18倍、プリフィルを最大1.73倍高速化する。
+  デコード時には過去のKVを読み出すため遅延も長くなり、プリフィルでは注意計算が系列長の二乗に増える。DuoAttentionは、全ての注意ヘッドが遠距離の情報を必要とするわけではないという観測に基づき、ヘッドごとに全履歴を残すか、固定長の履歴だけ残すかを切り替える方式である。
 
 - **2024-10 · [MagicPIG: LSH Sampling for Efficient LLM Generation](2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md)**  
   実装：[✓](https://github.com/Infini-AI-Lab/MagicPIG) ・ リポジトリ内被引用：31  

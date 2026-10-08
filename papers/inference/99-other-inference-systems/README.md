@@ -549,8 +549,8 @@
   音声対話の再生進捗・発話・割込みをスケジューリングとKV配置へ反映し、不要な先行生成を抑えながら次ターンのKVを発話中に先読みし、P90初回音声遅延と無駄計算を同時に減らす。
 
 - **2026-06 · [Less is MoE: Trimming Experts in Domain-Specialist Language Models](2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture-of-Experts; MoE）は各トークンで少数専門家だけを実行するため計算量は抑えられるが、全専門家重みを保持するのでメモリ footprintは大きい。専門家を丸ごと削除・統合する既存圧縮はcommonsense課題では動いても、数学や知識を含む一般ベンチマークへ広げると能力が急落することがある。
+  実装：[✓](https://github.com/HectorHHZ/Less-is-MoE) ・ リポジトリ内被引用：0  
+  Less is MoEは、混合専門家モデル（Mixture of エキスパート、MoE）を圧縮する際に専門家を丸ごと削ると、一般常識の選択式問題では性能が残っても数学推論やコード生成が崩壊する原因を分析し、専門家内部の順伝播ネットワーク（FFN）中間次元を削るFisher-MoEを提案する研究である。
 
 - **2026-06 · [High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration](2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
