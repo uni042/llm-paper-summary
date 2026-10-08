@@ -1,16 +1,22 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261007T1408-mistral-large4",
+  "attempt_id": "library-import-maint-20261008T1736-framework-6",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "llm-releases/mistral.md",
-    "llm-releases/README.md"
+    "framework-updates/inference-engines/exllama/README.md",
+    "framework-updates/inference-engines/vllm-omni/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
-    "llm-releases/mistral.md",
-    "llm-releases/README.md"
+    "framework-updates/inference-engines/exllama/README.md",
+    "framework-updates/inference-engines/vllm-omni/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/README.md"
   ],
-  "summary": "2026-10-07 08:30 maintenance: Mistral Large 4 public previewをLLMリリース一覧へ反映。vLLM v0.31.0 / llama.cpp v0.6.0は既反映、EmbeddingGemma 2は生成LLM一覧の対象外として未追加。"
+  "summary": "2026-10-08 08:30 framework update: ExLlamaV3, vLLM-Omni, Ollama, llama.cpp six verified releases."
 }

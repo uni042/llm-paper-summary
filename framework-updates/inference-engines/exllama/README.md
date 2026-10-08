@@ -28,6 +28,18 @@ ExLlamaV2には期間内の本質的更新がなく、後継のExLlamaV3を同�
 
 ## 主要更新
 
+### 2026-10-08 JST — ExLlamaV3 v1.6.0（正式公開、UTC 2026-10-07）
+
+- **CPU退避とメモリ使用量を改善**: AVX2対応CPUでの重み・専門家のCPU退避（offloading）を高速化し、CPUコアの割当・固定（pinning）を既定で最適化。システムRAMの追加使用量も削減した。比較可能な公式速度倍率・RAM削減量はリリースノートに記載されていないため断定しない。
+- **ROCm対応は初期段階**: ROCm 10、gfx1100以降のGPUで暫定対応を追加。安定版CUDA経路と同等の互換性を保証する記載ではない。GLM4とQwen3-VLの画像処理部分も修正。
+- 一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.0
+
+### 2026-10-04 JST — ExLlamaV3 v1.5.4（正式公開、UTC 2026-10-03）
+
+- **埋め込み層の量子化・ディスク逐次読込**: トークン埋め込み（token embedding）の量子化とディスク逐次読込（disk streaming）の選択肢を追加し、モデル読み込みを高速化。量子化精度を改善し、システムRAMとVRAMの使用量を削減した。具体的な削減率は公式ノートにない。
+- **Transformers 5連携**: Hugging Face Transformers 5向け統合モジュールを更新し、EXL3層を包んだモデルで逆伝播（backpropagation）を追加。
+- 一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.5.4
+
 ### 2026-07-25 — ExLlamaV3 v1.2.0（released）
 
 - **experimental expert-layer CPU offload**: MoE layerのexpert weightをCPU RAMへ退避し、必要なexpertだけGPU計算へ使う経路を追加。巨大MoEを少ないVRAMで動かせる一方、expert読込がCPU memory / PCIe bandwidthへ依存する。

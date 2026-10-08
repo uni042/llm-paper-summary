@@ -14,6 +14,13 @@ vLLM-Omniの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-06 — vLLM-Omni v0.31.0rc1（公開候補版・pre-release）
+
+- **多ノード推論**: Ray実行器を任意選択で追加し、段階ごとのGPUをクラスタ全体へ割り当て、環境情報を伝播できるようにした。vLLM本体0.31.0へ追随。
+- **多段階転送・双方向実行**: V1とModel Runner V2の混在段階を扱う共有実行、チャンク転送のバイト単位バックプレッシャー（byte backpressure）、双方向出力と中断処理の上限制御を追加。Qwen3-TTSの単一GPU・単一段階音声生成、Qwen3-Omniのリアルタイム提供、MiniCPM-oのKVスライディングウィンドウも改善。
+- **互換性・検証上の注意**: 出力型の旧別名を拒否し、`text`、`image`、`audio`、`latent`、`token_ids` の正規名を要求する。公式nightlyは54 passed / 3 failed / 4 brokenで全テスト成功ではなく、MiniCPM-o長時間音声の失敗が残る。安定版v0.30.0と混同しない。
+- 一次資料: https://github.com/vllm-project/vllm-omni/releases/tag/v0.31.0rc1
+
 ### 2026-09-25 — v0.30.0（released）
 
 - **統一full-duplex serving**: `DuplexOmni` / `DuplexOmniEngine` / `DuplexOrchestrator` を導入し、session ownershipとlifecycleをengine側へ移した。

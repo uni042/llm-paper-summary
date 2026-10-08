@@ -27,6 +27,12 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-09-25 — Ollama v0.40.0（正式公開、過去確認漏れの補完）
+
+- **Apple Siliconの既定推論経路を変更**: MLXに対応するモデル構造は自動的にMLXで動くようになった。対象例はQwen3.8、Gemma4、Qwen3.6、Qwen3.5、判定モデルClef系、埋め込みモデルembeddinggemma-2。利用者が別途MLXエンジンを選ばなくても対応モデルでMLXを使う。**Apple Silicon向け変更であり、Windows/NVIDIAのCUDA経路がMLXへ切り替わるわけではない**。
+- 既存ページは同機能をv0.40.0-rc0の公開候補版としてのみ掲載していたため、正式版への昇格を明記する。
+- 一次資料: https://github.com/ollama/ollama/releases/tag/v0.40.0
+
 ### 2026-06-30 — v0.31.1（released）
 
 - **Apple SiliconでMTP draft token数を自動調整**: MTP（Multi-Token Prediction; 複数token予測）headが一度に何token候補を先読みするかを固定せず、実行状況に応じて調整する。

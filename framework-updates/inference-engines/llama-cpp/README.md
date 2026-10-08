@@ -25,6 +25,11 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 以下の更新履歴は、これらの主要能力について**GPU外memoryをどこまで使えるか、低bit / fusionでmemory trafficをどこまで減らせるか、投機的デコードとmulti-GPUでtokenごとの待ち時間をどこまで削減できるか**を追う。
 
+## 2026-10-07 — llama.cpp b11476 / b11474（開発ビルド、正式版v0.6.0とは区別）
+
+- **b11476: Metalの少行列積（few-row MMA）対応形式拡大**: BF16、Q1_0、Q2_0、MXFP4、Q2_K、Q3_K、TQ2_0、IQ系を16重み逆量子化器で処理する汎用カーネルへ追加。M3 Ultra・`MUL_MAT`・m=4096、k=14336の測定では、各型の適用閾値から8行までの実行時間比が旧実装の0.23〜0.98倍、9〜16行では0.24〜0.33倍。1行・512行では0.99〜1.01倍で、全行数で高速化するわけではない。**Metal固有の結果でWindows CUDAには直接適用できない**。[一次資料](https://github.com/ggml-org/llama.cpp/releases/tag/b11476)
+- **b11474: GLM5-Nextの複数トークン予測（MTP）グラフ**: NextN層を本体と分離したGGUFから読み込めるようにし、MTPのdraft経路で使用可能にした。出力行に合わせたグラフ縮約により、4トークンの追いつき処理（catch-up）のカーネル時間が6.9→2.9 ms（同一実装比較）となり、greedy出力ハッシュは不変。モデル全体の生成速度改善率とは解釈しない。[一次資料](https://github.com/ggml-org/llama.cpp/releases/tag/b11474)
+
 ## 2026-10-05
 
 - **v0.6.0（released）**: 拡張batch API `llama_batch_ext` / `llama_process` を追加し、token / embedding混在入力とMTP / deepstack state embeddingを扱えるようにした。GLM-5.3-Flash（GLM5-Next）320B hybrid model、Clef decision model、Qwen4ExpのMTP speculative decodingも追加。backendではMetal tensor-APIのF16 KV Flash Attention、Vulkanの量子化K/V向けsparse Flash Attention、CUDAのNVFP4 MMQ accumulation最適化を含む。serverにはdecision model用`/v1/systemone` APIを追加し、ggmlはv0.26.0へ更新。[release](https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0)

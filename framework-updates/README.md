@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-10-06**
+- フレームワーク差分の最終確認: **2026-10-08**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -67,6 +67,14 @@
 ---
 
 ## 最新更新
+
+### 2026-10-08 — 日次調査で確認した実質更新（モデル新規0件、推論基盤6件）
+
+- **ExLlamaV3 v1.6.0（UTC 10/07）**: AVX2 CPUへの退避高速化、CPUコア割当改善、システムRAM削減、暫定ROCm 10対応（gfx1100+）。[一次資料](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.0)
+- **ExLlamaV3 v1.5.4（UTC 10/03）**: 埋め込み層の量子化・ディスク逐次読込、読み込みとRAM/VRAM効率改善、Transformers 5連携。[一次資料](https://github.com/turboderp-org/exllamav3/releases/tag/v1.5.4)
+- **vLLM-Omni v0.31.0rc1（UTC 10/06、公開候補版）**: Rayによる多ノード・段階別GPU配置、転送バックプレッシャー、リアルタイム音声経路を追加。公式nightlyに未解決失敗あり。[一次資料](https://github.com/vllm-project/vllm-omni/releases/tag/v0.31.0rc1)
+- **Ollama v0.40.0（UTC 09/25、過去確認漏れ）**: Apple Silicon対応モデルのMLX既定実行を公開候補版から正式版へ更新。[一次資料](https://github.com/ollama/ollama/releases/tag/v0.40.0)
+- **llama.cpp b11474 / b11476（UTC 10/07、開発ビルド）**: GLM5-Next MTPグラフ・分割GGUF読込、Metal少行列積の低ビット形式拡張。[b11474](https://github.com/ggml-org/llama.cpp/releases/tag/b11474) / [b11476](https://github.com/ggml-org/llama.cpp/releases/tag/b11476)
 
 ### 2026-10-05
 
