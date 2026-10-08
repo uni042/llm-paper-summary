@@ -26,8 +26,8 @@ class ClassifierTests(unittest.TestCase):
         self.assertIn("b:gpu_memory", ml.features("GPU Memory Inference"))
 
     def test_training_has_validated_threshold(self):
-        pos = [f"efficient gpu inference offloading optimization architecture token{i:03d}" for i in range(100)]
-        neg = [f"agriculture tomato crop phenotyping detection field{i:03d}" for i in range(100)]
+        pos = [f"efficient gpu inference offloading optimization architecture token{i:03d}" for i in range(240)]
+        neg = [f"agriculture tomato crop phenotyping detection field{i:03d}" for i in range(240)]
         with mock.patch.object(ml, "_paper_labels", return_value=(pos, neg)):
             model = ml.train(Path("/no-repo"))
         self.assertTrue(model["approved"])
@@ -65,10 +65,13 @@ class ClassifierTests(unittest.TestCase):
                 "schema_version": 1, "approved": True, "model_id": "demo",
                 "weights": {"u:tomato": -3.0}, "threshold": -0.1,
             }
-            source = [
-                {"canonical_id": f"arXiv:2601.{i:05d}", "title": "Tomato phenotyping"}
-                for i in range(8)
-            ]
+            source = []
+            i = 0
+            while len(source) < 8:
+                row = {"canonical_id": f"arXiv:2601.{i:05d}", "title": "Tomato phenotyping"}
+                if ml.shard_for(ml.identity_key(row)) == 0:
+                    source.append(row)
+                i += 1
             with mock.patch.object(batch.ml, "load_model", return_value=model), mock.patch.object(
                 batch.worklist, "_discovery_candidates", return_value=(source, len(source))
             ), mock.patch.object(batch.worklist, "_current_research_reservations", return_value=[]):
