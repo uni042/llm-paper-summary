@@ -1,0 +1,262 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill",
+  "run_key": "codex-backfill-r312-b01",
+  "reference_main_sha": "2e317e1f6c8392fac3c40bcb14b0c870e969e859",
+  "record_count": 18,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.19732",
+      "identity_tokens": [
+        "arXiv:2502.19732"
+      ],
+      "title": "Speculative Decoding and Beyond: An In-Depth Survey of Techniques",
+      "reason": "一次要旨はgeneration-refinement frameworkを提案戦略とverification方式で体系化し、理論とsystem実装、効率的autoregressive decodingのdeploymentを扱う。推論デコード高速化系統のサーベイとして採用候補に適合する。",
+      "source_url": "https://arxiv.org/abs/2502.19732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.17227",
+      "identity_tokens": [
+        "arXiv:2604.17227"
+      ],
+      "title": "Cloud-native and Distributed Systems for Efficient and Scalable Large Language Models -- A Research Agenda",
+      "reason": "一次要旨はLLM deploymentのresource optimization、microservices、autoscaling、serverless inferenceを研究課題として整理するが、個別の実装手法や性能検証を提示する論文ではないため、systems効率との接続は境界的。",
+      "source_url": "https://arxiv.org/abs/2604.17227",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37988",
+      "identity_tokens": [
+        "arXiv:2609.37988"
+      ],
+      "title": "KV-Kaizen: Learning Context-Adaptive Cache Compression Choices",
+      "reason": "一次要旨はcontextに応じてlayer別にcache共有深度、precision、低rank truncationを選ぶselectorを提案し、decode-time KV cacheを最大32倍縮小する。KV cacheのmemory/decoding効率を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2609.37988",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.06807",
+      "identity_tokens": [
+        "arXiv:2501.06807"
+      ],
+      "title": "MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference",
+      "reason": "一次要旨はsecure multi-party computation下のLLM推論向けにstatic evictionとquery-aware dynamic KV選択、階層clustering、cross-layer index sharingを組み合わせ、decode latencyと通信量を下げる。",
+      "source_url": "https://arxiv.org/abs/2501.06807",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01725",
+      "identity_tokens": [
+        "arXiv:2606.01725"
+      ],
+      "title": "Characterizing How Complex Agentic AI Systems Handle General Tasks: A Trace-Based Simulation Study",
+      "reason": "一次要旨はagentic AIのtoken-level trace datasetとtrace-driven simulatorを提供しsystem design choicesの再現評価を可能にする。一方、主眼はgeneral-taskでのagent behaviorで、推論効率やserving性能の改善を直接評価していないため境界的。",
+      "source_url": "https://arxiv.org/abs/2606.01725",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.02248",
+      "identity_tokens": [
+        "arXiv:2511.02248"
+      ],
+      "title": "From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models",
+      "reason": "一次要旨はoperator単位でscaling・batching・placementを最適化するserving frameworkを提案する。production tracesでSLO維持時のGPU/energy削減または固定資源でのthroughput向上を報告し、推論autoscalingへ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2511.02248",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.14808",
+      "identity_tokens": [
+        "arXiv:2501.14808"
+      ],
+      "title": "HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location",
+      "reason": "一次要旨はonline/offline workloadのco-location向けにlatency予測、SLO-aware interference profiling、starvationを防ぐoffline schedulingを導入し、latency SLOを保ちながらserving throughputを上げる。",
+      "source_url": "https://arxiv.org/abs/2501.14808",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.22788",
+      "identity_tokens": [
+        "arXiv:2608.22788"
+      ],
+      "title": "TailSieve: Partial-Rollout-Guided Tail Routing for LLM Rollouts",
+      "reason": "一次要旨はlong-tail generationを分離し、rollout replica配分とroutingを共同調整する。測定済みconcurrency-throughputモデルとpartial rolloutを使いmakespanおよび推論rollout throughputを改善する。",
+      "source_url": "https://arxiv.org/abs/2608.22788",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.05774",
+      "identity_tokens": [
+        "arXiv:2602.05774"
+      ],
+      "title": "Variational Speculative Decoding: Rethinking Draft Training from Token Likelihood to Sequence Acceptance",
+      "reason": "一次要旨はtarget-model acceptanceを最大化するvariational speculative decodingを提案し、draft pathのsequence-level trainingでexpected acceptance lengthとLLM decoding speedupを高める。",
+      "source_url": "https://arxiv.org/abs/2602.05774",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.09412",
+      "identity_tokens": [
+        "arXiv:2608.09412"
+      ],
+      "title": "KVDiagnosis: A Diagnostic Benchmark for KV-Cache Compression in Long-Context Language Models",
+      "reason": "一次要旨はKV圧縮の25手法をtaxonomy化し、cache・likelihood・attention・decoding測定を共通形式で対応させるdiagnostic benchmarkを構築する。long-context servingのcache手法を比較する性能評価基盤に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2608.09412",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.04377",
+      "identity_tokens": [
+        "arXiv:2509.04377"
+      ],
+      "title": "PagedEviction: Structured Block-wise KV Cache Pruning for Efficient Large Language Model Inference",
+      "reason": "一次要旨はvLLM PagedAttentionのpage layoutに合わせたblock-wise KV evictionを提案し、long-context推論のcache memoryを改善する。",
+      "source_url": "https://arxiv.org/abs/2509.04377",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.14037",
+      "identity_tokens": [
+        "arXiv:2605.14037"
+      ],
+      "title": "Self-Pruned Key-Value Attention: Learning When to Write by Predicting Future Utility",
+      "reason": "一次要旨はfuture utility predictorでKV write/useを動的に制御し、入力に応じた3–10倍のcache縮小とdecoding speed向上を狙うattention機構を提案する。",
+      "source_url": "https://arxiv.org/abs/2605.14037",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39972",
+      "identity_tokens": [
+        "arXiv:2609.39972"
+      ],
+      "title": "UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding",
+      "reason": "一次要旨はunigram proposerとbigram selectorで多様なdraft treeを並列構築するspeculative decoderを提案し、自己回帰推論に対する速度向上を報告する。",
+      "source_url": "https://arxiv.org/abs/2609.39972",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.05399",
+      "identity_tokens": [
+        "arXiv:2607.05399"
+      ],
+      "title": "Benchmarking KV-Cache Optimizations across Task Quality and System Performance for Long-Context Serving",
+      "reason": "一次要旨はquantization・pruning・mergingを同一long-context serving条件で比較し、task quality、output throughput、TTFT、圧縮率を測る。cache機構の実運用性能選択に直接関係するbenchmarkである。",
+      "source_url": "https://arxiv.org/abs/2607.05399",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.18169",
+      "identity_tokens": [
+        "arXiv:2412.18169"
+      ],
+      "title": "KunServe: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving",
+      "reason": "一次要旨はGPU memory pressure時に複製parameterを選択的にdropして空きを作り、KV evictionだけでは対処しにくいqueueing latencyを抑えるLLM serving memory managementを提案する。",
+      "source_url": "https://arxiv.org/abs/2412.18169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.01900",
+      "identity_tokens": [
+        "arXiv:2507.01900"
+      ],
+      "title": "High-Layer Attention Pruning with Rescaling",
+      "reason": "一次要旨は高層attention headを選択的にpruneし、表現scaleをadaptive rescalingで補正するtraining-free LLM圧縮法を提案する。推論latency削減を直接目的とする。",
+      "source_url": "https://arxiv.org/abs/2507.01900",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:dda0a9a2bae01178be42a57575e24d3ac1932a45",
+      "identity_tokens": [
+        "SemanticScholar:dda0a9a2bae01178be42a57575e24d3ac1932a45"
+      ],
+      "title": "OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving (Operational Systems)",
+      "reason": "一次資料は異種HPC clusterを統一serving platformにするuser-space orchestration overlay、heterogeneity-aware schedulerとproduction deploymentを記載する。LLM serving基盤・resource orchestrationへの具体的なsystems contributionである。",
+      "source_url": "https://www.usenix.org/conference/osdi26/presentation/yao",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.30465",
+      "identity_tokens": [
+        "arXiv:2609.30465"
+      ],
+      "title": "RAZOR: Pruning Replaceable Experts in LLMs",
+      "reason": "一次要旨はMoEのexpert出力residualを用いるtraining-freeなexpert pruning法を提示する。expert poolを削減する具体的なLLM compression手法としてmodel memory/実行効率の系統に関係する。",
+      "source_url": "https://arxiv.org/abs/2609.30465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T14:10:25:00Z",
+      "last_checked_at": "2026-10-08T14:10:25:00Z",
+      "linked_from": []
+    }
+  ]
+}
