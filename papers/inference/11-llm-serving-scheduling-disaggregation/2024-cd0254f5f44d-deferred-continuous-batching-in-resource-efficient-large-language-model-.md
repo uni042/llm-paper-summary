@@ -1,29 +1,29 @@
 ---
-canonical_id: "DOI:10.1145/3642970.3655835"
-title: "Deferred Continuous Batching in Resource-Efficient Large Language Model Serving"
-summary: "FineInferは、GPU容量に制約がある環境でLoRA微調整と生成推論を同時に進めるため、共通基盤モデルの共有、反復単位の切替え、遅延付き連続バッチ化、異種混合バッチを組み合わせる。著者の原稿と発表資料では、推論要求の短時間の繰延べによる微調整処理率26～36%の改善、GPU常駐モデルで最大3倍、容量超過モデルで最大36倍の改善が報告される。"
-list_summary: "FineInferは共通基盤モデルの共有と推論要求の許容遅延内での繰延べ、異種混合バッチ化により、資源制約GPU上でLoRA微調整と生成推論を共存させる。"
+canonical_id: DOI:10.1145/3642970.3655835
+title: Deferred Continuous Batching in Resource-Efficient Large Language Model Serving
+summary: FineInferは、GPU容量に制約がある環境でLoRA微調整と生成推論を同時に進めるため、共通基盤モデルの共有、反復単位の切替え、遅延付き連続バッチ化、異種混合バッチを組み合わせる。著者の原稿と発表資料では、推論要求の短時間の繰延べによる微調整処理率26～36%の改善、GPU常駐モデルで最大3倍、容量超過モデルで最大36倍の改善が報告される。
+list_summary: FineInferは共通基盤モデルの共有と推論要求の許容遅延内での繰延べ、異種混合バッチ化により、資源制約GPU上でLoRA微調整と生成推論を共存させる。
 authors:
-  - Yongjun He
-  - Yao Lu
-  - Gustavo Alonso
-published: "2024-04"
-publication: "Proceedings of the 4th Workshop on Machine Learning and Systems (EuroMLSys '24), pp. 98–106"
-publication_type: "workshop"
-publication_status: "published"
-source: "https://doi.org/10.1145/3642970.3655835"
+- Yongjun He
+- Yao Lu
+- Gustavo Alonso
+published: 2024-04
+publication: Proceedings of the 4th Workshop on Machine Learning and Systems (EuroMLSys '24), pp. 98–106
+publication_type: workshop
+publication_status: published
+source: https://doi.org/10.1145/3642970.3655835
 sources:
-  - "https://doi.org/10.1145/3642970.3655835"
-  - "https://www.research-collection.ethz.ch/server/api/core/bitstreams/eb66706a-ee39-4e2a-b958-4de5e3b3291a/content"
-  - "https://www.cl.cam.ac.uk/research/srg/netos/euromlsys2024/slides/S2_4__18.pdf"
-implementation: "著者のFineInfer試作基盤はLoRA微調整と推論の共存を実装する。公式コードはllm-db/FineInferで公開されるが、READMEは現行版で旧機能の一部を削除したと明記しており、論文評価版との機能一致は保証されない。"
-code: "https://github.com/llm-db/FineInfer"
-last_checked: "2026-10-08"
-worker_completed_at: "2026-10-08T23:36:55+09:00"
-worker_run_key: "20261008-2330-scheduled-chat-30/r01"
-reference_main_sha: "2dc6895fb41a1642ad248f8e94eb60a39c437852"
+- https://doi.org/10.1145/3642970.3655835
+- https://www.research-collection.ethz.ch/server/api/core/bitstreams/eb66706a-ee39-4e2a-b958-4de5e3b3291a/content
+- https://www.cl.cam.ac.uk/research/srg/netos/euromlsys2024/slides/S2_4__18.pdf
+implementation: 著者のFineInfer試作基盤はLoRA微調整と推論の共存を実装する。公式コードはllm-db/FineInferで公開されるが、READMEは現行版で旧機能の一部を削除したと明記しており、論文評価版との機能一致は保証されない。
+code: https://github.com/llm-db/FineInfer
+last_checked: '2026-10-08'
+worker_completed_at: '2026-10-08T23:36:55+09:00'
+worker_run_key: 20261008-2330-scheduled-chat-30/r01
+reference_main_sha: 2dc6895fb41a1642ad248f8e94eb60a39c437852
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 5107
 quality_method_chars: 1589
 quality_eval_chars: 1120
@@ -31,6 +31,46 @@ quality_evaluation_chars: 1120
 quality_limitation_chars: 580
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2312.11514
+- canonical_id: arXiv:2108.07258
+  arxiv_id: '2108.07258'
+- canonical_id: arXiv:2310.18547
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.18653/v1/2021.emnlp-main.243
+  doi: 10.18653/v1/2021.emnlp-main.243
+- canonical_id: DOI:10.1145/3514221.3526179
+  doi: 10.1145/3514221.3526179
+- canonical_id: DOI:10.1145/3552326.3587445
+  doi: 10.1145/3552326.3587445
+- canonical_id: DOI:10.1145/3605573.3605613
+  doi: 10.1145/3605573.3605613
+- canonical_id: DOI:10.18653/v1/2021.acl-long.353
+  doi: 10.18653/v1/2021.acl-long.353
+- canonical_id: DOI:10.1109/cvpr.2018.00640
+  doi: 10.1109/cvpr.2018.00640
+- canonical_id: DOI:10.18653/v1/2022.acl-short.8
+  doi: 10.18653/v1/2022.acl-short.8
+- canonical_id: arXiv:2312.15234
+  doi: 10.48550/arxiv.2312.15234
+- canonical_id: DOI:10.1145/3394486.3406703
+  doi: 10.1145/3394486.3406703
+- canonical_id: arXiv:2311.03285
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2312.12456
+- canonical_id: DOI:10.1145/3627703.3629578
+  doi: 10.1145/3627703.3629578
+- canonical_id: DOI:10.1145/3600006.3613175
+  doi: 10.1145/3600006.3613175
+- canonical_id: DOI:10.1109/sds60720.2024.00036
+  doi: 10.1109/sds60720.2024.00036
+- canonical_id: arXiv:2205.04713
+  arxiv_id: '2205.04713'
+- canonical_id: DOI:10.5555/3600237.3600268
+references_checked_at: '2026-10-08'
+references_source: crossref-deposited-reference-metadata
+references_total: 40
 ---
 
 ## 概要

@@ -1,39 +1,39 @@
 ---
-canonical_id: "DOI:10.1145/3620666.3651329"
-doi: "10.1145/3620666.3651329"
-title: "Characterizing Power Management Opportunities for LLMs in the Cloud"
+canonical_id: DOI:10.1145/3620666.3651329
+doi: 10.1145/3620666.3651329
+title: Characterizing Power Management Opportunities for LLMs in the Cloud
 authors:
-  - Pratyush Patel
-  - Esha Choukse
-  - Chaojie Zhang
-  - Íñigo Goiri
-  - Brijesh Warrier
-  - Nithish Mahalingam
-  - Ricardo Bianchini
-published: "2024-04-27"
-publication: "ASPLOS 2024, Volume 3"
-publication_type: "査読付き国際会議論文"
+- Pratyush Patel
+- Esha Choukse
+- Chaojie Zhang
+- Íñigo Goiri
+- Brijesh Warrier
+- Nithish Mahalingam
+- Ricardo Bianchini
+published: '2024-04-27'
+publication: ASPLOS 2024, Volume 3
+publication_type: 査読付き国際会議論文
 publication_status: published
-source: "https://doi.org/10.1145/3620666.3651329"
+source: https://doi.org/10.1145/3620666.3651329
 sources:
-  - "https://doi.org/10.1145/3620666.3651329"
-  - "https://www.microsoft.com/en-us/research/wp-content/uploads/2024/03/GPU_Power_ASPLOS_24.pdf"
+- https://doi.org/10.1145/3620666.3651329
+- https://www.microsoft.com/en-us/research/wp-content/uploads/2024/03/GPU_Power_ASPLOS_24.pdf
 code: null
-implementation: "POLCAは行単位の電力監視と帯域外GPU制御を想定。実機の電力特性を測定し、本番6週間のトレースから合成負荷を作った離散事象シミュレータで追加収容を評価。公式コードURLは確認できなかった。"
-summary: "学習クラスタの電力余裕が約3%、推論クラスタは約21%であることを本番データから示し、優先度別二段階制御のPOLCAを提案する。40秒級の帯域外GPU制御と緊急電力ブレーキの制約を考慮し、トレース駆動シミュレーションで既存給電設備へ30%多くサーバーを収容できると報告する。"
-list_summary: "学習と推論の電力ピークの違いを計測し、優先度別の二段階制御POLCAにより、既存電力予算で30%の追加サーバー収容をシミュレーション評価する。"
-last_checked: "2026-10-08"
+implementation: POLCAは行単位の電力監視と帯域外GPU制御を想定。実機の電力特性を測定し、本番6週間のトレースから合成負荷を作った離散事象シミュレータで追加収容を評価。公式コードURLは確認できなかった。
+summary: 学習クラスタの電力余裕が約3%、推論クラスタは約21%であることを本番データから示し、優先度別二段階制御のPOLCAを提案する。40秒級の帯域外GPU制御と緊急電力ブレーキの制約を考慮し、トレース駆動シミュレーションで既存給電設備へ30%多くサーバーを収容できると報告する。
+list_summary: 学習と推論の電力ピークの違いを計測し、優先度別の二段階制御POLCAにより、既存電力予算で30%の追加サーバー収容をシミュレーション評価する。
+last_checked: '2026-10-08'
 worker_id: scheduled-chat-00
-scheduled_slot: "00"
-worker_run_key: "20261008-2304-scheduled-chat-00/r02"
-worker_completed_at: "2026-10-08T23:17:01+09:00"
-reference_main_sha: "f68d0a2060a41e0ee60fe08cfeec2ed26bce5e85"
-under16kb_reaudit_target_path: "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
-under16kb_reaudit_source_git_blob_sha: "c7fe94c3c375903de4b25bcea2582e755b335074"
-under16kb_reaudit_version: "2026-10-07-v1"
+scheduled_slot: '00'
+worker_run_key: 20261008-2304-scheduled-chat-00/r02
+worker_completed_at: '2026-10-08T23:17:01+09:00'
+reference_main_sha: f68d0a2060a41e0ee60fe08cfeec2ed26bce5e85
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md
+under16kb_reaudit_source_git_blob_sha: c7fe94c3c375903de4b25bcea2582e755b335074
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 4686
 quality_method_chars: 1453
 quality_evaluation_chars: 1228
@@ -41,6 +41,63 @@ quality_eval_chars: 1228
 quality_limitation_chars: 648
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.1145/3442188.3445922
+  doi: 10.1145/3442188.3445922
+- canonical_id: arXiv:2210.11416
+  arxiv_id: '2210.11416'
+- canonical_id: arXiv:2208.07339
+- canonical_id: DOI:10.1145/1250662.1250665
+  doi: 10.1145/1250662.1250665
+- canonical_id: DOI:10.1145/1998582.1998589
+  doi: 10.1145/1998582.1998589
+- canonical_id: DOI:10.1145/1519065.1519099
+  doi: 10.1145/1519065.1519099
+- canonical_id: DOI:10.1109/hpca.2018.00059
+  doi: 10.1109/hpca.2018.00059
+- canonical_id: DOI:10.1109/bigdata47090.2019.9005632
+  doi: 10.1109/bigdata47090.2019.9005632
+- canonical_id: DOI:10.1145/3458817.3476223
+  doi: 10.1145/3458817.3476223
+- canonical_id: DOI:10.1109/lca.2020.3023723
+  doi: 10.1109/lca.2020.3023723
+- canonical_id: DOI:10.1145/3177754
+  doi: 10.1145/3177754
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1109/hpca53966.2022.00093
+  doi: 10.1109/hpca53966.2022.00093
+- canonical_id: DOI:10.14778/3415478.3415530
+  doi: 10.14778/3415478.3415530
+- canonical_id: DOI:10.1109/hpca.2019.00067
+  doi: 10.1109/hpca.2019.00067
+- canonical_id: arXiv:1907.11692
+  arxiv_id: '1907.11692'
+- canonical_id: DOI:10.1109/tpds.2022.3144614
+  doi: 10.1109/tpds.2022.3144614
+- canonical_id: arXiv:2311.18677
+  arxiv_id: '2311.18677'
+- canonical_id: arXiv:2308.12908
+  arxiv_id: '2308.12908'
+- canonical_id: DOI:10.1109/lca.2023.3278652
+  doi: 10.1109/lca.2023.3278652
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: arXiv:2202.07848
+  arxiv_id: '2202.07848'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2211.05100
+  arxiv_id: '2211.05100'
+- canonical_id: DOI:10.1109/hpca56546.2023.10070943
+  doi: 10.1109/hpca56546.2023.10070943
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+references_checked_at: '2026-10-08'
+references_source: crossref-deposited-reference-metadata
+references_total: 74
 ---
 
 # Characterizing Power Management Opportunities for LLMs in the Cloud：推論クラスタの電力余裕とPOLCA

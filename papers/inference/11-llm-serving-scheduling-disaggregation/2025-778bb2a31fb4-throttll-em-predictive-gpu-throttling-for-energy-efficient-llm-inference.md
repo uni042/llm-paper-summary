@@ -1,37 +1,37 @@
 ---
-canonical_id: "DOI:10.1109/HPCA61900.2025.00103"
-doi: "10.1109/HPCA61900.2025.00103"
-title: "throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving"
+canonical_id: DOI:10.1109/HPCA61900.2025.00103
+doi: 10.1109/HPCA61900.2025.00103
+title: 'throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving'
 authors:
-  - Andreas Kosmas Kakolyris
-  - Dimosthenis Masouros
-  - Petros Vavaroutsos
-  - Sotirios Xydis
-  - Dimitrios Soudris
-published: "2025-03-01"
-publication: "2025 IEEE International Symposium on High Performance Computer Architecture (HPCA)"
-publication_type: "査読付き国際会議論文"
+- Andreas Kosmas Kakolyris
+- Dimosthenis Masouros
+- Petros Vavaroutsos
+- Sotirios Xydis
+- Dimitrios Soudris
+published: '2025-03-01'
+publication: 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA)
+publication_type: 査読付き国際会議論文
 publication_status: published
-source: "https://doi.org/10.1109/HPCA61900.2025.00103"
+source: https://doi.org/10.1109/HPCA61900.2025.00103
 sources:
-  - "https://doi.org/10.1109/HPCA61900.2025.00103"
-  - "https://microlab.ntua.gr/wp-content/uploads/2025/03/throttLLeM_HPCA25.pdf"
-code: "https://github.com/WilliamBlaskowicz/throttLL-eM"
-implementation: "Triton＋TensorRT-LLM上に実装し、A100 40GB×8とA10G 24GB×8の実機で、Azure呼出しトレース由来の負荷とSLOを使って測定。著者公開コードを確認。"
-summary: "throttLL’eMは生成長・KVキャッシュ量・バッチ数を将来反復ごとに予測し、勾配ブースティング木で処理速度を見積もってSLOを満たすGPU周波数とインスタンス規模を選ぶ。Triton比較で最大43.8%のエネルギー削減を報告するが、Llama2-13B単一GPUではp99終了時間SLOを外す例もある。"
-list_summary: "将来のKV量とバッチ数から反復速度を予測し、SLOを守る最低側のGPU周波数とテンソル並列構成を選んで、Triton比で最大43.8%のエネルギーを削減する。"
-last_checked: "2026-10-08"
+- https://doi.org/10.1109/HPCA61900.2025.00103
+- https://microlab.ntua.gr/wp-content/uploads/2025/03/throttLLeM_HPCA25.pdf
+code: https://github.com/WilliamBlaskowicz/throttLL-eM
+implementation: Triton＋TensorRT-LLM上に実装し、A100 40GB×8とA10G 24GB×8の実機で、Azure呼出しトレース由来の負荷とSLOを使って測定。著者公開コードを確認。
+summary: throttLL’eMは生成長・KVキャッシュ量・バッチ数を将来反復ごとに予測し、勾配ブースティング木で処理速度を見積もってSLOを満たすGPU周波数とインスタンス規模を選ぶ。Triton比較で最大43.8%のエネルギー削減を報告するが、Llama2-13B単一GPUではp99終了時間SLOを外す例もある。
+list_summary: 将来のKV量とバッチ数から反復速度を予測し、SLOを守る最低側のGPU周波数とテンソル並列構成を選んで、Triton比で最大43.8%のエネルギーを削減する。
+last_checked: '2026-10-08'
 worker_id: scheduled-chat-00
-scheduled_slot: "00"
-worker_run_key: "20261008-2304-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-08T23:13:35+09:00"
-reference_main_sha: "f68d0a2060a41e0ee60fe08cfeec2ed26bce5e85"
-under16kb_reaudit_target_path: "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md"
-under16kb_reaudit_source_git_blob_sha: "57b7884d34e8bf6e133c07fb030cd7bb833b1194"
-under16kb_reaudit_version: "2026-10-07-v1"
+scheduled_slot: '00'
+worker_run_key: 20261008-2304-scheduled-chat-00/r01
+worker_completed_at: '2026-10-08T23:13:35+09:00'
+reference_main_sha: f68d0a2060a41e0ee60fe08cfeec2ed26bce5e85
+under16kb_reaudit_target_path: papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md
+under16kb_reaudit_source_git_blob_sha: 57b7884d34e8bf6e133c07fb030cd7bb833b1194
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 5615
 quality_method_chars: 1788
 quality_evaluation_chars: 1838
@@ -39,6 +39,77 @@ quality_eval_chars: 1838
 quality_limitation_chars: 625
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2207.00032
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: DOI:10.1145/2939672.2939785
+  doi: 10.1145/2939672.2939785
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:2010.05680
+- canonical_id: DOI:10.1109/mm.2022.3163226
+  doi: 10.1109/mm.2022.3163226
+- canonical_id: arXiv:2401.11181
+  arxiv_id: '2401.11181'
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: DOI:10.1109/lca.2024.3406038
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2311.15566
+  doi: 10.1145/3620665.3640411
+- canonical_id: DOI:10.1109/tpds.2022.3144614
+  doi: 10.1109/tpds.2022.3144614
+- canonical_id: DOI:10.1145/3620666.3651329
+  doi: 10.1145/3620666.3651329
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2407.00047
+  doi: 10.1145/3698038.3698523
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2404.08509
+  arxiv_id: '2404.08509'
+- canonical_id: arXiv:2310.03003
+  doi: 10.1109/hpec58863.2023
+- canonical_id: arXiv:1910.01108
+  arxiv_id: '1910.01108'
+- canonical_id: arXiv:2401.00588
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2312.12456
+  arxiv_id: '2312.12456'
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2403.20306
+  arxiv_id: '2403.20306'
+- canonical_id: DOI:10.48550/arxiv.2302.13971
+  doi: 10.48550/arxiv.2302.13971
+- canonical_id: arXiv:2010.13887
+- canonical_id: arXiv:2401.17644
+  arxiv_id: '2401.17644'
+- canonical_id: arXiv:2407.04014
+  arxiv_id: '2407.04014'
+- canonical_id: arXiv:2305.05920
+  arxiv_id: '2305.05920'
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2401.07851
+  arxiv_id: '2401.07851'
+- canonical_id: DOI:10.1145/3638757
+  doi: 10.1145/3638757
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2305.13144
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2404.14294
+  arxiv_id: '2404.14294'
+references_checked_at: '2026-10-08'
+references_source: primary-pdf-reference-section
+references_total: 80
 ---
 
 # throttLL’eM：SLOを守りながらGPU周波数とインスタンス構成を制御する推論基盤
