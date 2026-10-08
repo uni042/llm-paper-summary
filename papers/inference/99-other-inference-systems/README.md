@@ -1000,13 +1000,13 @@
   実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：16  
   2bit級の重み量子化では、各重みを単一の低bit格子へ丸めるだけでは外れ値や層ごとの重要方向を表現しにくく、同じモデル byte数なら小さいモデルを3–4bitで量子化した方が高精度になる場合があった。Llama 2 7B/13B/70Bで2–4 bit/パラメータを評価し、特に2bit域で既存PTQを大きく改善する。
 
+- **2024-02 · [WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More](2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  WKVQuantは、量子化対象を「重み・KVキャッシュ・一時活性化」に分解し、メモリ削減へ長時間効く重みとKVキャッシュだけを4ビット化し、一時活性化は高精度のまま残す事後量子化（post-学習 量子化; PTQ）方式である。
+
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   狙いは、学習済みFP16/BF16モデルを後から近似する事後学習量子化ではなく、モデル自体を極低bit表現へ適応させ、品質を維持したまま重み転送・行列積・メモリ容量の支配項を小さくすることにある。
-
-- **2024-02 · [WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More](2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  WKVQuantは、量子化対象を「重み・KVキャッシュ・一時活性化」に分解し、メモリ削減へ長時間効く重みとKVキャッシュだけを4ビット化し、一時活性化は高精度のまま残す事後量子化（post-学習 量子化; PTQ）方式である。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
   実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：14  
@@ -1192,6 +1192,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   LLMCompassは、大規模言語モデル（LLM）の推論を実行する新しいアクセラレータ構成を、RTL実装やcycle-level simulatorを作る前に比較するためのハードウェア評価基盤である。従来のルーフラインは速いが楽観的すぎ、cycle-level シミュレーションは大規模LLMには遅すぎる。
 
+- **2023-12 · [Compressed Context Memory For Online Language Model Interaction](2023-2312.03414-compressed-context-memory-for-online-language-model-interaction.md)**  
+  実装：[✓](https://github.com/snu-mllab/Context-Memory) ・ リポジトリ内被引用：2  
+  Compressed Context メモリ（CCM）は、古い文脈のKV表現を小さな記憶へ繰り返し圧縮する。
+
 - **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   複数の既製大規模言語モデル（LLM）は、同じ平均性能でも数学、コード、対話など得意領域が異なる。報酬モデル順位付け（Reward モデル Ranking; RMR）はこの補完性を利用できるが、問い合わせごとに全候補LLMへ生成させ、その出力を報酬モデルで採点するため、候補数に比例して推論計算が増える。
@@ -1224,10 +1228,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は、大規模言語モデル（LLM）推論をFPGA上で「同じ演算器を層ごとに使い回す時間型（temporal）overlay」として実装するのではなく、演算子・層ごとに専用処理要素を配置してFIFO等で直接つなぐ空間型（spatial）データフローの可能性を分析する。
 
-- **2023-12 · [Compressed Context Memory For Online Language Model Interaction](2023-2312.03414-compressed-context-memory-for-online-language-model-interaction.md)**  
-  実装：[✓](https://github.com/snu-mllab/Context-Memory) ・ リポジトリ内被引用：1  
-  Compressed Context メモリ（CCM）は、古い文脈のKV表現を小さな記憶へ繰り返し圧縮する。
-
 - **2024-09 · [DisDP: Disaggregating Compute, Network, and Storage for Model-Sharded Data-Parallel Training](2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPUから通信とオプティマイザ状態をSmartNIC・SmartSwitch・単一パラメータサーバへ分離し、100B級モデル分割データ並列の干渉と容量制約を同時に減らす。
@@ -1239,7 +1239,7 @@
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：152  
+  実装：✓ ・ リポジトリ内被引用：153  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
@@ -1251,7 +1251,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：62  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：63  
   Wanda（重み and 活性値）は、LLMを再学習せず一回の校正だけで疎化する枝刈り法である。LLaMA-7Bの50%非構造疎化では、WikiText-2のPPLが単純大きさ枝刈り17.29に対してWanda 7.26となり、重い二次情報更新を使うSparseGPTに競争的な品質を示す。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
@@ -1275,7 +1275,7 @@
   LLM-QATは、学習後量子化（post-学習 量子化; PTQ）が8 bit未満で急激に崩れる問題に対し、量子化誤差を順伝播中へ挿入してモデル自身を低精度表現へ適応させる量子化認識学習（量子化対応学習; QAT）を大規模言語モデルへ適用する。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：34  
   SparseGPTは、数十億〜数千億パラメータの生成事前学習Transformerを、追加の再学習なしに一回後処理（one-shot）で疎化する手法である。単純な絶対値枝刈り（magnitude 枝刈り）は重みの大きさだけで削除対象を決めるため、大規模モデルでも50%前後の疎化で層出力誤差が急増する場合がある。
 
 - **2023-07 · [Retentive Network: A Successor to Transformer for Large Language Models](2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md)**  
@@ -1510,6 +1510,10 @@
   実装：✓ ・ リポジトリ内被引用：19  
   Transformerの多頭自己注意は同じ層に複数の注意ヘッドを置くが、全ヘッドが同じ程度に必要とは限らない。本論文はニューラル機械翻訳を対象に、各ヘッドが最終予測へどれだけ寄与するか、どのような言語的役割を持つか、そしてヘッド単位で削除しても品質を維持できるかを一つの実験系で調べる。
 
+- **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  本論文は、多頭注意 (multi-head 注意機構; MHA) の各注意頭が学習後の推論で本当に必要かを、WMT14英仏翻訳のTransformerとMultiNLIで微調整したBERT-baseで直接検証する。
+
 - **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   目的は入力ごとに早期終了を判断することではなく、単一チェックポイントから複数の固定深度モデルを取り出すことである。
@@ -1517,10 +1521,6 @@
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   Q-BERTは、BERTの全encoder層へ同じbit数を割り当てるのではなく、各層の量子化感度を損失関数のヘッセ行列から推定し、高感度層だけに高い精度を残す混合精度（mixed 精度）量子化法である。BERT-Baseでは埋め込みが約91 MB、encoderが約325 MBを占める。
-
-- **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  本論文は、多頭注意 (multi-head 注意機構; MHA) の各注意頭が学習後の推論で本当に必要かを、WMT14英仏翻訳のTransformerとMultiNLIで微調整したBERT-baseで直接検証する。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
   実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：8  
