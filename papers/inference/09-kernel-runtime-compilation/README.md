@@ -134,13 +134,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：14  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
+- **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  この疎性は、注意や共有専門家をGPUに置き、多数のrouted 専門家を大容量CPUメモリへ置く混成推論と相性がよい。しかし単純なオフロードではCPU側の小さな行列演算が遅く、MoE層の結果を待つ間GPUが停止するため、PCIe転送だけでなくCPU計算と同期が律速になる。
+
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
   実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：9  
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
-
-- **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  この疎性は、注意や共有専門家をGPUに置き、多数のrouted 専門家を大容量CPUメモリへ置く混成推論と相性がよい。しかし単純なオフロードではCPU側の小さな行列演算が遅く、MoE層の結果を待つ間GPUが停止するため、PCIe転送だけでなくCPU計算と同期が律速になる。
 
 - **2025-04 · [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](2025-2504.19442-triton-distributed.md)**  
   実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：8  
