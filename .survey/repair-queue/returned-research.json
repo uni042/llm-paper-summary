@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T08:08:08+00:00",
+  "generated_at": "2026-10-08T08:18:47+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 159,
+  "count": 160,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -2947,8 +2947,8 @@
     },
     {
       "canonical_id": "arXiv:2603.10087",
-      "title": "Pooling Engram Conditional Memory in Large Language Models using CXL",
-      "source_url": "https://arxiv.org/abs/2603.10087",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T08:04:59+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -2971,6 +2971,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_609cefc875e08191880ef28d9d03d2fd--2603.10087-pooling-engram-cxl.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_609cefc875e08191880ef28d9d03d2fd--2603.10087-pooling-engram-cxl.json",
       "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.04462",
+      "title": "CARD: A Cache-Assisted Parallel Speculative Decoding Framework via Query-and-Correct Paradigm for Accelerating LLM Inference",
+      "source_url": "https://arxiv.org/abs/2508.04462",
+      "returned_at": "2026-10-08T08:17:14+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5307,
+        "body_paragraphs": 27,
+        "method_chars": 2024,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 723,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2af302282cd481918124011c23a43318--2025-2508.04462-card-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2af302282cd481918124011c23a43318--2025-2508.04462-card-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261008-1630-scheduled-chat-30/r01"
     }
   ]
 }
