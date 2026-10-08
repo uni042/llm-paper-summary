@@ -118,15 +118,17 @@ class ForwardLineageCitationTests(unittest.TestCase):
         def score(row, **_):
             return {**row, "priority": 100 if "relation_count" in row else 1}
 
-        with patch.object(reference_pool, "build_reference_pool",
-                          return_value={"candidates": [backward]}), \\
-             patch.object(forward_citation_state, "load",
-                          return_value={"candidates": {candidate_id: forward}}), \\
-             patch.object(citation_graph, "load_records", return_value=self.papers), \\
-             patch.object(reference_pool, "_load_ledger_tokens", return_value=set()), \\
-             patch.object(candidate_priority, "load_cache", return_value={}), \\
-             patch.object(candidate_priority, "load_config", return_value={}), \\
-             patch.object(wl, "_score_row", side_effect=score):
+        with (
+            patch.object(reference_pool, "build_reference_pool",
+                         return_value={"candidates": [backward]}),
+            patch.object(forward_citation_state, "load",
+                         return_value={"candidates": {candidate_id: forward}}),
+            patch.object(citation_graph, "load_records", return_value=self.papers),
+            patch.object(reference_pool, "_load_ledger_tokens", return_value=set()),
+            patch.object(candidate_priority, "load_cache", return_value={}),
+            patch.object(candidate_priority, "load_config", return_value={}),
+            patch.object(wl, "_score_row", side_effect=score),
+        ):
             found, total = wl._discovery_candidates(Path("/unused"))
         self.assertEqual(total, 1)
         self.assertEqual(found[0]["source_kind"], "reference_review_candidate")
