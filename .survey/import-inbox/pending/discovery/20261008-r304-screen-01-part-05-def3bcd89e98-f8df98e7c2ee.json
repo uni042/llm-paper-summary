@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r304-screen-01-part-05-def3bcd89e98",
+  "reference_main_sha": "14de2d64584c63ef0c5ff753e5bb7fccc08c6bc7",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.25011",
+      "identity_tokens": [
+        "arXiv:2604.25011"
+      ],
+      "title": "Why Does Reinforcement Learning Generalize? A Feature-Level Mechanistic Study of Post-Training in Large Language Models",
+      "reason": "This is a mechanistic study of why RL post-training generalizes; it analyzes training effects rather than proposing inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.25011",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17293",
+      "identity_tokens": [
+        "arXiv:2604.17293"
+      ],
+      "title": "Beyond \"I Don't Know\": Evaluating LLM Self-Awareness in Discriminating Data and Model Uncertainty",
+      "reason": "The paper evaluates LLM uncertainty/self-awareness and abstention behavior; no concrete serving, latency, cache, or compute reduction is described.",
+      "source_url": "https://arxiv.org/abs/2604.17293",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16896",
+      "identity_tokens": [
+        "arXiv:2604.16896"
+      ],
+      "title": "ProtoCycle: Reflective Tool-Augmented Planning for Text-Guided Protein Design",
+      "reason": "The work is a tool-augmented protein-design planning system for a domain task, without an inference-engine efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2604.16896",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.11169",
+      "identity_tokens": [
+        "arXiv:2409.11169"
+      ],
+      "title": "MAISI: Medical AI for Synthetic Imaging",
+      "reason": "MAISI combines CT volume compression, diffusion, and tensor-splitting parallelism for high-resolution medical-image synthesis. Its compression/parallelism is for 3D imaging networks, not LLM inference or PyTorch LLM serving.",
+      "source_url": "https://arxiv.org/abs/2409.11169",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03949",
+      "identity_tokens": [
+        "arXiv:2406.03949"
+      ],
+      "title": "UltraMedical: Building Specialized Generalists in Biomedicine",
+      "reason": "UltraMedical builds biomedical model capabilities/specialization; the abstract does not describe inference-time compute or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2406.03949",
+      "first_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "last_checked_at": "2026-10-08T06:15:58.971591+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
