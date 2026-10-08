@@ -431,7 +431,7 @@ def _import_progress_activity(repo_root: Path, now):
     for root in roots:
         for path, payload in _core.evidence._iter_json(root):
             status = str(payload.get("status") or "").strip()
-            if root.name == "results" and status not in {"imported", "already_represented"}:
+            if root.parent.name == "results" and status not in {"imported", "already_represented"}:
                 continue
             run_key = str(payload.get("run_key") or "").strip()
             stamp = _discovery_observed_at(payload, run_key)
@@ -464,7 +464,7 @@ def _import_progress_activity(repo_root: Path, now):
                 "relevance_count": relevance_count,
                 "unrelated_count": classifications.count("unrelated"),
                 "borderline_count": classifications.count("borderline"),
-                "stage": root.name,
+                "stage": root.parent.name,
                 "status": status,
             })
 
