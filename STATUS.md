@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-08 21:47:54 JST**
+> 自動生成: **2026-10-08 22:23:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **594** |
 | 未claim Research job | **594** |
-| 直近24hのResearch処理完了 | **200** |
-| 最終Research処理完了 | **10-08 20:49:56 JST** |
+| 直近24hのResearch処理完了 | **215** |
+| 最終Research処理完了 | **10-08 21:08:38 JST** |
 | 最終Discovery探索完了 | **10-08 16:47:03 JST** |
 | 整合性異常 | **0** |
 
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **107412** |
+| 探索候補総数 | **107413** |
 | 処理済み | **17724** |
-| 未処理Discovery候補 | **89688** |
+| 未処理Discovery候補 | **89689** |
 | 収録済み | **1749** |
 | Research / Audit候補へ昇格済み | **445** |
 | 無関係として除外 | **11124** |
@@ -63,12 +63,12 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **89688** |
+| 未処理候補（フィルタ前） | **89689** |
 | 機械規則による暫定隔離 | **1003** |
 | 拡張機械規則による追加隔離 | **675** |
-| 機械規則通過後 | **88010** |
-| 系統内前方引用スコアによる選抜保留 | **83609** |
-| 暫定隔離合計 | **85287** |
+| 機械規則通過後 | **88011** |
+| 系統内前方引用スコアによる選抜保留 | **83610** |
+| 暫定隔離合計 | **85288** |
 | **読解可能候補（隔離後）** | **4401** |
 | 前方引用が同一系統で2本以上の候補 | **10332** |
 | 前方引用が同一系統で3本以上の候補 | **5433** |
@@ -88,7 +88,7 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **16.5%**
-- 現在の生在庫: 後方references **49980件** / 前方引用 **40867件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 現在の生在庫: 後方references **49985件** / 前方引用 **40867件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
 - 前方・後方を統合してidentity重複を除いた未処理面は **90426件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-08 11:56:45 JST（9時間51分前）** |
+| 最終maintenance完了 | **10-08 11:56:45 JST（10時間26分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **51** |
-| 直近6hのDiscovery run | **44** |
-| 直近6hのDiscovery本文確認・分類 | **206** |
-| 最終Research完了 | **10-08 20:49:56 JST** |
+| 直近6hのResearch完了 | **55** |
+| 直近6hのDiscovery run | **20** |
+| 直近6hのDiscovery本文確認・分類 | **91** |
+| 最終Research完了 | **10-08 21:08:38 JST** |
 | 最終Discovery完了 | **10-08 16:47:03 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-08 20:49:56 JST** / worker — / run interactive-20261008-bottomup-compactor-primary-source-r02 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/interactive-20261008-compactor-primarysource-dualscore-r02.json
+- Research: **10-08 21:08:38 JST** / worker — / run 20261008-2100-scheduled-chat-00/r01 / 成果 **2件**
+  - evidence: .survey/import-inbox/results/research/libfile_87e67dfc01788191ab66480a6208e055--reaudit-20261008-2100-scheduled-chat-00-2603.19172-dymoe-r01.json
 - Discovery: **10-08 16:47:03 JST** / worker codex-local-screen-watcher / run 20261008-r311-screen-01-part-03-cc055bb3f9bc
   - 本文確認・分類 **5件** / accept **0件** / unrelated+borderline **5件**
   - evidence: .survey/import-inbox/results/discovery/20261008-r311-screen-01-part-03-cc055bb3f9bc-448a9d75517a.json

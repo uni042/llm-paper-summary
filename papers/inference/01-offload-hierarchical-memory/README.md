@@ -28,7 +28,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2025-11 · [In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading](2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  本論文は、Mixture of エキスパート（MoE）をGPUメモリに収めきれない環境で、エキスパート重みをCPU主記憶から必要時に転送するオフロードを対象に、キャッシュと投機的先読み（投機的 プリフェッチ）がどこまで有効かを実測・トレースから分析した研究である。
+  本論文は、GPUメモリに全専門家重みを置けない混合専門家モデル（MoE）の推論について、CPUメモリからの重み転送を削減するキャッシュと、次層で必要になる専門家を早めに予測する先読みを分析する。実測では、A6000上の固定プロンプトにおける生成速度がLRUの2.34トークン毎秒からLFUの4.32トークン毎秒へ改善し、約84.6%の速度向上を報告する。
 
 - **2026-08 · [Potential Applications of HBF in LLM Serving Systems](2026-2608.13127-hbf-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -52,7 +52,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2026-03 · [DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge](2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  GPUメモリに収まらない場合、使う専門家をCPUからPCIe経由で読み込むため、特に復号では「重み待ち」が逐次生成のクリティカルパスへ入る。静的な量子化は転送量を減らせる一方、全専門家を同じ精度へ落とすと品質を損ねやすい。
+  DyMoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリが12〜24GB程度に制約された端末で動かすため、専門家ごと・層ごと・入力ごとに必要な重み精度を変える推論システムである。
 
 - **2026-02 · [DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs](2026-2602.03495-dali-workload-aware-moe-offloading-local-pcs.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

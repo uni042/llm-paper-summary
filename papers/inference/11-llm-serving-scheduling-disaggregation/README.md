@@ -1237,8 +1237,8 @@
   本研究は、大規模言語モデル（LLM）サービングを遅延・スループットだけでなく、サービス水準目標（Service-Level Objective; SLO）を守ったときの電力・エネルギーまで含めて実機解析した特性評価研究である。短い要求や低負荷では周波数を下げてもSLOを維持しやすく、長いプリフィルでは周波数低下の影響が大きい。
 
 - **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  HexGenは、異種GPUを「同じ速さのワーカー」とみなさず、各GPUの計算性能・メモリ容量とリンク帯域に応じてテンソル並列（テンソル Parallelism; TP）とパイプライン並列（パイプライン Parallelism; PP）の仕事量を非対称に割り当てる。
+  実装：[✓](https://github.com/Relaxed-System-Lab/HexGen) ・ リポジトリ内被引用：9  
+  HexGenは、性能もメモリ容量も異なるGPUが複数のデータセンターに分散し、拠点間ネットワークの帯域と遅延も不均一な環境で、大規模言語モデル（LLM）の生成推論を提供する分散実行システムである。
 
 - **2024-05 · [Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving](2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

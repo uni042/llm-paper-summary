@@ -81,8 +81,8 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-04 · [MiLo: Efficient Quantized MoE Inference with Mixture of Low-Rank Compensators](2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  3ビットMoEの量子化残差を専門家特性に応じた低ランク補償器で回復し、校正不要の精度改善とテンソル Core向けW3A16実測高速化を両立する。
+  実装：[✓](https://github.com/Supercomputing-System-AI-Lab/MiLo) ・ リポジトリ内被引用：7  
+  Mixtral-8×7Bの半精度重みは約90GBに達し、単一の40GBや80GBのGPUに収まりにくい。4ビット量子化は比較的品質を保てる一方、3ビットに下げると重みを表現できる値が減り、WikiText-2の予測性能が顕著に悪化する。論文はMixtral-8×7BとDeepSeek-MoEで精度を測り、A100 40GBで推論遅延も測定した。
 
 - **2025-08 · [Efficient Mixed-Precision Large Language Model Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
   実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：5  

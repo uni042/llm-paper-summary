@@ -45,6 +45,8 @@ quality_limitation_chars: 482
 references_checked_at: '2026-10-03'
 references_source: 'arxiv-html-reference-section'
 references_total: 50
+last_audited: null
+audit_version: 0
 ---
 
 # CLLMs: Consistency Large Language Models

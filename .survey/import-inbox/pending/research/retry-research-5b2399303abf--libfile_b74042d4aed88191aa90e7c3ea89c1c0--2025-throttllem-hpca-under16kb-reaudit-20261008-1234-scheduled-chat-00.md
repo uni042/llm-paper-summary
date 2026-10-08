@@ -51,6 +51,8 @@ quality_method_chars: 2711
 quality_evaluation_chars: 3454
 quality_eval_chars: 3454
 quality_limitation_chars: 777
+last_audited: null
+audit_version: 0
 ---
 
 # throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving

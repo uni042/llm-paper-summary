@@ -20,6 +20,8 @@ worker_run_key: '20261008-interactive-verified-zero-repair'
 reference_main_sha: "d50824fe2088a6ebdc80b1a81ec856137bb5f08c"
 quality_self_review_passed: true
 quality_self_review_version: "2026-10-07-v1"
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要

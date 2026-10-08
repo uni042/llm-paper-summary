@@ -59,6 +59,8 @@ quality_method_chars: 2538
 quality_evaluation_chars: 1795
 quality_eval_chars: 1795
 quality_limitation_chars: 836
+last_audited: null
+audit_version: 0
 ---
 
 # FTRANS: Energy-Efficient Acceleration of Transformers using FPGA

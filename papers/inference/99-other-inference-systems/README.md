@@ -16,7 +16,7 @@
 
 - **2026-02 · [P-EAGLE: Parallel-Drafting EAGLE with Scalable Training](2026-2602.01469-p-eagle-parallel-drafting-eagle-with-scalable-training.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
-  投機的復号（投機的復号）は小さいドラフトモデルが先に複数トークンを提案し、大きな対象モデルがまとめて検証することで、対象 重みを読む回数を減らす。vLLM実装ではGPT-OSS 120B/20BとQwen3-Coder 30Bで自己回帰EAGLE-3比1.10〜1.36倍の高速化を報告する。
+  投機的復号は軽いドラフトモデルが先に複数トークンを提案し、大きな対象モデルがまとめて検証することで、対象モデルの重みを読む回数を減らす。vLLMでの実測では、GPT-OSS 20B、120B、Qwen3-Coder 30Bに対し、自己回帰EAGLE-3比で代表的に1.10〜1.36倍の生成処理量改善を報告する。
 
 - **2026-01 · [Double: Breaking the Acceleration Limit via Double Retrieval Speculative Parallelism](2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -402,7 +402,7 @@
 
 - **2026-08 · [MARCH: Scaling Recurrent Memory with Content-Routed State Anchors](2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Transformerは過去トークンをKVキャッシュとして残すため長距離検索に強いが、推論メモリは文脈長に比例する。再帰の高速経路を維持したまま、総記憶容量だけを文脈とともに増やす設計である。
+  MARCHは、再帰型言語モデルの「過去を固定サイズの状態に圧縮するため、後から古い情報を取り出しにくい」という問題を、累積再帰状態の履歴保存と内容に基づく検索で緩和する構造である。過去状態の読出しには追加費用があり、128KではTop-4の疎ルーティングが密なMARCHの学習処理量を2倍超に改善する。
 
 - **2026-08 · [M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU](2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -756,7 +756,7 @@
 
 - **2024-11 · [Context Parallelism for Scalable Million-Token Inference](2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  文脈並列（context parallelism）は入力系列をGPU間で分割し、各GPUが一部トークンだけを保持・計算することで、メモリとプレフィル計算をGPU数へ分散する。16ノード128基のH100でLlama 3 405Bの1Mトークンプレフィルを77秒、並列化効率93%、浮動小数点演算利用率63%で実行し、128Kでは3.8秒を報告する。
+  本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
 
 - **2025-05 · [ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor](2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -872,7 +872,7 @@
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
   実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：2  
-  TokenSkipはCoT中のすべてのトークンが同じ重要度を持つわけではないという観測から、論理上重要な部分を残し、説明的・冗長な部分を省略する制御可能なCoT圧縮を提案する。代表例ではQwen2.5-14B-InstructをGSM8Kへ適用し、推論トークン数を313から181へ40%減らしながら、性能低下を0.4%未満に抑える。
+  思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-01 · [MoE²: Optimizing Collaborative Inference for Edge Large Language Models](2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1080,10 +1080,6 @@
   実装：✓ ・ リポジトリ内被引用：9  
   通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
 
-- **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  FastVは、初期層では視覚情報を統合するため画像トークンを残し、指定した層 (K) で注意重みに基づき視覚トークンを順位付けし、重要度の低い下位 (R)% をそれ以降の層から除去する。代表的な (K=2, R=50%) ではLLaVA-1.5-13Bの理論FLOPsを154.6Bから84.6Bへ減らしながら、4種画像ベンチマーク平均73.6を維持する。
-
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
   実装：[✓](https://github.com/microsoft/Samba) ・ リポジトリ内被引用：8  
   Sambaは、選択的状態空間モデル（Selective State Space モデル; SSM）で遠い過去を固定サイズ状態へ畳み込み、スライディング窓注意（Sliding Window 注意機構; SWA）で直近トークンを正確に参照する。
@@ -1091,6 +1087,10 @@
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   本論文は、LLMクラウドでGPUの演算能力よりデータセンターの電力供給枠が先に制約になる状況を扱う。訓練は同期的にGPUが動くためピークが揃い、電力の過剰収容余地は約3%しかない。評価では同一電力予算へ30%多いサーバを配置しつつ設定した遅延SLOと電力ブレーキ0回を狙えることを示す。
+
+- **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  FastVは、初期層では視覚情報を統合するため画像トークンを残し、指定した層 (K) で注意重みに基づき視覚トークンを順位付けし、重要度の低い下位 (R)% をそれ以降の層から除去する。代表的な (K=2, R=50%) ではLLaVA-1.5-13Bの理論FLOPsを154.6Bから84.6Bへ減らしながら、4種画像ベンチマーク平均73.6を維持する。
 
 - **2023-12 · [Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy](2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md)**  
   実装：[✓](https://github.com/alipay/PainlessInferenceAcceleration) ・ リポジトリ内被引用：7  
@@ -1142,7 +1142,7 @@
 
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  本論文は、言語モデルを小さく・速くする圧縮研究を、枝刈り、量子化、知識蒸留、低ランク近似、パラメータ共有、効率的アーキテクチャ設計の6系統へ整理する。たとえばOPT-175BのOPTQは81.3%圧縮、PPL 8.34→8.68、3.20倍、LLaMA-13BのSqueezeLLMは78.0%圧縮、PPL 5.09→5.60、2.40倍と整理される。
+  枝刈り、量子化、知識蒸留、低ランク近似、パラメータ共有、効率的構造設計の六系統を、圧縮後の性能だけでなく、圧縮を実行するための学習・較正費用から比較するサーベイ。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
   実装：[✓](https://github.com/dvlab-research/LLaMA-VID) ・ リポジトリ内被引用：4  
@@ -1154,7 +1154,7 @@
 
 - **2024-10 · [SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference](2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md)**  
   実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：3  
-  SparseVLMは、大規模視覚言語モデル（VLM）で画像・動画から生成される大量の視覚トークン（visual トークン）のうち、現在の質問へ重要なものだけを残してTransformer後段の計算を減らす、追加学習不要（学習不要）のトークン疎化手法である。
+  SparseVLMは、視覚言語モデル（VLM）の入力画像から生じる大量の視覚トークンを、現在の質問に必要な情報をできるだけ残しながら削減する追加学習不要の方式である。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
   実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：3  
@@ -1238,7 +1238,7 @@
 
 - **2024-02 · [Efficient Prompt Caching via Embedding Similarity](2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  LLMサービスでは、過去と完全一致するプロンプトなら応答をキャッシュから返してモデル推論を省ける。しかし実際には「SATはいつ2400点から1600点へ変わったか」のような表現違いを再利用したい一方、語彙が非常に似ていても意味が逆の質問へ同じ応答を返してはいけない。未調整E5の最良46.0%に対し、BCE微調整は54.0%、SLDは52.4%に達する。
+  本論文は、言語モデルの生成済み応答そのものを再利用するプロンプトキャッシュの判定精度を改善する研究である。以前の質問に対する回答がキャッシュにあれば、新しい質問を言語モデルへ送らず、その回答を返すことができる。ただし、質問文の意味が近いことと、同じ回答で両方の質問に正しく答えられることは一致しない。
 
 - **2024-01 · [Inferflow: an Efficient and Highly Configurable Inference Engine for Large Language Models](2024-2401.08294-inferflow-an-efficient-and-highly-configurable-inference-engine-for-larg.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1284,7 +1284,7 @@
 
 - **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
   実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：49  
-  LLM-Prunerは、大規模言語モデル（large language モデル; LLM）を実際に小さなdenseモデルへ変換する構造枝刈り（structural 枝刈り）手法である。
+  LLM-Prunerは、大規模言語モデルのパラメータを実際に削除して小さい密行列モデルへ変換する構造枝刈り手法である。LLaMA-7B、Vicuna-7B、ChatGLM-6Bを評価し、LLaMA-7Bでは20%の構造削減でゼロショット七課題平均が63.25から56.82へ下がり、低ランク適応後60.07まで回復した。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
   実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：43  
@@ -1347,16 +1347,12 @@
   さらに既存Falcon/LlamaをReLUへ変換するrelufication、正規化層の後にもReLUを追加する第二段階、複数トークンを跨いだ集約疎性（aggregated 疎性）を提案し、推論時の重み I/O削減へ接続する。
 
 - **2023-10 · [Compressing Context to Enhance Inference Efficiency of Large Language Models](2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md)**  
-  実装：[✓](https://github.com/liyucheng09/Selective_Context) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/liyucheng09/Selective_Context) ・ リポジトリ内被引用：14  
   Selective Contextは、長い文書や会話を大規模言語モデル（LLM）へそのまま渡す前に、入力中の「予測しやすく情報量の低い語句」を削除して文脈自体を短くする前処理方式である。
 
 - **2023-10 · [LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression](2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md)**  
   実装：[✓](https://aka.ms/LongLLMLingua) ・ リポジトリ内被引用：13  
   LongLLMLinguaは、長いプロンプトを単に一律に切り詰めるのではなく、「質問に対してどの文書・トークンが有用か」を小型言語モデルで推定し、重要部分へトークン予算を集中させる長文脈プロンプト圧縮法である。
-
-- **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：11  
-  In-文脈 Autoencoder（ICAE）は、長い文脈を通常のテキスト トークンではない少数の学習済みメモリ slotへ圧縮し、その連続表現を同じLLMが後続生成の条件として直接読む。
 
 - **2023-03 · [ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md)**  
   実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：11  
@@ -1369,6 +1365,10 @@
 - **2023-07 · [Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding](2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   予測パイプライン復号（Predictive Pipelined Decoding; PPD）は、自己回帰大規模言語モデルの「現在トークンが最終層まで確定しないと次トークンの計算を開始できない」という逐次依存を、追加の計算資源で一部重畳する方式である。
+
+- **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：10  
+  In-文脈 Autoencoder（ICAE）は、長い文脈を通常のテキスト トークンではない少数の学習済みメモリ slotへ圧縮し、その連続表現を同じLLMが後続生成の条件として直接読む。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
   実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：7  
