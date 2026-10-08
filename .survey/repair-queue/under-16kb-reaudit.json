@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T10:39:52.369954+00:00",
+  "generated_at": "2026-10-08T10:51:13.629833+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 535,
+  "count": 531,
   "worker_counts": {
-    "scheduled-chat-00": 180,
-    "scheduled-chat-30": 170,
+    "scheduled-chat-00": 178,
+    "scheduled-chat-30": 168,
     "scheduled-chat-45": 185
   },
   "entries": [
@@ -573,30 +573,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
-      "canonical_id": "arXiv:2410.20399",
-      "title": "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
-      "file_bytes": 8469,
-      "source_sha256": "363346596eee3350da802b0c32d8d228038a659459614d972d06497db110aa59",
-      "source_git_blob_sha": "0ac2c248b168c41ea568e690d0c21365a1f88118",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.914024,
-      "quality_metrics": {
-        "body_chars": 1636,
-        "method_chars": 581,
-        "evaluation_chars": 0,
-        "limitation_chars": 166
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1636 < 2200",
-        "16KB未満再監査: 手法説明量 581 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
       "canonical_id": "DOI:10.1109/HPCA61900.2025.00103",
       "title": "throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving",
@@ -715,30 +691,6 @@
         "16KB未満再監査: 本文説明量 1534 < 2200",
         "16KB未満再監査: 手法説明量 319 < 700",
         "16KB未満再監査: 評価説明量 79 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2604.07815-asynctls-efficient-generative-llm-inference-with-asynchronous-two-level-.md",
-      "canonical_id": "arXiv:2604.07815",
-      "title": "AsyncTLS: Efficient Generative LLM Inference with Asynchronous Two-level Sparse Attention",
-      "file_bytes": 8577,
-      "source_sha256": "fbba51a8054ff81e6ef222adaebfb0ab3a91ceedbe8a3b210eac2555cd627b32",
-      "source_git_blob_sha": "5f8adc93fb2892aa4a6d0f058052f2d7eb2d19e4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.909405,
-      "quality_metrics": {
-        "body_chars": 1570,
-        "method_chars": 450,
-        "evaluation_chars": 285,
-        "limitation_chars": 141
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1570 < 2200",
-        "16KB未満再監査: 手法説明量 450 < 700",
-        "16KB未満再監査: 評価説明量 285 < 500"
       ],
       "warnings": []
     },
@@ -1008,30 +960,6 @@
       "warnings": [
         "日本語比率 75.7% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md",
-      "canonical_id": "arXiv:2505.19427",
-      "title": "WINA: Weight Informed Neuron Activation for Accelerating Large Language Model Inference",
-      "file_bytes": 8740,
-      "source_sha256": "1a3121a774267dc6010c8ff5549d7182a7e66a4fb88681d030af88af04ec4d6f",
-      "source_git_blob_sha": "8845e0b26a372d06859940be54933443850cd056",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.94267,
-      "quality_metrics": {
-        "body_chars": 1239,
-        "method_chars": 345,
-        "evaluation_chars": 0,
-        "limitation_chars": 128
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1239 < 2200",
-        "16KB未満再監査: 手法説明量 345 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
@@ -2236,29 +2164,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 130 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md",
-      "canonical_id": "arXiv:2402.01771",
-      "title": "BlackMamba: Mixture of Experts for State-Space Models",
-      "file_bytes": 9527,
-      "source_sha256": "995d1014937c31662827d2da2017d03d23b5bbf5e3c42e486cf647c9ddb211c5",
-      "source_git_blob_sha": "419f1b889d62ba32ea818503686a2cbc8a87d4a6",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.88963,
-      "quality_metrics": {
-        "body_chars": 1962,
-        "method_chars": 813,
-        "evaluation_chars": 92,
-        "limitation_chars": 149
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1962 < 2200",
-        "16KB未満再監査: 評価説明量 92 < 500"
       ],
       "warnings": []
     },
