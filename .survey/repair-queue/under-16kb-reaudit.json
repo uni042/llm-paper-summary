@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T11:11:50.920150+00:00",
+  "generated_at": "2026-10-08T11:21:42.924092+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 526,
+  "count": 525,
   "worker_counts": {
     "scheduled-chat-00": 178,
     "scheduled-chat-30": 166,
-    "scheduled-chat-45": 182
+    "scheduled-chat-45": 181
   },
   "entries": [
     {
@@ -765,28 +765,6 @@
         "16KB未満再監査: 本文説明量 1715 < 2200",
         "16KB未満再監査: 手法説明量 543 < 700",
         "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
-      "canonical_id": "arXiv:1701.06538",
-      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
-      "file_bytes": 8653,
-      "source_sha256": "92f4bde23997acb55106010ce618ce5969c9bfd69d18d70615869ea559462bfd",
-      "source_git_blob_sha": "48294e6d97139ec6f7697846ab5fa81b1b647067",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.956772,
-      "quality_metrics": {
-        "body_chars": 2205,
-        "method_chars": 728,
-        "evaluation_chars": 280,
-        "limitation_chars": 215
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 280 < 500"
       ],
       "warnings": []
     },
@@ -10460,26 +10438,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md",
-      "canonical_id": "arXiv:2402.11960",
-      "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
-      "file_bytes": 14045,
-      "source_sha256": "13ed1832504b21024e47dce5d7b8ec0520295e720403c7a8cd7903d8cff6e639",
-      "source_git_blob_sha": "637ff853e6e2d398f7354f87b825a4c0dd55a026",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.999382,
-      "quality_metrics": {
-        "body_chars": 4288,
-        "method_chars": 1207,
-        "evaluation_chars": 808,
-        "limitation_chars": 472
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
       "canonical_id": "arXiv:2606.26650",
       "title": "CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs",
@@ -11640,6 +11598,26 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 198 < 500"
       ],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md",
+      "canonical_id": "arXiv:2402.11960",
+      "title": "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
+      "file_bytes": 15834,
+      "source_sha256": "c1ad0d8d1f18fc3441dd607d87a3ac57b54bb5df714b59265e4d682f217af387",
+      "source_git_blob_sha": "28e1436255ba4c56ef8c844d7d8c547da7bc6d78",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.999382,
+      "quality_metrics": {
+        "body_chars": 4288,
+        "method_chars": 1207,
+        "evaluation_chars": 808,
+        "limitation_chars": 472
+      },
+      "mechanical_failures": [],
       "warnings": []
     },
     {
