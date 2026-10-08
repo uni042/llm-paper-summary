@@ -9,6 +9,8 @@ on:
       - '.survey/scripts/refresh_due.py'
       - '.survey/scripts/candidate_priority.py'
       - '.survey/scripts/refresh_candidate_priority.py'
+      - '.survey/scripts/candidate_priority_state.py'
+      - '.survey/scripts/forward_citation_state.py'
       - '.survey/scripts/discovery_provider_adapter.py'
       - '.survey/scripts/queue_worker.py'
       - '.survey/scripts/build_worker_worklist.py'
@@ -79,9 +81,10 @@ jobs:
           # re-querying providers.
           python .survey/scripts/refresh_candidate_priority.py --repo-root . | tee /tmp/candidate-priority-refresh.json
 
-          git add -A \
-            .survey/work-queue/candidate-priority-cache.json \
-            .survey/work-queue/jobs
+          git add -A -- .survey/work-queue/candidate-priority-cache.json .survey/work-queue/jobs
+          if [ -d .survey/work-queue/candidate-priority-cache-shards ]; then
+            git add -A -- .survey/work-queue/candidate-priority-cache-shards
+          fi
 
           if git diff --cached --quiet; then
             echo 'Candidate priority metadata already current.'
