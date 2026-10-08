@@ -1014,7 +1014,7 @@ def process_research(repo_root: Path, max_items: int | None = None) -> tuple[int
                     "artifact_type": "research",
                     "status": "blocked_import",
                     "source_sha256": payload_hash,
-                    "blocked_path": blocked_path.relative_to(repo_root).as_posix(),
+                    "blocked_path": repo_relative(blocked_path, repo_root),
                     "error": f"{type(exc).__name__}: {exc}",
                     "processed_at": now(),
                 },
@@ -1441,7 +1441,7 @@ def terminalize_discovery(
     source_ref: str | None = None
     if blocked:
         blocked_path = block_payload(source, repo_root / BLOCKED_DISCOVERY)
-        source_ref = blocked_path.relative_to(repo_root).as_posix()
+        source_ref = repo_relative(blocked_path, repo_root)
     else:
         source.unlink(missing_ok=True)
     replace_json(
