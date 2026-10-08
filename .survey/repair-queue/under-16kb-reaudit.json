@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T05:53:50.322561+00:00",
+  "generated_at": "2026-10-08T06:03:03.603095+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 593,
+  "count": 589,
   "worker_counts": {
-    "scheduled-chat-00": 200,
+    "scheduled-chat-00": 198,
     "scheduled-chat-30": 190,
-    "scheduled-chat-45": 203
+    "scheduled-chat-45": 201
   },
   "entries": [
     {
@@ -10229,28 +10229,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
-      "canonical_id": "arXiv:2410.09426",
-      "title": "FlatQuant: Flatness Matters for LLM Quantization",
-      "file_bytes": 13166,
-      "source_sha256": "b93ea7808f8c5c14de874f273f73de874126ff7b3db8cb695225fced188c4a4e",
-      "source_git_blob_sha": "5bddee114758219a8fc91c3377f9143003be49af",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.917326,
-      "quality_metrics": {
-        "body_chars": 2871,
-        "method_chars": 1471,
-        "evaluation_chars": 0,
-        "limitation_chars": 186
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
       "canonical_id": "arXiv:2406.16858",
       "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
@@ -10988,28 +10966,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
-      "canonical_id": "arXiv:2305.13245",
-      "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
-      "file_bytes": 13552,
-      "source_sha256": "851517451edf1d65d8e950aaf26912cc12606523f336878b916b177a1284641d",
-      "source_git_blob_sha": "7d077110ddbad39f9bd1eaac7654f3f10748e9a9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.995079,
-      "quality_metrics": {
-        "body_chars": 2843,
-        "method_chars": 1008,
-        "evaluation_chars": 475,
-        "limitation_chars": 269
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 475 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md",
       "canonical_id": "arXiv:2406.05955",
       "title": "Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters",
@@ -11713,50 +11669,6 @@
       "warnings": [
         "日本語比率 72.7% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md",
-      "canonical_id": "arXiv:2602.11812",
-      "title": "Predicting LLM Output Length via Entropy-Guided Representations",
-      "file_bytes": 14153,
-      "source_sha256": "b365462de09b202a42fc32a9fef33f890e7d720e02e7d241e156b3a6702ffdb3",
-      "source_git_blob_sha": "6c5e1235aba9f43e049c1585175dbe5c13b960d8",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.952896,
-      "quality_metrics": {
-        "body_chars": 2951,
-        "method_chars": 1107,
-        "evaluation_chars": 229,
-        "limitation_chars": 280
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 229 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md",
-      "canonical_id": "arXiv:2501.01792",
-      "title": "Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with A Single GPU",
-      "file_bytes": 14155,
-      "source_sha256": "3bdbb3683998e81f1233f9f42f58bedf4bfbccb20057e48c741e5bf396761d6e",
-      "source_git_blob_sha": "a8633b57fcc10b5c5cc41be75d5aa5d0fcba5398",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.890847,
-      "quality_metrics": {
-        "body_chars": 3521,
-        "method_chars": 938,
-        "evaluation_chars": 381,
-        "limitation_chars": 310
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 381 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
