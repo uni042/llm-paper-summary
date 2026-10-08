@@ -40,21 +40,43 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for attempt in 1 2 3; do
+          # Expensive model building and 2,000-paper inference must execute
+          # only once. Recomputing for every optimistic push retry previously
+          # took ~80 seconds; a busy main moved during each attempt.
+          git fetch origin main
+          git reset --hard origin/main
+          python .survey/scripts/discovery_relevance_batch.py --repo-root . --batch-size 2000
+
+          # Stage durable outputs outside the checkout. git reset --hard must
+          # never erase a successfully completed classification batch.
+          stage="$(mktemp -d)"
+          mkdir -p "$stage"
+          if [ ! -d .survey/work-queue/discovery-prefilter ]; then
+            echo 'No classifier artifacts to publish.'
+            exit 0
+          fi
+          cp -a .survey/work-queue/discovery-prefilter/. "$stage/"
+
+          # Only this workflow owns the classifier shards (serialized by
+          # concurrency group). Every retry rebases the same bounded output
+          # onto the latest main in seconds instead of 80+ seconds.
+          for attempt in $(seq 1 20); do
             git fetch origin main
             git reset --hard origin/main
-            python .survey/scripts/discovery_relevance_batch.py --repo-root . --batch-size 2000
+            mkdir -p .survey/work-queue/discovery-prefilter
+            cp -a "$stage"/. .survey/work-queue/discovery-prefilter/
             git add -A .survey/work-queue/discovery-prefilter/
             if git diff --cached --quiet; then
-              echo 'No new classifier decisions to publish.'
+              echo 'Classifier outputs already published on main.'
               exit 0
             fi
             git commit -m 'chore: advance bounded Discovery classifier'
             if git push origin HEAD:main; then
+              echo "Classifier results persisted on attempt $attempt."
               exit 0
             fi
-            echo "Concurrent push on attempt $attempt; reloading latest canonical state."
-            sleep $((attempt * 2))
+            echo "Concurrent main push on attempt $attempt; retrying publish only."
+            sleep 2
           done
-          echo 'Failed classifier progress push after three retries' >&2
+          echo 'Failed to publish classifier artifacts after 20 fast retries' >&2
           exit 1
