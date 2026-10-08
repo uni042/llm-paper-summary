@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-07T22:08:55+00:00",
-  "record_count": 10868,
+  "updated_at": "2026-10-08T06:13:07+00:00",
+  "record_count": 10909,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -155373,6 +155373,581 @@
         "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md"
       ],
       "title": "InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output"
+    },
+    "DOI:10.1109/cvprw67362.2025.00147": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvprw67362.2025.00147",
+      "identity_tokens": [
+        "DOI:10.1109/cvprw67362.2025.00147"
+      ],
+      "reason": "VLM alignment/benchmark/evaluationのsurveyで、独自のinference optimization mechanismはない。",
+      "first_checked_at": "2026-10-08T06:12:52+00:00",
+      "last_checked_at": "2026-10-08T06:12:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges"
+    },
+    "arXiv:2305.11430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11430",
+      "identity_tokens": [
+        "arXiv:2305.11430"
+      ],
+      "reason": "TELeRは複雑なtaskのprompt taxonomy/benchmarking guidanceで、serving/compute optimizationではない。",
+      "first_checked_at": "2026-10-08T06:12:52+00:00",
+      "last_checked_at": "2026-10-08T06:12:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "TELeR: A General Taxonomy of LLM Prompts for Benchmarking Complex Tasks"
+    },
+    "arXiv:2601.16148": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.16148",
+      "identity_tokens": [
+        "arXiv:2601.16148"
+      ],
+      "reason": "時間軸付き3D diffusionでanimated meshを生成する研究であり、LLM推論/servingへの接続がない。",
+      "first_checked_at": "2026-10-08T06:12:53+00:00",
+      "last_checked_at": "2026-10-08T06:12:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "ActionMesh: Animated 3D Mesh Generation with Temporal 3D Diffusion"
+    },
+    "arXiv:2602.15556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15556",
+      "identity_tokens": [
+        "arXiv:2602.15556"
+      ],
+      "reason": "PADEはLVLM hallucinationを抑えるattention intervention。overheadがnegligibleと報告するが、効率を下げることが研究貢献ではない。",
+      "first_checked_at": "2026-10-08T06:12:53+00:00",
+      "last_checked_at": "2026-10-08T06:12:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Revealing and Enhancing Core Visual Regions: Harnessing Internal Attention Dynamics for Hallucination Mitigation in LVLMs"
+    },
+    "arXiv:2601.15495": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15495",
+      "identity_tokens": [
+        "arXiv:2601.15495"
+      ],
+      "reason": "TRACKはconflicting knowledge下の多段reasoning failureを測るbenchmark/分析研究で、推論最適化手法は提案しない。",
+      "first_checked_at": "2026-10-08T06:12:53+00:00",
+      "last_checked_at": "2026-10-08T06:12:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Tracking the Limits of Knowledge Propagation: How LLMs Fail at Multi-Step Reasoning with Conflicting Knowledge"
+    },
+    "arXiv:2310.01432": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.01432",
+      "identity_tokens": [
+        "arXiv:2310.01432"
+      ],
+      "reason": "PORTIAはLLM evaluatorのposition biasをprompt segmentationで軽減する評価品質methodで、inference efficiencyを改善しない。",
+      "first_checked_at": "2026-10-08T06:12:55+00:00",
+      "last_checked_at": "2026-10-08T06:12:55+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Split and Merge: Aligning Position Biases in LLM-based Evaluators"
+    },
+    "arXiv:2304.00008": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.00008",
+      "identity_tokens": [
+        "arXiv:2304.00008"
+      ],
+      "reason": "LLM creativityの概念的分析で、効率化methodや実験がない。",
+      "first_checked_at": "2026-10-08T06:12:55+00:00",
+      "last_checked_at": "2026-10-08T06:12:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "On the creativity of large language models"
+    },
+    "arXiv:2211.05030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.05030",
+      "identity_tokens": [
+        "arXiv:2211.05030"
+      ],
+      "reason": "AI writing assistantのプロ作家利用を調べる質的user studyで、推論システムの最適化ではない。",
+      "first_checked_at": "2026-10-08T06:12:55+00:00",
+      "last_checked_at": "2026-10-08T06:12:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Creative Writing with an AI-Powered Writing Assistant: Perspectives from Professional Writers"
+    },
+    "arXiv:2302.01392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.01392",
+      "identity_tokens": [
+        "arXiv:2302.01392"
+      ],
+      "reason": "画像fusion用local-to-global expertsで、LLM推論との接続やserving効率を示さない。",
+      "first_checked_at": "2026-10-08T06:12:56+00:00",
+      "last_checked_at": "2026-10-08T06:12:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Multi-modal Gated Mixture of Local-to-Global Experts for Dynamic Image Fusion"
+    },
+    "arXiv:2409.13731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.13731",
+      "identity_tokens": [
+        "arXiv:2409.13731"
+      ],
+      "reason": "knowledge-augmented generation/RAGの専門分野QA methodで、推論資源を直接下げるsystem mechanismではない。",
+      "first_checked_at": "2026-10-08T06:12:56+00:00",
+      "last_checked_at": "2026-10-08T06:12:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "KAG: Boosting LLMs in Professional Domains via Knowledge Augmented Generation"
+    },
+    "arXiv:2212.14034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.14034",
+      "identity_tokens": [
+        "arXiv:2212.14034"
+      ],
+      "reason": "Crammingは単一GPU language-model pretrainingの高速化で、学習工程に限定。",
+      "first_checked_at": "2026-10-08T06:12:56+00:00",
+      "last_checked_at": "2026-10-08T06:12:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Cramming: Training a Language Model on a Single GPU in One Day"
+    },
+    "arXiv:2601.15224": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15224",
+      "identity_tokens": [
+        "arXiv:2601.15224"
+      ],
+      "reason": "VLM progress-reasoning benchmarkとprompt/training paradigmを提案する研究で、推論資源削減またはserving機構がない。",
+      "first_checked_at": "2026-10-08T06:12:57+00:00",
+      "last_checked_at": "2026-10-08T06:12:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "PROGRESSLM: Towards Progress Reasoning in Vision-Language Models"
+    },
+    "arXiv:2604.08865": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08865",
+      "identity_tokens": [
+        "arXiv:2604.08865"
+      ],
+      "reason": "SPPOはcritic/multiple-sampling cost等training throughputを扱うPPO学習法で、deployment inferenceを改善しない。",
+      "first_checked_at": "2026-10-08T06:12:57+00:00",
+      "last_checked_at": "2026-10-08T06:12:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "SPPO: Sequence-Level PPO for Long-Horizon Reasoning Tasks"
+    },
+    "arXiv:2604.06995": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06995",
+      "identity_tokens": [
+        "arXiv:2604.06995"
+      ],
+      "reason": "UILoopはGUI reasoning paradigm/task performanceで、serving効率化を提案しない。",
+      "first_checked_at": "2026-10-08T06:12:58+00:00",
+      "last_checked_at": "2026-10-08T06:12:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "What's Missing in Screen-to-Action? Towards a UI-in-the-Loop Paradigm for Multimodal GUI Reasoning"
+    },
+    "arXiv:2603.19880": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19880",
+      "identity_tokens": [
+        "arXiv:2603.19880"
+      ],
+      "reason": "SCRLはtest-time RLでreasoning robustnessを改善する品質向上法で、inference resource reductionではない。",
+      "first_checked_at": "2026-10-08T06:12:58+00:00",
+      "last_checked_at": "2026-10-08T06:12:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "What If Consensus Lies? Selective-Complementary Reinforcement Learning at Test Time"
+    },
+    "arXiv:2603.17775": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17775",
+      "identity_tokens": [
+        "arXiv:2603.17775"
+      ],
+      "reason": "CoVerRLはlabel-free reasoning向けgenerator-verifier co-evolution training methodである。",
+      "first_checked_at": "2026-10-08T06:12:58+00:00",
+      "last_checked_at": "2026-10-08T06:12:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "CoVerRL: Breaking the Consensus Trap in Label-Free Reasoning via Generator-Verifier Co-Evolution"
+    },
+    "DOI:10.1038/s41746-025-02005-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41746-025-02005-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41746-025-02005-2"
+      ],
+      "reason": "臨床記録要約の品質をLLM-as-a-Judgeで採点する評価研究。22秒という値は人手との評価時間比較で、モデル推論を効率化する手法ではない。",
+      "first_checked_at": "2026-10-08T06:12:59+00:00",
+      "last_checked_at": "2026-10-08T06:12:59+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Evaluating clinical AI summaries with large language models as judges"
+    },
+    "arXiv:2308.03303": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.03303",
+      "identity_tokens": [
+        "arXiv:2308.03303"
+      ],
+      "reason": "本文のactivation memory削減はLoRA fine-tuning時の勾配/学習メモリ。推論時最適化ではない。",
+      "first_checked_at": "2026-10-08T06:12:59+00:00",
+      "last_checked_at": "2026-10-08T06:12:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "LoRA-FA: Efficient and Effective Low Rank Representation Fine-tuning"
+    },
+    "arXiv:2307.09042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.09042",
+      "identity_tokens": [
+        "arXiv:2307.09042"
+      ],
+      "reason": "LLM emotional-intelligence評価尺度の研究で、efficiency/servingは扱わない。",
+      "first_checked_at": "2026-10-08T06:12:59+00:00",
+      "last_checked_at": "2026-10-08T06:12:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Emotional intelligence of Large Language Models"
+    },
+    "arXiv:2307.15771": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.15771",
+      "identity_tokens": [
+        "arXiv:2307.15771"
+      ],
+      "reason": "言語モデル内の層アブレーション後に起きる補償を因果分析する研究であり、推論効率化や圧縮を提案しない。",
+      "first_checked_at": "2026-10-08T06:13:00+00:00",
+      "last_checked_at": "2026-10-08T06:13:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "The Hydra Effect: Emergent Self-repair in Language Model Computations"
+    },
+    "arXiv:2405.14918": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.14918",
+      "identity_tokens": [
+        "arXiv:2405.14918"
+      ],
+      "reason": "アナログ回路設計をLLM code generation/feedbackで行うapplicationであり、inference engine improvementではない。",
+      "first_checked_at": "2026-10-08T06:13:00+00:00",
+      "last_checked_at": "2026-10-08T06:13:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "AnalogCoder: Analog Circuit Design via Training-Free Code Generation"
+    },
+    "arXiv:2212.13138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.13138",
+      "identity_tokens": [
+        "arXiv:2212.13138"
+      ],
+      "reason": "臨床QA能力・回答品質のbenchmark/human evaluationで、医療知識とinstruction prompt-tuningが焦点。inference efficiency機構を提案しない。",
+      "first_checked_at": "2026-10-08T06:13:01+00:00",
+      "last_checked_at": "2026-10-08T06:13:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Large language models encode clinical knowledge"
+    },
+    "arXiv:2303.17491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.17491",
+      "identity_tokens": [
+        "arXiv:2303.17491"
+      ],
+      "reason": "RCI promptingによるcomputer-task性能とreasoningを改善するagent methodで、servingや推論資源を軽減するmechanismではない。",
+      "first_checked_at": "2026-10-08T06:13:01+00:00",
+      "last_checked_at": "2026-10-08T06:13:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Language Models can Solve Computer Tasks"
+    },
+    "arXiv:2304.10428": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.10428",
+      "identity_tokens": [
+        "arXiv:2304.10428"
+      ],
+      "reason": "NER向けoutput-format/self-verification promptingのtask method。抽出性能が焦点で推論効率化ではない。",
+      "first_checked_at": "2026-10-08T06:13:02+00:00",
+      "last_checked_at": "2026-10-08T06:13:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "GPT-NER: Named Entity Recognition via Large Language Models"
+    },
+    "arXiv:2302.03169": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.03169",
+      "identity_tokens": [
+        "arXiv:2302.03169"
+      ],
+      "reason": "DSIRはpretraining corpusのデータ選択工程であり、deployment inferenceの最適化ではない。",
+      "first_checked_at": "2026-10-08T06:13:02+00:00",
+      "last_checked_at": "2026-10-08T06:13:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Data Selection for Language Models via Importance Resampling"
+    },
+    "arXiv:2312.14197": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.14197",
+      "identity_tokens": [
+        "arXiv:2312.14197"
+      ],
+      "reason": "間接prompt injectionのbenchmark/防御を扱うsecurity studyで、inference resource optimizationではない。",
+      "first_checked_at": "2026-10-08T06:13:02+00:00",
+      "last_checked_at": "2026-10-08T06:13:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Benchmarking and Defending against Indirect Prompt Injection Attacks on Large Language Models"
+    },
+    "arXiv:2305.18486": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18486",
+      "identity_tokens": [
+        "arXiv:2305.18486"
+      ],
+      "reason": "ChatGPTの多benchmark性能評価で、推論engineやserving optimizationはない。",
+      "first_checked_at": "2026-10-08T06:13:03+00:00",
+      "last_checked_at": "2026-10-08T06:13:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "A Systematic Study and Comprehensive Evaluation of ChatGPT on Benchmark Datasets"
+    },
+    "arXiv:2305.18295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18295",
+      "identity_tokens": [
+        "arXiv:2305.18295"
+      ],
+      "reason": "text-to-image diffusionのMoE生成品質が焦点で、LLM推論/serving対象外。",
+      "first_checked_at": "2026-10-08T06:13:03+00:00",
+      "last_checked_at": "2026-10-08T06:13:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "RAPHAEL: Text-to-Image Generation via Large Mixture of Diffusion Paths"
+    },
+    "DOI:10.1109/snams58071.2022.10062688": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/snams58071.2022.10062688",
+      "identity_tokens": [
+        "DOI:10.1109/snams58071.2022.10062688"
+      ],
+      "reason": "ChatGPTのfundamentals/applications/social impacts概説で、具体的推論機構・測定がない。",
+      "first_checked_at": "2026-10-08T06:13:03+00:00",
+      "last_checked_at": "2026-10-08T06:13:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "ChatGPT: Fundamentals, Applications and Social Impacts"
+    },
+    "arXiv:2603.24472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24472",
+      "identity_tokens": [
+        "arXiv:2603.24472"
+      ],
+      "reason": "self-distillationがreasoning qualityへ及ぼす学習効果の分析で、inference resourcesを改善しない。",
+      "first_checked_at": "2026-10-08T06:13:04+00:00",
+      "last_checked_at": "2026-10-08T06:13:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?"
+    },
+    "arXiv:2302.14838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.14838",
+      "identity_tokens": [
+        "arXiv:2302.14838"
+      ],
+      "reason": "LLMをcode-level neural architecture searchに使うが探索対象はnon-LLM architecturesで、言語モデル推論最適化ではない。",
+      "first_checked_at": "2026-10-08T06:13:04+00:00",
+      "last_checked_at": "2026-10-08T06:13:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "EvoPrompting: Language Models for Code-Level Neural Architecture Search"
+    },
+    "arXiv:2303.08518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.08518",
+      "identity_tokens": [
+        "arXiv:2303.08518"
+      ],
+      "reason": "UPRISEはzero-shot用prompt retrievalによる品質改善で、計算/メモリ/latency低減は主題でない。",
+      "first_checked_at": "2026-10-08T06:13:04+00:00",
+      "last_checked_at": "2026-10-08T06:13:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation"
+    },
+    "arXiv:2309.12625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12625",
+      "identity_tokens": [
+        "arXiv:2309.12625"
+      ],
+      "reason": "本文は臨床DRG予測のためのLoRA-fine-tuned LLaMA応用研究。推論圧縮またはserving改善機構はない。",
+      "first_checked_at": "2026-10-08T06:13:05+00:00",
+      "last_checked_at": "2026-10-08T06:13:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "DRG-LLaMA : tuning LLaMA model to predict diagnosis-related group for hospitalized patients"
+    },
+    "arXiv:2407.13690": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.13690",
+      "identity_tokens": [
+        "arXiv:2407.13690"
+      ],
+      "reason": "DARTは難しい問題を重み付けする訓練データ合成/rejection-tuning手法。推論資源の改善ではない。",
+      "first_checked_at": "2026-10-08T06:13:05+00:00",
+      "last_checked_at": "2026-10-08T06:13:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "DART-Math: Difficulty-Aware Rejection Tuning for Mathematical Problem-Solving"
+    },
+    "arXiv:2604.15840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15840",
+      "identity_tokens": [
+        "arXiv:2604.15840"
+      ],
+      "reason": "CoEvolveはagent-data互進化によるRL訓練手法で、deployment inferenceの効率改善がない。",
+      "first_checked_at": "2026-10-08T06:13:05+00:00",
+      "last_checked_at": "2026-10-08T06:13:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "CoEvolve: Training LLM Agents via Agent-Data Mutual Evolution"
+    },
+    "arXiv:2603.19835": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19835",
+      "identity_tokens": [
+        "arXiv:2603.19835"
+      ],
+      "reason": "FIPOはLLM reasoningのpolicy optimization training methodで、推論資源最適化ではない。",
+      "first_checked_at": "2026-10-08T06:13:06+00:00",
+      "last_checked_at": "2026-10-08T06:13:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "FIPO: Eliciting Deep Reasoning with Future-KL Influenced Policy Optimization"
+    },
+    "arXiv:2305.18565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18565",
+      "identity_tokens": [
+        "arXiv:2305.18565"
+      ],
+      "reason": "PaLI-Xは大規模multilingual VLMのscaling/能力評価で、推論コスト削減の仕組みを提案しない。",
+      "first_checked_at": "2026-10-08T06:13:06+00:00",
+      "last_checked_at": "2026-10-08T06:13:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "PaLI-X: On Scaling up a Multilingual Vision and Language Model"
+    },
+    "arXiv:2212.09611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.09611",
+      "identity_tokens": [
+        "arXiv:2212.09611"
+      ],
+      "reason": "text-to-image prompt adaptationで生成品質を上げる研究。LLM inference/serving efficiencyではない。",
+      "first_checked_at": "2026-10-08T06:13:06+00:00",
+      "last_checked_at": "2026-10-08T06:13:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Optimizing Prompts for Text-to-Image Generation"
+    },
+    "arXiv:2506.07339": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07339",
+      "identity_tokens": [
+        "arXiv:2506.07339"
+      ],
+      "reason": "RTCはaction-chunkingを使う拡散/flow VLA向けで、遅延下の制御スループットを改善する。評価対象はロボット制御ポリシーであり、LLM推論/servingではない。",
+      "first_checked_at": "2026-10-08T06:13:07+00:00",
+      "last_checked_at": "2026-10-08T06:13:07+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Real-Time Execution of Action Chunking Flow Policies"
+    },
+    "arXiv:2305.13169": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13169",
+      "identity_tokens": [
+        "arXiv:2305.13169"
+      ],
+      "reason": "pretraining data構成と下流性能/毒性の関係を分析する学習データ研究。推論時効率を扱わない。",
+      "first_checked_at": "2026-10-08T06:13:07+00:00",
+      "last_checked_at": "2026-10-08T06:13:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity"
+    },
+    "arXiv:2308.10168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.10168",
+      "identity_tokens": [
+        "arXiv:2308.10168"
+      ],
+      "reason": "LLM knowledge coverageのhead-to-tail QA benchmarkであり、efficiency methodを提示しない。",
+      "first_checked_at": "2026-10-08T06:13:07+00:00",
+      "last_checked_at": "2026-10-08T06:13:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Head-to-Tail: How Knowledgeable are Large Language Models (LLMs)? A.K.A. Will LLMs Replace Knowledge Graphs?"
     }
   }
 }

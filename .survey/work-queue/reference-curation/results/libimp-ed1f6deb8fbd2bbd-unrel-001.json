@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed1f6deb8fbd2bbd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.13138",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.13138",
+    "identity_tokens": [
+      "arXiv:2212.13138"
+    ],
+    "reason": "臨床QA能力・回答品質のbenchmark/human evaluationで、医療知識とinstruction prompt-tuningが焦点。inference efficiency機構を提案しない。",
+    "first_checked_at": "2026-10-08T06:13:01+00:00",
+    "last_checked_at": "2026-10-08T06:13:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Large language models encode clinical knowledge"
+  },
+  "processed_at": "2026-10-08T06:13:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed1f6deb8fbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
