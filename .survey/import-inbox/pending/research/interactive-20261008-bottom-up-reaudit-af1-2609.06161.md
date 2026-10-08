@@ -37,6 +37,9 @@ quality_body_chars: 5259
 quality_method_chars: 1350
 quality_evaluation_chars: 1693
 quality_limitation_chars: 339
+worker_id: interactive-audit
+worker_completed_at: '2026-10-08T11:29:43.099Z'
+worker_run_key: '20261008-bottom-up-interactive/af1-r01'
 references:
 - canonical_id: arXiv:1911.11641
   arxiv_id: '1911.11641'
