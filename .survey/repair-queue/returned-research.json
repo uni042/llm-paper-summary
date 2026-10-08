@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-08T09:12:22+00:00",
+  "generated_at": "2026-10-08T09:25:35+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 165,
+  "count": 164,
   "entries": [
     {
       "canonical_id": "OpenReview:ulCAPXYXfa",
@@ -29,22 +29,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_2a4f938bc43c819185442964dd572754--2025-openreview-ulCAPXYXfa-omnikv.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_2a4f938bc43c819185442964dd572754--2025-openreview-ulCAPXYXfa-omnikv.json",
       "worker_run_key": "20260930-0600-scheduled-chat-00"
-    },
-    {
-      "canonical_id": "arXiv:2503.18989",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-01T02:55:38+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 44.0% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e7a9de9b88788191a409cbab30882c76--2025-2503.18989-hat.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e7a9de9b88788191a409cbab30882c76--2025-2503.18989-hat.json",
-      "worker_run_key": "20261001-0758-scheduled-chat-00"
     },
     {
       "canonical_id": "arXiv:2410.18311",
@@ -125,22 +109,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9c8aef0bfd50819191384b252caa3ff6--2026-2606.24506-crosspool.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9c8aef0bfd50819191384b252caa3ff6--2026-2606.24506-crosspool.json",
       "worker_run_key": "20261002-0100-scheduled-chat-00"
-    },
-    {
-      "canonical_id": "arXiv:2309.16354",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T01:52:49+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0fbe94063980819188ae1a42e4b62b71--2023-2309.16354-transformer-vq.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0fbe94063980819188ae1a42e4b62b71--2023-2309.16354-transformer-vq.json",
-      "worker_run_key": "20261003-0433-scheduled-chat-30"
     },
     {
       "canonical_id": "arXiv:2312.04455",
@@ -3155,8 +3123,8 @@
     },
     {
       "canonical_id": "arXiv:2509.11815",
-      "title": "SpecVLM: Fast Speculative Decoding in Vision-Language Models",
-      "source_url": "https://arxiv.org/abs/2509.11815",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-08T09:09:48+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -3179,6 +3147,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_257f590f15108191855a2de836f101a2--specvlm-2509.11815-under16kb-reaudit-20261008-0927-scheduled-chat-30.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_257f590f15108191855a2de836f101a2--specvlm-2509.11815-under16kb-reaudit-20261008-0927-scheduled-chat-30.json",
       "worker_run_key": "20261008-0927-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2311.01282",
+      "title": "FlashDecoding++: Faster Large Language Model Inference on GPUs",
+      "source_url": "https://arxiv.org/pdf/2311.01282",
+      "returned_at": "2026-10-08T09:23:47+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4549,
+        "body_paragraphs": 27,
+        "method_chars": 1670,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_31f10609621c8191b2794a04ec342eca--2023-2311.01282-flashdecoding-under16kb-reaudit-20261008-1433-scheduled-chat-30-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_31f10609621c8191b2794a04ec342eca--2023-2311.01282-flashdecoding-under16kb-reaudit-20261008-1433-scheduled-chat-30-r02.json",
+      "worker_run_key": "20261008-1433-scheduled-chat-30/r02"
     }
   ]
 }
