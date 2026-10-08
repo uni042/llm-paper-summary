@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261008-r310-screen-01-part-03-d7e56573b287",
+  "reference_main_sha": "76ee43fb4d06420117334f161fc14e55fb831567",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17550",
+      "identity_tokens": [
+        "arXiv:2602.17550"
+      ],
+      "title": "MASPO: Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning",
+      "reason": "要旨に示される主目的は対象LLM inference optimization/servingの効率改善と異なり、推論時resource削減手法を示さない。 (題名: MASPO: Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning)",
+      "source_url": "https://arxiv.org/abs/2602.17550",
+      "first_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "last_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.06951",
+      "identity_tokens": [
+        "arXiv:2104.06951"
+      ],
+      "title": "Domain Adaptation and Multi-Domain Adaptation for Neural Machine Translation: A Survey",
+      "reason": "survey/benchmarkを中心とし、新しいLLM推論資源削減手法を提案・評価しない。 (題名: Domain Adaptation and Multi-Domain Adaptation for Neural Machine Translation: A Survey)",
+      "source_url": "https://arxiv.org/abs/2104.06951",
+      "first_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "last_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15693",
+      "identity_tokens": [
+        "arXiv:2512.15693"
+      ],
+      "title": "Skyra: AI-Generated Video Detection via Grounded Artifact Reasoning",
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Skyra: AI-Generated Video Detection via Grounded Artifact Reasoning)",
+      "source_url": "https://arxiv.org/abs/2512.15693",
+      "first_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "last_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02234",
+      "identity_tokens": [
+        "arXiv:2607.02234"
+      ],
+      "title": "Purified OPSD: On-Policy Self-Distillation Without Losing How to Think",
+      "reason": "本論文はOPSDによるLLM post-trainingの失敗要因をteacher supervision signalで分析し、reference-induced/inference-transferable成分を分解する。inference-transferableは学習信号の呼称であり、推論時compute/memory/latencyを改善する方法・評価はない。",
+      "source_url": "https://arxiv.org/abs/2607.02234",
+      "first_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "last_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17669",
+      "identity_tokens": [
+        "arXiv:2604.17669"
+      ],
+      "title": "Low Light Image Enhancement Challenge at NTIRE 2026",
+      "reason": "主対象は別ドメインの認識・生成・予測タスクで、LLM推論最適化との具体的接続が要旨から確認できない。 (題名: Low Light Image Enhancement Challenge at NTIRE 2026)",
+      "source_url": "https://arxiv.org/abs/2604.17669",
+      "first_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "last_checked_at": "2026-10-08T07:08:37.781812+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
