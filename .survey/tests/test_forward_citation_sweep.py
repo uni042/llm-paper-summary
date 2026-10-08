@@ -48,6 +48,33 @@ lineage: test-lineage
             encoding="utf-8",
         )
 
+    def test_state_compaction_preserves_all_seeds_candidates_and_aliases(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / ".survey/work-queue/forward-citation-sweep.json"
+            original = {
+                "schema_version": 1,
+                "seeds": {"arXiv:2303.06865": {"next_cursor": "100", "completed_cycles": 2}},
+                "candidates": {"arXiv:2601.00001": {
+                    "canonical_id": "arXiv:2601.00001",
+                    "linked_from": ["papers/inference/a.md", "papers/inference/b.md"],
+                }},
+                "candidate_aliases": {"DOI:10.1234/test": "arXiv:2601.00001"},
+            }
+            self.assertTrue(forward_citation_sweep._write(path, original))
+            compact = path.read_text(encoding="utf-8")
+            self.assertEqual(json.loads(compact), original)
+            self.assertNotIn('\\n  "', compact)
+            self.assertFalse(forward_citation_sweep._write(path, original))
+
+    def test_state_compaction_rejects_oversized_git_blob_without_overwriting(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "state.json"
+            path.write_text("original", encoding="utf-8")
+            with patch.object(forward_citation_sweep.json, "dumps", return_value="x" * (90 * 1024 * 1024)):
+                with self.assertRaisesRegex(ValueError, "unpublishable git blob"):
+                    forward_citation_sweep._write(path, {"schema_version": 1})
+            self.assertEqual(path.read_text(encoding="utf-8"), "original")
+
     def test_url_seed_is_used_only_for_semantic_scholar_supported_hosts(self) -> None:
         record = forward_citation_sweep.citation_graph.PaperRecord(
             path="papers/inference/test/url.md",
