@@ -160,5 +160,63 @@ class DiscoveryRoundStatusTests(unittest.TestCase):
             self.assertIn("round識別子重複submission: **1件**", discovery)
 
 
+    def test_codex_discovery_receipts_and_waiting_are_reported_separately(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            run_key = "20261008-r311-screen-01-part-01"
+            pending = {
+                "run_key": run_key,
+                "worker_id": "codex-local-screen-watcher",
+                "record_count": 2,
+                "records": [
+                    {"classification": "unrelated", "last_checked_at": "2026-10-08T07:13:00Z"},
+                    {"classification": "borderline", "last_checked_at": "2026-10-08T07:14:00Z"},
+                ],
+            }
+            _write_json(repo / ".survey/import-inbox/waiting/discovery/codex-waiting.json", pending)
+            _write_json(
+                repo / ".survey/import-inbox/results/discovery/codex-imported.json",
+                {
+                    "status": "imported",
+                    "run_key": "20261008-r310-screen-01-part-01",
+                    "worker_id": "codex-local-screen-watcher",
+                    "record_count": 5,
+                    "relevance_count": 5,
+                    "processed_at": "2026-10-08T07:20:00Z",
+                },
+            )
+            now = datetime(2026, 10, 8, 7, 30, tzinfo=timezone.utc)
+            renderer = _load_renderer(repo)
+            activity = renderer._import_progress_activity(repo, now)
+            self.assertEqual(len(activity["discovery"]), 2)
+            self.assertEqual(
+                {row["stage"] for row in activity["discovery"]}, {"waiting", "results"}
+            )
+            waiting = next(row for row in activity["discovery"] if row["stage"] == "waiting")
+            self.assertEqual(waiting["relevance_count"], 2)
+            self.assertEqual(waiting["unrelated_count"], 1)
+            self.assertEqual(waiting["borderline_count"], 1)
+            self.assertEqual(waiting["completed_at"].isoformat(), "2026-10-08T07:14:00+00:00")
+
+            section = renderer._render_library_first_activity_section(repo, now)
+            self.assertIn("Codex探索成果の反映状況", section)
+            self.assertIn("1ファイル / 5件", section)
+            self.assertIn("1ファイル / 2件", section)
+            self.assertIn("待機中のunrelated | **1件**", section)
+            self.assertIn("待機中のborderline | **1件**", section)
+
+            # In-flight copies must never override the successful receipt
+            # when both durable copies of the same run coexist.
+            _write_json(
+                repo / ".survey/import-inbox/waiting/discovery/codex-duplicate.json",
+                dict(pending, run_key="20261008-r310-screen-01-part-01"),
+            )
+            again = renderer._import_progress_activity(repo, now)
+            self.assertEqual(len(again["discovery"]), 2)
+            self.assertEqual(
+                sum(row["stage"] == "results" for row in again["discovery"]), 1
+            )
+
+
 if __name__ == "__main__":
     unittest.main()
