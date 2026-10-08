@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "codex-luna",
-  "run_key": "codex-backfill-r313-b05-main-4c4b08bd",
+  "run_key": "codex-backfill-r313-b05-main-4c4b08bd::provider-gap",
   "reference_main_sha": "4c4b08bd5f28e3c1fd45072920fcbb44f3afa92e",
-  "record_count": 20,
+  "record_count": 19,
   "records": [
     {
       "classification": "accept",
@@ -271,20 +271,29 @@
       "first_checked_at": "2026-10-08T16:40:55Z",
       "last_checked_at": "2026-10-08T16:40:55Z",
       "linked_from": []
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/ICDE65706.2026.00082",
-      "identity_tokens": [
-        "DOI:10.1109/ICDE65706.2026.00082"
-      ],
-      "title": "EC-RAG: Towards Efficient Edge-Cloud Retrieval-Augmented Generation Systems",
-      "reason": "The listed title indicates an edge-cloud RAG serving system, which may connect to efficient LLM inference, but the primary abstract could not be retrieved to verify the system contribution. Retain as a source-unavailable borderline using the reported DOI, title, and primary DOI URL.",
-      "source_url": "https://doi.org/10.1109/ICDE65706.2026.00082",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-08T16:40:55Z",
-      "last_checked_at": "2026-10-08T16:40:55Z",
-      "linked_from": []
     }
+  ],
+  "parent_run_key": "codex-backfill-r313-b05-main-4c4b08bd",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/codex-backfill-r313-b05-main-4c4b08bd--2d83f0122ed805f649c3d5f44855313ab9021a54d254aa8209643c6e731f5624--codex-backfill-r313-b05-main-4c4b08bd.json",
+  "provider_gap_ids": [
+    "arXiv:2405.01943",
+    "arXiv:2407.10032",
+    "arXiv:2410.13166",
+    "arXiv:2503.16257",
+    "arXiv:2506.04985",
+    "arXiv:2510.02329",
+    "arXiv:2510.11234",
+    "arXiv:2510.16807",
+    "arXiv:2512.14069",
+    "arXiv:2603.04592",
+    "arXiv:2603.27027",
+    "arXiv:2605.05602",
+    "arXiv:2605.05899",
+    "arXiv:2605.18165",
+    "arXiv:2606.30265",
+    "arXiv:2608.00902",
+    "arXiv:2608.03839",
+    "arXiv:2609.35263",
+    "arXiv:2609.36938"
   ]
 }
