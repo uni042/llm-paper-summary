@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T20:53:21.763925+00:00",
+  "generated_at": "2026-10-08T21:54:15.074987+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 410,
+  "count": 405,
   "worker_counts": {
-    "scheduled-chat-00": 137,
-    "scheduled-chat-30": 117,
+    "scheduled-chat-00": 133,
+    "scheduled-chat-30": 116,
     "scheduled-chat-45": 156
   },
   "entries": [
@@ -1121,30 +1121,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2509.24381-rserve-overlapping-encoding-and-prefill-for-efficient-lmm-inference.md",
-      "canonical_id": "arXiv:2509.24381",
-      "title": "RServe: Overlapping Encoding and Prefill for Efficient LMM Inference",
-      "file_bytes": 10096,
-      "source_sha256": "6e979eabc661ef4fd2b71e5cc4a680e404d1c7c92b6018fc74b486e4db024ef8",
-      "source_git_blob_sha": "554821d1373ba9339992cdb29c904f4bc825e556",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.816537,
-      "quality_metrics": {
-        "body_chars": 1503,
-        "method_chars": 517,
-        "evaluation_chars": 0,
-        "limitation_chars": 192
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1503 < 2200",
-        "16KB未満再監査: 手法説明量 517 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.13054-twla-achieving-ternary-weights-and-low-bit-activations-for-llms-via-post.md",
       "canonical_id": "arXiv:2606.13054",
       "title": "TWLA: Achieving Ternary Weights and Low-Bit Activations for LLMs via Post-Training Quantization",
@@ -1215,26 +1191,6 @@
       "warnings": [
         "日本語比率 78.6% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md",
-      "canonical_id": "arXiv:2607.02770",
-      "title": "Gemma 4 Technical Report",
-      "file_bytes": 10133,
-      "source_sha256": "b2eea80629eb9117bfe0d58418bccab7570512c20de576f98de956c9888df0ed",
-      "source_git_blob_sha": "e5b112467646810dbd1179959eaf23070f8723ce",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.936272,
-      "quality_metrics": {
-        "body_chars": 3358,
-        "method_chars": 1373,
-        "evaluation_chars": 770,
-        "limitation_chars": 267
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md",
@@ -1347,52 +1303,6 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.01106-component-aware-self-speculative-decoding-in-hybrid-language-models.md",
-      "canonical_id": "arXiv:2605.01106",
-      "title": "Component-Aware Self-Speculative Decoding in Hybrid Language Models",
-      "file_bytes": 10268,
-      "source_sha256": "0adcb1b1e12dfc5049a48087983846cf9db061c0cd3ff3c507c6500c65d4db0e",
-      "source_git_blob_sha": "4b9f5ef1f1c8c0e7b000332bac9765be2f019746",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.849371,
-      "quality_metrics": {
-        "body_chars": 2469,
-        "method_chars": 842,
-        "evaluation_chars": 143,
-        "limitation_chars": 299
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 143 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md",
-      "canonical_id": "arXiv:2504.17674",
-      "title": "Energy Considerations of Large Language Model Inference and Efficiency Optimizations",
-      "file_bytes": 10277,
-      "source_sha256": "30fb9f8e19df2498a112bebdbf10aefaa6baa0026862953ae26ea062ff2d596c",
-      "source_git_blob_sha": "de68abb391b3930ad5912390aefce29fef474000",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.898389,
-      "quality_metrics": {
-        "body_chars": 1445,
-        "method_chars": 430,
-        "evaluation_chars": 77,
-        "limitation_chars": 164
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1445 < 2200",
-        "16KB未満再監査: 手法説明量 430 < 700",
-        "16KB未満再監査: 評価説明量 77 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/13-sparse-attention/2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md",
@@ -2951,28 +2861,6 @@
         "limitation_chars": 221
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2026-2609.27040-ema.md",
-      "canonical_id": "arXiv:2609.27040",
-      "title": "EMA: Elastic and Performance Transparent Memory Across GPUs",
-      "file_bytes": 11330,
-      "source_sha256": "ebc646416c2a612aecf53548f9436f74e3b6ead4dc2538660cbc577c8e3745b6",
-      "source_git_blob_sha": "714167db2a382e6b80a44ee9ad33d64cd2240bf6",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.999216,
-      "quality_metrics": {
-        "body_chars": 2401,
-        "method_chars": 1069,
-        "evaluation_chars": 265,
-        "limitation_chars": 119
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 265 < 500"
-      ],
       "warnings": []
     },
     {
