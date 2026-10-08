@@ -1,41 +1,17 @@
 {
-  "generated_at": "2026-10-08T13:58:39.926844+00:00",
+  "generated_at": "2026-10-08T14:20:23.520653+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 454,
+  "count": 450,
   "worker_counts": {
     "scheduled-chat-00": 156,
-    "scheduled-chat-30": 135,
-    "scheduled-chat-45": 163
+    "scheduled-chat-30": 133,
+    "scheduled-chat-45": 161
   },
   "entries": [
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md",
-      "canonical_id": "arXiv:2509.11815",
-      "title": "SpecVLM: Fast Speculative Decoding in Vision-Language Models",
-      "file_bytes": 8101,
-      "source_sha256": "e238f17d0155f3dbd415f87c7c4298e978a78953b254511ac26ebd3bbf370bd6",
-      "source_git_blob_sha": "3711cc1b9d6fcc1b4ccdfb801b27966253e46b8e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.802776,
-      "quality_metrics": {
-        "body_chars": 1444,
-        "method_chars": 500,
-        "evaluation_chars": 0,
-        "limitation_chars": 210
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1444 < 2200",
-        "16KB未満再監査: 手法説明量 500 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03949-vestigekv-the-nope-mla-kv-cache-carries-its-own-eviction-signal-in-a-ves.md",
       "canonical_id": "arXiv:2609.03949",
@@ -58,26 +34,6 @@
         "16KB未満再監査: 手法説明量 420 < 700",
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
-      "canonical_id": "arXiv:1805.02867",
-      "title": "Online normalizer calculation for softmax",
-      "file_bytes": 8423,
-      "source_sha256": "53e29d054f411129955457ecd241c14fe0384c8bbaf7aad6b9aa3614af0a5184",
-      "source_git_blob_sha": "5bcf731d8442488e1e6dd7f46b83ae5ebfa7c0c5",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.941915,
-      "quality_metrics": {
-        "body_chars": 2279,
-        "method_chars": 841,
-        "evaluation_chars": 538,
-        "limitation_chars": 253
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -223,30 +179,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1728 < 2200",
         "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2410.13846-lighttransfer-your-long-context-llm-is-secretly-a-hybrid-model-with-effo.md",
-      "canonical_id": "arXiv:2410.13846",
-      "title": "LightTransfer: Your Long-Context LLM is Secretly a Hybrid Model with Effortless Adaptation",
-      "file_bytes": 8733,
-      "source_sha256": "b7d311ef2e285fa4c8c8a9e8c7b0c348659a98ab4ec1a2e6ed72517b0e9fb6a2",
-      "source_git_blob_sha": "bd206bb8023f12ed50af80011828ee526de6de54",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.826993,
-      "quality_metrics": {
-        "body_chars": 1494,
-        "method_chars": 388,
-        "evaluation_chars": 297,
-        "limitation_chars": 106
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1494 < 2200",
-        "16KB未満再監査: 手法説明量 388 < 700",
-        "16KB未満再監査: 評価説明量 297 < 500"
       ],
       "warnings": []
     },
@@ -858,28 +790,6 @@
       "warnings": [
         "日本語比率 76.7% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2506.10470-td-pipe-temporally-disaggregated-pipeline-parallelism-architecture-for-h.md",
-      "canonical_id": "arXiv:2506.10470",
-      "title": "TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference",
-      "file_bytes": 9443,
-      "source_sha256": "a5abf74dfa84bed8702fdd4b9aa697e98af00ffa1212e0ed85a598f522458f12",
-      "source_git_blob_sha": "22dc76085baef102e119d2d5dfe1075917e6d5c2",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.980559,
-      "quality_metrics": {
-        "body_chars": 2506,
-        "method_chars": 576,
-        "evaluation_chars": 1030,
-        "limitation_chars": 176
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 576 < 700"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md",
@@ -9149,6 +9059,26 @@
       ]
     },
     {
+      "path": "papers/inference/13-sparse-attention/2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md",
+      "canonical_id": "arXiv:2510.13602",
+      "title": "NOSA: Native and Offloadable Sparse Attention",
+      "file_bytes": 14282,
+      "source_sha256": "3f88ef708abf7ed4404fbb7cc585550b4717581431da4536cd28fe08ff866862",
+      "source_git_blob_sha": "1c3f9edc7359bea019688ce104c4e1a378fe91a1",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.971132,
+      "quality_metrics": {
+        "body_chars": 3873,
+        "method_chars": 1573,
+        "evaluation_chars": 639,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
       "canonical_id": "arXiv:2401.15947",
       "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
@@ -9484,28 +9414,6 @@
       "warnings": [
         "日本語比率 72.6% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
-      "canonical_id": "arXiv:2305.05920",
-      "title": "FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference",
-      "file_bytes": 14794,
-      "source_sha256": "dfd469546ce29009b6d4b3b9569d0df9b2004b9cac9214e62042e3593147b04d",
-      "source_git_blob_sha": "e1da9b5957e25501cf5821c4e5f4ff0a629c9517",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.975023,
-      "quality_metrics": {
-        "body_chars": 4106,
-        "method_chars": 1806,
-        "evaluation_chars": 294,
-        "limitation_chars": 241
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 294 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md",
