@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AdaMTP: An Adaptive Training Paradigm for Multi-Token Prediction",
+      "source_url": "https://arxiv.org/abs/2608.00434",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-Token Prediction (MTP) has emerged as an effective paradigm that augments a shared Large Language Model backbone with auxiliary heads, training the model to predict several future tokens in parallel to enrich its supervision signal and accelerate inference. However, existing training frameworks adopt a rigid, fixed-length prediction horizon, disregarding the highly non-uniform information density of natural language and code. Forcing the auxiliary heads to predict across high-entropy semantic boundaries injects noisy, conflicting training signals; because these heads share the backbone's latent representations, the resulting gradients backpropagate and interfere with the model's core capabilities. We propose AdaMTP, an adaptive training paradigm that dynamically aligns the prediction horizon with the intrinsic predictability of the sequence. At its core, an entropy-based segmentation algorithm leverages the base model to detect sudden surges in uncertainty as semantic boundaries, partitioning sequences into variable-length groups. Each token is assigned an adaptive prediction depth, and a dynamically masked MTP objective suppresses the loss for predictions that cross these boundaries, attenuating the noisy gradients that degrade the backbone. Across mathematical reasoning, code generation, and general benchmarks on three backbones (Llama-3.1-8B, Qwen-2.5-7B, Gemma-3-12B), AdaMTP consistently outperforms standard MTP in both task performance and inference speedup.",
+      "identifiers": [
+        "SemanticScholar:9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858"
+      ],
+      "semantic_scholar_id": "9020c3ff7ac719bbcbb0f61276c6bf8a0a8d7858",
+      "canonical_id": "arXiv:2608.00434",
+      "arxiv_id": "2608.00434",
+      "authors": [
+        "Zi-Qiang Cui",
+        "Han Shi",
+        "Bowei He",
+        "Yu Pan",
+        "Peiyang Liu",
+        "Sheng-Yin Sun",
+        "Yan-Kai Chen",
+        "Hao-Li Bai",
+        "Yichun Yin",
+        "Xue Liu",
+        "Chen Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 68,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract explains adaptive prediction horizons for multi-token prediction and reports better inference speedup than standard MTP across multiple backbones. Despite being a training method, it explicitly targets faster inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "G$^2$PTQ: Improving LLM Post-Training Quantization with Generalized Gradient Compensation",
+      "source_url": "https://arxiv.org/abs/2609.31009",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a practical approach to reducing the memory and computational footprint of large language models (LLMs) without retraining. GPTQ-based methods have become the de facto standard, yet they suffer from two complementary limitations. Methods with local, layer-wise objectives lack global supervision; while methods with global objectives fix their Hessian estimates at the start and ignore first-order gradients, so their guidance grows stale as quantization proceeds. This paper presents G$^2$PTQ, a unified PTQ framework with Generalized Gradient Compensation that integrates both first- and second-order information under a globally supervised, block-wise optimization objective. By refreshing gradient and Hessian estimates before quantizing each Transformer block, G$^2$PTQ avoids the staleness of prior global methods. Furthermore, to stabilize the exact first-order compensation, we introduce a trust-region scaling mechanism that dynamically bounds the gradient step to prevent exploding weight updates. Finally, we derive efficient implementations for block-wise Hessian approximation and exact gradient compensation. Experimental results on various model families and bit-widths demonstrate that G$^2$PTQ enables better alignment with the full-precision model, outperforming state-of-the-art baselines. Code is available at: https://github.com/G2PTQ/G2PTQ.",
+      "identifiers": [
+        "SemanticScholar:dd6f438611037b9db2ff9f12564bd6274b167097"
+      ],
+      "semantic_scholar_id": "dd6f438611037b9db2ff9f12564bd6274b167097",
+      "canonical_id": "arXiv:2609.31009",
+      "arxiv_id": "2609.31009",
+      "authors": [
+        "Rui-Kang Liu",
+        "Hao-Li Bai",
+        "Yuxuan Sun",
+        "Qian Zhang",
+        "Wen-Zheng Cai",
+        "Yan-Qi Hao",
+        "Feiyu Wang",
+        "Wei-Dong Zhong",
+        "Zhu-Yue Wang",
+        "Tong Yang",
+        "Xiang-Sheng Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes block-wise LLM post-training quantization with refreshed gradient/Hessian estimates and trust-region scaling; experiments report better alignment to full precision than prior baselines. This targets inference memory and compute footprint.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education",
+      "source_url": "https://arxiv.org/abs/2609.31568",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI tutoring could markedly improve learning outcomes for students in developing regions such as Vietnam, yet the two obvious paths both fall short. Cloud assistants such as ChatGPT route sensitive student data to foreign servers---violating data-sovereignty laws such as Vietnam's Decree 53---and, pre-trained on Western-centric corpora, are not organized around the national textbook curriculum, so their knowledge of local content is unsystematic and frequently hallucinated. Self-hosting an open model keeps data on-premise but hits a two-fold wall: post-training quantization (AWQ, GPTQ) tames the static weight footprint, yet the dynamic KV cache and prefill latency of long tutoring contexts still cause out-of-memory failures and slow responses on consumer GPUs, while the model keeps hallucinating on region-specific material. We present DeepEdu-v1, an AI-tutoring system for Vietnamese education built on SCALE (Self-improving Context-Aware Learning Engine), a framework with two innovations. First, a long-context inference engine amortizes token selection from per-sub-chunk to per-cluster granularity; on long-context retrieval it issues x7.7 fewer retrieval calls than a state-of-the-art selective-attention baseline, cutting prefill latency (TTFT) by roughly 35% while matching or improving task accuracy. Second, a self-improving agentic layer continuously curates a verified playbook from past interactions instead of fine-tuning, a design intended to progressively reduce reliance on dominant-language priors as trustworthy local knowledge accumulates. In its deployed configuration, DeepEdu achieves a nearly x2 TTFT speedup over standard vLLM serving and lifts agentic accuracy from 70.0% to 79.5% on complex tasks, with the strongest per-track gains across financial-reasoning and interactive-agent benchmarks.",
+      "identifiers": [
+        "SemanticScholar:181ecbd0a1f87a72e93869a102a61f2e2dcf07db"
+      ],
+      "semantic_scholar_id": "181ecbd0a1f87a72e93869a102a61f2e2dcf07db",
+      "canonical_id": "arXiv:2609.31568",
+      "arxiv_id": "2609.31568",
+      "authors": [
+        "Q. Nguyen",
+        "H. Nguyễn",
+        "H. Hoàng",
+        "T. Pham",
+        "Cong Tran",
+        "Nam Vu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Though evaluated in an education application, the abstract explicitly presents a reusable long-context LLM inference engine that reduces retrieval calls, cuts prefill latency about 35%, and nearly doubles TTFT speed over standard vLLM. The concrete inference-system contribution supports inclusion.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.38706",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Production LLM serving stacks combine an inference engine's local prefix cache with a shared KV-cache tier for fleet-wide reuse. The local cache distinguishes requests by adapter, weight configuration and sharing domain, but the shared tier may key entries only by token content and coarse model metadata. This boundary erases provenance and lets identical tokens under incompatible computational or sharing contexts collide. We call this composition gap provenance-blind reuse and present its first systematic study. A source audit of three vLLM connectors confirms the structural omission, while runtime experiments reproduce it across vLLM and two SGLang releases, 12 models from 7 families (0.5 B-32 B), and over 160 configurations. Cross-adapter collisions reduce accuracy from 0.94 to 0.64, incompatible KV representations reduce reasoning accuracy to zero, and salt omission enables 93% prompt identification from timing. We formalize the missing guarantee as the KV provenance contract: for a declared dimension registry, shared keys must be injective over computational and sharing provenance, with identities stable across workers. Any dimension with a stable identity can therefore be added without connector-specific key logic. A canonical descriptor binds per-request and per-worker provenance into lookup and store keys, while a differential checker detects dimensions that change KV state without changing the key. Implemented in vLLM and SGLang 0.5.20 across three cache paths, provenance binding eliminates unsafe reuse while preserving legitimate sharing. Hit-path latency changes remain within 0.34 ms and below run-to-run variation; retention grows with provenance diversity.",
+      "identifiers": [
+        "SemanticScholar:b29f1c09161c210d899d6b424d09213c03a6f8f0"
+      ],
+      "semantic_scholar_id": "b29f1c09161c210d899d6b424d09213c03a6f8f0",
+      "canonical_id": "arXiv:2609.38706",
+      "arxiv_id": "2609.38706",
+      "authors": [
+        "Wei Song",
+        "Yu-Xin Cao",
+        "Xi Zheng",
+        "Leo Zhang",
+        "Xiao-Hun Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 8,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract studies shared KV-cache correctness across adapters, weights, and sharing domains, then proposes provenance-bound keys and a differential checker. It eliminates unsafe reuse while preserving legitimate sharing with low hit-path latency impact.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The End of Transformers? On Challenging Attention and the Rise of Sub-Quadratic Architectures",
+      "source_url": "https://arxiv.org/abs/2510.05364",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "Proceedings of The Big Picture v2: Crafting a Research Narrative",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have dominated sequence processing tasks for the past seven years -- most notably language modeling. However, the inherent quadratic complexity of their attention mechanism remains a significant bottleneck as context length increases. This paper surveys recent efforts to overcome this bottleneck, including advances in (sub-quadratic) attention variants, recurrent neural networks, state space models, and hybrid architectures. We critically analyze these approaches in terms of compute and memory complexity, benchmark results, and fundamental limitations to assess whether the dominance of pure-attention transformers may soon be challenged.",
+      "identifiers": [
+        "SemanticScholar:f0be13d09e0f8bd1f652b50cde0183a0324dec73"
+      ],
+      "semantic_scholar_id": "f0be13d09e0f8bd1f652b50cde0183a0324dec73",
+      "canonical_id": "arXiv:2510.05364",
+      "arxiv_id": "2510.05364",
+      "doi": "10.18653/v1/2026.bigpicture-main.6",
+      "authors": [
+        "Alexander M. Fichtl",
+        "Jeremias Bohn",
+        "Josefin Kelber",
+        "Edoardo Mosca",
+        "Georg Groh"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 367,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official ACL Anthology record exactly matches the candidate title and reviews subquadratic attention, recurrent networks, state-space models, and hybrids in compute/memory terms, including edge-device contexts. This is a direct survey of efficient sequence architectures.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-21951cc27785",
+    "round": "libimp-21951cc277854984-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-21951cc277854984-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-21951cc277854984-pre01.json",
+    "receipt": "sha256:f157c8683033622b6252050dceec51815fc53c498f177583d8d5bb2eb507f55d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-21951cc27785",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
