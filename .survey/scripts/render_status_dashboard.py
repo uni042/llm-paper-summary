@@ -589,6 +589,41 @@ def _render_library_first_activity_section(repo_root: Path, now) -> str:
         "",
     ]
 
+    if latest_research is None:
+        lines.append("- Research: GitHubへ到達済みの成功receiptなし。")
+    else:
+        run_key = str(latest_research.get("run_key") or "").strip()
+        same_run = [
+            row for row in research
+            if run_key and row.get("run_key") == run_key
+        ] or [latest_research]
+        worker = str(latest_research.get("worker_id") or "—")
+        lines.append(
+            f"- Research: **{_core.evidence._fmt_time(latest_research['completed_at'])}**"
+            f" / worker {worker} / run {run_key or '—'} / 成果 **{len(same_run)}件**"
+        )
+        lines.append(
+            f"  - evidence: {_core.evidence._rel(repo_root, latest_research.get('path'))}"
+        )
+
+    if latest_discovery is None:
+        lines.append("- Discovery: GitHubへ到達済みのrun receiptなし。")
+    else:
+        run_key = str(latest_discovery.get("run_key") or "").strip()
+        worker = str(latest_discovery.get("worker_id") or "—")
+        lines.append(
+            f"- Discovery: **{_core.evidence._fmt_time(latest_discovery['completed_at'])}**"
+            f" / worker {worker} / run {run_key or '—'}"
+        )
+        lines.append(
+            f"  - 本文確認・分類 **{int(latest_discovery.get('record_count') or 0)}件**"
+            f" / accept **{int(latest_discovery.get('accept_count') or 0)}件**"
+            f" / unrelated+borderline **{int(latest_discovery.get('relevance_count') or 0)}件**"
+        )
+        lines.append(
+            f"  - evidence: {_core.evidence._rel(repo_root, latest_discovery.get('path'))}"
+        )
+
     # Codex uses date-only run keys. Its pending classifications and successful
     # import receipts are distinct evidence; do not equate either with new Research jobs.
     codex = [row for row in discovery if row["worker_id"].startswith("codex-")]
@@ -624,41 +659,6 @@ def _render_library_first_activity_section(repo_root: Path, now) -> str:
         )
         lines.append(f"  - evidence: {_core.evidence._rel(repo_root, latest_codex['path'])}")
         lines.append("")
-
-    if latest_research is None:
-        lines.append("- Research: GitHubへ到達済みの成功receiptなし。")
-    else:
-        run_key = str(latest_research.get("run_key") or "").strip()
-        same_run = [
-            row for row in research
-            if run_key and row.get("run_key") == run_key
-        ] or [latest_research]
-        worker = str(latest_research.get("worker_id") or "—")
-        lines.append(
-            f"- Research: **{_core.evidence._fmt_time(latest_research['completed_at'])}**"
-            f" / worker {worker} / run {run_key or '—'} / 成果 **{len(same_run)}件**"
-        )
-        lines.append(
-            f"  - evidence: {_core.evidence._rel(repo_root, latest_research.get('path'))}"
-        )
-
-    if latest_discovery is None:
-        lines.append("- Discovery: GitHubへ到達済みのrun receiptなし。")
-    else:
-        run_key = str(latest_discovery.get("run_key") or "").strip()
-        worker = str(latest_discovery.get("worker_id") or "—")
-        lines.append(
-            f"- Discovery: **{_core.evidence._fmt_time(latest_discovery['completed_at'])}**"
-            f" / worker {worker} / run {run_key or '—'}"
-        )
-        lines.append(
-            f"  - 本文確認・分類 **{int(latest_discovery.get('record_count') or 0)}件**"
-            f" / accept **{int(latest_discovery.get('accept_count') or 0)}件**"
-            f" / unrelated+borderline **{int(latest_discovery.get('relevance_count') or 0)}件**"
-        )
-        lines.append(
-            f"  - evidence: {_core.evidence._rel(repo_root, latest_discovery.get('path'))}"
-        )
 
     return "\n".join(lines)
 
