@@ -28,6 +28,8 @@ quality_body_chars: 6112
 quality_method_chars: 1564
 quality_evaluation_chars: 1701
 quality_limitation_chars: 598
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要

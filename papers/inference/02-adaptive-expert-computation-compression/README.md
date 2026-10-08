@@ -328,10 +328,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/Fighoture/MoE_unsupervised_pruning) ・ リポジトリ内被引用：3  
   MoE内の似たエキスパートを層ごとにクラスタ化し、層横断の冗長性も見ながらクラスタ単位で枝刈り・統合して、20%圧縮時の性能低下を既存方式より抑える。
 
-- **2025-03 · [SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models](2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  タスク別の隠れ状態・ニューロン活性から重要計算経路を特定し、再学習なしの構造化枝刈りで20%疎性の品質をほぼ維持しつつ高疎性で既存法を大幅に上回る。
-
 - **2025-08 · [Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts](2025-2508.07785-grove-moe-heterogeneous-experts.md)**  
   実装：[✓](https://github.com/inclusionAI/GroveMoE) ・ リポジトリ内被引用：2  
   専門家群ごとに小型の随伴専門家を共有して通常の上位k個ルーティングのまま計算量を動的化し、33B総パラメータ・3.14〜3.28B活性のGroveMoEを構築する。
@@ -339,6 +335,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-05 · [Mixture of Lookup Experts](2025-2503.15798-mixture-of-lookup-experts.md)**  
   実装：[✓](https://github.com/JieShibo/MoLE) ・ リポジトリ内被引用：2  
   学習時エキスパート入力を語彙埋め込みへ固定して推論前にFFN出力を検索表化し、巨大エキスパート重みではなく小さな出力ベクトルだけをストレージから読むことでMoEのVRAMと転送遅延を削減する。
+
+- **2025-03 · [SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models](2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  タスク別の隠れ状態・ニューロン活性から重要計算経路を特定し、再学習なしの構造化枝刈りで20%疎性の品質をほぼ維持しつつ高疎性で既存法を大幅に上回る。
 
 - **2025-10 · [Expert Merging in Sparse Mixture of Experts with Nash Bargaining](2025-2510.16138-namex-nash-expert-merging.md)**  
   実装：[✓](https://github.com/anh147/NAMEx) ・ リポジトリ内被引用：1  
