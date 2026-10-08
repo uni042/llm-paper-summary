@@ -123,6 +123,60 @@ class RelevancePrefilterTests(unittest.TestCase):
         self.assertEqual(prior_stats["expanded_rule_shadow_count"], 1)
         self.assertEqual(len(resumed), 3)
 
+
+    def test_quartile_reduces_pool_and_prioritizes_systems(self):
+        relevant = [
+            {"canonical_id": f"sys-{i}", "title": f"GPU KV-Cache Offloading for LLM Inference Method {i}", "priority": 100}
+            for i in range(9)
+        ]
+        unrelated = [
+            {"canonical_id": f"other-{i}", "title": f"Applications of Text Statistics in Retail Study {i}", "priority": 1000}
+            for i in range(31)
+        ]
+        rows = unrelated + relevant
+        q = {**POLICY, "max_audit_per_build": 0, "relevance_quota": {"enabled": True, "mode": "quarantine", "retain_percent": 25, "min_candidates": 0}}
+        before = json.dumps(rows, ensure_ascii=False, sort_keys=True)
+        chosen, metrics = mod.triage_worklist(rows, q)
+        self.assertEqual(metrics["unfiltered_count"], 40)
+        self.assertEqual(metrics["quota_target_count"], 10)
+        self.assertEqual(metrics["quota_quarantine_count"], 30)
+        self.assertEqual(metrics["reviewable_count"], 10)
+        self.assertEqual(len(chosen), 10)
+        self.assertEqual(sum(str(r["canonical_id"]).startswith("sys-") for r in chosen), 9)
+        self.assertEqual(json.dumps(rows, ensure_ascii=False, sort_keys=True), before)
+        disabled, old_stats = mod.triage_worklist(rows, {**q, "relevance_quota": {"enabled": False}})
+        self.assertEqual(disabled, rows)
+        self.assertEqual(old_stats["quota_quarantine_count"], 0)
+
+    def test_quartile_respects_allowlist(self):
+        rows = [{"canonical_id": f"id-{i}", "title": f"Unrelated Article Number {i}"} for i in range(40)]
+        q = {
+            **POLICY, "max_audit_per_build": 0,
+            "allow_canonical_ids": ["id-17"],
+            "relevance_quota": {"enabled": True, "mode": "quarantine", "retain_percent": 25, "min_candidates": 0},
+        }
+        chosen, metrics = mod.triage_worklist(rows, q)
+        self.assertEqual(len(chosen), 10)
+        self.assertIn("id-17", {row["canonical_id"] for row in chosen})
+        self.assertEqual(metrics["quota_quarantine_count"], 30)
+
+    def test_quartile_shadow_and_active_states_differ(self):
+        rows = [{"canonical_id": f"id-{i}", "title": f"Generic Article Number {i}"} for i in range(40)]
+        q = {**POLICY, "max_audit_per_build": 0, "relevance_quota": {"enabled": True, "mode": "shadow", "retain_percent": 25, "min_candidates": 0}}
+        selected, stats = mod.triage_worklist(rows, q)
+        self.assertEqual(selected, rows)
+        self.assertEqual(stats["quota_quarantine_count"], 0)
+        self.assertEqual(stats["quota_target_count"], 10)
+
+    def test_quartile_audit_sample_is_inside_quota(self):
+        rows = [{"canonical_id": f"id-{i}", "title": f"Generic Paper Number {i}"} for i in range(100)]
+        q = {**POLICY, "audit_stride": 3, "max_audit_per_build": 5, "relevance_quota": {"enabled": True, "mode": "quarantine", "retain_percent": 25, "min_candidates": 0}}
+        selected, stats = mod.triage_worklist(rows, q)
+        self.assertEqual(len(selected), 25)
+        self.assertEqual(stats["audit_count"], 5)
+        self.assertEqual(stats["quota_quarantine_count"], 80)
+        self.assertEqual(sum(bool(x.get("prefilter_audit")) for x in selected), 5)
+
     def test_missing_config_fail_open(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
