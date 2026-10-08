@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-08T05:10:33.481701+00:00",
+  "generated_at": "2026-10-08T05:22:02.408612+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 616,
+  "count": 611,
   "worker_counts": {
-    "scheduled-chat-00": 208,
-    "scheduled-chat-30": 196,
-    "scheduled-chat-45": 212
+    "scheduled-chat-00": 206,
+    "scheduled-chat-30": 195,
+    "scheduled-chat-45": 210
   },
   "entries": [
     {
@@ -12022,50 +12022,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md",
-      "canonical_id": "arXiv:2502.05043",
-      "title": "EcoServe: Designing Carbon-Aware AI Inference Systems",
-      "file_bytes": 14164,
-      "source_sha256": "fff73cbac5d8f8005d7ff840ef7b8296f018c09ca367f7b236760e78c68b019f",
-      "source_git_blob_sha": "6b0bca46e797c108a0d5282a86ce2e20f6da73c6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.922677,
-      "quality_metrics": {
-        "body_chars": 3314,
-        "method_chars": 1489,
-        "evaluation_chars": 152,
-        "limitation_chars": 277
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 152 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md",
-      "canonical_id": "arXiv:2410.12247",
-      "title": "EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference",
-      "file_bytes": 14170,
-      "source_sha256": "32d15a37cc1eaf30d8652276da4ffa0cc9d4844796ff2a920a746c7de980e422",
-      "source_git_blob_sha": "457d5885c86000f6e092e06ffdee45a8d3d834d7",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.831576,
-      "quality_metrics": {
-        "body_chars": 4372,
-        "method_chars": 1593,
-        "evaluation_chars": 259,
-        "limitation_chars": 351
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 259 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md",
       "canonical_id": "arXiv:2604.08133",
       "title": "Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference",
@@ -12245,28 +12201,6 @@
       ]
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
-      "canonical_id": "arXiv:2407.14679",
-      "title": "Compact Language Models via Pruning and Knowledge Distillation",
-      "file_bytes": 14333,
-      "source_sha256": "76d56442fd27809c579ce222c23d67817e48383a93080a536c99de13143b7590",
-      "source_git_blob_sha": "54dbeaa62057cd6a6251091a5b6af9b57f7be0dc",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.949158,
-      "quality_metrics": {
-        "body_chars": 3451,
-        "method_chars": 1429,
-        "evaluation_chars": 112,
-        "limitation_chars": 335
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 112 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md",
       "canonical_id": "arXiv:2606.15716",
       "title": "How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle",
@@ -12285,53 +12219,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 493 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
-      "canonical_id": "arXiv:2406.07522",
-      "title": "Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling",
-      "file_bytes": 14345,
-      "source_sha256": "043f26aacc731cdf834ac453ba99615e9b45339f31abdf6c89a5099fb1d6ce26",
-      "source_git_blob_sha": "2136254e6f6ed047f634867a8488a3fb986262f0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.902803,
-      "quality_metrics": {
-        "body_chars": 1662,
-        "method_chars": 397,
-        "evaluation_chars": 92,
-        "limitation_chars": 169
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1662 < 2200",
-        "16KB未満再監査: 手法説明量 397 < 700",
-        "16KB未満再監査: 評価説明量 92 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md",
-      "canonical_id": "arXiv:2412.10319",
-      "title": "SCBench: A KV Cache-Centric Analysis of Long-Context Methods",
-      "file_bytes": 14361,
-      "source_sha256": "033b67d05db39802f86f6324b59f0c5faa12b3522c3feb716ef69bfd64b1e668",
-      "source_git_blob_sha": "8c810eafb11365bdf0099da981c59e4203a46968",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.822519,
-      "quality_metrics": {
-        "body_chars": 2513,
-        "method_chars": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 164
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
     },
