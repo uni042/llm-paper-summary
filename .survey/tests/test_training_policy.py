@@ -37,7 +37,7 @@ class TrainingPolicyTest(unittest.TestCase):
                 data = path.read_bytes()
                 inventory_files.append({"path": path.relative_to(root).as_posix(), "sha": blob_sha(data)})
         inventory = {"source_commit": "test", "files": inventory_files}
-        with patch.object(check_repository, "REQUIRED_V10_PATHS", ()):
+        with patch.object(check_repository, "REQUIRED_RUNTIME_PATHS", ()):
             return check_repository.check(root, inventory)
 
     def test_existing_training_paper_may_change(self) -> None:

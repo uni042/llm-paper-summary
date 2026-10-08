@@ -66,7 +66,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("active_precheck_runs", workflow)
         self.assertIn("gh workflow run discovery-precheck.yml", workflow)
         self.assertIn(
-            "dispatching the dedicated gate",
+            "Dispatching dedicated Discovery precheck gate",
             workflow,
         )
 

@@ -1,48 +1,43 @@
+"""Machine-side invariants after moving human worker procedures to ChatGPT Library.
+
+The GitHub repository intentionally contains no executable human-facing worker
+router document. These tests validate only repository-owned machine contracts;
+Library prose is maintained and verified through the Library workflow.
+"""
 import unittest
 from pathlib import Path
-
 
 ROOT = Path(__file__).parents[2]
 ROUTER = ROOT / ".survey" / "docs" / "survey-workflow" / "worker-router.md"
 
 
 class ScheduledChatTransportContractTests(unittest.TestCase):
-    def test_scheduled_worker_is_library_first_and_github_read_only(self):
-        text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("scheduled-chat-00", text)
-        self.assertIn("scheduled-chat-30", text)
-        self.assertIn("scheduled-chat-45", text)
-        self.assertIn("read-only | read/write", text)
-        self.assertIn("毎時 :45 Importフェーズ", text)
-        self.assertIn("通常のScheduled workerフェーズはGitHubへのclaim、reservation、submission、result", text)
-        self.assertIn("例外は `scheduled-chat-45` の毎時Importフェーズだけ", text)
-        self.assertIn("Library保存不能でも完成成果を破棄しない", text)
-        self.assertIn("GitHub writeをLibrary失敗回避手段として使わない", text)
+    def test_worker_instructions_are_library_only(self):
+        self.assertFalse(ROUTER.exists())
+        self.assertFalse((ROOT / "docs/superpowers").exists())
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("/LLM-paper-summary-library-first/", readme)
 
-    def test_current_inventory_and_quota_contract(self):
-        text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("収録候補論文数 > 600", text)
-        self.assertIn("収録候補論文数 <= 600", text)
-        self.assertIn("Researchは**1ラウンドにつき**新規完成Research Markdownを5件Libraryへ保存する", text)
-        self.assertIn("Discoveryは**1ラウンドにつき**新規canonical identity 10件を1候補ずつ確認し", text)
-        self.assertNotIn("E = G + D - R", text)
+    def test_current_worker_quota_is_in_machine_policy(self):
+        text = (ROOT / ".survey/scripts/worker_quota_policy.py").read_text(encoding="utf-8")
+        self.assertIn("RESEARCH_AUDIT_MINIMUM_COMPLETIONS = 5", text)
+        self.assertIn("DISCOVERY_MINIMUM_ROUNDS = 8", text)
 
-    def test_worklist_order_is_highest_priority_first(self):
-        text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("rank 1がその生成時点で最も重要度スコアの高い候補", text)
-        self.assertIn("rank 1から上から下へ", text)
-        self.assertNotIn("候補はリスト末尾から上方向", text)
+    def test_worklists_still_exist_after_procedure_cleanup(self):
+        work_queue = ROOT / ".survey/work-queue"
+        for slot in ("00", "30", "45"):
+            with self.subTest(slot=slot):
+                self.assertTrue((work_queue / f"worker-worklist-{slot}.json").is_file())
 
-    def test_import_verifies_durable_handoff_before_library_cleanup(self):
-        text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("byte-preserving転送", text)
-        self.assertIn("source_sha256", text)
-        self.assertIn("そのLibrary成果を削除してよい", text)
+    def test_import_processor_keeps_durable_pending_payloads(self):
+        source = (ROOT / ".survey/scripts/process_library_import_inbox.py").read_text(encoding="utf-8")
+        self.assertIn("retain blocked payloads in GitHub", source)
+        self.assertIn("idempotent", source)
+        self.assertIn("create-only", source)
 
-    def test_legacy_direct_transport_is_not_a_current_worker_path(self):
-        text = ROUTER.read_text(encoding="utf-8")
-        self.assertIn("旧direct-GitHub worker運用は履歴資料", text)
-        self.assertIn("新規通常runへ復活させない", text)
+    def test_no_legacy_router_is_reintroduced(self):
+        self.assertFalse((ROOT / ".survey/docs").exists())
+        self.assertFalse((ROOT / "docs/superpowers").exists())
 
 
 if __name__ == "__main__":

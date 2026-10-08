@@ -75,7 +75,7 @@ audit_version: 0
                     )
             inventory = {"source_commit": "test", "files": files}
 
-            with patch.object(check_repository, "REQUIRED_V10_PATHS", ()):
+            with patch.object(check_repository, "REQUIRED_RUNTIME_PATHS", ()):
                 result = check_repository.check(root, inventory)
 
             invalid = [
