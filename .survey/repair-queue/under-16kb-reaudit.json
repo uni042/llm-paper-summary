@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T00:03:30.234268+00:00",
+  "generated_at": "2026-10-09T01:11:09.737950+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 396,
+  "count": 382,
   "worker_counts": {
-    "scheduled-chat-00": 126,
-    "scheduled-chat-30": 114,
+    "scheduled-chat-00": 121,
+    "scheduled-chat-30": 105,
     "scheduled-chat-45": 156
   },
   "entries": [
@@ -594,32 +594,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md",
-      "canonical_id": "arXiv:2601.06123",
-      "title": "Latent Space Communication via K-V Cache Alignment",
-      "file_bytes": 9673,
-      "source_sha256": "645708ff246e041d76097c0b6774ca74da717c91ca074e034e90971ad8bf8ad8",
-      "source_git_blob_sha": "34db4b0c7ee7a78c8b1960249735b7fc51512c54",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.779233,
-      "quality_metrics": {
-        "body_chars": 2169,
-        "method_chars": 943,
-        "evaluation_chars": 369,
-        "limitation_chars": 207
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2169 < 2200",
-        "16KB未満再監査: 評価説明量 369 < 500",
-        "16KB未満再監査: 日本語比率 77.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.9% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
       "canonical_id": "arXiv:2307.08621",
       "title": "Retentive Network: A Successor to Transformer for Large Language Models",
@@ -828,48 +802,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2508.04462-card-cache-assisted-parallel-speculative-decoding-for-efficient-large-la.md",
-      "canonical_id": "arXiv:2508.04462",
-      "title": "CARD: Cache-Assisted Parallel Speculative Decoding for Efficient Large Language Model Inference",
-      "file_bytes": 9796,
-      "source_sha256": "8548424e3fe866f513d50e29a058b0cb3dca3d188427fed2d60842bc0ce30a4c",
-      "source_git_blob_sha": "bb87b0ef1c1b005952d06e8bf33ff090d5476b14",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.965318,
-      "quality_metrics": {
-        "body_chars": 2244,
-        "method_chars": 618,
-        "evaluation_chars": 553,
-        "limitation_chars": 196
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 618 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
-      "canonical_id": "arXiv:1905.10650",
-      "title": "Are Sixteen Heads Really Better than One?",
-      "file_bytes": 9840,
-      "source_sha256": "64659f39a3f40a54236e7385d7fa96b1554e3ac6b042390884cea7f5393cf927",
-      "source_git_blob_sha": "b7f27a08a6dbbbd4f1af106d9fc816daec522477",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.896668,
-      "quality_metrics": {
-        "body_chars": 2737,
-        "method_chars": 753,
-        "evaluation_chars": 791,
-        "limitation_chars": 288
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md",
       "canonical_id": "arXiv:2508.13337",
       "title": "X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms",
@@ -1033,26 +965,6 @@
         "16KB未満再監査: 手法説明量 146 < 700",
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md",
-      "canonical_id": "arXiv:2312.15159",
-      "title": "Understanding the Potential of FPGA-Based Spatial Acceleration for Large Language Model Inference",
-      "file_bytes": 10006,
-      "source_sha256": "0b29834a3dd2253b23709261932d8db86146eea8bb8775c3d3f223d44546203a",
-      "source_git_blob_sha": "519fefb94d036e4746382872d609ed4a1ec29ad0",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.924675,
-      "quality_metrics": {
-        "body_chars": 2485,
-        "method_chars": 773,
-        "evaluation_chars": 551,
-        "limitation_chars": 255
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1368,30 +1280,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 2095 < 2200",
         "16KB未満再監査: 評価説明量 113 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md",
-      "canonical_id": "arXiv:2402.05445",
-      "title": "Accurate LoRA-Finetuning Quantization of LLMs via Information Retention",
-      "file_bytes": 10411,
-      "source_sha256": "254a1eda8deccd9a898f9cbb6e9dafd4601dfa0481fa529e62b1ab3759de6730",
-      "source_git_blob_sha": "14e2c84fc673659a2b9ca6508cd0f3fae66fd665",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.913189,
-      "quality_metrics": {
-        "body_chars": 2143,
-        "method_chars": 513,
-        "evaluation_chars": 0,
-        "limitation_chars": 219
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2143 < 2200",
-        "16KB未満再監査: 手法説明量 513 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
     },
@@ -1767,26 +1655,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md",
-      "canonical_id": "arXiv:2511.13676",
-      "title": "T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization",
-      "file_bytes": 10866,
-      "source_sha256": "901236d1fb6cff71b79ce452a6317d977b16043191a904890fd68bacf5ab8519",
-      "source_git_blob_sha": "c4149a6fa764b3505a39e617987ac4ad4e2b9f08",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.842449,
-      "quality_metrics": {
-        "body_chars": 3304,
-        "method_chars": 933,
-        "evaluation_chars": 1063,
-        "limitation_chars": 277
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
       "canonical_id": "arXiv:2412.03213",
       "title": "ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression",
@@ -1849,30 +1717,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 316 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md",
-      "canonical_id": "arXiv:2405.19715",
-      "title": "SpecDec++: Boosting Speculative Decoding via Adaptive Candidate Lengths",
-      "file_bytes": 10954,
-      "source_sha256": "bd8e257b588f2de37647632fbef84e65f9fb43005983d2ee165ca88623b84fad",
-      "source_git_blob_sha": "da35002e178391f60e3ae25f32fadcbcc21b0520",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.983735,
-      "quality_metrics": {
-        "body_chars": 2026,
-        "method_chars": 606,
-        "evaluation_chars": 313,
-        "limitation_chars": 172
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2026 < 2200",
-        "16KB未満再監査: 手法説明量 606 < 700",
-        "16KB未満再監査: 評価説明量 313 < 500"
       ],
       "warnings": []
     },
@@ -1956,50 +1800,6 @@
         "limitation_chars": 223
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.24197-h-spec-parallel-speculative-decoding-without-a-drafter-side-kv-cache.md",
-      "canonical_id": "arXiv:2609.24197",
-      "title": "H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache",
-      "file_bytes": 11001,
-      "source_sha256": "cd36482b9897bd23e247d4185ec8fd64a37b87cf2f904ad03cb608584051bfb8",
-      "source_git_blob_sha": "013b44956fb089bcf5ebf934362c5e41e959e298",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.951613,
-      "quality_metrics": {
-        "body_chars": 2608,
-        "method_chars": 660,
-        "evaluation_chars": 691,
-        "limitation_chars": 189
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 660 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md",
-      "canonical_id": "arXiv:2409.10516",
-      "title": "RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval",
-      "file_bytes": 11011,
-      "source_sha256": "71dd30f8d68969ec7df8323f7f8f245a2bf952b1c0a8135239c6c0995f3ad519",
-      "source_git_blob_sha": "365bdaab38353dfaff045c747c555f22dfc1b4d4",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.864,
-      "quality_metrics": {
-        "body_chars": 2208,
-        "method_chars": 717,
-        "evaluation_chars": 0,
-        "limitation_chars": 242
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
       "warnings": []
     },
     {
@@ -2131,30 +1931,6 @@
         "limitation_chars": 307
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
-      "canonical_id": "arXiv:2305.13048",
-      "title": "RWKV: Reinventing RNNs for the Transformer Era",
-      "file_bytes": 11049,
-      "source_sha256": "4cbfcb0a7523717aa66d37fb3478768c9c5527d7467d733df47a35c1140b5e09",
-      "source_git_blob_sha": "01e49bd3224c4e2b2bab38e436af3b18b509b8f3",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.943686,
-      "quality_metrics": {
-        "body_chars": 1731,
-        "method_chars": 698,
-        "evaluation_chars": 134,
-        "limitation_chars": 184
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1731 < 2200",
-        "16KB未満再監査: 手法説明量 698 < 700",
-        "16KB未満再監査: 評価説明量 134 < 500"
-      ],
       "warnings": []
     },
     {
@@ -3024,26 +2800,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md",
-      "canonical_id": "AAAI:39454",
-      "title": "CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints",
-      "file_bytes": 11517,
-      "source_sha256": "4fa6f2cfac8356b5ad434684f459860d58f8777ce7145eb5991cb1a3ea63b2ec",
-      "source_git_blob_sha": "c225c1a7e547b433f23a9a40f625ea7abcb0ea86",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.825581,
-      "quality_metrics": {
-        "body_chars": 2880,
-        "method_chars": 1534,
-        "evaluation_chars": 727,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/12-moe-parallelism-communication/2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md",
       "canonical_id": "arXiv:2404.05019",
       "title": "Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts",
@@ -3146,28 +2902,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md",
-      "canonical_id": "arXiv:2508.15601",
-      "title": "Efficient Mixed-Precision Large Language Model Inference with TurboMind",
-      "file_bytes": 11558,
-      "source_sha256": "5e862ec55a1e768e3b6c308de40d4b609d1337a4c7bc2201c145972f1021f8eb",
-      "source_git_blob_sha": "45cb2eea1b2bc0a31eeb61be88bdbda12eaadc66",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.958135,
-      "quality_metrics": {
-        "body_chars": 2571,
-        "method_chars": 771,
-        "evaluation_chars": 114,
-        "limitation_chars": 205
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 114 < 500"
-      ],
       "warnings": []
     },
     {
@@ -3345,48 +3079,6 @@
         "method_chars": 1282,
         "evaluation_chars": 893,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md",
-      "canonical_id": "arXiv:2502.02770",
-      "title": "Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning",
-      "file_bytes": 11680,
-      "source_sha256": "97d549da9d3e42af9175cc8edb9ffb583e5dcf5b8dfd5d06a507897726fe9f78",
-      "source_git_blob_sha": "e1310b932ffcbff8c85e46e8a5ab85f97910ac78",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.851266,
-      "quality_metrics": {
-        "body_chars": 3031,
-        "method_chars": 685,
-        "evaluation_chars": 788,
-        "limitation_chars": 197
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 685 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
-      "canonical_id": "arXiv:2109.04838",
-      "title": "Block Pruning For Faster Transformers",
-      "file_bytes": 11694,
-      "source_sha256": "5686dc974277f6bfc3ceec0ca13a5669bbd3df39c4925e1b32c086cb4c1d8585",
-      "source_git_blob_sha": "0817f56e36a409c1812784639241cd34405946b9",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.830229,
-      "quality_metrics": {
-        "body_chars": 2826,
-        "method_chars": 788,
-        "evaluation_chars": 854,
-        "limitation_chars": 293
       },
       "mechanical_failures": [],
       "warnings": []
