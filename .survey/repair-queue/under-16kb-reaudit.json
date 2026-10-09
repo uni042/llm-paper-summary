@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T05:58:59.564781+00:00",
+  "generated_at": "2026-10-09T06:49:10.393249+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 308,
+  "count": 307,
   "worker_counts": {
     "scheduled-chat-00": 81,
-    "scheduled-chat-30": 82,
+    "scheduled-chat-30": 81,
     "scheduled-chat-45": 145
   },
   "entries": [
@@ -2653,28 +2653,6 @@
       "warnings": [
         "日本語比率 76.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md",
-      "canonical_id": "arXiv:2404.03865",
-      "title": "FFN-SkipLLM: A Hidden Gem for Autoregressive Decoding with Adaptive Feed Forward Skipping",
-      "file_bytes": 12238,
-      "source_sha256": "360860eaec313685433b22d9c587d988802119409c9d7538b0eae93512961b69",
-      "source_git_blob_sha": "2f44db4bcf329420dbe8cd8eea0f09e163f081df",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.870378,
-      "quality_metrics": {
-        "body_chars": 2668,
-        "method_chars": 951,
-        "evaluation_chars": 412,
-        "limitation_chars": 255
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 412 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
