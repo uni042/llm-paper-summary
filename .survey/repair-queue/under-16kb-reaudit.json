@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T19:59:42.928398+00:00",
+  "generated_at": "2026-10-09T20:58:18.688757+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 203,
+  "count": 201,
   "worker_counts": {
     "scheduled-chat-00": 67,
-    "scheduled-chat-30": 68,
-    "scheduled-chat-45": 68
+    "scheduled-chat-30": 67,
+    "scheduled-chat-45": 67
   },
   "entries": [
     {
@@ -272,7 +272,7 @@
       "file_bytes": 11142,
       "source_sha256": "345765bb5faf75466a1463ca796337a1c1d8b54b3ccbe658cfe3d2ed8ab25403",
       "source_git_blob_sha": "f1f5a6e0703d50c05482550d36e5fd625a8423b3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.977932,
@@ -534,26 +534,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
-      "canonical_id": "arXiv:2407.14057",
-      "title": "LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference",
-      "file_bytes": 11873,
-      "source_sha256": "826e3d445a8ff89127eb6aa2ee29fdb83841f5eb2c9f25230f5f61238341e1c2",
-      "source_git_blob_sha": "891e383d5ee4f916d6fde2b07c26aae5e70204ef",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.827374,
-      "quality_metrics": {
-        "body_chars": 2564,
-        "method_chars": 1275,
-        "evaluation_chars": 564,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
       "canonical_id": "arXiv:2503.08524",
       "title": "Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency",
@@ -613,28 +593,6 @@
         "limitation_chars": 251
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md",
-      "canonical_id": "arXiv:2601.21473",
-      "title": "ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management",
-      "file_bytes": 11961,
-      "source_sha256": "2778716f55cb1ce1c9f123290598482af3f2103822402f2ecf9f203f84de1468",
-      "source_git_blob_sha": "21ec1c376b773601eb6717bf9a50937223b46f68",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.898484,
-      "quality_metrics": {
-        "body_chars": 2374,
-        "method_chars": 871,
-        "evaluation_chars": 0,
-        "limitation_chars": 239
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
       "warnings": []
     },
     {
@@ -899,7 +857,7 @@
       "file_bytes": 12330,
       "source_sha256": "03e07d14bc9a52497fbff8c6a22c8c95acaf4a867d593626d2f1d06f2eb5d84a",
       "source_git_blob_sha": "7b03d92cf803506749f792ff50af3347e4c653ba",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.929873,
