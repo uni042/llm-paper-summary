@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T16:21:21.557865+00:00",
+  "generated_at": "2026-10-09T16:40:18.606881+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 244,
+  "count": 225,
   "worker_counts": {
-    "scheduled-chat-00": 81,
-    "scheduled-chat-30": 81,
-    "scheduled-chat-45": 82
+    "scheduled-chat-00": 75,
+    "scheduled-chat-30": 75,
+    "scheduled-chat-45": 75
   },
   "entries": [
     {
@@ -35,31 +35,6 @@
         "16KB未満再監査: 評価説明量 155 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2609.13205-self-indexing-attention-for-compression-compatible-sparse-long-context-l.md",
-      "canonical_id": "arXiv:2609.13205",
-      "title": "Self-Indexing Attention for Compression-Compatible Sparse Long-Context LLM Inference",
-      "file_bytes": 9619,
-      "source_sha256": "1ace6c9cbbd8e85e942814c7a4f1a1ff10955501dfb1df4c779c890ab049a567",
-      "source_git_blob_sha": "d5f521a6d5ff73c5173f6ae64e65c158ece1bcc9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.750765,
-      "quality_metrics": {
-        "body_chars": 2668,
-        "method_chars": 624,
-        "evaluation_chars": 799,
-        "limitation_chars": 210
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 624 < 700",
-        "16KB未満再監査: 日本語比率 75.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 75.1% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md",
@@ -198,26 +173,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
-      "canonical_id": "arXiv:1910.06188",
-      "title": "Q8BERT: Quantized 8Bit BERT",
-      "file_bytes": 10153,
-      "source_sha256": "0fa1d4c20d4e9afd7955b0d22841dea3fbc39f920f612c7128c266a7922b5486",
-      "source_git_blob_sha": "77b16b7a8f8443e2843390c839c1d830a9755429",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.810079,
-      "quality_metrics": {
-        "body_chars": 3311,
-        "method_chars": 976,
-        "evaluation_chars": 1022,
-        "limitation_chars": 299
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
       "canonical_id": "arXiv:2307.06945",
       "title": "In-context Autoencoder for Context Compression in a Large Language Model",
@@ -285,31 +240,6 @@
         "16KB未満再監査: 評価説明量 113 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md",
-      "canonical_id": "arXiv:2402.15220",
-      "title": "ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition",
-      "file_bytes": 10417,
-      "source_sha256": "2b08766417587dc955d5bc984c1e27025a4b9d97ec2a413504c84311414b34d8",
-      "source_git_blob_sha": "f72c33f21fd9d3c1b33bcf7909b9890d48597bd9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.77616,
-      "quality_metrics": {
-        "body_chars": 2474,
-        "method_chars": 978,
-        "evaluation_chars": 348,
-        "limitation_chars": 188
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 348 < 500",
-        "16KB未満再監査: 日本語比率 77.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.6% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-me.md",
@@ -383,52 +313,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
-      "canonical_id": "arXiv:2309.00071",
-      "title": "YaRN: Efficient Context Window Extension of Large Language Models",
-      "file_bytes": 10585,
-      "source_sha256": "5bb0e1e50aa9f3927f8215d57531da96072847bbc63c8e1179e84e306b77e0fc",
-      "source_git_blob_sha": "96fd19656d2c8214c0f133f178a9c7ba2011680c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.955076,
-      "quality_metrics": {
-        "body_chars": 2293,
-        "method_chars": 909,
-        "evaluation_chars": 0,
-        "limitation_chars": 227
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md",
-      "canonical_id": "arXiv:2412.03594",
-      "title": "BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching",
-      "file_bytes": 10722,
-      "source_sha256": "d58089b1e057886940b73c1247cd90550d0666afc85e3d8ebeb9f3ad5ed7a546",
-      "source_git_blob_sha": "2a38d90f88af70ea3c62ba5f5cea7146b84bc8a1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.784832,
-      "quality_metrics": {
-        "body_chars": 2957,
-        "method_chars": 819,
-        "evaluation_chars": 1052,
-        "limitation_chars": 232
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.5% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.5% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md",
       "canonical_id": "arXiv:2111.00230",
       "title": "Magic Pyramid: Accelerating Inference with Early Exiting and Token Pruning",
@@ -448,26 +332,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 266 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md",
-      "canonical_id": "arXiv:1904.09324",
-      "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models",
-      "file_bytes": 10996,
-      "source_sha256": "cec55cf921f64029c6384690a409338bf04309c422a50b619fa0709156589937",
-      "source_git_blob_sha": "ca9d1b4e188280cf1ab55e033077eb23c3c8facb",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.873028,
-      "quality_metrics": {
-        "body_chars": 3302,
-        "method_chars": 870,
-        "evaluation_chars": 1408,
-        "limitation_chars": 223
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -582,29 +446,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
-      "canonical_id": "arXiv:2511.08923",
-      "title": "TiDAR: Think in Diffusion, Talk in Autoregression",
-      "file_bytes": 11264,
-      "source_sha256": "a2be83cb8d56a30b7bec68a5a0b74eaa73283cc04159f25784609686c1247967",
-      "source_git_blob_sha": "a9e70c1cefe9a544b546babf60b88f903a5178d1",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.938168,
-      "quality_metrics": {
-        "body_chars": 2169,
-        "method_chars": 1000,
-        "evaluation_chars": 112,
-        "limitation_chars": 177
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2169 < 2200",
-        "16KB未満再監査: 評価説明量 112 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
       "canonical_id": "arXiv:2412.15605",
       "title": "Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks",
@@ -674,51 +515,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md",
-      "canonical_id": "arXiv:2507.12000",
-      "title": "DSSD: Efficient Edge-Device LLM Deployment and Collaborative Inference via Distributed Split Speculative Decoding",
-      "file_bytes": 11513,
-      "source_sha256": "27d84525edf558ec2e9ce2119f607ed7c5bc68aaa3d17773d8eb5752fdd1304a",
-      "source_git_blob_sha": "d3f90d4d62155f8d665bdc8971561ac14f87697c",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.973928,
-      "quality_metrics": {
-        "body_chars": 2588,
-        "method_chars": 657,
-        "evaluation_chars": 161,
-        "limitation_chars": 207
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 657 < 700",
-        "16KB未満再監査: 評価説明量 161 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2026-elastic-memory-remapping-oneiros.md",
-      "canonical_id": "DOI:10.1145/3830422.3830427",
-      "title": "Elastic Memory Remapping for Multi-tenant LLM Serving",
-      "file_bytes": 11521,
-      "source_sha256": "7acc7db35e280ef5037afb257acab735de436e7c782c18ca18c94b5589c4b5f6",
-      "source_git_blob_sha": "73d7bb5d546e4ba38de3b0502d2482d446c697ea",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.969514,
-      "quality_metrics": {
-        "body_chars": 2628,
-        "method_chars": 1121,
-        "evaluation_chars": 258,
-        "limitation_chars": 220
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 258 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.02579-prophetkv-user-query-driven-selective-recomputation-for-efficient-kv-cac.md",
       "canonical_id": "arXiv:2602.02579",
       "title": "ProphetKV: User-Query-Driven Selective Recomputation for Efficient KV Cache Reuse in Retrieval-Augmented Generation",
@@ -754,26 +550,6 @@
         "method_chars": 971,
         "evaluation_chars": 530,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
-      "canonical_id": "arXiv:1909.11556",
-      "title": "Reducing Transformer Depth on Demand with Structured Dropout",
-      "file_bytes": 11561,
-      "source_sha256": "8c963d113155f95d844588f5c8cc3a2e00d23669e621531c699e9099f7a0dadd",
-      "source_git_blob_sha": "2fb466160c7b7da7f6c37bb64f824865016d74d2",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.849363,
-      "quality_metrics": {
-        "body_chars": 3061,
-        "method_chars": 765,
-        "evaluation_chars": 1061,
-        "limitation_chars": 293
       },
       "mechanical_failures": [],
       "warnings": []
@@ -823,30 +599,6 @@
         "16KB未満再監査: 評価説明量 143 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md",
-      "canonical_id": "arXiv:2607.24787",
-      "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models",
-      "file_bytes": 11653,
-      "source_sha256": "c656ef8d49167c02c81474fb0360b6dc9e12c8f32000c22e25a3b540413183e8",
-      "source_git_blob_sha": "3a76609e1037df7c31d99da40b0ae1c998c4fda0",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.795636,
-      "quality_metrics": {
-        "body_chars": 2828,
-        "method_chars": 1432,
-        "evaluation_chars": 780,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 79.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.6% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.07458-coinrag.md",
@@ -1025,51 +777,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2609.20971-rbs-attention.md",
-      "canonical_id": "arXiv:2609.20971",
-      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-      "file_bytes": 11835,
-      "source_sha256": "2941dc75babba35cab65f159dccd6f023c6ceca7f29945cd4cb177f88bd6fec4",
-      "source_git_blob_sha": "6c44186b9a37c9f448b4e7a7dd2df6a3eae25c54",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.95762,
-      "quality_metrics": {
-        "body_chars": 2556,
-        "method_chars": 944,
-        "evaluation_chars": 470,
-        "limitation_chars": 221
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 470 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md",
-      "canonical_id": "arXiv:2608.02515",
-      "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
-      "file_bytes": 11858,
-      "source_sha256": "6cdc398f9b735223f91b677aa76ba9a381fbed575b41bf9e0a462c5d04818390",
-      "source_git_blob_sha": "2e35c824637ff7b0a7044309d1095a0bc33759e6",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.841134,
-      "quality_metrics": {
-        "body_chars": 2082,
-        "method_chars": 727,
-        "evaluation_chars": 88,
-        "limitation_chars": 207
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2082 < 2200",
-        "16KB未満再監査: 評価説明量 88 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
       "canonical_id": "arXiv:2407.04620",
       "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
@@ -1096,7 +803,7 @@
       "file_bytes": 11873,
       "source_sha256": "826e3d445a8ff89127eb6aa2ee29fdb83841f5eb2c9f25230f5f61238341e1c2",
       "source_git_blob_sha": "891e383d5ee4f916d6fde2b07c26aae5e70204ef",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.827374,
@@ -1116,7 +823,7 @@
       "file_bytes": 11893,
       "source_sha256": "72c8018f62c89a645a73b480eae26b08a03fba63cbe5c2a419d3811305c2bbee",
       "source_git_blob_sha": "719dcdec63ffb39475feddbfeb5ddb7e9d3226c2",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.814344,
@@ -1138,7 +845,7 @@
       "file_bytes": 11905,
       "source_sha256": "1cbdb4af93abdf471e90471d97c93adfc82e91250e16f35a97a92531ae562a65",
       "source_git_blob_sha": "2767bbb2bb2e83dcf924e267c7e8129774fb298c",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.85049,
@@ -1158,7 +865,7 @@
       "file_bytes": 11922,
       "source_sha256": "5bdcfb7b3dad0ad1ec014efe9976e2eea12687f90d95da8aa229d51833e59079",
       "source_git_blob_sha": "5e0eced2be26183e83f0759951c7393cbf6ee20b",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.932268,
@@ -1200,7 +907,7 @@
       "file_bytes": 11964,
       "source_sha256": "54c18f8660b9610fefff531d5e8f780078029dafa75efb2360589510f5701b82",
       "source_git_blob_sha": "cc375f942c9da8971b18ba2660a892bf0843264b",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.823277,
@@ -1220,7 +927,7 @@
       "file_bytes": 12010,
       "source_sha256": "2e9ffd0941c19043bce8df406890d682b17f41da7924730c00986a4b43ca8081",
       "source_git_blob_sha": "f1057eaa45fd5b1c9ced6daf959d2e6d8817b77a",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.815391,
@@ -1415,26 +1122,6 @@
       ]
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md",
-      "canonical_id": "arXiv:2605.23078",
-      "title": "GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs",
-      "file_bytes": 12222,
-      "source_sha256": "2071d8fb74b0989acf0d40f4f3369c63f757aca1c741e15d3f05ce77eb33bbae",
-      "source_git_blob_sha": "9a07792281989241f9e5783be845e444e827545b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.903517,
-      "quality_metrics": {
-        "body_chars": 2372,
-        "method_chars": 974,
-        "evaluation_chars": 808,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md",
       "canonical_id": "arXiv:2503.07605",
       "title": "SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models",
@@ -1455,30 +1142,6 @@
         "16KB未満再監査: 評価説明量 91 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
-      "canonical_id": "arXiv:2503.23798",
-      "title": "Adaptive Layer-skipping in Pre-trained LLMs",
-      "file_bytes": 12238,
-      "source_sha256": "ca4c8090bb774d409ae9d5631524f73cec33f4f253d2baa7888c80f7b7758061",
-      "source_git_blob_sha": "8ea7c44f6a705287f9143d8e089a803447ff6d52",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.761056,
-      "quality_metrics": {
-        "body_chars": 3198,
-        "method_chars": 1512,
-        "evaluation_chars": 854,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.1% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
@@ -1544,26 +1207,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 270 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
-      "canonical_id": "ACL:2025.acl-long.633",
-      "title": "EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models",
-      "file_bytes": 12287,
-      "source_sha256": "c89dd6beaf7f5ccaa1ebcb80fed53eb5dc343279f52d4911db06ba3910154301",
-      "source_git_blob_sha": "8a697de288c2a17f27505b371e9868d8e93f2745",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.857143,
-      "quality_metrics": {
-        "body_chars": 2466,
-        "method_chars": 1304,
-        "evaluation_chars": 520,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1635,28 +1278,6 @@
       "warnings": [
         "日本語比率 73.9% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
-      "canonical_id": "arXiv:2510.03215",
-      "title": "Cache-to-Cache: Direct Semantic Communication Between Large Language Models",
-      "file_bytes": 12323,
-      "source_sha256": "5d4480cdcbd52e3404cddd8ac1c6469f1afd6655c3ae53abb68646ba08c64644",
-      "source_git_blob_sha": "4a13065a19bcfc85751d9d0338e2751fed744610",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.968608,
-      "quality_metrics": {
-        "body_chars": 2460,
-        "method_chars": 959,
-        "evaluation_chars": 174,
-        "limitation_chars": 192
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 174 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2602.13836-speculative-decoding-with-a-speculative-vocabulary.md",
@@ -1809,30 +1430,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
-      "canonical_id": "arXiv:2212.14052",
-      "title": "Hungry Hungry Hippos: Towards Language Modeling with State Space Models",
-      "file_bytes": 12391,
-      "source_sha256": "25d1f79bc6bc25f849b1d56bfb395e827024b7916969a6237d1467f2f6cc7e5b",
-      "source_git_blob_sha": "c215dfa4a9ffaa76132481345c7f2b6ae1f3ea25",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.78052,
-      "quality_metrics": {
-        "body_chars": 3967,
-        "method_chars": 1106,
-        "evaluation_chars": 1181,
-        "limitation_chars": 445
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.1% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md",
@@ -2184,30 +1781,6 @@
       ],
       "warnings": [
         "日本語比率 71.6% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md",
-      "canonical_id": "ACL:2025.findings-acl.377",
-      "title": "DiffSkip: Differential Layer Skipping in Large Language Models",
-      "file_bytes": 12547,
-      "source_sha256": "74287b004398cb99c2a7a51c51c79fa47701387ec99bd599ae7b1ca029d398cc",
-      "source_git_blob_sha": "1f5485bd60ea14a9f707ad4e5e627de0764021a5",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.776627,
-      "quality_metrics": {
-        "body_chars": 3335,
-        "method_chars": 1378,
-        "evaluation_chars": 1203,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 77.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.7% < 警告基準 80%"
       ]
     },
     {
