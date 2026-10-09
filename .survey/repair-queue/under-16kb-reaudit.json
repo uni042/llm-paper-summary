@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T12:05:37.070146+00:00",
+  "generated_at": "2026-10-09T13:54:07.918766+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 279,
+  "count": 278,
   "worker_counts": {
     "scheduled-chat-00": 93,
-    "scheduled-chat-30": 93,
+    "scheduled-chat-30": 92,
     "scheduled-chat-45": 93
   },
   "entries": [
@@ -731,28 +731,6 @@
       "warnings": [
         "日本語比率 78.5% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2508.19373-hap-hybrid-adaptive-parallelism-for-efficient-mixture-of-experts-inferen.md",
-      "canonical_id": "arXiv:2508.19373",
-      "title": "HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference",
-      "file_bytes": 10764,
-      "source_sha256": "67d415a3c8515684b8fc1accc29ab0a2f8552f709960d74a97ef7a1667f4dbb6",
-      "source_git_blob_sha": "6987b704cff168f0949c02e90d75cc3188f92920",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.980952,
-      "quality_metrics": {
-        "body_chars": 2399,
-        "method_chars": 935,
-        "evaluation_chars": 167,
-        "limitation_chars": 154
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 167 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md",
