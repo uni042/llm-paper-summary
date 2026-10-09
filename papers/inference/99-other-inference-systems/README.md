@@ -1551,7 +1551,7 @@
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [ブロック並列 Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   ブロック並列 Parallel Decodingは、この逐次性そのものを完全に捨てるのではなく、複数の将来位置を一度に予測し、元の自己回帰スコアリングモデルで「通常の貪欲復号なら同じトークンを選んだか」を並列検証する。
 
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  

@@ -426,6 +426,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：5  
   ドラフト分布のエントロピーから受理確率下限を推定し、投機的復号のドラフトを早期停止して無駄な小型モデル計算を削減する学習不要方式。
 
+- **2024-02 · [Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement](2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  投機的復号は小さいドラフトモデルで先のトークンを予測し、大きい対象モデルにまとめて検証させることで、対象モデルの逐次実行回数を減らす。Llama 2-7Bと115Mドラフトを使ったXSumの評価では、通常の逐次復号37.269トークン/秒に対し、RSD-Cの2-2分岐は56.609トークン/秒を報告する。
+
 - **2024-02 · [Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding](2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md)**  
   実装：[✓](https://github.com/cteant/SPACE) ・ リポジトリ内被引用：5  
   SPACE（Smart Parallel Auto-Correct デコード）は、自己回帰（autoregressive）型の大規模言語モデルを、別の小型下書きモデルを使わずに高速化する投機的復号方式である。論文は6B～70B級の複数モデルを評価し、HumanEval-Xのコード生成では2.71～4.04倍の高速化を報告する。
@@ -437,10 +441,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-10 · [A Theoretical Perspective for Speculative Decoding Algorithm](2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   小型モデルが候補トークンを提案し、大型モデルが並列に検証する方式では、候補が多く受理されるほど大型モデルの逐次呼出しが減る。定理3は複数のドラフト列を同時に検証するバッチ方式の不偏性と改善量を与える。
-
-- **2024-02 · [Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement](2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  投機的復号は小さいドラフトモデルで先のトークンを予測し、大きい対象モデルにまとめて検証させることで、対象モデルの逐次実行回数を減らす。Llama 2-7Bと115Mドラフトを使ったXSumの評価では、通常の逐次復号37.269トークン/秒に対し、RSD-Cの2-2分岐は56.609トークン/秒を報告する。
 
 - **2024-04 · [On Speculative Decoding for Multimodal Large Language Models](2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -487,6 +487,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-11〜2022-10）
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  
-  実装：[✓](https://github.com/hemingkx/SpecDec) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/hemingkx/SpecDec) ・ リポジトリ内被引用：18  
   提案の中核は、入力を読むエンコーダを深く、反復生成するデコーダを浅くした独立の候補生成モデル「Spec-Drafter」と、候補を対象モデルでまとめて確かめる「Spec-検証」である。
 <!-- survey:auto:end -->
