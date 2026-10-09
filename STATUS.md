@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 11:57:59 JST**
+> 自動生成: **2026-10-09 11:59:18 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-09 09:37:33 JST（2時間20分前）** |
+| 最終maintenance完了 | **10-09 09:37:33 JST（2時間21分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,8 +137,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **47** |
-| 直近6hのDiscovery run | **8** |
-| 直近6hのDiscovery本文確認・分類 | **128** |
+| 直近6hのDiscovery run | **9** |
+| 直近6hのDiscovery本文確認・分類 | **147** |
 | 最終Research完了 | **10-09 11:41:18 JST** |
 | 最終Discovery完了 | **10-09 11:46:17 JST** |
 
@@ -157,10 +157,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **2813ファイル / 13576件** |
-| Codex成果の取り込み待機中 | **0ファイル / 0件** |
-| └ 待機中のaccept | **0件** |
-| └ 待機中のunrelated | **0件** |
-| └ 待機中のborderline | **0件** |
+| Codex成果の取り込み待機中 | **1ファイル / 19件** |
+| └ 待機中のaccept | **13件** |
+| └ 待機中のunrelated | **1件** |
+| └ 待機中のborderline | **5件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
 - 最終Codex分類・受渡し証拠: **10-09 11:46:17 JST** / results / codex-backfill-r472-b21-p03-main-3650a958
