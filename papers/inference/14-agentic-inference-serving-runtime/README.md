@@ -152,7 +152,7 @@
   Haloは「LLM呼出しを1件ずつ速くする」のではなく、同時に走るエージェントワークフロー全体を実行計画として扱う。最新版v2では、同一ツール要求の統合とCPU-GPU協調を加え、強いエージェント基盤に対してバッチ推論最大3.6倍、オンライン処理量最大2.58倍を報告する。
 
 - **2025-05 · [Hexgen-Flow: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
-  実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：7  
   依存するText-to-SQLのLLM呼び出しを、異種GPUへの大域負荷分散と残り期限に基づく局所優先度制御で協調し、問い合わせ全体のSLOを守る。
 
 - **2025-01 · [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md)**  
