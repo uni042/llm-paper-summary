@@ -161,7 +161,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  垂直スケーリングで既存複製の並列度を変える方式は細粒度だが、プロセス再起動、重み再読込、KVキャッシュ再構築が発生し、短時間のバーストに間に合わない。Ascend NPU上で3種のMoE LLMを評価し、従来方式に対してスケールアップ遅延を最大9倍短縮し、スケール処理中の推論処理量を最大2倍にした。
+  数十台の装置にまたがる複製を丸ごと増やす方式は容量を大きな単位でしか増減できず、追加のために全重みを読み直す時間もかかる。拡張操作の所要時間は最速の比較方式の約0.11倍であり、最良条件では約9倍短い。
 
 - **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

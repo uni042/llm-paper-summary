@@ -242,7 +242,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2026-06 · [Cache-Resident LLM Inference in GB-Scale Last-Level Caches](2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本研究はCPUのGB級LLCへ重みを常駐させ、重み計算と注意/KVをソケット分離し、コア局所配置と細粒度同期でDRAM往復と演算子バリアを減らす。
+  この研究は、GPUではなく大容量の最終段キャッシュ（last-level キャッシュ; LLC）を備えたサーバCPUを使い、言語モデルの逐次生成を高速化する実行方式を提案する。著者はAMD EPYC 9684Xを使う複数CPUノードの試作を実装し、同じ計算資源を割り当てたllama.cppと比較する。
 
 - **2026-06 · [ASAP: A Disaggregated and Asynchronous Inference System for MoE Prefill](2026-2606.22541-asap-disaggregated-asynchronous-moe-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -409,7 +409,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：83  
   MoE-Infinityはルーティング履歴から次に再利用される専門家を予測し、GPUキャッシュへ先読みして個人PCのMoEオフロード転送待ちを減らす。
 
 - **2023-12 · [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
@@ -467,7 +467,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：336  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：335  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）

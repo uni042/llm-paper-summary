@@ -30,7 +30,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 - **2025-12 · [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  OD-MoEは常設キャッシュを持たず、軽量化モデルで数層先の専門家を予測して複数GPUへ実行直前に読み込む。予測が外れれば元ルータの専門家を追加ロードする分散エッジ方式である。
+  OD-MoEは、GPUメモリが小さい複数のエッジ装置を協調させて混合専門家モデル（Mixture-of-Experts; MoE）を実行するための分散推論方式である。著者らの10ノード実験では、Mixtral-8x7Bの復号速度が平均3.6925トークン/秒となり、全専門家をGPUへ保持する比較方式の4.8900トークン/秒の75.51%に相当する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
