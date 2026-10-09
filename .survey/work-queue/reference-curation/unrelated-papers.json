@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-09T04:44:47+00:00",
-  "record_count": 11232,
+  "updated_at": "2026-10-09T11:55:41+00:00",
+  "record_count": 11234,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160486,6 +160486,30 @@
         "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
       ],
       "title": "Birdie: Advancing State Space Models with Reward-Driven Objectives and Curricula"
+    },
+    "arXiv:2403.06664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.06664",
+      "identity_tokens": [
+        "arXiv:2403.06664"
+      ],
+      "reason": "一次要旨と著者公開実装READMEを確認。提案はFPGA搭載SmartSSD内でAdam等の学習パラメータ更新を行うSmartUpdate、GPUからの勾配転送を圧縮するSmartComp、学習時のオプティマイザ状態I/Oを減らす専用ストレージ処理であり、評価対象も学習スループットである。現在のサーベイで凍結している学習単独最適化に該当し、推論時のKVキャッシュ・専門家オフロード・推論サービングへの具体的な適用と評価が一次要旨にないため収録対象外。",
+      "first_checked_at": "2026-10-09T11:55:41+00:00",
+      "last_checked_at": "2026-10-09T11:55:41+00:00",
+      "linked_from": [],
+      "title": "Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System"
+    },
+    "arXiv:2504.14960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.14960",
+      "identity_tokens": [
+        "arXiv:2504.14960"
+      ],
+      "reason": "タイトルはMegatron Coreによる大規模MoEモデルの学習並列配置を明示している。対象は訓練中の異種並列マッピングであり、推論配信・専門家オフロード・推論時のメモリ管理への直接的なシステム貢献をタイトルから確認できない。現行の学習単独最適化凍結規則によりタイトル段階で対象外。",
+      "first_checked_at": "2026-10-09T11:55:41+00:00",
+      "last_checked_at": "2026-10-09T11:55:41+00:00",
+      "linked_from": [],
+      "title": "MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core"
     }
   }
 }
