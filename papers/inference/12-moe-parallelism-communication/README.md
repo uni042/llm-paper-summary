@@ -189,7 +189,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 - **2023-03 · [Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference](2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：19  
-  この論文は、混合専門家（Mixture of エキスパート; MoE）が「1トークン当たり少数専門家しか使わないのに、なぜ推論で効率が悪いのか」を言語モデル（Language Modeling; LM）と機械翻訳（Machine Translation; MT）で分解し、動的ゲーティング、専門家バッファ（専門家 Buffering）…
+  提案する三機構は動的ゲート（動的 Gating）、専門家バッファ（専門家 Buffering）、専門家負荷分散（専門家 読み込み Balancing）である。動的ゲートによる最大スループットは、静的方式比で言語モデル6.21～11.23倍、機械翻訳エンコーダ5.75～10.98倍、デコーダ2.58～5.71倍へ改善した。
 
 ### 5年前（2021-11〜2022-10）
 

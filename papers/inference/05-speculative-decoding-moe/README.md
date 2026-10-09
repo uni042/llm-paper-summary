@@ -428,7 +428,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-02 · [Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding](2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md)**  
   実装：[✓](https://github.com/cteant/SPACE) ・ リポジトリ内被引用：5  
-  SPACE（Smart Parallel Auto-Correct デコード）は、通常は1位置しか予測しない自己回帰LLMを半自己回帰教師あり微調整で「複数位置を同時予測できるモデル」へ変え、候補生成と検証を1回のモデル呼出しに同居させる。HumanEval-Xで出力品質を保ちながら2.7〜4.0倍の推論高速化を報告する。
+  SPACE（Smart Parallel Auto-Correct デコード）は、自己回帰（autoregressive）型の大規模言語モデルを、別の小型下書きモデルを使わずに高速化する投機的復号方式である。論文は6B～70B級の複数モデルを評価し、HumanEval-Xのコード生成では2.71～4.04倍の高速化を報告する。
 
 - **2024-10 · [AMUSD: Asynchronous Multi-Device Speculative Decoding for LLM Acceleration](2024-2410.17375-amusd-asynchronous-multi-device-speculative-decoding-for-llm-acceleratio.md)**  
   実装：[✓](https://github.com/BradMcDanel/AMUSD) ・ リポジトリ内被引用：4  

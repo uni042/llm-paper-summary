@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T07:47:23+00:00",
+  "generated_at": "2026-10-09T09:53:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 130,
+  "count": 131,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2549,6 +2549,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b69cf2fe2a3e--libfile_92d607da417c8191b3b5d4fa3c353676--2026-2609.33385-oled-moe-under16kb-reaudit-20261009-0956-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b69cf2fe2a3e--libfile_92d607da417c8191b3b5d4fa3c353676--2026-2609.33385-oled-moe-under16kb-reaudit-20261009-0956-scheduled-chat-00-r01.json",
       "worker_run_key": "20261009-0956-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.17421",
+      "title": "LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification",
+      "source_url": "https://aclanthology.org/2026.acl-long.83.pdf",
+      "returned_at": "2026-10-09T09:51:18+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 482 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6098,
+        "body_paragraphs": 33,
+        "method_chars": 1843,
+        "method_paragraphs": 11,
+        "evaluation_chars": 482,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 482 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0459871944508191af4892fb9538e0e1--2025-2502.17421-longspec-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0459871944508191af4892fb9538e0e1--2025-2502.17421-longspec-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261009-1755-scheduled-chat-00/r01"
     }
   ]
 }
