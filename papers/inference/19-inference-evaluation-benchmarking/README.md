@@ -89,7 +89,7 @@
   枝刈り（枝刈り）方法自体は単純で、ある長さ n の連続層 ブロックについて、そのブロックへの入力表現と通過後表現の角距離（angular distance）を測る。
 
 - **2024-02 · [A Comprehensive Evaluation of Quantization Strategies for Large Language Models](2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   量子化は重みや活性値を少ないビット数で表し、GPUメモリ容量とデータ転送量を減らす代表的なLLM圧縮手法である。結果として、4ビット量子化は多くの条件で非量子化モデルに近い下流性能を維持する。
 
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
