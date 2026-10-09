@@ -232,7 +232,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-11 · [Speculative Decoding in Decentralized LLM Inference: Turning Communication Latency into Computation Throughput](2025-2511.11733-speculative-decoding-in-decentralized-llm-inference-turning-communicatio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Decentralized 投機的復号（DSD）は、投機的復号（投機的復号）の目的を「対象モデルの計算回数削減」だけでなく「分散ノード間の同期回数削減」へ拡張した推論方式である。
+  分散投機的復号（Decentralized 投機的復号、DSD）は、投機的復号を中央集約型GPUサーバから、複数の独立管理ノードへモデルを分割して実行する環境へ拡張した方式である。
 
 ### 2年前（2024-11〜2025-10）
 

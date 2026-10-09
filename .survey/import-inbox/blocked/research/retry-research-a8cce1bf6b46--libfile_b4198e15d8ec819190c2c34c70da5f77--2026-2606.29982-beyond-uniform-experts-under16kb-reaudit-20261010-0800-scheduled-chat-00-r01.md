@@ -70,6 +70,8 @@ references:
 references_checked_at: '2026-09-11'
 references_source: arxiv-html-reference-section
 references_total: 38
+last_audited: null
+audit_version: 0
 ---
 
 # Beyond Uniform Experts：装置別の費用を考慮した混合専門家モデルの推論

@@ -114,7 +114,7 @@
 
 - **2026-08 · [Self-Indexing Attention for Compression-Compatible Sparse Long-Context LLM Inference](2026-2609.13205-self-indexing-attention-for-compression-compatible-sparse-long-context-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  必要なトークンだけを選ぶ疎注意は両段階の演算を減らせるが、入力処理向けのブロック検索器と復号向けの逐次検索器を別々に持つと、索引状態が増え、低ビットKV圧縮とも衝突する。著者らは注意密度を約5%に制限し、LongBenchとRULERで密注意に近い品質を報告する。
+  要点：鍵の直交変換後の符号を、追加の検索器を保存せずに、事前入力処理（プリフィル）と逐次復号（デコード）の双方で利用する。検索の近似性、注意計算そのものの正確性、鍵・値の量子化誤差は別の問題として扱う。
 
 - **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -162,17 +162,17 @@
   実装：[✓](https://github.com/thu-ml/SpargeAttn) ・ リポジトリ内被引用：9  
   自己類似度を使って重要ブロックを予測し、残ったブロックにもGPUワープ単位のsoftmax判定を適用する学習不要の疎注意演算子。近似誤差の許容範囲を層ごとに調整し、言語・画像・動画で実測性能と品質を比較する。
 
-- **2025-07 · [RefreshKV: Updating Small KV Cache During Long-form Generation](2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md)**  
-  実装：[✓](https://github.com/carriex/refreshkv) ・ リポジトリ内被引用：7  
-  従来のKVキャッシュ削除方式は、プリフィル直後や過去の注意得点から残すトークンを選び、それ以外の鍵値を捨てる。
+- **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：8  
+  中心的な前提：入力の大部分が、複数リクエスト間で変化しない固定文書・指示・例示である。前処理で固定文脈の鍵をクラスタ化し、オンラインの問い合わせに関連する元の鍵・値だけを読出す。
 
 - **2025-06 · [SeerAttention-R: Sparse Attention Adaptation for Long Reasoning](2025-2506.08889-seerattention-r-sparse-attention-adaptation-for-long-reasoning.md)**  
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：7  
   思考連鎖が1万トークンを超える推論モデルでは、1トークン生成するたび全過去KVを読む注意が重くなる。SeerAttention-Rは、元モデルを変えずに小さなゲートだけを学習し、「今回のクエリが見るべきKVブロック」を予測してデコード注意を疎化する。
 
-- **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：7  
-  Squeezed 注意機構は、文書検索、コード解析、長いシステム指示など、同じ大きな文脈を複数の要求で使い回す推論を対象とする。Triton製の重心比較と疎FlashAttentionを組み合わせ、H100 NVL上で512K文脈の入力処理が最大4.3倍、生成が4.2倍速いことを示す。
+- **2025-07 · [RefreshKV: Updating Small KV Cache During Long-form Generation](2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md)**  
+  実装：[✓](https://github.com/carriex/refreshkv) ・ リポジトリ内被引用：6  
+  従来のKVキャッシュ削除方式は、プリフィル直後や過去の注意得点から残すトークンを選び、それ以外の鍵値を捨てる。
 
 - **2025-02 · [Tactic: Adaptive Sparse Attention with Clustering and Distribution Fitting for Long-Context LLMs](2025-2502.12216-tactic-adaptive-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

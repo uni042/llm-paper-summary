@@ -34,7 +34,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  TuttiはGPU主導の非同期SSD読込みでKV要求をまとめ、CPU発行の小I/Oを排してGPUへ直接転送し、SSD容量を使いながらKV復元待ちを減らす方式。
+  長い入力文脈や過去の会話を再利用する大規模言語モデル（LLM）の配信では、過去の入力を処理した際の鍵・値キャッシュ（KVキャッシュ）を保存しておけば、同じ接頭辞を再計算せずに済む。提案するのは、KVブロックに対応するGPU向けオブジェクト、GPUから非同期で要求を発行・完了確認する待ち行列、推論カーネルの実行余裕に応じて読み書きを配置する制御の三つである。
 
 - **2025-12 · [EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving](2025-2512.14946-evicpress-joint-compression-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -208,9 +208,9 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：1  
   HillInferはSmartSSD内FPGAでKV全体ではなく重要度内積だけを評価し、CPUの高温KVとSSDの低温KVを選択転送・GPU計算と重ねてI/O待ちを減らす方式。
 
-- **2025-12 · [Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading](2025-2601.19910-understanding-bottlenecks-kv-offloading.md)**  
+- **2026-01 · [Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading](2025-2601.19910-understanding-bottlenecks-kv-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  KV再利用で省いたプリフィル計算と、CPUから戻すKV転送をH100実測・式で比較し、キャッシュ量が増えるといつPCIeが律速へ逆転するかを明らかにする分析。
+  本論文は、長文脈の大規模言語モデル推論で鍵値キャッシュ（KVキャッシュ）をCPUメモリへ退避し、後でGPUへ読み戻す方式が、どの条件で高速化ではなく性能低下を招くかを定量的に分析する。公称64GB/秒のホストからGPUへの転送帯域に対して、実効継続帯域は約15GB/秒であった。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
