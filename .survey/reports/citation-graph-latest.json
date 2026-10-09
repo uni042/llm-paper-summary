@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T17:58:43+00:00",
+  "generated_at": "2026-10-09T18:01:15+00:00",
   "paper_count": 1759,
-  "edge_count": 20712,
+  "edge_count": 20715,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 21,
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 336,
@@ -449,7 +449,7 @@
     "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md": 10,
     "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md": 12,
     "papers/inference/07-kv-cache-optimization-compression/2024-2412.18169-kunserve-elastic-and-efficient-large-language-model-serving-with-paramet.md": 7,
-    "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md": 22,
+    "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md": 23,
     "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md": 8,
     "papers/inference/07-kv-cache-optimization-compression/2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md": 11,
     "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md": 4,
@@ -1152,7 +1152,7 @@
     "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md": 10,
     "papers/inference/13-sparse-attention/2024-2407.02490-minference.md": 74,
     "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md": 15,
-    "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md": 7,
+    "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md": 8,
     "papers/inference/13-sparse-attention/2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md": 7,
     "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md": 26,
     "papers/inference/13-sparse-attention/2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md": 7,
@@ -1317,7 +1317,7 @@
     "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md": 4,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md": 6,
     "papers/inference/19-inference-evaluation-benchmarking/2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md": 12,
-    "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md": 4,
+    "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md": 5,
     "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md": 4,
     "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md": 8,
     "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md": 3,
@@ -9666,10 +9666,13 @@
       "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md"
     ],
     "papers/inference/07-kv-cache-optimization-compression/2026-2608.07458-coinrag.md": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
       "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
       "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
       "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
       "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
     ],
     "papers/inference/07-kv-cache-optimization-compression/2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-l.md": [
