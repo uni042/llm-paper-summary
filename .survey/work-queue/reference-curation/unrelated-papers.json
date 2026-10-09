@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-09T03:08:16+00:00",
-  "record_count": 11230,
+  "updated_at": "2026-10-09T04:22:59+00:00",
+  "record_count": 11231,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160441,6 +160441,18 @@
         "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md"
       ],
       "title": "EMO: Frustratingly Easy Progressive Training of Extendable MoE"
+    },
+    "arXiv:2303.04555": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.04555",
+      "identity_tokens": [
+        "arXiv:2303.04555"
+      ],
+      "reason": "The title identifies a small-space streaming Kernel PCA dimensionality-reduction algorithm and gives no concrete connection to LLM inference, Transformer serving, compression, or deployment efficiency. This is a permitted title-only exclusion for an unambiguously unrelated candidate.",
+      "first_checked_at": "2026-10-09T04:22:59+00:00",
+      "last_checked_at": "2026-10-09T04:22:59+00:00",
+      "linked_from": [],
+      "title": "Streaming Kernel PCA Algorithm With Small Space"
     }
   }
 }
