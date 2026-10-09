@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T03:34:35.948066+00:00",
+  "generated_at": "2026-10-09T03:49:52.013839+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 316,
+  "count": 313,
   "worker_counts": {
-    "scheduled-chat-00": 85,
-    "scheduled-chat-30": 86,
+    "scheduled-chat-00": 83,
+    "scheduled-chat-30": 85,
     "scheduled-chat-45": 145
   },
   "entries": [
@@ -967,28 +967,6 @@
       ]
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.25405-orthrus.md",
-      "canonical_id": "arXiv:2609.25405",
-      "title": "Efficient Iterative Retrieval with Heterogeneous Batching",
-      "file_bytes": 10734,
-      "source_sha256": "a366abd5d9eef62f586a2442f71bbcf0c378440bd777be581894fe26223bbb55",
-      "source_git_blob_sha": "57c86343d02aeea587ccb92c441444a0d669f141",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.970935,
-      "quality_metrics": {
-        "body_chars": 2388,
-        "method_chars": 1047,
-        "evaluation_chars": 244,
-        "limitation_chars": 119
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 244 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2508.19373-hap-hybrid-adaptive-parallelism-for-efficient-mixture-of-experts-inferen.md",
       "canonical_id": "arXiv:2508.19373",
       "title": "HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference",
@@ -1255,28 +1233,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md",
-      "canonical_id": "arXiv:2405.06856",
-      "title": "Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving",
-      "file_bytes": 11121,
-      "source_sha256": "fb0a17045d31c170816edc9068e5b8f4be7fbb80d6b803ed74c54e4274a3c24d",
-      "source_git_blob_sha": "c7ee071b428589389cea45b11a9be2b75e695fab",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.973879,
-      "quality_metrics": {
-        "body_chars": 2790,
-        "method_chars": 738,
-        "evaluation_chars": 351,
-        "limitation_chars": 219
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 351 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/12-moe-parallelism-communication/2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md",
       "canonical_id": "arXiv:2510.02613",
       "title": "ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models",
@@ -1318,26 +1274,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 132 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md",
-      "canonical_id": "arXiv:2410.18311",
-      "title": "CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation",
-      "file_bytes": 11235,
-      "source_sha256": "1c381e110c2b49b0566bbd1113d25bcde44980fc723431be638ec7e2e26a9cc2",
-      "source_git_blob_sha": "07ba375c41002639771f1b14212c3a21f09b3adf",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.92618,
-      "quality_metrics": {
-        "body_chars": 2865,
-        "method_chars": 826,
-        "evaluation_chars": 630,
-        "limitation_chars": 304
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
