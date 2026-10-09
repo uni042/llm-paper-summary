@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T14:55:53.262620+00:00",
+  "generated_at": "2026-10-09T15:22:56.645524+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 274,
+  "count": 266,
   "worker_counts": {
-    "scheduled-chat-00": 91,
-    "scheduled-chat-30": 91,
-    "scheduled-chat-45": 92
+    "scheduled-chat-00": 88,
+    "scheduled-chat-30": 89,
+    "scheduled-chat-45": 89
   },
   "entries": [
     {
@@ -181,30 +181,6 @@
       "warnings": [
         "日本語比率 72.3% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.22158-stepkv-step-aware-kv-cache-compression-for-llm-agents.md",
-      "canonical_id": "arXiv:2609.22158",
-      "title": "StepKV: Step-Aware KV Cache Compression for LLM Agents",
-      "file_bytes": 9876,
-      "source_sha256": "72c56360aff7c3b2f9ee265dc7cecc76abdf06aa687c752edf518a12b9093543",
-      "source_git_blob_sha": "b5ef9ce78477d7250a441de4e4c573527d4df0b9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.909788,
-      "quality_metrics": {
-        "body_chars": 1994,
-        "method_chars": 582,
-        "evaluation_chars": 176,
-        "limitation_chars": 165
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1994 < 2200",
-        "16KB未満再監査: 手法説明量 582 < 700",
-        "16KB未満再監査: 評価説明量 176 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.34727-dynamic-flow-static-graph-kv-cache-reuse-for-efficient-llm-serving-on-mo.md",
@@ -599,29 +575,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md",
-      "canonical_id": "arXiv:2502.15734",
-      "title": "Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation",
-      "file_bytes": 10546,
-      "source_sha256": "8047f980593d95a45e25334093e27ba317211bc90206261567fdc682eaad7cae",
-      "source_git_blob_sha": "44d7c2cb8acfbd18ef25de0882e24f0158b6195f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.852506,
-      "quality_metrics": {
-        "body_chars": 2013,
-        "method_chars": 758,
-        "evaluation_chars": 94,
-        "limitation_chars": 188
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2013 < 2200",
-        "16KB未満再監査: 評価説明量 94 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
       "canonical_id": "arXiv:2506.06472",
       "title": "Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage",
@@ -682,29 +635,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 132 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md",
-      "canonical_id": "arXiv:2602.04816",
-      "title": "Horizon-LM: A RAM-Centric Architecture for LLM Training",
-      "file_bytes": 10645,
-      "source_sha256": "520a6c99fe65b91d4309aafdcd706fbbe8a1a80280c891569a67cf9b5ccc05fc",
-      "source_git_blob_sha": "34ff852304c562e78a918ee102101af79d145ddf",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.919688,
-      "quality_metrics": {
-        "body_chars": 2925,
-        "method_chars": 566,
-        "evaluation_chars": 421,
-        "limitation_chars": 267
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 566 < 700",
-        "16KB未満再監査: 評価説明量 421 < 500"
       ],
       "warnings": []
     },
@@ -792,26 +722,6 @@
         "method_chars": 870,
         "evaluation_chars": 1408,
         "limitation_chars": 223
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md",
-      "canonical_id": "arXiv:2510.00636",
-      "title": "Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution",
-      "file_bytes": 11012,
-      "source_sha256": "b881b60126398c81dd0975bd656ef4f4e96e9680f5e64616f79daa84d39d328e",
-      "source_git_blob_sha": "c342a8e1171e4189e00dbfe9168d92a24ae87bfc",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.861937,
-      "quality_metrics": {
-        "body_chars": 3111,
-        "method_chars": 899,
-        "evaluation_chars": 979,
-        "limitation_chars": 254
       },
       "mechanical_failures": [],
       "warnings": []
@@ -1184,7 +1094,7 @@
       "file_bytes": 11554,
       "source_sha256": "e09fd38ccd22e4fca95db6519c5b16a40a97e0d820f077ef93cff2cc3278c9f8",
       "source_git_blob_sha": "d8dfa8a089775a0b260ae3a9fa90a5bb9263e1d9",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 1.0,
@@ -1204,7 +1114,7 @@
       "file_bytes": 11561,
       "source_sha256": "8c963d113155f95d844588f5c8cc3a2e00d23669e621531c699e9099f7a0dadd",
       "source_git_blob_sha": "2fb466160c7b7da7f6c37bb64f824865016d74d2",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.849363,
@@ -1240,26 +1150,6 @@
       "warnings": [
         "日本語比率 73.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
-      "canonical_id": "arXiv:2407.15891",
-      "title": "RazorAttention: Efficient KV Cache Compression Through Retrieval Heads",
-      "file_bytes": 11648,
-      "source_sha256": "abff050807679948867a34fc33c2ad2ed82940985b055b21d484b4b3af646b12",
-      "source_git_blob_sha": "7b64c4060f9cd75667d51290f7edb3aa84e8e014",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.907627,
-      "quality_metrics": {
-        "body_chars": 3259,
-        "method_chars": 1056,
-        "evaluation_chars": 880,
-        "limitation_chars": 266
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2607.11586-hcrmap.md",
@@ -1306,26 +1196,6 @@
       "warnings": [
         "日本語比率 79.6% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md",
-      "canonical_id": "arXiv:2512.17570",
-      "title": "GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping",
-      "file_bytes": 11673,
-      "source_sha256": "0017b3ddefc97cc97a34420fa620e4c9084282e200acd4f0aaca43ff9c922c1b",
-      "source_git_blob_sha": "34d499036ba8bb3daec26d6f9b5f000d1619abe4",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.860256,
-      "quality_metrics": {
-        "body_chars": 2882,
-        "method_chars": 1282,
-        "evaluation_chars": 893,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.07458-coinrag.md",
@@ -1862,26 +1732,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
-      "canonical_id": "arXiv:2502.12224",
-      "title": "Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate",
-      "file_bytes": 12154,
-      "source_sha256": "11aa2d54a81a80820603a16608bdb2eb1ba0aae9ed1b517837eeb0798a058ded",
-      "source_git_blob_sha": "598d0037c59eeab988636e64b0007fb89e05fa85",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.833537,
-      "quality_metrics": {
-        "body_chars": 2810,
-        "method_chars": 1508,
-        "evaluation_chars": 749,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md",
       "canonical_id": "arXiv:2607.01775",
       "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding",
@@ -1925,29 +1775,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 695 < 700",
         "16KB未満再監査: 評価説明量 110 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
-      "canonical_id": "arXiv:2504.19874",
-      "title": "TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate",
-      "file_bytes": 12191,
-      "source_sha256": "d3070121f278d3db52424d28a83348cae14e3ae2869a1c2a194a21852f3c89f4",
-      "source_git_blob_sha": "b177265b39d8fdf5f703dc384c210a4405f3c528",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.834014,
-      "quality_metrics": {
-        "body_chars": 2333,
-        "method_chars": 555,
-        "evaluation_chars": 337,
-        "limitation_chars": 126
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 555 < 700",
-        "16KB未満再監査: 評価説明量 337 < 500"
       ],
       "warnings": []
     },
