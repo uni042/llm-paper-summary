@@ -14,7 +14,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 - **2025-11 · [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)**  
   実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：2  
-  DynaExqは、ルーティング履歴から利用頻度の高い専門家を高ビットへ昇格し、低頻度専門家を低ビットに保って、限られたHBMを品質に効く重みへ配分する。
+  DynaExqは、専門家混合モデル（Mixture of エキスパート; MoE）を単一GPUの限られた高帯域メモリへ載せるため、専門家ごとの量子化精度を推論中に変更するシステムである。論文はQwen3-30B-A3B、Qwen3-80B-A3B、Phi-3.5-MoEをRTX A6000 48GBの単一GPUで測定した。
 
 - **2026-07 · [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

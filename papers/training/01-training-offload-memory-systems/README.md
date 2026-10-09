@@ -46,7 +46,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2025-05 · [MemAscend: System Memory Optimization for SSD-Offloaded LLM Fine-Tuning](2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  SSDオフロード時にCPU側で過剰確保する転送バッファや検査用一時領域を必要量へ縮め、余分なRAM消費とNVMeのコピーを減らしてLLM微調整を支える方式。
+  大規模言語モデルを微調整する際、モデル重み・勾配・最適化器状態をNVMe SSDへ退避すると、GPUの専用メモリ容量を超える学習が可能になる。論文はZeRO-Infinity系の比較でピークシステムメモリを平均55.7%削減し、128GiB RAMの構成で扱える文脈長を16,384から131,072へ、あるいはバッチを4から32へ増やせる条件を報告する。
 
 ### 3年前（2023-11〜2024-10）
 

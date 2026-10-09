@@ -266,7 +266,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2026-05 · [CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution](2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  CoX-MoEは複数マイクロバッチの同一専門家向けトークンを集約して大きなGEMMにし、Intel AMX CPUとGPUへ分担実行して小規模GEMMとオフロード転送の非効率を減らす。
+  CoX-MoEは、専門家混合モデル（Mixture of エキスパート; MoE）を限られたGPUメモリで大バッチ推論する際の処理率を改善する、CPUとGPUの協調実行システムである。
 
 - **2026-05 · [Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference](2026-2605.22416-asymmetric-virtual-memory-paging-hybrid-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
