@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T09:08:21.993243+00:00",
+  "generated_at": "2026-10-09T09:57:58.424396+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 299,
+  "count": 297,
   "worker_counts": {
     "scheduled-chat-00": 76,
-    "scheduled-chat-30": 78,
+    "scheduled-chat-30": 76,
     "scheduled-chat-45": 145
   },
   "entries": [
@@ -2737,28 +2737,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md",
-      "canonical_id": "arXiv:2402.11809",
-      "title": "Generation Meets Verification: Accelerating Large Language Model Inference with Smart Parallel Auto-Correct Decoding",
-      "file_bytes": 12335,
-      "source_sha256": "17c6eb2b0d3e8b7b5dfcded81da16904903d4707fe1ec7df1eb9956664b63c01",
-      "source_git_blob_sha": "6135755c23687903b5fbc9651672640ed96abd1e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.974669,
-      "quality_metrics": {
-        "body_chars": 2919,
-        "method_chars": 1001,
-        "evaluation_chars": 110,
-        "limitation_chars": 313
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 110 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
       "canonical_id": "arXiv:2307.02486",
       "title": "LongNet: Scaling Transformers to 1,000,000,000 Tokens",
@@ -2823,28 +2801,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 488 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md",
-      "canonical_id": "arXiv:2303.06182",
-      "title": "Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference",
-      "file_bytes": 12366,
-      "source_sha256": "a714b81b9b919eb5060f9b52860f035412ec2b3c132244bc848bc8811609cf4d",
-      "source_git_blob_sha": "6a2b5bab02c92a042c1b477dbb621e9b9883f25d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.893237,
-      "quality_metrics": {
-        "body_chars": 2829,
-        "method_chars": 771,
-        "evaluation_chars": 274,
-        "limitation_chars": 257
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 274 < 500"
       ],
       "warnings": []
     },
