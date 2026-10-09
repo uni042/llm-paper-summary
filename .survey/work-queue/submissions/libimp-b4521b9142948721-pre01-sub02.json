@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff",
+      "source_url": "https://arxiv.org/abs/2502.20704",
+      "year": 2025,
+      "published": "2025-02-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) enforces strict distributional equivalence to the target model when accepting candidate tokens. While it maintains the target model's generation quality, this strict equivalence limits the speedup achievable by SD and prevents users from trading deviations from the target distribution in exchange for further inference speed gains. To address these limitations, we introduce Fuzzy Speculative Decoding (FSD) - a decoding algorithm that generalizes SD by accepting candidate tokens based on the divergences between the target and draft model distributions. By allowing for controlled divergence from the target model, FSD enables users to flexibly trade generation quality for inference speed. Across several benchmarks, our method is able to achieve significant runtime improvements of over 5 tokens per second faster than SD at only an approximate 2% absolute reduction in benchmark accuracy. In many cases, FSD is even able to match SD benchmark accuracy at over 2 tokens per second faster, demonstrating that distributional equivalence is not necessary to maintain target model performance. Furthermore, FSD can be seamlessly integrated into existing SD extensions; we demonstrate this by applying FSD to EAGLE-2, greatly enhancing this existing extension's efficiency while allowing it to leverage FSD's tunable quality-speed trade-off.",
+      "identifiers": [
+        "SemanticScholar:c110e21884b7167b0ac07cdee9bd77e42ec68bdb"
+      ],
+      "semantic_scholar_id": "c110e21884b7167b0ac07cdee9bd77e42ec68bdb",
+      "canonical_id": "arXiv:2502.20704",
+      "arxiv_id": "2502.20704",
+      "doi": "10.48550/arXiv.2502.20704",
+      "authors": [
+        "Maximilian Holsman",
+        "Yukun Huang",
+        "Bhuwan Dhingra"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 588,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Generalizes speculative decoding by accepting controlled distribution divergence, explicitly trading a small quality change for faster LLM generation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query",
+      "source_url": "https://arxiv.org/abs/2505.20334",
+      "year": 2025,
+      "published": "2025-05-24",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) rely on key-value cache (KV cache) to accelerate decoding by reducing redundant computations. However, the KV cache memory usage grows substantially with longer text sequences, posing challenges for efficient deployment. Existing KV cache eviction methods prune tokens using prefilling-stage attention scores, causing inconsistency with actual inference queries, especially under tight memory budgets. In this paper, we propose Lookahead Q-Cache (LAQ), a novel eviction framework that generates low-cost pseudo lookahead queries to better approximate the true decoding-stage queries. By using these lookahead queries as the observation window for importance estimation, LAQ achieves more consistent and accurate KV cache eviction aligned with real inference scenarios. Experimental results on LongBench and Needle-in-a-Haystack benchmarks show that LAQ outperforms existing methods across various budget levels, achieving a 1 $\\sim$ 4 point improvement on LongBench under limited cache budget. Moreover, LAQ is complementary to existing approaches and can be flexibly combined to yield further improvements.",
+      "identifiers": [
+        "SemanticScholar:b19879903aa52d9688373af1079ab1ef212d6ca8"
+      ],
+      "semantic_scholar_id": "b19879903aa52d9688373af1079ab1ef212d6ca8",
+      "canonical_id": "arXiv:2505.20334",
+      "arxiv_id": "2505.20334",
+      "doi": "10.48550/arXiv.2505.20334",
+      "authors": [
+        "Yixuan Wang",
+        "Shi-Yu Ji",
+        "Yijun Liu",
+        "Yuzhuang Xu",
+        "Yang Xu",
+        "Qing-Fu Zhu",
+        "Wanxiang Che"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Uses inexpensive pseudo lookahead queries to align cache-eviction importance with decoding queries, improving quality under constrained LLM KV-cache budgets.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DecDEC: A Systems Approach to Advancing Low-Bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2412.20185",
+      "year": 2024,
+      "published": "2024-12-28",
+      "venue": "USENIX Symposium on Operating Systems Design and Implementation",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization of Large Language Models (LLMs) has recently gained popularity, particularly for on-device settings with limited hardware resources. While efficient, quantization inevitably degrades model quality, especially in aggressive low-bit settings such as 3-bit and 4-bit precision. In this paper, we propose DecDEC, an inference scheme that improves the quality of low-bit LLMs while preserving the key benefits of quantization: GPU memory savings and latency reduction. DecDEC stores the residual matrix -- the difference between full-precision and quantized weights -- in CPU, and dynamically fetches the residuals for only a small portion of the weights. This portion corresponds to the salient channels, marked by activation outliers, with the fetched residuals helping to correct quantization errors in these channels. Salient channels are identified dynamically at each decoding step by analyzing the input activations -- this enables adaptation to the dynamic nature of activation distribution, thus maximizing the effectiveness of error compensation. We demonstrate the effectiveness of DecDEC by augmenting state-of-the-art quantization methods. For example, DecDEC reduces the perplexity of a 3-bit Llama-3-8B-Instruct model from 10.15 to 9.12 -- outperforming its 3.5-bit counterpart -- while adding less than 0.0003\\% to GPU memory usage and incurring only a 1.7\\% inference slowdown on NVIDIA RTX 4050 Mobile.",
+      "identifiers": [
+        "SemanticScholar:e2584f00b9d5c6263f5c201e53a1390c534aa436"
+      ],
+      "semantic_scholar_id": "e2584f00b9d5c6263f5c201e53a1390c534aa436",
+      "canonical_id": "arXiv:2412.20185",
+      "arxiv_id": "2412.20185",
+      "authors": [
+        "Yeonhong Park",
+        "Jake Hyun",
+        "Hojoon Kim",
+        "Jae W. Lee"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 650,
+        "matched_prestigious_venue": "Operating Systems Design and Implementation"
+      },
+      "reason": "Fetches residuals for salient activation-outlier channels during decoding to recover low-bit quantized LLM quality with minimal memory and latency overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Case for a Simulation-Driven Exploration of Distributed GenAI Platforms",
+      "source_url": "https://doi.org/10.1145/3805621.3807623",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of Generative AI (GenAI) workloads has driven the emergence of inference serving platforms like llm-d and Nvidia Dynamo. However, exploring the design space for these platforms, especially for large-scale, multi-layer optimizations, remains prohibitively expensive and slow due to limited hardware access and high engineering overheads. Current evaluation methods often focus on isolated components, failing to capture the complex interplay between hardware components, scheduling policies, and dynamic GenAI workloads. We argue that the design space exploration of GenAI platforms can be accelerated by leveraging a simulation-based approach that offers a fast, cheap, and scalable methodology to rapidly prototype and validate new ideas. To this end, we present Opal, an open-source, discrete-event simulation framework. Unlike prior simulators, Opal models interactions across multiple layers of the inference stack from hardware to workloads, enabling a holistic analysis of system-level behaviors and trade-offs. Opal is designed to be simple, extensible, reproducible, and fast, allowing researchers to rapidly explore a wide range of deployment scenarios and optimization strategies. In this paper, we present our motivation and Opal's design, and seek feedback from the community on open challenges.",
+      "identifiers": [
+        "SemanticScholar:1cb63486559f33ec63150defeb30b288223e9269"
+      ],
+      "semantic_scholar_id": "1cb63486559f33ec63150defeb30b288223e9269",
+      "doi": "10.1145/3805621.3807623",
+      "canonical_id": "DOI:10.1145/3805621.3807623",
+      "authors": [
+        "Animesh Trivedi",
+        "Radu Stoica",
+        "J. Cohn",
+        "Danny Harnik",
+        "Yue Zhu",
+        "Jonathan Terner",
+        "Guy Margalit",
+        "Frank B. Schmuck",
+        "Vasily Tarasov",
+        "S. Sundararaman"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": "EuroSys"
+      },
+      "reason": "Presents Opal, a discrete-event simulator to explore cross-layer hardware, scheduling, and workload tradeoffs in distributed GenAI inference platforms.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Omni-LUT: Energy-Efficient LUT-Based Accelerator with Hardware-Aware KV Cache Quantization",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00037",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference incurs substantial computation and energy consumption. Lookup-table (LUT)-based general matrix multiplication (GEMM) accelerators reduce this burden by replacing costly multiplications with table lookups. However, existing designs only support activation-weight GEMM (AW-GEMM) in LLM linear layers, while LUT execution for activation-activation GEMM (AA-GEMM) in attention has not been realized. As AA-GEMM is a major contributor to the computation and energy costs of LLM inference in longcontext scenarios, supporting both GEMM types-not just AW-GEMM-is crucial. To solve this problem, we propose Omni-LUT, a hardware-software co-designed LUT-based GEMM accelerator that supports both AW-GEMM in linear layers and AA-GEMM in attention with efficient LUT execution. Omni-LUT uses a hardware-aware Key-Value (KV) cache quantization design that combines offline calibration with lightweight online quantization, preserving model accuracy while enabling compatibility with LUT-based GEMM accelerators. It also supports a more accurate quantization direction by leveraging quantization compensation during LUT creation. Omni-LUT further comprises a phaseadaptive hybrid-stationary LUT-based systolic array to improve the efficiency of both the prefill and decode phases in LLMs. Across diverse long context workloads, Omni-LUT achieves $\\mathbf{1. 2 5} \\times \\mathbf{- 1. 9 1} \\times$ higher energy efficiency than the state-of-the-art (SOTA) LUT-based GEMM accelerator under an equal peakthroughput hardware setup, while maintaining competitive model accuracy compared with SOTA KV quantization methods.",
+      "identifiers": [
+        "SemanticScholar:3c4bbd7bbb7886620bfc639ba8126b4c46f42a59"
+      ],
+      "semantic_scholar_id": "3c4bbd7bbb7886620bfc639ba8126b4c46f42a59",
+      "doi": "10.1109/ISCA66397.2026.00037",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00037",
+      "authors": [
+        "Cheng-Han Tsai",
+        "Kuan-Chen Chou",
+        "Yu-Hsin Wang",
+        "Chieh-Dun Wen",
+        "Tsung-Tai Yeh"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "Co-designs LUT GEMM hardware and KV-cache quantization for attention and linear layers, targeting lower energy use in long-context LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b4521b914294",
+    "round": "libimp-b4521b9142948721-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 20,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b4521b9142948721-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b4521b9142948721-pre01.json",
+    "receipt": "sha256:59fe65a3b76213c69f6def8a7d4ef856395dde90edc0e55ee423714f642c9475"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b4521b914294",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

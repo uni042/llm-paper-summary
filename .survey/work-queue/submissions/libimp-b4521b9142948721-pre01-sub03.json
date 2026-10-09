@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "APB: Accelerating Distributed Long-Context Inference by Passing Compressed Context Blocks across GPUs",
+      "source_url": "https://arxiv.org/abs/2502.12085",
+      "year": 2025,
+      "published": "2025-02-17",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While long-context inference is crucial for advancing large language model (LLM) applications, its prefill speed remains a significant bottleneck. Current approaches, including sequence parallelism strategies and compute reduction through approximate attention mechanisms, still fall short of delivering optimal inference efficiency. This hinders scaling the inputs to longer sequences and processing long-context queries in a timely manner. To address this, we introduce APB, an efficient long-context inference framework that leverages multi-host approximate attention to enhance prefill speed by reducing compute and enhancing parallelism simultaneously. APB introduces a communication mechanism for essential key-value pairs within a sequence parallelism framework, enabling a faster inference speed while maintaining task performance. We implement APB by incorporating a tailored FlashAttn kernel alongside optimized distribution strategies, supporting diverse models and parallelism configurations. APB achieves speedups of up to 9.2x, 4.2x, and 1.6x compared with FlashAttn, RingAttn, and StarAttn, respectively, without any observable task performance degradation. We provide the implementation and experiment code of APB in https://github.com/thunlp/APB.",
+      "identifiers": [
+        "SemanticScholar:f317d563bfe200e1cc247c9d43fa35b1659b6c66"
+      ],
+      "semantic_scholar_id": "f317d563bfe200e1cc247c9d43fa35b1659b6c66",
+      "canonical_id": "arXiv:2502.12085",
+      "arxiv_id": "2502.12085",
+      "doi": "10.48550/arXiv.2502.12085",
+      "authors": [
+        "Yu-Xiang Huang",
+        "Mingye Li",
+        "Xu Han",
+        "Chao-Jun Xiao",
+        "Weilin Zhao",
+        "Sun Ao",
+        "Hao Zhou",
+        "Jie Zhou",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 599,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Uses compressed context blocks and multi-host approximate attention to reduce prefill compute and communication overhead for distributed long-context inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HCSpec: Two-Tier Horizontal Cascade Speculative Decoding for High-Efficiency Large Language Model Inference",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.353",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:6b0e82783792e7fabda9a5bf2c0df85abd8794a6"
+      ],
+      "semantic_scholar_id": "6b0e82783792e7fabda9a5bf2c0df85abd8794a6",
+      "doi": "10.18653/v1/2026.acl-long.353",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.353",
+      "authors": [
+        "Yizhou Zhang",
+        "Si-Ming Chen",
+        "Haopeng Ye",
+        "Er-Hu Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Uses heterogeneous position-specialized draft modules in a two-tier cascade to improve acceptance efficiency and end-to-end speculative LLM decoding speed.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Speculative Sampling with Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2601.12212",
+      "year": 2026,
+      "published": "2026-01-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference time latency has remained an open challenge for real world applications of large language models (LLMs). State-of-the-art (SOTA) speculative sampling (SpS) methods for LLMs, like EAGLE-3, use tree-based drafting to explore multiple candidate continuations in parallel. However, the hyperparameters controlling the tree structure are static, which limits flexibility and efficiency across diverse contexts and domains. We introduce Reinforcement learning for Speculative Sampling (Re-SpS), the first reinforcement learning (RL)-based framework for draft tree hyperparameter optimization. Re-SpS dynamically adjusts draft tree hyperparameters in real-time, learning context-aware policies that maximize generation speed by balancing speculative aggression with computational overhead. It leverages efficient state representations from target model hidden states and introduces multi-step action persistence for better context modeling. Evaluation results across five diverse benchmarks demonstrate consistent improvements over the SOTA method EAGLE-3, achieving up to 5.45$\\times$ speedup over the backbone LLM and up to 1.12$\\times$ speedup compared to EAGLE-3 across five diverse benchmarks, with no loss in output fidelity.",
+      "identifiers": [
+        "SemanticScholar:7f896406e50a701eef8d248a03f40c25f91a73ae"
+      ],
+      "semantic_scholar_id": "7f896406e50a701eef8d248a03f40c25f91a73ae",
+      "canonical_id": "arXiv:2601.12212",
+      "arxiv_id": "2601.12212",
+      "doi": "10.48550/arXiv.2601.12212",
+      "authors": [
+        "Chenan Wang",
+        "Dan Shi",
+        "Hai-Peng Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Applies context-aware reinforcement learning to adjust speculative draft-tree hyperparameters in real time, improving inference speed while preserving output fidelity.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+      "source_url": "https://arxiv.org/abs/2609.05565",
+      "year": 2026,
+      "published": "2026-09-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) sustainability is increasingly a serving-systems problem, not only a training problem. In production, energy and carbon impact depend on more than model size: workload shape, batching, key-value (KV) cache reuse, prefill/decode placement, model and accelerator choice, power state, geographic carbon intensity, and service-level objectives (SLOs) all matter. Recent systems papers study many of these factors separately. This paper connects those results and asks a practical engineering question: what do they imply when the decision point is a distributed inference control plane such as llm-d? The contribution here is synthesis, not a new set of benchmark results. Reported performance, energy, carbon, and cost improvements remain the results of the cited papers and systems. I group the literature into recurring design patterns and use those patterns to sketch a Sustainable Inference Control Plane (SICP) for llm-d. The proposed control plane would consider latency, energy, carbon, cache reuse, serving cost, and quality when routing and scaling, while keeping TTFT/TPOT SLOs as hard constraints. I also outline an evaluation framework based on SLO-satisfied goodput per joule and per gram CO2e, together with a reproducible experimental plan. The main observation from connecting the literature is that sustainable LLM inference is unlikely to come from one\"green\"model or one accelerator; it is more naturally treated as a control problem across model, phase, cache, hardware, replica, region, and time.",
+      "identifiers": [
+        "SemanticScholar:fa21b8ff0a94101015ddb473b6d36129cb9a5bab"
+      ],
+      "semantic_scholar_id": "fa21b8ff0a94101015ddb473b6d36129cb9a5bab",
+      "canonical_id": "arXiv:2609.05565",
+      "arxiv_id": "2609.05565",
+      "authors": [
+        "Twinkll Sisodia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Synthesizes serving-system evidence into an energy-, carbon-, cache-, and SLO-aware distributed inference control-plane agenda for routing and scaling LLM deployments.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Predicting Quantization Price for Selecting PTQ Configurations Before Deployment",
+      "source_url": "https://arxiv.org/abs/2609.28270",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-space post-training quantization (PTQ) must choose finite formats, granularities, quantizer families, transformations, and bits before the completed quantized model reveals its output-distribution drift. Existing PTQ methods predict important pieces of this degradation, including reconstruction error, Hessian sensitivity, transformation effects, and downstream loss, but these pieces are usually scored after fixing the quantization geometry or inside separate configuration families. We formulate weight-space PTQ as pre-deployment configuration selection using priced layer-output error. Each admissible layer configuration is treated as an error generator with a deployment cost, which induces a layer-output error covariance $\\boldsymbol{\\Sigma}_l(\\alpha_l)$, and the full-precision model prices that covariance by downstream curvature, $\\widehat{\\rho}_l(\\alpha_l)=\\frac{1}{2}\\operatorname{Tr}\\left(\\widehat{\\mathbf{H}}_l\\,\\widehat{\\boldsymbol{\\Sigma}}_l(\\alpha_l)\\right)$. The price follows from full-precision-to-quantized forward KL, whose first-order term cancels at the reference model. It turns reconstruction and diagonal scores into reduced proxies that drop price factors, while finite formats, codebooks, granularities, and equivalent transformations become comparable candidates through the covariances they induce and the costs they pay. A trace reduction then yields a calibration-time price table and a budgeted price-guided selector, making fixed-geometry bit allocation a special case rather than the organizing problem.",
+      "identifiers": [
+        "SemanticScholar:10ba7bffb91332e528324d68d4faf0ca2c0b9b47"
+      ],
+      "semantic_scholar_id": "10ba7bffb91332e528324d68d4faf0ca2c0b9b47",
+      "canonical_id": "arXiv:2609.28270",
+      "arxiv_id": "2609.28270",
+      "authors": [
+        "Jun-Bin Qiu",
+        "Jian Mu",
+        "Wei-Tong Zhang",
+        "Yao Shu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Prices layer-output quantization error against downstream curvature and deployment cost to choose among PTQ formats/configurations before deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b4521b914294",
+    "round": "libimp-b4521b9142948721-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 20,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b4521b9142948721-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b4521b9142948721-pre01.json",
+    "receipt": "sha256:59fe65a3b76213c69f6def8a7d4ef856395dde90edc0e55ee423714f642c9475"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b4521b914294",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

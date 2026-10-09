@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DimPO: Dimensionality Reduction for Attention using Preference Optimization",
+      "source_url": "https://arxiv.org/abs/2609.32579",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A linear projection can reduce the dimension of query and key vectors without updating the pretrained model, but it remains unclear which training objective best preserves model behavior. We ask whether preferences over keys and attention mass on the highest-weighted keys provide a better signal than matching the full attention distribution with KL divergence, especially in long-context settings. We introduce DimPO, which combines listwise preference optimization with a lightweight top-k cross-entropy term for head-fidelity. DimPO is trained offline from the attention patterns of a frozen language model, with one map per layer, shared by the query and the keys and trained separately from the other layers. Across LLaMA3.2-3B, LLaMA3.1-8B, Qwen2.5-7B, and Qwen3-4B Instruct models, pairwise preference objectives outperform the triplet baseline and retain 98% of the original score on short-context tasks when projecting to half the dimension on the last 40% of the layers. With more projected layers or on long-context RULER, they degrade rapidly. In contrast, KL and DimPO, which use every key during training, retain about 95% of the original RULER 4k score on the 8B model when projecting up to 50% of the layers. KL-based projections remain closer to the original attention distribution and attention output, yet DimPO achieves better downstream performance. Beyond 50% of projected layers, DimPO increasingly outperforms KL on tasks including SQuAD, common-word extraction, frequent-word extraction, and variable tracking. These results suggest that under dimensionality reduction, preserving the ordering and concentration of task-relevant attention can matter more than reproducing the full attention distribution.",
+      "identifiers": [
+        "SemanticScholar:24f14da12b17c0c90785dd925cf27259ef21d3e0"
+      ],
+      "semantic_scholar_id": "24f14da12b17c0c90785dd925cf27259ef21d3e0",
+      "canonical_id": "arXiv:2609.32579",
+      "arxiv_id": "2609.32579",
+      "authors": [
+        "Vojtěch Lanz",
+        "Yu-Fei Cui",
+        "Prasanna Parthasarathi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Learns low-dimensional query/key projections from attention preference signals to reduce attention dimensions while retaining task-relevant behavior.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "X-former Elucidator: Reviving Efficient Attention for Long Context Language Modeling",
+      "source_url": "https://doi.org/10.24963/ijcai.2024/904",
+      "year": 2024,
+      "published": "2024-08-01",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based LLMs are becoming increasingly important in various AI applications. However, apart from the success of LLMs, the explosive demand of long context handling capabilities is a key and in-time problem for both academia and industry.\n\nDue to the limitations from the quadratic complexity of the attention mechanism, long context scenarios require much more resources for LLM development and deployment, bringing huge challenges to the underlying AI infrastructure.\n\nMeanwhile, we observe that there is a trend of reviving previous efficient attention mechanisms to latest LLMs.\n\nHowever, it still remains an open question about how to select from these diverse approaches in practice.\n\nIn this paper, we answer this question from several aspects.\n\nFirst, we revisit these latest long-context LLM innovations and discuss their relationship with prior approaches with a novel and comprehensive taxonomy.\n\nNext, we conduct a thorough evaluation over various types of workloads considering both efficiency and effectiveness.\n\nFinally, we provide an in-depth analysis, summarize our key findings, and offer insightful suggestions on the trade-offs of designing and deploying efficient attention mechanisms for Transformer-based LLMs.",
+      "identifiers": [
+        "SemanticScholar:dcfc77c92256fb135cd5eaa1c235e77c251cb87d"
+      ],
+      "semantic_scholar_id": "dcfc77c92256fb135cd5eaa1c235e77c251cb87d",
+      "doi": "10.24963/ijcai.2024/904",
+      "canonical_id": "DOI:10.24963/ijcai.2024/904",
+      "authors": [
+        "Xupeng Miao",
+        "Shen-Han Zhu",
+        "Fang-Cheng Fu",
+        "Ziyu Guo",
+        "Zhi Yang",
+        "Yao-Feng Tu",
+        "Zhi-Hao Jia",
+        "Bin Cui"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 799,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Survey and evaluation of efficient-attention alternatives for long-context LLM development and deployment, comparing efficiency, effectiveness, and tradeoffs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "STAT: Shrinking Transformers After Training",
+      "source_url": "https://arxiv.org/abs/2406.00061",
+      "year": 2024,
+      "published": "2024-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present STAT: a simple algorithm to prune transformer models without any fine-tuning. STAT eliminates both attention heads and neurons from the network, while preserving accuracy by calculating a correction to the weights of the next layer. Each layer block in the network is compressed using a series of principled matrix factorizations that preserve the network structure. Our entire algorithm takes minutes to compress BERT, and less than three hours to compress models with 7B parameters using a single GPU. Using only several hundred data examples, STAT preserves the output of the network and improves upon existing gradient-free pruning methods. It is even competitive with methods that include significant fine-tuning. We demonstrate our method on both encoder and decoder architectures, including BERT, DistilBERT, and Llama-2 using benchmarks such as GLUE, Squad, WikiText2.",
+      "identifiers": [
+        "SemanticScholar:3f728a611e641b61f6ce9385879a4e99a8384884"
+      ],
+      "semantic_scholar_id": "3f728a611e641b61f6ce9385879a4e99a8384884",
+      "canonical_id": "arXiv:2406.00061",
+      "arxiv_id": "2406.00061",
+      "doi": "10.48550/arXiv.2406.00061",
+      "authors": [
+        "Megan Flynn",
+        "Alexander Wang",
+        "D. Alvarez",
+        "C. De Sa",
+        "Anil Damle"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 863,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Prunes attention heads and neurons after training using matrix factorizations and weight correction, compressing BERT and decoder LLMs with limited accuracy loss.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OracleKV: Oracle Guidance for Question-Independent KV Cache Eviction",
+      "source_url": "https://www.semanticscholar.org/paper/285c703584d797e71885a6cf3ce87864bbba8ab9",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9"
+      ],
+      "semantic_scholar_id": "285c703584d797e71885a6cf3ce87864bbba8ab9",
+      "canonical_id": "SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9",
+      "authors": [
+        "Yuan-Bing Zhu",
+        "Zhen-Heng Tang",
+        "Xiang-Hong Liu",
+        "Ang Li",
+        "Bo Li",
+        "Xiaowen Chu",
+        "BoHan",
+        "Niah MultiKey",
+        "Niah MultiQuery",
+        "Niah MultiValue"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Uses dialogue-derived preference guidance to select KV-cache entries without future queries, targeting memory and computation costs in long-context LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Don't Pay Attention",
+      "source_url": "https://arxiv.org/abs/2506.11305",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer has become the de facto standard for modern language models owing to its parallelizable training and effective autoregressive decoding. However, its fixed context window and the quadratic time and memory costs of its self-attention mechanism remain central bottlenecks. These constraints have revived interest in recurrent architectures that scale linearly with sequence length, but at the cost of reduced parallelism. In this paper, we introduce Avey, a new foundational architecture that breaks away from both attention and recurrence. Avey pairs a ranker with an autoregressive neural processor to select and contextualize only the most relevant tokens for any given token. Specifically, it decouples sequence length from context width, thus enabling effective and efficient processing of arbitrarily long sequences. Results show that Avey compares favorably to the Transformer across a variety of standard short-range NLP benchmarks, while significantly outperforming it on tasks requiring long-range dependency modeling.",
+      "identifiers": [
+        "SemanticScholar:b5c326ce9d365a4a4a137701aca50252809f58e7"
+      ],
+      "semantic_scholar_id": "b5c326ce9d365a4a4a137701aca50252809f58e7",
+      "canonical_id": "arXiv:2506.11305",
+      "arxiv_id": "2506.11305",
+      "doi": "10.48550/arXiv.2506.11305",
+      "authors": [
+        "Mohammad Hammoud",
+        "Devang Acharya"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 484,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Introduces Avey, a ranker plus autoregressive processor that selectively contextualizes relevant tokens, aiming to avoid quadratic attention costs and support efficient long sequences.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b4521b914294",
+    "round": "libimp-b4521b9142948721-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 20,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b4521b9142948721-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b4521b9142948721-pre01.json",
+    "receipt": "sha256:59fe65a3b76213c69f6def8a7d4ef856395dde90edc0e55ee423714f642c9475"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b4521b914294",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

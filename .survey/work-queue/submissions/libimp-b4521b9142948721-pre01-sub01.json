@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Trellis: Learning to Compress Key-Value Memory in Attention Models",
+      "source_url": "https://arxiv.org/abs/2512.23852",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers, while powerful, suffer from quadratic computational complexity and the ever-growing Key-Value (KV) cache of the attention mechanism. This paper introduces Trellis, a novel Transformer architecture with bounded memory that learns how to compress its key-value memory dynamically at test time. Trellis replaces the standard KV cache with a fixed-size memory and train a two-pass recurrent compression mechanism to store new keys and values into memory. To achieve this, it leverages an online gradient descent procedure with a forget gate, enabling the compressed memory to be updated recursively while learning to retain important contextual information from incoming tokens at test time. Extensive experiments on language modeling, common-sense reasoning, recall-intensive tasks, and time series show that the proposed architecture outperforms strong baselines. Notably, its performance gains increase as the sequence length grows, highlighting its potential for long-context applications.",
+      "identifiers": [
+        "SemanticScholar:473378f0a55f1764d6b3f65b0d4175a79716355e"
+      ],
+      "semantic_scholar_id": "473378f0a55f1764d6b3f65b0d4175a79716355e",
+      "canonical_id": "arXiv:2512.23852",
+      "arxiv_id": "2512.23852",
+      "doi": "10.48550/arXiv.2512.23852",
+      "authors": [
+        "Mahdi Karami",
+        "Ali Behrouz",
+        "Praneeth Kacham",
+        "V. Mirrokni"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 284,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Introduces bounded, fixed-size KV memory updated by online recurrent compression, addressing Transformer attention memory growth for long sequences.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Characterizing Performance–Energy Trade-offs of Large Language Models in Multi-Request Workflows",
+      "source_url": "https://arxiv.org/abs/2604.09611",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "Measurement and Modeling of Computer Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed in applications forming multi-request workflows like document summarization, search-based copilots, and multi-agent programming. While these workflows unlock richer functionality, they also amplify latency and energy demand during inferences. Existing measurement and benchmarking efforts either focus on assessing performance of LLM inference systems or consider single-request evaluations, overlooking workflow dependencies and cross-request interactions unique to multi-request workflows. Moreover, the energy usage of such interdependent LLM calls is not explored in-depth. To address these gaps, this paper presents the first systematic characterization of performance--energy trade-offs in multi-request LLM inference. We develop and evaluate four representative workloads that capture sequential, interactive, agentic, and composite patterns common in modern deployments. Using an empirical NVIDIA A100 testbed with state-of-the-art serving systems (vLLM and Parrot), we systematically analyze how key energy knobs (e.g., input-output length, batch size, and GPU power cap) reshape latency, throughput, and component-level (e.g., CPU, GPU, and DRAM) energy use. Our findings reveal that batch size is the most impactful lever, though its benefits are highly workload dependent. While optimal batching benefits workloads with large shared prompts, it is ineffective for sequential summarization and only partially effective for mutli-agent coding. GPU power capping provides modest but predictable savings, while output length induces linear energy scaling with limited efficiency gains. We further demonstrate that engine-level optimizations in vLLM (e.g., continuous batching, PagedAttention) maintain higher GPU utilization and efficiency, especially for decode-heavy workloads, while Parrot's workflow-aware scheduling achieves lower energy consumption under stringent power constraints. These findings offer actionable guidelines for developers and system operators in designing performance- and energy-aware LLM serving systems in emerging multi-request workflows.",
+      "identifiers": [
+        "SemanticScholar:bf0b83319714532fc400bddf0342a8f21e38f825"
+      ],
+      "semantic_scholar_id": "bf0b83319714532fc400bddf0342a8f21e38f825",
+      "canonical_id": "arXiv:2604.09611",
+      "arxiv_id": "2604.09611",
+      "doi": "10.1145/3801489.3806907",
+      "authors": [
+        "Md. Monzurul Amin Ifath",
+        "Israat Haque"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Characterizes latency, throughput, and energy in multi-request LLM workflows and identifies batching and power controls as workload-dependent serving levers.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TriAxialKV: Toward Extreme Low-Precision KV-Cache Quantization for Agentic Inference Tasks",
+      "source_url": "https://arxiv.org/abs/2605.17170",
+      "year": 2026,
+      "published": "2026-05-16",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic workloads have emerged as a major workload for LLM inference. They differ significantly from chat-only workloads, requiring long-context processing, the ability to handle multimodal inputs, and structured multi-turn interactions with tool calling capabilities. As a result, their context exhibits structure that can carry different importance along three key axes: temporal recency to the current turn, modality such as text or image tokens, and semantic role such as user queries, tool calls, observations, or reasoning. These axes capture distinct token behaviors and lead to different sensitivities to KV-cache compression. However, existing KV-cache quantization methods are typically homogeneous or exploit only heterogeneity on a single dimension, such as temporal proximity or modality, overlooking the interactions among them. To this end, we introduce TriAxialKV, a novel mixed-precision KV-cache quantization scheme that assigns each token a triaxial tag, calibrates per-tag sensitivity, and allocates INT2/INT4 bitwidths under a fixed memory budget. We implement TriAxialKV as an end-to-end serving system, comprising calibration, mixed-precision quantization and memory management, and custom fused Triton decode kernels. When using Qwen3-VL-32B-Thinking as a computer-use agent operating the OSWorld, TriAxialKV matches the accuracy of SGLang with BF16 KV cache while supporting 4.5$\\times$ KV cache size and achieving 30% higher end-to-end throughput, when running on real GPU systems.",
+      "identifiers": [
+        "SemanticScholar:e48457c5bb2004fd1d27a12a31b4787116958362"
+      ],
+      "semantic_scholar_id": "e48457c5bb2004fd1d27a12a31b4787116958362",
+      "canonical_id": "arXiv:2605.17170",
+      "arxiv_id": "2605.17170",
+      "doi": "10.48550/arXiv.2605.17170",
+      "authors": [
+        "Han Shen",
+        "Hao-Ran Wu",
+        "Yi-Ren Zhao",
+        "Robert Mullins"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Assigns mixed KV-cache precision using temporal, modality, and semantic-role tags, enabling larger cache capacity and throughput for agentic LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Global Resolution: Optimal Multi-Draft Speculative Sampling via Convex Minimization",
+      "source_url": "https://arxiv.org/abs/2511.15898",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative sampling reduces the latency of autoregressive decoding for target model LLMs without sacrificing inference quality, by using a cheap draft model to suggest a candidate token and a verification criterion to accept or resample this token. To improve acceptance and decoding efficiency, recent work has explored the multi-draft extension, where at each step $n$ draft tokens are generated, and the verification criterion is a distribution conditioned on these. When this criterion maximizes the probability of accepting some draft token, it is called the optimal transport (OT). However, finding the OT is difficult, as it is the solution of a linear program (OTLP) in over $V^n$ variables, with $V$ being the vocabulary size. Two recent theoretical works have reframed the OTLP in terms of importance sampling or subset selection. In this work, we prove that these formulations are equivalent to an exponentially large relaxed OTLP, so it remains infeasible to solve. Then, we reverse engineer subset selection to formulate the OTLP as a max-flow problem. With a novel application of polymatroid theory, we reduce the exponentially large OTLP to a convex optimization problem in at most $V$ variables. This allows us to devise an algorithm for optimal $n$-draft speculative sampling when the $n$ tokens are chosen i.i.d. from a single draft model, which can be tuned to arbitrary accuracy. Finally, we measure acceptance rates and algorithm runtimes for various $n$ and top-$k$ draft sampling settings. Our findings give the first multi-draft algorithm with 90% acceptance and under 100 ms of overhead per generated token with negligible deviation from the target model distribution.",
+      "identifiers": [
+        "SemanticScholar:a0f73734d54f4b848a0d8f39e8f5706d896f6636"
+      ],
+      "semantic_scholar_id": "a0f73734d54f4b848a0d8f39e8f5706d896f6636",
+      "canonical_id": "arXiv:2511.15898",
+      "arxiv_id": "2511.15898",
+      "doi": "10.48550/arXiv.2511.15898",
+      "authors": [
+        "R. Thomas",
+        "Arka Pal"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 324,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Reformulates multi-draft speculative sampling as a tractable convex optimization problem to improve token acceptance and autoregressive decoding efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DeciMamba: Exploring the Length Extrapolation Potential of Mamba",
+      "source_url": "https://arxiv.org/abs/2406.14528",
+      "year": 2024,
+      "published": "2024-06-20",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 55,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-range sequence processing poses a significant challenge for Transformers due to their quadratic complexity in input length. A promising alternative is Mamba, which demonstrates high performance and achieves Transformer-level capabilities while requiring substantially fewer computational resources. In this paper we explore the length-generalization capabilities of Mamba, which we find to be relatively limited. Through a series of visualizations and analyses we identify that the limitations arise from a restricted effective receptive field, dictated by the sequence length used during training. To address this constraint, we introduce DeciMamba, a context-extension method specifically designed for Mamba. This mechanism, built on top of a hidden filtering mechanism embedded within the S6 layer, enables the trained model to extrapolate well even without additional training. Empirical experiments over real-world long-range NLP tasks show that DeciMamba can extrapolate to context lengths that are significantly longer than the ones seen during training, while enjoying faster inference.",
+      "identifiers": [
+        "SemanticScholar:ccff488946e5dbaee3bf07277000753fd07ef48b"
+      ],
+      "semantic_scholar_id": "ccff488946e5dbaee3bf07277000753fd07ef48b",
+      "canonical_id": "arXiv:2406.14528",
+      "arxiv_id": "2406.14528",
+      "doi": "10.48550/arXiv.2406.14528",
+      "authors": [
+        "Assaf Ben-Kish",
+        "Itamar Zimerman",
+        "Shady Abu-Hussein",
+        "Nadav Cohen",
+        "Amir Globerson",
+        "Lior Wolf",
+        "Raja Giryes"
+      ],
+      "priority": 65,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 55,
+        "citation_count": 55,
+        "total": 65,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 841,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "Introduces a context-extension method for Mamba that improves extrapolation to longer inputs without additional training while retaining faster inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b4521b914294",
+    "round": "libimp-b4521b9142948721-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 20,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b4521b9142948721-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b4521b9142948721-pre01.json",
+    "receipt": "sha256:59fe65a3b76213c69f6def8a7d4ef856395dde90edc0e55ee423714f642c9475"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b4521b914294",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
