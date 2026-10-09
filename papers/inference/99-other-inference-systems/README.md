@@ -1242,7 +1242,7 @@
 
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：1  
-  Dual Chunk 注意機構（DCA）は、長い系列をチャンクへ分割し、位置関係を「同一チャンク内」「離れたチャンク間」「直前チャンクとの連続関係」に分けて注意計算する。
+  二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
 
 - **2024-02 · [LongHeads: Multi-Head Attention is Secretly a Long Context Processor](2024-2402.10685-longheads-multi-head-attention-is-secretly-a-long-context-processor.md)**  
   実装：[✓](https://github.com/LuLuLuyi/LongHeads) ・ リポジトリ内被引用：1  
@@ -1514,7 +1514,7 @@
 
 - **2020-09 · [TernaryBERT: Distillation-aware Ultra-low Bit BERT](2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
-  TernaryBERTは、fine-tune済みBERTの主要重みを {-1,0,+1} の三値へ量子化し、低ビット化で失われる表現能力を知識蒸留（knowledge distillation）で補う方式である。BERT-baseはFP32で約418 MBだが、論文の代表的な W-E-A=2-2-8 構成では28 MBとなり14.9倍小さい。
+  TernaryBERTは、自然言語理解向けのBERTを極低ビットで実行可能な重み表現へ圧縮し、精度低下を知識蒸留（Knowledge Distillation）で抑える手法である。これにより重み2ビット・埋め込み2ビット・活性値8ビットの代表構成で、BERTの保存サイズを418MBから28MBへ減らす。
 
 - **2020-04 · [DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference](2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md)**  
   実装：[✓](https://github.com/castorini/DeeBERT) ・ リポジトリ内被引用：11  

@@ -306,7 +306,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2025-07 · [Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding](2025-2507.00605-quantize-sample-and-verify-llm-acceleration-via-adaptive-edge-cloud-spec.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  確率ベクトルを量子化すれば通信量は減るが、「元分布から標本した後に確率情報を量子化する」標本-quantize（S-Q）方式では、クラウドが検証時に使うproposal分布と実際に候補を生成した分布が一致しない。
+  しかし端末とクラウドがネットワークで離れていると、下書きトークンだけでなく検証に必要な確率分布を毎反復で送る必要があり、通信遅延が利点を打ち消す。本論文は、送信確率を量子化する際の処理順序に着目する。評価では、クラウドOPT-13Bと端末側OPT-125M、CNN/DailyMail要約、上り平均350 kbpsと4 Mbpsの二条件を使う。
 
 - **2025-05 · [Scaling Laws for Speculative Decoding](2025-2505.07858-scaling-laws-for-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

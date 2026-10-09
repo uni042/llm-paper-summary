@@ -123,8 +123,8 @@
   そのため演算量を抑えられるが、選択後に必要な重みがGPUに載っていない場合はストレージまたはホストメモリから転送する必要がある。従来の予測方式は前層の状態から次層の選択を予測するため、層をまたぐ変化が誤りになり、最初の層では参照できる前層出力もない。
 
 - **2025-11 · [ContextPilot: Fast Long-Context Inference via Context Reuse](2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  ContextPilotはこの制約を推論エンジン側の新しい注意機構で解くのではなく、エンジンへ渡す文脈の構成を変えて既存の接頭辞キャッシュを命中させる。論文はプリフィル遅延を最大約3倍削減し、推論品質を維持または長文脈条件で改善できると報告する。
+  実装：[✓](https://github.com/EfficientContext/ContextPilot) ・ リポジトリ内被引用：3  
+  ContextPilotは、検索拡張生成（Retrieval-Augmented Generation; RAG）、会話記憶、複数エージェントが同じ資料を繰り返し参照する状況で、長文脈の前処理（プリフィル）を減らす推論前段システムである。主要なRAG条件では既存方式比でプリフィル処理率が最大約3倍に改善する。
 
 - **2025-11 · [Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments](2024-2411.17741-chameleon-adapter-caching-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

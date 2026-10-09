@@ -32,7 +32,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 
 - **2025-04 · [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  動的に複製するエキスパート重みと、移動させない巨大な最適化状態を分離配置し、ルーティング負荷に応じて重みの複製数だけを毎反復調整するMoE学習システム。
+  SYMIは、混合専門家（Mixture-of-Experts; MoE）モデルの学習中に、特定の専門家へトークンが集中しても、毎反復の専門家複製数を変更して負荷を吸収できる分散学習システムである。著者らはDeepSpeedを基盤に実装し、A100 80GBを16枚備えるAzureクラスタで評価した。
 
 - **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
   実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：2  

@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 16:07:18 JST**
+> 自動生成: **2026-10-09 16:47:24 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **944** |
 | 未claim Research job | **944** |
-| 直近24hのResearch処理完了 | **205** |
-| 最終Research処理完了 | **10-09 15:30:00 JST** |
+| 直近24hのResearch処理完了 | **209** |
+| 最終Research処理完了 | **10-09 16:35:00 JST** |
 | 最終Discovery探索完了 | **10-09 13:36:44 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-09 09:37:33 JST（6時間29分前）** |
+| 最終maintenance完了 | **10-09 09:37:33 JST（7時間9分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **37** |
-| 直近6hのDiscovery run | **7** |
-| 直近6hのDiscovery本文確認・分類 | **118** |
-| 最終Research完了 | **10-09 15:30:00 JST** |
+| 直近6hのResearch完了 | **33** |
+| 直近6hのDiscovery run | **6** |
+| 直近6hのDiscovery本文確認・分類 | **98** |
+| 最終Research完了 | **10-09 16:35:00 JST** |
 | 最終Discovery完了 | **10-09 13:36:44 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-09 15:30:00 JST** / worker — / run 20261009-1530-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_60ec596cad808191a3a5afdd38587815--2024-2404.03865-ffn-skipllm-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.json
+- Research: **10-09 16:35:00 JST** / worker — / run 20261009-1600-scheduled-chat-00/r01 / 成果 **3件**
+  - evidence: .survey/import-inbox/results/research/libfile_3b757bf262008191b55658b7c5834b8a--2020-2009.12812-ternarybert-under16kb-reaudit-20261009-1600-scheduled-chat-00-r01.json
 - Discovery: **10-09 13:36:44 JST** / worker codex-local / run codex-backfill-r483-b23-p03-primary-title-reviewed-main-4fda232c
   - 本文確認・分類 **10件** / accept **9件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/codex-backfill-r483-b23-p03-primary-title-reviewed-main-4fda232c--a42d07431ce3c63dc6526b3d6759763c7c550dcfc0ea4daa744d255d009c45f6--codex-backfill-r483-b23-p03-.json
