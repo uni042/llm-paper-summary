@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T11:58:17.496391+00:00",
+  "generated_at": "2026-10-09T12:05:37.070146+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 281,
+  "count": 279,
   "worker_counts": {
-    "scheduled-chat-00": 94,
+    "scheduled-chat-00": 93,
     "scheduled-chat-30": 93,
-    "scheduled-chat-45": 94
+    "scheduled-chat-45": 93
   },
   "entries": [
     {
@@ -81,30 +81,6 @@
         "16KB未満再監査: 本文説明量 1915 < 2200",
         "16KB未満再監査: 手法説明量 447 < 700",
         "16KB未満再監査: 評価説明量 144 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md",
-      "canonical_id": "arXiv:2501.09410",
-      "title": "MoE²: Optimizing Collaborative Inference for Edge Large Language Models",
-      "file_bytes": 9579,
-      "source_sha256": "59e4875913ff0cc6bcaec4a9b08f28a31e28a18d1d36de93e15f2cdc24a24b46",
-      "source_git_blob_sha": "7a8d30950e37d98ccbfa6dd970090c1cac24f920",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.987879,
-      "quality_metrics": {
-        "body_chars": 1561,
-        "method_chars": 480,
-        "evaluation_chars": 123,
-        "limitation_chars": 189
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1561 < 2200",
-        "16KB未満再監査: 手法説明量 480 < 700",
-        "16KB未満再監査: 評価説明量 123 < 500"
       ],
       "warnings": []
     },
@@ -1205,30 +1181,6 @@
         "limitation_chars": 221
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md",
-      "canonical_id": "arXiv:2510.02358",
-      "title": "DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding",
-      "file_bytes": 11428,
-      "source_sha256": "5d14e4113fcfd7606ca4ec5d2dbb7349c8dc65bbb5209bc861120322f8384f10",
-      "source_git_blob_sha": "db37801900b54d279040cf2b5a174868a5d11cde",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.921026,
-      "quality_metrics": {
-        "body_chars": 2011,
-        "method_chars": 685,
-        "evaluation_chars": 214,
-        "limitation_chars": 121
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2011 < 2200",
-        "16KB未満再監査: 手法説明量 685 < 700",
-        "16KB未満再監査: 評価説明量 214 < 500"
-      ],
       "warnings": []
     },
     {
