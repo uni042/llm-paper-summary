@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T16:54:30.845309+00:00",
+  "generated_at": "2026-10-09T17:52:50.804946+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 220,
+  "count": 211,
   "worker_counts": {
-    "scheduled-chat-00": 73,
-    "scheduled-chat-30": 73,
-    "scheduled-chat-45": 74
+    "scheduled-chat-00": 70,
+    "scheduled-chat-30": 70,
+    "scheduled-chat-45": 71
   },
   "entries": [
     {
@@ -124,31 +124,6 @@
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/15-inference-simulation-emulation/2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high.md",
-      "canonical_id": "arXiv:2609.15636",
-      "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
-      "file_bytes": 10122,
-      "source_sha256": "e52ee346afcf6bd8db95aab755a958aa2dc6bde48a881e37096562c3b6dcb54a",
-      "source_git_blob_sha": "ddd8467c1891c4f92360fb2f10d5b2a6b87399c2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.786368,
-      "quality_metrics": {
-        "body_chars": 2657,
-        "method_chars": 896,
-        "evaluation_chars": 243,
-        "limitation_chars": 355
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 243 < 500",
-        "16KB未満再監査: 日本語比率 78.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.6% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md",
@@ -291,28 +266,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md",
-      "canonical_id": "arXiv:2111.00230",
-      "title": "Magic Pyramid: Accelerating Inference with Early Exiting and Token Pruning",
-      "file_bytes": 10956,
-      "source_sha256": "8d987d966d394ce125db6b792e245ab8902300e6b2a22764367dd9d6270002ed",
-      "source_git_blob_sha": "6df9edb4e72361c4ed6e22ee84c0f52226429694",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.92728,
-      "quality_metrics": {
-        "body_chars": 2519,
-        "method_chars": 757,
-        "evaluation_chars": 266,
-        "limitation_chars": 240
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 266 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/13-sparse-attention/2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md",
       "canonical_id": "arXiv:2603.28458",
       "title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention",
@@ -377,28 +330,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/12-moe-parallelism-communication/2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md",
-      "canonical_id": "arXiv:2601.17111",
-      "title": "Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts",
-      "file_bytes": 11180,
-      "source_sha256": "6b743131e86bf7119480bb423770e2e62f7dedde7baeaff960ec264356585c04",
-      "source_git_blob_sha": "528b909576021dc24ba575a053f9ac93321f3080",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.919329,
-      "quality_metrics": {
-        "body_chars": 2620,
-        "method_chars": 885,
-        "evaluation_chars": 132,
-        "limitation_chars": 332
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 132 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md",
       "canonical_id": "DOI:10.1145/3731569.3764843",
       "title": "KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models",
@@ -421,30 +352,6 @@
       ],
       "warnings": [
         "日本語比率 75.1% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
-      "canonical_id": "arXiv:2412.15605",
-      "title": "Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks",
-      "file_bytes": 11295,
-      "source_sha256": "bf1a41b484cc4307ee2113c46b5d649347d1f2725b74309a801a2d7c9efb6809",
-      "source_git_blob_sha": "4dd52cc27aaeb66a531d75442dbb97d2af8656cb",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.741569,
-      "quality_metrics": {
-        "body_chars": 3659,
-        "method_chars": 772,
-        "evaluation_chars": 1485,
-        "limitation_chars": 478
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 74.2% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.2% < 警告基準 80%"
       ]
     },
     {
@@ -508,26 +415,6 @@
         "method_chars": 921,
         "evaluation_chars": 966,
         "limitation_chars": 294
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2606.04511-sparda.md",
-      "canonical_id": "arXiv:2606.04511",
-      "title": "SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference",
-      "file_bytes": 11554,
-      "source_sha256": "e09fd38ccd22e4fca95db6519c5b16a40a97e0d820f077ef93cff2cc3278c9f8",
-      "source_git_blob_sha": "d8dfa8a089775a0b260ae3a9fa90a5bb9263e1d9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 2328,
-        "method_chars": 971,
-        "evaluation_chars": 530,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -597,30 +484,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 305 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
-      "canonical_id": "arXiv:2410.06916",
-      "title": "SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration",
-      "file_bytes": 11765,
-      "source_sha256": "940418dbb05c9bb51eb4d4307c8851689f607c3f80d806cba752bf4d7ca33dd4",
-      "source_git_blob_sha": "6ad559efb992d2c38ec6f200e3dc90f2d3044673",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.968319,
-      "quality_metrics": {
-        "body_chars": 1828,
-        "method_chars": 687,
-        "evaluation_chars": 126,
-        "limitation_chars": 148
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1828 < 2200",
-        "16KB未満再監査: 手法説明量 687 < 700",
-        "16KB未満再監査: 評価説明量 126 < 500"
       ],
       "warnings": []
     },
@@ -919,28 +782,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.05460-efficiently-serving-large-multimodal-models-using-epd-disaggregation.md",
-      "canonical_id": "arXiv:2501.05460",
-      "title": "Efficiently Serving Large Multimodal Models Using EPD Disaggregation",
-      "file_bytes": 12058,
-      "source_sha256": "6352572dd6b37580e92b4b87d07ea7a27c16e1ab64a0fc447acfb3d2b85bfc2a",
-      "source_git_blob_sha": "0a2a50db199cfdb6385a919ea4d19226e412dc84",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.97399,
-      "quality_metrics": {
-        "body_chars": 2854,
-        "method_chars": 1371,
-        "evaluation_chars": 166,
-        "limitation_chars": 222
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 166 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
       "canonical_id": "arXiv:2508.18265",
       "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency",
@@ -971,7 +812,7 @@
       "file_bytes": 12143,
       "source_sha256": "9e31d341548a00dc438826d478a90dee49a6a3ddc8a19c980f91c1bee4443682",
       "source_git_blob_sha": "8514f4c6e2838933d63983021ef1d09c66a3ce71",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.947434,
@@ -1082,26 +923,6 @@
       "warnings": [
         "日本語比率 77.5% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
-      "canonical_id": "arXiv:2310.03003",
-      "title": "From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference",
-      "file_bytes": 12245,
-      "source_sha256": "1697dc47dfebb41c1d0a310854f9010437cac865e348fad4c9bba45b626fd924",
-      "source_git_blob_sha": "52d6980fbdcc08e71a81576bfbea70e1af07f676",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.906204,
-      "quality_metrics": {
-        "body_chars": 3953,
-        "method_chars": 1078,
-        "evaluation_chars": 1484,
-        "limitation_chars": 322
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
@@ -1497,28 +1318,6 @@
         "limitation_chars": 297
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
-      "canonical_id": "arXiv:2405.19888",
-      "title": "Parrot: Efficient Serving of LLM-based Applications with Semantic Variable",
-      "file_bytes": 12478,
-      "source_sha256": "61d7d3b33854b39439beb114e549396f6ec69f7539c8e62da36d814ef92bfc38",
-      "source_git_blob_sha": "63b984dfed65ba8d0f1f520f9683ce05a4a82c09",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.967766,
-      "quality_metrics": {
-        "body_chars": 2927,
-        "method_chars": 1130,
-        "evaluation_chars": 215,
-        "limitation_chars": 254
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 215 < 500"
-      ],
       "warnings": []
     },
     {
