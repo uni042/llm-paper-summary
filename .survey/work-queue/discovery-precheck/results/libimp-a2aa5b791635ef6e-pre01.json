@@ -1,0 +1,1200 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a2aa5b791635ef6e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a2aa5b791635",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2026.acl-long.1189",
+    "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+    "arXiv:2505.17595",
+    "arXiv:2505.23807",
+    "arXiv:2508.10251",
+    "arXiv:2511.15927",
+    "arXiv:2511.20662",
+    "arXiv:2602.02197",
+    "arXiv:2602.10431",
+    "arXiv:2605.19932",
+    "arXiv:2607.03652",
+    "arXiv:2607.07964",
+    "arXiv:2607.28263"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 13,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "07a35067fcf4812c806438bc07d9ea1e477421b0",
+  "raw_search_result_count": 13,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 13,
+  "provider_progress": {
+    "requested_count": 13,
+    "status_counts": {
+      "allowed": 13,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-09T03:05:00.836607+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.1189",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.17595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.23807",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.10251",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.15927",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.20662",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02197",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.10431",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.19932",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.03652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.07964",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.28263",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents",
+      "source_url": "https://arxiv.org/abs/2605.19932",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents increasingly operate over long and recurring external contexts, like document corpora and code repositories. Across invocations, existing approaches preserve either the agent's trajectory, passive access to raw material, or task-level strategies. None of them preserves what we argue is most needed for repeated same-context workloads: reusable orientation knowledge (e.g., what the context contains, how it is organized, and which entities, constants, and schemas have historically been useful) about the recurring context itself. We introduce PEEK, a system that caches and maintains this orientation knowledge as a context map: a small, constant-sized artifact in the agent's prompt that gives it a persistent peek into the external context. The map is maintained by a programmable cache policy with three modules: a Distiller that extracts transferable knowledge from inference-time signals, a Cartographer that translates it into structured edits, and a priority-based Evictor that enforces a fixed token budget. On long-context reasoning and information aggregation, PEEK improves over strong baselines by 6.3-34.0% while using 93-145 fewer iterations and incurring 1.7-5.8x lower cost than the state-of-the-art prompt-learning framework, ACE. On context learning, PEEK improves solving rate and rubric accuracy by 6.0-14.0% and 7.8-12.1%, respectively, at 1.4x lower cost than ACE. These gains generalize across LMs and agent architectures, including OpenAI Codex, a production-grade coding agent. Together, these results show that a context map helps long-context LLM agents interact with recurring external contexts more accurately and efficiently.",
+      "identifiers": [
+        "SemanticScholar:8f4eda3352ba5b155d64813312933bcca4d355af"
+      ],
+      "semantic_scholar_id": "8f4eda3352ba5b155d64813312933bcca4d355af",
+      "canonical_id": "arXiv:2605.19932",
+      "arxiv_id": "2605.19932",
+      "doi": "10.48550/arXiv.2605.19932",
+      "authors": [
+        "Zhuohan Gu",
+        "Qizhen Zhang",
+        "Omar Khattab",
+        "Samuel Madden"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DiffuMamba: High-Throughput Diffusion LMs with Mamba Backbone",
+      "source_url": "https://arxiv.org/abs/2511.15927",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) generation, yet their reliance on Transformer backbones limits inference efficiency due to quadratic attention or KV-cache overhead. We introduce DiffuMamba, a masked diffusion language model built on a bidirectional Mamba backbone that combines the diffusion objective with linear-time sequence modeling, and DiffuMamba-H, a hybrid variant with interleaved attention. Across scales up to 1.3B parameters, our models match Transformer-based diffusion in downstream performance while achieving up to 8.2x and 4.3x higher inference throughput, respectively, on long sequences. We further present a systematic analysis of inference efficiency across modern DLM variants combining asymptotic complexity with empirical measurements. Notably, cache-efficient block diffusion with Mamba mixers emerges as the only strategy that scales linearly with sequence length and achieves the strongest performance across all baselines, suggesting a promising direction for future diffusion-based generation systems.",
+      "identifiers": [
+        "SemanticScholar:0e428dc856fe87e0901ba2aaf1d358415b667374"
+      ],
+      "semantic_scholar_id": "0e428dc856fe87e0901ba2aaf1d358415b667374",
+      "canonical_id": "arXiv:2511.15927",
+      "arxiv_id": "2511.15927",
+      "authors": [
+        "Vaibhav Singh",
+        "Oleksiy Ostapenko",
+        "Pierre-André Noël",
+        "Eugene Belilovsky",
+        "Torsten Scholak"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 324,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian",
+      "source_url": "https://arxiv.org/abs/2607.07964",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a widely adopted technique for compressing large language models (LLMs) without retraining. Most existing second-order PTQ methods, including GPTQ, construct quantization objectives from input activation statistics, effectively assuming that all output channels contribute equally to the layer-wise reconstruction objective. We propose KronQ, a PTQ framework that challenges this assumption by introducing the gradient covariance into the quantization pipeline. Under the Kronecker-factored Hessian approximation, the quantization loss depends jointly on both the activation and gradient covariances, and KronQ exploits this at two complementary levels. (1) KronQ introduces bidirectional incoherence processing, extending the existing input-side random rotation to the output dimension using the gradient covariance, reducing weight magnitude variance across both input and output dimensions. (2) KronQ derives a new sensitivity metric for inter-layer mixed-precision allocation, driven by the gradient and activation Hessian traces. Notably, in the case of 2-bit weight-only quantization on LLaMA-3-70B, while GPTQ and GPTAQ diverge or produce degenerate quantizations (>2000 perplexity on WikiText-2), \\KronQ{} achieves 7.93 perplexity.",
+      "identifiers": [
+        "SemanticScholar:8db8b55ec72de7e08a7355a79fb8ea40233ef1e1"
+      ],
+      "semantic_scholar_id": "8db8b55ec72de7e08a7355a79fb8ea40233ef1e1",
+      "canonical_id": "arXiv:2607.07964",
+      "arxiv_id": "2607.07964",
+      "doi": "10.48550/arXiv.2607.07964",
+      "authors": [
+        "Donghyun Lee",
+        "Yuhang Li",
+        "Ruokai Yin",
+        "Priyadarshini Panda"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DLP: Dynamic Layerwise Pruning in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2505.23807",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning has recently been widely adopted to reduce the parameter scale and improve the inference efficiency of Large Language Models (LLMs). Mainstream pruning techniques often rely on uniform layerwise pruning strategies, which can lead to severe performance degradation at high sparsity levels. Recognizing the varying contributions of different layers in LLMs, recent studies have shifted their focus toward non-uniform layerwise pruning. However, these approaches often rely on pre-defined values, which can result in suboptimal performance. To overcome these limitations, we propose a novel method called Dynamic Layerwise Pruning (DLP). This approach adaptively determines the relative importance of each layer by integrating model weights with input activation information, assigning pruning rates accordingly. Experimental results show that DLP effectively preserves model performance at high sparsity levels across multiple LLMs. Specifically, at 70% sparsity, DLP reduces the perplexity of LLaMA2-7B by 7.79 and improves the average accuracy by 2.7% compared to state-of-the-art methods. Moreover, DLP is compatible with various existing LLM compression techniques and can be seamlessly integrated into Parameter-Efficient Fine-Tuning (PEFT). We release the code at https://github.com/ironartisan/DLP to facilitate future research.",
+      "identifiers": [
+        "SemanticScholar:fbf89ffc7d4ed9e3a3ef50d605fad960033c5c69"
+      ],
+      "semantic_scholar_id": "fbf89ffc7d4ed9e3a3ef50d605fad960033c5c69",
+      "canonical_id": "arXiv:2505.23807",
+      "arxiv_id": "2505.23807",
+      "doi": "10.48550/arXiv.2505.23807",
+      "authors": [
+        "Yuli Chen",
+        "Bo Cheng",
+        "Jiale Han",
+        "Yingying Zhang",
+        "Yingting Li",
+        "Shuhao Zhang"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 500,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long-Code Completion",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1189",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Code Large Language Models face critical Time-To-First-Token (TTFT) latency challenges when handling long code completion due to the quadratic complexity ( O ( n 2 ) ) of attention mechanisms. While existing sparse attention methods attempt to address this issue, they suffer from three key limitations: (1) general sparse patterns cause excessive accuracy degradation without considering code structure, (2) code-specific methods achieve only logical sparsity without actual computational speedup, and (3) limited adaptation to complex scenarios such as repository-level completion. We propose SabreCoder , a training-free S tructure-a ware b lock-spa r s e attention mechanism that bridges the gap between logical and computational sparsity. SabreCoder parses code into semantic chunks, constructs chunk-level sparse patterns through dependency analysis and similarity matching, and maps them to GPU-friendly block-sparse formats. Extensive experiments on LCC and CrossCodeEval benchmarks demonstrate that SabreCoder reduces TTFT by 45-55% while maintaining accuracy within 3% of dense attention.",
+      "identifiers": [
+        "SemanticScholar:eb205b6da8c2bd1cfeb14749551a0e8a776fd982"
+      ],
+      "semantic_scholar_id": "eb205b6da8c2bd1cfeb14749551a0e8a776fd982",
+      "doi": "10.18653/v1/2026.acl-long.1189",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1189",
+      "authors": [
+        "Yan-Lin Wang",
+        "Yan-Lin Wang",
+        "Bowen Zhang",
+        "Yi Zhang",
+        "Da-Ya Guo",
+        "Jia-Chi Chen",
+        "Hong-Yu Zhang",
+        "Zi-Bin Zheng"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Democratizing LLM Efficiency: From Hyperscale Optimizations to Universal Deployability",
+      "source_url": "https://arxiv.org/abs/2511.20662",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have become indispensable, but the most celebrated efficiency methods---mixture-of-experts (MoE), speculative decoding, and complex retrieval-augmented generation (RAG)---were built for hyperscale providers with vast infrastructure and elite teams. \nOutside that context, their benefits collapse into overhead, fragility, and wasted carbon. \nThe result is that a handful of Big Tech companies benefit, while thousands of hospitals, schools, governments, and enterprises are left without viable options. \nWe argue that the next frontier is not greater sophistication at scale, but robust simplicity: efficiency that thrives under modest resources and minimal expertise. We propose a new research agenda: retrofitting pretrained models with more efficient architectures without retraining, inventing lightweight fine-tuning that preserves alignment, making reasoning economical despite long chains of thought, enabling dynamic knowledge management without heavy RAG pipelines, and adopting Overhead-Aware Efficiency (OAE) as a standard benchmark.\nBy redefining efficiency to include adoption cost, sustainability, and fairness, we can democratize LLM deployment---ensuring that optimization reduces inequality and carbon waste rather than amplifying them.",
+      "identifiers": [
+        "SemanticScholar:73a7a4ef88d35e9d615083852741b179ccd27a4b"
+      ],
+      "semantic_scholar_id": "73a7a4ef88d35e9d615083852741b179ccd27a4b",
+      "canonical_id": "arXiv:2511.20662",
+      "arxiv_id": "2511.20662",
+      "doi": "10.48550/arXiv.2511.20662",
+      "authors": [
+        "Hen-Hsen Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hierarchical Adaptive Eviction for KV Cache Management in Multimodal Language Models",
+      "source_url": "https://arxiv.org/abs/2602.02197",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of visual information into Large Language Models (LLMs) has enabled Multimodal LLMs (MLLMs), but the quadratic memory and computational costs of Transformer architectures remain a bottleneck. Existing KV cache eviction strategies fail to address the heterogeneous attention distributions between visual and text tokens, leading to suboptimal efficiency or degraded performance. In this paper, we propose Hierarchical Adaptive Eviction (HAE), a KV cache eviction framework that optimizes text-visual token interaction in MLLMs by implementing Dual-Attention Pruning during pre-filling (leveraging visual token sparsity and attention variance) and a Dynamic Decoding Eviction Strategy (inspired by OS Recycle Bins) during decoding. HAE minimizes KV cache usage across layers, reduces computational overhead via index broadcasting, and theoretically ensures superior information integrity and lower error bounds compared to greedy strategies, enhancing efficiency in both comprehension and generation tasks. Empirically, HAE reduces KV-Cache memory by 41\\% with minimal accuracy loss (0.3\\% drop) in image understanding tasks and accelerates story generation inference by 1.5x while maintaining output quality on Phi3.5-Vision-Instruct model.",
+      "identifiers": [
+        "SemanticScholar:5fcdbe17325acb335af532addf3c10bce821ff6d"
+      ],
+      "semantic_scholar_id": "5fcdbe17325acb335af532addf3c10bce821ff6d",
+      "canonical_id": "arXiv:2602.02197",
+      "arxiv_id": "2602.02197",
+      "doi": "10.48550/arXiv.2602.02197",
+      "authors": [
+        "Xindian Ma",
+        "Yidi Lu",
+        "Peng Zhang",
+        "Jing Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QTALE: Quantization-Robust Token-Adaptive Layer Execution for LLMs",
+      "source_url": "https://arxiv.org/abs/2602.10431",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) demand substantial computational and memory resources, posing challenges for efficient deployment. Two complementary approaches have emerged to address these issues: token-adaptive layer execution, which reduces floating-point operations (FLOPs) by selectively bypassing layers, and quantization, which lowers memory footprint by reducing weight precision. However, naively integrating these techniques leads to additional accuracy degradation due to reduced redundancy in token-adaptive models. We propose QTALE (Quantization-Robust Token-Adaptive Layer Execution for LLMs), a novel framework that enables seamless integration of token-adaptive execution with quantization while preserving accuracy. Conventional token-adaptive methods reduce redundancy in two ways: (1) by limiting the diversity of training paths explored during fine-tuning, and (2) by lowering the number of parameters actively involved in inference. To overcome these limitations, QTALE introduces two key components: (1) a training strategy that ensures diverse execution paths are actively explored during fine-tuning, and (2) a post-training mechanism that allows flexible adjustment of the execution ratio at inference to reintroduce redundancy when needed. Experimental results show that QTALE enables seamless integration of token-adaptive layer execution with quantization, while keeping the accuracy gap to quantization-only models below 0.5% on CommonsenseQA benchmarks. By combining tokenadaptive execution for FLOPs reduction and quantization for memory savings, QTALE provides an effective solution for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:04d30e40f1f7ab15b1104b12d8cac5c5b8223b51"
+      ],
+      "semantic_scholar_id": "04d30e40f1f7ab15b1104b12d8cac5c5b8223b51",
+      "canonical_id": "arXiv:2602.10431",
+      "arxiv_id": "2602.10431",
+      "doi": "10.48550/arXiv.2602.10431",
+      "authors": [
+        "Kanghyun Noh",
+        "Ji-Man Choi",
+        "Yulhwa Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ELiTeFormer: An Efficient Transformer for FPGAs",
+      "source_url": "https://arxiv.org/abs/2607.03652",
+      "year": 2026,
+      "published": "2026-07-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer blocks are prevalent in large language model (LLM) but present deployment challenges due to their challenging computational and memory demands. While prior work has typically optimized attention mechanisms or feed-forward networks (FFNs) separately, few hardware (HW) architecture have jointly addressed both components with co-designed hardware acceleration. We present ELiTeFormer (Efficient Linear Ternary Transformer), the first Transformer model architecture that unifies hybrid linear attention with ultra-low-precision (ternary) linear projections, specifically co-designed for field-programmable gate array (FPGA) deployment. ELiTeFormer achieves 10x model weight compression and 12.8x key-value (KV) cache compression compared to LLaMA 3, while maintaining competitive accuracy (31.9% on the MMLU benchmark, within 3.0% of BitNet b1.58). Our key architectural contribution is a novel processing element (PE) micro-architecture that eliminates all multiplications in ternary linear projections through bitmasking operations, significantly reducing resource utilization by completely avoiding dedicated digital signal processing (DSP) blocks. We simulate, synthesize, and deploy ELiTeFormer targeting a Xilinx VCK5000 Versal board using high-level synthesis (HLS) flows. Block-level simulations show 9.6x speedup for FFN operations and 4.4x speedup for attention compared to standard implementations. End-to-end deployment achieves up to 3.9x lower latency and 3.2x better energy efficiency than LLaMA 3 on an NVIDIA A100 graphics processing unit (GPU) at long context lengths. This represents the first FPGA realization combining linear attention with ternary quantization, demonstrating the viability of algorithm-architecture co-design for next-generation LLM acceleration.",
+      "identifiers": [
+        "SemanticScholar:f6d00e3c69c58473312dbb14eea01cdeeb4b0864"
+      ],
+      "semantic_scholar_id": "f6d00e3c69c58473312dbb14eea01cdeeb4b0864",
+      "canonical_id": "arXiv:2607.03652",
+      "arxiv_id": "2607.03652",
+      "doi": "10.48550/arXiv.2607.03652",
+      "authors": [
+        "Victor Agostinelli",
+        "N. Agostini",
+        "Antonino Tumeo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 97,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoMem: Reusing Transformer Depth across Queries with Persistent Intermediate Residuals",
+      "source_url": "https://arxiv.org/abs/2607.28263",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Repeated queries over shared documents repeatedly execute the same lower transformer layers. We introduce CoMem, which makes split depth j an explicit reusable-context axis: write one depth-j residual per token, select a bounded chunk set, and resume only layers [j:L). Among document-reuse systems we are aware of, CoMem jointly makes split depth a tunable serving axis and isolates it with a matched j=0 endpoint. On Qwen3-8B, j=12 reduces selected-pack Read from 931.9 to 664.4 ms (1.403x), with a 3.12-point RULER cost (95% CI [2.36, 3.93]); a continuous-prefix oracle recovers the full gap. The resulting depth axis quantifies a quality-latency-storage trade-off; a separate same-adapter, Write-inclusive pipeline is 2.74x faster. Equal-latency raw replay leads by 11.56 points with BM25, directly measuring an applicability boundary of prepaid depth rather than hiding it. CoMem stores 8 KiB/token versus 144 KiB/token for a protocol-aligned same-Qwen3 CacheBlend-style diagnostic; the cohorts and adaptation budgets are not matched. A context-position factorization identifies missing lower-layer document context as the dominant tested multikey error, and a 32-token overlap raises 92.5 to 98.5 without increasing persistent bytes or per-query Read. CoMem opens transformer depth as a measurable, tunable dimension for repeated-query long-context serving.",
+      "identifiers": [
+        "SemanticScholar:76ec7edcb9765075e113342fb1b29738151fc8d9"
+      ],
+      "semantic_scholar_id": "76ec7edcb9765075e113342fb1b29738151fc8d9",
+      "canonical_id": "arXiv:2607.28263",
+      "arxiv_id": "2607.28263",
+      "authors": [
+        "Han-Lin Liu",
+        "Xuan Qi",
+        "Chun-Yu Liu",
+        "Hao Zhong",
+        "Yulong Wang",
+        "Key",
+        "Rayying",
+        "Alex Lamb",
+        "Ming-Yu Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 71,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Meta-Metrics and Best Practices for System-Level Inference Performance Benchmarking",
+      "source_url": "https://arxiv.org/abs/2508.10251",
+      "year": 2025,
+      "published": "2025-08-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Benchmarking inference performance (speed) of Foundation Models such as Large Language Models (LLM) involves navigating a vast experimental landscape to understand the complex interactions between hardware and software components. However, evaluating every possible test configuration is impractical, unfeasible and unnecessary. To address this challenge, we introduce FMwork, a comprehensive and methodical approach to creating a controlled testing environment that accurately reflects and characterizes performance. FMwork comprises a set of benchmkaring best practices with three key components: 1) meta-metrics, 2) parameter selection, and 3) strategic cost-performance evaluation. Meta-metrics account for time and resources spent on benchmarking and the relative accuracy of the results compared to a larger body of measurements, representing the complete experimental space. FMwork operationalizes the meta-metrics and provides efficient strategies for parameter selection and cost-performance analysis. Using the framework, we show up to 24x improvement (speedup and/or resource savings) running sweeps of experiments compared to the ground truth. Even already considering a subset of experiments as reference point (using the power of two for batch sizes), reducing experimental output size from 1024 to 128 tokens yields another 2.7x gain while keeping 96.6% accuracy for an evaluation using Llama 3.1 8B model.",
+      "identifiers": [
+        "SemanticScholar:c19f7e60bc8f8f0e5178b142c81b7815b81d9f8a"
+      ],
+      "semantic_scholar_id": "c19f7e60bc8f8f0e5178b142c81b7815b81d9f8a",
+      "canonical_id": "arXiv:2508.10251",
+      "arxiv_id": "2508.10251",
+      "doi": "10.48550/arXiv.2508.10251",
+      "authors": [
+        "Shweta Salaria",
+        "Zhuoran Liu",
+        "Nelson Mimura Gonzalez"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 421,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NeUQI: Near-Optimal Uniform Quantization Parameter Initialization",
+      "source_url": "https://arxiv.org/abs/2505.17595",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve impressive performance across domains but face significant challenges when deployed on consumer-grade GPUs or personal devices such as laptops, due to high memory consumption and inference costs. Post-training quantization (PTQ) of LLMs offers a promising solution that reduces their memory footprint and decoding latency. In practice, PTQ with uniform quantization representation is favored due to its efficiency and ease of deployment, as uniform quantization is widely supported by mainstream hardware and software libraries. Recent studies on low-bit uniform quantization have led to noticeable improvements in post-quantization model performance; however, they mainly focus on quantization methodologies, while the initialization of quantization parameters remains underexplored and still relies on the conventional Min-Max formula. In this work, we identify the limitations of the Min-Max formula, move beyond its constraints, and propose NeUQI, a method that efficiently determines near-optimal initialization for uniform quantization. Our NeUQI simplifies the joint optimization of the scale and zero-point by deriving the zero-point for a given scale, thereby reducing the problem to a scale-only optimization. Benefiting from the improved quantization parameters, our NeUQI consistently outperforms existing methods in the experiments with the LLaMA and Qwen families on various settings and tasks. Furthermore, when combined with a lightweight distillation strategy, NeUQI even achieves superior performance to PV-tuning, a considerably more resource-intensive method.",
+      "identifiers": [
+        "SemanticScholar:9cfbeb5c6ff971211d28298130b7d59d78317c21"
+      ],
+      "semantic_scholar_id": "9cfbeb5c6ff971211d28298130b7d59d78317c21",
+      "canonical_id": "arXiv:2505.17595",
+      "arxiv_id": "2505.17595",
+      "doi": "10.48550/arXiv.2505.17595",
+      "authors": [
+        "Li Lin",
+        "Xinyu Hu",
+        "Xiao-Jun Wan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "D EMYSTIFYING THE M IXTURE OF E XPERTS S ERVING T AX",
+      "source_url": "https://www.semanticscholar.org/paper/929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2"
+      ],
+      "semantic_scholar_id": "929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "canonical_id": "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "authors": [
+        "P. Patel",
+        "Dayeol Lee",
+        "Shintaro Iwasaki",
+        "Arvind Krishnamurthy"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.19932",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.19932",
+        "id:SemanticScholar:8f4eda3352ba5b155d64813312933bcca4d355af",
+        "id:arXiv:2605.19932",
+        "title:peek context map as an orientation cache for longcontext llm agents",
+        "url:https://arxiv.org/abs/2605.19932"
+      ],
+      "record": {
+        "title": "PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents",
+        "source_url": "https://arxiv.org/abs/2605.19932",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) agents increasingly operate over long and recurring external contexts, like document corpora and code repositories. Across invocations, existing approaches preserve either the agent's trajectory, passive access to raw material, or task-level strategies. None of them preserves what we argue is most needed for repeated same-context workloads: reusable orientation knowledge (e.g., what the context contains, how it is organized, and which entities, constants, and schemas have historically been useful) about the recurring context itself. We introduce PEEK, a system that caches and maintains this orientation knowledge as a context map: a small, constant-sized artifact in the agent's prompt that gives it a persistent peek into the external context. The map is maintained by a programmable cache policy with three modules: a Distiller that extracts transferable knowledge from inference-time signals, a Cartographer that translates it into structured edits, and a priority-based Evictor that enforces a fixed token budget. On long-context reasoning and information aggregation, PEEK improves over strong baselines by 6.3-34.0% while using 93-145 fewer iterations and incurring 1.7-5.8x lower cost than the state-of-the-art prompt-learning framework, ACE. On context learning, PEEK improves solving rate and rubric accuracy by 6.0-14.0% and 7.8-12.1%, respectively, at 1.4x lower cost than ACE. These gains generalize across LMs and agent architectures, including OpenAI Codex, a production-grade coding agent. Together, these results show that a context map helps long-context LLM agents interact with recurring external contexts more accurately and efficiently.",
+        "identifiers": [
+          "SemanticScholar:8f4eda3352ba5b155d64813312933bcca4d355af"
+        ],
+        "semantic_scholar_id": "8f4eda3352ba5b155d64813312933bcca4d355af",
+        "canonical_id": "arXiv:2605.19932",
+        "arxiv_id": "2605.19932",
+        "doi": "10.48550/arXiv.2605.19932",
+        "authors": [
+          "Zhuohan Gu",
+          "Qizhen Zhang",
+          "Omar Khattab",
+          "Samuel Madden"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.15927",
+      "identity_tokens": [
+        "id:SemanticScholar:0e428dc856fe87e0901ba2aaf1d358415b667374",
+        "id:arXiv:2511.15927",
+        "title:diffumamba highthroughput diffusion lms with mamba backbone",
+        "url:https://arxiv.org/abs/2511.15927"
+      ],
+      "record": {
+        "title": "DiffuMamba: High-Throughput Diffusion LMs with Mamba Backbone",
+        "source_url": "https://arxiv.org/abs/2511.15927",
+        "year": 2025,
+        "published": "2025-11-19",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) generation, yet their reliance on Transformer backbones limits inference efficiency due to quadratic attention or KV-cache overhead. We introduce DiffuMamba, a masked diffusion language model built on a bidirectional Mamba backbone that combines the diffusion objective with linear-time sequence modeling, and DiffuMamba-H, a hybrid variant with interleaved attention. Across scales up to 1.3B parameters, our models match Transformer-based diffusion in downstream performance while achieving up to 8.2x and 4.3x higher inference throughput, respectively, on long sequences. We further present a systematic analysis of inference efficiency across modern DLM variants combining asymptotic complexity with empirical measurements. Notably, cache-efficient block diffusion with Mamba mixers emerges as the only strategy that scales linearly with sequence length and achieves the strongest performance across all baselines, suggesting a promising direction for future diffusion-based generation systems.",
+        "identifiers": [
+          "SemanticScholar:0e428dc856fe87e0901ba2aaf1d358415b667374"
+        ],
+        "semantic_scholar_id": "0e428dc856fe87e0901ba2aaf1d358415b667374",
+        "canonical_id": "arXiv:2511.15927",
+        "arxiv_id": "2511.15927",
+        "authors": [
+          "Vaibhav Singh",
+          "Oleksiy Ostapenko",
+          "Pierre-André Noël",
+          "Eugene Belilovsky",
+          "Torsten Scholak"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 324,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.07964",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.07964",
+        "id:SemanticScholar:8db8b55ec72de7e08a7355a79fb8ea40233ef1e1",
+        "id:arXiv:2607.07964",
+        "title:kronq llm quantization via kroneckerfactored hessian",
+        "url:https://arxiv.org/abs/2607.07964"
+      ],
+      "record": {
+        "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian",
+        "source_url": "https://arxiv.org/abs/2607.07964",
+        "year": 2026,
+        "published": "2026-07-08",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is a widely adopted technique for compressing large language models (LLMs) without retraining. Most existing second-order PTQ methods, including GPTQ, construct quantization objectives from input activation statistics, effectively assuming that all output channels contribute equally to the layer-wise reconstruction objective. We propose KronQ, a PTQ framework that challenges this assumption by introducing the gradient covariance into the quantization pipeline. Under the Kronecker-factored Hessian approximation, the quantization loss depends jointly on both the activation and gradient covariances, and KronQ exploits this at two complementary levels. (1) KronQ introduces bidirectional incoherence processing, extending the existing input-side random rotation to the output dimension using the gradient covariance, reducing weight magnitude variance across both input and output dimensions. (2) KronQ derives a new sensitivity metric for inter-layer mixed-precision allocation, driven by the gradient and activation Hessian traces. Notably, in the case of 2-bit weight-only quantization on LLaMA-3-70B, while GPTQ and GPTAQ diverge or produce degenerate quantizations (>2000 perplexity on WikiText-2), \\KronQ{} achieves 7.93 perplexity.",
+        "identifiers": [
+          "SemanticScholar:8db8b55ec72de7e08a7355a79fb8ea40233ef1e1"
+        ],
+        "semantic_scholar_id": "8db8b55ec72de7e08a7355a79fb8ea40233ef1e1",
+        "canonical_id": "arXiv:2607.07964",
+        "arxiv_id": "2607.07964",
+        "doi": "10.48550/arXiv.2607.07964",
+        "authors": [
+          "Donghyun Lee",
+          "Yuhang Li",
+          "Ruokai Yin",
+          "Priyadarshini Panda"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 93,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.23807",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.23807",
+        "id:SemanticScholar:fbf89ffc7d4ed9e3a3ef50d605fad960033c5c69",
+        "id:arXiv:2505.23807",
+        "title:dlp dynamic layerwise pruning in large language models",
+        "url:https://arxiv.org/abs/2505.23807"
+      ],
+      "record": {
+        "title": "DLP: Dynamic Layerwise Pruning in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2505.23807",
+        "year": 2025,
+        "published": "2025-05-27",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning has recently been widely adopted to reduce the parameter scale and improve the inference efficiency of Large Language Models (LLMs). Mainstream pruning techniques often rely on uniform layerwise pruning strategies, which can lead to severe performance degradation at high sparsity levels. Recognizing the varying contributions of different layers in LLMs, recent studies have shifted their focus toward non-uniform layerwise pruning. However, these approaches often rely on pre-defined values, which can result in suboptimal performance. To overcome these limitations, we propose a novel method called Dynamic Layerwise Pruning (DLP). This approach adaptively determines the relative importance of each layer by integrating model weights with input activation information, assigning pruning rates accordingly. Experimental results show that DLP effectively preserves model performance at high sparsity levels across multiple LLMs. Specifically, at 70% sparsity, DLP reduces the perplexity of LLaMA2-7B by 7.79 and improves the average accuracy by 2.7% compared to state-of-the-art methods. Moreover, DLP is compatible with various existing LLM compression techniques and can be seamlessly integrated into Parameter-Efficient Fine-Tuning (PEFT). We release the code at https://github.com/ironartisan/DLP to facilitate future research.",
+        "identifiers": [
+          "SemanticScholar:fbf89ffc7d4ed9e3a3ef50d605fad960033c5c69"
+        ],
+        "semantic_scholar_id": "fbf89ffc7d4ed9e3a3ef50d605fad960033c5c69",
+        "canonical_id": "arXiv:2505.23807",
+        "arxiv_id": "2505.23807",
+        "doi": "10.48550/arXiv.2505.23807",
+        "authors": [
+          "Yuli Chen",
+          "Bo Cheng",
+          "Jiale Han",
+          "Yingying Zhang",
+          "Yingting Li",
+          "Shuhao Zhang"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 500,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.1189",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.1189",
+        "id:SemanticScholar:eb205b6da8c2bd1cfeb14749551a0e8a776fd982",
+        "title:from logical to computational sparsity structureaware blocksparse attention for longcode completion",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.1189"
+      ],
+      "record": {
+        "title": "From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long-Code Completion",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1189",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Code Large Language Models face critical Time-To-First-Token (TTFT) latency challenges when handling long code completion due to the quadratic complexity ( O ( n 2 ) ) of attention mechanisms. While existing sparse attention methods attempt to address this issue, they suffer from three key limitations: (1) general sparse patterns cause excessive accuracy degradation without considering code structure, (2) code-specific methods achieve only logical sparsity without actual computational speedup, and (3) limited adaptation to complex scenarios such as repository-level completion. We propose SabreCoder , a training-free S tructure-a ware b lock-spa r s e attention mechanism that bridges the gap between logical and computational sparsity. SabreCoder parses code into semantic chunks, constructs chunk-level sparse patterns through dependency analysis and similarity matching, and maps them to GPU-friendly block-sparse formats. Extensive experiments on LCC and CrossCodeEval benchmarks demonstrate that SabreCoder reduces TTFT by 45-55% while maintaining accuracy within 3% of dense attention.",
+        "identifiers": [
+          "SemanticScholar:eb205b6da8c2bd1cfeb14749551a0e8a776fd982"
+        ],
+        "semantic_scholar_id": "eb205b6da8c2bd1cfeb14749551a0e8a776fd982",
+        "doi": "10.18653/v1/2026.acl-long.1189",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.1189",
+        "authors": [
+          "Yan-Lin Wang",
+          "Yan-Lin Wang",
+          "Bowen Zhang",
+          "Yi Zhang",
+          "Da-Ya Guo",
+          "Jia-Chi Chen",
+          "Hong-Yu Zhang",
+          "Zi-Bin Zheng"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.20662",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.20662",
+        "id:SemanticScholar:73a7a4ef88d35e9d615083852741b179ccd27a4b",
+        "id:arXiv:2511.20662",
+        "title:democratizing llm efficiency from hyperscale optimizations to universal deployability",
+        "url:https://arxiv.org/abs/2511.20662"
+      ],
+      "record": {
+        "title": "Democratizing LLM Efficiency: From Hyperscale Optimizations to Universal Deployability",
+        "source_url": "https://arxiv.org/abs/2511.20662",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have become indispensable, but the most celebrated efficiency methods---mixture-of-experts (MoE), speculative decoding, and complex retrieval-augmented generation (RAG)---were built for hyperscale providers with vast infrastructure and elite teams. \nOutside that context, their benefits collapse into overhead, fragility, and wasted carbon. \nThe result is that a handful of Big Tech companies benefit, while thousands of hospitals, schools, governments, and enterprises are left without viable options. \nWe argue that the next frontier is not greater sophistication at scale, but robust simplicity: efficiency that thrives under modest resources and minimal expertise. We propose a new research agenda: retrofitting pretrained models with more efficient architectures without retraining, inventing lightweight fine-tuning that preserves alignment, making reasoning economical despite long chains of thought, enabling dynamic knowledge management without heavy RAG pipelines, and adopting Overhead-Aware Efficiency (OAE) as a standard benchmark.\nBy redefining efficiency to include adoption cost, sustainability, and fairness, we can democratize LLM deployment---ensuring that optimization reduces inequality and carbon waste rather than amplifying them.",
+        "identifiers": [
+          "SemanticScholar:73a7a4ef88d35e9d615083852741b179ccd27a4b"
+        ],
+        "semantic_scholar_id": "73a7a4ef88d35e9d615083852741b179ccd27a4b",
+        "canonical_id": "arXiv:2511.20662",
+        "arxiv_id": "2511.20662",
+        "doi": "10.48550/arXiv.2511.20662",
+        "authors": [
+          "Hen-Hsen Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 340,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02197",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02197",
+        "id:SemanticScholar:5fcdbe17325acb335af532addf3c10bce821ff6d",
+        "id:arXiv:2602.02197",
+        "title:hierarchical adaptive eviction for kv cache management in multimodal language models",
+        "url:https://arxiv.org/abs/2602.02197"
+      ],
+      "record": {
+        "title": "Hierarchical Adaptive Eviction for KV Cache Management in Multimodal Language Models",
+        "source_url": "https://arxiv.org/abs/2602.02197",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of visual information into Large Language Models (LLMs) has enabled Multimodal LLMs (MLLMs), but the quadratic memory and computational costs of Transformer architectures remain a bottleneck. Existing KV cache eviction strategies fail to address the heterogeneous attention distributions between visual and text tokens, leading to suboptimal efficiency or degraded performance. In this paper, we propose Hierarchical Adaptive Eviction (HAE), a KV cache eviction framework that optimizes text-visual token interaction in MLLMs by implementing Dual-Attention Pruning during pre-filling (leveraging visual token sparsity and attention variance) and a Dynamic Decoding Eviction Strategy (inspired by OS Recycle Bins) during decoding. HAE minimizes KV cache usage across layers, reduces computational overhead via index broadcasting, and theoretically ensures superior information integrity and lower error bounds compared to greedy strategies, enhancing efficiency in both comprehension and generation tasks. Empirically, HAE reduces KV-Cache memory by 41\\% with minimal accuracy loss (0.3\\% drop) in image understanding tasks and accelerates story generation inference by 1.5x while maintaining output quality on Phi3.5-Vision-Instruct model.",
+        "identifiers": [
+          "SemanticScholar:5fcdbe17325acb335af532addf3c10bce821ff6d"
+        ],
+        "semantic_scholar_id": "5fcdbe17325acb335af532addf3c10bce821ff6d",
+        "canonical_id": "arXiv:2602.02197",
+        "arxiv_id": "2602.02197",
+        "doi": "10.48550/arXiv.2602.02197",
+        "authors": [
+          "Xindian Ma",
+          "Yidi Lu",
+          "Peng Zhang",
+          "Jing Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 249,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10431",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.10431",
+        "id:SemanticScholar:04d30e40f1f7ab15b1104b12d8cac5c5b8223b51",
+        "id:arXiv:2602.10431",
+        "title:qtale quantizationrobust tokenadaptive layer execution for llms",
+        "url:https://arxiv.org/abs/2602.10431"
+      ],
+      "record": {
+        "title": "QTALE: Quantization-Robust Token-Adaptive Layer Execution for LLMs",
+        "source_url": "https://arxiv.org/abs/2602.10431",
+        "year": 2026,
+        "published": "2026-02-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) demand substantial computational and memory resources, posing challenges for efficient deployment. Two complementary approaches have emerged to address these issues: token-adaptive layer execution, which reduces floating-point operations (FLOPs) by selectively bypassing layers, and quantization, which lowers memory footprint by reducing weight precision. However, naively integrating these techniques leads to additional accuracy degradation due to reduced redundancy in token-adaptive models. We propose QTALE (Quantization-Robust Token-Adaptive Layer Execution for LLMs), a novel framework that enables seamless integration of token-adaptive execution with quantization while preserving accuracy. Conventional token-adaptive methods reduce redundancy in two ways: (1) by limiting the diversity of training paths explored during fine-tuning, and (2) by lowering the number of parameters actively involved in inference. To overcome these limitations, QTALE introduces two key components: (1) a training strategy that ensures diverse execution paths are actively explored during fine-tuning, and (2) a post-training mechanism that allows flexible adjustment of the execution ratio at inference to reintroduce redundancy when needed. Experimental results show that QTALE enables seamless integration of token-adaptive layer execution with quantization, while keeping the accuracy gap to quantization-only models below 0.5% on CommonsenseQA benchmarks. By combining tokenadaptive execution for FLOPs reduction and quantization for memory savings, QTALE provides an effective solution for efficient LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:04d30e40f1f7ab15b1104b12d8cac5c5b8223b51"
+        ],
+        "semantic_scholar_id": "04d30e40f1f7ab15b1104b12d8cac5c5b8223b51",
+        "canonical_id": "arXiv:2602.10431",
+        "arxiv_id": "2602.10431",
+        "doi": "10.48550/arXiv.2602.10431",
+        "authors": [
+          "Kanghyun Noh",
+          "Ji-Man Choi",
+          "Yulhwa Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 240,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.03652",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.03652",
+        "id:SemanticScholar:f6d00e3c69c58473312dbb14eea01cdeeb4b0864",
+        "id:arXiv:2607.03652",
+        "title:eliteformer an efficient transformer for fpgas",
+        "url:https://arxiv.org/abs/2607.03652"
+      ],
+      "record": {
+        "title": "ELiTeFormer: An Efficient Transformer for FPGAs",
+        "source_url": "https://arxiv.org/abs/2607.03652",
+        "year": 2026,
+        "published": "2026-07-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer blocks are prevalent in large language model (LLM) but present deployment challenges due to their challenging computational and memory demands. While prior work has typically optimized attention mechanisms or feed-forward networks (FFNs) separately, few hardware (HW) architecture have jointly addressed both components with co-designed hardware acceleration. We present ELiTeFormer (Efficient Linear Ternary Transformer), the first Transformer model architecture that unifies hybrid linear attention with ultra-low-precision (ternary) linear projections, specifically co-designed for field-programmable gate array (FPGA) deployment. ELiTeFormer achieves 10x model weight compression and 12.8x key-value (KV) cache compression compared to LLaMA 3, while maintaining competitive accuracy (31.9% on the MMLU benchmark, within 3.0% of BitNet b1.58). Our key architectural contribution is a novel processing element (PE) micro-architecture that eliminates all multiplications in ternary linear projections through bitmasking operations, significantly reducing resource utilization by completely avoiding dedicated digital signal processing (DSP) blocks. We simulate, synthesize, and deploy ELiTeFormer targeting a Xilinx VCK5000 Versal board using high-level synthesis (HLS) flows. Block-level simulations show 9.6x speedup for FFN operations and 4.4x speedup for attention compared to standard implementations. End-to-end deployment achieves up to 3.9x lower latency and 3.2x better energy efficiency than LLaMA 3 on an NVIDIA A100 graphics processing unit (GPU) at long context lengths. This represents the first FPGA realization combining linear attention with ternary quantization, demonstrating the viability of algorithm-architecture co-design for next-generation LLM acceleration.",
+        "identifiers": [
+          "SemanticScholar:f6d00e3c69c58473312dbb14eea01cdeeb4b0864"
+        ],
+        "semantic_scholar_id": "f6d00e3c69c58473312dbb14eea01cdeeb4b0864",
+        "canonical_id": "arXiv:2607.03652",
+        "arxiv_id": "2607.03652",
+        "doi": "10.48550/arXiv.2607.03652",
+        "authors": [
+          "Victor Agostinelli",
+          "N. Agostini",
+          "Antonino Tumeo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 97,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28263",
+      "identity_tokens": [
+        "id:SemanticScholar:76ec7edcb9765075e113342fb1b29738151fc8d9",
+        "id:arXiv:2607.28263",
+        "title:comem reusing transformer depth across queries with persistent intermediate residuals",
+        "url:https://arxiv.org/abs/2607.28263"
+      ],
+      "record": {
+        "title": "CoMem: Reusing Transformer Depth across Queries with Persistent Intermediate Residuals",
+        "source_url": "https://arxiv.org/abs/2607.28263",
+        "year": 2026,
+        "published": "2026-07-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Repeated queries over shared documents repeatedly execute the same lower transformer layers. We introduce CoMem, which makes split depth j an explicit reusable-context axis: write one depth-j residual per token, select a bounded chunk set, and resume only layers [j:L). Among document-reuse systems we are aware of, CoMem jointly makes split depth a tunable serving axis and isolates it with a matched j=0 endpoint. On Qwen3-8B, j=12 reduces selected-pack Read from 931.9 to 664.4 ms (1.403x), with a 3.12-point RULER cost (95% CI [2.36, 3.93]); a continuous-prefix oracle recovers the full gap. The resulting depth axis quantifies a quality-latency-storage trade-off; a separate same-adapter, Write-inclusive pipeline is 2.74x faster. Equal-latency raw replay leads by 11.56 points with BM25, directly measuring an applicability boundary of prepaid depth rather than hiding it. CoMem stores 8 KiB/token versus 144 KiB/token for a protocol-aligned same-Qwen3 CacheBlend-style diagnostic; the cohorts and adaptation budgets are not matched. A context-position factorization identifies missing lower-layer document context as the dominant tested multikey error, and a 32-token overlap raises 92.5 to 98.5 without increasing persistent bytes or per-query Read. CoMem opens transformer depth as a measurable, tunable dimension for repeated-query long-context serving.",
+        "identifiers": [
+          "SemanticScholar:76ec7edcb9765075e113342fb1b29738151fc8d9"
+        ],
+        "semantic_scholar_id": "76ec7edcb9765075e113342fb1b29738151fc8d9",
+        "canonical_id": "arXiv:2607.28263",
+        "arxiv_id": "2607.28263",
+        "authors": [
+          "Han-Lin Liu",
+          "Xuan Qi",
+          "Chun-Yu Liu",
+          "Hao Zhong",
+          "Yulong Wang",
+          "Key",
+          "Rayying",
+          "Alex Lamb",
+          "Ming-Yu Gao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 71,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.10251",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.10251",
+        "id:SemanticScholar:c19f7e60bc8f8f0e5178b142c81b7815b81d9f8a",
+        "id:arXiv:2508.10251",
+        "title:metametrics and best practices for systemlevel inference performance benchmarking",
+        "url:https://arxiv.org/abs/2508.10251"
+      ],
+      "record": {
+        "title": "Meta-Metrics and Best Practices for System-Level Inference Performance Benchmarking",
+        "source_url": "https://arxiv.org/abs/2508.10251",
+        "year": 2025,
+        "published": "2025-08-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Benchmarking inference performance (speed) of Foundation Models such as Large Language Models (LLM) involves navigating a vast experimental landscape to understand the complex interactions between hardware and software components. However, evaluating every possible test configuration is impractical, unfeasible and unnecessary. To address this challenge, we introduce FMwork, a comprehensive and methodical approach to creating a controlled testing environment that accurately reflects and characterizes performance. FMwork comprises a set of benchmkaring best practices with three key components: 1) meta-metrics, 2) parameter selection, and 3) strategic cost-performance evaluation. Meta-metrics account for time and resources spent on benchmarking and the relative accuracy of the results compared to a larger body of measurements, representing the complete experimental space. FMwork operationalizes the meta-metrics and provides efficient strategies for parameter selection and cost-performance analysis. Using the framework, we show up to 24x improvement (speedup and/or resource savings) running sweeps of experiments compared to the ground truth. Even already considering a subset of experiments as reference point (using the power of two for batch sizes), reducing experimental output size from 1024 to 128 tokens yields another 2.7x gain while keeping 96.6% accuracy for an evaluation using Llama 3.1 8B model.",
+        "identifiers": [
+          "SemanticScholar:c19f7e60bc8f8f0e5178b142c81b7815b81d9f8a"
+        ],
+        "semantic_scholar_id": "c19f7e60bc8f8f0e5178b142c81b7815b81d9f8a",
+        "canonical_id": "arXiv:2508.10251",
+        "arxiv_id": "2508.10251",
+        "doi": "10.48550/arXiv.2508.10251",
+        "authors": [
+          "Shweta Salaria",
+          "Zhuoran Liu",
+          "Nelson Mimura Gonzalez"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 421,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.17595",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.17595",
+        "id:SemanticScholar:9cfbeb5c6ff971211d28298130b7d59d78317c21",
+        "id:arXiv:2505.17595",
+        "title:neuqi nearoptimal uniform quantization parameter initialization",
+        "url:https://arxiv.org/abs/2505.17595"
+      ],
+      "record": {
+        "title": "NeUQI: Near-Optimal Uniform Quantization Parameter Initialization",
+        "source_url": "https://arxiv.org/abs/2505.17595",
+        "year": 2025,
+        "published": "2025-05-23",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve impressive performance across domains but face significant challenges when deployed on consumer-grade GPUs or personal devices such as laptops, due to high memory consumption and inference costs. Post-training quantization (PTQ) of LLMs offers a promising solution that reduces their memory footprint and decoding latency. In practice, PTQ with uniform quantization representation is favored due to its efficiency and ease of deployment, as uniform quantization is widely supported by mainstream hardware and software libraries. Recent studies on low-bit uniform quantization have led to noticeable improvements in post-quantization model performance; however, they mainly focus on quantization methodologies, while the initialization of quantization parameters remains underexplored and still relies on the conventional Min-Max formula. In this work, we identify the limitations of the Min-Max formula, move beyond its constraints, and propose NeUQI, a method that efficiently determines near-optimal initialization for uniform quantization. Our NeUQI simplifies the joint optimization of the scale and zero-point by deriving the zero-point for a given scale, thereby reducing the problem to a scale-only optimization. Benefiting from the improved quantization parameters, our NeUQI consistently outperforms existing methods in the experiments with the LLaMA and Qwen families on various settings and tasks. Furthermore, when combined with a lightweight distillation strategy, NeUQI even achieves superior performance to PV-tuning, a considerably more resource-intensive method.",
+        "identifiers": [
+          "SemanticScholar:9cfbeb5c6ff971211d28298130b7d59d78317c21"
+        ],
+        "semantic_scholar_id": "9cfbeb5c6ff971211d28298130b7d59d78317c21",
+        "canonical_id": "arXiv:2505.17595",
+        "arxiv_id": "2505.17595",
+        "doi": "10.48550/arXiv.2505.17595",
+        "authors": [
+          "Li Lin",
+          "Xinyu Hu",
+          "Xiao-Jun Wan"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 504,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "identity_tokens": [
+        "id:SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+        "title:d emystifying the m ixture of e xperts s erving t ax",
+        "url:https://www.semanticscholar.org/paper/929a6dad9869799e02c60c0fc959d2fd41de8cb2"
+      ],
+      "record": {
+        "title": "D EMYSTIFYING THE M IXTURE OF E XPERTS S ERVING T AX",
+        "source_url": "https://www.semanticscholar.org/paper/929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2"
+        ],
+        "semantic_scholar_id": "929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+        "canonical_id": "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+        "authors": [
+          "P. Patel",
+          "Dayeol Lee",
+          "Shintaro Iwasaki",
+          "Arvind Krishnamurthy"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4e40744f3c0b17667c907f1ceb77632a0448b4ccc502870e1ec12c2ca8784d97",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
