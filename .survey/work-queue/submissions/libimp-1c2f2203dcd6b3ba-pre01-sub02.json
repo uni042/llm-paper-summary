@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers",
+      "source_url": "https://arxiv.org/abs/2604.23475",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study the organization of channel-level importance in transformer feed-forward networks (FFNs). Using a Fisher-style loss proxy (LP) based on activation-gradient second moments, we show that loss sensitivity is concentrated in a small set of channels within each layer. In Llama-3.1-8B, the top 1% of channels per layer accounts for a median of 58.7% of LP mass, with a range of 33.0% to 86.1%. We call these loss-critical channels supernodes. Although FFN layers also contain strong activation outliers, LP-defined supernodes overlap only weakly with activation-defined outliers and are not explained by activation power or weight norms alone. Around this core, we find a weaker but consistent halo structure: some non-supernode channels share the supernodes'write support and show stronger redundancy with the protected core. We use one-shot structured FFN pruning as a diagnostic test of this organization. At 50% FFN sparsity, baselines that prune many supernodes degrade sharply, whereas our SCAR variants explicitly protect the supernode core; the strongest variant, SCAR-Prot, reaches perplexity 54.8 compared with 989.2 for Wanda-channel. The LP-concentration pattern appears across Mistral-7B, Llama-2-7B, and Qwen2-7B, remains visible in targeted Llama-3.1-70B experiments, and increases during OLMo-2-7B pretraining. These results suggest that LLM FFNs develop a small learned core of loss-critical channels, and that preserving this core is important for reliable structured pruning.",
+      "identifiers": [
+        "SemanticScholar:64648bfed261885859c391f9659411df949e5bae"
+      ],
+      "semantic_scholar_id": "64648bfed261885859c391f9659411df949e5bae",
+      "canonical_id": "arXiv:2604.23475",
+      "arxiv_id": "2604.23475",
+      "doi": "10.48550/arXiv.2604.23475",
+      "authors": [
+        "Audrey Cherilyn",
+        "Houman Safaai"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Supernodes/Halos studies loss-critical LLM FFN channels and protected-core structured pruning.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OoO-Spec: Out-of-Order Semantic Speculation for Fast Tool Calling",
+      "source_url": "https://arxiv.org/abs/2608.00814",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs generate tool calls token by token, even though the function choice and argument values can often be predicted in parallel from the request and tool schema. ToolSpec reduces this cost by drafting schema tokens and retrieving earlier calls, but cannot propose request-specific values absent from either source. We present OoO-Spec, which computes these missing semantics out of order. At request arrival, a Qwen3-0.6B sidecar predicts the function choice and all schema-defined argument slots in one parallel request-level wave while the target begins ToolSpec decoding. The runtime joins the slot values, renders the resulting call as text, and exposes it to subsequent candidate-construction rounds. The target polls without blocking, re-tokenizes a ready hint with its own tokenizer, and remains the sole verifier and commit authority. The sidecar is trained once with LoRA on Qwen2.5-32B teacher traces and used unchanged across Qwen2.5, Qwen3, and Llama targets, without target-specific drafter training. Across seven fully ranked targets and three benchmarks under greedy batch-one decoding, OoO-Spec is fastest among all evaluated methods in all 21 target-benchmark cells, reaching 2.46x-5.34x over autoregressive decoding with an unweighted mean of 3.89x, versus 2.95x for ToolSpec. It also outperforms every evaluated released learned drafter in each comparable cell. Across Qwen3-4B, 8B, 14B, and 32B targets, the same sidecar improves on ToolSpec by 34.1% on average. Its compact semantic payload averages 85 bytes per request excluding protocol metadata, supporting effective split-GPU overlap.",
+      "identifiers": [
+        "SemanticScholar:e312e62ba35548ae72b403408f1f9350f842ee83"
+      ],
+      "semantic_scholar_id": "e312e62ba35548ae72b403408f1f9350f842ee83",
+      "canonical_id": "arXiv:2608.00814",
+      "arxiv_id": "2608.00814",
+      "authors": [
+        "Zhi-Heng Zhang",
+        "Mu-Jie Xu",
+        "Fei Sun",
+        "Zhi-Xin Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 69,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OoO-Spec predicts tool-call semantics in parallel and reports 2.46x-5.34x decoding speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EcoFormer: Energy-Saving Attention with Linear Complexity",
+      "source_url": "https://arxiv.org/abs/2209.09004",
+      "year": 2022,
+      "published": "2022-09-19",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 38,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer is a transformative framework that models sequential data and has achieved remarkable performance on a wide range of tasks, but with high computational and energy cost. To improve its efficiency, a popular choice is to compress the models via binarization which constrains the floating-point values into binary ones to save resource consumption owing to cheap bitwise operations significantly. However, existing binarization methods only aim at minimizing the information loss for the input distribution statistically, while ignoring the pairwise similarity modeling at the core of the attention. To this end, we propose a new binarization paradigm customized to high-dimensional softmax attention via kernelized hashing, called EcoFormer, to map the original queries and keys into low-dimensional binary codes in Hamming space. The kernelized hash functions are learned to match the ground-truth similarity relations extracted from the attention map in a self-supervised way. Based on the equivalence between the inner product of binary codes and the Hamming distance as well as the associative property of matrix multiplication, we can approximate the attention in linear complexity by expressing it as a dot-product of binary codes. Moreover, the compact binary representations of queries and keys enable us to replace most of the expensive multiply-accumulate operations in attention with simple accumulations to save considerable on-chip energy footprint on edge devices. Extensive experiments on both vision and language tasks show that EcoFormer consistently achieves comparable performance with standard attentions while consuming much fewer resources. For example, based on PVTv2-B0 and ImageNet-1K, Ecoformer achieves a 73% on-chip energy footprint reduction with only a 0.33% performance drop compared to the standard attention. Code is available at https://github.com/ziplab/EcoFormer.",
+      "identifiers": [
+        "SemanticScholar:adf56c96978fad861e92917f95708ae9935cc132"
+      ],
+      "semantic_scholar_id": "adf56c96978fad861e92917f95708ae9935cc132",
+      "canonical_id": "arXiv:2209.09004",
+      "arxiv_id": "2209.09004",
+      "doi": "10.48550/arXiv.2209.09004",
+      "authors": [
+        "Jing Liu",
+        "Zizheng Pan",
+        "Haoyu He",
+        "Jianfei Cai",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 48,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 38,
+        "citation_count": 38,
+        "total": 48,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1481,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "EcoFormer linearizes attention through binary hashing and reduces energy on language and vision tasks.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reward-Shifted Speculative Sampling Is An Efficient Test-Time Weak-to-Strong Aligner",
+      "source_url": "https://arxiv.org/abs/2508.15044",
+      "year": 2025,
+      "published": "2025-08-20",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Aligning large language models (LLMs) with human preferences has become a critical step in their development. Recent research has increasingly focused on test-time alignment, where additional compute is allocated during inference to enhance LLM safety and reasoning capabilities. However, these test-time alignment techniques often incur substantial inference costs, limiting their practical application. We are inspired by the speculative sampling acceleration, which leverages a small draft model to efficiently predict future tokens, to address the efficiency bottleneck of test-time alignment. We introduce the reward-shifted speculative sampling (SSS) algorithm, in which the draft model is aligned with human preferences, while the target model remains unchanged. We theoretically demonstrate that the distributional shift between the aligned draft model and the unaligned target model can be exploited to recover the RLHF optimal solution without actually obtaining it, by modifying the acceptance criterion and bonus token distribution. Our algorithm achieves superior gold reward scores at a significantly reduced inference cost in test-time weak-to-strong alignment experiments, thereby validating both its effectiveness and efficiency.",
+      "identifiers": [
+        "SemanticScholar:ccb70eb3381330c04f893471bb7b55b465a8bbbc"
+      ],
+      "semantic_scholar_id": "ccb70eb3381330c04f893471bb7b55b465a8bbbc",
+      "canonical_id": "arXiv:2508.15044",
+      "arxiv_id": "2508.15044",
+      "doi": "10.48550/arXiv.2508.15044",
+      "authors": [
+        "Bo-Lian Li",
+        "Yan-Ran Wu",
+        "Xin-Yu Luo",
+        "Ruqi Zhang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 415,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Reward-shifted speculative sampling lowers test-time LLM alignment inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination",
+      "source_url": "https://arxiv.org/abs/2510.22767",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) typically come with a fixed architecture, despite growing evidence that not all layers contribute equally to every downstream task. We introduce TALE (Task-Aware Layer Elimination), an inference-time method that improves task performance by selectively removing layers that are irrelevant or detrimental for a given task. TALE optimizes task-specific performance, yielding a task-optimized architecture without retraining. Across 9 tasks and 5 model families, under both zero-shot and few-shot settings, TALE consistently matches or surpasses baseline performance while simultaneously reducing computational costs. TALE also synergizes with fine-tuning, leading to further performance improvements. Computing TALE for a new task requires modest resources, making it a practical and deployable solution for task-specialized LLM inference.",
+      "identifiers": [
+        "SemanticScholar:a5f7ea6c5d5e6be5676ed47be0bc64b86371b8a7"
+      ],
+      "semantic_scholar_id": "a5f7ea6c5d5e6be5676ed47be0bc64b86371b8a7",
+      "canonical_id": "arXiv:2510.22767",
+      "arxiv_id": "2510.22767",
+      "doi": "10.48550/arXiv.2510.22767",
+      "authors": [
+        "Omar Naim",
+        "Krish Sharma",
+        "Niyar R. Barman",
+        "Nicholas Asher"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "TALE eliminates LLM layers at inference time to reduce computation without retraining.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1c2f2203dcd6",
+    "round": "libimp-1c2f2203dcd6b3ba-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 15,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1c2f2203dcd6b3ba-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1c2f2203dcd6b3ba-pre01.json",
+    "receipt": "sha256:0d9ee945b25743628cf38822923472149d2948e1000d24a8a5d21a72f0172403"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1c2f2203dcd6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
