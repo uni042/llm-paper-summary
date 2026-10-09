@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-81aebec4b616eca9-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2504.14960",
+  "reason": "タイトルはMegatron Coreによる大規模MoEモデルの学習並列配置を明示している。対象は訓練中の異種並列マッピングであり、推論配信・専門家オフロード・推論時のメモリ管理への直接的なシステム貢献をタイトルから確認できない。現行の学習単独最適化凍結規則によりタイトル段階で対象外。",
+  "title": "MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core",
+  "identity_tokens": [
+    "arxiv:2504.14960"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81aebec4b616",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

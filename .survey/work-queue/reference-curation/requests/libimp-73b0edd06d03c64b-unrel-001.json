@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-73b0edd06d03c64b-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2403.06664",
+  "reason": "一次要旨と著者公開実装READMEを確認。提案はFPGA搭載SmartSSD内でAdam等の学習パラメータ更新を行うSmartUpdate、GPUからの勾配転送を圧縮するSmartComp、学習時のオプティマイザ状態I/Oを減らす専用ストレージ処理であり、評価対象も学習スループットである。現在のサーベイで凍結している学習単独最適化に該当し、推論時のKVキャッシュ・専門家オフロード・推論サービングへの具体的な適用と評価が一次要旨にないため収録対象外。",
+  "title": "Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System",
+  "identity_tokens": [
+    "arxiv:2403.06664"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-73b0edd06d03",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
