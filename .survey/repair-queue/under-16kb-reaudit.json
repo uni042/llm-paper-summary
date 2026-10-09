@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T03:49:52.013839+00:00",
+  "generated_at": "2026-10-09T05:03:57.087089+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 313,
+  "count": 310,
   "worker_counts": {
-    "scheduled-chat-00": 83,
-    "scheduled-chat-30": 85,
+    "scheduled-chat-00": 82,
+    "scheduled-chat-30": 83,
     "scheduled-chat-45": 145
   },
   "entries": [
@@ -247,29 +247,6 @@
         "16KB未満再監査: 本文説明量 1475 < 2200",
         "16KB未満再監査: 手法説明量 375 < 700",
         "16KB未満再監査: 評価説明量 90 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
-      "canonical_id": "arXiv:2402.10517",
-      "title": "Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs",
-      "file_bytes": 9757,
-      "source_sha256": "d58a188a09b04b0d18d992a6aad13cb4bcfb37ccb16f0606537c456493e60eef",
-      "source_git_blob_sha": "e1439f82a7e98e2e4dbe29522c749db6b46f5e08",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.810442,
-      "quality_metrics": {
-        "body_chars": 1993,
-        "method_chars": 797,
-        "evaluation_chars": 132,
-        "limitation_chars": 161
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1993 < 2200",
-        "16KB未満再監査: 評価説明量 132 < 500"
       ],
       "warnings": []
     },
@@ -2389,51 +2366,6 @@
         "16KB未満再監査: 本文説明量 727 < 2200",
         "16KB未満再監査: 手法説明量 198 < 700",
         "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
-      "canonical_id": "arXiv:2409.15790",
-      "title": "Small Language Models: Survey, Measurements, and Insights",
-      "file_bytes": 12105,
-      "source_sha256": "bb375f6857a5892edd0332e47064cd220e9daa340a3a5193cc2958724e3d2623",
-      "source_git_blob_sha": "bd8cd629fe446e64bc5718eebf23262a03cc2684",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.918667,
-      "quality_metrics": {
-        "body_chars": 2201,
-        "method_chars": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 195
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2406.19657-llmeasyquant-scalable-quantization-for-parallel-and-distributed-llm-inference.md",
-      "canonical_id": "arXiv:2406.19657",
-      "title": "LLMEasyQuant: Scalable Quantization for Parallel and Distributed LLM Inference",
-      "file_bytes": 12108,
-      "source_sha256": "bad462c4293df146d8c702294348483999f24241232481d686db0cb23eec3feb",
-      "source_git_blob_sha": "0b9d32b80e41162ff6764e669af57ce2c07dc8bd",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.951838,
-      "quality_metrics": {
-        "body_chars": 2785,
-        "method_chars": 894,
-        "evaluation_chars": 178,
-        "limitation_chars": 317
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 178 < 500"
       ],
       "warnings": []
     },
