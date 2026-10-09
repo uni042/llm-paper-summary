@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c91eea5a2b90dc03-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2307.08045",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2307.08045",
+    "identity_tokens": [
+      "arXiv:2307.08045"
+    ],
+    "reason": "原著§5〜§8は、QK^Tの各行で閾値τ以上の要素が高々k個という仮定のもと、Grover探索と量子ランダムアクセスメモリを用いて大注意要素を発見し、量子計算量O~(n^1.5 sqrt(k)d+nkd)と近似誤差境界を証明する。推論注意計算への直接的な理論的関係はあるが、量子実機・GPU上の実装、LLMでの疎性仮定の検証、実測レイテンシ・メモリ・処理率がなく、現行サーベイの実行時推論システムへの具体的な実装貢献は確認できない。理論的関連を残して境界候補とする。",
+    "first_checked_at": "2026-10-09T12:47:45+00:00",
+    "last_checked_at": "2026-10-09T12:47:45+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Classical Attention: Quantum Attention for Scalable Computation"
+  },
+  "processed_at": "2026-10-09T12:47:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c91eea5a2b90",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

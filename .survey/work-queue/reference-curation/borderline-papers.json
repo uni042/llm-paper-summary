@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-09T03:08:15+00:00",
-  "record_count": 4525,
+  "updated_at": "2026-10-09T12:47:45+00:00",
+  "record_count": 4526,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69036,6 +69036,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "PSA: Pyramid Sparse Attention for Efficient Video Understanding and Generation"
+    },
+    "arXiv:2307.08045": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.08045",
+      "identity_tokens": [
+        "arXiv:2307.08045"
+      ],
+      "reason": "原著§5〜§8は、QK^Tの各行で閾値τ以上の要素が高々k個という仮定のもと、Grover探索と量子ランダムアクセスメモリを用いて大注意要素を発見し、量子計算量O~(n^1.5 sqrt(k)d+nkd)と近似誤差境界を証明する。推論注意計算への直接的な理論的関係はあるが、量子実機・GPU上の実装、LLMでの疎性仮定の検証、実測レイテンシ・メモリ・処理率がなく、現行サーベイの実行時推論システムへの具体的な実装貢献は確認できない。理論的関連を残して境界候補とする。",
+      "first_checked_at": "2026-10-09T12:47:45+00:00",
+      "last_checked_at": "2026-10-09T12:47:45+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Classical Attention: Quantum Attention for Scalable Computation"
     }
   }
 }
