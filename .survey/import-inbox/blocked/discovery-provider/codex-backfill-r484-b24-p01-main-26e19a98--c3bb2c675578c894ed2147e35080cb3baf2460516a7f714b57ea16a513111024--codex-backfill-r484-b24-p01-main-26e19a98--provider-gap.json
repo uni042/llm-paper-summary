@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "codex-local",
-  "run_key": "codex-backfill-r484-b24-p01-main-26e19a98",
+  "run_key": "codex-backfill-r484-b24-p01-main-26e19a98::provider-gap",
   "reference_main_sha": "26e19a985af008f353bae5aaa1745832823cbfb6",
-  "record_count": 20,
+  "record_count": 17,
   "records": [
     {
       "classification": "accept",
@@ -140,33 +140,6 @@
         "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
         "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
-      ]
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2411.01030",
-      "identity_tokens": [
-        "arXiv:2411.01030",
-        "DOI:10.48550/arXiv.2411.01030"
-      ],
-      "title": "Birdie: Advancing State Space Models with Reward-Driven Objectives and Curricula",
-      "reason": "The primary abstract describes a reward-driven objective and curriculum that improve retrieval capability in efficient SSMs while retaining their compute efficiency. Its contribution is training and retrieval quality, not reducing inference latency, memory, or resource use, so it falls outside the inference-efficiency scope.",
-      "source_url": "https://arxiv.org/abs/2411.01030",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-09T03:47:36+00:00",
-      "last_checked_at": "2026-10-09T03:47:36+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md",
-        "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md",
-        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
-        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
-        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
-        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
-        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
-        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
-        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
-        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
       ]
     },
     {
@@ -459,51 +432,27 @@
         "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
         "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
       ]
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2510.09426",
-      "identity_tokens": [
-        "arXiv:2510.09426",
-        "DOI:10.48550/arXiv.2510.09426"
-      ],
-      "title": "KORMo: Korean Open Reasoning Model for Everyone",
-      "reason": "The primary abstract is about training and releasing a Korean-English open reasoning model, data, and benchmark performance. It presents no inference-system or efficiency method.",
-      "source_url": "https://arxiv.org/abs/2510.09426",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-09T03:47:36+00:00",
-      "last_checked_at": "2026-10-09T03:47:36+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
-        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
-        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
-        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
-        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
-        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
-        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
-      ]
-    },
-    {
-      "classification": "accept",
-      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1123",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2026.acl-long.1123",
-        "ACL Anthology:2026.acl-long.1123"
-      ],
-      "title": "When Efficiency Meets Safety: A Benchmark Security Analysis of KV Cache Compression in Large Language Models",
-      "reason": "This ACL study examines how KV-cache compression affects LLM jailbreak robustness and proposes Safe-CAM, a cache-merging strategy that restores safety while maintaining compression efficiency with minimal overhead.",
-      "source_url": "https://aclanthology.org/2026.acl-long.1123/",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-09T03:47:36+00:00",
-      "last_checked_at": "2026-10-09T03:47:36+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
-        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
-        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
-        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
-        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
-        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
-      ]
     }
+  ],
+  "parent_run_key": "codex-backfill-r484-b24-p01-main-26e19a98",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/codex-backfill-r484-b24-p01-main-26e19a98--c3bb2c675578c894ed2147e35080cb3baf2460516a7f714b57ea16a513111024--codex-backfill-r484-b24-p01-main-26e19a98.json",
+  "provider_gap_ids": [
+    "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+    "SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6",
+    "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+    "SemanticScholar:ee14a30225684e9cb38c4772e2e0be0adfa709a5",
+    "SemanticScholar:eff6df09519baed05ca9050f21c87a9526aa3913",
+    "arXiv:2107.06419",
+    "arXiv:2108.04962",
+    "arXiv:2110.08678",
+    "arXiv:2203.12644",
+    "arXiv:2210.03841",
+    "arXiv:2405.01943",
+    "arXiv:2410.17268",
+    "arXiv:2502.00585",
+    "arXiv:2504.15300",
+    "arXiv:2509.24837",
+    "arXiv:2510.08798",
+    "arXiv:2510.23912"
   ]
 }
