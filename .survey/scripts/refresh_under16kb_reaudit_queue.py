@@ -76,8 +76,11 @@ def previous_queue_assignments(repo_root: Path) -> dict[str, str]:
         or payload.get("queue_version") != REAUDIT_VERSION
     ):
         return {}
+    entries = payload.get("entries")
+    if not isinstance(entries, list):
+        return {}
     result: dict[str, str] = {}
-    for row in payload.get("entries", []):
+    for row in entries:
         if not isinstance(row, dict):
             continue
         paper_path = str(row.get("path") or "")
