@@ -64,6 +64,82 @@ def assigned_worker(path: str) -> str:
     return WORKERS[digest[0] % len(WORKERS)]
 
 
+def previous_queue_assignments(repo_root: Path) -> dict[str, str]:
+    """Preserve existing ownership to avoid reshuffling running workers."""
+    target = repo_root.resolve() / QUEUE_PATH
+    try:
+        payload = json.loads(target.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError, TypeError):
+        return {}
+    if not isinstance(payload, dict) or (
+        payload.get("queue_kind") != "under_16kb_semantic_reaudit"
+        or payload.get("queue_version") != REAUDIT_VERSION
+    ):
+        return {}
+    result: dict[str, str] = {}
+    for row in payload.get("entries", []):
+        if not isinstance(row, dict):
+            continue
+        paper_path = str(row.get("path") or "")
+        owner = row.get("assigned_worker")
+        if paper_path.startswith("papers/") and owner in WORKERS:
+            result[paper_path] = owner
+    return result
+
+
+def rebalance_workers(
+    entries: list[dict[str, Any]],
+    previous: dict[str, str] | None = None,
+    protected_each_end: int = 5,
+) -> None:
+    """Balance *remaining* papers with minimal ownership changes.
+
+    Existing owners take precedence over the hash fallback. Protect the first
+    and last few tasks of each worker because a scheduled chat might already
+    be using either end of its prior queue snapshot. No paper is duplicated.
+    """
+    previous = previous or {}
+    for row in entries:
+        path = str(row["path"])
+        row["assigned_worker"] = previous.get(path, row.get("assigned_worker"))
+        if row["assigned_worker"] not in WORKERS:
+            row["assigned_worker"] = assigned_worker(path)
+
+    total = len(entries)
+    counts = {worker: 0 for worker in WORKERS}
+    for row in entries:
+        counts[row["assigned_worker"]] += 1
+
+    target = {worker: total // len(WORKERS) for worker in WORKERS}
+    # Give surplus slots to the current largest owners, reducing migrations
+    # when total is not a multiple of the number of workers.
+    for worker in sorted(WORKERS, key=lambda w: (-counts[w], WORKERS.index(w)))[:total % len(WORKERS)]:
+        target[worker] += 1
+
+    for donor in sorted(WORKERS, key=lambda w: (-counts[w], WORKERS.index(w))):
+        surplus = counts[donor] - target[donor]
+        if surplus <= 0:
+            continue
+        owned = [row for row in entries if row["assigned_worker"] == donor]
+        # Middle tasks are safest to transfer. Preserve both live work fronts.
+        protected = {
+            id(row)
+            for row in owned[:protected_each_end] + (
+                owned[-protected_each_end:] if protected_each_end else []
+            )
+        }
+        candidates = [row for row in owned if id(row) not in protected]
+        candidates += [row for row in owned if id(row) in protected]
+        for row in candidates[:surplus]:
+            recipient = min(
+                (w for w in WORKERS if counts[w] < target[w]),
+                key=lambda w: (counts[w] - target[w], WORKERS.index(w)),
+            )
+            row["assigned_worker"] = recipient
+            counts[donor] -= 1
+            counts[recipient] += 1
+
+
 def is_survey_path(path: str) -> bool:
     return path.startswith("papers/survey/")
 
@@ -207,6 +283,7 @@ def build_queue(repo_root: Path, max_file_bytes: int = MAX_FILE_BYTES) -> dict[s
         )
 
     entries.sort(key=lambda row: (int(row["file_bytes"]), str(row["path"])))
+    rebalance_workers(entries, previous_queue_assignments(repo_root))
     worker_counts = {
         worker: sum(1 for row in entries if row["assigned_worker"] == worker)
         for worker in WORKERS
