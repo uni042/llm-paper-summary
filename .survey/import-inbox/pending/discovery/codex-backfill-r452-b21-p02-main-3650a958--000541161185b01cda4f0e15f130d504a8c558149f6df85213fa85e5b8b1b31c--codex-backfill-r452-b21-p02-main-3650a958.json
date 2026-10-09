@@ -1,0 +1,307 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill-luna",
+  "run_key": "codex-backfill-r452-b21-p02-main-3650a958",
+  "reference_main_sha": "3650a958dd63f7434cdd424ed0eba508f2067f17",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.03681",
+      "identity_tokens": [
+        "arXiv:2603.03681",
+        "DOI:10.48550/arXiv.2603.03681"
+      ],
+      "title": "EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs",
+      "reason": "EvoPrune prunes visual tokens during MLLM encoding and reports 2x inference speedup with under 1% quality loss.",
+      "source_url": "https://arxiv.org/abs/2603.03681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/VCIP67698.2025.11396917",
+      "identity_tokens": [
+        "DOI:10.1109/VCIP67698.2025.11396917"
+      ],
+      "title": "Quadtree Partitioning-based Visual Token Pruning for MLLMs Considering Information Density",
+      "reason": "IEEE primary page exposed only robot-verification JavaScript text; abstract unavailable.",
+      "source_url": "https://doi.org/10.1109/VCIP67698.2025.11396917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.23475",
+      "identity_tokens": [
+        "arXiv:2604.23475",
+        "DOI:10.48550/arXiv.2604.23475"
+      ],
+      "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers",
+      "reason": "Supernodes/Halos studies loss-critical LLM FFN channels and protected-core structured pruning.",
+      "source_url": "https://arxiv.org/abs/2604.23475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.22767",
+      "identity_tokens": [
+        "arXiv:2510.22767",
+        "DOI:10.48550/arXiv.2510.22767"
+      ],
+      "title": "TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination",
+      "reason": "TALE eliminates LLM layers at inference time to reduce computation without retraining.",
+      "source_url": "https://arxiv.org/abs/2510.22767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPEC62836.2024.10938487",
+      "identity_tokens": [
+        "DOI:10.1109/HPEC62836.2024.10938487"
+      ],
+      "title": "Transformers: A Graph Processing Perspective",
+      "reason": "IEEE primary page exposed only robot-verification text; title alone cannot establish graph-processing relevance to LLM efficiency.",
+      "source_url": "https://doi.org/10.1109/HPEC62836.2024.10938487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.12856",
+      "identity_tokens": [
+        "arXiv:2510.12856",
+        "DOI:10.48550/arXiv.2510.12856"
+      ],
+      "title": "Efficient Adaptive Transformer: An Empirical Study and Reproducible Framework",
+      "reason": "EAT combines token pruning, sparse attention and early exit for adaptive transformer inference; abstract notes shallow-model latency overhead.",
+      "source_url": "https://arxiv.org/abs/2510.12856",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.20968",
+      "identity_tokens": [
+        "arXiv:2512.20968",
+        "DOI:10.48550/arXiv.2512.20968"
+      ],
+      "title": "Mesh-Attention: A New Communication-Efficient Distributed Attention with Improved Data Locality",
+      "reason": "Mesh-Attention reduces distributed LLM-attention communication and reports 3.4x speedup on 256 GPUs.",
+      "source_url": "https://arxiv.org/abs/2512.20968",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2209.09004",
+      "identity_tokens": [
+        "arXiv:2209.09004",
+        "DOI:10.48550/arXiv.2209.09004"
+      ],
+      "title": "EcoFormer: Energy-Saving Attention with Linear Complexity",
+      "reason": "EcoFormer linearizes attention through binary hashing and reduces energy on language and vision tasks.",
+      "source_url": "https://arxiv.org/abs/2209.09004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05030",
+      "identity_tokens": [
+        "arXiv:2604.05030",
+        "DOI:10.48550/arXiv.2604.05030"
+      ],
+      "title": "Phase-Associative Memory: Sequence Modeling in Complex Hilbert Space",
+      "reason": "PAM is a language model but reports 4x arithmetic overhead over matched Transformer and no efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2604.05030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12381",
+      "identity_tokens": [
+        "arXiv:2501.12381",
+        "DOI:10.48550/arXiv.2501.12381"
+      ],
+      "title": "Parallel Sequence Modeling via Generalized Spatial Propagation Network",
+      "reason": "GSPN is optimized for spatial vision and image generation, not LLM inference.",
+      "source_url": null,
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.26541",
+      "identity_tokens": [
+        "arXiv:2509.26541",
+        "DOI:10.48550/arXiv.2509.26541"
+      ],
+      "title": "TASP: Topology-aware Sequence Parallelism",
+      "reason": "TASP increases topology utilization for long-context LLM sequence parallelism and reports up to 3.58x speedup.",
+      "source_url": "https://arxiv.org/abs/2509.26541",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+      "identity_tokens": [
+        "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+        "OpenReview:NaldExCoyW"
+      ],
+      "title": "Long-context vision large language models: Empirical insights and a baseline",
+      "reason": "Official Edinburgh abstract confirms VLLM long-context baseline shortens visual input via caption aggregation and beats token-reduction/context-extension approaches.",
+      "source_url": "https://www.research.ed.ac.uk/en/publications/long-context-vision-large-language-models-empirical-insights-and-/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.18447",
+      "identity_tokens": [
+        "arXiv:2602.18447",
+        "DOI:10.48550/arXiv.2602.18447"
+      ],
+      "title": "ConfSpec: Efficient Step-Level Speculative Reasoning via Confidence-Gated Verification",
+      "reason": "ConfSpec selectively escalates speculative reasoning verification and reports 2.24x end-to-end speedup.",
+      "source_url": "https://arxiv.org/abs/2602.18447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.00814",
+      "identity_tokens": [
+        "arXiv:2608.00814",
+        "DOI:10.48550/arXiv.2608.00814"
+      ],
+      "title": "OoO-Spec: Out-of-Order Semantic Speculation for Fast Tool Calling",
+      "reason": "OoO-Spec predicts tool-call semantics in parallel and reports 2.46x-5.34x decoding speedup.",
+      "source_url": "https://arxiv.org/abs/2608.00814",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.15044",
+      "identity_tokens": [
+        "arXiv:2508.15044",
+        "DOI:10.48550/arXiv.2508.15044"
+      ],
+      "title": "Reward-Shifted Speculative Sampling Is An Efficient Test-Time Weak-to-Strong Aligner",
+      "reason": "Reward-shifted speculative sampling lowers test-time LLM alignment inference cost.",
+      "source_url": "https://arxiv.org/abs/2508.15044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.05848",
+      "identity_tokens": [
+        "arXiv:2605.05848",
+        "DOI:10.48550/arXiv.2605.05848"
+      ],
+      "title": "VideoRouter: Query-Adaptive Dual Routing for Efficient Long-Video Understanding",
+      "reason": "VideoRouter compresses less-relevant video-frame tokens in MLLM inference, reducing tokens up to 67.9%.",
+      "source_url": "https://arxiv.org/abs/2605.05848",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.09426",
+      "identity_tokens": [
+        "arXiv:2510.09426",
+        "DOI:10.48550/arXiv.2510.09426"
+      ],
+      "title": "KORMo: Korean Open Reasoning Model for Everyone",
+      "reason": "KORMo focuses on synthetic-data-driven Korean-English model training, openness, and reasoning quality, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2510.09426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.26678",
+      "identity_tokens": [
+        "arXiv:2605.26678",
+        "DOI:10.48550/arXiv.2605.26678"
+      ],
+      "title": "NestedKV: Nested Memory Routing for Long-Context KV Cache Compression",
+      "reason": "NestedKV compresses long-context LLM KV cache with hierarchical routing and no model changes.",
+      "source_url": "https://arxiv.org/abs/2605.26678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.09113",
+      "identity_tokens": [
+        "arXiv:2602.09113",
+        "DOI:10.48550/arXiv.2602.09113"
+      ],
+      "title": "Benchmarking the Energy Savings with Speculative Decoding Strategies",
+      "reason": "This work benchmarks LLM speculative-decoding energy use, directly measuring inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.09113",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1888",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1888"
+      ],
+      "title": "QUARTZ: Quantile-Aware Routing and Queueing for TTFT SLOs in LLM Serving",
+      "reason": "QUARTZ routing/queueing reduces TTFT tails and SLO violations in LLM serving.",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1888/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    }
+  ]
+}
