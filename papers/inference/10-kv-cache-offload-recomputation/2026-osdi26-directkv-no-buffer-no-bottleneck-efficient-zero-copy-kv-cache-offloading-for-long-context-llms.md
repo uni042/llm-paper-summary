@@ -1,229 +1,205 @@
 ---
 canonical_id: USENIX:OSDI26:luo
-arxiv_id: null
-doi: null
-openreview_id: null
-arxiv_categories:
-  primary: null
-  cross_list: []
-last_audited: null
-audit_version: 0
-storage_targets: []
-bottlenecks: []
-hardware_details: null
-quality_effect: null
-evidence_locations: []
 title: 'No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs'
-list_summary: 'DirectKVはCPU DRAM上のKVをGPUカーネルから直接読み、CPUデータを再利用するタイル化と融合カーネルで中継HBMバッファ・往復転送・帯域浪費を減らすゼロコピー方式。'
-summary: GH200でCPU DRAM上のKV cacheをGPU HBMへ一度コピーせず、GPUのattention kernelから直接読み、同じCPU側dataを何度も読まないよう計算順序とkernelを作り直すzero-copy KV offload system。
-authors_affiliations: Shutian Luo, Haiying Shen（University of Virginia）
-published: '2026-07-13'
-publication_status: OSDI 2026
-lineage: KV Cache Offload / Recomputation
-topics:
-- KV cache offload
-- Zero-copy
-- CPU pinned memory
-- NVLink-C2C
-- Kernel-memory co-design
-- Long-context inference
-importance: 高
-hardware_evaluation: 実機
-source: https://www.usenix.org/conference/osdi26/presentation/luo
-code: https://github.com/shutianluo/DirectKV
-implementation: 公式実装あり（shutianluo/DirectKV）
-last_checked: '2026-09-06'
 authors:
-- Shutian Luo
-- Haiying Shen
-publication: OSDI 2026
-publication_type: 査読付き国際会議論文
+  - Shutian Luo
+  - Haiying Shen
+published: '2026-07-13'
+publication: '20th USENIX Symposium on Operating Systems Design and Implementation (OSDI 2026), pp. 39–54'
+publication_type: conference paper
+publication_status: published
+source: https://www.usenix.org/conference/osdi26/presentation/luo
 sources:
-- https://www.usenix.org/conference/osdi26/presentation/luo
-- https://github.com/shutianluo/DirectKV
-implementation_status: official-code-available
+  - https://www.usenix.org/conference/osdi26/presentation/luo
+  - https://www.usenix.org/system/files/osdi26-luo.pdf
+  - https://github.com/shutianluo/DirectKV
+code: https://github.com/shutianluo/DirectKV
+implementation: 'CUDA 12.4、CUTLASS 3.0以降とFlashAttention-3を基に約5,300行のCUDA/C++を追加。ページ固定CPUメモリへKVを保存し、GPUカーネルが直接参照する。主評価はGH200の96GB HBM3とNVLink-C2C。通常PCIeでは容量拡張効果と速度効果を区別する。'
+last_checked: '2026-10-10'
+summary: 'DirectKVは長文脈推論のKVキャッシュをCPUのページ固定メモリへ置き、GPU側の中継バッファを経ずに注意機構カーネルから直接参照する。CPUメモリ帯域に合わせたタイル順序、ワープ単位の先読み・計算重畳、K/V射影と注意計算の融合で遠隔メモリ読出しを抑制する。GH200上の比較ではGPUメモリ使用量43%減、端点性能最大1.2倍改善を報告するが、KVがHBMに収まる場合はHBM常駐方式がより速い。'
+list_summary: 'GH200の高帯域CPU–GPU接続を利用し、CPU常駐KVをGPUカーネルから直接読み、CPU向けタイル順序・ワープ並行化・射影融合で中継HBMと余分な転送を削減。'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-10T00:05:00+09:00'
+worker_run_key: 20261009-2358-scheduled-chat-00/r01
+reference_main_sha: 825403a55ead65ccf9108ec4ec69846db92faaac
+last_audited: '2026-10-10'
+audit_version: 1
+under16kb_reaudit_target_path: papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md
+under16kb_reaudit_source_git_blob_sha: '27a2e5a2150c26607d9c1d6dfecda5721fc6ec1c'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+quality_body_chars: 8364
+quality_method_chars: 2272
+quality_eval_chars: 3029
+quality_limitation_chars: 584
 references:
-- canonical_id: arXiv:2303.08774
-  arxiv_id: '2303.08774'
-- canonical_id: arXiv:2403.02310
-- canonical_id: arXiv:2305.13245
-  arxiv_id: '2305.13245'
-- canonical_id: arXiv:2510.09665
-  arxiv_id: '2510.09665'
-- canonical_id: arXiv:2507.03153
-  arxiv_id: '2507.03153'
-- canonical_id: arXiv:2403.11421
-  arxiv_id: '2403.11421'
-- canonical_id: arXiv:2411.01142
-- canonical_id: arXiv:2001.08361
-  arxiv_id: '2001.08361'
-- canonical_id: DOI:10.1145/3600006.3613165
-- canonical_id: arXiv:2401.02669
-  arxiv_id: '2401.02669'
-- canonical_id: arXiv:1805.02867
-  arxiv_id: '1805.02867'
-- canonical_id: arXiv:2407.00079
-- canonical_id: arXiv:1911.02150
-  arxiv_id: '1911.02150'
-- canonical_id: arXiv:2303.06865
-- canonical_id: arXiv:2302.13971
-  arxiv_id: '2302.13971'
-- canonical_id: arXiv:2411.09317
-  arxiv_id: '2411.09317'
-- canonical_id: DOI:10.1145/3688351.3689164
-- canonical_id: arXiv:2205.01068
-  arxiv_id: '2205.01068'
-- canonical_id: arXiv:2403.01164
-- canonical_id: arXiv:2312.07104
-- canonical_id: arXiv:2401.09670
+  - canonical_id: arXiv:2303.08774
+    arxiv_id: '2303.08774'
+  - canonical_id: arXiv:2403.02310
+  - canonical_id: arXiv:2305.13245
+    arxiv_id: '2305.13245'
+  - canonical_id: arXiv:2510.09665
+    arxiv_id: '2510.09665'
+  - canonical_id: arXiv:2507.03153
+    arxiv_id: '2507.03153'
+  - canonical_id: arXiv:2403.11421
+    arxiv_id: '2403.11421'
+  - canonical_id: arXiv:2411.01142
+  - canonical_id: arXiv:2001.08361
+    arxiv_id: '2001.08361'
+  - canonical_id: DOI:10.1145/3600006.3613165
+  - canonical_id: arXiv:2401.02669
+    arxiv_id: '2401.02669'
+  - canonical_id: arXiv:1805.02867
+    arxiv_id: '1805.02867'
+  - canonical_id: arXiv:2407.00079
+  - canonical_id: arXiv:1911.02150
+    arxiv_id: '1911.02150'
+  - canonical_id: arXiv:2303.06865
+  - canonical_id: arXiv:2302.13971
+    arxiv_id: '2302.13971'
+  - canonical_id: arXiv:2411.09317
+    arxiv_id: '2411.09317'
+  - canonical_id: DOI:10.1145/3688351.3689164
+  - canonical_id: arXiv:2205.01068
+    arxiv_id: '2205.01068'
+  - canonical_id: arXiv:2403.01164
+  - canonical_id: arXiv:2312.07104
+  - canonical_id: arXiv:2401.09670
 references_checked_at: '2026-09-11'
 references_source: primary-pdf-reference-section
 references_total: 59
 ---
 
-# No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs
-
-> DirectKVはCPU DRAM上のKVをGPUカーネルから直接読み、CPUデータを再利用するタイル化と融合カーネルで中継HBMバッファ・往復転送・帯域浪費を減らすゼロコピー方式。
+# DirectKV：CPU常駐KVをGPUから直接参照するゼロコピー・オフロード
 
 ## 概要
 
-GH200実機でOPT-13B／30B等を評価し、既存オフロード方式比でCPU–GPU転送量を最大50%、GPUメモリを43%削減、エンドツーエンド性能を最大1.2倍改善した。16K文脈ではNEO／Pie比約1.3倍、FlexGen比約1.7倍で、32Kでは比較対象がメモリ不足になる条件でも動作した。
+長文脈の大規模言語モデルでは、生成済みトークンの鍵と値を保存するKVキャッシュが、文脈長に比例して増える。注意機構の計算を毎回最初からやり直さずに済む反面、数万トークンの文脈と複数の同時要求を抱えるとGPUの高帯域メモリ（HBM）を圧迫する。従来のオフロード方式はKVをCPU側へ退避するが、注意機構を実行する前にGPU側の中継バッファへ読み戻すため、転送量とバッファ容量の両方が問題になる。
 
-DirectKVは、長文脈でGPU HBMに収まらなくなるKVキャッシュをCPU メモリへ置きながら、**注意機構実行前にKVをGPU バッファへコピーしない**ゼロコピー オフロード システムである。
+DirectKVは、KVキャッシュをCPUのページ固定メモリへ保持し、GPUの注意機構カーネルがCPU側のKVを**GPU HBMへいったん格納せずに直接読み込む**方式である。ただし「ゼロコピー」とはデータ移動そのものがゼロという意味ではない。CPUからGPUへの実際の転送は生じるが、別のコピー命令で中継バッファを作る工程を省く。単純に既存のGPUカーネルへCPUメモリのアドレスを渡すだけでは、同じKVを何度も遠隔読出しして遅くなる。そこで計算順序、共有メモリ再利用、ワープ単位の先読み、K/V射影と注意演算の融合を合わせて設計する。
 
-ここでいう **ゼロコピー** は、「CPU上のKVを使うたびにGPU HBMへ明示的にコピーしてから計算する」のではなく、**GPU カーネル自身がCPU DRAM上のKVを直接読む**方式を指す。
+論文はNVIDIA GH200 Grace–Hopper SuperchipでLlama-3.1-8B、OPT-13B、OPT-30Bを評価した。既存のオフロード方式と比べ、CPU–GPU間の転送量を最大50%減らし、GPUメモリ使用量を43%削減し、端点の性能を最大1.2倍改善した。長い文脈でHBM常駐方式がメモリ不足になる場合にも動作する一方、**KVとモデルがHBMに収まる条件では、HBM常駐のSGLangの方が速い**。DirectKVの利点は、容量制約を緩めながら、オフロードに伴う速度低下を小さくする点にある。
 
-従来のswap型オフロードはCPU上のKV ブロックをGPUへ一度コピーしてから注意機構を実行するため、GPU側にコピー先となる一時バッファが必要になり、CPU→GPUの読み込みとGPU→CPUへの書き戻しも発生する。DirectKVはGPUから直接参照できるCPU メモリを使い、注意機構 カーネル自身が必要なKVだけをCPU側から読む。
+## 問題設定：なぜ従来の退避方式では足りないか
 
-ただし通常のGPU カーネルをそのままゼロコピー化すると、同じCPU-常駐 データを何度も読み直して接続網 trafficが増え、NVLink-C2Cでも大幅に遅くなる。そこでDirectKVは**CPU側データを一度読んだらできるだけ長く再利用する計算順序**、loadと計算の並行化、K/V生成と注意機構の統合を組み合わせ、CPU メモリ accessを重要な ボトルネックにしないようカーネルを作り直している。
+KVキャッシュをCPUへ置く交換型の方式は、各層で必要なKVをGPUへ読み込み、注意計算後に新しいKVを書き戻す。コピー先のGPUバッファが必要になり、退避して容量を節約する目的と衝突する。さらにバッファを埋めるCPU→GPU転送と、生成したKVのGPU→CPU転送を毎段階で調整しなければならない。プリフェッチを行っても、次に使うKVが予測通り届かなければGPUは待たされる。
 
-## 問題設定
+CPUとGPUの接続帯域も重要である。論文が対象とするGH200/GB200はNVLink-C2Cで最大900GB/秒級の双方向帯域を持つが、GPUのHBMは約4TB/秒とさらに速い。通常のPCIe環境ではCPU–GPU帯域は一段と低くなる。長文脈注意では、多数のストリーミングマルチプロセッサがそれぞれ約100KB級のKVタイルを並行して読むため、単発の遠隔読出し遅延よりも持続帯域が律速になりやすい。
 
-CPU メモリへKVをオフロードする既存システムの多くは、注意機構 カーネルがKVをHBM上に置く前提のため、CPU-常駐 KVを一度GPU 中継バッファへ移す必要がある。
+単純なゼロコピーが不十分であることを、論文は行列積の比較で示す。約400MBの行列を使う実験では、GPU上に全データを置いた場合の実行時間がPCIe環境で56ms、NVLink-C2C環境で52msだったのに対し、CPU側の行列をそのまま繰り返し読むゼロコピーではそれぞれ1122ms、106msへ悪化した。つまりPCIeでは20倍超、NVLink-C2Cでも約2倍遅い。GPU側のL2キャッシュ命中率も約77%から32.3%へ落ち、転送帯域だけでなく局所性の低下が問題になる。
 
-この **中継バッファ** は、CPU上のデータをGPU計算へ渡す前に一時的に置いておくGPU側のコピー先を指す。
-
-この方式には2つのコストがある。
-
-- 中継バッファ自体がHBMを消費し、オフロードで得たいメモリ容量を一部失う
-- デコードごとにKVをCPU→GPUへ読み、生成したKVを書き戻すため接続網 trafficが増える
-
-GH200 / GB200ではCPU-GPU間がNVLink-C2Cで最大900 GB/s級になり、PCIeより大幅に高速であるため、CPU メモリをGPUから直接読むゼロコピーが現実的になる。一方HBMは約4 TB/sとさらに速く、単純な ゼロコピーでは依然として帯域差が露出する。
-
-論文のmicrobenchmarkでは単純な ゼロコピーはPCIeで20倍超、NVLink-C2Cでも約2倍遅くなり、GPU L2 ヒット 速度も約77%から32.3%へ低下した。
+この結果は、CPUの大容量メモリをGPUへ直接見せれば速くなるという単純な説明を否定する。重要なのは、**遅い接続網を越えるデータを最小化するよう、カーネルのデータ再利用順序を作り直すこと**である。GPU内で多少余計にデータを動かしても、CPUから繰り返し読まない方が全体では速くなり得る。
 
 ## 手法
 
-### 1. KVをGPUから直接参照できるCPU memoryへ置く
+### 1．ページ固定CPUメモリにKVを置き、GPUから直接参照する
 
-KVキャッシュ管理機構は`cudaHostAlloc`を使い、OSにswapされずGPUから直接アドレス指定できるページ固定ホスト バッファを確保する。一般に **固定メモリ** と呼ばれる領域である。
+KVキャッシュ管理機構はCUDAの `cudaHostAlloc` を使い、ページ固定されたホストメモリを確保する。GPUから参照可能なアドレスを使うため、注意機構の実行前に `cudaMemcpyAsync` でKVをHBMの中継バッファへ複製する必要がない。生成したKVはCPU側の同じ保存領域へ書き戻し、次の生成段階でもそこから参照する。KVを捨てて再計算する方式ではなく、既存のKVを保持したまま利用する。
 
-GPU カーネルはこのKVを直接参照するため、明示的な`cudaMemcpyAsync`とHBM 中継バッファが不要になる。
+この方式ではGPUのメモリ使用量を節約できるが、GPUカーネルがCPUメモリを参照するため、接続網の帯域を十分に活用する設計が必要になる。DirectKVは単なるメモリ割当器ではなく、CPU常駐データに合わせた注意機構の実行経路を提供する。要求のスケジューリングやKVの追い出し方を全て作り替える方式ではない。
 
-プリフィルで生成したKVもCPU バッファへ書き、デコードでは過去KVをそこから直接再利用する。KV自体を捨てる再計算方式ではない。
+### 2．CPUメモリを意識したタイル化で遠隔読出しを減らす
 
-### 2. CPU側dataを一度読んだら何度も再利用する計算順序に変える
+通常の行列積カーネルはGPU HBM上に全ての入力があると仮定して、入力タイルを独立に読み込む。片方の入力がCPUにあると、同じCPUタイルを複数の出力計算で読み直し、遅い接続網を繰り返し使う。DirectKVはCPU側の入力タイルをストリーミングマルチプロセッサ内の共有メモリへ保持し、GPU側の別の行列や出力タイルを順に処理する。CPUからの読出しを減らす代わりに、GPU HBM側で中間結果を読み書きする回数を増やす。
 
-GPU行列演算は大きな行列を小さいブロックへ分割して処理する。論文の **tiling** はこの分割方法を指す。
+原著の行列積の内訳では、単純なゼロコピーでCPU→GPUの転送が33.5GBになった条件を、タイル順序の変更で0.4GBへ抑えた。代わりにHBM側の転送量は増えるが、HBMの帯域はNVLink-C2Cより高いため、全体の実行時間は106msから54msへ短縮し、L2命中率も32.3%から75.1%へ回復した。**CPU転送を減らす代わりにHBM転送を増やす**という交換条件が、手法の核である。
 
-単純な カーネルではCPU メモリ上の同じKV ブロックを複数の計算ブロックから繰り返し読むため、遠隔転送量が増幅する。
+### 3．ワープ単位のパイプライン化で読出し待ちを隠す
 
-DirectKVはCPU側のデータをGPU内の高速な共有d メモリへ一度読み込んだら、GPU HBM上の別データを順に変えながらできるだけ長く再利用する。これにより**遅いCPU-GPU 接続網のtrafficを減らし、その代わり増えるaccessを高速なHBM側へ寄せる**。
+Hopper世代では、スレッドの集まりを異なる役割へ分け、現在のタイルの計算と次のタイルの読出しを同時進行できる。DirectKVは生産側のワープが次のデータを先読みし、消費側のワープが現在のデータで行列積を進める。GPUの非同期転送機構を活用し、遠隔メモリの待ち時間が演算器を止めないようにする。
 
-論文の行列 multiplication例ではCPU→GPU trafficを33.5 GBから0.4 GBまで減らし、単純な ゼロコピーの106 msを54 msへ短縮した。
+行列積の構成要素実験では、転送量がほぼ同じまま、HBMの実効処理率が0.3TB/秒から1.3TB/秒へ増え、実行時間が54msから48msへ短縮した。これはデータの総量を減らした結果ではなく、**通信と計算を重ねた結果**である。CPU向けタイル化とパイプライン化は別の費用を削るため、両者を組み合わせる意義がある。
 
-### 3. Data load担当とcompute担当を並行して走らせる
+### 4．K/V射影と注意演算の融合で生成直後の再読出しを防ぐ
 
-Hopper GPUでは複数スレッドのまとまりを役割分担させ、現在のブロックを計算している間に次のブロックをCPU/HBMから先読みする。
+通常は入力からKとVを作る射影カーネルと、既存のKVを読む注意カーネルが別々に起動される。CPUにKVを保存する方式では、射影で作ったK/VをいったんCPUへ書き、その直後に注意機構が同じ値をCPUから読み直すと余計な転送が生じる。DirectKVは射影と注意を融合し、生成したタイルを共有メモリに残してそのまま注意計算に使う。保存が必要なKVはCPUへ書くが、直後の計算のために再びCPUから取得する必要を減らす。
 
-論文の **warp-level pipelining** は、この「計算担当が処理中に、別担当が次データを先に準備する」方式を指す。
+プリフィルでは多数の問い合わせトークンを扱うため、同じK/Vタイルを保持して複数の問い合わせを処理する。生産側、消費側、保存側のワープ群を分け、K/Vの射影、位置回転、CPUへの保存、注意の集約を重ねる。注意の数値安定性のために、逐次的なソフトマックスの最大値・正規化項・出力の更新を保つ。融合は注意の数式を近似するものではなく、計算順序と中間データの置き場所を変更する。
 
-microbenchmarkではHBM スループットを0.3 TB/sから1.3 TB/sへ高め、54 msから48 msへさらに短縮している。
+デコードでは新規問い合わせが1トークンなので、CPU上の過去K/Vを順に一度ずつ読み、現在の問い合わせとの積を計算する。出力の集約状態はレジスタへ保持し、プリフィルとは異なる再利用順序を選ぶ。生成する新規K/Vが少ないため、保存専用のワープ群を置かず、読出し担当と計算担当を中心に構成する。このようにプリフィルとデコードを同じ設計思想で扱いながら、具体的なカーネルの進め方は分ける。
 
-### 4. K/Vを作る処理とattentionを同じkernelへまとめる
+### 5．共有メモリ容量に合わせたカーネル選択
 
-別カーネルでK/Vを生成してCPUへ書き、その後注意機構 カーネルが再びCPUから読むと、生成直後の同じKVがCPU-GPU間を余計に往復する。
+GPUの共有メモリは高速だが容量が限られる。DirectKVはK/V射影に必要な入力・重みのタイルと、注意演算に必要な問い合わせ・K/V・出力の領域を分け、計算段階が進むと同じ領域を再利用する。Kは射影重みの一時領域を、Vも対応する領域を再利用し、共有メモリの総使用量を抑える。GH200ではL1キャッシュと共有メモリの総量が256KB級であり、論文は標準で80%を共有メモリ側へ割り当て、2段階のパイプラインを使う。
 
-DirectKVはK/V 射影と注意機構を1つのGPU カーネルへまとめ、新しく生成したK/VをGPU内の高速バッファに残したまま即座に注意機構へ使う。必要なKVだけ最後にCPU メモリへ書き込み-後段する。
-
-つまり論文の **カーネル 融合** は、別々なら中間データをメモリへ書いて再読込する処理を一つのカーネルへまとめ、その往復を消すことを意味する。
-
-### 5. Prefillとdecodeで「どちらのdataを再利用するか」を変える
-
-プリフィルでは多数のQ トークンがあるため、CPU-常駐 KVを繰り返しfetchしないようQ側を順に処理して同じKVを再利用する。
-
-デコードではQが1 トークンだけなので、CPU上のK/V ブロックを一度ずつストリームしながら注意機構を進める。
-
-同じゼロコピー方針でも段階ごとに再利用すべきデータを変えることで、remote-メモリ trafficを抑える。
+データ型、ヘッド次元、タイル幅、プリフィルかデコードかによって必要な共有メモリ容量が異なるため、カーネル生成器が利用可能な構成を事前にコンパイルする。実行時の選択器は現在の精度と実行段階に適したカーネルを選ぶ。毎トークン複雑なコンパイルをするのではなく、候補を準備して切り替える方式である。カーネルの実装はFlashAttention-3とCUTLASSを基礎とし、GPU上の高速な演算とCPU常駐データのアクセスを同時に設計する。
 
 ## 評価
 
-### 条件
+### 実験環境と比較対象
 
-| 項目 | 条件 |
-|---|---|
-| 主環境 | NVIDIA GH200 Grace-Hopper Superchip |
-| GPU メモリ | 96GB HBM3 |
-| CPU メモリ | LPDDR5X |
-| Interconnect | NVLink-C2C |
-| PCIe比較 | H100 PCIe Gen5 |
-| Model | Llama-3.1-8B、OPT-13B、OPT-30B |
-| Dataset | ShareGPT、Alpaca |
-| Context | 主に1K〜32K |
-| Baseline | SGLang、Pie、NEO、FlexGen |
-| 実装 | CUDA 12.4、CUTLASS 3+、FlashAttention-3拡張 |
+| 観点 | 原著の条件 | 読み方 |
+|---|---|---|
+| 主実機 | NVIDIA GH200 Grace–Hopper、96GB HBM3、CPU LPDDR5X | 高帯域NVLink-C2Cが重要 |
+| 比較実機 | H100とPCIe Gen5 | 通常接続網での限界を調べる |
+| 実装 | CUDA 12.4、CUTLASS 3.0以降、FlashAttention-3拡張 | CUDA/C++約5,300行の追加実装 |
+| モデル | Llama-3.1-8B、OPT-13B、OPT-30B | MoEモデルの評価ではない |
+| 負荷 | ShareGPT、Alpaca由来、ポアソン到着 | 元データに到着時刻がないため合成 |
+| 主文脈 | 1K〜32Kトークン | 高負荷・長文脈の追加条件も検証 |
+| 要求率 | 主に最大30要求/秒 | 負荷による遅延とメモリ不足を比較 |
+| 比較方式 | SGLang、Pie、Neo、FlexGen | HBM常駐と複数の退避方式を区別 |
 
-### 主要結果
+比較対象の性質は異なる。SGLangはGPU上にKVを保持する高速な基準であり、容量に収まるときはCPUアクセスを必要としない。PieはCPUからGPU中継バッファへKVを読み込む交換型、NeoはCPU側の計算も使う異種実行方式、FlexGenはGPU・CPU・ディスクの階層配置と圧縮を使う。DirectKVの目的は、これらのうち容量拡張を行う方式に対し、CPUアクセスの実行費用を小さくすることである。
 
-DirectKVはGH200上で既存オフロード方式に対し、**CPU-GPU 転送量を最大50%削減、GPU メモリ使用量を43%削減、エンドツーエンド 性能を最大1.2倍改善**した。
+### 要求率を増やしたときの遅延とメモリ不足
 
-文脈 長さを1K〜32Kへ伸ばした評価ではオフロード方式の中で一貫して低遅延で、16KではNEO / Pie比約1.3倍、FlexGen比約1.7倍高速だった。32KではNEO、Pie、SGLangがOOMになる条件でもDirectKVは動作した。
+図10では要求率を10、20、30要求/秒へ変え、モデル別のトークン当たり遅延を比較した。Llama-3.1-8BではSGLangが全ての要求率を処理でき、最も低遅延だった。DirectKVはそれより少し遅いが、他のオフロード方式より速く、30要求/秒では比較方式の1.55〜2.95秒に対し約0.75秒だった。これは**容量に余裕がある場合のSGLangより常に速い**という結果ではない。
 
-高リクエスト 速度でも、OPT-13B / 30BでGPU-のみ SGLangがOOMする領域まで処理を継続し、30 req/sで他のオフロード方式より低いトークンごと 遅延を維持している。
+OPT-13Bでは30要求/秒の条件でSGLangがメモリ不足となる一方、DirectKVは処理を継続し、約0.75秒の遅延を記録した。他のオフロード方式は同条件で約1.55〜3.95秒だった。OPT-30BではSGLangが低い要求率までしか処理できず、DirectKVは高い要求率まで対応した。したがって利点は単なる低負荷の演算速度ではなく、同時要求数を増やしたときにKV用のHBMを消費しないことで処理可能範囲を広げる点にある。
 
-構成要素評価ではCPU-aware tilingが単純な ゼロコピー比でCPU-GPU trafficを最大50%、遅延を最大70%削減した。K/V生成と注意機構をまとめたカーネルは別カーネル方式よりHBM スループットを最大3.5倍にし、カーネル 遅延を約2.5〜3倍短縮した。
+### 文脈長の影響と容量節約
 
-## 既存研究との差
+図11では文脈長を1Kから32Kまで変えた。16KではDirectKVがNeoとPieに対して約1.3倍、FlexGenに対して約1.7倍速く、32KではNeo・Pie・SGLangがメモリ不足になる条件でもDirectKVは動作した。文脈長を変えた評価での平均高速化は約1.2倍と報告される。ただし比較方式が途中でメモリ不足になるため、全方式について全ての文脈長で速度倍率を定義できるわけではない。
 
-### Swap型offloadとの違い
+同図のGPUメモリ使用量は、SGLangが平均92GB、Neoが86GB、Pieが88GB、FlexGenが74GB、DirectKVが47GBだった。DirectKVは他のオフロード方式に対して平均約35GBを節約し、43%の削減に相当する。これはモデル重みを43%小さくした結果ではなく、KVの保存領域とGPU中継バッファを減らした結果である。GPUメモリの使用量が減る代わりにCPU側のページ固定メモリを使うため、ホストメモリ容量を無視できるわけではない。
 
-PieなどはCPU上のKVをGPU 中継バッファへプリフェッチしてから注意機構を計算する。DirectKVは**KVをHBMへ一度コピーせず、GPU カーネルがCPU メモリから直接読む**ため、バッファ容量と往復コピーを削減する。
+### カーネル最適化の構成要素評価
 
-### NEO / FastDecodeとの違い
+| 対象 | 原著の比較 | 結果 | 意味 |
+|---|---|---|---|
+| 単純ゼロコピー | GPU常駐との行列積比較 | PCIeで20倍超、NVLink-C2Cでも約2倍遅い | 直接参照だけでは不十分 |
+| CPU向けタイル化 | 単純ゼロコピーとの行列積比較 | 106ms→54ms、L2命中率32.3%→75.1% | 遠隔読出しを減らす効果 |
+| ワープ単位の先読み | タイル化のみとの行列積比較 | 54ms→48ms、HBM処理率0.3→1.3TB/秒 | 転送と計算の重畳 |
+| CPU向けゼロコピー | 単純ゼロコピーとのモデル別比較 | CPU–GPU転送量最大50%減、推論遅延最大70%減 | 実モデルでも局所性改善が有効 |
+| 射影と注意の融合 | 別カーネルとのモデル別比較 | HBM処理率最大3.5倍、カーネル遅延約2.5〜3倍改善 | 生成直後のK/V再読出しを減らす |
 
-NEOやFastDeコードはKVがあるCPU側へ注意機構計算も移すことでPCIe 転送を減らす。DirectKVはCPUを保存領域として使いながら**注意機構計算はGPUに残す**。その代わり高帯域NVLink-C2Cと専用カーネルを必要とする。
+これらの数値は**異なる構成要素比較**から得られたものである。たとえば「単純ゼロコピーから70%の遅延短縮」と「端点性能最大1.2倍」を同じ母数の値として混同してはならない。前者は不利な単純実装を改善した効果、後者は他の実用オフロード方式と比較した全体の効果である。カーネル内部の3倍改善が、そのままユーザー要求全体の3倍高速化になるわけでもない。
 
-### KVPR / CAPTUREとの違い
+### PCIe環境との比較
 
-KVPRやCAPTUREは「KVを運ぶ代わりに一部をGPUで作り直す」方式でI/Oを減らす。DirectKVはKVを保持したままCPU メモリから直接読むため再計算を行わず、接続網とカーネル dataflowの改善でI/O コストを下げる。
+DirectKVは高帯域のNVLink-C2Cを主な性能対象とする。通常のPCIe環境では、CPU常駐KVをGPUから読む転送帯域が低く、同じ最適化を使っても速度の上限が接続網に制約される。論文はPCIeでも中継バッファを省く容量面の利点を示すが、GH200と同じ端点性能を保証していない。GPUがCPUメモリを直接参照できるという機能の有無と、それを高速に実行できるという性能条件は分けて考える必要がある。
 
-## 限界
+### 数値を解釈する際の留意点
 
-- 性能上の主対象はGH200/GB200のような高帯域CPU-GPU superchipであり、通常PCIe環境ではゼロコピーを容量 extensionとしては使えても性能利得が限定される。
-- Hopper世代の高速非同期データ 転送機能、スレッド-group制御、共有d メモリを前提としたカーネル設計で、他GPU 構成への移植には再設計が必要。
-- 評価モデルはLlama-3.1-8BとOPT-13B/30Bで、MoEやより大規模なGQA モデルは未評価。
-- CPU メモリをKV 保存領域として使うため、ホストDRAM容量・帯域が新しい資源 制約になる。
-- full-GPU KVが収まる場合はSGLangのようなHBM-常駐方式の方が最速である。
+本研究の実験では、処理可能な要求数が増えたことと、同じ要求数での応答時間が短くなったことを分けて評価する必要がある。高速な基準方式がメモリ不足で停止した条件では、そもそも両方式の処理時間を同じ基準で割って倍率を計算できない。そこでは「高速化倍率」よりも「処理を継続できる容量範囲」が成果である。一方、両方式が動作する条件では、遠隔メモリの読み出しを減らした効果を実際の遅延として比較できる。
 
-## 一般的な実装上の含意
+また、装置内の演算核で得られた改善と、利用者から見た一回の生成要求の改善は一致しない。要求全体には重みの読み出し、各層の演算、注意以外の処理、実行待ちなどが含まれる。注意の部分だけが大幅に短くなっても、それ以外が支配的なら全体の改善率は小さくなる。この論文では、局所的な改善が大きいことと、端点の改善が比較的小さいことが同時に観測されており、両者は矛盾しない。
 
-DirectKVは、ホスト-デバイス 接続網が高速化すると「オフロード = 明示的なコピー」という前提自体を変えられることを示す。ただしゼロコピー APIを使うだけでは不十分で、**メモリ 階層ごとの帯域差に合わせてカーネル内のデータ再利用順序まで設計し直す必要がある**。
+最後に、ホスト側へ保存領域を移したことで装置側の空き容量は増えるが、保存する情報の総量が減るわけではない。従来は装置側で占めていた保存領域をホスト側で負担するため、全システムの容量計画では双方を数える必要がある。高帯域接続を持つ装置ではこの移動が有利でも、一般的な接続では保存先を変えたことが新しい待ち時間の原因になる。性能値を読む際には、どこへ情報を保存し、どこで計算し、どの接続を何回通るかを併せて確認する。
 
-CXLやNVLink-C2Cのような異種の メモリ環境では、配置 方策だけでなくカーネル アクセスパターンまで含めたメモリ-計算 協調設計が重要になる。
+## 他方式との差
 
-## 引用関係
+Pieなどの交換型オフロードは、CPU側のKVをGPUへ明示的に読み込んでから注意計算をする。DirectKVはKVをCPUに保持したまま注意カーネルから直接読むため、HBM中継バッファを不要にする。NeoやFastDecodeのように注意計算の一部をCPUへ移す方式とも異なり、DirectKVは計算をGPUに残してGPUの演算器を活用する。KVを圧縮・削除して品質と容量を交換する方式でもなく、原著は完全な注意計算を維持する設計である。
 
-- **引用探索から発見:** NEO / FlexGen / KV オフロード系を直接比較対象とするOSDI 2026研究。
-- **主要な先行研究:** Pie、NEO、FlexGen、CPU上の注意機構 オフロード、remote/分離型 KVキャッシュ研究。
-- **系統上の位置:** KVキャッシュをCPU/保存領域へ置く研究群のうち、再計算ではなくゼロコピー 遠隔アクセスを選ぶ枝に位置する。
+また、接頭辞共有、KVの追い出し、要求のバッチ化といった上位の管理方策を置き換えるものではない。DirectKVは、KVがCPUメモリに置かれた後、それをどのようにGPUで計算するかという下位の実行経路を最適化する。論文は既存の推論基盤へCPUページ固定KVの割当器と注意カーネルを追加する統合可能性を論じているが、全ての上位機能が完成した単一製品を示すわけではない。
+
+## 限界・適用条件
+
+主な性能実証はGH200であり、NVLink-C2Cの高帯域とHopper世代の非同期データ転送、共有メモリ、ワープ単位の並行実行に依存する。通常のPCIe接続のH100や、さらに低帯域のCPU–GPU構成では、GPUメモリを節約できても、CPUからKVを読む速度が律速になり得る。RTX 4070 Superなどの一般的なPCIe接続環境に、GH200の最大1.2倍という端点性能をそのまま適用してはいけない。
+
+CPUのページ固定メモリをKV保存先として使うため、ホストDRAMの容量・帯域とページ固定領域の確保が新たな制約になる。GPUに全て収まる場合はHBM常駐の方が速く、CPUを使うこと自体が利益ではない。論文のモデル評価はLlama-3.1-8BとOPT-13B/30Bであり、大規模MoEやさまざまなGQA構成、他のGPU世代に対する速度の一般化は追加検証を要する。
+
+DirectKVは主として一つのノード内でCPUとGPUを結ぶ最適化である。複数ノードにKVが分散する場合は、別途ネットワーク通信と所有権の管理が必要になる。論文はテンソル並列やパイプライン並列との組合せを論じるが、ノード間のKVアクセス費用を消すわけではない。また、KVがページ固定DRAMからさらにディスクやページング対象のメモリへ退避されると、ゼロコピーの利点は弱まる。
+
+## 再監査での修正点
+
+旧原稿は基本的な仕組みを説明していたが、評価の日本語説明量が不足していた。今回、図10〜14のモデル別遅延、HBM使用量、文脈長ごとのメモリ不足、単純ゼロコピーとの比較、タイル化とワープ先読みの段階的な効果、融合カーネルの構成要素評価を分けて補強した。特に**単純ゼロコピー比で最大70%遅延減**と**既存オフロード方式比で端点最大1.2倍**を区別し、GPU HBMに収まるときはSGLangが速いという負の条件を保持した。
 
 ## 一次資料
 
-- OSDI 2026: https://www.usenix.org/conference/osdi26/presentation/luo
-- 論文PDF: https://www.usenix.org/system/files/osdi26-luo.pdf
-- 公式コード: https://github.com/shutianluo/DirectKV
-
-## 更新履歴
-
-- 2026-09-06: 引用関係探索から追加。OSDI 2026最終版と公式codeに基づき概要・手法・評価・限界を整理。
-- 2026-09-07: zero-copy、pinned memory、staging buffer、tiling、warp-level pipeline、カーネル fusionを処理内容ベースで平易化。
+- 正式掲載ページ：https://www.usenix.org/conference/osdi26/presentation/luo
+- 原著PDF（17ページ、図1〜14、アルゴリズムと評価を含む）：https://www.usenix.org/system/files/osdi26-luo.pdf
+- 著者の公式実装：https://github.com/shutianluo/DirectKV
