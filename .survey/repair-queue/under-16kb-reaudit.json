@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T10:38:54.444483+00:00",
+  "generated_at": "2026-10-09T10:54:01.887992+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 284,
+  "count": 282,
   "worker_counts": {
-    "scheduled-chat-00": 95,
+    "scheduled-chat-00": 94,
     "scheduled-chat-30": 94,
-    "scheduled-chat-45": 95
+    "scheduled-chat-45": 94
   },
   "entries": [
     {
@@ -178,30 +178,6 @@
         "16KB未満再監査: 本文説明量 1657 < 2200",
         "16KB未満再監査: 手法説明量 489 < 700",
         "16KB未満再監査: 評価説明量 90 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.26412-when-hidden-states-drift-can-kv-caches-rescue-long-range-speculative-dec.md",
-      "canonical_id": "arXiv:2604.26412",
-      "title": "When Hidden States Drift: Can KV Caches Rescue Long-Range Speculative Decoding?",
-      "file_bytes": 9783,
-      "source_sha256": "a41c550b76859450007c92e606efb321f3c3b60fe8bf70eb4fa37e99a5be8eff",
-      "source_git_blob_sha": "e5435579d817c597a4eb647c7d1b5865479338e5",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.857794,
-      "quality_metrics": {
-        "body_chars": 2199,
-        "method_chars": 669,
-        "evaluation_chars": 453,
-        "limitation_chars": 205
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2199 < 2200",
-        "16KB未満再監査: 手法説明量 669 < 700",
-        "16KB未満再監査: 評価説明量 453 < 500"
       ],
       "warnings": []
     },
@@ -1331,7 +1307,7 @@
       "file_bytes": 11513,
       "source_sha256": "27d84525edf558ec2e9ce2119f607ed7c5bc68aaa3d17773d8eb5752fdd1304a",
       "source_git_blob_sha": "d3f90d4d62155f8d665bdc8971561ac14f87697c",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.973928,
@@ -2625,28 +2601,6 @@
         "limitation_chars": 318
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2502.17421-longspec-long-context-lossless-speculative-decoding-with-efficient-draft.md",
-      "canonical_id": "arXiv:2502.17421",
-      "title": "LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification",
-      "file_bytes": 12390,
-      "source_sha256": "194dd09f08b8d0efa6eee1f94c892822b0a1529218952b87d39c9434cacb59ec",
-      "source_git_blob_sha": "047ef69c9bcd3875dd82ce4611ba10c8f64f7e62",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.833154,
-      "quality_metrics": {
-        "body_chars": 2906,
-        "method_chars": 1204,
-        "evaluation_chars": 307,
-        "limitation_chars": 303
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 307 < 500"
-      ],
       "warnings": []
     },
     {
