@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T02:25:46.608493+00:00",
+  "generated_at": "2026-10-09T03:00:36.019644+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 345,
+  "count": 338,
   "worker_counts": {
-    "scheduled-chat-00": 103,
-    "scheduled-chat-30": 93,
-    "scheduled-chat-45": 149
+    "scheduled-chat-00": 100,
+    "scheduled-chat-30": 90,
+    "scheduled-chat-45": 148
   },
   "entries": [
     {
@@ -86,30 +86,6 @@
       "warnings": [
         "日本語比率 72.0% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md",
-      "canonical_id": "arXiv:2403.05676",
-      "title": "PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design",
-      "file_bytes": 9299,
-      "source_sha256": "3925c41902454fe1a5683719e941499e76364b855cac1719b05254735b5da488",
-      "source_git_blob_sha": "7577b9d288ae011805bc10db5c164f4d67173655",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.847496,
-      "quality_metrics": {
-        "body_chars": 1794,
-        "method_chars": 530,
-        "evaluation_chars": 0,
-        "limitation_chars": 209
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1794 < 2200",
-        "16KB未満再監査: 手法説明量 530 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/13-sparse-attention/2025-2509.24663-infllm-v2-dense-sparse-switchable-attention-for-seamless-short-to-long-a.md",
@@ -1485,28 +1461,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md",
-      "canonical_id": "arXiv:2310.12072",
-      "title": "SPEED: Speculative Pipelined Execution for Efficient Decoding",
-      "file_bytes": 11147,
-      "source_sha256": "d4df8442dbf44b22c97e484df8473ff45016ba786ab739ae090bb8aa3c13cf91",
-      "source_git_blob_sha": "d66bfa392291ad348f77730fd45b6e0aaa8352b9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.987136,
-      "quality_metrics": {
-        "body_chars": 2551,
-        "method_chars": 760,
-        "evaluation_chars": 247,
-        "limitation_chars": 251
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 247 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md",
       "canonical_id": "arXiv:2309.09507",
       "title": "Pruning Large Language Models via Accuracy Predictor",
@@ -1611,31 +1565,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
-      "canonical_id": "arXiv:2403.14123",
-      "title": "AI and Memory Wall",
-      "file_bytes": 11236,
-      "source_sha256": "915ac7b48071832e0f28842c37feab1e3af2efd5a98b06373103d9b231fb52cb",
-      "source_git_blob_sha": "4fed9774ad2a9f4e52ef709140d3dbee3b657afe",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.770048,
-      "quality_metrics": {
-        "body_chars": 3459,
-        "method_chars": 511,
-        "evaluation_chars": 898,
-        "limitation_chars": 344
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 511 < 700",
-        "16KB未満再監査: 日本語比率 77.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.0% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md",
@@ -1777,31 +1706,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/15-inference-simulation-emulation/2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md",
-      "canonical_id": "arXiv:2610.01784",
-      "title": "ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving",
-      "file_bytes": 11347,
-      "source_sha256": "86d7c3e4ba12057a0a1320784c85d2b3f3e006e62704ffa39e09ae2edc065616",
-      "source_git_blob_sha": "0c32b41ba9e96f606e143d90dddb5a8d77c452c6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.780303,
-      "quality_metrics": {
-        "body_chars": 2466,
-        "method_chars": 778,
-        "evaluation_chars": 93,
-        "limitation_chars": 273
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 93 < 500",
-        "16KB未満再監査: 日本語比率 78.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.0% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md",
@@ -2243,33 +2147,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md",
-      "canonical_id": "arXiv:2407.06204",
-      "title": "A Survey on Mixture of Experts in Large Language Models",
-      "file_bytes": 11673,
-      "source_sha256": "8ab006a2bacb0c465223e87cc5e42c23e77bed0fdfe3e3c0dcaf2d5ec210c5ba",
-      "source_git_blob_sha": "7f9bc77c517ade0db90b1f1528fe92edc7ff7600",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.746124,
-      "quality_metrics": {
-        "body_chars": 979,
-        "method_chars": 0,
-        "evaluation_chars": 123,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 979 < 2200",
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 123 < 500",
-        "16KB未満再監査: 日本語比率 74.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.6% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/training/01-training-offload-memory-systems/2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md",
       "canonical_id": "arXiv:2512.17570",
       "title": "GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping",
@@ -2552,26 +2429,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
-      "canonical_id": "arXiv:2603.19289",
-      "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
-      "file_bytes": 11849,
-      "source_sha256": "43ae1d5598988b67bad6d9fa24213635e4fe92eabff4c4f7cef5b05e522e9709",
-      "source_git_blob_sha": "e30f4a3db4f484960825f7ca308278c5d9d4fb25",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.840175,
-      "quality_metrics": {
-        "body_chars": 2991,
-        "method_chars": 1483,
-        "evaluation_chars": 650,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
       "canonical_id": "arXiv:2305.17118",
       "title": "Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time",
@@ -2827,28 +2684,6 @@
       "warnings": [
         "日本語比率 76.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md",
-      "canonical_id": "arXiv:2408.05499",
-      "title": "LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale",
-      "file_bytes": 11958,
-      "source_sha256": "73fda0205abdd40d7a1a8213563435fcd4297c7174d1ab7922eb72202e61cd4b",
-      "source_git_blob_sha": "f17af995f0a7a2c1d51246041e63ff589a9c8a63",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.953589,
-      "quality_metrics": {
-        "body_chars": 2888,
-        "method_chars": 677,
-        "evaluation_chars": 804,
-        "limitation_chars": 249
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 677 < 700"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md",
