@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 07:29:50 JST**
+> 自動生成: **2026-10-10 07:47:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **949** |
 | 未claim Research job | **949** |
-| 直近24hのResearch処理完了 | **175** |
+| 直近24hのResearch処理完了 | **172** |
 | 最終Research処理完了 | **10-10 06:30:00 JST** |
-| 最終Discovery探索完了 | **10-10 07:27:22 JST** |
+| 最終Discovery探索完了 | **10-10 07:44:53 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **119349** |
+| 探索候補総数 | **119400** |
 | 処理済み | **18141** |
-| 未処理Discovery候補 | **101208** |
+| 未処理Discovery候補 | **101259** |
 | 収録済み | **1758** |
 | Research / Audit候補へ昇格済み | **797** |
 | 無関係として除外 | **11144** |
@@ -63,33 +63,33 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **101208** |
-| 機械規則による暫定隔離 | **1739** |
-| 拡張機械規則による追加隔離 | **1101** |
-| 機械規則通過後 | **98368** |
-| 系統内前方引用スコアによる選抜保留 | **93449** |
-| 暫定隔離合計 | **96289** |
-| **読解可能候補（隔離後）** | **4919** |
-| 前方引用が同一系統で2本以上の候補 | **12042** |
-| 前方引用が同一系統で3本以上の候補 | **5921** |
+| 未処理候補（フィルタ前） | **101259** |
+| 機械規則による暫定隔離 | **1743** |
+| 拡張機械規則による追加隔離 | **1106** |
+| 機械規則通過後 | **98410** |
+| 系統内前方引用スコアによる選抜保留 | **93489** |
+| 暫定隔離合計 | **96338** |
+| **読解可能候補（隔離後）** | **4921** |
+| 前方引用が同一系統で2本以上の候補 | **12074** |
+| 前方引用が同一系統で3本以上の候補 | **5938** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4919件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4921件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **1101件**（基本規則との重複を除去）
-- 実際の追加隔離: **1101件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 80, 'expanded_domain:content_moderation': 14, 'expanded_domain:educational_legal_applications': 20, 'expanded_domain:environmental_applications': 7, 'expanded_domain:financial_applications': 47, 'expanded_domain:geoscience_applications': 52, 'expanded_domain:materials_applications': 23, 'expanded_domain:vision_applications': 858}**
+- 拡張規則に一致した候補: **1106件**（基本規則との重複を除去）
+- 実際の追加隔離: **1106件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 80, 'expanded_domain:content_moderation': 14, 'expanded_domain:educational_legal_applications': 20, 'expanded_domain:environmental_applications': 7, 'expanded_domain:financial_applications': 47, 'expanded_domain:geoscience_applications': 53, 'expanded_domain:materials_applications': 23, 'expanded_domain:vision_applications': 862}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.2%**
-- 現在の生在庫: 後方references **50026件** / 前方引用 **52756件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **102299件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **50026件** / 前方引用 **52806件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **102350件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -104,11 +104,11 @@
 | 巡回中 | **10** |
 | 未巡回 | **0** |
 | 今回run開始時due | **10** |
-| 前方引用から保持中の未処理候補 | **52756** |
+| 前方引用から保持中の未処理候補 | **52806** |
 | エラー状態保持seed | **9** |
 
 - 初回カバレッジ完了率: **99.4%**
-- state最終更新: **10-10 06:38:44 JST**
+- state最終更新: **10-10 07:38:19 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-09 09:37:33 JST（21時間52分前）** |
+| 最終maintenance完了 | **10-09 09:37:33 JST（22時間9分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **28** |
-| 直近6hのDiscovery run | **1** |
-| 直近6hのDiscovery本文確認・分類 | **7** |
+| 直近6hのDiscovery run | **2** |
+| 直近6hのDiscovery本文確認・分類 | **27** |
 | 最終Research完了 | **10-10 06:30:00 JST** |
-| 最終Discovery完了 | **10-10 07:27:22 JST** |
+| 最終Discovery完了 | **10-10 07:44:53 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-10 06:30:00 JST** / worker — / run 20261010-0630-scheduled-chat-30/r01 / 成果 **4件**
   - evidence: .survey/import-inbox/results/research/libfile_20da3401893c8191aefef4027fc8e97a--2023-2307.09702-guided-generation-under16kb-reaudit-20261010-0630-scheduled-chat-30-r01.json
-- Discovery: **10-10 07:27:22 JST** / worker codex-local / run codex-backfill-r484-b24-p02-main-26e19a98
-  - 本文確認・分類 **7件** / accept **6件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r484-b24-p02-main-26e19a98--7ede08c42172d95ae62b428d4fe7c1db20df64e512d27bfeb8a3afb4859c5bfc--codex-backfill-r484-b24-p02-main-26e19a98.json
+- Discovery: **10-10 07:44:53 JST** / worker codex-local / run codex-backfill-r485-b25-main-ac261774-p01
+  - 本文確認・分類 **20件** / accept **19件** / unrelated+borderline **1件**
+  - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r485-b25-main-ac261774-p01--b7769e386dca8e20d9851e5d046f6ec2ddaf18eafd49959a33cc3fd854ea3d83--codex-backfill-r485-b25-main-ac261774-p01.json
 
 ### Codex探索成果の反映状況
 
@@ -157,14 +157,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **2818ファイル / 13652件** |
-| Codex成果の取り込み待機中 | **0ファイル / 0件** |
-| └ 待機中のaccept | **0件** |
+| Codex成果の取り込み待機中 | **1ファイル / 20件** |
+| └ 待機中のaccept | **19件** |
 | └ 待機中のunrelated | **0件** |
-| └ 待機中のborderline | **0件** |
+| └ 待機中のborderline | **1件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-10 07:27:22 JST** / results / codex-backfill-r484-b24-p02-main-26e19a98
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r484-b24-p02-main-26e19a98--7ede08c42172d95ae62b428d4fe7c1db20df64e512d27bfeb8a3afb4859c5bfc--codex-backfill-r484-b24-p02-main-26e19a98.json
+- 最終Codex分類・受渡し証拠: **10-10 07:44:53 JST** / waiting / codex-backfill-r485-b25-main-ac261774-p01
+  - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r485-b25-main-ac261774-p01--b7769e386dca8e20d9851e5d046f6ec2ddaf18eafd49959a33cc3fd854ea3d83--codex-backfill-r485-b25-main-ac261774-p01.json
 
 
 ## 件数サマリー（旧immutable transport診断）

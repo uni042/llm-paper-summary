@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ee836774f3028f9b-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1109/HPCC67675.2025.00064",
+  "reason": "確認済み書誌ID/題名とprimary URLを保持。一次abstract取得は失敗（web open https://doi.org/10.1109/HPCC67675.2025.00064 が inaccessible を返した）。題名だけでは主題接続を確定しない。 Retrieval failure: web.open(https://doi.org/10.1109/HPCC67675.2025.00064) returned URL inaccessible; no primary abstract retrieved",
+  "title": "SuperSpec: Enhanced Verification and Sampling for End-to-End LLM Speculative Decoding",
+  "identity_tokens": [
+    "DOI:10.1109/HPCC67675.2025.00064"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+    "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+    "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+    "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+    "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+    "papers/inference/99-other-inference-systems/2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md",
+    "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md",
+    "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee836774f302",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
