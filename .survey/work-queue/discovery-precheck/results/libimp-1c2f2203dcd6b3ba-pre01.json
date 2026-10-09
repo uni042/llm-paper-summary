@@ -1,0 +1,1385 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1c2f2203dcd6b3ba-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1c2f2203dcd6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2026.findings-acl.1888",
+    "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+    "arXiv:2209.09004",
+    "arXiv:2508.15044",
+    "arXiv:2509.26541",
+    "arXiv:2510.12856",
+    "arXiv:2510.22767",
+    "arXiv:2512.20968",
+    "arXiv:2602.09113",
+    "arXiv:2602.18447",
+    "arXiv:2603.03681",
+    "arXiv:2604.23475",
+    "arXiv:2605.05848",
+    "arXiv:2605.26678",
+    "arXiv:2608.00814"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 15,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2b49d3e08bafde09555464629312316d29b30029",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 15,
+  "provider_progress": {
+    "requested_count": 15,
+    "status_counts": {
+      "allowed": 15,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-09T02:16:17.548909+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.1888",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2209.09004",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.15044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.26541",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.12856",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.22767",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.20968",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.09113",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.18447",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.03681",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23475",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.05848",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.26678",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00814",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ConfSpec: Efficient Step-Level Speculative Reasoning via Confidence-Gated Verification",
+      "source_url": "https://arxiv.org/abs/2602.18447",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought reasoning significantly improves the performance of large language models on complex tasks, but incurs high inference latency due to long generation traces. Step-level speculative reasoning aims to mitigate this cost, yet existing approaches face a long-standing trade-off among accuracy, inference speed, and resource efficiency. We propose ConfSpec, a confidence-gated cascaded verification framework that resolves this trade-off. Our key insight is an asymmetry between generation and verification: while generating a correct reasoning step requires substantial model capacity, step-level verification is a constrained discriminative task for which small draft models are well-calibrated within their competence range, enabling high-confidence draft decisions to be accepted directly while selectively escalating uncertain cases to the large target model. Evaluation across diverse workloads shows that ConfSpec achieves up to 2.24$\\times$ end-to-end speedups while matching target-model accuracy. Our method requires no external judge models and is orthogonal to token-level speculative decoding, enabling further multiplicative acceleration.",
+      "identifiers": [
+        "SemanticScholar:e0dd5c76dfc256d0b97e5263bbd53c89058e9009"
+      ],
+      "semantic_scholar_id": "e0dd5c76dfc256d0b97e5263bbd53c89058e9009",
+      "canonical_id": "arXiv:2602.18447",
+      "arxiv_id": "2602.18447",
+      "doi": "10.48550/arXiv.2602.18447",
+      "authors": [
+        "Siran Liu",
+        "Zane Cao",
+        "Yong-Chao He"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Benchmarking the Energy Savings with Speculative Decoding Strategies",
+      "source_url": "https://arxiv.org/abs/2602.09113",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has emerged as an effective method to reduce latency and inference cost of LLM inferences. However, there has been inadequate attention towards the energy requirements of these models. To address this gap, this paper presents a comprehensive survey of energy requirements of speculative decoding strategies, with detailed analysis on how various factors -- model size and family, speculative decoding strategies, and dataset characteristics -- influence the energy optimizations.",
+      "identifiers": [
+        "SemanticScholar:c845ad4e6b8e1eae739b3b1043024c6b5b61a305"
+      ],
+      "semantic_scholar_id": "c845ad4e6b8e1eae739b3b1043024c6b5b61a305",
+      "canonical_id": "arXiv:2602.09113",
+      "arxiv_id": "2602.09113",
+      "doi": "10.48550/arXiv.2602.09113",
+      "authors": [
+        "R. Dutta",
+        "Paramita Koley",
+        "Soham Poddar",
+        "Janardan Misra",
+        "Sanjay Podder",
+        "Naveen Balani",
+        "Saptarshi Ghosh",
+        "Niloy Ganguly"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 242,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs",
+      "source_url": "https://arxiv.org/abs/2603.03681",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown strong performance in vision-language tasks, but their inference efficiency is severely limited by the exponential growth of visual tokens in complex scenarios such as high-resolution images and videos. Existing visual token pruning methods mainly operate after visual encoding, overlooking the substantial computational cost incurred during the encoding stage. To address this issue, we propose EvoPrune, an early-stage visual token pruning method for MLLMs that performs pruning directly during visual encoding. Specifically, EvoPrune employs a layer-wise pruning strategy guided by token similarity, diversity, and attention-based importance to retain the most informative visual tokens at selected encoding layers. Extensive experiments on image and video benchmarks validate the effectiveness of EvoPrune. In particular, on the VideoMME dataset, EvoPrune achieves 2$\\times$ inference speedup with less than 1% performance degradation, demonstrating its potential for latency-sensitive MLLM deployment.",
+      "identifiers": [
+        "SemanticScholar:b1bce63eb2ea1fea0b5decb2194a489f8c370ac5"
+      ],
+      "semantic_scholar_id": "b1bce63eb2ea1fea0b5decb2194a489f8c370ac5",
+      "canonical_id": "arXiv:2603.03681",
+      "arxiv_id": "2603.03681",
+      "doi": "10.48550/arXiv.2603.03681",
+      "authors": [
+        "Yuhao Chen",
+        "Bin Shan",
+        "Xin Ye",
+        "Cheng Chen"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mesh-Attention: A New Communication-Efficient Distributed Attention with Improved Data Locality",
+      "source_url": "https://arxiv.org/abs/2512.20968",
+      "year": 2025,
+      "published": "2025-12-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributed attention is essential for scaling large language models (LLMs) to long contexts, yet existing methods either have limited parallelism or incur high communication costs. Ulysses uses efficient all-to-all communication but cannot scale beyond the number of attention heads, whereas Ring-Attention removes this limit at the cost of high per-GPU communication. In our analytical Q-KV interaction matrix model, Ring-Attention assigns each GPU an entire row, preserving Q locality while sacrificing KV locality. Each GPU therefore receives nearly all KV partitions, and its communication grows linearly with sequence length. We present Mesh-Attention, which instead assigns each GPU a 2D tile to balance Q and KV locality, so that it collects only subsets of Q and KV partitions. This gives Mesh-Attention asymptotically lower communication complexity than Ring-Attention without limiting parallelism. Mesh-Attention further uses KV Partition Rotation (KVR), greedy scheduling, and topology-aware GPU mapping to balance traffic, overlap communication with computation, and reduce traffic over low-bandwidth links. Across experiments on up to 256 GPUs and 1M-token sequences, Mesh-Attention achieves average speedups of 17.00x, 2.62x and 2.94x (up to 32.27x, 4.36x and 4.59x) over Ring-Attention, USP (Ulysses degree 8) and StarTrail, respectively. It maintains this performance advantage as GPU count and sequence length increase while substantially reducing communication overhead at scale.",
+      "identifiers": [
+        "SemanticScholar:d9c23f97f8f720c00057c8aa5a12d4b1b6523ddf"
+      ],
+      "semantic_scholar_id": "d9c23f97f8f720c00057c8aa5a12d4b1b6523ddf",
+      "canonical_id": "arXiv:2512.20968",
+      "arxiv_id": "2512.20968",
+      "doi": "10.48550/arXiv.2512.20968",
+      "authors": [
+        "Si-Rui Chen",
+        "Jing-Ji Chen",
+        "Si-Qi Zhu",
+        "Ziheng Jiang",
+        "Yang-Hua Peng",
+        "Xuehai Qian"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 289,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NestedKV: Nested Memory Routing for Long-Context KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2605.26678",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language models are limited by the memory footprint of the key-value (KV) cache. Existing training-free KV compression methods usually rank tokens by one importance signal -- attention, recency, layer-wise allocation, or key distinctiveness -- which becomes brittle when useful context is globally distinctive, locally episodic, or immediately relevant. We introduce NestedKV, a key-only KV cache compression method inspired by the Continuum Memory System in Nested Learning. NestedKV maintains global, block-level, and sliding-window key anchors, scores tokens by multi-time-scale cosine anomaly, and combines the resulting rankings with a training-free outer learner using head-adaptive mixing and surprise-gated token routing. The score is paired with adaptive per-head budgets and requires no training or LLM modification. Across RULER (4k--32k), LooGLE, LongBench, LongBench-E, InfiniteBench, and MMLU-Pro on Qwen3 and Llama-3.2 models, NestedKV is strongest when the retained cache is small. On Qwen3-4B, it improves over KeyDiff by up to 19.10 points on RULER and 19.29 on LongBench at $r=0.75$; at $r=0.95$, it retains 37.32 on LongBench versus 17.55 for KeyDiff.",
+      "identifiers": [
+        "SemanticScholar:ff815552a12fa27c6bc22eb9e5c51ee29fc217db"
+      ],
+      "semantic_scholar_id": "ff815552a12fa27c6bc22eb9e5c51ee29fc217db",
+      "canonical_id": "arXiv:2605.26678",
+      "arxiv_id": "2605.26678",
+      "doi": "10.48550/arXiv.2605.26678",
+      "authors": [
+        "Hong Chen",
+        "Xianglong Liu",
+        "Yu-Bo Gao",
+        "Yuxuan Fan",
+        "Bo Wang",
+        "Yuan-Lin Chu",
+        "Y. Lin",
+        "Xu-Ming Hu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers",
+      "source_url": "https://arxiv.org/abs/2604.23475",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study the organization of channel-level importance in transformer feed-forward networks (FFNs). Using a Fisher-style loss proxy (LP) based on activation-gradient second moments, we show that loss sensitivity is concentrated in a small set of channels within each layer. In Llama-3.1-8B, the top 1% of channels per layer accounts for a median of 58.7% of LP mass, with a range of 33.0% to 86.1%. We call these loss-critical channels supernodes. Although FFN layers also contain strong activation outliers, LP-defined supernodes overlap only weakly with activation-defined outliers and are not explained by activation power or weight norms alone. Around this core, we find a weaker but consistent halo structure: some non-supernode channels share the supernodes'write support and show stronger redundancy with the protected core. We use one-shot structured FFN pruning as a diagnostic test of this organization. At 50% FFN sparsity, baselines that prune many supernodes degrade sharply, whereas our SCAR variants explicitly protect the supernode core; the strongest variant, SCAR-Prot, reaches perplexity 54.8 compared with 989.2 for Wanda-channel. The LP-concentration pattern appears across Mistral-7B, Llama-2-7B, and Qwen2-7B, remains visible in targeted Llama-3.1-70B experiments, and increases during OLMo-2-7B pretraining. These results suggest that LLM FFNs develop a small learned core of loss-critical channels, and that preserving this core is important for reliable structured pruning.",
+      "identifiers": [
+        "SemanticScholar:64648bfed261885859c391f9659411df949e5bae"
+      ],
+      "semantic_scholar_id": "64648bfed261885859c391f9659411df949e5bae",
+      "canonical_id": "arXiv:2604.23475",
+      "arxiv_id": "2604.23475",
+      "doi": "10.48550/arXiv.2604.23475",
+      "authors": [
+        "Audrey Cherilyn",
+        "Houman Safaai"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OoO-Spec: Out-of-Order Semantic Speculation for Fast Tool Calling",
+      "source_url": "https://arxiv.org/abs/2608.00814",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs generate tool calls token by token, even though the function choice and argument values can often be predicted in parallel from the request and tool schema. ToolSpec reduces this cost by drafting schema tokens and retrieving earlier calls, but cannot propose request-specific values absent from either source. We present OoO-Spec, which computes these missing semantics out of order. At request arrival, a Qwen3-0.6B sidecar predicts the function choice and all schema-defined argument slots in one parallel request-level wave while the target begins ToolSpec decoding. The runtime joins the slot values, renders the resulting call as text, and exposes it to subsequent candidate-construction rounds. The target polls without blocking, re-tokenizes a ready hint with its own tokenizer, and remains the sole verifier and commit authority. The sidecar is trained once with LoRA on Qwen2.5-32B teacher traces and used unchanged across Qwen2.5, Qwen3, and Llama targets, without target-specific drafter training. Across seven fully ranked targets and three benchmarks under greedy batch-one decoding, OoO-Spec is fastest among all evaluated methods in all 21 target-benchmark cells, reaching 2.46x-5.34x over autoregressive decoding with an unweighted mean of 3.89x, versus 2.95x for ToolSpec. It also outperforms every evaluated released learned drafter in each comparable cell. Across Qwen3-4B, 8B, 14B, and 32B targets, the same sidecar improves on ToolSpec by 34.1% on average. Its compact semantic payload averages 85 bytes per request excluding protocol metadata, supporting effective split-GPU overlap.",
+      "identifiers": [
+        "SemanticScholar:e312e62ba35548ae72b403408f1f9350f842ee83"
+      ],
+      "semantic_scholar_id": "e312e62ba35548ae72b403408f1f9350f842ee83",
+      "canonical_id": "arXiv:2608.00814",
+      "arxiv_id": "2608.00814",
+      "authors": [
+        "Zhi-Heng Zhang",
+        "Mu-Jie Xu",
+        "Fei Sun",
+        "Zhi-Xin Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 69,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EcoFormer: Energy-Saving Attention with Linear Complexity",
+      "source_url": "https://arxiv.org/abs/2209.09004",
+      "year": 2022,
+      "published": "2022-09-19",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 38,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer is a transformative framework that models sequential data and has achieved remarkable performance on a wide range of tasks, but with high computational and energy cost. To improve its efficiency, a popular choice is to compress the models via binarization which constrains the floating-point values into binary ones to save resource consumption owing to cheap bitwise operations significantly. However, existing binarization methods only aim at minimizing the information loss for the input distribution statistically, while ignoring the pairwise similarity modeling at the core of the attention. To this end, we propose a new binarization paradigm customized to high-dimensional softmax attention via kernelized hashing, called EcoFormer, to map the original queries and keys into low-dimensional binary codes in Hamming space. The kernelized hash functions are learned to match the ground-truth similarity relations extracted from the attention map in a self-supervised way. Based on the equivalence between the inner product of binary codes and the Hamming distance as well as the associative property of matrix multiplication, we can approximate the attention in linear complexity by expressing it as a dot-product of binary codes. Moreover, the compact binary representations of queries and keys enable us to replace most of the expensive multiply-accumulate operations in attention with simple accumulations to save considerable on-chip energy footprint on edge devices. Extensive experiments on both vision and language tasks show that EcoFormer consistently achieves comparable performance with standard attentions while consuming much fewer resources. For example, based on PVTv2-B0 and ImageNet-1K, Ecoformer achieves a 73% on-chip energy footprint reduction with only a 0.33% performance drop compared to the standard attention. Code is available at https://github.com/ziplab/EcoFormer.",
+      "identifiers": [
+        "SemanticScholar:adf56c96978fad861e92917f95708ae9935cc132"
+      ],
+      "semantic_scholar_id": "adf56c96978fad861e92917f95708ae9935cc132",
+      "canonical_id": "arXiv:2209.09004",
+      "arxiv_id": "2209.09004",
+      "doi": "10.48550/arXiv.2209.09004",
+      "authors": [
+        "Jing Liu",
+        "Zizheng Pan",
+        "Haoyu He",
+        "Jianfei Cai",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 48,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 38,
+        "citation_count": 38,
+        "total": 48,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1481,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Reward-Shifted Speculative Sampling Is An Efficient Test-Time Weak-to-Strong Aligner",
+      "source_url": "https://arxiv.org/abs/2508.15044",
+      "year": 2025,
+      "published": "2025-08-20",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Aligning large language models (LLMs) with human preferences has become a critical step in their development. Recent research has increasingly focused on test-time alignment, where additional compute is allocated during inference to enhance LLM safety and reasoning capabilities. However, these test-time alignment techniques often incur substantial inference costs, limiting their practical application. We are inspired by the speculative sampling acceleration, which leverages a small draft model to efficiently predict future tokens, to address the efficiency bottleneck of test-time alignment. We introduce the reward-shifted speculative sampling (SSS) algorithm, in which the draft model is aligned with human preferences, while the target model remains unchanged. We theoretically demonstrate that the distributional shift between the aligned draft model and the unaligned target model can be exploited to recover the RLHF optimal solution without actually obtaining it, by modifying the acceptance criterion and bonus token distribution. Our algorithm achieves superior gold reward scores at a significantly reduced inference cost in test-time weak-to-strong alignment experiments, thereby validating both its effectiveness and efficiency.",
+      "identifiers": [
+        "SemanticScholar:ccb70eb3381330c04f893471bb7b55b465a8bbbc"
+      ],
+      "semantic_scholar_id": "ccb70eb3381330c04f893471bb7b55b465a8bbbc",
+      "canonical_id": "arXiv:2508.15044",
+      "arxiv_id": "2508.15044",
+      "doi": "10.48550/arXiv.2508.15044",
+      "authors": [
+        "Bo-Lian Li",
+        "Yan-Ran Wu",
+        "Xin-Yu Luo",
+        "Ruqi Zhang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 415,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination",
+      "source_url": "https://arxiv.org/abs/2510.22767",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) typically come with a fixed architecture, despite growing evidence that not all layers contribute equally to every downstream task. We introduce TALE (Task-Aware Layer Elimination), an inference-time method that improves task performance by selectively removing layers that are irrelevant or detrimental for a given task. TALE optimizes task-specific performance, yielding a task-optimized architecture without retraining. Across 9 tasks and 5 model families, under both zero-shot and few-shot settings, TALE consistently matches or surpasses baseline performance while simultaneously reducing computational costs. TALE also synergizes with fine-tuning, leading to further performance improvements. Computing TALE for a new task requires modest resources, making it a practical and deployable solution for task-specialized LLM inference.",
+      "identifiers": [
+        "SemanticScholar:a5f7ea6c5d5e6be5676ed47be0bc64b86371b8a7"
+      ],
+      "semantic_scholar_id": "a5f7ea6c5d5e6be5676ed47be0bc64b86371b8a7",
+      "canonical_id": "arXiv:2510.22767",
+      "arxiv_id": "2510.22767",
+      "doi": "10.48550/arXiv.2510.22767",
+      "authors": [
+        "Omar Naim",
+        "Krish Sharma",
+        "Niyar R. Barman",
+        "Nicholas Asher"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "QUARTZ: Quantile-Aware Routing and Queueing for TTFT SLOs in LLM Serving",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1888",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:350cc35c0b86b5aeccc12052c2a0ee162bdfa9f8"
+      ],
+      "semantic_scholar_id": "350cc35c0b86b5aeccc12052c2a0ee162bdfa9f8",
+      "doi": "10.18653/v1/2026.findings-acl.1888",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1888",
+      "authors": [
+        "Zhipeng Liu",
+        "Yifan Zheng",
+        "Fanqi Kong",
+        "Zi-Ming Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "VideoRouter: Query-Adaptive Dual Routing for Efficient Long-Video Understanding",
+      "source_url": "https://arxiv.org/abs/2605.05848",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large multimodal models increasingly face a scalability bottleneck: long videos produce excessively long visual-token sequences, which sharply increase memory and latency during inference. While existing compression methods are effective in specific settings, most are either weakly query-aware or apply a fixed compression policy across frames, proving suboptimal when visual evidence is unevenly distributed over time. To address this, we present VideoRouter, a query-adaptive dual-router framework built on InternVL for budgeted evidence allocation. The Semantic Router predicts the dominant allocation policy, choosing between broad temporal coverage and adaptive high-resolution preservation, while the Image Router uses early LLM layers to score frame relevance. This enables aggressive compression on less relevant frames while preserving detail on critical evidence frames. To train both routers, we build Video-QTR-10K for allocation-policy supervision and Video-FLR-200K for frame-relevance supervision. Experiments on VideoMME, MLVU, and LongVideoBench show that VideoRouter consistently improves over the InternVL baseline under comparable or lower budgets, achieving up to a 67.9% token reduction.",
+      "identifiers": [
+        "SemanticScholar:277f881c355cba7d5a93c1d93fffc6cbbbfb2103"
+      ],
+      "semantic_scholar_id": "277f881c355cba7d5a93c1d93fffc6cbbbfb2103",
+      "canonical_id": "arXiv:2605.05848",
+      "arxiv_id": "2605.05848",
+      "doi": "10.48550/arXiv.2605.05848",
+      "authors": [
+        "Kuanwei Lin",
+        "Wen-Hao Zhang",
+        "Ge Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Edinburgh Research Explorer Long-context vision large language models Empirical insights and a baseline",
+      "source_url": "https://www.semanticscholar.org/paper/2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f"
+      ],
+      "semantic_scholar_id": "2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+      "canonical_id": "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+      "authors": [
+        "Yongshuo Zong",
+        "Ismail Elezi",
+        "Yong-Xin Yang",
+        "Jiankang Deng",
+        "Timothy M. Hospedales"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TASP: Topology-aware Sequence Parallelism",
+      "source_url": "https://arxiv.org/abs/2509.26541",
+      "year": 2025,
+      "published": "2025-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language models (LLMs) face constraints due to the quadratic complexity of the self-attention mechanism. The mainstream sequence parallelism (SP) method, Ring Attention, attempts to solve this by distributing the query into multiple query chunks across accelerators and enable each Q tensor to access all KV tensors from other accelerators via the Ring AllGather communication primitive. However, it exhibits low communication efficiency, restricting its practical applicability. This inefficiency stems from the mismatch between the Ring AllGather communication primitive it adopts and the AlltoAll topology of modern accelerators. A Ring AllGather primitive is composed of iterations of ring-styled data transfer, which can only utilize a very limited fraction of an AlltoAll topology. Inspired by the Hamiltonian decomposition of complete directed graphs, we identify that modern accelerator topology can be decomposed into multiple orthogonal ring datapaths which can concurrently transfer data without interference. Based on this, we further observe that the Ring AllGather primitive can also be decomposed into the same number of concurrent ring-styled data transfer at every iteration. Based on these insights, we propose TASP, a topology-aware SP method for long-context LLMs that fully utilizes the communication capacity of modern accelerators via topology decomposition and primitive decomposition. Experimental results on both single-node and multi-node NVIDIA H100 systems and a single-node AMD MI300X system demonstrate that TASP achieves higher communication efficiency than Ring Attention on these modern accelerator topologies and achieves up to 3.58 speedup than Ring Attention and its variant Zigzag-Ring Attention. The code is available at https://github.com/infinigence/HamiltonAttention.",
+      "identifiers": [
+        "SemanticScholar:624277cd1c04ee7da4b04b277c0f7a94bb8273c0"
+      ],
+      "semantic_scholar_id": "624277cd1c04ee7da4b04b277c0f7a94bb8273c0",
+      "canonical_id": "arXiv:2509.26541",
+      "arxiv_id": "2509.26541",
+      "doi": "10.48550/arXiv.2509.26541",
+      "authors": [
+        "Yi-Da Wang",
+        "Ke Hong",
+        "Xiu-Hong Li",
+        "Yuanchao Xu",
+        "Wen-Xun Wang",
+        "Guohao Dai",
+        "Yu Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 374,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Adaptive Transformer: An Empirical Study and Reproducible Framework",
+      "source_url": "https://arxiv.org/abs/2510.12856",
+      "year": 2025,
+      "published": "2025-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Efficient Adaptive Transformer (EAT) framework unifies three adaptive efficiency techniques - progressive token pruning, sparse attention, and dynamic early exiting - into a single, reproducible architecture for input-adaptive inference. EAT provides an open-source benchmarking pipeline that automates data processing, timing, and ablation across GLUE tasks (SST-2, QQP, MNLI). Although this empirical study finds that combining these mechanisms can increase latency in shallow six-layer models, it demonstrates that EAT achieves slightly higher accuracy than the optimized DistilBERT baseline on SST-2, illustrating the potential of dynamic computation for latency-sensitive NLP. The main contribution is the open, end-to-end reproducible framework - complete with scripts, CSV logging, and analysis utilities - intended to serve as a community tool for further research on adaptive transformers.",
+      "identifiers": [
+        "SemanticScholar:d49a8e52245014cb5a60dc4612a686b65c8e7db8"
+      ],
+      "semantic_scholar_id": "d49a8e52245014cb5a60dc4612a686b65c8e7db8",
+      "canonical_id": "arXiv:2510.12856",
+      "arxiv_id": "2510.12856",
+      "doi": "10.5281/zenodo.17282019",
+      "authors": [
+        "Jan D. Miller"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 360,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.18447",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.18447",
+        "id:SemanticScholar:e0dd5c76dfc256d0b97e5263bbd53c89058e9009",
+        "id:arXiv:2602.18447",
+        "title:confspec efficient steplevel speculative reasoning via confidencegated verification",
+        "url:https://arxiv.org/abs/2602.18447"
+      ],
+      "record": {
+        "title": "ConfSpec: Efficient Step-Level Speculative Reasoning via Confidence-Gated Verification",
+        "source_url": "https://arxiv.org/abs/2602.18447",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought reasoning significantly improves the performance of large language models on complex tasks, but incurs high inference latency due to long generation traces. Step-level speculative reasoning aims to mitigate this cost, yet existing approaches face a long-standing trade-off among accuracy, inference speed, and resource efficiency. We propose ConfSpec, a confidence-gated cascaded verification framework that resolves this trade-off. Our key insight is an asymmetry between generation and verification: while generating a correct reasoning step requires substantial model capacity, step-level verification is a constrained discriminative task for which small draft models are well-calibrated within their competence range, enabling high-confidence draft decisions to be accepted directly while selectively escalating uncertain cases to the large target model. Evaluation across diverse workloads shows that ConfSpec achieves up to 2.24$\\times$ end-to-end speedups while matching target-model accuracy. Our method requires no external judge models and is orthogonal to token-level speculative decoding, enabling further multiplicative acceleration.",
+        "identifiers": [
+          "SemanticScholar:e0dd5c76dfc256d0b97e5263bbd53c89058e9009"
+        ],
+        "semantic_scholar_id": "e0dd5c76dfc256d0b97e5263bbd53c89058e9009",
+        "canonical_id": "arXiv:2602.18447",
+        "arxiv_id": "2602.18447",
+        "doi": "10.48550/arXiv.2602.18447",
+        "authors": [
+          "Siran Liu",
+          "Zane Cao",
+          "Yong-Chao He"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.09113",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.09113",
+        "id:SemanticScholar:c845ad4e6b8e1eae739b3b1043024c6b5b61a305",
+        "id:arXiv:2602.09113",
+        "title:benchmarking the energy savings with speculative decoding strategies",
+        "url:https://arxiv.org/abs/2602.09113"
+      ],
+      "record": {
+        "title": "Benchmarking the Energy Savings with Speculative Decoding Strategies",
+        "source_url": "https://arxiv.org/abs/2602.09113",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding has emerged as an effective method to reduce latency and inference cost of LLM inferences. However, there has been inadequate attention towards the energy requirements of these models. To address this gap, this paper presents a comprehensive survey of energy requirements of speculative decoding strategies, with detailed analysis on how various factors -- model size and family, speculative decoding strategies, and dataset characteristics -- influence the energy optimizations.",
+        "identifiers": [
+          "SemanticScholar:c845ad4e6b8e1eae739b3b1043024c6b5b61a305"
+        ],
+        "semantic_scholar_id": "c845ad4e6b8e1eae739b3b1043024c6b5b61a305",
+        "canonical_id": "arXiv:2602.09113",
+        "arxiv_id": "2602.09113",
+        "doi": "10.48550/arXiv.2602.09113",
+        "authors": [
+          "R. Dutta",
+          "Paramita Koley",
+          "Soham Poddar",
+          "Janardan Misra",
+          "Sanjay Podder",
+          "Naveen Balani",
+          "Saptarshi Ghosh",
+          "Niloy Ganguly"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 242,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.03681",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.03681",
+        "id:SemanticScholar:b1bce63eb2ea1fea0b5decb2194a489f8c370ac5",
+        "id:arXiv:2603.03681",
+        "title:evoprune earlystage visual token pruning for efficient mllms",
+        "url:https://arxiv.org/abs/2603.03681"
+      ],
+      "record": {
+        "title": "EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs",
+        "source_url": "https://arxiv.org/abs/2603.03681",
+        "year": 2026,
+        "published": "2026-03-04",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) have shown strong performance in vision-language tasks, but their inference efficiency is severely limited by the exponential growth of visual tokens in complex scenarios such as high-resolution images and videos. Existing visual token pruning methods mainly operate after visual encoding, overlooking the substantial computational cost incurred during the encoding stage. To address this issue, we propose EvoPrune, an early-stage visual token pruning method for MLLMs that performs pruning directly during visual encoding. Specifically, EvoPrune employs a layer-wise pruning strategy guided by token similarity, diversity, and attention-based importance to retain the most informative visual tokens at selected encoding layers. Extensive experiments on image and video benchmarks validate the effectiveness of EvoPrune. In particular, on the VideoMME dataset, EvoPrune achieves 2$\\times$ inference speedup with less than 1% performance degradation, demonstrating its potential for latency-sensitive MLLM deployment.",
+        "identifiers": [
+          "SemanticScholar:b1bce63eb2ea1fea0b5decb2194a489f8c370ac5"
+        ],
+        "semantic_scholar_id": "b1bce63eb2ea1fea0b5decb2194a489f8c370ac5",
+        "canonical_id": "arXiv:2603.03681",
+        "arxiv_id": "2603.03681",
+        "doi": "10.48550/arXiv.2603.03681",
+        "authors": [
+          "Yuhao Chen",
+          "Bin Shan",
+          "Xin Ye",
+          "Cheng Chen"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 219,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.20968",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.20968",
+        "id:SemanticScholar:d9c23f97f8f720c00057c8aa5a12d4b1b6523ddf",
+        "id:arXiv:2512.20968",
+        "title:meshattention a new communicationefficient distributed attention with improved data locality",
+        "url:https://arxiv.org/abs/2512.20968"
+      ],
+      "record": {
+        "title": "Mesh-Attention: A New Communication-Efficient Distributed Attention with Improved Data Locality",
+        "source_url": "https://arxiv.org/abs/2512.20968",
+        "year": 2025,
+        "published": "2025-12-24",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Distributed attention is essential for scaling large language models (LLMs) to long contexts, yet existing methods either have limited parallelism or incur high communication costs. Ulysses uses efficient all-to-all communication but cannot scale beyond the number of attention heads, whereas Ring-Attention removes this limit at the cost of high per-GPU communication. In our analytical Q-KV interaction matrix model, Ring-Attention assigns each GPU an entire row, preserving Q locality while sacrificing KV locality. Each GPU therefore receives nearly all KV partitions, and its communication grows linearly with sequence length. We present Mesh-Attention, which instead assigns each GPU a 2D tile to balance Q and KV locality, so that it collects only subsets of Q and KV partitions. This gives Mesh-Attention asymptotically lower communication complexity than Ring-Attention without limiting parallelism. Mesh-Attention further uses KV Partition Rotation (KVR), greedy scheduling, and topology-aware GPU mapping to balance traffic, overlap communication with computation, and reduce traffic over low-bandwidth links. Across experiments on up to 256 GPUs and 1M-token sequences, Mesh-Attention achieves average speedups of 17.00x, 2.62x and 2.94x (up to 32.27x, 4.36x and 4.59x) over Ring-Attention, USP (Ulysses degree 8) and StarTrail, respectively. It maintains this performance advantage as GPU count and sequence length increase while substantially reducing communication overhead at scale.",
+        "identifiers": [
+          "SemanticScholar:d9c23f97f8f720c00057c8aa5a12d4b1b6523ddf"
+        ],
+        "semantic_scholar_id": "d9c23f97f8f720c00057c8aa5a12d4b1b6523ddf",
+        "canonical_id": "arXiv:2512.20968",
+        "arxiv_id": "2512.20968",
+        "doi": "10.48550/arXiv.2512.20968",
+        "authors": [
+          "Si-Rui Chen",
+          "Jing-Ji Chen",
+          "Si-Qi Zhu",
+          "Ziheng Jiang",
+          "Yang-Hua Peng",
+          "Xuehai Qian"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 289,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.26678",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.26678",
+        "id:SemanticScholar:ff815552a12fa27c6bc22eb9e5c51ee29fc217db",
+        "id:arXiv:2605.26678",
+        "title:nestedkv nested memory routing for longcontext kv cache compression",
+        "url:https://arxiv.org/abs/2605.26678"
+      ],
+      "record": {
+        "title": "NestedKV: Nested Memory Routing for Long-Context KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2605.26678",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context language models are limited by the memory footprint of the key-value (KV) cache. Existing training-free KV compression methods usually rank tokens by one importance signal -- attention, recency, layer-wise allocation, or key distinctiveness -- which becomes brittle when useful context is globally distinctive, locally episodic, or immediately relevant. We introduce NestedKV, a key-only KV cache compression method inspired by the Continuum Memory System in Nested Learning. NestedKV maintains global, block-level, and sliding-window key anchors, scores tokens by multi-time-scale cosine anomaly, and combines the resulting rankings with a training-free outer learner using head-adaptive mixing and surprise-gated token routing. The score is paired with adaptive per-head budgets and requires no training or LLM modification. Across RULER (4k--32k), LooGLE, LongBench, LongBench-E, InfiniteBench, and MMLU-Pro on Qwen3 and Llama-3.2 models, NestedKV is strongest when the retained cache is small. On Qwen3-4B, it improves over KeyDiff by up to 19.10 points on RULER and 19.29 on LongBench at $r=0.75$; at $r=0.95$, it retains 37.32 on LongBench versus 17.55 for KeyDiff.",
+        "identifiers": [
+          "SemanticScholar:ff815552a12fa27c6bc22eb9e5c51ee29fc217db"
+        ],
+        "semantic_scholar_id": "ff815552a12fa27c6bc22eb9e5c51ee29fc217db",
+        "canonical_id": "arXiv:2605.26678",
+        "arxiv_id": "2605.26678",
+        "doi": "10.48550/arXiv.2605.26678",
+        "authors": [
+          "Hong Chen",
+          "Xianglong Liu",
+          "Yu-Bo Gao",
+          "Yuxuan Fan",
+          "Bo Wang",
+          "Yuan-Lin Chu",
+          "Y. Lin",
+          "Xu-Ming Hu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 136,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23475",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.23475",
+        "id:SemanticScholar:64648bfed261885859c391f9659411df949e5bae",
+        "id:arXiv:2604.23475",
+        "title:supernodes and halos losscritical hubs in llm feedforward layers",
+        "url:https://arxiv.org/abs/2604.23475"
+      ],
+      "record": {
+        "title": "Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers",
+        "source_url": "https://arxiv.org/abs/2604.23475",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We study the organization of channel-level importance in transformer feed-forward networks (FFNs). Using a Fisher-style loss proxy (LP) based on activation-gradient second moments, we show that loss sensitivity is concentrated in a small set of channels within each layer. In Llama-3.1-8B, the top 1% of channels per layer accounts for a median of 58.7% of LP mass, with a range of 33.0% to 86.1%. We call these loss-critical channels supernodes. Although FFN layers also contain strong activation outliers, LP-defined supernodes overlap only weakly with activation-defined outliers and are not explained by activation power or weight norms alone. Around this core, we find a weaker but consistent halo structure: some non-supernode channels share the supernodes'write support and show stronger redundancy with the protected core. We use one-shot structured FFN pruning as a diagnostic test of this organization. At 50% FFN sparsity, baselines that prune many supernodes degrade sharply, whereas our SCAR variants explicitly protect the supernode core; the strongest variant, SCAR-Prot, reaches perplexity 54.8 compared with 989.2 for Wanda-channel. The LP-concentration pattern appears across Mistral-7B, Llama-2-7B, and Qwen2-7B, remains visible in targeted Llama-3.1-70B experiments, and increases during OLMo-2-7B pretraining. These results suggest that LLM FFNs develop a small learned core of loss-critical channels, and that preserving this core is important for reliable structured pruning.",
+        "identifiers": [
+          "SemanticScholar:64648bfed261885859c391f9659411df949e5bae"
+        ],
+        "semantic_scholar_id": "64648bfed261885859c391f9659411df949e5bae",
+        "canonical_id": "arXiv:2604.23475",
+        "arxiv_id": "2604.23475",
+        "doi": "10.48550/arXiv.2604.23475",
+        "authors": [
+          "Audrey Cherilyn",
+          "Houman Safaai"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 166,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00814",
+      "identity_tokens": [
+        "id:SemanticScholar:e312e62ba35548ae72b403408f1f9350f842ee83",
+        "id:arXiv:2608.00814",
+        "title:ooospec outoforder semantic speculation for fast tool calling",
+        "url:https://arxiv.org/abs/2608.00814"
+      ],
+      "record": {
+        "title": "OoO-Spec: Out-of-Order Semantic Speculation for Fast Tool Calling",
+        "source_url": "https://arxiv.org/abs/2608.00814",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLMs generate tool calls token by token, even though the function choice and argument values can often be predicted in parallel from the request and tool schema. ToolSpec reduces this cost by drafting schema tokens and retrieving earlier calls, but cannot propose request-specific values absent from either source. We present OoO-Spec, which computes these missing semantics out of order. At request arrival, a Qwen3-0.6B sidecar predicts the function choice and all schema-defined argument slots in one parallel request-level wave while the target begins ToolSpec decoding. The runtime joins the slot values, renders the resulting call as text, and exposes it to subsequent candidate-construction rounds. The target polls without blocking, re-tokenizes a ready hint with its own tokenizer, and remains the sole verifier and commit authority. The sidecar is trained once with LoRA on Qwen2.5-32B teacher traces and used unchanged across Qwen2.5, Qwen3, and Llama targets, without target-specific drafter training. Across seven fully ranked targets and three benchmarks under greedy batch-one decoding, OoO-Spec is fastest among all evaluated methods in all 21 target-benchmark cells, reaching 2.46x-5.34x over autoregressive decoding with an unweighted mean of 3.89x, versus 2.95x for ToolSpec. It also outperforms every evaluated released learned drafter in each comparable cell. Across Qwen3-4B, 8B, 14B, and 32B targets, the same sidecar improves on ToolSpec by 34.1% on average. Its compact semantic payload averages 85 bytes per request excluding protocol metadata, supporting effective split-GPU overlap.",
+        "identifiers": [
+          "SemanticScholar:e312e62ba35548ae72b403408f1f9350f842ee83"
+        ],
+        "semantic_scholar_id": "e312e62ba35548ae72b403408f1f9350f842ee83",
+        "canonical_id": "arXiv:2608.00814",
+        "arxiv_id": "2608.00814",
+        "authors": [
+          "Zhi-Heng Zhang",
+          "Mu-Jie Xu",
+          "Fei Sun",
+          "Zhi-Xin Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 69,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2209.09004",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2209.09004",
+        "id:SemanticScholar:adf56c96978fad861e92917f95708ae9935cc132",
+        "id:arXiv:2209.09004",
+        "title:ecoformer energysaving attention with linear complexity",
+        "url:https://arxiv.org/abs/2209.09004"
+      ],
+      "record": {
+        "title": "EcoFormer: Energy-Saving Attention with Linear Complexity",
+        "source_url": "https://arxiv.org/abs/2209.09004",
+        "year": 2022,
+        "published": "2022-09-19",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 38,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer is a transformative framework that models sequential data and has achieved remarkable performance on a wide range of tasks, but with high computational and energy cost. To improve its efficiency, a popular choice is to compress the models via binarization which constrains the floating-point values into binary ones to save resource consumption owing to cheap bitwise operations significantly. However, existing binarization methods only aim at minimizing the information loss for the input distribution statistically, while ignoring the pairwise similarity modeling at the core of the attention. To this end, we propose a new binarization paradigm customized to high-dimensional softmax attention via kernelized hashing, called EcoFormer, to map the original queries and keys into low-dimensional binary codes in Hamming space. The kernelized hash functions are learned to match the ground-truth similarity relations extracted from the attention map in a self-supervised way. Based on the equivalence between the inner product of binary codes and the Hamming distance as well as the associative property of matrix multiplication, we can approximate the attention in linear complexity by expressing it as a dot-product of binary codes. Moreover, the compact binary representations of queries and keys enable us to replace most of the expensive multiply-accumulate operations in attention with simple accumulations to save considerable on-chip energy footprint on edge devices. Extensive experiments on both vision and language tasks show that EcoFormer consistently achieves comparable performance with standard attentions while consuming much fewer resources. For example, based on PVTv2-B0 and ImageNet-1K, Ecoformer achieves a 73% on-chip energy footprint reduction with only a 0.33% performance drop compared to the standard attention. Code is available at https://github.com/ziplab/EcoFormer.",
+        "identifiers": [
+          "SemanticScholar:adf56c96978fad861e92917f95708ae9935cc132"
+        ],
+        "semantic_scholar_id": "adf56c96978fad861e92917f95708ae9935cc132",
+        "canonical_id": "arXiv:2209.09004",
+        "arxiv_id": "2209.09004",
+        "doi": "10.48550/arXiv.2209.09004",
+        "authors": [
+          "Jing Liu",
+          "Zizheng Pan",
+          "Haoyu He",
+          "Jianfei Cai",
+          "Bo-Han Zhuang"
+        ],
+        "priority": 48,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 38,
+          "citation_count": 38,
+          "total": 48,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1481,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.15044",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.15044",
+        "id:SemanticScholar:ccb70eb3381330c04f893471bb7b55b465a8bbbc",
+        "id:arXiv:2508.15044",
+        "title:rewardshifted speculative sampling is an efficient testtime weaktostrong aligner",
+        "url:https://arxiv.org/abs/2508.15044"
+      ],
+      "record": {
+        "title": "Reward-Shifted Speculative Sampling Is An Efficient Test-Time Weak-to-Strong Aligner",
+        "source_url": "https://arxiv.org/abs/2508.15044",
+        "year": 2025,
+        "published": "2025-08-20",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Aligning large language models (LLMs) with human preferences has become a critical step in their development. Recent research has increasingly focused on test-time alignment, where additional compute is allocated during inference to enhance LLM safety and reasoning capabilities. However, these test-time alignment techniques often incur substantial inference costs, limiting their practical application. We are inspired by the speculative sampling acceleration, which leverages a small draft model to efficiently predict future tokens, to address the efficiency bottleneck of test-time alignment. We introduce the reward-shifted speculative sampling (SSS) algorithm, in which the draft model is aligned with human preferences, while the target model remains unchanged. We theoretically demonstrate that the distributional shift between the aligned draft model and the unaligned target model can be exploited to recover the RLHF optimal solution without actually obtaining it, by modifying the acceptance criterion and bonus token distribution. Our algorithm achieves superior gold reward scores at a significantly reduced inference cost in test-time weak-to-strong alignment experiments, thereby validating both its effectiveness and efficiency.",
+        "identifiers": [
+          "SemanticScholar:ccb70eb3381330c04f893471bb7b55b465a8bbbc"
+        ],
+        "semantic_scholar_id": "ccb70eb3381330c04f893471bb7b55b465a8bbbc",
+        "canonical_id": "arXiv:2508.15044",
+        "arxiv_id": "2508.15044",
+        "doi": "10.48550/arXiv.2508.15044",
+        "authors": [
+          "Bo-Lian Li",
+          "Yan-Ran Wu",
+          "Xin-Yu Luo",
+          "Ruqi Zhang"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 415,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.22767",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.22767",
+        "id:SemanticScholar:a5f7ea6c5d5e6be5676ed47be0bc64b86371b8a7",
+        "id:arXiv:2510.22767",
+        "title:telltale task efficient llms with task aware layer elimination",
+        "url:https://arxiv.org/abs/2510.22767"
+      ],
+      "record": {
+        "title": "TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination",
+        "source_url": "https://arxiv.org/abs/2510.22767",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) typically come with a fixed architecture, despite growing evidence that not all layers contribute equally to every downstream task. We introduce TALE (Task-Aware Layer Elimination), an inference-time method that improves task performance by selectively removing layers that are irrelevant or detrimental for a given task. TALE optimizes task-specific performance, yielding a task-optimized architecture without retraining. Across 9 tasks and 5 model families, under both zero-shot and few-shot settings, TALE consistently matches or surpasses baseline performance while simultaneously reducing computational costs. TALE also synergizes with fine-tuning, leading to further performance improvements. Computing TALE for a new task requires modest resources, making it a practical and deployable solution for task-specialized LLM inference.",
+        "identifiers": [
+          "SemanticScholar:a5f7ea6c5d5e6be5676ed47be0bc64b86371b8a7"
+        ],
+        "semantic_scholar_id": "a5f7ea6c5d5e6be5676ed47be0bc64b86371b8a7",
+        "canonical_id": "arXiv:2510.22767",
+        "arxiv_id": "2510.22767",
+        "doi": "10.48550/arXiv.2510.22767",
+        "authors": [
+          "Omar Naim",
+          "Krish Sharma",
+          "Niyar R. Barman",
+          "Nicholas Asher"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.1888",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.1888",
+        "id:SemanticScholar:350cc35c0b86b5aeccc12052c2a0ee162bdfa9f8",
+        "title:quartz quantileaware routing and queueing for ttft slos in llm serving",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.1888"
+      ],
+      "record": {
+        "title": "QUARTZ: Quantile-Aware Routing and Queueing for TTFT SLOs in LLM Serving",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1888",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:350cc35c0b86b5aeccc12052c2a0ee162bdfa9f8"
+        ],
+        "semantic_scholar_id": "350cc35c0b86b5aeccc12052c2a0ee162bdfa9f8",
+        "doi": "10.18653/v1/2026.findings-acl.1888",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1888",
+        "authors": [
+          "Zhipeng Liu",
+          "Yifan Zheng",
+          "Fanqi Kong",
+          "Zi-Ming Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05848",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.05848",
+        "id:SemanticScholar:277f881c355cba7d5a93c1d93fffc6cbbbfb2103",
+        "id:arXiv:2605.05848",
+        "title:videorouter queryadaptive dual routing for efficient longvideo understanding",
+        "url:https://arxiv.org/abs/2605.05848"
+      ],
+      "record": {
+        "title": "VideoRouter: Query-Adaptive Dual Routing for Efficient Long-Video Understanding",
+        "source_url": "https://arxiv.org/abs/2605.05848",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large multimodal models increasingly face a scalability bottleneck: long videos produce excessively long visual-token sequences, which sharply increase memory and latency during inference. While existing compression methods are effective in specific settings, most are either weakly query-aware or apply a fixed compression policy across frames, proving suboptimal when visual evidence is unevenly distributed over time. To address this, we present VideoRouter, a query-adaptive dual-router framework built on InternVL for budgeted evidence allocation. The Semantic Router predicts the dominant allocation policy, choosing between broad temporal coverage and adaptive high-resolution preservation, while the Image Router uses early LLM layers to score frame relevance. This enables aggressive compression on less relevant frames while preserving detail on critical evidence frames. To train both routers, we build Video-QTR-10K for allocation-policy supervision and Video-FLR-200K for frame-relevance supervision. Experiments on VideoMME, MLVU, and LongVideoBench show that VideoRouter consistently improves over the InternVL baseline under comparable or lower budgets, achieving up to a 67.9% token reduction.",
+        "identifiers": [
+          "SemanticScholar:277f881c355cba7d5a93c1d93fffc6cbbbfb2103"
+        ],
+        "semantic_scholar_id": "277f881c355cba7d5a93c1d93fffc6cbbbfb2103",
+        "canonical_id": "arXiv:2605.05848",
+        "arxiv_id": "2605.05848",
+        "doi": "10.48550/arXiv.2605.05848",
+        "authors": [
+          "Kuanwei Lin",
+          "Wen-Hao Zhang",
+          "Ge Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+      "identity_tokens": [
+        "id:SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+        "title:edinburgh research explorer longcontext vision large language models empirical insights and a baseline",
+        "url:https://www.semanticscholar.org/paper/2194b262beb2bdc86ffc256dfb3dea124d5ffb2f"
+      ],
+      "record": {
+        "title": "Edinburgh Research Explorer Long-context vision large language models Empirical insights and a baseline",
+        "source_url": "https://www.semanticscholar.org/paper/2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f"
+        ],
+        "semantic_scholar_id": "2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+        "canonical_id": "SemanticScholar:2194b262beb2bdc86ffc256dfb3dea124d5ffb2f",
+        "authors": [
+          "Yongshuo Zong",
+          "Ismail Elezi",
+          "Yong-Xin Yang",
+          "Jiankang Deng",
+          "Timothy M. Hospedales"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.26541",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.26541",
+        "id:SemanticScholar:624277cd1c04ee7da4b04b277c0f7a94bb8273c0",
+        "id:arXiv:2509.26541",
+        "title:tasp topologyaware sequence parallelism",
+        "url:https://arxiv.org/abs/2509.26541"
+      ],
+      "record": {
+        "title": "TASP: Topology-aware Sequence Parallelism",
+        "source_url": "https://arxiv.org/abs/2509.26541",
+        "year": 2025,
+        "published": "2025-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context large language models (LLMs) face constraints due to the quadratic complexity of the self-attention mechanism. The mainstream sequence parallelism (SP) method, Ring Attention, attempts to solve this by distributing the query into multiple query chunks across accelerators and enable each Q tensor to access all KV tensors from other accelerators via the Ring AllGather communication primitive. However, it exhibits low communication efficiency, restricting its practical applicability. This inefficiency stems from the mismatch between the Ring AllGather communication primitive it adopts and the AlltoAll topology of modern accelerators. A Ring AllGather primitive is composed of iterations of ring-styled data transfer, which can only utilize a very limited fraction of an AlltoAll topology. Inspired by the Hamiltonian decomposition of complete directed graphs, we identify that modern accelerator topology can be decomposed into multiple orthogonal ring datapaths which can concurrently transfer data without interference. Based on this, we further observe that the Ring AllGather primitive can also be decomposed into the same number of concurrent ring-styled data transfer at every iteration. Based on these insights, we propose TASP, a topology-aware SP method for long-context LLMs that fully utilizes the communication capacity of modern accelerators via topology decomposition and primitive decomposition. Experimental results on both single-node and multi-node NVIDIA H100 systems and a single-node AMD MI300X system demonstrate that TASP achieves higher communication efficiency than Ring Attention on these modern accelerator topologies and achieves up to 3.58 speedup than Ring Attention and its variant Zigzag-Ring Attention. The code is available at https://github.com/infinigence/HamiltonAttention.",
+        "identifiers": [
+          "SemanticScholar:624277cd1c04ee7da4b04b277c0f7a94bb8273c0"
+        ],
+        "semantic_scholar_id": "624277cd1c04ee7da4b04b277c0f7a94bb8273c0",
+        "canonical_id": "arXiv:2509.26541",
+        "arxiv_id": "2509.26541",
+        "doi": "10.48550/arXiv.2509.26541",
+        "authors": [
+          "Yi-Da Wang",
+          "Ke Hong",
+          "Xiu-Hong Li",
+          "Yuanchao Xu",
+          "Wen-Xun Wang",
+          "Guohao Dai",
+          "Yu Wang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 374,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.12856",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.17282019",
+        "id:SemanticScholar:d49a8e52245014cb5a60dc4612a686b65c8e7db8",
+        "id:arXiv:2510.12856",
+        "title:efficient adaptive transformer an empirical study and reproducible framework",
+        "url:https://arxiv.org/abs/2510.12856"
+      ],
+      "record": {
+        "title": "Efficient Adaptive Transformer: An Empirical Study and Reproducible Framework",
+        "source_url": "https://arxiv.org/abs/2510.12856",
+        "year": 2025,
+        "published": "2025-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Efficient Adaptive Transformer (EAT) framework unifies three adaptive efficiency techniques - progressive token pruning, sparse attention, and dynamic early exiting - into a single, reproducible architecture for input-adaptive inference. EAT provides an open-source benchmarking pipeline that automates data processing, timing, and ablation across GLUE tasks (SST-2, QQP, MNLI). Although this empirical study finds that combining these mechanisms can increase latency in shallow six-layer models, it demonstrates that EAT achieves slightly higher accuracy than the optimized DistilBERT baseline on SST-2, illustrating the potential of dynamic computation for latency-sensitive NLP. The main contribution is the open, end-to-end reproducible framework - complete with scripts, CSV logging, and analysis utilities - intended to serve as a community tool for further research on adaptive transformers.",
+        "identifiers": [
+          "SemanticScholar:d49a8e52245014cb5a60dc4612a686b65c8e7db8"
+        ],
+        "semantic_scholar_id": "d49a8e52245014cb5a60dc4612a686b65c8e7db8",
+        "canonical_id": "arXiv:2510.12856",
+        "arxiv_id": "2510.12856",
+        "doi": "10.5281/zenodo.17282019",
+        "authors": [
+          "Jan D. Miller"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 360,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0d9ee945b25743628cf38822923472149d2948e1000d24a8a5d21a72f0172403",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
