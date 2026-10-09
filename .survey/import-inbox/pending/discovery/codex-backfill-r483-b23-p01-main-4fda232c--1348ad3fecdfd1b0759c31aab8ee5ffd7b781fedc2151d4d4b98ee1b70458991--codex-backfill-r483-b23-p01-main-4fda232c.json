@@ -1,0 +1,272 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-r483-b23-p01-main-4fda232c",
+  "reference_main_sha": "4fda232c524c575e568a1745b8de101f207f746a",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112",
+      "identity_tokens": [
+        "SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112",
+        "arXiv:2502.19732"
+      ],
+      "title": "Speculative Decoding and Beyond: An In-Depth Review of Techniques",
+      "reason": "Survey of generation-refinement/speculative decoding methods across autoregressive tasks, including draft strategies, verification, and deployment across compute settings. Supports a direct lineage to faster autoregressive LLM inference.",
+      "source_url": "https://arxiv.org/abs/2502.19732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.12928",
+      "identity_tokens": [
+        "arXiv:2512.12928"
+      ],
+      "title": "PROSERVE: Unified Multi-Priority Request Scheduling for LLM Serving",
+      "reason": "Proposes multi-priority LLM request scheduling and associated admission/routing/offload mechanisms to improve SLO attainment and serving system gain.",
+      "source_url": "https://arxiv.org/abs/2512.12928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00412",
+      "identity_tokens": [
+        "arXiv:2610.00412"
+      ],
+      "title": "EchoPress: Query-Agnostic KV Cache Pruning via Virtual Context Reconstruction",
+      "reason": "Training-free KV pruning reconstructs virtual context and selects cache tokens for query-agnostic compression, reducing inference overhead while retaining task quality.",
+      "source_url": "https://arxiv.org/abs/2610.00412",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.12706",
+      "identity_tokens": [
+        "arXiv:2412.12706"
+      ],
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "reason": "Studies joint KV-cache token pruning and lower-precision storage; quantized pruning retains more tokens and improves long-context retrieval under memory constraints.",
+      "source_url": "https://arxiv.org/abs/2412.12706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.07243",
+      "identity_tokens": [
+        "arXiv:2605.07243"
+      ],
+      "title": "SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting",
+      "reason": "Block-iterative speculative drafter preserves path dependence while reducing drafting cost; adaptive tree branching and verifier feedback improve LLM decoding speed.",
+      "source_url": "https://arxiv.org/abs/2605.07243",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36173",
+      "identity_tokens": [
+        "arXiv:2609.36173"
+      ],
+      "title": "Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding",
+      "reason": "DSpine injects predecessor-conditioned signals through network depth so parallel speculative candidates remain causally informed; reports longer accepted drafts and higher serving throughput.",
+      "source_url": "https://arxiv.org/abs/2609.36173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.07409",
+      "identity_tokens": [
+        "arXiv:2607.07409"
+      ],
+      "title": "DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting",
+      "reason": "Combines a fixed long-context speculative drafter with an independently trained local short-context head to improve acceptance and decoding speed.",
+      "source_url": "https://arxiv.org/abs/2607.07409",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.26140",
+      "identity_tokens": [
+        "arXiv:2608.26140"
+      ],
+      "title": "Affix Cache for Diffusion Large Language Models",
+      "reason": "ACache reuses KV states for shared spans in diffusion LLMs, recomputes selected anchor-token states, and reduces recompute latency and peak KV memory.",
+      "source_url": "https://arxiv.org/abs/2608.26140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.13254",
+      "identity_tokens": [
+        "arXiv:2505.13254"
+      ],
+      "title": "HeteroSpec: Leveraging Contextual Heterogeneity for Efficient Speculative Decoding",
+      "reason": "Entropy-based candidate stratification allocates verification effort according to uncertainty and improves speculative decoding speed while preserving the target distribution.",
+      "source_url": "https://arxiv.org/abs/2505.13254",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32278",
+      "identity_tokens": [
+        "arXiv:2609.32278"
+      ],
+      "title": "RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving",
+      "reason": "Round-robin fine-grained agent prefix-cache eviction spreads reclamation across trajectories, reducing recomputation and tail TTFT for returning agents.",
+      "source_url": "https://arxiv.org/abs/2609.32278",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.07234",
+      "identity_tokens": [
+        "arXiv:2605.07234"
+      ],
+      "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference",
+      "reason": "LaProx evaluates cache-token contributions through output-aware layerwise approximations and inter-head interactions, retaining quality with a small KV budget.",
+      "source_url": "https://arxiv.org/abs/2605.07234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+      "identity_tokens": [
+        "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+        "arXiv:2412.18169"
+      ],
+      "title": "K UN S ERVE : Parameter-centric Memory Management for Efficient Memory Throttling Handling in LLM Serving",
+      "reason": "KunServe frees GPU memory by temporarily dropping replicated model parameters and cooperatively scheduling requests, reducing queueing and tail latency during LLM-serving overload.",
+      "source_url": "https://arxiv.org/abs/2412.18169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2307.07982",
+      "identity_tokens": [
+        "arXiv:2307.07982"
+      ],
+      "title": "A Survey of Techniques for Optimizing Transformer Inference",
+      "reason": "Surveys algorithmic and hardware-level methods including distillation, pruning, quantization, architecture design, and accelerators to reduce Transformer inference compute and memory.",
+      "source_url": "https://arxiv.org/abs/2307.07982",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.07116",
+      "identity_tokens": [
+        "arXiv:2606.07116"
+      ],
+      "title": "OffQ: Taming Structured Outliers in LLM Quantization by Offsetting",
+      "reason": "Offsets structured activation outliers to enable uniform low-bit weight, activation, and KV quantization for LLM inference with lower memory and compute.",
+      "source_url": "https://arxiv.org/abs/2606.07116",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02707",
+      "identity_tokens": [
+        "arXiv:2602.02707"
+      ],
+      "title": "Every Bit Counts: A Theoretical Study of Precision-Expressivity Tradeoffs in Quantized Transformers",
+      "reason": "Analyzes the precision/expressivity threshold in quantized Transformers, explaining when reduced precision changes representable functions and informing safe quantization choices.",
+      "source_url": "https://arxiv.org/abs/2602.02707",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20316",
+      "identity_tokens": [
+        "arXiv:2505.20316"
+      ],
+      "title": "Reinforcement Speculative Decoding for Fast Ranking",
+      "reason": "Uses an RL-trained, budgeted up-to-down speculative procedure to accelerate LLM ranking inference and use listwise verification information across rounds.",
+      "source_url": "https://arxiv.org/abs/2505.20316",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37029",
+      "identity_tokens": [
+        "arXiv:2609.37029"
+      ],
+      "title": "LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter",
+      "reason": "A block-diffusion drafter extracts fixed-size views from target verification, making draft cost independent of prefix length and improving long-context speculative inference.",
+      "source_url": "https://arxiv.org/abs/2609.37029",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "identity_tokens": [
+        "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7"
+      ],
+      "title": "Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention",
+      "reason": "Author-hosted survey organizes hardware-efficient, sparse, compact/KV-cache, and linear attention methods and discusses computational and memory efficiency for Transformer/LLM use.",
+      "source_url": "https://attention-survey.github.io/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.09316",
+      "identity_tokens": [
+        "arXiv:2506.09316"
+      ],
+      "title": "On-the-Fly Adaptive Distillation of Transformer to Dual-State Linear Attention",
+      "reason": "DSLA-Serve adaptively replaces Transformer layers with dual-state linear attention at inference time to lower compute while preserving long-context and downstream performance.",
+      "source_url": "https://arxiv.org/abs/2506.09316",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36222",
+      "identity_tokens": [
+        "arXiv:2609.36222"
+      ],
+      "title": "BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding",
+      "reason": "Predicts the output error from removing MoE experts and coordinates expert selection across a batch with custom inference kernels, improving serving quality-efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36222",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    }
+  ]
+}
