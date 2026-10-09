@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T18:02:12.585840+00:00",
+  "generated_at": "2026-10-09T18:57:29.868389+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 210,
+  "count": 206,
   "worker_counts": {
-    "scheduled-chat-00": 70,
-    "scheduled-chat-30": 70,
-    "scheduled-chat-45": 70
+    "scheduled-chat-00": 69,
+    "scheduled-chat-30": 68,
+    "scheduled-chat-45": 69
   },
   "entries": [
     {
@@ -122,28 +122,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1777 < 2200",
         "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md",
-      "canonical_id": "arXiv:2410.10759",
-      "title": "SplitLLM: Collaborative Inference of LLMs for Model Placement and Throughput Optimization",
-      "file_bytes": 10136,
-      "source_sha256": "e63ba294e963c50a40960a650bd6b78d626a91d1ce3335ec516f363c6259bad5",
-      "source_git_blob_sha": "7d1747015b2abb16b47215233e9c9b0fba0a5c23",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.969554,
-      "quality_metrics": {
-        "body_chars": 2481,
-        "method_chars": 593,
-        "evaluation_chars": 697,
-        "limitation_chars": 219
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 593 < 700"
       ],
       "warnings": []
     },
@@ -556,26 +534,6 @@
       ]
     },
     {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
-      "canonical_id": "arXiv:2406.13233",
-      "title": "AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models",
-      "file_bytes": 11822,
-      "source_sha256": "cdd07e5b2253e637bb03a583b4b77cd78a403f9e979eaeba9a2f52d42e86b07d",
-      "source_git_blob_sha": "610717d3693ce099fda83a4e70f49bec22c6aec8",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.83126,
-      "quality_metrics": {
-        "body_chars": 2826,
-        "method_chars": 1616,
-        "evaluation_chars": 720,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
       "canonical_id": "arXiv:2407.04620",
       "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
@@ -740,26 +698,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
-      "canonical_id": "DOI:10.18653/v1/2024.acl-long.696",
-      "title": "Harder Task Needs More Experts: Dynamic Routing in MoE Models",
-      "file_bytes": 12017,
-      "source_sha256": "b51c683f4e5ade8331fd7114b6fc239de7fb4e6cd738085d9c7f7c7b67c09ce2",
-      "source_git_blob_sha": "6999950a23fd9067a7641ff46522bd8d3bff3d82",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.874324,
-      "quality_metrics": {
-        "body_chars": 3870,
-        "method_chars": 1020,
-        "evaluation_chars": 1271,
-        "limitation_chars": 435
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
       "canonical_id": "arXiv:2508.18265",
       "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency",
@@ -861,7 +799,7 @@
       "file_bytes": 12212,
       "source_sha256": "a9fb7f0e3bfa5f4d16a9fe31f4998c3bc35b369122cd7a76a444614e76393ff1",
       "source_git_blob_sha": "0d84a6dccb3a8f1b3d7c18bc1e0d6e6b07813aa4",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.767586,
@@ -1209,28 +1147,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 294 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md",
-      "canonical_id": "arXiv:2406.17276",
-      "title": "OPT-Tree: Speculative Decoding with Adaptive Draft Tree Structure",
-      "file_bytes": 12448,
-      "source_sha256": "904e27306a6dfd9f727020118acbbddbae31120c8e8a9baeaf98c6d69384d8ba",
-      "source_git_blob_sha": "dbfe5b9850a52ba1fcc1431674f25a8a4c51fea0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.90868,
-      "quality_metrics": {
-        "body_chars": 2688,
-        "method_chars": 816,
-        "evaluation_chars": 320,
-        "limitation_chars": 252
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 320 < 500"
       ],
       "warnings": []
     },
