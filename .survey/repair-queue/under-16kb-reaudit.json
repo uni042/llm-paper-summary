@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T01:11:09.737950+00:00",
+  "generated_at": "2026-10-09T01:35:27.176848+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 382,
+  "count": 365,
   "worker_counts": {
-    "scheduled-chat-00": 121,
-    "scheduled-chat-30": 105,
-    "scheduled-chat-45": 156
+    "scheduled-chat-00": 117,
+    "scheduled-chat-30": 96,
+    "scheduled-chat-45": 152
   },
   "entries": [
     {
@@ -33,54 +33,6 @@
         "16KB未満再監査: 本文説明量 1718 < 2200",
         "16KB未満再監査: 手法説明量 580 < 700",
         "16KB未満再監査: 評価説明量 155 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md",
-      "canonical_id": "arXiv:2402.14160",
-      "title": "Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement",
-      "file_bytes": 8807,
-      "source_sha256": "a21c373028fc37e9131a98698a2bcabd6faa128936b97f758b212e80c3388562",
-      "source_git_blob_sha": "5fde0a4187d361854694d42a27c86d0b1aeb723b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.947211,
-      "quality_metrics": {
-        "body_chars": 1772,
-        "method_chars": 693,
-        "evaluation_chars": 109,
-        "limitation_chars": 138
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1772 < 2200",
-        "16KB未満再監査: 手法説明量 693 < 700",
-        "16KB未満再監査: 評価説明量 109 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md",
-      "canonical_id": "arXiv:2510.25602",
-      "title": "INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats",
-      "file_bytes": 8816,
-      "source_sha256": "4ff08273c25b401b7b587f315139c1d497e21860c56f3c16d5a6b68cc681f889",
-      "source_git_blob_sha": "c269f1eb88b790e09f1fc06094f114d32db670bc",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.805243,
-      "quality_metrics": {
-        "body_chars": 1580,
-        "method_chars": 568,
-        "evaluation_chars": 0,
-        "limitation_chars": 138
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1580 < 2200",
-        "16KB未満再監査: 手法説明量 568 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
     },
@@ -158,33 +110,6 @@
         "16KB未満再監査: 評価説明量 252 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
-      "canonical_id": "arXiv:2405.14852",
-      "title": "PV-Tuning: Beyond Straight-Through Estimation for Extreme LLM Compression",
-      "file_bytes": 9058,
-      "source_sha256": "0eed711a4d9970c2134a10759bb93c1e9dd733f74f04ee62a517c1b59c576b69",
-      "source_git_blob_sha": "479661668268e0a59c0b89f0c25fe2ec5cd1216d",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.776901,
-      "quality_metrics": {
-        "body_chars": 2001,
-        "method_chars": 421,
-        "evaluation_chars": 409,
-        "limitation_chars": 168
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2001 < 2200",
-        "16KB未満再監査: 手法説明量 421 < 700",
-        "16KB未満再監査: 評価説明量 409 < 500",
-        "16KB未満再監査: 日本語比率 77.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.7% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
@@ -286,29 +211,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
-      "canonical_id": "arXiv:2405.05465",
-      "title": "Vidur: A Large-Scale Simulation Framework For LLM Inference",
-      "file_bytes": 9348,
-      "source_sha256": "2291f56ccddc7f9ffe8d6cc9070f91dedbbefa89af9ffd566abf008f470720f1",
-      "source_git_blob_sha": "8781d55fff975ccdaf92cf03721dfc113eaab4be",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.954444,
-      "quality_metrics": {
-        "body_chars": 1930,
-        "method_chars": 878,
-        "evaluation_chars": 0,
-        "limitation_chars": 155
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1930 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
       "canonical_id": "arXiv:2305.05176",
       "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
@@ -327,55 +229,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 692 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md",
-      "canonical_id": "arXiv:2512.14080",
-      "title": "SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations",
-      "file_bytes": 9359,
-      "source_sha256": "f1c4c4bb931bd75ed7af35ba2b6d92474ac25bfa56254128b8c68b40c1deb674",
-      "source_git_blob_sha": "217f9ea220afc779a03ec14bba2c4beb3e36e372",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.713254,
-      "quality_metrics": {
-        "body_chars": 2205,
-        "method_chars": 639,
-        "evaluation_chars": 404,
-        "limitation_chars": 208
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 639 < 700",
-        "16KB未満再監査: 評価説明量 404 < 500",
-        "16KB未満再監査: 日本語比率 71.3% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 71.3% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
-      "canonical_id": "arXiv:2404.08856",
-      "title": "On Speculative Decoding for Multimodal Large Language Models",
-      "file_bytes": 9368,
-      "source_sha256": "e91744f6430e6731ed1bdbfeaa806a235f520c6058c437fb7eefa93d1e226c9d",
-      "source_git_blob_sha": "5334bc900910e4d99b9df01379561186a4a558d3",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.958568,
-      "quality_metrics": {
-        "body_chars": 1929,
-        "method_chars": 798,
-        "evaluation_chars": 0,
-        "limitation_chars": 147
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1929 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
     },
@@ -523,26 +376,6 @@
         "16KB未満再監査: 本文説明量 1937 < 2200",
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md",
-      "canonical_id": "arXiv:2406.03736",
-      "title": "Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data",
-      "file_bytes": 9660,
-      "source_sha256": "0de6bd6191e7d8bf6e51c54b7e0cbef10c7ec5bf24d7fe922ad94b2884196e3c",
-      "source_git_blob_sha": "d0c7f6c56c7b7ea674892ee3ddfae60a2b8251c2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.927073,
-      "quality_metrics": {
-        "body_chars": 2722,
-        "method_chars": 849,
-        "evaluation_chars": 796,
-        "limitation_chars": 234
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -758,26 +591,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md",
-      "canonical_id": "arXiv:2407.07304",
-      "title": "Inference Performance Optimization for Large Language Models on CPUs",
-      "file_bytes": 9789,
-      "source_sha256": "6df0d4a653fec34c965165760c928b3ae8416575d1dd3ec98d91894e732c8401",
-      "source_git_blob_sha": "707db63e6358d33a94d046ed382349b0afda24c0",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.856376,
-      "quality_metrics": {
-        "body_chars": 3072,
-        "method_chars": 980,
-        "evaluation_chars": 887,
-        "limitation_chars": 255
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md",
       "canonical_id": "arXiv:2409.09071",
       "title": "Elastic On-Device LLM Service",
@@ -940,30 +753,6 @@
         "16KB未満再監査: 本文説明量 889 < 2200",
         "16KB未満再監査: 手法説明量 252 < 700",
         "16KB未満再監査: 評価説明量 55 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
-      "canonical_id": "arXiv:2112.06905",
-      "title": "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts",
-      "file_bytes": 9985,
-      "source_sha256": "5d8ce35cd0ef20fecb070f25a472e6a13f16c05af001e1549cae6fe76091ed19",
-      "source_git_blob_sha": "28520138f0a147851cb9ccd5acc4d8221d2a8810",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.874116,
-      "quality_metrics": {
-        "body_chars": 617,
-        "method_chars": 146,
-        "evaluation_chars": 0,
-        "limitation_chars": 106
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 617 < 2200",
-        "16KB未満再監査: 手法説明量 146 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
     },
@@ -1384,28 +1173,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
-      "canonical_id": "arXiv:2403.19887",
-      "title": "Jamba: A Hybrid Transformer-Mamba Language Model",
-      "file_bytes": 10517,
-      "source_sha256": "2cd2818e774e11ce1635b3507fe253bb1f13d35ec9da4d78781d724206157f86",
-      "source_git_blob_sha": "cd0906c297a463e949fce833d831c828b5ebf752",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.828533,
-      "quality_metrics": {
-        "body_chars": 2340,
-        "method_chars": 972,
-        "evaluation_chars": 0,
-        "limitation_chars": 235
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md",
       "canonical_id": "arXiv:2502.15734",
       "title": "Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation",
@@ -1580,29 +1347,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 167 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
-      "canonical_id": "arXiv:2101.01321",
-      "title": "I-BERT: Integer-only BERT Quantization",
-      "file_bytes": 10805,
-      "source_sha256": "11be4a6d42a53eacab5b509ad6e131e8b870c2fc8ff713a15bdd791d0614e1ea",
-      "source_git_blob_sha": "1944570dab8ea37d46a02bc1d4fe83ba10dec09f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.830378,
-      "quality_metrics": {
-        "body_chars": 1940,
-        "method_chars": 797,
-        "evaluation_chars": 90,
-        "limitation_chars": 246
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1940 < 2200",
-        "16KB未満再監査: 評価説明量 90 < 500"
       ],
       "warnings": []
     },
@@ -2046,29 +1790,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2405.14256-zipcache.md",
-      "canonical_id": "arXiv:2405.14256",
-      "title": "ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification",
-      "file_bytes": 11099,
-      "source_sha256": "1fdf7f75ba6d635e0dc9106c1b535370a4b20e162bfc3c56de885c22b7875eb2",
-      "source_git_blob_sha": "2ba15adfb83f879cc080b3410e3da9bec1771388",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.987199,
-      "quality_metrics": {
-        "body_chars": 2241,
-        "method_chars": 657,
-        "evaluation_chars": 0,
-        "limitation_chars": 100
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 657 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
       "canonical_id": "arXiv:2305.18403",
       "title": "LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning",
@@ -2086,28 +1807,6 @@
         "limitation_chars": 226
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
-      "canonical_id": "arXiv:2405.04532",
-      "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
-      "file_bytes": 11116,
-      "source_sha256": "85ad159e6ad78ec350393387638b270b93968bd86b51a35557609ca39332aca9",
-      "source_git_blob_sha": "8b25f3819c241d48dd6850e7c46dbcfe5945f344",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.948284,
-      "quality_metrics": {
-        "body_chars": 2368,
-        "method_chars": 796,
-        "evaluation_chars": 449,
-        "limitation_chars": 166
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 449 < 500"
-      ],
       "warnings": []
     },
     {
@@ -2298,26 +1997,6 @@
         "method_chars": 826,
         "evaluation_chars": 630,
         "limitation_chars": 304
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
-      "canonical_id": "arXiv:2504.15299",
-      "title": "D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving",
-      "file_bytes": 11236,
-      "source_sha256": "786bca47a8bf5ced77ae641aac68417bdae4626d9d2be7080a4789b0975601b2",
-      "source_git_blob_sha": "1d666e2b4952d3d5653454a48e8f6492edd143b7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.898891,
-      "quality_metrics": {
-        "body_chars": 2627,
-        "method_chars": 1528,
-        "evaluation_chars": 594,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -2715,28 +2394,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.06175-vecinfer-efficient-llm-inference-with-low-bit-kv-cache-via-outlier-suppr.md",
-      "canonical_id": "arXiv:2510.06175",
-      "title": "VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization",
-      "file_bytes": 11468,
-      "source_sha256": "558a9d015977b8cdd5c12a0e57f624bfee6ef7be72ad6081396bbd8cbafeef9d",
-      "source_git_blob_sha": "254fbec8a7ae691afd9e9bf1867872903b7fd3d7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.842424,
-      "quality_metrics": {
-        "body_chars": 2705,
-        "method_chars": 679,
-        "evaluation_chars": 842,
-        "limitation_chars": 229
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 679 < 700"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md",
       "canonical_id": "arXiv:2505.05286",
       "title": "Hexgen-Flow: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL",
@@ -2752,26 +2409,6 @@
         "method_chars": 970,
         "evaluation_chars": 738,
         "limitation_chars": 166
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md",
-      "canonical_id": "AAAI:39816",
-      "title": "CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices",
-      "file_bytes": 11500,
-      "source_sha256": "c2a68856f8453f983dc4042dcc620efdbabfbcd71526cd1b2bebaf82deb0a698",
-      "source_git_blob_sha": "07de866249edd0774f4824dcc6558e1590732681",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.882714,
-      "quality_metrics": {
-        "body_chars": 2821,
-        "method_chars": 1183,
-        "evaluation_chars": 976,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -2902,28 +2539,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
-      "canonical_id": "arXiv:2503.09573",
-      "title": "Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models",
-      "file_bytes": 11559,
-      "source_sha256": "0fd11af92fe6d256d97b7fdf5d96d0ed284744d6797d37a52821a32898ee413e",
-      "source_git_blob_sha": "abaf7710f81bcbd12c5d9880e4f68f53be38e36c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.92266,
-      "quality_metrics": {
-        "body_chars": 2595,
-        "method_chars": 640,
-        "evaluation_chars": 702,
-        "limitation_chars": 143
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 640 < 700"
-      ],
       "warnings": []
     },
     {
