@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T09:57:58.424396+00:00",
+  "generated_at": "2026-10-09T10:38:54.444483+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 297,
+  "count": 284,
   "worker_counts": {
-    "scheduled-chat-00": 99,
-    "scheduled-chat-30": 99,
-    "scheduled-chat-45": 99
+    "scheduled-chat-00": 95,
+    "scheduled-chat-30": 94,
+    "scheduled-chat-45": 95
   },
   "entries": [
     {
@@ -37,30 +37,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md",
-      "canonical_id": "arXiv:2606.18304",
-      "title": "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
-      "file_bytes": 9035,
-      "source_sha256": "16921b94e3545a6086ed08d744bd3e97abbbeb8a6c568082dc6d5d957ee0ec93",
-      "source_git_blob_sha": "c84bae72a9dbd25dc1b5ef748688de94b3b98bfb",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.968932,
-      "quality_metrics": {
-        "body_chars": 1693,
-        "method_chars": 487,
-        "evaluation_chars": 252,
-        "limitation_chars": 203
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1693 < 2200",
-        "16KB未満再監査: 手法説明量 487 < 700",
-        "16KB未満再監査: 評価説明量 252 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/13-sparse-attention/2025-2509.24663-infllm-v2-dense-sparse-switchable-attention-for-seamless-short-to-long-a.md",
       "canonical_id": "arXiv:2509.24663",
       "title": "InfLLM-V2: Dense-Sparse Switchable Attention for Seamless Short-to-Long Adaptation",
@@ -81,28 +57,6 @@
         "16KB未満再監査: 本文説明量 1697 < 2200",
         "16KB未満再監査: 手法説明量 542 < 700",
         "16KB未満再監査: 評価説明量 136 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
-      "canonical_id": "arXiv:2305.05176",
-      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
-      "file_bytes": 9354,
-      "source_sha256": "cc2500a6954735af166a4f8d48210b6d78f2648ef3aa4971e6a2e1d2b87cbc30",
-      "source_git_blob_sha": "101b915a98e2fdd905b1f0d708ab2d8546420e81",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.988817,
-      "quality_metrics": {
-        "body_chars": 2411,
-        "method_chars": 692,
-        "evaluation_chars": 723,
-        "limitation_chars": 249
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 692 < 700"
       ],
       "warnings": []
     },
@@ -178,53 +132,6 @@
       "warnings": [
         "日本語比率 75.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md",
-      "canonical_id": "arXiv:2504.14489",
-      "title": "Towards High-Goodput LLM Serving with Prefill-decode Multiplexing",
-      "file_bytes": 9661,
-      "source_sha256": "7ec6a0da54cc70764dd8cb195964662472b95eca9f96059c3341144ff42120de",
-      "source_git_blob_sha": "b38b721461b9dd4c26249fe33c9ca33e2cc3f0c6",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.96583,
-      "quality_metrics": {
-        "body_chars": 1500,
-        "method_chars": 423,
-        "evaluation_chars": 81,
-        "limitation_chars": 130
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1500 < 2200",
-        "16KB未満再監査: 手法説明量 423 < 700",
-        "16KB未満再監査: 評価説明量 81 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md",
-      "canonical_id": "arXiv:2304.03946",
-      "title": "FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement",
-      "file_bytes": 9710,
-      "source_sha256": "88054f7ed108418cb07f13f9fe71820ddec4574f32b6900f6456df675d0a7f66",
-      "source_git_blob_sha": "a5be0ef2a09840a3738ef154c24f79b5388035d4",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.85367,
-      "quality_metrics": {
-        "body_chars": 2158,
-        "method_chars": 977,
-        "evaluation_chars": 484,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2158 < 2200",
-        "16KB未満再監査: 評価説明量 484 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md",
@@ -389,52 +296,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 553 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
-      "canonical_id": "arXiv:2503.16428",
-      "title": "XAttention: Block Sparse Attention with Antidiagonal Scoring",
-      "file_bytes": 9965,
-      "source_sha256": "560f67f1937cf6ec2aed667f8bf8b39b8ed3858407d457720f1dade671d2ac90",
-      "source_git_blob_sha": "32389ada4aceb2193d6d77392a45f0863100432d",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.968085,
-      "quality_metrics": {
-        "body_chars": 889,
-        "method_chars": 252,
-        "evaluation_chars": 55,
-        "limitation_chars": 98
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 889 < 2200",
-        "16KB未満再監査: 手法説明量 252 < 700",
-        "16KB未満再監査: 評価説明量 55 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
-      "canonical_id": "arXiv:2403.06764",
-      "title": "An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models",
-      "file_bytes": 10066,
-      "source_sha256": "d12784657b6f62f76fb53c72e49a41c6aa37ad67c8d3ab6329b4bfef7eba4273",
-      "source_git_blob_sha": "fceabebbe1033eb71ff51d44fb619b6d13c2abe7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.923795,
-      "quality_metrics": {
-        "body_chars": 2786,
-        "method_chars": 632,
-        "evaluation_chars": 982,
-        "limitation_chars": 220
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 632 < 700"
       ],
       "warnings": []
     },
@@ -1425,7 +1286,7 @@
       "file_bytes": 11430,
       "source_sha256": "9b43a1155f8fc2ef099b599a2c3db8700c7c3abf9e78dc73a9b846c360ea9132",
       "source_git_blob_sha": "1c6b43cbb67ff632d358f20562e4b18643b0933b",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.97494,
@@ -1448,7 +1309,7 @@
       "file_bytes": 11464,
       "source_sha256": "5d5e1bc3298dea8c1f4a4fe1f925ef2aea36545e72b9030924305671920d14e5",
       "source_git_blob_sha": "cccb93aab2d15f822aaac374053a6e5bb5b9fbf4",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.957241,
@@ -1538,7 +1399,7 @@
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 1,
+      "japanese_ratio": 1.0,
       "quality_metrics": {
         "body_chars": 2328,
         "method_chars": 971,
@@ -1701,28 +1562,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md",
-      "canonical_id": "arXiv:2608.02703",
-      "title": "ARCHead：活性値計量に基づく出力ヘッド圧縮",
-      "file_bytes": 11709,
-      "source_sha256": "4514170f97faabff450adf0763e25963b60958b901ec83e8a6fa892dcdd292cf",
-      "source_git_blob_sha": "1e7b00be4fed5f3232735fe87d489fab6cb5cc8e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.977813,
-      "quality_metrics": {
-        "body_chars": 2650,
-        "method_chars": 845,
-        "evaluation_chars": 112,
-        "limitation_chars": 163
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 112 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.09721-revealing-the-challenges-of-attention-ffn-disaggregation-for-modern-moe-.md",
       "canonical_id": "arXiv:2602.09721",
       "title": "Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems",
@@ -1871,26 +1710,6 @@
         "body_chars": 2826,
         "method_chars": 1616,
         "evaluation_chars": 720,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md",
-      "canonical_id": "arXiv:2509.23638",
-      "title": "LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers",
-      "file_bytes": 11832,
-      "source_sha256": "eda10c91d3f3ebb77a179ef08395512b049a8cdc0a4433d23ac599714f5648ab",
-      "source_git_blob_sha": "1a3d2a6f0561ee82a890edcd2387828f399f04e5",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.824404,
-      "quality_metrics": {
-        "body_chars": 2945,
-        "method_chars": 1691,
-        "evaluation_chars": 724,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -2299,26 +2118,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md",
-      "canonical_id": "arXiv:2407.14417",
-      "title": "Mixture of Experts with Mixture of Precisions for Tuning Quality of Service",
-      "file_bytes": 12170,
-      "source_sha256": "b462a56d057b3318d5276c4f27fe15ad8c7ef7c3fd1e0f03cabe4def2c64b622",
-      "source_git_blob_sha": "61d937a514c6d87f08f66c99d137f9982eaaa67a",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.937781,
-      "quality_metrics": {
-        "body_chars": 2865,
-        "method_chars": 1324,
-        "evaluation_chars": 861,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17769-polyserve-efficient-multi-slo-serving-at-scale.md",
       "canonical_id": "arXiv:2507.17769",
       "title": "PolyServe: Efficient Multi-SLO Serving at Scale",
@@ -2386,26 +2185,6 @@
         "16KB未満再監査: 手法説明量 517 < 700",
         "16KB未満再監査: 評価説明量 212 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
-      "canonical_id": "arXiv:2501.10375",
-      "title": "DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference",
-      "file_bytes": 12212,
-      "source_sha256": "a68e17d38f419b80f4c12ee2aa38ee5c9b0f40524c3bf60e48e1d9c433d27d18",
-      "source_git_blob_sha": "d8d03a95a99a66c29282ae9c1433171d3a8459c6",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.892421,
-      "quality_metrics": {
-        "body_chars": 2761,
-        "method_chars": 1494,
-        "evaluation_chars": 649,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -2538,26 +2317,6 @@
         "method_chars": 1078,
         "evaluation_chars": 1484,
         "limitation_chars": 322
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md",
-      "canonical_id": "arXiv:2609.01338",
-      "title": "mzCache: On-Device LLM Memory Management under Multitasking",
-      "file_bytes": 12252,
-      "source_sha256": "e96c38cf193601514c299870d3673724516e3608f81c3c599166456b1417841b",
-      "source_git_blob_sha": "2f203a052a2d6d30d752dbf52c091eab1184acd6",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.861878,
-      "quality_metrics": {
-        "body_chars": 3513,
-        "method_chars": 1099,
-        "evaluation_chars": 542,
-        "limitation_chars": 269
       },
       "mechanical_failures": [],
       "warnings": []
@@ -2846,26 +2605,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 291 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
-      "canonical_id": "arXiv:2403.18926",
-      "title": "XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection",
-      "file_bytes": 12375,
-      "source_sha256": "e3d7edc5253a0f718882b3410d305322402edcf37cdf335b1cd40b73fc4a9e54",
-      "source_git_blob_sha": "4441320cec0715454d5c928a763439bf92c3c5df",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.836008,
-      "quality_metrics": {
-        "body_chars": 2879,
-        "method_chars": 1523,
-        "evaluation_chars": 857,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -3352,28 +3091,6 @@
         "limitation_chars": 214
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md",
-      "canonical_id": "arXiv:2404.09529",
-      "title": "Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models",
-      "file_bytes": 12609,
-      "source_sha256": "8eb0610c98400224f16ae03250fe5861eb724f9706544cca73f2f9840410a61b",
-      "source_git_blob_sha": "da70ded513ccf5c67b0933bcfbd2450514922347",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.936674,
-      "quality_metrics": {
-        "body_chars": 2980,
-        "method_chars": 983,
-        "evaluation_chars": 138,
-        "limitation_chars": 305
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 138 < 500"
-      ],
       "warnings": []
     },
     {
@@ -4459,7 +4176,7 @@
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
-      "japanese_ratio": 1,
+      "japanese_ratio": 1.0,
       "quality_metrics": {
         "body_chars": 2233,
         "method_chars": 919,
@@ -4660,7 +4377,7 @@
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
-      "japanese_ratio": 1,
+      "japanese_ratio": 1.0,
       "quality_metrics": {
         "body_chars": 2464,
         "method_chars": 1017,
@@ -5065,7 +4782,7 @@
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 1,
+      "japanese_ratio": 1.0,
       "quality_metrics": {
         "body_chars": 2928,
         "method_chars": 758,
@@ -6499,7 +6216,7 @@
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 1,
+      "japanese_ratio": 1.0,
       "quality_metrics": {
         "body_chars": 3367,
         "method_chars": 752,
