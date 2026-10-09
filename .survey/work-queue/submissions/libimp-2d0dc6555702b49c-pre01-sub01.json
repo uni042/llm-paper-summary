@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Recurrent Transformer: Greater Effective Depth and Efficient Decoding",
+      "source_url": "https://arxiv.org/abs/2604.21215",
+      "year": 2026,
+      "published": "2026-04-23",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers process tokens in parallel but are temporally shallow: at position $t$, each layer attends to key-value pairs computed based on the previous layer, yielding a depth capped by the number of layers. Recurrent models offer unbounded temporal depth but suffer from optimization instability and historically underutilize modern accelerators. We introduce the Recurrent Transformer, a simple architectural change where each layer attends to key-value pairs computed off its own activations, yielding layerwise recurrent memory while preserving standard autoregressive decoding cost. We show that the architecture can emulate both (i) a conventional Transformer and (ii) token-to-token recurrent updates under mild assumptions, while avoiding optimization instability. Naively, prefill/training appears bandwidth-bound with effective arithmetic intensity near $1$ because keys and values are revealed sequentially; we give an exact tiling-based algorithm that preserves the mathematical computation while reducing HBM traffic from $\\Theta(N^2)$ to $\\Theta(N\\log N)$, increasing effective arithmetic intensity to $\\Theta(N/\\log N)$ for sequence length $N$. On 150M and 300M parameter C4 pretraining, Recurrent Transformers improve cross-entropy over a parameter-matched Transformer baseline and achieve the improvement with fewer layers (fixed parameters), suggesting that recurrence can trade depth for width, thus reducing KV cache memory footprint and inference latency.",
+      "identifiers": [
+        "SemanticScholar:813e18bc8e77be99d406ae97a1f5f5bf9854162a"
+      ],
+      "semantic_scholar_id": "813e18bc8e77be99d406ae97a1f5f5bf9854162a",
+      "canonical_id": "arXiv:2604.21215",
+      "arxiv_id": "2604.21215",
+      "doi": "10.48550/arXiv.2604.21215",
+      "authors": [
+        "Costin-Andrei Oncescu",
+        "Depen Morwani",
+        "Samy Jelassi",
+        "Alexandru Meterez",
+        "Mujin Kwun",
+        "S. Kakade"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Recurrent Transformer tiling reduces HBM traffic to N log N and may lower KV memory/inference latency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Geometry-Guided 3D Visual Token Pruning for Video-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.18260",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models have demonstrated remarkable capabilities in 2D vision, motivating their extension to 3D scene understanding. Recent studies represent 3D scenes as 3D spatial videos composed of image sequences with depth and camera pose information, enabling pre-trained video-language models to perform 3D reasoning tasks. However, the large number of visual tokens in spatial videos remains a major bottleneck for efficient inference and context management. Existing pruning methods overlook the view consistency of spatial videos and the spatial diversity of the remaining tokens, which prevents them from effectively removing inter-frame redundancy and preserving scene completeness. In this paper, we propose Geo3DPruner, a Geometry-Guided 3D Visual Token Pruning framework. Geo3DPruner first models cross-frame relevance through geometry-aware global attention, and then performs a two-stage pruning process. The intra-voxel stage selects representative multi-view features within each voxel, while the inter-voxel stage preserves spatial diversity by selecting a globally distributed subset of voxels. Extensive experiments on multiple 3D scene understanding benchmarks demonstrate that Geo3DPruner retains over 90% of the original performance while pruning 90% of visual tokens, significantly outperforming existing text-guided and vision-guided pruning methods.",
+      "identifiers": [
+        "SemanticScholar:5e5a68df15743a7b7efb96f712aab4d8a7f35a78"
+      ],
+      "semantic_scholar_id": "5e5a68df15743a7b7efb96f712aab4d8a7f35a78",
+      "canonical_id": "arXiv:2604.18260",
+      "arxiv_id": "2604.18260",
+      "doi": "10.48550/arXiv.2604.18260",
+      "authors": [
+        "Hang Li",
+        "Ze-Hao Huang",
+        "Jia-Hui Fu",
+        "Nai-Yan Wang",
+        "Si Liu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Geo3DPruner removes redundant visual tokens in video-language inference, pruning 90% while retaining over 90% performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DiffPrune: differentiable information throttling for token pruning in vision-language models",
+      "source_url": "https://arxiv.org/abs/2608.01985",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning reduces the computational cost of Vision-Language Models (VLMs) by removing redundant visual tokens. The key is to learn a score that measures whether a token is useful. Existing methods typically rely on Gumbel-Softmax to approximate discrete selection during training. Such selectors make the score depend on the behavior of a relaxed pruning operator, not directly on the consequence of information loss. In this paper, we propose DiffPrune, which gives token scores a direct meaning. During training, DiffPrune keeps all tokens and weakens each token's information according to its score. If weakening a token hurts the task, the scorer is pushed to protect it; if not, the token can receive a lower score. Because the loss is differentiated through this actual information-throttling path, the scorer avoids the unstable surrogate path of relaxed token selection. DiffPrune implements this idea with an Information Throttler, which injects variance-preserving noise into visual tokens, where high-score tokens remain close to their original representations, while low-score tokens carry less original information. At inference, the throttler is removed, and hard top-K pruning is applied using the learned scores. Across ten VLM benchmarks, DiffPrune retains 96.5% of full-model accuracy while accelerating LLM prefill by 2.85x, with only 0.69 ms inference overhead. Code will be publicly available.",
+      "identifiers": [
+        "SemanticScholar:555fc95afae8fd3f1ebe2f9da6cb06c7648884f6"
+      ],
+      "semantic_scholar_id": "555fc95afae8fd3f1ebe2f9da6cb06c7648884f6",
+      "canonical_id": "arXiv:2608.01985",
+      "arxiv_id": "2608.01985",
+      "authors": [
+        "Lan He",
+        "Min Yao",
+        "S. Young",
+        "Lijian Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DiffPrune visual-token pruning reports 2.85x faster VLM LLM-prefill at near-baseline accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression",
+      "source_url": "https://doi.org/10.52202/085713-2340",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ".",
+      "identifiers": [
+        "SemanticScholar:bad9cbab0988f1ffb4a857e64611986703580c38"
+      ],
+      "semantic_scholar_id": "bad9cbab0988f1ffb4a857e64611986703580c38",
+      "doi": "10.52202/085713-2340",
+      "canonical_id": "DOI:10.52202/085713-2340",
+      "authors": [
+        "Juan Chen",
+        "Hong-Li Liu",
+        "Y. Ao",
+        "Ting Zhang",
+        "Yan Huang",
+        "Xu-Dong Liu",
+        "Biao Li",
+        "Jin-Tao Fang"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Official NeurIPS abstract describes query-guided visual-token compression with equal/lower VLM computation cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ConsensusDrop: Fusing Visual and Cross-Modal Saliency for Efficient Vision Language Models",
+      "source_url": "https://arxiv.org/abs/2602.00946",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are expensive because the LLM processes hundreds of largely redundant visual tokens. Existing token reduction methods typically exploit \\textit{either} vision-encoder saliency (broad but query-agnostic) \\textit{or} LLM cross-attention (query-aware but sparse and costly). We show that neither signal alone is sufficient: fusing them consistently improves performance compared to unimodal visual token selection (ranking). However, making such fusion practical is non-trivial: cross-modal saliency is usually only available \\emph{inside} the LLM (too late for efficient pre-LLM pruning), and the two signals are inherently asymmetric, so naive fusion underutilizes their complementary strengths. We propose \\textbf{ConsensusDrop}, a training-free framework that derives a \\emph{consensus} ranking by reconciling vision encoder saliency with query-aware cross-attention, retaining the most informative tokens while compressing the remainder via encoder-guided token merging. Across LLaVA-1.5/NeXT, Video-LLaVA, and other open-source VLMs, ConsensusDrop consistently outperforms prior pruning methods under identical token budgets and delivers a stronger accuracy-efficiency Pareto frontier -- preserving near-baseline accuracy even at aggressive token reductions while reducing TTFT and KV cache footprint. Our code will be open-sourced.",
+      "identifiers": [
+        "SemanticScholar:19e22346b7d67cc5414de848ab275723b6fe91db"
+      ],
+      "semantic_scholar_id": "19e22346b7d67cc5414de848ab275723b6fe91db",
+      "canonical_id": "arXiv:2602.00946",
+      "arxiv_id": "2602.00946",
+      "doi": "10.48550/arXiv.2602.00946",
+      "authors": [
+        "Dhruv Parikh",
+        "Haoyang Fan",
+        "Rajgopal Kannan",
+        "Viktor K. Prasanna"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ConsensusDrop fuses visual and cross-modal saliency to prune/merge tokens, reducing VLM TTFT and KV footprint.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2d0dc6555702",
+    "round": "libimp-2d0dc6555702b49c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2d0dc6555702b49c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2d0dc6555702b49c-pre01.json",
+    "receipt": "sha256:b22bac783020175d1caecf95ea929b162042890b664d5f2ec47c6de98ea83c6d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2d0dc6555702",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

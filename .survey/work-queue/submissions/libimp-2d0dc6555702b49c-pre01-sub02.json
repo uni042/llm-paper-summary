@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in Large VIsion-Language Models",
+      "source_url": "https://arxiv.org/abs/2605.13178",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In large vision-language models, visual tokens typically constitute the majority of input tokens, leading to substantial computational overhead. To address this, recent studies have explored pruning redundant or less informative visual tokens for image understanding tasks. However, these methods struggle with pixel grounding tasks, where token importance is highly contingent on the input text. Through an in-depth analysis of CLIP, we observe that visual tokens within referent regions often exhibit low similarity to their textual representation. Motivated by this insight, we introduce LiteLVLM, a training-free, text-guided token pruning strategy for efficient pixel grounding inference. By reversing the ranking of CLIP's visual-text similarity, LiteLVLM effectively retains visual tokens covering the referent regions, while recovering context tokens to enable clear foreground-background separation. Extensive experiments demonstrate that LiteLVLM significantly outperforms existing methods by over 5% across diverse token budgets. Without any training or fine-tuning, LiteLVLM maintains 90% of the original performance with a 22% speedup and a 2.3X memory reduction. Our code is available at https://github.com/sejong-rcv/LiteLVLM.",
+      "identifiers": [
+        "SemanticScholar:37dec971b6dec23ec8a3641f2fec684d4e45d70d"
+      ],
+      "semantic_scholar_id": "37dec971b6dec23ec8a3641f2fec684d4e45d70d",
+      "canonical_id": "arXiv:2605.13178",
+      "arxiv_id": "2605.13178",
+      "doi": "10.48550/arXiv.2605.13178",
+      "authors": [
+        "Sangin Lee",
+        "Yukyung Choi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LiteLVLM prunes visual tokens for pixel-grounding inference and reports speed/memory gains.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Smooth Reading: Bridging the Gap of Recurrent LLM to Self-Attention LLM on Long-Context Tasks",
+      "source_url": "https://arxiv.org/abs/2507.19353",
+      "year": 2025,
+      "published": "2025-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, recurrent large language models (Recurrent LLMs) with linear computational complexity have re-emerged as efficient alternatives to self-attention-based LLMs (Self-Attention LLMs), which have quadratic complexity. However, Recurrent LLMs often underperform on long-context tasks due to their limited fixed-size memory. Previous research has primarily focused on enhancing the memory capacity of Recurrent LLMs through architectural innovations, but these approaches have not yet enabled Recurrent LLMs to match the performance of Self-Attention LLMs on long-context tasks. We argue that this limitation arises because processing the entire context at once is not well-suited for Recurrent LLMs. In this paper, we propose Smooth Reading, a chunk-wise inference method inspired by human reading strategies. Smooth Reading processes context in chunks and iteratively summarizes the contextual information, thereby reducing memory demands and making the approach more compatible with Recurrent LLMs. Our experimental results show that this method substantially narrows the performance gap between Recurrent and Self-Attention LLMs on long-context tasks, while preserving the efficiency advantages of Recurrent LLMs. Our Smooth Reading boosts SWA-3B-4k (a Recurrent LLM) from 5.68% lower to 3.61% higher performance than Self-Attention LLMs on LongBench. Besides, our method maintains the high efficiency, training 3x faster and inferring 2x faster at 64k context compared to Self-Attention LLMs. To our knowledge, this is the first work to achieve comparable performance using Recurrent LLMs compared with Self-Attention LLMs on long-context tasks. We hope our method will inspire future research in this area. To facilitate further progress, we will release code and dataset.",
+      "identifiers": [
+        "SemanticScholar:23c7cf08bf8ead2a7dadbe2c1e18e28022ab0c40"
+      ],
+      "semantic_scholar_id": "23c7cf08bf8ead2a7dadbe2c1e18e28022ab0c40",
+      "canonical_id": "arXiv:2507.19353",
+      "arxiv_id": "2507.19353",
+      "doi": "10.48550/arXiv.2507.19353",
+      "authors": [
+        "Kai Liu",
+        "Zhan Su",
+        "Peijie Dong",
+        "Fengran Mo",
+        "Jianfei Gao",
+        "Shao-Ting Zhang",
+        "Kai Chen"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 441,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Smooth Reading chunks recurrent-LLM long-context inference and reports 2x speedup at 64k.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdaPTwin: Low-Cost Adaptive Compression of Product Twins in Transformers",
+      "source_url": "https://arxiv.org/abs/2406.08904",
+      "year": 2024,
+      "published": "2024-06-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While large transformer-based models have exhibited remarkable performance in speaker-independent speech recognition, their large size and computational requirements make them expensive or impractical to use in resource-constrained settings. In this work, we propose a low-rank adaptive compression technique called AdaPTwin that jointly compresses product-dependent pairs of weight matrices in the transformer attention layer. Our approach can prioritize the compressed model's performance on a specific speaker while maintaining generalizability to new speakers and acoustic conditions. Notably, our technique requires only 8 hours of speech data for fine-tuning, which can be accomplished in under 20 minutes, making it highly cost-effective compared to other compression methods. We demonstrate the efficacy of our approach by compressing the Whisper and Distil-Whisper models by up to 45% while incurring less than a 2% increase in word error rate.",
+      "identifiers": [
+        "SemanticScholar:c702a54098bce1f9911724775259f06ae48b5452"
+      ],
+      "semantic_scholar_id": "c702a54098bce1f9911724775259f06ae48b5452",
+      "canonical_id": "arXiv:2406.08904",
+      "arxiv_id": "2406.08904",
+      "doi": "10.48550/arXiv.2406.08904",
+      "authors": [
+        "Emil Biju",
+        "Anirudh Sriram",
+        "Mert Pilanci"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 848,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AdaPTwin compresses Whisper attention matrices up to 45% with under 2% WER rise; concrete transformer inference compression, evaluated in ASR.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2d0dc6555702",
+    "round": "libimp-2d0dc6555702b49c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2d0dc6555702b49c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2d0dc6555702b49c-pre01.json",
+    "receipt": "sha256:b22bac783020175d1caecf95ea929b162042890b664d5f2ec47c6de98ea83c6d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2d0dc6555702",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
