@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T10:54:01.887992+00:00",
+  "generated_at": "2026-10-09T11:58:17.496391+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 282,
+  "count": 281,
   "worker_counts": {
     "scheduled-chat-00": 94,
-    "scheduled-chat-30": 94,
+    "scheduled-chat-30": 93,
     "scheduled-chat-45": 94
   },
   "entries": [
@@ -478,30 +478,6 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md",
-      "canonical_id": "arXiv:2408.05646",
-      "title": "Eigen Attention: Attention in Low-Rank Space for KV Cache Compression",
-      "file_bytes": 10386,
-      "source_sha256": "420a5a9a320d84e703b01c11bca10ef11c33f2467a98500dc4b87bcb7ed68e13",
-      "source_git_blob_sha": "f57fc3a9ddcac91b203e06a48ea33d90270cf138",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.908924,
-      "quality_metrics": {
-        "body_chars": 1762,
-        "method_chars": 598,
-        "evaluation_chars": 105,
-        "limitation_chars": 184
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1762 < 2200",
-        "16KB未満再監査: 手法説明量 598 < 700",
-        "16KB未満再監査: 評価説明量 105 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2312.03414-compressed-context-memory-for-online-language-model-interaction.md",
