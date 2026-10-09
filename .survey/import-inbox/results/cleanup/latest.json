@@ -1,65 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-09T04:04:04+00:00",
+  "updated_at": "2026-10-09T04:20:32+00:00",
   "events": [
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-9a8e4de3fe4c--libfile_3b104d3a16fc8191802197c24a6794b2--reaudit-20261008-2045-scheduled-chat-45-2404.05892-eagle-finch.md",
-      "processed_at": "2026-10-08T13:33:03+00:00",
-      "canonical_id": "arXiv:2404.05892",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-9a8e4de3fe4c--libfile_3b104d3a16fc8191802197c24a6794b2--reaudit-20261008-2045-scheduled-chat-45-2404.05892-eagle-finch.md"
-    },
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
-      "processed_at": "2026-10-08T13:33:03+00:00",
-      "canonical_id": "arXiv:1905.07799",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary"
-      ]
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_c7668e1e050481918d74cad5d36e6d1c--2019-1911.02972-blockbert.md",
-      "processed_at": "2026-10-08T13:33:03+00:00",
-      "canonical_id": "arXiv:1911.02972"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-56feccb77231--libfile_d896d7a2d4a48191b003e54a2a29b1db--2021-berxit.md",
-      "processed_at": "2026-10-08T13:33:03+00:00",
-      "canonical_id": "DOI:10.18653/v1/2021.eacl-main.8",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-56feccb77231--libfile_d896d7a2d4a48191b003e54a2a29b1db--2021-berxit.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-85c12439a979--libfile_dc6e357e6768819185bedf0faba4ee30--2020-2004.02178-fastbert-under16kb-reaudit-20261008-0800.md",
-      "processed_at": "2026-10-08T13:33:03+00:00",
-      "canonical_id": "arXiv:2004.02178",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-85c12439a979--libfile_dc6e357e6768819185bedf0faba4ee30--2020-2004.02178-fastbert-under16kb-reaudit-20261008-0800.md"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_dfb8c9521e788191b0e213d5af8edaf8--2024-2403.00579-neupims.md",
-      "processed_at": "2026-10-08T13:33:03+00:00",
-      "canonical_id": "arXiv:2403.00579"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-8ec0d9e362e3--libfile_e0c1b099ff208191afb2340f4d5b9bfd--2024-2404.08856-multimodal-speculative-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.md",
-      "processed_at": "2026-10-08T13:33:03+00:00",
-      "canonical_id": "arXiv:2404.08856",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-8ec0d9e362e3--libfile_e0c1b099ff208191afb2340f4d5b9bfd--2024-2404.08856-multimodal-speculative-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.md"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-2efdb786f1d4--libfile_e6b792fb057881919594549507e0261f--2023-2311.01282-flashdecoding-repaired-20261008-1930-scheduled-chat-30-r01.md",
-      "processed_at": "2026-10-08T13:33:04+00:00",
-      "canonical_id": "arXiv:2311.01282",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-2efdb786f1d4--libfile_e6b792fb057881919594549507e0261f--2023-2311.01282-flashdecoding-repaired-20261008-1930-scheduled-chat-30-r01.md"
-    },
     {
       "status": "requeued_blocked_research",
       "source_path": ".survey/import-inbox/pending/research/retry-research-009aa00b08a5--libfile_f27173e1fb0c8191a649a6617dc3c9f4--2026-2602.06154-mose-under16kb-reaudit-20261008-1630-scheduled-chat-30-r02.md",
@@ -4248,6 +4191,79 @@
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
       "processed_at": "2026-10-09T04:04:04+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-certaindex-2412.20993.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
+      "canonical_id": "arXiv:2412.20993",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-edge-dmoe-2503.13421.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-09T04:20:32+00:00",
       "canonical_id": "arXiv:1905.07799",
       "failures": [
         "arxiv_categories.cross_list",
