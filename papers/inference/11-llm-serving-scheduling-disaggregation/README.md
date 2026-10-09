@@ -449,8 +449,8 @@
   端末側でモダリティ別特徴を先に融合してから64次元へ学習圧縮し、固定長潜在表現だけをサーバへ送ることで通信量を32分の1、帯域制約下の推定総遅延を最大3.4倍改善する。
 
 - **2026-09 · [Efficient Iterative Retrieval with Heterogeneous Batching](2026-2609.25405-orthrus.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Orthrusは両者を一つの推論ループへ入れ、異なる計算特性を持つ仕事を同じバッチへ組み合わせる異種バッチ処理を提案する。4基のA100 GPUで、制御ワークロードのスループットを比較構成の1.28〜4.52倍へ高め、反復RAGベンチマークではエンドツーエンドP99遅延を最大55.8%削減した。
+  実装：[✓](https://github.com/illinoisdata/Orthrus) ・ リポジトリ内被引用：0  
+  従来の推論サーバでは埋め込みモデルと生成モデルを別GPU群へ割り当てるか、同じGPU上で別プロセスとして実行することが多い。4基のA100 40GBで、固定GPU分割に対して制御ワークロードの処理率を1.28〜4.52倍に高め、反復RAGの99パーセンタイル遅延を最大55.8%減らした。
 
 - **2026-09 · [DLB: Distributed Load Balancing at Scale for Generative AI Inference](2026-2609.21079-dlb-distributed-load-balancing-at-scale-for-generative-ai-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1242,7 +1242,7 @@
 
 - **2024-05 · [Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving](2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
-  Aladdinは、大規模言語モデル（Large Language モデル; LLM）配信で「各要求をどのワーカーへ置くか」と「何台・どの構成のワーカーを用意するか」を別々に決めず、サービス品質目標（Service-Level Objective; SLO）を満たす最小資源として共同最適化するクラスタスケジューラである。
+  Aladdinは、複数GPUで大規模言語モデルの推論要求を処理するとき、各要求をどのワーカーへ配置するかと、ワーカーを何台・何GPU構成で用意するかを共同で決めるクラスタスケジューラである。
 
 - **2024-10 · [Fast Inference for Augmented Large Language Models](2024-2410.18248-lamps.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -1309,6 +1309,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：428  
+  実装：✓ ・ リポジトリ内被引用：427  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 <!-- survey:auto:end -->

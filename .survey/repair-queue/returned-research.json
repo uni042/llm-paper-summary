@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T03:30:56+00:00",
+  "generated_at": "2026-10-09T03:41:58+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2636,8 +2636,8 @@
       "canonical_id": "arXiv:2609.33385",
       "title": "OLED-MoE: Accelerating MoE-Based dLLM Inference via Inter-Iteration Locality-Aware Expert Offloading",
       "source_url": "https://arxiv.org/html/2609.33385v1",
-      "returned_at": "2026-10-09T03:28:54+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-09T03:40:53+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2655,8 +2655,8 @@
           "評価説明量 196 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_92d607da417c8191b3b5d4fa3c353676--2026-2609.33385-oled-moe-under16kb-reaudit-20261009-0956-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_92d607da417c8191b3b5d4fa3c353676--2026-2609.33385-oled-moe-under16kb-reaudit-20261009-0956-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b69cf2fe2a3e--libfile_92d607da417c8191b3b5d4fa3c353676--2026-2609.33385-oled-moe-under16kb-reaudit-20261009-0956-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b69cf2fe2a3e--libfile_92d607da417c8191b3b5d4fa3c353676--2026-2609.33385-oled-moe-under16kb-reaudit-20261009-0956-scheduled-chat-00-r01.json",
       "worker_run_key": "20261009-0956-scheduled-chat-00/r01"
     }
   ]
