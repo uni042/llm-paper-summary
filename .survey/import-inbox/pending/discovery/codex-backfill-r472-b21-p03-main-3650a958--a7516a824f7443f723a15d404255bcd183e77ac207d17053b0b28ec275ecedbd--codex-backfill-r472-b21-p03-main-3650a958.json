@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill-luna",
+  "run_key": "codex-backfill-r472-b21-p03-main-3650a958",
+  "reference_main_sha": "3650a958dd63f7434cdd424ed0eba508f2067f17",
+  "record_count": 9,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.21215",
+      "identity_tokens": [
+        "arXiv:2604.21215",
+        "DOI:10.48550/arXiv.2604.21215"
+      ],
+      "title": "The Recurrent Transformer: Greater Effective Depth and Efficient Decoding",
+      "reason": "Recurrent Transformer tiling reduces HBM traffic to N log N and may lower KV memory/inference latency.",
+      "source_url": "https://arxiv.org/abs/2604.21215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISADES69945.2026.11608129",
+      "identity_tokens": [
+        "DOI:10.1109/ISADES69945.2026.11608129"
+      ],
+      "title": "GPU-Parallel Binary Tree Token Merging for Efficient Large Language Model Inference",
+      "reason": "IEEE primary document inaccessible through the tool; secondary summaries were not relied upon.",
+      "source_url": "https://doi.org/10.1109/ISADES69945.2026.11608129",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.18260",
+      "identity_tokens": [
+        "arXiv:2604.18260",
+        "DOI:10.48550/arXiv.2604.18260"
+      ],
+      "title": "Geometry-Guided 3D Visual Token Pruning for Video-Language Models",
+      "reason": "Geo3DPruner removes redundant visual tokens in video-language inference, pruning 90% while retaining over 90% performance.",
+      "source_url": "https://arxiv.org/abs/2604.18260",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01985",
+      "identity_tokens": [
+        "arXiv:2608.01985",
+        "DOI:10.48550/arXiv.2608.01985"
+      ],
+      "title": "DiffPrune: differentiable information throttling for token pruning in vision-language models",
+      "reason": "DiffPrune visual-token pruning reports 2.85x faster VLM LLM-prefill at near-baseline accuracy.",
+      "source_url": "https://arxiv.org/abs/2608.01985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13178",
+      "identity_tokens": [
+        "arXiv:2605.13178",
+        "DOI:10.48550/arXiv.2605.13178"
+      ],
+      "title": "CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in Large Vision-Language Models",
+      "reason": "LiteLVLM prunes visual tokens for pixel-grounding inference and reports speed/memory gains.",
+      "source_url": null,
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.19353",
+      "identity_tokens": [
+        "arXiv:2507.19353",
+        "DOI:10.48550/arXiv.2507.19353"
+      ],
+      "title": "Smooth Reading: Bridging the Gap of Recurrent LLM to Self-Attention LLM on Long-Context Tasks",
+      "reason": "Smooth Reading chunks recurrent-LLM long-context inference and reports 2x speedup at 64k.",
+      "source_url": "https://arxiv.org/abs/2507.19353",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.08904",
+      "identity_tokens": [
+        "arXiv:2406.08904",
+        "DOI:10.48550/arXiv.2406.08904"
+      ],
+      "title": "AdaPTwin: Low-Cost Adaptive Compression of Product Twins in Transformers",
+      "reason": "AdaPTwin compresses Whisper attention matrices up to 45% with under 2% WER rise; concrete transformer inference compression, evaluated in ASR.",
+      "source_url": null,
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-2340",
+      "identity_tokens": [
+        "DOI:10.52202/085713-2340"
+      ],
+      "title": "Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression",
+      "reason": "Official NeurIPS abstract describes query-guided visual-token compression with equal/lower VLM computation cost.",
+      "source_url": "https://papers.neurips.cc/paper_files/paper/2025/hash/64ad7b36b497f375ded2e6f15713ed4c-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.00946",
+      "identity_tokens": [
+        "arXiv:2602.00946",
+        "DOI:10.48550/arXiv.2602.00946"
+      ],
+      "title": "ConsensusDrop: Fusing Visual and Cross-Modal Saliency for Efficient Vision Language Models",
+      "reason": "ConsensusDrop fuses visual and cross-modal saliency to prune/merge tokens, reducing VLM TTFT and KV footprint.",
+      "source_url": "https://arxiv.org/abs/2602.00946",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T20:05:12Z",
+      "last_checked_at": "2026-10-08T20:05:12Z",
+      "linked_from": []
+    }
+  ]
+}
