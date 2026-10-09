@@ -26,7 +26,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 - **2026-03 · [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  CommitMoEは次層専門家を先読みして実行対象に確定し、予測が外れても正しい重みを待たず準備済み専門家へ出力重みを再配分し、オフロード待ちをなくす近似方式。
+  不要な専門家をCPU側に退避し、必要時だけGPUへ読み込む方式は容量を節約するが、CPU・GPU間の転送が推論遅延を支配する。
 
 - **2025-12 · [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

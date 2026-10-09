@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5b573447372babe975ba65175721753d0895b7451d58b2b19167c37b2fd675ac",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/file_0000000013d88230a98ace647cff74c5--2025-2511.08923-tidar-under16kb-reaudit-20261009-0530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2511.08923",
+  "worker_completed_at": "2026-10-09T05:36:58+09:00",
+  "worker_run_key": "20261009-0530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5537,
+    "body_paragraphs": 30,
+    "method_chars": 1887,
+    "method_paragraphs": 10,
+    "evaluation_chars": 168,
+    "limitation_chars": 645,
+    "insufficiency_flags": [
+      "評価説明量 168 < 500"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 168 < 500"
+  ],
+  "processed_at": "2026-10-09T01:05:02+00:00"
+}
