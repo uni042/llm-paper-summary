@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T16:40:18.606881+00:00",
+  "generated_at": "2026-10-09T16:54:30.845309+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 225,
+  "count": 220,
   "worker_counts": {
-    "scheduled-chat-00": 75,
-    "scheduled-chat-30": 75,
-    "scheduled-chat-45": 75
+    "scheduled-chat-00": 73,
+    "scheduled-chat-30": 73,
+    "scheduled-chat-45": 74
   },
   "entries": [
     {
@@ -169,28 +169,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 593 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
-      "canonical_id": "arXiv:2307.06945",
-      "title": "In-context Autoencoder for Context Compression in a Large Language Model",
-      "file_bytes": 10223,
-      "source_sha256": "4410d876ec7f8d16b8269ed30b9c73995434705a83120a67b7dbc478d05e815c",
-      "source_git_blob_sha": "64a56733b223f1fd89920a11f26c53d33ab15e5e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.800173,
-      "quality_metrics": {
-        "body_chars": 2233,
-        "method_chars": 869,
-        "evaluation_chars": 213,
-        "limitation_chars": 256
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 213 < 500"
       ],
       "warnings": []
     },
@@ -623,26 +601,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.09721-revealing-the-challenges-of-attention-ffn-disaggregation-for-modern-moe-.md",
-      "canonical_id": "arXiv:2602.09721",
-      "title": "Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems",
-      "file_bytes": 11713,
-      "source_sha256": "d942a0e906a7ac7d6c05ec408589d6481c2c8205e5dec4a81fc9d168ce2965d5",
-      "source_git_blob_sha": "c8b81a047380255b46d7b1ce4f480b666a7d5371",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.840453,
-      "quality_metrics": {
-        "body_chars": 3328,
-        "method_chars": 1216,
-        "evaluation_chars": 778,
-        "limitation_chars": 302
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
       "canonical_id": "arXiv:2410.06916",
       "title": "SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration",
@@ -947,7 +905,7 @@
       "file_bytes": 12017,
       "source_sha256": "b51c683f4e5ade8331fd7114b6fc239de7fb4e6cd738085d9c7f7c7b67c09ce2",
       "source_git_blob_sha": "6999950a23fd9067a7641ff46522bd8d3bff3d82",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.874324,
@@ -1030,26 +988,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/15-inference-simulation-emulation/2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md",
-      "canonical_id": "arXiv:2603.07904",
-      "title": "DyQ-VLA: Dynamic Quantization and Compensation for VLA models with Runtime Error Awareness",
-      "file_bytes": 12146,
-      "source_sha256": "a7365428fa36e8ed2a6c10724585fe9145e4c66ae941ea707fb19c6b84b0b96a",
-      "source_git_blob_sha": "7551336052af7c4c7c945c25d345b017f58aea9d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.917573,
-      "quality_metrics": {
-        "body_chars": 3073,
-        "method_chars": 1020,
-        "evaluation_chars": 833,
-        "limitation_chars": 295
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md",
       "canonical_id": "arXiv:2607.01775",
       "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding",
@@ -1120,28 +1058,6 @@
       "warnings": [
         "日本語比率 76.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md",
-      "canonical_id": "arXiv:2503.07605",
-      "title": "SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models",
-      "file_bytes": 12227,
-      "source_sha256": "6ccc339f94c6db131ec37e77a0387f66855587f5dbff16cdc063895827bb4f42",
-      "source_git_blob_sha": "c810b224c5c4351e1a6ca8b05b4b7fa94357b3cd",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.993951,
-      "quality_metrics": {
-        "body_chars": 2235,
-        "method_chars": 1019,
-        "evaluation_chars": 91,
-        "limitation_chars": 192
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 91 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
@@ -1386,28 +1302,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 481 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2601.15013-radixmlp-intra-batch-deduplication.md",
-      "canonical_id": "arXiv:2601.15013",
-      "title": "RadixMLP — Intra-batch Deduplication for Causal Transformers",
-      "file_bytes": 12374,
-      "source_sha256": "912153f224f0e055150d2aad5ebb0f02b394304634f9e04757a7ba9008f1f23d",
-      "source_git_blob_sha": "eec87e2798fcdd5645f83172fddb5b644a454fc2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.957138,
-      "quality_metrics": {
-        "body_chars": 3179,
-        "method_chars": 933,
-        "evaluation_chars": 291,
-        "limitation_chars": 165
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 291 < 500"
       ],
       "warnings": []
     },
