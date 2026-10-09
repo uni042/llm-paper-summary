@@ -375,7 +375,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-08 · [CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG](2026-2608.07458-coinrag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  CoinRAGは、検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した長い文書チャンクを毎回前処理する費用と、チャンク単位のKVキャッシュ再利用に残る冗長情報を同時に減らす方式である。
+  LongBenchのHotpotQA、2WikiMQA、MuSiQueを対象に、初回トークン時間（Time to First Token、TTFT）の99パーセンタイルを100ミリ秒以内に制限した条件で、最良比較方式TurboRAGの3課題平均F1=39.6に対して41.7を報告する。
 
 - **2026-08 · [Budget-Aware Compression Pipeline for Single-GPU LLM Inference: Methods, Trade-offs, and Coupling Effects](2026-2608.30076-budget-aware-compression-single-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
