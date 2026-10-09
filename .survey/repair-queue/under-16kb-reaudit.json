@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-09T02:17:01.553153+00:00",
+  "generated_at": "2026-10-09T02:25:46.608493+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 346,
+  "count": 345,
   "worker_counts": {
-    "scheduled-chat-00": 104,
+    "scheduled-chat-00": 103,
     "scheduled-chat-30": 93,
     "scheduled-chat-45": 149
   },
@@ -1398,26 +1398,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 242 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md",
-      "canonical_id": "arXiv:2012.15828",
-      "title": "MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers",
-      "file_bytes": 11095,
-      "source_sha256": "4e3c0b2562c3a4fce43604c1f89395aeda944102802da318fc6cc7a5eb849d20",
-      "source_git_blob_sha": "cdf90ea86470a9533b54d61c0a660b0c7faf933b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.882838,
-      "quality_metrics": {
-        "body_chars": 3091,
-        "method_chars": 742,
-        "evaluation_chars": 1161,
-        "limitation_chars": 248
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
