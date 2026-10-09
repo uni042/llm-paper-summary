@@ -1,43 +1,95 @@
 ---
-canonical_id: "DOI:10.18653/v1/2025.acl-long.1211"
-doi: "10.18653/v1/2025.acl-long.1211"
-title: "RefreshKV: Updating Small KV Cache During Long-form Generation"
-authors: ["Fangyuan Xu", "Tanya Goyal", "Eunsol Choi"]
-published: "2025-07"
-publication: "ACL 2025（Long Papers）"
-publication_type: "査読付き国際会議論文"
-publication_status: "ACL 2025採録・公開（24878–24893頁）"
-arxiv_id: "2411.05787"
+canonical_id: DOI:10.18653/v1/2025.acl-long.1211
+doi: 10.18653/v1/2025.acl-long.1211
+title: 'RefreshKV: Updating Small KV Cache During Long-form Generation'
+authors:
+- Fangyuan Xu
+- Tanya Goyal
+- Eunsol Choi
+published: 2025-07
+publication: ACL 2025（Long Papers）
+publication_type: 査読付き国際会議論文
+publication_status: ACL 2025採録・公開（24878–24893頁）
+arxiv_id: '2411.05787'
 arxiv_categories:
-  primary: "cs.CL"
+  primary: cs.CL
   cross_list: []
-source: "https://aclanthology.org/2025.acl-long.1211/"
+source: https://aclanthology.org/2025.acl-long.1211/
 sources:
-  - "https://aclanthology.org/2025.acl-long.1211/"
-  - "https://aclanthology.org/2025.acl-long.1211.pdf"
-  - "https://arxiv.org/html/2411.05787v2"
-code: "https://github.com/carriex/refreshkv"
-implementation: "著者公開実装を使用できる推論時KV選択手法。Llama-3.1-8BとQwen2-7Bを主対象とし、単一A100 80GBでFlashAttentionを利用したデコード時間を測定。継続事前学習は追加実験であり、基本方式は既存モデルへ適用できる。"
-summary: "RefreshKVは長文生成で重要な入力位置が変わる問題に対し、全トークンのKVを保持したまま、通常は上位Kの部分KVだけへ注意し、クエリ類似度の低下時に全注意を実行して部分KVを再選択する。16K文脈のLlama-3.1-8BではArxiv PPLがSnapKV 2.54に対し2.32（QC=10）、デコード時間は6.77対6.33。HTMLからTSVへの変換では削除方式がF1=0となる条件でF1=17を得る。容量節約ではなく注意計算・読出し削減の方式である。"
-list_summary: "完全KVを残しながらクエリ変化時だけ全注意で部分KVを更新し、長い出力の後半で必要情報が変わる場合の品質低下を抑える。"
-last_checked: "2026-10-09"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-09T07:55:00+09:00"
-worker_run_key: "20261009-0755-scheduled-chat-00/r01"
-reference_main_sha: "8bcf16d69e919a50b1273ad74237d89467dfcb0b"
-under16kb_reaudit_target_path: "papers/inference/13-sparse-attention/2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md"
-under16kb_reaudit_source_sha256: "1367409d956843ce291bc29c3864b349e9224c507b617ae04b467d0620943c9e"
-under16kb_reaudit_source_git_blob_sha: "5c6c3c2157fb7bc523392b944ea87d0a03222a98"
-under16kb_reaudit_version: "2026-10-07-v1"
+- https://aclanthology.org/2025.acl-long.1211/
+- https://aclanthology.org/2025.acl-long.1211.pdf
+- https://arxiv.org/html/2411.05787v2
+code: https://github.com/carriex/refreshkv
+implementation: 著者公開実装を使用できる推論時KV選択手法。Llama-3.1-8BとQwen2-7Bを主対象とし、単一A100 80GBでFlashAttentionを利用したデコード時間を測定。継続事前学習は追加実験であり、基本方式は既存モデルへ適用できる。
+summary: RefreshKVは長文生成で重要な入力位置が変わる問題に対し、全トークンのKVを保持したまま、通常は上位Kの部分KVだけへ注意し、クエリ類似度の低下時に全注意を実行して部分KVを再選択する。16K文脈のLlama-3.1-8BではArxiv PPLがSnapKV 2.54に対し2.32（QC=10）、デコード時間は6.77対6.33。HTMLからTSVへの変換では削除方式がF1=0となる条件でF1=17を得る。容量節約ではなく注意計算・読出し削減の方式である。
+list_summary: 完全KVを残しながらクエリ変化時だけ全注意で部分KVを更新し、長い出力の後半で必要情報が変わる場合の品質低下を抑える。
+last_checked: '2026-10-09'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-09T07:55:00+09:00'
+worker_run_key: 20261009-0755-scheduled-chat-00/r01
+reference_main_sha: 8bcf16d69e919a50b1273ad74237d89467dfcb0b
+under16kb_reaudit_target_path: papers/inference/13-sparse-attention/2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md
+under16kb_reaudit_source_sha256: 1367409d956843ce291bc29c3864b349e9224c507b617ae04b467d0620943c9e
+under16kb_reaudit_source_git_blob_sha: 5c6c3c2157fb7bc523392b944ea87d0a03222a98
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_body_chars: 6730
 quality_method_chars: 1718
 quality_eval_chars: 2568
 quality_limitation_chars: 593
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-08-semantic-v2"
+quality_self_review_version: 2026-10-08-semantic-v2
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.09054
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2307.11088
+  arxiv_id: '2307.11088'
+- canonical_id: arXiv:2308.14508
+  arxiv_id: '2308.14508'
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2305.01625
+  arxiv_id: '2305.01625'
+- canonical_id: arXiv:2406.02069
+- canonical_id: arXiv:2408.03675
+  doi: 10.18653/v1/2024.acl-long.428
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2110.02861
+  arxiv_id: '2110.02861'
+- canonical_id: arXiv:2310.01801
+  openreview_id: uNrFpDPMyo
+- canonical_id: arXiv:2403.05530
+  arxiv_id: '2403.05530'
+- canonical_id: arXiv:2401.18079
+  arxiv_id: '2401.18079'
+- canonical_id: arXiv:2404.06654
+  arxiv_id: '2404.06654'
+- canonical_id: DOI:10.18653/v1/2021.naacl-main.112
+  doi: 10.18653/v1/2021.naacl-main.112
+- canonical_id: arXiv:2407.02490
+  arxiv_id: '2407.02490'
+- canonical_id: arXiv:2406.16264
+  arxiv_id: '2406.16264'
+- canonical_id: arXiv:2404.14469
+  openreview_id: poE54GOq2l
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2406.10774
+  arxiv_id: '2406.10774'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2410.10819
+- canonical_id: arXiv:2309.17453
+- canonical_id: DOI:10.18653/v1/2024.findings-acl.195
+  doi: 10.18653/v1/2024.findings-acl.195
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2306.14048
+- canonical_id: DOI:10.18653/v1/2021.naacl-main.472
+  doi: 10.18653/v1/2021.naacl-main.472
+references_checked_at: '2026-10-09'
+references_source: arxiv-html-reference-section
+references_total: 38
 ---
 
 # RefreshKV：長文生成の途中で小さなKVキャッシュを更新する推論方式
