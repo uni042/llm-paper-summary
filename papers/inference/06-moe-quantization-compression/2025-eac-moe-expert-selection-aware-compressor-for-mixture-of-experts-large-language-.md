@@ -3,30 +3,28 @@ canonical_id: ACL:2025.acl-long.633
 arxiv_id: '2508.01625'
 doi: 10.18653/v1/2025.acl-long.633
 title: 'EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models'
-summary: >-
-  EAC-MoEは、MoEの低ビット量子化でルータの上位専門家が入れ替わるexpert-shiftを、上位専門家のスコア誤差に注目した層別較正QESCで抑える。さらに現在の入力系列でほとんど選ばれない専門家をPESFでプリフィル中に省略する。ACL 2025の評価ではMixtral-8x7Bの重みメモリを93.41GBから18.98GBへ削減し、512トークン×4文の文脈推論で1.68倍高速化するが、強い枝刈りでは品質が大幅に低下する。
+summary: EAC-MoEは、MoEの低ビット量子化でルータの上位専門家が入れ替わるexpert-shiftを、上位専門家のスコア誤差に注目した層別較正QESCで抑える。さらに現在の入力系列でほとんど選ばれない専門家をPESFでプリフィル中に省略する。ACL 2025の評価ではMixtral-8x7Bの重みメモリを93.41GBから18.98GBへ削減し、512トークン×4文の文脈推論で1.68倍高速化するが、強い枝刈りでは品質が大幅に低下する。
 list_summary: 量子化による専門家選択のずれをルータ上位スコアの較正で抑え、入力系列で低頻度の専門家をプリフィル中に省略して容量・速度・品質を調整する。
 authors:
-  - Yuanteng Chen
-  - Yuantian Shao
-  - Peisong Wang
-  - Jian Cheng
+- Yuanteng Chen
+- Yuantian Shao
+- Peisong Wang
+- Jian Cheng
 published: '2025-07-27'
 publication: ACL 2025, Long Papers, pp.12942-12963
 publication_type: 査読付き国際会議論文
 publication_status: Published
 source: https://aclanthology.org/2025.acl-long.633/
 sources:
-  - https://aclanthology.org/2025.acl-long.633/
-  - https://aclanthology.org/2025.acl-long.633.pdf
-  - https://arxiv.org/abs/2508.01625
+- https://aclanthology.org/2025.acl-long.633/
+- https://aclanthology.org/2025.acl-long.633.pdf
+- https://arxiv.org/abs/2508.01625
 arxiv_categories:
   primary: cs.LG
   cross_list:
-    - cs.AI
+  - cs.AI
 code: null
-implementation: >-
-  論文はGPTQを基礎とするグループ単位量子化、層ごとのルータTopK-MSE較正、入力系列の専門家選択回数による動的枝刈り、BitBLASによる量子化重み実行を記載する。著者の公式コード配布URLは一次資料で確認できない。
+implementation: 論文はGPTQを基礎とするグループ単位量子化、層ごとのルータTopK-MSE較正、入力系列の専門家選択回数による動的枝刈り、BitBLASによる量子化重み実行を記載する。著者の公式コード配布URLは一次資料で確認できない。
 implementation_status: official-code-not-confirmed
 last_checked: '2026-10-09'
 worker_id: scheduled-chat-30
@@ -36,7 +34,7 @@ reference_main_sha: 68ddd68beaa89f462e2cd4e45117c28da60832e2
 under16kb_reaudit_target_path: papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md
 under16kb_reaudit_source_sha256: c89dd6beaf7f5ccaa1ebcb80fed53eb5dc343279f52d4911db06ba3910154301
 under16kb_reaudit_source_git_blob_sha: 8a697de288c2a17f27505b371e9868d8e93f2745
-under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_body_chars: 9376
 quality_method_chars: 2255
@@ -45,48 +43,92 @@ quality_limitation_chars: 1379
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
 references:
-  - canonical_id: arXiv:2404.14219
-  - canonical_id: DOI:10.18653/v1/n19-1245
-  - canonical_id: OpenReview:xXTkbTBmqq
-  - canonical_id: OpenReview:rAcgDBdKnP
-  - canonical_id: DOI:10.18653/v1/2022.emnlp-main.804
-  - canonical_id: OpenReview:vXxardq6db
-  - canonical_id: arXiv:2404.00456
-  - canonical_id: arXiv:2108.07732
-  - canonical_id: arXiv:2107.03374
-  - canonical_id: arXiv:1803.05457
-  - canonical_id: arXiv:2110.14168
-  - canonical_id: arXiv:2401.06066
-  - canonical_id: arXiv:2501.12948
-  - canonical_id: arXiv:2412.19437
-  - canonical_id: arXiv:2407.21783
-  - canonical_id: arXiv:2210.17323
-  - canonical_id: DOI:10.5281/zenodo.12608602
-  - canonical_id: arXiv:2410.06270
-  - canonical_id: DOI:10.1162/neco.1991.3.1.79
-  - canonical_id: arXiv:2401.04088
-  - canonical_id: DOI:10.1162/neco.1994.6.2.181
-  - canonical_id: arXiv:2109.10465
-  - canonical_id: arXiv:2406.08155
-  - canonical_id: arXiv:2402.18158
-  - canonical_id: arXiv:2407.00945
-  - canonical_id: arXiv:2402.14800
-  - canonical_id: arXiv:1609.07843
-  - canonical_id: DOI:10.18653/v1/2020.acl-main.92
-  - canonical_id: DOI:10.48550/arxiv.2404.05089
-  - canonical_id: arXiv:2303.08774
-  - canonical_id: DOI:10.18653/v1/d19-1454
-  - canonical_id: arXiv:2308.13137
-  - canonical_id: arXiv:1701.06538
-  - canonical_id: arXiv:2306.11695
-  - canonical_id: arXiv:2307.09288
-  - canonical_id: arXiv:2410.12013
-  - canonical_id: arXiv:2407.10671
-  - canonical_id: arXiv:2404.02852
-  - canonical_id: OpenReview:c8McWs4Av0
-  - canonical_id: OpenReview:S1lN69AT-
+- canonical_id: arXiv:2404.14219
+  arxiv_id: '2404.14219'
+- canonical_id: DOI:10.18653/v1/n19-1245
+  doi: 10.18653/v1/n19-1245
+- canonical_id: arXiv:2409.02060
+  openreview_id: xXTkbTBmqq
+- canonical_id: OpenReview:rAcgDBdKnP
+  openreview_id: rAcgDBdKnP
+- canonical_id: DOI:10.18653/v1/2022.emnlp-main.804
+  doi: 10.18653/v1/2022.emnlp-main.804
+- canonical_id: arXiv:2401.15024
+  openreview_id: vXxardq6db
+- canonical_id: arXiv:2404.00456
+  arxiv_id: '2404.00456'
+- canonical_id: arXiv:2108.07732
+  arxiv_id: '2108.07732'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2401.06066
+  arxiv_id: '2401.06066'
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2101.03961
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: DOI:10.5281/zenodo.12608602
+  doi: 10.5281/zenodo.12608602
+- canonical_id: arXiv:2410.06270
+  arxiv_id: '2410.06270'
+- canonical_id: arXiv:2402.04291
+- canonical_id: DOI:10.1162/neco.1991.3.1.79
+  doi: 10.1162/neco.1991.3.1.79
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: DOI:10.1162/neco.1994.6.2.181
+  doi: 10.1162/neco.1994.6.2.181
+- canonical_id: arXiv:2109.10465
+  arxiv_id: '2109.10465'
+- canonical_id: arXiv:2406.08155
+  arxiv_id: '2406.08155'
+- canonical_id: arXiv:2402.18158
+  arxiv_id: '2402.18158'
+- canonical_id: arXiv:2306.00978
+- canonical_id: arXiv:2407.00945
+  arxiv_id: '2407.00945'
+- canonical_id: arXiv:2402.14800
+  doi: 10.18653/v1/2024.acl-long.334
+- canonical_id: arXiv:1609.07843
+  arxiv_id: '1609.07843'
+- canonical_id: DOI:10.18653/v1/2020.acl-main.92
+  doi: 10.18653/v1/2020.acl-main.92
+- canonical_id: arXiv:2404.05089
+  doi: 10.48550/arxiv.2404.05089
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: DOI:10.18653/v1/d19-1454
+  doi: 10.18653/v1/d19-1454
+- canonical_id: arXiv:2308.13137
+  arxiv_id: '2308.13137'
+- canonical_id: arXiv:1701.06538
+  arxiv_id: '1701.06538'
+- canonical_id: arXiv:2306.11695
+  arxiv_id: '2306.11695'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2410.12013
+  arxiv_id: '2410.12013'
+- canonical_id: arXiv:2407.10671
+  arxiv_id: '2407.10671'
+- canonical_id: arXiv:2404.02852
+  arxiv_id: '2404.02852'
+- canonical_id: OpenReview:c8McWs4Av0
+  openreview_id: c8McWs4Av0
+- canonical_id: OpenReview:S1lN69AT-
+  openreview_id: S1lN69AT-
 references_checked_at: '2026-10-09'
-references_source: acl-anthology-pdf-reference-section
+references_source: arxiv-html-reference-section
 references_total: 69
 last_audited: null
 audit_version: 0

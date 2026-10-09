@@ -2,30 +2,27 @@
 canonical_id: DOI:10.1145/3830422.3830427
 title: Elastic Memory Remapping for Multi-tenant LLM Serving
 authors:
-  - Ruihao Li
-  - Shagnik Pal
-  - Vineeth Narayan Pullu
-  - Prasoon Sinha
-  - Jeeho Ryoo
-  - Lizy K. John
-  - Neeraja J. Yadwadkar
-published: '2026-07'
+- Ruihao Li
+- Shagnik Pal
+- Vineeth Narayan Pullu
+- Prasoon Sinha
+- Jeeho Ryoo
+- Lizy K. John
+- Neeraja J. Yadwadkar
+published: 2026-07
 publication: ACM SIGOPS Operating Systems Review 60(1), 41-49
 publication_type: journal
 publication_status: published
-summary: >-
-  Oneirosは複数の言語モデルがGPUを共有する配信基盤で、復号中に更新されるKVキャッシュではなく、推論中に不変のモデル重みをホストメモリへ移動する。非稼働モデルを優先した重み退避、負荷に応じた再配置率制限、層の等間隔配置と二重バッファ、非同期転送、需要減少時の復元を組み合わせ、GH200上のvLLMで末尾TTFTを最大99.3%削減し処理率を最大86.7%改善する。
-list_summary: >-
-  GPU上の非稼働モデル重み領域をKVキャッシュへ弾力的に転用し、層の等間隔配置と非同期転送で復号の停止を避ける複数モデル配信システム。
+summary: Oneirosは複数の言語モデルがGPUを共有する配信基盤で、復号中に更新されるKVキャッシュではなく、推論中に不変のモデル重みをホストメモリへ移動する。非稼働モデルを優先した重み退避、負荷に応じた再配置率制限、層の等間隔配置と二重バッファ、非同期転送、需要減少時の復元を組み合わせ、GH200上のvLLMで末尾TTFTを最大99.3%削減し処理率を最大86.7%改善する。
+list_summary: GPU上の非稼働モデル重み領域をKVキャッシュへ弾力的に転用し、層の等間隔配置と非同期転送で復号の停止を避ける複数モデル配信システム。
 source: https://doi.org/10.1145/3830422.3830427
 sources:
-  - https://doi.org/10.1145/3830422.3830427
-  - https://ut-sysml.ece.utexas.edu/publications/prints/socc2025_li.pdf
-  - https://arxiv.org/abs/2507.11507
-  - https://github.com/UT-SysML/Oneiros/
+- https://doi.org/10.1145/3830422.3830427
+- https://ut-sysml.ece.utexas.edu/publications/prints/socc2025_li.pdf
+- https://arxiv.org/abs/2507.11507
+- https://github.com/UT-SysML/Oneiros/
 code: https://github.com/UT-SysML/Oneiros/
-implementation: >-
-  vLLM 0.7.3、CUDA 12.4、PyTorch 2.5.1、Linux 5.14に組み込み、96GB HBM3のH200 GPUと224GBホストメモリを900GB/sのNVLinkで結ぶGH200実機で評価。著者の公式コードを公開。
+implementation: vLLM 0.7.3、CUDA 12.4、PyTorch 2.5.1、Linux 5.14に組み込み、96GB HBM3のH200 GPUと224GBホストメモリを900GB/sのNVLinkで結ぶGH200実機で評価。著者の公式コードを公開。
 implementation_status: official-code-available
 last_checked: '2026-10-09'
 worker_id: scheduled-chat-45
@@ -35,30 +32,77 @@ worker_run_key: 20261009-2045-scheduled-chat-45/r01
 reference_main_sha: 74ae6d84207b1b34a099fdc62fe9bf92bee1f587
 under16kb_reaudit_target_path: papers/inference/01-offload-hierarchical-memory/2026-elastic-memory-remapping-oneiros.md
 under16kb_reaudit_source_git_blob_sha: 73d7bb5d546e4ba38de3b0502d2482d446c697ea
-under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_body_chars: 8677
 quality_method_chars: 2693
 quality_eval_chars: 2034
 quality_limitation_chars: 957
 quality_self_review_passed: true
-quality_self_review_version: '2026-10-07-v1'
+quality_self_review_version: 2026-10-07-v1
 references:
-  - canonical_id: arXiv:2407.21783
-  - canonical_id: arXiv:2410.03065
-  - canonical_id: arXiv:2507.11507
-  - canonical_id: DOI:10.1145/3651890.3672274
-  - canonical_id: arXiv:2405.04437
-  - canonical_id: arXiv:1910.02054
-  - canonical_id: arXiv:2303.06865
-  - canonical_id: arXiv:2408.00741
-  - canonical_id: arXiv:2307.09288
-  - canonical_id: arXiv:2411.09317
-  - canonical_id: arXiv:2505.04021
-references_checked_at: '2026-10-03'
-references_source: existing-structured-references-preserved-not-fully-reaudited
+- canonical_id: arXiv:2403.09054
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2308.07201
+  arxiv_id: '2308.07201'
+- canonical_id: arXiv:2404.02015
+  arxiv_id: '2404.02015'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2401.14351
+- canonical_id: arXiv:2402.03578
+  arxiv_id: '2402.03578'
+- canonical_id: arXiv:2411.01142
+- canonical_id: arXiv:2410.03065
+  arxiv_id: '2410.03065'
+- canonical_id: DOI:10.1145/3676641.3715996
+  arxiv_id: '2410.18038'
+- canonical_id: arXiv:2506.04301
+  arxiv_id: '2506.04301'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2406.19707
+- canonical_id: arXiv:2402.05120
+  arxiv_id: '2402.05120'
+- canonical_id: arXiv:2302.11665
+- canonical_id: DOI:10.1145/3651890.3672274
+- canonical_id: arXiv:2311.15566
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2407.00047
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2405.04437
+- canonical_id: arXiv:1910.02054
+- canonical_id: arXiv:2104.07857
+- canonical_id: DOI:10.1145/3394486.3406703
+  doi: 10.1145/3394486.3406703
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2408.00741
+  arxiv_id: '2408.00741'
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2306.03314
+  arxiv_id: '2306.03314'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2411.03350
+  arxiv_id: '2411.03350'
+- canonical_id: arXiv:2407.13126
+  arxiv_id: '2407.13126'
+- canonical_id: arXiv:2411.09317
+  arxiv_id: '2411.09317'
+- canonical_id: arXiv:2502.14866
+  arxiv_id: '2502.14866'
+- canonical_id: arXiv:2408.16978
+  arxiv_id: '2408.16978'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2505.04021
+  arxiv_id: '2505.04021'
+- canonical_id: arXiv:2503.18292
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+references_checked_at: '2026-10-09'
+references_source: arxiv-html-reference-section
 last_audited: null
 audit_version: 0
+references_total: 81
 ---
 
 # Oneiros：不変なモデル重みの退避によるKVキャッシュ領域の弾力的な再配置
