@@ -42,7 +42,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2025-05 · [ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates](2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeedExamples/tree/master/training/DeepSpeed-ZenFlow) ・ リポジトリ内被引用：2  
-  影響の大きい勾配だけをGPUで毎ステップ更新し、残りをCPUで蓄積して遅延更新する二経路に分け、CPUオフロード学習のGPU待ち時間を減らす方式。
+  GPU容量を超える場合、ZeRO-Offloadなどは勾配や最適化器状態をCPUメモリへ移し、CPU側で更新してからGPUへ戻す。低重要度勾配を単純に捨てる方式ではなく、更新の頻度と実行場所を変える方式である。論文の主要評価ではZeRO-Offloadに対する学習処理率が平均4.3倍、ZeRO-Infinityに対して平均6.3倍になった。
 
 - **2025-05 · [MemAscend: System Memory Optimization for SSD-Offloaded LLM Fine-Tuning](2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -59,7 +59,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   順伝播で生成した活性値をNVMe SSDへ非同期退避し、逆伝播の直前に先読みして、再計算を減らしながらGPU活性値メモリを空けるLLM学習システム。
 
 - **2024-06 · [Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors](2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md)**  
-  実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：2  
+  実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：1  
   特徴は、単に固定の低ランク更新を使うのではなく、射影器の非零位置と係数を少量のデータで学習し、勾配の推定誤差が大きくなった場合に部分空間を更新することである。原論文は4GBのノートPC GPUで13億パラメータ級、24GBのRTX 4090で67億パラメータ級の微調整を示す。
 
 ### 4年前（2022-11〜2023-10）

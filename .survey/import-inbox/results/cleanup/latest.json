@@ -1,73 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-09T03:06:29+00:00",
+  "updated_at": "2026-10-09T03:25:27+00:00",
   "events": [
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-4e7dbbca0808--libfile_883e054709688191a6992b90c3663f99--2024-2407.18921-mobile-edge-llm-survey.md",
-      "processed_at": "2026-10-08T12:05:51+00:00",
-      "canonical_id": "arXiv:2407.18921",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-4e7dbbca0808--libfile_883e054709688191a6992b90c3663f99--2024-2407.18921-mobile-edge-llm-survey.md"
-    },
-    {
-      "status": "deleted_stale_blocked_research",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_95dfb11f82d48191ba977ed0f277c0fc--2023-2310.01382-llm-kick-repair-20261008-0428.md",
-      "processed_at": "2026-10-08T12:05:51+00:00",
-      "canonical_id": "arXiv:2310.01382"
-    },
-    {
-      "status": "requeued_blocked_research",
-      "source_path": ".survey/import-inbox/pending/research/retry-research-9e10a67f178b--libfile_98f636189190819191f143d1b95d2fce--2501.00663-titans.md",
-      "processed_at": "2026-10-08T12:05:51+00:00",
-      "canonical_id": "arXiv:2501.00663",
-      "retry_path": ".survey/import-inbox/pending/research/retry-research-9e10a67f178b--libfile_98f636189190819191f143d1b95d2fce--2501.00663-titans.md"
-    },
-    {
-      "status": "deferred_blocked_research_retry_collision",
-      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
-      "processed_at": "2026-10-08T12:30:28+00:00",
-      "canonical_id": "arXiv:2306.11222",
-      "existing_retry_path": ".survey/import-inbox/pending/research/retry-research-35dd54db6c17--interactive-20261008-bottom-up-reaudit-losparse-2306.11222.md",
-      "blocked_normalized_sha256": "11676ea31e307d2fad0f55864d4a90be9859f94d17d575908296be24b01cea72",
-      "pending_sha256": "0b11814c7daaebcd8a35e04d219064d12815dbc36d17bb3f6ac71b484c0e0dd6"
-    },
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
-      "processed_at": "2026-10-08T12:30:28+00:00",
-      "canonical_id": "arXiv:2609.19657",
-      "failures": [
-        "worker_completed_at"
-      ]
-    },
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
-      "processed_at": "2026-10-08T12:30:28+00:00",
-      "canonical_id": "arXiv:2411.15997",
-      "failures": [
-        "arxiv_categories.cross_list"
-      ]
-    },
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
-      "processed_at": "2026-10-08T12:30:28+00:00",
-      "canonical_id": "arXiv:2406.02532",
-      "failures": [
-        "worker_completed_at"
-      ]
-    },
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
-      "processed_at": "2026-10-08T12:30:28+00:00",
-      "canonical_id": "arXiv:2503.13421",
-      "failures": [
-        "arxiv_categories.cross_list"
-      ]
-    },
     {
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
@@ -4217,6 +4152,79 @@
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
       "processed_at": "2026-10-09T03:06:29+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-certaindex-2412.20993.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
+      "canonical_id": "arXiv:2412.20993",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-edge-dmoe-2503.13421.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-09T03:25:27+00:00",
       "canonical_id": "arXiv:1905.07799",
       "failures": [
         "arxiv_categories.cross_list",

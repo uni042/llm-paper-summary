@@ -173,9 +173,9 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 ### 3年前（2023-11〜2024-10）
 
-- **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
+- **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture of Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
-  前層表現をルーティング専門家、現層表現を共有専門家へ分けて全対全通信と計算を並行化し、MoE推論の通信待ちを隠す。
+  混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

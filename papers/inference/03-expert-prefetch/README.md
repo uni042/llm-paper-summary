@@ -22,7 +22,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 - **2026-03 · [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  FIRM-MoEは専門家FFNを射影行列単位へ分解し、複数前層の予測が一致した部分を優先して先読みする。VRAM容量とPCIe帯域に合わせて先読み距離・量を調整する。
+  FIRM-MoEは、専門家混合（Mixture-of-Experts、MoE）型の大規模言語モデルをGPUメモリの小さい端末で推論するとき、CPUからGPUへ専門家重みを運ぶ待ち時間を削減する仕組みである。従来の専門家先読みは、将来選択される専門家を予測して重み全体を先に転送する。
 
 - **2026-03 · [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
