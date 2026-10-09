@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs",
+      "source_url": "https://arxiv.org/abs/2604.03072",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For multimodal large language models (MLLMs), visual information is relatively sparse compared with text. As a result, research on visual pruning emerges for efficient inference. Current approaches typically measure token importance based on the attention scores in the visual encoder or in the LLM decoder, then select visual tokens with high attention scores while pruning others. In this paper, we pursue a different and more surgical approach. Instead of relying on mechanism-specific signals, we directly compute Mutual Information (MI) between visual and textual features themselves, prior to their interaction. This allows us to explicitly measure crossmodal dependency at the feature levels. Our MI-Pruner is simple, efficient and non-intrusive, requiring no access to internal attention maps or architectural modifications. Experimental results demonstrate that our approach outperforms previous attention-based pruning methods with minimal latency.",
+      "identifiers": [
+        "SemanticScholar:306b3195ab528acb81003fbd8301a64f4d4a252f"
+      ],
+      "semantic_scholar_id": "306b3195ab528acb81003fbd8301a64f4d4a252f",
+      "canonical_id": "arXiv:2604.03072",
+      "arxiv_id": "2604.03072",
+      "doi": "10.48550/arXiv.2604.03072",
+      "authors": [
+        "Jia-Meng Li",
+        "A. Tiulpin",
+        "M. Blaschko"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mutual-information visual-token pruning reduces MLLM inference work.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Swordsman: Entropy-Driven Adaptive Block Partition for Efficient Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.04399",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-wise decoding effectively improves the inference speed and quality in diffusion language models (DLMs) by combining inter-block sequential denoising and intra-block parallel unmasking. However, existing block-wise decoding methods typically partition blocks in a rigid and fixed manner, which inevitably fragments complete semantic or syntactic constituents, leading to suboptimal performance. Inspired by the entropy reduction hypothesis (ERH), we recognize that constituent boundaries offer greater opportunities for uncertainty reduction, which motivates us to employ entropy analysis for identifying constituent boundaries. Therefore, we propose Swordsman, an entropy-driven adaptive block-wise decoding framework for DLMs. Swordsman adaptively partitions blocks by identifying entropy shifts between adjacent tokens to better align with semantic or syntactic constituent boundaries. In addition, Swordsman dynamically adjusts unmasking thresholds conditioned on the real-time unmasking status within a block, further improving both efficiency and stability. As a training-free framework, supported by KV Cache, Swordsman demonstrates state-of-the-art performance across extensive evaluations.",
+      "identifiers": [
+        "SemanticScholar:75be89a2b2d4801957b1afdab1627308651cb301"
+      ],
+      "semantic_scholar_id": "75be89a2b2d4801957b1afdab1627308651cb301",
+      "canonical_id": "arXiv:2602.04399",
+      "arxiv_id": "2602.04399",
+      "doi": "10.48550/arXiv.2602.04399",
+      "authors": [
+        "Yu Zhang",
+        "Xinchen Li",
+        "Jialei Zhou",
+        "Hongnan Ma",
+        "Zhongwei Wan",
+        "Yiwei Shi",
+        "Duoqian Miao",
+        "Qi Zhang",
+        "Long-Bing Cao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Swordsman adapts diffusion-LM decoding blocks and unmasking thresholds to improve efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2512.01949",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of visual tokens in multimodal large language models (MLLMs) leads to excessive memory consumption and inference latency, especially when handling high-resolution images and videos. Token pruning is a technique used to mitigate this issue by removing redundancy, but existing methods often ignore relevance to the user query or suffer from the limitations of attention mechanisms, reducing their adaptability and effectiveness. To address these challenges, we propose Script, a plug-and-play pruning method that requires no retraining and generalizes across diverse MLLMs. Script comprises two modules: a graph-structured pruning module that removes visually redundant tokens, and a query-conditioned semantic pruning module that preserves query-relevant visual information. Together, they enhance performance on multimodal tasks. Experiments on fourteen benchmarks across image and video understanding tasks show that Script consistently achieves higher model efficiency and predictive accuracy compared to existing pruning methods. On LLaVA-NeXT-7B, it achieves up to 6.8x prefill speedup and 10x FLOP reduction, while retaining 96.88% of the original performance.",
+      "identifiers": [
+        "SemanticScholar:4f66a7bbd905468cd97ed04712bf4ccae1c4fb5e"
+      ],
+      "semantic_scholar_id": "4f66a7bbd905468cd97ed04712bf4ccae1c4fb5e",
+      "canonical_id": "arXiv:2512.01949",
+      "arxiv_id": "2512.01949",
+      "doi": "10.48550/arXiv.2512.01949",
+      "authors": [
+        "Zhongyu Yang",
+        "Dan-Nong Xu",
+        "Wei Pang",
+        "Ying-Fang Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 312,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Script MLLM token pruning reports up to 6.8x prefill and 10x FLOP reduction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ASTL: An Adaptive Serving Stack for LLMs to Balance Utilization and Tail Latency",
+      "source_url": "https://doi.org/10.1145/3788550.3794877",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "SEAMS@ICSE",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present ASTL, a practical serving stack that adapts runtime parallelism to each request’s predicted output length, improving throughput and tail latency for LLM inference on CPU and GPU. The design rests on two ingredients: (i) an offline knee identification step that profiles sequence-level parallelism (NP) to find regime-specific operating points for short vs. long generations; and (ii) a lightweight XGBoost predictor that estimates output tokens at admission time using only proxy, admission-available cues (e.g., input length, presence of code fences/backticks, punctuation patterns, temperature/top-p)—without explicit domain labels. At runtime, ASTL routes requests to per-NP lanes with continuous batching and length-homogeneous micro-batches, running just below the knee for the inferred regime. Implemented atop llama.cpp and evaluated on a CPU m5.4xlarge (Llama-2-7B Q4) and a single-GPU A10 (Llama-2-13B Q4) under mixed/short workloads, ASTL reduces p95/p99 tails while preserving near-peak throughput.",
+      "identifiers": [
+        "SemanticScholar:c073d24e5a36afd0e37723cf63be76ee51347a08"
+      ],
+      "semantic_scholar_id": "c073d24e5a36afd0e37723cf63be76ee51347a08",
+      "doi": "10.1145/3788550.3794877",
+      "canonical_id": "DOI:10.1145/3788550.3794877",
+      "authors": [
+        "Farhoud Jafari Kaleibar",
+        "Marin Litoiu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Official SEAMS abstract describes adaptive LLM runtime parallelism/batching that reduces tail latency while preserving throughput.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.00021",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) accelerates Large Language Model (LLM) inference by employing a lightweight draft model to propose candidate tokens, which are verified in parallel by the target model, without compromising generation quality. While Retrieval-based Speculative Decoding (RSD) is favored for its plug-and-play versatility, its potential is impeded by rigid lexical dependencies, rendering both retrieval and verification brittle to surface-level variations. To address this, we propose SENSE (Semantic Embedding Navigation with Soft-gated Evaluation). By anchoring retrieval on the hidden states of the target model, SENSE establishes robust semantic alignment, which empowers the Soft-gated Evaluation module to validate semantic equivalence rather than surface forms. To ensure rigorous benchmarking, we deconstruct existing methods into atomic primitives within a unified framework, facilitating granular, component-level comparison. Extensive experiments across diverse domains demonstrate that SENSE outperforms multiple baselines on the LLaMA and Qwen families, attaining up to 4.09 mean acceptance length and 3.26x speedup, while preserving generation quality. Our code will be released upon publication.",
+      "identifiers": [
+        "SemanticScholar:25a69145c46da12196ad562a0b30d7e3edd3af0e"
+      ],
+      "semantic_scholar_id": "25a69145c46da12196ad562a0b30d7e3edd3af0e",
+      "canonical_id": "arXiv:2606.00021",
+      "arxiv_id": "2606.00021",
+      "doi": "10.48550/arXiv.2606.00021",
+      "authors": [
+        "Shao-Wen Chen",
+        "Zhicheng Liao",
+        "Hongwei Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SENSE accelerates retrieval-based speculative decoding through semantic embedding navigation and gated evaluation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fc1b0814e525",
+    "round": "libimp-fc1b0814e525389e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fc1b0814e525389e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fc1b0814e525389e-pre01.json",
+    "receipt": "sha256:bd8d023584f8274d1f0150f8feea0e3a363dac56f40faa6d2bc6399fbda51c95"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fc1b0814e525",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
