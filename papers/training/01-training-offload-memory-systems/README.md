@@ -24,11 +24,11 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2026-02 · [Horizon-LM: A RAM-Centric Architecture for LLM Training](2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md)**  
   実装：[✓](https://github.com/DLYuanGod/Horizon-LM) ・ リポジトリ内被引用：0  
-  CPU DRAMをパラメータ・勾配・最適化状態の正本にし、計算中の層だけをGPUへ流し込んでGPUメモリをモデル全体から切り離す学習方式。ただし性能評価の計算誤りで撤回済み。
+  従来のGPU中心学習では、ZeRO-3やFSDPでパラメータを分割・退避しても、GPU側にモデルの実行構造と自動微分の計算グラフが残り、実行基盤のバッファや勾配管理がメモリ消費を増やす。
 
 - **2025-12 · [GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping](2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md)**  
-  実装：[✓](https://github.com/npz7yyk/GreedySnake) ・ リポジトリ内被引用：0  
-  層ごとに全マイクロバッチをまとめて処理して重みを再利用し、最適化器更新の一部を次の反復と重ねることで、SSDオフロード学習の再読込と更新待ちを減らす方式。
+  実装：✓ ・ リポジトリ内被引用：0  
+  同一層の重みを複数マイクロバッチ間で再利用し、層間活性値の転送増加と引き換えに重み・勾配の反復転送を抑える。さらに最適化器の一部を次の学習反復へ遅延させ、計算とSSD入出力の重畳範囲を広げる。
 
 ### 2年前（2024-11〜2025-10）
 

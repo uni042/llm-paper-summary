@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T10:59:09+00:00",
+  "generated_at": "2026-10-09T15:18:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 132,
+  "count": 133,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2605,6 +2605,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-aede99e4aac3--libfile_ede40e199e248191b8a537e1a8d2a2eb--2025-2506.18879-commvq-under16kb-reaudit-20261009-1857-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-aede99e4aac3--libfile_ede40e199e248191b8a537e1a8d2a2eb--2025-2506.18879-commvq-under16kb-reaudit-20261009-1857-scheduled-chat-00-r01.json",
       "worker_run_key": "20261009-1857-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.07348",
+      "title": "MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/7efe88bb4138d602e56637cfcf713654-Paper-Conference.pdf",
+      "returned_at": "2026-10-09T15:15:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 340 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6767,
+        "body_paragraphs": 39,
+        "method_chars": 2175,
+        "method_paragraphs": 12,
+        "evaluation_chars": 340,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 340 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_68acc0f869e08191b27d373cdd02795a--2024-2410.07348-moe-plus-plus-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_68acc0f869e08191b27d373cdd02795a--2024-2410.07348-moe-plus-plus-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261009-1755-scheduled-chat-00/r01"
     }
   ]
 }
