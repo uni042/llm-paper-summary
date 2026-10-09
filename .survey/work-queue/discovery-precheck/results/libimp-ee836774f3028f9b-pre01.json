@@ -1,0 +1,1736 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ee836774f3028f9b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ee836774f302",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.findings-naacl.462",
+    "DOI:10.52202/085713-0350",
+    "arXiv:2407.03157",
+    "arXiv:2502.02493",
+    "arXiv:2507.19409",
+    "arXiv:2510.20787",
+    "arXiv:2510.22876",
+    "arXiv:2510.26527",
+    "arXiv:2601.04359",
+    "arXiv:2602.04595",
+    "arXiv:2602.04852",
+    "arXiv:2602.16994",
+    "arXiv:2603.19664",
+    "arXiv:2604.19157",
+    "arXiv:2608.02123",
+    "arXiv:2609.33224",
+    "arXiv:2609.33536",
+    "arXiv:2609.39068",
+    "arXiv:2610.00321"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 19,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2e224d9c57367c867cb80c4291a748509b37faca",
+  "raw_search_result_count": 19,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 19,
+  "provider_progress": {
+    "requested_count": 19,
+    "status_counts": {
+      "allowed": 19,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-09T23:01:19.942242+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-naacl.462",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.52202/085713-0350",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.03157",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.02493",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.19409",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.20787",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.22876",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.26527",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.04359",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.04595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.04852",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.16994",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.19664",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.19157",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.02123",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33224",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33536",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39068",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00321",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
+      "source_url": "https://arxiv.org/abs/2601.04359",
+      "year": 2026,
+      "published": "2026-01-07",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A unified autoregressive model is a Transformer-based framework that addresses diverse multimodal tasks (e.g., text, image, video) as a single sequence modeling problem under a shared token space. Such models rely on the KV-cache mechanism to reduce attention computation from O(T^2) to O(T); however, KV-cache size grows linearly with the number of generated tokens, and it rapidly becomes the dominant bottleneck limiting inference efficiency and generative length. Unified autoregressive video generation inherits this limitation. Our analysis reveals that KV-cache tokens exhibit distinct spatiotemporal properties: (i) text and conditioning-image tokens act as persistent semantic anchors that consistently receive high attention, and (ii) attention to previous frames naturally decays with temporal distance. Leveraging these observations, we introduce PackCache, a training-free KV-cache management method that dynamically compacts the KV cache through three coordinated mechanisms: condition anchoring that preserves semantic references, cross-frame decay modeling that allocates cache budget according to temporal distance, and spatially preserving position embedding that maintains coherent 3D structure under cache removal. In terms of efficiency, PackCache accelerates end-to-end generation by 1.7-2.2x on 48-frame long sequences, showcasing its strong potential for enabling longer-sequence video generation. Notably, the final four frames - the portion most impacted by the progressively expanding KV-cache and thus the most expensive segment of the clip - PackCache delivers a 2.6x and 3.7x acceleration on A40 and H200, respectively, for 48-frame videos.",
+      "identifiers": [
+        "SemanticScholar:52c18472c4ce46ee646348c64de6f0e7b8e33876"
+      ],
+      "semantic_scholar_id": "52c18472c4ce46ee646348c64de6f0e7b8e33876",
+      "canonical_id": "arXiv:2601.04359",
+      "arxiv_id": "2601.04359",
+      "doi": "10.48550/arXiv.2601.04359",
+      "authors": [
+        "Kun-Yang Li",
+        "Mubarak Shah",
+        "Yu-Zhang Shang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On State Reduction in Linear Attention",
+      "source_url": "https://arxiv.org/abs/2602.04852",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention offers a computationally efficient yet expressive alternative to softmax attention. However, recent empirical results indicate that the hidden state of trained linear attention models often exhibits a low-rank structure, suggesting that these models underexploit their capacity in practice. To understand this phenomenon, we analyze how keys and values shape the rank of the recurrent state, providing a theoretical perspective on memory utilization in linear attention. In addition to these theoretical insights, we conjecture that low-rank states can be substantially reduced after pre-training. To this end, we propose a hardware-aware strategy to structurally prune the key and query matrices, reducing the state size while retaining compatibility with existing fast kernels. We adapt several existing pruning strategies to fit our framework and, building on our theoretical analysis, propose a robust structured pruning method based on a rank-revealing QR decomposition. Our empirical evaluations across model sizes show that the recurrent state of pretrained linear attention models can often be halved with only a modest increase in language modeling perplexity, while maintaining competitive performance on downstream tasks. The code for this project can be found at https://github.com/camail-official/LinearAttentionPruning.",
+      "identifiers": [
+        "SemanticScholar:af73ac720da745198471e1669878a6588e22c890"
+      ],
+      "semantic_scholar_id": "af73ac720da745198471e1669878a6588e22c890",
+      "canonical_id": "arXiv:2602.04852",
+      "arxiv_id": "2602.04852",
+      "authors": [
+        "Philipp Nazari",
+        "T. Konstantin Rusch"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.19157",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache memory is a major bottleneck in real-world LLM serving, where systems must simultaneously support latency-sensitive small-batch requests and high-throughput concurrent workloads. Although many KV-cache compression methods improve offline accuracy or compression ratio, they often violate practical serving constraints such as paged memory layouts, regular memory access, and fused attention execution, limiting their effectiveness in deployment. In this work, we identify the minimal set of 4-bit KV-cache quantization methods that remain viable under these constraints. Our central finding is that a simple design--token-wise INT4 quantization with block-diagonal Hadamard rotation--consistently achieves the best accuracy-efficiency trade-off. Across multiple models and benchmarks, this approach recovers nearly all of the accuracy lost by naive INT4, while more complex methods such as vector quantization and Hessian-aware quantization provide only marginal additional gains once serving compatibility is taken into account. To make this practical, we implement a fused rotation-quantization kernel that integrates directly into paged KV-cache layouts and introduces zero measurable end-to-end overhead, matching plain INT4 throughput across concurrency levels. Our results show that effective KV-cache compression is fundamentally a systems co-design problem: under real serving constraints, lightweight block-diagonal Hadamard rotation is a viable method that delivers near-lossless accuracy without sacrificing serving efficiency.",
+      "identifiers": [
+        "SemanticScholar:25cb0e3926f6e48c929313b627957f6d7d325edb"
+      ],
+      "semantic_scholar_id": "25cb0e3926f6e48c929313b627957f6d7d325edb",
+      "canonical_id": "arXiv:2604.19157",
+      "arxiv_id": "2604.19157",
+      "doi": "10.48550/arXiv.2604.19157",
+      "authors": [
+        "Jinda Jia",
+        "Ji-Sen Li",
+        "Zhong-Zhu Zhou",
+        "Junghwa Heo",
+        "Jue Wang",
+        "Tri Dao",
+        "S. Song",
+        "B. Athiwaratkun",
+        "Chen-Feng Xu",
+        "Tian-Yi Zhang",
+        "Xiao-Xia Wu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2603.19664",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache is widely treated as essential state in transformer inference, and a large body of work engineers policies to compress, evict, or approximate its entries. We prove that this state is entirely redundant: keys and values at every layer are deterministic projections of the residual stream, and recomputing them from a single residual vector per token incurs exactly zero reconstruction error, not approximately, but bit-identically. We verify this across six models from four architecture families (135M to 4B parameters). Cross-task residual patching at every layer produces D_KL = 0 between patched and original output distributions, confirming that the residual stream satisfies a Markov property and is the sole information-carrying state. Removing the cache entirely and recomputing from scratch yields token-identical output under greedy decoding on all models tested. We build on this result with KV-Direct, a bounded-memory inference scheme that checkpoints residual vectors (5 KB per token on Gemma 3-4B) instead of full KV pairs (136 KB), recomputing keys and values on demand. Over 20 conversation turns, KV-Direct holds peak memory at 42 MB while the standard cache grows past 103 MB. Against five eviction baselines (H2O, StreamingLLM, SnapKV, TOVA, window-only), KV-Direct maintains 100% token match at every cache budget; all baselines degrade to 5-28%. A per-operation latency analysis shows recomputation runs up to 5x faster than reading cached tensors at moderate batch sizes. Code is available at https://github.com/Kaleemullahqasim/KV-Direct.",
+      "identifiers": [
+        "SemanticScholar:45072890ed0fa71cbfea7179f2d45a11d19f1c9f"
+      ],
+      "semantic_scholar_id": "45072890ed0fa71cbfea7179f2d45a11d19f1c9f",
+      "canonical_id": "arXiv:2603.19664",
+      "arxiv_id": "2603.19664",
+      "doi": "10.48550/arXiv.2603.19664",
+      "authors": [
+        "Kaleem Ullah Qasim",
+        "Jia-Shu Zhang",
+        "M. Shaheen",
+        "Razan Alharith",
+        "He-Ying Zhang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Chains to Trees: Parent-Conditioned Drafting for Semi-Autoregressive Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.02123",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference only when drafted continuations survive target-model verification. Semi-autoregressive drafters such as DSpark predict an entire token block with one backbone forward and refine it with a lightweight Markov head. However, DSpark decodes this block as a single chain, so an early mismatch invalidates the remaining suffix and limits the benefit of large draft blocks. We show that the conditional structure already learned by DSpark can support multiple parent-consistent continuations without retraining or additional backbone passes. We introduce Parent-Conditioned Drafting Tree (PCTree), which uses the pretrained Markov head to score alternative children separately for each concrete parent and allocates a fixed verification budget to the most probable paths. This converts DSpark's linear draft into a tree while preserving its one-pass parallel backbone. Across Qwen3-{4B,8B,14B} and nine benchmarks, at $B{=}7$, measured speedup gains over autoregressive (AR) decoding, relative to matched DSpark, range from $3.1\\%$ to $29.5\\%$. On Qwen3-4B GSM8K at $B{=}16$, PCTree increases mean acceptance length from $9.41$ to $11.16$ and three-run mean AR speedup from $6.14{\\times}$ to $6.60{\\times}$. These show that parent-conditioned branching can turn conditional capacity already present in a semi-autoregressive drafter into end-to-end inference gains through an inference-only change.",
+      "identifiers": [
+        "SemanticScholar:65400a61064bdb2929b0f7baa08b5e4f5da85b47"
+      ],
+      "semantic_scholar_id": "65400a61064bdb2929b0f7baa08b5e4f5da85b47",
+      "canonical_id": "arXiv:2608.02123",
+      "arxiv_id": "2608.02123",
+      "authors": [
+        "Zixian Li",
+        "Tong Li",
+        "C. Xie",
+        "Xiaohui Song",
+        "Hao Lu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.04595",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) incur substantial memory and computation costs. Prior works reduce FP-INT arithmetic overhead by converting linear-layer activations to block floating point (BFP), but retain FP activations in attention layers due to accuracy concerns. We propose Harmonia, an algorithm-hardware co-design framework that enables BFP representation and computation across both linear and attention layers. Harmonia first explores BFP configurations to balance model accuracy and activation compression. It then combines asymmetric bit allocation with hybrid offline-online outlier smoothing to compress the KV cache from FP16 to 4-bit-mantissa BFP with less than 1% average accuracy loss on LongBench. To efficiently support all-layer BFP computation, Harmonia incorporates a reconfigurable PE unit for mixed data formats and precisions, a real-time FP16-to-BFP converter, and a flexible tiling-aware dataflow that reduces external memory traffic. Evaluations across eight widely used LLMs show that Harmonia achieves 3.84x higher area efficiency, 2.03x better energy efficiency, and 3.08x speedup on average, with maximum improvements of 5.05x, 3.90x, and 4.62x, respectively.",
+      "identifiers": [
+        "SemanticScholar:d32ae9842c1eedef4ec2f68fec328e800c65a460"
+      ],
+      "semantic_scholar_id": "d32ae9842c1eedef4ec2f68fec328e800c65a460",
+      "canonical_id": "arXiv:2602.04595",
+      "arxiv_id": "2602.04595",
+      "doi": "10.1109/TCAD.2026.3731383",
+      "authors": [
+        "Xin-Yu Wang",
+        "Jie-Yu Li",
+        "Yanan Sun",
+        "Weifeng He"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Let the Code LLM Edit Itself When You Edit the Code",
+      "source_url": "https://arxiv.org/abs/2407.03157",
+      "year": 2024,
+      "published": "2024-07-03",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we investigate a typical scenario in code generation where a developer edits existing code in real time and requests a code assistant, e.g., a large language model, to re-predict the next token or next line on the fly. Naively, the LLM needs to re-encode the entire KV cache to provide an accurate prediction. However, this process is computationally expensive, especially when the sequence length is long. Simply encoding the edited subsequence and integrating it to the original KV cache meets the temporal confusion problem, leading to significantly worse performance. We address this efficiency and accuracy trade-off by introducing \\underline{\\textbf{Positional \\textbf{I}ntegrity \\textbf{E}ncoding} (PIE). Building upon the rotary positional encoding, PIE first removes the rotary matrices in the Key cache that introduce temporal confusion and then reapplies the correct rotary matrices. This process ensures that positional relationships between tokens are correct and requires only a single round of matrix multiplication. We validate the effectiveness of PIE through extensive experiments on the RepoBench-C-8k dataset, utilizing DeepSeek-Coder models with 1.3B, 6.7B, and 33B parameters. Our evaluation includes three real-world coding tasks: code insertion, code deletion, and multi-place code editing. Results demonstrate that PIE reduces computational overhead by over 85% compared to the standard full recomputation approach across all model sizes and tasks while well approximating the model performance.",
+      "identifiers": [
+        "SemanticScholar:03a015adaa28e2b2c83bf4c7cc9d0a930ab12218"
+      ],
+      "semantic_scholar_id": "03a015adaa28e2b2c83bf4c7cc9d0a930ab12218",
+      "canonical_id": "arXiv:2407.03157",
+      "arxiv_id": "2407.03157",
+      "doi": "10.48550/arXiv.2407.03157",
+      "authors": [
+        "Zhenyu He",
+        "Jun Zhang",
+        "Sheng-Jie Luo",
+        "Jingjing Xu",
+        "Zhi Zhang",
+        "Di He"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 828,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Accurate KV Cache Eviction via Anchor Direction Projection for Efficient LLM Inference",
+      "source_url": "https://doi.org/10.52202/085713-0350",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) cache eviction—which retains the KV pairs of the most important tokens while discarding less important ones—is a critical technique for optimizing both memory usage and inference latency in large language models (LLMs). However, existing approaches often rely on simple heuristics—such as attention weights—to measure token importance, overlooking the spatial relationships be-tween token value states in the vector space. This often leads to suboptimal token selections and thus performance degradation. To tackle this problem, we propose a novel method, namely AnDPro ( An chor D irection Pro jection), which introduces a projection-based scoring function to more accurately measure token importance. Specifically, AnDPro operates in the space of value vectors and leverages the projections of these vectors onto an “Anchor Direction” —the direction of the pre-eviction output—to measure token importance and guide more accurate token selection. Experiments on 16 datasets from the LongBench benchmark demonstrate that AnDPro can maintain 96 . 07% of the full cache accuracy using only 3 . 44% KV cache budget, reducing KV cache budget size by 46 . 0% without compromising quality compared to previous state-of-the-arts.",
+      "identifiers": [
+        "SemanticScholar:69233828b38f614a9e3a742b4c835b8328710e4e"
+      ],
+      "semantic_scholar_id": "69233828b38f614a9e3a742b4c835b8328710e4e",
+      "doi": "10.52202/085713-0350",
+      "canonical_id": "DOI:10.52202/085713-0350",
+      "authors": [
+        "Zijie Geng",
+        "Jie Wang",
+        "Ziqi Liu",
+        "Feng Ju",
+        "Yiming Li",
+        "Xing Li",
+        "Ming-Xuan Yuan",
+        "Jian-Ye Hao",
+        "De-Fu Lian",
+        "Enhong Chen",
+        "Feng Wu"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Hierarchical Speculative Decoding with Dynamic Window",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-naacl.462",
+      "year": 2025,
+      "published": null,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) utilizes an efficient draft model to generate multiple tokens, which are subsequently verified in parallel by a target model. This approach has shown significant potential for accelerating inference in large language models (LLMs), with performance heavily reliant on the hyperparameter K —the window size. However, previous meth-ods often depend on simple heuristics to select K or dynamically adjust the window size, which may necessitate additional training or careful resource management to avoid competition. To address these challenges, we pro-pose H ierarchical S peculative D ecoding with D ynamic W indow (HSDDW), a straightforward framework that eliminates the need for additional training. Specifically, we introduce a self-verify mechanism that enables the draft model to autonomously decide when to stop generating tokens. Additionally, by integrating a hierarchical structure that leverages the capabilities of models of different sizes, we significantly enhance the overall speed of the sys-tem. HSDDW demonstrates competitive performance across four datasets, achieving notable speedups of 2 . 91 × on MT-Bench and 2 . 99 × on Alpaca, outperforming existing state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:ba0f0183255afb920a84720b268b4f4bf78259c0"
+      ],
+      "semantic_scholar_id": "ba0f0183255afb920a84720b268b4f4bf78259c0",
+      "doi": "10.18653/v1/2025.findings-naacl.462",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
+      "authors": [
+        "Shensian Syu",
+        "Hung-yi Lee"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "EasySpec: Layer-Parallel Speculative Decoding for Efficient Multi-GPU Utilization",
+      "source_url": "https://arxiv.org/abs/2502.02493",
+      "year": 2025,
+      "published": "2025-02-04",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is an effective and lossless method for Large Language Model (LLM) inference acceleration. It employs a smaller model to generate a draft token sequence, which is then verified by the original base model. In multi-GPU systems, inference latency can be further reduced through tensor parallelism (TP), while the optimal TP size of the draft model is typically smaller than that of the base model, leading to GPU idling during the drafting stage. We observe that such inefficiency stems from the sequential execution of layers, which is seemingly natural but actually unnecessary. Therefore, we propose EasySpec, a layer-parallel speculation strategy that optimizes the efficiency of multi-GPU utilization. EasySpec breaks the inter-layer data dependencies in the draft model, enabling multiple layers to run simultaneously across multiple devices as'fuzzy'speculation. After each drafting-and-verification iteration, the draft model's key-value cache is calibrated in a single forward pass, preventing long-term fuzzy-error accumulation at minimal additional latency. EasySpec is a training-free and plug-in method. We evaluated EasySpec on several mainstream open-source LLMs, using smaller versions of models from the same series as drafters. The results demonstrate that EasySpec can achieve a peak speedup of 4.17x compared to vanilla decoding, while preserving the original distributions of the base LLMs. Specifically, the drafting stage can be accelerated by up to 1.62x with a maximum speculation accuracy drop of only 7%. The code is available at https://github.com/Yize-Wu/EasySpec.",
+      "identifiers": [
+        "SemanticScholar:7ebf679e89777f26655e0ea1c25757117f57e25d"
+      ],
+      "semantic_scholar_id": "7ebf679e89777f26655e0ea1c25757117f57e25d",
+      "canonical_id": "arXiv:2502.02493",
+      "arxiv_id": "2502.02493",
+      "doi": "10.48550/arXiv.2502.02493",
+      "authors": [
+        "Yi-Ze Wu",
+        "Ke Gao",
+        "Ling Li",
+        "Yan-Jun Wu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 612,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Polybasic Speculative Decoding Through a Theoretical Perspective",
+      "source_url": "https://arxiv.org/abs/2510.26527",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference latency stands as a critical bottleneck in the large-scale deployment of Large Language Models (LLMs). Speculative decoding methods have recently shown promise in accelerating inference without compromising the output distribution. However, existing work typically relies on a dualistic draft-verify framework and lacks rigorous theoretical grounding. In this paper, we introduce a novel \\emph{polybasic} speculative decoding framework, underpinned by a comprehensive theoretical analysis. Specifically, we prove a fundamental theorem that characterizes the optimal inference time for multi-model speculative decoding systems, shedding light on how to extend beyond the dualistic approach to a more general polybasic paradigm. Through our theoretical investigation of multi-model token generation, we expose and optimize the interplay between model capabilities, acceptance lengths, and overall computational cost. Our framework supports both standalone implementation and integration with existing speculative techniques, leading to accelerated performance in practice. Experimental results across multiple model families demonstrate that our approach yields speedup ratios ranging from $3.31\\times$ to $4.01\\times$ for LLaMA2-Chat 7B, up to $3.87 \\times$ for LLaMA3-8B, up to $4.43 \\times$ for Vicuna-7B and up to $3.85 \\times$ for Qwen2-7B -- all while preserving the original output distribution. We release our theoretical proofs and implementation code to facilitate further investigation into polybasic speculative decoding.",
+      "identifiers": [
+        "SemanticScholar:bcf618a5c5e9ff876813da4c5c1cc4033018a2ca"
+      ],
+      "semantic_scholar_id": "bcf618a5c5e9ff876813da4c5c1cc4033018a2ca",
+      "canonical_id": "arXiv:2510.26527",
+      "arxiv_id": "2510.26527",
+      "doi": "10.48550/arXiv.2510.26527",
+      "authors": [
+        "Rui-Lin Wang",
+        "Huixia Li",
+        "Yue-Xiao Ma",
+        "Xia-Wu Zheng",
+        "Fei Chao",
+        "Xue-Feng Xiao",
+        "Rongrong Ji"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2602.16994",
+      "year": 2026,
+      "published": "2026-02-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-path speculative decoding accelerates lossless sampling from a target model by using a cheaper draft model to generate a draft tree of tokens, and then applies a verification algorithm that accepts a subset of these. While prior work has proposed various verification algorithms for i.i.d rollouts, their relative performance under matched settings remains unclear. In this work, we firstly present a systematic evaluation of verification strategies across model families, tasks, and sampling regimes, and find that Traversal Verification dominates consistently, with OT-based methods lagging far behind. Our analysis uncovers that this occurs because OT-based methods achieve high multi-token acceptance near the root of the draft tree, while multi-token gains are most impactful deeper in the draft tree, where draft and target distributions diverge. Based on this insight, we propose delayed tree expansion, which drafts a partial single path, delaying the i.i.d. branching point. We show that delayed tree expansion preserves the target distribution and improves on root-node i.i.d rollouts. Further, we develop a dynamic neural selector that estimates the expected block efficiency of optimal-transport-based verification methods from draft and target features, enabling context-dependent expansion decisions. Our neural selector allows OT-based methods like SpecInfer to outperform Traversal Verification for the first time, achieving 5% higher average throughput across a wide range of models, datasets, and sampling settings.",
+      "identifiers": [
+        "SemanticScholar:0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4"
+      ],
+      "semantic_scholar_id": "0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4",
+      "canonical_id": "arXiv:2602.16994",
+      "arxiv_id": "2602.16994",
+      "doi": "10.48550/arXiv.2602.16994",
+      "authors": [
+        "R. Thomas",
+        "Teo Kitanovski",
+        "Micah Goldblum",
+        "Arka Pal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 232,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+      "source_url": "https://arxiv.org/abs/2609.33224",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Request scheduling is a key challenge in large-scale clusters serving agentic large language model (LLM) workloads. An effective scheduler must preserve key-value cache (KVC) reuse across long, shared prefixes, meet token-level latency service-level objectives (SLOs), and minimize GPU resource footprint. Existing schedulers struggle to reconcile these requirements: request consolidation can sacrifice cache locality and increase prefill/decode interference, compromising both SLO attainment and resource efficiency. We present PackServe, a scheduler designed to reduce resource costs while meeting latency SLOs for agentic LLM serving. PackServe uses compact white-box models to predict latency under prefill/decode interference. Guided by these predictions, it packs requests onto fewer serving instances while preserving KVC reuse and SLO constraints, trading available latency headroom for improved per-instance throughput. Evaluation on 64 NVIDIA H20 GPUs shows that PackServe uses up to 16.8% and 24.6% fewer GPU-hours than state-of-the-art schedulers under 30-ms and 50-ms TPOT targets, respectively, while meeting the target TPOT objectives. PackServe has also been deployed in our production cluster comprising over 1000 GPUs, where it reduces the resource footprint by 34.7% compared with the original production scheduler.",
+      "identifiers": [
+        "SemanticScholar:d07c54b105eedb5d6853337b23cffc09b6d93264"
+      ],
+      "semantic_scholar_id": "d07c54b105eedb5d6853337b23cffc09b6d93264",
+      "canonical_id": "arXiv:2609.33224",
+      "arxiv_id": "2609.33224",
+      "authors": [
+        "Zhi-Yuan Tan",
+        "De-Jiang Zhu",
+        "Jing-Zhe Jiang",
+        "Yi-Hao Zheng",
+        "Yang Tian",
+        "Tao Wang",
+        "Min-Chen Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.33536",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving is increasingly constrained by the GPU memory consumed by key-value (KV) caches. Existing compression, eviction, and offloading techniques alleviate this pressure, but serving runtimes typically treat only the configured target KV representation as execution-ready. Under memory pressure, this target-only contract can turn KV shortage into request stalls and preemptions. We present ElasticKV, a mixed-fidelity KV runtime built on the observation that target fidelity need not gate execution. ElasticKV introduces a compact intermediate KV state, making fidelity a runtime-managed execution property. To realize this state in a paged serving runtime, ElasticKV combines (i) a pair-structured layout that turns fidelity reduction into reusable GPU capacity, (ii) a dual-mode attention backend that directly consumes the compact state while preserving the native target-only path, and (iii) pressure-aware fidelity management that adapts KV fidelity to memory pressure. Our extensive evaluation across diverse workloads, model families and scales, and GPU platforms demonstrates the effectiveness and generality of ElasticKV. Under high concurrency, ElasticKV achieves 3.8-4.0$\\times$ lower time-to-first-token (TTFT) and 9.1$\\times$ lower P90 TTFT than vLLM while preserving generation quality.",
+      "identifiers": [
+        "SemanticScholar:101dd807a178d41163afaf258ee5e88069ff636e"
+      ],
+      "semantic_scholar_id": "101dd807a178d41163afaf258ee5e88069ff636e",
+      "canonical_id": "arXiv:2609.33536",
+      "arxiv_id": "2609.33536",
+      "authors": [
+        "Jiantong Jiang",
+        "Yue Yang",
+        "Pei-Yu Yang",
+        "Feng Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CAST: Cost-Aware Speculative Trees from One-Pass Block Drafters",
+      "source_url": "https://arxiv.org/abs/2610.00321",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by drafting future tokens cheaply and verifying them with the target model in parallel. Block drafters score a whole block of future tokens in one forward pass, yet standard decoding verifies only the top-scoring chain and discards the other candidates. Because these candidates are already scored, verifying more of them adds target computation but no extra drafting. We introduce CAST (Cost-Aware Speculative Trees), which packs these candidates into a tree and verifies it in a single target pass, leaving the target model, drafter weights, and decoding rule untouched. To decide how wide the tree should be, CAST adds candidates while the expected gain from the next one outweighs the verification time it adds. The width therefore adapts to each deployment from a latency measurement, without sweeping over widths. We evaluate CAST across five domains on three GPU generations and two model families. At its predicted width, CAST is faster than the standard chain in all eight settings, by up to 43%. We also find that the best width depends strongly on the deployment. Where verification cost jumps at a kernel boundary, a 128-token tree is only 2% faster than the standard chain, whereas the tree at the predicted width is 20% faster. Furthermore, we prove that CAST leaves the target output distribution unchanged under both greedy and sampled decoding. Code is available at https://github.com/js-lee-AI/CAST.",
+      "identifiers": [
+        "SemanticScholar:7c640cbdab916c67b16099ba67b1d2174ecddd29"
+      ],
+      "semantic_scholar_id": "7c640cbdab916c67b16099ba67b1d2174ecddd29",
+      "canonical_id": "arXiv:2610.00321",
+      "arxiv_id": "2610.00321",
+      "authors": [
+        "Jungseob Lee",
+        "Sugyeong Eo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SparseEngine: Sparse-First Inference Engine",
+      "source_url": "https://arxiv.org/abs/2609.39068",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM agents accumulate interaction histories that strain KV-cache memory and attention computation. Although sparse attention reduces these costs, heterogeneous cache representations and workflows hinder integration with existing inference engines, while prior sparse-serving abstractions support only specific layouts or workflows. We present SparseEngine, a ground-up, sparse-first inference engine whose shared lifecycle contract lets each method control its KV representation and computation while coordinating state transitions with common serving infrastructure. SparseEngine supports 15 methods across four categories and enables cross-request state management through Chain Cache, which resumes KV-eviction methods from retained history, and controllable Prefix-Cache Pruning, which removes KV from selected history regions while preserving logical-prefix matching. While maintaining method quality, SparseEngine delivers over 10x higher throughput with KV eviction, over 2.5x faster decoding at matched concurrency than vLLM, and over 2x end-to-end speedup on agent benchmarks. The code is available at https://github.com/CURRENTF/SparseEngine.",
+      "identifiers": [
+        "SemanticScholar:8303a36506f1529b7fac06064cfefe8855d5f813"
+      ],
+      "semantic_scholar_id": "8303a36506f1529b7fac06064cfefe8855d5f813",
+      "canonical_id": "arXiv:2609.39068",
+      "arxiv_id": "2609.39068",
+      "authors": [
+        "Jitai Hao",
+        "Quan-Sheng Gu",
+        "Qiang Huang",
+        "Jun Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Alleviating Forgetfulness of Linear Attention by Hybrid Sparse Attention and Contextualized Learnable Token Eviction",
+      "source_url": "https://arxiv.org/abs/2510.20787",
+      "year": 2025,
+      "published": "2025-10-23",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-attention models that compress the entire input sequence into a fixed-size recurrent state offer an efficient alternative to Transformers, but their finite memory induces forgetfulness that harms retrieval-intensive tasks. To mitigate the issue, we explore a series of hybrid models that restore direct access to past tokens. We interleave token mixers with intermediate time and space complexity between linear and full attention, including sparse attention with token eviction, and the query-aware native sparse attention. Particularly, we propose a novel learnable token eviction approach. Combined with sliding-window attention, an end-to-end trainable lightweight CNN aggregates information from both past and future adjacent tokens to adaptively retain a limited set of critical KV-pairs per head, maintaining linear attention's constant time and space complexity. Efficient Triton kernels for the sparse attention mechanisms are provided. Empirical evaluations on retrieval-intensive benchmarks support the effectiveness of our approaches.",
+      "identifiers": [
+        "SemanticScholar:c43c714fb65f982264bdbc417f0e9da6954f704a"
+      ],
+      "semantic_scholar_id": "c43c714fb65f982264bdbc417f0e9da6954f704a",
+      "canonical_id": "arXiv:2510.20787",
+      "arxiv_id": "2510.20787",
+      "doi": "10.48550/arXiv.2510.20787",
+      "authors": [
+        "Mu-Tian He",
+        "Philip N. Garner"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem",
+      "source_url": "https://arxiv.org/abs/2510.22876",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference optimizations are routinely evaluated by throughput alone, without verifying output correctness. We conduct a forensic analysis of batch speculative decoding and find that several widely-used implementations silently produce corrupted outputs (repetitive tokens,symbols) while reporting competitive speed; failures invisible to metrics like ROUGE. We trace the root cause to the ragged tensor problem: variable token acceptance desynchronizes position IDs, attention masks, and KV-cache across a batch. We formalize the synchronization invariants (rectangular alignment and position-ID contiguity) that valid batched inference must preserve and show that maintaining them incurs superlinear alignment overhead under contiguous layouts. EQSPEC enforces the invariants without custom kernels; EXSPEC schedules same-length sequences to bypass realignment. On SpecBench across three model families, EXSPEC reaches 3 x throughput at batch size 8 with 95% exact match to standard decoding; residual divergence traces to floating-point non-determinism, not synchronization error. Code:https://github.com/eBay/spec_dec",
+      "identifiers": [
+        "SemanticScholar:fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a"
+      ],
+      "semantic_scholar_id": "fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a",
+      "canonical_id": "arXiv:2510.22876",
+      "arxiv_id": "2510.22876",
+      "authors": [
+        "Ran-Ran Zhang",
+        "Soumik Dey",
+        "Ashirbad Mishra",
+        "Han-Si Wu",
+        "Bin-Bin Li",
+        "Rui Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Modality Agnostic Efficient Long Range Encoder",
+      "source_url": "https://arxiv.org/abs/2507.19409",
+      "year": 2025,
+      "published": "2025-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The long-context capability of recent large transformer models can be surmised to rely on techniques such as attention/model parallelism, as well as hardware-level optimizations. While these strategies allow input lengths to scale to millions of tokens, they do not fundamentally mitigate the quadratic computational and memory complexity of the core attention mechanism. In this paper, we address the challenge of long-context processing on a single device using generic implementations by reducing the quadratic memory footprint and inference cost. Existing approaches to extend the context length for generic single device implementations -- such as token merging and modified attentions -- are often modality specific and attain a suboptimal tradeoff between accuracy and efficiency. To overcome these limitations, we propose MAELRE (Modality Agnostic Efficient Long Range Encoder), a unified and efficient transformer architecture designed for long-range encoding across diverse modalities. MAELRE integrates token merging with attention approximation, progressively merging tokens at different stages of internal computational blocks. It employs a lightweight attention approximation when the number of tokens is large, and switches to standard dot-product attention as the sequence becomes shorter through successive aggregation. We demonstrate that MAELRE achieves superior accuracy while reducing computational cost compared to existing long-context models on classification tasks spanning multiple modalities, including text, time series, audio, and vision.",
+      "identifiers": [
+        "SemanticScholar:74098938f86ab0e37561377b7250e3d02c92fbfb"
+      ],
+      "semantic_scholar_id": "74098938f86ab0e37561377b7250e3d02c92fbfb",
+      "canonical_id": "arXiv:2507.19409",
+      "arxiv_id": "2507.19409",
+      "doi": "10.48550/arXiv.2507.19409",
+      "authors": [
+        "T. Parag",
+        "Ahmed Elgammal"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 441,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.04359",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.04359",
+        "id:SemanticScholar:52c18472c4ce46ee646348c64de6f0e7b8e33876",
+        "id:arXiv:2601.04359",
+        "title:packcache a trainingfree acceleration method for unified autoregressive video generation via compact kvcache",
+        "url:https://arxiv.org/abs/2601.04359"
+      ],
+      "record": {
+        "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
+        "source_url": "https://arxiv.org/abs/2601.04359",
+        "year": 2026,
+        "published": "2026-01-07",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A unified autoregressive model is a Transformer-based framework that addresses diverse multimodal tasks (e.g., text, image, video) as a single sequence modeling problem under a shared token space. Such models rely on the KV-cache mechanism to reduce attention computation from O(T^2) to O(T); however, KV-cache size grows linearly with the number of generated tokens, and it rapidly becomes the dominant bottleneck limiting inference efficiency and generative length. Unified autoregressive video generation inherits this limitation. Our analysis reveals that KV-cache tokens exhibit distinct spatiotemporal properties: (i) text and conditioning-image tokens act as persistent semantic anchors that consistently receive high attention, and (ii) attention to previous frames naturally decays with temporal distance. Leveraging these observations, we introduce PackCache, a training-free KV-cache management method that dynamically compacts the KV cache through three coordinated mechanisms: condition anchoring that preserves semantic references, cross-frame decay modeling that allocates cache budget according to temporal distance, and spatially preserving position embedding that maintains coherent 3D structure under cache removal. In terms of efficiency, PackCache accelerates end-to-end generation by 1.7-2.2x on 48-frame long sequences, showcasing its strong potential for enabling longer-sequence video generation. Notably, the final four frames - the portion most impacted by the progressively expanding KV-cache and thus the most expensive segment of the clip - PackCache delivers a 2.6x and 3.7x acceleration on A40 and H200, respectively, for 48-frame videos.",
+        "identifiers": [
+          "SemanticScholar:52c18472c4ce46ee646348c64de6f0e7b8e33876"
+        ],
+        "semantic_scholar_id": "52c18472c4ce46ee646348c64de6f0e7b8e33876",
+        "canonical_id": "arXiv:2601.04359",
+        "arxiv_id": "2601.04359",
+        "doi": "10.48550/arXiv.2601.04359",
+        "authors": [
+          "Kun-Yang Li",
+          "Mubarak Shah",
+          "Yu-Zhang Shang"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 275,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.04852",
+      "identity_tokens": [
+        "id:SemanticScholar:af73ac720da745198471e1669878a6588e22c890",
+        "id:arXiv:2602.04852",
+        "title:on state reduction in linear attention",
+        "url:https://arxiv.org/abs/2602.04852"
+      ],
+      "record": {
+        "title": "On State Reduction in Linear Attention",
+        "source_url": "https://arxiv.org/abs/2602.04852",
+        "year": 2026,
+        "published": "2026-02-04",
+        "venue": null,
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention offers a computationally efficient yet expressive alternative to softmax attention. However, recent empirical results indicate that the hidden state of trained linear attention models often exhibits a low-rank structure, suggesting that these models underexploit their capacity in practice. To understand this phenomenon, we analyze how keys and values shape the rank of the recurrent state, providing a theoretical perspective on memory utilization in linear attention. In addition to these theoretical insights, we conjecture that low-rank states can be substantially reduced after pre-training. To this end, we propose a hardware-aware strategy to structurally prune the key and query matrices, reducing the state size while retaining compatibility with existing fast kernels. We adapt several existing pruning strategies to fit our framework and, building on our theoretical analysis, propose a robust structured pruning method based on a rank-revealing QR decomposition. Our empirical evaluations across model sizes show that the recurrent state of pretrained linear attention models can often be halved with only a modest increase in language modeling perplexity, while maintaining competitive performance on downstream tasks. The code for this project can be found at https://github.com/camail-official/LinearAttentionPruning.",
+        "identifiers": [
+          "SemanticScholar:af73ac720da745198471e1669878a6588e22c890"
+        ],
+        "semantic_scholar_id": "af73ac720da745198471e1669878a6588e22c890",
+        "canonical_id": "arXiv:2602.04852",
+        "arxiv_id": "2602.04852",
+        "authors": [
+          "Philipp Nazari",
+          "T. Konstantin Rusch"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 247,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.19157",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.19157",
+        "id:SemanticScholar:25cb0e3926f6e48c929313b627957f6d7d325edb",
+        "id:arXiv:2604.19157",
+        "title:sawint4 systemaware 4bit kvcache quantization for realworld llm serving",
+        "url:https://arxiv.org/abs/2604.19157"
+      ],
+      "record": {
+        "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
+        "source_url": "https://arxiv.org/abs/2604.19157",
+        "year": 2026,
+        "published": "2026-04-21",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache memory is a major bottleneck in real-world LLM serving, where systems must simultaneously support latency-sensitive small-batch requests and high-throughput concurrent workloads. Although many KV-cache compression methods improve offline accuracy or compression ratio, they often violate practical serving constraints such as paged memory layouts, regular memory access, and fused attention execution, limiting their effectiveness in deployment. In this work, we identify the minimal set of 4-bit KV-cache quantization methods that remain viable under these constraints. Our central finding is that a simple design--token-wise INT4 quantization with block-diagonal Hadamard rotation--consistently achieves the best accuracy-efficiency trade-off. Across multiple models and benchmarks, this approach recovers nearly all of the accuracy lost by naive INT4, while more complex methods such as vector quantization and Hessian-aware quantization provide only marginal additional gains once serving compatibility is taken into account. To make this practical, we implement a fused rotation-quantization kernel that integrates directly into paged KV-cache layouts and introduces zero measurable end-to-end overhead, matching plain INT4 throughput across concurrency levels. Our results show that effective KV-cache compression is fundamentally a systems co-design problem: under real serving constraints, lightweight block-diagonal Hadamard rotation is a viable method that delivers near-lossless accuracy without sacrificing serving efficiency.",
+        "identifiers": [
+          "SemanticScholar:25cb0e3926f6e48c929313b627957f6d7d325edb"
+        ],
+        "semantic_scholar_id": "25cb0e3926f6e48c929313b627957f6d7d325edb",
+        "canonical_id": "arXiv:2604.19157",
+        "arxiv_id": "2604.19157",
+        "doi": "10.48550/arXiv.2604.19157",
+        "authors": [
+          "Jinda Jia",
+          "Ji-Sen Li",
+          "Zhong-Zhu Zhou",
+          "Junghwa Heo",
+          "Jue Wang",
+          "Tri Dao",
+          "S. Song",
+          "B. Athiwaratkun",
+          "Chen-Feng Xu",
+          "Tian-Yi Zhang",
+          "Xiao-Xia Wu"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 171,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.19664",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.19664",
+        "id:SemanticScholar:45072890ed0fa71cbfea7179f2d45a11d19f1c9f",
+        "id:arXiv:2603.19664",
+        "title:the residual stream is all you need on the redundancy of the kv cache in transformer inference",
+        "url:https://arxiv.org/abs/2603.19664"
+      ],
+      "record": {
+        "title": "The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference",
+        "source_url": "https://arxiv.org/abs/2603.19664",
+        "year": 2026,
+        "published": "2026-03-20",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The key-value (KV) cache is widely treated as essential state in transformer inference, and a large body of work engineers policies to compress, evict, or approximate its entries. We prove that this state is entirely redundant: keys and values at every layer are deterministic projections of the residual stream, and recomputing them from a single residual vector per token incurs exactly zero reconstruction error, not approximately, but bit-identically. We verify this across six models from four architecture families (135M to 4B parameters). Cross-task residual patching at every layer produces D_KL = 0 between patched and original output distributions, confirming that the residual stream satisfies a Markov property and is the sole information-carrying state. Removing the cache entirely and recomputing from scratch yields token-identical output under greedy decoding on all models tested. We build on this result with KV-Direct, a bounded-memory inference scheme that checkpoints residual vectors (5 KB per token on Gemma 3-4B) instead of full KV pairs (136 KB), recomputing keys and values on demand. Over 20 conversation turns, KV-Direct holds peak memory at 42 MB while the standard cache grows past 103 MB. Against five eviction baselines (H2O, StreamingLLM, SnapKV, TOVA, window-only), KV-Direct maintains 100% token match at every cache budget; all baselines degrade to 5-28%. A per-operation latency analysis shows recomputation runs up to 5x faster than reading cached tensors at moderate batch sizes. Code is available at https://github.com/Kaleemullahqasim/KV-Direct.",
+        "identifiers": [
+          "SemanticScholar:45072890ed0fa71cbfea7179f2d45a11d19f1c9f"
+        ],
+        "semantic_scholar_id": "45072890ed0fa71cbfea7179f2d45a11d19f1c9f",
+        "canonical_id": "arXiv:2603.19664",
+        "arxiv_id": "2603.19664",
+        "doi": "10.48550/arXiv.2603.19664",
+        "authors": [
+          "Kaleem Ullah Qasim",
+          "Jia-Shu Zhang",
+          "M. Shaheen",
+          "Razan Alharith",
+          "He-Ying Zhang"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 203,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02123",
+      "identity_tokens": [
+        "id:SemanticScholar:65400a61064bdb2929b0f7baa08b5e4f5da85b47",
+        "id:arXiv:2608.02123",
+        "title:from chains to trees parentconditioned drafting for semiautoregressive speculative decoding",
+        "url:https://arxiv.org/abs/2608.02123"
+      ],
+      "record": {
+        "title": "From Chains to Trees: Parent-Conditioned Drafting for Semi-Autoregressive Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2608.02123",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM inference only when drafted continuations survive target-model verification. Semi-autoregressive drafters such as DSpark predict an entire token block with one backbone forward and refine it with a lightweight Markov head. However, DSpark decodes this block as a single chain, so an early mismatch invalidates the remaining suffix and limits the benefit of large draft blocks. We show that the conditional structure already learned by DSpark can support multiple parent-consistent continuations without retraining or additional backbone passes. We introduce Parent-Conditioned Drafting Tree (PCTree), which uses the pretrained Markov head to score alternative children separately for each concrete parent and allocates a fixed verification budget to the most probable paths. This converts DSpark's linear draft into a tree while preserving its one-pass parallel backbone. Across Qwen3-{4B,8B,14B} and nine benchmarks, at $B{=}7$, measured speedup gains over autoregressive (AR) decoding, relative to matched DSpark, range from $3.1\\%$ to $29.5\\%$. On Qwen3-4B GSM8K at $B{=}16$, PCTree increases mean acceptance length from $9.41$ to $11.16$ and three-run mean AR speedup from $6.14{\\times}$ to $6.60{\\times}$. These show that parent-conditioned branching can turn conditional capacity already present in a semi-autoregressive drafter into end-to-end inference gains through an inference-only change.",
+        "identifiers": [
+          "SemanticScholar:65400a61064bdb2929b0f7baa08b5e4f5da85b47"
+        ],
+        "semantic_scholar_id": "65400a61064bdb2929b0f7baa08b5e4f5da85b47",
+        "canonical_id": "arXiv:2608.02123",
+        "arxiv_id": "2608.02123",
+        "authors": [
+          "Zixian Li",
+          "Tong Li",
+          "C. Xie",
+          "Xiaohui Song",
+          "Hao Lu"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 67,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.04595",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2026.3731383",
+        "id:SemanticScholar:d32ae9842c1eedef4ec2f68fec328e800c65a460",
+        "id:arXiv:2602.04595",
+        "title:harmonia algorithmhardware codesign for memory and computeefficient bfpbased llm inference",
+        "url:https://arxiv.org/abs/2602.04595"
+      ],
+      "record": {
+        "title": "Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference",
+        "source_url": "https://arxiv.org/abs/2602.04595",
+        "year": 2026,
+        "published": "2026-02-04",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) incur substantial memory and computation costs. Prior works reduce FP-INT arithmetic overhead by converting linear-layer activations to block floating point (BFP), but retain FP activations in attention layers due to accuracy concerns. We propose Harmonia, an algorithm-hardware co-design framework that enables BFP representation and computation across both linear and attention layers. Harmonia first explores BFP configurations to balance model accuracy and activation compression. It then combines asymmetric bit allocation with hybrid offline-online outlier smoothing to compress the KV cache from FP16 to 4-bit-mantissa BFP with less than 1% average accuracy loss on LongBench. To efficiently support all-layer BFP computation, Harmonia incorporates a reconfigurable PE unit for mixed data formats and precisions, a real-time FP16-to-BFP converter, and a flexible tiling-aware dataflow that reduces external memory traffic. Evaluations across eight widely used LLMs show that Harmonia achieves 3.84x higher area efficiency, 2.03x better energy efficiency, and 3.08x speedup on average, with maximum improvements of 5.05x, 3.90x, and 4.62x, respectively.",
+        "identifiers": [
+          "SemanticScholar:d32ae9842c1eedef4ec2f68fec328e800c65a460"
+        ],
+        "semantic_scholar_id": "d32ae9842c1eedef4ec2f68fec328e800c65a460",
+        "canonical_id": "arXiv:2602.04595",
+        "arxiv_id": "2602.04595",
+        "doi": "10.1109/TCAD.2026.3731383",
+        "authors": [
+          "Xin-Yu Wang",
+          "Jie-Yu Li",
+          "Yanan Sun",
+          "Weifeng He"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 247,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.03157",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.03157",
+        "id:SemanticScholar:03a015adaa28e2b2c83bf4c7cc9d0a930ab12218",
+        "id:arXiv:2407.03157",
+        "title:let the code llm edit itself when you edit the code",
+        "url:https://arxiv.org/abs/2407.03157"
+      ],
+      "record": {
+        "title": "Let the Code LLM Edit Itself When You Edit the Code",
+        "source_url": "https://arxiv.org/abs/2407.03157",
+        "year": 2024,
+        "published": "2024-07-03",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this work, we investigate a typical scenario in code generation where a developer edits existing code in real time and requests a code assistant, e.g., a large language model, to re-predict the next token or next line on the fly. Naively, the LLM needs to re-encode the entire KV cache to provide an accurate prediction. However, this process is computationally expensive, especially when the sequence length is long. Simply encoding the edited subsequence and integrating it to the original KV cache meets the temporal confusion problem, leading to significantly worse performance. We address this efficiency and accuracy trade-off by introducing \\underline{\\textbf{Positional \\textbf{I}ntegrity \\textbf{E}ncoding} (PIE). Building upon the rotary positional encoding, PIE first removes the rotary matrices in the Key cache that introduce temporal confusion and then reapplies the correct rotary matrices. This process ensures that positional relationships between tokens are correct and requires only a single round of matrix multiplication. We validate the effectiveness of PIE through extensive experiments on the RepoBench-C-8k dataset, utilizing DeepSeek-Coder models with 1.3B, 6.7B, and 33B parameters. Our evaluation includes three real-world coding tasks: code insertion, code deletion, and multi-place code editing. Results demonstrate that PIE reduces computational overhead by over 85% compared to the standard full recomputation approach across all model sizes and tasks while well approximating the model performance.",
+        "identifiers": [
+          "SemanticScholar:03a015adaa28e2b2c83bf4c7cc9d0a930ab12218"
+        ],
+        "semantic_scholar_id": "03a015adaa28e2b2c83bf4c7cc9d0a930ab12218",
+        "canonical_id": "arXiv:2407.03157",
+        "arxiv_id": "2407.03157",
+        "doi": "10.48550/arXiv.2407.03157",
+        "authors": [
+          "Zhenyu He",
+          "Jun Zhang",
+          "Sheng-Jie Luo",
+          "Jingjing Xu",
+          "Zhi Zhang",
+          "Di He"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 828,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.52202/085713-0350",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-0350",
+        "id:SemanticScholar:69233828b38f614a9e3a742b4c835b8328710e4e",
+        "title:accurate kv cache eviction via anchor direction projection for efficient llm inference",
+        "url:https://doi.org/10.52202/085713-0350"
+      ],
+      "record": {
+        "title": "Accurate KV Cache Eviction via Anchor Direction Projection for Efficient LLM Inference",
+        "source_url": "https://doi.org/10.52202/085713-0350",
+        "year": 2025,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-Value (KV) cache eviction—which retains the KV pairs of the most important tokens while discarding less important ones—is a critical technique for optimizing both memory usage and inference latency in large language models (LLMs). However, existing approaches often rely on simple heuristics—such as attention weights—to measure token importance, overlooking the spatial relationships be-tween token value states in the vector space. This often leads to suboptimal token selections and thus performance degradation. To tackle this problem, we propose a novel method, namely AnDPro ( An chor D irection Pro jection), which introduces a projection-based scoring function to more accurately measure token importance. Specifically, AnDPro operates in the space of value vectors and leverages the projections of these vectors onto an “Anchor Direction” —the direction of the pre-eviction output—to measure token importance and guide more accurate token selection. Experiments on 16 datasets from the LongBench benchmark demonstrate that AnDPro can maintain 96 . 07% of the full cache accuracy using only 3 . 44% KV cache budget, reducing KV cache budget size by 46 . 0% without compromising quality compared to previous state-of-the-arts.",
+        "identifiers": [
+          "SemanticScholar:69233828b38f614a9e3a742b4c835b8328710e4e"
+        ],
+        "semantic_scholar_id": "69233828b38f614a9e3a742b4c835b8328710e4e",
+        "doi": "10.52202/085713-0350",
+        "canonical_id": "DOI:10.52202/085713-0350",
+        "authors": [
+          "Zijie Geng",
+          "Jie Wang",
+          "Ziqi Liu",
+          "Feng Ju",
+          "Yiming Li",
+          "Xing Li",
+          "Ming-Xuan Yuan",
+          "Jian-Ye Hao",
+          "De-Fu Lian",
+          "Enhong Chen",
+          "Feng Wu"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 465,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-naacl.462",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-naacl.462",
+        "id:SemanticScholar:ba0f0183255afb920a84720b268b4f4bf78259c0",
+        "title:hierarchical speculative decoding with dynamic window",
+        "url:https://doi.org/10.18653/v1/2025.findings-naacl.462"
+      ],
+      "record": {
+        "title": "Hierarchical Speculative Decoding with Dynamic Window",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-naacl.462",
+        "year": 2025,
+        "published": null,
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) utilizes an efficient draft model to generate multiple tokens, which are subsequently verified in parallel by a target model. This approach has shown significant potential for accelerating inference in large language models (LLMs), with performance heavily reliant on the hyperparameter K —the window size. However, previous meth-ods often depend on simple heuristics to select K or dynamically adjust the window size, which may necessitate additional training or careful resource management to avoid competition. To address these challenges, we pro-pose H ierarchical S peculative D ecoding with D ynamic W indow (HSDDW), a straightforward framework that eliminates the need for additional training. Specifically, we introduce a self-verify mechanism that enables the draft model to autonomously decide when to stop generating tokens. Additionally, by integrating a hierarchical structure that leverages the capabilities of models of different sizes, we significantly enhance the overall speed of the sys-tem. HSDDW demonstrates competitive performance across four datasets, achieving notable speedups of 2 . 91 × on MT-Bench and 2 . 99 × on Alpaca, outperforming existing state-of-the-art methods.",
+        "identifiers": [
+          "SemanticScholar:ba0f0183255afb920a84720b268b4f4bf78259c0"
+        ],
+        "semantic_scholar_id": "ba0f0183255afb920a84720b268b4f4bf78259c0",
+        "doi": "10.18653/v1/2025.findings-naacl.462",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
+        "authors": [
+          "Shensian Syu",
+          "Hung-yi Lee"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 465,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.02493",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.02493",
+        "id:SemanticScholar:7ebf679e89777f26655e0ea1c25757117f57e25d",
+        "id:arXiv:2502.02493",
+        "title:easyspec layerparallel speculative decoding for efficient multigpu utilization",
+        "url:https://arxiv.org/abs/2502.02493"
+      ],
+      "record": {
+        "title": "EasySpec: Layer-Parallel Speculative Decoding for Efficient Multi-GPU Utilization",
+        "source_url": "https://arxiv.org/abs/2502.02493",
+        "year": 2025,
+        "published": "2025-02-04",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding is an effective and lossless method for Large Language Model (LLM) inference acceleration. It employs a smaller model to generate a draft token sequence, which is then verified by the original base model. In multi-GPU systems, inference latency can be further reduced through tensor parallelism (TP), while the optimal TP size of the draft model is typically smaller than that of the base model, leading to GPU idling during the drafting stage. We observe that such inefficiency stems from the sequential execution of layers, which is seemingly natural but actually unnecessary. Therefore, we propose EasySpec, a layer-parallel speculation strategy that optimizes the efficiency of multi-GPU utilization. EasySpec breaks the inter-layer data dependencies in the draft model, enabling multiple layers to run simultaneously across multiple devices as'fuzzy'speculation. After each drafting-and-verification iteration, the draft model's key-value cache is calibrated in a single forward pass, preventing long-term fuzzy-error accumulation at minimal additional latency. EasySpec is a training-free and plug-in method. We evaluated EasySpec on several mainstream open-source LLMs, using smaller versions of models from the same series as drafters. The results demonstrate that EasySpec can achieve a peak speedup of 4.17x compared to vanilla decoding, while preserving the original distributions of the base LLMs. Specifically, the drafting stage can be accelerated by up to 1.62x with a maximum speculation accuracy drop of only 7%. The code is available at https://github.com/Yize-Wu/EasySpec.",
+        "identifiers": [
+          "SemanticScholar:7ebf679e89777f26655e0ea1c25757117f57e25d"
+        ],
+        "semantic_scholar_id": "7ebf679e89777f26655e0ea1c25757117f57e25d",
+        "canonical_id": "arXiv:2502.02493",
+        "arxiv_id": "2502.02493",
+        "doi": "10.48550/arXiv.2502.02493",
+        "authors": [
+          "Yi-Ze Wu",
+          "Ke Gao",
+          "Ling Li",
+          "Yan-Jun Wu"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 612,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.26527",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.26527",
+        "id:SemanticScholar:bcf618a5c5e9ff876813da4c5c1cc4033018a2ca",
+        "id:arXiv:2510.26527",
+        "title:polybasic speculative decoding through a theoretical perspective",
+        "url:https://arxiv.org/abs/2510.26527"
+      ],
+      "record": {
+        "title": "Polybasic Speculative Decoding Through a Theoretical Perspective",
+        "source_url": "https://arxiv.org/abs/2510.26527",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference latency stands as a critical bottleneck in the large-scale deployment of Large Language Models (LLMs). Speculative decoding methods have recently shown promise in accelerating inference without compromising the output distribution. However, existing work typically relies on a dualistic draft-verify framework and lacks rigorous theoretical grounding. In this paper, we introduce a novel \\emph{polybasic} speculative decoding framework, underpinned by a comprehensive theoretical analysis. Specifically, we prove a fundamental theorem that characterizes the optimal inference time for multi-model speculative decoding systems, shedding light on how to extend beyond the dualistic approach to a more general polybasic paradigm. Through our theoretical investigation of multi-model token generation, we expose and optimize the interplay between model capabilities, acceptance lengths, and overall computational cost. Our framework supports both standalone implementation and integration with existing speculative techniques, leading to accelerated performance in practice. Experimental results across multiple model families demonstrate that our approach yields speedup ratios ranging from $3.31\\times$ to $4.01\\times$ for LLaMA2-Chat 7B, up to $3.87 \\times$ for LLaMA3-8B, up to $4.43 \\times$ for Vicuna-7B and up to $3.85 \\times$ for Qwen2-7B -- all while preserving the original output distribution. We release our theoretical proofs and implementation code to facilitate further investigation into polybasic speculative decoding.",
+        "identifiers": [
+          "SemanticScholar:bcf618a5c5e9ff876813da4c5c1cc4033018a2ca"
+        ],
+        "semantic_scholar_id": "bcf618a5c5e9ff876813da4c5c1cc4033018a2ca",
+        "canonical_id": "arXiv:2510.26527",
+        "arxiv_id": "2510.26527",
+        "doi": "10.48550/arXiv.2510.26527",
+        "authors": [
+          "Rui-Lin Wang",
+          "Huixia Li",
+          "Yue-Xiao Ma",
+          "Xia-Wu Zheng",
+          "Fei Chao",
+          "Xue-Feng Xiao",
+          "Rongrong Ji"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 344,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.16994",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.16994",
+        "id:SemanticScholar:0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4",
+        "id:arXiv:2602.16994",
+        "title:dynamic delayed tree expansion for improved multipath speculative decoding",
+        "url:https://arxiv.org/abs/2602.16994"
+      ],
+      "record": {
+        "title": "Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2602.16994",
+        "year": 2026,
+        "published": "2026-02-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-path speculative decoding accelerates lossless sampling from a target model by using a cheaper draft model to generate a draft tree of tokens, and then applies a verification algorithm that accepts a subset of these. While prior work has proposed various verification algorithms for i.i.d rollouts, their relative performance under matched settings remains unclear. In this work, we firstly present a systematic evaluation of verification strategies across model families, tasks, and sampling regimes, and find that Traversal Verification dominates consistently, with OT-based methods lagging far behind. Our analysis uncovers that this occurs because OT-based methods achieve high multi-token acceptance near the root of the draft tree, while multi-token gains are most impactful deeper in the draft tree, where draft and target distributions diverge. Based on this insight, we propose delayed tree expansion, which drafts a partial single path, delaying the i.i.d. branching point. We show that delayed tree expansion preserves the target distribution and improves on root-node i.i.d rollouts. Further, we develop a dynamic neural selector that estimates the expected block efficiency of optimal-transport-based verification methods from draft and target features, enabling context-dependent expansion decisions. Our neural selector allows OT-based methods like SpecInfer to outperform Traversal Verification for the first time, achieving 5% higher average throughput across a wide range of models, datasets, and sampling settings.",
+        "identifiers": [
+          "SemanticScholar:0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4"
+        ],
+        "semantic_scholar_id": "0cbf050bd3b32bb602e8bd1a8e006ae8fcdf4dd4",
+        "canonical_id": "arXiv:2602.16994",
+        "arxiv_id": "2602.16994",
+        "doi": "10.48550/arXiv.2602.16994",
+        "authors": [
+          "R. Thomas",
+          "Teo Kitanovski",
+          "Micah Goldblum",
+          "Arka Pal"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 232,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33224",
+      "identity_tokens": [
+        "id:SemanticScholar:d07c54b105eedb5d6853337b23cffc09b6d93264",
+        "id:arXiv:2609.33224",
+        "title:packserve sloaware request scheduling for agentic llm serving at scale",
+        "url:https://arxiv.org/abs/2609.33224"
+      ],
+      "record": {
+        "title": "PackServe: SLO-Aware Request Scheduling for Agentic LLM Serving at Scale",
+        "source_url": "https://arxiv.org/abs/2609.33224",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Request scheduling is a key challenge in large-scale clusters serving agentic large language model (LLM) workloads. An effective scheduler must preserve key-value cache (KVC) reuse across long, shared prefixes, meet token-level latency service-level objectives (SLOs), and minimize GPU resource footprint. Existing schedulers struggle to reconcile these requirements: request consolidation can sacrifice cache locality and increase prefill/decode interference, compromising both SLO attainment and resource efficiency. We present PackServe, a scheduler designed to reduce resource costs while meeting latency SLOs for agentic LLM serving. PackServe uses compact white-box models to predict latency under prefill/decode interference. Guided by these predictions, it packs requests onto fewer serving instances while preserving KVC reuse and SLO constraints, trading available latency headroom for improved per-instance throughput. Evaluation on 64 NVIDIA H20 GPUs shows that PackServe uses up to 16.8% and 24.6% fewer GPU-hours than state-of-the-art schedulers under 30-ms and 50-ms TPOT targets, respectively, while meeting the target TPOT objectives. PackServe has also been deployed in our production cluster comprising over 1000 GPUs, where it reduces the resource footprint by 34.7% compared with the original production scheduler.",
+        "identifiers": [
+          "SemanticScholar:d07c54b105eedb5d6853337b23cffc09b6d93264"
+        ],
+        "semantic_scholar_id": "d07c54b105eedb5d6853337b23cffc09b6d93264",
+        "canonical_id": "arXiv:2609.33224",
+        "arxiv_id": "2609.33224",
+        "authors": [
+          "Zhi-Yuan Tan",
+          "De-Jiang Zhu",
+          "Jing-Zhe Jiang",
+          "Yi-Hao Zheng",
+          "Yang Tian",
+          "Tao Wang",
+          "Min-Chen Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33536",
+      "identity_tokens": [
+        "id:SemanticScholar:101dd807a178d41163afaf258ee5e88069ff636e",
+        "id:arXiv:2609.33536",
+        "title:does execution require target kv fidelity a mixedfidelity kv runtime for llm serving",
+        "url:https://arxiv.org/abs/2609.33536"
+      ],
+      "record": {
+        "title": "Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.33536",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving is increasingly constrained by the GPU memory consumed by key-value (KV) caches. Existing compression, eviction, and offloading techniques alleviate this pressure, but serving runtimes typically treat only the configured target KV representation as execution-ready. Under memory pressure, this target-only contract can turn KV shortage into request stalls and preemptions. We present ElasticKV, a mixed-fidelity KV runtime built on the observation that target fidelity need not gate execution. ElasticKV introduces a compact intermediate KV state, making fidelity a runtime-managed execution property. To realize this state in a paged serving runtime, ElasticKV combines (i) a pair-structured layout that turns fidelity reduction into reusable GPU capacity, (ii) a dual-mode attention backend that directly consumes the compact state while preserving the native target-only path, and (iii) pressure-aware fidelity management that adapts KV fidelity to memory pressure. Our extensive evaluation across diverse workloads, model families and scales, and GPU platforms demonstrates the effectiveness and generality of ElasticKV. Under high concurrency, ElasticKV achieves 3.8-4.0$\\times$ lower time-to-first-token (TTFT) and 9.1$\\times$ lower P90 TTFT than vLLM while preserving generation quality.",
+        "identifiers": [
+          "SemanticScholar:101dd807a178d41163afaf258ee5e88069ff636e"
+        ],
+        "semantic_scholar_id": "101dd807a178d41163afaf258ee5e88069ff636e",
+        "canonical_id": "arXiv:2609.33536",
+        "arxiv_id": "2609.33536",
+        "authors": [
+          "Jiantong Jiang",
+          "Yue Yang",
+          "Pei-Yu Yang",
+          "Feng Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00321",
+      "identity_tokens": [
+        "id:SemanticScholar:7c640cbdab916c67b16099ba67b1d2174ecddd29",
+        "id:arXiv:2610.00321",
+        "title:cast costaware speculative trees from onepass block drafters",
+        "url:https://arxiv.org/abs/2610.00321"
+      ],
+      "record": {
+        "title": "CAST: Cost-Aware Speculative Trees from One-Pass Block Drafters",
+        "source_url": "https://arxiv.org/abs/2610.00321",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference by drafting future tokens cheaply and verifying them with the target model in parallel. Block drafters score a whole block of future tokens in one forward pass, yet standard decoding verifies only the top-scoring chain and discards the other candidates. Because these candidates are already scored, verifying more of them adds target computation but no extra drafting. We introduce CAST (Cost-Aware Speculative Trees), which packs these candidates into a tree and verifies it in a single target pass, leaving the target model, drafter weights, and decoding rule untouched. To decide how wide the tree should be, CAST adds candidates while the expected gain from the next one outweighs the verification time it adds. The width therefore adapts to each deployment from a latency measurement, without sweeping over widths. We evaluate CAST across five domains on three GPU generations and two model families. At its predicted width, CAST is faster than the standard chain in all eight settings, by up to 43%. We also find that the best width depends strongly on the deployment. Where verification cost jumps at a kernel boundary, a 128-token tree is only 2% faster than the standard chain, whereas the tree at the predicted width is 20% faster. Furthermore, we prove that CAST leaves the target output distribution unchanged under both greedy and sampled decoding. Code is available at https://github.com/js-lee-AI/CAST.",
+        "identifiers": [
+          "SemanticScholar:7c640cbdab916c67b16099ba67b1d2174ecddd29"
+        ],
+        "semantic_scholar_id": "7c640cbdab916c67b16099ba67b1d2174ecddd29",
+        "canonical_id": "arXiv:2610.00321",
+        "arxiv_id": "2610.00321",
+        "authors": [
+          "Jungseob Lee",
+          "Sugyeong Eo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39068",
+      "identity_tokens": [
+        "id:SemanticScholar:8303a36506f1529b7fac06064cfefe8855d5f813",
+        "id:arXiv:2609.39068",
+        "title:sparseengine sparsefirst inference engine",
+        "url:https://arxiv.org/abs/2609.39068"
+      ],
+      "record": {
+        "title": "SparseEngine: Sparse-First Inference Engine",
+        "source_url": "https://arxiv.org/abs/2609.39068",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLM agents accumulate interaction histories that strain KV-cache memory and attention computation. Although sparse attention reduces these costs, heterogeneous cache representations and workflows hinder integration with existing inference engines, while prior sparse-serving abstractions support only specific layouts or workflows. We present SparseEngine, a ground-up, sparse-first inference engine whose shared lifecycle contract lets each method control its KV representation and computation while coordinating state transitions with common serving infrastructure. SparseEngine supports 15 methods across four categories and enables cross-request state management through Chain Cache, which resumes KV-eviction methods from retained history, and controllable Prefix-Cache Pruning, which removes KV from selected history regions while preserving logical-prefix matching. While maintaining method quality, SparseEngine delivers over 10x higher throughput with KV eviction, over 2.5x faster decoding at matched concurrency than vLLM, and over 2x end-to-end speedup on agent benchmarks. The code is available at https://github.com/CURRENTF/SparseEngine.",
+        "identifiers": [
+          "SemanticScholar:8303a36506f1529b7fac06064cfefe8855d5f813"
+        ],
+        "semantic_scholar_id": "8303a36506f1529b7fac06064cfefe8855d5f813",
+        "canonical_id": "arXiv:2609.39068",
+        "arxiv_id": "2609.39068",
+        "authors": [
+          "Jitai Hao",
+          "Quan-Sheng Gu",
+          "Qiang Huang",
+          "Jun Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.20787",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.20787",
+        "id:SemanticScholar:c43c714fb65f982264bdbc417f0e9da6954f704a",
+        "id:arXiv:2510.20787",
+        "title:alleviating forgetfulness of linear attention by hybrid sparse attention and contextualized learnable token eviction",
+        "url:https://arxiv.org/abs/2510.20787"
+      ],
+      "record": {
+        "title": "Alleviating Forgetfulness of Linear Attention by Hybrid Sparse Attention and Contextualized Learnable Token Eviction",
+        "source_url": "https://arxiv.org/abs/2510.20787",
+        "year": 2025,
+        "published": "2025-10-23",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear-attention models that compress the entire input sequence into a fixed-size recurrent state offer an efficient alternative to Transformers, but their finite memory induces forgetfulness that harms retrieval-intensive tasks. To mitigate the issue, we explore a series of hybrid models that restore direct access to past tokens. We interleave token mixers with intermediate time and space complexity between linear and full attention, including sparse attention with token eviction, and the query-aware native sparse attention. Particularly, we propose a novel learnable token eviction approach. Combined with sliding-window attention, an end-to-end trainable lightweight CNN aggregates information from both past and future adjacent tokens to adaptively retain a limited set of critical KV-pairs per head, maintaining linear attention's constant time and space complexity. Efficient Triton kernels for the sparse attention mechanisms are provided. Empirical evaluations on retrieval-intensive benchmarks support the effectiveness of our approaches.",
+        "identifiers": [
+          "SemanticScholar:c43c714fb65f982264bdbc417f0e9da6954f704a"
+        ],
+        "semantic_scholar_id": "c43c714fb65f982264bdbc417f0e9da6954f704a",
+        "canonical_id": "arXiv:2510.20787",
+        "arxiv_id": "2510.20787",
+        "doi": "10.48550/arXiv.2510.20787",
+        "authors": [
+          "Mu-Tian He",
+          "Philip N. Garner"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 351,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.22876",
+      "identity_tokens": [
+        "id:SemanticScholar:fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a",
+        "id:arXiv:2510.22876",
+        "title:correctness forensics for batch speculative decoding diagnosing the ragged tensor problem",
+        "url:https://arxiv.org/abs/2510.22876"
+      ],
+      "record": {
+        "title": "Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem",
+        "source_url": "https://arxiv.org/abs/2510.22876",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": null,
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference optimizations are routinely evaluated by throughput alone, without verifying output correctness. We conduct a forensic analysis of batch speculative decoding and find that several widely-used implementations silently produce corrupted outputs (repetitive tokens,symbols) while reporting competitive speed; failures invisible to metrics like ROUGE. We trace the root cause to the ragged tensor problem: variable token acceptance desynchronizes position IDs, attention masks, and KV-cache across a batch. We formalize the synchronization invariants (rectangular alignment and position-ID contiguity) that valid batched inference must preserve and show that maintaining them incurs superlinear alignment overhead under contiguous layouts. EQSPEC enforces the invariants without custom kernels; EXSPEC schedules same-length sequences to bypass realignment. On SpecBench across three model families, EXSPEC reaches 3 x throughput at batch size 8 with 95% exact match to standard decoding; residual divergence traces to floating-point non-determinism, not synchronization error. Code:https://github.com/eBay/spec_dec",
+        "identifiers": [
+          "SemanticScholar:fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a"
+        ],
+        "semantic_scholar_id": "fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a",
+        "canonical_id": "arXiv:2510.22876",
+        "arxiv_id": "2510.22876",
+        "authors": [
+          "Ran-Ran Zhang",
+          "Soumik Dey",
+          "Ashirbad Mishra",
+          "Han-Si Wu",
+          "Bin-Bin Li",
+          "Rui Zhang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.19409",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.19409",
+        "id:SemanticScholar:74098938f86ab0e37561377b7250e3d02c92fbfb",
+        "id:arXiv:2507.19409",
+        "title:modality agnostic efficient long range encoder",
+        "url:https://arxiv.org/abs/2507.19409"
+      ],
+      "record": {
+        "title": "Modality Agnostic Efficient Long Range Encoder",
+        "source_url": "https://arxiv.org/abs/2507.19409",
+        "year": 2025,
+        "published": "2025-07-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The long-context capability of recent large transformer models can be surmised to rely on techniques such as attention/model parallelism, as well as hardware-level optimizations. While these strategies allow input lengths to scale to millions of tokens, they do not fundamentally mitigate the quadratic computational and memory complexity of the core attention mechanism. In this paper, we address the challenge of long-context processing on a single device using generic implementations by reducing the quadratic memory footprint and inference cost. Existing approaches to extend the context length for generic single device implementations -- such as token merging and modified attentions -- are often modality specific and attain a suboptimal tradeoff between accuracy and efficiency. To overcome these limitations, we propose MAELRE (Modality Agnostic Efficient Long Range Encoder), a unified and efficient transformer architecture designed for long-range encoding across diverse modalities. MAELRE integrates token merging with attention approximation, progressively merging tokens at different stages of internal computational blocks. It employs a lightweight attention approximation when the number of tokens is large, and switches to standard dot-product attention as the sequence becomes shorter through successive aggregation. We demonstrate that MAELRE achieves superior accuracy while reducing computational cost compared to existing long-context models on classification tasks spanning multiple modalities, including text, time series, audio, and vision.",
+        "identifiers": [
+          "SemanticScholar:74098938f86ab0e37561377b7250e3d02c92fbfb"
+        ],
+        "semantic_scholar_id": "74098938f86ab0e37561377b7250e3d02c92fbfb",
+        "canonical_id": "arXiv:2507.19409",
+        "arxiv_id": "2507.19409",
+        "doi": "10.48550/arXiv.2507.19409",
+        "authors": [
+          "T. Parag",
+          "Ahmed Elgammal"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 441,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4620f21673e2363054a99c18c6af0d287b43f41715fe1e584cb805baa487b73c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
