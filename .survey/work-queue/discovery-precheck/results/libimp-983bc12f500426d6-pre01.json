@@ -1,0 +1,1600 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-983bc12f500426d6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-983bc12f5004",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1609/aaai.v38i17.29908",
+    "DOI:10.18653/v1/2026.findings-acl.201",
+    "DOI:10.52202/085713-2984",
+    "arXiv:2410.10141",
+    "arXiv:2502.15955",
+    "arXiv:2503.00022",
+    "arXiv:2509.10798",
+    "arXiv:2510.05176",
+    "arXiv:2512.02901",
+    "arXiv:2602.18196",
+    "arXiv:2603.01399",
+    "arXiv:2605.08587",
+    "arXiv:2605.24330",
+    "arXiv:2609.35621",
+    "arXiv:2609.36835",
+    "arXiv:2609.37626",
+    "arXiv:2609.39329"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 17,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "bbdaae3ad19b6dbbf8f28bdaa8e9e9d028c7725e",
+  "raw_search_result_count": 17,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 17,
+  "provider_progress": {
+    "requested_count": 17,
+    "status_counts": {
+      "allowed": 17,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-09T23:33:42.174538+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1609/aaai.v38i17.29908",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.201",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.52202/085713-2984",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.10141",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.15955",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.00022",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.10798",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.05176",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.02901",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.18196",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.01399",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08587",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.24330",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35621",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36835",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37626",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39329",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {± 1, ± i}",
+      "source_url": "https://arxiv.org/abs/2512.02901",
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have revolutionized artificial intelligence, yet their massive memory and computational demands necessitate aggressive quantization, increasingly pushing representations toward the theoretical limit of a single bit. While complex-valued LLMs, such as iFairy, offer a superior chance for low-bit representation compared to real-valued counterparts, they require training from scratch, preventing the utilization of the vast ecosystem of pre-trained real-valued foundation models. Here we present Fairy2i, a universal framework that transforms pre-trained real-valued layers into an equivalent widely-linear complex form, enabling extremely low-bit quantization while reusing existing checkpoints. By proving a lossless mathematical equivalence between real and widely-linear maps, we convert standard Transformers into the complex domain and employ a phase-aware quantization scheme with a highly efficient codebook of fourth roots of unity. Furthermore, we introduce a recursive residual quantization mechanism that iteratively minimizes quantization error, allowing inference to proceed via efficient multiplication-free accumulation. We demonstrate that Fairy2i restores the performance of LLaMA-2 7B at an effective 2-bit precision to levels nearly comparable with full-precision baselines, significantly outperforming state-of-the-art real-valued binary and ternary quantization methods. This work bridges the gap between the representational efficiency of complex-valued arithmetic and the practical utility of pre-trained models, paving a new way for efficient inference on commodity hardware. We open-source the Fairy2i model and code at https://huggingface.co/PKU-DS-LAB/Fairy2i-W2 and https://github.com/PKULab1806/Fairy2i-W2.",
+      "identifiers": [
+        "SemanticScholar:adcee8cd5a7e6de2448fd8f33c7e71cb26d7c691"
+      ],
+      "semantic_scholar_id": "adcee8cd5a7e6de2448fd8f33c7e71cb26d7c691",
+      "canonical_id": "arXiv:2512.02901",
+      "arxiv_id": "2512.02901",
+      "doi": "10.48550/arXiv.2512.02901",
+      "authors": [
+        "Feiyu Wang",
+        "Xin-Yu Tan",
+        "Bo-Kai Huang",
+        "Yihao Zhang",
+        "Guo-An Wang",
+        "Pei-Zhuang Cong",
+        "Tong Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 311,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RAT+: Train Dense, Infer Sparse - Recurrence Augmented Attention for Dilated Inference",
+      "source_url": "https://arxiv.org/abs/2602.18196",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured dilated attention has an appealing inference-time efficiency knob: it reduces the FLOPs of attention and the KV cache size by a factor of the dilation size D, while preserving long-range connectivity. While prior work studies it by training each configuration from scratch, directly sparsifying a pretrained attention model into a dilated pattern leads to severe accuracy degradation, preventing flexible reuse across inference scenarios. We introduce RAT+, a dense-pretraining architecture that augments attention with full-sequence recurrence and active recurrence learning. A single RAT+ model is pretrained densely once and can then be flexibly switched at inference time to dilated attention (optionally with local windows) or hybrid layer/head compositions, requiring only a short 1B-token resolution adaptation rather than retraining separate sparse models. At 1.5B parameters trained on 100B tokens, RAT+ closely matches dense accuracy at D = 16, and drops by about 2-3 points at D = 64 on commonsense reasoning and LongBench tasks. We further scale to 2.6B and 7.6B parameters and observe even more promising performance (e.g., a 1-point average accuracy loss with a 64x reduction in attention FLOPs and KV cache size). Code is available at https://github.com/wimh966/rat-plus.",
+      "identifiers": [
+        "SemanticScholar:d76feb4e3dcad47fb31d634c3bd3899f56c56c6b"
+      ],
+      "semantic_scholar_id": "d76feb4e3dcad47fb31d634c3bd3899f56c56c6b",
+      "canonical_id": "arXiv:2602.18196",
+      "arxiv_id": "2602.18196",
+      "doi": "10.48550/arXiv.2602.18196",
+      "authors": [
+        "Xiuying Wei",
+        "Caglar Gulcehre"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification",
+      "source_url": "https://arxiv.org/abs/2603.01399",
+      "year": 2026,
+      "published": "2026-03-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) has emerged as a premier technique for accelerating Large Language Model (LLM) inference by decoupling token generation into rapid drafting and parallel verification. While recent advancements in self-speculation and lookahead decoding have successfully minimized drafting overhead, they have shifted the primary performance bottleneck to the verification phase. Since verification requires a full forward pass of the target model, it remains strictly memory-bandwidth bound, fundamentally limiting the maximum achievable speedup.In this paper, we introduce \\textbf{Quasar} (\\textbf{Qua}ntized \\textbf{S}elf-speculative \\textbf{A}cceleration for \\textbf{R}apid Inference), a novel, training-free framework designed to overcome this\"memory wall\"by employing low-bit quantization specifically for the verification stage. Our empirical analysis reveals that while aggressive structural pruning significantly degrades verification accuracy, quantization-based verification preserves the logit distribution with high fidelity while effectively halving memory traffic. Extensive experiments on state-of-the-art models (e.g., OpenPangu and Qwen3) demonstrate that Quasar maintains a speculative acceptance length comparable to full-precision methods while achieving a $1.28\\times$ improvement in end-to-end throughput. Being orthogonal to existing drafting strategies, Quasar offers a generic and efficient pathway to accelerate the verification leg of speculative execution. Code is available at https://github.com/Tom-HG/Quasar.",
+      "identifiers": [
+        "SemanticScholar:94ab7b9bbb6a61304631b46f4cce016feddb9052"
+      ],
+      "semantic_scholar_id": "94ab7b9bbb6a61304631b46f4cce016feddb9052",
+      "canonical_id": "arXiv:2603.01399",
+      "arxiv_id": "2603.01399",
+      "doi": "10.48550/arXiv.2603.01399",
+      "authors": [
+        "Guangtai Huang",
+        "Ze-Yi Wen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 221,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Kaczmarz Linear Attention",
+      "source_url": "https://arxiv.org/abs/2605.08587",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language modeling remains central to modern sequence modeling, but the quadratic cost of Transformer attention makes scaling computationally prohibitive. Linear recurrent models address this bottleneck by compressing the context into a fixed-size state, making the rule that forgets, writes, and edits information a central design problem. To address state maintenance, Gated DeltaNet (GDN) combines gated state decay with delta-rule residual writes, using a learnable coefficient to balance forgetting and update magnitude. However, this coefficient is learned empirically rather than derived from the underlying objective, which can lead to suboptimal update magnitudes. We revisit the online-regression objective underlying GDN and, inspired by the Kaczmarz projection method, derive the key-norm-normalized dynamic step size $\\beta_t = \\eta_t / (\\|k_t\\|_2^2 + \\epsilon)$ for residual updates. We propose Kaczmarz Linear Attention (KLA), a one-scalar modification of GDN that preserves the state shape, gates, linear recurrence, and chunkwise parallel algorithm. At the 0.4B scale with a 1B-token budget, KLA achieves the lowest validation perplexity among evaluated linear-time baselines, 8.09 versus 8.50 for GDN, and remains stable up to 65K tokens. On controlled tasks, KLA reaches 100% on single-needle-in-a-haystack retrieval, improves 8x multi-query associative recall by 7.03 points over GDN, and delivers 2.1x higher decode throughput at 32K context. These results suggest that the key-norm-normalized Kaczmarz coefficient is a first-order design axis for delta-rule sequence models: it improves accuracy, extrapolation, and decoding efficiency without changing the recurrent state or hardware kernel.",
+      "identifiers": [
+        "SemanticScholar:7200df0603b57db0446c58e5a572f50a57d56005"
+      ],
+      "semantic_scholar_id": "7200df0603b57db0446c58e5a572f50a57d56005",
+      "canonical_id": "arXiv:2605.08587",
+      "arxiv_id": "2605.08587",
+      "doi": "10.48550/arXiv.2605.08587",
+      "authors": [
+        "Jiaxuan Zou",
+        "Ruifeng Ren",
+        "Yong Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cartridges++: KV Cache Compression without Off-Context Derailment",
+      "source_url": "https://arxiv.org/abs/2609.35621",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving long documents to a Large Language Model (LLM) repeatedly is expensive: computations grow with context length, and the memory footprint of the key-value (KV) cache balloons. Compressed KV (CKV) representations aim to mimic the cache of a document and are typically computed once and for all, ahead of inference time. Methods to obtain CKVs range from drop mechanisms that reduce their number of columns, to learned approaches. Among the latter, Cartridges have emerged as a leading compression method, learning compact KV representations through distillation on relevant Q/A pairs. While existing evaluations focus primarily on whether Cartridges and other CKVs yield approximately similar responses to document-related, on-context queries, we investigate the crucial deployment question of whether they can handle off-context queries, something the native KV representation is particularly good at, thanks to the mechanics of attention. We observe a fundamental trade-off: while Cartridges perform better for on-context queries, heuristic-variants preserve better the original LLM's ability to operate off-context. We measure this through their capability to avoid context contamination in their response, retain general knowledge, and follow instructions. We propose Cartridges++, simple modifications to cartridges that retain off-context abilities at small or negligible cost. The router variant decides at inference time whether the query should use the learned long-context memory, while the data-mixing variant allocates a small fraction of training Q/As to queries outside the reference long document. Our study shows that assessing CKVs on document utility alone can mask substantial degradation in broader model capabilities, yet those issues can be fixed with benign changes to CKV inference or training.",
+      "identifiers": [
+        "SemanticScholar:bc905ea430e4ca8ed40be2f11ed8fa469dc5022c"
+      ],
+      "semantic_scholar_id": "bc905ea430e4ca8ed40be2f11ed8fa469dc5022c",
+      "canonical_id": "arXiv:2609.35621",
+      "arxiv_id": "2609.35621",
+      "authors": [
+        "Sonia Laguna",
+        "João Monteiro",
+        "Marco Cuturi",
+        "Pierre Ablin",
+        "Eleonora Gualdoni"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
+      "source_url": "https://arxiv.org/abs/2609.36835",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language model inference is bottlenecked by KV caches that grow linearly with sequence length. This burden is especially severe for long, reusable context prefixes, whose cache must serve many downstream queries. Reconstruction-based methods such as Attention Matching achieve strong downstream task performance with compact KV caches. However, iterative anchor search dominates the compaction cost of OMP-based Attention Matching. This motivates our selective amortization principle of learning a reusable anchor-selection policy across contexts while retaining context-specific reconstruction. In this work, we propose ARC-KV, a novel reconstruction-based KV cache compaction method that follows this principle. To this end, we first train a value-aware indexer to select real-key anchors in a single scoring pass. ARC-KV then applies convex-hull-constrained key merging and fits an attention-mass bias and compact values against the full cache. At inference time, ARC-KV builds the compact cache once per context using the frozen indexer and reuses it for all subsequent queries. Extensive experiments demonstrate that ARC-KV outperforms reported compaction methods in most settings across QuALITY, RULER, and LongBench on Llama-3.1-8B-Instruct. In particular, at 10% KV retention on QuALITY, ARC-KV improves accuracy from 0.6409 to 0.6474 over Attention Matching while reducing compaction time by a factor of 25.73, from 959.8 s to 37.3 s.",
+      "identifiers": [
+        "SemanticScholar:63808af9addaa711fd90de3f35f16a8c5dfc82bd"
+      ],
+      "semantic_scholar_id": "63808af9addaa711fd90de3f35f16a8c5dfc82bd",
+      "canonical_id": "arXiv:2609.36835",
+      "arxiv_id": "2609.36835",
+      "authors": [
+        "Zhe-Yu Shen",
+        "Guan-Hua Wang",
+        "De-Zhan Tu",
+        "Meng-Chi Zhang",
+        "Yan-Jiao Li",
+        "Adnan Aziz",
+        "Chun-Qiang Tang",
+        "Ang Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
+      "source_url": "https://doi.org/10.1609/aaai.v38i17.29908",
+      "year": 2024,
+      "published": "2024-03-24",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 63,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has emerged as a promising technique for mitigating memory consumption and computational costs in large language models (LLMs). However, a systematic examination of various quantization schemes, model families, and quantization bit precision has been absent from the literature. In this paper, we conduct a comprehensive analysis of these factors by investigating the effects of PTQ on weight-only, activation-only, and weight-and-activation quantization using diverse methods such as round-to-nearest (RTN), GPTQ, ZeroQuant, and their variants. We apply these methods to two distinct model families with parameters ranging from 125M to 176B. Our contributions include: (1) a sensitivity analysis revealing that activation quantization is generally more susceptible to weight quantization, with smaller models often outperforming larger models in terms of activation quantization; (2) an evaluation and comparison of existing PTQ methods to optimize model size reduction while minimizing the impact on accuracy, revealing that none of the current methods can achieve the original model quality for quantization with either INT4-weight or INT4-weight-and-INT8-activation; (3) based on these insights, we propose an optimized method called Low-Rank Compensation (LoRC), which employs low-rank matrices to enhance model quality recovery with a minimal increase in model size.",
+      "identifiers": [
+        "SemanticScholar:93ad719fdad8ef1ced208d7034954009ec4d793e"
+      ],
+      "semantic_scholar_id": "93ad719fdad8ef1ced208d7034954009ec4d793e",
+      "doi": "10.1609/aaai.v38i17.29908",
+      "canonical_id": "DOI:10.1609/aaai.v38i17.29908",
+      "authors": [
+        "Zhewei Yao",
+        "Xiaoxia Wu",
+        "Cheng Li",
+        "Stephen Youn",
+        "Yuxiong He"
+      ],
+      "priority": 63,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 63,
+        "citation_count": 63,
+        "total": 63,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 929,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Temperature-Centric Investigation of Speculative Decoding with Knowledge Distillation",
+      "source_url": "https://arxiv.org/abs/2410.10141",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding stands as a pivotal technique to expedite inference in autoregressive (large) language models. This method employs a smaller draft model to speculate a block of tokens, which the target model then evaluates for acceptance. Despite a wealth of studies aimed at increasing the efficiency of speculative decoding, the influence of generation configurations on the decoding process remains poorly understood, especially concerning decoding temperatures. This paper delves into the effects of decoding temperatures on speculative decoding's efficacy. Beginning with knowledge distillation (KD), we first highlight the challenge of decoding at higher temperatures, and demonstrate KD in a consistent temperature setting could be a remedy. We also investigate the effects of out-of-domain testing sets with out-of-range temperatures. Building upon these findings, we take an initial step to further the speedup for speculative decoding, particularly in a high-temperature generation setting. Our work offers new insights into how generation configurations drastically affect the performance of speculative decoding, and underscores the need for developing methods that focus on diverse decoding configurations. Code is publically available at https://github.com/ozyyshr/TempSpec.",
+      "identifiers": [
+        "SemanticScholar:ef2ebc205bf8d7c4cea73ff8774689f65d426e71"
+      ],
+      "semantic_scholar_id": "ef2ebc205bf8d7c4cea73ff8774689f65d426e71",
+      "canonical_id": "arXiv:2410.10141",
+      "arxiv_id": "2410.10141",
+      "doi": "10.48550/arXiv.2410.10141",
+      "authors": [
+        "Siru Ouyang",
+        "Shuohang Wang",
+        "Minhao Jiang",
+        "Ming Zhong",
+        "Dong Yu",
+        "Jiawei Han",
+        "Yelong Shen"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 725,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "HqeKV: Towards Hybrid Quantization and Eviction for KV Cache in Long-Context LLM Inference",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.201",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive inference in large language models requires repeated computation across transformer layers. While caching intermediate key-value (KV) pairs eliminates redundancy, it introduces severe memory overhead, particularly in long-context settings. Most existing cache compression methods operate solely on either quantization or eviction, based on importance estimation of cached data. However, they are limited by coarse compression choices and inaccurate importance assessment, leading to suboptimal inference quality. To address this, we propose HqeKV, a hybrid compression framework built on both quantization and eviction, offering finer-grained compression options that adapt smoothly to the varying importance of cached KV pairs. An integrated optimizer automatically selects the best compression action for each cached element, maximizing quality while insulating end-users from tedious low-level tuning details. We further de-sign a joint K–V importance metric to provide more accurate importance assessment results so that the optimizer can make smarter decisions. Additionally, HqeKV supports flexible conversion policies across multiple quantization precision levels, to further reduce quality degradation. Extensive experiments show that HqeKV improves output quality under the same memory constraints, outperforming state-of-the-art alternatives. Code is available at https://github.com/skywclouds/HqeKV .",
+      "identifiers": [
+        "SemanticScholar:e5bc62270dc0be9d3125782a34832fec54f47e12"
+      ],
+      "semantic_scholar_id": "e5bc62270dc0be9d3125782a34832fec54f47e12",
+      "doi": "10.18653/v1/2026.findings-acl.201",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.201",
+      "authors": [
+        "He Wang",
+        "Yu Gu",
+        "Fangfang Li",
+        "Zhigang Wang",
+        "Zheng-Hao Liu",
+        "Ning Wang",
+        "Xiaohua Li",
+        "Ge Yu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse",
+      "source_url": "https://doi.org/10.52202/085713-2984",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache technology, by storing key-value pairs, helps reduce the computational overhead incurred by large language models (LLMs). It facilitates their deployment on resource-constrained edge computing nodes like edge servers. However, as the complexity and size of tasks increase, KV cache usage leads to substantial GPU memory consumption. Existing research has focused on mitigating KV cache memory usage through sequence length reduction, task-specific compression, and dynamic eviction policies. However, these methods are computationally expensive for resource-constrained edge computing nodes. To tackle this challenge, this paper presents Sim-LLM, a novel inference optimization mechanism that leverages task similarity to reduce KV cache memory consumption for LLMs. By caching KVs from processed tasks and reusing them for subsequent similar tasks during inference, Sim-LLM significantly reduces memory consumption while boosting system throughput and increasing maximum batch size, all with minimal accuracy degradation. Evaluated on both A40 and A100 GPUs, Sim-LLM achieves a system throughput improvement of up to 39.40% and a memory reduction of up to 34.65%, compared to state-of-the-art approaches. Our source code is available at https://github.com/CGCL-codes/SimLLM .",
+      "identifiers": [
+        "SemanticScholar:e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c"
+      ],
+      "semantic_scholar_id": "e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c",
+      "doi": "10.52202/085713-2984",
+      "canonical_id": "DOI:10.52202/085713-2984",
+      "authors": [
+        "Rui-Kun Luo",
+        "C. Gu",
+        "Qiang He",
+        "Feifei Chen",
+        "Song Wu",
+        "Hai Jin",
+        "Yun Yang"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Interdomain Attention: Beyond Token-Level Key-Value Memory",
+      "source_url": "https://arxiv.org/abs/2605.24330",
+      "year": 2026,
+      "published": "2026-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers and deep state space models (SSMs) sit at opposite ends of a basic design choice: attention routes each query through a growing key-value (KV) cache by content-based matching at quadratic cost, while deep SSMs compress context into a fixed-size recurrent state that is not directly addressed by query-key matching. We propose Interdomain Attention, which integrates an SSM into an attention module through kernel methods: an attention kernel is approximated by a finite feature map, the resulting key features and values are projected onto a shared set of basis functions maintained by a single SSM recurrence, and each query attends to the compressed coefficients through its own feature map, recovering query-conditioned attention over a fixed-size state. The scalable layer is a learned relaxation of this derivation, and we validate its components through ablations. In a 125M to 1.3B autoregressive language-modeling study on FineWeb-Edu at matched recurrent-state budget, Interdomain Attention improves on an SSM token mixer at every scale, surpasses a same-recipe softmax baseline at 1.3B on validation perplexity and on the eight-task commonsense suite, and inherits the length-flat behavior of its fixed-state core out to 3.5x the training context. Ablations indicate that the query-conditioned projection is the main source of the gain.",
+      "identifiers": [
+        "SemanticScholar:811b5f616aadc4d9a742ddbcbccccc8478f3d744"
+      ],
+      "semantic_scholar_id": "811b5f616aadc4d9a742ddbcbccccc8478f3d744",
+      "canonical_id": "arXiv:2605.24330",
+      "arxiv_id": "2605.24330",
+      "doi": "10.48550/arXiv.2605.24330",
+      "authors": [
+        "Naoki Kiyohara",
+        "Harrison Zhu",
+        "Riccardo El Hassanin",
+        "Zhu Sun",
+        "Wenlong Chen",
+        "Samir Bhatt",
+        "Yingzhen Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37626",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+      "identifiers": [
+        "SemanticScholar:407270c7dd77b70917c58d4868e7d6c9044934c6"
+      ],
+      "semantic_scholar_id": "407270c7dd77b70917c58d4868e7d6c9044934c6",
+      "canonical_id": "arXiv:2609.37626",
+      "arxiv_id": "2609.37626",
+      "authors": [
+        "Chuan Liu",
+        "Shuo-Ming Zhang",
+        "Zhi-Cheng Li",
+        "Qian-Qi Sun",
+        "Rui-Yuan Xu",
+        "Qiu-Chun Yu",
+        "Xi-Yu Shi",
+        "Hui-Min Cui",
+        "Jia-Cheng Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PatchKV: Weight-Space Compensation of KV Cache",
+      "source_url": "https://arxiv.org/abs/2609.39329",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference with Large Language Models (LLMs) is bottlenecked by the linearly growing memory of the key-value (KV) cache. Existing compression methods reduce the cache through token eviction or approximation, but degrade sharply at aggressive compression budgets. We propose PatchKV, a training-free framework that compensates KV cache compression methods by carrying part of the context in the model's weights. PatchKV pairs an off-the-shelf compressed KV cache with a context-specific weight patch, which is computed once at context-loading time and served for downstream queries for the context. The weight patch is derived in closed form via ridge regression, by aligning the block-wise activations of context-derived reference query tokens under the full cache and the compressed cache. Once merged into the model, the patch leaves the forward graph and per-query inference cost unchanged in the single-context, multi-query setting. Across long-context QA (SCBench with up to 170K tokens, SQuAD, NIAH) and math (GSM8K) benchmarks on three model architectures, PatchKV consistently improves cache compression methods, suggesting an alternative direction to compensate them at aggressive budgets.",
+      "identifiers": [
+        "SemanticScholar:7b1e21d78bb9791589e45aa2d68f2fa1101d4dca"
+      ],
+      "semantic_scholar_id": "7b1e21d78bb9791589e45aa2d68f2fa1101d4dca",
+      "canonical_id": "arXiv:2609.39329",
+      "arxiv_id": "2609.39329",
+      "authors": [
+        "Chanryeol Lee",
+        "Chanhyuk Lee",
+        "Yeonwoo Choi",
+        "Donggyun Kim",
+        "Seunghoon Hong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compression Barriers for Autoregressive Transformers",
+      "source_url": "https://arxiv.org/abs/2502.15955",
+      "year": 2025,
+      "published": "2025-02-21",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A key limitation of autoregressive Transformers is the large memory needed at inference-time to cache all previous key-value (KV) embeddings. Prior works address this by compressing the KV cache, but often assume specific structural properties of the embeddings. This raises the following natural question: Can truly sublinear space utilization be achieved without such assumptions? In this work, we answer this question in the negative. Any algorithm for attention-based token generation must use $\\Theta(nd)$ space, where $n$ is the number of tokens generated so far and $d = \\Omega(\\log n)$ is the dimension of the KV embeddings. Our proof involves a reduction from a classic communication complexity problem and uses a randomized construction that leverages properties of projections in the spirit of the Johnson-Linderstrauss lemma. For the low-dimensional regime $d = o(\\log n)$, we show that any algorithm requires $\\Omega(d\\cdot e^d)$ space and prove, using tight bounds on covering numbers, that SubGen, proposed by Zandieh, Han, Mirrokni and Karbasi, matches this bound. Further, we investigate how sparsity assumptions enable token generation in truly sublinear space, presenting impossibility results and proposing a new KV cache compression algorithm for sliding window attention when the value cache outside the window is unmasked. Finally, we analyze token generation's time complexity, using an indistinguishability argument to prove that no non-adaptive algorithm can compute attention online in sublinear time for all tokens.",
+      "identifiers": [
+        "SemanticScholar:e0188c3ca8aa98bb8a4faf82e80a0997e6e2e29f"
+      ],
+      "semantic_scholar_id": "e0188c3ca8aa98bb8a4faf82e80a0997e6e2e29f",
+      "canonical_id": "arXiv:2502.15955",
+      "arxiv_id": "2502.15955",
+      "doi": "10.48550/arXiv.2502.15955",
+      "authors": [
+        "Themistoklis Haris",
+        "Krzysztof Onak"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Judge Q: Trainable Queries for Optimized Information Retention in KV Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2509.10798",
+      "year": 2025,
+      "published": "2025-09-13",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) utilize key-value (KV) cache to store historical information during sequence processing. The size of KV cache grows linearly as the length of the sequence extends, which seriously affects memory usage and decoding efficiency. Current methods for KV cache eviction typically utilize the last window from the pre-filling phase as queries to compute the KV importance scores for eviction. Although this scheme is simple to implement, it tends to overly focus on local information, potentially leading to the neglect or omission of crucial global information. To mitigate this issue, we propose **Judge Q**, a novel training method which incorporates a soft token list. This method only tunes the model’s embedding layer at a low training cost. By concatenating the soft token list at the end of the input sequence, we train these tokens' attention map to the original input sequence to align with that of the actual decoded tokens. In this way, the queries corresponding to the soft tokens can effectively capture global information and better evaluate the importance of the keys and values within the KV cache, thus maintaining decoding quality when KV cache is evicted. Under the same eviction budget, our method exhibits less performance degradation compared to existing eviction approaches. We validate our approach through experiments conducted on models such as Llama-3.1-8B-Instruct and Mistral-7B-Instruct-v0.3, using benchmarks including LongBench, RULER, and Needle-in-a-Haystack. Results indicate an improvement of approximately 1 point on the LongBench and over 3 points on RULER. This proposed methodology can be seamlessly integrated into existing open-source models with minimal training overhead, thereby enhancing performance in KV cache eviction scenarios.",
+      "identifiers": [
+        "SemanticScholar:d1dcced94c2fbc71a861fda4be060c4deb7cdee0"
+      ],
+      "semantic_scholar_id": "d1dcced94c2fbc71a861fda4be060c4deb7cdee0",
+      "canonical_id": "arXiv:2509.10798",
+      "arxiv_id": "2509.10798",
+      "doi": "10.48550/arXiv.2509.10798",
+      "authors": [
+        "Yijun Liu",
+        "Yixuan Wang",
+        "Yuzhuang Xu",
+        "Shi-Yu Ji",
+        "Yang Xu",
+        "Qing-Fu Zhu",
+        "Wanxiang Che"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 391,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KVCrush: Key value cache size-reduction using similarity in head-behaviour",
+      "source_url": "https://arxiv.org/abs/2503.00022",
+      "year": 2025,
+      "published": "2025-02-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) caching has emerged as a crucial optimization technique for accelerating inference in large language models (LLMs). By allowing the attention operation to scale linearly rather than quadratically with the total sequence length, KV caching significantly enhances generation throughput. However, due to large context lengths in the modern LLMs, the memory footprint of the KV is a huge bottleneck for model deployment directly impacting the model's batch size, hindering its ability to deliver high-throughput. Existing research addresses this challenge using several techniques, such as discarding low-attention tokens, quantization, and matrix approximation which typically lead to a negative impact on the model accuracy. In this paper, We propose KVCrush technology which can be combined with many KV compression technologies to improve the model accuracy at a much smaller memory. KVCrush provides an alternate representation scheme for key-value states, along with a low-overhead token pruning algorithm that accounts for the token distribution in the KV cache, which in turn allows for a a smaller footprint while maintaining the accuracy of the model. Based on our results, KVCrush reduces LongBench KV Cache size by 4x with less than 1% accuracy drop and achieves state-of-the-art average accuracy with minimal overhead, incurring less than 0.5% total inference latency. KVCrush not only outperforms the accuracy of state-of-the-art importance-based token retention schemes but is also compatible with typical practical LLM deployments using KV cache paging schemes such as vLLM and mixed precision quantization.",
+      "identifiers": [
+        "SemanticScholar:9464ae39ff973456dbd39d35928828a4ee9b6f4b"
+      ],
+      "semantic_scholar_id": "9464ae39ff973456dbd39d35928828a4ee9b6f4b",
+      "canonical_id": "arXiv:2503.00022",
+      "arxiv_id": "2503.00022",
+      "doi": "10.48550/arXiv.2503.00022",
+      "authors": [
+        "Gopi Krishna Jha",
+        "Sameh Gobriel",
+        "Liubov Talamanova",
+        "Alexander Kozlov",
+        "Nilesh jain"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 592,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PatternKV: Flattening KV Representation Expands Quantization Headroom",
+      "source_url": "https://arxiv.org/abs/2510.05176",
+      "year": 2025,
+      "published": "2025-10-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache in autoregressive LLMs eliminates redundant recomputation but has emerged as the dominant memory and bandwidth bottleneck during inference, notably with long contexts and test-time scaling. KV quantization is a key lever for reducing cache cost, but accuracy drops sharply as the native KV distribution lacks flatness and thus maintains a wide quantization range. Prior work focuses on isolating outliers, which caps their error but fails to flatten the overall distribution, leaving performance fragile under low-bit settings. In this work, we show that the K cache maintains a stable, context-evolving structure, while the V cache carries latent semantic regularities, with both contributing to the organization of vectors into shared patterns. Building on these insights, we propose PatternKV, a pattern-aligned residual quantization scheme. It mines representative pattern vectors online, aligns each KV vector to its nearest pattern, and quantizes only the residual. This reshaping of the KV distribution flattens the quantization target and narrows its range, thereby improving the fidelity of low-bit KV quantization. Across long-context and test-time scaling settings on multiple backbones, PatternKV delivers consistent 2-bit gains, with a 0.08% average 4-bit drop relative to FP16, improves test-time scaling accuracy by 10% on average, and raises throughput by 1.5x while supporting 1.25x larger batches.",
+      "identifiers": [
+        "SemanticScholar:4daaff2d5dd80410dc96168ea5340b0c3b9f1409"
+      ],
+      "semantic_scholar_id": "4daaff2d5dd80410dc96168ea5340b0c3b9f1409",
+      "canonical_id": "arXiv:2510.05176",
+      "arxiv_id": "2510.05176",
+      "doi": "10.48550/arXiv.2510.05176",
+      "authors": [
+        "Ji Zhang",
+        "Yi-Wei Li",
+        "Shaoxiong Feng",
+        "Pei-Wen Yuan",
+        "Xing-Lin Wang",
+        "Jia-Yi Shi",
+        "Yue-Qi Zhang",
+        "Chu-Yi Tan",
+        "Bo-Yuan Pan",
+        "Yao Hu",
+        "Kan Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 369,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.02901",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.02901",
+        "id:SemanticScholar:adcee8cd5a7e6de2448fd8f33c7e71cb26d7c691",
+        "id:arXiv:2512.02901",
+        "title:fairy2i training complex llms from real llms with all parameters in 1 i",
+        "url:https://arxiv.org/abs/2512.02901"
+      ],
+      "record": {
+        "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {± 1, ± i}",
+        "source_url": "https://arxiv.org/abs/2512.02901",
+        "year": 2025,
+        "published": "2025-12-02",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have revolutionized artificial intelligence, yet their massive memory and computational demands necessitate aggressive quantization, increasingly pushing representations toward the theoretical limit of a single bit. While complex-valued LLMs, such as iFairy, offer a superior chance for low-bit representation compared to real-valued counterparts, they require training from scratch, preventing the utilization of the vast ecosystem of pre-trained real-valued foundation models. Here we present Fairy2i, a universal framework that transforms pre-trained real-valued layers into an equivalent widely-linear complex form, enabling extremely low-bit quantization while reusing existing checkpoints. By proving a lossless mathematical equivalence between real and widely-linear maps, we convert standard Transformers into the complex domain and employ a phase-aware quantization scheme with a highly efficient codebook of fourth roots of unity. Furthermore, we introduce a recursive residual quantization mechanism that iteratively minimizes quantization error, allowing inference to proceed via efficient multiplication-free accumulation. We demonstrate that Fairy2i restores the performance of LLaMA-2 7B at an effective 2-bit precision to levels nearly comparable with full-precision baselines, significantly outperforming state-of-the-art real-valued binary and ternary quantization methods. This work bridges the gap between the representational efficiency of complex-valued arithmetic and the practical utility of pre-trained models, paving a new way for efficient inference on commodity hardware. We open-source the Fairy2i model and code at https://huggingface.co/PKU-DS-LAB/Fairy2i-W2 and https://github.com/PKULab1806/Fairy2i-W2.",
+        "identifiers": [
+          "SemanticScholar:adcee8cd5a7e6de2448fd8f33c7e71cb26d7c691"
+        ],
+        "semantic_scholar_id": "adcee8cd5a7e6de2448fd8f33c7e71cb26d7c691",
+        "canonical_id": "arXiv:2512.02901",
+        "arxiv_id": "2512.02901",
+        "doi": "10.48550/arXiv.2512.02901",
+        "authors": [
+          "Feiyu Wang",
+          "Xin-Yu Tan",
+          "Bo-Kai Huang",
+          "Yihao Zhang",
+          "Guo-An Wang",
+          "Pei-Zhuang Cong",
+          "Tong Yang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 311,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.18196",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.18196",
+        "id:SemanticScholar:d76feb4e3dcad47fb31d634c3bd3899f56c56c6b",
+        "id:arXiv:2602.18196",
+        "title:rat train dense infer sparse recurrence augmented attention for dilated inference",
+        "url:https://arxiv.org/abs/2602.18196"
+      ],
+      "record": {
+        "title": "RAT+: Train Dense, Infer Sparse - Recurrence Augmented Attention for Dilated Inference",
+        "source_url": "https://arxiv.org/abs/2602.18196",
+        "year": 2026,
+        "published": "2026-02-20",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured dilated attention has an appealing inference-time efficiency knob: it reduces the FLOPs of attention and the KV cache size by a factor of the dilation size D, while preserving long-range connectivity. While prior work studies it by training each configuration from scratch, directly sparsifying a pretrained attention model into a dilated pattern leads to severe accuracy degradation, preventing flexible reuse across inference scenarios. We introduce RAT+, a dense-pretraining architecture that augments attention with full-sequence recurrence and active recurrence learning. A single RAT+ model is pretrained densely once and can then be flexibly switched at inference time to dilated attention (optionally with local windows) or hybrid layer/head compositions, requiring only a short 1B-token resolution adaptation rather than retraining separate sparse models. At 1.5B parameters trained on 100B tokens, RAT+ closely matches dense accuracy at D = 16, and drops by about 2-3 points at D = 64 on commonsense reasoning and LongBench tasks. We further scale to 2.6B and 7.6B parameters and observe even more promising performance (e.g., a 1-point average accuracy loss with a 64x reduction in attention FLOPs and KV cache size). Code is available at https://github.com/wimh966/rat-plus.",
+        "identifiers": [
+          "SemanticScholar:d76feb4e3dcad47fb31d634c3bd3899f56c56c6b"
+        ],
+        "semantic_scholar_id": "d76feb4e3dcad47fb31d634c3bd3899f56c56c6b",
+        "canonical_id": "arXiv:2602.18196",
+        "arxiv_id": "2602.18196",
+        "doi": "10.48550/arXiv.2602.18196",
+        "authors": [
+          "Xiuying Wei",
+          "Caglar Gulcehre"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 231,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.01399",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.01399",
+        "id:SemanticScholar:94ab7b9bbb6a61304631b46f4cce016feddb9052",
+        "id:arXiv:2603.01399",
+        "title:quasar quantized selfspeculative acceleration for rapid inference via memoryefficient verification",
+        "url:https://arxiv.org/abs/2603.01399"
+      ],
+      "record": {
+        "title": "Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification",
+        "source_url": "https://arxiv.org/abs/2603.01399",
+        "year": 2026,
+        "published": "2026-03-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) has emerged as a premier technique for accelerating Large Language Model (LLM) inference by decoupling token generation into rapid drafting and parallel verification. While recent advancements in self-speculation and lookahead decoding have successfully minimized drafting overhead, they have shifted the primary performance bottleneck to the verification phase. Since verification requires a full forward pass of the target model, it remains strictly memory-bandwidth bound, fundamentally limiting the maximum achievable speedup.In this paper, we introduce \\textbf{Quasar} (\\textbf{Qua}ntized \\textbf{S}elf-speculative \\textbf{A}cceleration for \\textbf{R}apid Inference), a novel, training-free framework designed to overcome this\"memory wall\"by employing low-bit quantization specifically for the verification stage. Our empirical analysis reveals that while aggressive structural pruning significantly degrades verification accuracy, quantization-based verification preserves the logit distribution with high fidelity while effectively halving memory traffic. Extensive experiments on state-of-the-art models (e.g., OpenPangu and Qwen3) demonstrate that Quasar maintains a speculative acceptance length comparable to full-precision methods while achieving a $1.28\\times$ improvement in end-to-end throughput. Being orthogonal to existing drafting strategies, Quasar offers a generic and efficient pathway to accelerate the verification leg of speculative execution. Code is available at https://github.com/Tom-HG/Quasar.",
+        "identifiers": [
+          "SemanticScholar:94ab7b9bbb6a61304631b46f4cce016feddb9052"
+        ],
+        "semantic_scholar_id": "94ab7b9bbb6a61304631b46f4cce016feddb9052",
+        "canonical_id": "arXiv:2603.01399",
+        "arxiv_id": "2603.01399",
+        "doi": "10.48550/arXiv.2603.01399",
+        "authors": [
+          "Guangtai Huang",
+          "Ze-Yi Wen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 221,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08587",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08587",
+        "id:SemanticScholar:7200df0603b57db0446c58e5a572f50a57d56005",
+        "id:arXiv:2605.08587",
+        "title:kaczmarz linear attention",
+        "url:https://arxiv.org/abs/2605.08587"
+      ],
+      "record": {
+        "title": "Kaczmarz Linear Attention",
+        "source_url": "https://arxiv.org/abs/2605.08587",
+        "year": 2026,
+        "published": "2026-05-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context language modeling remains central to modern sequence modeling, but the quadratic cost of Transformer attention makes scaling computationally prohibitive. Linear recurrent models address this bottleneck by compressing the context into a fixed-size state, making the rule that forgets, writes, and edits information a central design problem. To address state maintenance, Gated DeltaNet (GDN) combines gated state decay with delta-rule residual writes, using a learnable coefficient to balance forgetting and update magnitude. However, this coefficient is learned empirically rather than derived from the underlying objective, which can lead to suboptimal update magnitudes. We revisit the online-regression objective underlying GDN and, inspired by the Kaczmarz projection method, derive the key-norm-normalized dynamic step size $\\beta_t = \\eta_t / (\\|k_t\\|_2^2 + \\epsilon)$ for residual updates. We propose Kaczmarz Linear Attention (KLA), a one-scalar modification of GDN that preserves the state shape, gates, linear recurrence, and chunkwise parallel algorithm. At the 0.4B scale with a 1B-token budget, KLA achieves the lowest validation perplexity among evaluated linear-time baselines, 8.09 versus 8.50 for GDN, and remains stable up to 65K tokens. On controlled tasks, KLA reaches 100% on single-needle-in-a-haystack retrieval, improves 8x multi-query associative recall by 7.03 points over GDN, and delivers 2.1x higher decode throughput at 32K context. These results suggest that the key-norm-normalized Kaczmarz coefficient is a first-order design axis for delta-rule sequence models: it improves accuracy, extrapolation, and decoding efficiency without changing the recurrent state or hardware kernel.",
+        "identifiers": [
+          "SemanticScholar:7200df0603b57db0446c58e5a572f50a57d56005"
+        ],
+        "semantic_scholar_id": "7200df0603b57db0446c58e5a572f50a57d56005",
+        "canonical_id": "arXiv:2605.08587",
+        "arxiv_id": "2605.08587",
+        "doi": "10.48550/arXiv.2605.08587",
+        "authors": [
+          "Jiaxuan Zou",
+          "Ruifeng Ren",
+          "Yong Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 153,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35621",
+      "identity_tokens": [
+        "id:SemanticScholar:bc905ea430e4ca8ed40be2f11ed8fa469dc5022c",
+        "id:arXiv:2609.35621",
+        "title:cartridges kv cache compression without offcontext derailment",
+        "url:https://arxiv.org/abs/2609.35621"
+      ],
+      "record": {
+        "title": "Cartridges++: KV Cache Compression without Off-Context Derailment",
+        "source_url": "https://arxiv.org/abs/2609.35621",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving long documents to a Large Language Model (LLM) repeatedly is expensive: computations grow with context length, and the memory footprint of the key-value (KV) cache balloons. Compressed KV (CKV) representations aim to mimic the cache of a document and are typically computed once and for all, ahead of inference time. Methods to obtain CKVs range from drop mechanisms that reduce their number of columns, to learned approaches. Among the latter, Cartridges have emerged as a leading compression method, learning compact KV representations through distillation on relevant Q/A pairs. While existing evaluations focus primarily on whether Cartridges and other CKVs yield approximately similar responses to document-related, on-context queries, we investigate the crucial deployment question of whether they can handle off-context queries, something the native KV representation is particularly good at, thanks to the mechanics of attention. We observe a fundamental trade-off: while Cartridges perform better for on-context queries, heuristic-variants preserve better the original LLM's ability to operate off-context. We measure this through their capability to avoid context contamination in their response, retain general knowledge, and follow instructions. We propose Cartridges++, simple modifications to cartridges that retain off-context abilities at small or negligible cost. The router variant decides at inference time whether the query should use the learned long-context memory, while the data-mixing variant allocates a small fraction of training Q/As to queries outside the reference long document. Our study shows that assessing CKVs on document utility alone can mask substantial degradation in broader model capabilities, yet those issues can be fixed with benign changes to CKV inference or training.",
+        "identifiers": [
+          "SemanticScholar:bc905ea430e4ca8ed40be2f11ed8fa469dc5022c"
+        ],
+        "semantic_scholar_id": "bc905ea430e4ca8ed40be2f11ed8fa469dc5022c",
+        "canonical_id": "arXiv:2609.35621",
+        "arxiv_id": "2609.35621",
+        "authors": [
+          "Sonia Laguna",
+          "João Monteiro",
+          "Marco Cuturi",
+          "Pierre Ablin",
+          "Eleonora Gualdoni"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36835",
+      "identity_tokens": [
+        "id:SemanticScholar:63808af9addaa711fd90de3f35f16a8c5dfc82bd",
+        "id:arXiv:2609.36835",
+        "title:arckv amortizing anchor search for reconstructionbased kv cache compaction",
+        "url:https://arxiv.org/abs/2609.36835"
+      ],
+      "record": {
+        "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
+        "source_url": "https://arxiv.org/abs/2609.36835",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context large language model inference is bottlenecked by KV caches that grow linearly with sequence length. This burden is especially severe for long, reusable context prefixes, whose cache must serve many downstream queries. Reconstruction-based methods such as Attention Matching achieve strong downstream task performance with compact KV caches. However, iterative anchor search dominates the compaction cost of OMP-based Attention Matching. This motivates our selective amortization principle of learning a reusable anchor-selection policy across contexts while retaining context-specific reconstruction. In this work, we propose ARC-KV, a novel reconstruction-based KV cache compaction method that follows this principle. To this end, we first train a value-aware indexer to select real-key anchors in a single scoring pass. ARC-KV then applies convex-hull-constrained key merging and fits an attention-mass bias and compact values against the full cache. At inference time, ARC-KV builds the compact cache once per context using the frozen indexer and reuses it for all subsequent queries. Extensive experiments demonstrate that ARC-KV outperforms reported compaction methods in most settings across QuALITY, RULER, and LongBench on Llama-3.1-8B-Instruct. In particular, at 10% KV retention on QuALITY, ARC-KV improves accuracy from 0.6409 to 0.6474 over Attention Matching while reducing compaction time by a factor of 25.73, from 959.8 s to 37.3 s.",
+        "identifiers": [
+          "SemanticScholar:63808af9addaa711fd90de3f35f16a8c5dfc82bd"
+        ],
+        "semantic_scholar_id": "63808af9addaa711fd90de3f35f16a8c5dfc82bd",
+        "canonical_id": "arXiv:2609.36835",
+        "arxiv_id": "2609.36835",
+        "authors": [
+          "Zhe-Yu Shen",
+          "Guan-Hua Wang",
+          "De-Zhan Tu",
+          "Meng-Chi Zhang",
+          "Yan-Jiao Li",
+          "Adnan Aziz",
+          "Chun-Qiang Tang",
+          "Ang Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1609/aaai.v38i17.29908",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v38i17.29908",
+        "id:SemanticScholar:93ad719fdad8ef1ced208d7034954009ec4d793e",
+        "title:exploring posttraining quantization in llms from comprehensive study to low rank compensation",
+        "url:https://doi.org/10.1609/aaai.v38i17.29908"
+      ],
+      "record": {
+        "title": "Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
+        "source_url": "https://doi.org/10.1609/aaai.v38i17.29908",
+        "year": 2024,
+        "published": "2024-03-24",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 63,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) has emerged as a promising technique for mitigating memory consumption and computational costs in large language models (LLMs). However, a systematic examination of various quantization schemes, model families, and quantization bit precision has been absent from the literature. In this paper, we conduct a comprehensive analysis of these factors by investigating the effects of PTQ on weight-only, activation-only, and weight-and-activation quantization using diverse methods such as round-to-nearest (RTN), GPTQ, ZeroQuant, and their variants. We apply these methods to two distinct model families with parameters ranging from 125M to 176B. Our contributions include: (1) a sensitivity analysis revealing that activation quantization is generally more susceptible to weight quantization, with smaller models often outperforming larger models in terms of activation quantization; (2) an evaluation and comparison of existing PTQ methods to optimize model size reduction while minimizing the impact on accuracy, revealing that none of the current methods can achieve the original model quality for quantization with either INT4-weight or INT4-weight-and-INT8-activation; (3) based on these insights, we propose an optimized method called Low-Rank Compensation (LoRC), which employs low-rank matrices to enhance model quality recovery with a minimal increase in model size.",
+        "identifiers": [
+          "SemanticScholar:93ad719fdad8ef1ced208d7034954009ec4d793e"
+        ],
+        "semantic_scholar_id": "93ad719fdad8ef1ced208d7034954009ec4d793e",
+        "doi": "10.1609/aaai.v38i17.29908",
+        "canonical_id": "DOI:10.1609/aaai.v38i17.29908",
+        "authors": [
+          "Zhewei Yao",
+          "Xiaoxia Wu",
+          "Cheng Li",
+          "Stephen Youn",
+          "Yuxiong He"
+        ],
+        "priority": 63,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 63,
+          "citation_count": 63,
+          "total": 63,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 929,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.10141",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.10141",
+        "id:SemanticScholar:ef2ebc205bf8d7c4cea73ff8774689f65d426e71",
+        "id:arXiv:2410.10141",
+        "title:temperaturecentric investigation of speculative decoding with knowledge distillation",
+        "url:https://arxiv.org/abs/2410.10141"
+      ],
+      "record": {
+        "title": "Temperature-Centric Investigation of Speculative Decoding with Knowledge Distillation",
+        "source_url": "https://arxiv.org/abs/2410.10141",
+        "year": 2024,
+        "published": "2024-10-14",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding stands as a pivotal technique to expedite inference in autoregressive (large) language models. This method employs a smaller draft model to speculate a block of tokens, which the target model then evaluates for acceptance. Despite a wealth of studies aimed at increasing the efficiency of speculative decoding, the influence of generation configurations on the decoding process remains poorly understood, especially concerning decoding temperatures. This paper delves into the effects of decoding temperatures on speculative decoding's efficacy. Beginning with knowledge distillation (KD), we first highlight the challenge of decoding at higher temperatures, and demonstrate KD in a consistent temperature setting could be a remedy. We also investigate the effects of out-of-domain testing sets with out-of-range temperatures. Building upon these findings, we take an initial step to further the speedup for speculative decoding, particularly in a high-temperature generation setting. Our work offers new insights into how generation configurations drastically affect the performance of speculative decoding, and underscores the need for developing methods that focus on diverse decoding configurations. Code is publically available at https://github.com/ozyyshr/TempSpec.",
+        "identifiers": [
+          "SemanticScholar:ef2ebc205bf8d7c4cea73ff8774689f65d426e71"
+        ],
+        "semantic_scholar_id": "ef2ebc205bf8d7c4cea73ff8774689f65d426e71",
+        "canonical_id": "arXiv:2410.10141",
+        "arxiv_id": "2410.10141",
+        "doi": "10.48550/arXiv.2410.10141",
+        "authors": [
+          "Siru Ouyang",
+          "Shuohang Wang",
+          "Minhao Jiang",
+          "Ming Zhong",
+          "Dong Yu",
+          "Jiawei Han",
+          "Yelong Shen"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 725,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.201",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.201",
+        "id:SemanticScholar:e5bc62270dc0be9d3125782a34832fec54f47e12",
+        "title:hqekv towards hybrid quantization and eviction for kv cache in longcontext llm inference",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.201"
+      ],
+      "record": {
+        "title": "HqeKV: Towards Hybrid Quantization and Eviction for KV Cache in Long-Context LLM Inference",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.201",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The autoregressive inference in large language models requires repeated computation across transformer layers. While caching intermediate key-value (KV) pairs eliminates redundancy, it introduces severe memory overhead, particularly in long-context settings. Most existing cache compression methods operate solely on either quantization or eviction, based on importance estimation of cached data. However, they are limited by coarse compression choices and inaccurate importance assessment, leading to suboptimal inference quality. To address this, we propose HqeKV, a hybrid compression framework built on both quantization and eviction, offering finer-grained compression options that adapt smoothly to the varying importance of cached KV pairs. An integrated optimizer automatically selects the best compression action for each cached element, maximizing quality while insulating end-users from tedious low-level tuning details. We further de-sign a joint K–V importance metric to provide more accurate importance assessment results so that the optimizer can make smarter decisions. Additionally, HqeKV supports flexible conversion policies across multiple quantization precision levels, to further reduce quality degradation. Extensive experiments show that HqeKV improves output quality under the same memory constraints, outperforming state-of-the-art alternatives. Code is available at https://github.com/skywclouds/HqeKV .",
+        "identifiers": [
+          "SemanticScholar:e5bc62270dc0be9d3125782a34832fec54f47e12"
+        ],
+        "semantic_scholar_id": "e5bc62270dc0be9d3125782a34832fec54f47e12",
+        "doi": "10.18653/v1/2026.findings-acl.201",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.201",
+        "authors": [
+          "He Wang",
+          "Yu Gu",
+          "Fangfang Li",
+          "Zhigang Wang",
+          "Zheng-Hao Liu",
+          "Ning Wang",
+          "Xiaohua Li",
+          "Ge Yu"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.52202/085713-2984",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-2984",
+        "id:SemanticScholar:e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c",
+        "title:simllm optimizing llm inference at the edge through intertask kv reuse",
+        "url:https://doi.org/10.52202/085713-2984"
+      ],
+      "record": {
+        "title": "Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse",
+        "source_url": "https://doi.org/10.52202/085713-2984",
+        "year": 2025,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache technology, by storing key-value pairs, helps reduce the computational overhead incurred by large language models (LLMs). It facilitates their deployment on resource-constrained edge computing nodes like edge servers. However, as the complexity and size of tasks increase, KV cache usage leads to substantial GPU memory consumption. Existing research has focused on mitigating KV cache memory usage through sequence length reduction, task-specific compression, and dynamic eviction policies. However, these methods are computationally expensive for resource-constrained edge computing nodes. To tackle this challenge, this paper presents Sim-LLM, a novel inference optimization mechanism that leverages task similarity to reduce KV cache memory consumption for LLMs. By caching KVs from processed tasks and reusing them for subsequent similar tasks during inference, Sim-LLM significantly reduces memory consumption while boosting system throughput and increasing maximum batch size, all with minimal accuracy degradation. Evaluated on both A40 and A100 GPUs, Sim-LLM achieves a system throughput improvement of up to 39.40% and a memory reduction of up to 34.65%, compared to state-of-the-art approaches. Our source code is available at https://github.com/CGCL-codes/SimLLM .",
+        "identifiers": [
+          "SemanticScholar:e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c"
+        ],
+        "semantic_scholar_id": "e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c",
+        "doi": "10.52202/085713-2984",
+        "canonical_id": "DOI:10.52202/085713-2984",
+        "authors": [
+          "Rui-Kun Luo",
+          "C. Gu",
+          "Qiang He",
+          "Feifei Chen",
+          "Song Wu",
+          "Hai Jin",
+          "Yun Yang"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 465,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.24330",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.24330",
+        "id:SemanticScholar:811b5f616aadc4d9a742ddbcbccccc8478f3d744",
+        "id:arXiv:2605.24330",
+        "title:interdomain attention beyond tokenlevel keyvalue memory",
+        "url:https://arxiv.org/abs/2605.24330"
+      ],
+      "record": {
+        "title": "Interdomain Attention: Beyond Token-Level Key-Value Memory",
+        "source_url": "https://arxiv.org/abs/2605.24330",
+        "year": 2026,
+        "published": "2026-05-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers and deep state space models (SSMs) sit at opposite ends of a basic design choice: attention routes each query through a growing key-value (KV) cache by content-based matching at quadratic cost, while deep SSMs compress context into a fixed-size recurrent state that is not directly addressed by query-key matching. We propose Interdomain Attention, which integrates an SSM into an attention module through kernel methods: an attention kernel is approximated by a finite feature map, the resulting key features and values are projected onto a shared set of basis functions maintained by a single SSM recurrence, and each query attends to the compressed coefficients through its own feature map, recovering query-conditioned attention over a fixed-size state. The scalable layer is a learned relaxation of this derivation, and we validate its components through ablations. In a 125M to 1.3B autoregressive language-modeling study on FineWeb-Edu at matched recurrent-state budget, Interdomain Attention improves on an SSM token mixer at every scale, surpasses a same-recipe softmax baseline at 1.3B on validation perplexity and on the eight-task commonsense suite, and inherits the length-flat behavior of its fixed-state core out to 3.5x the training context. Ablations indicate that the query-conditioned projection is the main source of the gain.",
+        "identifiers": [
+          "SemanticScholar:811b5f616aadc4d9a742ddbcbccccc8478f3d744"
+        ],
+        "semantic_scholar_id": "811b5f616aadc4d9a742ddbcbccccc8478f3d744",
+        "canonical_id": "arXiv:2605.24330",
+        "arxiv_id": "2605.24330",
+        "doi": "10.48550/arXiv.2605.24330",
+        "authors": [
+          "Naoki Kiyohara",
+          "Harrison Zhu",
+          "Riccardo El Hassanin",
+          "Zhu Sun",
+          "Wenlong Chen",
+          "Samir Bhatt",
+          "Yingzhen Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37626",
+      "identity_tokens": [
+        "id:SemanticScholar:407270c7dd77b70917c58d4868e7d6c9044934c6",
+        "id:arXiv:2609.37626",
+        "title:splash switching parallel layouts of attention with seamless handoff for llm serving",
+        "url:https://arxiv.org/abs/2609.37626"
+      ],
+      "record": {
+        "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.37626",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+        "identifiers": [
+          "SemanticScholar:407270c7dd77b70917c58d4868e7d6c9044934c6"
+        ],
+        "semantic_scholar_id": "407270c7dd77b70917c58d4868e7d6c9044934c6",
+        "canonical_id": "arXiv:2609.37626",
+        "arxiv_id": "2609.37626",
+        "authors": [
+          "Chuan Liu",
+          "Shuo-Ming Zhang",
+          "Zhi-Cheng Li",
+          "Qian-Qi Sun",
+          "Rui-Yuan Xu",
+          "Qiu-Chun Yu",
+          "Xi-Yu Shi",
+          "Hui-Min Cui",
+          "Jia-Cheng Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39329",
+      "identity_tokens": [
+        "id:SemanticScholar:7b1e21d78bb9791589e45aa2d68f2fa1101d4dca",
+        "id:arXiv:2609.39329",
+        "title:patchkv weightspace compensation of kv cache",
+        "url:https://arxiv.org/abs/2609.39329"
+      ],
+      "record": {
+        "title": "PatchKV: Weight-Space Compensation of KV Cache",
+        "source_url": "https://arxiv.org/abs/2609.39329",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context inference with Large Language Models (LLMs) is bottlenecked by the linearly growing memory of the key-value (KV) cache. Existing compression methods reduce the cache through token eviction or approximation, but degrade sharply at aggressive compression budgets. We propose PatchKV, a training-free framework that compensates KV cache compression methods by carrying part of the context in the model's weights. PatchKV pairs an off-the-shelf compressed KV cache with a context-specific weight patch, which is computed once at context-loading time and served for downstream queries for the context. The weight patch is derived in closed form via ridge regression, by aligning the block-wise activations of context-derived reference query tokens under the full cache and the compressed cache. Once merged into the model, the patch leaves the forward graph and per-query inference cost unchanged in the single-context, multi-query setting. Across long-context QA (SCBench with up to 170K tokens, SQuAD, NIAH) and math (GSM8K) benchmarks on three model architectures, PatchKV consistently improves cache compression methods, suggesting an alternative direction to compensate them at aggressive budgets.",
+        "identifiers": [
+          "SemanticScholar:7b1e21d78bb9791589e45aa2d68f2fa1101d4dca"
+        ],
+        "semantic_scholar_id": "7b1e21d78bb9791589e45aa2d68f2fa1101d4dca",
+        "canonical_id": "arXiv:2609.39329",
+        "arxiv_id": "2609.39329",
+        "authors": [
+          "Chanryeol Lee",
+          "Chanhyuk Lee",
+          "Yeonwoo Choi",
+          "Donggyun Kim",
+          "Seunghoon Hong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.15955",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.15955",
+        "id:SemanticScholar:e0188c3ca8aa98bb8a4faf82e80a0997e6e2e29f",
+        "id:arXiv:2502.15955",
+        "title:compression barriers for autoregressive transformers",
+        "url:https://arxiv.org/abs/2502.15955"
+      ],
+      "record": {
+        "title": "Compression Barriers for Autoregressive Transformers",
+        "source_url": "https://arxiv.org/abs/2502.15955",
+        "year": 2025,
+        "published": "2025-02-21",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A key limitation of autoregressive Transformers is the large memory needed at inference-time to cache all previous key-value (KV) embeddings. Prior works address this by compressing the KV cache, but often assume specific structural properties of the embeddings. This raises the following natural question: Can truly sublinear space utilization be achieved without such assumptions? In this work, we answer this question in the negative. Any algorithm for attention-based token generation must use $\\Theta(nd)$ space, where $n$ is the number of tokens generated so far and $d = \\Omega(\\log n)$ is the dimension of the KV embeddings. Our proof involves a reduction from a classic communication complexity problem and uses a randomized construction that leverages properties of projections in the spirit of the Johnson-Linderstrauss lemma. For the low-dimensional regime $d = o(\\log n)$, we show that any algorithm requires $\\Omega(d\\cdot e^d)$ space and prove, using tight bounds on covering numbers, that SubGen, proposed by Zandieh, Han, Mirrokni and Karbasi, matches this bound. Further, we investigate how sparsity assumptions enable token generation in truly sublinear space, presenting impossibility results and proposing a new KV cache compression algorithm for sliding window attention when the value cache outside the window is unmasked. Finally, we analyze token generation's time complexity, using an indistinguishability argument to prove that no non-adaptive algorithm can compute attention online in sublinear time for all tokens.",
+        "identifiers": [
+          "SemanticScholar:e0188c3ca8aa98bb8a4faf82e80a0997e6e2e29f"
+        ],
+        "semantic_scholar_id": "e0188c3ca8aa98bb8a4faf82e80a0997e6e2e29f",
+        "canonical_id": "arXiv:2502.15955",
+        "arxiv_id": "2502.15955",
+        "doi": "10.48550/arXiv.2502.15955",
+        "authors": [
+          "Themistoklis Haris",
+          "Krzysztof Onak"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 595,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.10798",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.10798",
+        "id:SemanticScholar:d1dcced94c2fbc71a861fda4be060c4deb7cdee0",
+        "id:arXiv:2509.10798",
+        "title:judge q trainable queries for optimized information retention in kv cache eviction",
+        "url:https://arxiv.org/abs/2509.10798"
+      ],
+      "record": {
+        "title": "Judge Q: Trainable Queries for Optimized Information Retention in KV Cache Eviction",
+        "source_url": "https://arxiv.org/abs/2509.10798",
+        "year": 2025,
+        "published": "2025-09-13",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) utilize key-value (KV) cache to store historical information during sequence processing. The size of KV cache grows linearly as the length of the sequence extends, which seriously affects memory usage and decoding efficiency. Current methods for KV cache eviction typically utilize the last window from the pre-filling phase as queries to compute the KV importance scores for eviction. Although this scheme is simple to implement, it tends to overly focus on local information, potentially leading to the neglect or omission of crucial global information. To mitigate this issue, we propose **Judge Q**, a novel training method which incorporates a soft token list. This method only tunes the model’s embedding layer at a low training cost. By concatenating the soft token list at the end of the input sequence, we train these tokens' attention map to the original input sequence to align with that of the actual decoded tokens. In this way, the queries corresponding to the soft tokens can effectively capture global information and better evaluate the importance of the keys and values within the KV cache, thus maintaining decoding quality when KV cache is evicted. Under the same eviction budget, our method exhibits less performance degradation compared to existing eviction approaches. We validate our approach through experiments conducted on models such as Llama-3.1-8B-Instruct and Mistral-7B-Instruct-v0.3, using benchmarks including LongBench, RULER, and Needle-in-a-Haystack. Results indicate an improvement of approximately 1 point on the LongBench and over 3 points on RULER. This proposed methodology can be seamlessly integrated into existing open-source models with minimal training overhead, thereby enhancing performance in KV cache eviction scenarios.",
+        "identifiers": [
+          "SemanticScholar:d1dcced94c2fbc71a861fda4be060c4deb7cdee0"
+        ],
+        "semantic_scholar_id": "d1dcced94c2fbc71a861fda4be060c4deb7cdee0",
+        "canonical_id": "arXiv:2509.10798",
+        "arxiv_id": "2509.10798",
+        "doi": "10.48550/arXiv.2509.10798",
+        "authors": [
+          "Yijun Liu",
+          "Yixuan Wang",
+          "Yuzhuang Xu",
+          "Shi-Yu Ji",
+          "Yang Xu",
+          "Qing-Fu Zhu",
+          "Wanxiang Che"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 391,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.00022",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.00022",
+        "id:SemanticScholar:9464ae39ff973456dbd39d35928828a4ee9b6f4b",
+        "id:arXiv:2503.00022",
+        "title:kvcrush key value cache sizereduction using similarity in headbehaviour",
+        "url:https://arxiv.org/abs/2503.00022"
+      ],
+      "record": {
+        "title": "KVCrush: Key value cache size-reduction using similarity in head-behaviour",
+        "source_url": "https://arxiv.org/abs/2503.00022",
+        "year": 2025,
+        "published": "2025-02-24",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-value (KV) caching has emerged as a crucial optimization technique for accelerating inference in large language models (LLMs). By allowing the attention operation to scale linearly rather than quadratically with the total sequence length, KV caching significantly enhances generation throughput. However, due to large context lengths in the modern LLMs, the memory footprint of the KV is a huge bottleneck for model deployment directly impacting the model's batch size, hindering its ability to deliver high-throughput. Existing research addresses this challenge using several techniques, such as discarding low-attention tokens, quantization, and matrix approximation which typically lead to a negative impact on the model accuracy. In this paper, We propose KVCrush technology which can be combined with many KV compression technologies to improve the model accuracy at a much smaller memory. KVCrush provides an alternate representation scheme for key-value states, along with a low-overhead token pruning algorithm that accounts for the token distribution in the KV cache, which in turn allows for a a smaller footprint while maintaining the accuracy of the model. Based on our results, KVCrush reduces LongBench KV Cache size by 4x with less than 1% accuracy drop and achieves state-of-the-art average accuracy with minimal overhead, incurring less than 0.5% total inference latency. KVCrush not only outperforms the accuracy of state-of-the-art importance-based token retention schemes but is also compatible with typical practical LLM deployments using KV cache paging schemes such as vLLM and mixed precision quantization.",
+        "identifiers": [
+          "SemanticScholar:9464ae39ff973456dbd39d35928828a4ee9b6f4b"
+        ],
+        "semantic_scholar_id": "9464ae39ff973456dbd39d35928828a4ee9b6f4b",
+        "canonical_id": "arXiv:2503.00022",
+        "arxiv_id": "2503.00022",
+        "doi": "10.48550/arXiv.2503.00022",
+        "authors": [
+          "Gopi Krishna Jha",
+          "Sameh Gobriel",
+          "Liubov Talamanova",
+          "Alexander Kozlov",
+          "Nilesh jain"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 592,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05176",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.05176",
+        "id:SemanticScholar:4daaff2d5dd80410dc96168ea5340b0c3b9f1409",
+        "id:arXiv:2510.05176",
+        "title:patternkv flattening kv representation expands quantization headroom",
+        "url:https://arxiv.org/abs/2510.05176"
+      ],
+      "record": {
+        "title": "PatternKV: Flattening KV Representation Expands Quantization Headroom",
+        "source_url": "https://arxiv.org/abs/2510.05176",
+        "year": 2025,
+        "published": "2025-10-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache in autoregressive LLMs eliminates redundant recomputation but has emerged as the dominant memory and bandwidth bottleneck during inference, notably with long contexts and test-time scaling. KV quantization is a key lever for reducing cache cost, but accuracy drops sharply as the native KV distribution lacks flatness and thus maintains a wide quantization range. Prior work focuses on isolating outliers, which caps their error but fails to flatten the overall distribution, leaving performance fragile under low-bit settings. In this work, we show that the K cache maintains a stable, context-evolving structure, while the V cache carries latent semantic regularities, with both contributing to the organization of vectors into shared patterns. Building on these insights, we propose PatternKV, a pattern-aligned residual quantization scheme. It mines representative pattern vectors online, aligns each KV vector to its nearest pattern, and quantizes only the residual. This reshaping of the KV distribution flattens the quantization target and narrows its range, thereby improving the fidelity of low-bit KV quantization. Across long-context and test-time scaling settings on multiple backbones, PatternKV delivers consistent 2-bit gains, with a 0.08% average 4-bit drop relative to FP16, improves test-time scaling accuracy by 10% on average, and raises throughput by 1.5x while supporting 1.25x larger batches.",
+        "identifiers": [
+          "SemanticScholar:4daaff2d5dd80410dc96168ea5340b0c3b9f1409"
+        ],
+        "semantic_scholar_id": "4daaff2d5dd80410dc96168ea5340b0c3b9f1409",
+        "canonical_id": "arXiv:2510.05176",
+        "arxiv_id": "2510.05176",
+        "doi": "10.48550/arXiv.2510.05176",
+        "authors": [
+          "Ji Zhang",
+          "Yi-Wei Li",
+          "Shaoxiong Feng",
+          "Pei-Wen Yuan",
+          "Xing-Lin Wang",
+          "Jia-Yi Shi",
+          "Yue-Qi Zhang",
+          "Chu-Yi Tan",
+          "Bo-Yuan Pan",
+          "Yao Hu",
+          "Kan Li"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 369,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:26c70e70d57d1d4004457f9ebde1d33b24c3c12aa4927b8e2f5e232d64dc22b8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
