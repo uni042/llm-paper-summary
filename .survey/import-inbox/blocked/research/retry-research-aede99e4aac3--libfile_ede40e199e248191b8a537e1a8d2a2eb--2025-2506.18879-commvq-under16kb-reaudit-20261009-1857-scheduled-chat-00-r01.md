@@ -65,6 +65,8 @@ references:
 references_checked_at: '2026-10-03'
 references_source: 'arxiv-html-reference-section（旧原稿から保持。今回の再監査では全参考文献の再照合は行わず）'
 references_total: 29
+last_audited: null
+audit_version: 0
 ---
 
 # CommVQ：回転位置埋め込みと交換可能な符号帳によるキー・値キャッシュ圧縮
