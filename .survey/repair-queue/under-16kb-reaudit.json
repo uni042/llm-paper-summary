@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-09T08:59:31.447351+00:00",
+  "generated_at": "2026-10-09T09:08:21.993243+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 301,
+  "count": 299,
   "worker_counts": {
-    "scheduled-chat-00": 78,
+    "scheduled-chat-00": 76,
     "scheduled-chat-30": 78,
     "scheduled-chat-45": 145
   },
@@ -2126,26 +2126,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
-      "canonical_id": "arXiv:2505.05799",
-      "title": "MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design",
-      "file_bytes": 12036,
-      "source_sha256": "afa91422c0f329c91a88807bb6b63228f4c9d7504a4828d647cc0e84732d8f0c",
-      "source_git_blob_sha": "c713b3d7111b9cfd54291c557efdde57ed766117",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.916805,
-      "quality_metrics": {
-        "body_chars": 2737,
-        "method_chars": 1702,
-        "evaluation_chars": 709,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
       "canonical_id": "arXiv:2605.17889",
       "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
@@ -2333,26 +2313,6 @@
         "body_chars": 2865,
         "method_chars": 1324,
         "evaluation_chars": 861,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md",
-      "canonical_id": "arXiv:2511.14124",
-      "title": "10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training",
-      "file_bytes": 12174,
-      "source_sha256": "aa22cefe39f5e4e1d752f1b34b870b45eda6ad3b93530b3849e2d5c4cf87e1cb",
-      "source_git_blob_sha": "73adc815cb9ab80b30797cf86bb6cab417e282ce",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.893199,
-      "quality_metrics": {
-        "body_chars": 2805,
-        "method_chars": 1230,
-        "evaluation_chars": 839,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
