@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-09T00:12:16+00:00",
-  "record_count": 11224,
+  "updated_at": "2026-10-09T01:09:38+00:00",
+  "record_count": 11227,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160352,6 +160352,45 @@
       "last_checked_at": "2026-10-09T00:12:16+00:00",
       "linked_from": [],
       "title": "Yuan3.0 Ultra: A Trillion-Parameter Enterprise-Oriented MoE LLM"
+    },
+    "arXiv:2605.26415": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26415",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.26415",
+        "arXiv:2605.26415"
+      ],
+      "reason": "CLIP early exit/quantization is limited to image retrieval and classification.",
+      "first_checked_at": "2026-10-09T01:09:37+00:00",
+      "last_checked_at": "2026-10-09T01:09:37+00:00",
+      "linked_from": [],
+      "title": "The Rescue Effect: Spatio-Semantic Early Exit Bypasses Quantization Collapse in CLIP"
+    },
+    "arXiv:2501.16085": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.16085",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.16085",
+        "arXiv:2501.16085"
+      ],
+      "reason": "ARFlow applies hybrid linear attention to image/video flow generation, an independent vision application.",
+      "first_checked_at": "2026-10-09T01:09:38+00:00",
+      "last_checked_at": "2026-10-09T01:09:38+00:00",
+      "linked_from": [],
+      "title": "ARFlow: Autoregressive Flow with Hybrid Linear Attention"
+    },
+    "arXiv:2603.13019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13019",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.13019",
+        "arXiv:2603.13019"
+      ],
+      "reason": "ARL-Tangram improves agentic reinforcement-learning training-resource scheduling, not inference.",
+      "first_checked_at": "2026-10-09T01:09:38+00:00",
+      "last_checked_at": "2026-10-09T01:09:38+00:00",
+      "linked_from": [],
+      "title": "ARL-Tangram: Unleash the Resource Efficiency in Agentic Reinforcement Learning"
     }
   }
 }

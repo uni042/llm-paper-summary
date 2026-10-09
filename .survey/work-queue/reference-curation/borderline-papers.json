@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-08T23:47:37+00:00",
-  "record_count": 4514,
+  "updated_at": "2026-10-09T01:09:37+00:00",
+  "record_count": 4516,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68834,6 +68834,33 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Past- and Future-Informed KV Cache Policy with Salience Estimation in Autoregressive Video Diffusion"
+    },
+    "arXiv:2602.12128": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12128",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.12128",
+        "arXiv:2602.12128"
+      ],
+      "reason": "Hadamard linear attention is evaluated on video diffusion; transfer to LLM inference remains plausible but unshown.",
+      "first_checked_at": "2026-10-09T01:09:37+00:00",
+      "last_checked_at": "2026-10-09T01:09:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "HLA: Hadamard Linear Attention"
+    },
+    "DOI:10.1109/cai68641.2026.11536574": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cai68641.2026.11536574",
+      "identity_tokens": [
+        "DOI:10.1109/cai68641.2026.11536574"
+      ],
+      "reason": "IEEE primary page and DOI route inaccessible; only secondary abstract summaries surfaced and were not used.",
+      "first_checked_at": "2026-10-09T01:09:37+00:00",
+      "last_checked_at": "2026-10-09T01:09:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Task Aware One-Shot Pruning for Edge-Deployable Large Language Models"
     }
   }
 }
