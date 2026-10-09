@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-09T19:50:57.602478+00:00",
+  "generated_at": "2026-10-09T19:59:42.928398+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 204,
+  "count": 203,
   "worker_counts": {
-    "scheduled-chat-00": 68,
+    "scheduled-chat-00": 67,
     "scheduled-chat-30": 68,
     "scheduled-chat-45": 68
   },
@@ -635,26 +635,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
-      "canonical_id": "arXiv:2102.03902",
-      "title": "Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention",
-      "file_bytes": 11964,
-      "source_sha256": "54c18f8660b9610fefff531d5e8f780078029dafa75efb2360589510f5701b82",
-      "source_git_blob_sha": "cc375f942c9da8971b18ba2660a892bf0843264b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.823277,
-      "quality_metrics": {
-        "body_chars": 3434,
-        "method_chars": 969,
-        "evaluation_chars": 1274,
-        "limitation_chars": 288
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
