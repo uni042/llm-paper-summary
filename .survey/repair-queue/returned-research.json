@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T16:36:35+00:00",
+  "generated_at": "2026-10-09T16:50:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2454,66 +2454,11 @@
       "worker_run_key": "20261009-1755-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2310.03003",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-09T16:15:50+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4610,
-        "body_paragraphs": 28,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1024,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_329e4ff98b20819187e916a0a2a5cf6b--2023-2310.03003-from-words-to-watts-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_329e4ff98b20819187e916a0a2a5cf6b--2023-2310.03003-from-words-to-watts-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261009-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2303.06349",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-09T16:16:45+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 162 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6762,
-        "body_paragraphs": 39,
-        "method_chars": 2185,
-        "method_paragraphs": 13,
-        "evaluation_chars": 162,
-        "limitation_chars": 902,
-        "insufficiency_flags": [
-          "評価説明量 162 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4d010f733e888191869347e9414bf9f0--2023-2303.06349-lru-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4d010f733e888191869347e9414bf9f0--2023-2303.06349-lru-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261009-2130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.15636",
       "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
       "source_url": "https://arxiv.org/html/2609.15636v1",
-      "returned_at": "2026-10-09T16:35:07+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-09T16:49:28+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2533,8 +2478,63 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ccf264777be88191ad86707ba6db1da3--2026-2609.15636-trillion-parameter-moe-hbf-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01-corrected.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ccf264777be88191ad86707ba6db1da3--2026-2609.15636-trillion-parameter-moe-hbf-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01-corrected.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-29d34a3ea9bf--libfile_ccf264777be88191ad86707ba6db1da3--2026-2609.15636-trillion-parameter-moe-hbf-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01-corrected.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-29d34a3ea9bf--libfile_ccf264777be88191ad86707ba6db1da3--2026-2609.15636-trillion-parameter-moe-hbf-under16kb-reaudit-20261009-2130-scheduled-chat.json",
+      "worker_run_key": "20261009-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2310.03003",
+      "title": "From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/HPEC58863.2023.10363447",
+      "returned_at": "2026-10-09T16:49:29+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4610,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1024,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-43c932ac10d4--libfile_329e4ff98b20819187e916a0a2a5cf6b--2023-2310.03003-from-words-to-watts-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-43c932ac10d4--libfile_329e4ff98b20819187e916a0a2a5cf6b--2023-2310.03003-from-words-to-watts-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261009-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2303.06349",
+      "title": "Resurrecting Recurrent Neural Networks for Long Sequences",
+      "source_url": "https://proceedings.mlr.press/v202/orvieto23a/orvieto23a.pdf",
+      "returned_at": "2026-10-09T16:49:30+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 162 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6762,
+        "body_paragraphs": 39,
+        "method_chars": 2185,
+        "method_paragraphs": 13,
+        "evaluation_chars": 162,
+        "limitation_chars": 902,
+        "insufficiency_flags": [
+          "評価説明量 162 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a011af8be104--libfile_4d010f733e888191869347e9414bf9f0--2023-2303.06349-lru-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a011af8be104--libfile_4d010f733e888191869347e9414bf9f0--2023-2303.06349-lru-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01.json",
       "worker_run_key": "20261009-2130-scheduled-chat-30/r01"
     }
   ]

@@ -329,8 +329,8 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   MoE内の似たエキスパートを層ごとにクラスタ化し、層横断の冗長性も見ながらクラスタ単位で枝刈り・統合して、20%圧縮時の性能低下を既存方式より抑える。
 
 - **2025-03 · [SEAP: Sparse Expert Activation Pruning Unlocks the Brainpower of Large Language Models](2025-2503.07605-seap-sparse-expert-activation-pruning-unlocks-the-brainpower-of-large-la.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  タスク別の隠れ状態・ニューロン活性から重要計算経路を特定し、再学習なしの構造化枝刈りで20%疎性の品質をほぼ維持しつつ高疎性で既存法を大幅に上回る。
+  実装：[✓](https://github.com/IAAR-Shanghai/SEAP) ・ リポジトリ内被引用：3  
+  SEAPは、密な大規模言語モデルの内部でタスクごとに異なるニューロン群が強く活性化することを利用し、タスクに必要な経路を残しながら不要なニューロンを構造単位で削る圧縮手法である。
 
 - **2025-08 · [Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts](2025-2508.07785-grove-moe-heterogeneous-experts.md)**  
   実装：[✓](https://github.com/inclusionAI/GroveMoE) ・ リポジトリ内被引用：2  

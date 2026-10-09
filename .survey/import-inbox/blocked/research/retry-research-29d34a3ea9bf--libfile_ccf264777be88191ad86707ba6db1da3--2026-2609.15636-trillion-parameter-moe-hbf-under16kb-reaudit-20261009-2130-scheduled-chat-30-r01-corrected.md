@@ -53,6 +53,8 @@ references:
 references_checked_at: '2026-10-09'
 references_source: 'arxiv-html-reference-section'
 references_total: 12
+last_audited: null
+audit_version: 0
 ---
 
 # Trillion-Parameter MoE in a Box：高帯域フラッシュによる兆パラメータMoEのメモリ分離設計

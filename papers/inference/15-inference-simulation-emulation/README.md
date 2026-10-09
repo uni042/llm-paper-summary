@@ -52,7 +52,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 - **2026-03 · [DyQ-VLA: Dynamic Quantization and Compensation for VLA models with Runtime Error Awareness](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
   実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：2  
-  DyQ-VLAは、視覚言語行動モデル（Vision-Language-行動 モデル; VLA）の量子化を単なる「タスク 成功を保ちながら低ビット化する」問題ではなく、閉ループ実行中の実行時 誤差が次の観測・行動へどう伝播するかという観点から設計し直す。
+  DyQ-VLAの2026年10月4日公開の第3版は、量子化によって変わる実行時の行動と誤差の相関を明示的に測り、並進と回転で異なる制御を行う。LIBEROおよびRoboTwin 2.0の評価では、BF16に対する推論単位の速度改善が1.74〜1.81倍、成功した実行全体にわたるモデル推論時間の改善が1.88〜1.93倍となった。
 
 - **2026-06 · [KernelSight-LM: A Kernel-Level LLM Inference Simulator](2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
