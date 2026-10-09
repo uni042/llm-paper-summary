@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-09T01:09:37+00:00",
-  "record_count": 4516,
+  "updated_at": "2026-10-09T02:14:25+00:00",
+  "record_count": 4519,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -68861,6 +68861,46 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Task Aware One-Shot Pruning for Edge-Deployable Large Language Models"
+    },
+    "DOI:10.1109/vcip67698.2025.11396917": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/vcip67698.2025.11396917",
+      "identity_tokens": [
+        "DOI:10.1109/vcip67698.2025.11396917"
+      ],
+      "reason": "IEEE primary page exposed only robot-verification JavaScript text; abstract unavailable.",
+      "first_checked_at": "2026-10-09T02:14:24+00:00",
+      "last_checked_at": "2026-10-09T02:14:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Quadtree Partitioning-based Visual Token Pruning for MLLMs Considering Information Density"
+    },
+    "DOI:10.1109/hpec62836.2024.10938487": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpec62836.2024.10938487",
+      "identity_tokens": [
+        "DOI:10.1109/hpec62836.2024.10938487"
+      ],
+      "reason": "IEEE primary page exposed only robot-verification text; title alone cannot establish graph-processing relevance to LLM efficiency.",
+      "first_checked_at": "2026-10-09T02:14:25+00:00",
+      "last_checked_at": "2026-10-09T02:14:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Transformers: A Graph Processing Perspective"
+    },
+    "arXiv:2604.05030": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05030",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.05030",
+        "arXiv:2604.05030"
+      ],
+      "reason": "PAM is a language model but reports 4x arithmetic overhead over matched Transformer and no efficiency improvement.",
+      "first_checked_at": "2026-10-09T02:14:25+00:00",
+      "last_checked_at": "2026-10-09T02:14:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Phase-Associative Memory: Sequence Modeling in Complex Hilbert Space"
     }
   }
 }
