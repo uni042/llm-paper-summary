@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T03:00:36.019644+00:00",
+  "generated_at": "2026-10-09T03:34:35.948066+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 338,
+  "count": 316,
   "worker_counts": {
-    "scheduled-chat-00": 100,
-    "scheduled-chat-30": 90,
-    "scheduled-chat-45": 148
+    "scheduled-chat-00": 85,
+    "scheduled-chat-30": 86,
+    "scheduled-chat-45": 145
   },
   "entries": [
     {
@@ -59,33 +59,6 @@
         "16KB未満再監査: 評価説明量 252 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
-      "canonical_id": "arXiv:2401.06118",
-      "title": "Extreme Compression of Large Language Models via Additive Quantization",
-      "file_bytes": 9217,
-      "source_sha256": "732141340d3744ee0ae66c97d650418b33c9c2945741afcf1bf6e327baf373f9",
-      "source_git_blob_sha": "df0ab9bf90da5ed3a210a2abba1c06757c9a4aa1",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.720143,
-      "quality_metrics": {
-        "body_chars": 2147,
-        "method_chars": 649,
-        "evaluation_chars": 427,
-        "limitation_chars": 168
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2147 < 2200",
-        "16KB未満再監査: 手法説明量 649 < 700",
-        "16KB未満再監査: 評価説明量 427 < 500",
-        "16KB未満再監査: 日本語比率 72.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.0% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/13-sparse-attention/2025-2509.24663-infllm-v2-dense-sparse-switchable-attention-for-seamless-short-to-long-a.md",
@@ -207,33 +180,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
-      "canonical_id": "arXiv:2311.08692",
-      "title": "Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models",
-      "file_bytes": 9622,
-      "source_sha256": "08e2c740835e03e3f68e75169c4764902af0f1cf36d50c359b4ae3f6a132077e",
-      "source_git_blob_sha": "685e91a05cfe20dd0373df978886f3a32fe1882f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.746579,
-      "quality_metrics": {
-        "body_chars": 1970,
-        "method_chars": 691,
-        "evaluation_chars": 170,
-        "limitation_chars": 225
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1970 < 2200",
-        "16KB未満再監査: 手法説明量 691 < 700",
-        "16KB未満再監査: 評価説明量 170 < 500",
-        "16KB未満再監査: 日本語比率 74.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.7% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md",
       "canonical_id": "arXiv:2504.14489",
       "title": "Towards High-Goodput LLM Serving with Prefill-decode Multiplexing",
@@ -350,30 +296,6 @@
         "16KB未満再監査: 評価説明量 90 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
-      "canonical_id": "arXiv:2407.08608",
-      "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
-      "file_bytes": 9775,
-      "source_sha256": "7a77836e23b9d8e30821b8dd83e9dc4174ca7224a836f071be651d3d0bcf7616",
-      "source_git_blob_sha": "825934f7490e73f370f6aceb7ca4074f053ccdbb",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.755919,
-      "quality_metrics": {
-        "body_chars": 2553,
-        "method_chars": 799,
-        "evaluation_chars": 725,
-        "limitation_chars": 139
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 75.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 75.6% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.26412-when-hidden-states-drift-can-kv-caches-rescue-long-range-speculative-dec.md",
@@ -1263,50 +1185,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
-      "canonical_id": "arXiv:2112.07916",
-      "title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
-      "file_bytes": 11046,
-      "source_sha256": "978f6260f6555b6a4cbbed5200249e363b593f5e8f4a36133be17ea5fd2c8a03",
-      "source_git_blob_sha": "6c464b6d252a905261fc19f227e968e0e81e7a20",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.799903,
-      "quality_metrics": {
-        "body_chars": 3171,
-        "method_chars": 924,
-        "evaluation_chars": 1222,
-        "limitation_chars": 248
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 80.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 80.0% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2505.07858-scaling-laws-for-speculative-decoding.md",
-      "canonical_id": "arXiv:2505.07858",
-      "title": "Scaling Laws for Speculative Decoding",
-      "file_bytes": 11048,
-      "source_sha256": "f4d956dca1940dfdf8d57f25f9480526808dc2f70fd6403a75e1c13205f9f87e",
-      "source_git_blob_sha": "3c52fb3d653a22b75e13b8e5b124b99ee58ffdb8",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.82256,
-      "quality_metrics": {
-        "body_chars": 2761,
-        "method_chars": 1029,
-        "evaluation_chars": 617,
-        "limitation_chars": 307
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
       "canonical_id": "arXiv:2502.11089",
       "title": "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention",
@@ -1377,26 +1255,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
-      "canonical_id": "arXiv:2305.18403",
-      "title": "LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning",
-      "file_bytes": 11110,
-      "source_sha256": "3b63f234d570e3a11e1a5919fe0da8e699c5a8af2e88caffa2bd8130ba3530b0",
-      "source_git_blob_sha": "c5fc92ca8b6a1b858f067d7f7f87d0f59d65fccc",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.929878,
-      "quality_metrics": {
-        "body_chars": 2906,
-        "method_chars": 788,
-        "evaluation_chars": 1021,
-        "limitation_chars": 226
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md",
       "canonical_id": "arXiv:2405.06856",
       "title": "Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving",
@@ -1441,46 +1299,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md",
-      "canonical_id": "AAAI:39106",
-      "title": "FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference",
-      "file_bytes": 11145,
-      "source_sha256": "8e2b4bc715448702d648324bcf471409ff8e2795792d4df657423722a29ff28b",
-      "source_git_blob_sha": "c01c0ec42fe339fc00ba75ec6e0a993e13742c5d",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.879077,
-      "quality_metrics": {
-        "body_chars": 2901,
-        "method_chars": 1467,
-        "evaluation_chars": 760,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md",
-      "canonical_id": "arXiv:2309.09507",
-      "title": "Pruning Large Language Models via Accuracy Predictor",
-      "file_bytes": 11165,
-      "source_sha256": "4e1f4281729adad78356a90f06770fd4dea138e56843494e01b852ba26748ff6",
-      "source_git_blob_sha": "252946de4fafbd83db2aeba421443216ebf75e64",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.847853,
-      "quality_metrics": {
-        "body_chars": 3058,
-        "method_chars": 945,
-        "evaluation_chars": 680,
-        "limitation_chars": 358
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/12-moe-parallelism-communication/2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md",
       "canonical_id": "arXiv:2601.17111",
       "title": "Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts",
@@ -1500,50 +1318,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 132 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
-      "canonical_id": "arXiv:2310.01382",
-      "title": "Compressing LLMs: The Truth is Rarely Pure and Never Simple",
-      "file_bytes": 11210,
-      "source_sha256": "9be4afa9285e27bdc2dc6aa88c43a586df3bc80d291e6ed78b8a6508c5d5946f",
-      "source_git_blob_sha": "743e655d4c22e14a7e1ae645f0676e4801ced93b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.896063,
-      "quality_metrics": {
-        "body_chars": 1938,
-        "method_chars": 614,
-        "evaluation_chars": 0,
-        "limitation_chars": 190
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1938 < 2200",
-        "16KB未満再監査: 手法説明量 614 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.18517-kvsharer-efficient-inference-via-layer-wise-dissimilar-kv-cache-sharing.md",
-      "canonical_id": "arXiv:2410.18517",
-      "title": "KVSharer: Efficient Inference via Layer-Wise Dissimilar KV Cache Sharing",
-      "file_bytes": 11224,
-      "source_sha256": "8d76f5647f34576517ebb85c3e510b38959f9c24624e508378e57ba20f0b1644",
-      "source_git_blob_sha": "c359a6d28a650d06eaee03033a8bed9b48e65337",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.95676,
-      "quality_metrics": {
-        "body_chars": 2746,
-        "method_chars": 767,
-        "evaluation_chars": 1032,
-        "limitation_chars": 145
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1756,30 +1530,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
-      "canonical_id": "arXiv:2412.06464",
-      "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
-      "file_bytes": 11392,
-      "source_sha256": "0e928460e323f6dcfc8b5310606510f329f6dc064ea458285707f3403906b907",
-      "source_git_blob_sha": "111e17d041f99346efd802baac30c5b97c0238d2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.956613,
-      "quality_metrics": {
-        "body_chars": 1555,
-        "method_chars": 576,
-        "evaluation_chars": 173,
-        "limitation_chars": 152
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1555 < 2200",
-        "16KB未満再監査: 手法説明量 576 < 700",
-        "16KB未満再監査: 評価説明量 173 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md",
       "canonical_id": "arXiv:2510.02358",
       "title": "DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding",
@@ -1827,46 +1577,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md",
-      "canonical_id": "arXiv:2402.18096",
-      "title": "No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization",
-      "file_bytes": 11442,
-      "source_sha256": "ad6b55091f98bc941f82a197a04a89caff5066d2048fb8951a0cb28fb8925d73",
-      "source_git_blob_sha": "77dc23dd2916c4402606ee8b642db407773e4cfc",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.877207,
-      "quality_metrics": {
-        "body_chars": 3105,
-        "method_chars": 1146,
-        "evaluation_chars": 635,
-        "limitation_chars": 305
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md",
-      "canonical_id": "arXiv:2402.11131",
-      "title": "Speculative Streaming: Fast LLM Inference without Auxiliary Models",
-      "file_bytes": 11455,
-      "source_sha256": "c3f5ef6251cf4322e664ffee98810af923f87d80995b7276eae55a16f4705bbc",
-      "source_git_blob_sha": "39dfc70e3a1d8f411d4958add7cc4744dbfa57a3",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.85953,
-      "quality_metrics": {
-        "body_chars": 2794,
-        "method_chars": 790,
-        "evaluation_chars": 1009,
-        "limitation_chars": 148
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.11504-longflow-efficient-kv-cache-compression-for-reasoning-models.md",
       "canonical_id": "arXiv:2603.11504",
       "title": "LongFlow: Efficient KV Cache Compression for Reasoning Models",
@@ -1886,26 +1596,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 123 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md",
-      "canonical_id": "arXiv:2505.05286",
-      "title": "Hexgen-Flow: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL",
-      "file_bytes": 11487,
-      "source_sha256": "a8fe5f2887c8413fac3dfda2b69196839167db3bd4e112092d69af0764503836",
-      "source_git_blob_sha": "205fa823898f3cb167898f37d51c96e0316ad330",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.937743,
-      "quality_metrics": {
-        "body_chars": 2877,
-        "method_chars": 970,
-        "evaluation_chars": 738,
-        "limitation_chars": 166
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1929,26 +1619,6 @@
         "16KB未満再監査: 手法説明量 657 < 700",
         "16KB未満再監査: 評価説明量 161 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md",
-      "canonical_id": "arXiv:2404.05019",
-      "title": "Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts",
-      "file_bytes": 11519,
-      "source_sha256": "e1129e209778f6c253d9ab5a7fbb3808aa90ebc507662dac8c16034051ea7aa0",
-      "source_git_blob_sha": "732dea534d0e1c0e7488babb0100cbffd94d2756",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.955331,
-      "quality_metrics": {
-        "body_chars": 3140,
-        "method_chars": 1015,
-        "evaluation_chars": 979,
-        "limitation_chars": 158
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -1991,29 +1661,6 @@
         "limitation_chars": 294
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md",
-      "canonical_id": "arXiv:2408.07092",
-      "title": "Post-Training Sparse Attention with Double Sparsity",
-      "file_bytes": 11547,
-      "source_sha256": "5a09402be2c7fb565ddf246d2cc460c0b778568730c535b6f9f20ecc0a8f2247",
-      "source_git_blob_sha": "2b93a82a5ff837733de18230e8f3a869a37780d2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.892035,
-      "quality_metrics": {
-        "body_chars": 1983,
-        "method_chars": 823,
-        "evaluation_chars": 0,
-        "limitation_chars": 174
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1983 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
       "warnings": []
     },
     {
@@ -2429,28 +2076,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
-      "canonical_id": "arXiv:2305.17118",
-      "title": "Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time",
-      "file_bytes": 11852,
-      "source_sha256": "351fb920bdfee447b29babf0e021ccd48e856c8b966cf7ea4da3fad452a2a3fd",
-      "source_git_blob_sha": "6a0657f9d43783c382c3a7211e0b9a402b4b07b8",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.977461,
-      "quality_metrics": {
-        "body_chars": 2544,
-        "method_chars": 1104,
-        "evaluation_chars": 318,
-        "limitation_chars": 233
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 318 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md",
       "canonical_id": "arXiv:2608.02515",
       "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
@@ -2618,48 +2243,6 @@
       "warnings": [
         "日本語比率 70.3% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
-      "canonical_id": "arXiv:2505.12242",
-      "title": "ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates",
-      "file_bytes": 11930,
-      "source_sha256": "2f3183e4eaf1bb4a147fc5cbedc0560f6797f6a79b488e2ec233397ffc632758",
-      "source_git_blob_sha": "e1c45a40a1385f57cf3a37035f6a3296996dbe00",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.963497,
-      "quality_metrics": {
-        "body_chars": 2636,
-        "method_chars": 1231,
-        "evaluation_chars": 705,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md",
-      "canonical_id": "arXiv:2411.19379",
-      "title": "Marconi: Prefix Caching for the Era of Hybrid LLMs",
-      "file_bytes": 11938,
-      "source_sha256": "7d2169e2b73a5299bc86f73b54056cb8e7a077e10005914f3990d5e5556baaeb",
-      "source_git_blob_sha": "ef1fe8dba3d74c57e3648a49b8b9e61441ece820",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.817321,
-      "quality_metrics": {
-        "body_chars": 2267,
-        "method_chars": 960,
-        "evaluation_chars": 0,
-        "limitation_chars": 216
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
@@ -7281,51 +6864,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
-      "canonical_id": "arXiv:2506.09501",
-      "title": "Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference",
-      "file_bytes": 15567,
-      "source_sha256": "2f8d4a8d54926295374d3e7642f2a289f79cb3cc00554cad78f82fa6d2851306",
-      "source_git_blob_sha": "25ca52c1cefc1f3c477ea33b007c1d4ab3e6ab61",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.96744,
-      "quality_metrics": {
-        "body_chars": 3505,
-        "method_chars": 516,
-        "evaluation_chars": 122,
-        "limitation_chars": 321
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 516 < 700",
-        "16KB未満再監査: 評価説明量 122 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md",
-      "canonical_id": "arXiv:2504.06792",
-      "title": "Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations",
-      "file_bytes": 15582,
-      "source_sha256": "cfdf1a1db40ee133a90969c54306a974dcdfa576a59b8c8af2168b7146ac248a",
-      "source_git_blob_sha": "81fdc2d70514da599412628352d87d25e1a27dda",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.977166,
-      "quality_metrics": {
-        "body_chars": 3768,
-        "method_chars": 1209,
-        "evaluation_chars": 330,
-        "limitation_chars": 414
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 330 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
       "canonical_id": "DOI:10.1109/LCA.2024.3406038",
       "title": "SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving",
@@ -7344,28 +6882,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 179 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md",
-      "canonical_id": "arXiv:2509.23324",
-      "title": "Scaling LLM Test-Time Compute with Mobile NPU on Smartphones",
-      "file_bytes": 15696,
-      "source_sha256": "a63d7dfc401ef56f6276afd28c8747b591134a628b412f2afe9715ae39aaf2b7",
-      "source_git_blob_sha": "39a0903ff6d2a077b568ccfa735310067acf92fb",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.904101,
-      "quality_metrics": {
-        "body_chars": 3372,
-        "method_chars": 1144,
-        "evaluation_chars": 198,
-        "limitation_chars": 350
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 198 < 500"
       ],
       "warnings": []
     },
