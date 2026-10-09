@@ -13,8 +13,8 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  テンソルの次回利用時刻と更新場所を見て、GPU・CPU DRAM・NVMeの三階層へ残すか退避するかと先読み時刻を決め、LLM学習の再読込待ちを減らすキャッシュ方式。
+  実装：[✓](https://github.com/Sabiha1225/10cache) ・ リポジトリ内被引用：1  
+  10Cacheは、LLMを単一GPUで学習するときに不足するGPUメモリを、CPU主記憶とNVMeストレージで補いながら、テンソルの移動待ちを抑える仕組みである。従来のオフロード方式では、モデルの重み、勾配、最適化状態をGPUから外へ移して容量制限を緩和するが、必要になる直前まで低速階層に置いたままだとGPUが読み戻しを待ち、計算器が遊休する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 

@@ -42,7 +42,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
   実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：12  
-  MxMoEは、専門家内の各線形ブロックを量子化誤差・利用頻度・GPU実測時間で比較し、メモリ予算内のビット配置を品質と実速度の両面で選ぶ。
+  MxMoEは、混合専門家モデル（Mixture of エキスパート; MoE）の推論において、モデルの重みを小さくするだけでなく、実際にGPU上で計算が速くなる量子化配置を選ぶ研究である。専門家演算の処理量は16ビット基準に対して、512トークン条件で1.6～2.7倍、8192トークン条件で3.0～3.4倍となった。
 
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
   実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：10  
