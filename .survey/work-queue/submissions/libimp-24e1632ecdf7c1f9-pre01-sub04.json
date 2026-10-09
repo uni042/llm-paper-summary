@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter",
+      "source_url": "https://arxiv.org/abs/2609.37029",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive inference by verifying multiple draft tokens in a single target forward pass. However, as the context grows, existing state-of-the-art drafters become increasingly expensive, eroding the very efficiency advantage they are designed to provide. We argue that this scaling is unnecessary. A standalone language model must grow with its prefix because it is solely responsible for every token it produces. A drafter, by contrast, only proposes candidates; the target catches and corrects every error before any token is committed. The drafter's decoding cost can therefore be made entirely independent of the prefix length. We introduce LongSpark, a block-diffusion drafter that achieves this by extracting fixed-size, multiscale views from the target's verification pass, thereby eliminating the need for a growing persistent state. Extensive evaluations demonstrate that LongSpark achieves state-of-the-art end-to-end efficiency across multiple model scales and realistic serving conditions. Notably, it delivers the lowest time-per-output-token on long-context tasks while reducing the drafter's context state by several orders of magnitude.",
+      "identifiers": [
+        "SemanticScholar:e0df98dd07d7a81a93a85a5fba2e4302ed14c1ca"
+      ],
+      "semantic_scholar_id": "e0df98dd07d7a81a93a85a5fba2e4302ed14c1ca",
+      "canonical_id": "arXiv:2609.37029",
+      "arxiv_id": "2609.37029",
+      "authors": [
+        "Hao-Yuan He",
+        "Peng-Fei Liu",
+        "Si-Shi Shen",
+        "Ming Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      },
+      "reason": "A block-diffusion drafter extracts fixed-size views from target verification, making draft cost independent of prefix length and improving long-context speculative inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EchoPress: Query-Agnostic KV Cache Pruning via Virtual Context Reconstruction",
+      "source_url": "https://arxiv.org/abs/2610.00412",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache pruning reduces long-context inference memory usage by evicting less important key-value pairs. KVzip estimates importance through context reconstruction: prompting a model to repeat the context chunk by chunk. This achieves strong compression quality at the cost of additional forward passes. Learned approximations reduce this cost but require model-specific training. We analyze how KVzip identifies important cached information and show how to approximate its reconstruction scores using information already computed during prefill. These findings motivate EchoPress, a training-free method that approximates reconstruction attention using queries and keys from standard prefill. For each request, it reconstructs only the first chunk to calibrate importance scores for the remaining context. Experiments on LongBench and RULER with Qwen3-8B and Llama-3.1-8B-Instruct show that EchoPress matches KVzip in task accuracy across eviction ratios from 50% to 90%, while reducing compression overhead by a factor of 1.7-19.6 and total prefill time by a factor of up to 2.9. Code is available at https://github.com/ljwljwljwljw/kvpress/tree/echo-press.",
+      "identifiers": [
+        "SemanticScholar:913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f"
+      ],
+      "semantic_scholar_id": "913cc2a0875c5b2fdbfb79557b8e9b79bfaf144f",
+      "canonical_id": "arXiv:2610.00412",
+      "arxiv_id": "2610.00412",
+      "authors": [
+        "Jia-Wei Lin",
+        "Sai-Bo Geng",
+        "Thomas Bourgeat"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Training-free KV pruning reconstructs virtual context and selects cache tokens for query-agnostic compression, reducing inference overhead while retaining task quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reinforcement Speculative Decoding for Fast Ranking",
+      "source_url": "https://arxiv.org/abs/2505.20316",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have been widely adopted in ranking systems such as information retrieval (IR) systems and recommender systems (RSs). To alleviate the latency of auto-regressive decoding, some studies explore the single (first) token decoding for ranking approximation, but they suffer from severe degradation in tail positions. Although speculative decoding (SD) methods can be a remedy with verification at different positions, they face challenges in ranking systems due to their left-to-right decoding paradigm. Firstly, ranking systems require strict latency constraints, but verification rounds in SD methods remain agnostic; Secondly, SD methods usually discard listwise ranking knowledge about unaccepted items in previous rounds, hindering future multi-token prediction, especially when candidate tokens are the unaccepted items. In this paper, we propose a Reinforcement Speculative Decoding method for fast ranking inference of LLMs. To meet the ranking systems' latency requirement, we propose an up-to-down decoding paradigm that employs an agent to iteratively modify the ranking sequence under a constrained budget. Specifically, we design a ranking-tailored policy optimization, actively exploring optimal multi-round ranking modification policy verified by LLMs via reinforcement learning (RL). To better approximate the target LLM under the constrained budget, we trigger the agent fully utilizing the listwise ranking knowledge about all items verified by LLMs across different rounds in RL, enhancing the modification policy of the agent. More importantly, we demonstrate the theoretical robustness and advantages of our paradigm and implementation. Experiments on both IR and RS tasks show the effectiveness of our proposed method.",
+      "identifiers": [
+        "SemanticScholar:bb14404a8d0f5b9db1a66726ffd7317447cdae9a"
+      ],
+      "semantic_scholar_id": "bb14404a8d0f5b9db1a66726ffd7317447cdae9a",
+      "canonical_id": "arXiv:2505.20316",
+      "arxiv_id": "2505.20316",
+      "doi": "10.1145/3770854.3780197",
+      "authors": [
+        "Yingpeng Du",
+        "Tian-Jun Wei",
+        "Zhu Sun",
+        "Jie M. Zhang",
+        "Xun Jiang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Uses an RL-trained, budgeted up-to-down speculative procedure to accelerate LLM ranking inference and use listwise verification information across rounds.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-24e1632ecdf7",
+    "round": "libimp-24e1632ecdf7c1f9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-24e1632ecdf7c1f9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-24e1632ecdf7c1f9-pre01.json",
+    "receipt": "sha256:96ef85ddb9711489e8138154fa8fe899eb75dd3b7d8381f80ddbe85e5cfedd43"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-24e1632ecdf7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

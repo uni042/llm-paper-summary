@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Survey of Techniques for Optimizing Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2307.07982",
+      "year": 2023,
+      "published": "2023-07-16",
+      "venue": "Journal of systems architecture",
+      "citation_count": 167,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent years have seen a phenomenal rise in performance and applications of transformer neural networks. The family of transformer networks, including Bidirectional Encoder Representations from Transformer (BERT), Generative Pretrained Transformer (GPT) and Vision Transformer (ViT), have shown their effectiveness across Natural Language Processing (NLP) and Computer Vision (CV) domains. Transformer-based networks such as ChatGPT have impacted the lives of common men. However, the quest for high predictive performance has led to an exponential increase in transformers' memory and compute footprint. Researchers have proposed techniques to optimize transformer inference at all levels of abstraction. This paper presents a comprehensive survey of techniques for optimizing the inference phase of transformer networks. We survey techniques such as knowledge distillation, pruning, quantization, neural architecture search and lightweight network design at the algorithmic level. We further review hardware-level optimization techniques and the design of novel hardware accelerators for transformers. We summarize the quantitative results on the number of parameters/FLOPs and accuracy of several models/techniques to showcase the tradeoff exercised by them. We also outline future directions in this rapidly evolving field of research. We believe that this survey will educate both novice and seasoned researchers and also spark a plethora of research efforts in this field.",
+      "identifiers": [
+        "SemanticScholar:5b0fe50dc6df8f4eba13f8177dcd4bbe5a2b0e23"
+      ],
+      "semantic_scholar_id": "5b0fe50dc6df8f4eba13f8177dcd4bbe5a2b0e23",
+      "canonical_id": "arXiv:2307.07982",
+      "arxiv_id": "2307.07982",
+      "doi": "10.48550/arXiv.2307.07982",
+      "authors": [
+        "Krishna Teja Chitty-Venkata",
+        "Sparsh Mittal",
+        "M. Emani",
+        "V. Vishwanath",
+        "Arun Somani"
+      ],
+      "priority": 167,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 167,
+        "citation_count": 167,
+        "total": 167,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1181,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Surveys algorithmic and hardware-level methods including distillation, pruning, quantization, architecture design, and accelerators to reduce Transformer inference compute and memory.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting",
+      "source_url": "https://arxiv.org/abs/2605.07243",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by drafting a tree of candidate continuations and verifying it in one target forward. Existing drafters fall into two camps with opposite weaknesses. Autoregressive drafters such as EAGLE-3 preserve dependence along each draft path but call the drafter once per tree depth, making drafting a non-trivial share of per-iteration latency. Parallel drafters cut drafter calls by predicting multiple future positions in one forward, but each position is predicted without seeing the others, producing paths the verifier rejects. In this paper, we propose SpecBlock, a block-iterative drafter that combines path dependence with cheap drafting. Each drafter forward produces K dependent positions and we call this a block. The draft tree grows through repeated block expansions. Two mechanisms explicitly carry path dependence to keep later draft positions accurate. Within each block, a layer-wise shift carries the previous position's hidden state into every decoder layer. Across blocks, each new block can start from any position of the previous block, inheriting its hidden state to extend the path. To spend verifier budget where acceptance is likely, a co-trained rank head replaces the fixed top-k tree by allocating per-position branching during drafting. To avoid training the drafter on prefixes it never produces at inference, a valid-prefix mask drops the loss at later positions once an earlier one is wrong. Beyond static drafting, a cost-aware bandit at deployment uses free verifier feedback to update the drafter selectively, only when the expected throughput gain exceeds the update cost. Experiments show that SpecBlock improves mean speedup by 8-13% over EAGLE-3 at 44-52% of its drafting cost, and cost-aware adaptation extends this lead to 11-19%.",
+      "identifiers": [
+        "SemanticScholar:1dcf07adad21710b4e394d185d40a7b030200f25"
+      ],
+      "semantic_scholar_id": "1dcf07adad21710b4e394d185d40a7b030200f25",
+      "canonical_id": "arXiv:2605.07243",
+      "arxiv_id": "2605.07243",
+      "doi": "10.48550/arXiv.2605.07243",
+      "authors": [
+        "Wei-Jie Shi",
+        "Qiang Xu",
+        "Fan Deng",
+        "Ya-Guang Wu",
+        "Jia-Run Liu",
+        "Yehong Xu",
+        "Hao Chen",
+        "Jia Zhu",
+        "Jiajie Xu",
+        "Xiang-Jun Huang",
+        "Jian Yang",
+        "Xiao-Fang Zhou"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Block-iterative speculative drafter preserves path dependence while reducing drafting cost; adaptive tree branching and verifier feedback improve LLM decoding speed.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting",
+      "source_url": "https://arxiv.org/abs/2607.07409",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by drafting multiple tokens and verifying them in parallel. Block-parallel drafters such as DFlash further improve drafting efficiency by predicting an entire block in one pass, but their position-wise predictions lack explicit intra-block causal conditioning. Recent methods such as Domino and DSpark attempt to introduce such causality into block-parallel drafting, but they require training the draft model from scratch, which limits their flexibility and increases training cost. We propose DeLS-Spec, a decoupled long-short context speculative decoding method. DeLS-Spec treats the fixed DFlash model as a long-context expert and introduces a lightweight local head as a short-context expert. The local head can be trained independently with a standard next-token prediction objective, without joint training with the target model or the DFlash backbone, leading to extremely low training cost. At inference time, DeLS-Spec combines long-context and short-context logits, and the local head is not tied to a specific DFlash checkpoint, making the method more modular and flexible. Experiments on Qwen3 models show that DeLS-Spec consistently improves speedup and average acceptance length over DFlash across math, code, and dialogue benchmarks.",
+      "identifiers": [
+        "SemanticScholar:1960add05c3f95c0fdeb01c3938e6122e01a047a"
+      ],
+      "semantic_scholar_id": "1960add05c3f95c0fdeb01c3938e6122e01a047a",
+      "canonical_id": "arXiv:2607.07409",
+      "arxiv_id": "2607.07409",
+      "doi": "10.48550/arXiv.2607.07409",
+      "authors": [
+        "Hong-Kai Zheng",
+        "Pi-Ji Li"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Combines a fixed long-context speculative drafter with an independently trained local short-context head to improve acceptance and decoding speed.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.07234",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) support long-context inference but suffer from substantial memory and runtime overhead due to Key-Value (KV) Cache growth. Existing KV Cache eviction methods primarily rely on local attention weights, neglecting the influence of value representations, output projection, and inter-head interactions. In this work, we reformulate KV Cache eviction from a conventional head-wise, weight-averaging approach into an output-aware, layer-wise matrix multiplication approximation problem. We introduce LaProx, a novel eviction strategy that explicitly models the multiplicative interaction between attention maps and projected value states to accurately quantify token contributions while accounting for inter-head dependencies. Building on this metric, we propose the first unified eviction strategy that assigns globally comparable importance scores to tokens, enabling model-wide selection instead of local, head-wise decisions. Experimental results across 19 datasets on long-context benchmarks LongBench and Needle-In-A-Haystack demonstrate that our approach maintains model performance with only 5\\% of the KV cache and consistently outperforms prior works across all configurations. Notably, our method achieves up to 2$\\times$ accuracy loss reduction under extreme compression scenarios compared to existing state-of-the-art baselines with minimal overhead.",
+      "identifiers": [
+        "SemanticScholar:c0e8efe267d60ca99e874bd6a704537b2a2d9a14"
+      ],
+      "semantic_scholar_id": "c0e8efe267d60ca99e874bd6a704537b2a2d9a14",
+      "canonical_id": "arXiv:2605.07234",
+      "arxiv_id": "2605.07234",
+      "doi": "10.48550/arXiv.2605.07234",
+      "authors": [
+        "Tho Mai",
+        "Joo-Young Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LaProx evaluates cache-token contributions through output-aware layerwise approximations and inter-head interactions, retaining quality with a small KV budget.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention",
+      "source_url": "https://www.semanticscholar.org/paper/c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7"
+      ],
+      "semantic_scholar_id": "c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "canonical_id": "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7",
+      "authors": [
+        "Jintao Zhang",
+        "Rundong Su",
+        "Chunyu Liu",
+        "Jia Wei",
+        "Zi-Teng Wang",
+        "Hao-Xu Wang",
+        "Pengle Zhang",
+        "Huiqiang Jiang",
+        "Hao-Feng Huang",
+        "Chendong Xiang",
+        "Hao-Cheng Xi",
+        "Shuo Yang",
+        "Xing-Yang Li",
+        "Yi-Long Zhao",
+        "Yuezhou Hu",
+        "Tianyu Fu",
+        "Tiancheng Zhao",
+        "Yicheng Zhang",
+        "Bo-Shuo Cao",
+        "You-He Jiang",
+        "Changrui Chen",
+        "Kai Jiang",
+        "Huayu Chen",
+        "Min Zhao",
+        "Xiaoming Xu",
+        "Yi Wu",
+        "Fan Bao",
+        "Fellow Ieee Ion Stoica",
+        "Joseph E. Gonzalez",
+        "Jian-Fei Chen",
+        "Fellow Ieee Jun Zhu"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Author-hosted survey organizes hardware-efficient, sparse, compact/KV-cache, and linear attention methods and discusses computational and memory efficiency for Transformer/LLM use.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-24e1632ecdf7",
+    "round": "libimp-24e1632ecdf7c1f9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-24e1632ecdf7c1f9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-24e1632ecdf7c1f9-pre01.json",
+    "receipt": "sha256:96ef85ddb9711489e8138154fa8fe899eb75dd3b7d8381f80ddbe85e5cfedd43"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-24e1632ecdf7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

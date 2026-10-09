@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2412.12706",
+      "year": 2024,
+      "published": "2024-12-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) process increasing context windows, the memory usage of KV cache has become a critical bottleneck during inference. The mainstream KV compression methods, including KV pruning and KV quantization, primarily focus on either token or precision dimension separately. However, these works leaving the trade-off between these two orthogonal dimensions largely under-explored. In this paper, we comprehensively investigate the token-precision trade-off in KV cache compression.Experiments demonstrate that storing more tokens in the KV cache with lower precision,a strategy we term quantized pruning, can significantly enhance the long-context performance of LLMs. In-depth analysis of the token-precision trade-off across key aspects demonstrates that, quantized pruning achieves substantial improvements in retrieval-related tasks and consistently performs well across varying input lengths. Furthermore, quantized pruning demonstrates notable stability and effectiveness across different KV pruning methods, quantization strategies, and model scales. These findings offer valuable insights into optimizing KV cache compression through balanced token-precision trade-off strategies. Our code is available at https://github.com/zhzihao/QPruningKV.",
+      "identifiers": [
+        "SemanticScholar:fa37f801ae978dd961062cd639cf0d3fccc33794"
+      ],
+      "semantic_scholar_id": "fa37f801ae978dd961062cd639cf0d3fccc33794",
+      "canonical_id": "arXiv:2412.12706",
+      "arxiv_id": "2412.12706",
+      "doi": "10.48550/arXiv.2412.12706",
+      "authors": [
+        "Jiebin Zhang",
+        "Dawei Zhu",
+        "Yifan Song",
+        "Wenhao Wu",
+        "Chu-Qiao Kuang",
+        "Xiao-Guang Li",
+        "Lifeng Shang",
+        "Qun Liu",
+        "Sujian Li"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 661,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Studies joint KV-cache token pruning and lower-precision storage; quantized pruning retains more tokens and improves long-context retrieval under memory constraints.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HeteroSpec: Leveraging Contextual Heterogeneity for Efficient Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2505.13254",
+      "year": 2025,
+      "published": "2025-05-19",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding inherently limits the inference throughput of Large Language Model (LLM) due to its sequential dependency. Speculative decoding mitigates this by verifying multiple predicted tokens in parallel, but its efficiency remains constrained by what we identify as verification heterogeneity -- the uneven difficulty of verifying different speculative candidates. In practice, a small subset of high-confidence predictions accounts for most successful verifications, yet existing methods treat all candidates uniformly, leading to redundant computation. We present HeteroSpec, a heterogeneity-adaptive speculative decoding framework that allocates verification effort in proportion to candidate uncertainty. HeteroSpec estimates verification complexity using a lightweight entropy-based quantifier, partitions candidates via a data-driven stratification policy, and dynamically tunes speculative depth and pruning thresholds through coordinated optimization. Across five benchmarks and four LLMs, HeteroSpec delivers an average 4.24$\\times$ decoding speedup over state-of-the-art methods such as EAGLE-3, while preserving exact output distributions. Crucially, HeteroSpec requires no model retraining and remains compatible with other inference optimizations, making it a practical direction for improving speculative decoding efficiency.",
+      "identifiers": [
+        "SemanticScholar:a18c7c979bd328f5f88a3a70f3286c313140d470"
+      ],
+      "semantic_scholar_id": "a18c7c979bd328f5f88a3a70f3286c313140d470",
+      "canonical_id": "arXiv:2505.13254",
+      "arxiv_id": "2505.13254",
+      "doi": "10.48550/arXiv.2505.13254",
+      "authors": [
+        "Si-Ran Liu",
+        "Yangang Ye",
+        "Qianchao Zhu",
+        "Zheng Cao",
+        "Yong-Chao He"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Entropy-based candidate stratification allocates verification effort according to uncertainty and improves speculative decoding speed while preserving the target distribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On-the-Fly Adaptive Distillation of Transformer to Dual-State Linear Attention",
+      "source_url": "https://arxiv.org/abs/2506.09316",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel at capturing global token dependencies via self-attention but face prohibitive compute and memory costs on lengthy inputs. While sub-quadratic methods (e.g., linear attention) can reduce these costs, they often degrade accuracy due to overemphasizing recent tokens. In this work, we first propose dual-state linear attention (DSLA), a novel design that maintains two specialized hidden states-one for preserving historical context and one for tracking recency-thereby mitigating the short-range bias typical of linear-attention architectures. To further balance efficiency and accuracy under dynamic workload conditions, we introduce DSLA-Serve, an online adaptive distillation framework that progressively replaces Transformer layers with DSLA layers at inference time, guided by a sensitivity-based layer ordering. DSLA-Serve uses a chained fine-tuning strategy to ensure that each newly converted DSLA layer remains consistent with previously replaced layers, preserving the overall quality. Extensive evaluations on commonsense reasoning, long-context QA, and text summarization demonstrate that DSLA-Serve yields 2.3x faster inference than Llama2-7B and 3.0x faster than the hybrid Zamba-7B, while retaining comparable performance across downstream tasks. Our ablation studies show that DSLA's dual states capture both global and local dependencies, addressing the historical-token underrepresentation seen in prior linear attentions. Codes are available at https://github.com/utnslab/DSLA-Serve.",
+      "identifiers": [
+        "SemanticScholar:9c407a5b56980380517e44ca14e0727941d3b221"
+      ],
+      "semantic_scholar_id": "9c407a5b56980380517e44ca14e0727941d3b221",
+      "canonical_id": "arXiv:2506.09316",
+      "arxiv_id": "2506.09316",
+      "doi": "10.48550/arXiv.2506.09316",
+      "authors": [
+        "Yeonju Ro",
+        "Zhenyu (Allen) Zhang",
+        "Souvik Kundu",
+        "Zhang-Yang Wang",
+        "Aditya Akella"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 485,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "DSLA-Serve adaptively replaces Transformer layers with dual-state linear attention at inference time to lower compute while preserving long-context and downstream performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PROSERVE: Unified Multi-Priority Request Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.12928",
+      "year": 2025,
+      "published": "2025-12-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The widespread deployment of large language models (LLMs) for interactive applications necessitates serving systems that can handle thousands of concurrent requests with diverse Service Level Objective (SLO) requirements. A critical yet often overlooked dimension in this context is the inherent priority difference among clients; for instance, business-critical functions demand higher performance guarantees, as fulfilling such requests yields significantly greater business value. However, existing LLM serving schedulers fail to jointly optimize for both SLO attainment and client-level priorities. To bridge this gap, we first formalize multi-priority request scheduling as a service gain maximization problem, where satisfying latency requirements for requests of different priorities contributes varying gain. We propose ProServe, a unified two-tier scheduling framework designed to maximize overall service gain. At the engine layer, SlideBatching dynamically adapts batch formation under varying loads, employing a sliding boundary mechanism to balance latency and priority differentiation. Considering potential preemption, efficient block management adopts asynchronous offloading, pipelined reloading, and adaptive copy-budget control to overlap computation with host-device block transfers. At the service layer, GoRouting performs gain-oriented and capability-aware dispatching across distributed instances, proactively reserving capacity for future high-priority or long requests. Extensive evaluation on four open-source and one industrial dataset shows that ProServe outperforms state-of-the-art baselines, improving system gain by up to 35% and SLO attainment by up to 52%.",
+      "identifiers": [
+        "SemanticScholar:76eaab7aa6206284b572bdcde20261fe3a9ab6ec"
+      ],
+      "semantic_scholar_id": "76eaab7aa6206284b572bdcde20261fe3a9ab6ec",
+      "canonical_id": "arXiv:2512.12928",
+      "arxiv_id": "2512.12928",
+      "doi": "10.48550/arXiv.2512.12928",
+      "authors": [
+        "Weizhe Huang",
+        "Tao Peng",
+        "Tong-Xuan Liu",
+        "Donghe Jin",
+        "Xianzhe Dong",
+        "Ke Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Proposes multi-priority LLM request scheduling and associated admission/routing/offload mechanisms to improve SLO attainment and serving system gain.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Every Bit Counts: A Theoretical Study of Precision-Expressivity Tradeoffs in Quantized Transformers",
+      "source_url": "https://arxiv.org/abs/2602.02707",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization reduces the numerical precision of Transformer computations and is widely used to accelerate inference, yet its effect on expressivity remains poorly characterized. We demonstrate a fine-grained theoretical tradeoff between expressivity and precision: For every p we exhibit a function {\\Gamma}, inspired by the equality function, and prove that a one-layer softmax Transformer can compute {\\Gamma}, with p bits of precision, but not with p-1 bits of precision. This result concretely explains the widely observed phenomenon of empirical loss of expressivity when quantization is used. Practically, it suggests that tasks requiring equality-like comparisons (exact match, membership, etc.) are especially sensitive to quantization. Dropping even one bit can cross a threshold where the model cannot represent the needed comparison reliably. Thus, it paves the way for developing heuristics that will help practitioners choose how much quantization is possible: the precision should be chosen as a function of the length of equality to be checked for the specific task. Our proofs combine explicit finite-precision Transformer constructions with communication-complexity lower bounds, yielding a tight\"one-bit\"threshold.",
+      "identifiers": [
+        "SemanticScholar:886512a1486b740fbfc9b7825aa11f39b59bf697"
+      ],
+      "semantic_scholar_id": "886512a1486b740fbfc9b7825aa11f39b59bf697",
+      "canonical_id": "arXiv:2602.02707",
+      "arxiv_id": "2602.02707",
+      "doi": "10.48550/arXiv.2602.02707",
+      "authors": [
+        "Sayak Chakrabarti",
+        "T. Pitassi",
+        "Josh Alman"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Analyzes the precision/expressivity threshold in quantized Transformers, explaining when reduced precision changes representable functions and informing safe quantization choices.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-24e1632ecdf7",
+    "round": "libimp-24e1632ecdf7c1f9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-24e1632ecdf7c1f9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-24e1632ecdf7c1f9-pre01.json",
+    "receipt": "sha256:96ef85ddb9711489e8138154fa8fe899eb75dd3b7d8381f80ddbe85e5cfedd43"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-24e1632ecdf7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
