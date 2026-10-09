@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.26112",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference through a draft-then-verify paradigm. Building on this, tree-structured methods improve inference by organizing proposals into multiple candidate paths, increasing the accepted length. However, existing tree-structured methods use a single drafter for all drafting steps, creating a dilemma: a smaller drafter is fast but yields lower-quality trees, whereas a larger drafter improves tree quality but suffers from high latency. To address this, we propose TreeGraft, a multi-drafter framework in which drafters of different costs jointly construct a shared draft tree. TreeGraft uses the stronger drafter to rescore candidates by updating scores assigned by the weaker drafter, reselect grafting positions, and recover promising paths left unexplored. It also integrates stronger drafter expansions non-destructively, preserving existing branches that may still be accepted by the target model. Together, these designs improve the quality of the shared draft tree. To control the drafting cost, TreeGraft introduces a lightweight scheduler distilled from an offline value system to decide when to call the stronger drafter. Across 10 model pairs and 6 benchmarks, TreeGraft outperforms the better of the two fixed single-drafter endpoint strategies by 15.1% on average, reaching a maximum gain of 26.6%. Our code is available at https://github.com/fjm9933/TreeGraft.",
+      "identifiers": [
+        "SemanticScholar:ca39b9c49ba617863c9aae1c569cbc927d1b1b43"
+      ],
+      "semantic_scholar_id": "ca39b9c49ba617863c9aae1c569cbc927d1b1b43",
+      "canonical_id": "arXiv:2608.26112",
+      "arxiv_id": "2608.26112",
+      "authors": [
+        "Jiaming Fan",
+        "D. Cao",
+        "Can-Chen Huang",
+        "Jiale Fu",
+        "Jin Zhang",
+        "Junjie Gao",
+        "Kai Yang",
+        "Xiangzhong Luo",
+        "Xu Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Coordinates multiple drafters with a lightweight scheduler to construct better speculative token trees while controlling additional drafting cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "source_url": "https://arxiv.org/abs/2609.32712",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "FullAttn often assigns negligible normalized mass to much of the causal score space, yet dense kernels execute the complete post-score path after forming each QK tile. We introduce MALA, a fused attention primitive that preserves score access to every legal causal interaction and uses normalized contribution to allocate post-score computation. Forward uses its evolving online-softmax normalizer, while backward reuses the finalized normalizer to derive nested retained support using only standard attention state. A common tolerance governs training and inference, allowing for adaptive retention of the work. MALA reduces low-contribution post-score computation. A matched-work study at 8K isolates the benefit of distribution-adaptive allocation: under exactly matched total post-score work, MALA approaches a per-instance reference-mass oracle, with mean omitted mass of 0.0188% versus 0.0182%. Across context lengths from 1K to 32K tokens, the same tolerance maintains low output and gradient errors relative to the reference. Across a broader controlled associative-recall comparison, MALA closely tracks FullAttn as context grows, reaching 89.67% accuracy at 8K compared with 89.97% for FullAttn. In an attention-operator benchmark at 128K tokens with tensor parallelism, MALA reduces forward and backward latency during training by 2.2x and 3.0x and decoding latency during inference by 1.6x relative to FullAttn. Across scaling-law training from 0.6B to 14B parameters, MALA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results indicate that allocating post-score computation according to normalized attention contributions can retain the evaluated capabilities of FullAttn while reducing attention computation.",
+      "identifiers": [
+        "SemanticScholar:789bd424c13654d9cd1a1604b3ed80a4fda41e0f"
+      ],
+      "semantic_scholar_id": "789bd424c13654d9cd1a1604b3ed80a4fda41e0f",
+      "canonical_id": "arXiv:2609.32712",
+      "arxiv_id": "2609.32712",
+      "authors": [
+        "Jing-Ze Shi",
+        "Zhang-Yang Peng",
+        "Xian-Duo Li",
+        "Yan-Lin Qi",
+        "Xiao-Tian Lin",
+        "Hao-Xian Chen",
+        "Liang-Dong Wang",
+        "Guang Liu",
+        "Yu-Yu Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MALA uses normalized attention contribution to adaptively omit low-value post-score work, reducing attention operator latency while maintaining output/gradient accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Speculative Verification: Exploiting Information Gain to Refine Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2509.24328",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs have low GPU efficiency and high latency due to autoregressive decoding. Speculative decoding (SD) mitigates this using a small draft model to speculatively generate multiple tokens, which are then verified in parallel by a target model. However, when speculation accuracy is low, the overhead from rejected tokens can offset the benefits, limiting SD's effectiveness, especially at large batch sizes. To address this, we propose Speculative Verification (SV), an efficient augmentation to SD that dynamically predicts speculation accuracy and adapts the verification length to maximize throughput. SV introduces a companion model - a small auxiliary model similar in size to the draft model - to estimate the alignment between draft and target model distributions. By maximizing the information gain from quantifying this alignment, SV refines verification decisions, reducing wasted computation on rejected tokens and improving decoding efficiency. Moreover, SV requires no modifications to the draft or target models and is compatible with existing SD variants. We extensively evaluated SV on publicly available LLMs across three NLP tasks using nine combinations of draft, companion, and target models, including 13B-72B target models and three types of variations: base (no finetuning), instruction-tuned, and task fine-tuned. Across all experiments and batch sizes (4-80), SV consistently outperforms both SD and standard decoding with the target model. It improves SD performance by up to 2$\\times$, with an average speedup of 1.4 $\\times$ in large-batch settings (batch sizes 32-80). These results demonstrate SV's robustness, scalability, and practical utility for efficient LLM inference.",
+      "identifiers": [
+        "SemanticScholar:5913b974de7b4c604eec46778acabebed343e8df"
+      ],
+      "semantic_scholar_id": "5913b974de7b4c604eec46778acabebed343e8df",
+      "canonical_id": "arXiv:2509.24328",
+      "arxiv_id": "2509.24328",
+      "doi": "10.48550/arXiv.2509.24328",
+      "authors": [
+        "Sungkyun Kim",
+        "Jaemin Kim",
+        "Dogyung Yoon",
+        "Jiho Shin",
+        "Junyeol Lee",
+        "Jiwon Seo"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 375,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Adds a companion model to estimate draft-target alignment and adapt verification length, reducing wasted speculative decoding work; the ACL version confirms the same authors and method under a shortened title.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ee1743138111",
+    "round": "libimp-ee174313811148fa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ee174313811148fa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ee174313811148fa-pre01.json",
+    "receipt": "sha256:7b93ed229e140250291e382e938f4640703621bc429e0e333f35359551ceb624"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ee1743138111",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
