@@ -48,7 +48,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 - **2026-01 · [ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management](2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  それでもLoRAアダプタ、接頭辞キャッシュ、専用モデル、検索状態などのエージェント固有メモリを全員分GPUへ常駐させると、エージェント数の増加に伴って容量を超える。一般的なSGLang等はアプリケーションの将来実行順を知らず、要求が来てから必要状態をCPUからGPUへロードし、LRU等で過去の利用履歴に基づき退避する。
+  ScaleSimは、多数の大規模言語モデル利用エージェントを同時に動かすシミュレーションにおいて、GPUメモリ上のエージェント固有状態を、次にどのエージェントが言語モデルを呼び出すかというアプリケーション側の予測に基づいて管理する配信システムである。
 
 - **2026-03 · [DyQ-VLA: Dynamic Quantization and Compensation for VLA models with Runtime Error Awareness](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
   実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：2  
