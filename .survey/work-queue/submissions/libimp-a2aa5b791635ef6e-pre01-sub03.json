@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Meta-Metrics and Best Practices for System-Level Inference Performance Benchmarking",
+      "source_url": "https://arxiv.org/abs/2508.10251",
+      "year": 2025,
+      "published": "2025-08-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Benchmarking inference performance (speed) of Foundation Models such as Large Language Models (LLM) involves navigating a vast experimental landscape to understand the complex interactions between hardware and software components. However, evaluating every possible test configuration is impractical, unfeasible and unnecessary. To address this challenge, we introduce FMwork, a comprehensive and methodical approach to creating a controlled testing environment that accurately reflects and characterizes performance. FMwork comprises a set of benchmkaring best practices with three key components: 1) meta-metrics, 2) parameter selection, and 3) strategic cost-performance evaluation. Meta-metrics account for time and resources spent on benchmarking and the relative accuracy of the results compared to a larger body of measurements, representing the complete experimental space. FMwork operationalizes the meta-metrics and provides efficient strategies for parameter selection and cost-performance analysis. Using the framework, we show up to 24x improvement (speedup and/or resource savings) running sweeps of experiments compared to the ground truth. Even already considering a subset of experiments as reference point (using the power of two for batch sizes), reducing experimental output size from 1024 to 128 tokens yields another 2.7x gain while keeping 96.6% accuracy for an evaluation using Llama 3.1 8B model.",
+      "identifiers": [
+        "SemanticScholar:c19f7e60bc8f8f0e5178b142c81b7815b81d9f8a"
+      ],
+      "semantic_scholar_id": "c19f7e60bc8f8f0e5178b142c81b7815b81d9f8a",
+      "canonical_id": "arXiv:2508.10251",
+      "arxiv_id": "2508.10251",
+      "doi": "10.48550/arXiv.2508.10251",
+      "authors": [
+        "Shweta Salaria",
+        "Zhuoran Liu",
+        "Nelson Mimura Gonzalez"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 421,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract specifically addresses system-level LLM inference performance evaluation and reduces benchmarking sweep cost while quantifying accuracy against larger measurement spaces.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "NeUQI: Near-Optimal Uniform Quantization Parameter Initialization",
+      "source_url": "https://arxiv.org/abs/2505.17595",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve impressive performance across domains but face significant challenges when deployed on consumer-grade GPUs or personal devices such as laptops, due to high memory consumption and inference costs. Post-training quantization (PTQ) of LLMs offers a promising solution that reduces their memory footprint and decoding latency. In practice, PTQ with uniform quantization representation is favored due to its efficiency and ease of deployment, as uniform quantization is widely supported by mainstream hardware and software libraries. Recent studies on low-bit uniform quantization have led to noticeable improvements in post-quantization model performance; however, they mainly focus on quantization methodologies, while the initialization of quantization parameters remains underexplored and still relies on the conventional Min-Max formula. In this work, we identify the limitations of the Min-Max formula, move beyond its constraints, and propose NeUQI, a method that efficiently determines near-optimal initialization for uniform quantization. Our NeUQI simplifies the joint optimization of the scale and zero-point by deriving the zero-point for a given scale, thereby reducing the problem to a scale-only optimization. Benefiting from the improved quantization parameters, our NeUQI consistently outperforms existing methods in the experiments with the LLaMA and Qwen families on various settings and tasks. Furthermore, when combined with a lightweight distillation strategy, NeUQI even achieves superior performance to PV-tuning, a considerably more resource-intensive method.",
+      "identifiers": [
+        "SemanticScholar:9cfbeb5c6ff971211d28298130b7d59d78317c21"
+      ],
+      "semantic_scholar_id": "9cfbeb5c6ff971211d28298130b7d59d78317c21",
+      "canonical_id": "arXiv:2505.17595",
+      "arxiv_id": "2505.17595",
+      "doi": "10.48550/arXiv.2505.17595",
+      "authors": [
+        "Li Lin",
+        "Xinyu Hu",
+        "Xiao-Jun Wan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 504,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NeUQI directly improves low-bit LLM post-training quantization aimed at lower deployment memory and decoding latency; primary title confirms the additional title phrase.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "D EMYSTIFYING THE M IXTURE OF E XPERTS S ERVING T AX",
+      "source_url": "https://www.semanticscholar.org/paper/929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2"
+      ],
+      "semantic_scholar_id": "929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "canonical_id": "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
+      "authors": [
+        "P. Patel",
+        "Dayeol Lee",
+        "Shintaro Iwasaki",
+        "Arvind Krishnamurthy"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary MLSys paper measures MoE inference/serving overhead and identifies phase- and parallelism-specific costs that directly inform efficient LLM serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a2aa5b791635",
+    "round": "libimp-a2aa5b791635ef6e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a2aa5b791635ef6e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a2aa5b791635ef6e-pre01.json",
+    "receipt": "sha256:4e40744f3c0b17667c907f1ceb77632a0448b4ccc502870e1ec12c2ca8784d97"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a2aa5b791635",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

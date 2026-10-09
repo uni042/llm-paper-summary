@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents",
+      "source_url": "https://arxiv.org/abs/2605.19932",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents increasingly operate over long and recurring external contexts, like document corpora and code repositories. Across invocations, existing approaches preserve either the agent's trajectory, passive access to raw material, or task-level strategies. None of them preserves what we argue is most needed for repeated same-context workloads: reusable orientation knowledge (e.g., what the context contains, how it is organized, and which entities, constants, and schemas have historically been useful) about the recurring context itself. We introduce PEEK, a system that caches and maintains this orientation knowledge as a context map: a small, constant-sized artifact in the agent's prompt that gives it a persistent peek into the external context. The map is maintained by a programmable cache policy with three modules: a Distiller that extracts transferable knowledge from inference-time signals, a Cartographer that translates it into structured edits, and a priority-based Evictor that enforces a fixed token budget. On long-context reasoning and information aggregation, PEEK improves over strong baselines by 6.3-34.0% while using 93-145 fewer iterations and incurring 1.7-5.8x lower cost than the state-of-the-art prompt-learning framework, ACE. On context learning, PEEK improves solving rate and rubric accuracy by 6.0-14.0% and 7.8-12.1%, respectively, at 1.4x lower cost than ACE. These gains generalize across LMs and agent architectures, including OpenAI Codex, a production-grade coding agent. Together, these results show that a context map helps long-context LLM agents interact with recurring external contexts more accurately and efficiently.",
+      "identifiers": [
+        "SemanticScholar:8f4eda3352ba5b155d64813312933bcca4d355af"
+      ],
+      "semantic_scholar_id": "8f4eda3352ba5b155d64813312933bcca4d355af",
+      "canonical_id": "arXiv:2605.19932",
+      "arxiv_id": "2605.19932",
+      "doi": "10.48550/arXiv.2605.19932",
+      "authors": [
+        "Zhuohan Gu",
+        "Qizhen Zhang",
+        "Omar Khattab",
+        "Samuel Madden"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The fixed-budget orientation cache targets repeated long-context LLM inference and reports fewer iterations and lower cost while preserving agent context knowledge.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DiffuMamba: High-Throughput Diffusion LMs with Mamba Backbone",
+      "source_url": "https://arxiv.org/abs/2511.15927",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) generation, yet their reliance on Transformer backbones limits inference efficiency due to quadratic attention or KV-cache overhead. We introduce DiffuMamba, a masked diffusion language model built on a bidirectional Mamba backbone that combines the diffusion objective with linear-time sequence modeling, and DiffuMamba-H, a hybrid variant with interleaved attention. Across scales up to 1.3B parameters, our models match Transformer-based diffusion in downstream performance while achieving up to 8.2x and 4.3x higher inference throughput, respectively, on long sequences. We further present a systematic analysis of inference efficiency across modern DLM variants combining asymptotic complexity with empirical measurements. Notably, cache-efficient block diffusion with Mamba mixers emerges as the only strategy that scales linearly with sequence length and achieves the strongest performance across all baselines, suggesting a promising direction for future diffusion-based generation systems.",
+      "identifiers": [
+        "SemanticScholar:0e428dc856fe87e0901ba2aaf1d358415b667374"
+      ],
+      "semantic_scholar_id": "0e428dc856fe87e0901ba2aaf1d358415b667374",
+      "canonical_id": "arXiv:2511.15927",
+      "arxiv_id": "2511.15927",
+      "authors": [
+        "Vaibhav Singh",
+        "Oleksiy Ostapenko",
+        "Pierre-André Noël",
+        "Eugene Belilovsky",
+        "Torsten Scholak"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 324,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DiffuMamba targets diffusion-language-model inference overhead from quadratic attention and KV caching, and reports higher long-sequence throughput with Mamba backbones.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian",
+      "source_url": "https://arxiv.org/abs/2607.07964",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a widely adopted technique for compressing large language models (LLMs) without retraining. Most existing second-order PTQ methods, including GPTQ, construct quantization objectives from input activation statistics, effectively assuming that all output channels contribute equally to the layer-wise reconstruction objective. We propose KronQ, a PTQ framework that challenges this assumption by introducing the gradient covariance into the quantization pipeline. Under the Kronecker-factored Hessian approximation, the quantization loss depends jointly on both the activation and gradient covariances, and KronQ exploits this at two complementary levels. (1) KronQ introduces bidirectional incoherence processing, extending the existing input-side random rotation to the output dimension using the gradient covariance, reducing weight magnitude variance across both input and output dimensions. (2) KronQ derives a new sensitivity metric for inter-layer mixed-precision allocation, driven by the gradient and activation Hessian traces. Notably, in the case of 2-bit weight-only quantization on LLaMA-3-70B, while GPTQ and GPTAQ diverge or produce degenerate quantizations (>2000 perplexity on WikiText-2), \\KronQ{} achieves 7.93 perplexity.",
+      "identifiers": [
+        "SemanticScholar:8db8b55ec72de7e08a7355a79fb8ea40233ef1e1"
+      ],
+      "semantic_scholar_id": "8db8b55ec72de7e08a7355a79fb8ea40233ef1e1",
+      "canonical_id": "arXiv:2607.07964",
+      "arxiv_id": "2607.07964",
+      "doi": "10.48550/arXiv.2607.07964",
+      "authors": [
+        "Donghyun Lee",
+        "Yuhang Li",
+        "Ruokai Yin",
+        "Priyadarshini Panda"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KronQ is an LLM post-training quantization method that targets weight compression and inference deployment while preserving low-bit model quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DLP: Dynamic Layerwise Pruning in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2505.23807",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning has recently been widely adopted to reduce the parameter scale and improve the inference efficiency of Large Language Models (LLMs). Mainstream pruning techniques often rely on uniform layerwise pruning strategies, which can lead to severe performance degradation at high sparsity levels. Recognizing the varying contributions of different layers in LLMs, recent studies have shifted their focus toward non-uniform layerwise pruning. However, these approaches often rely on pre-defined values, which can result in suboptimal performance. To overcome these limitations, we propose a novel method called Dynamic Layerwise Pruning (DLP). This approach adaptively determines the relative importance of each layer by integrating model weights with input activation information, assigning pruning rates accordingly. Experimental results show that DLP effectively preserves model performance at high sparsity levels across multiple LLMs. Specifically, at 70% sparsity, DLP reduces the perplexity of LLaMA2-7B by 7.79 and improves the average accuracy by 2.7% compared to state-of-the-art methods. Moreover, DLP is compatible with various existing LLM compression techniques and can be seamlessly integrated into Parameter-Efficient Fine-Tuning (PEFT). We release the code at https://github.com/ironartisan/DLP to facilitate future research.",
+      "identifiers": [
+        "SemanticScholar:fbf89ffc7d4ed9e3a3ef50d605fad960033c5c69"
+      ],
+      "semantic_scholar_id": "fbf89ffc7d4ed9e3a3ef50d605fad960033c5c69",
+      "canonical_id": "arXiv:2505.23807",
+      "arxiv_id": "2505.23807",
+      "doi": "10.48550/arXiv.2505.23807",
+      "authors": [
+        "Yuli Chen",
+        "Bo Cheng",
+        "Jiale Han",
+        "Yingying Zhang",
+        "Yingting Li",
+        "Shuhao Zhang"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 500,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "DLP targets LLM inference efficiency through input-aware nonuniform layer pruning and reports quality-preserving results at 70% sparsity.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long-Code Completion",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1189",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Code Large Language Models face critical Time-To-First-Token (TTFT) latency challenges when handling long code completion due to the quadratic complexity ( O ( n 2 ) ) of attention mechanisms. While existing sparse attention methods attempt to address this issue, they suffer from three key limitations: (1) general sparse patterns cause excessive accuracy degradation without considering code structure, (2) code-specific methods achieve only logical sparsity without actual computational speedup, and (3) limited adaptation to complex scenarios such as repository-level completion. We propose SabreCoder , a training-free S tructure-a ware b lock-spa r s e attention mechanism that bridges the gap between logical and computational sparsity. SabreCoder parses code into semantic chunks, constructs chunk-level sparse patterns through dependency analysis and similarity matching, and maps them to GPU-friendly block-sparse formats. Extensive experiments on LCC and CrossCodeEval benchmarks demonstrate that SabreCoder reduces TTFT by 45-55% while maintaining accuracy within 3% of dense attention.",
+      "identifiers": [
+        "SemanticScholar:eb205b6da8c2bd1cfeb14749551a0e8a776fd982"
+      ],
+      "semantic_scholar_id": "eb205b6da8c2bd1cfeb14749551a0e8a776fd982",
+      "doi": "10.18653/v1/2026.acl-long.1189",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1189",
+      "authors": [
+        "Yan-Lin Wang",
+        "Yan-Lin Wang",
+        "Bowen Zhang",
+        "Yi Zhang",
+        "Da-Ya Guo",
+        "Jia-Chi Chen",
+        "Hong-Yu Zhang",
+        "Zi-Bin Zheng"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "SabreCoder directly reduces long-code LLM time-to-first-token using training-free, GPU-friendly block-sparse attention while preserving accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a2aa5b791635",
+    "round": "libimp-a2aa5b791635ef6e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 13,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a2aa5b791635ef6e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a2aa5b791635ef6e-pre01.json",
+    "receipt": "sha256:4e40744f3c0b17667c907f1ceb77632a0448b4ccc502870e1ec12c2ca8784d97"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a2aa5b791635",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
