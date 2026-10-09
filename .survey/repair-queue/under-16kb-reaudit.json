@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T17:52:50.804946+00:00",
+  "generated_at": "2026-10-09T18:02:12.585840+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 211,
+  "count": 210,
   "worker_counts": {
     "scheduled-chat-00": 70,
     "scheduled-chat-30": 70,
-    "scheduled-chat-45": 71
+    "scheduled-chat-45": 70
   },
   "entries": [
     {
@@ -462,28 +462,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 143 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.07458-coinrag.md",
-      "canonical_id": "arXiv:2608.07458",
-      "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
-      "file_bytes": 11704,
-      "source_sha256": "d07c55d2c7f2f67a590df6d22e4f51ba59fb2aa49b534b12e54d63eb8c38e95a",
-      "source_git_blob_sha": "b52999654c7d38ce20f3543cb5c9350d943915fb",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.997737,
-      "quality_metrics": {
-        "body_chars": 2677,
-        "method_chars": 1103,
-        "evaluation_chars": 305,
-        "limitation_chars": 266
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 305 < 500"
       ],
       "warnings": []
     },
