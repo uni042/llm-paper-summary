@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-09T01:33:18+00:00",
-  "last_run_key": "library-import-fc1b0814e525",
-  "last_round": "libimp-fc1b0814e525389e-pre01",
+  "updated_at": "2026-10-09T02:24:14+00:00",
+  "last_run_key": "library-import-1c2f2203dcd6",
+  "last_round": "libimp-1c2f2203dcd6b3ba-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-21T06:00:07+09:00-hourly30",
-      "round": "round-02",
-      "axis": "repository-wide backward references from collected papers",
-      "query_summary": "構造化後方引用から未評価20件を取得。今回の軽量評価では、タイトル・抄録が不足する記録を推測で採用せず0件提出とした。候補山は継続して残存。",
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "candidate_count": 0,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "別の前方引用seedまたは後方引用の次の未評価集合",
-      "source_submission": "work-queue/submissions/20260921T0604JST-hourly30-discovery-round-02-backward.json"
-    },
     {
       "run_key": "2026-09-21T06:00:07+09:00-hourly30",
       "round": "round-03",
@@ -13277,6 +13256,44 @@
       "duplicate_ratio": 0.7142857142857143,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-1c2f2203dcd6b3ba-pre01",
+      "precheck_request_id": "libimp-1c2f2203dcd6b3ba-pre01",
+      "run_key": "library-import-1c2f2203dcd6",
+      "round": "libimp-1c2f2203dcd6b3ba-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 15,
+      "duplicate_filtered_count": 10,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-1c2f2203dcd6b3ba-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-1c2f2203dcd6b3ba-pre01-sub01.json",
+        "work-queue/submissions/libimp-1c2f2203dcd6b3ba-pre01-sub02.json",
+        "work-queue/submissions/libimp-1c2f2203dcd6b3ba-pre01-sub03.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3
+      ],
+      "round_submission_count": 3,
+      "round_accounted": true,
+      "novel_candidate_count": 5,
+      "post_final_dedupe_count": 5,
+      "duplicate_ratio": 0.6666666666666666,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21648,16 +21665,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-fc1b0814e525",
-      "rounds": 210,
-      "candidate_count": 764,
-      "duplicate_filtered_count": 320,
-      "novel_candidate_count": 444,
+      "last_run_key": "library-import-1c2f2203dcd6",
+      "rounds": 211,
+      "candidate_count": 779,
+      "duplicate_filtered_count": 330,
+      "novel_candidate_count": 449,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 439,
-      "accepted_count": 439,
-      "duplicate_ratio": 0.418848167539267,
-      "final_duplicate_ratio": 0.01126126126126126,
+      "post_final_dedupe_count": 444,
+      "accepted_count": 444,
+      "duplicate_ratio": 0.42362002567394097,
+      "final_duplicate_ratio": 0.011135857461024499,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
