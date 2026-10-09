@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2608.02625",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) can revise tokens bidirectionally, but standard decoding procedures often adapt them to left-to-right generation by producing text block by block. We study a simple plug-and-play inference pattern: first generate a complete draft, then refine the full response using bidirectional diffusion. Using LLaDA2.1-Flash and LLaDA2.1-Mini, we evaluate two configurations. In Flash-Flash, the same Flash model serves as both drafter and refiner, testing whether an existing model can improve its own block-autoregressive output through global refinement. In Mini-Flash, inspired by speculative decoding, we introduce speculative correction: Mini drafts a full response, and Flash revises it as an editable initialization. Flash-Flash improves GSM8K-384 accuracy from 0.848 to 0.899 while running 1.20 times faster than the selected Flash block-autoregressive baseline, and improves MBPP-384 from 0.545 to 0.693. Latency-window-matched Flash-only controls indicate that these gains persist after targeted tuning of block-autoregressive decoding. Causal ablations indicate that completed drafts provide useful initializations: refinement from a fully masked span performs poorly, full global refinement provides a clear additional gain on GSM8K, and local refinement captures much of the gain on MBPP and MATH. Mini-Flash provides useful quality-latency trade-offs, including MATH-384 performance of 0.294 versus 0.300 for Flash while running 2.17 times faster. These results support a Pareto-frontier interpretation rather than the claim that the heterogeneous cascade uniformly matches Flash quality. Overall, same-model draft-and-refine provides evidence that bidirectional refinement is a useful decoding primitive for DLMs, while speculative correction demonstrates a training-free route to fast DLM generation.",
+      "identifiers": [
+        "SemanticScholar:754bd0767a342e2f78ffba59f05e1a63d9fdf890"
+      ],
+      "semantic_scholar_id": "754bd0767a342e2f78ffba59f05e1a63d9fdf890",
+      "canonical_id": "arXiv:2608.02625",
+      "arxiv_id": "2608.02625",
+      "authors": [
+        "Brian K. Chen",
+        "Chongwu Wu",
+        "Kenji Kawaguchi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract presents draft/refine speculative correction for diffusion language-model decoding and reports speed improvements.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SparseLLM: Towards Global Pruning of Pre-trained Language Models",
+      "source_url": "https://arxiv.org/abs/2402.17946",
+      "year": 2024,
+      "published": "2024-02-28",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 51,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The transformative impact of large language models (LLMs) like LLaMA and GPT on natural language processing is countered by their prohibitive computational demands. Pruning has emerged as a pivotal compression strategy, introducing sparsity to enhance both memory and computational efficiency. Yet, traditional global pruning is impractical for LLMs due to scalability issues, while local pruning, despite its efficiency, leads to suboptimal solutions. Addressing these challenges, we propose SparseLLM, a novel framework that redefines the global pruning process into manageable, coordinated subproblems, allowing for resource-efficient optimization with global optimality. SparseLLM's approach, which conceptualizes LLMs as a chain of modular functions and leverages auxiliary variables for problem decomposition, not only facilitates a pragmatic application on LLMs but also demonstrates significant performance improvements, particularly in high-sparsity regimes where it surpasses current state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:eb87c11618e2de4f1287320c22cedcc9ad1af761"
+      ],
+      "semantic_scholar_id": "eb87c11618e2de4f1287320c22cedcc9ad1af761",
+      "canonical_id": "arXiv:2402.17946",
+      "arxiv_id": "2402.17946",
+      "doi": "10.52202/079017-1468",
+      "authors": [
+        "Guangji Bai",
+        "Yi-Jiang Li",
+        "Chen Ling",
+        "Kibaek Kim",
+        "Liang Zhao"
+      ],
+      "priority": 61,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 51,
+        "citation_count": 51,
+        "total": 61,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 954,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The abstract describes global pruning for pretrained LLMs to reduce computation and memory, directly connected to model compression.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction",
+      "source_url": "https://arxiv.org/abs/2412.00556",
+      "year": 2024,
+      "published": "2024-11-30",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prevailing Multimodal Large Language Models (MLLMs) encode the input image(s) as vision tokens and feed them into the language backbone, similar to how Large Language Models (LLMs) process the text tokens. However, the number of vision tokens increases quadratically as the image resolutions, leading to huge computational costs. In this paper, we consider improving MLLM’s efficiency from two scenarios, (I) Reducing computational cost without degrading the performance. (II) Improving the performance with given budgets. We start with our main finding that the ranking of each vision token sorted by attention scores is similar in each layer except the first layer. Based on it, we assume that the number of essential top vision tokens does not increase along layers. Accordingly, for Scenario I, we propose a greedy search algorithm (G-Search) to find the least number of vision tokens to keep at each layer from the shallow to the deep. Interestingly, G-Search is able to reach the optimal reduction strategy based on our assumption. For Scenario II, based on the reduction strategy from G-Search, we design a parametric sigmoid function (P-Sigmoid) to guide the reduction at each layer of the MLLM, whose parameters are optimized by Bayesian Optimization. Extensive experiments demonstrate that our approach can significantly accelerate those popular MLLMs, e.g. LLaVA, and InternVL2 models, by more than 2⇥ without performance drops. Our approach also far outperforms other token reduction methods when budgets are limited, achieving a better trade-off between efficiency and effectiveness.",
+      "identifiers": [
+        "SemanticScholar:63f86230a6a862fbc01bae6e24ecbee499e1884d"
+      ],
+      "semantic_scholar_id": "63f86230a6a862fbc01bae6e24ecbee499e1884d",
+      "canonical_id": "arXiv:2412.00556",
+      "arxiv_id": "2412.00556",
+      "doi": "10.1109/CVPR52734.2025.02780",
+      "authors": [
+        "Shi-Yu Zhao",
+        "Zhen-Ting Wang",
+        "Felix Juefei-Xu",
+        "Xide Xia",
+        "Miao Liu",
+        "Xiao-Fang Wang",
+        "Mingfu Liang",
+        "Ning Zhang",
+        "Dimitris N. Metaxas",
+        "Licheng Yu"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 678,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract proposes visual-token reduction for MLLMs and reports inference acceleration, directly relevant to multimodal LLM serving.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DenoiseRotator: Enhance Pruning Robustness for LLMs via Importance Concentration",
+      "source_url": "https://arxiv.org/abs/2505.23049",
+      "year": 2025,
+      "published": "2025-05-29",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is a widely used technique to compress large language models (LLMs) by removing unimportant weights, but it often suffers from significant performance degradation - especially under semi-structured sparsity constraints. Existing pruning methods primarily focus on estimating the importance of individual weights, which limits their ability to preserve critical capabilities of the model. In this work, we propose a new perspective: rather than merely selecting which weights to prune, we first redistribute parameter importance to make the model inherently more amenable to pruning. By minimizing the information entropy of normalized importance scores, our approach concentrates importance onto a smaller subset of weights, thereby enhancing pruning robustness. We instantiate this idea through DenoiseRotator, which applies learnable orthogonal transformations to the model's weight matrices. Our method can be seamlessly integrated with existing pruning techniques such as Magnitude, SparseGPT, and Wanda. Evaluated on LLaMA3, Qwen2.5, and Mistral models under 50% unstructured and 2:4 semi-structured sparsity, DenoiseRotator consistently improves perplexity and zero-shot accuracy. For instance, on LLaMA3-70B pruned with SparseGPT at 2:4 semi-structured sparsity, DenoiseRotator reduces the perplexity gap to the dense model by 58%, narrowing the degradation from 8.1 to 3.4 points. Codes are available at https://github.com/Axel-gu/DenoiseRotator.",
+      "identifiers": [
+        "SemanticScholar:29ff93fafdc6e874dd1fe6a52f9b4fc84a398825"
+      ],
+      "semantic_scholar_id": "29ff93fafdc6e874dd1fe6a52f9b4fc84a398825",
+      "canonical_id": "arXiv:2505.23049",
+      "arxiv_id": "2505.23049",
+      "doi": "10.48550/arXiv.2505.23049",
+      "authors": [
+        "Tianteng Gu",
+        "Bei Liu",
+        "Bo Xiao",
+        "Ke Zeng",
+        "Jiacheng Liu",
+        "Yanmin Qian"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 498,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The abstract makes LLM weight representations more amenable to pruning, a direct model-compression method.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2510.16598",
+      "year": 2025,
+      "published": "2025-10-18",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) encounter significant computational and memory bottlenecks from the massive number of visual tokens generated by high-resolution images or multi-image inputs. Previous token compression techniques are often constrained by heuristic rules that risk discarding critical information. They may suffer from biases, such as attention sinks, that lead to sharp performance drops under aggressive compression ratios. To address these limitations, we reformulate token compression as a lightweight plug-and-play framework and turn it into an end-to-end learnable decision process. Specifically, we propose VisionSelector, a scorer module decoupled from the MLLM backbone that incorporates a differentiable Top-K mechanism and a curriculum annealing strategy to bridge the training-inference gap, enabling efficient and adaptive token selection across various compression rates. Remarkably lightweight with only 12.85M trainable parameters, VisionSelector demonstrates generalization across various compression rates and adaptively identifies critical tokens. This leads to superior performance across the evaluated compression budgets, evidenced by preserving 100% performance on MME with a 30% retention budget, outperforming representative heuristic baselines by 12.14 percentage points at a 10% retention budget, and doubling prefill speed. Our code is available at https://github.com/JulietChoo/VisionSelector .",
+      "identifiers": [
+        "SemanticScholar:d9a556df0e8bb25e4c52b3141f2295ac762fe091"
+      ],
+      "semantic_scholar_id": "d9a556df0e8bb25e4c52b3141f2295ac762fe091",
+      "canonical_id": "arXiv:2510.16598",
+      "arxiv_id": "2510.16598",
+      "doi": "10.48550/arXiv.2510.16598",
+      "authors": [
+        "Jiaying Zhu",
+        "Yurui Zhu",
+        "Xin Lu",
+        "Wenrui Yan",
+        "Dong Li",
+        "Kunlin Liu",
+        "Xue-Yang Fu",
+        "Zheng-Jun Zha"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 356,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract compresses visual tokens in MLLMs and reports prefill-speed improvement, directly targeting multimodal inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-189ac5833c07",
+    "round": "libimp-189ac5833c075c2c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-189ac5833c075c2c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-189ac5833c075c2c-pre01.json",
+    "receipt": "sha256:f6261d97aed06414831483b992b2a01e075c4cfdd5f519eece597695a837c796"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-189ac5833c07",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
