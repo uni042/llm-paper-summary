@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T13:54:07.918766+00:00",
+  "generated_at": "2026-10-09T14:55:53.262620+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 278,
+  "count": 274,
   "worker_counts": {
-    "scheduled-chat-00": 93,
-    "scheduled-chat-30": 92,
-    "scheduled-chat-45": 93
+    "scheduled-chat-00": 91,
+    "scheduled-chat-30": 91,
+    "scheduled-chat-45": 92
   },
   "entries": [
     {
@@ -325,7 +325,7 @@
       "file_bytes": 10122,
       "source_sha256": "e52ee346afcf6bd8db95aab755a958aa2dc6bde48a881e37096562c3b6dcb54a",
       "source_git_blob_sha": "ddd8467c1891c4f92360fb2f10d5b2a6b87399c2",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.786368,
@@ -733,30 +733,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md",
-      "canonical_id": "arXiv:2402.02082",
-      "title": "GliDe with a CaPE: A Low-Hassle Method to Accelerate Speculative Decoding",
-      "file_bytes": 10831,
-      "source_sha256": "e039d4f619e20e3ab500c4690757790cfa549b417bb28353833385c6f504eaaa",
-      "source_git_blob_sha": "9f5dfd188c68bb898da9713bd5212f1652020a09",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.792832,
-      "quality_metrics": {
-        "body_chars": 3239,
-        "method_chars": 1107,
-        "evaluation_chars": 945,
-        "limitation_chars": 252
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 79.3% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.3% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
       "canonical_id": "arXiv:2412.03213",
       "title": "ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression",
@@ -775,28 +751,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2608.01662-longcat-sparse-attention-taming-the-lightning-via-streaming-aware-hierar.md",
-      "canonical_id": "arXiv:2608.01662",
-      "title": "LongCat Sparse Attention: Taming the Lightning via Streaming-aware Hierarchical Cross-Layer Indexing",
-      "file_bytes": 10908,
-      "source_sha256": "ac90f3db997ffef59758474267fab5fe4680ca9613d4f51b23f887345af5ea7c",
-      "source_git_blob_sha": "b4a28f7c135dc2fa4019a5bca7a9d1b03958afd1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.816,
-      "quality_metrics": {
-        "body_chars": 2302,
-        "method_chars": 712,
-        "evaluation_chars": 316,
-        "limitation_chars": 257
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 316 < 500"
       ],
       "warnings": []
     },
@@ -907,32 +861,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
-      "canonical_id": "arXiv:2502.11089",
-      "title": "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention",
-      "file_bytes": 11071,
-      "source_sha256": "f182fe8d2841e279829aabd86c227f1ffa79ecfea802651f87fbc345d3581606",
-      "source_git_blob_sha": "f814cbfbb0c1b7b42c1f14d354a064edd2f9f7a2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.740113,
-      "quality_metrics": {
-        "body_chars": 2134,
-        "method_chars": 995,
-        "evaluation_chars": 0,
-        "limitation_chars": 272
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 2134 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500",
-        "16KB未満再監査: 日本語比率 74.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.0% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-l.md",
       "canonical_id": "arXiv:2608.08878",
       "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
@@ -951,28 +879,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 127 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
-      "canonical_id": "arXiv:2402.05099",
-      "title": "Hydragen: High-Throughput LLM Inference with Shared Prefixes",
-      "file_bytes": 11094,
-      "source_sha256": "cc9c448f5c4c75dcde47deb355c0dc9f0433b83d7879ab7b029e325237b6ed9c",
-      "source_git_blob_sha": "a61f3f168ef7b67dd11d7d7624950d7982cbb964",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.816622,
-      "quality_metrics": {
-        "body_chars": 3005,
-        "method_chars": 1020,
-        "evaluation_chars": 242,
-        "limitation_chars": 237
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 242 < 500"
       ],
       "warnings": []
     },
@@ -1258,7 +1164,7 @@
       "file_bytes": 11539,
       "source_sha256": "3601f4d9cca1faef5f78ec1d92b3214fb95d49e233daa295d28e9866e1b03910",
       "source_git_blob_sha": "dacdc3c859e49894596bc68078307c6c90683be9",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.901447,
