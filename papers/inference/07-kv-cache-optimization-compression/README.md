@@ -762,8 +762,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   SqueezeAttentionは、KVキャッシュ圧縮を「各層の中でどのトークンを残すか」という系列方向だけでなく、「総KV予算をどの注意機構層へ配るか」という層方向まで含む二次元問題として扱う。
 
 - **2024-09 · [Small Language Models: Survey, Measurements, and Insights](2024-2409.15790-small-language-models-survey-measurements-and-insights.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  100M〜5B級小型言語モデルを端末上で統一測定し、プリフィルは構造依存、デコードは規模依存が強く、長文脈ではKVと計算バッファがメモリ支配になると示す。
+  実装：[✓](https://github.com/UbiquitousLearning/SLM_Survey) ・ リポジトリ内被引用：3  
+  推論を高速化する新しいアルゴリズムを提案する論文ではない。同程度のパラメータ数でもQwen2-0.5Bの初回トークン時間はQwen1.5-0.5Bの1.46倍であり、Qwen1.5-0.5Bはパラメータが25.4%多いにもかかわらずJetson上では31.9%速い。
 
 ### 4年前（2022-11〜2023-10）
 

@@ -1,59 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-09T04:42:58+00:00",
+  "updated_at": "2026-10-09T04:56:51+00:00",
   "events": [
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-13c2c0103d25--libfile_05a93cc32a68819198fcc0eaeb4aa348--2025-2504.03871-hetermoe-under16kb-reaudit-20261008-1630-scheduled-chat-30-r01.md",
-      "processed_at": "2026-10-08T13:50:38+00:00",
-      "canonical_id": "arXiv:2504.03871"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-16779e5565ea--libfile_31f10609621c8191b2794a04ec342eca--2023-2311.01282-flashdecoding-under16kb-reaudit-20261008-1433-scheduled-chat-30-r02.md",
-      "processed_at": "2026-10-08T13:50:38+00:00",
-      "canonical_id": "arXiv:2311.01282"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-232a71663b58--libfile_930cdc0462c0819184ec07615f16cb53--gist-tokens-under16kb-reaudit-20261008-1130-scheduled-chat-30-r01-timestamp-corrected.md",
-      "processed_at": "2026-10-08T13:50:38+00:00",
-      "canonical_id": "arXiv:2304.08467"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-24a61e23573e--libfile_bc9de1ad5e408191a611ac34dd283e7f--2024-2403.00835-cllms-under16kb-reaudit-20261008-1812-scheduled-chat-00-r01.md",
-      "processed_at": "2026-10-08T13:50:38+00:00",
-      "canonical_id": "arXiv:2403.00835"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-27fc609eb675--libfile_603fb89247c08191be1387f984cba9e4--2024-2411.00841-speculative-decoding-theory-under16kb-reaudit-20261008-1235-scheduled-chat-00.md",
-      "processed_at": "2026-10-08T13:50:38+00:00",
-      "canonical_id": "arXiv:2411.00841"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-2af71806f79c--libfile_8013cc81cea4819192306bc320a19c9f--2024-2405.05465-vidur-under16kb-reaudit-20261008-1433-scheduled-chat-30-r01.md",
-      "processed_at": "2026-10-08T13:50:38+00:00",
-      "canonical_id": "arXiv:2405.05465"
-    },
-    {
-      "status": "discarded_research_after_retry",
-      "source_path": ".survey/import-inbox/blocked/research/retry-research-2efdb786f1d4--libfile_e6b792fb057881919594549507e0261f--2023-2311.01282-flashdecoding-repaired-20261008-1930-scheduled-chat-30-r01.md",
-      "processed_at": "2026-10-08T13:50:38+00:00",
-      "canonical_id": "arXiv:2311.01282"
-    },
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
-      "processed_at": "2026-10-08T14:09:49+00:00",
-      "canonical_id": "arXiv:2609.19657",
-      "failures": [
-        "worker_completed_at"
-      ]
-    },
     {
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
@@ -4287,6 +4236,79 @@
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
       "processed_at": "2026-10-09T04:42:58+00:00",
+      "canonical_id": "arXiv:1905.07799",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-prefixbench-2609.19657.md",
+      "processed_at": "2026-10-09T04:56:50+00:00",
+      "canonical_id": "arXiv:2609.19657",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-r3-fairserve-2411.15997.md",
+      "processed_at": "2026-10-09T04:56:50+00:00",
+      "canonical_id": "arXiv:2411.15997",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-specexec-2406.02532.md",
+      "processed_at": "2026-10-09T04:56:51+00:00",
+      "canonical_id": "arXiv:2406.02532",
+      "failures": [
+        "worker_completed_at"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261008-bottom-up-reaudit-wireless-moe-2503.13421.md",
+      "processed_at": "2026-10-09T04:56:51+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-certaindex-2412.20993.md",
+      "processed_at": "2026-10-09T04:56:51+00:00",
+      "canonical_id": "arXiv:2412.20993",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-20261009-bottom-up-reaudit-edge-dmoe-2503.13421.md",
+      "processed_at": "2026-10-09T04:56:51+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/interactive-reaudit-20261008-optimal-expert-wireless-2503.13421.md",
+      "processed_at": "2026-10-09T04:56:51+00:00",
+      "canonical_id": "arXiv:2503.13421",
+      "failures": [
+        "arxiv_categories.cross_list"
+      ]
+    },
+    {
+      "status": "retained_blocked_reaudit_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_b409c37047448191b416eb3da8ae89aa--2019-1905.07799-adaptive-attention-span-reaudit-20261008-scheduled-chat-45-r01.md",
+      "processed_at": "2026-10-09T04:56:51+00:00",
       "canonical_id": "arXiv:1905.07799",
       "failures": [
         "arxiv_categories.cross_list",
