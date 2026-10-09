@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-09T11:55:41+00:00",
-  "record_count": 11234,
+  "updated_at": "2026-10-09T15:42:59+00:00",
+  "record_count": 11235,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160510,6 +160510,18 @@
       "last_checked_at": "2026-10-09T11:55:41+00:00",
       "linked_from": [],
       "title": "MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core"
+    },
+    "arXiv:2506.06472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06472",
+      "identity_tokens": [
+        "arXiv:2506.06472"
+      ],
+      "reason": "タイトルはGPUDirect Storageを使った学習時テンソルの生存期間に応じた退避を明示している。対象は訓練時の計算・メモリ効率であり、推論時の重み・KVキャッシュ退避やサービングへの直接適用はタイトルから確認できない。学習単独最適化は凍結対象のためタイトル段階で対象外。",
+      "first_checked_at": "2026-10-09T15:42:59+00:00",
+      "last_checked_at": "2026-10-09T15:42:59+00:00",
+      "linked_from": [],
+      "title": "Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage"
     }
   }
 }
