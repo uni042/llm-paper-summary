@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T05:03:57.087089+00:00",
+  "generated_at": "2026-10-09T05:58:59.564781+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 310,
+  "count": 308,
   "worker_counts": {
-    "scheduled-chat-00": 82,
-    "scheduled-chat-30": 83,
+    "scheduled-chat-00": 81,
+    "scheduled-chat-30": 82,
     "scheduled-chat-45": 145
   },
   "entries": [
@@ -1925,28 +1925,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
-      "canonical_id": "arXiv:2310.05869",
-      "title": "HyperAttention: Long-context Attention in Near-Linear Time",
-      "file_bytes": 11824,
-      "source_sha256": "fda6acb2e7664f900d006e3e9d8e40a286534f025ace5bcbea0d84529a486b35",
-      "source_git_blob_sha": "c489267e3bf4a71a58a20fce55c0760c39c4aa03",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.925799,
-      "quality_metrics": {
-        "body_chars": 2381,
-        "method_chars": 727,
-        "evaluation_chars": 93,
-        "limitation_chars": 196
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 93 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/03-expert-prefetch/2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md",
       "canonical_id": "arXiv:2509.23638",
       "title": "LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers",
@@ -2471,26 +2449,6 @@
         "body_chars": 2865,
         "method_chars": 1324,
         "evaluation_chars": 861,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md",
-      "canonical_id": "arXiv:2408.10013",
-      "title": "SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training",
-      "file_bytes": 12173,
-      "source_sha256": "d5f639a83559253c32b7389a036edd0d1176b62254d00044f0a2c82532e005e5",
-      "source_git_blob_sha": "a4d1aa928392854f7e94762026e044bcfbc34981",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.954943,
-      "quality_metrics": {
-        "body_chars": 2992,
-        "method_chars": 1205,
-        "evaluation_chars": 983,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
