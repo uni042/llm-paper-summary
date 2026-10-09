@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T07:51:04.759004+00:00",
+  "generated_at": "2026-10-09T08:59:31.447351+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 302,
+  "count": 301,
   "worker_counts": {
     "scheduled-chat-00": 78,
-    "scheduled-chat-30": 79,
+    "scheduled-chat-30": 78,
     "scheduled-chat-45": 145
   },
   "entries": [
@@ -2600,28 +2600,6 @@
         "limitation_chars": 269
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
-      "canonical_id": "arXiv:2407.04153",
-      "title": "Mixture of A Million Experts：百万専門家を扱うPEER層",
-      "file_bytes": 12271,
-      "source_sha256": "a37ce14178c048e7382e11530a398a761a5222db118e29d28fba09090df04ab0",
-      "source_git_blob_sha": "c12b5a57ff856660ea44b06f22bb014d4fe37e3a",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.99027,
-      "quality_metrics": {
-        "body_chars": 2573,
-        "method_chars": 939,
-        "evaluation_chars": 138,
-        "limitation_chars": 138
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 138 < 500"
-      ],
       "warnings": []
     },
     {
