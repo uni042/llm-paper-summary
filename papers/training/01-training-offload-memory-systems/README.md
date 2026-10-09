@@ -56,7 +56,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2024-08 · [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)**  
   実装：[✓](https://github.com/K-Wu/FlashTrain) ・ リポジトリ内被引用：2  
-  順伝播で生成した活性値をNVMe SSDへ非同期退避し、逆伝播の直前に先読みして、再計算を減らしながらGPU活性値メモリを空けるLLM学習システム。
+  モデルのパラメータや最適化状態だけでなく活性値がGPUメモリの大きな割合を占めるため、メモリが足りないとマイクロバッチを小さくするか、一部の活性値を捨てて逆伝播時に再計算する必要がある。SSDTrainは、活性値を捨てる代わりに高帯域のNVMe SSDへ一時保存し、逆伝播で必要になる前にGPUへ戻す方式である。
 
 - **2024-06 · [Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors](2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md)**  
   実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：2  
