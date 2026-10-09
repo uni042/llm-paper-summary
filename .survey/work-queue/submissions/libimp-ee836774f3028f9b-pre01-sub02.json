@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.04595",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) incur substantial memory and computation costs. Prior works reduce FP-INT arithmetic overhead by converting linear-layer activations to block floating point (BFP), but retain FP activations in attention layers due to accuracy concerns. We propose Harmonia, an algorithm-hardware co-design framework that enables BFP representation and computation across both linear and attention layers. Harmonia first explores BFP configurations to balance model accuracy and activation compression. It then combines asymmetric bit allocation with hybrid offline-online outlier smoothing to compress the KV cache from FP16 to 4-bit-mantissa BFP with less than 1% average accuracy loss on LongBench. To efficiently support all-layer BFP computation, Harmonia incorporates a reconfigurable PE unit for mixed data formats and precisions, a real-time FP16-to-BFP converter, and a flexible tiling-aware dataflow that reduces external memory traffic. Evaluations across eight widely used LLMs show that Harmonia achieves 3.84x higher area efficiency, 2.03x better energy efficiency, and 3.08x speedup on average, with maximum improvements of 5.05x, 3.90x, and 4.62x, respectively.",
+      "identifiers": [
+        "SemanticScholar:d32ae9842c1eedef4ec2f68fec328e800c65a460"
+      ],
+      "semantic_scholar_id": "d32ae9842c1eedef4ec2f68fec328e800c65a460",
+      "canonical_id": "arXiv:2602.04595",
+      "arxiv_id": "2602.04595",
+      "doi": "10.1109/TCAD.2026.3731383",
+      "authors": [
+        "Xin-Yu Wang",
+        "Jie-Yu Li",
+        "Yanan Sun",
+        "Weifeng He"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HarmoniaはLLMの全層でBFP演算と4-bit-mantissa KV cacheを支えるalgorithm-hardware co-designで、メモリ/計算/エネルギー効率を評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Let the Code LLM Edit Itself When You Edit the Code",
+      "source_url": "https://arxiv.org/abs/2407.03157",
+      "year": 2024,
+      "published": "2024-07-03",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we investigate a typical scenario in code generation where a developer edits existing code in real time and requests a code assistant, e.g., a large language model, to re-predict the next token or next line on the fly. Naively, the LLM needs to re-encode the entire KV cache to provide an accurate prediction. However, this process is computationally expensive, especially when the sequence length is long. Simply encoding the edited subsequence and integrating it to the original KV cache meets the temporal confusion problem, leading to significantly worse performance. We address this efficiency and accuracy trade-off by introducing \\underline{\\textbf{Positional \\textbf{I}ntegrity \\textbf{E}ncoding} (PIE). Building upon the rotary positional encoding, PIE first removes the rotary matrices in the Key cache that introduce temporal confusion and then reapplies the correct rotary matrices. This process ensures that positional relationships between tokens are correct and requires only a single round of matrix multiplication. We validate the effectiveness of PIE through extensive experiments on the RepoBench-C-8k dataset, utilizing DeepSeek-Coder models with 1.3B, 6.7B, and 33B parameters. Our evaluation includes three real-world coding tasks: code insertion, code deletion, and multi-place code editing. Results demonstrate that PIE reduces computational overhead by over 85% compared to the standard full recomputation approach across all model sizes and tasks while well approximating the model performance.",
+      "identifiers": [
+        "SemanticScholar:03a015adaa28e2b2c83bf4c7cc9d0a930ab12218"
+      ],
+      "semantic_scholar_id": "03a015adaa28e2b2c83bf4c7cc9d0a930ab12218",
+      "canonical_id": "arXiv:2407.03157",
+      "arxiv_id": "2407.03157",
+      "doi": "10.48550/arXiv.2407.03157",
+      "authors": [
+        "Zhenyu He",
+        "Jun Zhang",
+        "Sheng-Jie Luo",
+        "Jingjing Xu",
+        "Zhi Zhang",
+        "Di He"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 828,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "コード編集後の次token予測でKV全体再計算を避けるPIEを提案。コード編集タスクで再計算比85%以上の計算 overhead reductionを評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accurate KV Cache Eviction via Anchor Direction Projection for Efficient LLM Inference",
+      "source_url": "https://doi.org/10.52202/085713-0350",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) cache eviction—which retains the KV pairs of the most important tokens while discarding less important ones—is a critical technique for optimizing both memory usage and inference latency in large language models (LLMs). However, existing approaches often rely on simple heuristics—such as attention weights—to measure token importance, overlooking the spatial relationships be-tween token value states in the vector space. This often leads to suboptimal token selections and thus performance degradation. To tackle this problem, we propose a novel method, namely AnDPro ( An chor D irection Pro jection), which introduces a projection-based scoring function to more accurately measure token importance. Specifically, AnDPro operates in the space of value vectors and leverages the projections of these vectors onto an “Anchor Direction” —the direction of the pre-eviction output—to measure token importance and guide more accurate token selection. Experiments on 16 datasets from the LongBench benchmark demonstrate that AnDPro can maintain 96 . 07% of the full cache accuracy using only 3 . 44% KV cache budget, reducing KV cache budget size by 46 . 0% without compromising quality compared to previous state-of-the-arts.",
+      "identifiers": [
+        "SemanticScholar:69233828b38f614a9e3a742b4c835b8328710e4e"
+      ],
+      "semantic_scholar_id": "69233828b38f614a9e3a742b4c835b8328710e4e",
+      "doi": "10.52202/085713-0350",
+      "canonical_id": "DOI:10.52202/085713-0350",
+      "authors": [
+        "Zijie Geng",
+        "Jie Wang",
+        "Ziqi Liu",
+        "Feng Ju",
+        "Yiming Li",
+        "Xing Li",
+        "Ming-Xuan Yuan",
+        "Jian-Ye Hao",
+        "De-Fu Lian",
+        "Enhong Chen",
+        "Feng Wu"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "AnDProはvalue-vectorのanchor-direction projectionで重要KVを選ぶeviction手法。LongBenchで3.44% cache budget時もfull-cache精度の96.07%を維持。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hierarchical Speculative Decoding with Dynamic Window",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-naacl.462",
+      "year": 2025,
+      "published": null,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) utilizes an efficient draft model to generate multiple tokens, which are subsequently verified in parallel by a target model. This approach has shown significant potential for accelerating inference in large language models (LLMs), with performance heavily reliant on the hyperparameter K —the window size. However, previous meth-ods often depend on simple heuristics to select K or dynamically adjust the window size, which may necessitate additional training or careful resource management to avoid competition. To address these challenges, we pro-pose H ierarchical S peculative D ecoding with D ynamic W indow (HSDDW), a straightforward framework that eliminates the need for additional training. Specifically, we introduce a self-verify mechanism that enables the draft model to autonomously decide when to stop generating tokens. Additionally, by integrating a hierarchical structure that leverages the capabilities of models of different sizes, we significantly enhance the overall speed of the sys-tem. HSDDW demonstrates competitive performance across four datasets, achieving notable speedups of 2 . 91 × on MT-Bench and 2 . 99 × on Alpaca, outperforming existing state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:ba0f0183255afb920a84720b268b4f4bf78259c0"
+      ],
+      "semantic_scholar_id": "ba0f0183255afb920a84720b268b4f4bf78259c0",
+      "doi": "10.18653/v1/2025.findings-naacl.462",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.462",
+      "authors": [
+        "Shensian Syu",
+        "Hung-yi Lee"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "HSDDWはdraftモデルによるself-verifyと階層的draft構成でwindow調整の追加学習を避け、LLM speculative decodingを高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EasySpec: Layer-Parallel Speculative Decoding for Efficient Multi-GPU Utilization",
+      "source_url": "https://arxiv.org/abs/2502.02493",
+      "year": 2025,
+      "published": "2025-02-04",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is an effective and lossless method for Large Language Model (LLM) inference acceleration. It employs a smaller model to generate a draft token sequence, which is then verified by the original base model. In multi-GPU systems, inference latency can be further reduced through tensor parallelism (TP), while the optimal TP size of the draft model is typically smaller than that of the base model, leading to GPU idling during the drafting stage. We observe that such inefficiency stems from the sequential execution of layers, which is seemingly natural but actually unnecessary. Therefore, we propose EasySpec, a layer-parallel speculation strategy that optimizes the efficiency of multi-GPU utilization. EasySpec breaks the inter-layer data dependencies in the draft model, enabling multiple layers to run simultaneously across multiple devices as'fuzzy'speculation. After each drafting-and-verification iteration, the draft model's key-value cache is calibrated in a single forward pass, preventing long-term fuzzy-error accumulation at minimal additional latency. EasySpec is a training-free and plug-in method. We evaluated EasySpec on several mainstream open-source LLMs, using smaller versions of models from the same series as drafters. The results demonstrate that EasySpec can achieve a peak speedup of 4.17x compared to vanilla decoding, while preserving the original distributions of the base LLMs. Specifically, the drafting stage can be accelerated by up to 1.62x with a maximum speculation accuracy drop of only 7%. The code is available at https://github.com/Yize-Wu/EasySpec.",
+      "identifiers": [
+        "SemanticScholar:7ebf679e89777f26655e0ea1c25757117f57e25d"
+      ],
+      "semantic_scholar_id": "7ebf679e89777f26655e0ea1c25757117f57e25d",
+      "canonical_id": "arXiv:2502.02493",
+      "arxiv_id": "2502.02493",
+      "doi": "10.48550/arXiv.2502.02493",
+      "authors": [
+        "Yi-Ze Wu",
+        "Ke Gao",
+        "Ling Li",
+        "Yan-Jun Wu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 612,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "EasySpecはdraft modelの層をmulti-GPUで並列化し、iterationごとにKVを補正するtraining-free speculative inference法。最大4.17x speedup。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ee836774f302",
+    "round": "libimp-ee836774f3028f9b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ee836774f3028f9b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ee836774f3028f9b-pre01.json",
+    "receipt": "sha256:4620f21673e2363054a99c18c6af0d287b43f41715fe1e584cb805baa487b73c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ee836774f302",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

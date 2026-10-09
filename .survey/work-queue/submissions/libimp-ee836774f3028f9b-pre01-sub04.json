@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SparseEngine: Sparse-First Inference Engine",
+      "source_url": "https://arxiv.org/abs/2609.39068",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM agents accumulate interaction histories that strain KV-cache memory and attention computation. Although sparse attention reduces these costs, heterogeneous cache representations and workflows hinder integration with existing inference engines, while prior sparse-serving abstractions support only specific layouts or workflows. We present SparseEngine, a ground-up, sparse-first inference engine whose shared lifecycle contract lets each method control its KV representation and computation while coordinating state transitions with common serving infrastructure. SparseEngine supports 15 methods across four categories and enables cross-request state management through Chain Cache, which resumes KV-eviction methods from retained history, and controllable Prefix-Cache Pruning, which removes KV from selected history regions while preserving logical-prefix matching. While maintaining method quality, SparseEngine delivers over 10x higher throughput with KV eviction, over 2.5x faster decoding at matched concurrency than vLLM, and over 2x end-to-end speedup on agent benchmarks. The code is available at https://github.com/CURRENTF/SparseEngine.",
+      "identifiers": [
+        "SemanticScholar:8303a36506f1529b7fac06064cfefe8855d5f813"
+      ],
+      "semantic_scholar_id": "8303a36506f1529b7fac06064cfefe8855d5f813",
+      "canonical_id": "arXiv:2609.39068",
+      "arxiv_id": "2609.39068",
+      "authors": [
+        "Jitai Hao",
+        "Quan-Sheng Gu",
+        "Qiang Huang",
+        "Jun Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SparseEngineは複数のsparse/KV-eviction法を統合するinference engine。cache lifecycle共有によりvLLM比decoding・agent throughput改善を評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Alleviating Forgetfulness of Linear Attention by Hybrid Sparse Attention and Contextualized Learnable Token Eviction",
+      "source_url": "https://arxiv.org/abs/2510.20787",
+      "year": 2025,
+      "published": "2025-10-23",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-attention models that compress the entire input sequence into a fixed-size recurrent state offer an efficient alternative to Transformers, but their finite memory induces forgetfulness that harms retrieval-intensive tasks. To mitigate the issue, we explore a series of hybrid models that restore direct access to past tokens. We interleave token mixers with intermediate time and space complexity between linear and full attention, including sparse attention with token eviction, and the query-aware native sparse attention. Particularly, we propose a novel learnable token eviction approach. Combined with sliding-window attention, an end-to-end trainable lightweight CNN aggregates information from both past and future adjacent tokens to adaptively retain a limited set of critical KV-pairs per head, maintaining linear attention's constant time and space complexity. Efficient Triton kernels for the sparse attention mechanisms are provided. Empirical evaluations on retrieval-intensive benchmarks support the effectiveness of our approaches.",
+      "identifiers": [
+        "SemanticScholar:c43c714fb65f982264bdbc417f0e9da6954f704a"
+      ],
+      "semantic_scholar_id": "c43c714fb65f982264bdbc417f0e9da6954f704a",
+      "canonical_id": "arXiv:2510.20787",
+      "arxiv_id": "2510.20787",
+      "doi": "10.48550/arXiv.2510.20787",
+      "authors": [
+        "Mu-Tian He",
+        "Philip N. Garner"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": null
+      },
+      "reason": "linear attentionの忘却対策としてsparse attentionと学習可能token evictionを併用し、CNNでheadごとに保持KVを選ぶ。長系列効率と検索性能を評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem",
+      "source_url": "https://arxiv.org/abs/2510.22876",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference optimizations are routinely evaluated by throughput alone, without verifying output correctness. We conduct a forensic analysis of batch speculative decoding and find that several widely-used implementations silently produce corrupted outputs (repetitive tokens,symbols) while reporting competitive speed; failures invisible to metrics like ROUGE. We trace the root cause to the ragged tensor problem: variable token acceptance desynchronizes position IDs, attention masks, and KV-cache across a batch. We formalize the synchronization invariants (rectangular alignment and position-ID contiguity) that valid batched inference must preserve and show that maintaining them incurs superlinear alignment overhead under contiguous layouts. EQSPEC enforces the invariants without custom kernels; EXSPEC schedules same-length sequences to bypass realignment. On SpecBench across three model families, EXSPEC reaches 3 x throughput at batch size 8 with 95% exact match to standard decoding; residual divergence traces to floating-point non-determinism, not synchronization error. Code:https://github.com/eBay/spec_dec",
+      "identifiers": [
+        "SemanticScholar:fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a"
+      ],
+      "semantic_scholar_id": "fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a",
+      "canonical_id": "arXiv:2510.22876",
+      "arxiv_id": "2510.22876",
+      "authors": [
+        "Ran-Ran Zhang",
+        "Soumik Dey",
+        "Ashirbad Mishra",
+        "Han-Si Wu",
+        "Bin-Bin Li",
+        "Rui Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      },
+      "reason": "batch speculative decodingのragged tensorで位置ID/mask/KV同期が崩れる問題を解析し、整合性維持法とthroughput改善策を示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Modality Agnostic Efficient Long Range Encoder",
+      "source_url": "https://arxiv.org/abs/2507.19409",
+      "year": 2025,
+      "published": "2025-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The long-context capability of recent large transformer models can be surmised to rely on techniques such as attention/model parallelism, as well as hardware-level optimizations. While these strategies allow input lengths to scale to millions of tokens, they do not fundamentally mitigate the quadratic computational and memory complexity of the core attention mechanism. In this paper, we address the challenge of long-context processing on a single device using generic implementations by reducing the quadratic memory footprint and inference cost. Existing approaches to extend the context length for generic single device implementations -- such as token merging and modified attentions -- are often modality specific and attain a suboptimal tradeoff between accuracy and efficiency. To overcome these limitations, we propose MAELRE (Modality Agnostic Efficient Long Range Encoder), a unified and efficient transformer architecture designed for long-range encoding across diverse modalities. MAELRE integrates token merging with attention approximation, progressively merging tokens at different stages of internal computational blocks. It employs a lightweight attention approximation when the number of tokens is large, and switches to standard dot-product attention as the sequence becomes shorter through successive aggregation. We demonstrate that MAELRE achieves superior accuracy while reducing computational cost compared to existing long-context models on classification tasks spanning multiple modalities, including text, time series, audio, and vision.",
+      "identifiers": [
+        "SemanticScholar:74098938f86ab0e37561377b7250e3d02c92fbfb"
+      ],
+      "semantic_scholar_id": "74098938f86ab0e37561377b7250e3d02c92fbfb",
+      "canonical_id": "arXiv:2507.19409",
+      "arxiv_id": "2507.19409",
+      "doi": "10.48550/arXiv.2507.19409",
+      "authors": [
+        "T. Parag",
+        "Ahmed Elgammal"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 441,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MAELREはtoken mergeと長系列attention近似を統合し、テキスト等の長距離encoderで単一deviceの計算・メモリ負担を減らす。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ee836774f302",
+    "round": "libimp-ee836774f3028f9b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ee836774f3028f9b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ee836774f3028f9b-pre01.json",
+    "receipt": "sha256:4620f21673e2363054a99c18c6af0d287b43f41715fe1e584cb805baa487b73c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ee836774f302",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

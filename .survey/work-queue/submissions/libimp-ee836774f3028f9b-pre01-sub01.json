@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
+      "source_url": "https://arxiv.org/abs/2601.04359",
+      "year": 2026,
+      "published": "2026-01-07",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A unified autoregressive model is a Transformer-based framework that addresses diverse multimodal tasks (e.g., text, image, video) as a single sequence modeling problem under a shared token space. Such models rely on the KV-cache mechanism to reduce attention computation from O(T^2) to O(T); however, KV-cache size grows linearly with the number of generated tokens, and it rapidly becomes the dominant bottleneck limiting inference efficiency and generative length. Unified autoregressive video generation inherits this limitation. Our analysis reveals that KV-cache tokens exhibit distinct spatiotemporal properties: (i) text and conditioning-image tokens act as persistent semantic anchors that consistently receive high attention, and (ii) attention to previous frames naturally decays with temporal distance. Leveraging these observations, we introduce PackCache, a training-free KV-cache management method that dynamically compacts the KV cache through three coordinated mechanisms: condition anchoring that preserves semantic references, cross-frame decay modeling that allocates cache budget according to temporal distance, and spatially preserving position embedding that maintains coherent 3D structure under cache removal. In terms of efficiency, PackCache accelerates end-to-end generation by 1.7-2.2x on 48-frame long sequences, showcasing its strong potential for enabling longer-sequence video generation. Notably, the final four frames - the portion most impacted by the progressively expanding KV-cache and thus the most expensive segment of the clip - PackCache delivers a 2.6x and 3.7x acceleration on A40 and H200, respectively, for 48-frame videos.",
+      "identifiers": [
+        "SemanticScholar:52c18472c4ce46ee646348c64de6f0e7b8e33876"
+      ],
+      "semantic_scholar_id": "52c18472c4ce46ee646348c64de6f0e7b8e33876",
+      "canonical_id": "arXiv:2601.04359",
+      "arxiv_id": "2601.04359",
+      "doi": "10.48550/arXiv.2601.04359",
+      "authors": [
+        "Kun-Yang Li",
+        "Mubarak Shah",
+        "Yu-Zhang Shang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PackCacheは動画生成用KV cacheを時間減衰・意味anchor・位置構造に沿って動的圧縮し、長尺動画生成を最大2.2x高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On State Reduction in Linear Attention",
+      "source_url": "https://arxiv.org/abs/2602.04852",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention offers a computationally efficient yet expressive alternative to softmax attention. However, recent empirical results indicate that the hidden state of trained linear attention models often exhibits a low-rank structure, suggesting that these models underexploit their capacity in practice. To understand this phenomenon, we analyze how keys and values shape the rank of the recurrent state, providing a theoretical perspective on memory utilization in linear attention. In addition to these theoretical insights, we conjecture that low-rank states can be substantially reduced after pre-training. To this end, we propose a hardware-aware strategy to structurally prune the key and query matrices, reducing the state size while retaining compatibility with existing fast kernels. We adapt several existing pruning strategies to fit our framework and, building on our theoretical analysis, propose a robust structured pruning method based on a rank-revealing QR decomposition. Our empirical evaluations across model sizes show that the recurrent state of pretrained linear attention models can often be halved with only a modest increase in language modeling perplexity, while maintaining competitive performance on downstream tasks. The code for this project can be found at https://github.com/camail-official/LinearAttentionPruning.",
+      "identifiers": [
+        "SemanticScholar:af73ac720da745198471e1669878a6588e22c890"
+      ],
+      "semantic_scholar_id": "af73ac720da745198471e1669878a6588e22c890",
+      "canonical_id": "arXiv:2602.04852",
+      "arxiv_id": "2602.04852",
+      "authors": [
+        "Philipp Nazari",
+        "T. Konstantin Rusch"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "linear attentionのrecurrent stateを構造化pruningし、fast-kernel互換を保ちながらstate sizeを半減可能と評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SAW-INT4: System-Aware 4-Bit KV-Cache Quantization for Real-World LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.19157",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache memory is a major bottleneck in real-world LLM serving, where systems must simultaneously support latency-sensitive small-batch requests and high-throughput concurrent workloads. Although many KV-cache compression methods improve offline accuracy or compression ratio, they often violate practical serving constraints such as paged memory layouts, regular memory access, and fused attention execution, limiting their effectiveness in deployment. In this work, we identify the minimal set of 4-bit KV-cache quantization methods that remain viable under these constraints. Our central finding is that a simple design--token-wise INT4 quantization with block-diagonal Hadamard rotation--consistently achieves the best accuracy-efficiency trade-off. Across multiple models and benchmarks, this approach recovers nearly all of the accuracy lost by naive INT4, while more complex methods such as vector quantization and Hessian-aware quantization provide only marginal additional gains once serving compatibility is taken into account. To make this practical, we implement a fused rotation-quantization kernel that integrates directly into paged KV-cache layouts and introduces zero measurable end-to-end overhead, matching plain INT4 throughput across concurrency levels. Our results show that effective KV-cache compression is fundamentally a systems co-design problem: under real serving constraints, lightweight block-diagonal Hadamard rotation is a viable method that delivers near-lossless accuracy without sacrificing serving efficiency.",
+      "identifiers": [
+        "SemanticScholar:25cb0e3926f6e48c929313b627957f6d7d325edb"
+      ],
+      "semantic_scholar_id": "25cb0e3926f6e48c929313b627957f6d7d325edb",
+      "canonical_id": "arXiv:2604.19157",
+      "arxiv_id": "2604.19157",
+      "doi": "10.48550/arXiv.2604.19157",
+      "authors": [
+        "Jinda Jia",
+        "Ji-Sen Li",
+        "Zhong-Zhu Zhou",
+        "Junghwa Heo",
+        "Jue Wang",
+        "Tri Dao",
+        "S. Song",
+        "B. Athiwaratkun",
+        "Chen-Feng Xu",
+        "Tian-Yi Zhang",
+        "Xiao-Xia Wu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SAW-INT4はpaged KVとfused attentionの実serving制約を満たす4-bit KV量子化・kernelを示し、精度維持とend-to-end overheadなしを報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2603.19664",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache is widely treated as essential state in transformer inference, and a large body of work engineers policies to compress, evict, or approximate its entries. We prove that this state is entirely redundant: keys and values at every layer are deterministic projections of the residual stream, and recomputing them from a single residual vector per token incurs exactly zero reconstruction error, not approximately, but bit-identically. We verify this across six models from four architecture families (135M to 4B parameters). Cross-task residual patching at every layer produces D_KL = 0 between patched and original output distributions, confirming that the residual stream satisfies a Markov property and is the sole information-carrying state. Removing the cache entirely and recomputing from scratch yields token-identical output under greedy decoding on all models tested. We build on this result with KV-Direct, a bounded-memory inference scheme that checkpoints residual vectors (5 KB per token on Gemma 3-4B) instead of full KV pairs (136 KB), recomputing keys and values on demand. Over 20 conversation turns, KV-Direct holds peak memory at 42 MB while the standard cache grows past 103 MB. Against five eviction baselines (H2O, StreamingLLM, SnapKV, TOVA, window-only), KV-Direct maintains 100% token match at every cache budget; all baselines degrade to 5-28%. A per-operation latency analysis shows recomputation runs up to 5x faster than reading cached tensors at moderate batch sizes. Code is available at https://github.com/Kaleemullahqasim/KV-Direct.",
+      "identifiers": [
+        "SemanticScholar:45072890ed0fa71cbfea7179f2d45a11d19f1c9f"
+      ],
+      "semantic_scholar_id": "45072890ed0fa71cbfea7179f2d45a11d19f1c9f",
+      "canonical_id": "arXiv:2603.19664",
+      "arxiv_id": "2603.19664",
+      "doi": "10.48550/arXiv.2603.19664",
+      "authors": [
+        "Kaleem Ullah Qasim",
+        "Jia-Shu Zhang",
+        "M. Shaheen",
+        "Razan Alharith",
+        "He-Ying Zhang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      },
+      "reason": "residual streamからKVをbit-identicalに再構成し、5KB/tokenの残差checkpointでKV cacheを置換するKV-Directを提案。メモリと推論時間を評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Chains to Trees: Parent-Conditioned Drafting for Semi-Autoregressive Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.02123",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference only when drafted continuations survive target-model verification. Semi-autoregressive drafters such as DSpark predict an entire token block with one backbone forward and refine it with a lightweight Markov head. However, DSpark decodes this block as a single chain, so an early mismatch invalidates the remaining suffix and limits the benefit of large draft blocks. We show that the conditional structure already learned by DSpark can support multiple parent-consistent continuations without retraining or additional backbone passes. We introduce Parent-Conditioned Drafting Tree (PCTree), which uses the pretrained Markov head to score alternative children separately for each concrete parent and allocates a fixed verification budget to the most probable paths. This converts DSpark's linear draft into a tree while preserving its one-pass parallel backbone. Across Qwen3-{4B,8B,14B} and nine benchmarks, at $B{=}7$, measured speedup gains over autoregressive (AR) decoding, relative to matched DSpark, range from $3.1\\%$ to $29.5\\%$. On Qwen3-4B GSM8K at $B{=}16$, PCTree increases mean acceptance length from $9.41$ to $11.16$ and three-run mean AR speedup from $6.14{\\times}$ to $6.60{\\times}$. These show that parent-conditioned branching can turn conditional capacity already present in a semi-autoregressive drafter into end-to-end inference gains through an inference-only change.",
+      "identifiers": [
+        "SemanticScholar:65400a61064bdb2929b0f7baa08b5e4f5da85b47"
+      ],
+      "semantic_scholar_id": "65400a61064bdb2929b0f7baa08b5e4f5da85b47",
+      "canonical_id": "arXiv:2608.02123",
+      "arxiv_id": "2608.02123",
+      "authors": [
+        "Zixian Li",
+        "Tong Li",
+        "C. Xie",
+        "Xiaohui Song",
+        "Hao Lu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PCTreeは半自己回帰draftの親条件付き複数候補をtree化し、既存backbone passを増やさず推論時変更だけでspeculative decodingを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ee836774f302",
+    "round": "libimp-ee836774f3028f9b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 19,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ee836774f3028f9b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ee836774f3028f9b-pre01.json",
+    "receipt": "sha256:4620f21673e2363054a99c18c6af0d287b43f41715fe1e584cb805baa487b73c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ee836774f302",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
