@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-09T06:49:10.393249+00:00",
+  "generated_at": "2026-10-09T07:51:04.759004+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 307,
+  "count": 302,
   "worker_counts": {
-    "scheduled-chat-00": 81,
-    "scheduled-chat-30": 81,
+    "scheduled-chat-00": 78,
+    "scheduled-chat-30": 79,
     "scheduled-chat-45": 145
   },
   "entries": [
@@ -1395,54 +1395,6 @@
       "warnings": []
     },
     {
-      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md",
-      "canonical_id": "arXiv:2504.19925",
-      "title": "SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling",
-      "file_bytes": 11387,
-      "source_sha256": "f3bc03739af34c16dd11e0c00147975cdc49776d8bcfa6e44cbe9c4c3c1027b0",
-      "source_git_blob_sha": "78864439b1c924891ab16e207c623b5cdf018f3d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.786166,
-      "quality_metrics": {
-        "body_chars": 2460,
-        "method_chars": 1079,
-        "evaluation_chars": 739,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.6% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md",
-      "canonical_id": "arXiv:2511.03475",
-      "title": "ContextPilot: Fast Long-Context Inference via Context Reuse",
-      "file_bytes": 11388,
-      "source_sha256": "aa209ba4af13aca77ba97b2b723f38bc2b6b35c0a9d39aaeef17c44372bffe01",
-      "source_git_blob_sha": "2bba1a0630eb19fa75a876b8331750cc21b7e60c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.98863,
-      "quality_metrics": {
-        "body_chars": 1945,
-        "method_chars": 653,
-        "evaluation_chars": 279,
-        "limitation_chars": 163
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1945 < 2200",
-        "16KB未満再監査: 手法説明量 653 < 700",
-        "16KB未満再監査: 評価説明量 279 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md",
       "canonical_id": "arXiv:2510.02358",
       "title": "DiffuSpec: Unlocking Diffusion Language Models for Speculative Decoding",
@@ -2030,26 +1982,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md",
-      "canonical_id": "arXiv:2402.17463",
-      "title": "Training-Free Long-Context Scaling of Large Language Models",
-      "file_bytes": 11883,
-      "source_sha256": "86ff87d0f109a2d8c19fb9ea102bd3e7d4910281e4f6be85dc22130ddf444f10",
-      "source_git_blob_sha": "54ec278373f8bcd327370e5fcfc5bff1979bbcfc",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.992778,
-      "quality_metrics": {
-        "body_chars": 2954,
-        "method_chars": 874,
-        "evaluation_chars": 910,
-        "limitation_chars": 246
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
       "canonical_id": "arXiv:2503.08524",
       "title": "Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency",
@@ -2110,54 +2042,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2507.00605-quantize-sample-and-verify-llm-acceleration-via-adaptive-edge-cloud-spec.md",
-      "canonical_id": "arXiv:2507.00605",
-      "title": "Quantize-Sample-and-Verify: LLM Acceleration via Adaptive Edge-Cloud Speculative Decoding",
-      "file_bytes": 11927,
-      "source_sha256": "91e5b5100d16a63d4cb8495c3a68934436e39a388fba7e5ffb99690ee642774c",
-      "source_git_blob_sha": "2b6ff7ffef5e6e8ede8db73368db68f9b708e929",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.703371,
-      "quality_metrics": {
-        "body_chars": 3605,
-        "method_chars": 1330,
-        "evaluation_chars": 574,
-        "limitation_chars": 355
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 70.3% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 70.3% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
-      "canonical_id": "arXiv:2009.12812",
-      "title": "TernaryBERT: Distillation-aware Ultra-low Bit BERT",
-      "file_bytes": 11952,
-      "source_sha256": "3012ca3bb7ec0b693949866b3a6b73241256b4019ea1d8691e503e5d93a761aa",
-      "source_git_blob_sha": "c86f7e9f199bef44170f747be2d8ceb038331ac9",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.768003,
-      "quality_metrics": {
-        "body_chars": 3802,
-        "method_chars": 1352,
-        "evaluation_chars": 1238,
-        "limitation_chars": 381
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.8% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md",
