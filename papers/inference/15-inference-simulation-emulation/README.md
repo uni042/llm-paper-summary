@@ -66,7 +66,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 - **2026-10 · [ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving](2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  方式は二段構成で、大域計画器が実測済み消費量と残りコミットメントから次の制御区間の電力量目標を更新し、局所意思決定器が現在の要求状態を起点に候補構成のエネルギーと完了時刻を予測する。
+  LLMサービングの電力を単純に減らすのではなく、事前に契約した時間単位の電力量へ実消費を近づける。要求ごとのサービス期限を予測し、レプリカ数とGPUクロックをオンラインで調整する。
 
 - **2026-09 · [Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash](2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -93,12 +93,12 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：13  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  
-  実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：9  
-  自己回帰サービングを反復単位で追跡しつつ、Transformerブロックのコンパイル・演算結果を再利用して異種アクセラレータ構成を高速に協調シミュレーションする。
+  実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：5  
+  大規模言語モデルの推論基盤では、GPUや専用演算器の設計だけでなく、到着する要求の分布、バッチ化、KVキャッシュ管理、複数装置へのモデル分割が性能を左右する。論文は実GPU上の推論基盤に対する性能傾向の誤差を平均14.7%程度に抑え、既存の演算器シミュレータに対して34.7〜491倍の高速化を報告する。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
   実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：4  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T02:34:19+00:00",
+  "generated_at": "2026-10-09T02:57:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 139,
+  "count": 138,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2771,34 +2771,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f24fb1b6dd3c--file_000000001f1481f48dbce8fd9fb95daa--2019-1904.09324-mask-predict-under16kb-reaudit-20261009-0230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f24fb1b6dd3c--file_000000001f1481f48dbce8fd9fb95daa--2019-1904.09324-mask-predict-under16kb-reaudit-20261009-0230-scheduled-chat-30-r01.json",
       "worker_run_key": "20261009-0230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2407.06204",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-09T02:20:57+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7416,
-        "body_paragraphs": 37,
-        "method_chars": 2254,
-        "method_paragraphs": 11,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1b5bbafee01--file_00000000892881f59dee4bdb75d35fa2--2024-2407.06204-moe-survey-under16kb-reaudit-20261009-0930-scheduled-chat-30-r01-timestamp-fixed.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e1b5bbafee01--file_00000000892881f59dee4bdb75d35fa2--2024-2407.06204-moe-survey-under16kb-reaudit-20261009-0930-scheduled-chat-30-r01-timestamp-f.json",
-      "worker_run_key": "20261009-0930-scheduled-chat-30/r01"
     }
   ]
 }

@@ -18,7 +18,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 - **2026-03 · [Speculating Experts Accelerates Inference for Mixture-of-Experts](2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/axonn-ai/yalis/tree/offload_prefetch) ・ リポジトリ内被引用：1  
-  Speculating Expertsは次層の専門家を予測し、重み転送だけでなくFFN計算まで現在層と並行して先行実行する。元ルータと一致した結果だけ再利用し、外れれば正しく再計算する。
+  論文のA6000でのQwen3-30B-A3B評価では、要求時に専門家を読み込む方式のTPOTの約84〜88%を転送が占める。
 
 - **2026-03 · [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -57,7 +57,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   Fateは隣接層のルータ入力から次層専門家を予測し、層ごとのGPU常駐数と利用履歴を調整する。低頻度専門家の低ビット化も組み合わせ、エッジMoEの転送と容量を抑える。
 
 - **2025-09 · [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：7  
   LayerScopeは将来専門家の先読み、CPU直接計算、必要時転送を複数バッチで一体計画し、PCIe帯域を先読みで使い切って緊急転送を遅らせる問題を抑える。
 
 - **2025-10 · [ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference](2025-2510.26730-expertflow-adaptive-prefetch.md)**  
@@ -73,7 +73,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：84  
   Pre-gated MoEは次層のルーティング判定を1ブロック前へ移し、必要な専門家重みのCPUからGPUへの転送を現在ブロックの計算と重ねて、オフロード待ちを減らす。
 
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  
