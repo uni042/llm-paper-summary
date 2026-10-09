@@ -205,7 +205,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   LeanAttentionが減らすのは注意の数学的な計算量ではない。まったく同じ厳密注意を、長いKV文脈方向へ細かく分割し、GPUの全SMへ端数なく近い形で仕事を割り振る。デコードでは問い合わせが1トークンしかないため従来のタイル並列性が不足する、というハードウェア利用率の問題を解く。
 
 - **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
-  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：4  
   実運用では、同じ能力系列でも低遅延用・高品質用の複数モデルを切り替えたり、投機的復号で小型ドラフトと大型対象モデルを同時常駐させたりする。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
@@ -259,7 +259,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: an intermediate language and compiler for tiled neural network computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：55  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：56  
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

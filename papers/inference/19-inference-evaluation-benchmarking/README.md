@@ -105,6 +105,6 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：19  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->

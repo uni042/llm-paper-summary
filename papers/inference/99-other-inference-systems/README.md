@@ -941,7 +941,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：73  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：74  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
@@ -1279,7 +1279,7 @@
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：145  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：147  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
@@ -1375,7 +1375,7 @@
   In-文脈 Autoencoder（ICAE）は、長い文脈を通常のテキスト トークンではない少数の学習済みメモリ slotへ圧縮し、その連続表現を同じLLMが後続生成の条件として直接読む。
 
 - **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/H3) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/HazyResearch/H3) ・ リポジトリ内被引用：13  
   H3（Hungry Hungry Hippo）は、状態空間モデル（状態 space モデル; SSM）が長系列をほぼ線形時間で扱える一方、言語モデリングでは注意機構（注意）に劣る理由を合成タスクで分解し、「過去トークンの想起」と「系列中のトークン同士の比較」が不足していると突き止めた上で、その二能力を明示的に実装するSSM 層である。
 
 - **2023-07 · [Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding](2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md)**  
@@ -1438,13 +1438,13 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本論文はTransformer/LLMの注意計算を量子アルゴリズムで高速化できる条件を理論的に調べる。
 
+- **2023-02 · [With Shared Microexponents, A Little Shifting Goes a Long Way](2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Rouhaniらは、ブロックデータ表現（Block Data Representation; BDR）という共通の設計枠を用意し、ブロックサイズ、尺度の階層、尺度を保存するビット数、各要素の仮数幅を変えて比較した。
+
 - **2023-10 · [A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration](2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md)**  
   実装：[✓](https://github.com/SALT-NLP/DyLAN) ・ リポジトリ内被引用：0  
   複数の大規模言語モデル（large language モデル; LLM）エージェントを協調させる方式では、役割の異なる複数回答を相互評価できる一方、人数と通信構造を全タスクで固定すると、不要なモデル呼出しが増え、専門外のエージェントが有用な回答へ干渉する。
-
-- **2023-02 · [With Shared Microexponents, A Little Shifting Goes a Long Way](2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Rouhaniらは、ブロックデータ表現（Block Data Representation; BDR）という共通の設計枠を用意し、ブロックサイズ、尺度の階層、尺度を保存するビット数、各要素の仮数幅を変えて比較した。
 
 ### 5年前（2021-11〜2022-10）
 
@@ -1457,7 +1457,7 @@
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：44  
   ZeroQuantは、大規模Transformerを量子化後学習（post-学習 量子化; PTQ）で低ビット化しながら、単なるモデル容量削減ではなく実測推論速度まで改善するためのエンドツーエンド設計である。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
@@ -1513,7 +1513,7 @@
   Performerは、通常の全ランクのソフトマックス注意を正の直交ランダム特徴で近似するFAVOR+を提案し、注意行列を明示的に保持しない線形時間・線形空間の実行を可能にする。
 
 - **2020-09 · [TernaryBERT: Distillation-aware Ultra-low Bit BERT](2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   TernaryBERTは、fine-tune済みBERTの主要重みを {-1,0,+1} の三値へ量子化し、低ビット化で失われる表現能力を知識蒸留（knowledge distillation）で補う方式である。BERT-baseはFP32で約418 MBだが、論文の代表的な W-E-A=2-2-8 構成では28 MBとなり14.9倍小さい。
 
 - **2020-04 · [FastBERT: a Self-distilling BERT with Adaptive Inference Time](2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md)**  
@@ -1524,13 +1524,13 @@
   実装：[✓](https://github.com/castorini/DeeBERT) ・ リポジトリ内被引用：10  
   DeeBERTは、BERT系の分類モデルで入力ごとに必要なTransformer層数が異なることを利用し、浅い層ですでに十分確信度の高い予測が得られた例を途中で返す動的早期終了（動的 early exiting）方式である。
 
+- **2020-05 · [GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference](2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  GOBOは、BERTなどの注意機構を使う自然言語処理モデルの重みを、学習後に大幅に圧縮する手法である。重みの約99.9%を少数の代表値への索引で表し、残る約0.1%の外れ値だけを元の32ビット浮動小数点のまま保持する。
+
 - **2019-11 · [Blockwise Self-Attention for Long Document Understanding](2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md)**  
   実装：[✓](https://github.com/xptree/BlockBERT) ・ リポジトリ内被引用：7  
   BlockBERTは、長い文書をBERT型の双方向符号化器へ入力するとき、通常の自己注意が系列長の二乗に比例する注意得点を作る問題を、ブロック単位で規則的に疎化した注意によって緩和する。単に遠方のトークンを切り捨てるのではなく、各注意ヘッドへ異なるブロック置換を割り当てることで、近傍情報を読むヘッドと離れたブロックを読むヘッドを共存させる。
-
-- **2020-05 · [GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference](2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  GOBOは、BERTなどの注意機構を使う自然言語処理モデルの重みを、学習後に大幅に圧縮する手法である。重みの約99.9%を少数の代表値への索引で表し、残る約0.1%の外れ値だけを元の32ビット浮動小数点のまま保持する。
 
 - **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1554,21 +1554,21 @@
   実装：[✓](https://github.com/lena-voita/the-story-of-heads) ・ リポジトリ内被引用：19  
   本論文は、翻訳用Transformerの多頭注意機構において、各ヘッドの計算が同じだけ必要なのかを、予測への寄与と実際の削除耐性の両側面から調べた研究である。一方、これは2019年の機械翻訳Transformerにおける品質評価であり、現代の生成専用LLMで実際に同じ割合の実行時間や鍵・値キャッシュ容量を削減できると証明した結果ではない。
 
-- **2018-11 · [ブロック並列 Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  ブロック並列 Parallel Decodingは、この逐次性そのものを完全に捨てるのではなく、複数の将来位置を一度に予測し、元の自己回帰スコアリングモデルで「通常の貪欲復号なら同じトークンを選んだか」を並列検証する。
-
 - **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   目的は入力ごとに早期終了を判断することではなく、単一チェックポイントから複数の固定深度モデルを取り出すことである。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   Q-BERTは、BERTの各層へ同じビット数を割り当てる均一量子化ではなく、損失関数の二階微分から層ごとの誤差感度を推定し、敏感な層へ高い精度を残す混合精度量子化手法である。論文はSST-2、MNLI、CoNLL-03、SQuADの四課題で、重みの最大13倍圧縮、埋め込みと活性値の最大4倍圧縮を報告し、強圧縮でも性能低下を最大2.3%以内に抑えたと説明する。
 
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
-  実装：[✓](https://github.com/pmichel31415/are-16-heads-really-better-than-1) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/pmichel31415/are-16-heads-really-better-than-1) ・ リポジトリ内被引用：18  
   Michelらは、学習済みの翻訳用TransformerとBERTの各注意ヘッドを無効化して、品質の変化、ヘッド重要度の推定、構造的な枝刈り後の推論速度を実験した。WMT14英仏翻訳のTransformerでは全ヘッドの約20%、MultiNLIに微調整したBERTでは約40%を重要度順に削っても顕著な品質低下が生じなかった。
+
+- **2018-11 · [ブロック並列 Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  ブロック並列 Parallel Decodingは、この逐次性そのものを完全に捨てるのではなく、複数の将来位置を一度に予測し、元の自己回帰スコアリングモデルで「通常の貪欲復号なら同じトークンを選んだか」を並列検証する。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
   実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：9  
@@ -1579,13 +1579,13 @@
   マスク予測は、機械翻訳の対象文を左から右へ1 トークンずつ確定する自己回帰復号を、全位置の並列予測と低信頼トークンだけの反復再生成へ置き換える。基盤モデルは条件付きmasked 言語 モデル（Conditional Masked 言語 モデル; CMLM）で、原文文と一部だけ観測された対象文を条件に、マスクされた複数位置を同時に予測する。
 
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
-  実装：[✓](https://github.com/NervanaSystems/nlp-architect) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/NervanaSystems/nlp-architect) ・ リポジトリ内被引用：8  
   Q8BERTは、BERTの下流タスク向け微調整（微調整）に量子化認識学習（量子化-aware 学習; QAT）を組み込み、重みと活性値を8ビット整数（INT8）へ適応させる研究である。そこでQ8BERTは、BERTのパラメータの99%以上を占める埋め込み層とFully Connected（FC）層の重みをINT8化し、約4倍のモデル容量削減を得る。
 
 ### 9年前（2017-11〜2018-10）
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：20  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement](2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md)**  
@@ -1595,6 +1595,6 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：140  
+  実装：✓ ・ リポジトリ内被引用：141  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 <!-- survey:auto:end -->
