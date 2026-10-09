@@ -90,5 +90,5 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2021-10 · [Magic Pyramid: Accelerating Inference with Early Exiting and Token Pruning](2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  BERT系推論で「何個のトークンを後段へ残すか」と「何層まで進むか」を同時に削る。トークン枝刈りは長文、早期終了は短く容易な入力で効きやすいという相補性を使い、片方だけの方式より広い入力長で計算量を落とす。
+  文章分類器BERTの推論で、後続層へ運ぶトークン数を減らす枝刈りと、十分に確信できた入力の層処理を途中終了する機構を組み合わせる。入力長により得意条件が異なる二つの削減方法を重ね、五つの分類課題で演算量と精度の交換条件を評価した研究。表に示す4.95倍や8.25倍は浮動小数点演算量から計算した削減倍率であり、GPUの実時間高速化をそのまま意味しない。
 <!-- survey:auto:end -->

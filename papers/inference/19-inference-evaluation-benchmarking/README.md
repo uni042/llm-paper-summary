@@ -68,7 +68,7 @@
 
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
   実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：4  
-  キャッシュ拡張生成（キャッシュ拡張生成; CAG）は、知識集合が限定的かつ長文脈モデルの文脈 ウィンドウへ収まる用途で、質問時の検索を丸ごと省く設計である。
+  著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -100,7 +100,7 @@
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
-  本論文は、大規模言語モデル（large language モデル; LLM）の推論を「処理速度」だけでなく「実際にGPUが何ジュール消費したか」まで同じ実験で計測するベンチマーク研究である。さらにA100の電力上限（power cap）を下げ、レイテンシと総エネルギーの交換条件を実測する。
+  対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 ### 6年前（2020-11〜2021-10）
 

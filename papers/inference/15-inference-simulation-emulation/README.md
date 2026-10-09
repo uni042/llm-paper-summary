@@ -70,7 +70,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 - **2026-09 · [Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash](2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  HBMだけで容量を満たすと、容量と同時に非常に高い帯域まで購入することになり、低並列の実行時状態には過剰な場合がある。本論文は高帯域フラッシュ（High-Bandwidth Flash; HBF）へ重みを移し、DRAMをKV等の実行時状態専用にしたとき、各階層に本当に必要な容量と帯域を分離して測る。
+  本研究は、総パラメータ数が1兆を超える混合専門家モデル（Mixture-of-Experts、MoE）を、多数の要求で負荷を平準化するクラスタではなく、同時要求数1〜8程度の単一装置で動かす場合のメモリ設計を検討する。
 
 - **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

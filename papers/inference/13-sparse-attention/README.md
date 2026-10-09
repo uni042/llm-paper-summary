@@ -87,8 +87,8 @@
   LongCat Sparse 注意機構（LSA）は、長文脈モデルにおける疎注意の「選ぶための計算」と「選んだ鍵・値をGPUが読むための計算」の両方を減らす研究である。
 
 - **2026-06 · [SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference](2026-2606.04511-sparda.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  疎注意は実際に参照するKVだけを減らせるが、全KVキャッシュ容量は文脈長に比例して増え、GPUからCPUへ退避するとPCIe転送が律速になる。
+  実装：[✓](https://github.com/NVlabs/SparDA) ・ リポジトリ内被引用：1  
+  長文脈の大規模言語モデルでは、事前入力処理の注意計算、復号時のKVキャッシュ読出し帯域、KVキャッシュのGPU容量という三つの資源が制約になる。疎注意（Sparse 注意機構）は実際に参照するトークンやブロックを減らし、注意計算と読出し帯域を削減する。
 
 - **2026-06 · [From Rigid to Dynamic: Entropy-Guided Adaptive Inference for Long-Context LLMs](2026-2606.09508-from-rigid-to-dynamic-entropy-guided-adaptive-inference-for-long-context.md)**  
   実装：[✓](https://github.com/SHA-4096/EntropyInfer) ・ リポジトリ内被引用：1  
