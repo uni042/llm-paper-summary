@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1123",
+      "doi": "10.18653/v1/2026.acl-long.1123",
+      "identifiers": [
+        "DOI:10.18653/v1/2026.acl-long.1123"
+      ],
+      "title": "When Efficiency Meets Safety: A Benchmark Security Analysis of KV Cache Compression in Large Language Models",
+      "source_url": "https://aclanthology.org/2026.acl-long.1123/",
+      "authors": [
+        "Xiaoxiao Ma",
+        "Kuofeng Gao",
+        "Zeyi Lu",
+        "Wenxi Jiang",
+        "Hao Fang",
+        "Hao Wu",
+        "Bin Chen",
+        "Shu-Tao Xia"
+      ],
+      "published": "2026/7",
+      "year": 2026,
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      },
+      "reason": "This ACL study examines how KV-cache compression affects LLM jailbreak robustness and proposes Safe-CAM, a cache-merging strategy that restores safety while maintaining compression efficiency with minimal overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3d2e54a5f921",
+    "round": "libimp-3d2e54a5f92172c0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3d2e54a5f92172c0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3d2e54a5f92172c0-pre01.json",
+    "receipt": "sha256:343004d66e70f16948a78c97e495a7951d8f5fc6dfe5e67be730e7d735cdf7d7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3d2e54a5f921",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
