@@ -68,6 +68,65 @@ class Under16KbReauditTests(unittest.TestCase):
         self.assertEqual(reaud.assigned_worker(path), reaud.assigned_worker(path))
         self.assertIn(reaud.assigned_worker(path), reaud.WORKERS)
 
+    def test_balancing_skewed_existing_assignments_and_preserving_live_edges(self) -> None:
+        # The last worker may accumulate far more *remaining* papers as other
+        # workers finish; the regenerated queue must balance what is left.
+        workers = reaud.WORKERS
+        rows = [
+            {"path": f"papers/inference/paper-{n:03d}.md", "assigned_worker": owner}
+            for owner, length in zip(workers, (76, 76, 145))
+            for n in range(length)
+        ]
+        # Paths must be unique across workers, as in a real paper queue.
+        for i, row in enumerate(rows):
+            row["path"] = f"papers/inference/paper-{i:03d}.md"
+        before = {r["path"]: r["assigned_worker"] for r in rows}
+        edges = {
+            r["path"]
+            for owner in workers
+            for r in (
+                [row for row in rows if row["assigned_worker"] == owner][:5]
+                + [row for row in rows if row["assigned_worker"] == owner][-5:]
+            )
+        }
+        reaud.rebalance_workers(rows, before)
+        counts = [sum(r["assigned_worker"] == owner for r in rows) for owner in workers]
+        self.assertEqual(counts, [99, 99, 99])
+        self.assertEqual(sum(r["assigned_worker"] != before[r["path"]] for r in rows), 46)
+        self.assertTrue(all(r["assigned_worker"] == before[r["path"]] for r in rows if r["path"] in edges))
+        balanced = {r["path"]: r["assigned_worker"] for r in rows}
+        reaud.rebalance_workers(rows, balanced)
+        self.assertEqual(balanced, {r["path"]: r["assigned_worker"] for r in rows})
+
+    def test_balancer_handles_new_and_completed_papers_without_mass_rotation(self) -> None:
+        workers = reaud.WORKERS
+        rows = [
+            {"path": f"papers/inference/{i:03d}.md", "assigned_worker": workers[i % 3]}
+            for i in range(90)
+        ]
+        previous = {r["path"]: r["assigned_worker"] for r in rows}
+        rows.pop(0)  # completed job should not rotate the rest
+        reaud.rebalance_workers(rows, previous)
+        self.assertEqual(sum(r["assigned_worker"] != previous[r["path"]] for r in rows), 0)
+        self.assertLessEqual(
+            max(sum(r["assigned_worker"] == w for r in rows) for w in workers)
+            - min(sum(r["assigned_worker"] == w for r in rows) for w in workers),
+            1,
+        )
+        # A new paper can be assigned without reshuffling all old ownership.
+        new_path = "papers/inference/new-paper.md"
+        rows.append({"path": new_path, "assigned_worker": reaud.assigned_worker(new_path)})
+        reaud.rebalance_workers(rows, previous)
+        self.assertLessEqual(
+            max(sum(r["assigned_worker"] == w for r in rows) for w in workers)
+            - min(sum(r["assigned_worker"] == w for r in rows) for w in workers),
+            1,
+        )
+        self.assertLessEqual(
+            sum(r["assigned_worker"] != previous[r["path"]] for r in rows if r["path"] in previous),
+            1,
+        )
+
     def test_attested_mechanical_pass_is_removed_from_queue(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
