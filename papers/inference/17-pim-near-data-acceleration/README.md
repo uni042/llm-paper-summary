@@ -106,11 +106,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：16  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：4  
   NeuPIMsは、複数の大規模言語モデル（LLM）推論要求をまとめて処理するとき、行列積中心の計算と注意機構のメモリ帯域中心の計算が交互に現れる問題を、ニューラル処理装置（NPU）とメモリ内処理（PIM）の異種構成で改善するシステム研究である。
 
 ### 4年前（2022-11〜2023-10）
@@ -122,6 +122,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   TransPIMは、Transformerを高帯域メモリ（High Bandwidth メモリ; HBM）上のメモリ内処理（Processing-in-メモリ; PIM）とニアメモリ計算（Near-メモリ Computing; NMC）で高速化するため、データ配置・実行順とHBM内部ハードウェアを一体で設計したアクセラレータである。
 <!-- survey:auto:end -->
