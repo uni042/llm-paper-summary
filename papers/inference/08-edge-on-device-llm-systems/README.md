@@ -30,7 +30,7 @@
 
 - **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  mzCacheはスマホの他アプリ負荷を検知し、LLM重みとKVを圧縮RAM・Flashへ細粒度退避し、復帰計算と読出しを重ねてメモリ回収と再開遅延を両立する方式。
+  スマートフォンで大規模言語モデル（LLM）を端末内実行すると、モデル重みだけでなく、会話履歴を再計算せずに利用する鍵・値キャッシュ（KVキャッシュ）が長時間RAMを占有する。mzCacheはこの問題を、端末での退避後の復帰時間を最小化するメモリ管理として扱う。
 
 - **2026-09 · [EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs](2026-2609.06551-estream.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

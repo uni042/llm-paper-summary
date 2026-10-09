@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T09:53:04+00:00",
+  "generated_at": "2026-10-09T10:34:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 131,
+  "count": 133,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2497,33 +2497,6 @@
       "worker_run_key": "20261009-0157-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:1904.09324",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-09T02:20:57+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 208 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5781,
-        "body_paragraphs": 31,
-        "method_chars": 1899,
-        "method_paragraphs": 11,
-        "evaluation_chars": 208,
-        "limitation_chars": 472,
-        "insufficiency_flags": [
-          "評価説明量 208 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f24fb1b6dd3c--file_000000001f1481f48dbce8fd9fb95daa--2019-1904.09324-mask-predict-under16kb-reaudit-20261009-0230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f24fb1b6dd3c--file_000000001f1481f48dbce8fd9fb95daa--2019-1904.09324-mask-predict-under16kb-reaudit-20261009-0230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261009-0230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.33385",
       "title": null,
       "source_url": null,
@@ -2551,11 +2524,94 @@
       "worker_run_key": "20261009-0956-scheduled-chat-00/r01"
     },
     {
+      "canonical_id": "arXiv:2607.01775",
+      "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding",
+      "source_url": "https://proceedings.mlr.press/v306/arriola26a.html",
+      "returned_at": "2026-10-09T10:31:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 408 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6665,
+        "body_paragraphs": 33,
+        "method_chars": 2098,
+        "method_paragraphs": 10,
+        "evaluation_chars": 408,
+        "limitation_chars": 596,
+        "insufficiency_flags": [
+          "評価説明量 408 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6827c20a15948191bebf62ab719bd82b--2026-2607.01775-set-diffusion-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6827c20a15948191bebf62ab719bd82b--2026-2607.01775-set-diffusion-under16kb-reaudit-20261009-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261009-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:1904.09324",
+      "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models",
+      "source_url": "https://aclanthology.org/D19-1633.pdf",
+      "returned_at": "2026-10-09T10:32:54+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 418 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6857,
+        "body_paragraphs": 40,
+        "method_chars": 1928,
+        "method_paragraphs": 11,
+        "evaluation_chars": 418,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 418 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a83767cc0a488191968f9b0163aef8e6--2019-1904.09324-mask-predict-under16kb-reaudit-20261009-1230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a83767cc0a488191968f9b0163aef8e6--2019-1904.09324-mask-predict-under16kb-reaudit-20261009-1230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261009-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.18879",
+      "title": "CommVQ: Commutative Vector Quantization for KV Cache Compression",
+      "source_url": "https://arxiv.org/pdf/2506.18879",
+      "returned_at": "2026-10-09T10:34:00+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 178 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8405,
+        "body_paragraphs": 49,
+        "method_chars": 3100,
+        "method_paragraphs": 17,
+        "evaluation_chars": 178,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 178 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ede40e199e248191b8a537e1a8d2a2eb--2025-2506.18879-commvq-under16kb-reaudit-20261009-1857-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ede40e199e248191b8a537e1a8d2a2eb--2025-2506.18879-commvq-under16kb-reaudit-20261009-1857-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261009-1857-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2502.17421",
       "title": "LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification",
       "source_url": "https://aclanthology.org/2026.acl-long.83.pdf",
-      "returned_at": "2026-10-09T09:51:18+00:00",
-      "return_count": 2,
+      "returned_at": "2026-10-09T10:34:01+00:00",
+      "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2574,8 +2630,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0459871944508191af4892fb9538e0e1--2025-2502.17421-longspec-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0459871944508191af4892fb9538e0e1--2025-2502.17421-longspec-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-11c838cdaaa3--libfile_0459871944508191af4892fb9538e0e1--2025-2502.17421-longspec-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-11c838cdaaa3--libfile_0459871944508191af4892fb9538e0e1--2025-2502.17421-longspec-under16kb-reaudit-20261009-1755-scheduled-chat-00-r01.json",
       "worker_run_key": "20261009-1755-scheduled-chat-00/r01"
     }
   ]

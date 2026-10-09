@@ -472,9 +472,9 @@
   実装：✓ ・ リポジトリ内被引用：0  
   非対称回線向けの証明付き段階補正と確認済み要求間パイプラインを組み合わせ、クラウド・エッジ投機的復号の通信待ちと無効先読みを削減する。
 
-- **2026-08 · [ARCHead：活性値計量に基づく出力ヘッド圧縮](2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  既存の重み量子化はトランスフォーマー本体を4ビットへ縮めても、語彙全体へロジットを出す最終言語モデルヘッドをBF16やFP16で残す実装がある。Qwen3-8Bではこの射影だけで約1.18GBになる。
+- **2026-08 · [ARCHead: Activation-Metric Residual Correction for Large Language Model Output Heads](2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md)**  
+  実装：[✓](https://github.com/suayptalha/archead) ・ リポジトリ内被引用：0  
+  ARCHeadは、大規模言語モデル（LLM）の最終出力射影（language-modeling head; LM-head）に特化した学習後圧縮方式である。語彙数が大きいモデルでは、この例外だけで数百MBから1GB以上の重みを保持する。
 
 - **2026-08 · [AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation](2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md)**  
   実装：[✓](https://github.com/kvcache-ai/AFD-Ledger) ・ リポジトリ内被引用：0  
@@ -573,8 +573,8 @@
   系列をイベント駆動コルーチン化して停止・結合・分割・移動を可能にし、MoEバッチ形成と長尾負荷分散を動的化して最大2.3倍の大規模高速化を示す。
 
 - **2026-06 · [Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression](2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture-of-Experts; MoE）はトークンごとに一部の専門家しか実行しないが、全専門家の重みを保持するため配備メモリが大きい。専門家を丸ごと削る圧縮は直接的だが、重要と判定された専門家の内部にも冗長チャネルがあり、逆に一つの専門家を全削除するとその専門家だけが持つ有用なチャネルまで失う。
+  実装：[✓](https://github.com/yifu-ding/MoE-Slimming) ・ リポジトリ内被引用：0  
+  専門家を丸ごと削除する従来方式では、重要度が高いと判定された専門家の内部にも残る冗長チャネルを見逃し、逆に頻度の低い専門家を全削除すると一部の入力に必要な能力を失う。著者らはDeepSeekとQwenの複数の混合専門家モデルを対象に、構造的枝刈り（structural 枝刈り）50%単独と、25%枝刈りに4ビット量子化を重ねた構成を比較した。
 
 - **2026-06 · [Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX](2026-2606.25426-above-the-inner-loop-exceeding-accelerate-at-llm-prefill-gemm-on-the-m1-amx.md)**  
   実装：[✓](https://github.com/dbhan08/inferc) ・ リポジトリ内被引用：0  
@@ -1069,8 +1069,8 @@
   単純に既学習LLMのFFNをMoEへ変えて視覚言語学習を始めると、モダリティ間の特徴分布差と専門家負荷の偏りにより学習が崩れやすい。そこで論文は三段階の分離学習（MoE-Tuning）を採用し、まず密なLVLMとして視覚と言語を整合・適応させ、その重みを専門家へ損失なく複製してから疎ルーティングを学ぶ。
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  FastVは、初期層では視覚情報を統合するため画像トークンを残し、指定した層 (K) で注意重みに基づき視覚トークンを順位付けし、重要度の低い下位 (R)% をそれ以降の層から除去する。代表的な (K=2, R=50%) ではLLaVA-1.5-13Bの理論FLOPsを154.6Bから84.6Bへ減らしながら、4種画像ベンチマーク平均73.6を維持する。
+  実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：11  
+  LLaVA-1.5では一枚の336×336画像が576トークンになり、高解像度化や動画の複数フレーム処理では数千トークンへ増える。初期層では画像情報が広く注意される一方、深い層では少数のシステム指示や文章トークンへ注意が集中し、画像トークン一個当たりの注意効率が非常に低くなる。代表設定は二層後に視覚トークンの50%を削除する方式である。
 
 - **2024-01 · [Long Context Compression with Activation Beacon](2024-2401.03462-long-context-compression-with-activation-beacon.md)**  
   実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：11  
@@ -1347,8 +1347,8 @@
   距離に応じて注意解像度を段階的に粗くするdilated 注意と、系列 dimensionを跨いだ分散実行を組み合わせ、自己注意の計算量を系列長に対して線形へ落としつつ、任意トークン間の依存経路を対数長に保つ。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  FrugalGPTは、性能と料金が大きく異なる複数の大規模言語モデル（LLM）APIを、予算制約の中で使い分けるための枠組みである。カスケードでは安価なAPIから順に問い合わせ、生成結果の信頼度が十分高ければそこで終了し、低ければより高価なAPIへ送る。
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：17  
+  FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Outlier Suppression+: Accurate quantization of large language models by equivalent and optimal shifting and scaling](2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md)**  
   実装：[✓](https://github.com/ModelTC/Outlier_Suppression_Plus) ・ リポジトリ内被引用：17  

@@ -49,16 +49,16 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 2年前（2024-11〜2025-10）
 
 - **2024-12 · [DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference](2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md)**  
-  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：17  
-  DAOPはプリフィルでリクエスト固有の専門家をGPU配置へ反映し、デコードでは次層のCPU専門家を1ブロック前に予測・計算して、単一GPUの転送待ちを減らす。
+  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：16  
+  しかし、GPUメモリが限られると専門家の重みをすべて常駐させられない。従来のCPU専門家実行方式Fiddlerに対し、DAOPは二つの最適化を加える。RTX A6000 48GBと18コアCPUの実機評価では、Fiddler比で専門家キャッシュ比率を変えた場合の平均生成速度改善が35.4%、一部条件では40.4%である。
 
 - **2025-02 · [Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate](2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：12  
   Fateは隣接層のルータ入力から次層専門家を予測し、層ごとのGPU常駐数と利用履歴を調整する。低頻度専門家の低ビット化も組み合わせ、エッジMoEの転送と容量を抑える。
 
 - **2025-09 · [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
-  LayerScopeは将来専門家の先読み、CPU直接計算、必要時転送を複数バッチで一体計画し、PCIe帯域を先読みで使い切って緊急転送を遅らせる問題を抑える。
+  将来必要になる専門家を予測しても、その先読みがPCIe帯域を占有すると、現在必要な専門家の緊急転送が遅れる。LayerScopeは、先読み、必要時転送、CPUでの直接計算を複数バッチ・複数層の時間軸で一体的に計画する。
 
 - **2025-10 · [ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference](2025-2510.26730-expertflow-adaptive-prefetch.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -67,13 +67,13 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
-  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：34  
   ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
 
 ### 4年前（2022-11〜2023-10）
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：85  
   Pre-gated MoEは次層のルーティング判定を1ブロック前へ移し、必要な専門家重みのCPUからGPUへの転送を現在ブロックの計算と重ねて、オフロード待ちを減らす。
 
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  

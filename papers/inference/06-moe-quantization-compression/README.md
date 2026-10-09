@@ -41,7 +41,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   EAC-MoEは、量子化でルータが選ぶ専門家がずれる誤差を重点補正し、プリフィルで低頻度専門家を入力単位に枝刈りして、品質と容量を両立する。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
-  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：11  
   MxMoEは、混合専門家モデル（Mixture of エキスパート; MoE）の推論において、モデルの重みを小さくするだけでなく、実際にGPU上で計算が速くなる量子化配置を選ぶ研究である。専門家演算の処理量は16ビット基準に対して、512トークン条件で1.6～2.7倍、8192トークン条件で3.0～3.4倍となった。
 
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
@@ -84,7 +84,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 - **2024-07 · [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
-  Mixture of Precisionsは、専門家ごとの4/16ビット精度とCPU/GPU配置をVRAM予算に応じて切替え、品質低下とPCIe転送を抑えながらスループットを調整する。
+  本論文は、混合専門家モデル（Mixture-of-Experts、MoE）を限られたGPUメモリで動かすとき、専門家の量子化精度とCPU/GPU上の配置を別々の選択変数として扱い、推論サービスの品質と生成速度を調整する方式を提案する。対象は単一GPU上のMixtral 8x7Bであり、分散学習や多数GPU間の専門家並列処理ではない。
 
 ### 4年前（2022-11〜2023-10）
 
@@ -93,6 +93,6 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MoQEは、モデル容量の大半を占める専門家FFNだけを2〜8ビット化し、注意・共有FFNは高精度に残して、品質を守りながら保存量と重み帯域を減らす。
 
 - **2023-10 · [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)**  
-  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/IST-DASLab/qmoe) ・ リポジトリ内被引用：17  
   QMoEは、Switch Transformerの専門家重みをデータ依存に2ビット/三値圧縮し、圧縮表現を直接読むGPUカーネルで展開帯域を抑え、超大規模MoEの保存容量を減らす。
 <!-- survey:auto:end -->

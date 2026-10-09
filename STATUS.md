@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-09 19:26:22 JST**
+> 自動生成: **2026-10-09 19:34:52 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **944** |
 | 未claim Research job | **944** |
-| 直近24hのResearch処理完了 | **176** |
-| 最終Research処理完了 | **10-09 18:55:00 JST** |
+| 直近24hのResearch処理完了 | **186** |
+| 最終Research処理完了 | **10-09 19:06:00 JST** |
 | 最終Discovery探索完了 | **10-09 13:36:44 JST** |
 | 整合性異常 | **0** |
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.4%**
-- 現在の生在庫: 後方references **50052件** / 前方引用 **51010件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **100594件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **50051件** / 前方引用 **51010件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **100593件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-09 09:37:33 JST（9時間48分前）** |
+| 最終maintenance完了 | **10-09 09:37:33 JST（9時間57分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **15** |
+| 直近6hのResearch完了 | **27** |
 | 直近6hのDiscovery run | **1** |
 | 直近6hのDiscovery本文確認・分類 | **10** |
-| 最終Research完了 | **10-09 18:55:00 JST** |
+| 最終Research完了 | **10-09 19:06:00 JST** |
 | 最終Discovery完了 | **10-09 13:36:44 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-09 18:55:00 JST** / worker — / run 20261009-1830-scheduled-chat-30/r01 / 成果 **2件**
-  - evidence: .survey/import-inbox/results/research/libfile_62fa8b95c66c8191857d3001094fbd9e--2023-2303.06182-moe-deployment-under16kb-reaudit-20261009-1830-scheduled-chat-30-r01.json
+- Research: **10-09 19:06:00 JST** / worker — / run 20261009-1857-scheduled-chat-00/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_dd2b9261abcc8191b3dbafdac26396b0--2024-2404.09529-prepacking-under16kb-reaudit-20261009-1905-scheduled-chat-00-r01.json
 - Discovery: **10-09 13:36:44 JST** / worker codex-local / run codex-backfill-r483-b23-p03-primary-title-reviewed-main-4fda232c
   - 本文確認・分類 **10件** / accept **9件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/codex-backfill-r483-b23-p03-primary-title-reviewed-main-4fda232c--a42d07431ce3c63dc6526b3d6759763c7c550dcfc0ea4daa744d255d009c45f6--codex-backfill-r483-b23-p03-.json

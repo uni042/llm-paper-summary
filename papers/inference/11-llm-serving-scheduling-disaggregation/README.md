@@ -914,6 +914,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   二つの段階を同じGPU群で混在させる同居方式は、片方を最適化するともう片方が悪化しやすい。
 
+- **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  プリフィルは大きな行列積で計算資源を利用しやすいのに対し、デコードは各反復で過去の鍵・値（KV）キャッシュを読み、メモリ帯域や反復遅延の制約が強い。既存の分離配信はプリフィル用GPUとデコード用GPUを分けるため、負荷比が変化したときに一方が遊休となり、KVキャッシュプールも分断されやすい。
+
 - **2025-04 · [FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling](2025-2504.03775-flowkv-low-latency-transfer-load-aware.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   KVキャッシュを連続セグメントへ寄せてNCCL転送をまとめ、全体負荷に応じてプリフィル／デコード役割も切り替える分離推論基盤。転送遅延を最大96.8%削減し、LongBenchで15.2〜48.9%短縮。
@@ -945,10 +949,6 @@
 - **2025-05 · [HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving](2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   画像符号化・入力処理・デコードを異種段階として扱い、負荷とSLOに応じてE+P+D、EP+D、ED+Pを選ぶ混成分離と段階別バッチ・二重ストリームを組み合わせ、マルチモーダル配信のグッドプットを高める。
-
-- **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  MuxWiseはプリフィル（プリフィル）とデコード（デコード）を別GPUへ固定分離せず、同一GPUのストリーミングマルチプロセッサ（Streaming Multiprocessor; SM）を空間分割して同時実行する。
 
 - **2025-03 · [Teola: Towards End-to-End Optimization of LLM-based Applications](2024-2407.00326-teola.md)**  
   実装：[✓](https://github.com/NetX-lab/Ayo) ・ リポジトリ内被引用：6  
@@ -1266,7 +1266,7 @@
 
 - **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
   実装：[✓](https://github.com/siyan-zhao/prepacking) ・ リポジトリ内被引用：4  
-  可変長プロンプトを最長系列へそろえてパディングする代わりに、長さを見て複数プロンプトを同じ固定長コンテナへビン詰めし、ブロック対角の注意マスクとプロンプトごとに再開する位置番号で独立したKVキャッシュを一回のプリフィルから作る。
+  Prepackingは、長さの異なる複数の入力プロンプトを一括処理する際、短いプロンプトを最長プロンプトまでパディングすることで発生する無駄な計算とGPUメモリ消費を減らす方式である。論文は単一のNVIDIA A6000-48GBで、1.3Bから13Bまでのモデルを使って検証する。
 
 - **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
   実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：4  
@@ -1283,7 +1283,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：888  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：887  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  

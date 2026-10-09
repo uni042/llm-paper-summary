@@ -156,7 +156,7 @@
 
 - **2025-03 · [XAttention: Block Sparse Attention with Antidiagonal Scoring](2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md)**  
   実装：[✓](https://github.com/mit-han-lab/x-attention) ・ リポジトリ内被引用：9  
-  反対角線標本の和で注意ブロック重要度を予測し、重要ブロックだけを残すことで256k級長文脈の注意計算を最大13.5倍高速化する。
+  すべての過去トークンが同じように重要とは限らないため、注意行列の重要な領域だけを計算するブロック疎注意（block-sparse 注意機構）が提案されてきた。RULERやLongBenchでは全注意に近い精度を保ち、注意演算部分では最大13.5倍の高速化を報告する。
 
 - **2025-07 · [RefreshKV: Updating Small KV Cache During Long-form Generation](2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md)**  
   実装：[✓](https://github.com/carriex/refreshkv) ・ リポジトリ内被引用：7  
