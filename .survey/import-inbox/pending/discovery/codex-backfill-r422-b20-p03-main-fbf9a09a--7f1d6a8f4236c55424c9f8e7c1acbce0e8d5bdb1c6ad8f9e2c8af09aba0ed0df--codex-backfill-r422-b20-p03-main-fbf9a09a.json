@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-discovery-backfill-luna",
+  "run_key": "codex-backfill-r422-b20-p03-main-fbf9a09a",
+  "reference_main_sha": "fbf9a09a0e8cbbf3a146719b26ba34c8e9e2a9ed",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02625",
+      "identity_tokens": [
+        "arXiv:2608.02625",
+        "DOI:10.48550/arXiv.2608.02625"
+      ],
+      "title": "Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models",
+      "reason": "The abstract presents draft/refine speculative correction for diffusion language-model decoding and reports speed improvements.",
+      "source_url": "https://arxiv.org/abs/2608.02625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28099",
+      "identity_tokens": [
+        "arXiv:2608.28099",
+        "DOI:10.48550/arXiv.2608.28099"
+      ],
+      "title": "Speculative Probing: LLM Monitoring at Speculative-Decoding Cost",
+      "reason": "The abstract reuses speculative-decoding machinery and resident KV cache for low-overhead real-time LLM monitoring, a direct inference systems mechanism.",
+      "source_url": "https://arxiv.org/abs/2608.28099",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2511.04919",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2511.04919",
+        "arXiv:2511.04919"
+      ],
+      "title": "BudgetMem: Training-Free Selective Memory for Cost-Efficient Long-Context Processing in Language Models",
+      "reason": "The arXiv-issued DOI resolves to arXiv:2511.04919; its abstract describes selective memory that reduces retained context and processing cost.",
+      "source_url": "https://arxiv.org/abs/2511.04919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.17946",
+      "identity_tokens": [
+        "arXiv:2402.17946",
+        "DOI:10.48550/arXiv.2402.17946"
+      ],
+      "title": "SparseLLM: Towards Global Pruning of Pre-trained Language Models",
+      "reason": "The abstract describes global pruning for pretrained LLMs to reduce computation and memory, directly connected to model compression.",
+      "source_url": "https://arxiv.org/abs/2402.17946",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.00556",
+      "identity_tokens": [
+        "arXiv:2412.00556",
+        "DOI:10.48550/arXiv.2412.00556"
+      ],
+      "title": "Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction",
+      "reason": "The abstract proposes visual-token reduction for MLLMs and reports inference acceleration, directly relevant to multimodal LLM serving.",
+      "source_url": "https://arxiv.org/abs/2412.00556",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.23049",
+      "identity_tokens": [
+        "arXiv:2505.23049",
+        "DOI:10.48550/arXiv.2505.23049"
+      ],
+      "title": "DenoiseRotator: Enhance Pruning Robustness for LLMs via Importance Concentration",
+      "reason": "The abstract makes LLM weight representations more amenable to pruning, a direct model-compression method.",
+      "source_url": "https://arxiv.org/abs/2505.23049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.16598",
+      "identity_tokens": [
+        "arXiv:2510.16598",
+        "DOI:10.48550/arXiv.2510.16598"
+      ],
+      "title": "VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs",
+      "reason": "The abstract compresses visual tokens in MLLMs and reports prefill-speed improvement, directly targeting multimodal inference cost.",
+      "source_url": "https://arxiv.org/abs/2510.16598",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.23912",
+      "identity_tokens": [
+        "arXiv:2510.23912",
+        "DOI:10.48550/arXiv.2510.23912"
+      ],
+      "title": "Key and Value Weights Are Probably All You Need: On the Necessity of the Query, Key, Value weight Triplet in Self-Attention Transformers",
+      "reason": "The arXiv abstract proves one attention projection can be redundant, reducing attention parameters by 25% while preserving model performance in decoder-only GPT-style models.",
+      "source_url": "https://arxiv.org/abs/2510.23912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.15593",
+      "identity_tokens": [
+        "arXiv:2607.15593",
+        "DOI:10.48550/arXiv.2607.15593"
+      ],
+      "title": "Scalable LLM Agent Tool Access in the Cloud",
+      "reason": "The arXiv abstract describes a cloud-scale MCP gateway that lowers tool-selection time and token usage, directly addressing agent inference overhead and serving scale.",
+      "source_url": "https://arxiv.org/abs/2607.15593",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14327",
+      "identity_tokens": [
+        "arXiv:2601.14327",
+        "DOI:10.48550/arXiv.2601.14327"
+      ],
+      "title": "Yuan3.0 Ultra: A Trillion-Parameter Enterprise-Oriented MoE LLM",
+      "reason": "The arXiv abstract describes Layer-Adaptive Expert Pruning for the pre-training stage and reports pre-training efficiency only; it does not establish an inference/serving efficiency method.",
+      "source_url": "https://arxiv.org/abs/2601.14327",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-08T19:51:01Z",
+      "last_checked_at": "2026-10-08T19:51:01Z",
+      "linked_from": []
+    }
+  ]
+}
