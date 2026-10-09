@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-08T22:51:44.418929+00:00",
+  "generated_at": "2026-10-09T00:03:30.234268+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 400,
+  "count": 396,
   "worker_counts": {
-    "scheduled-chat-00": 130,
+    "scheduled-chat-00": 126,
     "scheduled-chat-30": 114,
     "scheduled-chat-45": 156
   },
@@ -1628,26 +1628,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md",
-      "canonical_id": "arXiv:2310.06178",
-      "title": "Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM",
-      "file_bytes": 10670,
-      "source_sha256": "7d9133e08a5b8236a49b90060ff929bd68e22d91bea722d6e369a8c436bfde4c",
-      "source_git_blob_sha": "12331a0bcb9e46558435fd7f862e2830ee89b2a2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.86611,
-      "quality_metrics": {
-        "body_chars": 2982,
-        "method_chars": 995,
-        "evaluation_chars": 678,
-        "limitation_chars": 336
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md",
       "canonical_id": "arXiv:2412.03594",
       "title": "BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching",
@@ -1672,26 +1652,6 @@
       ]
     },
     {
-      "path": "papers/inference/13-sparse-attention/2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md",
-      "canonical_id": "DOI:10.18653/v1/2025.acl-long.1211",
-      "title": "RefreshKV: Updating Small KV Cache During Long-form Generation",
-      "file_bytes": 10731,
-      "source_sha256": "1367409d956843ce291bc29c3864b349e9224c507b617ae04b467d0620943c9e",
-      "source_git_blob_sha": "5c6c3c2157fb7bc523392b944ea87d0a03222a98",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.916936,
-      "quality_metrics": {
-        "body_chars": 3263,
-        "method_chars": 719,
-        "evaluation_chars": 1238,
-        "limitation_chars": 211
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.25405-orthrus.md",
       "canonical_id": "arXiv:2609.25405",
       "title": "Efficient Iterative Retrieval with Heterogeneous Batching",
@@ -1710,29 +1670,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 244 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.05508-beyond-the-buzz-a-pragmatic-take-on-inference-disaggregation.md",
-      "canonical_id": "arXiv:2506.05508",
-      "title": "Beyond the Buzz: A Pragmatic Take on Inference Disaggregation",
-      "file_bytes": 10764,
-      "source_sha256": "b92d2d1f360b9f0450c0415b52689eb269f242f39a30f82fd3493fd9b4bd7a37",
-      "source_git_blob_sha": "b55d131dce401c8831b578456835333206033519",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.976528,
-      "quality_metrics": {
-        "body_chars": 2371,
-        "method_chars": 647,
-        "evaluation_chars": 0,
-        "limitation_chars": 192
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 647 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
       ],
       "warnings": []
     },
@@ -1757,30 +1694,6 @@
         "16KB未満再監査: 評価説明量 167 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
-      "canonical_id": "arXiv:2404.07904",
-      "title": "HGRN2: Gated Linear RNNs with State Expansion",
-      "file_bytes": 10784,
-      "source_sha256": "4bb7d5d9f529da350104ae7fde85929c4d8446cf994aa0ca621b3401867a7dfe",
-      "source_git_blob_sha": "78189c33908a61960479d10f73d3f39228c8ccb6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.765739,
-      "quality_metrics": {
-        "body_chars": 3175,
-        "method_chars": 823,
-        "evaluation_chars": 1001,
-        "limitation_chars": 282
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.6% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
