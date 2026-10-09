@@ -90,7 +90,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2026-03 · [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  Swarmは共に参照されるKVを事前にグループ化し、複数SSDへ分散して並列読込みすることで、単一SSDの帯域上限と長文KVのI/O待ちを減らす方式。
+  Swarmは、長文脈の大規模言語モデル推論で鍵・値キャッシュ（KV キャッシュ）を大容量のSSDへ退避するとき、SSDの入出力帯域が注意計算を待たせる問題に取り組む。
 
 - **2026-02 · [KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning](2026-2602.23592-keep-kv-cache-centric-embodied-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -336,13 +336,13 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：13  
   Pieは数層先で必要なKVをCPU DRAMからGPUへ先読みし、現在層の計算と転送を重ね、転送が律速する直前まで退避量を動的に増やす方式。
 
-- **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
-  実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：12  
-  KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
-
 - **2025-10 · [TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications](2025-2510.18586-tokencake-agent-kv-cache-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。
+
+- **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
+  実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：11  
+  KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
 
 - **2025-10 · [CacheClip: Accelerating RAG with Effective KV Cache Reuse](2025-2510.10129-cacheclip-rag-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -384,10 +384,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   ShadowServeは遠隔圧縮KVの展開・逆量子化をSmartNICへ移し、GPUを推論計算に専念させて、KV取得時のGPU競合とCPU処理待ちを減らす方式。
 
-- **2025-08 · [AdaptCache: KV Cache Native Storage Hierarchy for Low-Delay and High-Quality Language Model Serving](2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  KV項目ごとの内容・再利用頻度・品質劣化とDRAM/SSD転送遅延を推定し、圧縮方式・率・配置を限界効用で共同最適化して高速階層への命中率を高める。
-
 - **2025-06 · [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   APEXはCPU担当要求とGPU担当要求の線形計算を一つのGPUバッチにまとめ、注意結果の同期を必要直前まで遅らせてCPU計算をGPU処理の裏へ隠す方式。
@@ -395,6 +391,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-09 · [TRACE: Unlocking Effective CXL Bandwidth via Lossless Compression and Precision Scaling](2025-2509.03377-cxl-ndp-transparent-near-data-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   TRACEはCXLメモリ装置内で重み・KVをビット面再配置して無損失圧縮し、精度別別名で不要ビット面を読まず、CXL帯域・DRAM読出し・エネルギーを減らす方式。
+
+- **2025-08 · [AdaptCache: KV Cache Native Storage Hierarchy for Low-Delay and High-Quality Language Model Serving](2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  KV項目ごとの内容・再利用頻度・品質劣化とDRAM/SSD転送遅延を推定し、圧縮方式・率・配置を限界効用で共同最適化して高速階層への命中率を高める。
 
 - **2025-07 · [Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System](2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -415,7 +415,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：62  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：61  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
@@ -449,6 +449,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](2024-2310.07240-cachegen.md)**  
-  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：79  
+  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：78  
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 <!-- survey:auto:end -->

@@ -135,8 +135,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  この疎性は、注意や共有専門家をGPUに置き、多数のrouted 専門家を大容量CPUメモリへ置く混成推論と相性がよい。しかし単純なオフロードではCPU側の小さな行列演算が遅く、MoE層の結果を待つ間GPUが停止するため、PCIe転送だけでなくCPU計算と同期が律速になる。
+  実装：[✓](https://github.com/kvcache-ai/ktransformers) ・ リポジトリ内被引用：11  
+  大規模な混合専門家モデルの多数の専門家重みをCPUメモリに常駐させ、注意機構などをGPUで処理する異種混成推論基盤。CPUの行列演算命令を算術強度に応じて使い分け、非同期の実行制御と専門家計算の遅延反映によってCPU・GPUの相互待ちを減らす。低同時実行の巨大モデルを主対象とし、評価した環境は二基の高性能XeonとA100またはRTX 4080である。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
   実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：9  
@@ -216,7 +216,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
   実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：20  
-  固定枝刈りでパラメータを削れば帯域を減らせるが、全入力に共通の小ネットワークへ固定すると精度やin-文脈 learningを損なう。
+  密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
   実装：[✓](https://github.com/AlibabaResearch/flash-llm) ・ リポジトリ内被引用：17  
@@ -259,7 +259,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：59  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：58  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

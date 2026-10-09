@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 07:49:36 JST**
+> 自動生成: **2026-10-10 08:06:02 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **949** |
 | 未claim Research job | **949** |
-| 直近24hのResearch処理完了 | **172** |
-| 最終Research処理完了 | **10-10 06:30:00 JST** |
+| 直近24hのResearch処理完了 | **186** |
+| 最終Research処理完了 | **10-10 07:59:29 JST** |
 | 最終Discovery探索完了 | **10-10 07:44:53 JST** |
 | 整合性異常 | **0** |
 
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **119400** |
+| 探索候補総数 | **119387** |
 | 処理済み | **18142** |
-| 未処理Discovery候補 | **101258** |
+| 未処理Discovery候補 | **101245** |
 | 収録済み | **1758** |
 | Research / Audit候補へ昇格済み | **797** |
 | 無関係として除外 | **11144** |
@@ -63,18 +63,18 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **101258** |
+| 未処理候補（フィルタ前） | **101245** |
 | 機械規則による暫定隔離 | **1743** |
 | 拡張機械規則による追加隔離 | **1106** |
-| 機械規則通過後 | **98409** |
-| 系統内前方引用スコアによる選抜保留 | **93488** |
-| 暫定隔離合計 | **96337** |
-| **読解可能候補（隔離後）** | **4921** |
+| 機械規則通過後 | **98396** |
+| 系統内前方引用スコアによる選抜保留 | **93476** |
+| 暫定隔離合計 | **96325** |
+| **読解可能候補（隔離後）** | **4920** |
 | 前方引用が同一系統で2本以上の候補 | **12073** |
 | 前方引用が同一系統で3本以上の候補 | **5937** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4921件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4920件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.2%**
-- 現在の生在庫: 後方references **50026件** / 前方引用 **52806件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **102349件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **50012件** / 前方引用 **52806件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **102336件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-09 09:37:33 JST（22時間12分前）** |
+| 最終maintenance完了 | **10-09 09:37:33 JST（22時間28分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **28** |
+| 直近6hのResearch完了 | **42** |
 | 直近6hのDiscovery run | **2** |
 | 直近6hのDiscovery本文確認・分類 | **27** |
-| 最終Research完了 | **10-10 06:30:00 JST** |
+| 最終Research完了 | **10-10 07:59:29 JST** |
 | 最終Discovery完了 | **10-10 07:44:53 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-10 06:30:00 JST** / worker — / run 20261010-0630-scheduled-chat-30/r01 / 成果 **4件**
-  - evidence: .survey/import-inbox/results/research/libfile_20da3401893c8191aefef4027fc8e97a--2023-2307.09702-guided-generation-under16kb-reaudit-20261010-0630-scheduled-chat-30-r01.json
+- Research: **10-10 07:59:29 JST** / worker — / run 20261010-0745-scheduled-chat-45/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_5a57800923e48191bd65cfcd4c731a86--2025-2501.16383-rotatekv-under16kb-reaudit-20261010-0745-scheduled-chat-45-r01.json
 - Discovery: **10-10 07:44:53 JST** / worker codex-local / run codex-backfill-r485-b25-main-ac261774-p01
   - 本文確認・分類 **20件** / accept **19件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/waiting/discovery/codex-backfill-r485-b25-main-ac261774-p01--b7769e386dca8e20d9851e5d046f6ec2ddaf18eafd49959a33cc3fd854ea3d83--codex-backfill-r485-b25-main-ac261774-p01.json
@@ -302,11 +302,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **347** |
+| 成功result未照合のimmutable submission | **351** |
 | └ Research | **120** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **82** |
+| └ Other/Unknown | **86** |
 
 ### 厳格検証が未成立のcompleted job
 

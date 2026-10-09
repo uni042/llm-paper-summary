@@ -794,6 +794,10 @@
 
 ### 2年前（2024-11〜2025-10）
 
+- **2025-02 · [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：214  
+  同じシステム指示や過去の会話が次の要求でも現れる場合、その部分の鍵・値キャッシュ（KV キャッシュ）を再利用すれば、既に行った注意計算を省ける。遅延制約を守る要求容量が基準方式より59～498%増え、分散キャッシュの命中率が局所キャッシュ比で最大2.36倍、事前入力処理のGPU計算時間が最大48%減った。
+
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：45  
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
@@ -1004,7 +1008,7 @@
 
 - **2024-12 · [GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions](2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  「古いGPUは遅いからLLM配信には使えない」と一括りにせず、処理段階・モデルサイズ・要求率ごとにエネルギー効率を測る。A100が必要な重い部分だけを新GPUへ残し、T4/V100でもSLOを守れる部分を旧GPUへ移すことで、運用時電力だけでなく新GPU製造に伴う体現炭素も含めた総排出量を減らす。
+  GreenLLMは、新型A100と旧世代T4/V100を組み合わせ、要求の種類と負荷に応じて推論処理の一部を旧GPUへ割り当てる配信基盤である。
 
 - **2025-09 · [Ranking Before Serving: Low-Latency LLM Serving via Pairwise Learning-to-Rank](2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md)**  
   実装：[✓](https://github.com/SPEAR-UIC/PARS) ・ リポジトリ内被引用：3  
@@ -1109,11 +1113,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：427  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：424  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：422  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：420  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -1124,16 +1128,12 @@
   実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：325  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
-- **2024-07 · [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：214  
-  プリフィルとデコードを別GPU群へ分け、クラスタ内のCPU DRAM・SSDへ過去KVを保存して別ノードからも再利用できるようにし、KV取得時間・待ち行列待ち・残りプリフィル計算を比較してリクエストの実行先を決める大規模な推論提供システム。
-
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
   実装：[✓](https://github.com/AlibabaPAI/llumnix) ・ リポジトリ内被引用：126  
   実行中要求のKVキャッシュを別モデル実行単位へ段階的に移し、GPU間の混雑差・メモリ不足・優先度変更・実行単位削減が起きた後でも要求配置を修正できる複数実行単位の推論提供スケジューラ。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：123  
+  実装：✓ ・ リポジトリ内被引用：122  
   複数ターン会話の過去KVを要求終了後もDRAM / SSDへ保存し、次ターンで使う層のKVを少し前からGPUへ戻すことで、履歴全体の再プリフィルと記憶装置待ちを減らす状態保持型推論提供手法。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
@@ -1283,7 +1283,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：889  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：886  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -1295,7 +1295,7 @@
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-05 · [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)**  
-  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：105  
   出力トークンを1つ生成する区切りで要求（リクエスト）を一時停止・再開できるようにし、短い要求を優先しながらKVキャッシュ（KV キャッシュ）をCPUへ退避・先読みして待ち時間を減らすLLMサービングスケジューラ（serving スケジューラ）。
 
 - **2023-10 · [Punica: Multi-Tenant LoRA Serving](2023-2310.18547-punica-multitenant-lora-serving.md)**  
@@ -1309,6 +1309,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：429  
+  実装：✓ ・ リポジトリ内被引用：428  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 <!-- survey:auto:end -->

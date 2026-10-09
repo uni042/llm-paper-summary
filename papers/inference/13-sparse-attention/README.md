@@ -64,7 +64,7 @@
 
 - **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
   実装：[✓](https://github.com/longcheng-nv/GVR_TopK_supplementaty_materials) ・ リポジトリ内被引用：3  
-  Guess-Verify-Refine（GVR）は、DeepSeek Sparse 注意機構（DSA）の復号時に毎トークン実行される正確な上位K選択（exact Top-K）を高速化するGPUアルゴリズムである。
+  Guess-Verify-Refine（GVR）は、長文脈の疎注意を使う言語モデルが次のトークンを生成するとき、過去の全トークンから重要度上位の位置を選ぶ処理を高速化するGPUアルゴリズムである。
 
 - **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
   実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：2  
@@ -197,7 +197,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：122  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：121  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -231,7 +231,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  
-  実装：[✓](https://github.com/sanagno/adaptively_sparse_attention) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/sanagno/adaptively_sparse_attention) ・ リポジトリ内被引用：10  
   動的 Context 枝刈りは、生成の途中で「今後のトークンが参照する価値が低い」と学習した過去トークンを、注意対象とキー・バリュー（Key-Value; KV）キャッシュから動的に削除する。固定窓のように距離だけで落とさず、層ごとの学習可能な相互作用スコアで削除時点を決める。
 
 - **2023-10 · [HyperAttention: Long-context Attention in Near-Linear Time](2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md)**  
