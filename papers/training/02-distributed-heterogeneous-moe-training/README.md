@@ -44,7 +44,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 
 - **2025-08 · [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/X-MoE) ・ リポジトリ内被引用：1  
-  大規模MoEで実トークンだけを詰めて通信し、同一ノード宛ての重複送信をまとめ、MoE部分の系列分割も変えて、paddingとノード間通信を減らすHPC学習システム。
+  計算量を抑えながら専門家の組合せを増やせる反面、分配・回収するトークン活性値が増え、学習用GPUのメモリとノード間通信が律速になる。X-MoEはこの学習上の問題に対し、ゼロ埋めを排したトークン格納（PFT）、ノード間の重複回避分配（RBD）、MoE層専用の系列分割（SSMB）を統合する。
 
 ### 3年前（2023-11〜2024-10）
 

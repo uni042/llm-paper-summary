@@ -138,7 +138,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 - **2026-09 · [Mira: Memory-Efficient MoE Inference Using Adaptive Caching and Predictive Expert Staging](2026-2609.38090-mira-memory-efficient-moe-inference-using-adaptive-caching-and-predictiv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  単一GPUでVRAMに収まらない場合、専門家をCPUメモリへ置き、ルータが選んだ専門家だけPCIe経由でGPUへ移す。Miraはこの反応型オフロードを予測型へ変える。
+  専門家の将来利用を予測してCPUから先に搬入し、頻出専門家と短期予測専門家を別々のGPUキャッシュで管理する単一GPU向け推論システム。
 
 - **2026-09 · [LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism](2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -467,7 +467,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：336  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：335  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）

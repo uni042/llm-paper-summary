@@ -248,7 +248,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
   実装：[✓](https://github.com/haopeng-nlp/transformer-rfa) ・ リポジトリ内被引用：3  
-  Random Feature 注意機構（RFA）は、通常のsoftmax注意がqueryとkeyの全組合せを評価するため系列長に対して二次の時間・空間コストを持つ問題を、カーネル近似へ置き換えて解く。
+  本論文が扱うのは、標準的な指数正規化注意（softmax 注意機構）において、各質問ベクトルが過去のすべての鍵ベクトルと内積を計算するため、自己回帰復号で生成長が増すほど注意処理が重くなる問題である。
 
 ### 7年前（2019-11〜2020-10）
 
@@ -263,8 +263,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  FLOP（Factorized Low-rank Pruning）は、非構造疎性のように0位置を大量に持つ行列を作るのではなく、重み行列を低ランク因子へ分解し、不要なrank-1成分を学習で削る構造枝刈り法である。100Mパラメータ級word LMでは50%圧縮でPPL 24.5から25.3程度に留め、論文全体として学習・推論とも2倍超の高速化を報告する。
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：9  
+  FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-11〜2018-10）
 
