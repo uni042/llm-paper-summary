@@ -35,8 +35,8 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   演算子単位の多数カーネル起動をSM粒度の依存グラフへ分解し、単一常駐巨大カーネル内の分散スケジューラで演算・通信・タスク間パイプラインを重ね、vLLM/SGLang比で最大1.7倍の推論遅延改善を示す。
 
 - **2025-12 · [SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations](2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  SonicMoEは、逆伝播に必要な活性値を減らす再計算設計、大域 メモリ IOとテンソル-core計算を重ねるカーネル、トークン数をハードウェア tileへ合わせてルーティングするトークン roundingを組み合わせる。
+  実装：[✓](https://github.com/Dao-AILab/sonic-moe) ・ リポジトリ内被引用：6  
+  SonicMoEは混合専門家モデル（Mixture-of-Experts、MoE）の学習を対象に、専門家の細粒度化と高疎性化によって生じる三種類の非効率を同時に減らす。ICLR 2026正式版では、7B級の細粒度MoEでScatterMoEに対する活性値メモリ削減45%、Hopper世代GPUでの計算処理量1.86倍を報告する。
 
 - **2026-01 · [FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems](2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -210,7 +210,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
   実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：2  
-  単一の行列積カーネルだけを高速化するのではなく、IntelのxFasterTransformerへ、CPU向け注意機構SlimAttention、8ビット整数（INT8）KVキャッシュ、oneAPI Collective Communications Library（oneCCL）を用いた分散推論とゼロコピー通信を組み込む。
+  IntelのxFasterTransformerに、CPU向けSlimAttention、トークン・ヘッド単位のINT8 KVキャッシュ、oneCCLによる分散推論とゼロコピー通信を組み込む。Xeon 8563C環境でLlama2-70Bの次トークン遅延を2ソケット249.7msから8ソケット87.7msへ短縮した。
 
 ### 4年前（2022-11〜2023-10）
 

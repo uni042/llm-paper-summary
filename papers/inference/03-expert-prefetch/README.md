@@ -44,7 +44,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 - **2026-03 · [CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices](2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  CasMoEは類似入力の過去ルーティング履歴を検索し、見つからない場合だけ学習予測器で全層の専門家を予測して、CPUからGPUへの先読みを早く始める。
+  しかし専門家の総重量は大きく、GPUにすべて常駐させると容量不足になりやすい。CPU側へ非活性専門家を退避し、必要なものだけGPUへ移せば容量は節約できるが、専門家が決まってから転送するとPCIeの待機が推論時間へ直接加算される。
 
 ### 2年前（2024-11〜2025-10）
 
