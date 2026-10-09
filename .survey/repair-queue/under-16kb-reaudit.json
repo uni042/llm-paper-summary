@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T15:22:56.645524+00:00",
+  "generated_at": "2026-10-09T15:45:44.877183+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 266,
+  "count": 261,
   "worker_counts": {
-    "scheduled-chat-00": 88,
-    "scheduled-chat-30": 89,
-    "scheduled-chat-45": 89
+    "scheduled-chat-00": 87,
+    "scheduled-chat-30": 87,
+    "scheduled-chat-45": 87
   },
   "entries": [
     {
@@ -33,30 +33,6 @@
         "16KB未満再監査: 本文説明量 1718 < 2200",
         "16KB未満再監査: 手法説明量 580 < 700",
         "16KB未満再監査: 評価説明量 155 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2025-2509.24663-infllm-v2-dense-sparse-switchable-attention-for-seamless-short-to-long-a.md",
-      "canonical_id": "arXiv:2509.24663",
-      "title": "InfLLM-V2: Dense-Sparse Switchable Attention for Seamless Short-to-Long Adaptation",
-      "file_bytes": 9329,
-      "source_sha256": "e526bce30ac61c426eb6ceb0d01c74114a3f7b660c27c6f52dc5f06016cd7c26",
-      "source_git_blob_sha": "30bbf99c446f65cb7e4d80bd8d2ed6fb76ea69cb",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.966905,
-      "quality_metrics": {
-        "body_chars": 1697,
-        "method_chars": 542,
-        "evaluation_chars": 136,
-        "limitation_chars": 130
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1697 < 2200",
-        "16KB未満再監査: 手法説明量 542 < 700",
-        "16KB未満再監査: 評価説明量 136 < 500"
       ],
       "warnings": []
     },
@@ -326,7 +302,7 @@
       "file_bytes": 10136,
       "source_sha256": "e63ba294e963c50a40960a650bd6b78d626a91d1ce3335ec516f363c6259bad5",
       "source_git_blob_sha": "7d1747015b2abb16b47215233e9c9b0fba0a5c23",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.969554,
@@ -934,30 +910,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
-      "canonical_id": "arXiv:2403.03853",
-      "title": "ShortGPT: Layers in Large Language Models are More Redundant Than You Expect",
-      "file_bytes": 11309,
-      "source_sha256": "78d003e68d66ef00ac74438c74a37630593e9e194bfc0b8956bdaf1e1b306c47",
-      "source_git_blob_sha": "89f337e7a4623e841ba5aee3cd25ef3e03d1ad01",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.78251,
-      "quality_metrics": {
-        "body_chars": 3641,
-        "method_chars": 1021,
-        "evaluation_chars": 1239,
-        "limitation_chars": 325
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.3% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.3% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2608.20530-lilicorr-lightweight-likelihood-correlation-of-parallel-drafts-for-specu.md",
       "canonical_id": "arXiv:2608.20530",
       "title": "LiLiCorr: Lightweight Likelihood Correlation of Parallel Drafts for Speculative Decoding",
@@ -1158,7 +1110,7 @@
       "file_bytes": 11653,
       "source_sha256": "4c9b796803bdd51a6a67c319234e460287b71aea19fa5eab19faf75c62781763",
       "source_git_blob_sha": "53d188f3a243db9126c5afc74ff2173c026d6153",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.992157,
@@ -1603,46 +1555,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
-      "canonical_id": "arXiv:2605.17889",
-      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
-      "file_bytes": 12037,
-      "source_sha256": "24e0dd10d598a5d95c1e309b233bc6b6dc6b378fa832cd9a0621b82b1dcb8c84",
-      "source_git_blob_sha": "564f43a52eb33cb7877e7d7246ad19a61a876180",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.903854,
-      "quality_metrics": {
-        "body_chars": 2788,
-        "method_chars": 1300,
-        "evaluation_chars": 736,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md",
-      "canonical_id": "arXiv:2511.15015",
-      "title": "Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference",
-      "file_bytes": 12052,
-      "source_sha256": "087a4dfa9c17a177e847e30e49460f9f543aa47e351c07cc076e0b5768c9d689",
-      "source_git_blob_sha": "641249edfdff7cd6d145126ce8e83ce4188033c5",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.810275,
-      "quality_metrics": {
-        "body_chars": 2884,
-        "method_chars": 1636,
-        "evaluation_chars": 612,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.05460-efficiently-serving-large-multimodal-models-using-epd-disaggregation.md",
       "canonical_id": "arXiv:2501.05460",
       "title": "Efficiently Serving Large Multimodal Models Using EPD Disaggregation",
@@ -2068,26 +1980,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 174 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md",
-      "canonical_id": "arXiv:2505.23254",
-      "title": "MemAscend: System Memory Optimization for SSD-Offloaded LLM Fine-Tuning",
-      "file_bytes": 12327,
-      "source_sha256": "a75c92e5e1b5de57e988f458378c82db0151202c0070327b7a4039eaa55fc30e",
-      "source_git_blob_sha": "59b07a61adc5f1e608d57533f02825513259b9d8",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.920721,
-      "quality_metrics": {
-        "body_chars": 3235,
-        "method_chars": 1522,
-        "evaluation_chars": 793,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
