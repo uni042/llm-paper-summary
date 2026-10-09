@@ -1,0 +1,146 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-r483-b23-p03-primary-title-reviewed-main-4fda232c",
+  "reference_main_sha": "4fda232c524c575e568a1745b8de101f207f746a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.16795",
+      "identity_tokens": [
+        "arXiv:2504.16795"
+      ],
+      "title": "Hardware-aligned Hierarchical Sparse Attention for Efficient Long-term Memory Access",
+      "reason": "Adds hierarchical sparse attention and hardware-aligned kernels to recurrent models, enabling efficient retrieval from long contexts with near-constant memory.",
+      "source_url": "https://arxiv.org/abs/2504.16795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.18253",
+      "identity_tokens": [
+        "arXiv:2607.18253"
+      ],
+      "title": "Beyond Accuracy and Cost: Latency-Aware LLM Query Routing for Dynamic Workloads",
+      "reason": "Combines estimated TTFT with accuracy and cost in a router that assigns LLM queries across instances under dynamic workload and serving conditions.",
+      "source_url": "https://arxiv.org/abs/2607.18253",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.04555",
+      "identity_tokens": [
+        "arXiv:2303.04555"
+      ],
+      "title": "Streaming Kernel PCA Algorithm With Small Space",
+      "reason": "The title identifies a small-space streaming Kernel PCA dimensionality-reduction algorithm and gives no concrete connection to LLM inference, Transformer serving, compression, or deployment efficiency. This is a permitted title-only exclusion for an unambiguously unrelated candidate.",
+      "source_url": "https://arxiv.org/abs/2303.04555",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.10741",
+      "identity_tokens": [
+        "arXiv:2411.10741"
+      ],
+      "title": "MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map",
+      "reason": "Develops a linear-attention approximation designed to capture dynamic memory and static approximation behavior, targeting lower-complexity Transformer sequence modeling.",
+      "source_url": "https://arxiv.org/abs/2411.10741",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "identity_tokens": [
+        "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+        "arXiv:2509.24328",
+        "DOI:10.18653/v1/2026.findings-acl.1809",
+        "ACL:2026.findings-acl.1809"
+      ],
+      "title": "Speculative Verification: Exploiting Information Gain to Refine Speculative Decoding",
+      "reason": "Adds a companion model to estimate draft-target alignment and adapt verification length, reducing wasted speculative decoding work; the ACL version confirms the same authors and method under a shortened title.",
+      "source_url": "https://arxiv.org/abs/2509.24328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2203.14380",
+      "identity_tokens": [
+        "arXiv:2203.14380",
+        "ACL:2022.acl-long.602",
+        "DOI:10.18653/v1/2022.acl-long.602"
+      ],
+      "title": "Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection",
+      "reason": "Uses core-set token selection to shorten intermediate Transformer sequences in BERT-style classification/ranking, reducing compute and supporting longer inputs.",
+      "source_url": "https://aclanthology.org/2022.acl-long.602/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.26112",
+      "identity_tokens": [
+        "arXiv:2608.26112"
+      ],
+      "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
+      "reason": "Coordinates multiple drafters with a lightweight scheduler to construct better speculative token trees while controlling additional drafting cost.",
+      "source_url": "https://arxiv.org/abs/2608.26112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:459b34447952feebacc2f12778c539618e8a299f",
+      "identity_tokens": [
+        "SemanticScholar:459b34447952feebacc2f12778c539618e8a299f",
+        "arXiv:2202.07105"
+      ],
+      "title": "A Survey on Model Compression and Acceleration for Pretrained Language Models",
+      "reason": "Surveys inference-stage compression and acceleration for pretrained language models, motivated by high inference delay, energy use, and edge deployment costs.",
+      "source_url": "https://arxiv.org/abs/2202.07105",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3568702",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3568702"
+      ],
+      "title": "Addressing Activation Outliers in LLMs: A Systematic Review of Post-Training Quantization Techniques",
+      "reason": "Systematic review focuses on activation outliers and weight-activation post-training quantization methods to make LLM inference more efficient.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3568702",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32712",
+      "identity_tokens": [
+        "arXiv:2609.32712"
+      ],
+      "title": "MassAlloc Attention: Let Attention Allocate Its Own Compute",
+      "reason": "MALA uses normalized attention contribution to adaptively omit low-value post-score work, reducing attention operator latency while maintaining output/gradient accuracy.",
+      "source_url": "https://arxiv.org/abs/2609.32712",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T03:27:04Z",
+      "last_checked_at": "2026-10-09T03:27:04Z"
+    }
+  ]
+}
