@@ -27,6 +27,12 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-08 — Ollama v0.40.1：WindowsのClef Flash読込み互換性修正
+
+- Windows環境の古いlibc++で2GiB超のファイルオフセットが32ビットへ切り詰められ、`clef-flash` の判定ヘッドを誤読して `/v1/systemone` が `Clef: non-finite logit` で失敗する問題を、64ビットのファイルシークへ修正。Windows 11のCPU経路で失敗から正常なHTTP 200への復帰が確認された。
+- **特定モデルの読込み不具合修正であり、一般のQwen系モデル、レシートOCR、CUDA推論速度の改善を意味しない**。同PRにGPU経路全体の再試験はない。
+- 公式資料: [正式版 v0.40.1](https://github.com/ollama/ollama/releases/tag/v0.40.1)、[PR #18777](https://github.com/ollama/ollama/pull/18777)。
+
 ### 2026-09-25 — Ollama v0.40.0（正式公開、過去確認漏れの補完）
 
 - **Apple Siliconの既定推論経路を変更**: MLXに対応するモデル構造は自動的にMLXで動くようになった。対象例はQwen3.8、Gemma4、Qwen3.6、Qwen3.5、判定モデルClef系、埋め込みモデルembeddinggemma-2。利用者が別途MLXエンジンを選ばなくても対応モデルでMLXを使う。**Apple Silicon向け変更であり、Windows/NVIDIAのCUDA経路がMLXへ切り替わるわけではない**。

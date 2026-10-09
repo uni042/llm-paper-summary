@@ -1,22 +1,18 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261008T1736-framework-6",
+  "attempt_id": "library-import-maint-20261009T0940-cache-topk-ollama",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "framework-updates/inference-engines/exllama/README.md",
-    "framework-updates/inference-engines/vllm-omni/README.md",
-    "framework-updates/inference-engines/ollama/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
     "framework-updates/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
-    "framework-updates/inference-engines/exllama/README.md",
-    "framework-updates/inference-engines/vllm-omni/README.md",
-    "framework-updates/inference-engines/ollama/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
     "framework-updates/README.md"
   ],
-  "summary": "2026-10-08 08:30 framework update: ExLlamaV3, vLLM-Omni, Ollama, llama.cpp six verified releases."
+  "summary": "2026-10-09 08:30 framework maintenance: llama.cpp MoE GPU cache and CUDA TOP_K; Ollama Windows Clef Flash 64-bit seek."
 }

@@ -78,6 +78,18 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-09 — b11513：CUDAの上位k件選択（Top-k）の形状別最適化
+
+- CUDAの上位k件選択で行数・列数に応じて複数の選択アルゴリズムを使い分ける。Qwen4Expの34,816トークン条件では演算単体の実行時間が5,761.8→941.8 ms（約6.12倍）となったが、**モデル全体が6倍高速になるわけではない**。DGX Station GB300でのQwen3.8-Flash-Nextのプリフィルは1,755.8→2,852.8 tok/s（約1.625倍）、通常生成は100.08→99.89 tok/sでほぼ不変。Windows RTX 5090での形状別正当性試験527/527通過、RTX 4070 SUPERでの実速度は未計測。
+- 公式資料: [開発ビルド b11513](https://github.com/ggml-org/llama.cpp/releases/tag/b11513)、[PR #28713](https://github.com/ggml-org/llama.cpp/pull/28713)。
+
+### 2026-10-08〜09 — b11480 / b11507：CPU退避したMoE専門家のGPUキャッシュ
+
+- CPU RAMへ退避した混合専門家（Mixture of Experts、MoE）の重みをGPU側の最近使用順（LRU）キャッシュへ保持し、キャッシュを外れた専門家をCPUから転送する。実装フラグは `--moe-cache-mib N`（GPUごとのMiB）。b11507では層分割型の複数GPUへ拡張。小バッチ（最大32トークン）で効果がある経路であり、2026-09-05時点の**Draft PR**にあった `--moe-expert-cache` と混同しない。
+- 公式の単一GPU試験（Qwen3.8-Flash-Next Q4_0、93.7GiB、CPU側に専門家65.4GiB、EPYC 7742）ではRTX 4090の生成25.0→39.4 tok/s（1.57倍、キャッシュ6,544MiB）、RTX 5090で30.8→54.5 tok/s（1.77倍）。RTX 4090×2では34.78→60.38 tok/s（1.74倍）だが、プリフィルは440.7→402.0 tok/s（約9%低下）。15,000MiB指定で生成64.39 tok/sに改善した一方、プリフィル321.5 tok/sまで低下。これらは該当モデル・接続条件での比較で、キャッシュ常駐量は他の層やKVキャッシュとGPUメモリを競合する。
+- Windows 11／RTX 4070 SUPER 12GB／RAM 32GBでは同規模93.7GiBモデルを保持できないため速度倍率は外挿しない。より小型のMoEでGPU空き容量と転送条件を測定する必要がある。
+- 公式資料: [b11480](https://github.com/ggml-org/llama.cpp/releases/tag/b11480)、[PR #29887](https://github.com/ggml-org/llama.cpp/pull/29887)、[b11507](https://github.com/ggml-org/llama.cpp/releases/tag/b11507)、[PR #30112](https://github.com/ggml-org/llama.cpp/pull/30112)。
+
 - **2026-06-26 — token間同期の削減（merged）**: パイプライン並列（pipeline parallelism）でCPU→CUDA copyを非同期化し、copy完了確認とCUDA Graph実行の間にあった同期点を1回へ削減。GPUがCPU側処理を待つ時間を減らす。[PR #20793](https://github.com/ggml-org/llama.cpp/pull/20793)
 
 - **2026-07-03 — GDNの冗長CUDA copy削除（merged）**: recurrent modelで次tokenへ持ち越す状態を、一時領域を何度も経由せずcacheへ直接書くよう変更し、4回のcopyを除去。DGX Sparkで通常decode約3%、MTP平均約4%向上。[PR #23940](https://github.com/ggml-org/llama.cpp/pull/23940)

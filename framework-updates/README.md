@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-10-08**
+- フレームワーク差分の最終確認: **2026-10-09**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -67,6 +67,12 @@
 ---
 
 ## 最新更新
+
+### 2026-10-09 — llama.cpp / Ollamaの主要更新（新モデル公開0件）
+
+- **llama.cpp b11480 / b11507**: CPUへ退避したMoE専門家をGPUのLRUキャッシュへ保持。新オプション `--moe-cache-mib`、複数GPU対応。RTX 4090×2の限定ベンチマークでは生成1.74倍に対しプリフィル約9%低下。RAM 32GB環境へ93.7GiBモデルの実測は外挿不可。[b11480](https://github.com/ggml-org/llama.cpp/releases/tag/b11480) / [b11507](https://github.com/ggml-org/llama.cpp/releases/tag/b11507)
+- **llama.cpp b11513**: CUDA上位k件選択カーネル（Top-k）を形状別に最適化。演算単体約6.12倍でも生成速度はほぼ不変、対象モデルのプリフィル約1.625倍。[b11513](https://github.com/ggml-org/llama.cpp/releases/tag/b11513)
+- **Ollama v0.40.1**: Windows環境におけるClef Flashの2GiB超ファイルオフセットの読込み不具合を修正。一般LLMの推論高速化ではない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.1)
 
 ### 2026-10-08 — 日次調査で確認した実質更新（モデル新規0件、推論基盤6件）
 
