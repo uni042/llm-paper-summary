@@ -59,7 +59,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   順伝播で生成した活性値をNVMe SSDへ非同期退避し、逆伝播の直前に先読みして、再計算を減らしながらGPU活性値メモリを空けるLLM学習システム。
 
 - **2024-06 · [Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors](2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md)**  
-  実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：2  
   特徴は、単に固定の低ランク更新を使うのではなく、射影器の非零位置と係数を少量のデータで学習し、勾配の推定誤差が大きくなった場合に部分空間を更新することである。原論文は4GBのノートPC GPUで13億パラメータ級、24GBのRTX 4090で67億パラメータ級の微調整を示す。
 
 ### 4年前（2022-11〜2023-10）
@@ -77,6 +77,6 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 7年前（2019-11〜2020-10）
 
 - **2020-05 · [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](2019-1910.02054-zero.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：49  
   データ並列で重複する最適化器状態・勾配・パラメータをGPU間分割し、必要時だけ通信することで、モデル並列の細粒度通信を避けつつ巨大モデル学習のメモリ効率を高める基盤方式。
 <!-- survey:auto:end -->
