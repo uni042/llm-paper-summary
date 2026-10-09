@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {± 1, ± i}",
+      "source_url": "https://arxiv.org/abs/2512.02901",
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have revolutionized artificial intelligence, yet their massive memory and computational demands necessitate aggressive quantization, increasingly pushing representations toward the theoretical limit of a single bit. While complex-valued LLMs, such as iFairy, offer a superior chance for low-bit representation compared to real-valued counterparts, they require training from scratch, preventing the utilization of the vast ecosystem of pre-trained real-valued foundation models. Here we present Fairy2i, a universal framework that transforms pre-trained real-valued layers into an equivalent widely-linear complex form, enabling extremely low-bit quantization while reusing existing checkpoints. By proving a lossless mathematical equivalence between real and widely-linear maps, we convert standard Transformers into the complex domain and employ a phase-aware quantization scheme with a highly efficient codebook of fourth roots of unity. Furthermore, we introduce a recursive residual quantization mechanism that iteratively minimizes quantization error, allowing inference to proceed via efficient multiplication-free accumulation. We demonstrate that Fairy2i restores the performance of LLaMA-2 7B at an effective 2-bit precision to levels nearly comparable with full-precision baselines, significantly outperforming state-of-the-art real-valued binary and ternary quantization methods. This work bridges the gap between the representational efficiency of complex-valued arithmetic and the practical utility of pre-trained models, paving a new way for efficient inference on commodity hardware. We open-source the Fairy2i model and code at https://huggingface.co/PKU-DS-LAB/Fairy2i-W2 and https://github.com/PKULab1806/Fairy2i-W2.",
+      "identifiers": [
+        "SemanticScholar:adcee8cd5a7e6de2448fd8f33c7e71cb26d7c691"
+      ],
+      "semantic_scholar_id": "adcee8cd5a7e6de2448fd8f33c7e71cb26d7c691",
+      "canonical_id": "arXiv:2512.02901",
+      "arxiv_id": "2512.02901",
+      "doi": "10.48550/arXiv.2512.02901",
+      "authors": [
+        "Feiyu Wang",
+        "Xin-Yu Tan",
+        "Bo-Kai Huang",
+        "Yihao Zhang",
+        "Guo-An Wang",
+        "Pei-Zhuang Cong",
+        "Tong Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 311,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Fairy2iは複素値4-phase低bit量子化を既存LLMへ適用し、commodity hardware上のefficient inferenceを目指して評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RAT+: Train Dense, Infer Sparse - Recurrence Augmented Attention for Dilated Inference",
+      "source_url": "https://arxiv.org/abs/2602.18196",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured dilated attention has an appealing inference-time efficiency knob: it reduces the FLOPs of attention and the KV cache size by a factor of the dilation size D, while preserving long-range connectivity. While prior work studies it by training each configuration from scratch, directly sparsifying a pretrained attention model into a dilated pattern leads to severe accuracy degradation, preventing flexible reuse across inference scenarios. We introduce RAT+, a dense-pretraining architecture that augments attention with full-sequence recurrence and active recurrence learning. A single RAT+ model is pretrained densely once and can then be flexibly switched at inference time to dilated attention (optionally with local windows) or hybrid layer/head compositions, requiring only a short 1B-token resolution adaptation rather than retraining separate sparse models. At 1.5B parameters trained on 100B tokens, RAT+ closely matches dense accuracy at D = 16, and drops by about 2-3 points at D = 64 on commonsense reasoning and LongBench tasks. We further scale to 2.6B and 7.6B parameters and observe even more promising performance (e.g., a 1-point average accuracy loss with a 64x reduction in attention FLOPs and KV cache size). Code is available at https://github.com/wimh966/rat-plus.",
+      "identifiers": [
+        "SemanticScholar:d76feb4e3dcad47fb31d634c3bd3899f56c56c6b"
+      ],
+      "semantic_scholar_id": "d76feb4e3dcad47fb31d634c3bd3899f56c56c6b",
+      "canonical_id": "arXiv:2602.18196",
+      "arxiv_id": "2602.18196",
+      "doi": "10.48550/arXiv.2602.18196",
+      "authors": [
+        "Xiuying Wei",
+        "Caglar Gulcehre"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RAT+はdense pretrained attentionをinference時dilated/sparseへ切替可能にし、KV sizeとattention FLOPsを最大64分の1にする構成を評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification",
+      "source_url": "https://arxiv.org/abs/2603.01399",
+      "year": 2026,
+      "published": "2026-03-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) has emerged as a premier technique for accelerating Large Language Model (LLM) inference by decoupling token generation into rapid drafting and parallel verification. While recent advancements in self-speculation and lookahead decoding have successfully minimized drafting overhead, they have shifted the primary performance bottleneck to the verification phase. Since verification requires a full forward pass of the target model, it remains strictly memory-bandwidth bound, fundamentally limiting the maximum achievable speedup.In this paper, we introduce \\textbf{Quasar} (\\textbf{Qua}ntized \\textbf{S}elf-speculative \\textbf{A}cceleration for \\textbf{R}apid Inference), a novel, training-free framework designed to overcome this\"memory wall\"by employing low-bit quantization specifically for the verification stage. Our empirical analysis reveals that while aggressive structural pruning significantly degrades verification accuracy, quantization-based verification preserves the logit distribution with high fidelity while effectively halving memory traffic. Extensive experiments on state-of-the-art models (e.g., OpenPangu and Qwen3) demonstrate that Quasar maintains a speculative acceptance length comparable to full-precision methods while achieving a $1.28\\times$ improvement in end-to-end throughput. Being orthogonal to existing drafting strategies, Quasar offers a generic and efficient pathway to accelerate the verification leg of speculative execution. Code is available at https://github.com/Tom-HG/Quasar.",
+      "identifiers": [
+        "SemanticScholar:94ab7b9bbb6a61304631b46f4cce016feddb9052"
+      ],
+      "semantic_scholar_id": "94ab7b9bbb6a61304631b46f4cce016feddb9052",
+      "canonical_id": "arXiv:2603.01399",
+      "arxiv_id": "2603.01399",
+      "doi": "10.48550/arXiv.2603.01399",
+      "authors": [
+        "Guangtai Huang",
+        "Ze-Yi Wen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 221,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Quasarはself-speculative verification段階を低bit量子化し、memory trafficを半減しながらspeculative acceptanceとthroughputを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Kaczmarz Linear Attention",
+      "source_url": "https://arxiv.org/abs/2605.08587",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language modeling remains central to modern sequence modeling, but the quadratic cost of Transformer attention makes scaling computationally prohibitive. Linear recurrent models address this bottleneck by compressing the context into a fixed-size state, making the rule that forgets, writes, and edits information a central design problem. To address state maintenance, Gated DeltaNet (GDN) combines gated state decay with delta-rule residual writes, using a learnable coefficient to balance forgetting and update magnitude. However, this coefficient is learned empirically rather than derived from the underlying objective, which can lead to suboptimal update magnitudes. We revisit the online-regression objective underlying GDN and, inspired by the Kaczmarz projection method, derive the key-norm-normalized dynamic step size $\\beta_t = \\eta_t / (\\|k_t\\|_2^2 + \\epsilon)$ for residual updates. We propose Kaczmarz Linear Attention (KLA), a one-scalar modification of GDN that preserves the state shape, gates, linear recurrence, and chunkwise parallel algorithm. At the 0.4B scale with a 1B-token budget, KLA achieves the lowest validation perplexity among evaluated linear-time baselines, 8.09 versus 8.50 for GDN, and remains stable up to 65K tokens. On controlled tasks, KLA reaches 100% on single-needle-in-a-haystack retrieval, improves 8x multi-query associative recall by 7.03 points over GDN, and delivers 2.1x higher decode throughput at 32K context. These results suggest that the key-norm-normalized Kaczmarz coefficient is a first-order design axis for delta-rule sequence models: it improves accuracy, extrapolation, and decoding efficiency without changing the recurrent state or hardware kernel.",
+      "identifiers": [
+        "SemanticScholar:7200df0603b57db0446c58e5a572f50a57d56005"
+      ],
+      "semantic_scholar_id": "7200df0603b57db0446c58e5a572f50a57d56005",
+      "canonical_id": "arXiv:2605.08587",
+      "arxiv_id": "2605.08587",
+      "doi": "10.48550/arXiv.2605.08587",
+      "authors": [
+        "Jiaxuan Zou",
+        "Ruifeng Ren",
+        "Yong Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Kaczmarz Linear Attentionはonline-regression導出のstep-sizeでlinear-attention state updateを改善し、32K contextでdecode throughput向上を評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cartridges++: KV Cache Compression without Off-Context Derailment",
+      "source_url": "https://arxiv.org/abs/2609.35621",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving long documents to a Large Language Model (LLM) repeatedly is expensive: computations grow with context length, and the memory footprint of the key-value (KV) cache balloons. Compressed KV (CKV) representations aim to mimic the cache of a document and are typically computed once and for all, ahead of inference time. Methods to obtain CKVs range from drop mechanisms that reduce their number of columns, to learned approaches. Among the latter, Cartridges have emerged as a leading compression method, learning compact KV representations through distillation on relevant Q/A pairs. While existing evaluations focus primarily on whether Cartridges and other CKVs yield approximately similar responses to document-related, on-context queries, we investigate the crucial deployment question of whether they can handle off-context queries, something the native KV representation is particularly good at, thanks to the mechanics of attention. We observe a fundamental trade-off: while Cartridges perform better for on-context queries, heuristic-variants preserve better the original LLM's ability to operate off-context. We measure this through their capability to avoid context contamination in their response, retain general knowledge, and follow instructions. We propose Cartridges++, simple modifications to cartridges that retain off-context abilities at small or negligible cost. The router variant decides at inference time whether the query should use the learned long-context memory, while the data-mixing variant allocates a small fraction of training Q/As to queries outside the reference long document. Our study shows that assessing CKVs on document utility alone can mask substantial degradation in broader model capabilities, yet those issues can be fixed with benign changes to CKV inference or training.",
+      "identifiers": [
+        "SemanticScholar:bc905ea430e4ca8ed40be2f11ed8fa469dc5022c"
+      ],
+      "semantic_scholar_id": "bc905ea430e4ca8ed40be2f11ed8fa469dc5022c",
+      "canonical_id": "arXiv:2609.35621",
+      "arxiv_id": "2609.35621",
+      "authors": [
+        "Sonia Laguna",
+        "João Monteiro",
+        "Marco Cuturi",
+        "Pierre Ablin",
+        "Eleonora Gualdoni"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Cartridges++は圧縮KVがoff-context能力を損なう問題とinference-time routing等の緩和策を扱い、長文context servingの安全なcache compressionを研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-983bc12f5004",
+    "round": "libimp-983bc12f500426d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-983bc12f500426d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-983bc12f500426d6-pre01.json",
+    "receipt": "sha256:26c70e70d57d1d4004457f9ebde1d33b24c3c12aa4927b8e2f5e232d64dc22b8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-983bc12f5004",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

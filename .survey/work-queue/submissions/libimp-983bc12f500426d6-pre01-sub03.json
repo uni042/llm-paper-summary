@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Interdomain Attention: Beyond Token-Level Key-Value Memory",
+      "source_url": "https://arxiv.org/abs/2605.24330",
+      "year": 2026,
+      "published": "2026-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers and deep state space models (SSMs) sit at opposite ends of a basic design choice: attention routes each query through a growing key-value (KV) cache by content-based matching at quadratic cost, while deep SSMs compress context into a fixed-size recurrent state that is not directly addressed by query-key matching. We propose Interdomain Attention, which integrates an SSM into an attention module through kernel methods: an attention kernel is approximated by a finite feature map, the resulting key features and values are projected onto a shared set of basis functions maintained by a single SSM recurrence, and each query attends to the compressed coefficients through its own feature map, recovering query-conditioned attention over a fixed-size state. The scalable layer is a learned relaxation of this derivation, and we validate its components through ablations. In a 125M to 1.3B autoregressive language-modeling study on FineWeb-Edu at matched recurrent-state budget, Interdomain Attention improves on an SSM token mixer at every scale, surpasses a same-recipe softmax baseline at 1.3B on validation perplexity and on the eight-task commonsense suite, and inherits the length-flat behavior of its fixed-state core out to 3.5x the training context. Ablations indicate that the query-conditioned projection is the main source of the gain.",
+      "identifiers": [
+        "SemanticScholar:811b5f616aadc4d9a742ddbcbccccc8478f3d744"
+      ],
+      "semantic_scholar_id": "811b5f616aadc4d9a742ddbcbccccc8478f3d744",
+      "canonical_id": "arXiv:2605.24330",
+      "arxiv_id": "2605.24330",
+      "doi": "10.48550/arXiv.2605.24330",
+      "authors": [
+        "Naoki Kiyohara",
+        "Harrison Zhu",
+        "Riccardo El Hassanin",
+        "Zhu Sun",
+        "Wenlong Chen",
+        "Samir Bhatt",
+        "Yingzhen Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Interdomain AttentionはattentionとSSMを統合し、query-conditioned accessを固定サイズstateから行う長系列言語model architecture。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37626",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "No single way of parallelizing attention serves large language models well under all loads. Low concurrency favors tensor parallelism, many independent requests favor data-parallel attention, and long prompts favor context parallelism. Reasoning, agentic, and RL-rollout workloads make a fixed choice untenable: a batch that begins as many short requests ends as a few very long ones, so the best layout changes while the same requests run. Serving engines nevertheless fix one layout at launch, because changing it has meant draining requests and restarting workers. We present SPLASH, a serving system that switches the parallel layout of attention while requests are running. It builds on one observation: modern attention, with few or no KV heads, decouples where a request's KV cache lives from how attention weights are sharded. This has two consequences. First, layouts differ only in who owns the weights and the cache, and most of that state already sits where the next layout needs it; SPLASH reuses it, moves the rest in the background of ongoing inference, and hands off at a batch boundary, making a switch nearly free: its median overhead is under 0.51% of the step it runs in. Second, the decoupling exposes a layout that existing engines lack: Decoupled Ownership Parallelism (DOP) shards attention weights as tensor parallelism does while keeping each request's cache on a single owner as data-parallel attention does. DOP replicates neither, offers 27-60% more KV capacity than data-parallel attention, and gives the scheduler a choice when KV memory limits admission. A transition-aware scheduler follows the best of the four layouts as load changes. On B200 GPUs serving GLM-5.3, SPLASH improves end-to-end serving throughput by 1.3-1.73x over fixed-layout deployments, and the same layout regimes appear with DeepSeek-V3.2 on H200 and GLM-5.3-Flash on DCU.",
+      "identifiers": [
+        "SemanticScholar:407270c7dd77b70917c58d4868e7d6c9044934c6"
+      ],
+      "semantic_scholar_id": "407270c7dd77b70917c58d4868e7d6c9044934c6",
+      "canonical_id": "arXiv:2609.37626",
+      "arxiv_id": "2609.37626",
+      "authors": [
+        "Chuan Liu",
+        "Shuo-Ming Zhang",
+        "Zhi-Cheng Li",
+        "Qian-Qi Sun",
+        "Rui-Yuan Xu",
+        "Qiu-Chun Yu",
+        "Xi-Yu Shi",
+        "Hui-Min Cui",
+        "Jia-Cheng Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SPLASHは実行中にattention parallel layoutを切替え、cache配置再利用・背景移送でLLM servingのKV capacityとSLO対応を改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PatchKV: Weight-Space Compensation of KV Cache",
+      "source_url": "https://arxiv.org/abs/2609.39329",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference with Large Language Models (LLMs) is bottlenecked by the linearly growing memory of the key-value (KV) cache. Existing compression methods reduce the cache through token eviction or approximation, but degrade sharply at aggressive compression budgets. We propose PatchKV, a training-free framework that compensates KV cache compression methods by carrying part of the context in the model's weights. PatchKV pairs an off-the-shelf compressed KV cache with a context-specific weight patch, which is computed once at context-loading time and served for downstream queries for the context. The weight patch is derived in closed form via ridge regression, by aligning the block-wise activations of context-derived reference query tokens under the full cache and the compressed cache. Once merged into the model, the patch leaves the forward graph and per-query inference cost unchanged in the single-context, multi-query setting. Across long-context QA (SCBench with up to 170K tokens, SQuAD, NIAH) and math (GSM8K) benchmarks on three model architectures, PatchKV consistently improves cache compression methods, suggesting an alternative direction to compensate them at aggressive budgets.",
+      "identifiers": [
+        "SemanticScholar:7b1e21d78bb9791589e45aa2d68f2fa1101d4dca"
+      ],
+      "semantic_scholar_id": "7b1e21d78bb9791589e45aa2d68f2fa1101d4dca",
+      "canonical_id": "arXiv:2609.39329",
+      "arxiv_id": "2609.39329",
+      "authors": [
+        "Chanryeol Lee",
+        "Chanhyuk Lee",
+        "Yeonwoo Choi",
+        "Donggyun Kim",
+        "Seunghoon Hong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PatchKVはcompressed cacheで生じる誤差をcontext-specific weight patchで補い、queryごとのinference costを変えずKV圧縮を改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compression Barriers for Autoregressive Transformers",
+      "source_url": "https://arxiv.org/abs/2502.15955",
+      "year": 2025,
+      "published": "2025-02-21",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A key limitation of autoregressive Transformers is the large memory needed at inference-time to cache all previous key-value (KV) embeddings. Prior works address this by compressing the KV cache, but often assume specific structural properties of the embeddings. This raises the following natural question: Can truly sublinear space utilization be achieved without such assumptions? In this work, we answer this question in the negative. Any algorithm for attention-based token generation must use $\\Theta(nd)$ space, where $n$ is the number of tokens generated so far and $d = \\Omega(\\log n)$ is the dimension of the KV embeddings. Our proof involves a reduction from a classic communication complexity problem and uses a randomized construction that leverages properties of projections in the spirit of the Johnson-Linderstrauss lemma. For the low-dimensional regime $d = o(\\log n)$, we show that any algorithm requires $\\Omega(d\\cdot e^d)$ space and prove, using tight bounds on covering numbers, that SubGen, proposed by Zandieh, Han, Mirrokni and Karbasi, matches this bound. Further, we investigate how sparsity assumptions enable token generation in truly sublinear space, presenting impossibility results and proposing a new KV cache compression algorithm for sliding window attention when the value cache outside the window is unmasked. Finally, we analyze token generation's time complexity, using an indistinguishability argument to prove that no non-adaptive algorithm can compute attention online in sublinear time for all tokens.",
+      "identifiers": [
+        "SemanticScholar:e0188c3ca8aa98bb8a4faf82e80a0997e6e2e29f"
+      ],
+      "semantic_scholar_id": "e0188c3ca8aa98bb8a4faf82e80a0997e6e2e29f",
+      "canonical_id": "arXiv:2502.15955",
+      "arxiv_id": "2502.15955",
+      "doi": "10.48550/arXiv.2502.15955",
+      "authors": [
+        "Themistoklis Haris",
+        "Krzysztof Onak"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": null
+      },
+      "reason": "論文はautoregressive Transformer生成で可能なKV-cache compressionの理論限界と、条件付きsliding-window圧縮手法を分析。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Judge Q: Trainable Queries for Optimized Information Retention in KV Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2509.10798",
+      "year": 2025,
+      "published": "2025-09-13",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) utilize key-value (KV) cache to store historical information during sequence processing. The size of KV cache grows linearly as the length of the sequence extends, which seriously affects memory usage and decoding efficiency. Current methods for KV cache eviction typically utilize the last window from the pre-filling phase as queries to compute the KV importance scores for eviction. Although this scheme is simple to implement, it tends to overly focus on local information, potentially leading to the neglect or omission of crucial global information. To mitigate this issue, we propose **Judge Q**, a novel training method which incorporates a soft token list. This method only tunes the model’s embedding layer at a low training cost. By concatenating the soft token list at the end of the input sequence, we train these tokens' attention map to the original input sequence to align with that of the actual decoded tokens. In this way, the queries corresponding to the soft tokens can effectively capture global information and better evaluate the importance of the keys and values within the KV cache, thus maintaining decoding quality when KV cache is evicted. Under the same eviction budget, our method exhibits less performance degradation compared to existing eviction approaches. We validate our approach through experiments conducted on models such as Llama-3.1-8B-Instruct and Mistral-7B-Instruct-v0.3, using benchmarks including LongBench, RULER, and Needle-in-a-Haystack. Results indicate an improvement of approximately 1 point on the LongBench and over 3 points on RULER. This proposed methodology can be seamlessly integrated into existing open-source models with minimal training overhead, thereby enhancing performance in KV cache eviction scenarios.",
+      "identifiers": [
+        "SemanticScholar:d1dcced94c2fbc71a861fda4be060c4deb7cdee0"
+      ],
+      "semantic_scholar_id": "d1dcced94c2fbc71a861fda4be060c4deb7cdee0",
+      "canonical_id": "arXiv:2509.10798",
+      "arxiv_id": "2509.10798",
+      "doi": "10.48550/arXiv.2509.10798",
+      "authors": [
+        "Yijun Liu",
+        "Yixuan Wang",
+        "Yuzhuang Xu",
+        "Shi-Yu Ji",
+        "Yang Xu",
+        "Qing-Fu Zhu",
+        "Wanxiang Che"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 391,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Judge Qはsoft query tokensでKV eviction時のglobal information importanceを推定し、同一cache budgetでLongBench/RULER品質を改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-983bc12f5004",
+    "round": "libimp-983bc12f500426d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-983bc12f500426d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-983bc12f500426d6-pre01.json",
+    "receipt": "sha256:26c70e70d57d1d4004457f9ebde1d33b24c3c12aa4927b8e2f5e232d64dc22b8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-983bc12f5004",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

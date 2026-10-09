@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction",
+      "source_url": "https://arxiv.org/abs/2609.36835",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language model inference is bottlenecked by KV caches that grow linearly with sequence length. This burden is especially severe for long, reusable context prefixes, whose cache must serve many downstream queries. Reconstruction-based methods such as Attention Matching achieve strong downstream task performance with compact KV caches. However, iterative anchor search dominates the compaction cost of OMP-based Attention Matching. This motivates our selective amortization principle of learning a reusable anchor-selection policy across contexts while retaining context-specific reconstruction. In this work, we propose ARC-KV, a novel reconstruction-based KV cache compaction method that follows this principle. To this end, we first train a value-aware indexer to select real-key anchors in a single scoring pass. ARC-KV then applies convex-hull-constrained key merging and fits an attention-mass bias and compact values against the full cache. At inference time, ARC-KV builds the compact cache once per context using the frozen indexer and reuses it for all subsequent queries. Extensive experiments demonstrate that ARC-KV outperforms reported compaction methods in most settings across QuALITY, RULER, and LongBench on Llama-3.1-8B-Instruct. In particular, at 10% KV retention on QuALITY, ARC-KV improves accuracy from 0.6409 to 0.6474 over Attention Matching while reducing compaction time by a factor of 25.73, from 959.8 s to 37.3 s.",
+      "identifiers": [
+        "SemanticScholar:63808af9addaa711fd90de3f35f16a8c5dfc82bd"
+      ],
+      "semantic_scholar_id": "63808af9addaa711fd90de3f35f16a8c5dfc82bd",
+      "canonical_id": "arXiv:2609.36835",
+      "arxiv_id": "2609.36835",
+      "authors": [
+        "Zhe-Yu Shen",
+        "Guan-Hua Wang",
+        "De-Zhan Tu",
+        "Meng-Chi Zhang",
+        "Yan-Jiao Li",
+        "Adnan Aziz",
+        "Chun-Qiang Tang",
+        "Ang Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ARC-KVは再構成型KV compactionのanchor探索を学習済みindexerで償却し、compact cache品質を保ちながら作成時間を短縮。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
+      "source_url": "https://doi.org/10.1609/aaai.v38i17.29908",
+      "year": 2024,
+      "published": "2024-03-24",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 63,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has emerged as a promising technique for mitigating memory consumption and computational costs in large language models (LLMs). However, a systematic examination of various quantization schemes, model families, and quantization bit precision has been absent from the literature. In this paper, we conduct a comprehensive analysis of these factors by investigating the effects of PTQ on weight-only, activation-only, and weight-and-activation quantization using diverse methods such as round-to-nearest (RTN), GPTQ, ZeroQuant, and their variants. We apply these methods to two distinct model families with parameters ranging from 125M to 176B. Our contributions include: (1) a sensitivity analysis revealing that activation quantization is generally more susceptible to weight quantization, with smaller models often outperforming larger models in terms of activation quantization; (2) an evaluation and comparison of existing PTQ methods to optimize model size reduction while minimizing the impact on accuracy, revealing that none of the current methods can achieve the original model quality for quantization with either INT4-weight or INT4-weight-and-INT8-activation; (3) based on these insights, we propose an optimized method called Low-Rank Compensation (LoRC), which employs low-rank matrices to enhance model quality recovery with a minimal increase in model size.",
+      "identifiers": [
+        "SemanticScholar:93ad719fdad8ef1ced208d7034954009ec4d793e"
+      ],
+      "semantic_scholar_id": "93ad719fdad8ef1ced208d7034954009ec4d793e",
+      "doi": "10.1609/aaai.v38i17.29908",
+      "canonical_id": "DOI:10.1609/aaai.v38i17.29908",
+      "authors": [
+        "Zhewei Yao",
+        "Xiaoxia Wu",
+        "Cheng Li",
+        "Stephen Youn",
+        "Yuxiong He"
+      ],
+      "priority": 63,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 63,
+        "citation_count": 63,
+        "total": 63,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 929,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AAAI primary abstract compares LLM post-training quantization schemes across model families and bit widths, then proposes low-rank compensation to recover model quality with little added size; the work directly targets LLM memory and computation cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Temperature-Centric Investigation of Speculative Decoding with Knowledge Distillation",
+      "source_url": "https://arxiv.org/abs/2410.10141",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding stands as a pivotal technique to expedite inference in autoregressive (large) language models. This method employs a smaller draft model to speculate a block of tokens, which the target model then evaluates for acceptance. Despite a wealth of studies aimed at increasing the efficiency of speculative decoding, the influence of generation configurations on the decoding process remains poorly understood, especially concerning decoding temperatures. This paper delves into the effects of decoding temperatures on speculative decoding's efficacy. Beginning with knowledge distillation (KD), we first highlight the challenge of decoding at higher temperatures, and demonstrate KD in a consistent temperature setting could be a remedy. We also investigate the effects of out-of-domain testing sets with out-of-range temperatures. Building upon these findings, we take an initial step to further the speedup for speculative decoding, particularly in a high-temperature generation setting. Our work offers new insights into how generation configurations drastically affect the performance of speculative decoding, and underscores the need for developing methods that focus on diverse decoding configurations. Code is publically available at https://github.com/ozyyshr/TempSpec.",
+      "identifiers": [
+        "SemanticScholar:ef2ebc205bf8d7c4cea73ff8774689f65d426e71"
+      ],
+      "semantic_scholar_id": "ef2ebc205bf8d7c4cea73ff8774689f65d426e71",
+      "canonical_id": "arXiv:2410.10141",
+      "arxiv_id": "2410.10141",
+      "doi": "10.48550/arXiv.2410.10141",
+      "authors": [
+        "Siru Ouyang",
+        "Shuohang Wang",
+        "Minhao Jiang",
+        "Ming Zhong",
+        "Dong Yu",
+        "Jiawei Han",
+        "Yelong Shen"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 725,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "論文はsampling temperatureとknowledge distillationがspeculative decoding acceptance/speedに与える影響を調査し、高temperature時の改善方向を示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HqeKV: Towards Hybrid Quantization and Eviction for KV Cache in Long-Context LLM Inference",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.201",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive inference in large language models requires repeated computation across transformer layers. While caching intermediate key-value (KV) pairs eliminates redundancy, it introduces severe memory overhead, particularly in long-context settings. Most existing cache compression methods operate solely on either quantization or eviction, based on importance estimation of cached data. However, they are limited by coarse compression choices and inaccurate importance assessment, leading to suboptimal inference quality. To address this, we propose HqeKV, a hybrid compression framework built on both quantization and eviction, offering finer-grained compression options that adapt smoothly to the varying importance of cached KV pairs. An integrated optimizer automatically selects the best compression action for each cached element, maximizing quality while insulating end-users from tedious low-level tuning details. We further de-sign a joint K–V importance metric to provide more accurate importance assessment results so that the optimizer can make smarter decisions. Additionally, HqeKV supports flexible conversion policies across multiple quantization precision levels, to further reduce quality degradation. Extensive experiments show that HqeKV improves output quality under the same memory constraints, outperforming state-of-the-art alternatives. Code is available at https://github.com/skywclouds/HqeKV .",
+      "identifiers": [
+        "SemanticScholar:e5bc62270dc0be9d3125782a34832fec54f47e12"
+      ],
+      "semantic_scholar_id": "e5bc62270dc0be9d3125782a34832fec54f47e12",
+      "doi": "10.18653/v1/2026.findings-acl.201",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.201",
+      "authors": [
+        "He Wang",
+        "Yu Gu",
+        "Fangfang Li",
+        "Zhigang Wang",
+        "Zheng-Hao Liu",
+        "Ning Wang",
+        "Xiaohua Li",
+        "Ge Yu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "HqeKVはKV importanceに基づくhybrid quantization/eviction最適化でlong-context LLM cache memory制約下のqualityを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse",
+      "source_url": "https://doi.org/10.52202/085713-2984",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache technology, by storing key-value pairs, helps reduce the computational overhead incurred by large language models (LLMs). It facilitates their deployment on resource-constrained edge computing nodes like edge servers. However, as the complexity and size of tasks increase, KV cache usage leads to substantial GPU memory consumption. Existing research has focused on mitigating KV cache memory usage through sequence length reduction, task-specific compression, and dynamic eviction policies. However, these methods are computationally expensive for resource-constrained edge computing nodes. To tackle this challenge, this paper presents Sim-LLM, a novel inference optimization mechanism that leverages task similarity to reduce KV cache memory consumption for LLMs. By caching KVs from processed tasks and reusing them for subsequent similar tasks during inference, Sim-LLM significantly reduces memory consumption while boosting system throughput and increasing maximum batch size, all with minimal accuracy degradation. Evaluated on both A40 and A100 GPUs, Sim-LLM achieves a system throughput improvement of up to 39.40% and a memory reduction of up to 34.65%, compared to state-of-the-art approaches. Our source code is available at https://github.com/CGCL-codes/SimLLM .",
+      "identifiers": [
+        "SemanticScholar:e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c"
+      ],
+      "semantic_scholar_id": "e51dab8952aa3cf7ae2ce7331ed47d01e7f5612c",
+      "doi": "10.52202/085713-2984",
+      "canonical_id": "DOI:10.52202/085713-2984",
+      "authors": [
+        "Rui-Kun Luo",
+        "C. Gu",
+        "Qiang He",
+        "Feifei Chen",
+        "Song Wu",
+        "Hai Jin",
+        "Yun Yang"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Sim-LLMは類似タスク間でKV cacheを再利用し、edge LLM inferenceのGPU memory使用を減らしてthroughputとbatch容量を上げる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-983bc12f5004",
+    "round": "libimp-983bc12f500426d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-983bc12f500426d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-983bc12f500426d6-pre01.json",
+    "receipt": "sha256:26c70e70d57d1d4004457f9ebde1d33b24c3c12aa4927b8e2f5e232d64dc22b8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-983bc12f5004",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

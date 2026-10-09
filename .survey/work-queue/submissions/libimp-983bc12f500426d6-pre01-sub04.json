@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KVCrush: Key value cache size-reduction using similarity in head-behaviour",
+      "source_url": "https://arxiv.org/abs/2503.00022",
+      "year": 2025,
+      "published": "2025-02-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) caching has emerged as a crucial optimization technique for accelerating inference in large language models (LLMs). By allowing the attention operation to scale linearly rather than quadratically with the total sequence length, KV caching significantly enhances generation throughput. However, due to large context lengths in the modern LLMs, the memory footprint of the KV is a huge bottleneck for model deployment directly impacting the model's batch size, hindering its ability to deliver high-throughput. Existing research addresses this challenge using several techniques, such as discarding low-attention tokens, quantization, and matrix approximation which typically lead to a negative impact on the model accuracy. In this paper, We propose KVCrush technology which can be combined with many KV compression technologies to improve the model accuracy at a much smaller memory. KVCrush provides an alternate representation scheme for key-value states, along with a low-overhead token pruning algorithm that accounts for the token distribution in the KV cache, which in turn allows for a a smaller footprint while maintaining the accuracy of the model. Based on our results, KVCrush reduces LongBench KV Cache size by 4x with less than 1% accuracy drop and achieves state-of-the-art average accuracy with minimal overhead, incurring less than 0.5% total inference latency. KVCrush not only outperforms the accuracy of state-of-the-art importance-based token retention schemes but is also compatible with typical practical LLM deployments using KV cache paging schemes such as vLLM and mixed precision quantization.",
+      "identifiers": [
+        "SemanticScholar:9464ae39ff973456dbd39d35928828a4ee9b6f4b"
+      ],
+      "semantic_scholar_id": "9464ae39ff973456dbd39d35928828a4ee9b6f4b",
+      "canonical_id": "arXiv:2503.00022",
+      "arxiv_id": "2503.00022",
+      "doi": "10.48550/arXiv.2503.00022",
+      "authors": [
+        "Gopi Krishna Jha",
+        "Sameh Gobriel",
+        "Liubov Talamanova",
+        "Alexander Kozlov",
+        "Nilesh jain"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 592,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVCrushはhead behavior similarityに基づくKV representation/token pruningでcache footprintを削減し、LongBench accuracyとlatencyを評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PatternKV: Flattening KV Representation Expands Quantization Headroom",
+      "source_url": "https://arxiv.org/abs/2510.05176",
+      "year": 2025,
+      "published": "2025-10-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache in autoregressive LLMs eliminates redundant recomputation but has emerged as the dominant memory and bandwidth bottleneck during inference, notably with long contexts and test-time scaling. KV quantization is a key lever for reducing cache cost, but accuracy drops sharply as the native KV distribution lacks flatness and thus maintains a wide quantization range. Prior work focuses on isolating outliers, which caps their error but fails to flatten the overall distribution, leaving performance fragile under low-bit settings. In this work, we show that the K cache maintains a stable, context-evolving structure, while the V cache carries latent semantic regularities, with both contributing to the organization of vectors into shared patterns. Building on these insights, we propose PatternKV, a pattern-aligned residual quantization scheme. It mines representative pattern vectors online, aligns each KV vector to its nearest pattern, and quantizes only the residual. This reshaping of the KV distribution flattens the quantization target and narrows its range, thereby improving the fidelity of low-bit KV quantization. Across long-context and test-time scaling settings on multiple backbones, PatternKV delivers consistent 2-bit gains, with a 0.08% average 4-bit drop relative to FP16, improves test-time scaling accuracy by 10% on average, and raises throughput by 1.5x while supporting 1.25x larger batches.",
+      "identifiers": [
+        "SemanticScholar:4daaff2d5dd80410dc96168ea5340b0c3b9f1409"
+      ],
+      "semantic_scholar_id": "4daaff2d5dd80410dc96168ea5340b0c3b9f1409",
+      "canonical_id": "arXiv:2510.05176",
+      "arxiv_id": "2510.05176",
+      "doi": "10.48550/arXiv.2510.05176",
+      "authors": [
+        "Ji Zhang",
+        "Yi-Wei Li",
+        "Shaoxiong Feng",
+        "Pei-Wen Yuan",
+        "Xing-Lin Wang",
+        "Jia-Yi Shi",
+        "Yue-Qi Zhang",
+        "Chu-Yi Tan",
+        "Bo-Yuan Pan",
+        "Yao Hu",
+        "Kan Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 369,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PatternKVはKVを代表patternへ整列後residual量子化し、long-context/test-time inferenceで低bit精度とthroughputを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-983bc12f5004",
+    "round": "libimp-983bc12f500426d6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-983bc12f500426d6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-983bc12f500426d6-pre01.json",
+    "receipt": "sha256:26c70e70d57d1d4004457f9ebde1d33b24c3c12aa4927b8e2f5e232d64dc22b8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-983bc12f5004",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
