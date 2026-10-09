@@ -334,7 +334,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2024-11 · [Pie: Pooling CPU Memory for LLM Inference](2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
-  Pieは数層先で必要なKVをCPU DRAMからGPUへ先読みし、現在層の計算と転送を重ね、転送が律速する直前まで退避量を動的に増やす方式。
+  Pieが扱う問題は、言語モデル推論で鍵・値キャッシュ（KVキャッシュ）をGPUの高帯域メモリからCPUメモリへ退避すると、同時処理可能な要求は増えるものの、必要時の読み戻しが逐次生成を停止させることである。物理GPU KV領域が同じvLLMとの比較では、ShareGPTで最大1.9倍、Alpacaで最大1.5倍の処理能力を示す。
 
 - **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
   実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：12  
@@ -396,9 +396,9 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：1  
   TRACEはCXLメモリ装置内で重み・KVをビット面再配置して無損失圧縮し、精度別別名で不要ビット面を読まず、CXL帯域・DRAM読出し・エネルギーを減らす方式。
 
-- **2025-07 · [Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System](2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md)**  
+- **2025-08 · [Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System](2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  高速HBMと大容量DRAMへのKV配置を将来の注意参照まで既知とする理想条件で比較し、頻繁に読むKVをHBMへ移すことの性能上限と予測配置の余地を測る分析。
+  大規模言語モデルのデコード段階では、過去トークンの鍵・値キャッシュ（KV キャッシュ）を繰り返し参照するため、メモリ帯域が処理率を制約しやすい。ただし、これは実用可能な予測スケジューラの実測高速化ではなく、未来を知る理想条件での性能改善余地を示す。
 
 - **2025-03 · [FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework](2025-2503.08461-fastcache-multimodal-kv-compression-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -424,7 +424,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
   実装：✓ ・ リポジトリ内被引用：33  
-  FastDecodeはKVと注意計算を複数CPUノードへ置き、GPUは重み計算を大バッチで進め、巨大KVのGPU転送とHBM容量制約を減らす異種パイプライン。
+  FastDecodeは、言語モデルの逐次生成で巨大化する鍵・値キャッシュ（KVキャッシュ）をGPU外へ置くだけでなく、キャッシュを読む注意計算そのものを複数のCPUノードへ移す推論配信システムである。
 
 - **2024-10 · [EPIC: Efficient Position-Independent Caching for Serving Large Language Models](2024-2410.15332-epic-position-independent-caching.md)**  
   実装：[✓](https://github.com/DerekHJH/epic) ・ リポジトリ内被引用：26  

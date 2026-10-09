@@ -16,7 +16,7 @@
 
 - **2026-08 · [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)**  
   実装：[✓](https://github.com/FlashML-org/FreeToken) ・ リポジトリ内被引用：2  
-  FreeTokenはGPU・CPU・RAM・PCIe帯域を実測し、専門家キャッシュ容量、CPU/GPU分担、KVへのVRAM配分を動的に変えて、MoE転送待ちを抑えるランタイム。
+  FreeTokenは、混合専門家モデル（Mixture of エキスパート、MoE）の全専門家重みがGPUメモリに収まらない場合に、GPU・CPU・主記憶・PCIeを一つの推論基盤として使うローカル配信システムである。
 
 - **2026-06 · [Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design](2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -120,7 +120,7 @@
 
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  無線edge上の分散MoEでタスク relevanceと経路/energyを同時に考え、DESで専門家、JESAで専門家＋OFDMA subcarrierを共同選択し、Top-kに近い性能で最大約50%のenergy削減を示す。
+  提案方式の中核は、品質制約の下で消費エネルギーが小さい専門家集合を探す動的専門家選択（動的 専門家 Selection; DES）と、無線資源割当まで結合した共同専門家・副搬送波割当（Joint 専門家 and Subcarrier Allocation; JESA）である。
 
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

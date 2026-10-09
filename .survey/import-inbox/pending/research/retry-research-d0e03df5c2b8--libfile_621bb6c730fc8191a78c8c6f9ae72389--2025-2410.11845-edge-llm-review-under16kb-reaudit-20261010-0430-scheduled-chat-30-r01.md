@@ -102,6 +102,8 @@ references:
 references_checked_at: '2026-10-10'
 references_source: 'arxiv:2410.11845v2, references section; structured metadata carried forward from source'
 references_total: 234
+last_audited: null
+audit_version: 0
 ---
 
 ## 概要

@@ -97,8 +97,8 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   検証中に受理長と補正トークンを複数予測し、その各結果に続く次ラウンドのドラフトを別GPUで先行生成することで、投機的デコードに残るドラフト待ちを隠す方式。
 
 - **2026-02 · [Speculative Decoding with a Speculative Vocabulary](2026-2602.13836-speculative-decoding-with-a-speculative-vocabulary.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  SpecVocabは、投機的復号（投機的復号）のドラフトモデルで、語彙射影そのものを動的に縮小する方式である。
+  実装：[✓](https://github.com/SamsungLabs/SpecVocab) ・ リポジトリ内被引用：2  
+  SpecVocabは、投機的復号（投機的復号）の小型ドラフトモデルが次のトークンを予測する際、語彙全体への出力射影を行わず、文脈ごとに予測した候補語だけを精密計算する手法である。Qwen3 8BのSpec-Benchでは、再現したEAGLE-3の平均受理長4.78から5.01へ、平均スループット235.1から245.2トークン/秒へ改善した。
 
 - **2026-01 · [WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching](2026-2601.11652-wisp-distributed-speculative-serving-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

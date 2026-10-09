@@ -407,8 +407,8 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   単純なトークンにも固定のk個を実行すると計算が余り、逆に難しいトークンへ多く割り当てる自由度がなくなる。原著は既存のMixtral-8x7Bを微調整した6課題で、通常の上位2専門家選択の平均実行数2.00に対し、AdaMoEの設定m=8、k=3では1.66へ低下し、浮動小数点演算量（FLOPs）が平均15.21%減ったと報告する。
 
 - **2024-09 · [STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning](2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  STUNは「非構造化枝刈りの方が自由度が高いので常に有利」という直感に反し、まず専門家全体を削る構造化枝刈りを行い、その後で残った専門家内部の重みを非構造化枝刈りする方が高疎性で品質を保てることを示す。
+  実装：[✓](https://github.com/thnkinbtfly/STUN) ・ リポジトリ内被引用：16  
+  重みを個別にゼロ化する非構造化枝刈り（unstructured 枝刈り）は高い自由度を持つが、強く削ると数学的な文章生成能力が急落し、不規則なゼロ配置はGPUの実行時間削減にも直結しない。原著のACL 2025版では、Snowflake Arcticを40%疎化したとき、数学文章題GSM8Kの正解率は未圧縮70.74から70.28となった。
 
 - **2024-07 · [Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts](2024-2407.09590-task-agnostic-expert-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：16  

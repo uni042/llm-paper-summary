@@ -322,7 +322,7 @@
 
 - **2026-09 · [EAT: Expert Account Tracker for Efficient MoE Inference](2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家（Mixture-of-Experts; MoE）は全専門家を毎トークン実行しないが、一般的なTop-K ルーティングでは入力の難しさに関係なく同じK個を起動する。Top-P型の動的ルーティングは現在トークンのgating スコアだけで個数を変えるため、過去に一貫して有用だった専門家と一時的に高スコアになった専門家を区別しにくい。
+  本論文は混合専門家モデル（Mixture-of-Experts、MoE）の推論時に、各トークンで何個の専門家ネットワークを実行するかを決める問題を扱う。固定個数選択（Top-K）では容易なトークンにも同じ数の専門家を割り当てる。
 
 - **2026-09 · [Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models](2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -720,7 +720,7 @@
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：15  
-  分散MoEでデータが全到着するまで待たず、届いたタイルから専門家GEMMを始め、GPU間全対全通信を計算の裏へ重ねて同期待ちを減らすランタイム。
+  Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
   実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：12  
@@ -1052,10 +1052,6 @@
   実装：✓ ・ リポジトリ内被引用：12  
   SLO予測付きトークン調整・層単位プリエンプション・増分KV退避で、オンライン遅延を守りながら遊休GPUをオフライン推論へ回す共同サービング方式。
 
-- **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
-  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：12  
-  HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
-
 - **2024-01 · [Multi-Candidate Speculative Decoding](2024-2401.06706-multi-candidate-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   各投機位置で複数候補をサンプリングして木として一括検証し、ターゲット分布を保ったまま単一路の投機的復号より受理率を高める。
@@ -1063,6 +1059,10 @@
 - **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
   実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：12  
   単純に既学習LLMのFFNをMoEへ変えて視覚言語学習を始めると、モダリティ間の特徴分布差と専門家負荷の偏りにより学習が崩れやすい。そこで論文は三段階の分離学習（MoE-Tuning）を採用し、まず密なLVLMとして視覚と言語を整合・適応させ、その重みを専門家へ損失なく複製してから疎ルーティングを学ぶ。
+
+- **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
+  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：11  
+  HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
   実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：11  
@@ -1098,7 +1098,7 @@
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
   実装：[✓](https://github.com/dvlab-research/LLaMA-VID) ・ リポジトリ内被引用：8  
-  LLaMA-VIDは、動画をVision-言語 モデル（VLM）へ入力するとフレーム数に比例して視覚 トークンが増え、長時間動画がLLMの文脈長と注意計算を圧迫する問題を、各フレームを原則2 トークンへ圧縮して解く。
+  LLaMA-VIDは、各フレームの情報を質問に応じて抽出する文脈トークンと画像内容を要約する内容トークンに分離する。ECCV 2024正式論文では、動画質問応答のMSVD-QAでVicuna-7B構成が正解率69.7%、MSRVTT-QAで57.7%、ActivityNet-QAで47.4%を記録した。
 
 - **2024-04 · [Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence](2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md)**  
   実装：[✓](https://github.com/RWKV/RWKV-LM) ・ リポジトリ内被引用：6  
@@ -1180,10 +1180,6 @@
   実装：[✓](https://github.com/SalesforceAIResearch/GemFilter) ・ リポジトリ内被引用：3  
   GemFilterは、長文脈LLMが回答に必要なトークン位置を最終層まで待たず、比較的早い層ですでに強く識別しているという観察を利用する、学習不要の入力圧縮法である。システム評価ではSnapKVとの比較で最大2.4倍の高速化と約30%のGPUメモリ削減を報告する。
 
-- **2024-06 · [ProTrain: Efficient LLM Training via Memory-Aware Techniques](2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  モデル状態と活性値の階層管理を費用モデルで自動調整し、限られたGPUメモリで学習容量とスループットを高める。
-
 - **2024-06 · [Optimised Grouped-Query Attention Mechanism for Transformers](2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   既存の多頭注意（Multi-Head 注意機構、MHA）を、複数の質問ヘッドで鍵・値ヘッドを共有するグループ化質問注意（Grouped-Query 注意機構、GQA）へ変換すると、復号時に保存する鍵値キャッシュと鍵値投影のパラメータを減らせる。
@@ -1203,6 +1199,10 @@
 - **2024-10 · [CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation](2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   文の意味が安定している間は、生成トークンが変わっても必要なFFNニューロンの集合は大きく変わらない。プリフィル時に文単位の重要ニューロンを決めて生成中に固定し、トークンごとの予測器と頻繁な重み配置変更を避ける。
+
+- **2024-06 · [ProTrain: Efficient LLM Training via Memory-Aware Techniques](2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  モデル状態と活性値の階層管理を費用モデルで自動調整し、限られたGPUメモリで学習容量とスループットを高める。
 
 - **2024-06 · [Divergent Token Metrics: Measuring degradation to prune away LLM components -- and optimize quantization](2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md)**  
   実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：2  
@@ -1271,7 +1271,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：215  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：213  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1384,7 +1384,7 @@
 
 - **2023-03 · [Resurrecting Recurrent Neural Networks for Long Sequences](2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
-  状態空間モデル（State Space モデル; SSM）のS4系は、長い系列でTransformerより低い計算量を持ち、学習時には畳み込みや並列走査で並列化でき、推論時には再帰として定数状態を更新できる。本論文は「S4の性能は連続時間状態空間、HiPPO初期化、離散化といった固有構造が不可欠なのか」を、通常RNNから一要素ずつ変更する実験で分解する。
+  連続時間状態空間モデルの特殊な離散化を出発点とせず、古典的な再帰型ニューラルネットワークを線形化・複素対角化・安定化・正規化することで、長距離依存の精度と並列学習速度を回復できることを、段階的な除去実験で示した研究。論文が測ったのは主として長系列ベンチマークの分類精度と学習速度であり、大規模言語モデルの実運用推論性能ではない。
 
 - **2023-05 · [Unlimiformer: Long-Range Transformers with Unlimited Length Input](2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md)**  
   実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：8  
@@ -1449,7 +1449,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：295  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：294  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -1595,6 +1595,6 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：151  
+  実装：✓ ・ リポジトリ内被引用：150  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 <!-- survey:auto:end -->

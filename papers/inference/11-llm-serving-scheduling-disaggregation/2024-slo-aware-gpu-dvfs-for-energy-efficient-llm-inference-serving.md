@@ -56,6 +56,19 @@ references:
 references_checked_at: '2026-10-03'
 references_source: crossref-deposited-reference-metadata
 references_total: 15
+worker_id: interactive-chat
+worker_run_key: '20261010-interactive-reverse-queue/gpu-dvfs-r01'
+worker_completed_at: '2026-10-10T08:20:00+09:00'
+under16kb_reaudit_target_path: papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md
+under16kb_reaudit_source_git_blob_sha: 'f021941c99f341d4edee1613775887cc3ce1aca7'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_body_chars: 6343
+quality_method_chars: 1289
+quality_eval_chars: 1736
+quality_limitation_chars: 677
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-10-reverse-queue-ieee-abstract-and-evaluation'
 ---
 
 # SLO-Aware GPU DVFS for Energy-Efficient LLM Inference Serving
@@ -161,6 +174,17 @@ A100では全プロファイルデータの12.5%程度でも平均絶対誤差�
 A100のトレースではRPSが5を超えるような高負荷区間でほぼ最大周波数が必要になり、節電幅が縮む。逆に低〜中負荷では周波数を下げ、尾部遅延をSLO境界へ近づけることでエネルギーを削減する。
 
 この結果は「周波数を下げれば常に効率が上がる」という主張ではない。遅延余裕がある区間だけ周波数を下げることが重要で、負荷が高い場合は通常運用と同じ最大周波数へ収束する。
+
+
+### 実機結果の比較条件と読み方（再監査追記）
+
+IEEE Computer Architecture Letters掲載版の実機評価では、NVIDIA Triton Inference ServerとTensorRT-LLMを介してGPT-J-6Bを提供し、NVIDIA A100 SXM 40GBとA30 24GBの二種類で周波数制御を試した。要求はポアソン到着モデルで生成し、Alibabaの負荷トレースを各GPUの処理能力に合わせて縮尺した。入力長には分布があり、生成は要求当たり128トークンにそろえている。これは単一要求の最大生成速度を測る負荷ではなく、要求到着率の変動に対する尾部遅延と全体エネルギーの関係を測る条件である。デフォルト最大周波数の配信基盤を比較対象とするため、同一GPUにおける周波数最適化の効果は観測できるが、モデル変更・異種GPU間の速度比較ではない。
+
+主要結果は、指定されたサービス水準目標（Service-Level Objective; SLO）を満たす範囲での消費エネルギー削減が22.8～45.5%というものである。これは処理速度が22.8～45.5%上がる意味でも、全データセンターの消費電力が同率で減る意味でもない。要求到着率が高い区間では最大周波数へ戻さなければ期限を守れないため、削減量は小さくなる。一方、余裕のある低負荷区間は低周波数で処理でき、計測全体のエネルギー量が小さくなる。p99遅延を制約するとp95制約より尾部を厳しく保護する必要があり、同じ到着率でも節電の余地は一般に小さい。
+
+期限が厳しい条件と緩い条件も混同しない。原著はA100の7秒、A30の8.4秒といったより厳しい期限に加え、両装置で10秒の緩い期限を比較している。制御器は推定されるp95またはp99遅延が選んだ期限以下になる最も低いGPU周波数を選ぶが、予測誤差がある以上、SLO達成を数学的に保証するものではない。実験の成功は評価した到着率、生成長、GPU、プロファイル条件の範囲で解釈する。特に遅延が急に伸びる飽和領域では、周波数の選択ミスが尾部違反につながる。
+
+事前プロファイルを少量で済ませる設計にも装置依存性がある。A100では全較正格子の約12.5%を使う条件で平均絶対誤差が0.2秒未満だったが、A30では35%以上の点を使っても0.3秒未満という別の精度水準で評価されている。比例削減できる較正点の割合を別機種へそのまま移植できず、サーバーのバッチ処理方式やモデルが変われば再校正が必要になる。学習済みの尾部遅延予測器と周波数選択が主要機構であり、重み量子化やモデル精度改善ではない点も区別する必要がある。
 
 ## 既存研究との差
 

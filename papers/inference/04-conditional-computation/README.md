@@ -28,7 +28,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2024-11 · [SparseInfer: Training-free Prediction of Activation Sparsity for Fast LLM Inference](2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  ReLU化FFNのzero行を入力・重みの符号bit XORだけで学習なし予測し、行単位GEMV スキップへつなぐSparseInfer。
+  大規模言語モデルの逐次生成では、要求ごとの同時処理数が小さいと、フィードフォワード網の大きな重み行列をGPUメモリから読み出す費用が律速になる。入力によってゼロになる中間活性を事前に予測できれば、その活性に対応する行の重み読込みと行列ベクトル積を省略できる。しかし、一般的なLLaMAの滑らかな活性化関数であるSiLUでは、負の値も厳密にはゼロになりにくい。
 
 - **2025-03 · [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)**  
   実装：[✓](https://github.com/luoxuan-cs/Flexidepth) ・ リポジトリ内被引用：2  
@@ -36,7 +36,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2024-12 · [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md)**  
   実装：[✓](https://github.com/Jyk-122/D-LLM) ・ リポジトリ内被引用：2  
-  D-LLMは各トークン・各層に小型判断器を置き、実行かskipかを学習する。skipしたトークンのKVも後続注意から外し、計算量とKV使用量を同時に減らす。
+  D-LLMは、大規模言語モデルのすべてのトークンに同じ層数の計算を行う必要はないという観点から、各トークン・各Transformer層でその層を実行するか省略するかを学習する動的深度方式である。代表的な設定では、完全な層を実行するLoRA基準の約52～59%の浮動小数点演算量で、多くの課題の品質を維持した。
 
 - **2025-07 · [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

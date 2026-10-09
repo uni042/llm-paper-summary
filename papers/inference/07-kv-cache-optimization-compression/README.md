@@ -350,8 +350,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   PagedAttentionの固定長ページごとにKVを独立低ランク分解し、密ページと因子化ページを復元なしで同時に注意計算することで、学習不要のままKV容量を約60%へ削減する。
 
 - **2026-08 · [PAGE: Partition-Aware Gated KV-Cache Eviction](2026-2609.22157-page-partition-aware-gated-kv-cache-eviction.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  プリフィル注意の層間ヘッド一致度低下から入力ごとのKV退避安全性を判定し、危険な入力だけ全キャッシュ保持へ戻す学習不要の安全ゲート。
+  実装：[✓](https://github.com/pankajkumar6002/PAGE) ・ リポジトリ内被引用：0  
+  値が大きければ注意希釈型と見なして既存の退避器を起動し、小さければ容量律速型と見なして全キャッシュを保持する。Mistral-7Bの精密な複数鍵検索では、通常のSnapKVの正答率が99%から0%へ崩れる保持予算でも、PAGEを併用すると89%を保った。
 
 - **2026-08 · [Output-Aware Rotation for INT2 KV-Cache Quantization](2026-2608.02691-output-aware-rotation-int2-kv-cache.md)**  
   実装：[✓](https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization) ・ リポジトリ内被引用：0  
@@ -772,15 +772,15 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：246  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：245  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  
-  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：109  
+  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：108  
   FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。
 
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  
-  実装：✓ ・ リポジトリ内被引用：73  
+  実装：✓ ・ リポジトリ内被引用：72  
   Scissorhandsは、過去の注意重みが大きかったトークンは将来の生成でも高い注意を受けやすいという「重要性の持続性仮説（Persistence of Importance Hypothesis）」を提案する。
 
 ### 7年前（2019-11〜2020-10）

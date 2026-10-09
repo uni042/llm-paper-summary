@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T21:49:14+00:00",
+  "generated_at": "2026-10-09T23:29:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2411,31 +2411,32 @@
       "worker_run_key": "20261009-1755-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2303.06349",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-09T16:49:30+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
+      "canonical_id": "arXiv:2606.29982",
+      "title": "Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference",
+      "source_url": "https://arxiv.org/abs/2606.29982",
+      "returned_at": "2026-10-09T23:26:43+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
-        "16KB未満再監査: 評価説明量 162 < 500"
+        "16KB未満再監査: 評価説明量 388 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6762,
-        "body_paragraphs": 39,
-        "method_chars": 2185,
-        "method_paragraphs": 13,
-        "evaluation_chars": 162,
-        "limitation_chars": 902,
+        "body_chars": 7360,
+        "body_paragraphs": 38,
+        "method_chars": 2444,
+        "method_paragraphs": 12,
+        "evaluation_chars": 388,
+        "limitation_chars": 0,
         "insufficiency_flags": [
-          "評価説明量 162 < 500"
+          "評価説明量 388 < 500",
+          "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a011af8be104--libfile_4d010f733e888191869347e9414bf9f0--2023-2303.06349-lru-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a011af8be104--libfile_4d010f733e888191869347e9414bf9f0--2023-2303.06349-lru-under16kb-reaudit-20261009-2130-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261009-2130-scheduled-chat-30/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b4198e15d8ec819190c2c34c70da5f77--2026-2606.29982-beyond-uniform-experts-under16kb-reaudit-20261010-0800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b4198e15d8ec819190c2c34c70da5f77--2026-2606.29982-beyond-uniform-experts-under16kb-reaudit-20261010-0800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261010-0800-scheduled-chat-00/r01"
     }
   ]
 }
