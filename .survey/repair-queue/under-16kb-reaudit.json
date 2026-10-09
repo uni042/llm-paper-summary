@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T20:58:18.688757+00:00",
+  "generated_at": "2026-10-09T21:53:14.638957+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 201,
+  "count": 192,
   "worker_counts": {
-    "scheduled-chat-00": 67,
-    "scheduled-chat-30": 67,
-    "scheduled-chat-45": 67
+    "scheduled-chat-00": 64,
+    "scheduled-chat-30": 64,
+    "scheduled-chat-45": 64
   },
   "entries": [
     {
@@ -262,28 +262,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 127 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/12-moe-parallelism-communication/2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md",
-      "canonical_id": "arXiv:2510.02613",
-      "title": "ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models",
-      "file_bytes": 11142,
-      "source_sha256": "345765bb5faf75466a1463ca796337a1c1d8b54b3ccbe658cfe3d2ed8ab25403",
-      "source_git_blob_sha": "f1f5a6e0703d50c05482550d36e5fd625a8423b3",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.977932,
-      "quality_metrics": {
-        "body_chars": 2636,
-        "method_chars": 916,
-        "evaluation_chars": 95,
-        "limitation_chars": 311
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 95 < 500"
       ],
       "warnings": []
     },
@@ -663,30 +641,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md",
-      "canonical_id": "arXiv:2607.01775",
-      "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding",
-      "file_bytes": 12161,
-      "source_sha256": "ba38665087029f8acc983cffe9c58666f606173450f1dadf291cae4ac5a95217",
-      "source_git_blob_sha": "69ea618142aae6aa023f0819b59a50ebe24b6c3c",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.946824,
-      "quality_metrics": {
-        "body_chars": 1416,
-        "method_chars": 402,
-        "evaluation_chars": 190,
-        "limitation_chars": 133
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1416 < 2200",
-        "16KB未満再監査: 手法説明量 402 < 700",
-        "16KB未満再監査: 評価説明量 190 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md",
       "canonical_id": "arXiv:2601.05524",
       "title": "Double: Breaking the Acceleration Limit via Double Retrieval Speculative Parallelism",
@@ -803,28 +757,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md",
-      "canonical_id": "arXiv:2307.09702",
-      "title": "Efficient Guided Generation for Large Language Models",
-      "file_bytes": 12301,
-      "source_sha256": "483c53be11111b313b30db5cc012cc54f49a7dc045c309da546c74ae9ac0d115",
-      "source_git_blob_sha": "7e2f7e2b2b4e5a96399ff3519ea4737b4bbbea77",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.918929,
-      "quality_metrics": {
-        "body_chars": 3038,
-        "method_chars": 761,
-        "evaluation_chars": 160,
-        "limitation_chars": 332
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 160 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.19775-understanding-inference-scaling-for-llms-bottlenecks-trade-offs-and-perf.md",
       "canonical_id": "arXiv:2605.19775",
       "title": "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles",
@@ -871,30 +803,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
-      "canonical_id": "arXiv:2307.02486",
-      "title": "LongNet: Scaling Transformers to 1,000,000,000 Tokens",
-      "file_bytes": 12336,
-      "source_sha256": "b31526598e0a0d20030fceb76ca9c823f3e02898e66252396915fd2ab1c360ad",
-      "source_git_blob_sha": "c4c91bfefcfafbe11f02eb228d10f66d6b3bf8ce",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.749338,
-      "quality_metrics": {
-        "body_chars": 4049,
-        "method_chars": 1254,
-        "evaluation_chars": 1320,
-        "limitation_chars": 449
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 74.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.9% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
       "canonical_id": "arXiv:2603.17803",
       "title": "Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs",
@@ -923,7 +831,7 @@
       "file_bytes": 12365,
       "source_sha256": "37bdb60c185e163c99308d00a553912ab35821a037490096cf3d6b0086df3eaf",
       "source_git_blob_sha": "92c39243b99495234e8ad90dcf00854b5b399585",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.88776,
@@ -961,26 +869,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/01-offload-hierarchical-memory/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md",
-      "canonical_id": "arXiv:2606.25353",
-      "title": "Cache-Resident LLM Inference in GB-Scale Last-Level Caches",
-      "file_bytes": 12390,
-      "source_sha256": "cdc4a6e31da9ac7e55cde32f0b8f1376cf4895cea475185bb3b1e0a3870a5a1e",
-      "source_git_blob_sha": "a55f6ff32dab14c37ba3a6148e7f0523d3b28755",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.878249,
-      "quality_metrics": {
-        "body_chars": 3790,
-        "method_chars": 895,
-        "evaluation_chars": 833,
-        "limitation_chars": 318
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md",
       "canonical_id": "arXiv:2404.04793",
       "title": "SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget",
@@ -1003,48 +891,6 @@
       "warnings": [
         "日本語比率 74.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md",
-      "canonical_id": "arXiv:2607.12696",
-      "title": "Less Experts, Faster Decoding: Cost-Aware Speculative Decoding for Mixture-of-Experts",
-      "file_bytes": 12416,
-      "source_sha256": "00a530d848559fe1aaf78a4a7bc29d348a50a8dd0fbceea5a113b8f9c9a32198",
-      "source_git_blob_sha": "afef93a3bb396ed94f6e53b826712aba36270ab9",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.839983,
-      "quality_metrics": {
-        "body_chars": 2534,
-        "method_chars": 1206,
-        "evaluation_chars": 687,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md",
-      "canonical_id": "arXiv:2505.13326",
-      "title": "Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately",
-      "file_bytes": 12424,
-      "source_sha256": "db6e5bf7b128c7093f9bba90eef19138d268250ccedfe809ddd21ac983787fd4",
-      "source_git_blob_sha": "8c7aa4561d03d7955d78a29489e66bb456bdd559",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.971921,
-      "quality_metrics": {
-        "body_chars": 2744,
-        "method_chars": 1176,
-        "evaluation_chars": 141,
-        "limitation_chars": 211
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 141 < 500"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.26828-lm-cxd.md",
@@ -1286,30 +1132,6 @@
       ],
       "warnings": [
         "日本語比率 71.6% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
-      "canonical_id": "arXiv:2512.03927",
-      "title": "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
-      "file_bytes": 12563,
-      "source_sha256": "23e013d8608fd01c9c2c7142660f9c730a68ae6acaef54ad44235d18bb759d83",
-      "source_git_blob_sha": "2657c6364f0fa21a4331d1d21c2a9f86aae69f58",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.783164,
-      "quality_metrics": {
-        "body_chars": 3001,
-        "method_chars": 1618,
-        "evaluation_chars": 703,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.3% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.3% < 警告基準 80%"
       ]
     },
     {
@@ -1565,30 +1387,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.06940-unified-ai-gateway-a-framework-for-joint-model-routing-and-kv-cache-mana.md",
-      "canonical_id": "arXiv:2609.06940",
-      "title": "Unified AI Gateway: A Framework for Joint Model Routing and KV Cache Management",
-      "file_bytes": 12705,
-      "source_sha256": "4a2c10f4f21a2d16cb8055de290a99541dacf7839a51b1014848b2c888b6f944",
-      "source_git_blob_sha": "325c5532747e1da6cccd26b978c3acc01eac9b4b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.875695,
-      "quality_metrics": {
-        "body_chars": 1936,
-        "method_chars": 587,
-        "evaluation_chars": 126,
-        "limitation_chars": 249
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1936 < 2200",
-        "16KB未満再監査: 手法説明量 587 < 700",
-        "16KB未満再監査: 評価説明量 126 < 500"
-      ],
       "warnings": []
     },
     {
