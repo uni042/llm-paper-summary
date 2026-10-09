@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T23:34:24.763612+00:00",
+  "generated_at": "2026-10-09T23:51:40.767305+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 155,
+  "count": 148,
   "worker_counts": {
-    "scheduled-chat-00": 52,
-    "scheduled-chat-30": 52,
-    "scheduled-chat-45": 51
+    "scheduled-chat-00": 49,
+    "scheduled-chat-30": 50,
+    "scheduled-chat-45": 49
   },
   "entries": [
     {
@@ -218,28 +218,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.11504-longflow-efficient-kv-cache-compression-for-reasoning-models.md",
-      "canonical_id": "arXiv:2603.11504",
-      "title": "LongFlow: Efficient KV Cache Compression for Reasoning Models",
-      "file_bytes": 11464,
-      "source_sha256": "5d5e1bc3298dea8c1f4a4fe1f925ef2aea36545e72b9030924305671920d14e5",
-      "source_git_blob_sha": "cccb93aab2d15f822aaac374053a6e5bb5b9fbf4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.957241,
-      "quality_metrics": {
-        "body_chars": 2353,
-        "method_chars": 1059,
-        "evaluation_chars": 123,
-        "limitation_chars": 179
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 123 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md",
       "canonical_id": "DOI:10.1145/3793230.3837769",
       "title": "To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems",
@@ -303,49 +281,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2511.11733-speculative-decoding-in-decentralized-llm-inference-turning-communicatio.md",
-      "canonical_id": "arXiv:2511.11733",
-      "title": "Speculative Decoding in Decentralized LLM Inference: Turning Communication Latency into Computation Throughput",
-      "file_bytes": 11922,
-      "source_sha256": "5bdcfb7b3dad0ad1ec014efe9976e2eea12687f90d95da8aa229d51833e59079",
-      "source_git_blob_sha": "5e0eced2be26183e83f0759951c7393cbf6ee20b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.932268,
-      "quality_metrics": {
-        "body_chars": 3313,
-        "method_chars": 954,
-        "evaluation_chars": 937,
-        "limitation_chars": 251
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
-      "canonical_id": "arXiv:2605.03375",
-      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
-      "file_bytes": 12143,
-      "source_sha256": "9e31d341548a00dc438826d478a90dee49a6a3ddc8a19c980f91c1bee4443682",
-      "source_git_blob_sha": "8514f4c6e2838933d63983021ef1d09c66a3ce71",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.947434,
-      "quality_metrics": {
-        "body_chars": 3326,
-        "method_chars": 666,
-        "evaluation_chars": 438,
-        "limitation_chars": 217
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 666 < 700",
-        "16KB未満再監査: 評価説明量 438 < 500"
-      ],
       "warnings": []
     },
     {
@@ -484,48 +419,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 294 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md",
-      "canonical_id": "arXiv:2506.18879",
-      "title": "CommVQ: Commutative Vector Quantization for KV Cache Compression",
-      "file_bytes": 12457,
-      "source_sha256": "9583fc08a8e7b616025d3c8872e5cc0bba81e11cffefc22b05f6d54740b5e123",
-      "source_git_blob_sha": "74f79cac2e00d4aa26b5f8edf0616a91d02b5724",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.974348,
-      "quality_metrics": {
-        "body_chars": 2901,
-        "method_chars": 736,
-        "evaluation_chars": 415,
-        "limitation_chars": 212
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 415 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
-      "canonical_id": "ACL:2024.acl-long.681",
-      "title": "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding",
-      "file_bytes": 12509,
-      "source_sha256": "7f389a2cc73b3d365bfc40d881f85c9644e5c6f6f50d9344553a749b027862c3",
-      "source_git_blob_sha": "09bb175ac995ca9f0e9e5150ce2e9a4bf8746053",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.802202,
-      "quality_metrics": {
-        "body_chars": 2721,
-        "method_chars": 1301,
-        "evaluation_chars": 520,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -967,28 +860,6 @@
         "limitation_chars": 323
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2601.19910-understanding-bottlenecks-kv-offloading.md",
-      "canonical_id": "arXiv:2601.19910",
-      "title": "Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading",
-      "file_bytes": 12876,
-      "source_sha256": "6cc8b6022180054c9f44301dd1df4430e320063bd382421781520f2603249c69",
-      "source_git_blob_sha": "1844018676e0d88bb608013ed119f9a8c77cfbb6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.844612,
-      "quality_metrics": {
-        "body_chars": 3305,
-        "method_chars": 575,
-        "evaluation_chars": 589,
-        "limitation_chars": 342
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 575 < 700"
-      ],
       "warnings": []
     },
     {
@@ -2326,28 +2197,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
-      "canonical_id": "arXiv:2307.02628",
-      "title": "SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference",
-      "file_bytes": 13727,
-      "source_sha256": "04f9cc6e7558b85d1d3c3f44a48d2e016e16340531de03539bbb9f3188f8f717",
-      "source_git_blob_sha": "96d826b54210710bbad155370daae567e90983e3",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.921061,
-      "quality_metrics": {
-        "body_chars": 3126,
-        "method_chars": 1536,
-        "evaluation_chars": 488,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 488 < 500"
       ],
       "warnings": []
     },
