@@ -1082,7 +1082,7 @@
 
 - **2024-08 · [Harder Task Needs More Experts: Dynamic Routing in MoE Models](unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md)**  
   実装：[✓](https://github.com/ZhenweiAn/Dynamic_MoE) ・ リポジトリ内被引用：9  
-  本論文は、混合専門家モデル（Mixture-of-Experts; MoE）の固定トップkルーティング（Top-k ルーティング）が、簡単なトークンにも難しいトークンにも同じ数の専門家を割り当てる問題を扱う。100Bトークン学習後の5下流タスク平均は42.3で固定Top-2の41.6を0.7ポイント上回り、平均活性パラメータはTop-2の90%未満となる。
+  HuangらのACL 2024論文は、ルータの専門家確率を高い順に累積し、閾値を超えた時点で専門家の追加を止める動的ルーティング（動的 ルーティング）を提案する。
 
 - **2024-07 · [Mixture of A Million Experts](2024-2407.04153-mixture-of-a-million-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -1166,7 +1166,7 @@
 
 - **2024-10 · [SplitLLM: Collaborative Inference of LLMs for Model Placement and Throughput Optimization](2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  層ごとの計算・通信費を使う動的計画法でクライアント/サーバー配置を決め、遅延SLAを守りながらサーバー仕事量を約3分の1削減する協調推論方式。
+  提案方式は、層ごとの端末推論時間、端末からサーバーへの上り転送時間、サーバーから端末への下り転送時間、サーバー資源消費量を測定し、モデルの順方向の依存関係を守りながら配置する。
 
 - **2024-10 · [SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference](2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md)**  
   実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：3  

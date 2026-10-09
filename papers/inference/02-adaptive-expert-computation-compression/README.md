@@ -403,8 +403,8 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   専門家の平均出力を用いる階層的クラスタリングと頻度重み付き統合により、再学習なしでQwen/Mixtralの専門家を最大50%削減しつつ比較手法より高い性能保持を示す。
 
 - **2024-06 · [AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models](2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  AdaMoEは計算しないnull専門家をTop-k候補に加え、簡単なトークンほどnullを選ばせて実FFN数を減らし、トークンごとの計算量を適応させる。
+  実装：[✓](https://github.com/CengZihao/AdaMoE) ・ リポジトリ内被引用：18  
+  単純なトークンにも固定のk個を実行すると計算が余り、逆に難しいトークンへ多く割り当てる自由度がなくなる。原著は既存のMixtral-8x7Bを微調整した6課題で、通常の上位2専門家選択の平均実行数2.00に対し、AdaMoEの設定m=8、k=3では1.66へ低下し、浮動小数点演算量（FLOPs）が平均15.21%減ったと報告する。
 
 - **2024-09 · [STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning](2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
