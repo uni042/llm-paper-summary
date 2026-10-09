@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T18:57:29.868389+00:00",
+  "generated_at": "2026-10-09T19:50:57.602478+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 206,
+  "count": 204,
   "worker_counts": {
-    "scheduled-chat-00": 69,
+    "scheduled-chat-00": 68,
     "scheduled-chat-30": 68,
-    "scheduled-chat-45": 69
+    "scheduled-chat-45": 68
   },
   "entries": [
     {
@@ -239,26 +239,6 @@
         "method_chars": 1239,
         "evaluation_chars": 660,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md",
-      "canonical_id": "arXiv:2603.28458",
-      "title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention",
-      "file_bytes": 11041,
-      "source_sha256": "c989f2cbf18057a0aeba9db47710aff84831efa838bab1d57d5ad25ec1721595",
-      "source_git_blob_sha": "a70a2d34f2294bf99050fb6053f2d5b435c82d3e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.949656,
-      "quality_metrics": {
-        "body_chars": 2897,
-        "method_chars": 808,
-        "evaluation_chars": 834,
-        "limitation_chars": 297
       },
       "mechanical_failures": [],
       "warnings": []
@@ -891,7 +871,7 @@
       "file_bytes": 12301,
       "source_sha256": "483c53be11111b313b30db5cc012cc54f49a7dc045c309da546c74ae9ac0d115",
       "source_git_blob_sha": "7e2f7e2b2b4e5a96399ff3519ea4737b4bbbea77",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.918929,
@@ -2511,28 +2491,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 本文説明量 1840 < 2200",
         "16KB未満再監査: 手法説明量 545 < 700"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
-      "canonical_id": "arXiv:2401.09670",
-      "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
-      "file_bytes": 13119,
-      "source_sha256": "d9fca5d5f720c57a07d234a5b77985fbcaef0820b024e9005e871f24fbb1fa67",
-      "source_git_blob_sha": "2b1dec74839b39ea837d6eece9d2dd25bb1cb93e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.972326,
-      "quality_metrics": {
-        "body_chars": 3219,
-        "method_chars": 820,
-        "evaluation_chars": 465,
-        "limitation_chars": 253
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 465 < 500"
       ],
       "warnings": []
     },
