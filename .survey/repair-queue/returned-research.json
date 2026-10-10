@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T03:40:37+00:00",
+  "generated_at": "2026-10-10T08:16:40+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 124,
+  "count": 125,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2420,6 +2420,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-68e37f6275e2--libfile_8ed922636938819194bc6f4502aa84d3--2026-2605.19775-understanding-inference-scaling-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-68e37f6275e2--libfile_8ed922636938819194bc6f4502aa84d3--2026-2605.19775-understanding-inference-scaling-under16kb-reaudit-20261010-1100-scheduled.json",
       "worker_run_key": "20261010-1100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3806645.3807596",
+      "title": "Scaling Attention Beyond GPUs for LLM Inference",
+      "source_url": "https://doi.org/10.1145/3806645.3807596",
+      "returned_at": "2026-10-10T08:15:35+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7424,
+        "body_paragraphs": 37,
+        "method_chars": 2271,
+        "method_paragraphs": 12,
+        "evaluation_chars": 2148,
+        "limitation_chars": 870,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c1e026e6d7b081919623f06edc6c6763--2026-doi-10.1145-3806645.3807596-beyond-under16kb-reaudit-20261010-1545-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c1e026e6d7b081919623f06edc6c6763--2026-doi-10.1145-3806645.3807596-beyond-under16kb-reaudit-20261010-1545-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261010-1545-scheduled-chat-45/r01"
     }
   ]
 }

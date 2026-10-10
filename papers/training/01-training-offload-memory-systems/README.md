@@ -66,12 +66,12 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2023-10 · [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)**  
   実装：[✓](https://github.com/platformxlab/G10) ・ リポジトリ内被引用：4  
-  テンソルの生存期間と次回利用時刻を実行グラフから求め、GPU・ホストメモリ・SSD間の退避と先読みを自動化して、ページフォルトと転送待ちを減らす学習システム。
+  G10が扱う問題は、深層学習の一反復で保持する全テンソルの容量がGPU搭載メモリを超えても、各演算器がその瞬間に使うテンソルの集合はずっと小さい、という差をどう利用するかである。SSDの容量が十分でも帯域と遅延はGPUメモリと大きく異なるため、無計画な退避は処理率を落とす。
 
 ### 5年前（2021-11〜2022-10）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：49  
   学習パラメータ・勾配・最適化状態をGPU、CPU DRAM、NVMe SSDへ分散し、各SSDの読み込みと先読みをGPU計算に重ねて、GPU総容量を超える巨大モデルを収める方式。
 
 ### 7年前（2019-11〜2020-10）
