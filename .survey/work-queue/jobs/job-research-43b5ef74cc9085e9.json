@@ -35,10 +35,15 @@
   "selection_reason": "GPT-Cをcloud code completionとして実配備し、beam searchを候補batch化してL×k回のmodel callをL回へ削減、過去stepのattention key/valueをcacheしてさらに約10%高速化する。L=25,k=15ではsequential 7500 msからparallel 3000 ms、KV cache併用2700 msへ短縮し、client-side trie cacheで100 ms未満の体感要件も狙うため、Transformer推論runtime/serving最適化として対象内。",
   "semantic_scholar_id": "a4c6cb385a90441061218f50abe2871d5e384a2e",
   "source_url": "https://arxiv.org/abs/2005.08025",
-  "status": "ready",
+  "status": "superseded",
   "title": "IntelliCode compose: code generation using transformer",
   "type": "research",
   "venue": "ESEC/SIGSOFT FSE",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-10T13:56:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md",
+  "represented_canonical_id": "arXiv:2005.08025",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
