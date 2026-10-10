@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-09T23:51:40.767305+00:00",
+  "generated_at": "2026-10-10T00:57:43.003539+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 148,
+  "count": 144,
   "worker_counts": {
-    "scheduled-chat-00": 49,
-    "scheduled-chat-30": 50,
-    "scheduled-chat-45": 49
+    "scheduled-chat-00": 48,
+    "scheduled-chat-30": 48,
+    "scheduled-chat-45": 48
   },
   "entries": [
     {
@@ -52,29 +52,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md",
-      "canonical_id": "arXiv:2307.08045",
-      "title": "Beyond Classical Attention: Quantum Attention for Scalable Computation",
-      "file_bytes": 10118,
-      "source_sha256": "c7819ee253c7f1fc4ecb3e7d8d56d4a5cac95ad3023a23a9ca85dcb25c41f3aa",
-      "source_git_blob_sha": "748952bdb7069a64bedc86495eab490e6436d493",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.862659,
-      "quality_metrics": {
-        "body_chars": 1777,
-        "method_chars": 774,
-        "evaluation_chars": 0,
-        "limitation_chars": 219
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1777 < 2200",
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
       "warnings": []
     },
     {
@@ -378,50 +355,6 @@
       ]
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
-      "canonical_id": "arXiv:2510.10962",
-      "title": "MC#: Mixture Compressor for Mixture-of-Experts Large Models",
-      "file_bytes": 12365,
-      "source_sha256": "37bdb60c185e163c99308d00a553912ab35821a037490096cf3d6b0086df3eaf",
-      "source_git_blob_sha": "92c39243b99495234e8ad90dcf00854b5b399585",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.88776,
-      "quality_metrics": {
-        "body_chars": 2589,
-        "method_chars": 1563,
-        "evaluation_chars": 488,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 488 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.26828-lm-cxd.md",
-      "canonical_id": "arXiv:2609.26828",
-      "title": "Bridging LLM Serving and CXL-SSDs with Chunk-Aware KV Cache Management",
-      "file_bytes": 12431,
-      "source_sha256": "e46c1a7b9b83490f8b8a3fd6c14b70fc7fdd4d1a066b753e3766e4c7aab044b3",
-      "source_git_blob_sha": "06d35bea091b9b9e950fb0905754e1e695bb6e6d",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.991593,
-      "quality_metrics": {
-        "body_chars": 2848,
-        "method_chars": 1215,
-        "evaluation_chars": 294,
-        "limitation_chars": 154
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 294 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.28113-h-scale-hessian-guided-scale-refinement-for-nvfp4-sub-byte-llm-inference.md",
       "canonical_id": "arXiv:2608.28113",
       "title": "H-Scale: Hessian-Guided Scale Refinement for NVFP4 Sub-Byte LLM Inference",
@@ -564,28 +497,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2403.10444-block-verification-accelerates-speculative-decoding.md",
-      "canonical_id": "arXiv:2403.10444",
-      "title": "Block Verification Accelerates Speculative Decoding",
-      "file_bytes": 12702,
-      "source_sha256": "a5bb525eb6583d0544e34fd2112f2af2620ad2408b61e7a655dc2756f325101c",
-      "source_git_blob_sha": "8ce44c87bbb8344978ebbb1215e1bf5116b8bfac",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.957983,
-      "quality_metrics": {
-        "body_chars": 2731,
-        "method_chars": 721,
-        "evaluation_chars": 340,
-        "limitation_chars": 262
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 340 < 500"
-      ],
       "warnings": []
     },
     {
