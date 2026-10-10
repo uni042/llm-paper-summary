@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "N-vium: Mixture-of-Exits Transformer for Accelerated Exact Generation",
+      "source_url": "https://arxiv.org/abs/2605.13190",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Improving the inference efficiency of autoregressive transformers typically means reducing FLOPs per token, usually through approximations that degrade model quality. We introduce N-vium, a mixture-of-exits transformer that partially parallelizes computation across depth on standard hardware, increasing effective FLOPs per second rather than minimizing compute per token. N-vium attaches prediction heads at multiple depths and defines the next-token distribution as a learned mixture over these exits, with token-adaptive routing. This formulation strictly generalizes the standard transformer, which is recovered exactly when routing assigns zero mass to all intermediate heads. Sampling from the mixture is exact, and complete KV caches are recovered by deferring the upper-layer computation and batching it with later tokens. We pretrain N-vium at scales up to 1.5B parameters. Our largest model reaches 57.9% wall-clock speedup over a parameter- and data-matched standard transformer at no perplexity cost.",
+      "identifiers": [
+        "SemanticScholar:f4d36c2af03275aa806bbebb079497409475db3e"
+      ],
+      "semantic_scholar_id": "f4d36c2af03275aa806bbebb079497409475db3e",
+      "canonical_id": "arXiv:2605.13190",
+      "arxiv_id": "2605.13190",
+      "doi": "10.48550/arXiv.2605.13190",
+      "authors": [
+        "Aleksander Lorenc",
+        "Frédéric Berdoz",
+        "Joël Mathys",
+        "R. Wattenhofer"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct exact-generation inference acceleration.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Oilbird: Training-Free Speculative Decoding with Keys the Verifier Already Computes",
+      "source_url": "https://arxiv.org/abs/2608.03839",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training-free speculative decoding drafts by matching an exact suffix of the context against a pool of earlier context. That lookup misses correct drafts already in the pool, most visibly on tool-calling traffic, where a request repeats almost everything but the few values minted for it, and where one rejected token discards the correct continuation behind it. We diagnose the failure position by position across ten benchmarks and find it to be a problem of addressing rather than of coverage: on our densest tool-calling benchmark, about half of what the strongest exact-match drafter misses is present in the pool yet unreachable by exact matching. We therefore propose a second, semantic draft source: the same pool, re-keyed by the hidden state the verifier has already computed at each committed token, together with a merge that lets it ride inside an existing lexical drafter's tree. In three published drafters, at matched pool and budget, it lifts accepted length by 24-29%. Oilbird reaches 4.4x autoregressive decoding speed on API-Bank, against 3.9x for the strongest training-free baseline in our harness and 2.0x for EAGLE-3.",
+      "identifiers": [
+        "SemanticScholar:add52fd34527a37c8df3031cde67b0f107bd408a"
+      ],
+      "semantic_scholar_id": "add52fd34527a37c8df3031cde67b0f107bd408a",
+      "canonical_id": "arXiv:2608.03839",
+      "arxiv_id": "2608.03839",
+      "authors": [
+        "Tao Jin",
+        "P. Nguyen",
+        "Zhenzhu Yan",
+        "Teeradaj Racharak",
+        "Naoya Inoue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct training-free speculative decoding speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.31551",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregating the two stages, Prefill and Decode, onto separate GPU pools is now a standard optimization for (text-only) LLM serving. However, multimodal LLMs (MLLMs), which add a third phase, Encode, pose new challenges for resource allocation. Encode turns images, video, or audio into embeddings that the language model can consume, yielding a three-stage Encode-Prefill-Decode (EPD) pipeline. Existing frameworks offer only partial answers: text-only PD systems lack Encode, while EPD frameworks expose it as a separate service without regulating downstream request flow. The pipeline also carries a structural resource imbalance: every request enters through Encode before downstream work can begin, yet per-request execution leaves the encode GPU severely underutilized even at high loads, starving the downstream Prefill and Decode workers. Addressing this, we reposition Encode as the control point of the EPD pipeline, exposing three tightly coupled dimensions: when work enters downstream, where prefill executes, and how the GPU is shared. We instantiate this in EAServe across two co-designed layers. Its runtime manages load-adaptive micro-batching, rate-controlled partial offload to a co-resident prefill worker, and dynamic SM partitioning for predictable co-location. The configuration layer, Hybrid Auto Selection (HAS), navigates the joint space of GPU allocation, encode batch size, and offload ratio by pruning unbalanced allocations with per-stage capacity profiling and refining the remainder through TPE-based Bayesian optimization. Evaluated on three MLLM architectures spanning image, video, and audio, EAServe delivers up to 4.3x and 1.7x higher goodput than NVIDIA Dynamo and vLLM, respectively, under identical SLO constraints, sustains more balanced and higher GPU utilization across the EPD pipeline, and reaches near-optimal configurations faster than baseline search methods.",
+      "identifiers": [
+        "SemanticScholar:f0cf7f6a33c0ac0a5f9b02d193aff795d001c95d"
+      ],
+      "semantic_scholar_id": "f0cf7f6a33c0ac0a5f9b02d193aff795d001c95d",
+      "canonical_id": "arXiv:2609.31551",
+      "arxiv_id": "2609.31551",
+      "doi": "10.1145/3838684.3846886",
+      "authors": [
+        "Kun-Xiong Zhu",
+        "Zhi-Hao Shu",
+        "Hang-Yu Zheng",
+        "Ming-Hai Qin",
+        "Miao Yin",
+        "Gagan Agrawal",
+        "Wei Niu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct multimodal LLM serving resource allocation and goodput improvement.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2609.35263",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pipeline parallelism can improve prefill throughput by processing multiple request chunks concurrently across different stages of the model. However, keeping the pipeline fully utilized requires efficient scheduling and request preparation. In systems where stages retain and evict cache state independently, a local cache hit does not guarantee that the same prefix can be reused across the pipeline. Here, coordination overhead can impede request admission cadence and thus reduce overall throughput. In this paper, we present WavePP, a prefill runtime built on top of TensorRT-LLM that addresses these challenges by overlapping request admission with pipeline execution. WavePP asynchronously finds a prefix that can be reused across all stages, protects the cached state, and reserves space for the remaining input while earlier requests continue to execute. It subsequently plans the chunk sizes of each request dynamically to maximize pipeline fill. Each stage then completes the local preparation before executing the request. In the same system and pipeline topology, WavePP improves TensorRT-LLM's prefill throughput in 37 of 40 tested settings on GLM 5.2 and MiniMax M2.7. At concurrency 128 with high cache reuse, these changes increase throughput by factors of 2.91 and 2.02, respectively. Across 28 Kimi K3 settings, WavePP also has the highest measured throughput in all 18 settings at concurrency eight or higher, compared with tensor/expert-parallel and pipeline-parallel baselines from TRT-LLM, SGLang, and vLLM.",
+      "identifiers": [
+        "SemanticScholar:bb83727dcd64b255ebf164ebd4a30600e3dea6ec"
+      ],
+      "semantic_scholar_id": "bb83727dcd64b255ebf164ebd4a30600e3dea6ec",
+      "canonical_id": "arXiv:2609.35263",
+      "arxiv_id": "2609.35263",
+      "authors": [
+        "Aaryam Sharma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct LLM serving runtime and prefill throughput optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
+      "source_url": "https://arxiv.org/abs/2508.08435",
+      "year": 2025,
+      "published": "2025-08-11",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in artificial neural networks for machine learning, and language modeling in particular, have established a family of recurrent neural network (RNN) architectures that, unlike conventional RNNs with vector-form hidden states, use two-dimensional (2D) matrix-form hidden states. Such 2D-state RNNs, known as Fast Weight Programmers (FWPs), can be interpreted as a neural network whose synaptic weights (called fast weights) dynamically change over time as a function of input observations, and serve as short-term memory storage; corresponding synaptic weight modifications are controlled or programmed by another network (the programmer) whose parameters are trained (e.g., by gradient descent). In this Primer, we review the technical foundations of FWPs, their computational characteristics, and their connections to transformers and state space models. We also discuss connections between FWPs and models of synaptic plasticity in the brain, suggesting a convergence of natural and artificial intelligence.",
+      "identifiers": [
+        "SemanticScholar:5a35a636758044463fc42bffb4e234d6774d569d"
+      ],
+      "semantic_scholar_id": "5a35a636758044463fc42bffb4e234d6774d569d",
+      "canonical_id": "arXiv:2508.08435",
+      "arxiv_id": "2508.08435",
+      "doi": "10.48550/arXiv.2508.08435",
+      "authors": [
+        "Kazuki Irie",
+        "Samuel J. Gershman"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 425,
+        "matched_prestigious_venue": null
+      },
+      "reason": "A primary-source primer on computationally efficient recurrent/linear-transformer model families; relevant architecture background despite no new serving benchmark.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-02e07e805815",
+    "round": "libimp-02e07e80581589a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-02e07e80581589a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-02e07e80581589a7-pre01.json",
+    "receipt": "sha256:a314f89d23ee6aa0465fbfe3fc33af6f074fd7f6804b4e973c5875aacd8c33ef"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-02e07e805815",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

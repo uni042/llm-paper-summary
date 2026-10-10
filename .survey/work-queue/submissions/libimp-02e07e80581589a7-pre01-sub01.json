@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "InfiniteVL: Synergizing Linear and Sparse Attention for Highly-Efficient, Unlimited-Input Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2512.08829",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are increasingly tasked with ultra-long multimodal understanding. While linear architectures offer constant computation and memory footprints, they often struggle with high-frequency visual perception compared to standard Transformers. To bridge this gap, we introduce \\textbf{InfiniteVL}. We first develop a hybrid base model called \\textbf{InfiniteVL-Base} that interleaves a small fraction of Full Attention layers with Gated DeltaNet. Empowered by a tailored distillation and fine-tuning strategy, InfiniteVL-Base matches the fundamental multimodal performance of equivalent Transformers while achieving a \\textbf{1.7$\\times$} decoding speedup. However, the quadratic complexity of the retained Full Attention inevitably becomes an efficiency bottleneck when scaling to ultra long context. To break this barrier, we propose a novel Long-Sequence Architectural Fine-Tuning strategy that seamlessly transforms the dense attention into vision-specific sparse mechanisms. This yields two specialized variants: \\textbf{InfiniteVL-Offline} for offline retrieval and \\textbf{InfiniteVL-Online} for online streaming. By eliminating the computation explosion of global attention without sacrificing high-frequency visual recall, InfiniteVL-Offline achieves Transformer-level length generalization with a \\textbf{5x} prefill acceleration at 256K context. Concurrently, InfiniteVL-Online delivers robust streaming perception with a constant memory footprint and a real-time throughput of \\textbf{25} FPS. Code and models are available at https://github.com/hustvl/InfiniteVL.",
+      "identifiers": [
+        "SemanticScholar:19bd606d070cca75b11a455c3c3dc8e938ff8c7e"
+      ],
+      "semantic_scholar_id": "19bd606d070cca75b11a455c3c3dc8e938ff8c7e",
+      "canonical_id": "arXiv:2512.08829",
+      "arxiv_id": "2512.08829",
+      "doi": "10.48550/arXiv.2512.08829",
+      "authors": [
+        "Hong-Yuan Tao",
+        "Ben-Cheng Liao",
+        "Shao-Yu Chen",
+        "Haoran Yin",
+        "Qian Zhang",
+        "Wen-Yu Liu",
+        "Xing-Gang Wang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 305,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct efficiency and context scalability for vision-language inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Practical Online KV Cache Compaction for LLM Agents: An Empirical Study",
+      "source_url": "https://arxiv.org/abs/2608.00902",
+      "year": 2026,
+      "published": "2026-08-02",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents accumulate long trajectories of reasoning steps, tool calls, and environment feedback, making the KV cache a major inference bottleneck. KV cache compaction can reduce this cost, but most prior methods assume a static context where future queries are known or can be approximated offline. Agents instead require online compaction: new information must be compressed before future relevance is known, using proxy queries cheap enough for the inference path. We study online compaction across token eviction (TE) and attention matching (AM), adapting both to compact agent turns and comparing cheap proxy sources such as boundary, repeat-prefill, and delayed future-generation queries. Experiments on BrowseComp-Plus and WideSearch show that immediate compaction often hurts performance, whereas delaying compaction to use the agent's future queries recovers much of the gap. Moreover, TE is often more robust than AM under imperfect proxies. Across models at different scales, TE preserves most of the accuracy while reducing KV cache by 80%, and can improve throughput over the no compaction baseline. These results position proxy-query selection as a core design choice for practical online KV compaction.",
+      "identifiers": [
+        "SemanticScholar:19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb"
+      ],
+      "semantic_scholar_id": "19aeb49c24b9850b5353bb2cfc41ea63c5ada3bb",
+      "canonical_id": "arXiv:2608.00902",
+      "arxiv_id": "2608.00902",
+      "authors": [
+        "Yu-Jian Liu",
+        "Jiabao Ji",
+        "Li An",
+        "Rohit Jain",
+        "Gungor Polatkan",
+        "Si-Yu Zhu",
+        "Shi-Yu Chang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 69,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct agent LLM inference memory and throughput optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Duration Aware Scheduling for ASR Serving Under Workload Drift",
+      "source_url": "https://arxiv.org/abs/2603.11273",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scheduling policies in large-scale Automatic Speech Recognition (ASR) serving pipelines play a key role in determining end-to-end (E2E) latency. Yet, widely used serving engines rely on first-come-first-served (FCFS) scheduling, which ignores variability in request duration and leads to head-of-line blocking under workload drift. We show that audio duration is an accurate proxy for job processing time in ASR models such as Whisper, and use this insight to enable duration-aware scheduling. We integrate two classical algorithms, Shortest Job First (SJF) and Highest Response Ratio Next (HRRN), into vLLM and evaluate them under realistic and drifted workloads. On LibriSpeech test-clean, compared to baseline, SJF reduces median E2E latency by up to $73\\%$ at high load, but increases $90$th-percentile tail latency by up to $97\\%$ due to starvation of long requests. HRRN addresses this trade-off: it reduces median E2E latency by up to $28\\%$ while bounding tail-latency degradation to at most $24\\%$. These gains persist under workload drift, with no throughput penalty and $<0.1$\\,ms scheduling overhead per request.",
+      "identifiers": [
+        "SemanticScholar:e9feabb00a186e7b611b16e42c0d47e2e5402e3c"
+      ],
+      "semantic_scholar_id": "e9feabb00a186e7b611b16e42c0d47e2e5402e3c",
+      "canonical_id": "arXiv:2603.11273",
+      "arxiv_id": "2603.11273",
+      "doi": "10.48550/arXiv.2603.11273",
+      "authors": [
+        "Darshan Makwana",
+        "Yash Jogi",
+        "Harsh Kotta",
+        "Aayush Kubba"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transferable model-serving scheduling and latency/throughput evaluation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2605.18165",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unlike autoregressive models, which generate one token at a time, dLLMs denoise a chunk of [MASK] tokens jointly and sample one or more tokens per step; despite enabling parallel decoding, this process incurs substantial computational cost due to the large chunk size of masked tokens. We observe that much of this cost is spent on repeatedly processing the preceding context and many [MASK] tokens with the same feature representations, indicating considerable computational redundancy. In this work, we revisit dLLM's redundancy from the perspective of [MASK] tokens. Through systematic analysis, we verify the redundancy of [MASK] tokens while revealing their critical role in providing structural information. Guided by these findings, we propose position-preserving [MASK] token compression and terminal-aware augmentation. By compressing redundant [MASK] computation, this approach accelerates decoding and further provides a natural extension toward context-folding-like long-context scaling under limited input-length constraints for full-sequence dLLMs such as LLaDA-8B-Instruct and LLaDA-1.5. Moreover, for block dLLMs such as LLaDA2.0-mini, it augments the context with a protected terminal [MASK] token to enhance generation quality with negligible overhead.",
+      "identifiers": [
+        "SemanticScholar:d49d42428f25d1a1b6e6bfe19a84cffcdda0b387"
+      ],
+      "semantic_scholar_id": "d49d42428f25d1a1b6e6bfe19a84cffcdda0b387",
+      "canonical_id": "arXiv:2605.18165",
+      "arxiv_id": "2605.18165",
+      "doi": "10.48550/arXiv.2605.18165",
+      "authors": [
+        "Jun-Yi Wu",
+        "Tianchen Zhao",
+        "Shao-Qiu Zhang",
+        "Lin-Feng Zhang",
+        "Guohao Dai",
+        "Yu Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct diffusion-LLM decoding-cost reduction and context extension are in scope.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Is a Draft Accepted? A Theory of Acceptance in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.30265",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates language model inference by using a fast drafter to propose candidate tokens that are then verified by a larger target model. Existing theory largely studies the stochastic, distribution-preserving setting, where the goal is to exactly sample from the target distribution. In contrast, many practical systems use greedy decoding, relaxed acceptance rules, or tree-based candidate sets, where success is governed by local ranking and threshold events rather than exact distributional equality. We develop a theory for these regimes. We identify that many common acceptance criteria have rejection regions that can be characterized as lower level sets of the target distribution. For these, we characterize the exact KL divergence required for rejection yielding exact certificates and sharp margin-based bounds for strict greedy decoding, additive and multiplicative relaxed acceptance, top-(m) relaxed criteria, and entropy-thresholded acceptance. We then extend the framework to greedy tree decoding, deriving exact and margin-only certificates for when the target greedy token remains covered by the drafter's top-(m) candidates. Finally, we evaluate the resulting certificates on Qwen3 models, showing that relaxed and tree-based criteria substantially enlarge the region of certified acceptance, especially on decoding steps with low target model distribution margin. These results complement existing distribution-preserving analyses of speculative decoding by characterizing the deterministic local acceptance events common in practical inference systems.",
+      "identifiers": [
+        "SemanticScholar:f5e8d9d5e7a74ca1ec6d082ec6cd5e00491450d5"
+      ],
+      "semantic_scholar_id": "f5e8d9d5e7a74ca1ec6d082ec6cd5e00491450d5",
+      "canonical_id": "arXiv:2606.30265",
+      "arxiv_id": "2606.30265",
+      "doi": "10.48550/arXiv.2606.30265",
+      "authors": [
+        "Aaryam Sharma"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 103,
+        "matched_prestigious_venue": null
+      },
+      "reason": "It directly analyzes acceptance behavior used in practical speculative inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-02e07e805815",
+    "round": "libimp-02e07e80581589a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-02e07e80581589a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-02e07e80581589a7-pre01.json",
+    "receipt": "sha256:a314f89d23ee6aa0465fbfe3fc33af6f074fd7f6804b4e973c5875aacd8c33ef"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-02e07e805815",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

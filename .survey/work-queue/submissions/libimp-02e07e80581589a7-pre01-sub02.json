@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization",
+      "source_url": "https://arxiv.org/abs/2406.05981",
+      "year": 2024,
+      "published": "2024-06-10",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 47,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown impressive performance on language tasks but face challenges when deployed on resource-constrained devices due to their extensive parameters and reliance on dense multiplications, resulting in high memory demands and latency bottlenecks. Shift-and-add reparameterization offers a promising solution by replacing costly multiplications with hardware-friendly primitives in both the attention and multi-layer perceptron (MLP) layers of an LLM. However, current reparameterization techniques require training from scratch or full parameter fine-tuning to restore accuracy, which is resource-intensive for LLMs. To address this, we propose accelerating pretrained LLMs through post-training shift-and-add reparameterization, creating efficient multiplication-free models, dubbed ShiftAddLLM. Specifically, we quantize each weight matrix into binary matrices paired with group-wise scaling factors. The associated multiplications are reparameterized into (1) shifts between activations and scaling factors and (2) queries and adds according to the binary matrices. To reduce accuracy loss, we present a multi-objective optimization method to minimize both weight and output activation reparameterization errors. Additionally, based on varying sensitivity across layers to reparameterization, we develop an automated bit allocation strategy to further reduce memory usage and latency. Experiments on five LLM families and eight tasks consistently validate the effectiveness of ShiftAddLLM, achieving average perplexity improvements of 5.6 and 22.7 points at comparable or lower latency compared to the most competitive quantized LLMs at 3 and 2 bits, respectively, and more than 80% memory and energy reductions over the original LLMs. Codes and models are available at https://github.com/GATECH-EIC/ShiftAddLLM.",
+      "identifiers": [
+        "SemanticScholar:63cf5220c962f8550cf7f08060fdd498c9925c73"
+      ],
+      "semantic_scholar_id": "63cf5220c962f8550cf7f08060fdd498c9925c73",
+      "canonical_id": "arXiv:2406.05981",
+      "arxiv_id": "2406.05981",
+      "doi": "10.48550/arXiv.2406.05981",
+      "authors": [
+        "Yichao Fu",
+        "Yi-Pin Guo",
+        "Souvik Kundu",
+        "Y. Lin",
+        "Huihong Shi",
+        "Amir Yazdanbakhsh",
+        "Hao-Ran You",
+        "Xiaofan Zhang",
+        "Wei Zhou"
+      ],
+      "priority": 57,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 47,
+        "citation_count": 47,
+        "total": 57,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 852,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Direct LLM inference acceleration and compression.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Speculate Deep and Accurate: Lossless and Training-Free Acceleration for Offloaded LLMs via Substitute Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2509.18344",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The immense model sizes of large language models (LLMs) challenge deployment on memory-limited consumer GPUs. Although model compression and parameter offloading are common strategies to address memory limitations, compression can degrade quality, and offloading maintains quality but suffers from slow inference. Speculative decoding presents a promising avenue to accelerate parameter offloading, utilizing a fast draft model to propose multiple draft tokens, which are then verified by the target LLM in parallel with a single forward pass. This method reduces the time-consuming data transfers in forward passes that involve offloaded weight transfers. Existing methods often rely on pretrained weights of the same family, but require additional training to align with custom-trained models. Moreover, approaches that involve draft model training usually yield only modest speedups. This limitation arises from insufficient alignment with the target model, preventing higher token acceptance lengths. To address these challenges and achieve greater speedups, we propose SubSpec, a plug-and-play method to accelerate parameter offloading that is lossless and training-free. SubSpec constructs a highly aligned draft model by generating low-bit quantized substitute layers from offloaded target LLM portions. Additionally, our method shares the remaining GPU-resident layers and the KV-Cache, further reducing memory overhead and enhance alignment. SubSpec achieves a high average acceptance length, delivering 9.1x speedup for Qwen2.5 7B on MT-Bench (8GB VRAM limit) and an average of 12.5x speedup for Qwen2.5 32B on popular generation benchmarks (24GB VRAM limit).",
+      "identifiers": [
+        "SemanticScholar:bcc076d0a88e2cab752402091c3aa62944a63d73"
+      ],
+      "semantic_scholar_id": "bcc076d0a88e2cab752402091c3aa62944a63d73",
+      "canonical_id": "arXiv:2509.18344",
+      "arxiv_id": "2509.18344",
+      "doi": "10.48550/arXiv.2509.18344",
+      "authors": [
+        "Pei-Shuo Wang",
+        "Jian-Jia Chen",
+        "Chun-Che Yang",
+        "Chi-Chih Chang",
+        "N. Huang",
+        "Mohamed S. Abdelfattah",
+        "Kai-Chiang Wu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Direct offloaded-LLM inference acceleration with reported multi-fold speedups.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RADAR: Accelerate Large Language Model Inference With RL-Based Dynamic Draft Trees",
+      "source_url": "https://arxiv.org/abs/2512.14069",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference with modern Large Language Models (LLMs) is expensive and slow, and speculative sampling has emerged as an effective solution to this problem. However, the number of calls to the draft model for generating candidate tokens in speculative sampling is a preset hyperparameter, lacking flexibility. To generate and utilize the candidate tokens more effectively, we propose RADAR, a novel speculative sampling method with RL-based dynamic draft trees. RADAR formulates the draft tree generation process as a Markov Decision Process (MDP) and employs offline reinforcement learning to train a prediction model, which enables real-time decisions on calls to the draft model, reducing redundant computations and further accelerating inference. Evaluations across three LLMs and four tasks show that RADAR achieves a speedup of 3.17x-4.82x over the auto-regressive decoding baseline. The code is available at https://github.com/minaduki-sora/RADAR.",
+      "identifiers": [
+        "SemanticScholar:5204418313ba244eb2027b9694930d26639093ba"
+      ],
+      "semantic_scholar_id": "5204418313ba244eb2027b9694930d26639093ba",
+      "canonical_id": "arXiv:2512.14069",
+      "arxiv_id": "2512.14069",
+      "authors": [
+        "Jun-Jie Ma",
+        "Jinlong Li",
+        "Jiachen Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct LLM inference acceleration via adaptive speculative decoding.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TAPS: Task Aware Proposal Distributions for Speculative Sampling",
+      "source_url": "https://arxiv.org/abs/2603.27027",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by letting a lightweight draft model propose future tokens that a larger target model then verifies in parallel. In practice, however, draft models are usually trained on broad generic corpora, which leaves it unclear how much speculative decoding quality depends on the draft training distribution. We study this question with lightweight HASS and EAGLE-2 drafters trained on MathInstruct, ShareGPT, and mixed-data variants, evaluated on MT-Bench, GSM8K, MATH-500, and SVAMP. Measured by acceptance length, task-specific training yields clear specialization: MathInstruct-trained drafts are strongest on reasoning benchmarks, while ShareGPT-trained drafts are strongest on MT-Bench. Mixed-data training improves robustness, but larger mixtures do not dominate across decoding temperatures. We also study how to combine specialized drafters at inference time. Naive checkpoint averaging performs poorly, whereas confidence-based routing improves over single-domain drafts and merged-tree verification yields the highest acceptance length overall for both backbones. Finally, confidence is a more useful routing signal than entropy: rejected tokens tend to have higher entropy, but confidence produces much clearer benchmark-level routing decisions. These results show that speculative decoding quality depends not only on draft architecture, but also on the match between draft training data and downstream workload, and that specialized drafters are better combined at inference time than in weight space.",
+      "identifiers": [
+        "SemanticScholar:586a0ba114143f0c6228502de2dfc9f0ab54cb93"
+      ],
+      "semantic_scholar_id": "586a0ba114143f0c6228502de2dfc9f0ab54cb93",
+      "canonical_id": "arXiv:2603.27027",
+      "arxiv_id": "2603.27027",
+      "doi": "10.48550/arXiv.2603.27027",
+      "authors": [
+        "M. Zbib",
+        "Mohammad Bazzi",
+        "Ammar Mohanna",
+        "Hasan Abed Al Kader Hammoud",
+        "Bernard Ghanem"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Directly studies inference-time speculative sampling efficiency and task-aware draft strategy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VisMMOE: Exploiting Visual-Expert Affinity for Efficient Visual-Language MoE Offloading",
+      "source_url": "https://arxiv.org/abs/2605.05899",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale vision-language mixture-of-experts (VL-MoE) models provide strong multimodal capability, but efficient deployment on memory-constrained platforms remains difficult. Existing MoE offloading systems are largely designed for text-centric workloads and become much less effective for visual-heavy inputs, where large numbers of visual tokens induce broader and less predictable expert accesses. We present VisMMoE, a VL-MoE offloading system built on a single systems insight: pruning redundant visual tokens can improve offloading not only by reducing computation, but also by reshaping expert demand. We refer to this effect as \\textit{visual-expert affinity}: token pruning makes expert accesses more concentrated within layers and more stable across layers, producing a smaller and more predictable expert working set. Guided by this insight, VisMMoE combines affinity-aware token compression, lookahead expert prediction, and cache/pipeline orchestration to improve expert locality and prefetch effectiveness under tight memory budgets. We implement VisMMoE on multiple frameworks and evaluate it on representative VL-MoE models and benchmarks. VisMMoE improves end-to-end inference performance by up to 2.68x and 1.61x, respectively, over strong baselines for today's VL-MoE deployments while maintaining competitive accuracy.",
+      "identifiers": [
+        "SemanticScholar:32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd"
+      ],
+      "semantic_scholar_id": "32b0262f7bb86e9865ca8070f6f2fc5e6d4cbbfd",
+      "canonical_id": "arXiv:2605.05899",
+      "arxiv_id": "2605.05899",
+      "doi": "10.48550/arXiv.2605.05899",
+      "authors": [
+        "Cheng Xu",
+        "Xiaofeng Hou",
+        "Jiacheng Liu",
+        "Chao Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct multimodal LLM inference/offloading efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-02e07e805815",
+    "round": "libimp-02e07e80581589a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-02e07e80581589a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-02e07e80581589a7-pre01.json",
+    "receipt": "sha256:a314f89d23ee6aa0465fbfe3fc33af6f074fd7f6804b4e973c5875aacd8c33ef"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-02e07e805815",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

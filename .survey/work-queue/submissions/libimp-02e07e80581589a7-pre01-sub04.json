@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2411.17426",
+      "year": 2024,
+      "published": "2024-11-26",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decoder-only models generate tokens autoregressively by caching key/value vectors, but as the cache grows, inference becomes memory-bound. To address this issue, we introduce CLOVER (Cross-Layer Orthogonal Vectors), a novel approach that treats pairs of attention layers as a set of low-rank decompositions. CLOVER applies Singular Value Decomposition (SVD) to the \\( Q \\)-\\( K \\) and \\( V \\)-\\( O \\) pairs within each attention head. The resulting singular values can either guide pruning or serve as trainable parameters for efficient fine-tuning of all orthogonal vectors. After pruning or fine-tuning, these values are reintegrated into the model without increasing its parameter count. We apply CLOVER to various models, including GPT-2 XL, DeepSeek-V2-Lite, Whisper-Large-v3, Stable Diffusion XL, and LLaMA-3.2-11B-Vision. Our results demonstrate that CLOVER significantly improves pruning efficiency. For instance, the perplexity of pruning 70\\% of the \\( Q \\)-\\( K \\) pairs in GPT-2 XL is similar to that of pruning just 8\\% with vanilla methods. Fine-tuning the singular values further results in a full-rank update, outperforming state-of-the-art methods (LoRA, DoRA, HiRA, and PiSSA) by 7.6\\%, 5.5\\%, 3.8\\%, and 0.7\\%, respectively, on eight commonsense tasks for LLaMA-2 7B.",
+      "identifiers": [
+        "SemanticScholar:ed4ad28a41988d495a3963dce4f0ff426e79bffa"
+      ],
+      "semantic_scholar_id": "ed4ad28a41988d495a3963dce4f0ff426e79bffa",
+      "canonical_id": "arXiv:2411.17426",
+      "arxiv_id": "2411.17426",
+      "authors": [
+        "Fan-Xu Meng",
+        "Pingzhi Tang",
+        "Fan Jiang",
+        "Mu-Han Zhang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 683,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Pruning and parameter-efficient tuning are directly relevant model inference efficiency techniques.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SelfJudge: Faster Speculative Decoding via Self-Supervised Judge Verification",
+      "source_url": "https://arxiv.org/abs/2510.02329",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by verifying candidate tokens from a draft model against a larger target model. Recent judge decoding boosts this process by relaxing verification criteria by accepting draft tokens that may exhibit minor discrepancies from target model output, but existing methods are restricted by their reliance on human annotations or tasks with verifiable ground truths, limiting generalizability across diverse NLP tasks. We propose SelfJudge, which trains judge verifiers via self-supervision of the target model. Our method measures semantic preservation by assessing whether token-substituted responses preserve the meaning of original responses, enabling automatic verifier training across diverse NLP tasks. Our experiments show SelfJudge achieves superior inference-accuracy trade-offs than judge decoding baselines, offering a broadly applicable solution for faster LLM inference.",
+      "identifiers": [
+        "SemanticScholar:d9373a64b94237ce06e81ad4917d83d0bb7a5b8e"
+      ],
+      "semantic_scholar_id": "d9373a64b94237ce06e81ad4917d83d0bb7a5b8e",
+      "canonical_id": "arXiv:2510.02329",
+      "arxiv_id": "2510.02329",
+      "doi": "10.48550/arXiv.2510.02329",
+      "authors": [
+        "Kanghoon Yoon",
+        "Minsub Kim",
+        "Sungjae Lee",
+        "Joonhyung Lee",
+        "Sunghyeon Woo",
+        "Yeonjun In",
+        "S. Kwon",
+        "Chanyoung Park",
+        "Dongsoo Lee"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Direct speculative-decoding verification and inference speed/quality tradeoff.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "S2D: Sorted Speculative Decoding For More Efficient Deployment of Nested Large Language Models",
+      "source_url": "https://arxiv.org/abs/2407.01955",
+      "year": 2024,
+      "published": "2024-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deployment of autoregressive large language models (LLMs) is costly, and as these models increase in size, the associated costs will become even more considerable. Consequently, different methods have been proposed to accelerate the token generation process and reduce costs. Speculative decoding (SD) is among the most promising approaches to speed up the LLM decoding process by verifying multiple tokens in parallel and using an auxiliary smaller draft model to generate the possible tokens. In SD, usually, one draft model is used to serve a specific target model; however, in practice, LLMs are diverse, and we might need to deal with many target models or more than one target model simultaneously. In this scenario, it is not clear which draft model should be used for which target model, and searching among different draft models or training customized draft models can further increase deployment costs. In this paper, we first introduce a novel multi-target scenario for the deployment of draft models for faster inference. Then, we present a novel, more efficient sorted speculative decoding mechanism that outperforms regular baselines in multi-target settings. We evaluated our method on Spec-Bench in different settings, including base models such as Vicuna 7B, 13B, and LLama Chat 70B. Our results suggest that our draft models perform better than baselines for multiple target models at the same time.",
+      "identifiers": [
+        "SemanticScholar:f2347083a18dbdc47f403d427cc66564668276ff"
+      ],
+      "semantic_scholar_id": "f2347083a18dbdc47f403d427cc66564668276ff",
+      "canonical_id": "arXiv:2407.01955",
+      "arxiv_id": "2407.01955",
+      "doi": "10.48550/arXiv.2407.01955",
+      "authors": [
+        "Parsa Kavehzadeh",
+        "Mohammadreza Pourreza",
+        "Mojtaba Valipour",
+        "Tinashu Zhu",
+        "H. Bai",
+        "Ali Ghodsi",
+        "Boxing Chen",
+        "Mehdi Rezagholizadeh"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 830,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Directly targets multi-model deployment and faster LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-02e07e805815",
+    "round": "libimp-02e07e80581589a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 18,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-02e07e80581589a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-02e07e80581589a7-pre01.json",
+    "receipt": "sha256:a314f89d23ee6aa0465fbfe3fc33af6f074fd7f6804b4e973c5875aacd8c33ef"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-02e07e805815",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
