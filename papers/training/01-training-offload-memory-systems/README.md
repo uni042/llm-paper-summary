@@ -51,8 +51,8 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System](2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md)**  
-  実装：[✓](https://github.com/AIS-SNU/Smart-Infinity) ・ リポジトリ内被引用：14  
-  SSD上のパラメータと最適化状態をCPU・GPUへ毎回戻さず、FPGA搭載SmartSSD内でAdam更新を実行して、PCIeを通る状態転送量と学習のI/O待ちを減らす方式。
+  実装：[✓](https://github.com/AIS-SNU/smart-infinity) ・ リポジトリ内被引用：14  
+  Smart-Infinityは、GPUメモリに収まらない大規模言語モデルをSSDへ退避しながら学習する際、最適化器状態をSSDからCPUへ読み出して再び書き戻す通信が実行時間を支配する問題を扱う。
 
 - **2024-08 · [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)**  
   実装：[✓](https://github.com/K-Wu/FlashTrain) ・ リポジトリ内被引用：2  
@@ -71,7 +71,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 5年前（2021-11〜2022-10）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：50  
   ZeRO-Infinityは、ゼロ冗長最適化器（Zero Redundancy Optimizer、ZeRO）の第3段階で全モデル状態をデータ並列プロセス間に分割する設計を、GPUの高帯域メモリだけでなくCPUの主記憶、さらに不揮発性メモリ接続のSSD（NVMe SSD）へ拡張する。
 
 ### 7年前（2019-11〜2020-10）

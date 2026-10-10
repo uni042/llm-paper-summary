@@ -49,6 +49,8 @@ quality_body_chars: 5517
 quality_method_chars: 1698
 quality_eval_chars: 1770
 quality_limitation_chars: 592
+last_audited: null
+audit_version: 0
 ---
 
 # DistillCache：出力分布の保存を学習するKVキャッシュ適応削除
