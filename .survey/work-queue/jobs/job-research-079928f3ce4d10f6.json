@@ -35,10 +35,15 @@
   "selection_reason": "RAGで取得文書をLM入力前に圧縮し、入力token数とencoding計算量を直接削減する。本文で圧縮率6%まで、学習済みcompressorではLMで25%、QAで5–10%まで圧縮しつつ性能低下を抑えるため、推論時context圧縮として直接対象。",
   "semantic_scholar_id": "23af54b82c951317f1fc1841164d8a441a2d8120",
   "source_url": "https://arxiv.org/abs/2310.04408",
-  "status": "ready",
+  "status": "superseded",
   "title": "RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-10T18:52:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md",
+  "represented_canonical_id": "arXiv:2310.04408",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

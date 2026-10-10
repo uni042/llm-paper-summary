@@ -41,8 +41,8 @@
   AceSpecは端末–クラウド投機的復号で棄却分岐をWAN待ち中に先回り生成して状態キャッシュへ保存し、棄却後の再下書きと往復通信を減らす方式。
 
 - **2026-08 · [FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving](2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  FlashDriveは四段階をアルゴリズム・システム協調設計で同時に短縮する。Alpamayo 1.5-10Bでは単一GPUのエンドツーエンド遅延を717ミリ秒から151ミリ秒へ4.7倍短縮し、制御周波数を1.4Hzから6.6Hzへ高めた。
+  実装：[✓](https://github.com/z-lab/flashdrive) ・ リポジトリ内被引用：0  
+  FlashDriveは、映像と鍵・値キャッシュ（KVキャッシュ）の時系列再利用、拡散モデルによる複数推論トークンの投機的生成、軌跡生成の中間速度再利用、CUDA実行グラフと演算融合、重み4ビット・活性値8ビット量子化を組み合わせる。最終構成では716.9→151.4ミリ秒、約4.7倍の実測高速化となる。
 
 - **2026-07 · [Transition-Aware Backend Dispatch for Edge LLM Inference](2026-2607.17415-transition-aware-backend-dispatch-for-edge-llm-inference.md)**  
   実装：[✓](https://anonymous.4open.science/r/power_aware_edge_inference_public-3B71/README.md) ・ リポジトリ内被引用：0  
