@@ -1271,7 +1271,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：218  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：219  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1283,7 +1283,7 @@
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：129  
+  実装：✓ ・ リポジトリ内被引用：130  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -1339,11 +1339,11 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2022-12 · [The case for 4-bit precision: k-bit Inference Scaling Laws](2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   量子化では、1パラメータ当たりのビット数を下げるほど同じ重みメモリへ大きなモデルを置ける。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
-  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：18  
+  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：19  
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
@@ -1362,13 +1362,13 @@
   実装：[✓](https://github.com/liyucheng09/Selective_Context) ・ リポジトリ内被引用：16  
   長い文書や会話を大規模言語モデル（LLM）へ入力すると、初回入力処理と鍵・値キャッシュに多くの時間・メモリが必要になる。Selective Contextは、下流モデルの構造や重みを変更する代わりに、入力文脈に含まれる予測しやすい語句を事前に削り、残った自然言語テキストだけを渡す。
 
+- **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
+  実装：[✓](https://github.com/HazyResearch/H3) ・ リポジトリ内被引用：16  
+  本論文は、状態空間モデル（state space モデル; SSM）が長系列を効率的に処理できるにもかかわらず、言語モデリングでは注意機構（注意機構）を使う変換器（Transformer）に劣る理由を二つの観点から調べる。
+
 - **2023-10 · [ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models](2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   大規模言語モデルは推論時に膨大な重みを読み出す。特に小さなバッチでの一トークンずつの生成では、演算器のピーク性能より高帯域メモリからの重み移動が制約になることが多い。滑らかな活性化関数であるSiLUやGELUは、負の入力でも通常は厳密なゼロを出さないため、出力が小さくても対応する重みの読み出しを機械的に省略しにくい。
-
-- **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/H3) ・ リポジトリ内被引用：15  
-  本論文は、状態空間モデル（state space モデル; SSM）が長系列を効率的に処理できるにもかかわらず、言語モデリングでは注意機構（注意機構）を使う変換器（Transformer）に劣る理由を二つの観点から調べる。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
   実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：14  
@@ -1457,11 +1457,11 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：301  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：303  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：97  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：98  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
@@ -1476,6 +1476,10 @@
   実装：[✓](https://github.com/google-research/google-research/tree/master/memory_efficient_attention) ・ リポジトリ内被引用：20  
   ソフトマックス注意の最大値、指数和、値の重み付き和を逐次更新し、全注意行列を実体化せず同じ数学的出力を得る。理論上の省メモリ算法と、TPU向けのチャンク並列実装、再計算を使った微分を示す。
 
+- **2022-06 · [Long Range Language Modeling via Gated State Spaces](2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  対象：自己回帰言語モデルの状態空間層をTPUで効率よく学習し、学習系列長を超える長距離依存を扱う研究。学習速度と推論速度の主張を分けて読む。一次論文は2022年7月2日改訂の第3版。
+
 - **2022-02 · [Transformer Quality in Linear Time](2022-2202.10447-transformer-quality-in-linear-time.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   FLASHは、注意計算を系列長に対して線形に近づける方式が、理論計算量を減らしても実機で速くならず、強いTransformerを比較対象にすると品質が落ちるという問題に取り組む。
@@ -1483,10 +1487,6 @@
 - **2021-12 · [LongT5: Efficient Text-To-Text Transformer for Long Sequences](2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md)**  
   実装：[✓](https://github.com/google-research/longt5) ・ リポジトリ内被引用：8  
   T5のエンコーダを長文向けに置き換え、各層でブロック集約した大域トークンを一時的に作る注意機構を提案する。重要文生成による事前学習と組み合わせ、要約・質問応答で長い入力の情報を利用する。論文の主な評価はモデル品質と学習時の計算費用であり、デコード専用の推論サービング実験とは区別する。
-
-- **2022-06 · [Long Range Language Modeling via Gated State Spaces](2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  対象：自己回帰言語モデルの状態空間層をTPUで効率よく学習し、学習系列長を超える長距離依存を扱う研究。学習速度と推論速度の主張を分けて読む。一次論文は2022年7月2日改訂の第3版。
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
@@ -1513,7 +1513,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：61  
+  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：63  
   Reformerは、長系列Transformerで支配的になる二つの資源問題を別々の機構で解く。
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
@@ -1559,7 +1559,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：102  
+  実装：✓ ・ リポジトリ内被引用：104  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [ブロック並列 Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
