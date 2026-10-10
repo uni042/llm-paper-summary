@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T04:48:11.689320+00:00",
+  "generated_at": "2026-10-10T05:46:56.206241+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 136,
+  "count": 132,
   "worker_counts": {
-    "scheduled-chat-00": 45,
-    "scheduled-chat-30": 45,
-    "scheduled-chat-45": 46
+    "scheduled-chat-00": 44,
+    "scheduled-chat-30": 44,
+    "scheduled-chat-45": 44
   },
   "entries": [
     {
@@ -503,7 +503,7 @@
       "file_bytes": 12769,
       "source_sha256": "e81cc9278c122b977624f857f7f254ebd81d77cb062dfd021c3f052c7e0bbca6",
       "source_git_blob_sha": "a50f8f69ff8b3b78d55497b25b5aeef5efdeeda7",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.822569,
@@ -535,28 +535,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 91 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md",
-      "canonical_id": "arXiv:2506.10848",
-      "title": "Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles",
-      "file_bytes": 12811,
-      "source_sha256": "d0c6b556edb815ab1bc0884a0d7f03ee8bdaaa1161f58ecbdcb9a8ea6a321075",
-      "source_git_blob_sha": "53a9869b6fb1909b530cc2a6f787f58d96895838",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.93906,
-      "quality_metrics": {
-        "body_chars": 2813,
-        "method_chars": 847,
-        "evaluation_chars": 155,
-        "limitation_chars": 296
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 155 < 500"
       ],
       "warnings": []
     },
@@ -1051,28 +1029,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md",
-      "canonical_id": "arXiv:2510.27656",
-      "title": "fabric-lib: RDMA Point-to-Point Communication for LLM Systems",
-      "file_bytes": 13098,
-      "source_sha256": "7f4c110c4dfcc2ac33d36b1e3ae3da3ee593b70160a7fc6f6d10fe6f58c03301",
-      "source_git_blob_sha": "7638c93e27cc43e7ef44e767b7209ee4b1dcd263",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.951783,
-      "quality_metrics": {
-        "body_chars": 3004,
-        "method_chars": 1513,
-        "evaluation_chars": 0,
-        "limitation_chars": 254
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md",
       "canonical_id": "arXiv:2607.07862",
       "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems",
@@ -1269,30 +1225,6 @@
       ],
       "warnings": [
         "日本語比率 75.7% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md",
-      "canonical_id": "arXiv:2401.14361",
-      "title": "MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache",
-      "file_bytes": 13150,
-      "source_sha256": "55e3aee17f40c8b6d65abb2c4896a0f8c5dcb5699a33b53ac6d1b0fa7297d1b5",
-      "source_git_blob_sha": "96497fb83b7c0665a759d84b7ab65cca35033249",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.77704,
-      "quality_metrics": {
-        "body_chars": 3234,
-        "method_chars": 1684,
-        "evaluation_chars": 1003,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 77.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.7% < 警告基準 80%"
       ]
     },
     {
@@ -1936,26 +1868,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 0 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
-      "canonical_id": "arXiv:2402.14800",
-      "title": "Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models",
-      "file_bytes": 13780,
-      "source_sha256": "54b85a56cde5ee6fb688357dbcab8ff7ce7ebd701566d70de7729701f99fc8d1",
-      "source_git_blob_sha": "89286501500d490e6b7c47627e4d3ae3d5b08853",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.897399,
-      "quality_metrics": {
-        "body_chars": 2922,
-        "method_chars": 1298,
-        "evaluation_chars": 997,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
