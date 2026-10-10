@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8dd1d3be0b23e00a0e3ac408bb07f998e4f23f649f493563d80e203b7019fd52",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bd09f6313b02--libfile_fe0509753bf48191918f72e2987a7cfd--2024-2407.18921-mobile-edge-intelligence-llm-survey-quality-heading-repair-20261011-0345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2407.18921",
+  "worker_completed_at": "2026-10-11T03:53:18+09:00",
+  "worker_run_key": "20261011-0345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5391,
+    "body_paragraphs": 24,
+    "method_chars": 2848,
+    "method_paragraphs": 12,
+    "evaluation_chars": 190,
+    "limitation_chars": 707,
+    "insufficiency_flags": [
+      "評価説明量 190 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 190 < 500"
+  ],
+  "processed_at": "2026-10-10T19:56:08+00:00"
+}
