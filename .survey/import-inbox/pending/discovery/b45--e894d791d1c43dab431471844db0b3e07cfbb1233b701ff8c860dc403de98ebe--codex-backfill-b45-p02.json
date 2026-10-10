@@ -1,0 +1,427 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-b45-p02",
+  "reference_main_sha": "49b0db5f48a3423b3a8e7ef85341001ea6a83a88",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.09512",
+      "identity_tokens": [
+        "arxiv:2310.09512"
+      ],
+      "title": "Attentive Multi-Layer Perceptron for Non-autoregressive Generation",
+      "reason": "The AMLP-based non-autoregressive generation architecture changes quadratic sequence cost to linear time/space and reduces memory cost for long generation.",
+      "source_url": "https://arxiv.org/abs/2310.09512",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.01261",
+      "identity_tokens": [
+        "arxiv:2508.01261"
+      ],
+      "title": "Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models",
+      "reason": "Combining expert routing with latent attention reduces KV-cache memory and accelerates language-model inference in the reported experiments.",
+      "source_url": "https://arxiv.org/abs/2508.01261",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.09342",
+      "identity_tokens": [
+        "arxiv:2506.09342"
+      ],
+      "title": "Latent Multi-Head Attention for Small Language Models",
+      "reason": "The abstract measures lower KV-cache memory and faster inference for compact language models while preserving quality.",
+      "source_url": "https://arxiv.org/abs/2506.09342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AANN66429.2025.11257655",
+      "identity_tokens": [
+        "doi:10.1109/aann66429.2025.11257655"
+      ],
+      "title": "Self-Learning Logarithm with Dual Shift-ln-Log2: An Activation Quantization for Large Language Models",
+      "reason": "The candidate title claims activation quantization for LLMs, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1109/AANN66429.2025.11257655. Exact retrieval failure: URL https://doi.org/10.1109/AANN66429.2025.11257655 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1109/AANN66429.2025.11257655 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "source_url": "https://doi.org/10.1109/AANN66429.2025.11257655",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:24Z",
+      "last_checked_at": "2026-10-10T06:21:26Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14614",
+      "identity_tokens": [
+        "arXiv:2510.14614"
+      ],
+      "title": "First Attentions Last: Better Exploiting First Attentions for Efficient Transformer Training",
+      "reason": "The primary abstract measures distributed training time and training throughput for GPT-style transformers; it presents a training architecture and does not report inference or serving improvements.",
+      "source_url": "https://arxiv.org/abs/2510.14614",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:28:22Z",
+      "last_checked_at": "2026-10-10T06:28:25Z",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.16340",
+      "identity_tokens": [
+        "arxiv:2305.16340"
+      ],
+      "title": "Segmented Recurrent Transformer: An Efficient Sequence-to-Sequence Model",
+      "reason": "Segmented/recurrent attention and lightweight recurrent neurons reduce computation and memory for sequence-to-sequence Transformer modeling.",
+      "source_url": "https://arxiv.org/abs/2305.16340",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12059",
+      "identity_tokens": [
+        "arxiv:2406.12059"
+      ],
+      "title": "A Scalable and Effective Alternative to Graph Transformers",
+      "reason": "The abstract's efficiency result is specifically for graph representation learning/graph transformers, without an LLM inference or serving connection.",
+      "source_url": "https://arxiv.org/abs/2406.12059",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.15096",
+      "identity_tokens": [
+        "arxiv:2402.15096"
+      ],
+      "title": "Multimodal Transformer with a Low-Computational-Cost Guarantee",
+      "reason": "LoCoMT directly reduces inference/training computational cost in multimodal Transformer models while retaining benchmark quality.",
+      "source_url": "https://arxiv.org/abs/2402.15096",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2111.15588",
+      "identity_tokens": [
+        "arxiv:2111.15588"
+      ],
+      "title": "SimpleTRON: Simple Transformer with O(N) Complexity",
+      "reason": "The method removes quadratic attention cost and can reuse pretrained language-model parameters, linking linear-time architecture to efficient Transformer inference.",
+      "source_url": "https://arxiv.org/abs/2111.15588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.63646/jaiaa.2025.030401",
+      "identity_tokens": [
+        "doi:10.63646/jaiaa.2025.030401"
+      ],
+      "title": "Operationalizing Green AI Analytics: A Reproducible Framework for Monitoring Model Complexity Across Classical and Deep Learning",
+      "reason": "The candidate title describes a Green AI complexity-monitoring framework, but no primary abstract was retrievable. Primary URL: https://doi.org/10.63646/jaiaa.2025.030401. Exact retrieval failure: URL https://doi.org/10.63646/jaiaa.2025.030401 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.63646/jaiaa.2025.030401 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "source_url": "https://doi.org/10.63646/jaiaa.2025.030401",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:24Z",
+      "last_checked_at": "2026-10-10T06:21:26Z",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.06617",
+      "identity_tokens": [
+        "arxiv:2508.06617"
+      ],
+      "title": "Generalizing Scaling Laws for Dense and Sparse Large Language Models",
+      "reason": "This paper estimates pretraining resource/model-size tradeoffs for dense and sparse LLMs, but does not establish an inference-time efficiency method.",
+      "source_url": "https://arxiv.org/abs/2508.06617",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2110.04711",
+      "identity_tokens": [
+        "arxiv:2110.04711"
+      ],
+      "title": "SuperShaper: Task-Agnostic Super Pre-training of BERT Models with Variable Hidden Dimensions",
+      "reason": "Variable-size BERT subnetworks let deployment fit accuracy and model-size/resource constraints across devices, supporting efficient NLP model deployment.",
+      "source_url": "https://arxiv.org/abs/2110.04711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.07788",
+      "identity_tokens": [
+        "arXiv:2405.07788"
+      ],
+      "title": "DEPTH: Discourse Education through Pre-Training Hierarchically",
+      "reason": "The primary abstract targets discourse-level language understanding through a pretraining objective and reports task-learning quality; it does not describe an inference efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2405.07788",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:28:22Z",
+      "last_checked_at": "2026-10-10T06:28:25Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.09613",
+      "identity_tokens": [
+        "arxiv:2506.09613"
+      ],
+      "title": "SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot",
+      "reason": "One-shot structured-state-space pruning reduces Mamba-based LLM parameters for deployment while preserving the abstract's reported zero-shot accuracy.",
+      "source_url": "https://arxiv.org/abs/2506.09613",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:38Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.05302",
+      "identity_tokens": [
+        "arXiv:2407.05302"
+      ],
+      "title": "Mamba Hawkes Process",
+      "reason": "The primary abstract is a Mamba-based temporal point-process modeling application; its task scope is event-sequence prediction rather than LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2407.05302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:28:22Z",
+      "last_checked_at": "2026-10-10T06:28:25Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.14027",
+      "identity_tokens": [
+        "arxiv:2510.14027"
+      ],
+      "title": "Context-Selective State Space Models: Feedback is All You Need",
+      "reason": "The paper proposes a compact, scalable sequence model related to linear-complexity SSMs, but its abstract lacks an LLM inference/serving evaluation.",
+      "source_url": "https://arxiv.org/abs/2510.14027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:50Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/UBMK67458.2025.11206955",
+      "identity_tokens": [
+        "doi:10.1109/ubmk67458.2025.11206955"
+      ],
+      "title": "Efficient Long-Context Fine-Tuning of LLaMA 2 7B with QLoRA, Dynamic RoPE, and FlashAttention",
+      "reason": "The candidate title claims efficient long-context LLaMA fine-tuning, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1109/UBMK67458.2025.11206955. Exact retrieval failure: URL https://doi.org/10.1109/UBMK67458.2025.11206955 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1109/UBMK67458.2025.11206955 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "source_url": "https://doi.org/10.1109/UBMK67458.2025.11206955",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:24Z",
+      "last_checked_at": "2026-10-10T06:21:26Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2301.09262",
+      "identity_tokens": [
+        "arxiv:2301.09262"
+      ],
+      "title": "MEMO : Accelerating Transformers with Memoization on Big Memory Systems",
+      "reason": "Memoization of repeated attention computation reduces Transformer inference latency in the reported tests without requiring architecture changes.",
+      "source_url": "https://arxiv.org/abs/2301.09262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:50Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.06465",
+      "identity_tokens": [
+        "arXiv:2411.06465"
+      ],
+      "title": "Accelerating Large Language Model Training with 4D Parallelism and Memory Consumption Estimator",
+      "reason": "Although the paper concerns LLMs, its proposed memory estimator and 4D parallelism optimize distributed training configuration; the abstract does not establish an inference or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2411.06465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:28:31Z",
+      "last_checked_at": "2026-10-10T06:28:33Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2210.15541",
+      "identity_tokens": [
+        "arxiv:2210.15541"
+      ],
+      "title": "Transformers meet Stochastic Block Models: Attention with Data-Adaptive Sparsity and Cost",
+      "reason": "Data-adaptive sparse attention makes Transformer cost scale with selected edges and improves efficiency on sequence benchmarks.",
+      "source_url": "https://arxiv.org/abs/2210.15541",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:50Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
