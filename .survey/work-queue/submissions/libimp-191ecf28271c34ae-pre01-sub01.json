@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HunyuanOCR Technical Report",
+      "source_url": "https://arxiv.org/abs/2511.19575",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents HunyuanOCR, a commercial-grade, open-source, and lightweight (1B parameters) Vision-Language Model (VLM) dedicated to OCR tasks. The architecture comprises a Native Vision Transformer (ViT) and a lightweight LLM connected via an MLP adapter. HunyuanOCR demonstrates superior performance, outperforming commercial APIs, traditional pipelines, and larger models (e.g., Qwen3-VL-4B). Specifically, it surpasses current public solutions in perception tasks (Text Spotting, Parsing) and excels in semantic tasks (IE, Text Image Translation), securing first place in the ICDAR 2025 DIMT Challenge (Small Model Track). Furthermore, it achieves state-of-the-art (SOTA) results on OCRBench among VLMs with fewer than 3B parameters. HunyuanOCR achieves breakthroughs in three key aspects: 1) Unifying Versatility and Efficiency: We implement comprehensive support for core capabilities including spotting, parsing, IE, VQA, and translation within a lightweight framework. This addresses the limitations of narrow\"OCR expert models\"and inefficient\"General VLMs\". 2) Streamlined End-to-End Architecture: Adopting a pure end-to-end paradigm eliminates dependencies on pre-processing modules (e.g., layout analysis). This fundamentally resolves error propagation common in traditional pipelines and simplifies system deployment. 3) Data-Driven and RL Strategies: We confirm the critical role of high-quality data and, for the first time in the industry, demonstrate that Reinforcement Learning (RL) strategies yield significant performance gains in OCR tasks. HunyuanOCR is officially open-sourced on HuggingFace. We also provide a high-performance deployment solution based on vLLM, placing its production efficiency in the top tier. We hope this model will advance frontier research and provide a solid foundation for industrial applications.",
+      "identifiers": [
+        "SemanticScholar:be83b24d5af4c70bdcf2dccba2f75a08f64eb5cb"
+      ],
+      "semantic_scholar_id": "be83b24d5af4c70bdcf2dccba2f75a08f64eb5cb",
+      "canonical_id": "arXiv:2511.19575",
+      "arxiv_id": "2511.19575",
+      "doi": "10.48550/arXiv.2511.19575",
+      "authors": [
+        "HunyuanWorld Team",
+        "Pengyuan Lyu",
+        "Xingyu Wan",
+        "Gengluo Li",
+        "Shangpin Peng",
+        "Wei-Nong Wang",
+        "Liang Wu",
+        "Hua-Wen Shen",
+        "Yu ZHOU",
+        "Canhui Tang",
+        "Qi Yang",
+        "Qiming Peng",
+        "Bin Luo",
+        "Hower Yang",
+        "Xin-Song Zhang",
+        "Jin-Nian Zhang",
+        "Hou-Wen Peng",
+        "Hong-Ming Yang",
+        "Sen-Hao Xie",
+        "Long-Sha Zhou",
+        "Ge Pei",
+        "Bin Wu",
+        "Rui Yan",
+        "Kan Wu",
+        "Jie Yang",
+        "Bo-Chao Wang",
+        "Kai Liu",
+        "Jian-Chen Zhu",
+        "Jie Jiang",
+        "Linus",
+        "Han Hu",
+        "Cheng-Quan Zhang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 320,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HunyuanOCR is a lightweight 1B-parameter VLM with an end-to-end architecture and a vLLM deployment solution described as high-performance, directly relevant to efficient multimodal inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Query-based Cross-Modal Projector Bolstering Mamba Multimodal LLM",
+      "source_url": "https://arxiv.org/abs/2606.04719",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer's quadratic complexity with input length imposes an unsustainable computational load on large language models (LLMs). In contrast, the Selective Scan Structured State-Space Model, or Mamba, addresses this computational challenge effectively. This paper explores a query-based cross-modal projector designed to bolster Mamba's efficiency for vision-language modeling by compressing visual tokens based on input through the cross-attention mechanism. This innovative projector also removes the need for manually designing the 2D scan order of original image features when converting them into an input sequence for Mamba LLM. Experimental results across various vision-language understanding benchmarks show that the proposed cross-modal projector enhances Mamba-based multimodal LLMs, boosting both performance and throughput.",
+      "identifiers": [
+        "SemanticScholar:e89adf833d7b99be2fd1437d06b23a288ea2dd1f"
+      ],
+      "semantic_scholar_id": "e89adf833d7b99be2fd1437d06b23a288ea2dd1f",
+      "canonical_id": "arXiv:2606.04719",
+      "arxiv_id": "2606.04719",
+      "doi": "10.18653/v1/2024.findings-emnlp.827",
+      "authors": [
+        "Soohwan Eom",
+        "Jay Shim",
+        "Gwanhyeong Koo",
+        "H. Na",
+        "Mark A. Hasegawa-Johnson",
+        "Sungwoong Kim",
+        "C. D. Yoo"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "The query-based cross-modal projector compresses visual tokens for a Mamba multimodal LLM and the primary abstract reports increased throughput as well as performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-191ecf28271c",
+    "round": "libimp-191ecf28271c34ae-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-191ecf28271c34ae-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-191ecf28271c34ae-pre01.json",
+    "receipt": "sha256:03e63fae308980537a6210a6421a96f6e0a5187947ac974ff25570665a1f76be"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-191ecf28271c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
