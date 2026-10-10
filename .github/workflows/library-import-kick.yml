@@ -27,3 +27,8 @@ jobs:
             --method POST \
             "repos/${GITHUB_REPOSITORY}/actions/workflows/library-import.yml/dispatches" \
             -f ref=main
+          # Explicit recovery kick covers both independent Library queues.
+          gh api \
+            --method POST \
+            "repos/${GITHUB_REPOSITORY}/actions/workflows/library-discovery-intake.yml/dispatches" \
+            -f ref=main
