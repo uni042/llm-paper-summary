@@ -88,7 +88,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
-  SamuLLMは、複数のLLMから構成されるオフライン推論アプリケーションを単一ノード複数GPUで実行するとき、「どのモデルを同時に走らせるか」と「各モデルへデータ並列（データ 並列方式; DP）とテンソル並列（テンソル 並列方式; TP）を何度ずつ割り当てるか」を共同最適化するフレームワークである。
+  本研究が対象とするのは、あらかじめ処理する要求集合が分かっているオフライン推論であり、複数の大規模言語モデル（LLM）を一つのアプリケーション内で使う状況である。単一モデルの要求順序を最適化するだけでは、モデル間のGPU分配を決められない。SamuLLMはこれらを一つの計画問題として扱う。
 
 ### 3年前（2023-11〜2024-10）
 

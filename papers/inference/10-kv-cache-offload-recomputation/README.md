@@ -174,7 +174,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2026-04 · [Predictive Multi-Tier Memory Management for KV Cache in Large-Scale GPU Inference](2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  本研究は、大規模言語モデル推論のKVキャッシュをGPU HBMだけへ閉じ込めず、注意方式に応じた正確な容量計算と六階層メモリへの動的配置を統合する。
+  注意機構ごとの鍵・値キャッシュ（KV キャッシュ）容量を正しく見積もり、GPUから遠隔ストレージまでの6階層へ再利用予測で配置する。重要なのは、部品検証の実測と64 GPUクラスタの解析的な性能投影を明確に分けることである。
 
 - **2026-04 · [ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache](2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
