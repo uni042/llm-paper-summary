@@ -12,13 +12,13 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
-- **2025-11 · [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)**  
-  実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：2  
-  DynaExqは、専門家混合モデル（Mixture of エキスパート; MoE）を単一GPUの限られた高帯域メモリへ載せるため、専門家ごとの量子化精度を推論中に変更するシステムである。論文はQwen3-30B-A3B、Qwen3-80B-A3B、Phi-3.5-MoEをRTX A6000 48GBの単一GPUで測定した。
-
 - **2026-07 · [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  PagedWeightは、KVキャッシュで空いたVRAMが減ると品質感度の低い専門家重みからビット幅を下げ、余裕が戻れば復元して、長文サービングの容量競合を和らげる。
+  PagedWeightは、専門家混合（Mixture-of-Experts、MoE）モデルのサービングで、専門家重みと鍵・値（KV）キャッシュが同じGPUメモリを奪い合う問題を、重み側の動的な精度変更で緩和するシステムである。
+
+- **2025-11 · [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)**  
+  実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：1  
+  DynaExqは、専門家混合モデル（Mixture of エキスパート; MoE）を単一GPUの限られた高帯域メモリへ載せるため、専門家ごとの量子化精度を推論中に変更するシステムである。論文はQwen3-30B-A3B、Qwen3-80B-A3B、Phi-3.5-MoEをRTX A6000 48GBの単一GPUで測定した。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
@@ -41,7 +41,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルは、トークンごとに少数の専門家だけを実行するため活性パラメータ数を抑えられるが、専門家の総重みは大きく、GPUメモリの負担が残る。重み量子化は保存容量を削減する一方、各層の出力を少し変化させる。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
-  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：10  
   MxMoEは、混合専門家モデル（Mixture of エキスパート; MoE）の推論において、モデルの重みを小さくするだけでなく、実際にGPU上で計算が速くなる量子化配置を選ぶ研究である。専門家演算の処理量は16ビット基準に対して、512トークン条件で1.6～2.7倍、8192トークン条件で3.0～3.4倍となった。
 
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
@@ -53,7 +53,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MoEQuantは、較正例を低頻度専門家へ補い、ルータ寄与の大きいトークンを重く量子化評価して、同じ低ビットでも専門家出力の品質劣化を抑える。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
-  実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：4  
   密モデル向けの事後学習量子化（Post-学習 量子化; PTQ）をMoEへそのまま持ち込むと、専門家ごとに異なる活性外れ値、量子化後のルータTop-kの入れ替わり、ほとんど選ばれない専門家の校正データ不足が重なる。EAQuantはこれを一つの量子化誤差として扱わず、専門家認識平滑化、ルーティング整合、専門家単位の校正データ均衡の三機構に分解して補正する。
 
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
@@ -71,11 +71,11 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：36  
   MC-MoEは、専門家ごとの混合精度で保存重みを圧縮し、トークンごとに寄与の小さい専門家を動的枝刈りして、容量と実行FLOPsを別々に減らす。
 
 - **2024-06 · [Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：18  
   このベンチマークは、MoEの平均ビット予算を専門家頻度・ブロック位置・線形層へ割り当てて比較し、モデル別に量子化誤差へ効く保護対象を測定する。
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  
@@ -89,7 +89,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness](2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：24  
   MoQEは、モデル容量の大半を占める専門家FFNだけを2〜8ビット化し、注意・共有FFNは高精度に残して、品質を守りながら保存量と重み帯域を減らす。
 
 - **2023-10 · [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)**  

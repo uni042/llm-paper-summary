@@ -147,6 +147,8 @@ references:
 - canonical_id: DOI:10.5555/3600237.3600268
 references_checked_at: '2026-09-20'
 references_source: arxiv-html-reference-section
+last_audited: null
+audit_version: 0
 ---
 
 # The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving

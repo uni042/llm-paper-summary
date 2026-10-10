@@ -122,8 +122,8 @@
   軽量ドラフターだけが完全文脈を読み、完全/圧縮文脈のロジット差δと文脈発散連動の受理ゲートで、圧縮文脈しか見ない大規模検証器の精度を回復する非対称推測復号。
 
 - **2026-07 · [Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV](2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  疎なイベントKV管理は「残したイベントが、生成元の観測を捨てても役に立つ」と暗黙に仮定する。本論文は、配信トークンと位置を完全に同一にしたドナー対で、事前計算時の元値だけを変え、下流KVが見えない元値を保持する意味的具現化を確認した。
+  実装：[✓](https://github.com/oklen/Compute-Globally-Materialize-Locally) ・ リポジトリ内被引用：0  
+  長い会話を続けるエージェントでは、過去の発話やツール結果を一度モデルに読み込ませ、各イベントのKV行を再利用する設計が考えられる。一方、意図的な値非明示の計算指示イベントを追加すると、同じモデルの追随回復率は6%から51%へ増えるが、二値以外の大きな値は保持しにくい。
 
 - **2026-06 · [Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows](2026-2606.14672-towards-direct-latent-space-synthesis-for-parallel-branches-in-llm-agent-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
