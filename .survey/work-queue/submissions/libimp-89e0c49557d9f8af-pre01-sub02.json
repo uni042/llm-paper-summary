@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SwiftPruner: Reinforced Evolutionary Pruning for Efficient Ad Relevance",
+      "source_url": "https://arxiv.org/abs/2209.00625",
+      "year": 2022,
+      "published": "2022-08-30",
+      "venue": "International Conference on Information and Knowledge Management",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ad relevance modeling plays a critical role in online advertising systems including Microsoft Bing. To leverage powerful transformers like BERT in this low-latency setting, many existing approaches perform ad-side computations offline. While efficient, these approaches are unable to serve cold start ads, resulting in poor relevance predictions for such ads. This work aims to design a new, low-latency BERT via structured pruning to empower real-time online inference for cold start ads relevance on a CPU platform. Our challenge is that previous methods typically prune all layers of the transformer to a high, uniform sparsity, thereby producing models which cannot achieve satisfactory inference speed with an acceptable accuracy. In this paper, we propose SwiftPruner - an efficient framework that leverages evolution-based search to automatically find the best-performing layer-wise sparse BERT model under the desired latency constraint. Different from existing evolution algorithms that conduct random mutations, we propose a reinforced mutator with a latency-aware multi-objective reward to conduct better mutations for efficiently searching the large space of layer-wise sparse models. Extensive experiments demonstrate that our method consistently achieves higher ROC AUC and lower latency than the uniform sparse baseline and state-of-the-art search methods. Remarkably, under our latency requirement of 1900us on CPU, SwiftPruner achieves a 0.86% higher AUC than the state-of-the-art uniform sparse baseline for BERT-Mini on a large scale real-world dataset. Online A/B testing shows that our model also achieves a significant 11.7% cut in the ratio of defective cold start ads with satisfactory real-time serving latency.",
+      "identifiers": [
+        "SemanticScholar:2fd1194f6a217403388d640a823503b33cefac05"
+      ],
+      "semantic_scholar_id": "2fd1194f6a217403388d640a823503b33cefac05",
+      "canonical_id": "arXiv:2209.00625",
+      "arxiv_id": "2209.00625",
+      "doi": "10.1145/3511808.3557139",
+      "authors": [
+        "L. Zhang",
+        "Youkow Homma",
+        "Yujing Wang",
+        "Min Wu",
+        "Mao Yang",
+        "Ruo-Fei Zhang",
+        "Ting Cao",
+        "Wei Shen"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1502,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SwiftPrunerはCPU上のreal-time ad relevance BERTをlayer-wise sparse化し、latency制約下でinference向け構造を探索。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Greedy Layer Pruning: Decreasing Inference Time of Transformer Models",
+      "source_url": "https://doi.org/10.2139/ssrn.3985429",
+      "year": 2021,
+      "published": null,
+      "venue": "Social Science Research Network",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fine-tuning transformer models after unsupervised pre-training reaches a very high performance on many different NLP tasks. Unfortunately, transformers suffer from long inference times which greatly increases costs in production and is a limiting factor for the deployment into embedded devices. One possible solution is to use knowledge distillation, which solves this problem by transferring information from large teacher models to smaller student models, but as it needs an additional expensive pre-training phase, this solution is computationally expensive and can be ﬁnancially prohibitive for smaller academic research groups. Another solution is to use layer-wise pruning methods, which reach high compression rates for transformer models and avoids the computational load of the pre-training distillation stage. The price to pay is that the performance of layer-wise pruning algorithms is not on par with state-of-the-art knowledge distillation methods. In this paper, greedy layer pruning (GLP) is introduced to (1) outperform current state-of-the-art for layer-wise pruning (2) close the performance gap when compared to knowledge distillation, while (3) using only a modest budget. More precisely, with the methodology presented it is possible to prune and evaluate competitive models on the whole GLUE benchmark with a budget of just $300 . Our source code is available on GitHub 1 .",
+      "identifiers": [
+        "SemanticScholar:f1ba6d50fb1c8d6fe3d151eccaa4ecd8fbb0d6c3"
+      ],
+      "semantic_scholar_id": "f1ba6d50fb1c8d6fe3d151eccaa4ecd8fbb0d6c3",
+      "doi": "10.2139/ssrn.3985429",
+      "canonical_id": "DOI:10.2139/ssrn.3985429",
+      "authors": [
+        "David Peer",
+        "Sebastian Stabinger",
+        "Stefan Engl",
+        "A. Rodríguez-Sánchez"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1927,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SSRN primary abstractのGreedy Layer PruningはTransformer layerをpruneし、task別desired inference speedup/sizeへ調整。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DReSS: Data-driven Regularized Structured Streamlining for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.17905",
+      "year": 2025,
+      "published": "2025-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved significant progress across various domains, but their increasing scale results in high computational and memory costs. Recent studies have revealed that LLMs exhibit sparsity, providing the potential to reduce model size through pruning techniques. However, existing pruning methods typically follow a prune-then-finetune paradigm. Since the pruned components still contain valuable information, their direct removal often leads to irreversible performance degradation, imposing a substantial computational burden to recover performance during finetuning. In this paper, we propose a novel paradigm that first applies regularization, then prunes, and finally finetunes. Based on this paradigm, we introduce DReSS, a simple and effective Data-driven Regularized Structured Streamlining method for LLMs. By leveraging a small amount of data to regularize the components to be pruned, DReSS explicitly transfers the important information to the remaining parts of the model in advance. Compared to direct pruning, this can reduce the information loss caused by parameter removal, thereby enhancing its language modeling capabilities. Experimental results demonstrate that DReSS significantly outperforms existing pruning methods even under extreme pruning ratios, significantly reducing latency and increasing throughput.",
+      "identifiers": [
+        "SemanticScholar:4e20af3bff98ae125b21d23a14b09de00ebcf909"
+      ],
+      "semantic_scholar_id": "4e20af3bff98ae125b21d23a14b09de00ebcf909",
+      "canonical_id": "arXiv:2501.17905",
+      "arxiv_id": "2501.17905",
+      "doi": "10.48550/arXiv.2501.17905",
+      "authors": [
+        "Mingkuan Feng",
+        "Jinyang Wu",
+        "Shuai Zhang",
+        "Peng-Peng Shao",
+        "Ruihan Jin",
+        "Zheng-Qi Wen",
+        "Jianhua Tao",
+        "Feihu Che"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 619,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DReSS learns structured pruning masks for LLMs to reduce computation/latency while retaining task quality. (既存の一次資料確認は保持したが、正確な観測時刻が記録されていないためwindowはunknown。)",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance",
+      "source_url": "https://arxiv.org/abs/2509.15704",
+      "year": 2025,
+      "published": "2025-09-19",
+      "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have recently demonstrated strong multimodal understanding, yet their fine-grained visual perception is often constrained by low input resolutions. A common remedy is to partition high-resolution images into multiple sub-images for separate encoding, but this approach drastically inflates the number of visual tokens and introduces prohibitive inference overhead. To overcome this challenge, we propose Pyramid Token Pruning (PTP), a training-free strategy that hierarchically integrates bottom-up visual saliency at both region and token levels with top-down instruction-guided relevance. Inspired by human visual cognition, PTP selectively preserves more tokens from salient regions while further emphasizing those most relevant to task instructions. Extensive experiments on 13 diverse benchmarks show that PTP substantially reduces computational cost, memory usage, and inference latency, with negligible performance degradation.",
+      "identifiers": [
+        "SemanticScholar:d8d445db6f3901b4324d0d4c7c99f3eaaae4dfe5"
+      ],
+      "semantic_scholar_id": "d8d445db6f3901b4324d0d4c7c99f3eaaae4dfe5",
+      "canonical_id": "arXiv:2509.15704",
+      "arxiv_id": "2509.15704",
+      "doi": "10.1109/TCSVT.2026.3663658",
+      "authors": [
+        "Yuxuan Liang",
+        "Xu Li",
+        "Xiao-Lei Chen",
+        "Hao-Tian Chen",
+        "Yi Zheng",
+        "Zhe Liu",
+        "Rui Zhu",
+        "Bin Li",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Pyramid Token Pruningはhigh-resolution LVLMのvisual token数をtraining-freeに減らしcompute/memory/inference latencyを低下。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Towards Better Multi-head Attention via Channel-wise Sample Permutation",
+      "source_url": "https://arxiv.org/abs/2410.10914",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer plays a central role in many fundamental deep learning models, e.g., the ViT in computer vision and the BERT and GPT in natural language processing, whose effectiveness is mainly attributed to its multi-head attention (MHA) mechanism. In this study, we propose a simple and novel channel-wise sample permutation (CSP) operator, achieving a new structured MHA with fewer parameters and lower complexity. Given an input matrix, CSP circularly shifts the samples of different channels with various steps and then sorts grouped samples of each channel. This operator is equivalent to implicitly implementing cross-channel attention maps as permutation matrices, which achieves linear complexity and suppresses the risk of rank collapse when representing data. We replace the MHA of some representative models with CSP and test the CSP-based models in several discriminative tasks, including image classification and long sequence analysis. Experiments show that the CSP-based models achieve comparable or better performance with fewer parameters and lower computational costs than the classic Transformer and its state-of-the-art variants. The code is available at https://github.com/DaShenZi721/CSP.",
+      "identifiers": [
+        "SemanticScholar:2e4595dc58fd02796ef4855f0bd42478157a75d4"
+      ],
+      "semantic_scholar_id": "2e4595dc58fd02796ef4855f0bd42478157a75d4",
+      "canonical_id": "arXiv:2410.10914",
+      "arxiv_id": "2410.10914",
+      "doi": "10.48550/arXiv.2410.10914",
+      "authors": [
+        "Shen Yuan",
+        "Hong-Teng Xu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 726,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Channel-wise sample permutation restructures MHA to use fewer parameters and lower computation while maintaining comparable performance. (既存の一次資料確認は保持したが、正確な観測時刻が記録されていないためwindowはunknown。)",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-89e0c49557d9",
+    "round": "libimp-89e0c49557d9f8af-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-89e0c49557d9f8af-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-89e0c49557d9f8af-pre01.json",
+    "receipt": "sha256:fcffd864a6bc78afe50d65161dc393a220b45c067067f0ec93b65c9e38babd76"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-89e0c49557d9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

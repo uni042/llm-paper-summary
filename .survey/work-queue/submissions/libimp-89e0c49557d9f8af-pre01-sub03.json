@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Drop-in efficient self-attention approximation method",
+      "source_url": "https://doi.org/10.1007/s10994-025-06768-3",
+      "year": 2025,
+      "published": "2025-04-24",
+      "venue": "Machine-mediated learning",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have achieved state-of-the-art performance in most common tasks to which they have been applied. Those achievements are attributed to the Self-Attention mechanism at their core. Self-Attention is understood to map the relationship between tokens of any given sequence. This exhaustive mapping incurs massive costs in memory and inference time, as Self-Attention scales quadratically with regard to sequence length. Standard Self-Attention has required increasingly large compute and memory usage when applied to long input sequences because of this memory and time bottleneck. Efficient Transformers emerged as performant alternatives demonstrating good scalability and occasionally better tracking of long-range dependencies. Their efficiency gains are obtained through different methods, usually focusing on the linear scaling of the attention matrix through sparsification, approximation, or other methods. Among existing approaches, those using low-rank approximation present particular advantages because of their compatibility with standard Self-Attention-based models, allowing for weight transfers and other time-saving schemes. More recently, hardware-aware versions of Self-Attention (e.g., FlashAttention) have mitigated all memory bottlenecks and have alleviated its compute burden. Unfortunately, hardware-aware Self-Attentions have stricter hardware compatibility requirements making Efficient Transformers still relevant for use on older or less powerful hardware. Furthermore, some Efficient Transformers can even be applied in an hardware-aware manner to further improve training and inference speed. In this paper, we propose a novel linear approximation method for Self-Attention inspired by the CUR approximation method. This method, proposed in two versions (one leveraging FlashAttention), is conceived as a drop-in replacement for standard Self-Attention with weights compatibility. Our method compares favorably to standard Transformers’ and Efficient Transformers’ performances on varied tasks and demonstrates a significant decrease in memory footprint as well as competitive performance in training speed, even compared to similar methods.",
+      "identifiers": [
+        "SemanticScholar:03ce7da423fa88fd8d9308c6efe49210ee63e8db"
+      ],
+      "semantic_scholar_id": "03ce7da423fa88fd8d9308c6efe49210ee63e8db",
+      "doi": "10.1007/s10994-025-06768-3",
+      "canonical_id": "DOI:10.1007/s10994-025-06768-3",
+      "authors": [
+        "Damien François",
+        "Mathis Saillot",
+        "Jacques Klein",
+        "Tegawendé F. Bissyandé",
+        "A. Skupin"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 534,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official ORBi record describes CUR-based linear self-attention as a drop-in approximation, with lower memory use and competitive training speed. (既存の一次資料確認は保持したが、正確な観測時刻が記録されていないためwindowはunknown。)",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "STAR: Stage-Wise Attention-Guided Token Reduction for Efficient Large Vision-Language Models Inference",
+      "source_url": "https://arxiv.org/abs/2505.12359",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large vision-language models (LVLMs) leverage rich visual token representations to achieve strong performance on multimodal tasks, these tokens also introduce significant computational overhead during inference. Existing training-free token pruning methods typically adopt a single-stage strategy, focusing either on visual self-attention or visual-textual cross-attention. However, such localized perspectives often overlook the broader information flow across the model, leading to substantial performance degradation, especially under high pruning ratios. In this work, we propose STAR (Stage-wise Attention-guided token Reduction), a training-free, plug-and-play framework that approaches token pruning from a global perspective. Instead of pruning at a single point, STAR performs attention-guided reduction in two complementary stages: an early-stage pruning based on visual self-attention to remove redundant low-level features, and a later-stage pruning guided by cross-modal attention to discard task-irrelevant tokens. This holistic approach allows STAR to significantly reduce computational cost while better preserving task-critical information. Extensive experiments across multiple LVLM architectures and benchmarks show that STAR achieves strong acceleration while maintaining comparable, and in some cases even improved performance.",
+      "identifiers": [
+        "SemanticScholar:765c52396143ecbe7ce5dfde777c4cd288efaf9c"
+      ],
+      "semantic_scholar_id": "765c52396143ecbe7ce5dfde777c4cd288efaf9c",
+      "canonical_id": "arXiv:2505.12359",
+      "arxiv_id": "2505.12359",
+      "doi": "10.48550/arXiv.2505.12359",
+      "authors": [
+        "Yi-Chen Guo",
+        "Hanze Li",
+        "Zong-Hao Zhang",
+        "Jin-Hao You",
+        "Kai Tang",
+        "Xian-De Huang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": null
+      },
+      "reason": "STARはLVLM inference overheadへstage-wise visual/cross-modal attention-guided token reductionを行う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Learned Token Pruning for Efficient Transformer Inference",
+      "source_url": "https://www.semanticscholar.org/paper/4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a"
+      ],
+      "semantic_scholar_id": "4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "canonical_id": "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "authors": [
+        "Kim",
+        "Sheng Shen",
+        "David Thorsley",
+        "Amir Gholami",
+        "Woosuk Kwon",
+        "Joseph Hassoun",
+        "Kurt Keutzer"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Berkeley technical report abstract reports learned-threshold token pruning, 2.1x FLOP reduction at <1% accuracy loss and measured throughput gains on Haswell/V100. (既存の一次資料確認は保持したが、正確な観測時刻が記録されていないためwindowはunknown。)",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling Attention to Very Long Sequences in Linear Time with Wavelet-Enhanced Random Spectral Attention (WERSA)",
+      "source_url": "https://arxiv.org/abs/2507.08637",
+      "year": 2025,
+      "published": "2025-07-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models are computationally costly on long sequences since regular attention has quadratic $O(n^2)$ time complexity. We introduce Wavelet-Enhanced Random Spectral Attention (WERSA), a novel mechanism of linear $O(n)$ time complexity that is pivotal to enable successful long-sequence processing without the performance trade-off. WERSA merges content-adaptive random spectral features together with multi-resolution Haar wavelets and learnable parameters to selectively attend to informative scales of data while preserving linear efficiency. Large-scale comparisons \\textbf{on single GPU} and across various benchmarks (vision, NLP, hierarchical reasoning) and various attention mechanisms (like Multiheaded Attention, Flash-Attention-2, FNet, Linformer, Performer, Waveformer), reveal uniform advantages of WERSA. It achieves best accuracy in all tests. On ArXiv classification, WERSA improves accuracy over vanilla attention by 1.2\\% (86.2\\% vs 85.0\\%) while cutting training time by 81\\% (296s vs 1554s) and FLOPS by 73.4\\% (26.2G vs 98.4G). Significantly, WERSA excels where vanilla and FlashAttention-2 fail: on ArXiv-128k's extremely lengthy sequences, it achieves best accuracy (79.1\\%) and AUC (0.979) among viable methods, operating on data that gives Out-Of-Memory errors to quadratic methods while being \\textbf{twice as fast} as Waveformer, its next-best competitor. By significantly reducing computational loads without compromising accuracy, WERSA makes possible more practical, more affordable, long-context models, in particular on low-resource hardware, for more sustainable and more scalable AI development.",
+      "identifiers": [
+        "SemanticScholar:90f70b1645d4ea354f5430567293015df5f69b96"
+      ],
+      "semantic_scholar_id": "90f70b1645d4ea354f5430567293015df5f69b96",
+      "canonical_id": "arXiv:2507.08637",
+      "arxiv_id": "2507.08637",
+      "doi": "10.48550/arXiv.2507.08637",
+      "authors": [
+        "Vincenzo Dentamaro"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 456,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WERSA proposes wavelet-enhanced spectral attention with linear sequence scaling and reports lower FLOPs and faster long-sequence processing.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Inducing Elasticity in Foundation Models: Post-Training Techniques for Adaptable Inference",
+      "source_url": "https://www.semanticscholar.org/paper/2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818"
+      ],
+      "semantic_scholar_id": "2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "canonical_id": "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "authors": [
+        "Aashiq Muhamed",
+        "Jia-Rui Liu",
+        "Mona T. Diab",
+        "Virginia Smith"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SparseDecomp and RankDecomp create nested submodels for hardware/latency-adapted inference; the abstract reports speedup/latency reductions at 25% sparsity.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-89e0c49557d9",
+    "round": "libimp-89e0c49557d9f8af-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-89e0c49557d9f8af-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-89e0c49557d9f8af-pre01.json",
+    "receipt": "sha256:fcffd864a6bc78afe50d65161dc393a220b45c067067f0ec93b65c9e38babd76"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-89e0c49557d9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

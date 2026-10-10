@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "E FFICIENT M ULTIMODAL S PATIAL R EASONING VIA D Y - NAMIC AND A SYMMETRIC R OUTING",
+      "source_url": "https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73"
+      ],
+      "semantic_scholar_id": "ea9209764ac8824da3c193560c3915b080579c73",
+      "canonical_id": "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73",
+      "authors": [
+        "Yixian Shen",
+        "Qingwei Bi",
+        "Zihan Wang",
+        "Zhiheng Yang",
+        "Changshuo Wang",
+        "Zhi Zhang",
+        "Prayag Tiwari",
+        "Andy D. Pimentel",
+        "Anuj Pathania"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DAREはMLLM推論中にmultimodal tokens/KV cacheを動的圧縮し、abstractでFLOPsとcache使用量低減を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Low-Bit FlashAttention Accelerated Operator Design Based on Triton",
+      "source_url": "https://doi.org/10.1109/ICCVW69036.2025.00315",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer architecture has been widely adopted across numerous models. As the core component of the Trans-former, the attention mechanism has a computational complexity of $\\mathrm{O}(\\mathrm{n}^{2})$ compared to linear transformations, making it a major computational bottleneck when handling long sequences. Although quantization has proven to be an ef-fective method for accelerating model inference, existing quantization approaches struggle to support ultra-low-bit formats for attention. To address this, we propose a Triton-based low-bit FlashAttention accelerator design. Specif-ically, this work leverages operator fusion techniques to merge the dequantization process with matrix multiplication, reducing memory access overhead. In addition, a mixed-precision quantization strategy is employed to miti-gate quantization error and preserve model accuracy. Compared to FlashAttention2, the kernel has a $2.4\\times \\text{speedup}$ ratio and an end-to-end inference $1.2\\times \\text{speedup}$. Exper-imental results demonstrate that the proposed kernel im-proves inference speed and memory efficiency while main-taining accuracy, offering a novel approach for deploying large models with low latency and resource consumption on edge devices. Our code is available at https:/github.com/Charles2530/lowbit_quant_fa2.",
+      "identifiers": [
+        "SemanticScholar:ac55bb5861c4c7639536ef5ed3006607701d0fd3"
+      ],
+      "semantic_scholar_id": "ac55bb5861c4c7639536ef5ed3006607701d0fd3",
+      "doi": "10.1109/ICCVW69036.2025.00315",
+      "canonical_id": "DOI:10.1109/ICCVW69036.2025.00315",
+      "authors": [
+        "Jin-Yang Du",
+        "Jin-Yang Guo",
+        "Yifu Ding"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 356,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CVF primary abstract: Triton low-bit FlashAttention fusion/mixed precisionでkernel 2.4x、end-to-end inference 1.2x speedup。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-89e0c49557d9",
+    "round": "libimp-89e0c49557d9f8af-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-89e0c49557d9f8af-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-89e0c49557d9f8af-pre01.json",
+    "receipt": "sha256:fcffd864a6bc78afe50d65161dc393a220b45c067067f0ec93b65c9e38babd76"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-89e0c49557d9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

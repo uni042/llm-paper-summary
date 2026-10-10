@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fourier Controller Networks for Real-Time Decision-Making in Embodied Learning",
+      "source_url": "https://arxiv.org/abs/2405.19885",
+      "year": 2024,
+      "published": "2024-05-30",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has shown promise in reinforcement learning to model time-varying features for obtaining generalized low-level robot policies on diverse robotics datasets in embodied learning. However, it still suffers from the issues of low data efficiency and high inference latency. In this paper, we propose to investigate the task from a new perspective of the frequency domain. We first observe that the energy density in the frequency domain of a robot's trajectory is mainly concentrated in the low-frequency part. Then, we present the Fourier Controller Network (FCNet), a new network that uses Short-Time Fourier Transform (STFT) to extract and encode time-varying features through frequency domain interpolation. In order to do real-time decision-making, we further adopt FFT and Sliding DFT methods in the model architecture to achieve parallel training and efficient recurrent inference. Extensive results in both simulated (e.g., D4RL) and real-world environments (e.g., robot locomotion) demonstrate FCNet's substantial efficiency and effectiveness over existing methods such as Transformer, e.g., FCNet outperforms Transformer on multi-environmental robotics datasets of all types of sizes (from 1.9M to 120M). The project page and code can be found https://thkkk.github.io/fcnet.",
+      "identifiers": [
+        "SemanticScholar:4f022613f233c45e19be774a38a6a499146c396f"
+      ],
+      "semantic_scholar_id": "4f022613f233c45e19be774a38a6a499146c396f",
+      "canonical_id": "arXiv:2405.19885",
+      "arxiv_id": "2405.19885",
+      "doi": "10.48550/arXiv.2405.19885",
+      "authors": [
+        "Heng-Kai Tan",
+        "Songming Liu",
+        "Kai Ma",
+        "Chengyang Ying",
+        "Xingxing Zhang",
+        "Hang Su",
+        "Jun Zhu"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 863,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "FCNet uses STFT/FFT and sliding DFT for real-time robot decisions and efficient recurrent inference as a Transformer alternative.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GPT-Zip: Deep Compression of Finetuned Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/c8408635982d36d55882ef3e95564ed85ec07565",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565"
+      ],
+      "semantic_scholar_id": "c8408635982d36d55882ef3e95564ed85ec07565",
+      "canonical_id": "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565",
+      "authors": [
+        "Berivan Isik",
+        "Hermann Kumbong",
+        "Wan-Yi Ning",
+        "Xiaozhe Yao",
+        "Sanmi Koyejo",
+        "Ce Zhang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPT-Zip combines delta quantization and high sparsity to sharply compress fine-tuned LLM weights while preserving quality. (既存の一次資料確認は保持したが、正確な観測時刻が記録されていないためwindowはunknown。)",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "One-for-All Pruning: A Universal Model for Customized Compression of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2505.12216",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing pruning methods for large language models (LLMs) focus on achieving high compression rates while maintaining model performance. Although these methods have demonstrated satisfactory performance in handling a single user's compression request, their processing time increases linearly with the number of requests, making them inefficient for real-world scenarios with multiple simultaneous requests. To address this limitation, we propose a Univeral Model for Customized Compression (UniCuCo) for LLMs, which introduces a StratNet that learns to map arbitrary requests to their optimal pruning strategy. The challenge in training StratNet lies in the high computational cost of evaluating pruning strategies and the non-differentiable nature of the pruning process, which hinders gradient backpropagation for StratNet updates. To overcome these challenges, we leverage a Gaussian process to approximate the evaluation process. Since the gradient of the Gaussian process is computable, we can use it to approximate the gradient of the non-differentiable pruning process, thereby enabling StratNet updates. Experimental results show that UniCuCo is 28 times faster than baselines in processing 64 requests, while maintaining comparable accuracy to baselines.",
+      "identifiers": [
+        "SemanticScholar:42019886c37c11cf96478d128cb6a8055a6b00fc"
+      ],
+      "semantic_scholar_id": "42019886c37c11cf96478d128cb6a8055a6b00fc",
+      "canonical_id": "arXiv:2505.12216",
+      "arxiv_id": "2505.12216",
+      "doi": "10.48550/arXiv.2505.12216",
+      "authors": [
+        "Rong-Guang Ye",
+        "Ming Tang"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "UniCuCoはLLM pruning requestごとにcompression strategyを出し、64 requests処理をbaseline比28x高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Understanding Differential Transformer Unchains Pretrained Self-Attentions",
+      "source_url": "https://arxiv.org/abs/2505.16333",
+      "year": 2025,
+      "published": "2025-05-22",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Differential Transformer has recently gained significant attention for its impressive empirical performance, often attributed to its ability to perform noise canceled attention. However, precisely how differential attention achieves its empirical benefits remains poorly understood. Moreover, Differential Transformer architecture demands large-scale training from scratch, hindering utilization of open pretrained weights. In this work, we conduct an in-depth investigation of Differential Transformer, uncovering three key factors behind its success: (1) enhanced expressivity via negative attention, (2) reduced redundancy among attention heads, and (3) improved learning dynamics. Based on these findings, we propose DEX, a novel method to efficiently integrate the advantages of differential attention into pretrained language models. By reusing the softmax attention scores and adding a lightweight differential operation on the output value matrix, DEX effectively incorporates the key advantages of differential attention while remaining lightweight in both training and inference. Evaluations confirm that DEX substantially improves the pretrained LLMs across diverse benchmarks, achieving significant performance gains with minimal adaptation data (<0.01%).",
+      "identifiers": [
+        "SemanticScholar:b24cf10e60ed3d57b57d7958bb3e9e5c7e348121"
+      ],
+      "semantic_scholar_id": "b24cf10e60ed3d57b57d7958bb3e9e5c7e348121",
+      "canonical_id": "arXiv:2505.16333",
+      "arxiv_id": "2505.16333",
+      "doi": "10.48550/arXiv.2505.16333",
+      "authors": [
+        "Chaerin Kong",
+        "Jiho Jang",
+        "N. Kwak"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "DEXはDifferential Transformerの軽量operationをpretrained LLMへ移植し、minimal training/inference costを保ってattention機能を追加。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OdeBERT: One-stage Deep-supervised Early-exiting BERT for Fast Inference in User Intent Classification",
+      "source_url": "https://doi.org/10.1145/3587464",
+      "year": 2023,
+      "published": "2023-03-13",
+      "venue": "ACM Trans. Asian Low Resour. Lang. Inf. Process.",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "User intent classification is a vital task for analyzing users’ essential requirements from the users’ input query in information retrieval systems, question answering systems, and dialogue systems. Pre-trained language model Bidirectional Encoder Representation from Transformers (BERT) has been widely applied to the user intent classification task. However, BERT is compute intensive and time-consuming during inference and usually causes latency in real-time applications. To improve the inference efficiency of BERT for the user intent classification task, this article proposes a new network named one-stage deep-supervised early-exiting BERT as one-stage deep-supervised early-exiting BERT (OdeBERT). In addition, a deep supervision strategy is developed to incorporate the network with internal classifiers by one-stage joint training to improve the learning process of classifiers by extracting discriminative category features. Experiments are conducted on publicly available datasets, including ECDT, SNIPS, and FDQuestion. The results show that the OdeBERT can speed up original BERT 12 times faster at most with the same performance, outperforming state-of-the-art baseline methods.",
+      "identifiers": [
+        "SemanticScholar:ff34aeb5869f04e954780104866e0c55aba82901"
+      ],
+      "semantic_scholar_id": "ff34aeb5869f04e954780104866e0c55aba82901",
+      "doi": "10.1145/3587464",
+      "canonical_id": "DOI:10.1145/3587464",
+      "authors": [
+        "Yuanxia Liu",
+        "Tianyong Hao",
+        "Hai Liu",
+        "Yuanyuan Mu",
+        "Heng Weng",
+        "Fu-Lee Wang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1307,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者機関レコードのabstract: BERT user-intent early exitで同性能最大12x inference speedup。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-89e0c49557d9",
+    "round": "libimp-89e0c49557d9f8af-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 17,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-89e0c49557d9f8af-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-89e0c49557d9f8af-pre01.json",
+    "receipt": "sha256:fcffd864a6bc78afe50d65161dc393a220b45c067067f0ec93b65c9e38babd76"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-89e0c49557d9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
