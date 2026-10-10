@@ -369,15 +369,17 @@ def recover_blocked_discovery(repo_root: Path) -> dict[str, int]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
+    parser.add_argument("--skip-discovery", action="store_true")
+    parser.add_argument("--skip-research", action="store_true")
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
 
     summary = {
         "ok": True,
         "processed_at": inbox.now(),
-        "pending_research_junk_deleted": cleanup_pending_research_junk(repo_root),
-        "research": recover_blocked_research(repo_root),
-        "discovery": recover_blocked_discovery(repo_root),
+        "pending_research_junk_deleted": 0 if args.skip_research else cleanup_pending_research_junk(repo_root),
+        "research": {} if args.skip_research else recover_blocked_research(repo_root),
+        "discovery": {} if args.skip_discovery else recover_blocked_discovery(repo_root),
     }
     print(json.dumps(summary, ensure_ascii=False))
     return 0

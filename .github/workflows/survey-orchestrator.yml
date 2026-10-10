@@ -118,13 +118,17 @@ jobs:
             recovery_tick=1
           fi
 
-          if [ "$import_backlog" -gt 0 ] || [ "$recovery_tick" -eq 1 ]; then
-            if [ "$import_backlog" -eq 0 ]; then
-              echo 'Hourly-equivalent recovery tick: run one empty-inbox recovery pass.'
-            fi
+          # Preserve the uploader paths. Route each durable inbox to its own
+          # writer so a Discovery backfill never blocks Research/reaudit.
+          if [ "$research_pending" -gt 0 ] || [ "$recovery_tick" -eq 1 ]; then
             dispatch_if_idle library-import.yml
           else
-            echo 'Library import inbox is empty; skip processor dispatch.'
+            echo 'Research import inbox is empty; skip Research processor.'
+          fi
+          if [ $((discovery_pending + discovery_waiting)) -gt 0 ]; then
+            dispatch_if_idle library-discovery-intake.yml
+          else
+            echo 'Library Discovery inbox is empty; skip Discovery intake.'
           fi
 
           metadata_max_age_seconds=3000

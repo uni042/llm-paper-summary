@@ -1643,19 +1643,28 @@ def main() -> int:
         help="Rebuild the hash-pinned re-audit queue from final main after the checkpoint",
     )
     parser.add_argument("--max-discovery-records", type=int, default=None)
+    parser.add_argument("--skip-discovery", action="store_true", help="Process Research only")
+    parser.add_argument("--skip-research", action="store_true", help="Process Discovery only")
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
 
-    research_imported, research_terminal = process_research(
-        repo_root,
-        args.max_research,
-        max_reaudit=args.max_reaudit,
-        defer_reaudit_queue_refresh=args.defer_reaudit_queue_refresh,
-    )
-    returned_queue = sync_returned_research_queue(repo_root)
-    discovery_advanced, discovery_terminal = process_discovery(
-        repo_root, args.max_discovery_records
-    )
+    if args.skip_research:
+        research_imported, research_terminal = 0, 0
+        returned_queue = {"count": None}
+    else:
+        research_imported, research_terminal = process_research(
+            repo_root,
+            args.max_research,
+            max_reaudit=args.max_reaudit,
+            defer_reaudit_queue_refresh=args.defer_reaudit_queue_refresh,
+        )
+        returned_queue = sync_returned_research_queue(repo_root)
+    if args.skip_discovery:
+        discovery_advanced, discovery_terminal = 0, 0
+    else:
+        discovery_advanced, discovery_terminal = process_discovery(
+            repo_root, args.max_discovery_records
+        )
 
     summary = {
         "ok": True,

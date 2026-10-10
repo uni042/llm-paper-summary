@@ -24,7 +24,9 @@ class RunLivenessPolicyTests(unittest.TestCase):
             with self.subTest(workflow=workflow):
                 self.assertIn(f"dispatch_if_idle {workflow}", scheduler)
         self.assertIn("GITHUB_RUN_NUMBER % 6", scheduler)
-        self.assertIn("Library import inbox is empty; skip processor dispatch.", scheduler)
+        self.assertIn("Research import inbox is empty; skip Research processor.", scheduler)
+        self.assertIn("dispatch_if_idle library-discovery-intake.yml", scheduler)
+        self.assertIn("Library Discovery inbox is empty; skip Discovery intake.", scheduler)
         self.assertIn('if [ "$GITHUB_EVENT_NAME" = "push" ] && jq -e', scheduler)
 
         watchdog = (WORKFLOWS / "survey-scheduler-watchdog.yml").read_text(encoding="utf-8")
@@ -60,15 +62,19 @@ class RunLivenessPolicyTests(unittest.TestCase):
                 self.assertNotIn("push:", trigger)
                 self.assertNotIn("workflow_run:", trigger)
 
-    def test_library_import_rechecks_precheck_liveness_at_handoff(self):
-        workflow = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
-        self.assertIn("unsettled_library_prechecks", workflow)
-        self.assertIn("active_precheck_runs", workflow)
+    def test_dedicated_discovery_intake_rechecks_precheck_liveness_at_handoff(self):
+        workflow = (WORKFLOWS / "library-discovery-intake.yml").read_text(encoding="utf-8")
+        self.assertIn("unsettled", workflow)
+        self.assertIn("discovery-precheck.yml", workflow)
         self.assertIn("gh workflow run discovery-precheck.yml", workflow)
-        self.assertIn(
-            "Dispatching dedicated Discovery precheck gate",
-            workflow,
-        )
+        self.assertIn("--skip-research", workflow)
+        self.assertNotIn("render_status_dashboard.py", workflow)
+        self.assertNotIn("refresh_under16kb_reaudit_queue.py", workflow)
+
+        research = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
+        self.assertIn("--skip-discovery", research)
+        self.assertIn("--exclude-library-discovery", research)
+        self.assertNotIn("gh workflow run discovery-precheck.yml", research)
 
     def test_library_import_hands_new_papers_to_citation_backfill(self):
         workflow = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
