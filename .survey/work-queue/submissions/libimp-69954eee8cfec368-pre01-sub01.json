@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Alternating Updates for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2301.13310",
+      "year": 2023,
+      "published": "2023-01-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "It has been well established that increasing scale in deep transformer networks leads to improved quality and performance. However, this increase in scale often comes with prohibitive increases in compute cost and inference latency. We introduce Alternating Updates (AltUp), a simple-to-implement method to increase a model's capacity without the computational burden. AltUp enables the widening of the learned representation, i.e., the token embedding, while only incurring a negligible increase in latency. AltUp achieves this by working on a subblock of the widened representation at each layer and using a predict-and-correct mechanism to update the inactivated blocks. We present extensions of AltUp, such as its applicability to the sequence dimension, and demonstrate how AltUp can be synergistically combined with existing approaches, such as Sparse Mixture-of-Experts models, to obtain efficient models with even higher capacity. Our experiments on benchmark transformer models and language tasks demonstrate the consistent effectiveness of AltUp on a diverse set of scenarios. Notably, on SuperGLUE and SQuAD benchmarks, AltUp enables up to $87\\%$ speedup relative to the dense baselines at the same accuracy.",
+      "identifiers": [
+        "SemanticScholar:c9d46cfcf0211d11356c295ecd9584c84c19c8f8"
+      ],
+      "semantic_scholar_id": "c9d46cfcf0211d11356c295ecd9584c84c19c8f8",
+      "canonical_id": "arXiv:2301.13310",
+      "arxiv_id": "2301.13310",
+      "doi": "10.48550/arXiv.2301.13310",
+      "authors": [
+        "Cenk Baykal",
+        "D. Cutler",
+        "Nishanth Dikkala",
+        "Nikhil Ghosh",
+        "Rina Panigrahy",
+        "Xin Wang"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1349,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "AltUpはTransformerのrepresentation幅を広げつつ各層で部分blockだけ処理し、同等精度で最大87% speedupを報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast Monte-Carlo Approximation of the Attention Mechanism",
+      "source_url": "https://arxiv.org/abs/2201.12854",
+      "year": 2022,
+      "published": "2022-01-30",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Monte-Carlo Attention (MCA), a randomized approximation method for reducing the computational cost of self-attention mechanisms in Transformer architectures. MCA exploits the fact that the importance of each token in an input sequence vary with respect to their attention scores; thus, some degree of error can be tolerable when encoding tokens with low attention. Using approximate matrix multiplication, MCA applies different error bounds to encode input tokens such that those with low attention scores are computed with relaxed precision, whereas errors of salient elements are minimized. MCA can operate in parallel with other attention optimization schemes and does not require model modification. We study the theoretical error bounds and demonstrate that MCA reduces attention complexity (in FLOPS) for various Transformer models by up to 11 in GLUE benchmarks without compromising model accuracy. Source code and appendix: https://github.com/eis-lab/monte-carlo-attention",
+      "identifiers": [
+        "SemanticScholar:ac668af2e58c008636f653a186268afb1167b038"
+      ],
+      "semantic_scholar_id": "ac668af2e58c008636f653a186268afb1167b038",
+      "canonical_id": "arXiv:2201.12854",
+      "arxiv_id": "2201.12854",
+      "doi": "10.1609/aaai.v36i7.20679",
+      "authors": [
+        "Hyunjun Kim",
+        "Jeonggil Ko"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1714,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Monte-Carlo attentionは低attention tokenを緩い誤差で近似しTransformer attention FLOPsを最大11倍減らすと要旨に記載。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mixture of Attention Schemes (MoAS): Learning to Route Between MHA, GQA, and MQA",
+      "source_url": "https://arxiv.org/abs/2512.20650",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The choice of attention mechanism in Transformer models involves a critical trade-off between modeling quality and inference efficiency. Multi-Head Attention (MHA) offers the best quality but suffers from large Key-Value (KV) cache memory requirements during inference. Multi-Query Attention (MQA) and Grouped-Query Attention (GQA) reduce memory usage but often at the cost of model performance. In this work, we propose Mixture of Attention Schemes (MoAS), a novel architecture that dynamically selects the optimal attention scheme (MHA, GQA, or MQA) for each token via a learned router. We demonstrate that dynamic routing performs better than static averaging of schemes and achieves performance competitive with the MHA baseline while offering potential for conditional compute efficiency. Experimental results on WikiText-2 show that dynamic routing (val loss 2.3074) outperforms a static mixture (2.3093), validating the effectiveness of the proposed method. Our code is available at https://github.com/Esmail-ibraheem/Mixture-of-Attention-Schemes-MoAS.",
+      "identifiers": [
+        "SemanticScholar:eeda013475a182a2bcfb18ee9cfd434f42f98878"
+      ],
+      "semantic_scholar_id": "eeda013475a182a2bcfb18ee9cfd434f42f98878",
+      "canonical_id": "arXiv:2512.20650",
+      "arxiv_id": "2512.20650",
+      "doi": "10.48550/arXiv.2512.20650",
+      "authors": [
+        "Esmail Atta Gumaan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 298,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoASはtoken別にMHA/GQA/MQAをrouteし、KV-cache memoryとqualityのinference tradeoffを直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2502.14644",
+      "year": 2025,
+      "published": "2025-02-20",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context understanding remains challenging for LLMs due to limited context windows. This paper introduces Long Input Fine-Tuning (LIFT), a framework that improves the long-context performance of arbitrary short-context LLMs by dynamically adapting their parameters to each long input. Instead of endlessly extending context windows to fit longer inputs in context, LIFT stores and absorbs the input in parameters. By fine-tuning long inputs into parameters, LIFT enables short-context LLMs to answer questions even when required information is absent from the inference context, avoiding the quadratic input-length complexity of standard long-context models. Rather than simple continued pretraining on new long contexts, LIFT uses carefully designed LLM-generated synthetic tasks to enhance comprehension beyond memorization. To offset fine-tuning overhead, we design a highly optimized pipeline that reduces Time to First Token (TTFT) to under 10 seconds for 8k context. We further analyze LIFT's strengths and limitations, discuss large-scale deployment feasibility, and highlight future research directions. Implementation is open-sourced at https://github.com/MuLabPKU/LIFT.",
+      "identifiers": [
+        "SemanticScholar:7c314da3c91f4160ac426584ff0ae6c922c1bd9c"
+      ],
+      "semantic_scholar_id": "7c314da3c91f4160ac426584ff0ae6c922c1bd9c",
+      "canonical_id": "arXiv:2502.14644",
+      "arxiv_id": "2502.14644",
+      "authors": [
+        "Yan-Sheng Mao",
+        "Yufei Xu",
+        "Jiaqi Li",
+        "Fan-Xu Meng",
+        "Haotong Yang",
+        "Zi-Long Zheng",
+        "Xiyuan Wang",
+        "Mu-Han Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 597,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LIFTは長文をparametersへ吸収してstandard long-context推論の二次input-length費用を避け、TTFTも最適化する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DBA: Efficient Transformer With Dynamic Bilinear Low-Rank Attention",
+      "source_url": "https://arxiv.org/abs/2211.16368",
+      "year": 2022,
+      "published": "2022-11-24",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many studies have aimed to improve Transformer model efficiency using low-rank-based methods that compress sequence length with predetermined or learned compression matrices. However, these methods fix compression coefficients for tokens in the same position during inference, ignoring sequence-specific variations. They also overlook the impact of hidden state dimensions on efficiency gains. To address these limitations, we propose dynamic bilinear low-rank attention (DBA), an efficient and effective attention mechanism that compresses sequence length using input-sensitive dynamic compression matrices. DBA achieves linear time and space complexity by jointly optimizing sequence length and hidden state dimension while maintaining state-of-the-art performance. Specifically, we demonstrate through experiments and the properties of low-rank matrices that sequence length can be compressed with compression coefficients dynamically determined by the input sequence. In addition, we illustrate that the hidden state dimension can be approximated by extending the Johnson-Lindenstrauss lemma, thereby introducing only a small amount of error. DBA optimizes the attention mechanism through bilinear forms that consider both the sequence length and hidden state dimension. Moreover, the theoretical analysis substantiates that DBA excels at capturing high-order relationships in cross-attention problems. Experimental results across different tasks with varied sequence length conditions demonstrate that DBA achieves state-of-the-art performance compared to several robust baselines. DBA also maintains higher processing speed and lower memory usage, highlighting its efficiency and effectiveness across diverse applications.",
+      "identifiers": [
+        "SemanticScholar:4d5cf66cc91ba4bbb8197d7e5711e11043002ad2"
+      ],
+      "semantic_scholar_id": "4d5cf66cc91ba4bbb8197d7e5711e11043002ad2",
+      "canonical_id": "arXiv:2211.16368",
+      "arxiv_id": "2211.16368",
+      "doi": "10.1109/TNNLS.2025.3527046",
+      "authors": [
+        "Bo-Sheng Qin",
+        "Jun-Cheng Li",
+        "Siliang Tang",
+        "Yueting Zhuang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1416,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DBAはinput-sensitive dynamic bilinear low-rank attentionでsequence lengthとhidden dimensionを圧縮し、linear time/spaceかつ低memory・高speedを主張。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-69954eee8cfe",
+    "round": "libimp-69954eee8cfec368-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-69954eee8cfec368-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-69954eee8cfec368-pre01.json",
+    "receipt": "sha256:6788dff7b5d8248947a93374e2768273bf9e964e4b90d75145a214a6aa1d0dda"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-69954eee8cfe",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
