@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - '.survey/import-inbox/pending/research/**'
+      - '.survey/import-inbox/pending/discovery/**'
+      - '.survey/import-inbox/waiting/discovery/**'
       - '.github/workflows/library-import.yml'
   workflow_dispatch:
     inputs:
@@ -55,10 +57,8 @@ jobs:
             .survey/scripts/process_reference_relevance_requests.py \
             .survey/scripts/queue_worker.py \
             .survey/scripts/render_status_dashboard.py
-          python -m unittest discover -s .survey/tests -p 'test_library_import_inbox.py'
-          python -m unittest discover -s .survey/tests -p 'test_under16kb_reaudit.py'
-          python -m unittest discover -s .survey/tests -p 'test_fast_lane_trigger_semantics.py'
-          python -m unittest discover -s .survey/tests -p 'test_cleanup_import_inbox.py'
+          # The full regression suites run in repository-tests.yml on code changes.
+          # Retain syntax checks and all per-record quality/provenance gates here.
 
       - name: Process bounded Library import work
         shell: bash
@@ -113,7 +113,14 @@ jobs:
             return 1
           }
 
-          # Stage 1: 20 semantic re-audits + 5 ordinary Research + 60 Discovery.
+          # Stage 1: when Discovery is backed up, prioritize intake while
+          # retaining five slots for independent semantic re-audit work.
+          reaudit_quota=20
+          if compgen -G '.survey/import-inbox/pending/discovery/*.json' > /dev/null ||
+             compgen -G '.survey/import-inbox/waiting/discovery/*.json' > /dev/null; then
+            reaudit_quota=5
+          fi
+          echo "Discovery intake: 240 records/pass; semantic re-audit quota=${reaudit_quota}"
           stage1_ok=0
           for attempt in $(seq 1 6); do
             sync_main
@@ -121,16 +128,14 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --max-research 5 \
-              --max-reaudit 20 \
+              --max-reaudit "$reaudit_quota" \
               --defer-reaudit-queue-refresh \
-              --max-discovery-records 60
+              --max-discovery-records 240
             # Re-audit hashes are regenerated against current main in the final
             # stage. Computing them here leaves an unstaged derived-file edit,
             # making the checkpoint rebase fail on every retry.
-            python .survey/scripts/render_status_dashboard.py \
-              --repo-root . \
-              --output STATUS.md
-
+            # Build STATUS once after downstream acceptance, rather than
+            # recounting the entire identity pool in this initial checkpoint.
             if publish \
               'library-import: checkpoint bounded intake' \
               .survey/import-inbox \
@@ -191,7 +196,7 @@ jobs:
             set +e
             python .survey/scripts/process_reference_relevance_requests.py \
               --repo-root . \
-              --max-requests 60
+              --max-requests 240
             relevance_rc=$?
             set -e
 
@@ -208,7 +213,7 @@ jobs:
             exit 1
           }
 
-          # Stage 3: re-read current main and advance only the same <=60-record
+          # Stage 3: re-read current main and advance the same <=240-record
           # Discovery window. Research is disabled after the intake stage.
           stage3_ok=0
           for attempt in $(seq 1 4); do
@@ -216,7 +221,7 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --max-research 0 \
-              --max-discovery-records 60
+              --max-discovery-records 240
 
             if publish \
               'library-import: advance bounded Discovery work' \
@@ -234,14 +239,14 @@ jobs:
             exit 1
           }
 
-          # Stage 4: a 60-record Discovery window creates at most twelve normal
-          # five-candidate submissions. Keep extra historical queue work bounded.
+          # Stage 4: a 240-record window creates at most 48 normal
+          # five-candidate submissions; keep 16 slots for older queue work.
           stage4_ok=0
           for attempt in $(seq 1 4); do
             sync_main
             python .survey/scripts/queue_worker.py \
               --root .survey \
-              --max-submissions 16
+              --max-submissions 64
 
             if publish \
               'library-import: process bounded submissions' \
@@ -267,7 +272,7 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --max-research 0 \
-              --max-discovery-records 60
+              --max-discovery-records 240
             python .survey/scripts/render_status_dashboard.py \
               --repo-root . \
               --output STATUS.md
