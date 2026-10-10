@@ -1,0 +1,519 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-31da1f3d0112b144-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-31da1f3d0112",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.14096",
+    "arXiv:2601.02535",
+    "arXiv:2601.10323",
+    "arXiv:2601.13742",
+    "arXiv:2602.02050"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4eaef7fa27bc0f9cde9e3ce5427cf615fd9af3e4",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T15:25:41.610657+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.14096",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.02535",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.10323",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.13742",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02050",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval",
+      "source_url": "https://arxiv.org/abs/2511.14096",
+      "year": 2025,
+      "published": "2025-11-18",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) greatly enhances large language models (LLMs) performance in knowledge-intensive tasks. However, naive RAG methods struggle with multi-hop question answering due to their limited capacity to capture complex dependencies across documents. Recent studies employ graph-based RAG to capture document connections. However, these approaches often result in a loss of semantic coherence and introduce irrelevant noise during node matching and subgraph construction. To address these limitations, we propose NeuroPath, an LLM-driven semantic path tracking RAG framework inspired by the path navigational planning of place cells in neurobiology. It consists of two steps: Dynamic Path Tracking and Post-retrieval Completion. Dynamic Path Tracking performs goal-directed semantic path tracking and pruning over the constructed knowledge graph (KG), improving noise reduction and semantic coherence. Post-retrieval Completion further reinforces these benefits by conducting second-stage retrieval using intermediate reasoning and the original query to refine the query goal and complete missing information in the reasoning path. NeuroPath surpasses current state-of-the-art baselines on three multi-hop QA datasets, achieving average improvements of 16.3% on recall@2 and 13.5% on recall@5 over advanced graph-based RAG methods. Moreover, compared to existing iter-based RAG methods, NeuroPath achieves higher accuracy and reduces token consumption by 22.8%. Finally, we demonstrate the robustness of NeuroPath across four smaller LLMs (Llama3.1, GLM4, Mistral0.3, and Gemma3), and further validate its scalability across tasks of varying complexity. Code is available at https://github.com/KennyCaty/NeuroPath.",
+      "identifiers": [
+        "SemanticScholar:125d438f7cfb8b0b721de67c786deb4e115ac953"
+      ],
+      "semantic_scholar_id": "125d438f7cfb8b0b721de67c786deb4e115ac953",
+      "canonical_id": "arXiv:2511.14096",
+      "arxiv_id": "2511.14096",
+      "doi": "10.48550/arXiv.2511.14096",
+      "authors": [
+        "Juncheng Li",
+        "Rong-Zheng Wang",
+        "Yi-Hong Huang",
+        "Qi-Zhi Chen",
+        "Jiasheng Zhang",
+        "Shuang Liang"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 326,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
+      "source_url": "https://arxiv.org/abs/2601.02535",
+      "year": 2026,
+      "published": "2026-01-05",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Selecting a single high-quality output from multiple stochastic generations remains a fundamental challenge for large language models (LLMs), particularly in open-ended tasks where no canonical answer exists. While Best-of-N and self-consistency methods show that aggregating multiple generations can improve performance, existing approaches typically rely on external evaluators, reward models, or exact string-match voting, limiting their applicability and efficiency. We propose Mode Extraction (ModeX), an evaluator-free Best-of-N selection framework that generalizes majority voting to open-ended text generation by identifying the modal output representing the dominant semantic consensus among generated texts. ModeX constructs a similarity graph over candidate generations and recursively applies spectral clustering to select a representative centroid, without requiring additional inference or auxiliary models. We further instantiate this selection principle as ModeX-Lite, an improved version of ModeX with early pruning for efficiency. Across open-ended tasks -- including text summarization, code generation, and mathematical reasoning -- our approaches consistently outperform standard single- and multi-path baselines, providing a computationally efficient solution for robust open-ended text generation. Code is released in https://github.com/deeplearning-wisc/ModeX.",
+      "identifiers": [
+        "SemanticScholar:63b42b74459d5a1cf91aa1742a86a3c4c37b37c6"
+      ],
+      "semantic_scholar_id": "63b42b74459d5a1cf91aa1742a86a3c4c37b37c6",
+      "canonical_id": "arXiv:2601.02535",
+      "arxiv_id": "2601.02535",
+      "doi": "10.48550/arXiv.2601.02535",
+      "authors": [
+        "Hyeong Kyu Choi",
+        "Sharon Li"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding",
+      "source_url": "https://arxiv.org/abs/2601.10323",
+      "year": 2026,
+      "published": "2026-01-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent Omni-multimodal Large Language Models show promise in unified audio, vision, and text modeling. However, streaming audio-video understanding remains challenging, as existing approaches suffer from disjointed capabilities: they typically exhibit incomplete modality support or lack autonomous proactive monitoring. To address this, we present ROMA, a real-time omni-multimodal assistant for unified reactive and proactive interaction. ROMA processes continuous inputs as synchronized multimodal units, aligning dense audio with discrete video frames to handle granularity mismatches. For online decision-making, we introduce a lightweight speak head that decouples response initiation from generation to ensure precise triggering without task conflict. We train ROMA with a curated streaming dataset and a two-stage curriculum that progressively optimizes for streaming format adaptation and proactive responsiveness. To standardize the fragmented evaluation landscape, we reorganize diverse benchmarks into a unified suite covering both proactive (alert, narration) and reactive (QA) settings. Extensive experiments across 12 benchmarks demonstrate ROMA achieves state-of-the-art performance on proactive tasks while competitive in reactive settings, validating its robustness in unified real-time omni-multimodal understanding.",
+      "identifiers": [
+        "SemanticScholar:96b985e626d68117165082f7cabe2db567a145d6"
+      ],
+      "semantic_scholar_id": "96b985e626d68117165082f7cabe2db567a145d6",
+      "canonical_id": "arXiv:2601.10323",
+      "arxiv_id": "2601.10323",
+      "doi": "10.48550/arXiv.2601.10323",
+      "authors": [
+        "Xue-Yun Tian",
+        "Wei Li",
+        "Bingbing Xu",
+        "Heng Dong",
+        "Yuan-Zhuo Wang",
+        "Hua-Wei Shen"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 268,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation",
+      "source_url": "https://arxiv.org/abs/2601.13742",
+      "year": 2026,
+      "published": "2026-01-20",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) judges exhibit strong reasoning capabilities but are limited to textual content. This leaves current automatic Speech-to-Speech (S2S) evaluation methods reliant on opaque and expensive Audio Language Models (ALMs). In this work, we propose TRACE (Textual Reasoning over Audio Cues for Evaluation), a novel framework that enables LLM judges to reason over audio cues to achieve cost-efficient and human-aligned S2S evaluation. To demonstrate the strength of the framework, we first introduce a Human Chain-of-Thought (HCoT) annotation protocol to improve the diagnostic capability of existing judge benchmarks by separating evaluation into explicit dimensions: content (C), voice quality (VQ), and paralinguistics (P). Using this data, TRACE constructs a textual blueprint of inexpensive audio signals and prompts an LLM to render dimension-wise judgments, fusing them into an overall rating via a deterministic policy. TRACE achieves higher agreement with human raters than ALMs and transcript-only LLM judges while being significantly more cost-effective. We will release the HCoT annotations and the TRACE framework to enable scalable and human-aligned S2S evaluation.",
+      "identifiers": [
+        "SemanticScholar:10ce70368fa980d6d1dcf4c8bf13d26294f827e7"
+      ],
+      "semantic_scholar_id": "10ce70368fa980d6d1dcf4c8bf13d26294f827e7",
+      "canonical_id": "arXiv:2601.13742",
+      "arxiv_id": "2601.13742",
+      "doi": "10.48550/arXiv.2601.13742",
+      "authors": [
+        "Arjun Chandra",
+        "Kevin Miller",
+        "Venkatesh Ravichandran",
+        "Constantinos Papayiannis",
+        "V. Saligrama"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 263,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents",
+      "source_url": "https://arxiv.org/abs/2602.02050",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tool-using agents based on Large Language Models (LLMs) excel in tasks such as mathematical reasoning and multi-hop question answering. However, in long trajectories, agents often trigger excessive and low-quality tool calls, increasing latency and degrading inference performance, making managing tool-use behavior challenging. In this work, we conduct entropy-based pilot experiments and observe a strong positive correlation between entropy reduction and high-quality tool calls. Building on this finding, we propose using entropy reduction as a supervisory signal and design two reward strategies to address the differing needs of optimizing tool-use behavior. Sparse outcome rewards provide coarse, trajectory-level guidance to improve efficiency, while dense process rewards offer fine-grained supervision to enhance performance. Experiments across diverse domains show that both reward designs improve tool-use behavior: the former reduces tool calls by 72.07% compared to the average of baselines, while the latter improves performance by 22.27%. These results position entropy reduction as a key mechanism for enhancing tool-use behavior, enabling agents to be more adaptive in real-world applications.",
+      "identifiers": [
+        "SemanticScholar:5dd02e466690cc0a53e794828e6bb5afc252e515"
+      ],
+      "semantic_scholar_id": "5dd02e466690cc0a53e794828e6bb5afc252e515",
+      "canonical_id": "arXiv:2602.02050",
+      "arxiv_id": "2602.02050",
+      "doi": "10.48550/arXiv.2602.02050",
+      "authors": [
+        "Ze-Ping Li",
+        "Hongru Wang",
+        "Yi-Wen Zhao",
+        "Guan-Hua Chen",
+        "Yixia Li",
+        "Keyang Chen",
+        "Yixin Cao",
+        "Guang-Nan Ye",
+        "Hongfeng Chai",
+        "Zhen-Fei Yin"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.14096",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.14096",
+        "id:SemanticScholar:125d438f7cfb8b0b721de67c786deb4e115ac953",
+        "id:arXiv:2511.14096",
+        "title:neuropath neurobiologyinspired path tracking and reflection for semantically coherent retrieval",
+        "url:https://arxiv.org/abs/2511.14096"
+      ],
+      "record": {
+        "title": "NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval",
+        "source_url": "https://arxiv.org/abs/2511.14096",
+        "year": 2025,
+        "published": "2025-11-18",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-augmented generation (RAG) greatly enhances large language models (LLMs) performance in knowledge-intensive tasks. However, naive RAG methods struggle with multi-hop question answering due to their limited capacity to capture complex dependencies across documents. Recent studies employ graph-based RAG to capture document connections. However, these approaches often result in a loss of semantic coherence and introduce irrelevant noise during node matching and subgraph construction. To address these limitations, we propose NeuroPath, an LLM-driven semantic path tracking RAG framework inspired by the path navigational planning of place cells in neurobiology. It consists of two steps: Dynamic Path Tracking and Post-retrieval Completion. Dynamic Path Tracking performs goal-directed semantic path tracking and pruning over the constructed knowledge graph (KG), improving noise reduction and semantic coherence. Post-retrieval Completion further reinforces these benefits by conducting second-stage retrieval using intermediate reasoning and the original query to refine the query goal and complete missing information in the reasoning path. NeuroPath surpasses current state-of-the-art baselines on three multi-hop QA datasets, achieving average improvements of 16.3% on recall@2 and 13.5% on recall@5 over advanced graph-based RAG methods. Moreover, compared to existing iter-based RAG methods, NeuroPath achieves higher accuracy and reduces token consumption by 22.8%. Finally, we demonstrate the robustness of NeuroPath across four smaller LLMs (Llama3.1, GLM4, Mistral0.3, and Gemma3), and further validate its scalability across tasks of varying complexity. Code is available at https://github.com/KennyCaty/NeuroPath.",
+        "identifiers": [
+          "SemanticScholar:125d438f7cfb8b0b721de67c786deb4e115ac953"
+        ],
+        "semantic_scholar_id": "125d438f7cfb8b0b721de67c786deb4e115ac953",
+        "canonical_id": "arXiv:2511.14096",
+        "arxiv_id": "2511.14096",
+        "doi": "10.48550/arXiv.2511.14096",
+        "authors": [
+          "Juncheng Li",
+          "Rong-Zheng Wang",
+          "Yi-Hong Huang",
+          "Qi-Zhi Chen",
+          "Jiasheng Zhang",
+          "Shuang Liang"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 326,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.02535",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.02535",
+        "id:SemanticScholar:63b42b74459d5a1cf91aa1742a86a3c4c37b37c6",
+        "id:arXiv:2601.02535",
+        "title:modex evaluatorfree bestofn selection for openended generation",
+        "url:https://arxiv.org/abs/2601.02535"
+      ],
+      "record": {
+        "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation",
+        "source_url": "https://arxiv.org/abs/2601.02535",
+        "year": 2026,
+        "published": "2026-01-05",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Selecting a single high-quality output from multiple stochastic generations remains a fundamental challenge for large language models (LLMs), particularly in open-ended tasks where no canonical answer exists. While Best-of-N and self-consistency methods show that aggregating multiple generations can improve performance, existing approaches typically rely on external evaluators, reward models, or exact string-match voting, limiting their applicability and efficiency. We propose Mode Extraction (ModeX), an evaluator-free Best-of-N selection framework that generalizes majority voting to open-ended text generation by identifying the modal output representing the dominant semantic consensus among generated texts. ModeX constructs a similarity graph over candidate generations and recursively applies spectral clustering to select a representative centroid, without requiring additional inference or auxiliary models. We further instantiate this selection principle as ModeX-Lite, an improved version of ModeX with early pruning for efficiency. Across open-ended tasks -- including text summarization, code generation, and mathematical reasoning -- our approaches consistently outperform standard single- and multi-path baselines, providing a computationally efficient solution for robust open-ended text generation. Code is released in https://github.com/deeplearning-wisc/ModeX.",
+        "identifiers": [
+          "SemanticScholar:63b42b74459d5a1cf91aa1742a86a3c4c37b37c6"
+        ],
+        "semantic_scholar_id": "63b42b74459d5a1cf91aa1742a86a3c4c37b37c6",
+        "canonical_id": "arXiv:2601.02535",
+        "arxiv_id": "2601.02535",
+        "doi": "10.48550/arXiv.2601.02535",
+        "authors": [
+          "Hyeong Kyu Choi",
+          "Sharon Li"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 278,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.10323",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.10323",
+        "id:SemanticScholar:96b985e626d68117165082f7cabe2db567a145d6",
+        "id:arXiv:2601.10323",
+        "title:roma realtime omnimultimodal assistant with interactive streaming understanding",
+        "url:https://arxiv.org/abs/2601.10323"
+      ],
+      "record": {
+        "title": "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding",
+        "source_url": "https://arxiv.org/abs/2601.10323",
+        "year": 2026,
+        "published": "2026-01-15",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent Omni-multimodal Large Language Models show promise in unified audio, vision, and text modeling. However, streaming audio-video understanding remains challenging, as existing approaches suffer from disjointed capabilities: they typically exhibit incomplete modality support or lack autonomous proactive monitoring. To address this, we present ROMA, a real-time omni-multimodal assistant for unified reactive and proactive interaction. ROMA processes continuous inputs as synchronized multimodal units, aligning dense audio with discrete video frames to handle granularity mismatches. For online decision-making, we introduce a lightweight speak head that decouples response initiation from generation to ensure precise triggering without task conflict. We train ROMA with a curated streaming dataset and a two-stage curriculum that progressively optimizes for streaming format adaptation and proactive responsiveness. To standardize the fragmented evaluation landscape, we reorganize diverse benchmarks into a unified suite covering both proactive (alert, narration) and reactive (QA) settings. Extensive experiments across 12 benchmarks demonstrate ROMA achieves state-of-the-art performance on proactive tasks while competitive in reactive settings, validating its robustness in unified real-time omni-multimodal understanding.",
+        "identifiers": [
+          "SemanticScholar:96b985e626d68117165082f7cabe2db567a145d6"
+        ],
+        "semantic_scholar_id": "96b985e626d68117165082f7cabe2db567a145d6",
+        "canonical_id": "arXiv:2601.10323",
+        "arxiv_id": "2601.10323",
+        "doi": "10.48550/arXiv.2601.10323",
+        "authors": [
+          "Xue-Yun Tian",
+          "Wei Li",
+          "Bingbing Xu",
+          "Heng Dong",
+          "Yuan-Zhuo Wang",
+          "Hua-Wei Shen"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 268,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.13742",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.13742",
+        "id:SemanticScholar:10ce70368fa980d6d1dcf4c8bf13d26294f827e7",
+        "id:arXiv:2601.13742",
+        "title:hearing between the lines unlocking the reasoning power of llms for speech evaluation",
+        "url:https://arxiv.org/abs/2601.13742"
+      ],
+      "record": {
+        "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation",
+        "source_url": "https://arxiv.org/abs/2601.13742",
+        "year": 2026,
+        "published": "2026-01-20",
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) judges exhibit strong reasoning capabilities but are limited to textual content. This leaves current automatic Speech-to-Speech (S2S) evaluation methods reliant on opaque and expensive Audio Language Models (ALMs). In this work, we propose TRACE (Textual Reasoning over Audio Cues for Evaluation), a novel framework that enables LLM judges to reason over audio cues to achieve cost-efficient and human-aligned S2S evaluation. To demonstrate the strength of the framework, we first introduce a Human Chain-of-Thought (HCoT) annotation protocol to improve the diagnostic capability of existing judge benchmarks by separating evaluation into explicit dimensions: content (C), voice quality (VQ), and paralinguistics (P). Using this data, TRACE constructs a textual blueprint of inexpensive audio signals and prompts an LLM to render dimension-wise judgments, fusing them into an overall rating via a deterministic policy. TRACE achieves higher agreement with human raters than ALMs and transcript-only LLM judges while being significantly more cost-effective. We will release the HCoT annotations and the TRACE framework to enable scalable and human-aligned S2S evaluation.",
+        "identifiers": [
+          "SemanticScholar:10ce70368fa980d6d1dcf4c8bf13d26294f827e7"
+        ],
+        "semantic_scholar_id": "10ce70368fa980d6d1dcf4c8bf13d26294f827e7",
+        "canonical_id": "arXiv:2601.13742",
+        "arxiv_id": "2601.13742",
+        "doi": "10.48550/arXiv.2601.13742",
+        "authors": [
+          "Arjun Chandra",
+          "Kevin Miller",
+          "Venkatesh Ravichandran",
+          "Constantinos Papayiannis",
+          "V. Saligrama"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 263,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02050",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02050",
+        "id:SemanticScholar:5dd02e466690cc0a53e794828e6bb5afc252e515",
+        "id:arXiv:2602.02050",
+        "title:rethinking the role of entropy in optimizing tooluse behaviors for large language model agents",
+        "url:https://arxiv.org/abs/2602.02050"
+      ],
+      "record": {
+        "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents",
+        "source_url": "https://arxiv.org/abs/2602.02050",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Tool-using agents based on Large Language Models (LLMs) excel in tasks such as mathematical reasoning and multi-hop question answering. However, in long trajectories, agents often trigger excessive and low-quality tool calls, increasing latency and degrading inference performance, making managing tool-use behavior challenging. In this work, we conduct entropy-based pilot experiments and observe a strong positive correlation between entropy reduction and high-quality tool calls. Building on this finding, we propose using entropy reduction as a supervisory signal and design two reward strategies to address the differing needs of optimizing tool-use behavior. Sparse outcome rewards provide coarse, trajectory-level guidance to improve efficiency, while dense process rewards offer fine-grained supervision to enhance performance. Experiments across diverse domains show that both reward designs improve tool-use behavior: the former reduces tool calls by 72.07% compared to the average of baselines, while the latter improves performance by 22.27%. These results position entropy reduction as a key mechanism for enhancing tool-use behavior, enabling agents to be more adaptive in real-world applications.",
+        "identifiers": [
+          "SemanticScholar:5dd02e466690cc0a53e794828e6bb5afc252e515"
+        ],
+        "semantic_scholar_id": "5dd02e466690cc0a53e794828e6bb5afc252e515",
+        "canonical_id": "arXiv:2602.02050",
+        "arxiv_id": "2602.02050",
+        "doi": "10.48550/arXiv.2602.02050",
+        "authors": [
+          "Ze-Ping Li",
+          "Hongru Wang",
+          "Yi-Wen Zhao",
+          "Guan-Hua Chen",
+          "Yixia Li",
+          "Keyang Chen",
+          "Yixin Cao",
+          "Guang-Nan Ye",
+          "Hongfeng Chai",
+          "Zhen-Fei Yin"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 250,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cd51b1bd497780a594def936e29019bfce7a2c5febb194b6fe8ecd3bfb655494",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
