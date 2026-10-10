@@ -1,0 +1,698 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5ce21df4d2d051a7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5ce21df4d2d0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.14778/3819518.3819541",
+    "arXiv:2503.10135",
+    "arXiv:2504.14992",
+    "arXiv:2506.14158",
+    "arXiv:2508.16700",
+    "arXiv:2608.08721",
+    "arXiv:2609.34117"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ce8550846e34878d384e43f467a4fde56cae084d",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T00:04:24.493395+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.14778/3819518.3819541",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.10135",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.14992",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.14158",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.16700",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08721",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34117",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Gumiho: A Hybrid Architecture to Prioritize Early Tokens in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2503.10135",
+      "year": 2025,
+      "published": "2025-03-13",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SPD) aims to accelerate the auto-regressive token generation process of a target Large Language Model (LLM). Some approaches employ a draft model with multiple heads to predict a sequence of future tokens, where each head handles a token in the sequence. The target LLM verifies the predicted sequence and accepts aligned tokens, enabling efficient multi-token generation. However, existing methods assume that all tokens within a sequence are equally important, employing identical head structures and relying on a single-generation paradigm, either serial or parallel. To this end, we theoretically demonstrate that initial tokens in the draft sequence are more important than later ones. Building on this insight, we propose Gumiho, a hybrid model combining serial and parallel heads. Specifically, given the critical importance of early tokens, we employ a sophisticated Transformer architecture for the early draft heads in a serial configuration to improve accuracy. For later tokens, we utilize multiple lightweight MLP heads operating in parallel to enhance efficiency. By allocating more advanced model structures and longer running times to the early heads, Gumiho achieves improved overall performance. The experimental results demonstrate that our method outperforms existing approaches, fully validating its effectiveness.",
+      "identifiers": [
+        "SemanticScholar:94f837c05976477d10344ef1b9a7587a81571a3c"
+      ],
+      "semantic_scholar_id": "94f837c05976477d10344ef1b9a7587a81571a3c",
+      "canonical_id": "arXiv:2503.10135",
+      "arxiv_id": "2503.10135",
+      "doi": "10.48550/arXiv.2503.10135",
+      "authors": [
+        "Jinze Li",
+        "Yixing Xu",
+        "Hai-Duo Huang",
+        "Xuan-Wu Yin",
+        "Dong Li",
+        "Edith C. H. Ngai",
+        "E. Barsoum"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 576,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Efficient Cooperation-Aware Key and Value Management for LLM Inference",
+      "source_url": "https://doi.org/10.14778/3819518.3819541",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "Proceedings of the VLDB Endowment",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) caching is a widely used technique for boosting performance in database and storage systems. It keeps frequently accessed data in fast storage to minimize redundant data fetching and improve throughput. This same idea has been adopted in Large Language Models (LLMs), where it avoids recomputing the key and value states of previous tokens in attention heads during autoregressive decoding, thereby greatly accelerating inference. However, the KV cache in LLMs faces a significant challenge due to the substantial memory required to store these KV pairs in the inference process. This issue arises because each attention head in the LLM stores its own KV cache for all context tokens, leading to the cache size that grows linearly with sequence length. This has spurred research into efficient management of the KV cache of LLMs.\n One of the promising directions is KV cache budget allocation, with several approaches proposing head-level allocation as they recognize that different attention heads play distinct roles. However, these methods assess each head in isolation, overlooking their cooperative contributions within the model, which results in a deviation from their true impact. To address this limitation, we propose CoKV, a novel method that efficiently manages the KV cache in LLM inference by modeling the cooperation among attention heads as a cooperative game. By attributing the contribution of each head within the model in advance, CoKV can more effectively allocate the global KV cache budget in KV cache optimization techniques such as eviction and quantization. Extensive experiments demonstrate the effectiveness of CoKV on long-context benchmarks (e.g., LongBench, NIAH, and RULER) and mathematical reasoning benchmarks (e.g., GSM8K and MATH) across multiple model families, including Qwen, Llama, and Mistral.",
+      "identifiers": [
+        "SemanticScholar:0515a64bf2540436807191690aea0e73c7e6b9ea"
+      ],
+      "semantic_scholar_id": "0515a64bf2540436807191690aea0e73c7e6b9ea",
+      "doi": "10.14778/3819518.3819541",
+      "canonical_id": "DOI:10.14778/3819518.3819541",
+      "authors": [
+        "Qiheng Sun",
+        "Hongwei Zhang",
+        "Jun-Xu Liu",
+        "Haocheng Xia",
+        "Jin-Fei Liu",
+        "Kui Ren",
+        "Hai-Bo Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LibraSpec: Dynamic Diffusion-Based Speculative Decoding via Marginal-Gain-Driven Optimization",
+      "source_url": "https://arxiv.org/abs/2608.08721",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by drafting multiple tokens for parallel verification, with efficiency critically determined by the speculative length selected at each decoding round. Existing dynamic speculation methods select the speculation length by estimating how many tokens will be accepted, which is reasonable for autoregressive drafters that generates tokens sequentially. The recent wave of diffusion-based drafters, however, generates candidate blocks in parallel at substantially lower drafting cost, shifting the key question from how many tokens to generate to how many generated tokens are worth verifying. We therefore reformulate dynamic speculative-length selection as expected-speedup optimization and derive a marginal criterion that extends the speculative sequence only when its acceptance gain outweighs the additional verification cost. Building on this criterion, we develop \\textit{LibraSpec}, a training-free and plug-and-play algorithm that iteratively determines the speculative length using drafter confidence scores. Theoretically, we prove that LibraSpec monotonically converges toward the optimal speculative length. Experiments across six target models, three diffusion-based speculative decoding methods, and math, coding, and chat benchmarks show consistent improvements under both greedy and sampling settings, achieving a further $0.5\\sim1.5\\times$ improvement over baselines and up to $8.49\\times$ speedup over autoregressive decoding.",
+      "identifiers": [
+        "SemanticScholar:ba5a5efdbd89b586ab6e25b7b567d819b0f31f8e"
+      ],
+      "semantic_scholar_id": "ba5a5efdbd89b586ab6e25b7b567d819b0f31f8e",
+      "canonical_id": "arXiv:2608.08721",
+      "arxiv_id": "2608.08721",
+      "authors": [
+        "Zexun Lin",
+        "Yuan Feng",
+        "Junlin Lv",
+        "Kevin S. Zhou",
+        "Xi-Ke Xie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 62,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving",
+      "source_url": "https://arxiv.org/abs/2609.34117",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-experts (MoE) models activate few experts per token, yet batched decoding can access nearly the entire expert pool, making expert-weight traffic a major bottleneck. Expert pruning reduces this traffic, but conventional approaches also prune compute-bound prefill, sacrificing model quality for little throughput benefit. We present SlimWise, a serving framework that tailors the expert pool to each inference phase. SlimWise performs prefill with the full model and decode with a pruned model that directly reuses the prefill-generated KV cache without conversion. Across two MoE backbones and three pruning criteria, this training-free KV cache handoff substantially narrows accuracy gaps relative to the full model in many settings. We also show that benchmark accuracy can conceal substantial pruning-induced changes in generation length. To address these distortions and residual accuracy loss, SlimWise introduces a low-cost distillation stage that trains the decoder to continue from full-model KV caches while updating only a small subset of parameters. Implemented in vLLM, SlimWise supports both prefill-decode (PD) disaggregation and PD-colocated serving. On Qwen3.6-35B-A3B, SlimWise improves decode throughput by up to 1.81x at 50% expert pruning with minimal accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:0a3486ae2ad62fbf422176471a0028b9420bb0c4"
+      ],
+      "semantic_scholar_id": "0a3486ae2ad62fbf422176471a0028b9420bb0c4",
+      "canonical_id": "arXiv:2609.34117",
+      "arxiv_id": "2609.34117",
+      "authors": [
+        "Gunho Park",
+        "Kyoungho Jeun",
+        "Juntaek Oh",
+        "Byeong-Gon Shin",
+        "Baeseong Park",
+        "Minsoo Rhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GPT-OSS-20B: A Comprehensive Deployment-Centric Analysis of OpenAI's Open-Weight Mixture of Experts Model",
+      "source_url": "https://arxiv.org/abs/2508.16700",
+      "year": 2025,
+      "published": "2025-08-22",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a single-GPU (H100, bf16) evaluation of GPT-OSS-20B (Mixture-of-Experts; 20.9B total, approx. 3.61B active) against dense baselines Qwen3-32B and Yi-34B across multiple dimensions. We measure true time-to-first-token (TTFT), full-decode throughput (TPOT), end-to-end latency percentiles, peak VRAM with past key values (PKV) held, and energy via a consistent nvidia-smi-based sampler. At a 2048-token context with 64-token decode, GPT-OSS-20B delivers higher decode throughput and tokens per Joule than dense baselines Qwen3-32B and Yi-34B, while substantially reducing peak VRAM and energy per 1000 generated tokens; its TTFT is higher due to MoE routing overhead. With only 17.3% of parameters active (3.61B of 20.9B), GPT-OSS-20B provides about 31.8% higher decode throughput and 25.8% lower energy per 1000 generated tokens than Qwen3-32B at 2048/64, while using 31.7% less peak VRAM. Normalized by active parameters, GPT-OSS-20B shows markedly stronger per-active-parameter efficiency (APE), underscoring MoE's deployment advantages. We do not evaluate accuracy; this is a deployment-focused study. We release code and consolidated results to enable replication and extension.",
+      "identifiers": [
+        "SemanticScholar:bea5ae03c021c0f04c5146a84ae98982edffa4c2"
+      ],
+      "semantic_scholar_id": "bea5ae03c021c0f04c5146a84ae98982edffa4c2",
+      "canonical_id": "arXiv:2508.16700",
+      "arxiv_id": "2508.16700",
+      "doi": "10.48550/arXiv.2508.16700",
+      "authors": [
+        "Deepak Kumar",
+        "Divakar Yadav",
+        "Y. Patel"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 414,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Pretraining Length Scaling",
+      "source_url": "https://arxiv.org/abs/2504.14992",
+      "year": 2025,
+      "published": "2025-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in large language models have demonstrated the effectiveness of length scaling during post-training, yet its potential in pre-training remains underexplored. We present the Parallel Hidden Decoding Transformer (\\textit{PHD}-Transformer), a novel framework that enables efficient length scaling during pre-training while maintaining inference efficiency. \\textit{PHD}-Transformer achieves this through an innovative KV cache management strategy that distinguishes between original tokens and hidden decoding tokens. By retaining only the KV cache of original tokens for long-range dependencies while immediately discarding hidden decoding tokens after use, our approach maintains the same KV cache size as the vanilla transformer while enabling effective length scaling. To further enhance performance, we introduce two optimized variants: \\textit{PHD-SWA} employs sliding window attention to preserve local dependencies, while \\textit{PHD-CSWA} implements chunk-wise sliding window attention to eliminate linear growth in pre-filling time. Extensive experiments demonstrate consistent improvements across multiple benchmarks.",
+      "identifiers": [
+        "SemanticScholar:4b8ce4d10bafb92d22335757066b2c1a120f7241"
+      ],
+      "semantic_scholar_id": "4b8ce4d10bafb92d22335757066b2c1a120f7241",
+      "canonical_id": "arXiv:2504.14992",
+      "arxiv_id": "2504.14992",
+      "doi": "10.48550/arXiv.2504.14992",
+      "authors": [
+        "Bo-Hong Wu",
+        "Shen Yan",
+        "Sijun Zhang",
+        "Jianqiao Lu",
+        "Yutao Zeng",
+        "Ya Wang",
+        "Xun Zhou"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 537,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S4C: Speculative Sampling with Syntactic and Semantic Coherence for Efficient Inference of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.14158",
+      "year": 2025,
+      "published": "2025-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) exhibit remarkable reasoning capabilities across diverse downstream tasks. However, their autoregressive nature leads to substantial inference latency, posing challenges for real-time applications. Speculative sampling mitigates this issue by introducing a drafting phase followed by a parallel validation phase, enabling faster token generation and verification. Existing approaches, however, overlook the inherent coherence in text generation, limiting their efficiency. To address this gap, we propose a Speculative Sampling with Syntactic and Semantic Coherence (S$^4$C) framework, which extends speculative sampling by leveraging multi-head drafting for rapid token generation and a continuous verification tree for efficient candidate validation and feature reuse. Experimental results demonstrate that S$^4$C surpasses baseline methods across mainstream tasks, offering enhanced efficiency, parallelism, and the ability to generate more valid tokens with fewer computational resources. On Spec-bench benchmarks, S$^4$C achieves an acceleration ratio of 2.26x-2.60x, outperforming state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:509280804418084f19aa2c955a67eaa888dc6578"
+      ],
+      "semantic_scholar_id": "509280804418084f19aa2c955a67eaa888dc6578",
+      "canonical_id": "arXiv:2506.14158",
+      "arxiv_id": "2506.14158",
+      "doi": "10.48550/arXiv.2506.14158",
+      "authors": [
+        "Tao He",
+        "Guang Huang",
+        "Yu Yang",
+        "Tian-Shi Xu",
+        "Sicheng Zhao",
+        "Gui-Guang Ding",
+        "Peng-Yang Wang",
+        "Feng Tian"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 480,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2503.10135",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.10135",
+        "id:SemanticScholar:94f837c05976477d10344ef1b9a7587a81571a3c",
+        "id:arXiv:2503.10135",
+        "title:gumiho a hybrid architecture to prioritize early tokens in speculative decoding",
+        "url:https://arxiv.org/abs/2503.10135"
+      ],
+      "record": {
+        "title": "Gumiho: A Hybrid Architecture to Prioritize Early Tokens in Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2503.10135",
+        "year": 2025,
+        "published": "2025-03-13",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SPD) aims to accelerate the auto-regressive token generation process of a target Large Language Model (LLM). Some approaches employ a draft model with multiple heads to predict a sequence of future tokens, where each head handles a token in the sequence. The target LLM verifies the predicted sequence and accepts aligned tokens, enabling efficient multi-token generation. However, existing methods assume that all tokens within a sequence are equally important, employing identical head structures and relying on a single-generation paradigm, either serial or parallel. To this end, we theoretically demonstrate that initial tokens in the draft sequence are more important than later ones. Building on this insight, we propose Gumiho, a hybrid model combining serial and parallel heads. Specifically, given the critical importance of early tokens, we employ a sophisticated Transformer architecture for the early draft heads in a serial configuration to improve accuracy. For later tokens, we utilize multiple lightweight MLP heads operating in parallel to enhance efficiency. By allocating more advanced model structures and longer running times to the early heads, Gumiho achieves improved overall performance. The experimental results demonstrate that our method outperforms existing approaches, fully validating its effectiveness.",
+        "identifiers": [
+          "SemanticScholar:94f837c05976477d10344ef1b9a7587a81571a3c"
+        ],
+        "semantic_scholar_id": "94f837c05976477d10344ef1b9a7587a81571a3c",
+        "canonical_id": "arXiv:2503.10135",
+        "arxiv_id": "2503.10135",
+        "doi": "10.48550/arXiv.2503.10135",
+        "authors": [
+          "Jinze Li",
+          "Yixing Xu",
+          "Hai-Duo Huang",
+          "Xuan-Wu Yin",
+          "Dong Li",
+          "Edith C. H. Ngai",
+          "E. Barsoum"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 576,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.14778/3819518.3819541",
+      "identity_tokens": [
+        "id:DOI:10.14778/3819518.3819541",
+        "id:SemanticScholar:0515a64bf2540436807191690aea0e73c7e6b9ea",
+        "title:efficient cooperationaware key and value management for llm inference",
+        "url:https://doi.org/10.14778/3819518.3819541"
+      ],
+      "record": {
+        "title": "Efficient Cooperation-Aware Key and Value Management for LLM Inference",
+        "source_url": "https://doi.org/10.14778/3819518.3819541",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "Proceedings of the VLDB Endowment",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-value (KV) caching is a widely used technique for boosting performance in database and storage systems. It keeps frequently accessed data in fast storage to minimize redundant data fetching and improve throughput. This same idea has been adopted in Large Language Models (LLMs), where it avoids recomputing the key and value states of previous tokens in attention heads during autoregressive decoding, thereby greatly accelerating inference. However, the KV cache in LLMs faces a significant challenge due to the substantial memory required to store these KV pairs in the inference process. This issue arises because each attention head in the LLM stores its own KV cache for all context tokens, leading to the cache size that grows linearly with sequence length. This has spurred research into efficient management of the KV cache of LLMs.\n One of the promising directions is KV cache budget allocation, with several approaches proposing head-level allocation as they recognize that different attention heads play distinct roles. However, these methods assess each head in isolation, overlooking their cooperative contributions within the model, which results in a deviation from their true impact. To address this limitation, we propose CoKV, a novel method that efficiently manages the KV cache in LLM inference by modeling the cooperation among attention heads as a cooperative game. By attributing the contribution of each head within the model in advance, CoKV can more effectively allocate the global KV cache budget in KV cache optimization techniques such as eviction and quantization. Extensive experiments demonstrate the effectiveness of CoKV on long-context benchmarks (e.g., LongBench, NIAH, and RULER) and mathematical reasoning benchmarks (e.g., GSM8K and MATH) across multiple model families, including Qwen, Llama, and Mistral.",
+        "identifiers": [
+          "SemanticScholar:0515a64bf2540436807191690aea0e73c7e6b9ea"
+        ],
+        "semantic_scholar_id": "0515a64bf2540436807191690aea0e73c7e6b9ea",
+        "doi": "10.14778/3819518.3819541",
+        "canonical_id": "DOI:10.14778/3819518.3819541",
+        "authors": [
+          "Qiheng Sun",
+          "Hongwei Zhang",
+          "Jun-Xu Liu",
+          "Haocheng Xia",
+          "Jin-Fei Liu",
+          "Kui Ren",
+          "Hai-Bo Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08721",
+      "identity_tokens": [
+        "id:SemanticScholar:ba5a5efdbd89b586ab6e25b7b567d819b0f31f8e",
+        "id:arXiv:2608.08721",
+        "title:libraspec dynamic diffusionbased speculative decoding via marginalgaindriven optimization",
+        "url:https://arxiv.org/abs/2608.08721"
+      ],
+      "record": {
+        "title": "LibraSpec: Dynamic Diffusion-Based Speculative Decoding via Marginal-Gain-Driven Optimization",
+        "source_url": "https://arxiv.org/abs/2608.08721",
+        "year": 2026,
+        "published": "2026-08-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference by drafting multiple tokens for parallel verification, with efficiency critically determined by the speculative length selected at each decoding round. Existing dynamic speculation methods select the speculation length by estimating how many tokens will be accepted, which is reasonable for autoregressive drafters that generates tokens sequentially. The recent wave of diffusion-based drafters, however, generates candidate blocks in parallel at substantially lower drafting cost, shifting the key question from how many tokens to generate to how many generated tokens are worth verifying. We therefore reformulate dynamic speculative-length selection as expected-speedup optimization and derive a marginal criterion that extends the speculative sequence only when its acceptance gain outweighs the additional verification cost. Building on this criterion, we develop \\textit{LibraSpec}, a training-free and plug-and-play algorithm that iteratively determines the speculative length using drafter confidence scores. Theoretically, we prove that LibraSpec monotonically converges toward the optimal speculative length. Experiments across six target models, three diffusion-based speculative decoding methods, and math, coding, and chat benchmarks show consistent improvements under both greedy and sampling settings, achieving a further $0.5\\sim1.5\\times$ improvement over baselines and up to $8.49\\times$ speedup over autoregressive decoding.",
+        "identifiers": [
+          "SemanticScholar:ba5a5efdbd89b586ab6e25b7b567d819b0f31f8e"
+        ],
+        "semantic_scholar_id": "ba5a5efdbd89b586ab6e25b7b567d819b0f31f8e",
+        "canonical_id": "arXiv:2608.08721",
+        "arxiv_id": "2608.08721",
+        "authors": [
+          "Zexun Lin",
+          "Yuan Feng",
+          "Junlin Lv",
+          "Kevin S. Zhou",
+          "Xi-Ke Xie"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 62,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34117",
+      "identity_tokens": [
+        "id:SemanticScholar:0a3486ae2ad62fbf422176471a0028b9420bb0c4",
+        "id:arXiv:2609.34117",
+        "title:slimwise decoupling expert pruning across prefill and decode for efficient moe serving",
+        "url:https://arxiv.org/abs/2609.34117"
+      ],
+      "record": {
+        "title": "SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving",
+        "source_url": "https://arxiv.org/abs/2609.34117",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-experts (MoE) models activate few experts per token, yet batched decoding can access nearly the entire expert pool, making expert-weight traffic a major bottleneck. Expert pruning reduces this traffic, but conventional approaches also prune compute-bound prefill, sacrificing model quality for little throughput benefit. We present SlimWise, a serving framework that tailors the expert pool to each inference phase. SlimWise performs prefill with the full model and decode with a pruned model that directly reuses the prefill-generated KV cache without conversion. Across two MoE backbones and three pruning criteria, this training-free KV cache handoff substantially narrows accuracy gaps relative to the full model in many settings. We also show that benchmark accuracy can conceal substantial pruning-induced changes in generation length. To address these distortions and residual accuracy loss, SlimWise introduces a low-cost distillation stage that trains the decoder to continue from full-model KV caches while updating only a small subset of parameters. Implemented in vLLM, SlimWise supports both prefill-decode (PD) disaggregation and PD-colocated serving. On Qwen3.6-35B-A3B, SlimWise improves decode throughput by up to 1.81x at 50% expert pruning with minimal accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:0a3486ae2ad62fbf422176471a0028b9420bb0c4"
+        ],
+        "semantic_scholar_id": "0a3486ae2ad62fbf422176471a0028b9420bb0c4",
+        "canonical_id": "arXiv:2609.34117",
+        "arxiv_id": "2609.34117",
+        "authors": [
+          "Gunho Park",
+          "Kyoungho Jeun",
+          "Juntaek Oh",
+          "Byeong-Gon Shin",
+          "Baeseong Park",
+          "Minsoo Rhu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.16700",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.16700",
+        "id:SemanticScholar:bea5ae03c021c0f04c5146a84ae98982edffa4c2",
+        "id:arXiv:2508.16700",
+        "title:gptoss20b a comprehensive deploymentcentric analysis of openais openweight mixture of experts model",
+        "url:https://arxiv.org/abs/2508.16700"
+      ],
+      "record": {
+        "title": "GPT-OSS-20B: A Comprehensive Deployment-Centric Analysis of OpenAI's Open-Weight Mixture of Experts Model",
+        "source_url": "https://arxiv.org/abs/2508.16700",
+        "year": 2025,
+        "published": "2025-08-22",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a single-GPU (H100, bf16) evaluation of GPT-OSS-20B (Mixture-of-Experts; 20.9B total, approx. 3.61B active) against dense baselines Qwen3-32B and Yi-34B across multiple dimensions. We measure true time-to-first-token (TTFT), full-decode throughput (TPOT), end-to-end latency percentiles, peak VRAM with past key values (PKV) held, and energy via a consistent nvidia-smi-based sampler. At a 2048-token context with 64-token decode, GPT-OSS-20B delivers higher decode throughput and tokens per Joule than dense baselines Qwen3-32B and Yi-34B, while substantially reducing peak VRAM and energy per 1000 generated tokens; its TTFT is higher due to MoE routing overhead. With only 17.3% of parameters active (3.61B of 20.9B), GPT-OSS-20B provides about 31.8% higher decode throughput and 25.8% lower energy per 1000 generated tokens than Qwen3-32B at 2048/64, while using 31.7% less peak VRAM. Normalized by active parameters, GPT-OSS-20B shows markedly stronger per-active-parameter efficiency (APE), underscoring MoE's deployment advantages. We do not evaluate accuracy; this is a deployment-focused study. We release code and consolidated results to enable replication and extension.",
+        "identifiers": [
+          "SemanticScholar:bea5ae03c021c0f04c5146a84ae98982edffa4c2"
+        ],
+        "semantic_scholar_id": "bea5ae03c021c0f04c5146a84ae98982edffa4c2",
+        "canonical_id": "arXiv:2508.16700",
+        "arxiv_id": "2508.16700",
+        "doi": "10.48550/arXiv.2508.16700",
+        "authors": [
+          "Deepak Kumar",
+          "Divakar Yadav",
+          "Y. Patel"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 414,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.14992",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.14992",
+        "id:SemanticScholar:4b8ce4d10bafb92d22335757066b2c1a120f7241",
+        "id:arXiv:2504.14992",
+        "title:efficient pretraining length scaling",
+        "url:https://arxiv.org/abs/2504.14992"
+      ],
+      "record": {
+        "title": "Efficient Pretraining Length Scaling",
+        "source_url": "https://arxiv.org/abs/2504.14992",
+        "year": 2025,
+        "published": "2025-04-21",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in large language models have demonstrated the effectiveness of length scaling during post-training, yet its potential in pre-training remains underexplored. We present the Parallel Hidden Decoding Transformer (\\textit{PHD}-Transformer), a novel framework that enables efficient length scaling during pre-training while maintaining inference efficiency. \\textit{PHD}-Transformer achieves this through an innovative KV cache management strategy that distinguishes between original tokens and hidden decoding tokens. By retaining only the KV cache of original tokens for long-range dependencies while immediately discarding hidden decoding tokens after use, our approach maintains the same KV cache size as the vanilla transformer while enabling effective length scaling. To further enhance performance, we introduce two optimized variants: \\textit{PHD-SWA} employs sliding window attention to preserve local dependencies, while \\textit{PHD-CSWA} implements chunk-wise sliding window attention to eliminate linear growth in pre-filling time. Extensive experiments demonstrate consistent improvements across multiple benchmarks.",
+        "identifiers": [
+          "SemanticScholar:4b8ce4d10bafb92d22335757066b2c1a120f7241"
+        ],
+        "semantic_scholar_id": "4b8ce4d10bafb92d22335757066b2c1a120f7241",
+        "canonical_id": "arXiv:2504.14992",
+        "arxiv_id": "2504.14992",
+        "doi": "10.48550/arXiv.2504.14992",
+        "authors": [
+          "Bo-Hong Wu",
+          "Shen Yan",
+          "Sijun Zhang",
+          "Jianqiao Lu",
+          "Yutao Zeng",
+          "Ya Wang",
+          "Xun Zhou"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 537,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.14158",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.14158",
+        "id:SemanticScholar:509280804418084f19aa2c955a67eaa888dc6578",
+        "id:arXiv:2506.14158",
+        "title:s4c speculative sampling with syntactic and semantic coherence for efficient inference of large language models",
+        "url:https://arxiv.org/abs/2506.14158"
+      ],
+      "record": {
+        "title": "S4C: Speculative Sampling with Syntactic and Semantic Coherence for Efficient Inference of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2506.14158",
+        "year": 2025,
+        "published": "2025-06-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) exhibit remarkable reasoning capabilities across diverse downstream tasks. However, their autoregressive nature leads to substantial inference latency, posing challenges for real-time applications. Speculative sampling mitigates this issue by introducing a drafting phase followed by a parallel validation phase, enabling faster token generation and verification. Existing approaches, however, overlook the inherent coherence in text generation, limiting their efficiency. To address this gap, we propose a Speculative Sampling with Syntactic and Semantic Coherence (S$^4$C) framework, which extends speculative sampling by leveraging multi-head drafting for rapid token generation and a continuous verification tree for efficient candidate validation and feature reuse. Experimental results demonstrate that S$^4$C surpasses baseline methods across mainstream tasks, offering enhanced efficiency, parallelism, and the ability to generate more valid tokens with fewer computational resources. On Spec-bench benchmarks, S$^4$C achieves an acceleration ratio of 2.26x-2.60x, outperforming state-of-the-art methods.",
+        "identifiers": [
+          "SemanticScholar:509280804418084f19aa2c955a67eaa888dc6578"
+        ],
+        "semantic_scholar_id": "509280804418084f19aa2c955a67eaa888dc6578",
+        "canonical_id": "arXiv:2506.14158",
+        "arxiv_id": "2506.14158",
+        "doi": "10.48550/arXiv.2506.14158",
+        "authors": [
+          "Tao He",
+          "Guang Huang",
+          "Yu Yang",
+          "Tian-Shi Xu",
+          "Sicheng Zhao",
+          "Gui-Guang Ding",
+          "Peng-Yang Wang",
+          "Feng Tian"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 480,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8a946e21151b1bf9b5041f59c82d0edbaa845af37a0e742e24b20c7aef4a5317",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
