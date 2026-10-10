@@ -171,8 +171,8 @@
   実行中のKVキャッシュ容量とレイヤー配置を動的に組み替え、差分KV同期で停止を約10msに抑えながら、ワークロードに応じたパイプライン並列構成へ切り替えるLLMサービング方式。
 
 - **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  ConnectX-7とAWS EFAを共通の順序非依存RDMA点対点APIで扱い、KV転送・MoE配送・重み更新を複数NICへ透過分散してLLM基盤のNIC依存を減らす。
+  実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：2  
+  fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
 
 - **2026-03 · [Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference](2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
