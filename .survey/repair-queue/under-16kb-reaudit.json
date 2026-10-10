@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T10:55:30.993392+00:00",
+  "generated_at": "2026-10-10T11:45:30.268824+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 71,
+  "count": 67,
   "worker_counts": {
-    "scheduled-chat-00": 24,
-    "scheduled-chat-30": 23,
-    "scheduled-chat-45": 24
+    "scheduled-chat-00": 22,
+    "scheduled-chat-30": 22,
+    "scheduled-chat-45": 23
   },
   "entries": [
     {
@@ -82,28 +82,6 @@
         "16KB未満再監査: 本文説明量 1316 < 2200",
         "16KB未満再監査: 手法説明量 546 < 700",
         "16KB未満再監査: 評価説明量 154 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.08878-distillcache-kl-guided-adaptive-kv-cache-eviction-for-memory-efficient-l.md",
-      "canonical_id": "arXiv:2608.08878",
-      "title": "DistillCache: KL-Guided Adaptive KV-Cache Eviction for Memory-Efficient LLM Inference",
-      "file_bytes": 11076,
-      "source_sha256": "a6ea92a24eb542732c6c81b2b2513027e81a0114ac73b57fbcab8bd5f7ab9f9a",
-      "source_git_blob_sha": "55b31ede0e78dd002a61cb1073561dc4c225cb12",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.93153,
-      "quality_metrics": {
-        "body_chars": 2661,
-        "method_chars": 879,
-        "evaluation_chars": 127,
-        "limitation_chars": 405
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 127 < 500"
       ],
       "warnings": []
     },
@@ -213,28 +191,6 @@
         "limitation_chars": 265
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
-      "canonical_id": "arXiv:2609.25492",
-      "title": "RGSQ：リーマン幾何感度型量子化",
-      "file_bytes": 12659,
-      "source_sha256": "9fc3f4d0eeaf31bb736bd89b21ce47a783efcd8f451fcf3545701c64eddde48c",
-      "source_git_blob_sha": "193421ced5e18b56cdb27ad5e75592fefdf6a0ef",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.992985,
-      "quality_metrics": {
-        "body_chars": 2741,
-        "method_chars": 871,
-        "evaluation_chars": 271,
-        "limitation_chars": 135
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 271 < 500"
-      ],
       "warnings": []
     },
     {
@@ -472,28 +428,6 @@
       ]
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
-      "canonical_id": "arXiv:2404.16283",
-      "title": "Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services",
-      "file_bytes": 13051,
-      "source_sha256": "c827d9c866474edfb4cd259496513f147550e34097197ca04a7cf36bfa338fdc",
-      "source_git_blob_sha": "043bfa005e25e56db436197e6035646f5ef0fb61",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.967402,
-      "quality_metrics": {
-        "body_chars": 3336,
-        "method_chars": 1001,
-        "evaluation_chars": 408,
-        "limitation_chars": 210
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 408 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
       "canonical_id": "arXiv:2609.13612",
       "title": "AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels",
@@ -669,28 +603,6 @@
         "limitation_chars": 272
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
-      "canonical_id": "arXiv:2410.06270",
-      "title": "Mixture Compressor for Mixture-of-Experts LLMs Gains More",
-      "file_bytes": 13304,
-      "source_sha256": "8289ffe8ff866da13576fd786b050f3030a49cbbf44c17427e3d89cbd44a9953",
-      "source_git_blob_sha": "b63ef24996ced1c37dfd8f888c1271b6a56cde0b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.941597,
-      "quality_metrics": {
-        "body_chars": 2675,
-        "method_chars": 1773,
-        "evaluation_chars": 383,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 383 < 500"
-      ],
       "warnings": []
     },
     {
@@ -899,7 +811,7 @@
       "file_bytes": 13711,
       "source_sha256": "2ec28e823b470e5adf86ff6e10d3ef4c3bb8707885f09d8bfc85abc3be1a0851",
       "source_git_blob_sha": "e571dc061ebff2692260ecb7431e3fcb8be1603f",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.870011,
