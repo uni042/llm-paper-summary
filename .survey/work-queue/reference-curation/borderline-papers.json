@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T08:16:47+00:00",
-  "record_count": 4573,
+  "updated_at": "2026-10-10T08:36:03+00:00",
+  "record_count": 4577,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69981,6 +69981,62 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "MetaBERT: Collaborative Meta-Learning for Accelerating BERT Inference"
+    },
+    "arXiv:2010.06993": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.06993",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2010.06993",
+        "arXiv:2010.06993"
+      ],
+      "reason": "Weight Squeezing transfers a teacher into a smaller student and evaluates BERT-Medium on GLUE; the abstract supports compression and smaller/faster training, but does not establish serving latency or inference-memory gains.",
+      "first_checked_at": "2026-10-10T08:36:03+00:00",
+      "last_checked_at": "2026-10-10T08:36:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Weight Squeezing: Reparameterization for Knowledge Transfer and Model Compression"
+    },
+    "DOI:10.1109/hpcc-dss-smartcity-dependsys57074.2022.00047": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpcc-dss-smartcity-dependsys57074.2022.00047",
+      "identity_tokens": [
+        "DOI:10.1109/hpcc-dss-smartcity-dependsys57074.2022.00047",
+        "PRIMARY:https://doi.org/10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00047"
+      ],
+      "reason": "The stable DOI/title identify an inference-oriented ME-BERT paper, but the primary DOI landing URL returned `Internal Error ()` and the exact-DOI search exposed only secondary ResearchGate metadata; the publisher abstract was not retrievable.",
+      "first_checked_at": "2026-10-10T08:36:03+00:00",
+      "last_checked_at": "2026-10-10T08:36:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ME-BERT: Multi-exit BERT by use of Adapter"
+    },
+    "arXiv:2407.15545": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.15545",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2407.15545",
+        "arXiv:2407.15545"
+      ],
+      "reason": "Inverted Activations reduces activation storage during neural-network training and evaluates GPT, BERT, Mistral, and Llama; the abstract establishes training-memory savings, not inference or serving savings.",
+      "first_checked_at": "2026-10-10T08:36:03+00:00",
+      "last_checked_at": "2026-10-10T08:36:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Inverted Activations"
+    },
+    "arXiv:2506.02890": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.02890",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2506.02890",
+        "arXiv:2506.02890"
+      ],
+      "reason": "The paper empirically studies fine-grained MoE scaling to 50B parameters and gives practical architecture/training insights; its abstract does not establish a specific inference-latency, memory, or serving optimization.",
+      "first_checked_at": "2026-10-10T08:36:03+00:00",
+      "last_checked_at": "2026-10-10T08:36:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Fine-Grained MoE Beyond 50B Parameters: Empirical Evaluation and Practical Insights"
     }
   }
 }
