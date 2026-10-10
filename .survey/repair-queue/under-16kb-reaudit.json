@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T08:54:40.110683+00:00",
+  "generated_at": "2026-10-10T09:11:39.028771+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 114,
+  "count": 104,
   "worker_counts": {
-    "scheduled-chat-00": 38,
-    "scheduled-chat-30": 38,
-    "scheduled-chat-45": 38
+    "scheduled-chat-00": 34,
+    "scheduled-chat-30": 35,
+    "scheduled-chat-45": 35
   },
   "entries": [
     {
@@ -127,26 +127,6 @@
         "16KB未満再監査: 手法説明量 546 < 700",
         "16KB未満再監査: 評価説明量 154 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
-      "canonical_id": "arXiv:2506.06472",
-      "title": "Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage",
-      "file_bytes": 10560,
-      "source_sha256": "839f20ce1a2c3f6fca6b681be699b2220bc103d1884653bb18272a65c83993dd",
-      "source_git_blob_sha": "eca9a8712e70135aff4c140f776e8541dcbad0d2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.965444,
-      "quality_metrics": {
-        "body_chars": 2536,
-        "method_chars": 1239,
-        "evaluation_chars": 660,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -354,7 +334,7 @@
       "file_bytes": 12620,
       "source_sha256": "f7c08d3905305e898f74a16978a1dd76d44b2b5a1e5975899376069f55f85d54",
       "source_git_blob_sha": "4122f659721f12aff12bbe47825a5b3fb3041223",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.939489,
@@ -474,28 +454,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md",
-      "canonical_id": "arXiv:2410.18351",
-      "title": "AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability",
-      "file_bytes": 12794,
-      "source_sha256": "340f3e8337df442631874ad259f186e2f6e40c84486da55d362940fa4eacbc9c",
-      "source_git_blob_sha": "f27ba8508a147a1851a214133f70478b60e42ed2",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.976208,
-      "quality_metrics": {
-        "body_chars": 2655,
-        "method_chars": 743,
-        "evaluation_chars": 91,
-        "limitation_chars": 291
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 91 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md",
       "canonical_id": "arXiv:2512.14098",
       "title": "Cornserve: Efficiently Serving Any-to-Any Multimodal Models",
@@ -600,28 +558,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md",
-      "canonical_id": "arXiv:2608.15531",
-      "title": "FlashQuant：外れ値認識量子化の疎密融合GPU実行",
-      "file_bytes": 12948,
-      "source_sha256": "48a73111e28f13f1db7833e03464e04c411e908178d998d55503cd5bb35245c6",
-      "source_git_blob_sha": "3d45cfb1d6631c1d025db32e254c5eca9824c2c7",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.97769,
-      "quality_metrics": {
-        "body_chars": 2873,
-        "method_chars": 869,
-        "evaluation_chars": 130,
-        "limitation_chars": 295
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 130 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md",
       "canonical_id": "arXiv:2402.18789",
       "title": "FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees",
@@ -641,26 +577,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 458 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
-      "canonical_id": "arXiv:2605.00342",
-      "title": "Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding",
-      "file_bytes": 12958,
-      "source_sha256": "4f70a02cbb2ed8dbba211818dc86e3566f8cecff13ac972d0bbbc280a5b6bc89",
-      "source_git_blob_sha": "b0273cb45c2745a2744874260b46ab2eb64d8662",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.80325,
-      "quality_metrics": {
-        "body_chars": 3027,
-        "method_chars": 1872,
-        "evaluation_chars": 575,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -864,7 +780,7 @@
       "file_bytes": 13051,
       "source_sha256": "c827d9c866474edfb4cd259496513f147550e34097197ca04a7cf36bfa338fdc",
       "source_git_blob_sha": "043bfa005e25e56db436197e6035646f5ef0fb61",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.967402,
@@ -924,28 +840,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md",
-      "canonical_id": "arXiv:2607.07862",
-      "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems",
-      "file_bytes": 13109,
-      "source_sha256": "9100ce67bcda5f23dd88b46c5bc72e09e46842e49efb35a3cd422be8b15df127",
-      "source_git_blob_sha": "6a866211840b2c2a799006423e68bd25054775d0",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.951754,
-      "quality_metrics": {
-        "body_chars": 2737,
-        "method_chars": 848,
-        "evaluation_chars": 108,
-        "limitation_chars": 179
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 108 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
       "canonical_id": "arXiv:2410.03111",
       "title": "LoRC: Low-Rank Compression for LLMs KV Cache with a Progressive Compression Strategy",
@@ -996,7 +890,7 @@
       "file_bytes": 13114,
       "source_sha256": "ccc60e3bfc13f8d59880d86351b89489cdbaa90c166ecf9c6a4a8781e0034ab1",
       "source_git_blob_sha": "ea17e858ee4f57562a0c0c31a0d1082febf4b728",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.701351,
@@ -1063,7 +957,7 @@
       "file_bytes": 13121,
       "source_sha256": "1033714312644f921186b5914f6d860fbb9ef4c4354d04f6a4e0c8d21770faf1",
       "source_git_blob_sha": "808b58d27001b786ada736c97e852b61ed1f3915",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.943768,
@@ -1145,26 +1039,6 @@
       "warnings": []
     },
     {
-      "path": "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
-      "canonical_id": "arXiv:2104.07857",
-      "title": "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning",
-      "file_bytes": 13229,
-      "source_sha256": "21ff9e1e74927ab9e3d20848ebf2af218b5ac8788e2069b792120ff623de8b0a",
-      "source_git_blob_sha": "f1405853bb69e251cc018bc3b9b9ae52e1d1997f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.829438,
-      "quality_metrics": {
-        "body_chars": 4127,
-        "method_chars": 1259,
-        "evaluation_chars": 629,
-        "limitation_chars": 288
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md",
       "canonical_id": "arXiv:2401.04658",
       "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
@@ -1224,26 +1098,6 @@
         "method_chars": 1226,
         "evaluation_chars": 1513,
         "limitation_chars": 272
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
-      "canonical_id": "arXiv:2407.21255",
-      "title": "Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains",
-      "file_bytes": 13299,
-      "source_sha256": "b1c52594707ba4a4c2f265866f9e3d959f602c4ef8777ce9146dcd81db9a238d",
-      "source_git_blob_sha": "986c6a498908a8b3f273b6d399d0ed8db01510e2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.831748,
-      "quality_metrics": {
-        "body_chars": 3501,
-        "method_chars": 866,
-        "evaluation_chars": 512,
-        "limitation_chars": 291
       },
       "mechanical_failures": [],
       "warnings": []
@@ -1351,26 +1205,6 @@
         "method_chars": 836,
         "evaluation_chars": 1080,
         "limitation_chars": 329
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
-      "canonical_id": "arXiv:2405.05803",
-      "title": "Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference",
-      "file_bytes": 13465,
-      "source_sha256": "cd8a895eb9f1ba5f87456d98d216a1edc2ed28f86bb280e62aeba56d7083edbe",
-      "source_git_blob_sha": "2196fc9c78eeacf360a22d6113968f378f434212",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.840133,
-      "quality_metrics": {
-        "body_chars": 4293,
-        "method_chars": 1507,
-        "evaluation_chars": 1355,
-        "limitation_chars": 382
       },
       "mechanical_failures": [],
       "warnings": []
@@ -1499,46 +1333,6 @@
         "method_chars": 1606,
         "evaluation_chars": 504,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.07891-kvzap-fast-adaptive-and-faithful-kv-cache-pruning.md",
-      "canonical_id": "arXiv:2601.07891",
-      "title": "KVzap: Fast, Adaptive, and Faithful KV Cache Pruning",
-      "file_bytes": 13574,
-      "source_sha256": "064b70574521973916d61aa362d069e981115c0fdd5df0825e47143637131143",
-      "source_git_blob_sha": "dbe137fc2f68352af8ee3b8e06bb6cea89de5005",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.852021,
-      "quality_metrics": {
-        "body_chars": 3990,
-        "method_chars": 1333,
-        "evaluation_chars": 1035,
-        "limitation_chars": 485
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.00428-layerkv-optimizing-large-language-model-serving-with-layer-wise-kv-cache.md",
-      "canonical_id": "arXiv:2410.00428",
-      "title": "LayerKV: Optimizing Large Language Model Serving with Layer-wise KV Cache Management",
-      "file_bytes": 13608,
-      "source_sha256": "6ccd2c9fff5be3140898d0fbabfc7f7e918f2a5fe64bc8e044edd73507ef9a8d",
-      "source_git_blob_sha": "eb5aff9bb6e94b3685452bf101817697a6afd00d",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.903933,
-      "quality_metrics": {
-        "body_chars": 4227,
-        "method_chars": 1343,
-        "evaluation_chars": 1021,
-        "limitation_chars": 393
       },
       "mechanical_failures": [],
       "warnings": []
@@ -2407,28 +2201,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md",
-      "canonical_id": "arXiv:2607.24555",
-      "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
-      "file_bytes": 15181,
-      "source_sha256": "e513f547eb40a473267de0004c7f8306ad4b06140738cb2e50902b8f1016f93b",
-      "source_git_blob_sha": "e5d387dd7d4fd4214c585f2a39056b46adfabadd",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.979868,
-      "quality_metrics": {
-        "body_chars": 2792,
-        "method_chars": 1081,
-        "evaluation_chars": 466,
-        "limitation_chars": 245
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 466 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
       "canonical_id": "arXiv:2403.17312",
       "title": "ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching",
@@ -2444,6 +2216,26 @@
         "method_chars": 1830,
         "evaluation_chars": 517,
         "limitation_chars": 341
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md",
+      "canonical_id": "arXiv:2607.24555",
+      "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
+      "file_bytes": 15943,
+      "source_sha256": "e75611139509cc2b4350a6c39245fc0bad8ae875826ac18b44aca5613074620c",
+      "source_git_blob_sha": "33389bb5dbcee563f97ff790c1a8cf3ac81e9994",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.981093,
+      "quality_metrics": {
+        "body_chars": 3034,
+        "method_chars": 1081,
+        "evaluation_chars": 649,
+        "limitation_chars": 245
       },
       "mechanical_failures": [],
       "warnings": []
