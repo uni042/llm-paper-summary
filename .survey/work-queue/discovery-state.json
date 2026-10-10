@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-10T14:06:42+00:00",
-  "last_run_key": "library-import-24ce3d56dae1",
-  "last_round": "libimp-24ce3d56dae1d771-pre01",
+  "updated_at": "2026-10-10T14:28:10+00:00",
+  "last_run_key": "library-import-2202132da625",
+  "last_round": "libimp-2202132da625f06c-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,44 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:adhoc-20260923T232013JST-worker-923191-backward-01",
-      "precheck_request_id": "adhoc-20260923T232013JST-worker-923191-backward-01",
-      "run_key": "adhoc-20260923T232013JST-worker-923191",
-      "round": "adhoc-20260923T232013JST-worker-923191-backward-01",
-      "axis": "repository-wide structured references for LLM inference systems",
-      "query_summary": "repository_references schema v3で固定sourceから100件を走査し、precheckが未評価20件を許可。一次資料のtitle/abstractを軽量確認し、推論システムへの直接性が高い4件をResearch候補化した。",
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "seed_canonical_id": null,
-      "candidate_count": 20,
-      "duplicate_filtered_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 4,
-      "accepted_canonical_ids": [
-        "arXiv:2406.02500",
-        "arXiv:2409.10516",
-        "arXiv:2404.14527",
-        "arXiv:2310.01889"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "same-run forward citation refresh",
-      "source_submission": "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-backward-01.json",
-      "source_submissions": [
-        "work-queue/submissions/adhoc-20260923T232013JST-worker-923191-backward-01.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 20,
-      "post_final_dedupe_count": 20,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:adhoc-20260923T232013JST-worker-923191-forward-02",
       "precheck_request_id": "adhoc-20260923T232013JST-worker-923191-forward-02",
@@ -13665,6 +13627,40 @@
       "duplicate_ratio": 0.8333333333333334,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-2202132da625f06c-pre01",
+      "precheck_request_id": "libimp-2202132da625f06c-pre01",
+      "run_key": "library-import-2202132da625",
+      "round": "libimp-2202132da625f06c-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-2202132da625f06c-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-2202132da625f06c-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -22036,16 +22032,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-24ce3d56dae1",
-      "rounds": 234,
-      "candidate_count": 1023,
+      "last_run_key": "library-import-2202132da625",
+      "rounds": 235,
+      "candidate_count": 1024,
       "duplicate_filtered_count": 510,
-      "novel_candidate_count": 513,
+      "novel_candidate_count": 514,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 508,
-      "accepted_count": 508,
-      "duplicate_ratio": 0.49853372434017595,
-      "final_duplicate_ratio": 0.009746588693957114,
+      "post_final_dedupe_count": 509,
+      "accepted_count": 509,
+      "duplicate_ratio": 0.498046875,
+      "final_duplicate_ratio": 0.009727626459143969,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
