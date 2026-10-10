@@ -1,0 +1,800 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cbc27a11a942c1ed-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cbc27a11a942",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.3390/bioengineering12101030",
+    "arXiv:2407.01049",
+    "arXiv:2410.04941",
+    "arXiv:2503.23959",
+    "arXiv:2507.16018",
+    "arXiv:2510.11129",
+    "arXiv:2604.09512",
+    "arXiv:2604.09547"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "02af68e709e76ad17019bd2d3e92d4cd4cf0287f",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T08:15:05.771166+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.3390/bioengineering12101030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.01049",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.04941",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.23959",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.16018",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.11129",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.09512",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.09547",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2507.16018",
+      "year": 2025,
+      "published": "2025-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision transformers have emerged as a powerful tool across a wide range of applications, yet their inner workings remain only partially understood. In this work, we examine the phenomenon of massive tokens - tokens with exceptionally high activation norms that act as attention sinks - and artifact tokens that emerge as a byproduct during inference. Our analysis reveals that these tokens mutually suppress one another through the attention mechanism, playing a critical role in regulating information flow within the network. Leveraging these insights, we introduce Fast Nystr\\\"om Attention (FNA), a training-free method that approximates self-attention in linear time and space by exploiting the structured patterns formed by massive and artifact tokens. Additionally, we propose a masking strategy to mitigate noise from these tokens, yielding modest performance gains at virtually no cost. We evaluate our approach on popular pretrained vision backbones and demonstrate competitive performance on retrieval, classification, segmentation, and visual question answering (VQA), all while reducing computational overhead.",
+      "identifiers": [
+        "SemanticScholar:f151907255c9eea266787a40d2c4563811db2f80"
+      ],
+      "semantic_scholar_id": "f151907255c9eea266787a40d2c4563811db2f80",
+      "canonical_id": "arXiv:2507.16018",
+      "arxiv_id": "2507.16018",
+      "doi": "10.48550/arXiv.2507.16018",
+      "authors": [
+        "Andrew Lu",
+        "Wentinn Liao",
+        "Liuhui Wang",
+        "Huzheng Yang",
+        "Jianbo Shi"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 446,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Integrated electro-optic attention nonlinearities for transformers",
+      "source_url": "https://arxiv.org/abs/2604.09512",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have emerged as the dominant neural-network architecture, achieving state-of-the-art performance in language processing and computer vision. At the core of these models lies the attention mechanism, which requires a nonlinear, non-negative mapping using the Softmax function. However, although Softmax operations account for less than 1% of the total operation count, they can disproportionately bottleneck overall inference latency. Here, we use thin-film lithium niobate (TFLN) Mach-Zehnder modulators (MZMs) as analog nonlinear computational elements to drastically reduce the latency of nonlinear computations. We implement electro-optic alternatives to digital Softmax and Sigmoid, and evaluate their performance in Vision Transformers and Large Language Models. Our system maintains highly competitive accuracy, even under aggressive 4-bit input-output quantization of the analog units. We further characterize system noise at encoding speeds up to 10 GBaud and assess model robustness under various noise conditions. Our findings suggest that TFLN modulators can serve as nonlinear function units within hybrid co-packaged hardware, enabling high-speed and energy-efficient nonlinear computation.",
+      "identifiers": [
+        "SemanticScholar:8f09b76f32e41437d18ab6031f788139385dd625"
+      ],
+      "semantic_scholar_id": "8f09b76f32e41437d18ab6031f788139385dd625",
+      "canonical_id": "arXiv:2604.09512",
+      "arxiv_id": "2604.09512",
+      "doi": "10.48550/arXiv.2604.09512",
+      "authors": [
+        "Luis Mickeler",
+        "Li-On Kai",
+        "Alfonso Nardi",
+        "Jost Kellner",
+        "P. Didier",
+        "B. Shastri",
+        "Niao He",
+        "Rachel Grange"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tango: Taming Visual Signals for Efficient Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.09547",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token pruning has emerged as a mainstream approach for developing efficient Video Large Language Models (Video LLMs). This work revisits and advances the two predominant token-pruning paradigms: attention-based selection and similarity-based clustering. Our study reveals two critical limitations in existing methods: (1) conventional top-k selection strategies fail to fully account for the attention distribution, which is often spatially multi-modal and long-tailed in magnitude; and (2) direct similarity-based clustering frequently generates fragmented clusters, resulting in distorted representations after pooling. To address these bottlenecks, we propose Tango, a novel framework designed to optimize the utilization of visual signals. Tango integrates a diversity-driven strategy to enhance attention-based token selection, and introduces Spatio-temporal Rotary Position Embedding (ST-RoPE) to preserve geometric structure via locality priors. Comprehensive experiments across various Video LLMs and video understanding benchmarks demonstrate the effectiveness and generalizability of our approach. Notably, when retaining only 10% of the video tokens, Tango preserves 98.9% of the original performance on LLaVA-OV while delivering a 1.88$\\times$ inference speedup.",
+      "identifiers": [
+        "SemanticScholar:20d4431a49c1c8e3201b4c70bf31290c994c3820"
+      ],
+      "semantic_scholar_id": "20d4431a49c1c8e3201b4c70bf31290c994c3820",
+      "canonical_id": "arXiv:2604.09547",
+      "arxiv_id": "2604.09547",
+      "doi": "10.48550/arXiv.2604.09547",
+      "authors": [
+        "Shu-Kang Yin",
+        "Si-Rui Zhao",
+        "Han Wang",
+        "Baozhi Jia",
+        "Xian-Quan Wang",
+        "Chaoyou Fu",
+        "En-Hong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SE(3)-Hyena Operator for Scalable Equivariant Learning",
+      "source_url": "https://arxiv.org/abs/2407.01049",
+      "year": 2024,
+      "published": "2024-07-01",
+      "venue": "GRaM",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modeling global geometric context while maintaining equivariance is crucial for accurate predictions in many fields such as biology, chemistry, or vision. Yet, this is challenging due to the computational demands of processing high-dimensional data at scale. Existing approaches such as equivariant self-attention or distance-based message passing, suffer from quadratic complexity with respect to sequence length, while localized methods sacrifice global information. Inspired by the recent success of state-space and long-convolutional models, in this work, we introduce SE(3)-Hyena operator, an equivariant long-convolutional model based on the Hyena operator. The SE(3)-Hyena captures global geometric context at sub-quadratic complexity while maintaining equivariance to rotations and translations. Evaluated on equivariant associative recall and n-body modeling, SE(3)-Hyena matches or outperforms equivariant self-attention while requiring significantly less memory and computational resources for long sequences. Our model processes the geometric context of 20k tokens x3.5 times faster than the equivariant transformer and allows x175 longer a context within the same memory budget.",
+      "identifiers": [
+        "SemanticScholar:cd1e307f5cc57a123d58d3f8dd855b14a558bf5d"
+      ],
+      "semantic_scholar_id": "cd1e307f5cc57a123d58d3f8dd855b14a558bf5d",
+      "canonical_id": "arXiv:2407.01049",
+      "arxiv_id": "2407.01049",
+      "doi": "10.48550/arXiv.2407.01049",
+      "authors": [
+        "Artem Moskalev",
+        "M. Prakash",
+        "Rui Liao",
+        "Tommaso Mansi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 831,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DermaMamba: A Dual-Branch Vision Mamba Architecture with Linear Complexity for Efficient Skin Lesion Classification",
+      "source_url": "https://doi.org/10.3390/bioengineering12101030",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "Bioengineering",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Accurate skin lesion classification is crucial for the early detection of malignant lesions, including melanoma, as well as improved patient outcomes. While convolutional neural networks (CNNs) excel at capturing local morphological features, they struggle with global context modeling essential for comprehensive lesion assessment. Vision transformers address this limitation but suffer from quadratic computational complexity O(n2), hindering deployment in resource-constrained clinical environments. We propose DermaMamba, a novel dual-branch fusion architecture that integrates CNN-based local feature extraction with Vision Mamba (VMamba) for efficient global context modeling with linear complexity O(n). Our approach introduces a state space fusion mechanism with adaptive weighting that dynamically balances local and global features based on lesion characteristics. We incorporate medical domain knowledge through multi-directional scanning strategies and ABCDE (Asymmetry, Border irregularity, Color variation, Diameter, Evolution) rule feature integration. Extensive experiments on the ISIC dataset show that DermaMamba achieves 92.1% accuracy, 91.7% precision, 91.3% recall, and 91.5% mac-F1 score, which outperforms the best baseline by 2.0% accuracy with 2.3× inference speedup and 40% memory reduction. The improvements are statistically significant based on a significance test (p < 0.001, Cohen’s d > 0.8), with greater than 79% confidence also preserved on challenging boundary cases. These results establish DermaMamba as an effective solution bridging diagnostic accuracy and computational efficiency for clinical deployment.",
+      "identifiers": [
+        "SemanticScholar:765b805e76d601b880634026980877b313c62984"
+      ],
+      "semantic_scholar_id": "765b805e76d601b880634026980877b313c62984",
+      "doi": "10.3390/bioengineering12101030",
+      "canonical_id": "DOI:10.3390/bioengineering12101030",
+      "authors": [
+        "Zhongyu Yao",
+        "Yuxuan Yan",
+        "Zhe Liu",
+        "Tianhang Chen",
+        "Cho Ling",
+        "Yat-Wah Leung",
+        "Tian-Chi Lu",
+        "Wenjing Niu",
+        "Z. Qiu",
+        "Yuchen Wang",
+        "Xingcheng Zhu",
+        "Ka-Chun Wong"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "video-SALMONN S: Memory-Enhanced Streaming Audio-Visual LLM",
+      "source_url": "https://arxiv.org/abs/2510.11129",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-duration streaming video understanding is fundamental for future AI agents, yet remains limited by ineffective long-term memory. We introduce video-SALMONN S, a memory-enhanced streaming audio-visual large language model that processes over 3-hour videos at 1 FPS and 360p resolution, outperforming strong non-streaming models under the same memory budget. In addition to token merging or downsampling, video-SALMONN S is the first to employ test-time training (TTT) as a streaming memory mechanism for video understanding. TTT continuously transforms short-term multimodal representations into long-term memory embedded in model parameters. To improve long-range dependency modeling and memory capacity, we propose (i) a TTT_MEM layer with an additional long-span prediction objective, (ii) a two-stage training scheme, and (iii) a modality-aware memory reader. We further introduce the Episodic Learning from Video Memory (ELViM) benchmark, simulating agent-like scenarios where models must learn from videos observed hours earlier. video-SALMONN S consistently outperforms both streaming and non-streaming baselines by 3-7% on long video benchmarks. Notably, video-SALMONN S achieves a 15% absolute accuracy improvement over strong non-streaming models on ELViM, demonstrating strong learning abilities from video memory.",
+      "identifiers": [
+        "SemanticScholar:427f5d31ac138e46517893c8101271b8c8b73d87"
+      ],
+      "semantic_scholar_id": "427f5d31ac138e46517893c8101271b8c8b73d87",
+      "canonical_id": "arXiv:2510.11129",
+      "arxiv_id": "2510.11129",
+      "authors": [
+        "Guang-Zhi Sun",
+        "Yixuan Li",
+        "Xiaodong Wu",
+        "Yudong Yang",
+        "Wei Li",
+        "Ze-Jun Ma",
+        "Chao Zhang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 362,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning",
+      "source_url": "https://arxiv.org/abs/2503.23959",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Grounded Conversation Generation (GCG) is an emerging vision-language task that requires models to generate natural language responses seamlessly intertwined with corresponding object segmentation masks. Recent models, such as GLaMM and OMG-LLaVA, achieve pixel-level grounding but incur significant computational costs due to processing a large number of visual tokens. Existing token pruning methods, like FastV and PyramidDrop, fail to preserve the local visual features critical for accurate grounding, leading to substantial performance drops in GCG tasks. To address this, we propose Adaptive Local-Aware Token Pruning (ALTP), a simple yet effective framework that accelerates GCG models by prioritizing local object information. ALTP introduces two key components: (1) Detail Density Capture (DDC), which uses superpixel segmentation to retain tokens in object-centric regions, preserving fine-grained details, and (2) Dynamic Density Formation (DDF), which dynamically allocates tokens based on information density, ensuring higher retention in semantically rich areas. Extensive experiments on the GranDf dataset demonstrate that ALTP significantly outperforms existing token pruning methods, such as FastV and PyramidDrop, on both GLaMM and OMG-LLaVA models. Notably, when applied to GLaMM, ALTP achieves a 90% reduction in visual tokens with a 4.9% improvement in AP50 and a 5.0% improvement in Recall compared to PyramidDrop. Similarly, on OMG-LLaVA, ALTP improves AP by 2.1% and mIOU by 3.0% at a 90% token reduction compared with PDrop.",
+      "identifiers": [
+        "SemanticScholar:64770ff0715e1aec70122c7d345c66b60afb7673"
+      ],
+      "semantic_scholar_id": "64770ff0715e1aec70122c7d345c66b60afb7673",
+      "canonical_id": "arXiv:2503.23959",
+      "arxiv_id": "2503.23959",
+      "doi": "10.48550/arXiv.2503.23959",
+      "authors": [
+        "Bizhe Bai",
+        "Jianjian Cao",
+        "Ya-Dan Luo",
+        "Tao Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 558,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TOAST: Transformer Optimization using Adaptive and Simple Transformations",
+      "source_url": "https://arxiv.org/abs/2410.04941",
+      "year": 2024,
+      "published": "2024-10-07",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Foundation models achieve state-of-the-art performance across different tasks, but their size and computational demands raise concerns about accessibility and sustainability. Existing efficiency methods often require additional retraining or finetuning, limiting their practicality. Recent findings suggest that deep neural networks exhibit internal representation similarities. While such similarities across different models have been exploited for enabling techniques such as model stitching and merging, intra-network redundancy remains underexplored as a source for efficiency gains. In this paper, we introduce Transformer Optimization using Adaptive and Simple Transformations (TOAST), a framework that exploits these redundancies to approximate entire transformer blocks with lightweight closed-form mappings, such as linear transformations or even the identity function, without any additional training. Across state-of-the-art pretrained vision models (e.g., ViT, DINOv2, DeiT) and datasets ranging from MNIST to ImageNet-1k, TOAST reduces parameters and computation while preserving, and in some cases improving, downstream performance. These results show that large portions of transformer depth can be replaced by trivial functions, opening a new perspective on efficient foundation models.",
+      "identifiers": [
+        "SemanticScholar:7db7bf8a91f8be6b0c6314a1c3365324430871a3"
+      ],
+      "semantic_scholar_id": "7db7bf8a91f8be6b0c6314a1c3365324430871a3",
+      "canonical_id": "arXiv:2410.04941",
+      "arxiv_id": "2410.04941",
+      "authors": [
+        "Irene Cannistraci",
+        "Simone Antonelli",
+        "Emanuele Palumbo",
+        "T. Sutter",
+        "E. Rodolà",
+        "Bastian Rieck",
+        "Julia E. Vogt"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 733,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2507.16018",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.16018",
+        "id:SemanticScholar:f151907255c9eea266787a40d2c4563811db2f80",
+        "id:arXiv:2507.16018",
+        "title:artifacts and attention sinks structured approximations for efficient vision transformers",
+        "url:https://arxiv.org/abs/2507.16018"
+      ],
+      "record": {
+        "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers",
+        "source_url": "https://arxiv.org/abs/2507.16018",
+        "year": 2025,
+        "published": "2025-07-21",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision transformers have emerged as a powerful tool across a wide range of applications, yet their inner workings remain only partially understood. In this work, we examine the phenomenon of massive tokens - tokens with exceptionally high activation norms that act as attention sinks - and artifact tokens that emerge as a byproduct during inference. Our analysis reveals that these tokens mutually suppress one another through the attention mechanism, playing a critical role in regulating information flow within the network. Leveraging these insights, we introduce Fast Nystr\\\"om Attention (FNA), a training-free method that approximates self-attention in linear time and space by exploiting the structured patterns formed by massive and artifact tokens. Additionally, we propose a masking strategy to mitigate noise from these tokens, yielding modest performance gains at virtually no cost. We evaluate our approach on popular pretrained vision backbones and demonstrate competitive performance on retrieval, classification, segmentation, and visual question answering (VQA), all while reducing computational overhead.",
+        "identifiers": [
+          "SemanticScholar:f151907255c9eea266787a40d2c4563811db2f80"
+        ],
+        "semantic_scholar_id": "f151907255c9eea266787a40d2c4563811db2f80",
+        "canonical_id": "arXiv:2507.16018",
+        "arxiv_id": "2507.16018",
+        "doi": "10.48550/arXiv.2507.16018",
+        "authors": [
+          "Andrew Lu",
+          "Wentinn Liao",
+          "Liuhui Wang",
+          "Huzheng Yang",
+          "Jianbo Shi"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 446,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.09512",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.09512",
+        "id:SemanticScholar:8f09b76f32e41437d18ab6031f788139385dd625",
+        "id:arXiv:2604.09512",
+        "title:integrated electrooptic attention nonlinearities for transformers",
+        "url:https://arxiv.org/abs/2604.09512"
+      ],
+      "record": {
+        "title": "Integrated electro-optic attention nonlinearities for transformers",
+        "source_url": "https://arxiv.org/abs/2604.09512",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have emerged as the dominant neural-network architecture, achieving state-of-the-art performance in language processing and computer vision. At the core of these models lies the attention mechanism, which requires a nonlinear, non-negative mapping using the Softmax function. However, although Softmax operations account for less than 1% of the total operation count, they can disproportionately bottleneck overall inference latency. Here, we use thin-film lithium niobate (TFLN) Mach-Zehnder modulators (MZMs) as analog nonlinear computational elements to drastically reduce the latency of nonlinear computations. We implement electro-optic alternatives to digital Softmax and Sigmoid, and evaluate their performance in Vision Transformers and Large Language Models. Our system maintains highly competitive accuracy, even under aggressive 4-bit input-output quantization of the analog units. We further characterize system noise at encoding speeds up to 10 GBaud and assess model robustness under various noise conditions. Our findings suggest that TFLN modulators can serve as nonlinear function units within hybrid co-packaged hardware, enabling high-speed and energy-efficient nonlinear computation.",
+        "identifiers": [
+          "SemanticScholar:8f09b76f32e41437d18ab6031f788139385dd625"
+        ],
+        "semantic_scholar_id": "8f09b76f32e41437d18ab6031f788139385dd625",
+        "canonical_id": "arXiv:2604.09512",
+        "arxiv_id": "2604.09512",
+        "doi": "10.48550/arXiv.2604.09512",
+        "authors": [
+          "Luis Mickeler",
+          "Li-On Kai",
+          "Alfonso Nardi",
+          "Jost Kellner",
+          "P. Didier",
+          "B. Shastri",
+          "Niao He",
+          "Rachel Grange"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 183,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.09547",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.09547",
+        "id:SemanticScholar:20d4431a49c1c8e3201b4c70bf31290c994c3820",
+        "id:arXiv:2604.09547",
+        "title:tango taming visual signals for efficient video large language models",
+        "url:https://arxiv.org/abs/2604.09547"
+      ],
+      "record": {
+        "title": "Tango: Taming Visual Signals for Efficient Video Large Language Models",
+        "source_url": "https://arxiv.org/abs/2604.09547",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Token pruning has emerged as a mainstream approach for developing efficient Video Large Language Models (Video LLMs). This work revisits and advances the two predominant token-pruning paradigms: attention-based selection and similarity-based clustering. Our study reveals two critical limitations in existing methods: (1) conventional top-k selection strategies fail to fully account for the attention distribution, which is often spatially multi-modal and long-tailed in magnitude; and (2) direct similarity-based clustering frequently generates fragmented clusters, resulting in distorted representations after pooling. To address these bottlenecks, we propose Tango, a novel framework designed to optimize the utilization of visual signals. Tango integrates a diversity-driven strategy to enhance attention-based token selection, and introduces Spatio-temporal Rotary Position Embedding (ST-RoPE) to preserve geometric structure via locality priors. Comprehensive experiments across various Video LLMs and video understanding benchmarks demonstrate the effectiveness and generalizability of our approach. Notably, when retaining only 10% of the video tokens, Tango preserves 98.9% of the original performance on LLaVA-OV while delivering a 1.88$\\times$ inference speedup.",
+        "identifiers": [
+          "SemanticScholar:20d4431a49c1c8e3201b4c70bf31290c994c3820"
+        ],
+        "semantic_scholar_id": "20d4431a49c1c8e3201b4c70bf31290c994c3820",
+        "canonical_id": "arXiv:2604.09547",
+        "arxiv_id": "2604.09547",
+        "doi": "10.48550/arXiv.2604.09547",
+        "authors": [
+          "Shu-Kang Yin",
+          "Si-Rui Zhao",
+          "Han Wang",
+          "Baozhi Jia",
+          "Xian-Quan Wang",
+          "Chaoyou Fu",
+          "En-Hong Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 183,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.01049",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.01049",
+        "id:SemanticScholar:cd1e307f5cc57a123d58d3f8dd855b14a558bf5d",
+        "id:arXiv:2407.01049",
+        "title:se3hyena operator for scalable equivariant learning",
+        "url:https://arxiv.org/abs/2407.01049"
+      ],
+      "record": {
+        "title": "SE(3)-Hyena Operator for Scalable Equivariant Learning",
+        "source_url": "https://arxiv.org/abs/2407.01049",
+        "year": 2024,
+        "published": "2024-07-01",
+        "venue": "GRaM",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modeling global geometric context while maintaining equivariance is crucial for accurate predictions in many fields such as biology, chemistry, or vision. Yet, this is challenging due to the computational demands of processing high-dimensional data at scale. Existing approaches such as equivariant self-attention or distance-based message passing, suffer from quadratic complexity with respect to sequence length, while localized methods sacrifice global information. Inspired by the recent success of state-space and long-convolutional models, in this work, we introduce SE(3)-Hyena operator, an equivariant long-convolutional model based on the Hyena operator. The SE(3)-Hyena captures global geometric context at sub-quadratic complexity while maintaining equivariance to rotations and translations. Evaluated on equivariant associative recall and n-body modeling, SE(3)-Hyena matches or outperforms equivariant self-attention while requiring significantly less memory and computational resources for long sequences. Our model processes the geometric context of 20k tokens x3.5 times faster than the equivariant transformer and allows x175 longer a context within the same memory budget.",
+        "identifiers": [
+          "SemanticScholar:cd1e307f5cc57a123d58d3f8dd855b14a558bf5d"
+        ],
+        "semantic_scholar_id": "cd1e307f5cc57a123d58d3f8dd855b14a558bf5d",
+        "canonical_id": "arXiv:2407.01049",
+        "arxiv_id": "2407.01049",
+        "doi": "10.48550/arXiv.2407.01049",
+        "authors": [
+          "Artem Moskalev",
+          "M. Prakash",
+          "Rui Liao",
+          "Tommaso Mansi"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 831,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/bioengineering12101030",
+      "identity_tokens": [
+        "id:DOI:10.3390/bioengineering12101030",
+        "id:SemanticScholar:765b805e76d601b880634026980877b313c62984",
+        "title:dermamamba a dualbranch vision mamba architecture with linear complexity for efficient skin lesion classification",
+        "url:https://doi.org/10.3390/bioengineering12101030"
+      ],
+      "record": {
+        "title": "DermaMamba: A Dual-Branch Vision Mamba Architecture with Linear Complexity for Efficient Skin Lesion Classification",
+        "source_url": "https://doi.org/10.3390/bioengineering12101030",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "Bioengineering",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Accurate skin lesion classification is crucial for the early detection of malignant lesions, including melanoma, as well as improved patient outcomes. While convolutional neural networks (CNNs) excel at capturing local morphological features, they struggle with global context modeling essential for comprehensive lesion assessment. Vision transformers address this limitation but suffer from quadratic computational complexity O(n2), hindering deployment in resource-constrained clinical environments. We propose DermaMamba, a novel dual-branch fusion architecture that integrates CNN-based local feature extraction with Vision Mamba (VMamba) for efficient global context modeling with linear complexity O(n). Our approach introduces a state space fusion mechanism with adaptive weighting that dynamically balances local and global features based on lesion characteristics. We incorporate medical domain knowledge through multi-directional scanning strategies and ABCDE (Asymmetry, Border irregularity, Color variation, Diameter, Evolution) rule feature integration. Extensive experiments on the ISIC dataset show that DermaMamba achieves 92.1% accuracy, 91.7% precision, 91.3% recall, and 91.5% mac-F1 score, which outperforms the best baseline by 2.0% accuracy with 2.3× inference speedup and 40% memory reduction. The improvements are statistically significant based on a significance test (p < 0.001, Cohen’s d > 0.8), with greater than 79% confidence also preserved on challenging boundary cases. These results establish DermaMamba as an effective solution bridging diagnostic accuracy and computational efficiency for clinical deployment.",
+        "identifiers": [
+          "SemanticScholar:765b805e76d601b880634026980877b313c62984"
+        ],
+        "semantic_scholar_id": "765b805e76d601b880634026980877b313c62984",
+        "doi": "10.3390/bioengineering12101030",
+        "canonical_id": "DOI:10.3390/bioengineering12101030",
+        "authors": [
+          "Zhongyu Yao",
+          "Yuxuan Yan",
+          "Zhe Liu",
+          "Tianhang Chen",
+          "Cho Ling",
+          "Yat-Wah Leung",
+          "Tian-Chi Lu",
+          "Wenjing Niu",
+          "Z. Qiu",
+          "Yuchen Wang",
+          "Xingcheng Zhu",
+          "Ka-Chun Wong"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 379,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.11129",
+      "identity_tokens": [
+        "id:SemanticScholar:427f5d31ac138e46517893c8101271b8c8b73d87",
+        "id:arXiv:2510.11129",
+        "title:videosalmonn s memoryenhanced streaming audiovisual llm",
+        "url:https://arxiv.org/abs/2510.11129"
+      ],
+      "record": {
+        "title": "video-SALMONN S: Memory-Enhanced Streaming Audio-Visual LLM",
+        "source_url": "https://arxiv.org/abs/2510.11129",
+        "year": 2025,
+        "published": "2025-10-13",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-duration streaming video understanding is fundamental for future AI agents, yet remains limited by ineffective long-term memory. We introduce video-SALMONN S, a memory-enhanced streaming audio-visual large language model that processes over 3-hour videos at 1 FPS and 360p resolution, outperforming strong non-streaming models under the same memory budget. In addition to token merging or downsampling, video-SALMONN S is the first to employ test-time training (TTT) as a streaming memory mechanism for video understanding. TTT continuously transforms short-term multimodal representations into long-term memory embedded in model parameters. To improve long-range dependency modeling and memory capacity, we propose (i) a TTT_MEM layer with an additional long-span prediction objective, (ii) a two-stage training scheme, and (iii) a modality-aware memory reader. We further introduce the Episodic Learning from Video Memory (ELViM) benchmark, simulating agent-like scenarios where models must learn from videos observed hours earlier. video-SALMONN S consistently outperforms both streaming and non-streaming baselines by 3-7% on long video benchmarks. Notably, video-SALMONN S achieves a 15% absolute accuracy improvement over strong non-streaming models on ELViM, demonstrating strong learning abilities from video memory.",
+        "identifiers": [
+          "SemanticScholar:427f5d31ac138e46517893c8101271b8c8b73d87"
+        ],
+        "semantic_scholar_id": "427f5d31ac138e46517893c8101271b8c8b73d87",
+        "canonical_id": "arXiv:2510.11129",
+        "arxiv_id": "2510.11129",
+        "authors": [
+          "Guang-Zhi Sun",
+          "Yixuan Li",
+          "Xiaodong Wu",
+          "Yudong Yang",
+          "Wei Li",
+          "Ze-Jun Ma",
+          "Chao Zhang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 362,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.23959",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.23959",
+        "id:SemanticScholar:64770ff0715e1aec70122c7d345c66b60afb7673",
+        "id:arXiv:2503.23959",
+        "title:local information matters inference acceleration for grounded conversation generation models through adaptive localaware token pruning",
+        "url:https://arxiv.org/abs/2503.23959"
+      ],
+      "record": {
+        "title": "Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning",
+        "source_url": "https://arxiv.org/abs/2503.23959",
+        "year": 2025,
+        "published": "2025-03-31",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Grounded Conversation Generation (GCG) is an emerging vision-language task that requires models to generate natural language responses seamlessly intertwined with corresponding object segmentation masks. Recent models, such as GLaMM and OMG-LLaVA, achieve pixel-level grounding but incur significant computational costs due to processing a large number of visual tokens. Existing token pruning methods, like FastV and PyramidDrop, fail to preserve the local visual features critical for accurate grounding, leading to substantial performance drops in GCG tasks. To address this, we propose Adaptive Local-Aware Token Pruning (ALTP), a simple yet effective framework that accelerates GCG models by prioritizing local object information. ALTP introduces two key components: (1) Detail Density Capture (DDC), which uses superpixel segmentation to retain tokens in object-centric regions, preserving fine-grained details, and (2) Dynamic Density Formation (DDF), which dynamically allocates tokens based on information density, ensuring higher retention in semantically rich areas. Extensive experiments on the GranDf dataset demonstrate that ALTP significantly outperforms existing token pruning methods, such as FastV and PyramidDrop, on both GLaMM and OMG-LLaVA models. Notably, when applied to GLaMM, ALTP achieves a 90% reduction in visual tokens with a 4.9% improvement in AP50 and a 5.0% improvement in Recall compared to PyramidDrop. Similarly, on OMG-LLaVA, ALTP improves AP by 2.1% and mIOU by 3.0% at a 90% token reduction compared with PDrop.",
+        "identifiers": [
+          "SemanticScholar:64770ff0715e1aec70122c7d345c66b60afb7673"
+        ],
+        "semantic_scholar_id": "64770ff0715e1aec70122c7d345c66b60afb7673",
+        "canonical_id": "arXiv:2503.23959",
+        "arxiv_id": "2503.23959",
+        "doi": "10.48550/arXiv.2503.23959",
+        "authors": [
+          "Bizhe Bai",
+          "Jianjian Cao",
+          "Ya-Dan Luo",
+          "Tao Chen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 558,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.04941",
+      "identity_tokens": [
+        "id:SemanticScholar:7db7bf8a91f8be6b0c6314a1c3365324430871a3",
+        "id:arXiv:2410.04941",
+        "title:toast transformer optimization using adaptive and simple transformations",
+        "url:https://arxiv.org/abs/2410.04941"
+      ],
+      "record": {
+        "title": "TOAST: Transformer Optimization using Adaptive and Simple Transformations",
+        "source_url": "https://arxiv.org/abs/2410.04941",
+        "year": 2024,
+        "published": "2024-10-07",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Foundation models achieve state-of-the-art performance across different tasks, but their size and computational demands raise concerns about accessibility and sustainability. Existing efficiency methods often require additional retraining or finetuning, limiting their practicality. Recent findings suggest that deep neural networks exhibit internal representation similarities. While such similarities across different models have been exploited for enabling techniques such as model stitching and merging, intra-network redundancy remains underexplored as a source for efficiency gains. In this paper, we introduce Transformer Optimization using Adaptive and Simple Transformations (TOAST), a framework that exploits these redundancies to approximate entire transformer blocks with lightweight closed-form mappings, such as linear transformations or even the identity function, without any additional training. Across state-of-the-art pretrained vision models (e.g., ViT, DINOv2, DeiT) and datasets ranging from MNIST to ImageNet-1k, TOAST reduces parameters and computation while preserving, and in some cases improving, downstream performance. These results show that large portions of transformer depth can be replaced by trivial functions, opening a new perspective on efficient foundation models.",
+        "identifiers": [
+          "SemanticScholar:7db7bf8a91f8be6b0c6314a1c3365324430871a3"
+        ],
+        "semantic_scholar_id": "7db7bf8a91f8be6b0c6314a1c3365324430871a3",
+        "canonical_id": "arXiv:2410.04941",
+        "arxiv_id": "2410.04941",
+        "authors": [
+          "Irene Cannistraci",
+          "Simone Antonelli",
+          "Emanuele Palumbo",
+          "T. Sutter",
+          "E. Rodolà",
+          "Bastian Rieck",
+          "Julia E. Vogt"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 733,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:128f7063d1122282605877fad841eaf79f05ac688afd61028153ed120adb1008",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
