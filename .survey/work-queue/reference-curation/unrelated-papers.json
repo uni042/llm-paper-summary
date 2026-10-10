@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T06:38:06+00:00",
-  "record_count": 11251,
+  "updated_at": "2026-10-10T07:04:33+00:00",
+  "record_count": 11256,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160846,6 +160846,100 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "ViT-Linearizer: Distilling Quadratic Knowledge into Linear-Time Vision Models"
+    },
+    "arXiv:2510.14614": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14614",
+      "identity_tokens": [
+        "arXiv:2510.14614"
+      ],
+      "reason": "The primary abstract measures distributed training time and training throughput for GPT-style transformers; it presents a training architecture and does not report inference or serving improvements.",
+      "first_checked_at": "2026-10-10T07:04:32+00:00",
+      "last_checked_at": "2026-10-10T07:04:32+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "First Attentions Last: Better Exploiting First Attentions for Efficient Transformer Training"
+    },
+    "arXiv:2406.12059": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12059",
+      "identity_tokens": [
+        "arXiv:2406.12059"
+      ],
+      "reason": "The abstract's efficiency result is specifically for graph representation learning/graph transformers, without an LLM inference or serving connection.",
+      "first_checked_at": "2026-10-10T07:04:32+00:00",
+      "last_checked_at": "2026-10-10T07:04:32+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A Scalable and Effective Alternative to Graph Transformers"
+    },
+    "arXiv:2405.07788": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.07788",
+      "identity_tokens": [
+        "arXiv:2405.07788"
+      ],
+      "reason": "The primary abstract targets discourse-level language understanding through a pretraining objective and reports task-learning quality; it does not describe an inference efficiency technique.",
+      "first_checked_at": "2026-10-10T07:04:32+00:00",
+      "last_checked_at": "2026-10-10T07:04:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "DEPTH: Discourse Education through Pre-Training Hierarchically"
+    },
+    "arXiv:2407.05302": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.05302",
+      "identity_tokens": [
+        "arXiv:2407.05302"
+      ],
+      "reason": "The primary abstract is a Mamba-based temporal point-process modeling application; its task scope is event-sequence prediction rather than LLM inference or serving.",
+      "first_checked_at": "2026-10-10T07:04:33+00:00",
+      "last_checked_at": "2026-10-10T07:04:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Mamba Hawkes Process"
+    },
+    "arXiv:2411.06465": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.06465",
+      "identity_tokens": [
+        "arXiv:2411.06465"
+      ],
+      "reason": "Although the paper concerns LLMs, its proposed memory estimator and 4D parallelism optimize distributed training configuration; the abstract does not establish an inference or serving contribution.",
+      "first_checked_at": "2026-10-10T07:04:33+00:00",
+      "last_checked_at": "2026-10-10T07:04:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Accelerating Large Language Model Training with 4D Parallelism and Memory Consumption Estimator"
     }
   }
 }

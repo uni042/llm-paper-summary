@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-621819831a6edffd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.14614",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.14614",
+    "identity_tokens": [
+      "arXiv:2510.14614"
+    ],
+    "reason": "The primary abstract measures distributed training time and training throughput for GPT-style transformers; it presents a training architecture and does not report inference or serving improvements.",
+    "first_checked_at": "2026-10-10T07:04:32+00:00",
+    "last_checked_at": "2026-10-10T07:04:32+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "First Attentions Last: Better Exploiting First Attentions for Efficient Transformer Training"
+  },
+  "processed_at": "2026-10-10T07:04:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-621819831a6e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T06:38:04+00:00",
-  "record_count": 4553,
+  "updated_at": "2026-10-10T07:04:31+00:00",
+  "record_count": 4558,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69657,6 +69657,105 @@
       ],
       "borderline_recheck_count": 0,
       "title": "QSLR: Post-Training Compression via Quantized Sparse and Low-Rank Factorization"
+    },
+    "DOI:10.1109/aann66429.2025.11257655": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aann66429.2025.11257655",
+      "identity_tokens": [
+        "DOI:10.1109/aann66429.2025.11257655"
+      ],
+      "reason": "The candidate title claims activation quantization for LLMs, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1109/AANN66429.2025.11257655. Exact retrieval failure: URL https://doi.org/10.1109/AANN66429.2025.11257655 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1109/AANN66429.2025.11257655 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T07:04:30+00:00",
+      "last_checked_at": "2026-10-10T07:04:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Learning Logarithm with Dual Shift-ln-Log2: An Activation Quantization for Large Language Models"
+    },
+    "DOI:10.63646/jaiaa.2025.030401": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.63646/jaiaa.2025.030401",
+      "identity_tokens": [
+        "DOI:10.63646/jaiaa.2025.030401"
+      ],
+      "reason": "The candidate title describes a Green AI complexity-monitoring framework, but no primary abstract was retrievable. Primary URL: https://doi.org/10.63646/jaiaa.2025.030401. Exact retrieval failure: URL https://doi.org/10.63646/jaiaa.2025.030401 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.63646/jaiaa.2025.030401 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T07:04:30+00:00",
+      "last_checked_at": "2026-10-10T07:04:30+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Operationalizing Green AI Analytics: A Reproducible Framework for Monitoring Model Complexity Across Classical and Deep Learning"
+    },
+    "arXiv:2508.06617": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.06617",
+      "identity_tokens": [
+        "arXiv:2508.06617"
+      ],
+      "reason": "This paper estimates pretraining resource/model-size tradeoffs for dense and sparse LLMs, but does not establish an inference-time efficiency method.",
+      "first_checked_at": "2026-10-10T07:04:31+00:00",
+      "last_checked_at": "2026-10-10T07:04:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Generalizing Scaling Laws for Dense and Sparse Large Language Models"
+    },
+    "arXiv:2510.14027": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.14027",
+      "identity_tokens": [
+        "arXiv:2510.14027"
+      ],
+      "reason": "The paper proposes a compact, scalable sequence model related to linear-complexity SSMs, but its abstract lacks an LLM inference/serving evaluation.",
+      "first_checked_at": "2026-10-10T07:04:31+00:00",
+      "last_checked_at": "2026-10-10T07:04:31+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Context-Selective State Space Models: Feedback is All You Need"
+    },
+    "DOI:10.1109/ubmk67458.2025.11206955": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ubmk67458.2025.11206955",
+      "identity_tokens": [
+        "DOI:10.1109/ubmk67458.2025.11206955"
+      ],
+      "reason": "The candidate title claims efficient long-context LLaMA fine-tuning, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1109/UBMK67458.2025.11206955. Exact retrieval failure: URL https://doi.org/10.1109/UBMK67458.2025.11206955 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1109/UBMK67458.2025.11206955 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T07:04:31+00:00",
+      "last_checked_at": "2026-10-10T07:04:31+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Long-Context Fine-Tuning of LLaMA 2 7B with QLoRA, Dynamic RoPE, and FlashAttention"
     }
   }
 }
