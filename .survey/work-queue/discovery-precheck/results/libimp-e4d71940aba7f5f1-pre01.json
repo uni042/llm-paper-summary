@@ -1,0 +1,234 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e4d71940aba7f5f1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e4d71940aba7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2402.04239",
+    "arXiv:2410.17980"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "344ee1491c0e32441795b4a9a36a389a94d6d790",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T07:26:17.400150+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2402.04239",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.17980",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
+      "source_url": "https://arxiv.org/abs/2410.17980",
+      "year": 2024,
+      "published": "2024-10-23",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The self-attention mechanism traditionally relies on the softmax operator, necessitating positional embeddings like RoPE, or position biases to account for token order. But current methods using still face length generalisation challenges. We investigate an alternative attention mechanism based on the stick-breaking process in larger scale settings. The method works as follows: For each token before the current, we determine a break point, which represents the proportion of the stick, the weight of the attention, to allocate to the current token. We repeat this on the remaining stick, until all tokens are allocated a weight, resulting in a sequence of attention weights. This process naturally incorporates recency bias, which has linguistic motivations for grammar parsing. We study the implications of replacing the conventional softmax-based attention mechanism with stick-breaking attention. We then discuss implementation of numerically stable stick-breaking attention and adapt Flash Attention to accommodate this mechanism. When used as a drop-in replacement for current softmax+RoPE attention systems, we find that stick-breaking attention performs competitively with current methods on length generalisation and downstream tasks. Stick-breaking also performs well at length generalisation, allowing a model trained with $2^{11}$ context window to perform well at $2^{14}$ with perplexity improvements.",
+      "identifiers": [
+        "SemanticScholar:3fab7327ce553c7a6dc67cd787d3926e5dac00e0"
+      ],
+      "semantic_scholar_id": "3fab7327ce553c7a6dc67cd787d3926e5dac00e0",
+      "canonical_id": "arXiv:2410.17980",
+      "arxiv_id": "2410.17980",
+      "authors": [
+        "Shawn Tan",
+        "Song-Lin Yang",
+        "A. Courville",
+        "Rameswar Panda",
+        "Yikang Shen"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 717,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2402.04239",
+      "year": 2024,
+      "published": "2024-02-06",
+      "venue": "Pattern Recognition Letters",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture has shown to be a powerful tool for a wide range of tasks. It is based on the self-attention mechanism, which is an inherently computationally expensive operation with quadratic computational complexity: memory usage and compute time increase quadratically with the length of the input sequences, thus limiting the application of Transformers. In this work, we propose a novel Clustering self-Attention mechanism using Surrogate Tokens (CAST), to optimize the attention computation and achieve efficient transformers. CAST utilizes learnable surrogate tokens to construct a cluster affinity matrix, used to cluster the input sequence and generate novel cluster summaries. The self-attention from within each cluster is then combined with the cluster summaries of other clusters, enabling information flow across the entire input sequence. CAST improves efficiency by reducing the complexity from $O(N^2)$ to $O(\\alpha N)$ where N is the sequence length, and {\\alpha} is constant according to the number of clusters and samples per cluster. We show that CAST performs better than or comparable to the baseline Transformers on long-range sequence modeling tasks, while also achieving higher results on time and memory efficiency than other efficient transformers.",
+      "identifiers": [
+        "SemanticScholar:41d5b00f73426402c9151c8e32561275cd4390f2"
+      ],
+      "semantic_scholar_id": "41d5b00f73426402c9151c8e32561275cd4390f2",
+      "canonical_id": "arXiv:2402.04239",
+      "arxiv_id": "2402.04239",
+      "doi": "10.48550/arXiv.2402.04239",
+      "authors": [
+        "Adjorn van Engelenhoven",
+        "Nicola Strisciuglio",
+        "E. Talavera"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 977,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.17980",
+      "identity_tokens": [
+        "id:SemanticScholar:3fab7327ce553c7a6dc67cd787d3926e5dac00e0",
+        "id:arXiv:2410.17980",
+        "title:scaling stickbreaking attention an efficient implementation and indepth study",
+        "url:https://arxiv.org/abs/2410.17980"
+      ],
+      "record": {
+        "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
+        "source_url": "https://arxiv.org/abs/2410.17980",
+        "year": 2024,
+        "published": "2024-10-23",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The self-attention mechanism traditionally relies on the softmax operator, necessitating positional embeddings like RoPE, or position biases to account for token order. But current methods using still face length generalisation challenges. We investigate an alternative attention mechanism based on the stick-breaking process in larger scale settings. The method works as follows: For each token before the current, we determine a break point, which represents the proportion of the stick, the weight of the attention, to allocate to the current token. We repeat this on the remaining stick, until all tokens are allocated a weight, resulting in a sequence of attention weights. This process naturally incorporates recency bias, which has linguistic motivations for grammar parsing. We study the implications of replacing the conventional softmax-based attention mechanism with stick-breaking attention. We then discuss implementation of numerically stable stick-breaking attention and adapt Flash Attention to accommodate this mechanism. When used as a drop-in replacement for current softmax+RoPE attention systems, we find that stick-breaking attention performs competitively with current methods on length generalisation and downstream tasks. Stick-breaking also performs well at length generalisation, allowing a model trained with $2^{11}$ context window to perform well at $2^{14}$ with perplexity improvements.",
+        "identifiers": [
+          "SemanticScholar:3fab7327ce553c7a6dc67cd787d3926e5dac00e0"
+        ],
+        "semantic_scholar_id": "3fab7327ce553c7a6dc67cd787d3926e5dac00e0",
+        "canonical_id": "arXiv:2410.17980",
+        "arxiv_id": "2410.17980",
+        "authors": [
+          "Shawn Tan",
+          "Song-Lin Yang",
+          "A. Courville",
+          "Rameswar Panda",
+          "Yikang Shen"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 717,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.04239",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.04239",
+        "id:SemanticScholar:41d5b00f73426402c9151c8e32561275cd4390f2",
+        "id:arXiv:2402.04239",
+        "title:cast clustering selfattention using surrogate tokens for efficient transformers",
+        "url:https://arxiv.org/abs/2402.04239"
+      ],
+      "record": {
+        "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers",
+        "source_url": "https://arxiv.org/abs/2402.04239",
+        "year": 2024,
+        "published": "2024-02-06",
+        "venue": "Pattern Recognition Letters",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Transformer architecture has shown to be a powerful tool for a wide range of tasks. It is based on the self-attention mechanism, which is an inherently computationally expensive operation with quadratic computational complexity: memory usage and compute time increase quadratically with the length of the input sequences, thus limiting the application of Transformers. In this work, we propose a novel Clustering self-Attention mechanism using Surrogate Tokens (CAST), to optimize the attention computation and achieve efficient transformers. CAST utilizes learnable surrogate tokens to construct a cluster affinity matrix, used to cluster the input sequence and generate novel cluster summaries. The self-attention from within each cluster is then combined with the cluster summaries of other clusters, enabling information flow across the entire input sequence. CAST improves efficiency by reducing the complexity from $O(N^2)$ to $O(\\alpha N)$ where N is the sequence length, and {\\alpha} is constant according to the number of clusters and samples per cluster. We show that CAST performs better than or comparable to the baseline Transformers on long-range sequence modeling tasks, while also achieving higher results on time and memory efficiency than other efficient transformers.",
+        "identifiers": [
+          "SemanticScholar:41d5b00f73426402c9151c8e32561275cd4390f2"
+        ],
+        "semantic_scholar_id": "41d5b00f73426402c9151c8e32561275cd4390f2",
+        "canonical_id": "arXiv:2402.04239",
+        "arxiv_id": "2402.04239",
+        "doi": "10.48550/arXiv.2402.04239",
+        "authors": [
+          "Adjorn van Engelenhoven",
+          "Nicola Strisciuglio",
+          "E. Talavera"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 977,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ce6bd1a99ce11396c3973e451889a94add41ed57b3432764e083fa819c626dd9",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
