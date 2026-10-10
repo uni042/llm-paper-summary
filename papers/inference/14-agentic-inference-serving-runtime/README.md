@@ -95,7 +95,7 @@
 
 - **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  SARAは、プリフィルとデコードを分離する大規模言語モデル推論で、ハードウェアの列挙や経験的な割当だけに頼らず、サービス水準目標（Service-Level Objective; SLO）を満たすための必要資源量を数理モデルから直接求める資源配分方式である。
+  大規模言語モデルの分離型推論では、入力をまとめて処理する事前充填（プリフィル）、生成された鍵・値キャッシュ（KV キャッシュ）の転送、出力を逐次生成する復号（デコード）を別々の装置群へ配置する。原著の要旨は段階別SLO予測の平均誤差5%未満、同じ配備費用で既存比較方式より平均26.6%高い有効処理率を報告する。
 
 - **2026-09 · [PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic LLM Serving](2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

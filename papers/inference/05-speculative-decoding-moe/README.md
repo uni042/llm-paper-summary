@@ -212,7 +212,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2026-05 · [An Interpretable Latency Model for Speculative Decoding in LLM Serving](2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  投機的復号の遅延モデルは、Littleの法則で実効バッチを推定し、下書き・検証の固定費と負荷依存費を分けて測定して、要求率に応じた下書き長の選択境界を明らかにする。
+  本論文は、投機的復号（投機的復号）が単独要求では速くても、実際の大規模言語モデル配備で要求数が増えると高速化倍率が縮小し、場合によっては通常復号より遅くなる現象を説明する遅延モデルを提案する。
 
 - **2026-04 · [NanoSpec: Accelerating Speculative Decoding using Minimalist In-Context Vocabularies](2026-2605.26444-microspec-lightweight-in-context-vocabularies.md)**  
   実装：[✓](https://github.com/csAugust/NanoSpec) ・ リポジトリ内被引用：0  
