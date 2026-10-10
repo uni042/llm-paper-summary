@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T09:22:50.279425+00:00",
+  "generated_at": "2026-10-10T09:34:15.045562+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 99,
+  "count": 95,
   "worker_counts": {
-    "scheduled-chat-00": 33,
-    "scheduled-chat-30": 33,
-    "scheduled-chat-45": 33
+    "scheduled-chat-00": 32,
+    "scheduled-chat-30": 31,
+    "scheduled-chat-45": 32
   },
   "entries": [
     {
@@ -303,26 +303,6 @@
         "method_chars": 1251,
         "evaluation_chars": 612,
         "limitation_chars": 214
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
-      "canonical_id": "DOI:10.1145/3669940.3707285",
-      "title": "Medusa: Accelerating Serverless LLM Inference with Materialization",
-      "file_bytes": 12620,
-      "source_sha256": "f7c08d3905305e898f74a16978a1dd76d44b2b5a1e5975899376069f55f85d54",
-      "source_git_blob_sha": "4122f659721f12aff12bbe47825a5b3fb3041223",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.939489,
-      "quality_metrics": {
-        "body_chars": 3075,
-        "method_chars": 844,
-        "evaluation_chars": 719,
-        "limitation_chars": 251
       },
       "mechanical_failures": [],
       "warnings": []
@@ -800,28 +780,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
-      "canonical_id": "arXiv:2410.03111",
-      "title": "LoRC: Low-Rank Compression for LLMs KV Cache with a Progressive Compression Strategy",
-      "file_bytes": 13111,
-      "source_sha256": "6b34e4583e7688e2d8ade6cc52ce7bc9ec3c0cb9df1861d2ffbf65a3e4fb78f5",
-      "source_git_blob_sha": "df9e64701f5cc15a9f80e37cbad19ae347a76570",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.982383,
-      "quality_metrics": {
-        "body_chars": 2958,
-        "method_chars": 907,
-        "evaluation_chars": 381,
-        "limitation_chars": 209
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 381 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-cmc.md",
       "canonical_id": "arXiv:2609.25537",
       "title": "Compressing Long Context into Answer-Aligned Memory Embeddings for LLM Inference",
@@ -866,29 +824,6 @@
       "warnings": [
         "日本語比率 70.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md",
-      "canonical_id": "arXiv:2401.07851",
-      "title": "Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding",
-      "file_bytes": 13115,
-      "source_sha256": "2e18aff26c253a44871090215fbe6a9faaac6956082ef55ace704fe08467cb44",
-      "source_git_blob_sha": "c78ebb35107c264ea70a355d1967ffa38a10a8f7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.982843,
-      "quality_metrics": {
-        "body_chars": 1840,
-        "method_chars": 545,
-        "evaluation_chars": 189,
-        "limitation_chars": 194
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1840 < 2200",
-        "16KB未満再監査: 手法説明量 545 < 700"
-      ],
-      "warnings": []
     },
     {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md",
@@ -983,7 +918,7 @@
       "file_bytes": 13165,
       "source_sha256": "92a4eb827ebd4b0ea71e41b93c0fb1d5747021cd850fa6c1ffc7a18f908bc520",
       "source_git_blob_sha": "8a5704b135cb8f29a6bfb4dd982c1f8ff2a4fe30",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 1.0,
@@ -1167,28 +1102,6 @@
         "limitation_chars": 329
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.24357-recalkv-low-rank-kv-cache-compression-via-head-reordering.md",
-      "canonical_id": "arXiv:2505.24357",
-      "title": "ReCalKV: Low-Rank KV Cache Compression via Head Reordering and Offline Calibration",
-      "file_bytes": 13488,
-      "source_sha256": "9e5329d10f15820f11ee5067e0a3f196f575cad940b30d31531445bfd68264f9",
-      "source_git_blob_sha": "69ca92edc4492d3025a9fa83802fc85373a65b67",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.822027,
-      "quality_metrics": {
-        "body_chars": 3013,
-        "method_chars": 856,
-        "evaluation_chars": 456,
-        "limitation_chars": 208
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 456 < 500"
-      ],
       "warnings": []
     },
     {
