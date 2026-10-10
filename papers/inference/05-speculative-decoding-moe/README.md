@@ -13,7 +13,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-02 · [DFlash: Block Diffusion for Flash Speculative Decoding](2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md)**  
-  実装：[✓](https://github.com/z-lab/dflash) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/z-lab/dflash) ・ リポジトリ内被引用：26  
   対象 隠れ featuresで条件付けしたblock-diffusion drafterが候補列を1回で並列生成し、投機ドラフト自身の逐次待ちを除くDFlash。
 
 - **2026-07 · [DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation](2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md)**  

@@ -105,6 +105,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   演算子-level ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式からcompute/メモリ/ネットワーク要件を逆算するGenZ。
 
 - **2024-09 · [TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation](2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md)**  
-  実装：[✓](https://github.com/liyaxuanliyaxuan/TinyVLA) ・ リポジトリ内被引用：0  
+  実装：[✓](https://github.com/liyaxuanliyaxuan/TinyVLA) ・ リポジトリ内被引用：1  
   提案手法は、画像・言語の意味理解を約4.2億〜13億パラメータの小型マルチモーダル基盤モデルへ、連続行動の生成を拡散方策（diffusion policy）復号器へ分担させる。実機のFranka単腕ロボット5タスクでは、最大構成TinyVLA-Hの平均成功率が94.0%、OpenVLAが68.3%であり、差は25.7パーセントポイントだった。
 <!-- survey:auto:end -->

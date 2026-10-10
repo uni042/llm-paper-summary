@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-10T18:22:14+00:00",
-  "paper_count": 1760,
-  "edge_count": 21080,
+  "generated_at": "2026-10-10T19:02:36+00:00",
+  "paper_count": 1761,
+  "edge_count": 21085,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 22,
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 335,
@@ -329,7 +329,7 @@
     "papers/inference/05-speculative-decoding-moe/2026-2601.07353-talon-confidence-aware-speculative-decoding-with-adaptive-draft-length.md": 10,
     "papers/inference/05-speculative-decoding-moe/2026-2601.11580-speculative-decoding-performance-or-illusion.md": 5,
     "papers/inference/05-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md": 2,
-    "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md": 25,
+    "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md": 26,
     "papers/inference/05-speculative-decoding-moe/2026-2602.06932-aurora-adaptive-speculator-training-serving.md": 0,
     "papers/inference/05-speculative-decoding-moe/2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md": 0,
     "papers/inference/05-speculative-decoding-moe/2026-2602.13836-speculative-decoding-with-a-speculative-vocabulary.md": 2,
@@ -1142,7 +1142,7 @@
     "papers/inference/12-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md": 0,
     "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md": 20,
-    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md": 60,
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md": 61,
     "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md": 26,
     "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md": 11,
     "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md": 11,
@@ -1231,7 +1231,7 @@
     "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md": 16,
     "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md": 4,
     "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md": 5,
-    "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md": 0,
+    "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md": 1,
     "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md": 8,
     "papers/inference/15-inference-simulation-emulation/2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md": 3,
     "papers/inference/15-inference-simulation-emulation/2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md": 4,
@@ -1377,7 +1377,7 @@
     "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md": 1,
     "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md": 9,
     "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md": 14,
-    "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md": 23,
+    "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md": 24,
     "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md": 17,
     "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md": 6,
     "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md": 8,
@@ -1406,6 +1406,7 @@
     "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md": 5,
     "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md": 46,
     "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md": 1,
+    "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md": 1,
     "papers/inference/99-other-inference-systems/2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md": 1,
     "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md": 16,
     "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md": 27,
@@ -10770,7 +10771,9 @@
       "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
     ],
     "papers/inference/08-edge-on-device-llm-systems/2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md": [
-      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
     ],
     "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -13636,6 +13639,7 @@
       "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
       "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
       "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+      "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md",
       "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
       "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
       "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
@@ -21781,6 +21785,10 @@
     ],
     "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md": [
       "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+    ],
+    "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
     ],
     "papers/inference/99-other-inference-systems/2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md": [],
     "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md": [
