@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-0430-scheduled-chat-30/r01",
+  "reference_main_sha": "38a70103b5ab452f73e7722f84cece2f97b5ca08",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2005.14187",
+      "identity_tokens": [
+        "arxiv:2005.14187",
+        "doi:10.18653/v1/2020.acl-main.686"
+      ],
+      "title": "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing",
+      "reason": "ACL 2020の全文を確認。可変エンコーダ・デコーダ注意と異種層の探索空間、重み共有SuperTransformer、ハードウェア遅延予測器、進化的探索を用いて機械翻訳モデルをRaspberry Pi/CPU/GPUに特化する。評価はWMT/IWSLT翻訳のBLEUと遅延であり、現行LLMの自己回帰デコード、KVキャッシュ、サービングの直接最適化ではない。ハードウェア認識型推論設計の先行研究として関連するが収録範囲の中心から外れるため微妙に分類する。",
+      "source_url": "https://aclanthology.org/2020.acl-main.686.pdf",
+      "body_check": "research_fulltext_relevance_review: ACL 2020本文の第2節でSuperTransformerと遅延予測器・進化探索、第3節でWMT14/19とIWSLT14翻訳評価、第4節でRaspberry Pi・Xeon・TITAN Xpの実測比較を確認。LLM専用推論基盤の研究ではない。",
+      "first_checked_at": "2026-10-11",
+      "last_checked_at": "2026-10-11",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 12
+    }
+  ]
+}
