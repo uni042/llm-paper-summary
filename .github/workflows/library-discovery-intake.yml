@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
-      GH_TOKEN: \${{ github.token }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -75,7 +75,7 @@ jobs:
                 return 1
               fi
               if git push origin HEAD:main; then return 0; fi
-              echo "Discovery publish race after rebase: \${push_attempt}"
+              echo "Discovery publish race after rebase: ${push_attempt}"
               sleep $((push_attempt * 2))
             done
             return 1
@@ -86,13 +86,13 @@ jobs:
               sync_main
               python .survey/scripts/process_library_import_inbox.py \
                 --repo-root . --skip-research --max-discovery-records 240
-              if publish "library-discovery: \${label} intake" \
+              if publish "library-discovery: ${label} intake" \
                   .survey/import-inbox \
                   .survey/work-queue/discovery-precheck \
                   .survey/work-queue/reference-curation \
                   .survey/work-queue/submissions \
                   .survey/work-queue/results; then return 0; fi
-              echo "Discovery intake recompute \${attempt}"
+              echo "Discovery intake recompute ${attempt}"
             done
             return 1
           }
@@ -126,7 +126,7 @@ jobs:
             active="$(gh run list --repo "$GITHUB_REPOSITORY" \
               --workflow discovery-precheck.yml --limit 20 \
               --json status --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
-            if [ "\${active:-0}" -eq 0 ]; then
+            if [ "${active:-0}" -eq 0 ]; then
               gh workflow run discovery-precheck.yml --repo "$GITHUB_REPOSITORY" --ref main
             fi
           fi
@@ -163,7 +163,7 @@ jobs:
           }
           pending="$(count_dir .survey/import-inbox/pending/discovery)"
           waiting="$(count_dir .survey/import-inbox/waiting/discovery)"
-          generation="\${{ github.event.inputs.drain_generation || '0' }}"
+          generation="${{ github.event.inputs.drain_generation || '0' }}"
           if ! [[ "$generation" =~ ^[0-9]+$ ]]; then generation=0; fi
           unsettled=0
           while IFS= read -r request; do
@@ -174,7 +174,7 @@ jobs:
             fi
           done < <(find .survey/work-queue/discovery-precheck/requests \
             -maxdepth 1 -type f -name 'libimp-*-pre*.json' 2>/dev/null | sort)
-          echo "Discovery backlog: pending=\${pending}, waiting=\${waiting}, generation=\${generation}"
+          echo "Discovery backlog: pending=${pending}, waiting=${waiting}, generation=${generation}"
           if [ $((pending + waiting)) -gt 0 ] && [ "$unsettled" -eq 0 ] && [ "$generation" -lt 96 ]; then
             next_generation=$((generation + 1))
             gh workflow run library-discovery-intake.yml \
