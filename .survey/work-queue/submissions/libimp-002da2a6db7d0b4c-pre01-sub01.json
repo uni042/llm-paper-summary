@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
+      "source_url": "https://arxiv.org/abs/2511.19097",
+      "year": 2025,
+      "published": "2025-11-11",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing reinforcement learning methods for Chain-of-Thought reasoning suffer from two critical limitations. First, they operate as monolithic black boxes that provide undifferentiated reward signals, obscuring individual step contributions and hindering error diagnosis. Second, sequential decoding has O(n) time complexity. This makes real-time deployment impractical for complex reasoning tasks.\nWe present DeCoRL (Decoupled Reasoning Chains via Coordinated Reinforcement Learning), a novel framework that transforms reasoning from sequential processing into collaborative modular orchestration. DeCoRL trains lightweight specialized models to generate reasoning sub-steps concurrently, eliminating sequential bottlenecks through parallel processing. To enable precise error attribution, the framework designs modular reward functions that score each sub-step independently. Cascaded DRPO optimization then coordinates these rewards while preserving inter-step dependencies.\nComprehensive evaluation demonstrates state-of-the-art results across RM-Bench, RMB, and RewardBench, outperforming existing methods including large-scale models. DeCoRL delivers 3.8 times faster inference while maintaining superior solution quality and offers a 22.7% improvement in interpretability through explicit reward attribution. These advancements, combined with a 72.4% reduction in energy consumption and a 68% increase in throughput, make real-time deployment of complex reasoning systems a reality.",
+      "identifiers": [
+        "SemanticScholar:b7a2a4dc448109a69dffe95269c8d9ea93119b46"
+      ],
+      "semantic_scholar_id": "b7a2a4dc448109a69dffe95269c8d9ea93119b46",
+      "canonical_id": "arXiv:2511.19097",
+      "arxiv_id": "2511.19097",
+      "doi": "10.48550/arXiv.2511.19097",
+      "authors": [
+        "Ziyuan Gao",
+        "Di Liang",
+        "Xianjie Wu",
+        "Philippe Morel",
+        "Min-Long Peng"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 333,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Decouples CoT into parallel sub-step generators and reports 3.8x faster inference, 68% higher throughput, and lower energy; direct latency/throughput contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost",
+      "source_url": "https://arxiv.org/abs/2605.22502",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent orchestration frameworks have proliferated, collectively exceeding 290,000 GitHub stars across LangGraph, CrewAI, Google ADK, OpenAI Agents SDK, Semantic Kernel, Strands, and LlamaIndex. All follow the same pattern: an external orchestrator above the LLM, injecting instructions and routing decisions every turn. Recent work has shown this architecture is dominated for procedural tasks by simply providing the procedure in a frontier model's system prompt [Dennis et al., 2026a], at the cost of consuming the context window, requiring a frontier model for every conversation, and exposing proprietary procedures to third-party providers. Compiling the procedure into the weights of a small fine-tuned model -- creating a subterranean agent -- should resolve all of these concerns, and prior work (SimpleTOD, FireAct, SynTOD, WorkflowLLM, Agent Lumos) has shown the technique works. Yet developer adoption has overwhelmingly favored orchestration. We identify three perceived barriers and address each empirically across travel booking (14 nodes), Zoom support (14 nodes, product-specific knowledge), and insurance claims (55 nodes, 6 decision hubs).",
+      "identifiers": [
+        "SemanticScholar:333cab7ca893cd996e31a40210131394c42a7382"
+      ],
+      "semantic_scholar_id": "333cab7ca893cd996e31a40210131394c42a7382",
+      "canonical_id": "arXiv:2605.22502",
+      "arxiv_id": "2605.22502",
+      "doi": "10.48550/arXiv.2605.22502",
+      "authors": [
+        "Simon Dennis",
+        "Rivaan Patil",
+        "Kevin D. Shabahang",
+        "Haoze Guo"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Compiles agent procedures into small-model weights rather than routing every turn through an external orchestrator/frontier model, targeting inference cost and orchestration overhead.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-002da2a6db7d",
+    "round": "libimp-002da2a6db7d0b4c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-002da2a6db7d0b4c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-002da2a6db7d0b4c-pre01.json",
+    "receipt": "sha256:aae582ea083d7e4db8643ff5c99d3cecfaf0f1d52cd945624737a60e8a507b65"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-002da2a6db7d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
