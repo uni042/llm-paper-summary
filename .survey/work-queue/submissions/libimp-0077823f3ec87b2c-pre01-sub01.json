@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Agent Contracts: A Formal Framework for Resource-Bounded Autonomous AI Systems",
+      "source_url": "https://arxiv.org/abs/2601.08815",
+      "year": 2026,
+      "published": "2026-01-13",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Contract Net Protocol (1980) introduced coordination through contracts in multi-agent systems. Modern agent protocols standardize connectivity and interoperability; yet, none provide formal, resource governance-normative mechanisms to bound how much agents may consume or how long they may operate. We introduce Agent Contracts, a formal framework that extends the contract metaphor from task allocation to resource-bounded execution. An Agent Contract unifies input/output specifications, multi-dimensional resource constraints, temporal boundaries, and success criteria into a coherent governance mechanism with explicit lifecycle semantics. For multi-agent coordination, we establish conservation laws ensuring delegated budgets respect parent constraints, enabling hierarchical coordination through contract delegation. Empirical validation across four experiments demonstrates 90% token reduction with 525x lower variance in iterative workflows, zero conservation violations in multi-agent delegation, and measurable quality-resource tradeoffs through contract modes. Agent Contracts provide formal foundations for predictable, auditable, and resource-bounded autonomous AI deployment.",
+      "identifiers": [
+        "SemanticScholar:46682696b006815a79af4b04926200d4d8e3b99c"
+      ],
+      "semantic_scholar_id": "46682696b006815a79af4b04926200d4d8e3b99c",
+      "canonical_id": "arXiv:2601.08815",
+      "arxiv_id": "2601.08815",
+      "doi": "10.48550/arXiv.2601.08815",
+      "authors": [
+        "Qing Ye",
+        "Jing Tan"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Agent Contracts formally bound multi-agent resource and time consumption and report a 90% token reduction in iterative workflows, directly addressing resource-bounded AI execution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0077823f3ec8",
+    "round": "libimp-0077823f3ec87b2c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0077823f3ec87b2c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0077823f3ec87b2c-pre01.json",
+    "receipt": "sha256:bceaab2acecd191771d664cc265661d683187b9eed39e4cd482d48ddbb933b67"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0077823f3ec8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
