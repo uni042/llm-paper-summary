@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T09:11:39.028771+00:00",
+  "generated_at": "2026-10-10T09:22:50.279425+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 104,
+  "count": 99,
   "worker_counts": {
-    "scheduled-chat-00": 34,
-    "scheduled-chat-30": 35,
-    "scheduled-chat-45": 35
+    "scheduled-chat-00": 33,
+    "scheduled-chat-30": 33,
+    "scheduled-chat-45": 33
   },
   "entries": [
     {
@@ -32,26 +32,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 553 < 700"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md",
-      "canonical_id": "arXiv:2403.06664",
-      "title": "Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System",
-      "file_bytes": 10073,
-      "source_sha256": "3a5787e3b09943b4c22b3852937cb2768f732efe0200123afa240ce99c9b5054",
-      "source_git_blob_sha": "3c20d09a38ff02fc77cb62dfd5d05d3f5ed4ce49",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.830536,
-      "quality_metrics": {
-        "body_chars": 2228,
-        "method_chars": 917,
-        "evaluation_chars": 536,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -354,7 +334,7 @@
       "file_bytes": 12641,
       "source_sha256": "c6b6bc47e9e045770518430a3132185152753d8c441e7c8456c0996ca08203d0",
       "source_git_blob_sha": "a7fcefe8b98862ed31750d365d2ea88509a80fc1",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.844947,
@@ -686,26 +666,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03648-aibrix-towards-scalable-cost-effective-large-language-model-inference-in.md",
-      "canonical_id": "arXiv:2504.03648",
-      "title": "AIBrix: Towards Scalable, Cost-Effective Large Language Model Inference Infrastructure",
-      "file_bytes": 12990,
-      "source_sha256": "109c21f9c380a8bc0c929edd2e0a78aa3400a57d765004734f04900aa2a5b564",
-      "source_git_blob_sha": "9434c1e9fb68e3622c570a333e60c9830e5a31f2",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.842484,
-      "quality_metrics": {
-        "body_chars": 4007,
-        "method_chars": 1696,
-        "evaluation_chars": 934,
-        "limitation_chars": 343
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
       "canonical_id": "arXiv:2403.02181",
       "title": "Not All Layers of LLMs Are Necessary During Inference",
@@ -979,7 +939,7 @@
       "file_bytes": 13137,
       "source_sha256": "551d7ba3feaca3463f68502a3724e48e4943922919c99aa4784a6fbab6b55f80",
       "source_git_blob_sha": "af720a76727ebffce25c35bafcdf964ba587b251",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.853726,
@@ -999,7 +959,7 @@
       "file_bytes": 13141,
       "source_sha256": "9cc6d95f448ea774a961778c2048f0278c9686801a1a55216e871bc0f2d3a06d",
       "source_git_blob_sha": "d309a26f64ffbf11acae124331df893ad01a9d3e",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.757177,
@@ -1729,29 +1689,6 @@
       ]
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md",
-      "canonical_id": "arXiv:2502.00922",
-      "title": "Huff-LLM: End-to-End Lossless Compression for Efficient LLM Inference",
-      "file_bytes": 14224,
-      "source_sha256": "85dbe3e043cc90f445e1b4be19fe2316e41d0f15c7d181c5209b15ee7fb7dc2a",
-      "source_git_blob_sha": "3b1d8cc4aa971b75706057be75a29a291951cc37",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.612401,
-      "quality_metrics": {
-        "body_chars": 4218,
-        "method_chars": 1228,
-        "evaluation_chars": 573,
-        "limitation_chars": 330
-      },
-      "mechanical_failures": [
-        "日本語比率 61.2% < 70%",
-        "16KB未満再監査: 日本語比率 61.2% < 80%"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md",
       "canonical_id": "arXiv:2512.13525",
       "title": "Janus: Disaggregating Attention and Experts for Scalable MoE Inference",
@@ -1838,26 +1775,6 @@
       "warnings": [
         "日本語比率 73.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md",
-      "canonical_id": "arXiv:2402.12065",
-      "title": "WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More",
-      "file_bytes": 14488,
-      "source_sha256": "a26cc7629860abf6682b6d3f1885c64cf7ef3928c7746fa435e0275469949d4b",
-      "source_git_blob_sha": "84b262d550df601b6a43ab4918ed66b7b66bfd59",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.945908,
-      "quality_metrics": {
-        "body_chars": 4437,
-        "method_chars": 1430,
-        "evaluation_chars": 1240,
-        "limitation_chars": 346
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md",
@@ -1987,26 +1904,6 @@
       "warnings": [
         "日本語比率 73.0% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md",
-      "canonical_id": "arXiv:2402.18668",
-      "title": "Simple linear attention language models balance the recall-throughput tradeoff",
-      "file_bytes": 14696,
-      "source_sha256": "065a815072e34b4f3910c8b8f504813a76e2cb272b50e53b31f0d8458d895dc7",
-      "source_git_blob_sha": "9c04c4f1a4202a2912f00ec6685b928bb7be8ad1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.945169,
-      "quality_metrics": {
-        "body_chars": 3710,
-        "method_chars": 1123,
-        "evaluation_chars": 944,
-        "limitation_chars": 399
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
@@ -2160,25 +2057,21 @@
       "path": "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md",
       "canonical_id": "arXiv:2609.21672",
       "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
-      "file_bytes": 14962,
-      "source_sha256": "8cb052be42ed36f7b27d21a7805013b2d320df90ba64c5918a0d9e953b4b1b61",
-      "source_git_blob_sha": "02f410aafe0d91730962e60f0ff027d561d3cf87",
+      "file_bytes": 15081,
+      "source_sha256": "7981361197cbb9c8fef1b0e61db588f480a4537895bb9d2fbc0c1b43b3c9f2ac",
+      "source_git_blob_sha": "e5066fe1cb43edd20fa91989999e11a0b89437cb",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.73764,
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.946069,
       "quality_metrics": {
-        "body_chars": 4608,
-        "method_chars": 1562,
-        "evaluation_chars": 1428,
-        "limitation_chars": 506
+        "body_chars": 4116,
+        "method_chars": 1322,
+        "evaluation_chars": 1313,
+        "limitation_chars": 437
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 73.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 73.8% < 警告基準 80%"
-      ]
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
@@ -2224,9 +2117,9 @@
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.24555-locks.md",
       "canonical_id": "arXiv:2607.24555",
       "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
-      "file_bytes": 15943,
-      "source_sha256": "e75611139509cc2b4350a6c39245fc0bad8ae875826ac18b44aca5613074620c",
-      "source_git_blob_sha": "33389bb5dbcee563f97ff790c1a8cf3ac81e9994",
+      "file_bytes": 16028,
+      "source_sha256": "2bb33fe00164d3e26c3cc0d0f3fc4eda67cc33cd69a6337d3f02907d5e1001b1",
+      "source_git_blob_sha": "c62d28bb29fe9060821c7264d2f01053cdeafaac",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
