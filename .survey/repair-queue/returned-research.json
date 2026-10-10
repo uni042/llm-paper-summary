@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T12:17:03+00:00",
+  "generated_at": "2026-10-10T12:22:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2450,8 +2450,8 @@
       "canonical_id": "arXiv:2605.15051",
       "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
       "source_url": "https://arxiv.org/abs/2605.15051",
-      "returned_at": "2026-10-10T12:14:38+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-10T12:22:28+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2469,8 +2469,8 @@
           "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_479cbf8b19448191af1c31851aaed5c3--2026-2605.15051-latency-model-under16kb-reaudit-20261010-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_479cbf8b19448191af1c31851aaed5c3--2026-2605.15051-latency-model-under16kb-reaudit-20261010-1830-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dd674eb2c78c--libfile_479cbf8b19448191af1c31851aaed5c3--2026-2605.15051-latency-model-under16kb-reaudit-20261010-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-dd674eb2c78c--libfile_479cbf8b19448191af1c31851aaed5c3--2026-2605.15051-latency-model-under16kb-reaudit-20261010-1830-scheduled-chat-30-r01.json",
       "worker_run_key": "20261010-1830-scheduled-chat-30-r01"
     }
   ]

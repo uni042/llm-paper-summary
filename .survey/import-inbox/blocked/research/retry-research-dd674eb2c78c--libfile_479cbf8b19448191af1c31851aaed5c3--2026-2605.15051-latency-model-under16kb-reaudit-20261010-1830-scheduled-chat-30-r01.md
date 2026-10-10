@@ -64,6 +64,8 @@ quality_eval_chars: 2090
 quality_limitation_chars: 433
 quality_self_review_passed: true
 quality_self_review_version: '2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # An Interpretable Latency Model for Speculative Decoding in LLM Serving

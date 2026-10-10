@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "be115d462e21f4b04f317531c3b13f94cfb828ac8855204b2aae21bd91171f19",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dd674eb2c78c--libfile_479cbf8b19448191af1c31851aaed5c3--2026-2605.15051-latency-model-under16kb-reaudit-20261010-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.15051",
+  "worker_completed_at": "2026-10-10T18:35:31+09:00",
+  "worker_run_key": "20261010-1830-scheduled-chat-30-r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4411,
+    "body_paragraphs": 26,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1388,
+    "limitation_chars": 426,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-10T12:22:28+00:00"
+}
