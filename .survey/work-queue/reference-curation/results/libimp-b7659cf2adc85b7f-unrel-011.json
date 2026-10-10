@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7659cf2adc85b7f-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.20697",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.20697",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.20697",
+      "SemanticScholar:cb4327430f9e8e5ba091ab7c1e944cc9e6978d9e",
+      "arXiv:2511.20697"
+    ],
+    "reason": "MSU-Bench evaluates musical-score understanding by language and vision-language models; the contribution is an application benchmark rather than an efficiency benchmark.",
+    "first_checked_at": "2026-10-10T14:41:55+00:00",
+    "last_checked_at": "2026-10-10T14:41:55+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Musical Score Understanding Benchmark: Evaluating Large Language Models' Comprehension of Complete Musical Scores"
+  },
+  "processed_at": "2026-10-10T14:41:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7659cf2adc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

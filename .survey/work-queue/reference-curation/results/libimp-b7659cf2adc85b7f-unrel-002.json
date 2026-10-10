@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7659cf2adc85b7f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.02445",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.02445",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.02445",
+      "SemanticScholar:febb0d38c39219f39d5325345882b5148a84b79e",
+      "arXiv:2512.02445"
+    ],
+    "reason": "The primary abstract evaluates long-context agent capability and refusal stability, reporting safety and accuracy degradation rather than an efficiency method.",
+    "first_checked_at": "2026-10-10T14:41:53+00:00",
+    "last_checked_at": "2026-10-10T14:41:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "When Refusals Fail: Unstable Safety Mechanisms in Long-Context LLM Agents"
+  },
+  "processed_at": "2026-10-10T14:41:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7659cf2adc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

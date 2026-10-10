@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T14:20:30+00:00",
-  "record_count": 11315,
+  "updated_at": "2026-10-10T14:41:57+00:00",
+  "record_count": 11332,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -161690,6 +161690,275 @@
       "last_checked_at": "2026-10-10T14:20:30+00:00",
       "linked_from": [],
       "title": "MobileWorld: Benchmarking Autonomous Mobile Agents in Agent-User Interactive and MCP-Augmented Environments"
+    },
+    "arXiv:2602.11164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11164",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.11164",
+        "SemanticScholar:5e8965b2435e3301ef4e4e18220dff4983e8f020",
+        "arXiv:2602.11164"
+      ],
+      "reason": "The arXiv abstract presents MIND and DFPO as domain-specific post-training and training-data refinement for optimization modeling; it does not describe inference, serving, or runtime efficiency.",
+      "first_checked_at": "2026-10-10T14:41:52+00:00",
+      "last_checked_at": "2026-10-10T14:41:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Automated Optimization Modeling via a Localizable Error-Driven Perspective"
+    },
+    "arXiv:2512.02445": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.02445",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.02445",
+        "SemanticScholar:febb0d38c39219f39d5325345882b5148a84b79e",
+        "arXiv:2512.02445"
+      ],
+      "reason": "The primary abstract evaluates long-context agent capability and refusal stability, reporting safety and accuracy degradation rather than an efficiency method.",
+      "first_checked_at": "2026-10-10T14:41:53+00:00",
+      "last_checked_at": "2026-10-10T14:41:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "When Refusals Fail: Unstable Safety Mechanisms in Long-Context LLM Agents"
+    },
+    "arXiv:2511.01008": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01008",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.01008",
+        "SemanticScholar:2f147aec448ee58caa7a66ae2ea01bb9155603b2",
+        "arXiv:2511.01008"
+      ],
+      "reason": "MARS-SQL trains role-specialized agents with interactive RL and trajectory ranking to improve SQL accuracy; the abstract gives no serving-cost or latency reduction.",
+      "first_checked_at": "2026-10-10T14:41:53+00:00",
+      "last_checked_at": "2026-10-10T14:41:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "MARS-SQL: A multi-agent reinforcement learning framework for Text-to-SQL"
+    },
+    "arXiv:2602.02244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02244",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.02244",
+        "SemanticScholar:20311c419dd7263bf43c39e4623f6bdf7625e0b4",
+        "arXiv:2602.02244"
+      ],
+      "reason": "The current arXiv title and abstract describe CurioSFT for preserving exploration during SFT; this is a post-training objective and reports reasoning quality, not inference efficiency.",
+      "first_checked_at": "2026-10-10T14:41:53+00:00",
+      "last_checked_at": "2026-10-10T14:41:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Entropy-Preserving Supervised Fine-Tuning via Adaptive Self-Distillation for Large Reasoning Models"
+    },
+    "arXiv:2601.18722": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18722",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.18722",
+        "SemanticScholar:9668149e13b9980b15d98a00c2499517cf9d5765",
+        "arXiv:2601.18722"
+      ],
+      "reason": "SP3F uses translation-based SFT and privileged-judge RL to improve multilingual reasoning accuracy; it is a training recipe without an inference/runtime optimization.",
+      "first_checked_at": "2026-10-10T14:41:53+00:00",
+      "last_checked_at": "2026-10-10T14:41:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Gained in Translation: Privileged Pairwise Judges Enhance Multilingual Reasoning"
+    },
+    "arXiv:2601.13020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13020",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1474",
+        "DOI:10.48550/arxiv.2601.13020",
+        "SemanticScholar:b59f6d8c58889fb107c5c3cdb9314927302d9e95",
+        "arXiv:2601.13020"
+      ],
+      "reason": "PAS-guided router reweighting and rank stabilization reduce continual-tuning forgetting at fixed model capacity; the abstract does not show lower inference cost or latency.",
+      "first_checked_at": "2026-10-10T14:41:54+00:00",
+      "last_checked_at": "2026-10-10T14:41:54+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "PASs-MoE: Mitigating Misaligned Co-drift among Router and Experts via Pathway Activation Subspaces for Continual Learning"
+    },
+    "arXiv:2601.10306": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10306",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.10306",
+        "SemanticScholar:59dea3b27e41b60a6977aa514627ee71dc583ef3",
+        "arXiv:2601.10306"
+      ],
+      "reason": "EAPO changes reward supervision and reward-policy co-evolution during RL to improve evidence quality in long-context reasoning; it reports no execution-efficiency result.",
+      "first_checked_at": "2026-10-10T14:41:54+00:00",
+      "last_checked_at": "2026-10-10T14:41:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Evidence-Augmented Policy Optimization with Reward Co-Evolution for Long-Context Reasoning"
+    },
+    "arXiv:2601.06633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06633",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.06633",
+        "SemanticScholar:ed94fefa18bed370f53c79337176867312b283c7",
+        "arXiv:2601.06633"
+      ],
+      "reason": "KASER is an RL-trained simulator for student coding errors and evaluates prediction diversity and coverage, not LLM serving or inference efficiency.",
+      "first_checked_at": "2026-10-10T14:41:54+00:00",
+      "last_checked_at": "2026-10-10T14:41:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "KASER: Knowledge-Aligned Student Error Simulator for Open-Ended Coding Tasks"
+    },
+    "arXiv:2601.03115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03115",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.687",
+        "DOI:10.48550/arxiv.2601.03115",
+        "SemanticScholar:95374a8765f53a2d4bf8275ff916e8d68eddca77",
+        "arXiv:2601.03115"
+      ],
+      "reason": "This study identifies and validates emotion-sensitive neurons in audio-language models; its interpretability and causal-analysis contribution is not a system-efficiency method.",
+      "first_checked_at": "2026-10-10T14:41:54+00:00",
+      "last_checked_at": "2026-10-10T14:41:54+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Discovering and Causally Validating Emotion-Sensitive Neurons in Large Audio-Language Models"
+    },
+    "arXiv:2511.20697": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20697",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.20697",
+        "SemanticScholar:cb4327430f9e8e5ba091ab7c1e944cc9e6978d9e",
+        "arXiv:2511.20697"
+      ],
+      "reason": "MSU-Bench evaluates musical-score understanding by language and vision-language models; the contribution is an application benchmark rather than an efficiency benchmark.",
+      "first_checked_at": "2026-10-10T14:41:55+00:00",
+      "last_checked_at": "2026-10-10T14:41:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Musical Score Understanding Benchmark: Evaluating Large Language Models' Comprehension of Complete Musical Scores"
+    },
+    "arXiv:2511.11966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.11966",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.11966",
+        "SemanticScholar:37e3d75c26e4cb80f64b74b5b0392f27f919c5dc",
+        "arXiv:2511.11966"
+      ],
+      "reason": "The paper studies calibration of generation entropy and output diversity; its proposed distribution truncation discussion concerns generation quality, not runtime cost.",
+      "first_checked_at": "2026-10-10T14:41:55+00:00",
+      "last_checked_at": "2026-10-10T14:41:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "On the Entropy Calibration of Language Models"
+    },
+    "arXiv:2511.11124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.11124",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.11124",
+        "SemanticScholar:f4e070c20cbf978b3f434bab7217e3ba8e5c766a",
+        "arXiv:2511.11124"
+      ],
+      "reason": "AV-Dialog improves speaker tracking, transcription, and turn-taking in noisy audio-visual dialogue; the abstract reports task robustness but no LLM-serving efficiency or latency measurement.",
+      "first_checked_at": "2026-10-10T14:41:55+00:00",
+      "last_checked_at": "2026-10-10T14:41:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "AV-Dialog: Spoken Dialogue Models with Audio-Visual Input"
+    },
+    "arXiv:2507.15061": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.15061",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.15061",
+        "SemanticScholar:52f36c2d1f109db3ff7efd862571e563150a0c9b",
+        "arXiv:2507.15061"
+      ],
+      "reason": "WebShaper synthesizes training data for information-seeking agents; its contribution is data generation and agent training, not inference execution efficiency.",
+      "first_checked_at": "2026-10-10T14:41:55+00:00",
+      "last_checked_at": "2026-10-10T14:41:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "WebShaper: Agentically Data Synthesizing via Information-Seeking Formalization"
+    },
+    "DOI:10.1109/icra55743.2025.11128119": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icra55743.2025.11128119",
+      "identity_tokens": [
+        "DOI:10.1109/icra55743.2025.11128119"
+      ],
+      "reason": "This paper studies jailbreak attacks on LLM-controlled robots, a robotics safety application with no stated model-inference or serving-efficiency contribution.",
+      "first_checked_at": "2026-10-10T14:41:56+00:00",
+      "last_checked_at": "2026-10-10T14:41:56+00:00",
+      "linked_from": [],
+      "title": "Jailbreaking LLM-Controlled Robots"
+    },
+    "arXiv:2406.08607": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08607",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.08607",
+        "SemanticScholar:593b8663c22300d91bca8d99f9f08f2fd4c527ed",
+        "arXiv:2406.08607"
+      ],
+      "reason": "ULD reports more than threefold faster LLM unlearning training, but the improvement is confined to training time and does not address inference or serving.",
+      "first_checked_at": "2026-10-10T14:41:56+00:00",
+      "last_checked_at": "2026-10-10T14:41:56+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Reversing the Forget-Retain Objectives: An Efficient LLM Unlearning Framework from Logit Difference"
+    },
+    "arXiv:2205.13320": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.13320",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2205.13320",
+        "SemanticScholar:943cd7cf7ba21911561d03228dc2dd3f397168c9",
+        "arXiv:2205.13320"
+      ],
+      "reason": "OptFormer meta-learns general hyperparameter optimization from tuning histories; its optimization target is experiment selection, not LLM inference, serving, or runtime.",
+      "first_checked_at": "2026-10-10T14:41:56+00:00",
+      "last_checked_at": "2026-10-10T14:41:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Towards Learning Universal Hyperparameter Optimizers with Transformers"
+    },
+    "arXiv:2106.04690": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.04690",
+      "identity_tokens": [
+        "arXiv:2106.04690"
+      ],
+      "reason": "This paper addresses handcrafted backdoors in deep neural networks, a security topic rather than LLM inference, serving, runtime, or model efficiency.",
+      "first_checked_at": "2026-10-10T14:41:57+00:00",
+      "last_checked_at": "2026-10-10T14:41:57+00:00",
+      "linked_from": [],
+      "title": "Handcrafted Backdoors in Deep Neural Networks"
     }
   }
 }

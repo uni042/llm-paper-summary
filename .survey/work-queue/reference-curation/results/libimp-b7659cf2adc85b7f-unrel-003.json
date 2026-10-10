@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7659cf2adc85b7f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.01008",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.01008",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.01008",
+      "SemanticScholar:2f147aec448ee58caa7a66ae2ea01bb9155603b2",
+      "arXiv:2511.01008"
+    ],
+    "reason": "MARS-SQL trains role-specialized agents with interactive RL and trajectory ranking to improve SQL accuracy; the abstract gives no serving-cost or latency reduction.",
+    "first_checked_at": "2026-10-10T14:41:53+00:00",
+    "last_checked_at": "2026-10-10T14:41:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "MARS-SQL: A multi-agent reinforcement learning framework for Text-to-SQL"
+  },
+  "processed_at": "2026-10-10T14:41:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7659cf2adc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

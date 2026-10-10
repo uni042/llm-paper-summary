@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T13:56:27+00:00",
-  "record_count": 4586,
+  "updated_at": "2026-10-10T14:41:52+00:00",
+  "record_count": 4588,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70162,6 +70162,39 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models"
+    },
+    "arXiv:2601.12078": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.12078",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.12078",
+        "SemanticScholar:13f82584a1fc5b54f21434bc4efc7218cc22848a",
+        "arXiv:2601.12078"
+      ],
+      "reason": "PURPLE uses a contextual bandit to order user-profile memories for RAG and reports effectiveness and efficiency, but the abstract does not specify a concrete reduction in prompt tokens, serving cost, or latency.",
+      "first_checked_at": "2026-10-10T14:41:52+00:00",
+      "last_checked_at": "2026-10-10T14:41:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing User Profiles via Contextual Bandits for Retrieval-Augmented LLM Personalization"
+    },
+    "DOI:10.1101/2023.10.03.560734": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1101/2023.10.03.560734",
+      "identity_tokens": [
+        "DOI:10.1101/2023.10.03.560734",
+        "SemanticScholar:b1e90b67675b6d7ae88b563a93cb4d375857cb15"
+      ],
+      "reason": "Stable DOI and supplied bibliographic title identify CellPLM, but the primary bioRxiv abstract could not be read: https://www.biorxiv.org/content/10.1101/2023.10.03.560734v1 returned HTTP 403 Forbidden, and https://doi.org/10.1101/2023.10.03.560734 was inaccessible through the browser tool. Abstract/body were not read; no secondary abstract was used.",
+      "first_checked_at": "2026-10-10T14:41:52+00:00",
+      "last_checked_at": "2026-10-10T14:41:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CellPLM: Pre-training of Cell Language Model Beyond Single Cells"
     }
   }
 }

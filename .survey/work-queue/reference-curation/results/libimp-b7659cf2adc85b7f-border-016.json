@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7659cf2adc85b7f-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1101/2023.10.03.560734",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1101/2023.10.03.560734",
+    "identity_tokens": [
+      "DOI:10.1101/2023.10.03.560734",
+      "SemanticScholar:b1e90b67675b6d7ae88b563a93cb4d375857cb15"
+    ],
+    "reason": "Stable DOI and supplied bibliographic title identify CellPLM, but the primary bioRxiv abstract could not be read: https://www.biorxiv.org/content/10.1101/2023.10.03.560734v1 returned HTTP 403 Forbidden, and https://doi.org/10.1101/2023.10.03.560734 was inaccessible through the browser tool. Abstract/body were not read; no secondary abstract was used.",
+    "first_checked_at": "2026-10-10T14:41:52+00:00",
+    "last_checked_at": "2026-10-10T14:41:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CellPLM: Pre-training of Cell Language Model Beyond Single Cells"
+  },
+  "processed_at": "2026-10-10T14:41:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7659cf2adc8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
