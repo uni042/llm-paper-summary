@@ -296,6 +296,11 @@ jobs:
             exit 1
           }
 
+          # Stage 5 already rendered STATUS against its queue snapshot.
+          # Preserve the counted queue blob ID to avoid a second full recount
+          # on Discovery-only imports that do not change the re-audit queue.
+          reaudit_queue_at_status="$(git rev-parse 'HEAD:.survey/repair-queue/under-16kb-reaudit.json' 2>/dev/null || true)"
+
           # The under-16KB re-audit queue embeds hashes of current paper bytes.
           # Never publish it through publish(), because publish() may rebase a
           # derived JSON snapshot across concurrent paper writes. Recompute from
@@ -323,31 +328,39 @@ jobs:
             exit 1
           }
 
-          # STATUS must reflect the final, authoritative under-16KB queue.
-          # Stage 5 rendered an older queue snapshot. GITHUB_TOKEN pushes do not
-          # trigger status-dashboard.yml, so regenerate from the latest main.
-          status_after_reaudit_ok=0
-          for attempt in $(seq 1 5); do
-            sync_main
-            python .survey/scripts/render_status_dashboard.py \
-              --repo-root . \
-              --output STATUS.md
-            git add STATUS.md
-            if git diff --cached --quiet; then
-              status_after_reaudit_ok=1
-              break
-            fi
-            git commit -m 'library-import: sync STATUS after re-audit refresh'
-            if git push origin HEAD:main; then
-              status_after_reaudit_ok=1
-              break
-            fi
-            echo "Post-re-audit STATUS push race on attempt ${attempt}; regenerating."
-          done
-          [ "$status_after_reaudit_ok" -eq 1 ] || {
-            echo 'STATUS refresh after under-16KB queue publication failed.' >&2
-            exit 1
-          }
+          # Re-render STATUS only if the final authoritative queue differs
+          # from what Stage 5 counted. Unchanged Discovery-only imports must
+          # not pay for the expensive full recount a second time.
+          sync_main
+          reaudit_queue_after_refresh="$(git rev-parse 'HEAD:.survey/repair-queue/under-16kb-reaudit.json' 2>/dev/null || true)"
+          if [ "$reaudit_queue_at_status" = "$reaudit_queue_after_refresh" ]; then
+            echo 'Re-audit queue unchanged since Stage-5 STATUS render; skip duplicate full dashboard recount.'
+          else
+            # GITHUB_TOKEN pushes do not trigger status-dashboard.yml.
+            # When the queue actually changed, bring STATUS into sync.
+            status_after_reaudit_ok=0
+            for attempt in $(seq 1 5); do
+              sync_main
+              python .survey/scripts/render_status_dashboard.py \
+                --repo-root . \
+                --output STATUS.md
+              git add STATUS.md
+              if git diff --cached --quiet; then
+                status_after_reaudit_ok=1
+                break
+              fi
+              git commit -m 'library-import: sync STATUS after re-audit refresh'
+              if git push origin HEAD:main; then
+                status_after_reaudit_ok=1
+                break
+              fi
+              echo "Post-re-audit STATUS push race on attempt ${attempt}; regenerating."
+            done
+            [ "$status_after_reaudit_ok" -eq 1 ] || {
+              echo 'STATUS refresh after under-16KB queue publication failed.' >&2
+              exit 1
+            }
+          fi
 
           if [ "${relevance_rc:-0}" -ne 0 ]; then
             echo 'Some relevance requests remain retryable; durable progress was preserved.' >&2
