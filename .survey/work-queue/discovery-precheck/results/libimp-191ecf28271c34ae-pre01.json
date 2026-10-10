@@ -1,0 +1,299 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-191ecf28271c34ae-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-191ecf28271c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.19575",
+    "arXiv:2606.04719"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e74b1340e1097164a1e6da863fff7ab5d065d267",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T16:40:56.228592+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.19575",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04719",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HunyuanOCR Technical Report",
+      "source_url": "https://arxiv.org/abs/2511.19575",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents HunyuanOCR, a commercial-grade, open-source, and lightweight (1B parameters) Vision-Language Model (VLM) dedicated to OCR tasks. The architecture comprises a Native Vision Transformer (ViT) and a lightweight LLM connected via an MLP adapter. HunyuanOCR demonstrates superior performance, outperforming commercial APIs, traditional pipelines, and larger models (e.g., Qwen3-VL-4B). Specifically, it surpasses current public solutions in perception tasks (Text Spotting, Parsing) and excels in semantic tasks (IE, Text Image Translation), securing first place in the ICDAR 2025 DIMT Challenge (Small Model Track). Furthermore, it achieves state-of-the-art (SOTA) results on OCRBench among VLMs with fewer than 3B parameters. HunyuanOCR achieves breakthroughs in three key aspects: 1) Unifying Versatility and Efficiency: We implement comprehensive support for core capabilities including spotting, parsing, IE, VQA, and translation within a lightweight framework. This addresses the limitations of narrow\"OCR expert models\"and inefficient\"General VLMs\". 2) Streamlined End-to-End Architecture: Adopting a pure end-to-end paradigm eliminates dependencies on pre-processing modules (e.g., layout analysis). This fundamentally resolves error propagation common in traditional pipelines and simplifies system deployment. 3) Data-Driven and RL Strategies: We confirm the critical role of high-quality data and, for the first time in the industry, demonstrate that Reinforcement Learning (RL) strategies yield significant performance gains in OCR tasks. HunyuanOCR is officially open-sourced on HuggingFace. We also provide a high-performance deployment solution based on vLLM, placing its production efficiency in the top tier. We hope this model will advance frontier research and provide a solid foundation for industrial applications.",
+      "identifiers": [
+        "SemanticScholar:be83b24d5af4c70bdcf2dccba2f75a08f64eb5cb"
+      ],
+      "semantic_scholar_id": "be83b24d5af4c70bdcf2dccba2f75a08f64eb5cb",
+      "canonical_id": "arXiv:2511.19575",
+      "arxiv_id": "2511.19575",
+      "doi": "10.48550/arXiv.2511.19575",
+      "authors": [
+        "HunyuanWorld Team",
+        "Pengyuan Lyu",
+        "Xingyu Wan",
+        "Gengluo Li",
+        "Shangpin Peng",
+        "Wei-Nong Wang",
+        "Liang Wu",
+        "Hua-Wen Shen",
+        "Yu ZHOU",
+        "Canhui Tang",
+        "Qi Yang",
+        "Qiming Peng",
+        "Bin Luo",
+        "Hower Yang",
+        "Xin-Song Zhang",
+        "Jin-Nian Zhang",
+        "Hou-Wen Peng",
+        "Hong-Ming Yang",
+        "Sen-Hao Xie",
+        "Long-Sha Zhou",
+        "Ge Pei",
+        "Bin Wu",
+        "Rui Yan",
+        "Kan Wu",
+        "Jie Yang",
+        "Bo-Chao Wang",
+        "Kai Liu",
+        "Jian-Chen Zhu",
+        "Jie Jiang",
+        "Linus",
+        "Han Hu",
+        "Cheng-Quan Zhang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 320,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Query-based Cross-Modal Projector Bolstering Mamba Multimodal LLM",
+      "source_url": "https://arxiv.org/abs/2606.04719",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer's quadratic complexity with input length imposes an unsustainable computational load on large language models (LLMs). In contrast, the Selective Scan Structured State-Space Model, or Mamba, addresses this computational challenge effectively. This paper explores a query-based cross-modal projector designed to bolster Mamba's efficiency for vision-language modeling by compressing visual tokens based on input through the cross-attention mechanism. This innovative projector also removes the need for manually designing the 2D scan order of original image features when converting them into an input sequence for Mamba LLM. Experimental results across various vision-language understanding benchmarks show that the proposed cross-modal projector enhances Mamba-based multimodal LLMs, boosting both performance and throughput.",
+      "identifiers": [
+        "SemanticScholar:e89adf833d7b99be2fd1437d06b23a288ea2dd1f"
+      ],
+      "semantic_scholar_id": "e89adf833d7b99be2fd1437d06b23a288ea2dd1f",
+      "canonical_id": "arXiv:2606.04719",
+      "arxiv_id": "2606.04719",
+      "doi": "10.18653/v1/2024.findings-emnlp.827",
+      "authors": [
+        "Soohwan Eom",
+        "Jay Shim",
+        "Gwanhyeong Koo",
+        "H. Na",
+        "Mark A. Hasegawa-Johnson",
+        "Sungwoong Kim",
+        "C. D. Yoo"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.19575",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.19575",
+        "id:SemanticScholar:be83b24d5af4c70bdcf2dccba2f75a08f64eb5cb",
+        "id:arXiv:2511.19575",
+        "title:hunyuanocr technical report",
+        "url:https://arxiv.org/abs/2511.19575"
+      ],
+      "record": {
+        "title": "HunyuanOCR Technical Report",
+        "source_url": "https://arxiv.org/abs/2511.19575",
+        "year": 2025,
+        "published": "2025-11-24",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents HunyuanOCR, a commercial-grade, open-source, and lightweight (1B parameters) Vision-Language Model (VLM) dedicated to OCR tasks. The architecture comprises a Native Vision Transformer (ViT) and a lightweight LLM connected via an MLP adapter. HunyuanOCR demonstrates superior performance, outperforming commercial APIs, traditional pipelines, and larger models (e.g., Qwen3-VL-4B). Specifically, it surpasses current public solutions in perception tasks (Text Spotting, Parsing) and excels in semantic tasks (IE, Text Image Translation), securing first place in the ICDAR 2025 DIMT Challenge (Small Model Track). Furthermore, it achieves state-of-the-art (SOTA) results on OCRBench among VLMs with fewer than 3B parameters. HunyuanOCR achieves breakthroughs in three key aspects: 1) Unifying Versatility and Efficiency: We implement comprehensive support for core capabilities including spotting, parsing, IE, VQA, and translation within a lightweight framework. This addresses the limitations of narrow\"OCR expert models\"and inefficient\"General VLMs\". 2) Streamlined End-to-End Architecture: Adopting a pure end-to-end paradigm eliminates dependencies on pre-processing modules (e.g., layout analysis). This fundamentally resolves error propagation common in traditional pipelines and simplifies system deployment. 3) Data-Driven and RL Strategies: We confirm the critical role of high-quality data and, for the first time in the industry, demonstrate that Reinforcement Learning (RL) strategies yield significant performance gains in OCR tasks. HunyuanOCR is officially open-sourced on HuggingFace. We also provide a high-performance deployment solution based on vLLM, placing its production efficiency in the top tier. We hope this model will advance frontier research and provide a solid foundation for industrial applications.",
+        "identifiers": [
+          "SemanticScholar:be83b24d5af4c70bdcf2dccba2f75a08f64eb5cb"
+        ],
+        "semantic_scholar_id": "be83b24d5af4c70bdcf2dccba2f75a08f64eb5cb",
+        "canonical_id": "arXiv:2511.19575",
+        "arxiv_id": "2511.19575",
+        "doi": "10.48550/arXiv.2511.19575",
+        "authors": [
+          "HunyuanWorld Team",
+          "Pengyuan Lyu",
+          "Xingyu Wan",
+          "Gengluo Li",
+          "Shangpin Peng",
+          "Wei-Nong Wang",
+          "Liang Wu",
+          "Hua-Wen Shen",
+          "Yu ZHOU",
+          "Canhui Tang",
+          "Qi Yang",
+          "Qiming Peng",
+          "Bin Luo",
+          "Hower Yang",
+          "Xin-Song Zhang",
+          "Jin-Nian Zhang",
+          "Hou-Wen Peng",
+          "Hong-Ming Yang",
+          "Sen-Hao Xie",
+          "Long-Sha Zhou",
+          "Ge Pei",
+          "Bin Wu",
+          "Rui Yan",
+          "Kan Wu",
+          "Jie Yang",
+          "Bo-Chao Wang",
+          "Kai Liu",
+          "Jian-Chen Zhu",
+          "Jie Jiang",
+          "Linus",
+          "Han Hu",
+          "Cheng-Quan Zhang"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 320,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04719",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2024.findings-emnlp.827",
+        "id:SemanticScholar:e89adf833d7b99be2fd1437d06b23a288ea2dd1f",
+        "id:arXiv:2606.04719",
+        "title:querybased crossmodal projector bolstering mamba multimodal llm",
+        "url:https://arxiv.org/abs/2606.04719"
+      ],
+      "record": {
+        "title": "Query-based Cross-Modal Projector Bolstering Mamba Multimodal LLM",
+        "source_url": "https://arxiv.org/abs/2606.04719",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Transformer's quadratic complexity with input length imposes an unsustainable computational load on large language models (LLMs). In contrast, the Selective Scan Structured State-Space Model, or Mamba, addresses this computational challenge effectively. This paper explores a query-based cross-modal projector designed to bolster Mamba's efficiency for vision-language modeling by compressing visual tokens based on input through the cross-attention mechanism. This innovative projector also removes the need for manually designing the 2D scan order of original image features when converting them into an input sequence for Mamba LLM. Experimental results across various vision-language understanding benchmarks show that the proposed cross-modal projector enhances Mamba-based multimodal LLMs, boosting both performance and throughput.",
+        "identifiers": [
+          "SemanticScholar:e89adf833d7b99be2fd1437d06b23a288ea2dd1f"
+        ],
+        "semantic_scholar_id": "e89adf833d7b99be2fd1437d06b23a288ea2dd1f",
+        "canonical_id": "arXiv:2606.04719",
+        "arxiv_id": "2606.04719",
+        "doi": "10.18653/v1/2024.findings-emnlp.827",
+        "authors": [
+          "Soohwan Eom",
+          "Jay Shim",
+          "Gwanhyeong Koo",
+          "H. Na",
+          "Mark A. Hasegawa-Johnson",
+          "Sungwoong Kim",
+          "C. D. Yoo"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 129,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:03e63fae308980537a6210a6421a96f6e0a5187947ac974ff25570665a1f76be",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
