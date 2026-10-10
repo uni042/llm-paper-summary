@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16febf58274da3cc-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.22471",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.22471",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.22471",
+      "SemanticScholar:586d50f979369133c356459dc90c4375e9988863",
+      "arXiv:2512.22471"
+    ],
+    "reason": "The paper uses controlled Bayesian settings to measure Transformer posterior behavior; it is an analysis of reasoning fidelity, not an efficiency technique.",
+    "first_checked_at": "2026-10-10T15:03:35+00:00",
+    "last_checked_at": "2026-10-10T15:03:35+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "The Bayesian Geometry of Transformer Attention"
+  },
+  "processed_at": "2026-10-10T15:03:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16febf58274d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

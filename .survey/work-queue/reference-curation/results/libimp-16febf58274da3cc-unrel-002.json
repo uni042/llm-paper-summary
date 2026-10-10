@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16febf58274da3cc-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.03143",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.03143",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.03143",
+      "SemanticScholar:d4c11afaa5a39ea110980e3a200f826c1095dc76",
+      "arXiv:2602.03143"
+    ],
+    "reason": "SAGE addresses sparse rewards in GRPO by injecting privileged hints during policy training; it reports learning improvements without an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-10T15:03:34+00:00",
+    "last_checked_at": "2026-10-10T15:03:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Self-Hinting Language Models Enhance Reinforcement Learning"
+  },
+  "processed_at": "2026-10-10T15:03:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16febf58274d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

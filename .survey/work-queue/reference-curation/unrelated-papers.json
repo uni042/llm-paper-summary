@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T14:41:57+00:00",
-  "record_count": 11332,
+  "updated_at": "2026-10-10T15:03:37+00:00",
+  "record_count": 11347,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -161959,6 +161959,234 @@
       "last_checked_at": "2026-10-10T14:41:57+00:00",
       "linked_from": [],
       "title": "Handcrafted Backdoors in Deep Neural Networks"
+    },
+    "arXiv:2603.28116": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28116",
+      "identity_tokens": [
+        "arXiv:2603.28116"
+      ],
+      "reason": "This paper targets autonomous-driving perception, prediction, and planning through reinforcement fine-tuning, with no stated LLM serving or inference-efficiency method.",
+      "first_checked_at": "2026-10-10T15:03:34+00:00",
+      "last_checked_at": "2026-10-10T15:03:34+00:00",
+      "linked_from": [],
+      "title": "AutoDrive-P3: Unified Chain of Perception-Prediction-Planning Thought via Reinforcement Fine-Tuning"
+    },
+    "arXiv:2602.03143": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.03143",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.03143",
+        "SemanticScholar:d4c11afaa5a39ea110980e3a200f826c1095dc76",
+        "arXiv:2602.03143"
+      ],
+      "reason": "SAGE addresses sparse rewards in GRPO by injecting privileged hints during policy training; it reports learning improvements without an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:03:34+00:00",
+      "last_checked_at": "2026-10-10T15:03:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Self-Hinting Language Models Enhance Reinforcement Learning"
+    },
+    "DOI:10.1109/mgrs.2025.3628194": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mgrs.2025.3628194",
+      "identity_tokens": [
+        "DOI:10.1109/mgrs.2025.3628194"
+      ],
+      "reason": "This work benchmarks geospatial foundation-model capabilities, a domain-specific evaluation without a stated LLM inference-efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:03:34+00:00",
+      "last_checked_at": "2026-10-10T15:03:34+00:00",
+      "linked_from": [],
+      "title": "PANGAEA: Assessing Geospatial Foundation Models Capabilities through a Global and Inclusive Benchmark"
+    },
+    "arXiv:2601.03986": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03986",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.03986",
+        "SemanticScholar:d1f946a73b431bcdf04a27552f6b5a981164a36f",
+        "arXiv:2601.03986"
+      ],
+      "reason": "Benchmark^2 measures consistency and discriminability of LLM evaluation benchmarks; it evaluates benchmark quality, not model execution efficiency.",
+      "first_checked_at": "2026-10-10T15:03:34+00:00",
+      "last_checked_at": "2026-10-10T15:03:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Benchmark^2: Systematic Evaluation of LLM Benchmarks"
+    },
+    "arXiv:2512.22471": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22471",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.22471",
+        "SemanticScholar:586d50f979369133c356459dc90c4375e9988863",
+        "arXiv:2512.22471"
+      ],
+      "reason": "The paper uses controlled Bayesian settings to measure Transformer posterior behavior; it is an analysis of reasoning fidelity, not an efficiency technique.",
+      "first_checked_at": "2026-10-10T15:03:35+00:00",
+      "last_checked_at": "2026-10-10T15:03:35+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "The Bayesian Geometry of Transformer Attention"
+    },
+    "arXiv:2511.22645": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.22645",
+      "identity_tokens": [
+        "arXiv:2511.22645"
+      ],
+      "reason": "This paper studies scratch reasoning on geospatial scenes, with no stated model-serving, runtime, or inference-efficiency method.",
+      "first_checked_at": "2026-10-10T15:03:35+00:00",
+      "last_checked_at": "2026-10-10T15:03:35+00:00",
+      "linked_from": [],
+      "title": "GeoZero: Incentivizing Reasoning from Scratch on Geospatial Scenes"
+    },
+    "arXiv:2511.21662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21662",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.21662",
+        "SemanticScholar:258bfe56adff249bc14ce52a656f463ff2bb98db",
+        "arXiv:2511.21662"
+      ],
+      "reason": "Multi-Crit is a benchmark of multimodal judges’ pluralistic-criteria following and reliability; the abstract does not propose a faster or cheaper judge.",
+      "first_checked_at": "2026-10-10T15:03:35+00:00",
+      "last_checked_at": "2026-10-10T15:03:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Multi-Crit: Benchmarking Multimodal Judges on Pluralistic Criteria-Following"
+    },
+    "arXiv:2604.18660": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18660",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.18660",
+        "SemanticScholar:eed2cb7679def5e509d924f48926e54006dd631e",
+        "arXiv:2604.18660"
+      ],
+      "reason": "The study tests whether LLM tutors resist adversarial answer-leakage requests; its contribution is safety evaluation rather than execution efficiency.",
+      "first_checked_at": "2026-10-10T15:03:35+00:00",
+      "last_checked_at": "2026-10-10T15:03:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Evaluating Answer Leakage Robustness of LLM Tutors against Adversarial Student Attacks"
+    },
+    "arXiv:2604.15163": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15163",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.15163",
+        "SemanticScholar:0fb495ab1bacf3b57786880e4fb99f0f7b75a5ce",
+        "arXiv:2604.15163"
+      ],
+      "reason": "DPC adds SLICER, TESTER, and SOLVER agents plus database construction to improve SQL candidate accuracy; the abstract reports no reduction in inference calls, latency, or resource use.",
+      "first_checked_at": "2026-10-10T15:03:35+00:00",
+      "last_checked_at": "2026-10-10T15:03:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "DPC: Training-Free Text-to-SQL Candidate Selection via Dual-Paradigm Consistency"
+    },
+    "arXiv:2601.09609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.09609",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.09609",
+        "SemanticScholar:2c01505ccf96285c93dfee9036ca959a8f5f6221",
+        "arXiv:2601.09609"
+      ],
+      "reason": "DPWriter changes RL exploration to preserve creative-writing diversity; the abstract frames an output-quality trade-off and provides no serving/runtime efficiency result.",
+      "first_checked_at": "2026-10-10T15:03:36+00:00",
+      "last_checked_at": "2026-10-10T15:03:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "DPWriter: Reinforcement Learning with Diverse Planning Branching for Creative Writing"
+    },
+    "arXiv:2601.06979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06979",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-demos.24",
+        "DOI:10.48550/arxiv.2601.06979",
+        "SemanticScholar:6ec5fe52cdc5c950f937ac8d587739fe47fc1eea",
+        "arXiv:2601.06979"
+      ],
+      "reason": "MedTutor retrieves educational case material for medical residents; the primary abstract describes a domain-specific tutoring application without an efficiency method.",
+      "first_checked_at": "2026-10-10T15:03:36+00:00",
+      "last_checked_at": "2026-10-10T15:03:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "MedTutor: A Retrieval-Augmented LLM System for Case-Based Medical Education"
+    },
+    "arXiv:2601.01373": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.01373",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.01373",
+        "SemanticScholar:27c3ee10dd68e3f3a7205b23c0efd8fad4e1e815",
+        "arXiv:2601.01373"
+      ],
+      "reason": "UltraEval-Audio unifies evaluation of audio foundation models; its stated contribution is evaluation infrastructure for audio quality, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-10T15:03:36+00:00",
+      "last_checked_at": "2026-10-10T15:03:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "UltraEval-Audio: A Unified Framework for Comprehensive Evaluation of Audio Foundation Models"
+    },
+    "arXiv:2512.03086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03086",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.03086",
+        "SemanticScholar:f135cdbccdde09c213de0da32c79c3b3fbebeccc",
+        "arXiv:2512.03086"
+      ],
+      "reason": "The compiler/runtime-feedback pipeline generates code-translation training data and improves model correctness; runtime feedback is used for dataset construction, not serving optimization.",
+      "first_checked_at": "2026-10-10T15:03:36+00:00",
+      "last_checked_at": "2026-10-10T15:03:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Beyond Code Pairs: Dialogue-Based Data Generation for LLM Code Translation"
+    },
+    "arXiv:2310.11417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.11417",
+      "identity_tokens": [
+        "arXiv:2310.11417"
+      ],
+      "reason": "This paper applies a visual-change transformer to remote-sensing imagery, an application task with no stated language-model inference or serving connection.",
+      "first_checked_at": "2026-10-10T15:03:36+00:00",
+      "last_checked_at": "2026-10-10T15:03:36+00:00",
+      "linked_from": [],
+      "title": "VcT: Visual Change Transformer for Remote Sensing Image Change Detection"
+    },
+    "arXiv:1903.12117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.12117",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2019.00146",
+        "DOI:10.48550/arxiv.1903.12117",
+        "SemanticScholar:575fffa523c150e4e1f899a0d4db322a099afea9",
+        "arXiv:1903.12117"
+      ],
+      "reason": "Many Task Learning with Task Routing routes convolutional activations to support multi-task learning; the primary record describes neither LLMs nor language-model inference/serving.",
+      "first_checked_at": "2026-10-10T15:03:37+00:00",
+      "last_checked_at": "2026-10-10T15:03:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Many Task Learning with Task Routing"
     }
   }
 }
