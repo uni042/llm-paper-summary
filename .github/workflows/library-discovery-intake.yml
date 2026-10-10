@@ -181,6 +181,16 @@ jobs:
               --repo "$GITHUB_REPOSITORY" --ref main -f drain_generation="$next_generation"
           elif [ "$unsettled" -eq 1 ]; then
             echo 'Awaiting canonical precheck; its completion resumes this lane.'
+          elif [ $((pending + waiting)) -eq 0 ]; then
+            # Refresh the expensive dashboard asynchronously after acceptance,
+            # never on the foreground Discovery critical path.
+            dashboard_active="$(gh run list --repo "$GITHUB_REPOSITORY" \
+              --workflow status-dashboard.yml --limit 20 \
+              --json status --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+            if [ "${dashboard_active:-0}" -eq 0 ]; then
+              gh workflow run status-dashboard.yml --repo "$GITHUB_REPOSITORY" --ref main
+            fi
+            echo 'Library Discovery inbox drained; background STATUS refresh requested.'
           else
-            echo 'Discovery intake settled or paused at its bounded generation limit.'
+            echo 'Discovery paused at its bounded generation limit.'
           fi
