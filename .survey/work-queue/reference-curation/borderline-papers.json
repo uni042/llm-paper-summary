@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T05:26:22+00:00",
-  "record_count": 4545,
+  "updated_at": "2026-10-10T06:38:04+00:00",
+  "record_count": 4553,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69497,6 +69497,166 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Selective Rotary Position Embedding"
+    },
+    "DOI:10.1109/cac53003.2021.9728246": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cac53003.2021.9728246",
+      "identity_tokens": [
+        "DOI:10.1109/cac53003.2021.9728246"
+      ],
+      "reason": "The candidate claims fixed-point quantization for Vision Transformers, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1109/CAC53003.2021.9728246. Exact retrieval failure: URL https://doi.org/10.1109/CAC53003.2021.9728246 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1109/CAC53003.2021.9728246 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T06:38:02+00:00",
+      "last_checked_at": "2026-10-10T06:38:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fixed-point Quantization for Vision Transformer"
+    },
+    "arXiv:2112.11480": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.11480",
+      "identity_tokens": [
+        "arXiv:2112.11480"
+      ],
+      "reason": "The paper reviews language-model compression and lottery-ticket hypotheses; its abstract does not establish a measured inference or serving benefit, so relevance remains borderline.",
+      "first_checked_at": "2026-10-10T06:38:02+00:00",
+      "last_checked_at": "2026-10-10T06:38:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Compression of Natural Language Models"
+    },
+    "DOI:10.1109/icassp49660.2025.10890315": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp49660.2025.10890315",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49660.2025.10890315"
+      ],
+      "reason": "The DOI and title identify a time-series forecasting paper, but its primary abstract could not be retrieved. Primary URL: https://doi.org/10.1109/ICASSP49660.2025.10890315. Exact failure: URL https://doi.org/10.1109/ICASSP49660.2025.10890315 is not accessible via this tool; official IEEE Xplore search returned no results. source_unavailable; abstract_not_read; body_not_read.",
+      "first_checked_at": "2026-10-10T06:38:03+00:00",
+      "last_checked_at": "2026-10-10T06:38:03+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SiMBA-TS: Simplified Channel Mixing and Mamba for Long-term Time Series Forecasting"
+    },
+    "DOI:10.1109/tmm.2024.3384060": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmm.2024.3384060",
+      "identity_tokens": [
+        "DOI:10.1109/tmm.2024.3384060"
+      ],
+      "reason": "The candidate title claims fast inference for vision-language pretrained models, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1109/TMM.2024.3384060. Exact retrieval failure: URL https://doi.org/10.1109/TMM.2024.3384060 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1109/TMM.2024.3384060 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T06:38:03+00:00",
+      "last_checked_at": "2026-10-10T06:38:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multimodality Self-distillation for Fast Inference of Vision and Language Pretrained Models"
+    },
+    "DOI:10.1109/access.2025.3617879": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2025.3617879",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3617879"
+      ],
+      "reason": "The candidate title indicates pruning for environmental sound classification, but its primary abstract could not be retrieved. Primary URL: https://doi.org/10.1109/ACCESS.2025.3617879. Exact failure: URL https://doi.org/10.1109/ACCESS.2025.3617879 is not accessible via this tool; official IEEE Xplore search returned no results. source_unavailable; abstract_not_read; body_not_read.",
+      "first_checked_at": "2026-10-10T06:38:03+00:00",
+      "last_checked_at": "2026-10-10T06:38:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+        "papers/inference/99-other-inference-systems/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Fine-Grained Pruning via Binary Search for Efficient Environmental Sound Classification"
+    },
+    "DOI:10.23919/date56975.2023.10136977": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/date56975.2023.10136977",
+      "identity_tokens": [
+        "DOI:10.23919/date56975.2023.10136977"
+      ],
+      "reason": "The candidate title claims predictor-driven dynamic BERT inference, but no primary abstract was retrievable. Primary URL: https://doi.org/10.23919/DATE56975.2023.10136977. Exact retrieval failure: URL https://doi.org/10.23919/DATE56975.2023.10136977 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.23919/DATE56975.2023.10136977 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T06:38:04+00:00",
+      "last_checked_at": "2026-10-10T06:38:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TBERT: Dynamic BERT Inference with Top-k Based Predictors"
+    },
+    "DOI:10.1145/3637528.3671780": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3637528.3671780",
+      "identity_tokens": [
+        "DOI:10.1145/3637528.3671780"
+      ],
+      "reason": "The candidate title claims layer-wise sparsity pruning for LLMs, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1145/3637528.3671780. Exact retrieval failure: URL https://doi.org/10.1145/3637528.3671780 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1145/3637528.3671780 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T06:38:04+00:00",
+      "last_checked_at": "2026-10-10T06:38:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dual-Assessment Driven Pruning: Iterative Optimizing Layer-wise Sparsity for Large Language Model"
+    },
+    "DOI:10.1109/access.2025.3615473": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2025.3615473",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3615473"
+      ],
+      "reason": "The candidate title claims quantized sparse/low-rank compression, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1109/ACCESS.2025.3615473. Exact retrieval failure: URL https://doi.org/10.1109/ACCESS.2025.3615473 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1109/ACCESS.2025.3615473 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T06:38:04+00:00",
+      "last_checked_at": "2026-10-10T06:38:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QSLR: Post-Training Compression via Quantized Sparse and Low-Rank Factorization"
     }
   }
 }
