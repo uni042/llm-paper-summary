@@ -1532,14 +1532,27 @@ def apply_artifact(sub: dict, job: dict):
     return {"paper": paper, "identity_delta": p.stdout.strip()}
 
 
-def process_submissions(st: dict, max_submissions: int | None = None):
-    """Process root-level discovery/control submissions and historical direct results."""
+def process_submissions(
+    st: dict, max_submissions: int | None = None, *,
+    library_discovery_only: bool = False,
+    exclude_library_discovery: bool = False,
+):
+    """Process root-level submissions with exclusive Library Discovery ownership."""
+    if library_discovery_only and exclude_library_discovery:
+        raise ValueError("incompatible submission lane selection")
     SUBMISSIONS.mkdir(parents=True, exist_ok=True)
     RESULTS.mkdir(parents=True, exist_ok=True)
     processed = 0
     for p in sorted(SUBMISSIONS.glob("*.json")):
         rp = RESULTS / p.name
         if rp.exists():
+            continue
+        # Library candidate submissions are deterministically libimp-* IDs.
+        # Select by durable filename before consuming the bounded budget.
+        is_library_discovery = p.name.startswith("libimp-")
+        if library_discovery_only and not is_library_discovery:
+            continue
+        if exclude_library_discovery and is_library_discovery:
             continue
         if max_submissions is not None and processed >= max(0, max_submissions):
             break
@@ -1742,6 +1755,9 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--root", type=Path, default=ROOT)
     p.add_argument("--max-submissions", type=int, default=None)
+    lane = p.add_mutually_exclusive_group()
+    lane.add_argument("--library-discovery-only", action="store_true")
+    lane.add_argument("--exclude-library-discovery", action="store_true")
     args = p.parse_args()
     ROOT = args.root.resolve()
     QUEUE = ROOT / "work-queue"
@@ -1757,12 +1773,18 @@ def main():
         "max_discovery_candidates": MAX_DISCOVERY_CANDIDATES,
         "worker_poll_minutes": 10,
     })
-    process_submissions(st, args.max_submissions)
+    process_submissions(
+        st, args.max_submissions,
+        library_discovery_only=args.library_discovery_only,
+        exclude_library_discovery=args.exclude_library_discovery,
+    )
     # Keep a discovery lane available even while research/audit work is ready so the
     # specialist worker can replenish the shared candidate buffer independently.
     ensure_discovery_job()
     normalize_ready_jobs()
-    maybe_rebuild_views(st)
+    # The dedicated Discovery lane may not block on full paper view rebuilds.
+    if not args.library_discovery_only:
+        maybe_rebuild_views(st)
     save_state(st)
     snap = queue_snapshot()
     snap_path = QUEUE / "next-jobs.json"
