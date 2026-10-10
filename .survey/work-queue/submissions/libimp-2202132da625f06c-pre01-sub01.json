@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation",
+      "source_url": "https://arxiv.org/abs/2512.04678",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "arXiv.org",
+      "citation_count": 79,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient streaming video generation is critical for simulating interactive and dynamic worlds. Existing methods distill few-step video diffusion models with sliding window attention, using initial frames as sink tokens to maintain attention performance and reduce error accumulation. However, video frames become overly dependent on these static tokens, resulting in copied initial frames and diminished motion dynamics. To address this, we introduce Reward Forcing, a novel framework with two key designs. First, we propose EMA-Sink, which maintains fixed-size tokens initialized from initial frames and continuously updated by fusing evicted tokens via exponential moving average as they exit the sliding window. Without additional computation cost, EMA-Sink tokens capture both long-term context and recent dynamics, preventing initial frame copying while maintaining long-horizon consistency. Second, to better distill motion dynamics from teacher models, we propose a novel Rewarded Distribution Matching Distillation (Re-DMD). Vanilla distribution matching treats every training sample equally, limiting the model's ability to prioritize dynamic content. Instead, Re-DMD biases the model's output distribution toward high-reward regions by prioritizing samples with greater dynamics rated by a vision-language model. Re-DMD significantly enhances motion quality while preserving data fidelity. We include both quantitative and qualitative experiments to show that Reward Forcing achieves state-of-the-art performance on standard benchmarks while enabling high-quality streaming video generation at 23.1 FPS on a single H100 GPU.",
+      "identifiers": [
+        "SemanticScholar:03a879ed2d831d605d7297fca9e5c085bfb9808b"
+      ],
+      "semantic_scholar_id": "03a879ed2d831d605d7297fca9e5c085bfb9808b",
+      "canonical_id": "arXiv:2512.04678",
+      "arxiv_id": "2512.04678",
+      "doi": "10.48550/arXiv.2512.04678",
+      "authors": [
+        "Yunhong Lu",
+        "Yanhong Zeng",
+        "Haobo Li",
+        "Hao Ouyang",
+        "Qiuyu Wang",
+        "K. Cheng",
+        "Jia-Peng Zhu",
+        "Hengyuan Cao",
+        "Zhi-Peng Zhang",
+        "Xing Zhu",
+        "Yujun Shen",
+        "Min Zhang"
+      ],
+      "priority": 179,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 79,
+        "citation_count": 79,
+        "total": 179,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 310,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Reward Forcing maintains fixed-size EMA-Sink context tokens without additional computation and reports 23.1 FPS streaming generation on one H100, directly supporting inference/runtime efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2202132da625",
+    "round": "libimp-2202132da625f06c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2202132da625f06c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2202132da625f06c-pre01.json",
+    "receipt": "sha256:211fefcdd044e86a79fb98f52bbd654208324aa491c82d0e246507c807e25587"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2202132da625",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
