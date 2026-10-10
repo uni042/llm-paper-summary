@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 17:43:37 JST**
+> 自動生成: **2026-10-10 17:51:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1092** |
-| 未claim Research job | **1092** |
-| 直近24hのResearch処理完了 | **157** |
+| 収録候補論文数 | **1101** |
+| 未claim Research job | **1101** |
+| 直近24hのResearch処理完了 | **160** |
 | 最終Research処理完了 | **10-10 17:25:00 JST** |
-| 最終Discovery探索完了 | **10-10 17:18:23 JST** |
+| 最終Discovery探索完了 | **10-10 17:51:54 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1092** |
+| canonical_id確認済みの一意な候補論文 | **1101** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1092** |
+| 非終端Research job合計 | **1101** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -51,11 +51,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **119965** |
-| 処理済み | **18373** |
-| 未処理Discovery候補 | **101592** |
+| 探索候補総数 | **119963** |
+| 処理済み | **18382** |
+| 未処理Discovery候補 | **101581** |
 | 収録済み | **1758** |
-| Research / Audit候補へ昇格済み | **940** |
+| Research / Audit候補へ昇格済み | **949** |
 | 無関係として除外 | **11182** |
 | 微妙として除外 | **4493** |
 
@@ -63,18 +63,18 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **101592** |
+| 未処理候補（フィルタ前） | **101581** |
 | 機械規則による暫定隔離 | **1885** |
 | 拡張機械規則による追加隔離 | **1124** |
-| 機械規則通過後 | **98583** |
-| 系統内前方引用スコアによる選抜保留 | **93653** |
-| 暫定隔離合計 | **96662** |
-| **読解可能候補（隔離後）** | **4930** |
-| 前方引用が同一系統で2本以上の候補 | **11944** |
-| 前方引用が同一系統で3本以上の候補 | **5769** |
+| 機械規則通過後 | **98572** |
+| 系統内前方引用スコアによる選抜保留 | **93643** |
+| 暫定隔離合計 | **96652** |
+| **読解可能候補（隔離後）** | **4929** |
+| 前方引用が同一系統で2本以上の候補 | **11935** |
+| 前方引用が同一系統で3本以上の候補 | **5760** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4930件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4929件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.3%**
-- 現在の生在庫: 後方references **50029件** / 前方引用 **53299件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **102825件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **50026件** / 前方引用 **53299件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **102823件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-10 11:37:47 JST（6時間5分前）** |
+| 最終maintenance完了 | **10-10 11:37:47 JST（6時間14分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **19** |
+| 直近6hのResearch完了 | **23** |
 | 直近6hのDiscovery run | **8** |
 | 直近6hのDiscovery本文確認・分類 | **147** |
 | 最終Research完了 | **10-10 17:25:00 JST** |
-| 最終Discovery完了 | **10-10 17:18:23 JST** |
+| 最終Discovery完了 | **10-10 17:51:54 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-10 17:25:00 JST** / worker — / run 20261010-1735-interactive-reaudit/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_7adf690439d481918827d19cb3f1598c--2024-2411.15997-fairserve-under16kb-reaudit-20261010-1735-interactive-r01.json
-- Discovery: **10-10 17:18:23 JST** / worker codex-local / run codex-backfill-b50-b51-20261010-p02
-  - 本文確認・分類 **20件** / accept **8件** / unrelated+borderline **12件**
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-aggregate-20261010-r2--84f1cb678b2b8987fe3e9818faaac1255acc7ce17e7e0e2b036c6b68e1d0608b--codex-backfill-b50-b51-20261010-p02.json
+- Discovery: **10-10 17:51:54 JST** / worker codex-local / run codex-backfill-b50-b51-20261010-p03
+  - 本文確認・分類 **20件** / accept **9件** / unrelated+borderline **11件**
+  - evidence: .survey/import-inbox/results/discovery/codex-backfill-aggregate-20261010-r2--08ebded08f4fb5ea53b822778a3c3beaa306909ff52cfe4bde869d3a878a82fa--codex-backfill-b50-b51-20261010-p03.json
 
 ### Codex探索成果の反映状況
 
@@ -156,15 +156,15 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| Codex成果の取り込み済み（receipt） | **2829ファイル / 13847件** |
-| Codex成果の取り込み待機中 | **1ファイル / 20件** |
-| └ 待機中のaccept | **9件** |
-| └ 待機中のunrelated | **7件** |
-| └ 待機中のborderline | **4件** |
+| Codex成果の取り込み済み（receipt） | **2830ファイル / 13867件** |
+| Codex成果の取り込み待機中 | **0ファイル / 0件** |
+| └ 待機中のaccept | **0件** |
+| └ 待機中のunrelated | **0件** |
+| └ 待機中のborderline | **0件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-10 17:18:23 JST** / results / codex-backfill-b50-b51-20261010-p02
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-aggregate-20261010-r2--84f1cb678b2b8987fe3e9818faaac1255acc7ce17e7e0e2b036c6b68e1d0608b--codex-backfill-b50-b51-20261010-p02.json
+- 最終Codex分類・受渡し証拠: **10-10 17:51:54 JST** / results / codex-backfill-b50-b51-20261010-p03
+  - evidence: .survey/import-inbox/results/discovery/codex-backfill-aggregate-20261010-r2--08ebded08f4fb5ea53b822778a3c3beaa306909ff52cfe4bde869d3a878a82fa--codex-backfill-b50-b51-20261010-p03.json
 
 
 ## 件数サマリー（旧immutable transport診断）
@@ -274,7 +274,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1092** |
+| ready | **1101** |
 
 ### 候補の重複・識別情報欠損
 
@@ -302,11 +302,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **316** |
+| 成功result未照合のimmutable submission | **318** |
 | └ Research | **120** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **51** |
+| └ Other/Unknown | **53** |
 
 ### 厳格検証が未成立のcompleted job
 
