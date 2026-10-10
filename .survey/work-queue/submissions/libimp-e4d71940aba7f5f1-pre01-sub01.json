@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
+      "source_url": "https://arxiv.org/abs/2410.17980",
+      "year": 2024,
+      "published": "2024-10-23",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The self-attention mechanism traditionally relies on the softmax operator, necessitating positional embeddings like RoPE, or position biases to account for token order. But current methods using still face length generalisation challenges. We investigate an alternative attention mechanism based on the stick-breaking process in larger scale settings. The method works as follows: For each token before the current, we determine a break point, which represents the proportion of the stick, the weight of the attention, to allocate to the current token. We repeat this on the remaining stick, until all tokens are allocated a weight, resulting in a sequence of attention weights. This process naturally incorporates recency bias, which has linguistic motivations for grammar parsing. We study the implications of replacing the conventional softmax-based attention mechanism with stick-breaking attention. We then discuss implementation of numerically stable stick-breaking attention and adapt Flash Attention to accommodate this mechanism. When used as a drop-in replacement for current softmax+RoPE attention systems, we find that stick-breaking attention performs competitively with current methods on length generalisation and downstream tasks. Stick-breaking also performs well at length generalisation, allowing a model trained with $2^{11}$ context window to perform well at $2^{14}$ with perplexity improvements.",
+      "identifiers": [
+        "SemanticScholar:3fab7327ce553c7a6dc67cd787d3926e5dac00e0"
+      ],
+      "semantic_scholar_id": "3fab7327ce553c7a6dc67cd787d3926e5dac00e0",
+      "canonical_id": "arXiv:2410.17980",
+      "arxiv_id": "2410.17980",
+      "authors": [
+        "Shawn Tan",
+        "Song-Lin Yang",
+        "A. Courville",
+        "Rameswar Panda",
+        "Yikang Shen"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 717,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "A numerically stable, FlashAttention-adapted implementation targets scalable attention runtime while retaining competitive length generalization and downstream results.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2402.04239",
+      "year": 2024,
+      "published": "2024-02-06",
+      "venue": "Pattern Recognition Letters",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture has shown to be a powerful tool for a wide range of tasks. It is based on the self-attention mechanism, which is an inherently computationally expensive operation with quadratic computational complexity: memory usage and compute time increase quadratically with the length of the input sequences, thus limiting the application of Transformers. In this work, we propose a novel Clustering self-Attention mechanism using Surrogate Tokens (CAST), to optimize the attention computation and achieve efficient transformers. CAST utilizes learnable surrogate tokens to construct a cluster affinity matrix, used to cluster the input sequence and generate novel cluster summaries. The self-attention from within each cluster is then combined with the cluster summaries of other clusters, enabling information flow across the entire input sequence. CAST improves efficiency by reducing the complexity from $O(N^2)$ to $O(\\alpha N)$ where N is the sequence length, and {\\alpha} is constant according to the number of clusters and samples per cluster. We show that CAST performs better than or comparable to the baseline Transformers on long-range sequence modeling tasks, while also achieving higher results on time and memory efficiency than other efficient transformers.",
+      "identifiers": [
+        "SemanticScholar:41d5b00f73426402c9151c8e32561275cd4390f2"
+      ],
+      "semantic_scholar_id": "41d5b00f73426402c9151c8e32561275cd4390f2",
+      "canonical_id": "arXiv:2402.04239",
+      "arxiv_id": "2402.04239",
+      "doi": "10.48550/arXiv.2402.04239",
+      "authors": [
+        "Adjorn van Engelenhoven",
+        "Nicola Strisciuglio",
+        "E. Talavera"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 977,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Clustered self-attention with surrogate tokens lowers sequence-length compute and memory complexity for efficient Transformers.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e4d71940aba7",
+    "round": "libimp-e4d71940aba7f5f1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e4d71940aba7f5f1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e4d71940aba7f5f1-pre01.json",
+    "receipt": "sha256:ce6bd1a99ce11396c3973e451889a94add41ed57b3432764e083fa819c626dd9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e4d71940aba7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
