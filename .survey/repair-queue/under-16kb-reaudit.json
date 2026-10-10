@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T10:00:52.509351+00:00",
+  "generated_at": "2026-10-10T10:55:30.993392+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 73,
+  "count": 71,
   "worker_counts": {
     "scheduled-chat-00": 24,
-    "scheduled-chat-30": 24,
-    "scheduled-chat-45": 25
+    "scheduled-chat-30": 23,
+    "scheduled-chat-45": 24
   },
   "entries": [
     {
@@ -194,32 +194,6 @@
         "16KB未満再監査: 評価説明量 270 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.19775-understanding-inference-scaling-for-llms-bottlenecks-trade-offs-and-perf.md",
-      "canonical_id": "arXiv:2605.19775",
-      "title": "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles",
-      "file_bytes": 12317,
-      "source_sha256": "6981947636b77fc7df353fff8c4956f8f97b69297dc64145fbefe37432c7a81c",
-      "source_git_blob_sha": "418d2d24720451c6d807dec679cf921f662a076b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.738693,
-      "quality_metrics": {
-        "body_chars": 4030,
-        "method_chars": 0,
-        "evaluation_chars": 345,
-        "limitation_chars": 294
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 345 < 500",
-        "16KB未満再監査: 日本語比率 73.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 73.9% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/13-sparse-attention/2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md",
@@ -901,7 +875,7 @@
       "file_bytes": 13698,
       "source_sha256": "a12c23f799c08d1c66c2a7314d0ab8bb3ef48035573e779b2d14e4df6e49d696",
       "source_git_blob_sha": "121d49ccec71c4efd17f85ab04048eed47d4b908",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.763642,
@@ -1325,30 +1299,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
-      "canonical_id": "arXiv:2408.15766",
-      "title": "Learning Harmonized Representations for Speculative Sampling",
-      "file_bytes": 14676,
-      "source_sha256": "37eec3a68428b724cb0365034f9b446432c0491780b5ecb0d081560d27209440",
-      "source_git_blob_sha": "db8a11da4ecc8aab0a7b367497af130c45775f85",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.730163,
-      "quality_metrics": {
-        "body_chars": 4417,
-        "method_chars": 1341,
-        "evaluation_chars": 792,
-        "limitation_chars": 315
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 73.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 73.0% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.13263-vtoken-token-level-virtualization-for-reclaimable-kv-caches.md",
