@@ -60,15 +60,19 @@ class RunLivenessPolicyTests(unittest.TestCase):
                 self.assertNotIn("push:", trigger)
                 self.assertNotIn("workflow_run:", trigger)
 
-    def test_library_import_rechecks_precheck_liveness_at_handoff(self):
-        workflow = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
-        self.assertIn("unsettled_library_prechecks", workflow)
-        self.assertIn("active_precheck_runs", workflow)
+    def test_dedicated_discovery_intake_rechecks_precheck_liveness_at_handoff(self):
+        workflow = (WORKFLOWS / "library-discovery-intake.yml").read_text(encoding="utf-8")
+        self.assertIn("unsettled", workflow)
+        self.assertIn("discovery-precheck.yml", workflow)
         self.assertIn("gh workflow run discovery-precheck.yml", workflow)
-        self.assertIn(
-            "Dispatching dedicated Discovery precheck gate",
-            workflow,
-        )
+        self.assertIn("--skip-research", workflow)
+        self.assertNotIn("render_status_dashboard.py", workflow)
+        self.assertNotIn("refresh_under16kb_reaudit_queue.py", workflow)
+
+        research = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
+        self.assertIn("--skip-discovery", research)
+        self.assertIn("--exclude-library-discovery", research)
+        self.assertNotIn("gh workflow run discovery-precheck.yml", research)
 
     def test_library_import_hands_new_papers_to_citation_backfill(self):
         workflow = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
