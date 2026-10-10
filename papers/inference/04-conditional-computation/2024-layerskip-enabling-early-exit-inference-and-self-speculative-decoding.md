@@ -3,8 +3,8 @@ canonical_id: ACL:2024.acl-long.681
 arxiv_id: '2404.16710'
 doi: 10.18653/v1/2024.acl-long.681
 title: 'LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding'
-summary: 'LayerSkipは後段ほど高い層ドロップアウト率と、全層が同じ言語モデル出力頭を使う途中退出損失でモデルを学習し、浅い層からも次トークンを予測できるようにする。推論では前半層で複数トークンを仮生成し、残りの層で並列検証・訂正する。前半層のKVと退出位置の問い合わせを共有するため別の下書きモデルを不要とし、H100上のLlama2系で条件により最大2.16倍の高速化を報告する。'
-list_summary: '層ドロップアウトと共有出力頭の途中退出学習により、同一モデルの浅い層で下書きし、残りの層で検証する自己投機的復号を実現する。'
+summary: LayerSkipは後段ほど高い層ドロップアウト率と、全層が同じ言語モデル出力頭を使う途中退出損失でモデルを学習し、浅い層からも次トークンを予測できるようにする。推論では前半層で複数トークンを仮生成し、残りの層で並列検証・訂正する。前半層のKVと退出位置の問い合わせを共有するため別の下書きモデルを不要とし、H100上のLlama2系で条件により最大2.16倍の高速化を報告する。
+list_summary: 層ドロップアウトと共有出力頭の途中退出学習により、同一モデルの浅い層で下書きし、残りの層で検証する自己投機的復号を実現する。
 authors:
 - Mostafa Elhoushi
 - Akshat Shrivastava
@@ -20,7 +20,7 @@ authors:
 - Beidi Chen
 - Carole Jean-Wu
 published: '2024-08-12'
-publication: 'Proceedings of ACL 2024, Long Papers'
+publication: Proceedings of ACL 2024, Long Papers
 publication_type: conference
 publication_status: published
 source: https://aclanthology.org/2024.acl-long.681.pdf
@@ -30,7 +30,7 @@ sources:
 - https://arxiv.org/abs/2404.16710
 - https://github.com/facebookresearch/LayerSkip
 code: https://github.com/facebookresearch/LayerSkip
-implementation: '共有言語モデル出力頭と層別損失による追加学習、途中退出層を使った仮生成、残り層の並列検証、前半層のKVと退出位置の問い合わせを共有するKVQキャッシュを実装。'
+implementation: 共有言語モデル出力頭と層別損失による追加学習、途中退出層を使った仮生成、残り層の並列検証、前半層のKVと退出位置の問い合わせを共有するKVQキャッシュを実装。
 last_checked: '2026-10-10'
 arxiv_categories:
   primary: cs.CL
@@ -44,14 +44,54 @@ last_audited: '2026-10-10'
 audit_version: 2
 under16kb_reaudit_target_path: papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md
 under16kb_reaudit_source_git_blob_sha: 09bb175ac995ca9f0e9e5150ce2e9a4bf8746053
-under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: '2026-10-10-primary-acl-pdf-semantic'
+quality_self_review_version: 2026-10-10-primary-acl-pdf-semantic
 quality_body_chars: 6209
 quality_method_chars: 1749
 quality_eval_chars: 2094
 quality_limitation_chars: 630
+references:
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: DOI:10.18653/v1/2020.emnlp-main.413
+  doi: 10.18653/v1/2020.emnlp-main.413
+- canonical_id: arXiv:2307.02628
+- canonical_id: arXiv:1909.11556
+  openreview_id: SylO2yStDr
+- canonical_id: arXiv:2101.00027
+  arxiv_id: '2101.00027'
+- canonical_id: DOI:10.18653/v1/2022.emnlp-main.3
+  doi: 10.18653/v1/2022.emnlp-main.3
+- canonical_id: OpenReview:d7KBjmI3GmQ
+  openreview_id: d7KBjmI3GmQ
+- canonical_id: arXiv:2310.12072
+- canonical_id: DOI:10.18653/v1/d17-1082
+  doi: 10.18653/v1/d17-1082
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2404.02258
+  arxiv_id: '2404.02258'
+- canonical_id: arXiv:2310.03003
+  arxiv_id: '2310.03003'
+  doi: 10.48550/arxiv.2310.03003
+- canonical_id: DOI:10.18653/v1/d19-1454
+  doi: 10.18653/v1/d19-1454
+- canonical_id: OpenReview:uLYc4L3C81A
+  openreview_id: uLYc4L3C81A
+- canonical_id: DOI:10.1109/isocc53507.2021.9613933
+  doi: 10.1109/isocc53507.2021.9613933
+- canonical_id: arXiv:2309.10285
+- canonical_id: arXiv:2211.10438
+- canonical_id: DOI:10.18653/v1/2021.eacl-main.8
+  doi: 10.18653/v1/2021.eacl-main.8
+- canonical_id: DOI:10.18653/v1/p19-1472
+  doi: 10.18653/v1/p19-1472
+- canonical_id: arXiv:2311.15436
+  arxiv_id: '2311.15436'
+- canonical_id: arXiv:2309.08168
+references_checked_at: '2026-10-09'
+references_source: arxiv-html-reference-section
+references_total: 69
 ---
 
 # LayerSkip：浅い層の予測力を学習し、同一モデル内で投機的復号する
