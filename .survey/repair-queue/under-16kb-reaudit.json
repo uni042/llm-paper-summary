@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-10T03:56:47.177226+00:00",
+  "generated_at": "2026-10-10T04:48:11.689320+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 138,
+  "count": 136,
   "worker_counts": {
-    "scheduled-chat-00": 46,
-    "scheduled-chat-30": 46,
+    "scheduled-chat-00": 45,
+    "scheduled-chat-30": 45,
     "scheduled-chat-45": 46
   },
   "entries": [
@@ -1073,28 +1073,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md",
-      "canonical_id": "arXiv:2502.17298",
-      "title": "Delta Decompression for MoE-based LLMs Compression",
-      "file_bytes": 13099,
-      "source_sha256": "aa44d2c058a606b2d87e5bb9ade131be72d0d362c44c7cf80c780a7377dddbbe",
-      "source_git_blob_sha": "3747cdcf31c35a6a52e1ee205faf6b25e633abf1",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.867802,
-      "quality_metrics": {
-        "body_chars": 2773,
-        "method_chars": 830,
-        "evaluation_chars": 397,
-        "limitation_chars": 211
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 397 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md",
       "canonical_id": "arXiv:2607.07862",
       "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems",
@@ -1614,26 +1592,6 @@
         "method_chars": 836,
         "evaluation_chars": 1080,
         "limitation_chars": 329
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
-      "canonical_id": "arXiv:2411.11217",
-      "title": "MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining",
-      "file_bytes": 13428,
-      "source_sha256": "ec0a102bcc2eb04b7f97742b1d85b01f361e6b189c3f26da1d6c61f659b6b0bd",
-      "source_git_blob_sha": "976114c9d4d0fd8c74e15f8c58a65d624525e10e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.884081,
-      "quality_metrics": {
-        "body_chars": 2835,
-        "method_chars": 1328,
-        "evaluation_chars": 951,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
