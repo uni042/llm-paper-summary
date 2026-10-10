@@ -50,7 +50,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2026-05 · [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
-  KVDriveはHBM・DRAM・NVMeの三層でKVを管理し、再利用度に応じた選択・転送・注意計算を小バッチで重ね、SSDから必要ブロックだけを読み長文I/Oを減らす方式。
+  KVDriveは、自己回帰生成中に蓄積される鍵・値キャッシュ（KVキャッシュ）をGPUの高帯域メモリ（HBM）だけでなく、CPU主記憶（DRAM）と不揮発性記憶装置（SSD）へ分散配置する推論基盤である。疎性を強くするだけでは回答精度が落ちるため、重要KVをどれだけ再利用するか、取得待ちをどの計算と重ねるか、SSDから何を読むかを共同設計する必要がある。
 
 - **2026-01 · [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) ・ リポジトリ内被引用：5  
@@ -411,15 +411,15 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-11〜2024-10）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：101  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：100  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：62  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：60  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：59  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
@@ -449,6 +449,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](2024-2310.07240-cachegen.md)**  
-  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：82  
+  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：81  
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 <!-- survey:auto:end -->

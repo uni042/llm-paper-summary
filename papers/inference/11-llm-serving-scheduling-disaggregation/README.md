@@ -114,9 +114,9 @@
   実装：✓ ・ リポジトリ内被引用：3  
   問い合わせごとのモデル振り分けと異種GPU上のモデル配置・並列化を多目的ベイズ最適化で同時に探索し、品質制約下の遅延と運用費を削減する。
 
-- **2025-12 · [Cornserve: Efficiently Serving Any-to-Any Multimodal Models](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
-  実装：[✓](https://github.com/cornserve-ai/cornserve) ・ リポジトリ内被引用：3  
-  Cornserveは、テキスト・画像・動画・音声を入力にも出力にも持つAny-to-Anyマルチモーダルモデルで、要求種別ごとに異なる計算経路と構成要素ごとのスケーリング特性を明示し、モノリシック配置・分離配置・混合配置を自動探索する配信システムである。
+- **2025-12 · [Cornfigurator: Automated Planning for Any-to-Any Multimodal Model Serving](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
+  実装：[✓](https://github.com/cornserve-ai/cornfigurator) ・ リポジトリ内被引用：3  
+  これらを一つのGPU集合へ固定すると遅い構成要素が全体を止め、逆にすべてを分離すると使われないGPUや通信費が増える。実機評価ではQwen 3 Omni、InternVL 3、Qwen 3 VL、Qwen-Imageなどを対象に、既存方式や専門家調整配置と同等または最大6.32倍の有効スループットを報告する。
 
 - **2025-11 · [Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models](2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -826,13 +826,13 @@
   実装：✓ ・ リポジトリ内被引用：16  
   トークン単位の先取り自動スケーリングと高速モデル切替で多数LLMをGPUプールへ集約し、実運用でGPU数を82%削減したマルチモデル推論基盤。
 
-- **2025-08 · [Strata: Hierarchical Context Caching for Long Context Language Model Serving](2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serv.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  GPUに載りきらない接頭辞KVをCPUやSSDへ置くだけでは、復帰時の小ページ転送とロード待ちが性能を支配する。StrataはGPU支援転送、階層別メモリ配置、I/Oを資源として扱う要求スケジューリングを一体化する。
-
 - **2025-04 · [SLOs-Serve: Optimized Serving of Multi-SLO LLMs](2025-2504.08784-slos-serve-multi-slo-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   段階別SLOを動的計画法で扱い、チャンク化プリフィル・投機的デコード・入場制御・レプリカルーティングを統合してGPU当たり容量を平均2.2倍改善する。
+
+- **2025-08 · [Strata: Hierarchical Context Caching for Long Context Language Model Serving](2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serv.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  GPUに載りきらない接頭辞KVをCPUやSSDへ置くだけでは、復帰時の小ページ転送とロード待ちが性能を支配する。StrataはGPU支援転送、階層別メモリ配置、I/Oを資源として扱う要求スケジューリングを一体化する。
 
 - **2025-08 · [Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving](2025-2508.01989-taichi-unified-prefill-decode-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
@@ -842,10 +842,6 @@
   実装：✓ ・ リポジトリ内被引用：14  
   流体平衡からデコード進捗区間ごとのGPU常駐構成を見積もり、WAIT/Nested WAITで制御する。未知の出力長は予測せず、生成を継続する残存要求を段階分類してKV追い出し連鎖を抑えるスケジューラ。
 
-- **2025-02 · [ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving](2025-2502.00937-modserve.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  画像処理・画像符号化とテキスト生成を独立プールへ分離し、モダリティ別ルーティングと自動拡縮でLMMの末尾遅延とGPU費用を削減する。
-
 - **2025-08 · [LLM Serving Optimization with Variable Prefill and Decode Lengths](2025-2508.06133-llm-serving-optimization-variable-prefill-decode-lengths.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   要求ごとのプリフィル長とデコード長を考慮し、KV容量を守るバッチをF指標で選ぶスケジューラ。Vidur時間モデルでは混合2000要求の平均遅延をFCFS比4.87倍改善した。
@@ -853,6 +849,10 @@
 - **2025-07 · [Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving](2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
+
+- **2025-02 · [ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving](2025-2502.00937-modserve.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  画像処理・画像符号化とテキスト生成を独立プールへ分離し、モダリティ別ルーティングと自動拡縮でLMMの末尾遅延とGPU費用を削減する。
 
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
   実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：12  
@@ -883,7 +883,7 @@
   クライアントごとのサービス量を公平に保ちつつ、公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じ接頭辞を持つリクエストを続けて処理しKV再利用を増やすスケジューラ。複数GPUでは負荷分散も同時に調整する。
 
 - **2025-01 · [Efficiently Serving Large Multimodal Models Using EPD Disaggregation](2025-2501.05460-efficiently-serving-large-multimodal-models-using-epd-disaggregation.md)**  
-  実装：[✓](https://github.com/vbdi/epdserve) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/vbdi/epdserve) ・ リポジトリ内被引用：10  
   本論文は大規模マルチモーダルモデル（Large Multimodal モデル、LMM）の推論を、マルチモーダル符号化（Encode、E）、事前入力処理（プリフィル、P）、逐次復号（デコード、D）の三段階に分離するEPD分離（EPD Disaggregation）を提案する。
 
 - **2025-01 · [DeepServe: Serverless Large Language Model Serving at Scale](2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md)**  
@@ -1026,10 +1026,6 @@
   実装：[✓](https://github.com/kaist-ina/specedge) ・ リポジトリ内被引用：3  
   消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。
 
-- **2025-05 · [PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications](2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  PrefillOnlyは、推薦・信用審査・ラベル付けのように「長い入力を読むが出力は1トークンだけ」というプリフィル専用（プリフィル-only）要求へ通常の生成エンジンをそのまま使う無駄を取り除く。後続デコードで再利用しないキー・バリュー（Key-Value; KV）キャッシュを全層分保持せず、固定出力長から完了時間を予測して要求を並べ替える。
-
 - **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
@@ -1061,6 +1057,10 @@
 - **2025-05 · [Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately](2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   SARTは、推論分岐を必要数より多く開始し、必要な本数が完成したら残りを停止する冗長サンプリング（redundant sampling with early stopping）と、過程報酬モデル（process reward モデル、PRM）で低品質の分岐を段階的に削る動的枝刈りを組み合わせる。
+
+- **2025-05 · [PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications](2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  PrefillOnlyは、推薦・信用審査・ラベル付けのように「長い入力を読むが出力は1トークンだけ」というプリフィル専用（プリフィル-only）要求へ通常の生成エンジンをそのまま使う無駄を取り除く。後続デコードで再利用しないキー・バリュー（Key-Value; KV）キャッシュを全層分保持せず、固定出力長から完了時間を予測して要求を並べ替える。
 
 - **2025-03 · [PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling](2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1113,11 +1113,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：426  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：425  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：422  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：421  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -1125,7 +1125,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：325  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：324  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -1172,13 +1172,13 @@
   実装：✓ ・ リポジトリ内被引用：55  
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
-- **2024-08 · [NanoFlow: Towards Optimal Large Language Model Serving Throughput](2024-2408.12757-nanoflow.md)**  
-  実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：51  
-  異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
-
 - **2024-08 · [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)**  
   実装：[✓](https://github.com/hao-ai-lab/vllm-ltr) ・ リポジトリ内被引用：51  
   正確な生成長を当てる代わりに「どの要求が相対的に短いか」を学習し、その順位で連続バッチ処理を並べ替える。OPT-125M級の補助予測器、ListMLE、要求飢餓を防ぐ優先度昇格を組み合わせ、先着順より最短ジョブ優先に近い配信を実現する。
+
+- **2024-08 · [NanoFlow: Towards Optimal Large Language Model Serving Throughput](2024-2408.12757-nanoflow.md)**  
+  実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：50  
+  異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
 
 - **2023-12 · [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：43  
@@ -1200,13 +1200,13 @@
   実装：✓ ・ リポジトリ内被引用：37  
   外部ツールや人間応答を待つ間に生成が中断される拡張LLMで、KVキャッシュをGPUに保持する、CPUへ退避する、破棄して再計算するという三つの選択肢を、GPUメモリの時間積で表した浪費量を基準に要求ごとに切り替える推論基盤。
 
-- **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：34  
-  根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
-
 - **2024-07 · [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)**  
   実装：[✓](https://github.com/QLM-project/QLM) ・ リポジトリ内被引用：33  
   QLMは、対話型の低遅延要求と、数分から数時間待てる一括処理要求を、複数の言語モデルが稼働するGPU群で混在させるための待ち行列管理システムである。ShareGPTの入出力長分布を使った実験では、到着率や比較方式によって期限達成率が40～90%改善し、単一モデルでは要求処理能力が約20%、複数モデルでは最大数倍改善したと報告する。
+
+- **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：33  
+  根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-06 · [Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs](2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md)**  
   実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：25  
@@ -1283,7 +1283,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：888  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：886  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -1309,6 +1309,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：430  
+  実装：✓ ・ リポジトリ内被引用：429  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 <!-- survey:auto:end -->

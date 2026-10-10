@@ -220,9 +220,9 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   要求長に応じて短い注意機構をGPU、長い疎注意を実機PNMへ配置し、文脈成長時はキー・バリュー状態を背景移送して一方向に実行先を切り替え、混在長負荷のGPUメモリ圧迫と先頭待ちを抑える異種実行基盤。
 
-- **2026-07 · [HCRMap：3.5D MoEチップレット向け圧力認識型ホット専門家配置](2026-2607.11586-hcrmap.md)**  
+- **2026-07 · [HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference](2026-2607.11586-hcrmap.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  方式は積層SRAM、ローカルHBM、共有DRAMを階層的な常駐先として扱い、専門家複製を昇格・維持・降格・追い出しする遅い制御と、現在の複製へトークン群を割り当てる速い制御を分離する。
+  HCRMapは、専門家複製の常駐位置をゆっくり変える制御と、すでに常駐している複製へトークンを素早く割り当てる制御を分ける。
 
 - **2026-07 · [Elastic Memory Remapping for Multi-tenant LLM Serving](2026-elastic-memory-remapping-oneiros.md)**  
   実装：[✓](https://github.com/UT-SysML/Oneiros/) ・ リポジトリ内被引用：0  
@@ -467,7 +467,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：336  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：335  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）

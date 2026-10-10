@@ -42,7 +42,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2026-04 · [Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference](2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  Alloc-MoEは全層・全トークンの専門家実行回数を総予算として、層の重要度とルータ確信度に応じて配分し、固定Top-kより少ない計算で品質を保つ。
+  本論文は混合専門家（Mixture-of-Experts、MoE）モデルで、各層・各トークンが起動する専門家数を一律に減らすと品質が大きく悪化する問題に対し、モデル全体の専門家起動回数を固定したまま、層間とトークン間で予算を再配分するAlloc-MoEを提案する。
 
 - **2026-03 · [EvoESAP: Non-Uniform Expert Pruning for Sparse MoE](2026-2603.06003-evoesap-non-uniform-expert-pruning-for-sparse-moe.md)**  
   実装：[✓](https://github.com/ZongfangLiu/EvoESAP) ・ リポジトリ内被引用：3  
@@ -383,7 +383,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-02 · [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md)**  
-  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：97  
+  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：96  
   本研究は、学習済みモデルを大規模に再学習せず、①各層の出力をできるだけ保つ専門家の集合を探索して重みを恒久的に削除する事後専門家枝刈り、②実行時にルータが選んだ2専門家のうち寄与の小さい第2専門家だけをトークン単位で省く動的専門家省略を組み合わせる。
 
 - **2024-10 · [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](2024-2410.12013-moe-pruner-router-hints.md)**  
