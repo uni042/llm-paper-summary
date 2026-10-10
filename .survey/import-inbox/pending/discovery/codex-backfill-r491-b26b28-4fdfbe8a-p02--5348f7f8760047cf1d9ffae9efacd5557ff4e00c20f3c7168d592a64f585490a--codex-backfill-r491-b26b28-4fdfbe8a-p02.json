@@ -1,0 +1,476 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-r491-b26b28-4fdfbe8a-p02",
+  "reference_main_sha": "4fdfbe8acbed73ba85ba106e2fffd41dc035b92e",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.09781",
+      "identity_tokens": [
+        "arXiv:2305.09781"
+      ],
+      "title": "SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification",
+      "reason": "arXiv v1の題名・IDはselection rowと一致。要旨はcandidate token sequencesをtoken treeへまとめ、LLMで並列検証するtree-based decodingによりgenerative LLM servingのend-to-end latencyと計算量を削減しqualityを保つと説明。Semantic Scholar IDは一次資料だけではaliasとして検証できないためcanonical IDに含めない。",
+      "source_url": "https://arxiv.org/abs/2305.09781v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T23:25:46Z",
+      "last_checked_at": "2026-10-09T23:28:22Z",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2211.16368",
+      "identity_tokens": [
+        "arXiv:2211.16368"
+      ],
+      "title": "DBA: Efficient Transformer With Dynamic Bilinear Low-Rank Attention",
+      "reason": "DBAはinput-sensitive dynamic bilinear low-rank attentionでsequence lengthとhidden dimensionを圧縮し、linear time/spaceかつ低memory・高speedを主張。",
+      "source_url": "https://arxiv.org/abs/2211.16368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-09T23:24:51Z",
+      "last_checked_at": "2026-10-09T23:24:57Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICMC60390.2024.00036",
+      "identity_tokens": [
+        "DOI:10.1109/ICMC60390.2024.00036"
+      ],
+      "title": "SoK: On-Device Large Language Model Personalization for Meta Computing",
+      "reason": "DOIのIEEE一次ページを開いたがrobots.txt拒否。オンデバイスLLM personalisation調査という候補題名以上のabstract根拠を得られない。",
+      "source_url": "https://doi.org/10.1109/ICMC60390.2024.00036",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T00:34:04Z",
+      "last_checked_at": "2026-10-10T00:34:18Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01538",
+      "identity_tokens": [
+        "arXiv:2312.01538",
+        "DOI:10.48550/arXiv.2312.01538"
+      ],
+      "title": "Recurrent Distance-Encoding Neural Networks for Graph Representation Learning",
+      "reason": "arXiv v1 titleは候補と一致、v3で題名変更。同一ID/著者のgraph representation learningでありLLM推論システムへの具体的接続なし。",
+      "source_url": "https://arxiv.org/abs/2312.01538v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2201.12854",
+      "identity_tokens": [
+        "arXiv:2201.12854",
+        "DOI:10.48550/arXiv.2201.12854"
+      ],
+      "title": "Fast Monte-Carlo Approximation of the Attention Mechanism",
+      "reason": "Monte-Carlo attentionは低attention tokenを緩い誤差で近似しTransformer attention FLOPsを最大11倍減らすと要旨に記載。",
+      "source_url": "https://arxiv.org/abs/2201.12854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CommNet63022.2024.10793270",
+      "identity_tokens": [
+        "DOI:10.1109/CommNet63022.2024.10793270"
+      ],
+      "title": "All You Should Know About Large Language Models (LLMs)",
+      "reason": "IEEE DOIを開いたが取得手段からURL不達。候補題名は一般LLM overviewであり、primary abstractを未確認のためborderline。",
+      "source_url": "https://doi.org/10.1109/CommNet63022.2024.10793270",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T00:34:04Z",
+      "last_checked_at": "2026-10-10T00:34:18Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.14644",
+      "identity_tokens": [
+        "arXiv:2502.14644",
+        "DOI:10.48550/arXiv.2502.14644"
+      ],
+      "title": "LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning",
+      "reason": "LIFTは長文をparametersへ吸収してstandard long-context推論の二次input-length費用を避け、TTFTも最適化する。",
+      "source_url": "https://arxiv.org/abs/2502.14644",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+      "identity_tokens": [
+        "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f"
+      ],
+      "title": "MoEfication: Transformer Feed-forward Layers are Mixtures of Experts",
+      "reason": "MoEfication/conditional computationはFFNをexpertsへ分割し入力別routerで使う部分だけ選択、inference FLOPsを削減する。",
+      "source_url": "https://arxiv.org/abs/2110.01786",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:34:04Z",
+      "last_checked_at": "2026-10-10T00:34:18Z",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0",
+      "identity_tokens": [
+        "SemanticScholar:999a39c8dafb1c4b1a917e4b53491b2074f187c0"
+      ],
+      "title": "Amdahl's Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization",
+      "reason": "Amdahl分析は極低bit LLM量子化で残る高精度attentionがthroughput上限になる点をモデル/ハードウェア横断で定量化。",
+      "source_url": "https://openreview.net/pdf/5bbd59e7661cf7c8b7362755d3c6d6c4a3af01d0.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:34:04Z",
+      "last_checked_at": "2026-10-10T00:34:18Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/075280-3538",
+      "identity_tokens": [
+        "SemanticScholar:af07b1b454f16ed351c893376c85be11d6dc2b5c",
+        "DOI:10.52202/075280-3538"
+      ],
+      "title": "Convolutional State Space Models for Long-Range Spatiotemporal Modeling",
+      "reason": "NeurIPS本論文に対応するappendix候補。ConvSSMのparallel scan/subquadratic計算とfast autoregressive generationは系列推論アーキテクチャへ転用可能。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/ff9783ec29688387d44779d67d06ef66-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:34:04Z",
+      "last_checked_at": "2026-10-10T00:34:18Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.16411",
+      "identity_tokens": [
+        "arXiv:2506.16411",
+        "DOI:10.48550/arXiv.2506.16411"
+      ],
+      "title": "When Does Divide and Conquer Work for Long Context LLM? A Noise Decomposition Framework",
+      "reason": "長文LLM chunkingの有効条件/品質noise分析。要旨はinference latencyやresource削減を評価しておらず、分割処理のシステム接点は限定的。",
+      "source_url": "https://arxiv.org/abs/2506.16411",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.18757",
+      "identity_tokens": [
+        "arXiv:2505.18757",
+        "DOI:10.48550/arXiv.2505.18757"
+      ],
+      "title": "ToDRE: Effective Visual Token Pruning via Token Diversity and Task Relevance",
+      "reason": "ToDREはtraining-free visual token/decoder token pruningによりLVLM total inference time 2.6x speedupをabstractで報告。",
+      "source_url": "https://arxiv.org/abs/2505.18757",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.00820",
+      "identity_tokens": [
+        "arXiv:2506.00820",
+        "DOI:10.48550/arXiv.2506.00820"
+      ],
+      "title": "QuantFace: Low-Bit Post-Training Quantization for One-Step Diffusion Face Restoration",
+      "reason": "QuantFaceはface restoration diffusion向けlow-bit quantizationであり、LLM inferenceとの具体的接続なし。",
+      "source_url": "https://arxiv.org/abs/2506.00820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:56c0374a194f3cdf4d882afa1c21801e3e9055d1",
+      "identity_tokens": [
+        "SemanticScholar:56c0374a194f3cdf4d882afa1c21801e3e9055d1"
+      ],
+      "title": "Tracking the Progress of Language Models by Extracting Their Underlying Knowledge Graphs",
+      "reason": "OpenReview references PDFはHTTP 403 Forbidden、正規forum URLもbrowser challengeへ転送され、一次abstractを再取得できなかった。既存検索snippetだけではabstract readを主張できないためborderline。Semantic Scholar候補IDと候補題名は保持し、identity unresolvedにはしない。",
+      "source_url": "https://openreview.net/forum?id=ghKbryXRRAB",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T00:48:15Z",
+      "last_checked_at": "2026-10-10T00:48:28Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2301.13310",
+      "identity_tokens": [
+        "arXiv:2301.13310",
+        "DOI:10.48550/arXiv.2301.13310"
+      ],
+      "title": "Alternating Updates for Efficient Transformers",
+      "reason": "AltUpはTransformerのrepresentation幅を広げつつ各層で部分blockだけ処理し、同等精度で最大87% speedupを報告。",
+      "source_url": "https://arxiv.org/abs/2301.13310",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.11163",
+      "identity_tokens": [
+        "arXiv:2404.11163",
+        "DOI:10.48550/arXiv.2404.11163"
+      ],
+      "title": "LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory",
+      "reason": "LongVQはvector-quantized固定長codebookでglobal contextを圧縮しlinear-time attention、autoregressive language modelingを評価。",
+      "source_url": "https://arxiv.org/abs/2404.11163",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2309.16354-transformer-vq-linear-time-transformers-via-vector-quantization.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.11135",
+      "identity_tokens": [
+        "arXiv:2312.11135",
+        "DOI:10.48550/arXiv.2312.11135"
+      ],
+      "title": "Linear Attention via Orthogonal Memory",
+      "reason": "Orthogonal memoryがcontextを固定サイズに圧縮し、causal LMをlinear complexityで128K contextへ拡張。",
+      "source_url": "https://arxiv.org/abs/2312.11135",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.00776",
+      "identity_tokens": [
+        "arXiv:2412.00776",
+        "DOI:10.48550/arXiv.2412.00776"
+      ],
+      "title": "Learning Mamba as a Continual Learner: Meta-Learning Selective State Space Models for Continual Learning",
+      "reason": "MambaCLはconstant-size stateのcontinual learnerだが、中心はmeta-continual learning性能でLLM serving/inference評価なし。",
+      "source_url": "https://arxiv.org/abs/2412.00776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICEENG64546.2025.11031301",
+      "identity_tokens": [
+        "DOI:10.1109/ICEENG64546.2025.11031301"
+      ],
+      "title": "Survival of the Smallest: Genetic Algorithms for LLM Compression",
+      "reason": "IEEE XploreはJavaScriptを無効と表示しrobot verificationを要求。DOI/titleは維持するがprimary abstractを取得できずLLM compression手法の詳細未確認。",
+      "source_url": "https://ieeexplore.ieee.org/document/11031301",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T00:35:31Z",
+      "last_checked_at": "2026-10-10T00:35:35Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.20650",
+      "identity_tokens": [
+        "arXiv:2512.20650",
+        "DOI:10.48550/arXiv.2512.20650"
+      ],
+      "title": "Mixture of Attention Schemes (MoAS): Learning to Route Between MHA, GQA, and MQA",
+      "reason": "MoASはtoken別にMHA/GQA/MQAをrouteし、KV-cache memoryとqualityのinference tradeoffを直接扱う。",
+      "source_url": "https://arxiv.org/abs/2512.20650",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:33:17Z",
+      "last_checked_at": "2026-10-10T00:33:29Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ]
+    }
+  ]
+}
