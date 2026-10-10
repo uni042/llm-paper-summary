@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T19:43:31+00:00",
-  "record_count": 11411,
+  "updated_at": "2026-10-10T20:47:30+00:00",
+  "record_count": 11412,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163128,6 +163128,18 @@
       "last_checked_at": "2026-10-10T19:43:31+00:00",
       "linked_from": [],
       "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
+    },
+    "arXiv:2008.02496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.02496",
+      "identity_tokens": [
+        "arXiv:2008.02496"
+      ],
+      "reason": "一次要旨ではBERTの一部の自己注意ヘッドを局所依存用の範囲別動的畳み込みに置き換え、GLUEで86.4点と学習費用4分の1未満を示す。中心はBERT表現学習と自然言語理解精度であり、LLMの推論サービング、メモリ階層、実行時KVキャッシュ、GPUカーネルのシステム設計を扱わないため現行サーベイの対象外。",
+      "first_checked_at": "2026-10-10T20:47:30+00:00",
+      "last_checked_at": "2026-10-10T20:47:30+00:00",
+      "linked_from": [],
+      "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution"
     }
   }
 }
