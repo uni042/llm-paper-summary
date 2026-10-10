@@ -1,0 +1,239 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-002da2a6db7d0b4c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-002da2a6db7d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.19097",
+    "arXiv:2605.22502"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fb428eb5b5598fce5707084aa419a2e029d6467f",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T18:49:51.352439+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.19097",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.22502",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
+      "source_url": "https://arxiv.org/abs/2511.19097",
+      "year": 2025,
+      "published": "2025-11-11",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing reinforcement learning methods for Chain-of-Thought reasoning suffer from two critical limitations. First, they operate as monolithic black boxes that provide undifferentiated reward signals, obscuring individual step contributions and hindering error diagnosis. Second, sequential decoding has O(n) time complexity. This makes real-time deployment impractical for complex reasoning tasks.\nWe present DeCoRL (Decoupled Reasoning Chains via Coordinated Reinforcement Learning), a novel framework that transforms reasoning from sequential processing into collaborative modular orchestration. DeCoRL trains lightweight specialized models to generate reasoning sub-steps concurrently, eliminating sequential bottlenecks through parallel processing. To enable precise error attribution, the framework designs modular reward functions that score each sub-step independently. Cascaded DRPO optimization then coordinates these rewards while preserving inter-step dependencies.\nComprehensive evaluation demonstrates state-of-the-art results across RM-Bench, RMB, and RewardBench, outperforming existing methods including large-scale models. DeCoRL delivers 3.8 times faster inference while maintaining superior solution quality and offers a 22.7% improvement in interpretability through explicit reward attribution. These advancements, combined with a 72.4% reduction in energy consumption and a 68% increase in throughput, make real-time deployment of complex reasoning systems a reality.",
+      "identifiers": [
+        "SemanticScholar:b7a2a4dc448109a69dffe95269c8d9ea93119b46"
+      ],
+      "semantic_scholar_id": "b7a2a4dc448109a69dffe95269c8d9ea93119b46",
+      "canonical_id": "arXiv:2511.19097",
+      "arxiv_id": "2511.19097",
+      "doi": "10.48550/arXiv.2511.19097",
+      "authors": [
+        "Ziyuan Gao",
+        "Di Liang",
+        "Xianjie Wu",
+        "Philippe Morel",
+        "Min-Long Peng"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 333,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost",
+      "source_url": "https://arxiv.org/abs/2605.22502",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent orchestration frameworks have proliferated, collectively exceeding 290,000 GitHub stars across LangGraph, CrewAI, Google ADK, OpenAI Agents SDK, Semantic Kernel, Strands, and LlamaIndex. All follow the same pattern: an external orchestrator above the LLM, injecting instructions and routing decisions every turn. Recent work has shown this architecture is dominated for procedural tasks by simply providing the procedure in a frontier model's system prompt [Dennis et al., 2026a], at the cost of consuming the context window, requiring a frontier model for every conversation, and exposing proprietary procedures to third-party providers. Compiling the procedure into the weights of a small fine-tuned model -- creating a subterranean agent -- should resolve all of these concerns, and prior work (SimpleTOD, FireAct, SynTOD, WorkflowLLM, Agent Lumos) has shown the technique works. Yet developer adoption has overwhelmingly favored orchestration. We identify three perceived barriers and address each empirically across travel booking (14 nodes), Zoom support (14 nodes, product-specific knowledge), and insurance claims (55 nodes, 6 decision hubs).",
+      "identifiers": [
+        "SemanticScholar:333cab7ca893cd996e31a40210131394c42a7382"
+      ],
+      "semantic_scholar_id": "333cab7ca893cd996e31a40210131394c42a7382",
+      "canonical_id": "arXiv:2605.22502",
+      "arxiv_id": "2605.22502",
+      "doi": "10.48550/arXiv.2605.22502",
+      "authors": [
+        "Simon Dennis",
+        "Rivaan Patil",
+        "Kevin D. Shabahang",
+        "Haoze Guo"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.19097",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.19097",
+        "id:SemanticScholar:b7a2a4dc448109a69dffe95269c8d9ea93119b46",
+        "id:arXiv:2511.19097",
+        "title:decorl decoupling reasoning chains via parallel substep generation and cascaded reinforcement for interpretable and scalable rlhf",
+        "url:https://arxiv.org/abs/2511.19097"
+      ],
+      "record": {
+        "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
+        "source_url": "https://arxiv.org/abs/2511.19097",
+        "year": 2025,
+        "published": "2025-11-11",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing reinforcement learning methods for Chain-of-Thought reasoning suffer from two critical limitations. First, they operate as monolithic black boxes that provide undifferentiated reward signals, obscuring individual step contributions and hindering error diagnosis. Second, sequential decoding has O(n) time complexity. This makes real-time deployment impractical for complex reasoning tasks.\nWe present DeCoRL (Decoupled Reasoning Chains via Coordinated Reinforcement Learning), a novel framework that transforms reasoning from sequential processing into collaborative modular orchestration. DeCoRL trains lightweight specialized models to generate reasoning sub-steps concurrently, eliminating sequential bottlenecks through parallel processing. To enable precise error attribution, the framework designs modular reward functions that score each sub-step independently. Cascaded DRPO optimization then coordinates these rewards while preserving inter-step dependencies.\nComprehensive evaluation demonstrates state-of-the-art results across RM-Bench, RMB, and RewardBench, outperforming existing methods including large-scale models. DeCoRL delivers 3.8 times faster inference while maintaining superior solution quality and offers a 22.7% improvement in interpretability through explicit reward attribution. These advancements, combined with a 72.4% reduction in energy consumption and a 68% increase in throughput, make real-time deployment of complex reasoning systems a reality.",
+        "identifiers": [
+          "SemanticScholar:b7a2a4dc448109a69dffe95269c8d9ea93119b46"
+        ],
+        "semantic_scholar_id": "b7a2a4dc448109a69dffe95269c8d9ea93119b46",
+        "canonical_id": "arXiv:2511.19097",
+        "arxiv_id": "2511.19097",
+        "doi": "10.48550/arXiv.2511.19097",
+        "authors": [
+          "Ziyuan Gao",
+          "Di Liang",
+          "Xianjie Wu",
+          "Philippe Morel",
+          "Min-Long Peng"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 333,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.22502",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22502",
+        "id:SemanticScholar:333cab7ca893cd996e31a40210131394c42a7382",
+        "id:arXiv:2605.22502",
+        "title:compiling agentic workflows into llm weights nearfrontier quality at two orders of magnitude less cost",
+        "url:https://arxiv.org/abs/2605.22502"
+      ],
+      "record": {
+        "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost",
+        "source_url": "https://arxiv.org/abs/2605.22502",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agent orchestration frameworks have proliferated, collectively exceeding 290,000 GitHub stars across LangGraph, CrewAI, Google ADK, OpenAI Agents SDK, Semantic Kernel, Strands, and LlamaIndex. All follow the same pattern: an external orchestrator above the LLM, injecting instructions and routing decisions every turn. Recent work has shown this architecture is dominated for procedural tasks by simply providing the procedure in a frontier model's system prompt [Dennis et al., 2026a], at the cost of consuming the context window, requiring a frontier model for every conversation, and exposing proprietary procedures to third-party providers. Compiling the procedure into the weights of a small fine-tuned model -- creating a subterranean agent -- should resolve all of these concerns, and prior work (SimpleTOD, FireAct, SynTOD, WorkflowLLM, Agent Lumos) has shown the technique works. Yet developer adoption has overwhelmingly favored orchestration. We identify three perceived barriers and address each empirically across travel booking (14 nodes), Zoom support (14 nodes, product-specific knowledge), and insurance claims (55 nodes, 6 decision hubs).",
+        "identifiers": [
+          "SemanticScholar:333cab7ca893cd996e31a40210131394c42a7382"
+        ],
+        "semantic_scholar_id": "333cab7ca893cd996e31a40210131394c42a7382",
+        "canonical_id": "arXiv:2605.22502",
+        "arxiv_id": "2605.22502",
+        "doi": "10.48550/arXiv.2605.22502",
+        "authors": [
+          "Simon Dennis",
+          "Rivaan Patil",
+          "Kevin D. Shabahang",
+          "Haoze Guo"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:aae582ea083d7e4db8643ff5c99d3cecfaf0f1d52cd945624737a60e8a507b65",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
