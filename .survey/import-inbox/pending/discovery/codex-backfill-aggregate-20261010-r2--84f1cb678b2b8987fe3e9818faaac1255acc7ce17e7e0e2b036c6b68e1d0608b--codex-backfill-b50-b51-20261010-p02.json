@@ -1,0 +1,288 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-b50-b51-20261010-p02",
+  "reference_main_sha": "ea0c2d3d29bf5c42174cec3d52de117cda1608ac",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.05316",
+      "title": "C-Mamba: Channel Correlation Enhanced State Space Models for Multivariate Time Series Forecasting",
+      "reason": "CMamba adapts Mamba with channel mixing for multivariate forecasting accuracy; its abstract does not report efficiency gains or inference-cost measurements, leaving the serving-efficiency connection uncertain.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2406.05316",
+        "PRIMARY:https://arxiv.org/abs/2406.05316"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.05316"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.01049",
+      "title": "SE(3)-Hyena Operator for Scalable Equivariant Learning",
+      "reason": "SE(3)-Hyena replaces quadratic equivariant attention with sub-quadratic long convolution; the abstract reports 3.5x faster processing and 175x longer context at the same memory budget, a transferable sequence-system efficiency result.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2407.01049",
+        "PRIMARY:https://arxiv.org/abs/2407.01049"
+      ],
+      "source_url": "https://arxiv.org/abs/2407.01049"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3390/bioengineering12101030",
+      "title": "DermaMamba: A Dual-Branch Vision Mamba Architecture with Linear Complexity for Efficient Skin Lesion Classification",
+      "reason": "The official MDPI abstract describes DermaMamba’s CNN/VMamba fusion with linear-complexity global modeling and reports 2.3x inference speedup plus 40% lower memory than the stated baseline; the SSM efficiency mechanism is transferable beyond its medical-imaging task.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:13:48Z",
+      "last_checked_at": "2026-10-10T07:18:02Z",
+      "identity_tokens": [
+        "DOI:10.3390/bioengineering12101030",
+        "PRIMARY:https://doi.org/10.3390/bioengineering12101030"
+      ],
+      "source_url": "https://doi.org/10.3390/bioengineering12101030"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.22052",
+      "title": "A Vision Toward Energy-Efficient Domain-Specific Artificial Intelligence Models and Agents",
+      "reason": "The arXiv abstract is a vision for compact domain-specific AI and energy-efficient agents, including a target of large system-level efficiency gains, but it offers goals and hardware direction rather than a concrete evaluated inference method.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2510.22052",
+        "PRIMARY:https://arxiv.org/abs/2510.22052"
+      ],
+      "source_url": "https://arxiv.org/abs/2510.22052"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17812",
+      "title": "Scalable Artificial Intelligence for Science: Perspectives, Methods and Exemplars",
+      "reason": "The arXiv abstract is a perspective on scaling scientific AI on HPC/cloud and lists scientific use cases; it does not present a concrete inference-efficiency method.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2406.17812",
+        "PRIMARY:https://arxiv.org/abs/2406.17812"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.17812"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09512",
+      "title": "Integrated electro-optic attention nonlinearities for transformers",
+      "reason": "The paper implements electro-optic alternatives to digital Softmax/Sigmoid, identifies nonlinearities as a disproportionate Transformer inference-latency bottleneck, and evaluates the hardware units in ViTs and LLMs.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2604.09512",
+        "PRIMARY:https://arxiv.org/abs/2604.09512"
+      ],
+      "source_url": "https://arxiv.org/abs/2604.09512"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746027.3755305",
+      "title": "BOLT: Fewer Tokens but More Performance Retention for Efficient Vision-Language Models Inference",
+      "reason": "The candidate DOI and title are retained, but the ACM primary URL `https://dl.acm.org/doi/10.1145/3746027.3755305` returned `(403) Forbidden`; no primary abstract was retrievable.",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T07:13:48Z",
+      "last_checked_at": "2026-10-10T07:17:15Z",
+      "identity_tokens": [
+        "DOI:10.1145/3746027.3755305",
+        "PRIMARY:https://doi.org/10.1145/3746027.3755305"
+      ],
+      "source_url": "https://doi.org/10.1145/3746027.3755305"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.23959",
+      "title": "Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning",
+      "reason": "ALTP prunes visual tokens in grounded-conversation LLaVA models while retaining object-local detail; the abstract reports 90% fewer visual tokens with maintained or improved grounding metrics, directly targeting multimodal inference cost.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2503.23959",
+        "PRIMARY:https://arxiv.org/abs/2503.23959"
+      ],
+      "source_url": "https://arxiv.org/abs/2503.23959"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.16018",
+      "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers",
+      "reason": "Fast Nyström Attention approximates ViT self-attention in linear time and space using structured attention-sink/artifact patterns and reports reduced computational overhead across vision tasks.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2507.16018",
+        "PRIMARY:https://arxiv.org/abs/2507.16018"
+      ],
+      "source_url": "https://arxiv.org/abs/2507.16018"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.03738",
+      "title": "Attention in Diffusion Model: A Survey",
+      "reason": "The arXiv abstract surveys attention operations and modifications in diffusion models but reports no new evaluated inference-efficiency mechanism; possible transfer from attention methods remains indirect.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2504.03738",
+        "PRIMARY:https://arxiv.org/abs/2504.03738"
+      ],
+      "source_url": "https://arxiv.org/abs/2504.03738"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2510.11129",
+      "title": "video-SALMONN S: Streaming Audio-Visual LLMs Beyond Length Limits via Memory",
+      "reason": "video-SALMONN S uses test-time training as streaming memory and processes over three-hour videos at 1 FPS/360p while outperforming non-streaming models under the same memory budget, a concrete long-context multimodal-serving design.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2510.11129",
+        "PRIMARY:https://doi.org/10.48550/arXiv.2510.11129"
+      ],
+      "source_url": "https://doi.org/10.48550/arXiv.2510.11129"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/APCCAS67402.2025.11377091",
+      "title": "Progressive NAS for Efficient Structural Pruning of Pretrained Language Models",
+      "reason": "The supplied DOI/title identify a language-model structural-pruning/NAS paper, but the primary DOI URL `https://doi.org/10.1109/APCCAS67402.2025.11377091` returned `URL https://doi.org/10.1109/APCCAS67402.2025.11377091 is not accessible via this tool` (repeat open: `Internal Error ()`); its publisher abstract could not be retrieved.",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T07:13:48Z",
+      "last_checked_at": "2026-10-10T07:17:15Z",
+      "identity_tokens": [
+        "DOI:10.1109/APCCAS67402.2025.11377091",
+        "PRIMARY:https://doi.org/10.1109/APCCAS67402.2025.11377091"
+      ],
+      "source_url": "https://doi.org/10.1109/APCCAS67402.2025.11377091"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.16413",
+      "title": "Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research",
+      "reason": "Pico is a reproducible framework for hypothesis-driven small-language-model architecture and training experiments; the arXiv abstract does not present inference or deployment efficiency methods.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:17:06Z",
+      "identity_tokens": [
+        "arXiv:2509.16413",
+        "PRIMARY:https://arxiv.org/abs/2509.16413"
+      ],
+      "source_url": "https://arxiv.org/abs/2509.16413"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09547",
+      "title": "Tango: Taming Visual Signals for Efficient Video Large Language Models",
+      "reason": "Tango improves visual-token selection and clustering in Video LLMs; its abstract reports retaining 98.9% of baseline performance with 10% of video tokens and 1.88x inference speedup.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:17:06Z",
+      "identity_tokens": [
+        "arXiv:2604.09547",
+        "PRIMARY:https://arxiv.org/abs/2604.09547"
+      ],
+      "source_url": "https://arxiv.org/abs/2604.09547"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.01985",
+      "title": "Optimization over Trained (and Sparse) Neural Networks: A Surrogate within a Surrogate",
+      "reason": "The paper prunes neural networks to make constraint-learning optimization models more tractable and explicitly notes that the pruned network may have worse inference; its objective is optimization-model solvability, not efficient inference.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:17:06Z",
+      "identity_tokens": [
+        "arXiv:2505.01985",
+        "PRIMARY:https://arxiv.org/abs/2505.01985"
+      ],
+      "source_url": "https://arxiv.org/abs/2505.01985"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.04941",
+      "title": "TOAST: Transformer Optimization using Adaptive and Simple Transformations",
+      "reason": "TOAST replaces redundant pretrained Transformer blocks with lightweight closed-form mappings without retraining and reports reduced parameters and computation while preserving or improving task performance.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:17:06Z",
+      "identity_tokens": [
+        "arXiv:2410.04941",
+        "PRIMARY:https://arxiv.org/abs/2410.04941"
+      ],
+      "source_url": "https://arxiv.org/abs/2410.04941"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.14493",
+      "title": "RCT: Resource Constrained Training for Edge AI",
+      "reason": "RCT reduces model memory and energy during edge training by retaining quantized parameters and adjusting bitwidths; its abstract focuses on training resource constraints, not inference/serving efficiency.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:16:48Z",
+      "last_checked_at": "2026-10-10T07:17:06Z",
+      "identity_tokens": [
+        "arXiv:2103.14493",
+        "PRIMARY:https://arxiv.org/abs/2103.14493"
+      ],
+      "source_url": "https://arxiv.org/abs/2103.14493"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CSCWD57460.2023.10152853",
+      "title": "MetaBERT: Collaborative Meta-Learning for Accelerating BERT Inference",
+      "reason": "The supplied DOI/title are retained, but the IEEE Xplore primary page `https://ieeexplore.ieee.org/document/10152853` displayed JavaScript-disabled/robot-verification content; no publisher abstract was retrievable.",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T07:13:48Z",
+      "last_checked_at": "2026-10-10T07:17:15Z",
+      "identity_tokens": [
+        "DOI:10.1109/CSCWD57460.2023.10152853",
+        "PRIMARY:https://doi.org/10.1109/CSCWD57460.2023.10152853"
+      ],
+      "source_url": "https://doi.org/10.1109/CSCWD57460.2023.10152853"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:20c6ac270d91142015350f05b172e604f37d48d4",
+      "title": "Strategic Doctrine Language Models (sdLM): A Comprehensive Framework for Automated Military Planning and Doctrinal Analysis",
+      "reason": "The title is an automated military-planning and doctrinal-analysis application of language models, with no stated model-inference or serving-efficiency contribution.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T07:05:19Z",
+      "last_checked_at": "2026-10-10T07:05:19Z",
+      "identity_tokens": [
+        "SemanticScholar:20c6ac270d91142015350f05b172e604f37d48d4"
+      ],
+      "source_url": "https://www.semanticscholar.org/paper/20c6ac270d91142015350f05b172e604f37d48d4"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.20765",
+      "title": "Onboard Hyperspectral Super-Resolution with Deep Pushbroom Neural Network",
+      "reason": "The title is hyperspectral-image super-resolution, an independent imaging application without an indicated LLM systems or transferable inference-efficiency mechanism.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T07:05:19Z",
+      "last_checked_at": "2026-10-10T07:05:19Z",
+      "identity_tokens": [
+        "arXiv:2507.20765"
+      ],
+      "source_url": "https://arxiv.org/abs/2507.20765"
+    }
+  ]
+}
