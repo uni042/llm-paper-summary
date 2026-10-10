@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T18:55:23.215044+00:00",
+  "generated_at": "2026-10-10T21:49:51.329252+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 41,
+  "count": 40,
   "worker_counts": {
     "scheduled-chat-00": 13,
     "scheduled-chat-30": 14,
-    "scheduled-chat-45": 14
+    "scheduled-chat-45": 13
   },
   "entries": [
     {
@@ -828,26 +828,6 @@
         "method_chars": 1357,
         "evaluation_chars": 1756,
         "limitation_chars": 397
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
-      "canonical_id": "arXiv:2403.17312",
-      "title": "ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching",
-      "file_bytes": 15522,
-      "source_sha256": "2811fca20c379115ff5fe184ad6218f5bee8c73c08e23dce2d37012a1adaff50",
-      "source_git_blob_sha": "0aa1dd73608a773aff406492bf64e6e672ec2eac",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.969516,
-      "quality_metrics": {
-        "body_chars": 4595,
-        "method_chars": 1830,
-        "evaluation_chars": 517,
-        "limitation_chars": 341
       },
       "mechanical_failures": [],
       "warnings": []
