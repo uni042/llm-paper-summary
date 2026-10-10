@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-0530-scheduled-chat-30/r01-prescreen-021",
+  "reference_main_sha": "f8d782c7bf821a2041150c36c91fe4eb4300bd55",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.02496",
+      "identity_tokens": [
+        "arxiv:2008.02496"
+      ],
+      "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution",
+      "reason": "一次要旨ではBERTの一部の自己注意ヘッドを局所依存用の範囲別動的畳み込みに置き換え、GLUEで86.4点と学習費用4分の1未満を示す。中心はBERT表現学習と自然言語理解精度であり、LLMの推論サービング、メモリ階層、実行時KVキャッシュ、GPUカーネルのシステム設計を扱わないため現行サーベイの対象外。",
+      "source_url": "https://arxiv.org/abs/2008.02496",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T05:28:30+09:00",
+      "last_checked_at": "2026-10-11T05:28:30+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 21
+    }
+  ]
+}
