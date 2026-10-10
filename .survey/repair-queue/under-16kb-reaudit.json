@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T14:51:48.104782+00:00",
+  "generated_at": "2026-10-10T16:51:16.155102+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 47,
+  "count": 46,
   "worker_counts": {
     "scheduled-chat-00": 16,
     "scheduled-chat-30": 15,
-    "scheduled-chat-45": 16
+    "scheduled-chat-45": 15
   },
   "entries": [
     {
@@ -573,26 +573,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md",
-      "canonical_id": "arXiv:2502.10517",
-      "title": "KernelBench: Can LLMs Write Efficient GPU Kernels?",
-      "file_bytes": 13998,
-      "source_sha256": "ab9952677892c024529ee854fdf1177d9e03c69c536bd06cfc9b940fc034c287",
-      "source_git_blob_sha": "e1b96c5a23cc9afd569cf9b19652845e2ed3069d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.849717,
-      "quality_metrics": {
-        "body_chars": 3741,
-        "method_chars": 1092,
-        "evaluation_chars": 1123,
-        "limitation_chars": 525
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
       "canonical_id": "arXiv:2606.26650",
       "title": "CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs",
@@ -648,7 +628,7 @@
       "file_bytes": 14160,
       "source_sha256": "577753ef315af9a8abe85526d3662ea3c878f4e6d04c0a166e8b0b675b4d4720",
       "source_git_blob_sha": "b929fc6f7d3b252e1f2cdb68d0a70c3de11c3aca",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.85773,
