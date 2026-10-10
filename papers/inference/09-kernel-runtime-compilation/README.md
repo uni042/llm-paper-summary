@@ -148,7 +148,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
   実装：[✓](https://github.com/thustorage/Medusa) ・ リポジトリ内被引用：7  
-  KV容量プロファイルとCUDAグラフをオフライン物化し、割当順序索引とカーネル再解決で別インスタンスへ復元してサーバーレスLLMのコールドスタートを短縮する。
+  Medusaは、大規模言語モデル（large language モデル; LLM）を必要なときだけ起動するサーバーレス推論において、モデル重みの読み込み以外にも無視できない起動費用があることに着目したシステム論文である。
 
 - **2025-06 · [FlashMoE: Fast Distributed MoE in a Single Kernel](2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md)**  
   実装：[✓](https://github.com/osayamenja/FlashMoE) ・ リポジトリ内被引用：5  

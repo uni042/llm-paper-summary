@@ -16,5 +16,5 @@
 
 - **2024-01 · [Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding](2024-2401.07851-speculative-decoding-survey.md)**  
   実装：[✓](https://github.com/hemingkx/SpeculativeDecodingPapers) ・ リポジトリ内被引用：63  
-  投機的デコードをドラフト器・検証規則・対象LLMとの整合へ分解し、受理率とドラフト費用の交換条件をSpec-Benchとともに整理したACL Findings 2024のサーベイ。
+  自己回帰型の大規模言語モデル（LLM）は、次トークンを一つ確定してから次を計算するため、出力長が伸びると逐次遅延が増える。投機的復号（投機的復号）は、軽量なドラフト器で将来の候補トークンを先に作り、対象モデルが一度の並列計算で複数候補を検証することで、対象モデル呼出し1回当たりの確定トークン数を増やす。
 <!-- survey:auto:end -->
