@@ -90,7 +90,7 @@
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  枝刈り（枝刈り）方法自体は単純で、ある長さ n の連続層 ブロックについて、そのブロックへの入力表現と通過後表現の角距離（angular distance）を測る。
+  削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
 
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
   実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：2  
