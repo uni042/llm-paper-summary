@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion",
+      "source_url": "https://arxiv.org/abs/2301.09474",
+      "year": 2023,
+      "published": "2023-01-23",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 172,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-world data generation often involves complex inter-dependencies among instances, violating the IID-data hypothesis of standard learning paradigms and posing a challenge for uncovering the geometric structures for learning desired instance representations. To this end, we introduce an energy constrained diffusion model which encodes a batch of instances from a dataset into evolutionary states that progressively incorporate other instances' information by their interactions. The diffusion process is constrained by descent criteria w.r.t.~a principled energy function that characterizes the global consistency of instance representations over latent structures. We provide rigorous theory that implies closed-form optimal estimates for the pairwise diffusion strength among arbitrary instance pairs, which gives rise to a new class of neural encoders, dubbed as DIFFormer (diffusion-based Transformers), with two instantiations: a simple version with linear complexity for prohibitive instance numbers, and an advanced version for learning complex structures. Experiments highlight the wide applicability of our model as a general-purpose encoder backbone with superior performance in various tasks, such as node classification on large graphs, semi-supervised image/text classification, and spatial-temporal dynamics prediction.",
+      "identifiers": [
+        "SemanticScholar:9b4f564e5d33625fa88fc4e1045e9d5681fa0cca"
+      ],
+      "semantic_scholar_id": "9b4f564e5d33625fa88fc4e1045e9d5681fa0cca",
+      "canonical_id": "arXiv:2301.09474",
+      "arxiv_id": "2301.09474",
+      "doi": "10.48550/arXiv.2301.09474",
+      "authors": [
+        "Qi-Tian Wu",
+        "Chen-Xiao Yang",
+        "Wen-Tao Zhao",
+        "Yixuan He",
+        "David Wipf",
+        "Junchi Yan"
+      ],
+      "priority": 182,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 172,
+        "citation_count": 172,
+        "total": 182,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1356,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "DIFFormer provides a linear-complexity graph-transformer encoder for prohibitive instance counts. The abstract supplies a concrete scaling property in attention-based encoders that can transfer to large-model sequence systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-Term Forecasting",
+      "source_url": "https://arxiv.org/abs/2403.09898",
+      "year": 2024,
+      "published": "2024-03-14",
+      "venue": "European Conference on Artificial Intelligence",
+      "citation_count": 177,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-term time-series forecasting remains challenging due to the difficulty in capturing long-term dependencies, achieving linear scalability, and maintaining computational efficiency. We introduce TimeMachine, an innovative model that leverages Mamba, a state-space model, to capture long-term dependencies in multivariate time series data while maintaining linear scalability and small memory footprints. TimeMachine exploits the unique properties of time series data to produce salient contextual cues at multi-scales and leverage an innovative integrated quadruple-Mamba architecture to unify the handling of channel-mixing and channel-independence situations, thus enabling effective selection of contents for prediction against global and local contexts at different scales. Experimentally, TimeMachine achieves superior performance in prediction accuracy, scalability, and memory efficiency, as extensively validated using benchmark datasets.",
+      "identifiers": [
+        "SemanticScholar:3a0c5026f7ea965dc4475c8d857fc3b6df27ae05"
+      ],
+      "semantic_scholar_id": "3a0c5026f7ea965dc4475c8d857fc3b6df27ae05",
+      "canonical_id": "arXiv:2403.09898",
+      "arxiv_id": "2403.09898",
+      "doi": "10.3233/faia240677",
+      "authors": [
+        "Md. Atik Ahamed",
+        "Q. Cheng"
+      ],
+      "priority": 177,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 177,
+        "citation_count": 177,
+        "total": 177,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 940,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TimeMachine uses Mamba sequence modeling and explicitly claims linear scalability and small memory footprints. This is a concrete, transferable state-space efficiency technique for long-sequence model execution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version",
+      "source_url": "https://arxiv.org/abs/2204.13767",
+      "year": 2022,
+      "published": "2022-04-28",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 174,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A variety of real-world applications rely on far future information to make decisions, thus calling for efficient and accurate long sequence multivariate time series forecasting. While recent attention-based forecasting models show strong abilities in\n\ncapturing long-term dependencies, they still suffer from two key limitations. First, canonical self attention has a quadratic complexity w.r.t. the input time series length, thus falling short in efficiency. Second, different variables’ time series often have\n\ndistinct temporal dynamics, which existing studies fail to capture, as they use the same model parameter space, e.g., projection matrices, for all variables’ time series, thus falling short in accuracy. To ensure high efficiency and accuracy, we propose Triformer, a triangular, variable-specific attention. (i) Linear complexity: we introduce a novel patch attention with linear complexity. When stacking multiple layers of the patch attentions, a triangular structure is proposed such that the\n\nlayer sizes shrink exponentially, thus maintaining linear complexity. (ii) Variable-specific parameters: we propose a light-weight method to enable distinct sets of model parameters for different variables’ time series to enhance accuracy\n\nwithout compromising efficiency and memory usage. Strong empirical evidence on four datasets from multiple domains justifies our design choices, and it demonstrates that Triformer outperforms state-of-the-art methods w.r.t. both accuracy and\n\nefficiency. Source code is publicly available at https://github.com/razvanc92/triformer.",
+      "identifiers": [
+        "SemanticScholar:00f4f0fe0d8f5e03f52b1ba7dda8c7e94f69de17"
+      ],
+      "semantic_scholar_id": "00f4f0fe0d8f5e03f52b1ba7dda8c7e94f69de17",
+      "canonical_id": "arXiv:2204.13767",
+      "arxiv_id": "2204.13767",
+      "doi": "10.48550/arXiv.2204.13767",
+      "authors": [
+        "Razvan-Gabriel Cirstea",
+        "Chen-Juan Guo",
+        "B. Yang",
+        "T. Kieu",
+        "Xuanyi Dong",
+        "Shirui Pan"
+      ],
+      "priority": 174,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 174,
+        "citation_count": 174,
+        "total": 174,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1626,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Triformer replaces quadratic sequence attention with linear-complexity patch attention and a shrinking triangular stack, while explicitly preserving efficiency and memory usage.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Structured State Space Models for In-Context Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2303.03982",
+      "year": 2023,
+      "published": "2023-03-07",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 164,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured state space sequence (S4) models have recently achieved state-of-the-art performance on long-range sequence modeling tasks. These models also have fast inference speeds and parallelisable training, making them potentially useful in many reinforcement learning settings. We propose a modification to a variant of S4 that enables us to initialise and reset the hidden state in parallel, allowing us to tackle reinforcement learning tasks. We show that our modified architecture runs asymptotically faster than Transformers in sequence length and performs better than RNN's on a simple memory-based task. We evaluate our modified architecture on a set of partially-observable environments and find that, in practice, our model outperforms RNN's while also running over five times faster. Then, by leveraging the model's ability to handle long-range sequences, we achieve strong performance on a challenging meta-learning task in which the agent is given a randomly-sampled continuous control environment, combined with a randomly-sampled linear projection of the environment's observations and actions. Furthermore, we show the resulting model can adapt to out-of-distribution held-out tasks. Overall, the results presented in this paper show that structured state space models are fast and performant for in-context reinforcement learning tasks. We provide code at https://github.com/luchris429/popjaxrl.",
+      "identifiers": [
+        "SemanticScholar:d98b5c1d0f9a4e39dc79ea7a3f74e54789df5e13"
+      ],
+      "semantic_scholar_id": "d98b5c1d0f9a4e39dc79ea7a3f74e54789df5e13",
+      "canonical_id": "arXiv:2303.03982",
+      "arxiv_id": "2303.03982",
+      "doi": "10.48550/arXiv.2303.03982",
+      "authors": [
+        "Chris Xiaoxuan Lu",
+        "Yannick Schroecker",
+        "Albert Gu",
+        "Emilio Parisotto",
+        "J. Foerster",
+        "Satinder Singh",
+        "Feryal M. P. Behbahani"
+      ],
+      "priority": 174,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 164,
+        "citation_count": 164,
+        "total": 174,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1313,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "The S4-based architecture is explicitly described as fast at inference, asymptotically faster than Transformers by sequence length, and over five times faster in tested environments.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text",
+      "source_url": "https://arxiv.org/abs/2403.18421",
+      "year": 2024,
+      "published": "2024-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 173,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Models such as GPT-4 and Med-PaLM 2 have demonstrated impressive performance on a wide variety of biomedical NLP tasks. However, these models have hundreds of billions of parameters, are computationally expensive to run, require users to send their input data over the internet, and are trained on unknown data sources. Can smaller, more targeted models compete? To address this question, we build and release BioMedLM, a 2.7 billion parameter GPT-style autoregressive model trained exclusively on PubMed abstracts and full articles. When fine-tuned, BioMedLM can produce strong multiple-choice biomedical question-answering results competitive with much larger models, such as achieving a score of 57.3% on MedMCQA (dev) and 69.0% on the MMLU Medical Genetics exam. BioMedLM can also be fine-tuned to produce useful answers to patient questions on medical topics. This demonstrates that smaller models can potentially serve as transparent, privacy-preserving, economical and environmentally friendly foundations for particular NLP applications, such as in biomedicine. The model is available on the Hugging Face Hub: https://huggingface.co/stanford-crfm/BioMedLM.",
+      "identifiers": [
+        "SemanticScholar:1804ea0c26e9b038547ff7a7e3eedf8d9de9717d"
+      ],
+      "semantic_scholar_id": "1804ea0c26e9b038547ff7a7e3eedf8d9de9717d",
+      "canonical_id": "arXiv:2403.18421",
+      "arxiv_id": "2403.18421",
+      "doi": "10.48550/arXiv.2403.18421",
+      "authors": [
+        "Elliot Bolton",
+        "Abhinav Venigalla",
+        "Michihiro Yasunaga",
+        "David Leo Wright Hall",
+        "Betty Xiong",
+        "Tony Lee",
+        "Roxana Daneshjou",
+        "Jonathan Frankle",
+        "Percy Liang",
+        "Michael Carbin",
+        "Christopher D. Manning"
+      ],
+      "priority": 173,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 173,
+        "citation_count": 173,
+        "total": 173,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 927,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BioMedLM demonstrates a 2.7B autoregressive model as an economical alternative to much larger computationally expensive models for biomedical NLP, a concrete domain-specific inference-cost reduction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-24ce3d56dae1",
+    "round": "libimp-24ce3d56dae1d771-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-24ce3d56dae1d771-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-24ce3d56dae1d771-pre01.json",
+    "receipt": "sha256:847fbca4ff6ca7953ae5c5e1b9d91ca8dd822345bfab4e9338623dafe12b3dcb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-24ce3d56dae1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

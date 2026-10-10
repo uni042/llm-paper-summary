@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging",
+      "source_url": "https://arxiv.org/abs/2412.00081",
+      "year": 2024,
+      "published": "2024-11-26",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 170,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Task Arithmetic has emerged as a simple yet effective method to merge models without additional training. However, by treating entire networks as flat parameter vectors, it overlooks key structural information and is susceptible to task interference. In this paper, we study task vectors at the layer level, focusing on task layer matrices and their singular value decomposition. In particular, we concentrate on the resulting singular vectors, which we refer to as Task Singular Vectors (TSV). Recognizing that layer task matrices are often low-rank, we propose TSV-Compress (TSV-C), a simple procedure that compresses them to 10% of their original size while retaining 99% of accuracy. We further leverage this low-rank space to define a new measure of task interference based on the interaction of singular vectors from different tasks. Building on these findings, we introduce TSV-Merge (TSV-M), a novel model merging approach that combines compression with interference reduction, significantly outperforming existing methods.",
+      "identifiers": [
+        "SemanticScholar:77c412a9b17c905b927eaae26664352517e480fa"
+      ],
+      "semantic_scholar_id": "77c412a9b17c905b927eaae26664352517e480fa",
+      "canonical_id": "arXiv:2412.00081",
+      "arxiv_id": "2412.00081",
+      "doi": "10.1109/CVPR52734.2025.01742",
+      "authors": [
+        "Antonio Andrea Gargiulo",
+        "Donato Crisostomi",
+        "Maria Sofia Bucarelli",
+        "Simone Scardapane",
+        "Fabrizio Silvestri",
+        "E. Rodolà"
+      ],
+      "priority": 170,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 170,
+        "citation_count": 170,
+        "total": 170,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 683,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TSV-Compress retains 99% accuracy while reducing task-layer matrix size to 10%; this is a concrete model compression method with direct storage/runtime relevance and is combined with model merging.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-24ce3d56dae1",
+    "round": "libimp-24ce3d56dae1d771-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-24ce3d56dae1d771-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-24ce3d56dae1d771-pre01.json",
+    "receipt": "sha256:847fbca4ff6ca7953ae5c5e1b9d91ca8dd822345bfab4e9338623dafe12b3dcb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-24ce3d56dae1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
