@@ -35,10 +35,15 @@
   "selection_reason": "学習方式自体はquantization-aware trainingだが、最終成果はRoBERTa/Transformerの極端な圧縮とdeployment memory削減であり、推論向けweight compressionの対象範囲に入る。RoBERTaを14MBまで圧縮しMNLI 82.5%を維持する実証を持つ。",
   "semantic_scholar_id": "0171ad4cc87cc7db25b4ec3169e293eed9a13b39",
   "source_url": "https://arxiv.org/abs/2004.07320",
-  "status": "ready",
+  "status": "superseded",
   "title": "Training with Quantization Noise for Extreme Model Compression",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-10T22:53:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md",
+  "represented_canonical_id": "arXiv:2004.07320",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

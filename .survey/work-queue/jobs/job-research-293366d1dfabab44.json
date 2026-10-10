@@ -35,10 +35,15 @@
   "selection_reason": "Fisher informationに基づくhead/filter mask search、mask rearrangement、layer出力を再構成するmask tuningで再学習なしのstructured post-training pruningを行う。BERT-base/DistilBERTでFLOPs最大2.0倍削減、推論latency最大1.56倍高速化、精度低下1%未満を報告しTransformer推論効率を直接改善するため対象内。",
   "semantic_scholar_id": "fb145e1e49d3269d8223c7710e22b45438613ff0",
   "source_url": "https://arxiv.org/abs/2204.09656",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Fast Post-Training Pruning Framework for Transformers",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-10T22:53:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md",
+  "represented_canonical_id": "arXiv:2204.09656",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

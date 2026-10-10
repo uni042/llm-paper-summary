@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T22:16:03+00:00",
+  "generated_at": "2026-10-10T22:53:46+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 127,
+  "count": 125,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -1250,22 +1250,6 @@
       "worker_run_key": "20261006-0630-scheduled-chat-30/r02"
     },
     {
-      "canonical_id": "arXiv:2204.09656",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T16:17:16+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 66.9% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8821fd6dd5d1--libfile_81a491feac048191b3588fc4099b3abb--2204.09656-fast-post-training-pruning.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8821fd6dd5d1--libfile_81a491feac048191b3588fc4099b3abb--2204.09656-fast-post-training-pruning.json",
-      "worker_run_key": "20261006-1800-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.02217",
       "title": null,
       "source_url": null,
@@ -2002,37 +1986,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-750e4ca1f55a--libfile_0e869a853f7c8191887fd26df78d5ec8--2110.15343-scatterbrain.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-750e4ca1f55a--libfile_0e869a853f7c8191887fd26df78d5ec8--2110.15343-scatterbrain.json",
       "worker_run_key": "20261007-1735-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.04463",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T14:41:25+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 本文説明量 1971 < 2200",
-        "説明不足トリガー: 手法説明量 580 < 700",
-        "説明不足トリガー: 評価説明量 225 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 1971,
-        "body_paragraphs": 15,
-        "method_chars": 580,
-        "method_paragraphs": 4,
-        "evaluation_chars": 225,
-        "limitation_chars": 326,
-        "insufficiency_flags": [
-          "本文説明量 1971 < 2200",
-          "手法説明量 580 < 700",
-          "評価説明量 225 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-78c03fef6fcb--libfile_47144823282c81918caf2776e6889cb0--2025-2502.04463-training-language-models-to-reason-efficiently.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-78c03fef6fcb--libfile_47144823282c81918caf2776e6889cb0--2025-2502.04463-training-language-models-to-reason-efficiently.json",
-      "worker_run_key": "20261007-1604-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2501.00663",
