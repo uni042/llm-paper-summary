@@ -1,0 +1,862 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6f71a02220644722-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6f71a0222064",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/ccwc67433.2026.11393760",
+    "arXiv:2208.06066",
+    "arXiv:2405.16883",
+    "arXiv:2504.03794",
+    "arXiv:2505.01475",
+    "arXiv:2505.24541",
+    "arXiv:2507.00004",
+    "arXiv:2509.00599",
+    "arXiv:2512.10252"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "05a3d69f55faffdd5de2cbb67546170a2485a9e9",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T08:39:11.345446+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/ccwc67433.2026.11393760",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2208.06066",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.16883",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.03794",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.01475",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.24541",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.00004",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.00599",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.10252",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CodeSSM: Towards State Space Models for Code Understanding",
+      "source_url": "https://arxiv.org/abs/2505.01475",
+      "year": 2025,
+      "published": "2025-05-02",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although transformers dominate many code-specific tasks, they have significant limitations. This paper explores State Space Models (SSMs) as a promising alternative for code understanding tasks such as retrieval, classification, and clone detection. We introduce CodeSSM, the first SSM-based model trained on code corpora to assess its effectiveness. Our results demonstrate that SSMs are more sample-efficient and can extrapolate to longer contexts beyond the pretraining length. Extensive experiments show that SSMs offer a viable alternative to transformers, addressing several their limitations. Additionally, CodeSSM reduces memory usage by up to 64\\% compared to transformers at a context length of 2048, with greater savings as context length grows.",
+      "identifiers": [
+        "SemanticScholar:04c116b1c36a247322ff9b8384ff4dba1d8ec3a8"
+      ],
+      "semantic_scholar_id": "04c116b1c36a247322ff9b8384ff4dba1d8ec3a8",
+      "canonical_id": "arXiv:2505.01475",
+      "arxiv_id": "2505.01475",
+      "doi": "10.48550/arXiv.2505.01475",
+      "authors": [
+        "S. Verma",
+        "Abhinav Anand",
+        "Mira Mezini"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 526,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Synthetic Intuition: A System-1/System-2 Architecture for Fast and Slow Thinking in Large Language Models",
+      "source_url": "https://doi.org/10.1109/CCWC67433.2026.11393760",
+      "year": 2026,
+      "published": "2026-01-05",
+      "venue": "Computing and Communication Workshop and Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current large language models (LLMs) apply uniform computational resources to every token generation, regardless of task complexity-a fundamental inefficiency that contradicts human cognitive architecture. Inspired by Kahneman's dual-process theory, we propose Synthetic Intuition, a novel architecture that integrates a fast, intuitive System1 model with a deliberate, reasoning-oriented System-2 model. System-1, a lightweight transformer ($\\mathbf{3 5 0 M}$ parameters), handles routine token generation with high confidence, while System2 (7B parameters) is selectively activated when System-1 detects uncertainty or complex reasoning requirements. Our architecture achieves a $3.2 \\times$ speedup in inference while maintaining 97.3 % of the original model's performance on diverse benchmarks. On reasoning-intensive tasks (GSM8K, ARC-Challenge), our approach matches or exceeds baseline performance with 68 % reduced computational cost. We demonstrate that cognitive load can be dynamically allocated, opening new pathways for efficient and adaptive language model deployment.",
+      "identifiers": [
+        "SemanticScholar:85f6ec8bfbcf750bffe550b7274434bc77acf076"
+      ],
+      "semantic_scholar_id": "85f6ec8bfbcf750bffe550b7274434bc77acf076",
+      "doi": "10.1109/CCWC67433.2026.11393760",
+      "canonical_id": "DOI:10.1109/CCWC67433.2026.11393760",
+      "authors": [
+        "Jasmin Jarsania",
+        "V. Patel"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Theory of Inference Compute Scaling: Reasoning through Directed Stochastic Skill Search",
+      "source_url": "https://arxiv.org/abs/2507.00004",
+      "year": 2025,
+      "published": "2025-06-10",
+      "venue": "Philosophical transactions. Series A, Mathematical, physical, and engineering sciences",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) require considerable computation and energy resources during training and deployment. While scaling laws for training have guided much recent progress, inference costs represent a significant and growing component of the overall resource burden, particularly for reasoning models. Existing compute-optimality characterizations that consider model size, dataset size and inference tokens in isolation or fixed combinations may overlook more efficient operating points. We introduce directed stochastic skill search (DS3), a general framework that represents inference as stochastic traversal over a learnt skill graph. From a simplified yet expressive instantiation, we derive closed-form expressions for task success and compute cost across a wide range of inference strategies-including chain-of-thought (CoT) and tree-of-thought (ToT)-enabling comparisons by task difficulty and model capability. We extend a prior graph framework of LLM training to include inference and bridge DS3 with empirical scaling laws. We theoretically recover observed patterns, including linear accuracy scaling with log-compute, variation in preferred inference strategies by task and capability, emergent behaviour elicited by reasoning despite parameter plateaus and both best-of-N and majority voting (MV) captured within one framework. By characterizing training-inference interdependencies, our framework deepens theoretical understanding and supports principled algorithmic design and resource allocation. This article is part of the discussion meeting issue 'Bits, neurons and qubits for sustainable AI'.",
+      "identifiers": [
+        "SemanticScholar:20e63fdb3f271ecc66e1220195523459238bfeeb"
+      ],
+      "semantic_scholar_id": "20e63fdb3f271ecc66e1220195523459238bfeeb",
+      "canonical_id": "arXiv:2507.00004",
+      "arxiv_id": "2507.00004",
+      "doi": "10.48550/arXiv.2507.00004",
+      "authors": [
+        "Austin R. Ellis-Mohr",
+        "A. Nayak",
+        "L. Varshney"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Deep is a Luxury We Don't Have",
+      "source_url": "https://arxiv.org/abs/2208.06066",
+      "year": 2022,
+      "published": "2022-08-11",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Medical images come in high resolutions. A high resolution is vital for finding malignant tissues at an early stage. Yet, this resolution presents a challenge in terms of modeling long range dependencies. Shallow transformers eliminate this problem, but they suffer from quadratic complexity. In this paper, we tackle this complexity by leveraging a linear self-attention approximation. Through this approximation, we propose an efficient vision model called HCT that stands for High resolution Convolutional Transformer. HCT brings transformers' merits to high resolution images at a significantly lower cost. We evaluate HCT using a high resolution mammography dataset. HCT is significantly superior to its CNN counterpart. Furthermore, we demonstrate HCT's fitness for medical images by evaluating its effective receptive field.Code available at https://bit.ly/3ykBhhf",
+      "identifiers": [
+        "SemanticScholar:c754a10e57accbf8729410654cc59e874a416293"
+      ],
+      "semantic_scholar_id": "c754a10e57accbf8729410654cc59e874a416293",
+      "canonical_id": "arXiv:2208.06066",
+      "arxiv_id": "2208.06066",
+      "doi": "10.48550/arXiv.2208.06066",
+      "authors": [
+        "Ahmed Taha",
+        "Yen Nhi Truong Vu",
+        "Brent Mombourquette",
+        "Thomas P. Matthews",
+        "Jason Su",
+        "Sadanand Singh"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1521,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mixpert: Mitigating Multimodal Learning Conflicts with Efficient Mixture-of-Vision-Experts",
+      "source_url": "https://arxiv.org/abs/2505.24541",
+      "year": 2025,
+      "published": "2025-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) require a nuanced interpretation of complex image information, typically leveraging a vision encoder to perceive various visual scenarios. However, relying solely on a single vision encoder to handle diverse task domains proves difficult and inevitably leads to conflicts. Recent work enhances data perception by directly integrating multiple domain-specific vision encoders, yet this structure adds complexity and limits the potential for joint optimization. In this paper, we introduce Mixpert, an efficient mixture-of-vision-experts architecture that inherits the joint learning advantages from a single vision encoder while being restructured into a multi-expert paradigm for task-specific fine-tuning across different visual tasks. Additionally, we design a dynamic routing mechanism that allocates input images to the most suitable visual expert. Mixpert effectively alleviates domain conflicts encountered by a single vision encoder in multi-task learning with minimal additional computational cost, making it more efficient than multiple encoders. Furthermore, Mixpert integrates seamlessly into any MLLM, with experimental results demonstrating substantial performance gains across various tasks.",
+      "identifiers": [
+        "SemanticScholar:079d7ed3d33542a307124f8ca9bd105c1a08f0c1"
+      ],
+      "semantic_scholar_id": "079d7ed3d33542a307124f8ca9bd105c1a08f0c1",
+      "canonical_id": "arXiv:2505.24541",
+      "arxiv_id": "2505.24541",
+      "doi": "10.48550/arXiv.2505.24541",
+      "authors": [
+        "Xin He",
+        "Xumeng Han",
+        "Longhui Wei",
+        "Lingxi Xie",
+        "Qi Tian"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 498,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scorch: A Library for Sparse Deep Learning",
+      "source_url": "https://arxiv.org/abs/2405.16883",
+      "year": 2024,
+      "published": "2024-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth in the size of deep learning models strains the capabilities of traditional dense computation paradigms. Leveraging sparse computation has become increasingly popular for training and deploying large-scale models, but existing deep learning frameworks lack extensive support for sparse operations. To bridge this gap, we introduce Scorch, a library that seamlessly integrates efficient sparse tensor computation into the PyTorch ecosystem, with an initial focus on inference workloads on CPUs. Scorch provides a flexible and intuitive interface for sparse tensors, supporting diverse sparse data structures. Scorch introduces a compiler stack that automates key optimizations, including automatic loop ordering, tiling, and format inference. Combined with a runtime that adapts its execution to both dense and sparse data, Scorch delivers substantial speedups over hand-written PyTorch Sparse (torch.sparse) operations without sacrificing usability. More importantly, Scorch enables efficient computation of complex sparse operations that lack hand-optimized PyTorch implementations. This flexibility is crucial for exploring novel sparse architectures. We demonstrate Scorch's ease of use and performance gains on diverse deep learning models across multiple domains. With only minimal code changes, Scorch achieves 1.05-5.78x speedups over PyTorch Sparse on end-to-end tasks. Scorch's seamless integration and performance gains make it a valuable addition to the PyTorch ecosystem. We believe Scorch will enable wider exploration of sparsity as a tool for scaling deep learning and inform the development of other sparse libraries.",
+      "identifiers": [
+        "SemanticScholar:0c8dfb6e969a953b01356a0a9c1902fa12b3b95d"
+      ],
+      "semantic_scholar_id": "0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
+      "canonical_id": "arXiv:2405.16883",
+      "arxiv_id": "2405.16883",
+      "doi": "10.48550/arXiv.2405.16883",
+      "authors": [
+        "Bobby Yan",
+        "Alexander J. Root",
+        "T. Gale",
+        "David Broman",
+        "Fredrik Kjolstad"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 866,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Entropy-Based Block Pruning for Efficient Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.03794",
+      "year": 2025,
+      "published": "2025-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models continue to scale, their growing computational and storage demands pose significant challenges for real-world deployment. In this work, we investigate redundancy within Transformer-based models and propose an entropy-based pruning strategy to enhance efficiency while maintaining performance. Empirical analysis reveals that the entropy of hidden representations decreases in the early blocks but progressively increases across most subsequent blocks. This trend suggests that entropy serves as a more effective measure of information richness within computation blocks. Unlike cosine similarity, which primarily captures geometric relationships, entropy directly quantifies uncertainty and information content, making it a more reliable criterion for pruning. Extensive experiments demonstrate that our entropy-based pruning approach surpasses cosine similarity-based methods in reducing model size while preserving accuracy, offering a promising direction for efficient model deployment.",
+      "identifiers": [
+        "SemanticScholar:95c938312e9ac4e3da6c874061b3939140703e1d"
+      ],
+      "semantic_scholar_id": "95c938312e9ac4e3da6c874061b3939140703e1d",
+      "canonical_id": "arXiv:2504.03794",
+      "arxiv_id": "2504.03794",
+      "doi": "10.48550/arXiv.2504.03794",
+      "authors": [
+        "Liang-Wei Yang",
+        "Yuhui Xu",
+        "Jun-Tao Tan",
+        "Doyen Sahoo",
+        "S. Savarese",
+        "Cai-Ming Xiong",
+        "Huan Wang",
+        "Shelby Heinecke"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 554,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives",
+      "source_url": "https://arxiv.org/abs/2509.00599",
+      "year": 2025,
+      "published": "2025-08-30",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern machine learning accelerators are designed to efficiently execute deep neural networks, but emerging models increasingly rely on compound operations that introduce significant off-chip memory traffic challenges. As model sizes continue to grow, computation must be distributed across spatial clusters, which requires frequent and complex collective communication. Existing dataflow optimization frameworks and performance models lack the explicit modeling of these collective communication costs, limiting their applicability. To address this, we propose COMET, a framework that introduces a novel representation to explicitly model collective communication across spatial clusters, alongside latency and energy cost models for operation-level dependencies. By enabling collective-aware modeling, COMET allows for broader mapping exploration, achieving up to a $1.42 \\times$ speedup for GEMM-Softmax and $3.46 \\times$ for GEMM-LayerNorm and $1.82 \\times$ for self-attention compared to unfused baselines.",
+      "identifiers": [
+        "SemanticScholar:56d1b9457872bef0b5450ddd05885402055a1368"
+      ],
+      "semantic_scholar_id": "56d1b9457872bef0b5450ddd05885402055a1368",
+      "canonical_id": "arXiv:2509.00599",
+      "arxiv_id": "2509.00599",
+      "doi": "10.1109/ISPASS69572.2026.00074",
+      "authors": [
+        "Shubham Negi",
+        "M. Singhal",
+        "Aayush Ankit",
+        "S. Bhoja",
+        "Kaushik Roy"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 406,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GDKVM: Echocardiography Video Segmentation via Spatiotemporal Key-Value Memory with Gated Delta Rule",
+      "source_url": "https://arxiv.org/abs/2512.10252",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Accurate segmentation of cardiac chambers in echocardiography sequences is crucial for the quantitative analysis of cardiac function, aiding in clinical diagnosis and treatment. The imaging noise, artifacts, and the deformation and motion of the heart pose challenges to segmentation algorithms. While existing methods based on convolutional neural networks, Transformers and space-time memory networks, have improved segmentation accuracy, they often struggle with the trade-off between capturing long-range spatiotemporal dependencies and maintaining computational efficiency with fine-grained feature representation. In this paper, we introduce GDKVM, a novel architecture for echocardiography video segmentation. The model employs Linear Key-Value Association (LKVA) to effectively model inter-frame correlations, and introduces Gated Delta Rule (GDR) to efficiently store intermediate memory states. Key-Pixel Feature Fusion (KPFF) module is designed to integrate local and global features at multiple scales, enhancing robustness against boundary blurring and noise interference. We validated GDKVM on two mainstream echocardiography video datasets (CAMUS and EchoNet-Dynamic) and compared it with various state-of-the-art methods. Experimental results show that GDKVM outperforms existing approaches in terms of segmentation accuracy and robustness, while ensuring real-time performance. Codes are available at https://github.com/wangrui2025/GDKVM.",
+      "identifiers": [
+        "SemanticScholar:6b0ef9604e589b6a9e31dc6f207ae1bd618d4da0"
+      ],
+      "semantic_scholar_id": "6b0ef9604e589b6a9e31dc6f207ae1bd618d4da0",
+      "canonical_id": "arXiv:2512.10252",
+      "arxiv_id": "2512.10252",
+      "doi": "10.1109/ICCV51701.2025.01133",
+      "authors": [
+        "Rui Wang",
+        "Yimu Sun",
+        "Jingxing Guo",
+        "Huisi Wu",
+        "Jing Qin"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 356,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.01475",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.01475",
+        "id:SemanticScholar:04c116b1c36a247322ff9b8384ff4dba1d8ec3a8",
+        "id:arXiv:2505.01475",
+        "title:codessm towards state space models for code understanding",
+        "url:https://arxiv.org/abs/2505.01475"
+      ],
+      "record": {
+        "title": "CodeSSM: Towards State Space Models for Code Understanding",
+        "source_url": "https://arxiv.org/abs/2505.01475",
+        "year": 2025,
+        "published": "2025-05-02",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although transformers dominate many code-specific tasks, they have significant limitations. This paper explores State Space Models (SSMs) as a promising alternative for code understanding tasks such as retrieval, classification, and clone detection. We introduce CodeSSM, the first SSM-based model trained on code corpora to assess its effectiveness. Our results demonstrate that SSMs are more sample-efficient and can extrapolate to longer contexts beyond the pretraining length. Extensive experiments show that SSMs offer a viable alternative to transformers, addressing several their limitations. Additionally, CodeSSM reduces memory usage by up to 64\\% compared to transformers at a context length of 2048, with greater savings as context length grows.",
+        "identifiers": [
+          "SemanticScholar:04c116b1c36a247322ff9b8384ff4dba1d8ec3a8"
+        ],
+        "semantic_scholar_id": "04c116b1c36a247322ff9b8384ff4dba1d8ec3a8",
+        "canonical_id": "arXiv:2505.01475",
+        "arxiv_id": "2505.01475",
+        "doi": "10.48550/arXiv.2505.01475",
+        "authors": [
+          "S. Verma",
+          "Abhinav Anand",
+          "Mira Mezini"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 526,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ccwc67433.2026.11393760",
+      "identity_tokens": [
+        "id:DOI:10.1109/ccwc67433.2026.11393760",
+        "id:SemanticScholar:85f6ec8bfbcf750bffe550b7274434bc77acf076",
+        "title:synthetic intuition a system1system2 architecture for fast and slow thinking in large language models",
+        "url:https://doi.org/10.1109/CCWC67433.2026.11393760"
+      ],
+      "record": {
+        "title": "Synthetic Intuition: A System-1/System-2 Architecture for Fast and Slow Thinking in Large Language Models",
+        "source_url": "https://doi.org/10.1109/CCWC67433.2026.11393760",
+        "year": 2026,
+        "published": "2026-01-05",
+        "venue": "Computing and Communication Workshop and Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Current large language models (LLMs) apply uniform computational resources to every token generation, regardless of task complexity-a fundamental inefficiency that contradicts human cognitive architecture. Inspired by Kahneman's dual-process theory, we propose Synthetic Intuition, a novel architecture that integrates a fast, intuitive System1 model with a deliberate, reasoning-oriented System-2 model. System-1, a lightweight transformer ($\\mathbf{3 5 0 M}$ parameters), handles routine token generation with high confidence, while System2 (7B parameters) is selectively activated when System-1 detects uncertainty or complex reasoning requirements. Our architecture achieves a $3.2 \\times$ speedup in inference while maintaining 97.3 % of the original model's performance on diverse benchmarks. On reasoning-intensive tasks (GSM8K, ARC-Challenge), our approach matches or exceeds baseline performance with 68 % reduced computational cost. We demonstrate that cognitive load can be dynamically allocated, opening new pathways for efficient and adaptive language model deployment.",
+        "identifiers": [
+          "SemanticScholar:85f6ec8bfbcf750bffe550b7274434bc77acf076"
+        ],
+        "semantic_scholar_id": "85f6ec8bfbcf750bffe550b7274434bc77acf076",
+        "doi": "10.1109/CCWC67433.2026.11393760",
+        "canonical_id": "DOI:10.1109/CCWC67433.2026.11393760",
+        "authors": [
+          "Jasmin Jarsania",
+          "V. Patel"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 278,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.00004",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.00004",
+        "id:SemanticScholar:20e63fdb3f271ecc66e1220195523459238bfeeb",
+        "id:arXiv:2507.00004",
+        "title:a theory of inference compute scaling reasoning through directed stochastic skill search",
+        "url:https://arxiv.org/abs/2507.00004"
+      ],
+      "record": {
+        "title": "A Theory of Inference Compute Scaling: Reasoning through Directed Stochastic Skill Search",
+        "source_url": "https://arxiv.org/abs/2507.00004",
+        "year": 2025,
+        "published": "2025-06-10",
+        "venue": "Philosophical transactions. Series A, Mathematical, physical, and engineering sciences",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) require considerable computation and energy resources during training and deployment. While scaling laws for training have guided much recent progress, inference costs represent a significant and growing component of the overall resource burden, particularly for reasoning models. Existing compute-optimality characterizations that consider model size, dataset size and inference tokens in isolation or fixed combinations may overlook more efficient operating points. We introduce directed stochastic skill search (DS3), a general framework that represents inference as stochastic traversal over a learnt skill graph. From a simplified yet expressive instantiation, we derive closed-form expressions for task success and compute cost across a wide range of inference strategies-including chain-of-thought (CoT) and tree-of-thought (ToT)-enabling comparisons by task difficulty and model capability. We extend a prior graph framework of LLM training to include inference and bridge DS3 with empirical scaling laws. We theoretically recover observed patterns, including linear accuracy scaling with log-compute, variation in preferred inference strategies by task and capability, emergent behaviour elicited by reasoning despite parameter plateaus and both best-of-N and majority voting (MV) captured within one framework. By characterizing training-inference interdependencies, our framework deepens theoretical understanding and supports principled algorithmic design and resource allocation. This article is part of the discussion meeting issue 'Bits, neurons and qubits for sustainable AI'.",
+        "identifiers": [
+          "SemanticScholar:20e63fdb3f271ecc66e1220195523459238bfeeb"
+        ],
+        "semantic_scholar_id": "20e63fdb3f271ecc66e1220195523459238bfeeb",
+        "canonical_id": "arXiv:2507.00004",
+        "arxiv_id": "2507.00004",
+        "doi": "10.48550/arXiv.2507.00004",
+        "authors": [
+          "Austin R. Ellis-Mohr",
+          "A. Nayak",
+          "L. Varshney"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 487,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2208.06066",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2208.06066",
+        "id:SemanticScholar:c754a10e57accbf8729410654cc59e874a416293",
+        "id:arXiv:2208.06066",
+        "title:deep is a luxury we dont have",
+        "url:https://arxiv.org/abs/2208.06066"
+      ],
+      "record": {
+        "title": "Deep is a Luxury We Don't Have",
+        "source_url": "https://arxiv.org/abs/2208.06066",
+        "year": 2022,
+        "published": "2022-08-11",
+        "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Medical images come in high resolutions. A high resolution is vital for finding malignant tissues at an early stage. Yet, this resolution presents a challenge in terms of modeling long range dependencies. Shallow transformers eliminate this problem, but they suffer from quadratic complexity. In this paper, we tackle this complexity by leveraging a linear self-attention approximation. Through this approximation, we propose an efficient vision model called HCT that stands for High resolution Convolutional Transformer. HCT brings transformers' merits to high resolution images at a significantly lower cost. We evaluate HCT using a high resolution mammography dataset. HCT is significantly superior to its CNN counterpart. Furthermore, we demonstrate HCT's fitness for medical images by evaluating its effective receptive field.Code available at https://bit.ly/3ykBhhf",
+        "identifiers": [
+          "SemanticScholar:c754a10e57accbf8729410654cc59e874a416293"
+        ],
+        "semantic_scholar_id": "c754a10e57accbf8729410654cc59e874a416293",
+        "canonical_id": "arXiv:2208.06066",
+        "arxiv_id": "2208.06066",
+        "doi": "10.48550/arXiv.2208.06066",
+        "authors": [
+          "Ahmed Taha",
+          "Yen Nhi Truong Vu",
+          "Brent Mombourquette",
+          "Thomas P. Matthews",
+          "Jason Su",
+          "Sadanand Singh"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1521,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.24541",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.24541",
+        "id:SemanticScholar:079d7ed3d33542a307124f8ca9bd105c1a08f0c1",
+        "id:arXiv:2505.24541",
+        "title:mixpert mitigating multimodal learning conflicts with efficient mixtureofvisionexperts",
+        "url:https://arxiv.org/abs/2505.24541"
+      ],
+      "record": {
+        "title": "Mixpert: Mitigating Multimodal Learning Conflicts with Efficient Mixture-of-Vision-Experts",
+        "source_url": "https://arxiv.org/abs/2505.24541",
+        "year": 2025,
+        "published": "2025-05-30",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) require a nuanced interpretation of complex image information, typically leveraging a vision encoder to perceive various visual scenarios. However, relying solely on a single vision encoder to handle diverse task domains proves difficult and inevitably leads to conflicts. Recent work enhances data perception by directly integrating multiple domain-specific vision encoders, yet this structure adds complexity and limits the potential for joint optimization. In this paper, we introduce Mixpert, an efficient mixture-of-vision-experts architecture that inherits the joint learning advantages from a single vision encoder while being restructured into a multi-expert paradigm for task-specific fine-tuning across different visual tasks. Additionally, we design a dynamic routing mechanism that allocates input images to the most suitable visual expert. Mixpert effectively alleviates domain conflicts encountered by a single vision encoder in multi-task learning with minimal additional computational cost, making it more efficient than multiple encoders. Furthermore, Mixpert integrates seamlessly into any MLLM, with experimental results demonstrating substantial performance gains across various tasks.",
+        "identifiers": [
+          "SemanticScholar:079d7ed3d33542a307124f8ca9bd105c1a08f0c1"
+        ],
+        "semantic_scholar_id": "079d7ed3d33542a307124f8ca9bd105c1a08f0c1",
+        "canonical_id": "arXiv:2505.24541",
+        "arxiv_id": "2505.24541",
+        "doi": "10.48550/arXiv.2505.24541",
+        "authors": [
+          "Xin He",
+          "Xumeng Han",
+          "Longhui Wei",
+          "Lingxi Xie",
+          "Qi Tian"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 498,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.16883",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.16883",
+        "id:SemanticScholar:0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
+        "id:arXiv:2405.16883",
+        "title:scorch a library for sparse deep learning",
+        "url:https://arxiv.org/abs/2405.16883"
+      ],
+      "record": {
+        "title": "Scorch: A Library for Sparse Deep Learning",
+        "source_url": "https://arxiv.org/abs/2405.16883",
+        "year": 2024,
+        "published": "2024-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid growth in the size of deep learning models strains the capabilities of traditional dense computation paradigms. Leveraging sparse computation has become increasingly popular for training and deploying large-scale models, but existing deep learning frameworks lack extensive support for sparse operations. To bridge this gap, we introduce Scorch, a library that seamlessly integrates efficient sparse tensor computation into the PyTorch ecosystem, with an initial focus on inference workloads on CPUs. Scorch provides a flexible and intuitive interface for sparse tensors, supporting diverse sparse data structures. Scorch introduces a compiler stack that automates key optimizations, including automatic loop ordering, tiling, and format inference. Combined with a runtime that adapts its execution to both dense and sparse data, Scorch delivers substantial speedups over hand-written PyTorch Sparse (torch.sparse) operations without sacrificing usability. More importantly, Scorch enables efficient computation of complex sparse operations that lack hand-optimized PyTorch implementations. This flexibility is crucial for exploring novel sparse architectures. We demonstrate Scorch's ease of use and performance gains on diverse deep learning models across multiple domains. With only minimal code changes, Scorch achieves 1.05-5.78x speedups over PyTorch Sparse on end-to-end tasks. Scorch's seamless integration and performance gains make it a valuable addition to the PyTorch ecosystem. We believe Scorch will enable wider exploration of sparsity as a tool for scaling deep learning and inform the development of other sparse libraries.",
+        "identifiers": [
+          "SemanticScholar:0c8dfb6e969a953b01356a0a9c1902fa12b3b95d"
+        ],
+        "semantic_scholar_id": "0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
+        "canonical_id": "arXiv:2405.16883",
+        "arxiv_id": "2405.16883",
+        "doi": "10.48550/arXiv.2405.16883",
+        "authors": [
+          "Bobby Yan",
+          "Alexander J. Root",
+          "T. Gale",
+          "David Broman",
+          "Fredrik Kjolstad"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 866,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.03794",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.03794",
+        "id:SemanticScholar:95c938312e9ac4e3da6c874061b3939140703e1d",
+        "id:arXiv:2504.03794",
+        "title:entropybased block pruning for efficient large language models",
+        "url:https://arxiv.org/abs/2504.03794"
+      ],
+      "record": {
+        "title": "Entropy-Based Block Pruning for Efficient Large Language Models",
+        "source_url": "https://arxiv.org/abs/2504.03794",
+        "year": 2025,
+        "published": "2025-04-04",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models continue to scale, their growing computational and storage demands pose significant challenges for real-world deployment. In this work, we investigate redundancy within Transformer-based models and propose an entropy-based pruning strategy to enhance efficiency while maintaining performance. Empirical analysis reveals that the entropy of hidden representations decreases in the early blocks but progressively increases across most subsequent blocks. This trend suggests that entropy serves as a more effective measure of information richness within computation blocks. Unlike cosine similarity, which primarily captures geometric relationships, entropy directly quantifies uncertainty and information content, making it a more reliable criterion for pruning. Extensive experiments demonstrate that our entropy-based pruning approach surpasses cosine similarity-based methods in reducing model size while preserving accuracy, offering a promising direction for efficient model deployment.",
+        "identifiers": [
+          "SemanticScholar:95c938312e9ac4e3da6c874061b3939140703e1d"
+        ],
+        "semantic_scholar_id": "95c938312e9ac4e3da6c874061b3939140703e1d",
+        "canonical_id": "arXiv:2504.03794",
+        "arxiv_id": "2504.03794",
+        "doi": "10.48550/arXiv.2504.03794",
+        "authors": [
+          "Liang-Wei Yang",
+          "Yuhui Xu",
+          "Jun-Tao Tan",
+          "Doyen Sahoo",
+          "S. Savarese",
+          "Cai-Ming Xiong",
+          "Huan Wang",
+          "Shelby Heinecke"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 554,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.00599",
+      "identity_tokens": [
+        "id:DOI:10.1109/ispass69572.2026.00074",
+        "id:SemanticScholar:56d1b9457872bef0b5450ddd05885402055a1368",
+        "id:arXiv:2509.00599",
+        "title:comet a framework for modeling compound operation dataflows with explicit collectives",
+        "url:https://arxiv.org/abs/2509.00599"
+      ],
+      "record": {
+        "title": "COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives",
+        "source_url": "https://arxiv.org/abs/2509.00599",
+        "year": 2025,
+        "published": "2025-08-30",
+        "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern machine learning accelerators are designed to efficiently execute deep neural networks, but emerging models increasingly rely on compound operations that introduce significant off-chip memory traffic challenges. As model sizes continue to grow, computation must be distributed across spatial clusters, which requires frequent and complex collective communication. Existing dataflow optimization frameworks and performance models lack the explicit modeling of these collective communication costs, limiting their applicability. To address this, we propose COMET, a framework that introduces a novel representation to explicitly model collective communication across spatial clusters, alongside latency and energy cost models for operation-level dependencies. By enabling collective-aware modeling, COMET allows for broader mapping exploration, achieving up to a $1.42 \\times$ speedup for GEMM-Softmax and $3.46 \\times$ for GEMM-LayerNorm and $1.82 \\times$ for self-attention compared to unfused baselines.",
+        "identifiers": [
+          "SemanticScholar:56d1b9457872bef0b5450ddd05885402055a1368"
+        ],
+        "semantic_scholar_id": "56d1b9457872bef0b5450ddd05885402055a1368",
+        "canonical_id": "arXiv:2509.00599",
+        "arxiv_id": "2509.00599",
+        "doi": "10.1109/ISPASS69572.2026.00074",
+        "authors": [
+          "Shubham Negi",
+          "M. Singhal",
+          "Aayush Ankit",
+          "S. Bhoja",
+          "Kaushik Roy"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 406,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.10252",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccv51701.2025.01133",
+        "id:SemanticScholar:6b0ef9604e589b6a9e31dc6f207ae1bd618d4da0",
+        "id:arXiv:2512.10252",
+        "title:gdkvm echocardiography video segmentation via spatiotemporal keyvalue memory with gated delta rule",
+        "url:https://arxiv.org/abs/2512.10252"
+      ],
+      "record": {
+        "title": "GDKVM: Echocardiography Video Segmentation via Spatiotemporal Key-Value Memory with Gated Delta Rule",
+        "source_url": "https://arxiv.org/abs/2512.10252",
+        "year": 2025,
+        "published": "2025-10-19",
+        "venue": "IEEE International Conference on Computer Vision",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Accurate segmentation of cardiac chambers in echocardiography sequences is crucial for the quantitative analysis of cardiac function, aiding in clinical diagnosis and treatment. The imaging noise, artifacts, and the deformation and motion of the heart pose challenges to segmentation algorithms. While existing methods based on convolutional neural networks, Transformers and space-time memory networks, have improved segmentation accuracy, they often struggle with the trade-off between capturing long-range spatiotemporal dependencies and maintaining computational efficiency with fine-grained feature representation. In this paper, we introduce GDKVM, a novel architecture for echocardiography video segmentation. The model employs Linear Key-Value Association (LKVA) to effectively model inter-frame correlations, and introduces Gated Delta Rule (GDR) to efficiently store intermediate memory states. Key-Pixel Feature Fusion (KPFF) module is designed to integrate local and global features at multiple scales, enhancing robustness against boundary blurring and noise interference. We validated GDKVM on two mainstream echocardiography video datasets (CAMUS and EchoNet-Dynamic) and compared it with various state-of-the-art methods. Experimental results show that GDKVM outperforms existing approaches in terms of segmentation accuracy and robustness, while ensuring real-time performance. Codes are available at https://github.com/wangrui2025/GDKVM.",
+        "identifiers": [
+          "SemanticScholar:6b0ef9604e589b6a9e31dc6f207ae1bd618d4da0"
+        ],
+        "semantic_scholar_id": "6b0ef9604e589b6a9e31dc6f207ae1bd618d4da0",
+        "canonical_id": "arXiv:2512.10252",
+        "arxiv_id": "2512.10252",
+        "doi": "10.1109/ICCV51701.2025.01133",
+        "authors": [
+          "Rui Wang",
+          "Yimu Sun",
+          "Jingxing Guo",
+          "Huisi Wu",
+          "Jing Qin"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 356,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c90cca7d623c31eebf8d63a2fd0a499d4539a050d073097c3ed322fdac3b0142",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
