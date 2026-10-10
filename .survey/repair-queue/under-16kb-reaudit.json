@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-10T01:12:49.703919+00:00",
+  "generated_at": "2026-10-10T01:54:19.163806+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 143,
+  "count": 141,
   "worker_counts": {
-    "scheduled-chat-00": 48,
-    "scheduled-chat-30": 48,
+    "scheduled-chat-00": 47,
+    "scheduled-chat-30": 47,
     "scheduled-chat-45": 47
   },
   "entries": [
@@ -470,26 +470,6 @@
         "body_chars": 2749,
         "method_chars": 1720,
         "evaluation_chars": 569,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md",
-      "canonical_id": "arXiv:2503.21135",
-      "title": "DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation（旧題 MoQa）",
-      "file_bytes": 12703,
-      "source_sha256": "702a86f192f5b5b9dd0229563a81149b95e3b1f1f54ff030c7ba0059a9ef1177",
-      "source_git_blob_sha": "755351d8a64eba0c6dd0183b9993a9fb4180405b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.903801,
-      "quality_metrics": {
-        "body_chars": 2868,
-        "method_chars": 1611,
-        "evaluation_chars": 891,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -1088,28 +1068,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 408 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md",
-      "canonical_id": "arXiv:2410.11744",
-      "title": "DySpec: Faster Speculative Decoding with Dynamic Token Tree Structure",
-      "file_bytes": 13065,
-      "source_sha256": "2460a6645731f496ac391698e3e1249b6657a82d24a7e8c5812633c5bbf5bf7a",
-      "source_git_blob_sha": "0331768706bc59b7664f7d497312e8d388b16687",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.983004,
-      "quality_metrics": {
-        "body_chars": 2958,
-        "method_chars": 856,
-        "evaluation_chars": 158,
-        "limitation_chars": 211
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 158 < 500"
       ],
       "warnings": []
     },
