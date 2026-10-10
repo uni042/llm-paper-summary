@@ -29,6 +29,8 @@ worker_completed_at: "2026-10-11T06:35:00+09:00"
 worker_id: "scheduled-chat-30"
 worker_run_key: "20261011-0630-scheduled-chat-30/r01"
 reference_main_sha: "47c2cb4322d72791a036e26162594f515709bbe3"
+last_audited: null
+audit_version: 0
 ---
 
 # Large Memory Layers with Product Keys — 積キーによる大容量記憶層

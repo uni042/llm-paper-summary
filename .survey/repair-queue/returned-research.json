@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T21:48:23+00:00",
+  "generated_at": "2026-10-10T21:53:17+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2484,8 +2484,8 @@
       "canonical_id": "arXiv:1907.05242",
       "title": "Large Memory Layers with Product Keys",
       "source_url": "https://arxiv.org/abs/1907.05242",
-      "returned_at": "2026-10-10T21:47:47+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-10T21:53:17+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2503,8 +2503,8 @@
           "評価説明量 178 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8953baf1d1481918cf811c01c897787--2019-1907.05242-product-key-memory-research-20261011-0630-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c8953baf1d1481918cf811c01c897787--2019-1907.05242-product-key-memory-research-20261011-0630-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d5ffbe3aa46e--libfile_c8953baf1d1481918cf811c01c897787--2019-1907.05242-product-key-memory-research-20261011-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d5ffbe3aa46e--libfile_c8953baf1d1481918cf811c01c897787--2019-1907.05242-product-key-memory-research-20261011-0630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-0630-scheduled-chat-30/r01"
     }
   ]
