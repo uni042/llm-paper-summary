@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T04:27:27+00:00",
-  "record_count": 11244,
+  "updated_at": "2026-10-10T05:02:39+00:00",
+  "record_count": 11247,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160712,6 +160712,65 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "PipeMesh: Achieving Memory-Efficient Computation-Communication Overlap for Training Large Language Models"
+    },
+    "arXiv:2505.12020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12020",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.12020",
+        "arXiv:2505.12020"
+      ],
+      "reason": "GeoMaNOはPDE/neural-operator solver向けMamba。LLM inferenceへの具体的適用は示されない。",
+      "first_checked_at": "2026-10-10T05:02:38+00:00",
+      "last_checked_at": "2026-10-10T05:02:38+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "GeoMaNO: Geometric Mamba Neural Operator for Partial Differential Equations"
+    },
+    "arXiv:2409.11867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.11867",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2409.11867",
+        "arXiv:2409.11867"
+      ],
+      "reason": "StableMambaはimages/videosのclassification/action recognitionのvision model scaling。LLM inference対象外。",
+      "first_checked_at": "2026-10-10T05:02:39+00:00",
+      "last_checked_at": "2026-10-10T05:02:39+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "StableMamba: Distillation-free Scaling of Large SSMs for Images and Videos"
+    },
+    "arXiv:2108.13032": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.13032",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2108.13032",
+        "arXiv:2108.13032"
+      ],
+      "reason": "Shatterはencoderのpretraining time/steps/memory改善を扱い、training-only効率化である。",
+      "first_checked_at": "2026-10-10T05:02:39+00:00",
+      "last_checked_at": "2026-10-10T05:02:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Shatter: An Efficient Transformer Encoder with Single-Headed Self-Attention and Relative Sequence Partitioning"
     }
   }
 }
