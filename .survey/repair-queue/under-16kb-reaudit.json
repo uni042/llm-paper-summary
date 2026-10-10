@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-10T17:53:44.617468+00:00",
+  "generated_at": "2026-10-10T18:55:23.215044+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 42,
+  "count": 41,
   "worker_counts": {
-    "scheduled-chat-00": 14,
+    "scheduled-chat-00": 13,
     "scheduled-chat-30": 14,
     "scheduled-chat-45": 14
   },
@@ -398,28 +398,6 @@
         "limitation_chars": 185
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md",
-      "canonical_id": "arXiv:2608.12932",
-      "title": "FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving",
-      "file_bytes": 13536,
-      "source_sha256": "e84d4d5fe3f0b58c91485411c0ab8f61572317f0ba30929ef2b51a7c3d7722d7",
-      "source_git_blob_sha": "1565f37307ab2f500d6e3d44133803b4a583840b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.971047,
-      "quality_metrics": {
-        "body_chars": 3076,
-        "method_chars": 1364,
-        "evaluation_chars": 447,
-        "limitation_chars": 232
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 447 < 500"
-      ],
       "warnings": []
     },
     {
