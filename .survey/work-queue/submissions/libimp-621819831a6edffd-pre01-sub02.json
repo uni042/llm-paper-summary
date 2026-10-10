@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Multimodal Transformer with a Low-Computational-Cost Guarantee",
+      "source_url": "https://arxiv.org/abs/2402.15096",
+      "year": 2024,
+      "published": "2024-02-23",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have significantly improved performance across a range of multimodal understanding tasks, such as visual question answering [1], [2] and action recognition [3], [4], [5]. However, multimodal Transformers significantly suffer from a quadratic complexity of the multi-head attention with the input sequence length, especially as the number of modalities increases. To address this, we introduce Low-Cost Multimodal Transformer (LoCoMT), a novel multimodal attention mechanism that aims to reduce computational cost during training and inference with minimal performance loss. Specifically, by assigning different multimodal attention patterns to each attention head, LoCoMT can flexibly control multimodal signals and theoretically ensures a reduced computational cost compared to existing multimodal Transformer variants. Experimental results on two multimodal datasets, namely Audioset and MedVidCL demonstrate that LoCoMT not only reduces GFLOPs but also matches or even outperforms established models.",
+      "identifiers": [
+        "SemanticScholar:1323e1be0cafb8aeb3ec6d1789cc34b51a2b4a32"
+      ],
+      "semantic_scholar_id": "1323e1be0cafb8aeb3ec6d1789cc34b51a2b4a32",
+      "canonical_id": "arXiv:2402.15096",
+      "arxiv_id": "2402.15096",
+      "doi": "10.1109/ICASSP48485.2024.10447954",
+      "authors": [
+        "Sungjin Park",
+        "Edward Choi"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 960,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoCoMT directly reduces inference/training computational cost in multimodal Transformer models while retaining benchmark quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models",
+      "source_url": "https://arxiv.org/abs/2508.01261",
+      "year": 2025,
+      "published": "2025-08-02",
+      "venue": "Proceedings of the First BabyLM Workshop",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present MoE-MLA-RoPE, a novel architecture combination that combines Mixture of Experts (MoE) with Multi-head Latent Attention (MLA) and Rotary Position Embeddings (RoPE) for efficient language modeling. Our approach addresses the fundamental trade-off between model capacity and computational efficiency through three key innovations: (1) fine-grained expert routing with 64 micro-experts and top-$k$ selection, enabling flexible specialization through 3.6 * 10^7 possible expert combinations; (2) shared expert isolation that dedicates 2 always active experts for common patterns while routing to 6 of 62 specialized experts; and (3) gradient-conflict-free load balancing that maintains expert utilization without interfering with primary loss optimization. Extensive experiments on models ranging from 17M to 202M parameters demonstrate that MoE-MLA-RoPE with compression ratio r=d/2 achieves 68% KV cache memory reduction and 3.2x inference speedup while maintaining competitive perplexity (0.8% degradation). Compared to the parameters with 53.9M parameters, MoE-MLA-RoPE improves the validation loss by 6.9% over the vanilla transformers while using 42% fewer active parameters per forward pass. FLOP-matched experiments reveal even larger gains: 11.1% improvement with 3.2x inference acceleration. Automated evaluation using GPT-4 as a judge confirms quality improvements in generation, with higher scores on coherence (8.1/10), creativity (7.9/10) and grammatical correctness (8.2/10). Our results establish that architectural novelty, not parameter scaling, defines the efficiency frontier for resource-constrained language model deployment.",
+      "identifiers": [
+        "SemanticScholar:6e68aaa134bdcf37d1d141fd38f9b1ee0842d645"
+      ],
+      "semantic_scholar_id": "6e68aaa134bdcf37d1d141fd38f9b1ee0842d645",
+      "canonical_id": "arXiv:2508.01261",
+      "arxiv_id": "2508.01261",
+      "doi": "10.48550/arXiv.2508.01261",
+      "authors": [
+        "Sushant Mehta",
+        "R. Dandekar",
+        "R. Dandekar",
+        "Sreedath Panat"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 434,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Combining expert routing with latent attention reduces KV-cache memory and accelerates language-model inference in the reported experiments.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Latent Multi-Head Attention for Small Language Models",
+      "source_url": "https://arxiv.org/abs/2506.09342",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present the first comprehensive study of latent multi-head attention (MLA) for small language models, revealing interesting efficiency-quality trade-offs. Training 30M-parameter GPT models on 100,000 synthetic stories, we benchmark three architectural variants: standard multi-head attention (MHA), MLA, and MLA with rotary positional embeddings (MLA+RoPE). Our key finding is that MLA+RoPE with half-rank latent dimensions (r = d/2) achieves a 45% KV-cache memory reduction while incurring only a 0.3% increase in validation loss (essentially matching MHA quality)- a Pareto improvement for memory constrained deployment. We further show that RoPE is crucial for MLA in small models: without it, MLA underperforms vanilla attention by 3-5%, but with RoPE, it surpasses vanilla by 2%. Inference benchmarks on NVIDIA A100 GPUs reveal that MLA with r=d/2 achieves a 1.4 times speedup over full-rank MLA while maintaining the memory savings. GPT-4 evaluations corroborate perplexity results, with ours achieving the highest quality scores (7.4/10) across grammar, creativity, and consistency metrics. Code and models will be released upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:cef8c13aba2b3074b7506c32bd85e8587a4e5c12"
+      ],
+      "semantic_scholar_id": "cef8c13aba2b3074b7506c32bd85e8587a4e5c12",
+      "canonical_id": "arXiv:2506.09342",
+      "arxiv_id": "2506.09342",
+      "doi": "10.48550/arXiv.2506.09342",
+      "authors": [
+        "Sushant Mehta",
+        "R. Dandekar",
+        "R. Dandekar",
+        "Sreedath Panat"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The abstract measures lower KV-cache memory and faster inference for compact language models while preserving quality.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SimpleTRON: Simple Transformer with O(N) Complexity",
+      "source_url": "https://arxiv.org/abs/2111.15588",
+      "year": 2021,
+      "published": "2021-11-23",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose that the dot product pairwise matching attention layer, which is widely used in Transformer-based models, is redundant for the model performance. Attention, in its original formulation, has to be seen rather as a human-level tool to explore and/or visualize relevancy scores in sequential data. However, the way how it is constructed leads to significant computational complexity. Instead, we present SimpleTRON: Simple Transformer with O(N) Complexity, a simple and fast alternative without any approximation that, unlike other approximation models, does not have any architecture-related overhead and therefore can be seen as a purely linear Transformer-like model. This architecture, to the best of our knowledge, outperforms existing sub-quadratic attention approximation models on several tasks from the Long-Range Arena benchmark. Moreover, we show, that SimpleTRON can benefit from weight transfer from pretrained large language models, as its parameters can be fully transferable.",
+      "identifiers": [
+        "SemanticScholar:298dd7d9c83d695d580d3a5e4afc8eb87b25359a"
+      ],
+      "semantic_scholar_id": "298dd7d9c83d695d580d3a5e4afc8eb87b25359a",
+      "canonical_id": "arXiv:2111.15588",
+      "arxiv_id": "2111.15588",
+      "authors": [
+        "Uladzislau Yorsh",
+        "Alexander Kovalenko",
+        "Vojtvech Vanvcura",
+        "Daniel Vavsata",
+        "Pavel Kord'ik",
+        "T. Mikolov"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1782,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The method removes quadratic attention cost and can reuse pretrained language-model parameters, linking linear-time architecture to efficient Transformer inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Attentive Multi-Layer Perceptron for Non-autoregressive Generation",
+      "source_url": "https://arxiv.org/abs/2310.09512",
+      "year": 2023,
+      "published": "2023-10-14",
+      "venue": "ECML/PKDD",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive~(AR) generation almost dominates sequence generation for its efficacy. Recently, non-autoregressive~(NAR) generation gains increasing popularity for its efficiency and growing efficacy. However, its efficiency is still bottlenecked by quadratic complexity in sequence lengths, which is prohibitive for scaling to long sequence generation and few works have been done to mitigate this problem. In this paper, we propose a novel MLP variant, \\textbf{A}ttentive \\textbf{M}ulti-\\textbf{L}ayer \\textbf{P}erceptron~(AMLP), to produce a generation model with linear time and space complexity. Different from classic MLP with static and learnable projection matrices, AMLP leverages adaptive projections computed from inputs in an attentive mode. The sample-aware adaptive projections enable communications among tokens in a sequence, and model the measurement between the query and key space. Furthermore, we marry AMLP with popular NAR models, deriving a highly efficient NAR-AMLP architecture with linear time and space complexity. Empirical results show that such marriage architecture surpasses competitive efficient NAR models, by a significant margin on text-to-speech synthesis and machine translation. We also test AMLP's self- and cross-attention ability separately with extensive ablation experiments, and find them comparable or even superior to the other efficient models. The efficiency analysis further shows that AMLP extremely reduces the memory cost against vanilla non-autoregressive models for long sequences.",
+      "identifiers": [
+        "SemanticScholar:8ebdf9e8fd61b9255bd39dacdd0878f8c0d68c43"
+      ],
+      "semantic_scholar_id": "8ebdf9e8fd61b9255bd39dacdd0878f8c0d68c43",
+      "canonical_id": "arXiv:2310.09512",
+      "arxiv_id": "2310.09512",
+      "doi": "10.1007/978-3-031-43415-0_36",
+      "authors": [
+        "Shu-Yang Jiang",
+        "Jinchao Zhang",
+        "Jiangtao Feng",
+        "Lin Zheng",
+        "Lingpeng Kong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1092,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The AMLP-based non-autoregressive generation architecture changes quadratic sequence cost to linear time/space and reduces memory cost for long generation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-621819831a6e",
+    "round": "libimp-621819831a6edffd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-621819831a6edffd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-621819831a6edffd-pre01.json",
+    "receipt": "sha256:914bea3b56ec8ae1a1b1863242ce621838c4f88a557dc2fe8bf5971446e372fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-621819831a6e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

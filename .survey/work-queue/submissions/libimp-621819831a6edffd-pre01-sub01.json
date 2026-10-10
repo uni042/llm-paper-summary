@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Transformers meet Stochastic Block Models: Attention with Data-Adaptive Sparsity and Cost",
+      "source_url": "https://arxiv.org/abs/2210.15541",
+      "year": 2022,
+      "published": "2022-10-27",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To overcome the quadratic cost of self-attention, recent works have proposed various sparse attention modules, most of which fall under one of two groups: 1) sparse attention under a hand-crafted patterns and 2) full attention followed by a sparse variant of softmax such as $\\alpha$-entmax. Unfortunately, the first group lacks adaptability to data while the second still requires quadratic cost in training. In this work, we propose SBM-Transformer, a model that resolves both problems by endowing each attention head with a mixed-membership Stochastic Block Model (SBM). Then, each attention head data-adaptively samples a bipartite graph, the adjacency of which is used as an attention mask for each input. During backpropagation, a straight-through estimator is used to flow gradients beyond the discrete sampling step and adjust the probabilities of sampled edges based on the predictive loss. The forward and backward cost are thus linear to the number of edges, which each attention head can also choose flexibly based on the input. By assessing the distribution of graphs, we theoretically show that SBM-Transformer is a universal approximator for arbitrary sequence-to-sequence functions in expectation. Empirical evaluations under the LRA and GLUE benchmarks demonstrate that our model outperforms previous efficient variants as well as the original Transformer with full attention. Our implementation can be found in https://github.com/sc782/SBM-Transformer .",
+      "identifiers": [
+        "SemanticScholar:50790468a774f3ecd663e79932e6da4e813048aa"
+      ],
+      "semantic_scholar_id": "50790468a774f3ecd663e79932e6da4e813048aa",
+      "canonical_id": "arXiv:2210.15541",
+      "arxiv_id": "2210.15541",
+      "doi": "10.48550/arXiv.2210.15541",
+      "authors": [
+        "Sungjun Cho",
+        "Seonwoo Min",
+        "Jinwoo Kim",
+        "Moontae Lee",
+        "Honglak Lee",
+        "Seunghoon Hong"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1444,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Data-adaptive sparse attention makes Transformer cost scale with selected edges and improves efficiency on sequence benchmarks.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SuperShaper: Task-Agnostic Super Pre-training of BERT Models with Variable Hidden Dimensions",
+      "source_url": "https://arxiv.org/abs/2110.04711",
+      "year": 2021,
+      "published": "2021-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Task-agnostic pre-training followed by task-specific fine-tuning is a default approach to train NLU models. Such models need to be deployed on devices across the cloud and the edge with varying resource and accuracy constraints. For a given task, repeating pre-training and fine-tuning across tens of devices is prohibitively expensive. We propose SuperShaper, a task agnostic pre-training approach which simultaneously pre-trains a large number of Transformer models by varying shapes, i.e., by varying the hidden dimensions across layers. This is enabled by a backbone network with linear bottleneck matrices around each Transformer layer which are sliced to generate differently shaped sub-networks. In spite of its simple design space and efficient implementation, SuperShaper discovers networks that effectively trade-off accuracy and model size: Discovered networks are more accurate than a range of hand-crafted and automatically searched networks on GLUE benchmarks. Further, we find two critical advantages of shape as a design variable for Neural Architecture Search (NAS): (a) heuristics of good shapes can be derived and networks found with these heuristics match and even improve on carefully searched networks across a range of parameter counts, and (b) the latency of networks across multiple CPUs and GPUs are insensitive to the shape and thus enable device-agnostic search. In summary, SuperShaper radically simplifies NAS for language models and discovers networks that generalize across tasks, parameter constraints, and devices.",
+      "identifiers": [
+        "SemanticScholar:17aff1f49a8a6788aae224bb7efb4bea8a1300e4"
+      ],
+      "semantic_scholar_id": "17aff1f49a8a6788aae224bb7efb4bea8a1300e4",
+      "canonical_id": "arXiv:2110.04711",
+      "arxiv_id": "2110.04711",
+      "authors": [
+        "Vinod Ganesan",
+        "Gowtham Ramesh",
+        "Pratyush Kumar"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1826,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Variable-size BERT subnetworks let deployment fit accuracy and model-size/resource constraints across devices, supporting efficient NLP model deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Segmented Recurrent Transformer: An Efficient Sequence-to-Sequence Model",
+      "source_url": "https://arxiv.org/abs/2305.16340",
+      "year": 2023,
+      "published": "2023-05-24",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have shown dominant performance across a range of domains including language and vision. However, their computational cost grows quadratically with the sequence length, making their usage prohibitive for resource-constrained applications. To counter this, our approach is to divide the whole sequence into segments and apply attention to the individual segments. We propose a segmented recurrent transformer (SRformer) that combines segmented (local) attention with recurrent attention. The loss caused by reducing the attention window length is compensated by aggregating information across segments with recurrent attention. SRformer leverages Recurrent Accumulate-and-Fire (RAF) neurons' inherent memory to update the cumulative product of keys and values. The segmented attention and lightweight RAF neurons ensure the efficiency of the proposed transformer. Such an approach leads to models with sequential processing capability at a lower computation/memory cost. We apply the proposed method to T5 and BART transformers. The modified models are tested on summarization datasets including CNN-dailymail, XSUM, ArXiv, and MediaSUM. Notably, using segmented inputs of varied sizes, the proposed model achieves $6-22\\%$ higher ROUGE1 scores than a segmented transformer and outperforms other recurrent transformer approaches. Furthermore, compared to full attention, the proposed model reduces the computational complexity of cross attention by around $40\\%$.",
+      "identifiers": [
+        "SemanticScholar:b7a4a942502a7b34baa498cc34fe6c138779d7a8"
+      ],
+      "semantic_scholar_id": "b7a4a942502a7b34baa498cc34fe6c138779d7a8",
+      "canonical_id": "arXiv:2305.16340",
+      "arxiv_id": "2305.16340",
+      "doi": "10.48550/arXiv.2305.16340",
+      "authors": [
+        "Yinghan Long",
+        "Sayeed Shafayet Chowdhury",
+        "Kaushik Roy"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1235,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Segmented/recurrent attention and lightweight recurrent neurons reduce computation and memory for sequence-to-sequence Transformer modeling.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MEMO : Accelerating Transformers with Memoization on Big Memory Systems",
+      "source_url": "https://arxiv.org/abs/2301.09262",
+      "year": 2023,
+      "published": "2023-01-23",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models gain popularity because of their superior inference accuracy and inference throughput. However, the transformer is computation-intensive, causing a long inference time. The existing works on transformer inference acceleration have limitations caused by either the modification of transformer architectures or the need of specialized hardware. In this paper, we identify the opportunities of using memoization to accelerate the self-attention mechanism in transformers without the above limitations. Built upon a unique observation that there is rich similarity in attention computation across inference sequences, we build a memoization database that leverages the emerging big memory system. We introduce a novel embedding technique to find semantically similar inputs to identify computation similarity. We also introduce a series of techniques such as memory mapping and selective memoization to avoid memory copy and unnecessary overhead. We enable 22% inference-latency reduction on average (up to 68%) with negligible loss in inference accuracy.",
+      "identifiers": [
+        "SemanticScholar:caf6f975ecbe1552271cb8fe7464e07c90847d76"
+      ],
+      "semantic_scholar_id": "caf6f975ecbe1552271cb8fe7464e07c90847d76",
+      "canonical_id": "arXiv:2301.09262",
+      "arxiv_id": "2301.09262",
+      "doi": "10.48550/arXiv.2301.09262",
+      "authors": [
+        "Yuan Feng",
+        "Hyeran Jeon",
+        "F. Blagojevic",
+        "Cyril Guyot",
+        "Qing Li",
+        "Dong Li"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1356,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Memoization of repeated attention computation reduces Transformer inference latency in the reported tests without requiring architecture changes.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot",
+      "source_url": "https://arxiv.org/abs/2506.09613",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space language models such as Mamba match Transformer quality while permitting linear complexity inference, yet still comprise billions of parameters that hinder deployment. Existing one-shot pruning methods are tailored to attention blocks and fail to account for the time-shared and discretized state-transition matrix at the heart of the selective state-space module (SSM). In this paper, we introduce SparseSSM, the first training-free pruning framework that extends the classic optimal brain surgeon (OBS) framework to state space architectures. Our layer-wise algorithm (i) derives an approximate second-order saliency score that aggregates Hessian-trace information across time steps, (ii) incorporates a component sensitivity analysis to guide feed-forward network (FFN) pruning, which also sheds light on where redundancy resides in mamba architecture, (iii) can be easily extended to semi-structured and structured sparsity. Empirically, we prune 50% of SSM weights without fine-tuning and observe no zero-shot accuracy loss, achieving the current state-of-the-art pruning algorithm for Mamba-based LLMs.",
+      "identifiers": [
+        "SemanticScholar:032c52fb3a21b567a11e1bb2c9f7df94c9a0c239"
+      ],
+      "semantic_scholar_id": "032c52fb3a21b567a11e1bb2c9f7df94c9a0c239",
+      "canonical_id": "arXiv:2506.09613",
+      "arxiv_id": "2506.09613",
+      "doi": "10.48550/arXiv.2506.09613",
+      "authors": [
+        "Kai-Wen Tuo",
+        "Huan Wang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": null
+      },
+      "reason": "One-shot structured-state-space pruning reduces Mamba-based LLM parameters for deployment while preserving the abstract's reported zero-shot accuracy.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-621819831a6e",
+    "round": "libimp-621819831a6edffd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-621819831a6edffd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-621819831a6edffd-pre01.json",
+    "receipt": "sha256:914bea3b56ec8ae1a1b1863242ce621838c4f88a557dc2fe8bf5971446e372fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-621819831a6e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
