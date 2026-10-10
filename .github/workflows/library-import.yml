@@ -6,8 +6,6 @@ on:
     branches: [main]
     paths:
       - '.survey/import-inbox/pending/research/**'
-      - '.survey/import-inbox/pending/discovery/**'
-      - '.survey/import-inbox/waiting/discovery/**'
       - '.github/workflows/library-import.yml'
   workflow_dispatch:
     inputs:
@@ -124,9 +122,10 @@ jobs:
           stage1_ok=0
           for attempt in $(seq 1 6); do
             sync_main
-            python .survey/scripts/cleanup_import_inbox.py --repo-root .
+            python .survey/scripts/cleanup_import_inbox.py --repo-root . --skip-discovery
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
+              --skip-discovery \
               --max-research 5 \
               --max-reaudit "$reaudit_quota" \
               --defer-reaudit-queue-refresh \
@@ -159,94 +158,15 @@ jobs:
             exit 1
           }
 
-          # Stage 2: process only relevance work here. Discovery precheck
-          # requests are published in Stage 1 and MUST be resolved by the
-          # dedicated discovery-precheck.yml workflow so provenance validation
-          # in queue_worker remains trustworthy. Commits made with GITHUB_TOKEN
-          # do not chain-trigger another workflow via push, so explicitly
-          # dispatch the dedicated gate when an unsettled request exists.
-          sync_main
-          if find .survey/work-queue/discovery-precheck/requests \
-              -maxdepth 1 -type f -name 'libimp-*-pre*.json' -print 2>/dev/null \
-              | while IFS= read -r request; do
-                  result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
-                  [ -f "$result" ] || { printf '%s\n' "$request"; break; }
-                done \
-              | grep -q .; then
-            active_precheck_runs="$(gh run list \
-              --repo "${GITHUB_REPOSITORY}" \
-              --workflow discovery-precheck.yml \
-              --limit 20 \
-              --json status \
-              --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
-            if [ "${active_precheck_runs:-0}" -eq 0 ]; then
-              echo 'Dispatching dedicated Discovery precheck gate for Library import requests.'
-              gh workflow run discovery-precheck.yml \
-                --repo "${GITHUB_REPOSITORY}" \
-                --ref main
-            else
-              echo "Discovery precheck gate already active (${active_precheck_runs} run(s)); skip duplicate dispatch."
-            fi
-          fi
-
-          stage2_ok=0
-          for attempt in $(seq 1 4); do
-            sync_main
-
-            set +e
-            python .survey/scripts/process_reference_relevance_requests.py \
-              --repo-root . \
-              --max-requests 240
-            relevance_rc=$?
-            set -e
-
-            if publish \
-              'library-import: publish bounded relevance checks' \
-              .survey/work-queue/reference-curation; then
-              stage2_ok=1
-              break
-            fi
-            echo "Library relevance-check push race on attempt ${attempt}; recomputing."
-          done
-          [ "$stage2_ok" -eq 1 ] || {
-            echo 'Library relevance checkpoint failed.' >&2
-            exit 1
-          }
-
-          # Stage 3: re-read current main and advance the same <=240-record
-          # Discovery window. Research is disabled after the intake stage.
-          stage3_ok=0
-          for attempt in $(seq 1 4); do
-            sync_main
-            python .survey/scripts/process_library_import_inbox.py \
-              --repo-root . \
-              --max-research 0 \
-              --max-discovery-records 240
-
-            if publish \
-              'library-import: advance bounded Discovery work' \
-              .survey/import-inbox \
-              .survey/work-queue/submissions \
-              .survey/work-queue/discovery-precheck \
-              .survey/work-queue/reference-curation; then
-              stage3_ok=1
-              break
-            fi
-            echo "Library Discovery advance push race on attempt ${attempt}; recomputing."
-          done
-          [ "$stage3_ok" -eq 1 ] || {
-            echo 'Library Discovery advance failed.' >&2
-            exit 1
-          }
-
-          # Stage 4: a 240-record window creates at most 48 normal
-          # five-candidate submissions; keep 16 slots for older queue work.
+          # Research/legacy submissions remain in this lane. Library Discovery
+          # submissions are exclusively owned by library-discovery-intake.yml.
           stage4_ok=0
           for attempt in $(seq 1 4); do
             sync_main
             python .survey/scripts/queue_worker.py \
               --root .survey \
-              --max-submissions 64
+              --max-submissions 64 \
+              --exclude-library-discovery
 
             if publish \
               'library-import: process bounded submissions' \
@@ -271,6 +191,7 @@ jobs:
             sync_main
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
+              --skip-discovery \
               --max-research 0 \
               --max-discovery-records 240
             python .survey/scripts/render_status_dashboard.py \
@@ -431,20 +352,7 @@ jobs:
           research_backlog=$(count_files .survey/import-inbox/pending/research '*.md')
           discovery_pending=$(count_files .survey/import-inbox/pending/discovery '*.json')
           discovery_waiting=$(count_files .survey/import-inbox/waiting/discovery '*.json')
-          backlog_total=$((research_backlog + discovery_pending + discovery_waiting))
-
-          # Only Library-owned libimp-* requests gate this importer; preload-*
-          # requests belong to the independent Discovery preload lane.
-          unsettled_library_prechecks="$(
-            find .survey/work-queue/discovery-precheck/requests \
-              -maxdepth 1 -type f -name 'libimp-*-pre*.json' -print 2>/dev/null \
-              | while IFS= read -r request; do
-                  result=".survey/work-queue/discovery-precheck/results/$(basename "$request")"
-                  [ -f "$result" ] || printf '%s\n' "$request"
-                done \
-              | wc -l
-          )"
-          unsettled_library_prechecks="${unsettled_library_prechecks//[[:space:]]/}"
+          backlog_total=$research_backlog
 
           generation="${{ github.event.inputs.drain_generation || '0' }}"
           if ! [[ "$generation" =~ ^[0-9]+$ ]]; then
@@ -453,29 +361,10 @@ jobs:
 
           echo "Library backlog after this run: research=${research_backlog}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}, generation=${generation}"
 
-          if [ "$backlog_total" -gt 0 ] && [ "${unsettled_library_prechecks:-0}" -gt 0 ]; then
-            # Discovery validation cannot block independent Research intake.
-            active_precheck_runs="$(gh run list \
-              --repo "${GITHUB_REPOSITORY}" \
-              --workflow discovery-precheck.yml \
-              --limit 20 \
-              --json status \
-              --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
-            if [ "${active_precheck_runs:-0}" -eq 0 ]; then
-              echo "Library Discovery awaiting ${unsettled_library_prechecks} precheck result(s); dispatching dedicated gate."
-              gh workflow run discovery-precheck.yml \
-                --repo "${GITHUB_REPOSITORY}" \
-                --ref main
-            else
-              echo "Discovery precheck already active (${active_precheck_runs} run(s))."
-            fi
-          fi
-
-          # Self-drain Research independently of Discovery precheck results.
-          if [ "$backlog_total" -gt 0 ] && [ "$generation" -lt 96 ] &&
-             { [ "$research_backlog" -gt 0 ] || [ "${unsettled_library_prechecks:-0}" -eq 0 ]; }; then
+          # Independent Research self-drain; Discovery uses its own lane.
+          if [ "$research_backlog" -gt 0 ] && [ "$generation" -lt 96 ]; then
             next_generation=$((generation + 1))
-            echo "Queueing Library continuation ${next_generation} (research priority; precheck independent)."
+            echo "Queueing Library continuation ${next_generation} (Research-only lane)."
             GH_TOKEN="${{ github.token }}" gh workflow run library-import.yml \
               --repo "${GITHUB_REPOSITORY}" \
               --ref main \
@@ -483,7 +372,7 @@ jobs:
           elif [ "$backlog_total" -gt 0 ] && [ "$generation" -ge 96 ]; then
             echo "Backlog remains after bounded generation cap; next user upload or kick resumes it." >&2
           elif [ "$backlog_total" -gt 0 ]; then
-            echo 'Discovery-only backlog is waiting for its dedicated precheck.'
+            echo 'No Research backlog remains; Discovery is handled by its dedicated intake.'
           else
             echo 'Library import backlog is drained.'
           fi
