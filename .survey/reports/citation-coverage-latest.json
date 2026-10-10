@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-10T11:58:06+00:00",
+  "checked_at": "2026-10-10T12:25:30+00:00",
   "summary": {
     "total": 1759,
-    "complete": 1757,
-    "incomplete": 2
+    "complete": 1756,
+    "incomplete": 3
   },
   "families": {
     "inference": {
       "total": 1720,
-      "complete": 1718
+      "complete": 1717
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
+      "canonical_id": "arXiv:2605.18071",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md",
       "canonical_id": "DOI:10.1109/hcs59251.2023.10254711",
