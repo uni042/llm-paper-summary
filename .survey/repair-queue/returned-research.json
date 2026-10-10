@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T08:16:40+00:00",
+  "generated_at": "2026-10-10T08:35:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2425,8 +2425,8 @@
       "canonical_id": "DOI:10.1145/3806645.3807596",
       "title": "Scaling Attention Beyond GPUs for LLM Inference",
       "source_url": "https://doi.org/10.1145/3806645.3807596",
-      "returned_at": "2026-10-10T08:15:35+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-10T08:35:05+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2442,8 +2442,8 @@
         "limitation_chars": 870,
         "insufficiency_flags": []
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c1e026e6d7b081919623f06edc6c6763--2026-doi-10.1145-3806645.3807596-beyond-under16kb-reaudit-20261010-1545-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c1e026e6d7b081919623f06edc6c6763--2026-doi-10.1145-3806645.3807596-beyond-under16kb-reaudit-20261010-1545-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-48d10c2d888c--libfile_c1e026e6d7b081919623f06edc6c6763--2026-doi-10.1145-3806645.3807596-beyond-under16kb-reaudit-20261010-1545-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-48d10c2d888c--libfile_c1e026e6d7b081919623f06edc6c6763--2026-doi-10.1145-3806645.3807596-beyond-under16kb-reaudit-20261010-1545-scheduled-chat-45.json",
       "worker_run_key": "20261010-1545-scheduled-chat-45/r01"
     }
   ]
