@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 20:30:27 JST**
+> 自動生成: **2026-10-10 20:44:12 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -14,7 +14,7 @@
 | 収録候補論文数 | **1112** |
 | 未claim Research job | **1112** |
 | 直近24hのResearch処理完了 | **182** |
-| 最終Research処理完了 | **10-10 19:39:23 JST** |
+| 最終Research処理完了 | **10-10 20:35:48 JST** |
 | 最終Discovery探索完了 | **10-10 18:32:27 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-10 11:37:47 JST（8時間52分前）** |
+| 最終maintenance完了 | **10-10 11:37:47 JST（9時間6分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **35** |
-| 直近6hのDiscovery run | **8** |
-| 直近6hのDiscovery本文確認・分類 | **147** |
-| 最終Research完了 | **10-10 19:39:23 JST** |
+| 直近6hのResearch完了 | **38** |
+| 直近6hのDiscovery run | **7** |
+| 直近6hのDiscovery本文確認・分類 | **128** |
+| 最終Research完了 | **10-10 20:35:48 JST** |
 | 最終Discovery完了 | **10-10 18:32:27 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-10 19:39:23 JST** / worker — / run 20261010-1930-scheduled-chat-30-r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_da33b21a99a481918a78d75062da171a--2024-2408.15766-hass-under16kb-reaudit-20261010-1930-scheduled-chat-30-r01.json
+- Research: **10-10 20:35:48 JST** / worker — / run 20261010-2030-scheduled-chat-30-r01 / 成果 **2件**
+  - evidence: .survey/import-inbox/results/research/libfile_c342725140248191b85cb476079a272f--2026-2609.25492-rgsq-under16kb-reaudit-20261010-2030-scheduled-chat-30-r01.json
 - Discovery: **10-10 18:32:27 JST** / worker codex-local / run codex-backfill-b50-b51-20261010-p04
   - 本文確認・分類 **20件** / accept **11件** / unrelated+borderline **9件**
   - evidence: .survey/import-inbox/results/discovery/codex-backfill-aggregate-20261010-r2--7cc74bb5058dafba31896b90342678b96d8b0a6373c684b091817454b7e044be--codex-backfill-b50-b51-20261010-p04.json
