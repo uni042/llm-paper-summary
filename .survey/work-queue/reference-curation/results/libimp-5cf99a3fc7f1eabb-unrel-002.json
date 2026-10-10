@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cf99a3fc7f1eabb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.10013",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.10013",
+    "identity_tokens": [
+      "arXiv:2504.10013"
+    ],
+    "reason": "一次資料はHPCによるLLM trainingの運用・throughput・profilingを扱う。inference system efficiencyとの具体的接続がない。",
+    "first_checked_at": "2026-10-10T01:24:17+00:00",
+    "last_checked_at": "2026-10-10T01:24:17+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Training LLMs on HPC Systems: Best Practices from the OpenGPT-X Project"
+  },
+  "processed_at": "2026-10-10T01:24:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cf99a3fc7f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
