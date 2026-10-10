@@ -24,7 +24,9 @@ class RunLivenessPolicyTests(unittest.TestCase):
             with self.subTest(workflow=workflow):
                 self.assertIn(f"dispatch_if_idle {workflow}", scheduler)
         self.assertIn("GITHUB_RUN_NUMBER % 6", scheduler)
-        self.assertIn("Library import inbox is empty; skip processor dispatch.", scheduler)
+        self.assertIn("Research import inbox is empty; skip Research processor.", scheduler)
+        self.assertIn("dispatch_if_idle library-discovery-intake.yml", scheduler)
+        self.assertIn("Library Discovery inbox is empty; skip Discovery intake.", scheduler)
         self.assertIn('if [ "$GITHUB_EVENT_NAME" = "push" ] && jq -e', scheduler)
 
         watchdog = (WORKFLOWS / "survey-scheduler-watchdog.yml").read_text(encoding="utf-8")
