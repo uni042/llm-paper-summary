@@ -2,34 +2,10 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "codex-local",
-  "run_key": "codex-backfill-r491-b26b28-4fdfbe8a-p03",
+  "run_key": "codex-backfill-r491-b26b28-4fdfbe8a-p03::provider-gap",
   "reference_main_sha": "4fdfbe8acbed73ba85ba106e2fffd41dc035b92e",
-  "record_count": 20,
+  "record_count": 11,
   "records": [
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2410.01866",
-      "identity_tokens": [
-        "arXiv:2410.01866",
-        "DOI:10.48550/arXiv.2410.01866"
-      ],
-      "title": "House of Cards: Massive Weights in LLMs",
-      "reason": "MacDropはmassive weightsへのparameter-efficient fine-tuning regularizer。abstractはrobustness/qualityで、inference効率を示さない。",
-      "source_url": "https://arxiv.org/abs/2410.01866",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-10T00:33:17Z",
-      "last_checked_at": "2026-10-10T00:33:29Z",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
-        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
-        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
-        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
-        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
-        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
-        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
-      ]
-    },
     {
       "classification": "accept",
       "canonical_id": "arXiv:2504.13981",
@@ -52,29 +28,6 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
         "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
-      ]
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "SemanticScholar:ac3ba29fb549bac9988f73f4c0683f38b473a199",
-      "identity_tokens": [
-        "SemanticScholar:ac3ba29fb549bac9988f73f4c0683f38b473a199"
-      ],
-      "title": "Examine the Opportunities and Challenges of Large Language Model (LLM) For Indic Languages",
-      "reason": "公式JISEMページはTitle/author/Abstractの汎用placeholderを返し、公式PDF取得もError fetching。primary abstract未確認。",
-      "source_url": "https://jisem-journal.com/index.php/journal/article/view/11887",
-      "body_check": "source_unavailable; abstract_not_read; body_not_read",
-      "first_checked_at": "2026-10-10T00:35:31Z",
-      "last_checked_at": "2026-10-10T00:35:35Z",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
-        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
-        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
-        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
-        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
-        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
-        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
       ]
     },
     {
@@ -126,51 +79,6 @@
       ]
     },
     {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043993",
-      "identity_tokens": [
-        "DOI:10.1109/ISCAS56072.2025.11043993"
-      ],
-      "title": "An Integer-only Quantization Framework for Edge Deployment of Large Language Models",
-      "reason": "IEEE XploreはJavaScript/robot verificationを要求しabstractを返さなかった。安定DOI/titleのみ保持。",
-      "source_url": "https://ieeexplore.ieee.org/document/11043993",
-      "body_check": "source_unavailable; abstract_not_read; body_not_read",
-      "first_checked_at": "2026-10-10T00:35:31Z",
-      "last_checked_at": "2026-10-10T00:35:35Z",
-      "linked_from": [
-        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
-        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
-        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
-        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
-        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
-        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
-      ]
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2309.01775",
-      "identity_tokens": [
-        "arXiv:2309.01775",
-        "DOI:10.48550/arXiv.2309.01775"
-      ],
-      "title": "Gated recurrent neural networks discover attention",
-      "reason": "gated RNNがlinear self-attentionを実装するmechanism分析。abstractにefficiency測定やinference resource低減はない。",
-      "source_url": "https://arxiv.org/abs/2309.01775",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-10T00:33:32Z",
-      "last_checked_at": "2026-10-10T00:33:43Z",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
-        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
-        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
-        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
-        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
-        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
-      ]
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2509.03733",
       "identity_tokens": [
@@ -191,52 +99,6 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
         "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
-      ]
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2506.02939",
-      "identity_tokens": [
-        "arXiv:2506.02939",
-        "DOI:10.48550/arXiv.2506.02939"
-      ],
-      "title": "QKV Projections Require a Fraction of Their Memory",
-      "reason": "QKV activation圧縮の対象はLLM training memoryであり、abstractはtraining効率のみを扱う。",
-      "source_url": "https://arxiv.org/abs/2506.02939",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-10T00:33:32Z",
-      "last_checked_at": "2026-10-10T00:33:43Z",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
-        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
-        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
-        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
-        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
-        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
-        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
-      ]
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2506.18999",
-      "identity_tokens": [
-        "arXiv:2506.18999",
-        "DOI:10.48550/arXiv.2506.18999"
-      ],
-      "title": "Diffusion Transformer-to-Mamba Distillation for High-Resolution Image Generation",
-      "reason": "Transformer-to-Mamba distillationの対象は高解像度diffusion image generationで、LLM inferenceへの接続なし。",
-      "source_url": "https://arxiv.org/abs/2506.18999",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-10T00:33:32Z",
-      "last_checked_at": "2026-10-10T00:33:43Z",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
-        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
-        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
-        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
-        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
-        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ]
     },
     {
@@ -283,73 +145,6 @@
         "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
         "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
-      ]
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2508.20441",
-      "identity_tokens": [
-        "arXiv:2508.20441",
-        "DOI:10.48550/arXiv.2508.20441"
-      ],
-      "title": "Uncovering the Spectral Bias in Diagonal State Space Models",
-      "reason": "diagonal SSMのspectral initialization研究。kernel計算単純化には触れるがabstract評価はlearning/LRA中心でLLM inference効果なし。",
-      "source_url": "https://arxiv.org/abs/2508.20441",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-10T00:33:46Z",
-      "last_checked_at": "2026-10-10T00:33:56Z",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
-        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
-        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
-        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
-        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
-        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
-      ]
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2502.12381",
-      "identity_tokens": [
-        "arXiv:2502.12381",
-        "DOI:10.48550/arXiv.2502.12381"
-      ],
-      "title": "Linear Diffusion Networks",
-      "reason": "Linear Diffusion Networksはparallelizable sequence modelingを提案するがabstractの評価はImageNet/LRAでLLM/servingとの接続不明瞭。",
-      "source_url": "https://arxiv.org/abs/2502.12381",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-10T00:33:32Z",
-      "last_checked_at": "2026-10-10T00:33:43Z",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
-        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
-        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
-        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
-        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
-        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
-      ]
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1109/TPDS.2025.3583983",
-      "identity_tokens": [
-        "DOI:10.1109/TPDS.2025.3583983"
-      ],
-      "title": "PipeMesh: Achieving Memory-Efficient Computation-Communication Overlap for Training Large Language Models",
-      "reason": "PipeMeshはLLM training pipeline scheduling/communication overlap。契約対象外のtraining-only効率改善。",
-      "source_url": "https://hub.hku.hk/handle/10722/361925",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-10T00:34:04Z",
-      "last_checked_at": "2026-10-10T00:34:18Z",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md",
-        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
-        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
-        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
-        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
-        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ]
     },
     {
@@ -461,5 +256,20 @@
         "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
       ]
     }
+  ],
+  "parent_run_key": "codex-backfill-r491-b26b28-4fdfbe8a-p03",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/codex-backfill-r491-b26b28-4fdfbe8a-p03--1905c1e715f92bc56e0c6c7de72e843ec7b1bfe2066d38e640617a146ffcaa84--codex-backfill-r491-b26b28-4fdfbe8a-p03.json",
+  "provider_gap_ids": [
+    "DOI:10.1007/978-3-031-10986-7_11",
+    "arXiv:2111.10951",
+    "arXiv:2304.08453",
+    "arXiv:2402.02625",
+    "arXiv:2404.12759",
+    "arXiv:2410.10553",
+    "arXiv:2411.07066",
+    "arXiv:2503.21782",
+    "arXiv:2504.13981",
+    "arXiv:2509.03733",
+    "arXiv:2510.03784"
   ]
 }
