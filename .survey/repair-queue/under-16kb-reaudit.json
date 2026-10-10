@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T07:00:03.285730+00:00",
+  "generated_at": "2026-10-10T07:48:04.697150+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 130,
+  "count": 126,
   "worker_counts": {
-    "scheduled-chat-00": 43,
-    "scheduled-chat-30": 44,
-    "scheduled-chat-45": 43
+    "scheduled-chat-00": 42,
+    "scheduled-chat-30": 42,
+    "scheduled-chat-45": 42
   },
   "entries": [
     {
@@ -609,7 +609,7 @@
       "file_bytes": 12860,
       "source_sha256": "499a7a6bd077fd03f287a35e76f827d7678a65ace32307bdd44201e17f675f64",
       "source_git_blob_sha": "968fb12bc056130e12a94dc533eec29b73bc149b",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.922882,
@@ -1418,26 +1418,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
-      "canonical_id": "arXiv:2206.01861",
-      "title": "ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers",
-      "file_bytes": 13373,
-      "source_sha256": "51b746aeebc39cfc14e70da7445dc5938cf1e0b59f74c891c8890c6d87d4d936",
-      "source_git_blob_sha": "2c173ab234ac29c214cb27ad9d4dd5124be4f804",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.918309,
-      "quality_metrics": {
-        "body_chars": 3442,
-        "method_chars": 1026,
-        "evaluation_chars": 864,
-        "limitation_chars": 390
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md",
       "canonical_id": "arXiv:2411.16102",
       "title": "BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching",
@@ -1460,30 +1440,6 @@
       ],
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md",
-      "canonical_id": "arXiv:2511.10054",
-      "title": "BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference",
-      "file_bytes": 13394,
-      "source_sha256": "744cae4fcb74683cd9e95cbb74e970b8193cf739f26f3e44a46992a857742e5e",
-      "source_git_blob_sha": "1938373f21fc8c9f704b8e583c862149e85b25f9",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.773801,
-      "quality_metrics": {
-        "body_chars": 3186,
-        "method_chars": 1882,
-        "evaluation_chars": 651,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 77.4% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.4% < 警告基準 80%"
       ]
     },
     {
@@ -1587,30 +1543,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
-      "canonical_id": "arXiv:2404.19737",
-      "title": "Better & Faster Large Language Models via Multi-token Prediction",
-      "file_bytes": 13513,
-      "source_sha256": "1adec4331e9358e34e2857aba574d53d5c7a4b818b09edd499942e47b9267fb7",
-      "source_git_blob_sha": "9f7e63aebb1945f29af004c37e3c9290cb4b339e",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.766639,
-      "quality_metrics": {
-        "body_chars": 4291,
-        "method_chars": 1075,
-        "evaluation_chars": 1825,
-        "limitation_chars": 415
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.7% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md",
@@ -2279,26 +2211,6 @@
       "warnings": [
         "日本語比率 73.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
-      "canonical_id": "arXiv:2409.04992",
-      "title": "InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）",
-      "file_bytes": 14480,
-      "source_sha256": "f3524de37a61c6553c6e790a7cf0bb58ce899c42cba3a71cd9b664306bb6cb06",
-      "source_git_blob_sha": "4fc7b8e2b293a94865547987bb28ac3aedf6e1a3",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.804509,
-      "quality_metrics": {
-        "body_chars": 3924,
-        "method_chars": 1014,
-        "evaluation_chars": 509,
-        "limitation_chars": 374
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md",
