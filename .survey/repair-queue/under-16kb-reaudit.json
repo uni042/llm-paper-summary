@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T08:38:06.152608+00:00",
+  "generated_at": "2026-10-10T08:54:40.110683+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 119,
+  "count": 114,
   "worker_counts": {
-    "scheduled-chat-00": 40,
-    "scheduled-chat-30": 39,
-    "scheduled-chat-45": 40
+    "scheduled-chat-00": 38,
+    "scheduled-chat-30": 38,
+    "scheduled-chat-45": 38
   },
   "entries": [
     {
@@ -756,7 +756,7 @@
       "file_bytes": 12981,
       "source_sha256": "f5e0ffbf7beed8ebd9001c4558fa9f2539dacef13f09d7f008fed40b60529134",
       "source_git_blob_sha": "aa0bedc7dc165da0e038c1a357139ebbd3a2bbc7",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.889895,
@@ -796,7 +796,7 @@
       "file_bytes": 13018,
       "source_sha256": "70c376fef4728017a32cafab191ffddb8ccb59595da21cf8641f2a665a5c7e7f",
       "source_git_blob_sha": "95f891d6a00dcd084441c471e23d75ee4840d8ee",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.911164,
@@ -1291,30 +1291,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
-      "canonical_id": "arXiv:2403.17887",
-      "title": "The Unreasonable Ineffectiveness of the Deeper Layers",
-      "file_bytes": 13317,
-      "source_sha256": "6f22da2a760fbb0c6010e6c18722eb9afc0724f4eb39527dad4fdbbee33e7efb",
-      "source_git_blob_sha": "078608debda6c3ddc842decf09dbc0a4d366a2e0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.785579,
-      "quality_metrics": {
-        "body_chars": 3239,
-        "method_chars": 955,
-        "evaluation_chars": 1005,
-        "limitation_chars": 308
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.6% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
       "canonical_id": "arXiv:2310.04564",
       "title": "ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models",
@@ -1462,26 +1438,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/01-offload-hierarchical-memory/2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md",
-      "canonical_id": "arXiv:2502.05370",
-      "title": "Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading",
-      "file_bytes": 13526,
-      "source_sha256": "e557b07a2ca5456868755c2d21cd3ae1dd77c841cce0e736bc7ab7606cbc7c33",
-      "source_git_blob_sha": "20857cfd26fd4fc7e9ff23a54286722c7d96b2e5",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.93219,
-      "quality_metrics": {
-        "body_chars": 2762,
-        "method_chars": 1305,
-        "evaluation_chars": 1018,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md",
       "canonical_id": "arXiv:2608.12932",
       "title": "FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving",
@@ -1563,26 +1519,6 @@
         "method_chars": 1333,
         "evaluation_chars": 1035,
         "limitation_chars": 485
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
-      "canonical_id": "arXiv:2304.11062",
-      "title": "Scaling Transformer to 1M tokens and beyond with RMT",
-      "file_bytes": 13601,
-      "source_sha256": "ccd38c4a0039681457dc9f055ff8eb605a68ad0fb750987e292b3d855285a931",
-      "source_git_blob_sha": "0f4e195f636e67277e50d3f1d01d9f8b1d447d31",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.912555,
-      "quality_metrics": {
-        "body_chars": 3696,
-        "method_chars": 893,
-        "evaluation_chars": 1505,
-        "limitation_chars": 292
       },
       "mechanical_failures": [],
       "warnings": []
@@ -1857,26 +1793,6 @@
         "method_chars": 1092,
         "evaluation_chars": 1123,
         "limitation_chars": 525
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md",
-      "canonical_id": "arXiv:2402.07033",
-      "title": "Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models",
-      "file_bytes": 14031,
-      "source_sha256": "577aebff50458aecd495930ee22c3fc8e94b1816a39d412bc73274135464efe5",
-      "source_git_blob_sha": "9b188fc4da0fd20954bc9798ffb8b0d525843fdd",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.857832,
-      "quality_metrics": {
-        "body_chars": 3233,
-        "method_chars": 1291,
-        "evaluation_chars": 1216,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -2294,26 +2210,6 @@
         "method_chars": 1123,
         "evaluation_chars": 944,
         "limitation_chars": 399
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
-      "canonical_id": "arXiv:2410.17954",
-      "title": "ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling",
-      "file_bytes": 14699,
-      "source_sha256": "6389f5067b30518ad2fd004f80455368e22d0399c9628bc29da903656f107393",
-      "source_git_blob_sha": "43a66feef8b7aa1bcc87e95ec953b90cc6209ef3",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.867155,
-      "quality_metrics": {
-        "body_chars": 3241,
-        "method_chars": 1842,
-        "evaluation_chars": 689,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
