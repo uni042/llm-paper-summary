@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "(PASS) Visual Prompt Locates Good Structure Sparsity through a Recurrent HyperNetwork",
+      "source_url": "https://arxiv.org/abs/2407.17412",
+      "year": 2024,
+      "published": "2024-07-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale neural networks have demonstrated remarkable performance in different domains like vision and language processing, although at the cost of massive computation resources. As illustrated by compression literature, structural model pruning is a prominent algorithm to encourage model efficiency, thanks to its acceleration-friendly sparsity patterns. One of the key questions of structural pruning is how to estimate the channel significance. In parallel, work on data-centric AI has shown that prompting-based techniques enable impressive generalization of large language models across diverse downstream tasks. In this paper, we investigate a charming possibility - \\textit{leveraging visual prompts to capture the channel importance and derive high-quality structural sparsity}. To this end, we propose a novel algorithmic framework, namely \\texttt{PASS}. It is a tailored hyper-network to take both visual prompts and network weight statistics as input, and output layer-wise channel sparsity in a recurrent manner. Such designs consider the intrinsic channel dependency between layers. Comprehensive experiments across multiple network architectures and six datasets demonstrate the superiority of \\texttt{PASS} in locating good structural sparsity. For example, at the same FLOPs level, \\texttt{PASS} subnetworks achieve $1\\%\\sim 3\\%$ better accuracy on Food101 dataset; or with a similar performance of $80\\%$ accuracy, \\texttt{PASS} subnetworks obtain $0.35\\times$ more speedup than the baselines.",
+      "identifiers": [
+        "SemanticScholar:2936fb8f584efc3a503617cb43ed3dd571d5205e"
+      ],
+      "semantic_scholar_id": "2936fb8f584efc3a503617cb43ed3dd571d5205e",
+      "canonical_id": "arXiv:2407.17412",
+      "arxiv_id": "2407.17412",
+      "doi": "10.48550/arXiv.2407.17412",
+      "authors": [
+        "Tianjin Huang",
+        "Meng Fang",
+        "Lijuan Shen",
+        "Fan Liu",
+        "Yu-Long Pei",
+        "Mykola Pechenizkiy",
+        "Shiwei Liu",
+        "Tian-Long Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 808,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PASS uses visual prompts and a recurrent hypernetwork to select acceleration-friendly structural channel sparsity; the abstract reports 0.35x more speedup at comparable accuracy than baselines.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Linear Attention is Enough in Spatial-Temporal Forecasting",
+      "source_url": "https://arxiv.org/abs/2408.09158",
+      "year": 2024,
+      "published": "2024-08-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the most representative scenario of spatial-temporal forecasting tasks, the traffic forecasting task attracted numerous attention from machine learning community due to its intricate correlation both in space and time dimension. Existing methods often treat road networks over time as spatial-temporal graphs, addressing spatial and temporal representations independently. However, these approaches struggle to capture the dynamic topology of road networks, encounter issues with message passing mechanisms and over-smoothing, and face challenges in learning spatial and temporal relationships separately. To address these limitations, we propose treating nodes in road networks at different time steps as independent spatial-temporal tokens and feeding them into a vanilla Transformer to learn complex spatial-temporal patterns, design \\textbf{STformer} achieving SOTA. Given its quadratic complexity, we introduce a variant \\textbf{NSTformer} based on Nystr$\\ddot{o}$m method to approximate self-attention with linear complexity but even slightly better than former in a few cases astonishingly. Extensive experimental results on traffic datasets demonstrate that the proposed method achieves state-of-the-art performance at an affordable computational cost. Our code is available at \\href{https://github.com/XinyuNing/STformer-and-NSTformer}{https://github.com/XinyuNing/STformer-and-NSTformer}.",
+      "identifiers": [
+        "SemanticScholar:68b260739d1efb80558305eabc68f65b7a872e8b"
+      ],
+      "semantic_scholar_id": "68b260739d1efb80558305eabc68f65b7a872e8b",
+      "canonical_id": "arXiv:2408.09158",
+      "arxiv_id": "2408.09158",
+      "doi": "10.48550/arXiv.2408.09158",
+      "authors": [
+        "Xinyu Ning"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 784,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NSTformer replaces quadratic self-attention with a Nyström approximation of linear complexity for long spatial-temporal sequences, making its attention-computation method transferable to long-context inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6151c3990068",
+    "round": "libimp-6151c3990068c8f4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6151c3990068c8f4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6151c3990068c8f4-pre01.json",
+    "receipt": "sha256:b4daacc3f523def9fd86f26545357068857a8f8ab701df56410508316f00ac12"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6151c3990068",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention",
+      "source_url": "https://arxiv.org/abs/2203.12276",
+      "year": 2022,
+      "published": "2022-03-23",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Transformer has recently attracted a lot of attention since the ability for reducing the quadratic dependency on the sequence length. We argue that two factors, information bottleneck sensitivity and inconsistency between different attention topologies, could affect the performance of the Sparse Transformer. This paper proposes a well-designed model named ERNIE-Sparse. It consists of two distinctive parts: (i) Hierarchical Sparse Transformer (HST) to sequentially unify local and global information. (ii) Self-Attention Regularization (SAR) method, a novel regularization designed to minimize the distance for transformers with different attention topologies. To evaluate the effectiveness of ERNIE-Sparse, we perform extensive evaluations. Firstly, we perform experiments on a multi-modal long sequence modeling task benchmark, Long Range Arena (LRA). Experimental results demonstrate that ERNIE-Sparse significantly outperforms a variety of strong baseline methods including the dense attention and other efficient sparse attention methods and achieves improvements by 2.77% (57.78% vs. 55.01%). Secondly, to further show the effectiveness of our method, we pretrain ERNIE-Sparse and verified it on 3 text classification and 2 QA downstream tasks, achieve improvements on classification benchmark by 0.83% (92.46% vs. 91.63%), on QA benchmark by 3.24% (74.67% vs. 71.43%). Experimental results continue to demonstrate its superior performance.",
+      "identifiers": [
+        "SemanticScholar:94e46e18d2628343a926acf6c3d0817e11d35d58"
+      ],
+      "semantic_scholar_id": "94e46e18d2628343a926acf6c3d0817e11d35d58",
+      "canonical_id": "arXiv:2203.12276",
+      "arxiv_id": "2203.12276",
+      "doi": "10.48550/arXiv.2203.12276",
+      "authors": [
+        "Yang Liu",
+        "Jia-Xiang Liu",
+        "Li Chen",
+        "Yu-Xiang Lu",
+        "Shi Feng",
+        "Zhi-Da Feng",
+        "Yu Sun",
+        "Hao Tian",
+        "Huan-Cheng Wu",
+        "Hai-feng Wang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1662,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ERNIE-Sparse combines hierarchical local/global sparse attention with topology regularization; its abstract positions sparse attention as reducing quadratic sequence-length dependence and reports results against dense and efficient sparse baselines.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A novel approach to attention mechanism using kernel functions: Kerformer",
+      "source_url": "https://doi.org/10.3389/fnbot.2023.1214203",
+      "year": 2023,
+      "published": "2023-08-24",
+      "venue": "Frontiers Neurorobotics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Artificial Intelligence (AI) is driving advancements across various fields by simulating and enhancing human intelligence. In Natural Language Processing (NLP), transformer models like the Kerformer, a linear transformer based on a kernel approach, have garnered success. However, traditional attention mechanisms in these models have quadratic calculation costs linked to input sequence lengths, hampering efficiency in tasks with extended orders. To tackle this, Kerformer introduces a nonlinear reweighting mechanism, transforming maximum attention into feature-based dot product attention. By exploiting the non-negativity and non-linear weighting traits of softmax computation, separate non-negativity operations for Query(Q) and Key(K) computations are performed. The inclusion of the SE Block further enhances model performance. Kerformer significantly reduces attention matrix time complexity from O(N2) to O(N), with N representing sequence length. This transformation results in remarkable efficiency and scalability gains, especially for prolonged tasks. Experimental results demonstrate Kerformer's superiority in terms of time and memory consumption, yielding higher average accuracy (83.39%) in NLP and vision tasks. In tasks with long sequences, Kerformer achieves an average accuracy of 58.94% and exhibits superior efficiency and convergence speed in visual tasks. This model thus offers a promising solution to the limitations posed by conventional attention mechanisms in handling lengthy tasks.",
+      "identifiers": [
+        "SemanticScholar:92f86c59a221752560e72466b2e1026e83bfdc12"
+      ],
+      "semantic_scholar_id": "92f86c59a221752560e72466b2e1026e83bfdc12",
+      "doi": "10.3389/fnbot.2023.1214203",
+      "canonical_id": "DOI:10.3389/fnbot.2023.1214203",
+      "authors": [
+        "Yao Gan",
+        "Yan-yun Fu",
+        "De-Yong Wang",
+        "Yong-Ming Li"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Kerformer rewrites attention with kernel feature maps and separate query/key transforms, reducing the attention matrix complexity from quadratic to linear and reporting lower time and memory use on NLP and vision tasks.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Linear Video Transformer with Feature Fixation",
+      "source_url": "https://arxiv.org/abs/2210.08164",
+      "year": 2022,
+      "published": "2022-10-15",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision Transformers have achieved impressive performance in video classification, while suffering from the quadratic complexity caused by the Softmax attention mechanism. Some studies alleviate the computational costs by reducing the number of tokens in attention calculation, but the complexity is still quadratic. Another promising way is to replace Softmax attention with linear attention, which owns linear complexity but presents a clear performance drop. We find that such a drop in linear attention results from the lack of attention concentration on critical features. Therefore, we propose a feature fixation module to reweight the feature importance of the query and key before computing linear attention. Specifically, we regard the query, key, and value as various latent representations of the input token, and learn the feature fixation ratio by aggregating Query-Key-Value information. This is beneficial for measuring the feature importance comprehensively. Furthermore, we enhance the feature fixation by neighborhood association, which leverages additional guidance from spatial and temporal neighbouring tokens. The proposed method significantly improves the linear attention baseline and achieves state-of-the-art performance among linear video Transformers on three popular video classification benchmarks. With fewer parameters and higher efficiency, our performance is even comparable to some Softmax-based quadratic Transformers.",
+      "identifiers": [
+        "SemanticScholar:ee1e1afe75eb0e20d57bf316f5ab1ca2c369d100"
+      ],
+      "semantic_scholar_id": "ee1e1afe75eb0e20d57bf316f5ab1ca2c369d100",
+      "canonical_id": "arXiv:2210.08164",
+      "arxiv_id": "2210.08164",
+      "doi": "10.48550/arXiv.2210.08164",
+      "authors": [
+        "Kaiyue Lu",
+        "Ze-Xia Liu",
+        "Jianyuan Wang",
+        "Weixuan Sun",
+        "Zhen Qin",
+        "Dong Li",
+        "Xu-Yang Shen",
+        "Huizhong Deng",
+        "Xiaodong Han",
+        "Yuchao Dai",
+        "Yiran Zhong"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1456,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The video Transformer uses a feature-fixation module to preserve critical features under linear attention and reports fewer parameters and higher efficiency with performance comparable to quadratic Softmax video Transformers.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer",
+      "source_url": "https://doi.org/10.1613/jair.1.13896",
+      "year": 2022,
+      "published": "2022-11-06",
+      "venue": "Journal of Artificial Intelligence Research",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer benefits from the high parallelization of attention networks in fast training, but it still suffers from slow decoding partially due to the linear dependency O(m) of the decoder self-attention on previous target words at inference. In this paper, we propose a generalized average attention network (AAN+) aiming at speeding up decoding by reducing the dependency from O(m) to O(1). We find that the learned self-attention weights in the decoder follow some patterns which can be approximated via a dynamic structure. Based on this insight, we develop AAN+, extending our previously proposed average attention (Zhang et al., 2018a, AAN) to support more general position- and content-based attention patterns. AAN+ only requires to maintain a small constant number of hidden states during decoding, ensuring its O(1) dependency. We apply AAN+ as a drop-in replacement of the decoder selfattention and conduct experiments on machine translation (with diverse language pairs), table-to-text generation and document summarization. With masking tricks and dynamic programming, AAN+ enables Transformer to decode sentences around 20% faster without largely compromising in the training speed and the generation performance. Our results further reveal the importance of the localness (neighboring words) in AAN+ and its capability in modeling long-range dependency.",
+      "identifiers": [
+        "SemanticScholar:b6438d56b9f18f0260953d5a32d11c1c758954c7"
+      ],
+      "semantic_scholar_id": "b6438d56b9f18f0260953d5a32d11c1c758954c7",
+      "doi": "10.1613/jair.1.13896",
+      "canonical_id": "DOI:10.1613/jair.1.13896",
+      "authors": [
+        "Biao Zhang",
+        "Deyi Xiong",
+        "Yubin Ge",
+        "Junfeng Yao",
+        "Hao Yue",
+        "Jinsong Su"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1434,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AAN+ replaces a decoder self-attention dependency with generalized average attention; the JAIR abstract reports constant-time decoder dependency and roughly 20% faster decoding, a directly transferable autoregressive inference optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdaEnsemble: Learning Adaptively Sparse Structured Ensemble Network for Click-Through Rate Prediction",
+      "source_url": "https://arxiv.org/abs/2301.08353",
+      "year": 2023,
+      "published": "2023-01-06",
+      "venue": "AdKDD@KDD",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Learning feature interactions is crucial to success for large-scale CTR prediction in recommender systems and Ads ranking. Researchers and practitioners extensively proposed various neural network architectures for searching and modeling feature interactions. However, we observe that different datasets favor different neural network architectures and feature interaction types, suggesting that different feature interaction learning methods may have their own unique advantages. Inspired by this observation, we propose AdaEnsemble: a Sparsely-Gated Mixture-of-Experts (SparseMoE) architecture that can leverage the strengths of heterogeneous feature interaction experts and adaptively learns the routing to a sparse combination of experts for each example, allowing us to build a dynamic hierarchy of the feature interactions of different types and orders. To further improve the prediction accuracy and inference efficiency, we incorporate the dynamic early exiting mechanism for feature interaction depth selection. The AdaEnsemble can adaptively choose the feature interaction depth and find the corresponding SparseMoE stacking layer to exit and compute prediction from. Therefore, our proposed architecture inherits the advantages of the exponential combinations of sparsely gated experts within SparseMoE layers and further dynamically selects the optimal feature interaction depth without executing deeper layers. We implement the proposed AdaEnsemble and evaluate its performance on real-world datasets. Extensive experiment results demonstrate the efficiency and effectiveness of AdaEnsemble over state-of-the-art models.",
+      "identifiers": [
+        "SemanticScholar:800352afe54fb7d9fa75bcabc4e1cbaadeff7415"
+      ],
+      "semantic_scholar_id": "800352afe54fb7d9fa75bcabc4e1cbaadeff7415",
+      "canonical_id": "arXiv:2301.08353",
+      "arxiv_id": "2301.08353",
+      "doi": "10.48550/arXiv.2301.08353",
+      "authors": [
+        "Yachen Yan",
+        "Liubo Li"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1373,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AdaEnsemble routes each CTR example to sparse experts and exits at a selected feature-interaction depth, explicitly avoiding deeper computation to improve inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6151c3990068",
+    "round": "libimp-6151c3990068c8f4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6151c3990068c8f4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6151c3990068c8f4-pre01.json",
+    "receipt": "sha256:b4daacc3f523def9fd86f26545357068857a8f8ab701df56410508316f00ac12"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6151c3990068",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

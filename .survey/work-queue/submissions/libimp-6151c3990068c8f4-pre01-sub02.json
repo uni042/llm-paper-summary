@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Hyper-Compression: Model Compression via Hyperfunction",
+      "source_url": "https://arxiv.org/abs/2409.00592",
+      "year": 2024,
+      "published": "2024-09-01",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of large models’ size has far outpaced that of computing resources. To bridge this gap, encouraged by the parsimonious relationship between genotype and phenotype in the brain’s growth and development, we propose the so-called Hyper-Compression that turns the model compression into the issue of parameter representation via a hyperfunction. Specifically, it is known that the trajectory of some low-dimensional dynamic systems can fill the high-dimensional space eventually. Thus, Hyper-Compression, using these dynamic systems as the hyperfunctions, represents the parameters of the target network by their corresponding composition number or trajectory length. This suggests a novel mechanism for model compression, substantially different from the existing pruning, quantization, distillation, and decomposition. Along this direction, we methodologically identify a suitable dynamic system with the irrational winding as the hyperfunction and theoretically derive its associated error bound. Next, guided by our theoretical insights, we propose several engineering twists to make the Hyper-Compression pragmatic and effective. Lastly, systematic and comprehensive experiments on NLP models such as LLaMA and Qwen series and vision models confirm that Hyper-Compression enjoys the following PNAS merits: 1) Preferable compression ratio; 2) No post-hoc retraining; 3) Affordable inference time; and 4) Short compression time. It compresses LLaMA2-7B in an hour and achieves close-to-int4-quantization performance, without retraining and with a performance drop of less than 1%.",
+      "identifiers": [
+        "SemanticScholar:796e98fca33d096aa76b66c097dac9d862278fcb"
+      ],
+      "semantic_scholar_id": "796e98fca33d096aa76b66c097dac9d862278fcb",
+      "canonical_id": "arXiv:2409.00592",
+      "arxiv_id": "2409.00592",
+      "doi": "10.1109/TPAMI.2026.3673772",
+      "authors": [
+        "Feng-Lei Fan",
+        "Jun-Tong Fan",
+        "Dayang Wang",
+        "Jingbo Zhang",
+        "Zelin Dong",
+        "Shi-Jun Zhang",
+        "Ge Wang",
+        "Tieyong Zeng"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 769,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Hyper-Compression represents target-model parameters through a low-dimensional dynamic-system hyperfunction, directly targeting model-size compression as a transferable deployment resource reduction.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pruning Laws for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.04342",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling up model parameters and training data consistently improves the performance of large language models (LLMs), but at the cost of rapidly growing memory and compute requirements, which makes deployment on resource-limited hardware infeasible. Model pruning, a widely used compression technique, reduces inference costs by removing redundant parameters. However, its impact on downstream performance remains unpredictable and is typically assessed only through costly empirical sweeps. To address this gap, we introduce pruning laws, simple and interpretable scaling relations that connect a pruned LLM's post-pruning performance to its unpruned performance and pruning ratio. Across ten LLMs (1.3B-30B parameters), a 20B mixture-of-experts model, three pruning strategies (unstructured, width, and depth), and eight diverse tasks, we show that pruning laws achieve strong predictive accuracy (average extrapolation error less than 7%), reliably quantify performance degradation, and identify critical pruning thresholds beyond which recovery is infeasible. Moreover, we demonstrate that the functional form transfers across dense and mixture-of-experts architectures, pruning methods, and unseen models in zero-shot and one-shot setups, with task- and method-specific coefficients that vary in interpretable ways. These results provide both researchers and practitioners with a principled framework to select pruning strategies, estimate safe pruning ratios without exhaustive tuning, and deploy LLMs efficiently under real-world compute and latency constraints.",
+      "identifiers": [
+        "SemanticScholar:ce8a8a9207f2a46d693eb804046fd746248221d3"
+      ],
+      "semantic_scholar_id": "ce8a8a9207f2a46d693eb804046fd746248221d3",
+      "canonical_id": "arXiv:2504.04342",
+      "arxiv_id": "2504.04342",
+      "authors": [
+        "Ayan Sengupta",
+        "Siddhant Chaudhary",
+        "Tanmoy Chakraborty"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 552,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The pruning laws predict post-pruning LLM quality from baseline quality and pruning ratio across dense and MoE models, supporting safe pruning choices under the abstract’s stated compute and latency deployment constraints.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TRA: Better Length Generalisation with Threshold Relative Attention",
+      "source_url": "https://arxiv.org/abs/2503.23174",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers struggle with length generalisation, displaying poor performance even on basic tasks. We test whether these limitations can be explained through two key failures of the self-attention mechanism. The first is the inability to fully remove irrelevant information. The second is tied to position, even if the dot product between a key and query is highly negative (i.e. an irrelevant key) learned positional biases may unintentionally up-weight such information - dangerous when distances become out of distribution. Put together, these two failure cases lead to compounding generalisation difficulties. We test whether they can be mitigated through the combination of a) selective sparsity - completely removing irrelevant keys from the attention softmax and b) contextualised relative distance - distance is only considered as between the query and the keys that matter. We show how refactoring the attention mechanism with these two mitigations in place can substantially improve the generalisation capabilities of decoder only transformers.",
+      "identifiers": [
+        "SemanticScholar:abad5178463d5e34f233e746e22a164a47ae926d"
+      ],
+      "semantic_scholar_id": "abad5178463d5e34f233e746e22a164a47ae926d",
+      "canonical_id": "arXiv:2503.23174",
+      "arxiv_id": "2503.23174",
+      "doi": "10.48550/arXiv.2503.23174",
+      "authors": [
+        "Mattia Opper",
+        "Roland Fernandez",
+        "P. Smolensky",
+        "Jianfeng Gao"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 560,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Threshold Relative Attention combines selective sparsity that removes irrelevant keys with contextual relative distance in decoder-only Transformers, a concrete reduction in attended information with direct autoregressive-model applicability.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DCT: Dynamic Compressive Transformer for Modeling Unbounded Sequence",
+      "source_url": "https://arxiv.org/abs/2110.04821",
+      "year": 2021,
+      "published": "2021-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose Dynamic Compressive Transformer (DCT), a transformer-based framework for modeling the unbounded sequence. In contrast to the previous baselines which append every sentence representation to memory, conditionally selecting and appending them is a more reasonable solution to deal with unlimited long sequences. Our model uses a policy that determines whether the sequence should be kept in memory with a compressed state or discarded during the training process. With the benefits of retaining semantically meaningful sentence information in the memory system, our experiment results on Enwik8 benchmark show that DCT outperforms the previous state-of-the-art (SOTA) model.",
+      "identifiers": [
+        "SemanticScholar:2a28aec16ed9b4cda1c7eb2c936509d0232ccfa1"
+      ],
+      "semantic_scholar_id": "2a28aec16ed9b4cda1c7eb2c936509d0232ccfa1",
+      "canonical_id": "arXiv:2110.04821",
+      "arxiv_id": "2110.04821",
+      "authors": [
+        "Kai-Po Chang",
+        "Wei-Yun Ma"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1826,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DCT conditionally retains sentence representations as compressed states or discards them instead of appending every sentence to sequence memory, a concrete long-context memory-compression mechanism transferable to language-model inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "NiNformer: a network in network transformer with token mixing generated gating function",
+      "source_url": "https://arxiv.org/abs/2403.02411",
+      "year": 2024,
+      "published": "2024-03-04",
+      "venue": "Neural computing & applications (Print)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The attention mechanism is the primary component of the transformer architecture; it has led to significant advancements in deep learning spanning many domains and covering multiple tasks. In computer vision, the attention mechanism was first incorporated in the vision transformer (ViT), and then its usage has expanded into many tasks in the vision domain, such as classification, segmentation, object detection, and image generation. While the attention mechanism is very expressive and capable, it comes with the disadvantage of being computationally expensive and requiring datasets of considerable size for effective optimization. To address these shortcomings, many designs have been proposed in the literature to reduce the computational burden and alleviate the data size requirements. Examples of such attempts in the vision domain are the MLP-Mixer, the Conv-Mixer, the Perceiver-IO, and many more attempts with different sets of advantages and disadvantages. This paper introduces a new computational block as an alternative to the standard ViT block. The newly proposed block reduces the computational requirements by replacing the normal attention layers with a network in network structure, therefore enhancing the static approach of the MLP-Mixer with a dynamic learning of element-wise gating function generated by a token-mixing process. Extensive experimentation shows that the proposed design provides better performance than the baseline architectures on multiple datasets applied in the image classification task of the vision domain.",
+      "identifiers": [
+        "SemanticScholar:ef256a2f8f0ad258f71bdfe56fb5f7e1a5ce6f66"
+      ],
+      "semantic_scholar_id": "ef256a2f8f0ad258f71bdfe56fb5f7e1a5ce6f66",
+      "canonical_id": "arXiv:2403.02411",
+      "arxiv_id": "2403.02411",
+      "doi": "10.1007/s00521-025-11226-1",
+      "authors": [
+        "Abdullah Nazhat Abdullah",
+        "Tarkan Aydin"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 950,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NiNformer replaces standard ViT attention layers with a Network-in-Network block and token-mixing-generated gates; its abstract states that the block reduces computational requirements, providing a transferable attention-cost reduction design.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6151c3990068",
+    "round": "libimp-6151c3990068c8f4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6151c3990068c8f4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6151c3990068c8f4-pre01.json",
+    "receipt": "sha256:b4daacc3f523def9fd86f26545357068857a8f8ab701df56410508316f00ac12"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6151c3990068",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
