@@ -34,7 +34,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2025-06 · [Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage](2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  テンソルごとの次回利用までの空き時間を測り、長く不要な重み・勾配・活性値をNVMe SSDへ退避し、先読みをGPU計算に重ねて固定的な層単位方式のI/O待ちを減らす学習方式。
+  大規模言語モデルの学習では、重み、勾配、最適化器状態、活性化がGPUの高帯域メモリを占有する。従来のSSD退避方式はモデルの層やデータ種類を単位に大きな転送を行うことが多く、必要になる直前の読込が遅れてGPUを停止させたり、まだ使わないデータを早くGPUへ戻しすぎたりする。
 
 - **2025-09 · [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)**  
   実装：[✓](https://github.com/DataStates/artifacts/blob/main/MLP-Offload) ・ リポジトリ内被引用：2  
@@ -51,16 +51,16 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System](2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md)**  
-  実装：[✓](https://github.com/AIS-SNU/Smart-Infinity) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/AIS-SNU/Smart-Infinity) ・ リポジトリ内被引用：13  
   SSD上のパラメータと最適化状態をCPU・GPUへ毎回戻さず、FPGA搭載SmartSSD内でAdam更新を実行して、PCIeを通る状態転送量と学習のI/O待ちを減らす方式。
-
-- **2024-08 · [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)**  
-  実装：[✓](https://github.com/K-Wu/FlashTrain) ・ リポジトリ内被引用：2  
-  モデルのパラメータや最適化状態だけでなく活性値がGPUメモリの大きな割合を占めるため、メモリが足りないとマイクロバッチを小さくするか、一部の活性値を捨てて逆伝播時に再計算する必要がある。SSDTrainは、活性値を捨てる代わりに高帯域のNVMe SSDへ一時保存し、逆伝播で必要になる前にGPUへ戻す方式である。
 
 - **2024-06 · [Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors](2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md)**  
   実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：2  
   特徴は、単に固定の低ランク更新を使うのではなく、射影器の非零位置と係数を少量のデータで学習し、勾配の推定誤差が大きくなった場合に部分空間を更新することである。原論文は4GBのノートPC GPUで13億パラメータ級、24GBのRTX 4090で67億パラメータ級の微調整を示す。
+
+- **2024-08 · [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)**  
+  実装：[✓](https://github.com/K-Wu/FlashTrain) ・ リポジトリ内被引用：1  
+  モデルのパラメータや最適化状態だけでなく活性値がGPUメモリの大きな割合を占めるため、メモリが足りないとマイクロバッチを小さくするか、一部の活性値を捨てて逆伝播時に再計算する必要がある。SSDTrainは、活性値を捨てる代わりに高帯域のNVMe SSDへ一時保存し、逆伝播で必要になる前にGPUへ戻す方式である。
 
 ### 4年前（2022-11〜2023-10）
 
@@ -72,7 +72,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：50  
-  学習パラメータ・勾配・最適化状態をGPU、CPU DRAM、NVMe SSDへ分散し、各SSDの読み込みと先読みをGPU計算に重ねて、GPU総容量を超える巨大モデルを収める方式。
+  ZeRO-Infinityは、ゼロ冗長最適化器（Zero Redundancy Optimizer、ZeRO）の第3段階で全モデル状態をデータ並列プロセス間に分割する設計を、GPUの高帯域メモリだけでなくCPUの主記憶、さらに不揮発性メモリ接続のSSD（NVMe SSD）へ拡張する。
 
 ### 7年前（2019-11〜2020-10）
 
