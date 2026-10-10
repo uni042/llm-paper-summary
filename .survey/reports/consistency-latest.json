@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-10T18:23:46.657958+00:00",
-  "status": "passed",
+  "checked_at": "2026-10-10T19:11:42.567158+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 53264,
-  "checked_file_count": 53264,
+  "inventory_file_count": 53330,
+  "checked_file_count": 53330,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,6 +26,72 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 3233,
-  "findings": []
+  "external_url_count": 3236,
+  "findings": [
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "PAPER-ADDITION-DETAILS.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "AUTOMATION-TOOLS.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "PAPER-SELECTION-FLOW.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "AUTOMATION-TOOLS.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "CODEX-PAPER-ROUTE.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "reports/20261005-codex-route-final.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "RESEARCH-BATCH-FLOW.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "PAPER-ADDITION-DETAILS.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "PAPER-ADDITION-DETAILS.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "UPLOAD-STAGING.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "reports/20261010-main-be057-worklist-5000/b45-upload-record.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "reports/20261004-processing-efficiency.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "PAPER-ADDITION-WORKFLOW.md",
+      "detail": "CODEX-PAPER-ROUTE.md#github接続が拒否される場合"
+    }
+  ]
 }
