@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261010-2230-scheduled-chat-30/r02",
+  "reference_main_sha": "084a97716f73188e2784e26e29067aec4a3aeb7a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.16449",
+      "identity_tokens": [
+        "arXiv:2307.16449"
+      ],
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+      "reason": "長時間動画のマルチモーダルLLM理解で、短期・長期記憶と視覚トークンの圧縮により長い映像の計算量・メモリ量を抑える方式。推論時の入力トークン削減という関連機構がある一方、主たる評価と最終用途は動画理解の品質と専用ベンチマークであり、一般的なテキストLLMのKVキャッシュ・推論サービング最適化とは異なる。長文脈・マルチモーダル推論系統への採否は追加精読が必要。",
+      "source_url": "https://arxiv.org/abs/2307.16449",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T22:35:12+09:00",
+      "last_checked_at": "2026-10-10T22:35:12+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 5
+    }
+  ]
+}
