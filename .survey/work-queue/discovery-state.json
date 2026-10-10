@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-10T04:09:52+00:00",
-  "last_run_key": "library-import-69954eee8cfe",
-  "last_round": "libimp-69954eee8cfec368-pre01",
+  "updated_at": "2026-10-10T05:14:40+00:00",
+  "last_run_key": "library-import-89e0c49557d9",
+  "last_round": "libimp-89e0c49557d9f8af-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-21T06:58:37+09:00",
-      "round": "hourly00-backward-09",
-      "axis": "repository structured backward references batch 2",
-      "query_summary": null,
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "candidate_count": 0,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 0,
-      "accepted_count": 0,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260921T0712JST-hourly00-discovery-backward-09.json"
-    },
     {
       "run_key": "2026-09-21T06:58:37+09:00",
       "round": "hourly00-forward-deepspeedmoe-10",
@@ -13492,6 +13471,46 @@
       "duplicate_ratio": 0.5555555555555556,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-89e0c49557d9f8af-pre01",
+      "precheck_request_id": "libimp-89e0c49557d9f8af-pre01",
+      "run_key": "library-import-89e0c49557d9",
+      "round": "libimp-89e0c49557d9f8af-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 17,
+      "duplicate_filtered_count": 15,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub01.json",
+        "work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub02.json",
+        "work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub03.json",
+        "work-queue/submissions/libimp-89e0c49557d9f8af-pre01-sub04.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "round_submission_count": 4,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.8823529411764706,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21863,16 +21882,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-69954eee8cfe",
-      "rounds": 223,
-      "candidate_count": 920,
-      "duplicate_filtered_count": 435,
-      "novel_candidate_count": 485,
+      "last_run_key": "library-import-89e0c49557d9",
+      "rounds": 224,
+      "candidate_count": 937,
+      "duplicate_filtered_count": 450,
+      "novel_candidate_count": 487,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 480,
-      "accepted_count": 480,
-      "duplicate_ratio": 0.47282608695652173,
-      "final_duplicate_ratio": 0.010309278350515464,
+      "post_final_dedupe_count": 482,
+      "accepted_count": 482,
+      "duplicate_ratio": 0.48025613660619,
+      "final_duplicate_ratio": 0.01026694045174538,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
