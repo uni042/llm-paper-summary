@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T15:15:50+00:00",
-  "record_count": 11355,
+  "updated_at": "2026-10-10T15:22:37+00:00",
+  "record_count": 11370,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162303,6 +162303,235 @@
       "last_checked_at": "2026-10-10T15:15:50+00:00",
       "linked_from": [],
       "title": "CaptionQA: Is Your Caption as Useful as the Image Itself?"
+    },
+    "DOI:10.3390/drones9120811": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/drones9120811",
+      "identity_tokens": [
+        "DOI:10.3390/drones9120811"
+      ],
+      "reason": "This is a survey of infrared and visible image-fusion techniques for UAVs; it does not state an LLM inference, serving, runtime, or efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:22:32+00:00",
+      "last_checked_at": "2026-10-10T15:22:32+00:00",
+      "linked_from": [],
+      "title": "Infrared and Visible Image Fusion Techniques for UAVs: A Comprehensive Review"
+    },
+    "arXiv:2511.13269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13269",
+      "identity_tokens": [
+        "arXiv:2511.13269"
+      ],
+      "reason": "This is a spatial-intelligence benchmark for UAV navigation, an application evaluation without a stated LLM serving or inference-efficiency method.",
+      "first_checked_at": "2026-10-10T15:22:32+00:00",
+      "last_checked_at": "2026-10-10T15:22:32+00:00",
+      "linked_from": [],
+      "title": "Is your VLM Sky-Ready? A Comprehensive Spatial Intelligence Benchmark for UAV Navigation"
+    },
+    "arXiv:2511.09586": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.09586",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.09586",
+        "SemanticScholar:a6e63335ddcd1c8d616eac428549004218b52d53",
+        "arXiv:2511.09586"
+      ],
+      "reason": "The survey organizes environment scaling for agentic experience collection and reinforcement learning; its focus is training data and learning environments, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-10T15:22:32+00:00",
+      "last_checked_at": "2026-10-10T15:22:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Environment Scaling for Interactive Agentic Experience Collection: A Survey"
+    },
+    "arXiv:2603.07392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07392",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.07392",
+        "SemanticScholar:9cee0b0ed53353486d8ec4d9508947bb12a5886a",
+        "arXiv:2603.07392"
+      ],
+      "reason": "OAKS benchmarks online adaptation to evolving knowledge streams; it evaluates adaptation capability without proposing a lower-cost or faster inference method.",
+      "first_checked_at": "2026-10-10T15:22:33+00:00",
+      "last_checked_at": "2026-10-10T15:22:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams"
+    },
+    "arXiv:2601.18207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18207",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.18207",
+        "SemanticScholar:d2b38855c82ab29b0d9aa7733e3a11ec177cc92d",
+        "arXiv:2601.18207"
+      ],
+      "reason": "PaperSearchQA trains scientific-paper search agents with verifiable-reward RL to improve question answering, with no inference-resource or serving-efficiency result.",
+      "first_checked_at": "2026-10-10T15:22:33+00:00",
+      "last_checked_at": "2026-10-10T15:22:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "PaperSearchQA: Learning to Search and Reason over Scientific Papers with RLVR"
+    },
+    "arXiv:2601.09876": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.09876",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.09876",
+        "SemanticScholar:25be07d2542c4d770131793e888bed2fd3311ac9",
+        "arXiv:2601.09876"
+      ],
+      "reason": "CLINSQL is an expert-annotated clinical Text-to-SQL benchmark for evaluating query reasoning; it is a medical task benchmark, not a compute-efficiency benchmark.",
+      "first_checked_at": "2026-10-10T15:22:33+00:00",
+      "last_checked_at": "2026-10-10T15:22:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Patient-Similarity Cohort Reasoning in Clinical Text-to-SQL"
+    },
+    "arXiv:2601.05567": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05567",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.05567",
+        "SemanticScholar:80e84da93b42c7a2810252d3f7038f17a0242a4a",
+        "arXiv:2601.05567"
+      ],
+      "reason": "WildSci expands scientific reasoning evaluation and data coverage for medicine/materials science; its contribution is domain capability rather than system runtime efficiency.",
+      "first_checked_at": "2026-10-10T15:22:34+00:00",
+      "last_checked_at": "2026-10-10T15:22:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "WildSci: Advancing Scientific Reasoning from In-the-Wild Literature"
+    },
+    "arXiv:2512.24851": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24851",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.24851",
+        "SemanticScholar:1ba6a97335a6ebde13617cd8a4d2233dac542fd9",
+        "arXiv:2512.24851"
+      ],
+      "reason": "VLN-MME diagnoses multimodal models on visual-navigation tasks and sequential action prediction; it does not optimize model execution.",
+      "first_checked_at": "2026-10-10T15:22:34+00:00",
+      "last_checked_at": "2026-10-10T15:22:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "VLN-MME: Diagnosing MLLMs as Language-guided Visual Navigation agents"
+    },
+    "arXiv:2512.12461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12461",
+      "identity_tokens": [
+        "arXiv:2512.12461"
+      ],
+      "reason": "This work applies cross-modal distillation to spike-informed local-field-potential modeling, with no stated language-model inference or serving contribution.",
+      "first_checked_at": "2026-10-10T15:22:34+00:00",
+      "last_checked_at": "2026-10-10T15:22:34+00:00",
+      "linked_from": [],
+      "title": "Cross-Modal Representational Knowledge Distillation for Enhanced Spike-Informed LFP Modeling"
+    },
+    "arXiv:2512.02840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.02840",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.02840",
+        "SemanticScholar:2dc9e3e2555b215eaab59514367c9b4062794b36",
+        "arXiv:2512.02840"
+      ],
+      "reason": "promptolution packages prompt-optimization methods into a modular framework for practical integration; it addresses prompt development and performance, not inference serving cost.",
+      "first_checked_at": "2026-10-10T15:22:35+00:00",
+      "last_checked_at": "2026-10-10T15:22:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "promptolution: A Unified, Modular Framework for Prompt Optimization"
+    },
+    "arXiv:2511.01315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01315",
+      "identity_tokens": [
+        "arXiv:2511.01315"
+      ],
+      "reason": "This paper applies a state-space model to multi-view stereo vision; its title gives no LLM inference, serving, or efficiency connection.",
+      "first_checked_at": "2026-10-10T15:22:35+00:00",
+      "last_checked_at": "2026-10-10T15:22:35+00:00",
+      "linked_from": [],
+      "title": "MVSMamba: Multi-View Stereo with State Space Model"
+    },
+    "arXiv:2310.06046": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06046",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3427369",
+        "DOI:10.48550/arxiv.2310.06046",
+        "SemanticScholar:99e6c90c0ed18030164a731250d547b5e5735055",
+        "arXiv:2310.06046"
+      ],
+      "reason": "The paper surveys and demonstrates LLM use for system-on-chip security verification; this is a security application, not LLM runtime optimization.",
+      "first_checked_at": "2026-10-10T15:22:36+00:00",
+      "last_checked_at": "2026-10-10T15:22:36+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "LLM for SoC Security: A Paradigm Shift"
+    },
+    "arXiv:2302.04501": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.04501",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn64981.2025.11229402",
+        "DOI:10.48550/arxiv.2302.04501",
+        "SemanticScholar:b4d4f7cc5b270073061a3cf219c62881f55c6351",
+        "arXiv:2302.04501"
+      ],
+      "reason": "MTS-Mixers replaces temporal/channel attention operations for multivariate time-series forecasting; it does not concern LLM inference or serving.",
+      "first_checked_at": "2026-10-10T15:22:36+00:00",
+      "last_checked_at": "2026-10-10T15:22:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "MTS-Mixers: Multivariate Time Series Forecasting via Factorized Temporal and Channel Mixing"
+    },
+    "DOI:10.48550/arxiv.2305.12031": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2305.12031",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.12031",
+        "SemanticScholar:61b0f5cfd4f951632435707948201474e16e835b",
+        "arXiv:2305.12031"
+      ],
+      "reason": "The current arXiv record describes a clinical research language model fine-tuned with QLoRA and efficient single-GPU training; the reported contribution is medical task quality/training, not inference efficiency.",
+      "first_checked_at": "2026-10-10T15:22:36+00:00",
+      "last_checked_at": "2026-10-10T15:22:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Clinical Camel: An Open Expert-Level Medical Language Model with Dialogue-Based Knowledge Encoding"
+    },
+    "arXiv:2206.06336": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.06336",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2206.06336",
+        "SemanticScholar:a8fd9c1625011741f74401ff9bdc1c584e25c86d",
+        "arXiv:2206.06336"
+      ],
+      "reason": "Language Models are General-Purpose Interfaces proposes connecting pretrained encoders to foundation models for task coverage; the abstract does not claim execution-cost or serving improvements.",
+      "first_checked_at": "2026-10-10T15:22:37+00:00",
+      "last_checked_at": "2026-10-10T15:22:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Language Models are General-Purpose Interfaces"
     }
   }
 }

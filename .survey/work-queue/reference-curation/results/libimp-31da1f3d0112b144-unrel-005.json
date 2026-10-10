@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-31da1f3d0112b144-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.18207",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.18207",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.18207",
+      "SemanticScholar:d2b38855c82ab29b0d9aa7733e3a11ec177cc92d",
+      "arXiv:2601.18207"
+    ],
+    "reason": "PaperSearchQA trains scientific-paper search agents with verifiable-reward RL to improve question answering, with no inference-resource or serving-efficiency result.",
+    "first_checked_at": "2026-10-10T15:22:33+00:00",
+    "last_checked_at": "2026-10-10T15:22:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "PaperSearchQA: Learning to Search and Reason over Scientific Papers with RLVR"
+  },
+  "processed_at": "2026-10-10T15:22:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-31da1f3d0112",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
