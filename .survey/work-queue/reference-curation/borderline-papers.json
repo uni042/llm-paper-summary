@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T09:21:18+00:00",
-  "record_count": 4582,
+  "updated_at": "2026-10-10T13:34:54+00:00",
+  "record_count": 4584,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70107,6 +70107,34 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Legal-HNet: Mixing Legal Long-Context Tokens with Hartley Transform"
+    },
+    "DOI:10.1145/3404835.3462978": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3404835.3462978",
+      "identity_tokens": [
+        "DOI:10.1145/3404835.3462978",
+        "semanticscholar:d3f51870f4da5dd9c2a08a55cfa8a380b8d49208"
+      ],
+      "reason": "Primary abstract unavailable. Confirmed DOI/title retained; the DOI resolver returned Internal Error and the official ACM endpoint returned 403 Forbidden (exact retrieval failure in this record). No secondary abstract was used.",
+      "first_checked_at": "2026-10-10T13:34:54+00:00",
+      "last_checked_at": "2026-10-10T13:34:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Lighter and Better: Low-Rank Decomposed Self-Attention Networks for Next-Item Recommendation"
+    },
+    "arXiv:2106.02795": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.02795",
+      "identity_tokens": [
+        "arXiv:2106.02795",
+        "semanticscholar:94576783bc73bf55a0091203a3d45a0a4665a1ae"
+      ],
+      "reason": "Learnable Fourier positional features improve accuracy and convergence speed, but the abstract demonstrates faster training convergence rather than lower inference/serving cost. Its connection to transformer attention is direct while target-runtime transfer remains uncertain.",
+      "first_checked_at": "2026-10-10T13:34:54+00:00",
+      "last_checked_at": "2026-10-10T13:34:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Learnable Fourier Features for Multi-Dimensional Spatial Positional Encoding"
     }
   }
 }
