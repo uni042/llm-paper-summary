@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HERO: Rethinking Visual Token Early Dropping in High-Resolution Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.13067",
+      "year": 2025,
+      "published": "2025-09-16",
+      "venue": "IEEE transactions on multimedia",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "By cropping high-resolution images into local tiles and encoding them independently, High-Resolution Large Vision-Language Models (HR-LVLMs) have demonstrated remarkable fine-grained visual understanding capabilities. However, this divide-and-conquer paradigm significantly increases the number of visual tokens, resulting in substantial computational and memory overhead. To better understand and address this challenge, we empirically investigate visual token utilization in HR-LVLMs and uncover three key findings: (1) the local tiles have varying importance, jointly determined by visual saliency and task relevance; (2) the CLS token in CLIP-based vision encoders exhibits a two-stage attention pattern across layers, with each stage attending to different types of visual tokens; (3) the visual tokens emphasized at different stages encode information at varying levels of granularity, playing complementary roles within LVLMs. Building on these insights, we propose HERO, a High-resolution visual token early dropping framework that integrates content-adaptive token budget allocation with function-aware token selection. By accurately estimating tile-level importance and selectively retaining visual tokens with complementary roles, HERO achieves superior efficiency-accuracy trade-offs across diverse benchmarks and model scales, all in a training-free manner. This study provides both empirical insights and practical solutions toward efficient inference in HR-LVLMs.",
+      "identifiers": [
+        "SemanticScholar:25a984dc3eac2fff4b3f22b224417c881c2c8de9"
+      ],
+      "semantic_scholar_id": "25a984dc3eac2fff4b3f22b224417c881c2c8de9",
+      "canonical_id": "arXiv:2509.13067",
+      "arxiv_id": "2509.13067",
+      "doi": "10.48550/arXiv.2509.13067",
+      "authors": [
+        "Xu Li",
+        "Yuxuan Liang",
+        "Xiao-Lei Chen",
+        "Yi Zheng",
+        "Hao-Tian Chen",
+        "Zhe Liu",
+        "Rui Zhu",
+        "Bin Li",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 389,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HERO selectively drops redundant high-resolution visual tokens to reduce the compute and memory overhead in large vision-language models.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Towards Extreme Pruning of LLMs with Plug-and-Play Mixed Sparsity",
+      "source_url": "https://arxiv.org/abs/2503.11164",
+      "year": 2025,
+      "published": "2025-03-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "N:M structured pruning is essential for large language models (LLMs) because it can remove less important network weights and reduce the memory and computation requirements. Existing pruning methods mainly focus on designing metrics to measure the importance of network components to guide pruning. Apart from the impact of these metrics, we observe that different layers have different sensitivities over the network performance. Thus, we propose an efficient method based on the trace of Fisher Information Matrix (FIM) to quantitatively measure and verify the different sensitivities across layers. Based on this, we propose Mixed Sparsity Pruning (MSP) which uses a pruning-oriented evolutionary algorithm (EA) to determine the optimal sparsity levels for different layers. To guarantee fast convergence and achieve promising performance, we utilize efficient FIM-inspired layer-wise sensitivity to initialize the population of EA. In addition, our MSP can work as a plug-and-play module, ready to be integrated into existing pruning methods. Extensive experiments on LLaMA and LLaMA-2 on language modeling and zero-shot tasks demonstrate our superior performance. In particular, in extreme pruning ratio (e.g. 75%), our method significantly outperforms existing methods in terms of perplexity (PPL) by orders of magnitude (Figure 1).",
+      "identifiers": [
+        "SemanticScholar:a878e50c9a940dc46854f9ece320120d84e322dc"
+      ],
+      "semantic_scholar_id": "a878e50c9a940dc46854f9ece320120d84e322dc",
+      "canonical_id": "arXiv:2503.11164",
+      "arxiv_id": "2503.11164",
+      "doi": "10.48550/arXiv.2503.11164",
+      "authors": [
+        "Chi Xu",
+        "Gefei Zhang",
+        "Yantong Zhu",
+        "Luca Benini",
+        "Guosheng Hu",
+        "Yawei Li",
+        "Zhihong Zhang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 575,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The proposed plug-and-play mixed-sparsity pruning reduces LLM memory/computation while preserving language-model quality under high sparsity.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Elementwise Language Representation",
+      "source_url": "https://arxiv.org/abs/2302.13475",
+      "year": 2023,
+      "published": "2023-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a new technique for computational language representation called elementwise embedding, in which a material (semantic unit) is abstracted into a horizontal concatenation of lower-dimensional element (character) embeddings. While elements are always characters, materials are arbitrary levels of semantic units so it generalizes to any type of tokenization. To focus only on the important letters, the $n^{th}$ spellings of each semantic unit are aligned in $n^{th}$ attention heads, then concatenated back into original forms creating unique embedding representations; they are jointly projected thereby determining own contextual importance. Technically, this framework is achieved by passing a sequence of materials, each consists of $v$ elements, to a transformer having $h=v$ attention heads. As a pure embedding technique, elementwise embedding replaces the $w$-dimensional embedding table of a transformer model with $256$ $c$-dimensional elements (each corresponding to one of UTF-8 bytes) where $c=w/v$. Using this novel approach, we show that the standard transformer architecture can be reused for all levels of language representations and be able to process much longer sequences at the same time-complexity without\"any\"architectural modification and additional overhead. BERT trained with elementwise embedding outperforms its subword equivalence (original implementation) in multilabel patent document classification exhibiting superior robustness to domain-specificity and data imbalance, despite using $0.005\\%$ of embedding parameters. Experiments demonstrate the generalizability of the proposed method by successfully transferring these enhancements to differently architected transformers CANINE and ALBERT.",
+      "identifiers": [
+        "SemanticScholar:67c28d697460b684a0ba97d989719b4ed3c9cffc"
+      ],
+      "semantic_scholar_id": "67c28d697460b684a0ba97d989719b4ed3c9cffc",
+      "canonical_id": "arXiv:2302.13475",
+      "arxiv_id": "2302.13475",
+      "doi": "10.48550/arXiv.2302.13475",
+      "authors": [
+        "Du-Yeong Kim",
+        "Jeeeun Kim"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1321,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The elementwise embedding method sharply reduces embedding parameters and avoids additional sequence-processing overhead in BERT/Transformer models, a concrete model-efficiency link.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ac1ca94c832a",
+    "round": "libimp-ac1ca94c832ad557-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ac1ca94c832ad557-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ac1ca94c832ad557-pre01.json",
+    "receipt": "sha256:1ab2ea6a32c2ccc2ab2c6465bb148ab7a2846b8daa29ad42d6c9a565955f60fd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ac1ca94c832a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

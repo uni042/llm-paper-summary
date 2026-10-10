@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RedundancyLens: Revealing and Exploiting Visual Token Processing Redundancy for Efficient Decoder-Only MLLMs",
+      "source_url": "https://arxiv.org/abs/2501.19036",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current Multimodal Large Language Model (MLLM) architectures face a critical tradeoff between performance and efficiency: decoder-only architectures achieve higher performance but lower efficiency, while cross-attention-based architectures offer greater efficiency but lower performance. The key distinction lies in how visual tokens are processed. Decoder-only architectures apply self-attention and FFN operations on visual tokens, while cross-attention architectures skip these computations. To investigate whether redundancy exists in this computationally expensive process, we propose a training-free framework for analyzing trained MLLMs. It consists of Probe-Activated Dynamic FFN and Hollow Attention, which enable adjustable reductions in computations for visual tokens, as well as a Layer Ranking Algorithm that prioritizes layers for these reductions. Extensive experiments demonstrate substantial, structured, and clustered redundancy unique to decoder-only MLLMs, offering valuable insights for future MLLM architecture design. Furthermore, by leveraging our reduction framework as a training-free inference acceleration approach, we achieve performance comparable to or better than state-of-the-art methods while remaining compatible with them. Code will be publicly available at https://github.com/L-Hugh/RedundancyLens.",
+      "identifiers": [
+        "SemanticScholar:aedfdab45b0bc1fa0cdd9d232a78d57f6cc2c4c0"
+      ],
+      "semantic_scholar_id": "aedfdab45b0bc1fa0cdd9d232a78d57f6cc2c4c0",
+      "canonical_id": "arXiv:2501.19036",
+      "arxiv_id": "2501.19036",
+      "doi": "10.18653/v1/2025.findings-acl.1233",
+      "authors": [
+        "Hongliang Li",
+        "Jia-Xin Zhang",
+        "Wenhui Liao",
+        "Dezhi Peng",
+        "Kai Ding",
+        "Lianwen Jin"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "RedundancyLens reduces visual-token computation in decoder-only MLLMs at inference without training, providing a direct multimodal inference-efficiency contribution.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Improving Task-Agnostic BERT Distillation with Layer Mapping Search",
+      "source_url": "https://arxiv.org/abs/2012.06153",
+      "year": 2020,
+      "published": "2020-12-11",
+      "venue": "Neurocomputing",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Knowledge distillation (KD) which transfers the knowledge from a large teacher model to a small student model, has been widely used to compress the BERT model recently. Besides the supervision in the output in the original KD, recent works show that layer-level supervision is crucial to the performance of the student BERT model. However, previous works designed the layer mapping strategy heuristically (e.g., uniform or last-layer), which can lead to inferior performance. In this paper, we propose to use the genetic algorithm (GA) to search for the optimal layer mapping automatically. To accelerate the search process, we further propose a proxy setting where a small portion of the training corpus are sampled for distillation, and three representative tasks are chosen for evaluation. After obtaining the optimal layer mapping, we perform the task-agnostic BERT distillation with it on the whole corpus to build a compact student model, which can be directly fine-tuned on downstream tasks. Comprehensive experiments on the evaluation benchmarks demonstrate that 1) layer mapping strategy has a significant effect on task-agnostic BERT distillation and different layer mappings can result in quite different performances; 2) the optimal layer mapping strategy from the proposed search process consistently outperforms the other heuristic ones; 3) with the optimal layer mapping, our student model achieves state-of-the-art performance on the GLUE tasks.",
+      "identifiers": [
+        "SemanticScholar:aa5562f85f917a0acad02c1f7f60ed4b1fba8a33"
+      ],
+      "semantic_scholar_id": "aa5562f85f917a0acad02c1f7f60ed4b1fba8a33",
+      "canonical_id": "arXiv:2012.06153",
+      "arxiv_id": "2012.06153",
+      "doi": "10.1016/J.NEUCOM.2021.07.050",
+      "authors": [
+        "Xiaoqi Jiao",
+        "Huating Chang",
+        "Yichun Yin",
+        "Li-Feng Shang",
+        "Xin Jiang",
+        "Xiao Chen",
+        "Linlin Li",
+        "Fang Wang",
+        "Qun Liu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2129,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Layer-mapping search improves BERT distillation into a compact student, supporting compressed NLP deployment under the broad model-efficiency scope.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Approximately Aligned Decoding",
+      "source_url": "https://arxiv.org/abs/2410.01103",
+      "year": 2024,
+      "published": "2024-10-01",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "It is common to reject undesired outputs of Large Language Models (LLMs); however, current methods to do so require an excessive amount of computation to re-sample after a rejection, or distort the distribution of outputs by constraining the output to highly improbable tokens. We present a method, Approximately Aligned Decoding (AprAD), to balance the distortion of the output distribution with computational efficiency, inspired by algorithms from the speculative decoding literature. AprAD allows for the generation of long sequences of text with difficult-to-satisfy constraints, while amplifying low probability outputs much less compared to existing methods. We show through a series of experiments that the task-specific performance of AprAD is comparable to methods that do not distort the output distribution, while being much more computationally efficient.",
+      "identifiers": [
+        "SemanticScholar:d7fed7523ec2eb5aaeda51e5608b21e8ffc31549"
+      ],
+      "semantic_scholar_id": "d7fed7523ec2eb5aaeda51e5608b21e8ffc31549",
+      "canonical_id": "arXiv:2410.01103",
+      "arxiv_id": "2410.01103",
+      "doi": "10.48550/arXiv.2410.01103",
+      "authors": [
+        "Daniel Melcer",
+        "Sujan Kumar Gonugondla",
+        "Pramuditha Perera",
+        "Hai-Feng Qian",
+        "Wen-Hao Chiang",
+        "Yan-Jun Wang",
+        "Nihal Jain",
+        "P. Garg",
+        "Xiaofei Ma",
+        "Anoop Deoras"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 739,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "AprAD reduces resampling computation for constrained LLM decoding while keeping task-specific quality comparable, directly targeting inference-time generation cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GPU Performance Portability needs Autotuning",
+      "source_url": "https://arxiv.org/abs/2505.03780",
+      "year": 2025,
+      "published": "2025-04-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLMs grow in complexity, achieving state-of-the-art performance requires tight co-design across algorithms, software, and hardware. Today's reliance on a single dominant platform limits portability, creates vendor lock-in, and raises barriers for new AI hardware. In this work, we make the case for combining just-in-time (JIT) compilation with comprehensive kernel parameter autotuning to enable portable LLM inference with state-of-the-art performance without code changes. Focusing on performance-critical LLM kernels, we demonstrate that this approach explores up to 15x more kernel parameter configurations, produces significantly more diverse code across multiple dimensions, and even outperforms vendor-optimized implementations by up to 230%, all while reducing kernel code size by 70x and eliminating manual code optimizations. Our results highlight autotuning as a promising path to unlocking model portability across GPU vendors.",
+      "identifiers": [
+        "SemanticScholar:0d7251708caa3c80ee52477a930f6ea407dceab2"
+      ],
+      "semantic_scholar_id": "0d7251708caa3c80ee52477a930f6ea407dceab2",
+      "canonical_id": "arXiv:2505.03780",
+      "arxiv_id": "2505.03780",
+      "doi": "10.48550/arXiv.2505.03780",
+      "authors": [
+        "Burkhard Ringlein",
+        "Thomas Parnell",
+        "R. Stoica"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 528,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Kernel autotuning targets performance-critical LLM inference and reports faster GPU kernels across vendors, a direct runtime-efficiency result.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DTRNet: Dynamic Token Routing Network to Reduce Quadratic Costs in Transformers",
+      "source_url": "https://arxiv.org/abs/2509.00925",
+      "year": 2025,
+      "published": "2025-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers achieve state-of-the-art results across many tasks, but their uniform application of quadratic self-attention to every token at every layer makes them computationally expensive. We introduce DTRNet (Dynamic Token Routing Network), an improved Transformer architecture that allows tokens to dynamically skip the quadratic cost of cross-token mixing while still receiving lightweight linear updates. By preserving the MLP module and reducing the attention cost for most tokens to linear, DTRNet ensures that every token is explicitly updated while significantly lowering overall computation. This design offers an efficient and effective alternative to standard dense attention. Once trained, DTRNet blocks routes only ~10% of tokens through attention at each layer while maintaining performance comparable to a full Transformer. It consistently outperforms routing-based layer skipping methods such as MoD and D-LLM in both accuracy and memory at matched FLOPs, while routing fewer tokens to full attention. Its efficiency gains, scales with sequence length, offering significant reduction in FLOPs for long-context inputs. By decoupling token updates from attention mixing, DTRNet substantially reduces the quadratic share of computation, providing a simple, efficient, and scalable alternative to Transformers.",
+      "identifiers": [
+        "SemanticScholar:983054375162192b94eef502dd81e8f2957d88cc"
+      ],
+      "semantic_scholar_id": "983054375162192b94eef502dd81e8f2957d88cc",
+      "canonical_id": "arXiv:2509.00925",
+      "arxiv_id": "2509.00925",
+      "doi": "10.48550/arXiv.2509.00925",
+      "authors": [
+        "Aman Sharma",
+        "Saeed Najafi",
+        "Parsa Farinneya",
+        "Benyamin Jamialahmadi",
+        "Marzieh S. Tahaei",
+        "Yuhe Fan",
+        "Mehdi Rezagholizadeh",
+        "Boxing Chen",
+        "A. Jafari"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Dynamic token routing reduces attention computation and long-context FLOPs while maintaining Transformer-level performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ac1ca94c832a",
+    "round": "libimp-ac1ca94c832ad557-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ac1ca94c832ad557-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ac1ca94c832ad557-pre01.json",
+    "receipt": "sha256:1ab2ea6a32c2ccc2ab2c6465bb148ab7a2846b8daa29ad42d6c9a565955f60fd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ac1ca94c832a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
