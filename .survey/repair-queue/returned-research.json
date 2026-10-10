@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T21:16:11+00:00",
+  "generated_at": "2026-10-10T21:48:23+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -864,22 +864,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b005949baa02--libfile_846183fd1e708191a26830a3e6b9f74f--2305.17126-latm.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b005949baa02--libfile_846183fd1e708191a26830a3e6b9f74f--2305.17126-latm.json",
       "worker_run_key": "20261006-0630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2302.10866",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-05T23:19:40+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 62.9% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d457ee0a53d1--libfile_db151f7383f4819192cc74cc313ba38d--2302.10866-hyena.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d457ee0a53d1--libfile_db151f7383f4819192cc74cc313ba38d--2302.10866-hyena.json",
-      "worker_run_key": "20261006-0700-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:1901.10430",
@@ -2471,8 +2455,8 @@
     },
     {
       "canonical_id": "arXiv:2504.09858",
-      "title": "Reasoning Models Can Be Effective Without Thinking",
-      "source_url": "https://arxiv.org/abs/2504.09858",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-10T21:16:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2495,6 +2479,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e7fcf894e17--libfile_4fc7f71a21f48191af08f423ede617b3--2025-2504.09858-reasoning-without-thinking-research-20261011-0530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1e7fcf894e17--libfile_4fc7f71a21f48191af08f423ede617b3--2025-2504.09858-reasoning-without-thinking-research-20261011-0530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:1907.05242",
+      "title": "Large Memory Layers with Product Keys",
+      "source_url": "https://arxiv.org/abs/1907.05242",
+      "returned_at": "2026-10-10T21:47:47+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 178 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5705,
+        "body_paragraphs": 29,
+        "method_chars": 2114,
+        "method_paragraphs": 10,
+        "evaluation_chars": 178,
+        "limitation_chars": 883,
+        "insufficiency_flags": [
+          "評価説明量 178 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8953baf1d1481918cf811c01c897787--2019-1907.05242-product-key-memory-research-20261011-0630-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c8953baf1d1481918cf811c01c897787--2019-1907.05242-product-key-memory-research-20261011-0630-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-0630-scheduled-chat-30/r01"
     }
   ]
 }
