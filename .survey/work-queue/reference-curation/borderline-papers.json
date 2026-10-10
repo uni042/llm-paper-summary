@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T03:54:13+00:00",
-  "record_count": 4539,
+  "updated_at": "2026-10-10T04:27:25+00:00",
+  "record_count": 4544,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69375,6 +69375,115 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Survival of the Smallest: Genetic Algorithms for LLM Compression"
+    },
+    "SemanticScholar:ac3ba29fb549bac9988f73f4c0683f38b473a199": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:ac3ba29fb549bac9988f73f4c0683f38b473a199",
+      "identity_tokens": [
+        "SemanticScholar:ac3ba29fb549bac9988f73f4c0683f38b473a199"
+      ],
+      "reason": "公式JISEMページはTitle/author/Abstractの汎用placeholderを返し、公式PDF取得もError fetching。primary abstract未確認。",
+      "first_checked_at": "2026-10-10T04:27:24+00:00",
+      "last_checked_at": "2026-10-10T04:27:24+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Examine the Opportunities and Challenges of Large Language Model (LLM) For Indic Languages"
+    },
+    "DOI:10.1109/iscas56072.2025.11043993": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas56072.2025.11043993",
+      "identity_tokens": [
+        "DOI:10.1109/iscas56072.2025.11043993"
+      ],
+      "reason": "IEEE XploreはJavaScript/robot verificationを要求しabstractを返さなかった。安定DOI/titleのみ保持。",
+      "first_checked_at": "2026-10-10T04:27:24+00:00",
+      "last_checked_at": "2026-10-10T04:27:24+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Integer-only Quantization Framework for Edge Deployment of Large Language Models"
+    },
+    "arXiv:2309.01775": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.01775",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2309.01775",
+        "arXiv:2309.01775"
+      ],
+      "reason": "gated RNNがlinear self-attentionを実装するmechanism分析。abstractにefficiency測定やinference resource低減はない。",
+      "first_checked_at": "2026-10-10T04:27:25+00:00",
+      "last_checked_at": "2026-10-10T04:27:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Gated recurrent neural networks discover attention"
+    },
+    "arXiv:2508.20441": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.20441",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.20441",
+        "arXiv:2508.20441"
+      ],
+      "reason": "diagonal SSMのspectral initialization研究。kernel計算単純化には触れるがabstract評価はlearning/LRA中心でLLM inference効果なし。",
+      "first_checked_at": "2026-10-10T04:27:25+00:00",
+      "last_checked_at": "2026-10-10T04:27:25+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Uncovering the Spectral Bias in Diagonal State Space Models"
+    },
+    "arXiv:2502.12381": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12381",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.12381",
+        "arXiv:2502.12381"
+      ],
+      "reason": "Linear Diffusion Networksはparallelizable sequence modelingを提案するがabstractの評価はImageNet/LRAでLLM/servingとの接続不明瞭。",
+      "first_checked_at": "2026-10-10T04:27:25+00:00",
+      "last_checked_at": "2026-10-10T04:27:25+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Linear Diffusion Networks"
     }
   }
 }

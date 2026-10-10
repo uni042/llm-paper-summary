@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-183473323b4fba03-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.20441",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.20441",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.20441",
+      "arXiv:2508.20441"
+    ],
+    "reason": "diagonal SSMのspectral initialization研究。kernel計算単純化には触れるがabstract評価はlearning/LRA中心でLLM inference効果なし。",
+    "first_checked_at": "2026-10-10T04:27:25+00:00",
+    "last_checked_at": "2026-10-10T04:27:25+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Uncovering the Spectral Bias in Diagonal State Space Models"
+  },
+  "processed_at": "2026-10-10T04:27:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-183473323b4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

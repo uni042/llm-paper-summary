@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T03:54:14+00:00",
-  "record_count": 11240,
+  "updated_at": "2026-10-10T04:27:27+00:00",
+  "record_count": 11244,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160629,6 +160629,89 @@
         "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
       ],
       "title": "QuantFace: Low-Bit Post-Training Quantization for One-Step Diffusion Face Restoration"
+    },
+    "arXiv:2410.01866": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01866",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.01866",
+        "arXiv:2410.01866"
+      ],
+      "reason": "MacDropはmassive weightsへのparameter-efficient fine-tuning regularizer。abstractはrobustness/qualityで、inference効率を示さない。",
+      "first_checked_at": "2026-10-10T04:27:26+00:00",
+      "last_checked_at": "2026-10-10T04:27:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "House of Cards: Massive Weights in LLMs"
+    },
+    "arXiv:2506.02939": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02939",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.02939",
+        "arXiv:2506.02939"
+      ],
+      "reason": "QKV activation圧縮の対象はLLM training memoryであり、abstractはtraining効率のみを扱う。",
+      "first_checked_at": "2026-10-10T04:27:26+00:00",
+      "last_checked_at": "2026-10-10T04:27:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "QKV Projections Require a Fraction of Their Memory"
+    },
+    "arXiv:2506.18999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.18999",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.18999",
+        "arXiv:2506.18999"
+      ],
+      "reason": "Transformer-to-Mamba distillationの対象は高解像度diffusion image generationで、LLM inferenceへの接続なし。",
+      "first_checked_at": "2026-10-10T04:27:26+00:00",
+      "last_checked_at": "2026-10-10T04:27:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Diffusion Transformer-to-Mamba Distillation for High-Resolution Image Generation"
+    },
+    "DOI:10.1109/tpds.2025.3583983": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpds.2025.3583983",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2025.3583983"
+      ],
+      "reason": "PipeMeshはLLM training pipeline scheduling/communication overlap。契約対象外のtraining-only効率改善。",
+      "first_checked_at": "2026-10-10T04:27:27+00:00",
+      "last_checked_at": "2026-10-10T04:27:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "PipeMesh: Achieving Memory-Efficient Computation-Communication Overlap for Training Large Language Models"
     }
   }
 }

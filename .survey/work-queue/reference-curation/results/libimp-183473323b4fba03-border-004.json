@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-183473323b4fba03-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2309.01775",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2309.01775",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2309.01775",
+      "arXiv:2309.01775"
+    ],
+    "reason": "gated RNNがlinear self-attentionを実装するmechanism分析。abstractにefficiency測定やinference resource低減はない。",
+    "first_checked_at": "2026-10-10T04:27:25+00:00",
+    "last_checked_at": "2026-10-10T04:27:25+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Gated recurrent neural networks discover attention"
+  },
+  "processed_at": "2026-10-10T04:27:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-183473323b4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
