@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T07:48:04.697150+00:00",
+  "generated_at": "2026-10-10T08:11:21.294199+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 126,
+  "count": 123,
   "worker_counts": {
-    "scheduled-chat-00": 42,
-    "scheduled-chat-30": 42,
-    "scheduled-chat-45": 42
+    "scheduled-chat-00": 41,
+    "scheduled-chat-30": 41,
+    "scheduled-chat-45": 41
   },
   "entries": [
     {
@@ -168,29 +168,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 127 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md",
-      "canonical_id": "arXiv:2410.11845",
-      "title": "A Review on Edge Large Language Models: Design, Execution, and Applications",
-      "file_bytes": 11430,
-      "source_sha256": "9b43a1155f8fc2ef099b599a2c3db8700c7c3abf9e78dc73a9b846c360ea9132",
-      "source_git_blob_sha": "1c6b43cbb67ff632d358f20562e4b18643b0933b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.97494,
-      "quality_metrics": {
-        "body_chars": 1886,
-        "method_chars": 497,
-        "evaluation_chars": 193,
-        "limitation_chars": 191
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1886 < 2200",
-        "16KB未満再監査: 手法説明量 497 < 700"
       ],
       "warnings": []
     },
@@ -638,26 +615,6 @@
         "method_chars": 1134,
         "evaluation_chars": 994,
         "limitation_chars": 323
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2608.02989-acceptmoe-commitment-weighted-self-sizing-verifier-expert-sets-for-efficient-moe.md",
-      "canonical_id": "arXiv:2608.02989",
-      "title": "AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding",
-      "file_bytes": 12893,
-      "source_sha256": "5d42089f0430d8679746b591cf6042d1cc5df9eceb885f921e44fe7339a15c39",
-      "source_git_blob_sha": "9d75acaee7c3d1e98d6b1f3fdbb943fc74674b62",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.883117,
-      "quality_metrics": {
-        "body_chars": 2706,
-        "method_chars": 1412,
-        "evaluation_chars": 613,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -2313,26 +2270,6 @@
         "method_chars": 1047,
         "evaluation_chars": 698,
         "limitation_chars": 227
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
-      "canonical_id": "arXiv:2403.19708",
-      "title": "Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention",
-      "file_bytes": 14593,
-      "source_sha256": "1ef1801b4b40bd2233ebde7405315007ccc35eaefb519c28dbd419a8f1b962a3",
-      "source_git_blob_sha": "bbaf11dfaefc62605df8b319af005c9a1d4e0199",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.984146,
-      "quality_metrics": {
-        "body_chars": 3394,
-        "method_chars": 986,
-        "evaluation_chars": 548,
-        "limitation_chars": 277
       },
       "mechanical_failures": [],
       "warnings": []
