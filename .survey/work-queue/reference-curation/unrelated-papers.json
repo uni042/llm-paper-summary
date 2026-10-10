@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T07:24:14+00:00",
-  "record_count": 11259,
+  "updated_at": "2026-10-10T07:45:49+00:00",
+  "record_count": 11261,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160995,6 +160995,32 @@
         "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
       ],
       "title": "Activator: GLU Activations as The Core Functions of a Vision Transformer"
+    },
+    "arXiv:2412.10599": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.10599",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2412.10599",
+        "arXiv:2412.10599"
+      ],
+      "reason": "The arXiv abstract is a survey of Transformer use in robotic perception, planning, control, and foundation models; it proposes no model-serving or inference-efficiency method.",
+      "first_checked_at": "2026-10-10T07:45:49+00:00",
+      "last_checked_at": "2026-10-10T07:45:49+00:00",
+      "linked_from": [],
+      "title": "Advances in Transformers for Robotic Applications: A Review"
+    },
+    "arXiv:2503.12992": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.12992",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2503.12992",
+        "arXiv:2503.12992"
+      ],
+      "reason": "The arXiv abstract studies whether language-model neurons segment activation patterns into semantic categories; it is an interpretability/representation analysis and does not propose inference savings.",
+      "first_checked_at": "2026-10-10T07:45:49+00:00",
+      "last_checked_at": "2026-10-10T07:45:49+00:00",
+      "linked_from": [],
+      "title": "Intra-neuronal attention within language models Relationships between activation and semantics"
     }
   }
 }

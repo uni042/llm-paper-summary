@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6151c3990068c8f4-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.12992",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.12992",
+    "identity_tokens": [
+      "PRIMARY:https://arxiv.org/abs/2503.12992",
+      "arXiv:2503.12992"
+    ],
+    "reason": "The arXiv abstract studies whether language-model neurons segment activation patterns into semantic categories; it is an interpretability/representation analysis and does not propose inference savings.",
+    "first_checked_at": "2026-10-10T07:45:49+00:00",
+    "last_checked_at": "2026-10-10T07:45:49+00:00",
+    "linked_from": [],
+    "title": "Intra-neuronal attention within language models Relationships between activation and semantics"
+  },
+  "processed_at": "2026-10-10T07:45:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6151c3990068",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

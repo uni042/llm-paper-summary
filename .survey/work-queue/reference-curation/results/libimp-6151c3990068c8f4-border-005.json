@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6151c3990068c8f4-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.00867",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.00867",
+    "identity_tokens": [
+      "PRIMARY:https://arxiv.org/abs/2310.00867",
+      "arXiv:2310.00867"
+    ],
+    "reason": "The paper experimentally studies knowledge retention in compressed LLMs and the practical implications of compression, but its contribution is an evaluation of forgetting rather than a compression or serving-efficiency technique.",
+    "first_checked_at": "2026-10-10T07:45:48+00:00",
+    "last_checked_at": "2026-10-10T07:45:48+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Do Compressed LLMs Forget Knowledge? An Experimental Study with Practical Implications"
+  },
+  "processed_at": "2026-10-10T07:45:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6151c3990068",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
