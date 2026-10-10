@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T09:51:24.232824+00:00",
+  "generated_at": "2026-10-10T10:00:52.509351+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 78,
+  "count": 73,
   "worker_counts": {
-    "scheduled-chat-00": 26,
-    "scheduled-chat-30": 26,
-    "scheduled-chat-45": 26
+    "scheduled-chat-00": 24,
+    "scheduled-chat-30": 24,
+    "scheduled-chat-45": 25
   },
   "entries": [
     {
@@ -33,30 +33,6 @@
         "16KB未満再監査: 手法説明量 553 < 700"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md",
-      "canonical_id": "arXiv:2504.14960",
-      "title": "MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core",
-      "file_bytes": 10233,
-      "source_sha256": "1482faac91376a9c2337716bcc8fe0f5fe0186e38db3ddb35e7ed268f29cece2",
-      "source_git_blob_sha": "dfffc1a9135c23e4d1ce902a2f1da8aef82b360e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.789136,
-      "quality_metrics": {
-        "body_chars": 2606,
-        "method_chars": 1171,
-        "evaluation_chars": 652,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.9% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-me.md",
@@ -220,28 +196,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md",
-      "canonical_id": "arXiv:2609.25376",
-      "title": "VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models",
-      "file_bytes": 12296,
-      "source_sha256": "084706e16358301002134f1e4b0262d109b0de6cf87100294651fc509d738f0a",
-      "source_git_blob_sha": "0bb4a7ff6c6667970f6d1434f41271ac5129674b",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.996925,
-      "quality_metrics": {
-        "body_chars": 2491,
-        "method_chars": 1118,
-        "evaluation_chars": 263,
-        "limitation_chars": 125
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 263 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.19775-understanding-inference-scaling-for-llms-bottlenecks-trade-offs-and-perf.md",
       "canonical_id": "arXiv:2605.19775",
       "title": "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles",
@@ -371,26 +325,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 197 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md",
-      "canonical_id": "arXiv:2509.02480",
-      "title": "MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall",
-      "file_bytes": 12840,
-      "source_sha256": "62ec7c0df28eec762b85faf3e9cd517255bbbf5267914e43674cdf5867bbe3ae",
-      "source_git_blob_sha": "c4f3d1e64b190a579ae8b861df022ac073200cd7",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.911873,
-      "quality_metrics": {
-        "body_chars": 2986,
-        "method_chars": 1492,
-        "evaluation_chars": 739,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
@@ -537,28 +471,6 @@
         "limitation_chars": 329
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
-      "canonical_id": "arXiv:2403.02181",
-      "title": "Not All Layers of LLMs Are Necessary During Inference",
-      "file_bytes": 13018,
-      "source_sha256": "70c376fef4728017a32cafab191ffddb8ccb59595da21cf8641f2a665a5c7e7f",
-      "source_git_blob_sha": "95f891d6a00dcd084441c471e23d75ee4840d8ee",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.911164,
-      "quality_metrics": {
-        "body_chars": 2728,
-        "method_chars": 723,
-        "evaluation_chars": 266,
-        "limitation_chars": 315
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 266 < 500"
-      ],
       "warnings": []
     },
     {
@@ -919,7 +831,7 @@
       "file_bytes": 13536,
       "source_sha256": "e84d4d5fe3f0b58c91485411c0ab8f61572317f0ba30929ef2b51a7c3d7722d7",
       "source_git_blob_sha": "1565f37307ab2f500d6e3d44133803b4a583840b",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.971047,
@@ -1283,30 +1195,6 @@
       ],
       "warnings": [
         "日本語比率 70.8% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
-      "canonical_id": "arXiv:2510.10302",
-      "title": "SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference",
-      "file_bytes": 14220,
-      "source_sha256": "98f8f86fb8fb5b5d6b40a8d96a1bc7bb05a37db8ab9e4695bd3c0b60e1d37614",
-      "source_git_blob_sha": "4e9ee50270cb7d9281c3c4f03a9712d32512565d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.798792,
-      "quality_metrics": {
-        "body_chars": 3647,
-        "method_chars": 1773,
-        "evaluation_chars": 1085,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 79.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.9% < 警告基準 80%"
       ]
     },
     {
