@@ -332,7 +332,7 @@ jobs:
           echo 'Failed to publish Discovery precheck results after retries.' >&2
           exit 1
 
-      - name: Resume Library import after Library precheck
+      - name: Resume dedicated Discovery intake after precheck
         if: success()
         shell: bash
         run: |
@@ -351,17 +351,17 @@ jobs:
 
           active_import_runs="$(gh run list \
             --repo "${GITHUB_REPOSITORY}" \
-            --workflow library-import.yml \
+            --workflow library-discovery-intake.yml \
             --limit 20 \
             --json status \
             --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
 
           if [ "${active_import_runs:-0}" -eq 0 ]; then
-            echo "Resuming Library import for ${library_waiting} waiting Discovery payload(s)."
-            gh workflow run library-import.yml \
+            echo "Resuming Library Discovery intake for ${library_waiting} waiting Discovery payload(s)."
+            gh workflow run library-discovery-intake.yml \
               --repo "${GITHUB_REPOSITORY}" \
               --ref main
           else
-            echo "Library import already active (${active_import_runs} run(s)); it will consume the published precheck results."
+            echo "Library Discovery intake already active (${active_import_runs} run(s)); it will consume the published precheck results."
           fi
 
