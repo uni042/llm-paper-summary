@@ -1,0 +1,372 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-b82-20261011-r3-final-5d9dedf9-p01",
+  "reference_main_sha": "5d9dedf97b1a6af2aa63c1aa5d67492383dcde82",
+  "record_count": 20,
+  "records": [
+    {
+      "rank": 2727,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.13259",
+      "title": "GeoX-Bench: Benchmarking Cross-View Geo-Localization and Pose Estimation Capabilities of Large Multimodal Models",
+      "reason": "The title is a geolocalization and pose-estimation benchmark; no LLM inference-system efficiency contribution is indicated.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2511.13259",
+      "identity_tokens": [
+        "arXiv:2511.13259"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2730,
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.19097",
+      "title": "DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF",
+      "reason": "Decouples CoT into parallel sub-step generators and reports 3.8x faster inference, 68% higher throughput, and lower energy; direct latency/throughput contribution.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2511.19097",
+      "identity_tokens": [
+        "arXiv:2511.19097"
+      ],
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2511.19097, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100"
+    },
+    {
+      "rank": 2731,
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-22402-7",
+      "title": "Large language model performance versus human expert ratings in automated suicide risk assessment",
+      "reason": "The title concerns clinical risk-assessment accuracy rather than LLM systems or efficiency.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://doi.org/10.1038/s41598-025-22402-7",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-22402-7"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2733,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.06205",
+      "title": "We Can Hear You with mmWave Radar! An End-to-End Eavesdropping System",
+      "reason": "The title concerns a radio-frequency eavesdropping system, outside the target language-model systems scope.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2511.06205",
+      "identity_tokens": [
+        "arXiv:2511.06205"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2735,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.02622",
+      "title": "Machine learning for RNA secondary structure prediction: a review of current methods and challenges",
+      "reason": "The title is a review of RNA structure prediction, outside the target LLM systems scope.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2511.02622",
+      "identity_tokens": [
+        "arXiv:2511.02622"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2736,
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/lpor.202501895",
+      "title": "Fast High‐Fidelity Fourier Ptychographic Microscopy via Wavelet Transform and Linear Attention",
+      "reason": "Primary publisher abstract endpoint https://onlinelibrary.wiley.com/doi/abs/10.1002/lpor.202501895 returned HTTP 403 Forbidden from 2026-10-10T15:08:27Z through 2026-10-10T15:08:27Z. Confirmed DOI/title identity through metadata only; primary abstract unavailable, so retained as borderline. See evidence trace: Primary publisher abstract URL returned HTTP 403 Forbidden (UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z). DOI title/authors/date confirmed via Crossref metadata at https://api.crossref.org/works/10.1002/lpor.202501895, HTTP 200, UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:28Z; Crossref was not used as abstract or relevance evidence. No full text read.",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://doi.org/10.1002/lpor.202501895",
+      "identity_tokens": [
+        "DOI:10.1002/lpor.202501895"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "check_trace": "Primary publisher abstract URL returned HTTP 403 Forbidden (UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z). DOI title/authors/date confirmed via Crossref metadata at https://api.crossref.org/works/10.1002/lpor.202501895, HTTP 200, UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:28Z; Crossref was not used as abstract or relevance evidence. No full text read."
+    },
+    {
+      "rank": 2737,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00389",
+      "title": "Rethinking Facial Expression Recognition in the Era of Multimodal Large Language Models: Benchmark, Datasets, and Beyond",
+      "reason": "FERBench and domain-specific post-training improve facial-expression reasoning quality; the primary abstract presents no LLM inference or serving efficiency contribution.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2511.00389",
+      "identity_tokens": [
+        "arXiv:2511.00389"
+      ],
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2511.00389, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100"
+    },
+    {
+      "rank": 2739,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.17808",
+      "title": "Dora: Sampling and Benchmarking for 3D Shape Variational Auto-Encoders",
+      "reason": "The title concerns 3D-shape variational autoencoders, with no indicated LLM systems connection.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2412.17808",
+      "identity_tokens": [
+        "arXiv:2412.17808"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2741,
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.16445",
+      "title": "ProLLaMA: A Protein Large Language Model for Multi-Task Protein Language Processing",
+      "reason": "The abstract describes protein-domain language modeling and hierarchical efficient decoding, but that decoding method is coupled to protein generation and transfer to general LLM serving is not shown; borderline.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2402.16445",
+      "identity_tokens": [
+        "arXiv:2402.16445"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2402.16445, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100",
+      "candidate_title": "ProLLaMA: A Protein Large Language Model for Multitask Protein Language Processing"
+    },
+    {
+      "rank": 2742,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.20208",
+      "title": "ZoomNeXt: A Unified Collaborative Pyramid Network for Camouflaged Object Detection",
+      "reason": "The title concerns camouflaged-object detection, outside the target LLM systems scope.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2310.20208",
+      "identity_tokens": [
+        "arXiv:2310.20208"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2743,
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/s23156949",
+      "title": "Visual Intelligence in Precision Agriculture: Exploring Plant Disease Detection via Efficient Vision Transformers",
+      "reason": "Primary publisher abstract endpoint https://www.mdpi.com/1424-8220/23/15/6949 returned HTTP 403 Forbidden from 2026-10-10T15:08:28Z through 2026-10-10T15:08:28Z. Confirmed DOI/title identity through metadata only; primary abstract unavailable, so retained as borderline. See evidence trace: Primary publisher abstract URL returned HTTP 403 Forbidden (UTC 2026-10-10T15:08:28Z to 2026-10-10T15:08:28Z). DOI title/authors/date confirmed via Crossref metadata at https://api.crossref.org/works/10.3390/s23156949, HTTP 200, UTC 2026-10-10T15:08:28Z to 2026-10-10T15:08:29Z; Crossref was not used as abstract or relevance evidence. No full text read.",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:28Z",
+      "last_checked_at": "2026-10-10T15:08:28Z",
+      "source_url": "https://doi.org/10.3390/s23156949",
+      "identity_tokens": [
+        "DOI:10.3390/s23156949"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "check_trace": "Primary publisher abstract URL returned HTTP 403 Forbidden (UTC 2026-10-10T15:08:28Z to 2026-10-10T15:08:28Z). DOI title/authors/date confirmed via Crossref metadata at https://api.crossref.org/works/10.3390/s23156949, HTTP 200, UTC 2026-10-10T15:08:28Z to 2026-10-10T15:08:29Z; Crossref was not used as abstract or relevance evidence. No full text read."
+    },
+    {
+      "rank": 2744,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.04812",
+      "title": "Scallop: A Language for Neurosymbolic Programming",
+      "reason": "The title concerns a neurosymbolic programming language, with no indicated LLM systems-efficiency connection.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2304.04812",
+      "identity_tokens": [
+        "arXiv:2304.04812"
+      ],
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2745,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.16349",
+      "title": "Historical Inertia: A Neglected but Powerful Baseline for Long Sequence Time-series Forecasting",
+      "reason": "The title concerns long-sequence time-series forecasting, outside the target LLM systems scope.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2103.16349",
+      "identity_tokens": [
+        "arXiv:2103.16349"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2746,
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TFUZZ.2020.2967282",
+      "title": "Optimize TSK Fuzzy Systems for Classification Problems: Minibatch Gradient Descent With Uniform Regularization and Batch Normalization",
+      "reason": "The title concerns fuzzy classification systems and optimizer settings, outside the target LLM systems scope.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://doi.org/10.1109/TFUZZ.2020.2967282",
+      "identity_tokens": [
+        "DOI:10.1109/TFUZZ.2020.2967282"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2747,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.19407",
+      "title": "Brain-JEPA: Brain Dynamics Foundation Model with Gradient Positioning and Spatiotemporal Masking",
+      "reason": "The title concerns brain-dynamics representation learning, outside the target LLM systems scope.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T15:02:43Z",
+      "last_checked_at": "2026-10-10T15:02:43Z",
+      "source_url": "https://arxiv.org/abs/2409.19407",
+      "identity_tokens": [
+        "arXiv:2409.19407"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "check_trace": "Root reviewed exact B82 rank/ID/title at title level at 2026-10-10T15:02:43Z; abstract and full text not read."
+    },
+    {
+      "rank": 2748,
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.02432",
+      "title": "A Panda? No, It's a Sloth: Slowdown Attacks on Adaptive Multi-Exit Neural Network Inference",
+      "reason": "Studies adversarial slowdowns against multi-exit image-classification DNNs and measures latency amplification; transfer to LLM inference is untested, so borderline.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2010.02432",
+      "identity_tokens": [
+        "arXiv:2010.02432"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2010.02432, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100"
+    },
+    {
+      "rank": 2763,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00831",
+      "title": "Subliminal Learning is a LoRA Artifact",
+      "reason": "Explains behavioral transfer tied to LoRA rank and finetuning context; no inference efficiency, systems, or runtime contribution.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2606.00831",
+      "identity_tokens": [
+        "arXiv:2606.00831"
+      ],
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2606.00831, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100"
+    },
+    {
+      "rank": 2771,
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22502",
+      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost",
+      "reason": "Compiles agent procedures into small-model weights rather than routing every turn through an external orchestrator/frontier model, targeting inference cost and orchestration overhead.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2605.22502",
+      "identity_tokens": [
+        "arXiv:2605.22502"
+      ],
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2605.22502, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100"
+    },
+    {
+      "rank": 2773,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20643",
+      "title": "AVSD: Adaptive-View Self-Distillation by Balancing Consensus and Teacher-Specific Privileged Signals",
+      "reason": "Adaptive-view self-distillation changes training supervision and benchmark accuracy; no inference systems efficiency claim.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2605.20643",
+      "identity_tokens": [
+        "arXiv:2605.20643"
+      ],
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2605.20643, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100"
+    },
+    {
+      "rank": 2775,
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19436",
+      "title": "CEPO: RLVR Self-Distillation using Contrastive Evidence Policy Optimization",
+      "reason": "Contrastive evidence policy optimization changes RLVR token-level training credit assignment; it reuses rejected rollouts but does not claim serving or inference efficiency.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T15:08:27Z",
+      "last_checked_at": "2026-10-10T15:08:27Z",
+      "source_url": "https://arxiv.org/abs/2605.19436",
+      "identity_tokens": [
+        "arXiv:2605.19436"
+      ],
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "check_trace": "Official arXiv API HTTP 200; exact arXiv:2605.19436, current title, authors, date, and primary abstract checked; abstract only; full text not opened or read. UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z. Group query: https://export.arxiv.org/api/query?id_list=2511.19097,2511.00389,2402.16445,2010.02432,2606.00831,2605.22502,2605.20643,2605.19436,2605.11928,2604.22245,2604.07725,2604.06912,2604.01897&max_results=100"
+    }
+  ]
+}
