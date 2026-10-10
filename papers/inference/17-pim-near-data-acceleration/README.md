@@ -116,7 +116,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-08 · [Samsung PIM/PNM for Transformer based AI: Energy Efficiency on PIM/PNM Cluster](2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   本発表は、Transformerを用いた言語生成で重み行列を繰り返し読み出す負担を、メモリ側に演算器を配置して削減する設計を、異なるメモリ階層にわたって示す。単体HBM-PIMではGPT-J 6Bの生成を通常HBM搭載MI100比で2.16～2.33倍に高速化し、エネルギー効率も1.79～2.24倍と報告する。
 
 ### 5年前（2021-11〜2022-10）
