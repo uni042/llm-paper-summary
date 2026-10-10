@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-10T07:53:27+00:00",
-  "last_run_key": "library-import-6151c3990068",
-  "last_round": "libimp-6151c3990068c8f4-pre01",
+  "updated_at": "2026-10-10T08:18:20+00:00",
+  "last_run_key": "library-import-cbc27a11a942",
+  "last_round": "libimp-cbc27a11a942c1ed-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-21T07:26:35+09:00",
-      "round": "hourly00-repository-refs-01",
-      "axis": "repository structured references curation",
-      "query_summary": null,
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "candidate_count": 3,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 3,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 3,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260921T0730JST-hourly00-discovery-repository-refs-01.json"
-    },
     {
       "run_key": "20260921T0802JST-auto",
       "round": "auto-backward-01-retry",
@@ -13590,6 +13569,42 @@
       "duplicate_ratio": 0.8333333333333334,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-cbc27a11a942c1ed-pre01",
+      "precheck_request_id": "libimp-cbc27a11a942c1ed-pre01",
+      "run_key": "library-import-cbc27a11a942",
+      "round": "libimp-cbc27a11a942c1ed-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-cbc27a11a942c1ed-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-cbc27a11a942c1ed-pre01-sub01.json",
+        "work-queue/submissions/libimp-cbc27a11a942c1ed-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.625,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21961,16 +21976,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-6151c3990068",
-      "rounds": 229,
-      "candidate_count": 987,
-      "duplicate_filtered_count": 485,
-      "novel_candidate_count": 502,
+      "last_run_key": "library-import-cbc27a11a942",
+      "rounds": 230,
+      "candidate_count": 995,
+      "duplicate_filtered_count": 490,
+      "novel_candidate_count": 505,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 497,
-      "accepted_count": 497,
-      "duplicate_ratio": 0.49138804457953394,
-      "final_duplicate_ratio": 0.0099601593625498,
+      "post_final_dedupe_count": 500,
+      "accepted_count": 500,
+      "duplicate_ratio": 0.49246231155778897,
+      "final_duplicate_ratio": 0.009900990099009901,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
