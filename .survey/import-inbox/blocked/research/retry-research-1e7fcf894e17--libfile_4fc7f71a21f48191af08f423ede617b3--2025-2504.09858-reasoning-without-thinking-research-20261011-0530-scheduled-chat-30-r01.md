@@ -31,6 +31,8 @@ worker_run_key: '20261011-0530-scheduled-chat-30/r01'
 worker_completed_at: '2026-10-11T05:27:47+09:00'
 quality_self_review_passed: true
 quality_self_review_version: library-paper-quality-guide-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # Reasoning Models Can Be Effective Without Thinking：長い思考を省いた並列推論の効率

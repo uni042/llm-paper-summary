@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T20:48:43+00:00",
+  "generated_at": "2026-10-10T21:16:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2473,8 +2473,8 @@
       "canonical_id": "arXiv:2504.09858",
       "title": "Reasoning Models Can Be Effective Without Thinking",
       "source_url": "https://arxiv.org/abs/2504.09858",
-      "returned_at": "2026-10-10T20:48:43+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-10T21:16:11+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2492,8 +2492,8 @@
           "評価説明量 375 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4fc7f71a21f48191af08f423ede617b3--2025-2504.09858-reasoning-without-thinking-research-20261011-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4fc7f71a21f48191af08f423ede617b3--2025-2504.09858-reasoning-without-thinking-research-20261011-0530-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e7fcf894e17--libfile_4fc7f71a21f48191af08f423ede617b3--2025-2504.09858-reasoning-without-thinking-research-20261011-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1e7fcf894e17--libfile_4fc7f71a21f48191af08f423ede617b3--2025-2504.09858-reasoning-without-thinking-research-20261011-0530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-0530-scheduled-chat-30/r01"
     }
   ]
