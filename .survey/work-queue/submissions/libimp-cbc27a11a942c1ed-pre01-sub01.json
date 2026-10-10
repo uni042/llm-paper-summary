@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2507.16018",
+      "year": 2025,
+      "published": "2025-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision transformers have emerged as a powerful tool across a wide range of applications, yet their inner workings remain only partially understood. In this work, we examine the phenomenon of massive tokens - tokens with exceptionally high activation norms that act as attention sinks - and artifact tokens that emerge as a byproduct during inference. Our analysis reveals that these tokens mutually suppress one another through the attention mechanism, playing a critical role in regulating information flow within the network. Leveraging these insights, we introduce Fast Nystr\\\"om Attention (FNA), a training-free method that approximates self-attention in linear time and space by exploiting the structured patterns formed by massive and artifact tokens. Additionally, we propose a masking strategy to mitigate noise from these tokens, yielding modest performance gains at virtually no cost. We evaluate our approach on popular pretrained vision backbones and demonstrate competitive performance on retrieval, classification, segmentation, and visual question answering (VQA), all while reducing computational overhead.",
+      "identifiers": [
+        "SemanticScholar:f151907255c9eea266787a40d2c4563811db2f80"
+      ],
+      "semantic_scholar_id": "f151907255c9eea266787a40d2c4563811db2f80",
+      "canonical_id": "arXiv:2507.16018",
+      "arxiv_id": "2507.16018",
+      "doi": "10.48550/arXiv.2507.16018",
+      "authors": [
+        "Andrew Lu",
+        "Wentinn Liao",
+        "Liuhui Wang",
+        "Huzheng Yang",
+        "Jianbo Shi"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 446,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Fast Nyström Attention approximates ViT self-attention in linear time and space using structured attention-sink/artifact patterns and reports reduced computational overhead across vision tasks.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Integrated electro-optic attention nonlinearities for transformers",
+      "source_url": "https://arxiv.org/abs/2604.09512",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have emerged as the dominant neural-network architecture, achieving state-of-the-art performance in language processing and computer vision. At the core of these models lies the attention mechanism, which requires a nonlinear, non-negative mapping using the Softmax function. However, although Softmax operations account for less than 1% of the total operation count, they can disproportionately bottleneck overall inference latency. Here, we use thin-film lithium niobate (TFLN) Mach-Zehnder modulators (MZMs) as analog nonlinear computational elements to drastically reduce the latency of nonlinear computations. We implement electro-optic alternatives to digital Softmax and Sigmoid, and evaluate their performance in Vision Transformers and Large Language Models. Our system maintains highly competitive accuracy, even under aggressive 4-bit input-output quantization of the analog units. We further characterize system noise at encoding speeds up to 10 GBaud and assess model robustness under various noise conditions. Our findings suggest that TFLN modulators can serve as nonlinear function units within hybrid co-packaged hardware, enabling high-speed and energy-efficient nonlinear computation.",
+      "identifiers": [
+        "SemanticScholar:8f09b76f32e41437d18ab6031f788139385dd625"
+      ],
+      "semantic_scholar_id": "8f09b76f32e41437d18ab6031f788139385dd625",
+      "canonical_id": "arXiv:2604.09512",
+      "arxiv_id": "2604.09512",
+      "doi": "10.48550/arXiv.2604.09512",
+      "authors": [
+        "Luis Mickeler",
+        "Li-On Kai",
+        "Alfonso Nardi",
+        "Jost Kellner",
+        "P. Didier",
+        "B. Shastri",
+        "Niao He",
+        "Rachel Grange"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper implements electro-optic alternatives to digital Softmax/Sigmoid, identifies nonlinearities as a disproportionate Transformer inference-latency bottleneck, and evaluates the hardware units in ViTs and LLMs.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Tango: Taming Visual Signals for Efficient Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.09547",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token pruning has emerged as a mainstream approach for developing efficient Video Large Language Models (Video LLMs). This work revisits and advances the two predominant token-pruning paradigms: attention-based selection and similarity-based clustering. Our study reveals two critical limitations in existing methods: (1) conventional top-k selection strategies fail to fully account for the attention distribution, which is often spatially multi-modal and long-tailed in magnitude; and (2) direct similarity-based clustering frequently generates fragmented clusters, resulting in distorted representations after pooling. To address these bottlenecks, we propose Tango, a novel framework designed to optimize the utilization of visual signals. Tango integrates a diversity-driven strategy to enhance attention-based token selection, and introduces Spatio-temporal Rotary Position Embedding (ST-RoPE) to preserve geometric structure via locality priors. Comprehensive experiments across various Video LLMs and video understanding benchmarks demonstrate the effectiveness and generalizability of our approach. Notably, when retaining only 10% of the video tokens, Tango preserves 98.9% of the original performance on LLaVA-OV while delivering a 1.88$\\times$ inference speedup.",
+      "identifiers": [
+        "SemanticScholar:20d4431a49c1c8e3201b4c70bf31290c994c3820"
+      ],
+      "semantic_scholar_id": "20d4431a49c1c8e3201b4c70bf31290c994c3820",
+      "canonical_id": "arXiv:2604.09547",
+      "arxiv_id": "2604.09547",
+      "doi": "10.48550/arXiv.2604.09547",
+      "authors": [
+        "Shu-Kang Yin",
+        "Si-Rui Zhao",
+        "Han Wang",
+        "Baozhi Jia",
+        "Xian-Quan Wang",
+        "Chaoyou Fu",
+        "En-Hong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Tango improves visual-token selection and clustering in Video LLMs; its abstract reports retaining 98.9% of baseline performance with 10% of video tokens and 1.88x inference speedup.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SE(3)-Hyena Operator for Scalable Equivariant Learning",
+      "source_url": "https://arxiv.org/abs/2407.01049",
+      "year": 2024,
+      "published": "2024-07-01",
+      "venue": "GRaM",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modeling global geometric context while maintaining equivariance is crucial for accurate predictions in many fields such as biology, chemistry, or vision. Yet, this is challenging due to the computational demands of processing high-dimensional data at scale. Existing approaches such as equivariant self-attention or distance-based message passing, suffer from quadratic complexity with respect to sequence length, while localized methods sacrifice global information. Inspired by the recent success of state-space and long-convolutional models, in this work, we introduce SE(3)-Hyena operator, an equivariant long-convolutional model based on the Hyena operator. The SE(3)-Hyena captures global geometric context at sub-quadratic complexity while maintaining equivariance to rotations and translations. Evaluated on equivariant associative recall and n-body modeling, SE(3)-Hyena matches or outperforms equivariant self-attention while requiring significantly less memory and computational resources for long sequences. Our model processes the geometric context of 20k tokens x3.5 times faster than the equivariant transformer and allows x175 longer a context within the same memory budget.",
+      "identifiers": [
+        "SemanticScholar:cd1e307f5cc57a123d58d3f8dd855b14a558bf5d"
+      ],
+      "semantic_scholar_id": "cd1e307f5cc57a123d58d3f8dd855b14a558bf5d",
+      "canonical_id": "arXiv:2407.01049",
+      "arxiv_id": "2407.01049",
+      "doi": "10.48550/arXiv.2407.01049",
+      "authors": [
+        "Artem Moskalev",
+        "M. Prakash",
+        "Rui Liao",
+        "Tommaso Mansi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 831,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SE(3)-Hyena replaces quadratic equivariant attention with sub-quadratic long convolution; the abstract reports 3.5x faster processing and 175x longer context at the same memory budget, a transferable sequence-system efficiency result.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DermaMamba: A Dual-Branch Vision Mamba Architecture with Linear Complexity for Efficient Skin Lesion Classification",
+      "source_url": "https://doi.org/10.3390/bioengineering12101030",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "Bioengineering",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Accurate skin lesion classification is crucial for the early detection of malignant lesions, including melanoma, as well as improved patient outcomes. While convolutional neural networks (CNNs) excel at capturing local morphological features, they struggle with global context modeling essential for comprehensive lesion assessment. Vision transformers address this limitation but suffer from quadratic computational complexity O(n2), hindering deployment in resource-constrained clinical environments. We propose DermaMamba, a novel dual-branch fusion architecture that integrates CNN-based local feature extraction with Vision Mamba (VMamba) for efficient global context modeling with linear complexity O(n). Our approach introduces a state space fusion mechanism with adaptive weighting that dynamically balances local and global features based on lesion characteristics. We incorporate medical domain knowledge through multi-directional scanning strategies and ABCDE (Asymmetry, Border irregularity, Color variation, Diameter, Evolution) rule feature integration. Extensive experiments on the ISIC dataset show that DermaMamba achieves 92.1% accuracy, 91.7% precision, 91.3% recall, and 91.5% mac-F1 score, which outperforms the best baseline by 2.0% accuracy with 2.3× inference speedup and 40% memory reduction. The improvements are statistically significant based on a significance test (p < 0.001, Cohen’s d > 0.8), with greater than 79% confidence also preserved on challenging boundary cases. These results establish DermaMamba as an effective solution bridging diagnostic accuracy and computational efficiency for clinical deployment.",
+      "identifiers": [
+        "SemanticScholar:765b805e76d601b880634026980877b313c62984"
+      ],
+      "semantic_scholar_id": "765b805e76d601b880634026980877b313c62984",
+      "doi": "10.3390/bioengineering12101030",
+      "canonical_id": "DOI:10.3390/bioengineering12101030",
+      "authors": [
+        "Zhongyu Yao",
+        "Yuxuan Yan",
+        "Zhe Liu",
+        "Tianhang Chen",
+        "Cho Ling",
+        "Yat-Wah Leung",
+        "Tian-Chi Lu",
+        "Wenjing Niu",
+        "Z. Qiu",
+        "Yuchen Wang",
+        "Xingcheng Zhu",
+        "Ka-Chun Wong"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The official MDPI abstract describes DermaMamba’s CNN/VMamba fusion with linear-complexity global modeling and reports 2.3x inference speedup plus 40% lower memory than the stated baseline; the SSM efficiency mechanism is transferable beyond its medical-imaging task.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cbc27a11a942",
+    "round": "libimp-cbc27a11a942c1ed-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cbc27a11a942c1ed-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cbc27a11a942c1ed-pre01.json",
+    "receipt": "sha256:128f7063d1122282605877fad841eaf79f05ac688afd61028153ed120adb1008"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cbc27a11a942",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

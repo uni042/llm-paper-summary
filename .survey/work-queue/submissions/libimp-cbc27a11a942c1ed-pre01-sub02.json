@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "video-SALMONN S: Memory-Enhanced Streaming Audio-Visual LLM",
+      "source_url": "https://arxiv.org/abs/2510.11129",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-duration streaming video understanding is fundamental for future AI agents, yet remains limited by ineffective long-term memory. We introduce video-SALMONN S, a memory-enhanced streaming audio-visual large language model that processes over 3-hour videos at 1 FPS and 360p resolution, outperforming strong non-streaming models under the same memory budget. In addition to token merging or downsampling, video-SALMONN S is the first to employ test-time training (TTT) as a streaming memory mechanism for video understanding. TTT continuously transforms short-term multimodal representations into long-term memory embedded in model parameters. To improve long-range dependency modeling and memory capacity, we propose (i) a TTT_MEM layer with an additional long-span prediction objective, (ii) a two-stage training scheme, and (iii) a modality-aware memory reader. We further introduce the Episodic Learning from Video Memory (ELViM) benchmark, simulating agent-like scenarios where models must learn from videos observed hours earlier. video-SALMONN S consistently outperforms both streaming and non-streaming baselines by 3-7% on long video benchmarks. Notably, video-SALMONN S achieves a 15% absolute accuracy improvement over strong non-streaming models on ELViM, demonstrating strong learning abilities from video memory.",
+      "identifiers": [
+        "SemanticScholar:427f5d31ac138e46517893c8101271b8c8b73d87"
+      ],
+      "semantic_scholar_id": "427f5d31ac138e46517893c8101271b8c8b73d87",
+      "canonical_id": "arXiv:2510.11129",
+      "arxiv_id": "2510.11129",
+      "authors": [
+        "Guang-Zhi Sun",
+        "Yixuan Li",
+        "Xiaodong Wu",
+        "Yudong Yang",
+        "Wei Li",
+        "Ze-Jun Ma",
+        "Chao Zhang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 362,
+        "matched_prestigious_venue": null
+      },
+      "reason": "video-SALMONN S uses test-time training as streaming memory and processes over three-hour videos at 1 FPS/360p while outperforming non-streaming models under the same memory budget, a concrete long-context multimodal-serving design.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning",
+      "source_url": "https://arxiv.org/abs/2503.23959",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Grounded Conversation Generation (GCG) is an emerging vision-language task that requires models to generate natural language responses seamlessly intertwined with corresponding object segmentation masks. Recent models, such as GLaMM and OMG-LLaVA, achieve pixel-level grounding but incur significant computational costs due to processing a large number of visual tokens. Existing token pruning methods, like FastV and PyramidDrop, fail to preserve the local visual features critical for accurate grounding, leading to substantial performance drops in GCG tasks. To address this, we propose Adaptive Local-Aware Token Pruning (ALTP), a simple yet effective framework that accelerates GCG models by prioritizing local object information. ALTP introduces two key components: (1) Detail Density Capture (DDC), which uses superpixel segmentation to retain tokens in object-centric regions, preserving fine-grained details, and (2) Dynamic Density Formation (DDF), which dynamically allocates tokens based on information density, ensuring higher retention in semantically rich areas. Extensive experiments on the GranDf dataset demonstrate that ALTP significantly outperforms existing token pruning methods, such as FastV and PyramidDrop, on both GLaMM and OMG-LLaVA models. Notably, when applied to GLaMM, ALTP achieves a 90% reduction in visual tokens with a 4.9% improvement in AP50 and a 5.0% improvement in Recall compared to PyramidDrop. Similarly, on OMG-LLaVA, ALTP improves AP by 2.1% and mIOU by 3.0% at a 90% token reduction compared with PDrop.",
+      "identifiers": [
+        "SemanticScholar:64770ff0715e1aec70122c7d345c66b60afb7673"
+      ],
+      "semantic_scholar_id": "64770ff0715e1aec70122c7d345c66b60afb7673",
+      "canonical_id": "arXiv:2503.23959",
+      "arxiv_id": "2503.23959",
+      "doi": "10.48550/arXiv.2503.23959",
+      "authors": [
+        "Bizhe Bai",
+        "Jianjian Cao",
+        "Ya-Dan Luo",
+        "Tao Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 558,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ALTP prunes visual tokens in grounded-conversation LLaVA models while retaining object-local detail; the abstract reports 90% fewer visual tokens with maintained or improved grounding metrics, directly targeting multimodal inference cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TOAST: Transformer Optimization using Adaptive and Simple Transformations",
+      "source_url": "https://arxiv.org/abs/2410.04941",
+      "year": 2024,
+      "published": "2024-10-07",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Foundation models achieve state-of-the-art performance across different tasks, but their size and computational demands raise concerns about accessibility and sustainability. Existing efficiency methods often require additional retraining or finetuning, limiting their practicality. Recent findings suggest that deep neural networks exhibit internal representation similarities. While such similarities across different models have been exploited for enabling techniques such as model stitching and merging, intra-network redundancy remains underexplored as a source for efficiency gains. In this paper, we introduce Transformer Optimization using Adaptive and Simple Transformations (TOAST), a framework that exploits these redundancies to approximate entire transformer blocks with lightweight closed-form mappings, such as linear transformations or even the identity function, without any additional training. Across state-of-the-art pretrained vision models (e.g., ViT, DINOv2, DeiT) and datasets ranging from MNIST to ImageNet-1k, TOAST reduces parameters and computation while preserving, and in some cases improving, downstream performance. These results show that large portions of transformer depth can be replaced by trivial functions, opening a new perspective on efficient foundation models.",
+      "identifiers": [
+        "SemanticScholar:7db7bf8a91f8be6b0c6314a1c3365324430871a3"
+      ],
+      "semantic_scholar_id": "7db7bf8a91f8be6b0c6314a1c3365324430871a3",
+      "canonical_id": "arXiv:2410.04941",
+      "arxiv_id": "2410.04941",
+      "authors": [
+        "Irene Cannistraci",
+        "Simone Antonelli",
+        "Emanuele Palumbo",
+        "T. Sutter",
+        "E. Rodolà",
+        "Bastian Rieck",
+        "Julia E. Vogt"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 733,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TOAST replaces redundant pretrained Transformer blocks with lightweight closed-form mappings without retraining and reports reduced parameters and computation while preserving or improving task performance.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cbc27a11a942",
+    "round": "libimp-cbc27a11a942c1ed-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cbc27a11a942c1ed-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cbc27a11a942c1ed-pre01.json",
+    "receipt": "sha256:128f7063d1122282605877fad841eaf79f05ac688afd61028153ed120adb1008"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cbc27a11a942",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
