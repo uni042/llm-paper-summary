@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T09:34:15.045562+00:00",
+  "generated_at": "2026-10-10T09:51:24.232824+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 95,
+  "count": 78,
   "worker_counts": {
-    "scheduled-chat-00": 32,
-    "scheduled-chat-30": 31,
-    "scheduled-chat-45": 32
+    "scheduled-chat-00": 26,
+    "scheduled-chat-30": 26,
+    "scheduled-chat-45": 26
   },
   "entries": [
     {
@@ -288,46 +288,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11035-introspective-diffusion-language-models.md",
-      "canonical_id": "arXiv:2604.11035",
-      "title": "Introspective Diffusion Language Models",
-      "file_bytes": 12592,
-      "source_sha256": "60489091238d50b60f29e2077d711949d0f0a143f44d7b35f7d33b22bee81241",
-      "source_git_blob_sha": "e0776aac4fa2104c66f312f04b2caba9d7fe0671",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.845276,
-      "quality_metrics": {
-        "body_chars": 3194,
-        "method_chars": 1251,
-        "evaluation_chars": 612,
-        "limitation_chars": 214
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md",
-      "canonical_id": "arXiv:2404.02258",
-      "title": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
-      "file_bytes": 12641,
-      "source_sha256": "c6b6bc47e9e045770518430a3132185152753d8c441e7c8456c0996ca08203d0",
-      "source_git_blob_sha": "a7fcefe8b98862ed31750d365d2ea88509a80fc1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.844947,
-      "quality_metrics": {
-        "body_chars": 3803,
-        "method_chars": 1297,
-        "evaluation_chars": 943,
-        "limitation_chars": 415
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
       "canonical_id": "arXiv:2609.25492",
       "title": "RGSQ：リーマン幾何感度型量子化",
@@ -370,57 +330,13 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md",
-      "canonical_id": "arXiv:2609.19441",
-      "title": "Predict Before You Deploy: Offline Prediction of Quantization-Induced Task Degradation for World Action Models",
-      "file_bytes": 12750,
-      "source_sha256": "1019ad5293da7ba100998ee6ae95a010740de7b4aa081a6120d7fc1a1bb8ba46",
-      "source_git_blob_sha": "c96e71b2cd19f2ec60bcf6a76a64a73929abb6bf",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.985374,
-      "quality_metrics": {
-        "body_chars": 2933,
-        "method_chars": 1008,
-        "evaluation_chars": 144,
-        "limitation_chars": 242
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 144 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
-      "canonical_id": "arXiv:2311.15566",
-      "title": "SpotServe: Serving Generative Large Language Models on Preemptible Instances",
-      "file_bytes": 12753,
-      "source_sha256": "d5c5a8eeebdb5d49fcbfe76f493381087c4b2c371af1a7c70ed012f400cace68",
-      "source_git_blob_sha": "168f781db64ebcc501431e5bb1447732c8130f60",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.985463,
-      "quality_metrics": {
-        "body_chars": 3356,
-        "method_chars": 1568,
-        "evaluation_chars": 192,
-        "limitation_chars": 187
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 192 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md",
       "canonical_id": "arXiv:2512.14098",
       "title": "Cornserve: Efficiently Serving Any-to-Any Multimodal Models",
       "file_bytes": 12812,
       "source_sha256": "d45926521098c010a0012e2db78b59b714a0f757f7c23a55b52ab173ea95a4a7",
       "source_git_blob_sha": "02e03445e87bd4de818a230f79df0be008f00180",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.923673,
@@ -515,28 +431,6 @@
         "limitation_chars": 0
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md",
-      "canonical_id": "arXiv:2402.18789",
-      "title": "FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees",
-      "file_bytes": 12951,
-      "source_sha256": "1a39482be8a17781d524aedea473180eb4ae9151bb7367c40d6fd27f2572db7c",
-      "source_git_blob_sha": "4e30c7b5ce59d60d6b5bbae3beba2034f0178cac",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.990807,
-      "quality_metrics": {
-        "body_chars": 2901,
-        "method_chars": 744,
-        "evaluation_chars": 458,
-        "limitation_chars": 178
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 458 < 500"
-      ],
       "warnings": []
     },
     {
@@ -668,28 +562,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
-      "canonical_id": "arXiv:2404.14618",
-      "title": "Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing",
-      "file_bytes": 13018,
-      "source_sha256": "0257a23c2e8cb37f7686866d0d26a624b7ed9301d446f56381076ff53028b796",
-      "source_git_blob_sha": "f18dd2bd6b9c336c345d8e95541905f9377f30de",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.964676,
-      "quality_metrics": {
-        "body_chars": 2278,
-        "method_chars": 624,
-        "evaluation_chars": 752,
-        "limitation_chars": 185
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 手法説明量 624 < 700"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md",
       "canonical_id": "arXiv:2512.22195",
       "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
@@ -736,28 +608,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md",
-      "canonical_id": "arXiv:2403.01164",
-      "title": "HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices",
-      "file_bytes": 13077,
-      "source_sha256": "817b8ffaa392abecdb9fd86014dcdfe8fbf13cdd82a1d221c9032d0073fd84a7",
-      "source_git_blob_sha": "487e0bb8cdd6c826de0ccd7e25fcd054d8745945",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.895155,
-      "quality_metrics": {
-        "body_chars": 3133,
-        "method_chars": 986,
-        "evaluation_chars": 355,
-        "limitation_chars": 234
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 355 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md",
       "canonical_id": "arXiv:2609.13612",
       "title": "AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels",
@@ -776,28 +626,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 495 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.25537-cmc.md",
-      "canonical_id": "arXiv:2609.25537",
-      "title": "Compressing Long Context into Answer-Aligned Memory Embeddings for LLM Inference",
-      "file_bytes": 13114,
-      "source_sha256": "d62ed282f7542701526fd08c8d1ee5346714156e4bca5f5267e36a7443132e7f",
-      "source_git_blob_sha": "50f0e99eedb2acae1c604c2ca2d404fa008fc133",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 1.0,
-      "quality_metrics": {
-        "body_chars": 2233,
-        "method_chars": 919,
-        "evaluation_chars": 490,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 490 < 500"
       ],
       "warnings": []
     },
@@ -824,26 +652,6 @@
       "warnings": [
         "日本語比率 70.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md",
-      "canonical_id": "arXiv:2607.23693",
-      "title": "Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV",
-      "file_bytes": 13119,
-      "source_sha256": "101fb8e4bdd95bedc5d4abc4337d22f898667351c666cdf3d3bb5f8be1e69948",
-      "source_git_blob_sha": "556ac12fd4bbddcf02175297b3674fcdc5d99e2f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.99489,
-      "quality_metrics": {
-        "body_chars": 2309,
-        "method_chars": 985,
-        "evaluation_chars": 501,
-        "limitation_chars": 148
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md",
@@ -934,26 +742,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md",
-      "canonical_id": "arXiv:2401.04658",
-      "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
-      "file_bytes": 13247,
-      "source_sha256": "903f3eb14adaa133bedad3ef88a3400f6a4efd5131cdb58e9e8aede9c51523e2",
-      "source_git_blob_sha": "a337a25f1df32e0d0f3c440e5175bc1f0c3d6971",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.861326,
-      "quality_metrics": {
-        "body_chars": 3448,
-        "method_chars": 1066,
-        "evaluation_chars": 638,
-        "limitation_chars": 476
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md",
       "canonical_id": "arXiv:2604.15409",
       "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference",
@@ -984,7 +772,7 @@
       "file_bytes": 13282,
       "source_sha256": "fb51ec66f80273d1fafe52b072ad69e68d513c68c575551dd36e35eafebb59c9",
       "source_git_blob_sha": "68faffd4715c5288d14adb51263a59b6f51f4f70",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.893443,
@@ -1004,7 +792,7 @@
       "file_bytes": 13304,
       "source_sha256": "8289ffe8ff866da13576fd786b050f3030a49cbbf44c17427e3d89cbd44a9953",
       "source_git_blob_sha": "b63ef24996ced1c37dfd8f888c1271b6a56cde0b",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.941597,
@@ -1046,7 +834,7 @@
       "file_bytes": 13343,
       "source_sha256": "b39a05532357b480f27bf8c8832d0dc3c9b3f4748a919d76ef8ee13569a93944",
       "source_git_blob_sha": "ec293cc9a11bbc45322c58ca3ea1432ecb8b8c49",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.806818,
@@ -1066,7 +854,7 @@
       "file_bytes": 13393,
       "source_sha256": "4098a79795acc0906cb2f975042e2dad67671bb5250fa64bc0d7e70b6bd4e62f",
       "source_git_blob_sha": "fd1b5f76537784c0fe7a5d6bae4fb24bd645320a",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.788144,
@@ -1083,26 +871,6 @@
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
-      "canonical_id": "arXiv:2308.16137",
-      "title": "LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models",
-      "file_bytes": 13401,
-      "source_sha256": "7bc6c25663fa756ac5724e0502e73a23df7885242d770a8eb01c9928cf01a83a",
-      "source_git_blob_sha": "3774f08d31fec4ad75bc7b5f5b3f7a5664f167c6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.92354,
-      "quality_metrics": {
-        "body_chars": 3277,
-        "method_chars": 836,
-        "evaluation_chars": 1080,
-        "limitation_chars": 329
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/15-inference-simulation-emulation/2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md",
@@ -1131,7 +899,7 @@
       "file_bytes": 13512,
       "source_sha256": "6a34fe511c6182487837a6cdad656711d9e88c56b4cda533d9639093e989dd9f",
       "source_git_blob_sha": "374b08f9db3de3351ba1d24645c0f2b07aa09e99",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 1.0,
@@ -1191,26 +959,6 @@
       ]
     },
     {
-      "path": "papers/inference/06-moe-quantization-compression/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md",
-      "canonical_id": "arXiv:2607.16184",
-      "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-      "file_bytes": 13573,
-      "source_sha256": "de9e89509ec825bd9273d4cf8948a718437973075c548de32f5f951dbb3882d3",
-      "source_git_blob_sha": "d19398281bdd5e75d8e0a7b0b0c963ac40adc350",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.904517,
-      "quality_metrics": {
-        "body_chars": 2866,
-        "method_chars": 1606,
-        "evaluation_chars": 504,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md",
       "canonical_id": "arXiv:2411.17651",
       "title": "APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving",
@@ -1257,26 +1005,6 @@
       "warnings": [
         "日本語比率 76.4% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
-      "canonical_id": "arXiv:2409.06666",
-      "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
-      "file_bytes": 13706,
-      "source_sha256": "a0b90078e6f019b54238c36070bc80b224b8d8af37c8a713e0797ea339687557",
-      "source_git_blob_sha": "1d9ef901c55bcdee750ed38262678e91dbab6bd6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.828753,
-      "quality_metrics": {
-        "body_chars": 3830,
-        "method_chars": 1283,
-        "evaluation_chars": 1334,
-        "limitation_chars": 263
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md",
@@ -1380,26 +1108,6 @@
         "method_chars": 1113,
         "evaluation_chars": 1567,
         "limitation_chars": 425
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
-      "canonical_id": "arXiv:2307.05908",
-      "title": "Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding",
-      "file_bytes": 13899,
-      "source_sha256": "17634fb50c46241c0561e09b97c3a88f418198e038c34962396e17fd123f69ff",
-      "source_git_blob_sha": "1d0269386548a5340f96aa84904aa19242924833",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.874961,
-      "quality_metrics": {
-        "body_chars": 4045,
-        "method_chars": 1143,
-        "evaluation_chars": 1281,
-        "limitation_chars": 474
       },
       "mechanical_failures": [],
       "warnings": []
@@ -1602,50 +1310,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md",
-      "canonical_id": "arXiv:2512.13525",
-      "title": "Janus: Disaggregating Attention and Experts for Scalable MoE Inference",
-      "file_bytes": 14254,
-      "source_sha256": "70ac4c010be66ee14da7a95375ed2585cd7da9d0648183aa335fbf1e8b4422d1",
-      "source_git_blob_sha": "346a825e77445da4e7577cc4fd1df907d2f1829e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.803807,
-      "quality_metrics": {
-        "body_chars": 4500,
-        "method_chars": 1355,
-        "evaluation_chars": 890,
-        "limitation_chars": 309
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/01-offload-hierarchical-memory/2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md",
-      "canonical_id": "arXiv:2512.17073",
-      "title": "Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation",
-      "file_bytes": 14277,
-      "source_sha256": "b17edcfd4d999ed07e6560e9ae3be7c4a9b7434c23aa5a0825d1624264f6cc80",
-      "source_git_blob_sha": "7765f2aede70e18fee7d895d269fd2a8facdf32f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.747818,
-      "quality_metrics": {
-        "body_chars": 4855,
-        "method_chars": 1201,
-        "evaluation_chars": 1514,
-        "limitation_chars": 420
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 74.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.8% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
       "canonical_id": "arXiv:2401.15947",
       "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
@@ -1770,26 +1434,6 @@
         "method_chars": 1047,
         "evaluation_chars": 698,
         "limitation_chars": 227
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
-      "canonical_id": "arXiv:2602.07721",
-      "title": "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
-      "file_bytes": 14670,
-      "source_sha256": "e29212723c2c941988e8dc5d0f4c5233d272d9a8b0fbab43ef8c3b5ad377b106",
-      "source_git_blob_sha": "7842d68e4b40fe6dffdf0a11a79c60e468293f38",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.855911,
-      "quality_metrics": {
-        "body_chars": 4275,
-        "method_chars": 1064,
-        "evaluation_chars": 1002,
-        "limitation_chars": 429
       },
       "mechanical_failures": [],
       "warnings": []
