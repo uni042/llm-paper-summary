@@ -34,7 +34,32 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          # One tip commit, not the full history of all branches and tags.
+          fetch-depth: 1
+      - name: Restore main ancestry for precheck provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          start="$(date +%s)"
+          # Recover every commit reachable from main. Historical blob bodies
+          # remain lazy, but the commit graph and trees are complete. This is
+          # required for git log --diff-filter=A marker boundaries and the
+          # precheck workflow-bot author audit in queue_worker.py.
+          git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Discovery precheck requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
+          for marker in ENFORCED ITERATIVE_ENFORCED FIXED_SOURCE_ENFORCED REFERENCE_POOL_FIRST_ENFORCED CITATION_FIRST_ENFORCED; do
+            marker_path=".survey/work-queue/discovery-precheck/${marker}"
+            marker_commit="$(git log --diff-filter=A --format=%H -- "${marker_path}" | tail -1)"
+            if [ ! -f "${marker_path}" ] || [ -z "${marker_commit}" ]; then
+              echo "Missing trusted Discovery precheck history marker: ${marker}" >&2
+              exit 1
+            fi
+            git merge-base --is-ancestor "${marker_commit}" HEAD
+          done
+          echo "DISCOVERY_MAIN_HISTORY_BOOTSTRAP_SECONDS=$(($(date +%s)-start))"
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
