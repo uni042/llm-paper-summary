@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T07:45:49+00:00",
-  "record_count": 11261,
+  "updated_at": "2026-10-10T08:16:49+00:00",
+  "record_count": 11267,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -161021,6 +161021,82 @@
       "last_checked_at": "2026-10-10T07:45:49+00:00",
       "linked_from": [],
       "title": "Intra-neuronal attention within language models Relationships between activation and semantics"
+    },
+    "arXiv:2406.17812": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17812",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2406.17812",
+        "arXiv:2406.17812"
+      ],
+      "reason": "The arXiv abstract is a perspective on scaling scientific AI on HPC/cloud and lists scientific use cases; it does not present a concrete inference-efficiency method.",
+      "first_checked_at": "2026-10-10T08:16:48+00:00",
+      "last_checked_at": "2026-10-10T08:16:48+00:00",
+      "linked_from": [],
+      "title": "Scalable Artificial Intelligence for Science: Perspectives, Methods and Exemplars"
+    },
+    "arXiv:2509.16413": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.16413",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2509.16413",
+        "arXiv:2509.16413"
+      ],
+      "reason": "Pico is a reproducible framework for hypothesis-driven small-language-model architecture and training experiments; the arXiv abstract does not present inference or deployment efficiency methods.",
+      "first_checked_at": "2026-10-10T08:16:48+00:00",
+      "last_checked_at": "2026-10-10T08:16:48+00:00",
+      "linked_from": [],
+      "title": "Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research"
+    },
+    "arXiv:2505.01985": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.01985",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2505.01985",
+        "arXiv:2505.01985"
+      ],
+      "reason": "The paper prunes neural networks to make constraint-learning optimization models more tractable and explicitly notes that the pruned network may have worse inference; its objective is optimization-model solvability, not efficient inference.",
+      "first_checked_at": "2026-10-10T08:16:48+00:00",
+      "last_checked_at": "2026-10-10T08:16:48+00:00",
+      "linked_from": [],
+      "title": "Optimization over Trained (and Sparse) Neural Networks: A Surrogate within a Surrogate"
+    },
+    "arXiv:2103.14493": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.14493",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2103.14493",
+        "arXiv:2103.14493"
+      ],
+      "reason": "RCT reduces model memory and energy during edge training by retaining quantized parameters and adjusting bitwidths; its abstract focuses on training resource constraints, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-10T08:16:49+00:00",
+      "last_checked_at": "2026-10-10T08:16:49+00:00",
+      "linked_from": [],
+      "title": "RCT: Resource Constrained Training for Edge AI"
+    },
+    "SemanticScholar:20c6ac270d91142015350f05b172e604f37d48d4": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:20c6ac270d91142015350f05b172e604f37d48d4",
+      "identity_tokens": [
+        "SemanticScholar:20c6ac270d91142015350f05b172e604f37d48d4"
+      ],
+      "reason": "The title is an automated military-planning and doctrinal-analysis application of language models, with no stated model-inference or serving-efficiency contribution.",
+      "first_checked_at": "2026-10-10T08:16:49+00:00",
+      "last_checked_at": "2026-10-10T08:16:49+00:00",
+      "linked_from": [],
+      "title": "Strategic Doctrine Language Models (sdLM): A Comprehensive Framework for Automated Military Planning and Doctrinal Analysis"
+    },
+    "arXiv:2507.20765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.20765",
+      "identity_tokens": [
+        "arXiv:2507.20765"
+      ],
+      "reason": "The title is hyperspectral-image super-resolution, an independent imaging application without an indicated LLM systems or transferable inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-10T08:16:49+00:00",
+      "last_checked_at": "2026-10-10T08:16:49+00:00",
+      "linked_from": [],
+      "title": "Onboard Hyperspectral Super-Resolution with Deep Pushbroom Neural Network"
     }
   }
 }
