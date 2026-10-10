@@ -1172,8 +1172,8 @@
     {
       "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
       "status": "PASS",
-      "summary": "MoE++は無計算・入力コピー・学習済み定数の軽量専門家を通常FFNと同じ候補に混ぜ、トークンごとに代替経路を選んでFFN計算を減らす。",
-      "char_count": 68,
+      "summary": "ゼロ出力・コピー・学習可能な定数補正の軽量専門家を通常FFNと混在させ、経路認識ルーティングと異種負荷均衡によりトークン単位の演算量を適応配分する。",
+      "char_count": 74,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -2492,8 +2492,8 @@
     {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2403.10444-block-verification-accelerates-speculative-decoding.md",
       "status": "PASS",
-      "summary": "投機的復号の候補接頭辞をブロック単位で共同検証し、出力分布を変えず期待生成量を理論最適化。PaLM-2評価で標準検証よりブロック効率平均8.30%、実時間平均6.49%改善する。",
-      "char_count": 89,
+      "summary": "投機的復号の候補接頭辞を共同検証し、出力分布を厳密に保ちながら期待受理長を最適化。PaLM-2で実時間の追加改善平均6.49%を示す。",
+      "char_count": 67,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -2618,8 +2618,8 @@
     {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md",
       "status": "PASS",
-      "summary": "ドラフト確率を対象モデルの受理確率の代理にして投機木を実行時に動的構築し、限られた検証予算を高確率枝へ集中して固定木より長い受理系列と低遅延を狙う。",
-      "char_count": 74,
+      "summary": "下書き確率と受理率の相関を使い、子・兄弟候補の到達見込みで投機木を動的展開し、閾値付き層生成で木構築費を削減する。",
+      "char_count": 57,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -3448,8 +3448,8 @@
     {
       "path": "papers/inference/06-moe-quantization-compression/2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md",
       "status": "PASS",
-      "summary": "DynaMoは、データ集合ごとの専門家重要度に応じてINT2〜8のビット幅を切替え、変化に敏感なチャネルだけを更新して、全モデル再量子化なしに品質を保つ。",
-      "char_count": 77,
+      "summary": "MoEのデータ集合横断的な専門家重要度でINT2～8の基準精度を決め、変動が大きい約1%のチャネルのみFP16原本から再量子化してデータ変化へ適応する。",
+      "char_count": 76,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -3484,8 +3484,8 @@
     {
       "path": "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
       "status": "PASS",
-      "summary": "MC#は、専門家ごとのビット幅で保存重みを圧縮し、トークンごとに必要な専門家数を学習して枝刈りし、LLM/VLMの容量と実行計算量を同時に減らす。",
-      "char_count": 73,
+      "summary": "専門家ごとの重要度に応じた混合ビット量子化と、トークンごとの学習型可変専門家枝刈りを組み合わせ、MoEの保存容量と実行計算を別々に削減する。",
+      "char_count": 70,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -6953,8 +6953,8 @@
     {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.26828-lm-cxd.md",
       "status": "PASS",
-      "summary": "CXL接続SSD上のKVチャンク配置と進捗をサービング側へ公開し、層単位先読みをGPU計算と重ねるLM-CXDにより、標準CXL-SSD比で平均初回トークン時間を最大4.03倍短縮する。",
-      "char_count": 93,
+      "summary": "LM-CXDはCXL接続SSDへKVチャンクと要求進捗を共有し、装置内DRAMの窓先読みと層単位転送で標準CXL-SSD比平均TTFTを最大4.03倍改善する。",
+      "char_count": 80,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -12542,8 +12542,8 @@
     {
       "path": "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md",
       "status": "PASS",
-      "summary": "疎な大注意要素をGrover探索で発見し、疎成分と低ランク成分から注意を近似して、条件付き量子計算量の多項式高速化と古典下界を示す理論研究。",
-      "char_count": 70,
+      "summary": "注意内積の大要素を量子探索で抽出し、疎成分と階数1の背景成分で注意を近似する理論方式。古典近似と条件付き下界も比較する。",
+      "char_count": 60,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
