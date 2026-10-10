@@ -46,7 +46,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
   実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：10  
-  MoEの専門家同士は完全に別物ではなく、大きな共通知識と比較的小さな専門家固有差分を持つ。D²-MoEはこの構造を「共有基底＋低ランク差分」として明示し、全専門家を保存するコストを減らしながら専門家ごとの特化を残す。
+  しかし、推論環境には多数の専門家の重みを保持する必要があり、GPUメモリ・ホストメモリ・ストレージ容量が大きくなる。専門家を丸ごと削除すると特化した能力を失い、複数専門家を単純に統合すると固有の知識が平均化される。
 
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
   実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：8  
