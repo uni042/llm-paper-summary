@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69954eee8cfec368-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.16411",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.16411",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2506.16411",
+      "arXiv:2506.16411"
+    ],
+    "reason": "長文LLM chunkingの有効条件/品質noise分析。要旨はinference latencyやresource削減を評価しておらず、分割処理のシステム接点は限定的。",
+    "first_checked_at": "2026-10-10T03:54:12+00:00",
+    "last_checked_at": "2026-10-10T03:54:12+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Does Divide and Conquer Work for Long Context LLM? A Noise Decomposition Framework"
+  },
+  "processed_at": "2026-10-10T03:54:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69954eee8cfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

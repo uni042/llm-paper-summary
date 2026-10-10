@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T01:24:16+00:00",
-  "record_count": 4533,
+  "updated_at": "2026-10-10T03:54:13+00:00",
+  "record_count": 4539,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69242,6 +69242,139 @@
       ],
       "borderline_recheck_count": 0,
       "title": "pLSTM: parallelizable Linear Source Transition Mark networks"
+    },
+    "DOI:10.1109/icmc60390.2024.00036": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icmc60390.2024.00036",
+      "identity_tokens": [
+        "DOI:10.1109/icmc60390.2024.00036"
+      ],
+      "reason": "DOIのIEEE一次ページを開いたがrobots.txt拒否。オンデバイスLLM personalisation調査という候補題名以上のabstract根拠を得られない。",
+      "first_checked_at": "2026-10-10T03:54:11+00:00",
+      "last_checked_at": "2026-10-10T03:54:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SoK: On-Device Large Language Model Personalization for Meta Computing"
+    },
+    "DOI:10.1109/commnet63022.2024.10793270": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/commnet63022.2024.10793270",
+      "identity_tokens": [
+        "DOI:10.1109/commnet63022.2024.10793270"
+      ],
+      "reason": "IEEE DOIを開いたが取得手段からURL不達。候補題名は一般LLM overviewであり、primary abstractを未確認のためborderline。",
+      "first_checked_at": "2026-10-10T03:54:12+00:00",
+      "last_checked_at": "2026-10-10T03:54:12+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "All You Should Know About Large Language Models (LLMs)"
+    },
+    "arXiv:2506.16411": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.16411",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.16411",
+        "arXiv:2506.16411"
+      ],
+      "reason": "長文LLM chunkingの有効条件/品質noise分析。要旨はinference latencyやresource削減を評価しておらず、分割処理のシステム接点は限定的。",
+      "first_checked_at": "2026-10-10T03:54:12+00:00",
+      "last_checked_at": "2026-10-10T03:54:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Does Divide and Conquer Work for Long Context LLM? A Noise Decomposition Framework"
+    },
+    "SemanticScholar:56c0374a194f3cdf4d882afa1c21801e3e9055d1": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:56c0374a194f3cdf4d882afa1c21801e3e9055d1",
+      "identity_tokens": [
+        "SemanticScholar:56c0374a194f3cdf4d882afa1c21801e3e9055d1"
+      ],
+      "reason": "OpenReview references PDFはHTTP 403 Forbidden、正規forum URLもbrowser challengeへ転送され、一次abstractを再取得できなかった。既存検索snippetだけではabstract readを主張できないためborderline。Semantic Scholar候補IDと候補題名は保持し、identity unresolvedにはしない。",
+      "first_checked_at": "2026-10-10T03:54:12+00:00",
+      "last_checked_at": "2026-10-10T03:54:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tracking the Progress of Language Models by Extracting Their Underlying Knowledge Graphs"
+    },
+    "arXiv:2412.00776": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.00776",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.00776",
+        "arXiv:2412.00776"
+      ],
+      "reason": "MambaCLはconstant-size stateのcontinual learnerだが、中心はmeta-continual learning性能でLLM serving/inference評価なし。",
+      "first_checked_at": "2026-10-10T03:54:13+00:00",
+      "last_checked_at": "2026-10-10T03:54:13+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning Mamba as a Continual Learner: Meta-Learning Selective State Space Models for Continual Learning"
+    },
+    "DOI:10.1109/iceeng64546.2025.11031301": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iceeng64546.2025.11031301",
+      "identity_tokens": [
+        "DOI:10.1109/iceeng64546.2025.11031301"
+      ],
+      "reason": "IEEE XploreはJavaScriptを無効と表示しrobot verificationを要求。DOI/titleは維持するがprimary abstractを取得できずLLM compression手法の詳細未確認。",
+      "first_checked_at": "2026-10-10T03:54:13+00:00",
+      "last_checked_at": "2026-10-10T03:54:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Survival of the Smallest: Genetic Algorithms for LLM Compression"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T01:24:17+00:00",
-  "record_count": 11238,
+  "updated_at": "2026-10-10T03:54:14+00:00",
+  "record_count": 11240,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160586,6 +160586,49 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Training LLMs on HPC Systems: Best Practices from the OpenGPT-X Project"
+    },
+    "arXiv:2312.01538": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01538",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.01538",
+        "arXiv:2312.01538"
+      ],
+      "reason": "arXiv v1 titleは候補と一致、v3で題名変更。同一ID/著者のgraph representation learningでありLLM推論システムへの具体的接続なし。",
+      "first_checked_at": "2026-10-10T03:54:13+00:00",
+      "last_checked_at": "2026-10-10T03:54:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Recurrent Distance-Encoding Neural Networks for Graph Representation Learning"
+    },
+    "arXiv:2506.00820": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.00820",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.00820",
+        "arXiv:2506.00820"
+      ],
+      "reason": "QuantFaceはface restoration diffusion向けlow-bit quantizationであり、LLM inferenceとの具体的接続なし。",
+      "first_checked_at": "2026-10-10T03:54:14+00:00",
+      "last_checked_at": "2026-10-10T03:54:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+        "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "QuantFace: Low-Bit Post-Training Quantization for One-Step Diffusion Face Restoration"
     }
   }
 }
