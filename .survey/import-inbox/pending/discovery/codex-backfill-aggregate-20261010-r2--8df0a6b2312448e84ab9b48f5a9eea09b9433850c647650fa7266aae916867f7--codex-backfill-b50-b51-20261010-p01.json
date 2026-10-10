@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-b50-b51-20261010-p01",
+  "reference_main_sha": "ea0c2d3d29bf5c42174cec3d52de117cda1608ac",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.14206",
+      "title": "Manifold-Preserving Transformers are Effective for Short-Long Range Encoding",
+      "reason": "TransJect replaces dot-product attention and preserves token distances, but the abstract reports classification/language-model quality and efficient depth scaling rather than measured inference latency, memory, or serving gains; the systems-efficiency connection remains indirect.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2310.14206",
+        "PRIMARY:https://arxiv.org/abs/2310.14206"
+      ],
+      "source_url": "https://arxiv.org/abs/2310.14206"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.10599",
+      "title": "Advances in Transformers for Robotic Applications: A Review",
+      "reason": "The arXiv abstract is a survey of Transformer use in robotic perception, planning, control, and foundation models; it proposes no model-serving or inference-efficiency method.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2412.10599",
+        "PRIMARY:https://arxiv.org/abs/2412.10599"
+      ],
+      "source_url": "https://arxiv.org/abs/2412.10599"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2110.04821",
+      "title": "DCT: Dynamic Compressive Transformer for Modeling Unbounded Sequence",
+      "reason": "DCT conditionally retains sentence representations as compressed states or discards them instead of appending every sentence to sequence memory, a concrete long-context memory-compression mechanism transferable to language-model inference.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2110.04821",
+        "PRIMARY:https://arxiv.org/abs/2110.04821"
+      ],
+      "source_url": "https://arxiv.org/abs/2110.04821"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.06213",
+      "title": "Training Dynamics Impact Post-Training Quantization Robustness",
+      "reason": "The study analyzes how training dynamics change post-training quantization robustness for large language models, but it contributes training interventions and quantization-quality analysis rather than a new inference implementation or measured serving-efficiency method.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2510.06213",
+        "PRIMARY:https://arxiv.org/abs/2510.06213"
+      ],
+      "source_url": "https://arxiv.org/abs/2510.06213"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3389/fnbot.2023.1214203",
+      "title": "A novel approach to attention mechanism using kernel functions: Kerformer",
+      "reason": "Kerformer rewrites attention with kernel feature maps and separate query/key transforms, reducing the attention matrix complexity from quadratic to linear and reporting lower time and memory use on NLP and vision tasks.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:13:48Z",
+      "last_checked_at": "2026-10-10T07:17:15Z",
+      "identity_tokens": [
+        "DOI:10.3389/fnbot.2023.1214203",
+        "PRIMARY:https://doi.org/10.3389/fnbot.2023.1214203"
+      ],
+      "source_url": "https://doi.org/10.3389/fnbot.2023.1214203"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.09158",
+      "title": "Linear Attention is Enough in Spatial-Temporal Forecasting",
+      "reason": "NSTformer replaces quadratic self-attention with a Nyström approximation of linear complexity for long spatial-temporal sequences, making its attention-computation method transferable to long-context inference.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2408.09158",
+        "PRIMARY:https://arxiv.org/abs/2408.09158"
+      ],
+      "source_url": "https://arxiv.org/abs/2408.09158"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.00592",
+      "title": "Hyper-Compression: Model Compression via Hyperfunction",
+      "reason": "Hyper-Compression represents target-model parameters through a low-dimensional dynamic-system hyperfunction, directly targeting model-size compression as a transferable deployment resource reduction.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2409.00592",
+        "PRIMARY:https://arxiv.org/abs/2409.00592"
+      ],
+      "source_url": "https://arxiv.org/abs/2409.00592"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2301.08353",
+      "title": "AdaEnsemble: Learning Adaptively Sparse Structured Ensemble Network for Click-Through Rate Prediction",
+      "reason": "AdaEnsemble routes each CTR example to sparse experts and exits at a selected feature-interaction depth, explicitly avoiding deeper computation to improve inference efficiency.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2301.08353",
+        "PRIMARY:https://arxiv.org/abs/2301.08353"
+      ],
+      "source_url": "https://arxiv.org/abs/2301.08353"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2203.12276",
+      "title": "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention",
+      "reason": "ERNIE-Sparse combines hierarchical local/global sparse attention with topology regularization; its abstract positions sparse attention as reducing quadratic sequence-length dependence and reports results against dense and efficient sparse baselines.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2203.12276",
+        "PRIMARY:https://arxiv.org/abs/2203.12276"
+      ],
+      "source_url": "https://arxiv.org/abs/2203.12276"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1613/jair.1.13896",
+      "title": "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer",
+      "reason": "AAN+ replaces a decoder self-attention dependency with generalized average attention; the JAIR abstract reports constant-time decoder dependency and roughly 20% faster decoding, a directly transferable autoregressive inference optimization.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:13:48Z",
+      "last_checked_at": "2026-10-10T07:17:15Z",
+      "identity_tokens": [
+        "DOI:10.1613/jair.1.13896",
+        "PRIMARY:https://doi.org/10.1613/jair.1.13896"
+      ],
+      "source_url": "https://doi.org/10.1613/jair.1.13896"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.04342",
+      "title": "Pruning Laws for Large Language Models",
+      "reason": "The pruning laws predict post-pruning LLM quality from baseline quality and pruning ratio across dense and MoE models, supporting safe pruning choices under the abstract’s stated compute and latency deployment constraints.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2504.04342",
+        "PRIMARY:https://arxiv.org/abs/2504.04342"
+      ],
+      "source_url": "https://arxiv.org/abs/2504.04342"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.12992",
+      "title": "Intra-neuronal attention within language models Relationships between activation and semantics",
+      "reason": "The arXiv abstract studies whether language-model neurons segment activation patterns into semantic categories; it is an interpretability/representation analysis and does not propose inference savings.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:43Z",
+      "last_checked_at": "2026-10-10T07:16:48Z",
+      "identity_tokens": [
+        "arXiv:2503.12992",
+        "PRIMARY:https://arxiv.org/abs/2503.12992"
+      ],
+      "source_url": "https://arxiv.org/abs/2503.12992"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.00867",
+      "title": "Do Compressed LLMs Forget Knowledge? An Experimental Study with Practical Implications",
+      "reason": "The paper experimentally studies knowledge retention in compressed LLMs and the practical implications of compression, but its contribution is an evaluation of forgetting rather than a compression or serving-efficiency technique.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2310.00867",
+        "PRIMARY:https://arxiv.org/abs/2310.00867"
+      ],
+      "source_url": "https://arxiv.org/abs/2310.00867"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2210.08164",
+      "title": "Linear Video Transformer with Feature Fixation",
+      "reason": "The video Transformer uses a feature-fixation module to preserve critical features under linear attention and reports fewer parameters and higher efficiency with performance comparable to quadratic Softmax video Transformers.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2210.08164",
+        "PRIMARY:https://arxiv.org/abs/2210.08164"
+      ],
+      "source_url": "https://arxiv.org/abs/2210.08164"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.02411",
+      "title": "NiNformer: a network in network transformer with token mixing generated gating function",
+      "reason": "NiNformer replaces standard ViT attention layers with a Network-in-Network block and token-mixing-generated gates; its abstract states that the block reduces computational requirements, providing a transferable attention-cost reduction design.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2403.02411",
+        "PRIMARY:https://arxiv.org/abs/2403.02411"
+      ],
+      "source_url": "https://arxiv.org/abs/2403.02411"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.23174",
+      "title": "TRA: Better Length Generalisation with Threshold Relative Attention",
+      "reason": "Threshold Relative Attention combines selective sparsity that removes irrelevant keys with contextual relative distance in decoder-only Transformers, a concrete reduction in attended information with direct autoregressive-model applicability.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2503.23174",
+        "PRIMARY:https://arxiv.org/abs/2503.23174"
+      ],
+      "source_url": "https://arxiv.org/abs/2503.23174"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.17412",
+      "title": "(PASS) Visual Prompt Locates Good Structure Sparsity through a Recurrent HyperNetwork",
+      "reason": "PASS uses visual prompts and a recurrent hypernetwork to select acceleration-friendly structural channel sparsity; the abstract reports 0.35x more speedup at comparable accuracy than baselines.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2407.17412",
+        "PRIMARY:https://arxiv.org/abs/2407.17412"
+      ],
+      "source_url": "https://arxiv.org/abs/2407.17412"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.02823",
+      "title": "The Curious Case of In-Training Compression of State Space Models",
+      "reason": "CompreSSM applies balanced truncation to reduce state dimensions during SSM training and reports faster optimization; the abstract does not establish inference-time or serving performance for the compressed models.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2510.02823",
+        "PRIMARY:https://arxiv.org/abs/2510.02823"
+      ],
+      "source_url": "https://arxiv.org/abs/2510.02823"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMI.2024.3475587",
+      "title": "Unleash the Power of State Space Model for Whole Slide Image With Local Aware Scanning and Importance Resampling",
+      "reason": "The supplied DOI/title identify a whole-slide pathology state-space-model paper, but the primary DOI landing URL returned `URL https://doi.org/10.1109/TMI.2024.3475587 is not accessible via this tool` (repeat open: `Internal Error ()`); the publisher abstract could not be retrieved.",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T07:13:48Z",
+      "last_checked_at": "2026-10-10T07:17:15Z",
+      "identity_tokens": [
+        "DOI:10.1109/TMI.2024.3475587",
+        "PRIMARY:https://doi.org/10.1109/TMI.2024.3475587"
+      ],
+      "source_url": "https://doi.org/10.1109/TMI.2024.3475587"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.19006",
+      "title": "Snakes and Ladders: Two Steps Up for VideoMamba",
+      "reason": "VideoMambaPro addresses self-attention’s compute burden with masked backward computation and residual connections and is described as an efficient Transformer alternative, but the abstract gives accuracy comparisons without inference-time, memory, or latency measurements.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T07:14:34Z",
+      "last_checked_at": "2026-10-10T07:16:56Z",
+      "identity_tokens": [
+        "arXiv:2406.19006",
+        "PRIMARY:https://arxiv.org/abs/2406.19006"
+      ],
+      "source_url": "https://arxiv.org/abs/2406.19006"
+    }
+  ]
+}
