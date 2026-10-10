@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning",
+      "source_url": "https://arxiv.org/abs/1807.08887",
+      "year": 2018,
+      "published": "2018-07-24",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 181,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents Tofu, a system that partitions very large DNN models across multiple GPU devices to reduce per-GPU memory footprint. Tofu is designed to partition a dataflow graph of fine-grained tensor operators used by platforms like MXNet and TensorFlow. In order to automatically partition each operator, we propose to describe the semantics of an operator in a simple language inspired by Halide. To optimally partition different operators in a dataflow graph, Tofu uses a recursive search algorithm that minimizes the total communication cost. Our experiments on an 8-GPU machine show that Tofu enables the training of very large CNN and RNN models. It also achieves 25% - 400% speedup over alternative approaches to train very large models.",
+      "identifiers": [
+        "SemanticScholar:7dd7198bb8a61dd22879068e8c4619b32f0470f8"
+      ],
+      "semantic_scholar_id": "7dd7198bb8a61dd22879068e8c4619b32f0470f8",
+      "canonical_id": "arXiv:1807.08887",
+      "arxiv_id": "1807.08887",
+      "doi": "10.1145/3302424.3303953",
+      "authors": [
+        "Minjie Wang",
+        "Chien-chin Huang",
+        "Jinyang Li"
+      ],
+      "priority": 181,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 181,
+        "citation_count": 181,
+        "total": 181,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 3000,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Tofu partitions large DNN operator graphs across GPUs, lowers per-GPU memory footprint, and reports 25%–400% training speedups. This concrete large-model graph-partitioning and memory technique is transferable to model-parallel systems.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CogLTX: Applying BERT to Long Texts",
+      "source_url": "https://www.semanticscholar.org/paper/a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "year": 2020,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 163,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+      ],
+      "semantic_scholar_id": "a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "authors": [
+        "Ming Ding",
+        "Chang Zhou",
+        "Hong-Xia Yang",
+        "Jie Tang"
+      ],
+      "priority": 173,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 163,
+        "citation_count": 163,
+        "total": 173,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2292,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "CogLTX addresses BERT’s quadratic time and memory cost on long documents by selecting key sentences and reports memory overhead independent of input text length, a direct transformer inference-memory efficiency result.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ccd23c553668",
+    "round": "libimp-ccd23c55366846aa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ccd23c55366846aa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ccd23c55366846aa-pre01.json",
+    "receipt": "sha256:d31c3698866f6ac97de9f3f49044b712b7a262f217cb54b724415022da4395ee"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ccd23c553668",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
