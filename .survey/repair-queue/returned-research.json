@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T09:58:13+00:00",
+  "generated_at": "2026-10-10T10:12:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2447,36 +2447,9 @@
       "worker_run_key": "20261010-1545-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2512.22195",
-      "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
-      "source_url": "https://arxiv.org/abs/2512.22195",
-      "returned_at": "2026-10-10T09:56:42+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7346,
-        "body_paragraphs": 41,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2168,
-        "limitation_chars": 815,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f61157ca58ac8191877b62d3106188ac--2025-2512.22195-matkv-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f61157ca58ac8191877b62d3106188ac--2025-2512.22195-matkv-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261010-1100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.18071",
-      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
-      "source_url": "https://arxiv.org/html/2605.18071v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-10T09:56:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2502,8 +2475,8 @@
     },
     {
       "canonical_id": "arXiv:2406.08155",
-      "title": "QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts",
-      "source_url": "https://arxiv.org/pdf/2406.08155",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-10T09:57:05+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2529,8 +2502,8 @@
     },
     {
       "canonical_id": "arXiv:2405.11299",
-      "title": "The CAP Principle for LLM Serving: A Survey of Long-Context Large Language Model Serving",
-      "source_url": "https://arxiv.org/pdf/2405.11299",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-10T09:57:06+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2554,6 +2527,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e7e75bf4ebc8--libfile_9a81e4bec2d88191a0d82cb27ef68342--2024-2405.11299-cap-principle-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e7e75bf4ebc8--libfile_9a81e4bec2d88191a0d82cb27ef68342--2024-2405.11299-cap-principle-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.json",
       "worker_run_key": "20261010-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.22195",
+      "title": "MatKV: Trading Compute for Flash Storage in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2512.22195",
+      "returned_at": "2026-10-10T10:12:29+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7346,
+        "body_paragraphs": 41,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2168,
+        "limitation_chars": 815,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8b64950058f1--libfile_f61157ca58ac8191877b62d3106188ac--2025-2512.22195-matkv-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8b64950058f1--libfile_f61157ca58ac8191877b62d3106188ac--2025-2512.22195-matkv-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261010-1100-scheduled-chat-00/r01"
     }
   ]
 }
