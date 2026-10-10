@@ -1,0 +1,229 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ccd23c55366846aa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ccd23c553668",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+    "arXiv:1807.08887"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2009b59d160a07afe46c081c4358a43e3e0b1e56",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T13:36:39.992246+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:1807.08887",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning",
+      "source_url": "https://arxiv.org/abs/1807.08887",
+      "year": 2018,
+      "published": "2018-07-24",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 181,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents Tofu, a system that partitions very large DNN models across multiple GPU devices to reduce per-GPU memory footprint. Tofu is designed to partition a dataflow graph of fine-grained tensor operators used by platforms like MXNet and TensorFlow. In order to automatically partition each operator, we propose to describe the semantics of an operator in a simple language inspired by Halide. To optimally partition different operators in a dataflow graph, Tofu uses a recursive search algorithm that minimizes the total communication cost. Our experiments on an 8-GPU machine show that Tofu enables the training of very large CNN and RNN models. It also achieves 25% - 400% speedup over alternative approaches to train very large models.",
+      "identifiers": [
+        "SemanticScholar:7dd7198bb8a61dd22879068e8c4619b32f0470f8"
+      ],
+      "semantic_scholar_id": "7dd7198bb8a61dd22879068e8c4619b32f0470f8",
+      "canonical_id": "arXiv:1807.08887",
+      "arxiv_id": "1807.08887",
+      "doi": "10.1145/3302424.3303953",
+      "authors": [
+        "Minjie Wang",
+        "Chien-chin Huang",
+        "Jinyang Li"
+      ],
+      "priority": 181,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 181,
+        "citation_count": 181,
+        "total": 181,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 3000,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CogLTX: Applying BERT to Long Texts",
+      "source_url": "https://www.semanticscholar.org/paper/a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "year": 2020,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 163,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+      ],
+      "semantic_scholar_id": "a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "authors": [
+        "Ming Ding",
+        "Chang Zhou",
+        "Hong-Xia Yang",
+        "Jie Tang"
+      ],
+      "priority": 173,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 163,
+        "citation_count": 163,
+        "total": 173,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2292,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:1807.08887",
+      "identity_tokens": [
+        "id:DOI:10.1145/3302424.3303953",
+        "id:SemanticScholar:7dd7198bb8a61dd22879068e8c4619b32f0470f8",
+        "id:arXiv:1807.08887",
+        "title:supporting very large models using automatic dataflow graph partitioning",
+        "url:https://arxiv.org/abs/1807.08887"
+      ],
+      "record": {
+        "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning",
+        "source_url": "https://arxiv.org/abs/1807.08887",
+        "year": 2018,
+        "published": "2018-07-24",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 181,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents Tofu, a system that partitions very large DNN models across multiple GPU devices to reduce per-GPU memory footprint. Tofu is designed to partition a dataflow graph of fine-grained tensor operators used by platforms like MXNet and TensorFlow. In order to automatically partition each operator, we propose to describe the semantics of an operator in a simple language inspired by Halide. To optimally partition different operators in a dataflow graph, Tofu uses a recursive search algorithm that minimizes the total communication cost. Our experiments on an 8-GPU machine show that Tofu enables the training of very large CNN and RNN models. It also achieves 25% - 400% speedup over alternative approaches to train very large models.",
+        "identifiers": [
+          "SemanticScholar:7dd7198bb8a61dd22879068e8c4619b32f0470f8"
+        ],
+        "semantic_scholar_id": "7dd7198bb8a61dd22879068e8c4619b32f0470f8",
+        "canonical_id": "arXiv:1807.08887",
+        "arxiv_id": "1807.08887",
+        "doi": "10.1145/3302424.3303953",
+        "authors": [
+          "Minjie Wang",
+          "Chien-chin Huang",
+          "Jinyang Li"
+        ],
+        "priority": 181,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 181,
+          "citation_count": 181,
+          "total": 181,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 3000,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+      "identity_tokens": [
+        "id:SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+        "title:cogltx applying bert to long texts",
+        "url:https://www.semanticscholar.org/paper/a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+      ],
+      "record": {
+        "title": "CogLTX: Applying BERT to Long Texts",
+        "source_url": "https://www.semanticscholar.org/paper/a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+        "year": 2020,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 163,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
+        ],
+        "semantic_scholar_id": "a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+        "canonical_id": "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
+        "authors": [
+          "Ming Ding",
+          "Chang Zhou",
+          "Hong-Xia Yang",
+          "Jie Tang"
+        ],
+        "priority": 173,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 163,
+          "citation_count": 163,
+          "total": 173,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2292,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d31c3698866f6ac97de9f3f49044b712b7a262f217cb54b724415022da4395ee",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
