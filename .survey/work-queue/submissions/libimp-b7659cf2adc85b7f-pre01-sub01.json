@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System",
+      "source_url": "https://arxiv.org/abs/2512.18706",
+      "year": 2025,
+      "published": "2025-12-21",
+      "venue": "arXiv.org",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present X-Talk, an open-source framework that champions a decoupled, modular design for LLM-driven speech-to-speech (S2S) systems. While the dominant trend favors end-to-end (E2E) modeling to optimize information flow, these\"omni-models\"often struggle to balance the competing objectives of complex speech tasks within a single network. X-Talk challenges this paradigm by demonstrating that a systematically optimized cascaded pipeline can achieve sub-second latency without sacrificing modular flexibility. Our framework seamlessly integrates specialized front-end components (e.g., VAD, speech enhancement) and diverse understanding models (e.g., ASR, emotion, and environmental sound analysis) with LLM capabilities like retrieval-augmented generation (RAG) and tool use. By revitalizing the cascaded approach, X-Talk highlights the underestimated potential of modular S2S systems and provides a robust foundation for future research and applications.",
+      "identifiers": [
+        "SemanticScholar:dbd1c05bd3f7f43b1e097ab49c582fbd55442983"
+      ],
+      "semantic_scholar_id": "dbd1c05bd3f7f43b1e097ab49c582fbd55442983",
+      "canonical_id": "arXiv:2512.18706",
+      "arxiv_id": "2512.18706",
+      "doi": "10.48550/arXiv.2512.18706",
+      "authors": [
+        "Zhan-Xun Liu",
+        "Yi-Fan Duan",
+        "Mengmeng Wang",
+        "Pengchao Feng",
+        "Hao-Tian Zhang",
+        "Xiaoyu Xing",
+        "Y. Shan",
+        "Haina Zhu",
+        "Yu-Hang Dai",
+        "Chao-Chao Lu",
+        "Xi-Peng Qiu",
+        "Lei Xie",
+        "Lan Wang",
+        "Nan Yan",
+        "Zi-Long Zheng",
+        "Ziyang Ma",
+        "Kai Yu",
+        "Xie Chen"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 293,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The primary abstract describes an optimized cascaded LLM-driven speech pipeline that reaches sub-second latency, a concrete latency result for an inference-time dialogue system.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b7659cf2adc8",
+    "round": "libimp-b7659cf2adc85b7f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b7659cf2adc85b7f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b7659cf2adc85b7f-pre01.json",
+    "receipt": "sha256:bfb4b21c1808a52347c9e04a62fdcc838cc7e5db2ee391e10ba9a16c3467456e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b7659cf2adc8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
