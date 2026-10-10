@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T20:47:31+00:00",
-  "record_count": 4602,
+  "updated_at": "2026-10-10T21:46:56+00:00",
+  "record_count": 4603,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -8729,12 +8729,13 @@
       "identity_tokens": [
         "arXiv:2011.14203"
       ],
-      "reason": "一次本文は言語モデル推論の具体的なenergy/latency最適化を示すが、BERT encoderと専用acceleratorに限定され、LLM servingへの一般化が確認できないためborderline。",
+      "reason": "原著要旨はBERT系のマルチタスク推論を対象とし、文単位の早期終了と動的電圧・周波数制御、注意範囲の適応、枝刈り、量子化、専用12nmアクセラレータを組み合わせて省電力化する。推論システムとハードウェア協調設計に明確に関連するが、対象は2020年のBERTエンコーダであり、現在の生成型LLMのデコード、KVキャッシュ、MoE推論基盤ではない。歴史的なエッジ推論システム研究として境界とする。",
       "first_checked_at": "2026-10-05T01:54:14+00:00",
-      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-10T21:46:53+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
       ],
+      "borderline_recheck_count": 0,
       "title": "EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference"
     },
     "arXiv:2506.20639": {
@@ -70398,6 +70399,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SwapAdvisor: Pushing Deep Learning Beyond the GPU Memory Limit via Smart Swapping"
+    },
+    "arXiv:2409.12961": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.12961",
+      "identity_tokens": [
+        "arXiv:2409.12961"
+      ],
+      "reason": "原著要旨は画像・動画・3D場面を任意解像度で扱うOryxViTと、要求に応じて視覚トークンを1〜16倍圧縮する動的圧縮器を提案する。視覚トークン数削減はマルチモーダル推論の入力計算・長文脈効率と関係するが、中心的な成果は画像・動画・3D認識の能力改善とデータ整備であり、GPUメモリ管理、LLMサービング、デコード処理率などのシステム評価は要旨で明確でないため境界とする。",
+      "first_checked_at": "2026-10-10T21:46:56+00:00",
+      "last_checked_at": "2026-10-10T21:46:56+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution"
     }
   }
 }

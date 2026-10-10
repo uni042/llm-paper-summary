@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2a3a782f9ec58b41-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2011.14203",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2011.14203",
+    "identity_tokens": [
+      "arXiv:2011.14203"
+    ],
+    "reason": "原著要旨はBERT系のマルチタスク推論を対象とし、文単位の早期終了と動的電圧・周波数制御、注意範囲の適応、枝刈り、量子化、専用12nmアクセラレータを組み合わせて省電力化する。推論システムとハードウェア協調設計に明確に関連するが、対象は2020年のBERTエンコーダであり、現在の生成型LLMのデコード、KVキャッシュ、MoE推論基盤ではない。歴史的なエッジ推論システム研究として境界とする。",
+    "first_checked_at": "2026-10-05T01:54:14+00:00",
+    "last_checked_at": "2026-10-10T21:46:53+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference"
+  },
+  "processed_at": "2026-10-10T21:46:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2a3a782f9ec5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

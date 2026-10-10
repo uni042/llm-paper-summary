@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T20:47:30+00:00",
-  "record_count": 11412,
+  "updated_at": "2026-10-10T21:46:55+00:00",
+  "record_count": 11413,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163140,6 +163140,18 @@
       "last_checked_at": "2026-10-10T20:47:30+00:00",
       "linked_from": [],
       "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution"
+    },
+    "arXiv:2403.09898": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09898",
+      "identity_tokens": [
+        "arXiv:2403.09898"
+      ],
+      "reason": "題名が長期時系列予測を対象とするTimeMachineであり、LLM推論サービング、LLM推論効率、MoE・KVキャッシュ・オフロード・生成デコードの研究ではないことが明白なため、本文読解前のタイトル先行除外とする。Researchの5件ノルマには算入しない。",
+      "first_checked_at": "2026-10-10T21:46:55+00:00",
+      "last_checked_at": "2026-10-10T21:46:55+00:00",
+      "linked_from": [],
+      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-Term Forecasting"
     }
   }
 }

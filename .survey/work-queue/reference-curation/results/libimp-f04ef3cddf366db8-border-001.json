@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f04ef3cddf366db8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.12961",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.12961",
+    "identity_tokens": [
+      "arXiv:2409.12961"
+    ],
+    "reason": "原著要旨は画像・動画・3D場面を任意解像度で扱うOryxViTと、要求に応じて視覚トークンを1〜16倍圧縮する動的圧縮器を提案する。視覚トークン数削減はマルチモーダル推論の入力計算・長文脈効率と関係するが、中心的な成果は画像・動画・3D認識の能力改善とデータ整備であり、GPUメモリ管理、LLMサービング、デコード処理率などのシステム評価は要旨で明確でないため境界とする。",
+    "first_checked_at": "2026-10-10T21:46:56+00:00",
+    "last_checked_at": "2026-10-10T21:46:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution"
+  },
+  "processed_at": "2026-10-10T21:46:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f04ef3cddf36",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
