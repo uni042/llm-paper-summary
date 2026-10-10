@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T15:22:37+00:00",
-  "record_count": 11370,
+  "updated_at": "2026-10-10T15:55:40+00:00",
+  "record_count": 11388,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162532,6 +162532,273 @@
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
       "title": "Language Models are General-Purpose Interfaces"
+    },
+    "arXiv:2206.08948": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.08948",
+      "identity_tokens": [
+        "arXiv:2206.08948"
+      ],
+      "reason": "This paper targets panoptic image segmentation with mask transformers and does not state an LLM inference or serving-efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:55:34+00:00",
+      "last_checked_at": "2026-10-10T15:55:34+00:00",
+      "linked_from": [],
+      "title": "CMT-DeepLab: Clustering Mask Transformers for Panoptic Segmentation"
+    },
+    "arXiv:2108.06363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.06363",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2108.06363",
+        "SemanticScholar:06e36261b21af2943e464a562c92c09dac292a82",
+        "arXiv:2108.06363"
+      ],
+      "reason": "The work predicts variable names and types to improve decompiler output for reverse engineering; it is a software-analysis task, not LLM systems efficiency.",
+      "first_checked_at": "2026-10-10T15:55:35+00:00",
+      "last_checked_at": "2026-10-10T15:55:35+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Augmenting Decompiler Output with Learned Variable Names and Types"
+    },
+    "SemanticScholar:e4315bc0ec3975e33d7c15a27d233d597ccbcf4e": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:e4315bc0ec3975e33d7c15a27d233d597ccbcf4e",
+      "identity_tokens": [
+        "SemanticScholar:e4315bc0ec3975e33d7c15a27d233d597ccbcf4e"
+      ],
+      "reason": "This paper studies vision-based robot locomotion on complex terrain, without a stated language-model inference or serving method.",
+      "first_checked_at": "2026-10-10T15:55:35+00:00",
+      "last_checked_at": "2026-10-10T15:55:35+00:00",
+      "linked_from": [],
+      "title": "Visual-Locomotion: Learning to Walk on Complex Terrains with Vision"
+    },
+    "arXiv:2504.13055": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.13055",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.13055",
+        "SemanticScholar:6593f4eecfa46c17abeb43ee3b5f331a461a0577",
+        "arXiv:2504.13055"
+      ],
+      "reason": "NoisyRollout augments visual inputs to improve VLM reasoning and test-time exploration; the abstract targets reasoning quality rather than lower inference cost.",
+      "first_checked_at": "2026-10-10T15:55:36+00:00",
+      "last_checked_at": "2026-10-10T15:55:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "NoisyRollout: Reinforcing Visual Reasoning with Data Augmentation"
+    },
+    "arXiv:2410.05695": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.05695",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.05695",
+        "SemanticScholar:3cda8bca2e9eb2dfdb2243f9a8584123e2ad4a51",
+        "arXiv:2410.05695"
+      ],
+      "reason": "The reasoning-boundary framework quantifies CoT capability and proposes strategies to improve reasoning outcomes; the abstract does not establish shorter sequences or reduced compute.",
+      "first_checked_at": "2026-10-10T15:55:36+00:00",
+      "last_checked_at": "2026-10-10T15:55:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Unlocking the Capabilities of Thought: A Reasoning Boundary Framework to Quantify and Optimize Chain-of-Thought"
+    },
+    "arXiv:2304.04740": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.04740",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.04740",
+        "SemanticScholar:ce72a0dd8cead1806bf84ae01985ee2667d38ea9",
+        "arXiv:2304.04740"
+      ],
+      "reason": "Reflected Diffusion Models addresses numerical drift in score-based image generation; it is unrelated to LLM serving or inference efficiency.",
+      "first_checked_at": "2026-10-10T15:55:36+00:00",
+      "last_checked_at": "2026-10-10T15:55:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Reflected Diffusion Models"
+    },
+    "SemanticScholar:45d332dc1f67eae7bb313827fe13d0048ed0bea9": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:45d332dc1f67eae7bb313827fe13d0048ed0bea9",
+      "identity_tokens": [
+        "SemanticScholar:45d332dc1f67eae7bb313827fe13d0048ed0bea9"
+      ],
+      "reason": "This paper introduces self-routing capsule networks, with no stated LLM inference, serving, or model-efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:55:37+00:00",
+      "last_checked_at": "2026-10-10T15:55:37+00:00",
+      "linked_from": [],
+      "title": "Self-Routing Capsule Networks"
+    },
+    "arXiv:2603.11682": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11682",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.11682",
+        "SemanticScholar:54078cff475d774a8b1c15b14a5d090dde0123b8",
+        "arXiv:2603.11682"
+      ],
+      "reason": "Entropy-Preserving Reinforcement Learning studies exploration entropy in policy-gradient training; its contribution is a training objective rather than serving/runtime efficiency.",
+      "first_checked_at": "2026-10-10T15:55:37+00:00",
+      "last_checked_at": "2026-10-10T15:55:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Entropy-Preserving Reinforcement Learning"
+    },
+    "arXiv:2602.20739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20739",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.20739",
+        "SemanticScholar:e14ec44b244378020736963dc55c1712e6dc75aa",
+        "arXiv:2602.20739"
+      ],
+      "reason": "PyVision-RL stabilizes RL training and interaction behavior for vision agents; it does not describe a lower-cost or faster inference implementation.",
+      "first_checked_at": "2026-10-10T15:55:37+00:00",
+      "last_checked_at": "2026-10-10T15:55:37+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md"
+      ],
+      "title": "PyVision-RL: Forging Open Agentic Vision Models via RL"
+    },
+    "arXiv:2602.04476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04476",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.04476",
+        "SemanticScholar:43576f7b21b987a0d77fd3b0f7d10c9727aff8af",
+        "arXiv:2602.04476"
+      ],
+      "reason": "VaLR preserves visual information during multimodal reasoning with latent tokens and improves benchmark accuracy; the abstract reports no token, latency, or resource reduction.",
+      "first_checked_at": "2026-10-10T15:55:38+00:00",
+      "last_checked_at": "2026-10-10T15:55:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Vision-aligned Latent Reasoning for Multi-modal Large Language Model"
+    },
+    "arXiv:2601.21251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21251",
+      "identity_tokens": [
+        "arXiv:2601.21251"
+      ],
+      "reason": "This paper targets robot manipulation policies with mixture-of-experts diffusion; its title states no LLM inference or serving-efficiency method.",
+      "first_checked_at": "2026-10-10T15:55:38+00:00",
+      "last_checked_at": "2026-10-10T15:55:38+00:00",
+      "linked_from": [],
+      "title": "Abstracting Robot Manipulation Skills via Mixture-of-Experts Diffusion Policies"
+    },
+    "DOI:10.48550/arxiv.2601.21282": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2601.21282",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.21282",
+        "arXiv:2601.21282"
+      ],
+      "reason": "This is a diagnostic benchmark for world models and does not state a concrete LLM inference, serving, or runtime-efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:55:38+00:00",
+      "last_checked_at": "2026-10-10T15:55:38+00:00",
+      "linked_from": [],
+      "title": "WorldBench: Disambiguating Physics for Diagnostic Evaluation of World Models"
+    },
+    "arXiv:2601.09921": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.09921",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.09921",
+        "SemanticScholar:be3a4518693f8254478cdc68e77ca0254109f0d0",
+        "arXiv:2601.09921"
+      ],
+      "reason": "The work improves parallel neural decoders for real-time quantum error correction, including high throughput on TPU; it targets quantum decoding, not LLM execution.",
+      "first_checked_at": "2026-10-10T15:55:39+00:00",
+      "last_checked_at": "2026-10-10T15:55:39+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Learning to Decode in Parallel: Self-Coordinating Neural Network for Real-Time Quantum Error Correction"
+    },
+    "DOI:10.1016/j.chom.2026.01.001": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.chom.2026.01.001",
+      "identity_tokens": [
+        "DOI:10.1016/j.chom.2026.01.001"
+      ],
+      "reason": "This paper studies the evolution of root-nodule symbiosis, outside LLM inference, serving, or model-efficiency scope.",
+      "first_checked_at": "2026-10-10T15:55:39+00:00",
+      "last_checked_at": "2026-10-10T15:55:39+00:00",
+      "linked_from": [],
+      "title": "Evolution of root nodule symbiosis via paleopolyploidy and modular pathway rewiring."
+    },
+    "arXiv:2512.19920": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.19920",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.19920",
+        "SemanticScholar:6304047b9333173e85f2498a0008f3b5449f9b99",
+        "arXiv:2512.19920"
+      ],
+      "reason": "Behaviorally calibrated RL changes model training to reduce hallucination; the abstract focuses on factuality and does not claim inference-efficiency improvements.",
+      "first_checked_at": "2026-10-10T15:55:39+00:00",
+      "last_checked_at": "2026-10-10T15:55:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Mitigating LLM Hallucination via Behaviorally Calibrated Reinforcement Learning"
+    },
+    "arXiv:2512.18181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.18181",
+      "identity_tokens": [
+        "arXiv:2512.18181"
+      ],
+      "reason": "This paper targets music-driven dance video generation and does not state an LLM inference, serving, runtime, or efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:55:40+00:00",
+      "last_checked_at": "2026-10-10T15:55:40+00:00",
+      "linked_from": [],
+      "title": "MACE-Dance: Motion-Appearance Cascaded Experts for Music-Driven Dance Video Generation"
+    },
+    "arXiv:2512.11391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.11391",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.11391",
+        "SemanticScholar:8fde60e3f88ed92b79622ae70118f5aa146e09bf",
+        "arXiv:2512.11391"
+      ],
+      "reason": "Null-space constrained policy optimization mitigates capability loss during safety alignment training; it is a training method, not an inference/runtime optimization.",
+      "first_checked_at": "2026-10-10T15:55:40+00:00",
+      "last_checked_at": "2026-10-10T15:55:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Mitigating the Safety Alignment Tax with Null-Space Constrained Policy Optimization"
+    },
+    "arXiv:2512.06328": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.06328",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.06328",
+        "SemanticScholar:c0b2c0316d4d199501b052e454068c8c12bfb2ff",
+        "arXiv:2512.06328"
+      ],
+      "reason": "ReCAD applies vision-language models and RL to parametric CAD generation; it is a design-generation application without an LLM-system efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:55:40+00:00",
+      "last_checked_at": "2026-10-10T15:55:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "ReCAD: Reinforcement Learning Enhanced Parametric CAD Model Generation with Vision-Language Models"
     }
   }
 }

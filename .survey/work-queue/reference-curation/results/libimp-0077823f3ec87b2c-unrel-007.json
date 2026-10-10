@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0077823f3ec87b2c-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:45d332dc1f67eae7bb313827fe13d0048ed0bea9",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:45d332dc1f67eae7bb313827fe13d0048ed0bea9",
+    "identity_tokens": [
+      "SemanticScholar:45d332dc1f67eae7bb313827fe13d0048ed0bea9"
+    ],
+    "reason": "This paper introduces self-routing capsule networks, with no stated LLM inference, serving, or model-efficiency contribution.",
+    "first_checked_at": "2026-10-10T15:55:37+00:00",
+    "last_checked_at": "2026-10-10T15:55:37+00:00",
+    "linked_from": [],
+    "title": "Self-Routing Capsule Networks"
+  },
+  "processed_at": "2026-10-10T15:55:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0077823f3ec8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

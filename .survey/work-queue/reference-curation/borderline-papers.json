@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T15:15:47+00:00",
-  "record_count": 4590,
+  "updated_at": "2026-10-10T15:55:34+00:00",
+  "record_count": 4591,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70229,6 +70229,24 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge"
+    },
+    "arXiv:2602.01672": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01672",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.01672",
+        "SemanticScholar:e4fc9f881b73a2f5e19b2b96510685bff4c23d12",
+        "arXiv:2602.01672"
+      ],
+      "reason": "DeepControl regulates whether retrieval continues and how much evidence detail enters context, plausibly limiting redundant search and context overhead; the abstract reports effectiveness but no concrete retrieval-cost or latency reduction.",
+      "first_checked_at": "2026-10-10T15:55:34+00:00",
+      "last_checked_at": "2026-10-10T15:55:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Information Control for Search-Augmented LLM Reasoning"
     }
   }
 }

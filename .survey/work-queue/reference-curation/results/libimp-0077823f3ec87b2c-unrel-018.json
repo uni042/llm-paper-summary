@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0077823f3ec87b2c-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.11391",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.11391",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.11391",
+      "SemanticScholar:8fde60e3f88ed92b79622ae70118f5aa146e09bf",
+      "arXiv:2512.11391"
+    ],
+    "reason": "Null-space constrained policy optimization mitigates capability loss during safety alignment training; it is a training method, not an inference/runtime optimization.",
+    "first_checked_at": "2026-10-10T15:55:40+00:00",
+    "last_checked_at": "2026-10-10T15:55:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "Mitigating the Safety Alignment Tax with Null-Space Constrained Policy Optimization"
+  },
+  "processed_at": "2026-10-10T15:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0077823f3ec8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

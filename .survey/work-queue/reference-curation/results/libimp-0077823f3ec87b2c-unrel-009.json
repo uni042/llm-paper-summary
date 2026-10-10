@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0077823f3ec87b2c-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.20739",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.20739",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.20739",
+      "SemanticScholar:e14ec44b244378020736963dc55c1712e6dc75aa",
+      "arXiv:2602.20739"
+    ],
+    "reason": "PyVision-RL stabilizes RL training and interaction behavior for vision agents; it does not describe a lower-cost or faster inference implementation.",
+    "first_checked_at": "2026-10-10T15:55:37+00:00",
+    "last_checked_at": "2026-10-10T15:55:37+00:00",
+    "linked_from": [
+      "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md"
+    ],
+    "title": "PyVision-RL: Forging Open Agentic Vision Models via RL"
+  },
+  "processed_at": "2026-10-10T15:55:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0077823f3ec8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

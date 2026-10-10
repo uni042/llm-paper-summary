@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0077823f3ec87b2c-unrel-019",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.06328",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.06328",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.06328",
+      "SemanticScholar:c0b2c0316d4d199501b052e454068c8c12bfb2ff",
+      "arXiv:2512.06328"
+    ],
+    "reason": "ReCAD applies vision-language models and RL to parametric CAD generation; it is a design-generation application without an LLM-system efficiency contribution.",
+    "first_checked_at": "2026-10-10T15:55:40+00:00",
+    "last_checked_at": "2026-10-10T15:55:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "title": "ReCAD: Reinforcement Learning Enhanced Parametric CAD Model Generation with Vision-Language Models"
+  },
+  "processed_at": "2026-10-10T15:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0077823f3ec8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
