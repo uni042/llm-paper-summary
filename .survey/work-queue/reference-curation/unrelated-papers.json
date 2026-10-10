@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T15:55:40+00:00",
-  "record_count": 11388,
+  "updated_at": "2026-10-10T16:38:25+00:00",
+  "record_count": 11396,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162799,6 +162799,125 @@
         "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
       ],
       "title": "ReCAD: Reinforcement Learning Enhanced Parametric CAD Model Generation with Vision-Language Models"
+    },
+    "arXiv:2512.05564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.05564",
+      "identity_tokens": [
+        "arXiv:2512.05564"
+      ],
+      "reason": "This paper concerns physical alignment for dynamic world simulation, with no stated LLM inference or serving-efficiency method.",
+      "first_checked_at": "2026-10-10T16:38:22+00:00",
+      "last_checked_at": "2026-10-10T16:38:22+00:00",
+      "linked_from": [],
+      "title": "ProPhy: Progressive Physical Alignment for Dynamic World Simulation"
+    },
+    "arXiv:2601.04203": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04203",
+      "identity_tokens": [
+        "arXiv:2601.04203"
+      ],
+      "reason": "This is a benchmark for conversational front-end development and code generation, not a concrete LLM inference or serving-efficiency method.",
+      "first_checked_at": "2026-10-10T16:38:23+00:00",
+      "last_checked_at": "2026-10-10T16:38:23+00:00",
+      "linked_from": [],
+      "title": "FronTalk: Benchmarking Front-End Development as Conversational Code Generation with Multi-Modal Feedback"
+    },
+    "arXiv:2512.14989": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.14989",
+      "identity_tokens": [
+        "arXiv:2512.14989"
+      ],
+      "reason": "This paper evaluates language models on chemistry exams, a domain-specific benchmark with no stated inference-efficiency contribution.",
+      "first_checked_at": "2026-10-10T16:38:23+00:00",
+      "last_checked_at": "2026-10-10T16:38:23+00:00",
+      "linked_from": [],
+      "title": "Evaluating large language models on multimodal chemistry olympiad exams"
+    },
+    "arXiv:2512.00968": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00968",
+      "identity_tokens": [
+        "DOI:10.1145/3770854.3783917",
+        "DOI:10.48550/arxiv.2512.00968",
+        "SemanticScholar:9de61329456e8a550bdabbb6ecdfd784342071ad",
+        "arXiv:2512.00968"
+      ],
+      "reason": "The paper uses RL and explicit reasoning to improve product-ranking relevance in a search application; it reports task quality rather than serving efficiency.",
+      "first_checked_at": "2026-10-10T16:38:23+00:00",
+      "last_checked_at": "2026-10-10T16:38:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Optimizing Generative Ranking Relevance via Reinforcement Learning in Xiaohongshu Search"
+    },
+    "arXiv:2511.21029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21029",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.21029",
+        "SemanticScholar:a154b71bf6f5f64765c35bcbb8eb26c1682053a7",
+        "arXiv:2511.21029"
+      ],
+      "reason": "FlowerDance improves 3D dance generation efficiency with a diffusion-model method; it is a non-language generation domain and does not contribute to LLM inference.",
+      "first_checked_at": "2026-10-10T16:38:24+00:00",
+      "last_checked_at": "2026-10-10T16:38:24+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "FlowerDance: MeanFlow for Efficient and Refined 3D Dance Generation"
+    },
+    "arXiv:2511.12982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.12982",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.12982",
+        "SemanticScholar:deccb43ffd7b35adfb42a467e81a169afd0c4cdc",
+        "arXiv:2511.12982"
+      ],
+      "reason": "SafeGRPO addresses multimodal safety alignment through self-rewarded policy optimization; this is safety training, not inference efficiency.",
+      "first_checked_at": "2026-10-10T16:38:24+00:00",
+      "last_checked_at": "2026-10-10T16:38:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "SafeGRPO: Self-Rewarded Multimodal Safety Alignment via Rule-Governed Policy Optimization"
+    },
+    "arXiv:2511.02778": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.02778",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.02778",
+        "SemanticScholar:e62b0fd0bc8b18e5df65a767f2abd2c410def3cf",
+        "arXiv:2511.02778"
+      ],
+      "reason": "VCode is a multimodal coding benchmark using SVG representations; it evaluates task capability without an execution-efficiency method.",
+      "first_checked_at": "2026-10-10T16:38:24+00:00",
+      "last_checked_at": "2026-10-10T16:38:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VCode: a Multimodal Coding Benchmark with SVG as Symbolic Visual Representation"
+    },
+    "arXiv:2605.04523": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04523",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.semeval-1.216",
+        "DOI:10.48550/arxiv.2605.04523",
+        "SemanticScholar:d5570e4ede8d24bdb601ce49d61b2527710cc656",
+        "arXiv:2605.04523"
+      ],
+      "reason": "The SemEval system ensembles seven LLMs and uses a judge to improve response faithfulness; the reported contribution is task score, not efficient serving.",
+      "first_checked_at": "2026-10-10T16:38:25+00:00",
+      "last_checked_at": "2026-10-10T16:38:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "RaguTeam at SemEval-2026 Task 8: Meno and Friends in a Judge-Orchestrated LLM Ensemble for Faithful Multi-Turn Response Generation"
     }
   }
 }
