@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficient Pretraining Length Scaling",
+      "source_url": "https://arxiv.org/abs/2504.14992",
+      "year": 2025,
+      "published": "2025-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in large language models have demonstrated the effectiveness of length scaling during post-training, yet its potential in pre-training remains underexplored. We present the Parallel Hidden Decoding Transformer (\\textit{PHD}-Transformer), a novel framework that enables efficient length scaling during pre-training while maintaining inference efficiency. \\textit{PHD}-Transformer achieves this through an innovative KV cache management strategy that distinguishes between original tokens and hidden decoding tokens. By retaining only the KV cache of original tokens for long-range dependencies while immediately discarding hidden decoding tokens after use, our approach maintains the same KV cache size as the vanilla transformer while enabling effective length scaling. To further enhance performance, we introduce two optimized variants: \\textit{PHD-SWA} employs sliding window attention to preserve local dependencies, while \\textit{PHD-CSWA} implements chunk-wise sliding window attention to eliminate linear growth in pre-filling time. Extensive experiments demonstrate consistent improvements across multiple benchmarks.",
+      "identifiers": [
+        "SemanticScholar:4b8ce4d10bafb92d22335757066b2c1a120f7241"
+      ],
+      "semantic_scholar_id": "4b8ce4d10bafb92d22335757066b2c1a120f7241",
+      "canonical_id": "arXiv:2504.14992",
+      "arxiv_id": "2504.14992",
+      "doi": "10.48550/arXiv.2504.14992",
+      "authors": [
+        "Bo-Hong Wu",
+        "Shen Yan",
+        "Sijun Zhang",
+        "Jianqiao Lu",
+        "Yutao Zeng",
+        "Ya Wang",
+        "Xun Zhou"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 537,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PHD-Transformerはpretraining length scalingを扱うが、hidden token KVの即時破棄とSWA変種でinference KV size/computeを維持・削減。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "S4C: Speculative Sampling with Syntactic and Semantic Coherence for Efficient Inference of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.14158",
+      "year": 2025,
+      "published": "2025-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) exhibit remarkable reasoning capabilities across diverse downstream tasks. However, their autoregressive nature leads to substantial inference latency, posing challenges for real-time applications. Speculative sampling mitigates this issue by introducing a drafting phase followed by a parallel validation phase, enabling faster token generation and verification. Existing approaches, however, overlook the inherent coherence in text generation, limiting their efficiency. To address this gap, we propose a Speculative Sampling with Syntactic and Semantic Coherence (S$^4$C) framework, which extends speculative sampling by leveraging multi-head drafting for rapid token generation and a continuous verification tree for efficient candidate validation and feature reuse. Experimental results demonstrate that S$^4$C surpasses baseline methods across mainstream tasks, offering enhanced efficiency, parallelism, and the ability to generate more valid tokens with fewer computational resources. On Spec-bench benchmarks, S$^4$C achieves an acceleration ratio of 2.26x-2.60x, outperforming state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:509280804418084f19aa2c955a67eaa888dc6578"
+      ],
+      "semantic_scholar_id": "509280804418084f19aa2c955a67eaa888dc6578",
+      "canonical_id": "arXiv:2506.14158",
+      "arxiv_id": "2506.14158",
+      "doi": "10.48550/arXiv.2506.14158",
+      "authors": [
+        "Tao He",
+        "Guang Huang",
+        "Yu Yang",
+        "Tian-Shi Xu",
+        "Sicheng Zhao",
+        "Gui-Guang Ding",
+        "Peng-Yang Wang",
+        "Feng Tian"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 480,
+        "matched_prestigious_venue": null
+      },
+      "reason": "S4Cはsyntax/semantic coherenceを用いるmulti-head speculative samplingとcontinuous verification treeでLLM inferenceを高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5ce21df4d2d0",
+    "round": "libimp-5ce21df4d2d051a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5ce21df4d2d051a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5ce21df4d2d051a7-pre01.json",
+    "receipt": "sha256:8a946e21151b1bf9b5041f59c82d0edbaa845af37a0e742e24b20c7aef4a5317"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5ce21df4d2d0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
