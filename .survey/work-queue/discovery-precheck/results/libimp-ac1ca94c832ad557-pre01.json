@@ -1,0 +1,811 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ac1ca94c832ad557-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ac1ca94c832a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2012.06153",
+    "arXiv:2302.13475",
+    "arXiv:2410.01103",
+    "arXiv:2501.19036",
+    "arXiv:2503.11164",
+    "arXiv:2505.03780",
+    "arXiv:2509.00925",
+    "arXiv:2509.13067"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1f79053dd2f87c3379fc1b7d19ac773b4686f145",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T06:40:12.428127+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2012.06153",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2302.13475",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.01103",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.19036",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.11164",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.03780",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.00925",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.13067",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RedundancyLens: Revealing and Exploiting Visual Token Processing Redundancy for Efficient Decoder-Only MLLMs",
+      "source_url": "https://arxiv.org/abs/2501.19036",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current Multimodal Large Language Model (MLLM) architectures face a critical tradeoff between performance and efficiency: decoder-only architectures achieve higher performance but lower efficiency, while cross-attention-based architectures offer greater efficiency but lower performance. The key distinction lies in how visual tokens are processed. Decoder-only architectures apply self-attention and FFN operations on visual tokens, while cross-attention architectures skip these computations. To investigate whether redundancy exists in this computationally expensive process, we propose a training-free framework for analyzing trained MLLMs. It consists of Probe-Activated Dynamic FFN and Hollow Attention, which enable adjustable reductions in computations for visual tokens, as well as a Layer Ranking Algorithm that prioritizes layers for these reductions. Extensive experiments demonstrate substantial, structured, and clustered redundancy unique to decoder-only MLLMs, offering valuable insights for future MLLM architecture design. Furthermore, by leveraging our reduction framework as a training-free inference acceleration approach, we achieve performance comparable to or better than state-of-the-art methods while remaining compatible with them. Code will be publicly available at https://github.com/L-Hugh/RedundancyLens.",
+      "identifiers": [
+        "SemanticScholar:aedfdab45b0bc1fa0cdd9d232a78d57f6cc2c4c0"
+      ],
+      "semantic_scholar_id": "aedfdab45b0bc1fa0cdd9d232a78d57f6cc2c4c0",
+      "canonical_id": "arXiv:2501.19036",
+      "arxiv_id": "2501.19036",
+      "doi": "10.18653/v1/2025.findings-acl.1233",
+      "authors": [
+        "Hongliang Li",
+        "Jia-Xin Zhang",
+        "Wenhui Liao",
+        "Dezhi Peng",
+        "Kai Ding",
+        "Lianwen Jin"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Improving Task-Agnostic BERT Distillation with Layer Mapping Search",
+      "source_url": "https://arxiv.org/abs/2012.06153",
+      "year": 2020,
+      "published": "2020-12-11",
+      "venue": "Neurocomputing",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Knowledge distillation (KD) which transfers the knowledge from a large teacher model to a small student model, has been widely used to compress the BERT model recently. Besides the supervision in the output in the original KD, recent works show that layer-level supervision is crucial to the performance of the student BERT model. However, previous works designed the layer mapping strategy heuristically (e.g., uniform or last-layer), which can lead to inferior performance. In this paper, we propose to use the genetic algorithm (GA) to search for the optimal layer mapping automatically. To accelerate the search process, we further propose a proxy setting where a small portion of the training corpus are sampled for distillation, and three representative tasks are chosen for evaluation. After obtaining the optimal layer mapping, we perform the task-agnostic BERT distillation with it on the whole corpus to build a compact student model, which can be directly fine-tuned on downstream tasks. Comprehensive experiments on the evaluation benchmarks demonstrate that 1) layer mapping strategy has a significant effect on task-agnostic BERT distillation and different layer mappings can result in quite different performances; 2) the optimal layer mapping strategy from the proposed search process consistently outperforms the other heuristic ones; 3) with the optimal layer mapping, our student model achieves state-of-the-art performance on the GLUE tasks.",
+      "identifiers": [
+        "SemanticScholar:aa5562f85f917a0acad02c1f7f60ed4b1fba8a33"
+      ],
+      "semantic_scholar_id": "aa5562f85f917a0acad02c1f7f60ed4b1fba8a33",
+      "canonical_id": "arXiv:2012.06153",
+      "arxiv_id": "2012.06153",
+      "doi": "10.1016/J.NEUCOM.2021.07.050",
+      "authors": [
+        "Xiaoqi Jiao",
+        "Huating Chang",
+        "Yichun Yin",
+        "Li-Feng Shang",
+        "Xin Jiang",
+        "Xiao Chen",
+        "Linlin Li",
+        "Fang Wang",
+        "Qun Liu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2129,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Approximately Aligned Decoding",
+      "source_url": "https://arxiv.org/abs/2410.01103",
+      "year": 2024,
+      "published": "2024-10-01",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "It is common to reject undesired outputs of Large Language Models (LLMs); however, current methods to do so require an excessive amount of computation to re-sample after a rejection, or distort the distribution of outputs by constraining the output to highly improbable tokens. We present a method, Approximately Aligned Decoding (AprAD), to balance the distortion of the output distribution with computational efficiency, inspired by algorithms from the speculative decoding literature. AprAD allows for the generation of long sequences of text with difficult-to-satisfy constraints, while amplifying low probability outputs much less compared to existing methods. We show through a series of experiments that the task-specific performance of AprAD is comparable to methods that do not distort the output distribution, while being much more computationally efficient.",
+      "identifiers": [
+        "SemanticScholar:d7fed7523ec2eb5aaeda51e5608b21e8ffc31549"
+      ],
+      "semantic_scholar_id": "d7fed7523ec2eb5aaeda51e5608b21e8ffc31549",
+      "canonical_id": "arXiv:2410.01103",
+      "arxiv_id": "2410.01103",
+      "doi": "10.48550/arXiv.2410.01103",
+      "authors": [
+        "Daniel Melcer",
+        "Sujan Kumar Gonugondla",
+        "Pramuditha Perera",
+        "Hai-Feng Qian",
+        "Wen-Hao Chiang",
+        "Yan-Jun Wang",
+        "Nihal Jain",
+        "P. Garg",
+        "Xiaofei Ma",
+        "Anoop Deoras"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 739,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "GPU Performance Portability needs Autotuning",
+      "source_url": "https://arxiv.org/abs/2505.03780",
+      "year": 2025,
+      "published": "2025-04-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLMs grow in complexity, achieving state-of-the-art performance requires tight co-design across algorithms, software, and hardware. Today's reliance on a single dominant platform limits portability, creates vendor lock-in, and raises barriers for new AI hardware. In this work, we make the case for combining just-in-time (JIT) compilation with comprehensive kernel parameter autotuning to enable portable LLM inference with state-of-the-art performance without code changes. Focusing on performance-critical LLM kernels, we demonstrate that this approach explores up to 15x more kernel parameter configurations, produces significantly more diverse code across multiple dimensions, and even outperforms vendor-optimized implementations by up to 230%, all while reducing kernel code size by 70x and eliminating manual code optimizations. Our results highlight autotuning as a promising path to unlocking model portability across GPU vendors.",
+      "identifiers": [
+        "SemanticScholar:0d7251708caa3c80ee52477a930f6ea407dceab2"
+      ],
+      "semantic_scholar_id": "0d7251708caa3c80ee52477a930f6ea407dceab2",
+      "canonical_id": "arXiv:2505.03780",
+      "arxiv_id": "2505.03780",
+      "doi": "10.48550/arXiv.2505.03780",
+      "authors": [
+        "Burkhard Ringlein",
+        "Thomas Parnell",
+        "R. Stoica"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 528,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DTRNet: Dynamic Token Routing Network to Reduce Quadratic Costs in Transformers",
+      "source_url": "https://arxiv.org/abs/2509.00925",
+      "year": 2025,
+      "published": "2025-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers achieve state-of-the-art results across many tasks, but their uniform application of quadratic self-attention to every token at every layer makes them computationally expensive. We introduce DTRNet (Dynamic Token Routing Network), an improved Transformer architecture that allows tokens to dynamically skip the quadratic cost of cross-token mixing while still receiving lightweight linear updates. By preserving the MLP module and reducing the attention cost for most tokens to linear, DTRNet ensures that every token is explicitly updated while significantly lowering overall computation. This design offers an efficient and effective alternative to standard dense attention. Once trained, DTRNet blocks routes only ~10% of tokens through attention at each layer while maintaining performance comparable to a full Transformer. It consistently outperforms routing-based layer skipping methods such as MoD and D-LLM in both accuracy and memory at matched FLOPs, while routing fewer tokens to full attention. Its efficiency gains, scales with sequence length, offering significant reduction in FLOPs for long-context inputs. By decoupling token updates from attention mixing, DTRNet substantially reduces the quadratic share of computation, providing a simple, efficient, and scalable alternative to Transformers.",
+      "identifiers": [
+        "SemanticScholar:983054375162192b94eef502dd81e8f2957d88cc"
+      ],
+      "semantic_scholar_id": "983054375162192b94eef502dd81e8f2957d88cc",
+      "canonical_id": "arXiv:2509.00925",
+      "arxiv_id": "2509.00925",
+      "doi": "10.48550/arXiv.2509.00925",
+      "authors": [
+        "Aman Sharma",
+        "Saeed Najafi",
+        "Parsa Farinneya",
+        "Benyamin Jamialahmadi",
+        "Marzieh S. Tahaei",
+        "Yuhe Fan",
+        "Mehdi Rezagholizadeh",
+        "Boxing Chen",
+        "A. Jafari"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HERO: Rethinking Visual Token Early Dropping in High-Resolution Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.13067",
+      "year": 2025,
+      "published": "2025-09-16",
+      "venue": "IEEE transactions on multimedia",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "By cropping high-resolution images into local tiles and encoding them independently, High-Resolution Large Vision-Language Models (HR-LVLMs) have demonstrated remarkable fine-grained visual understanding capabilities. However, this divide-and-conquer paradigm significantly increases the number of visual tokens, resulting in substantial computational and memory overhead. To better understand and address this challenge, we empirically investigate visual token utilization in HR-LVLMs and uncover three key findings: (1) the local tiles have varying importance, jointly determined by visual saliency and task relevance; (2) the CLS token in CLIP-based vision encoders exhibits a two-stage attention pattern across layers, with each stage attending to different types of visual tokens; (3) the visual tokens emphasized at different stages encode information at varying levels of granularity, playing complementary roles within LVLMs. Building on these insights, we propose HERO, a High-resolution visual token early dropping framework that integrates content-adaptive token budget allocation with function-aware token selection. By accurately estimating tile-level importance and selectively retaining visual tokens with complementary roles, HERO achieves superior efficiency-accuracy trade-offs across diverse benchmarks and model scales, all in a training-free manner. This study provides both empirical insights and practical solutions toward efficient inference in HR-LVLMs.",
+      "identifiers": [
+        "SemanticScholar:25a984dc3eac2fff4b3f22b224417c881c2c8de9"
+      ],
+      "semantic_scholar_id": "25a984dc3eac2fff4b3f22b224417c881c2c8de9",
+      "canonical_id": "arXiv:2509.13067",
+      "arxiv_id": "2509.13067",
+      "doi": "10.48550/arXiv.2509.13067",
+      "authors": [
+        "Xu Li",
+        "Yuxuan Liang",
+        "Xiao-Lei Chen",
+        "Yi Zheng",
+        "Hao-Tian Chen",
+        "Zhe Liu",
+        "Rui Zhu",
+        "Bin Li",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 389,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Extreme Pruning of LLMs with Plug-and-Play Mixed Sparsity",
+      "source_url": "https://arxiv.org/abs/2503.11164",
+      "year": 2025,
+      "published": "2025-03-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "N:M structured pruning is essential for large language models (LLMs) because it can remove less important network weights and reduce the memory and computation requirements. Existing pruning methods mainly focus on designing metrics to measure the importance of network components to guide pruning. Apart from the impact of these metrics, we observe that different layers have different sensitivities over the network performance. Thus, we propose an efficient method based on the trace of Fisher Information Matrix (FIM) to quantitatively measure and verify the different sensitivities across layers. Based on this, we propose Mixed Sparsity Pruning (MSP) which uses a pruning-oriented evolutionary algorithm (EA) to determine the optimal sparsity levels for different layers. To guarantee fast convergence and achieve promising performance, we utilize efficient FIM-inspired layer-wise sensitivity to initialize the population of EA. In addition, our MSP can work as a plug-and-play module, ready to be integrated into existing pruning methods. Extensive experiments on LLaMA and LLaMA-2 on language modeling and zero-shot tasks demonstrate our superior performance. In particular, in extreme pruning ratio (e.g. 75%), our method significantly outperforms existing methods in terms of perplexity (PPL) by orders of magnitude (Figure 1).",
+      "identifiers": [
+        "SemanticScholar:a878e50c9a940dc46854f9ece320120d84e322dc"
+      ],
+      "semantic_scholar_id": "a878e50c9a940dc46854f9ece320120d84e322dc",
+      "canonical_id": "arXiv:2503.11164",
+      "arxiv_id": "2503.11164",
+      "doi": "10.48550/arXiv.2503.11164",
+      "authors": [
+        "Chi Xu",
+        "Gefei Zhang",
+        "Yantong Zhu",
+        "Luca Benini",
+        "Guosheng Hu",
+        "Yawei Li",
+        "Zhihong Zhang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 575,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Elementwise Language Representation",
+      "source_url": "https://arxiv.org/abs/2302.13475",
+      "year": 2023,
+      "published": "2023-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a new technique for computational language representation called elementwise embedding, in which a material (semantic unit) is abstracted into a horizontal concatenation of lower-dimensional element (character) embeddings. While elements are always characters, materials are arbitrary levels of semantic units so it generalizes to any type of tokenization. To focus only on the important letters, the $n^{th}$ spellings of each semantic unit are aligned in $n^{th}$ attention heads, then concatenated back into original forms creating unique embedding representations; they are jointly projected thereby determining own contextual importance. Technically, this framework is achieved by passing a sequence of materials, each consists of $v$ elements, to a transformer having $h=v$ attention heads. As a pure embedding technique, elementwise embedding replaces the $w$-dimensional embedding table of a transformer model with $256$ $c$-dimensional elements (each corresponding to one of UTF-8 bytes) where $c=w/v$. Using this novel approach, we show that the standard transformer architecture can be reused for all levels of language representations and be able to process much longer sequences at the same time-complexity without\"any\"architectural modification and additional overhead. BERT trained with elementwise embedding outperforms its subword equivalence (original implementation) in multilabel patent document classification exhibiting superior robustness to domain-specificity and data imbalance, despite using $0.005\\%$ of embedding parameters. Experiments demonstrate the generalizability of the proposed method by successfully transferring these enhancements to differently architected transformers CANINE and ALBERT.",
+      "identifiers": [
+        "SemanticScholar:67c28d697460b684a0ba97d989719b4ed3c9cffc"
+      ],
+      "semantic_scholar_id": "67c28d697460b684a0ba97d989719b4ed3c9cffc",
+      "canonical_id": "arXiv:2302.13475",
+      "arxiv_id": "2302.13475",
+      "doi": "10.48550/arXiv.2302.13475",
+      "authors": [
+        "Du-Yeong Kim",
+        "Jeeeun Kim"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1321,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2501.19036",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-acl.1233",
+        "id:SemanticScholar:aedfdab45b0bc1fa0cdd9d232a78d57f6cc2c4c0",
+        "id:arXiv:2501.19036",
+        "title:redundancylens revealing and exploiting visual token processing redundancy for efficient decoderonly mllms",
+        "url:https://arxiv.org/abs/2501.19036"
+      ],
+      "record": {
+        "title": "RedundancyLens: Revealing and Exploiting Visual Token Processing Redundancy for Efficient Decoder-Only MLLMs",
+        "source_url": "https://arxiv.org/abs/2501.19036",
+        "year": 2025,
+        "published": "2025-01-31",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Current Multimodal Large Language Model (MLLM) architectures face a critical tradeoff between performance and efficiency: decoder-only architectures achieve higher performance but lower efficiency, while cross-attention-based architectures offer greater efficiency but lower performance. The key distinction lies in how visual tokens are processed. Decoder-only architectures apply self-attention and FFN operations on visual tokens, while cross-attention architectures skip these computations. To investigate whether redundancy exists in this computationally expensive process, we propose a training-free framework for analyzing trained MLLMs. It consists of Probe-Activated Dynamic FFN and Hollow Attention, which enable adjustable reductions in computations for visual tokens, as well as a Layer Ranking Algorithm that prioritizes layers for these reductions. Extensive experiments demonstrate substantial, structured, and clustered redundancy unique to decoder-only MLLMs, offering valuable insights for future MLLM architecture design. Furthermore, by leveraging our reduction framework as a training-free inference acceleration approach, we achieve performance comparable to or better than state-of-the-art methods while remaining compatible with them. Code will be publicly available at https://github.com/L-Hugh/RedundancyLens.",
+        "identifiers": [
+          "SemanticScholar:aedfdab45b0bc1fa0cdd9d232a78d57f6cc2c4c0"
+        ],
+        "semantic_scholar_id": "aedfdab45b0bc1fa0cdd9d232a78d57f6cc2c4c0",
+        "canonical_id": "arXiv:2501.19036",
+        "arxiv_id": "2501.19036",
+        "doi": "10.18653/v1/2025.findings-acl.1233",
+        "authors": [
+          "Hongliang Li",
+          "Jia-Xin Zhang",
+          "Wenhui Liao",
+          "Dezhi Peng",
+          "Kai Ding",
+          "Lianwen Jin"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 617,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2012.06153",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2021.07.050",
+        "id:SemanticScholar:aa5562f85f917a0acad02c1f7f60ed4b1fba8a33",
+        "id:arXiv:2012.06153",
+        "title:improving taskagnostic bert distillation with layer mapping search",
+        "url:https://arxiv.org/abs/2012.06153"
+      ],
+      "record": {
+        "title": "Improving Task-Agnostic BERT Distillation with Layer Mapping Search",
+        "source_url": "https://arxiv.org/abs/2012.06153",
+        "year": 2020,
+        "published": "2020-12-11",
+        "venue": "Neurocomputing",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Knowledge distillation (KD) which transfers the knowledge from a large teacher model to a small student model, has been widely used to compress the BERT model recently. Besides the supervision in the output in the original KD, recent works show that layer-level supervision is crucial to the performance of the student BERT model. However, previous works designed the layer mapping strategy heuristically (e.g., uniform or last-layer), which can lead to inferior performance. In this paper, we propose to use the genetic algorithm (GA) to search for the optimal layer mapping automatically. To accelerate the search process, we further propose a proxy setting where a small portion of the training corpus are sampled for distillation, and three representative tasks are chosen for evaluation. After obtaining the optimal layer mapping, we perform the task-agnostic BERT distillation with it on the whole corpus to build a compact student model, which can be directly fine-tuned on downstream tasks. Comprehensive experiments on the evaluation benchmarks demonstrate that 1) layer mapping strategy has a significant effect on task-agnostic BERT distillation and different layer mappings can result in quite different performances; 2) the optimal layer mapping strategy from the proposed search process consistently outperforms the other heuristic ones; 3) with the optimal layer mapping, our student model achieves state-of-the-art performance on the GLUE tasks.",
+        "identifiers": [
+          "SemanticScholar:aa5562f85f917a0acad02c1f7f60ed4b1fba8a33"
+        ],
+        "semantic_scholar_id": "aa5562f85f917a0acad02c1f7f60ed4b1fba8a33",
+        "canonical_id": "arXiv:2012.06153",
+        "arxiv_id": "2012.06153",
+        "doi": "10.1016/J.NEUCOM.2021.07.050",
+        "authors": [
+          "Xiaoqi Jiao",
+          "Huating Chang",
+          "Yichun Yin",
+          "Li-Feng Shang",
+          "Xin Jiang",
+          "Xiao Chen",
+          "Linlin Li",
+          "Fang Wang",
+          "Qun Liu"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2129,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.01103",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.01103",
+        "id:SemanticScholar:d7fed7523ec2eb5aaeda51e5608b21e8ffc31549",
+        "id:arXiv:2410.01103",
+        "title:approximately aligned decoding",
+        "url:https://arxiv.org/abs/2410.01103"
+      ],
+      "record": {
+        "title": "Approximately Aligned Decoding",
+        "source_url": "https://arxiv.org/abs/2410.01103",
+        "year": 2024,
+        "published": "2024-10-01",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "It is common to reject undesired outputs of Large Language Models (LLMs); however, current methods to do so require an excessive amount of computation to re-sample after a rejection, or distort the distribution of outputs by constraining the output to highly improbable tokens. We present a method, Approximately Aligned Decoding (AprAD), to balance the distortion of the output distribution with computational efficiency, inspired by algorithms from the speculative decoding literature. AprAD allows for the generation of long sequences of text with difficult-to-satisfy constraints, while amplifying low probability outputs much less compared to existing methods. We show through a series of experiments that the task-specific performance of AprAD is comparable to methods that do not distort the output distribution, while being much more computationally efficient.",
+        "identifiers": [
+          "SemanticScholar:d7fed7523ec2eb5aaeda51e5608b21e8ffc31549"
+        ],
+        "semantic_scholar_id": "d7fed7523ec2eb5aaeda51e5608b21e8ffc31549",
+        "canonical_id": "arXiv:2410.01103",
+        "arxiv_id": "2410.01103",
+        "doi": "10.48550/arXiv.2410.01103",
+        "authors": [
+          "Daniel Melcer",
+          "Sujan Kumar Gonugondla",
+          "Pramuditha Perera",
+          "Hai-Feng Qian",
+          "Wen-Hao Chiang",
+          "Yan-Jun Wang",
+          "Nihal Jain",
+          "P. Garg",
+          "Xiaofei Ma",
+          "Anoop Deoras"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 739,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.03780",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.03780",
+        "id:SemanticScholar:0d7251708caa3c80ee52477a930f6ea407dceab2",
+        "id:arXiv:2505.03780",
+        "title:gpu performance portability needs autotuning",
+        "url:https://arxiv.org/abs/2505.03780"
+      ],
+      "record": {
+        "title": "GPU Performance Portability needs Autotuning",
+        "source_url": "https://arxiv.org/abs/2505.03780",
+        "year": 2025,
+        "published": "2025-04-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLMs grow in complexity, achieving state-of-the-art performance requires tight co-design across algorithms, software, and hardware. Today's reliance on a single dominant platform limits portability, creates vendor lock-in, and raises barriers for new AI hardware. In this work, we make the case for combining just-in-time (JIT) compilation with comprehensive kernel parameter autotuning to enable portable LLM inference with state-of-the-art performance without code changes. Focusing on performance-critical LLM kernels, we demonstrate that this approach explores up to 15x more kernel parameter configurations, produces significantly more diverse code across multiple dimensions, and even outperforms vendor-optimized implementations by up to 230%, all while reducing kernel code size by 70x and eliminating manual code optimizations. Our results highlight autotuning as a promising path to unlocking model portability across GPU vendors.",
+        "identifiers": [
+          "SemanticScholar:0d7251708caa3c80ee52477a930f6ea407dceab2"
+        ],
+        "semantic_scholar_id": "0d7251708caa3c80ee52477a930f6ea407dceab2",
+        "canonical_id": "arXiv:2505.03780",
+        "arxiv_id": "2505.03780",
+        "doi": "10.48550/arXiv.2505.03780",
+        "authors": [
+          "Burkhard Ringlein",
+          "Thomas Parnell",
+          "R. Stoica"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 528,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.00925",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.00925",
+        "id:SemanticScholar:983054375162192b94eef502dd81e8f2957d88cc",
+        "id:arXiv:2509.00925",
+        "title:dtrnet dynamic token routing network to reduce quadratic costs in transformers",
+        "url:https://arxiv.org/abs/2509.00925"
+      ],
+      "record": {
+        "title": "DTRNet: Dynamic Token Routing Network to Reduce Quadratic Costs in Transformers",
+        "source_url": "https://arxiv.org/abs/2509.00925",
+        "year": 2025,
+        "published": "2025-08-31",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers achieve state-of-the-art results across many tasks, but their uniform application of quadratic self-attention to every token at every layer makes them computationally expensive. We introduce DTRNet (Dynamic Token Routing Network), an improved Transformer architecture that allows tokens to dynamically skip the quadratic cost of cross-token mixing while still receiving lightweight linear updates. By preserving the MLP module and reducing the attention cost for most tokens to linear, DTRNet ensures that every token is explicitly updated while significantly lowering overall computation. This design offers an efficient and effective alternative to standard dense attention. Once trained, DTRNet blocks routes only ~10% of tokens through attention at each layer while maintaining performance comparable to a full Transformer. It consistently outperforms routing-based layer skipping methods such as MoD and D-LLM in both accuracy and memory at matched FLOPs, while routing fewer tokens to full attention. Its efficiency gains, scales with sequence length, offering significant reduction in FLOPs for long-context inputs. By decoupling token updates from attention mixing, DTRNet substantially reduces the quadratic share of computation, providing a simple, efficient, and scalable alternative to Transformers.",
+        "identifiers": [
+          "SemanticScholar:983054375162192b94eef502dd81e8f2957d88cc"
+        ],
+        "semantic_scholar_id": "983054375162192b94eef502dd81e8f2957d88cc",
+        "canonical_id": "arXiv:2509.00925",
+        "arxiv_id": "2509.00925",
+        "doi": "10.48550/arXiv.2509.00925",
+        "authors": [
+          "Aman Sharma",
+          "Saeed Najafi",
+          "Parsa Farinneya",
+          "Benyamin Jamialahmadi",
+          "Marzieh S. Tahaei",
+          "Yuhe Fan",
+          "Mehdi Rezagholizadeh",
+          "Boxing Chen",
+          "A. Jafari"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 405,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.13067",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.13067",
+        "id:SemanticScholar:25a984dc3eac2fff4b3f22b224417c881c2c8de9",
+        "id:arXiv:2509.13067",
+        "title:hero rethinking visual token early dropping in highresolution large visionlanguage models",
+        "url:https://arxiv.org/abs/2509.13067"
+      ],
+      "record": {
+        "title": "HERO: Rethinking Visual Token Early Dropping in High-Resolution Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2509.13067",
+        "year": 2025,
+        "published": "2025-09-16",
+        "venue": "IEEE transactions on multimedia",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "By cropping high-resolution images into local tiles and encoding them independently, High-Resolution Large Vision-Language Models (HR-LVLMs) have demonstrated remarkable fine-grained visual understanding capabilities. However, this divide-and-conquer paradigm significantly increases the number of visual tokens, resulting in substantial computational and memory overhead. To better understand and address this challenge, we empirically investigate visual token utilization in HR-LVLMs and uncover three key findings: (1) the local tiles have varying importance, jointly determined by visual saliency and task relevance; (2) the CLS token in CLIP-based vision encoders exhibits a two-stage attention pattern across layers, with each stage attending to different types of visual tokens; (3) the visual tokens emphasized at different stages encode information at varying levels of granularity, playing complementary roles within LVLMs. Building on these insights, we propose HERO, a High-resolution visual token early dropping framework that integrates content-adaptive token budget allocation with function-aware token selection. By accurately estimating tile-level importance and selectively retaining visual tokens with complementary roles, HERO achieves superior efficiency-accuracy trade-offs across diverse benchmarks and model scales, all in a training-free manner. This study provides both empirical insights and practical solutions toward efficient inference in HR-LVLMs.",
+        "identifiers": [
+          "SemanticScholar:25a984dc3eac2fff4b3f22b224417c881c2c8de9"
+        ],
+        "semantic_scholar_id": "25a984dc3eac2fff4b3f22b224417c881c2c8de9",
+        "canonical_id": "arXiv:2509.13067",
+        "arxiv_id": "2509.13067",
+        "doi": "10.48550/arXiv.2509.13067",
+        "authors": [
+          "Xu Li",
+          "Yuxuan Liang",
+          "Xiao-Lei Chen",
+          "Yi Zheng",
+          "Hao-Tian Chen",
+          "Zhe Liu",
+          "Rui Zhu",
+          "Bin Li",
+          "Xiang-Yang Xue"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 389,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.11164",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.11164",
+        "id:SemanticScholar:a878e50c9a940dc46854f9ece320120d84e322dc",
+        "id:arXiv:2503.11164",
+        "title:towards extreme pruning of llms with plugandplay mixed sparsity",
+        "url:https://arxiv.org/abs/2503.11164"
+      ],
+      "record": {
+        "title": "Towards Extreme Pruning of LLMs with Plug-and-Play Mixed Sparsity",
+        "source_url": "https://arxiv.org/abs/2503.11164",
+        "year": 2025,
+        "published": "2025-03-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "N:M structured pruning is essential for large language models (LLMs) because it can remove less important network weights and reduce the memory and computation requirements. Existing pruning methods mainly focus on designing metrics to measure the importance of network components to guide pruning. Apart from the impact of these metrics, we observe that different layers have different sensitivities over the network performance. Thus, we propose an efficient method based on the trace of Fisher Information Matrix (FIM) to quantitatively measure and verify the different sensitivities across layers. Based on this, we propose Mixed Sparsity Pruning (MSP) which uses a pruning-oriented evolutionary algorithm (EA) to determine the optimal sparsity levels for different layers. To guarantee fast convergence and achieve promising performance, we utilize efficient FIM-inspired layer-wise sensitivity to initialize the population of EA. In addition, our MSP can work as a plug-and-play module, ready to be integrated into existing pruning methods. Extensive experiments on LLaMA and LLaMA-2 on language modeling and zero-shot tasks demonstrate our superior performance. In particular, in extreme pruning ratio (e.g. 75%), our method significantly outperforms existing methods in terms of perplexity (PPL) by orders of magnitude (Figure 1).",
+        "identifiers": [
+          "SemanticScholar:a878e50c9a940dc46854f9ece320120d84e322dc"
+        ],
+        "semantic_scholar_id": "a878e50c9a940dc46854f9ece320120d84e322dc",
+        "canonical_id": "arXiv:2503.11164",
+        "arxiv_id": "2503.11164",
+        "doi": "10.48550/arXiv.2503.11164",
+        "authors": [
+          "Chi Xu",
+          "Gefei Zhang",
+          "Yantong Zhu",
+          "Luca Benini",
+          "Guosheng Hu",
+          "Yawei Li",
+          "Zhihong Zhang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 575,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2302.13475",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2302.13475",
+        "id:SemanticScholar:67c28d697460b684a0ba97d989719b4ed3c9cffc",
+        "id:arXiv:2302.13475",
+        "title:elementwise language representation",
+        "url:https://arxiv.org/abs/2302.13475"
+      ],
+      "record": {
+        "title": "Elementwise Language Representation",
+        "source_url": "https://arxiv.org/abs/2302.13475",
+        "year": 2023,
+        "published": "2023-02-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose a new technique for computational language representation called elementwise embedding, in which a material (semantic unit) is abstracted into a horizontal concatenation of lower-dimensional element (character) embeddings. While elements are always characters, materials are arbitrary levels of semantic units so it generalizes to any type of tokenization. To focus only on the important letters, the $n^{th}$ spellings of each semantic unit are aligned in $n^{th}$ attention heads, then concatenated back into original forms creating unique embedding representations; they are jointly projected thereby determining own contextual importance. Technically, this framework is achieved by passing a sequence of materials, each consists of $v$ elements, to a transformer having $h=v$ attention heads. As a pure embedding technique, elementwise embedding replaces the $w$-dimensional embedding table of a transformer model with $256$ $c$-dimensional elements (each corresponding to one of UTF-8 bytes) where $c=w/v$. Using this novel approach, we show that the standard transformer architecture can be reused for all levels of language representations and be able to process much longer sequences at the same time-complexity without\"any\"architectural modification and additional overhead. BERT trained with elementwise embedding outperforms its subword equivalence (original implementation) in multilabel patent document classification exhibiting superior robustness to domain-specificity and data imbalance, despite using $0.005\\%$ of embedding parameters. Experiments demonstrate the generalizability of the proposed method by successfully transferring these enhancements to differently architected transformers CANINE and ALBERT.",
+        "identifiers": [
+          "SemanticScholar:67c28d697460b684a0ba97d989719b4ed3c9cffc"
+        ],
+        "semantic_scholar_id": "67c28d697460b684a0ba97d989719b4ed3c9cffc",
+        "canonical_id": "arXiv:2302.13475",
+        "arxiv_id": "2302.13475",
+        "doi": "10.48550/arXiv.2302.13475",
+        "authors": [
+          "Du-Yeong Kim",
+          "Jeeeun Kim"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1321,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1ab2ea6a32c2ccc2ab2c6465bb148ab7a2846b8daa29ad42d6c9a565955f60fd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
