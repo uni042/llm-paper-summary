@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T05:46:56.206241+00:00",
+  "generated_at": "2026-10-10T07:00:03.285730+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 132,
+  "count": 130,
   "worker_counts": {
-    "scheduled-chat-00": 44,
+    "scheduled-chat-00": 43,
     "scheduled-chat-30": 44,
-    "scheduled-chat-45": 44
+    "scheduled-chat-45": 43
   },
   "entries": [
     {
@@ -640,28 +640,6 @@
         "limitation_chars": 323
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
-      "canonical_id": "arXiv:2207.00032",
-      "title": "DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale",
-      "file_bytes": 12881,
-      "source_sha256": "62deb4409db98d2a4b4a910336e6363687cd1090409f6dc2018d46d4a4410a8b",
-      "source_git_blob_sha": "fee0b17f592ed49cbaaf70a23740cdbc233c0296",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.945936,
-      "quality_metrics": {
-        "body_chars": 2758,
-        "method_chars": 885,
-        "evaluation_chars": 121,
-        "limitation_chars": 116
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 121 < 500"
-      ],
       "warnings": []
     },
     {
@@ -2030,26 +2008,6 @@
         "method_chars": 1092,
         "evaluation_chars": 1123,
         "limitation_chars": 525
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md",
-      "canonical_id": "arXiv:2409.09086",
-      "title": "Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU",
-      "file_bytes": 14005,
-      "source_sha256": "4c065baefd5b1635c8aaced8dfc07319eaf0edcbf2bf733f698867ad10e9586a",
-      "source_git_blob_sha": "749f8a6c6e0b6c0e4374ef37827c4cfa9b6626d1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.816421,
-      "quality_metrics": {
-        "body_chars": 3963,
-        "method_chars": 1344,
-        "evaluation_chars": 935,
-        "limitation_chars": 267
       },
       "mechanical_failures": [],
       "warnings": []
