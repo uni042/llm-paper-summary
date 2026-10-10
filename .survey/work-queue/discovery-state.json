@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-10T05:35:28+00:00",
-  "last_run_key": "library-import-02e07e805815",
-  "last_round": "libimp-02e07e80581589a7-pre01",
+  "updated_at": "2026-10-10T06:46:22+00:00",
+  "last_run_key": "library-import-ac1ca94c832a",
+  "last_round": "libimp-ac1ca94c832ad557-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "2026-09-21T06:58:37+09:00",
-      "round": "hourly00-forward-h2o-11",
-      "axis": "forward citations of H2O KV cache eviction and efficient inference",
-      "query_summary": null,
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2306.14048/citations?fields=title,abstract,year,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "forward",
-      "candidate_count": 5,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 5,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 5,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260921T0715JST-hourly00-discovery-forward-h2o-11.json"
-    },
     {
       "run_key": "2026-09-21T06:58:37+09:00",
       "round": "hourly00-forward-flexgen-12",
@@ -13530,6 +13509,42 @@
       "duplicate_ratio": 0.8333333333333334,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-ac1ca94c832ad557-pre01",
+      "precheck_request_id": "libimp-ac1ca94c832ad557-pre01",
+      "run_key": "library-import-ac1ca94c832a",
+      "round": "libimp-ac1ca94c832ad557-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 3,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-ac1ca94c832ad557-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-ac1ca94c832ad557-pre01-sub01.json",
+        "work-queue/submissions/libimp-ac1ca94c832ad557-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 3,
+      "post_final_dedupe_count": 3,
+      "duplicate_ratio": 0.625,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21901,16 +21916,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-02e07e805815",
-      "rounds": 225,
-      "candidate_count": 955,
-      "duplicate_filtered_count": 465,
-      "novel_candidate_count": 490,
+      "last_run_key": "library-import-ac1ca94c832a",
+      "rounds": 226,
+      "candidate_count": 963,
+      "duplicate_filtered_count": 470,
+      "novel_candidate_count": 493,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 485,
-      "accepted_count": 485,
-      "duplicate_ratio": 0.4869109947643979,
-      "final_duplicate_ratio": 0.01020408163265306,
+      "post_final_dedupe_count": 488,
+      "accepted_count": 488,
+      "duplicate_ratio": 0.48805815160955346,
+      "final_duplicate_ratio": 0.010141987829614604,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
