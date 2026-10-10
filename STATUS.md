@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 15:53:01 JST**
+> 自動生成: **2026-10-10 15:58:15 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1060** |
 | 未claim Research job | **1060** |
-| 直近24hのResearch処理完了 | **163** |
-| 最終Research処理完了 | **10-10 14:30:41 JST** |
+| 直近24hのResearch処理完了 | **165** |
+| 最終Research処理完了 | **10-10 15:00:00 JST** |
 | 最終Discovery探索完了 | **10-10 15:46:25 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-10 11:37:47 JST（4時間15分前）** |
+| 最終maintenance完了 | **10-10 11:37:47 JST（4時間20分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **12** |
+| 直近6hのResearch完了 | **13** |
 | 直近6hのDiscovery run | **4** |
 | 直近6hのDiscovery本文確認・分類 | **79** |
-| 最終Research完了 | **10-10 14:30:41 JST** |
+| 最終Research完了 | **10-10 15:00:00 JST** |
 | 最終Discovery完了 | **10-10 15:46:25 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-10 14:30:41 JST** / worker — / run 20261010-1430-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_f3f5bde7c4448191ba5f4eaf07ed6c69--2024-2401.14361-moe-infinity-under16kb-reaudit-20261010-1430-scheduled-chat-30-r01.json
+- Research: **10-10 15:00:00 JST** / worker — / run 20261010-1500-scheduled-chat-00/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_b597cdbae8248191a109a60568e0358e--2024-2409.09086-inf-mllm-under16kb-reaudit-20261010-1500-scheduled-chat-00-r01.json
 - Discovery: **10-10 15:46:25 JST** / worker codex-local / run codex-backfill-b45-p01
   - 本文確認・分類 **20件** / accept **8件** / unrelated+borderline **12件**
   - evidence: .survey/import-inbox/results/discovery/b45--48cf18c5d2f816dfbb9eaf9b87a75f03328307883f383981199b83cbc9405da9--codex-backfill-b45-p01.json
