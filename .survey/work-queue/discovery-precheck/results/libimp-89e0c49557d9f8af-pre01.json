@@ -1,0 +1,1565 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-89e0c49557d9f8af-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-89e0c49557d9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s10994-025-06768-3",
+    "DOI:10.1109/iccvw69036.2025.00315",
+    "DOI:10.1145/3587464",
+    "DOI:10.2139/ssrn.3985429",
+    "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+    "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+    "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565",
+    "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73",
+    "arXiv:2209.00625",
+    "arXiv:2405.19885",
+    "arXiv:2410.10914",
+    "arXiv:2501.17905",
+    "arXiv:2505.12216",
+    "arXiv:2505.12359",
+    "arXiv:2505.16333",
+    "arXiv:2507.08637",
+    "arXiv:2509.15704"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 17,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f7afd3d610f9bfb4429ab2e21b9a562abb9ffc71",
+  "raw_search_result_count": 17,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 17,
+  "provider_progress": {
+    "requested_count": 17,
+    "status_counts": {
+      "allowed": 17,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T05:06:14.330795+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s10994-025-06768-3",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iccvw69036.2025.00315",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3587464",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.2139/ssrn.3985429",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2209.00625",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.19885",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.10914",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.17905",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.12216",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.12359",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.16333",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.08637",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.15704",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fourier Controller Networks for Real-Time Decision-Making in Embodied Learning",
+      "source_url": "https://arxiv.org/abs/2405.19885",
+      "year": 2024,
+      "published": "2024-05-30",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has shown promise in reinforcement learning to model time-varying features for obtaining generalized low-level robot policies on diverse robotics datasets in embodied learning. However, it still suffers from the issues of low data efficiency and high inference latency. In this paper, we propose to investigate the task from a new perspective of the frequency domain. We first observe that the energy density in the frequency domain of a robot's trajectory is mainly concentrated in the low-frequency part. Then, we present the Fourier Controller Network (FCNet), a new network that uses Short-Time Fourier Transform (STFT) to extract and encode time-varying features through frequency domain interpolation. In order to do real-time decision-making, we further adopt FFT and Sliding DFT methods in the model architecture to achieve parallel training and efficient recurrent inference. Extensive results in both simulated (e.g., D4RL) and real-world environments (e.g., robot locomotion) demonstrate FCNet's substantial efficiency and effectiveness over existing methods such as Transformer, e.g., FCNet outperforms Transformer on multi-environmental robotics datasets of all types of sizes (from 1.9M to 120M). The project page and code can be found https://thkkk.github.io/fcnet.",
+      "identifiers": [
+        "SemanticScholar:4f022613f233c45e19be774a38a6a499146c396f"
+      ],
+      "semantic_scholar_id": "4f022613f233c45e19be774a38a6a499146c396f",
+      "canonical_id": "arXiv:2405.19885",
+      "arxiv_id": "2405.19885",
+      "doi": "10.48550/arXiv.2405.19885",
+      "authors": [
+        "Heng-Kai Tan",
+        "Songming Liu",
+        "Kai Ma",
+        "Chengyang Ying",
+        "Xingxing Zhang",
+        "Hang Su",
+        "Jun Zhu"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 863,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "GPT-Zip: Deep Compression of Finetuned Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/c8408635982d36d55882ef3e95564ed85ec07565",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565"
+      ],
+      "semantic_scholar_id": "c8408635982d36d55882ef3e95564ed85ec07565",
+      "canonical_id": "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565",
+      "authors": [
+        "Berivan Isik",
+        "Hermann Kumbong",
+        "Wan-Yi Ning",
+        "Xiaozhe Yao",
+        "Sanmi Koyejo",
+        "Ce Zhang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "One-for-All Pruning: A Universal Model for Customized Compression of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2505.12216",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing pruning methods for large language models (LLMs) focus on achieving high compression rates while maintaining model performance. Although these methods have demonstrated satisfactory performance in handling a single user's compression request, their processing time increases linearly with the number of requests, making them inefficient for real-world scenarios with multiple simultaneous requests. To address this limitation, we propose a Univeral Model for Customized Compression (UniCuCo) for LLMs, which introduces a StratNet that learns to map arbitrary requests to their optimal pruning strategy. The challenge in training StratNet lies in the high computational cost of evaluating pruning strategies and the non-differentiable nature of the pruning process, which hinders gradient backpropagation for StratNet updates. To overcome these challenges, we leverage a Gaussian process to approximate the evaluation process. Since the gradient of the Gaussian process is computable, we can use it to approximate the gradient of the non-differentiable pruning process, thereby enabling StratNet updates. Experimental results show that UniCuCo is 28 times faster than baselines in processing 64 requests, while maintaining comparable accuracy to baselines.",
+      "identifiers": [
+        "SemanticScholar:42019886c37c11cf96478d128cb6a8055a6b00fc"
+      ],
+      "semantic_scholar_id": "42019886c37c11cf96478d128cb6a8055a6b00fc",
+      "canonical_id": "arXiv:2505.12216",
+      "arxiv_id": "2505.12216",
+      "doi": "10.48550/arXiv.2505.12216",
+      "authors": [
+        "Rong-Guang Ye",
+        "Ming Tang"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Understanding Differential Transformer Unchains Pretrained Self-Attentions",
+      "source_url": "https://arxiv.org/abs/2505.16333",
+      "year": 2025,
+      "published": "2025-05-22",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Differential Transformer has recently gained significant attention for its impressive empirical performance, often attributed to its ability to perform noise canceled attention. However, precisely how differential attention achieves its empirical benefits remains poorly understood. Moreover, Differential Transformer architecture demands large-scale training from scratch, hindering utilization of open pretrained weights. In this work, we conduct an in-depth investigation of Differential Transformer, uncovering three key factors behind its success: (1) enhanced expressivity via negative attention, (2) reduced redundancy among attention heads, and (3) improved learning dynamics. Based on these findings, we propose DEX, a novel method to efficiently integrate the advantages of differential attention into pretrained language models. By reusing the softmax attention scores and adding a lightweight differential operation on the output value matrix, DEX effectively incorporates the key advantages of differential attention while remaining lightweight in both training and inference. Evaluations confirm that DEX substantially improves the pretrained LLMs across diverse benchmarks, achieving significant performance gains with minimal adaptation data (<0.01%).",
+      "identifiers": [
+        "SemanticScholar:b24cf10e60ed3d57b57d7958bb3e9e5c7e348121"
+      ],
+      "semantic_scholar_id": "b24cf10e60ed3d57b57d7958bb3e9e5c7e348121",
+      "canonical_id": "arXiv:2505.16333",
+      "arxiv_id": "2505.16333",
+      "doi": "10.48550/arXiv.2505.16333",
+      "authors": [
+        "Chaerin Kong",
+        "Jiho Jang",
+        "N. Kwak"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "OdeBERT: One-stage Deep-supervised Early-exiting BERT for Fast Inference in User Intent Classification",
+      "source_url": "https://doi.org/10.1145/3587464",
+      "year": 2023,
+      "published": "2023-03-13",
+      "venue": "ACM Trans. Asian Low Resour. Lang. Inf. Process.",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "User intent classification is a vital task for analyzing users’ essential requirements from the users’ input query in information retrieval systems, question answering systems, and dialogue systems. Pre-trained language model Bidirectional Encoder Representation from Transformers (BERT) has been widely applied to the user intent classification task. However, BERT is compute intensive and time-consuming during inference and usually causes latency in real-time applications. To improve the inference efficiency of BERT for the user intent classification task, this article proposes a new network named one-stage deep-supervised early-exiting BERT as one-stage deep-supervised early-exiting BERT (OdeBERT). In addition, a deep supervision strategy is developed to incorporate the network with internal classifiers by one-stage joint training to improve the learning process of classifiers by extracting discriminative category features. Experiments are conducted on publicly available datasets, including ECDT, SNIPS, and FDQuestion. The results show that the OdeBERT can speed up original BERT 12 times faster at most with the same performance, outperforming state-of-the-art baseline methods.",
+      "identifiers": [
+        "SemanticScholar:ff34aeb5869f04e954780104866e0c55aba82901"
+      ],
+      "semantic_scholar_id": "ff34aeb5869f04e954780104866e0c55aba82901",
+      "doi": "10.1145/3587464",
+      "canonical_id": "DOI:10.1145/3587464",
+      "authors": [
+        "Yuanxia Liu",
+        "Tianyong Hao",
+        "Hai Liu",
+        "Yuanyuan Mu",
+        "Heng Weng",
+        "Fu-Lee Wang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1307,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SwiftPruner: Reinforced Evolutionary Pruning for Efficient Ad Relevance",
+      "source_url": "https://arxiv.org/abs/2209.00625",
+      "year": 2022,
+      "published": "2022-08-30",
+      "venue": "International Conference on Information and Knowledge Management",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ad relevance modeling plays a critical role in online advertising systems including Microsoft Bing. To leverage powerful transformers like BERT in this low-latency setting, many existing approaches perform ad-side computations offline. While efficient, these approaches are unable to serve cold start ads, resulting in poor relevance predictions for such ads. This work aims to design a new, low-latency BERT via structured pruning to empower real-time online inference for cold start ads relevance on a CPU platform. Our challenge is that previous methods typically prune all layers of the transformer to a high, uniform sparsity, thereby producing models which cannot achieve satisfactory inference speed with an acceptable accuracy. In this paper, we propose SwiftPruner - an efficient framework that leverages evolution-based search to automatically find the best-performing layer-wise sparse BERT model under the desired latency constraint. Different from existing evolution algorithms that conduct random mutations, we propose a reinforced mutator with a latency-aware multi-objective reward to conduct better mutations for efficiently searching the large space of layer-wise sparse models. Extensive experiments demonstrate that our method consistently achieves higher ROC AUC and lower latency than the uniform sparse baseline and state-of-the-art search methods. Remarkably, under our latency requirement of 1900us on CPU, SwiftPruner achieves a 0.86% higher AUC than the state-of-the-art uniform sparse baseline for BERT-Mini on a large scale real-world dataset. Online A/B testing shows that our model also achieves a significant 11.7% cut in the ratio of defective cold start ads with satisfactory real-time serving latency.",
+      "identifiers": [
+        "SemanticScholar:2fd1194f6a217403388d640a823503b33cefac05"
+      ],
+      "semantic_scholar_id": "2fd1194f6a217403388d640a823503b33cefac05",
+      "canonical_id": "arXiv:2209.00625",
+      "arxiv_id": "2209.00625",
+      "doi": "10.1145/3511808.3557139",
+      "authors": [
+        "L. Zhang",
+        "Youkow Homma",
+        "Yujing Wang",
+        "Min Wu",
+        "Mao Yang",
+        "Ruo-Fei Zhang",
+        "Ting Cao",
+        "Wei Shen"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1502,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Greedy Layer Pruning: Decreasing Inference Time of Transformer Models",
+      "source_url": "https://doi.org/10.2139/ssrn.3985429",
+      "year": 2021,
+      "published": null,
+      "venue": "Social Science Research Network",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fine-tuning transformer models after unsupervised pre-training reaches a very high performance on many different NLP tasks. Unfortunately, transformers suffer from long inference times which greatly increases costs in production and is a limiting factor for the deployment into embedded devices. One possible solution is to use knowledge distillation, which solves this problem by transferring information from large teacher models to smaller student models, but as it needs an additional expensive pre-training phase, this solution is computationally expensive and can be ﬁnancially prohibitive for smaller academic research groups. Another solution is to use layer-wise pruning methods, which reach high compression rates for transformer models and avoids the computational load of the pre-training distillation stage. The price to pay is that the performance of layer-wise pruning algorithms is not on par with state-of-the-art knowledge distillation methods. In this paper, greedy layer pruning (GLP) is introduced to (1) outperform current state-of-the-art for layer-wise pruning (2) close the performance gap when compared to knowledge distillation, while (3) using only a modest budget. More precisely, with the methodology presented it is possible to prune and evaluate competitive models on the whole GLUE benchmark with a budget of just $300 . Our source code is available on GitHub 1 .",
+      "identifiers": [
+        "SemanticScholar:f1ba6d50fb1c8d6fe3d151eccaa4ecd8fbb0d6c3"
+      ],
+      "semantic_scholar_id": "f1ba6d50fb1c8d6fe3d151eccaa4ecd8fbb0d6c3",
+      "doi": "10.2139/ssrn.3985429",
+      "canonical_id": "DOI:10.2139/ssrn.3985429",
+      "authors": [
+        "David Peer",
+        "Sebastian Stabinger",
+        "Stefan Engl",
+        "A. Rodríguez-Sánchez"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1927,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DReSS: Data-driven Regularized Structured Streamlining for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.17905",
+      "year": 2025,
+      "published": "2025-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved significant progress across various domains, but their increasing scale results in high computational and memory costs. Recent studies have revealed that LLMs exhibit sparsity, providing the potential to reduce model size through pruning techniques. However, existing pruning methods typically follow a prune-then-finetune paradigm. Since the pruned components still contain valuable information, their direct removal often leads to irreversible performance degradation, imposing a substantial computational burden to recover performance during finetuning. In this paper, we propose a novel paradigm that first applies regularization, then prunes, and finally finetunes. Based on this paradigm, we introduce DReSS, a simple and effective Data-driven Regularized Structured Streamlining method for LLMs. By leveraging a small amount of data to regularize the components to be pruned, DReSS explicitly transfers the important information to the remaining parts of the model in advance. Compared to direct pruning, this can reduce the information loss caused by parameter removal, thereby enhancing its language modeling capabilities. Experimental results demonstrate that DReSS significantly outperforms existing pruning methods even under extreme pruning ratios, significantly reducing latency and increasing throughput.",
+      "identifiers": [
+        "SemanticScholar:4e20af3bff98ae125b21d23a14b09de00ebcf909"
+      ],
+      "semantic_scholar_id": "4e20af3bff98ae125b21d23a14b09de00ebcf909",
+      "canonical_id": "arXiv:2501.17905",
+      "arxiv_id": "2501.17905",
+      "doi": "10.48550/arXiv.2501.17905",
+      "authors": [
+        "Mingkuan Feng",
+        "Jinyang Wu",
+        "Shuai Zhang",
+        "Peng-Peng Shao",
+        "Ruihan Jin",
+        "Zheng-Qi Wen",
+        "Jianhua Tao",
+        "Feihu Che"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 619,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance",
+      "source_url": "https://arxiv.org/abs/2509.15704",
+      "year": 2025,
+      "published": "2025-09-19",
+      "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have recently demonstrated strong multimodal understanding, yet their fine-grained visual perception is often constrained by low input resolutions. A common remedy is to partition high-resolution images into multiple sub-images for separate encoding, but this approach drastically inflates the number of visual tokens and introduces prohibitive inference overhead. To overcome this challenge, we propose Pyramid Token Pruning (PTP), a training-free strategy that hierarchically integrates bottom-up visual saliency at both region and token levels with top-down instruction-guided relevance. Inspired by human visual cognition, PTP selectively preserves more tokens from salient regions while further emphasizing those most relevant to task instructions. Extensive experiments on 13 diverse benchmarks show that PTP substantially reduces computational cost, memory usage, and inference latency, with negligible performance degradation.",
+      "identifiers": [
+        "SemanticScholar:d8d445db6f3901b4324d0d4c7c99f3eaaae4dfe5"
+      ],
+      "semantic_scholar_id": "d8d445db6f3901b4324d0d4c7c99f3eaaae4dfe5",
+      "canonical_id": "arXiv:2509.15704",
+      "arxiv_id": "2509.15704",
+      "doi": "10.1109/TCSVT.2026.3663658",
+      "authors": [
+        "Yuxuan Liang",
+        "Xu Li",
+        "Xiao-Lei Chen",
+        "Hao-Tian Chen",
+        "Yi Zheng",
+        "Zhe Liu",
+        "Rui Zhu",
+        "Bin Li",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Better Multi-head Attention via Channel-wise Sample Permutation",
+      "source_url": "https://arxiv.org/abs/2410.10914",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer plays a central role in many fundamental deep learning models, e.g., the ViT in computer vision and the BERT and GPT in natural language processing, whose effectiveness is mainly attributed to its multi-head attention (MHA) mechanism. In this study, we propose a simple and novel channel-wise sample permutation (CSP) operator, achieving a new structured MHA with fewer parameters and lower complexity. Given an input matrix, CSP circularly shifts the samples of different channels with various steps and then sorts grouped samples of each channel. This operator is equivalent to implicitly implementing cross-channel attention maps as permutation matrices, which achieves linear complexity and suppresses the risk of rank collapse when representing data. We replace the MHA of some representative models with CSP and test the CSP-based models in several discriminative tasks, including image classification and long sequence analysis. Experiments show that the CSP-based models achieve comparable or better performance with fewer parameters and lower computational costs than the classic Transformer and its state-of-the-art variants. The code is available at https://github.com/DaShenZi721/CSP.",
+      "identifiers": [
+        "SemanticScholar:2e4595dc58fd02796ef4855f0bd42478157a75d4"
+      ],
+      "semantic_scholar_id": "2e4595dc58fd02796ef4855f0bd42478157a75d4",
+      "canonical_id": "arXiv:2410.10914",
+      "arxiv_id": "2410.10914",
+      "doi": "10.48550/arXiv.2410.10914",
+      "authors": [
+        "Shen Yuan",
+        "Hong-Teng Xu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 726,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Drop-in efficient self-attention approximation method",
+      "source_url": "https://doi.org/10.1007/s10994-025-06768-3",
+      "year": 2025,
+      "published": "2025-04-24",
+      "venue": "Machine-mediated learning",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have achieved state-of-the-art performance in most common tasks to which they have been applied. Those achievements are attributed to the Self-Attention mechanism at their core. Self-Attention is understood to map the relationship between tokens of any given sequence. This exhaustive mapping incurs massive costs in memory and inference time, as Self-Attention scales quadratically with regard to sequence length. Standard Self-Attention has required increasingly large compute and memory usage when applied to long input sequences because of this memory and time bottleneck. Efficient Transformers emerged as performant alternatives demonstrating good scalability and occasionally better tracking of long-range dependencies. Their efficiency gains are obtained through different methods, usually focusing on the linear scaling of the attention matrix through sparsification, approximation, or other methods. Among existing approaches, those using low-rank approximation present particular advantages because of their compatibility with standard Self-Attention-based models, allowing for weight transfers and other time-saving schemes. More recently, hardware-aware versions of Self-Attention (e.g., FlashAttention) have mitigated all memory bottlenecks and have alleviated its compute burden. Unfortunately, hardware-aware Self-Attentions have stricter hardware compatibility requirements making Efficient Transformers still relevant for use on older or less powerful hardware. Furthermore, some Efficient Transformers can even be applied in an hardware-aware manner to further improve training and inference speed. In this paper, we propose a novel linear approximation method for Self-Attention inspired by the CUR approximation method. This method, proposed in two versions (one leveraging FlashAttention), is conceived as a drop-in replacement for standard Self-Attention with weights compatibility. Our method compares favorably to standard Transformers’ and Efficient Transformers’ performances on varied tasks and demonstrates a significant decrease in memory footprint as well as competitive performance in training speed, even compared to similar methods.",
+      "identifiers": [
+        "SemanticScholar:03ce7da423fa88fd8d9308c6efe49210ee63e8db"
+      ],
+      "semantic_scholar_id": "03ce7da423fa88fd8d9308c6efe49210ee63e8db",
+      "doi": "10.1007/s10994-025-06768-3",
+      "canonical_id": "DOI:10.1007/s10994-025-06768-3",
+      "authors": [
+        "Damien François",
+        "Mathis Saillot",
+        "Jacques Klein",
+        "Tegawendé F. Bissyandé",
+        "A. Skupin"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 534,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STAR: Stage-Wise Attention-Guided Token Reduction for Efficient Large Vision-Language Models Inference",
+      "source_url": "https://arxiv.org/abs/2505.12359",
+      "year": 2025,
+      "published": "2025-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large vision-language models (LVLMs) leverage rich visual token representations to achieve strong performance on multimodal tasks, these tokens also introduce significant computational overhead during inference. Existing training-free token pruning methods typically adopt a single-stage strategy, focusing either on visual self-attention or visual-textual cross-attention. However, such localized perspectives often overlook the broader information flow across the model, leading to substantial performance degradation, especially under high pruning ratios. In this work, we propose STAR (Stage-wise Attention-guided token Reduction), a training-free, plug-and-play framework that approaches token pruning from a global perspective. Instead of pruning at a single point, STAR performs attention-guided reduction in two complementary stages: an early-stage pruning based on visual self-attention to remove redundant low-level features, and a later-stage pruning guided by cross-modal attention to discard task-irrelevant tokens. This holistic approach allows STAR to significantly reduce computational cost while better preserving task-critical information. Extensive experiments across multiple LVLM architectures and benchmarks show that STAR achieves strong acceleration while maintaining comparable, and in some cases even improved performance.",
+      "identifiers": [
+        "SemanticScholar:765c52396143ecbe7ce5dfde777c4cd288efaf9c"
+      ],
+      "semantic_scholar_id": "765c52396143ecbe7ce5dfde777c4cd288efaf9c",
+      "canonical_id": "arXiv:2505.12359",
+      "arxiv_id": "2505.12359",
+      "doi": "10.48550/arXiv.2505.12359",
+      "authors": [
+        "Yi-Chen Guo",
+        "Hanze Li",
+        "Zong-Hao Zhang",
+        "Jin-Hao You",
+        "Kai Tang",
+        "Xian-De Huang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Learned Token Pruning for Efficient Transformer Inference",
+      "source_url": "https://www.semanticscholar.org/paper/4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a"
+      ],
+      "semantic_scholar_id": "4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "canonical_id": "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "authors": [
+        "Kim",
+        "Sheng Shen",
+        "David Thorsley",
+        "Amir Gholami",
+        "Woosuk Kwon",
+        "Joseph Hassoun",
+        "Kurt Keutzer"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling Attention to Very Long Sequences in Linear Time with Wavelet-Enhanced Random Spectral Attention (WERSA)",
+      "source_url": "https://arxiv.org/abs/2507.08637",
+      "year": 2025,
+      "published": "2025-07-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models are computationally costly on long sequences since regular attention has quadratic $O(n^2)$ time complexity. We introduce Wavelet-Enhanced Random Spectral Attention (WERSA), a novel mechanism of linear $O(n)$ time complexity that is pivotal to enable successful long-sequence processing without the performance trade-off. WERSA merges content-adaptive random spectral features together with multi-resolution Haar wavelets and learnable parameters to selectively attend to informative scales of data while preserving linear efficiency. Large-scale comparisons \\textbf{on single GPU} and across various benchmarks (vision, NLP, hierarchical reasoning) and various attention mechanisms (like Multiheaded Attention, Flash-Attention-2, FNet, Linformer, Performer, Waveformer), reveal uniform advantages of WERSA. It achieves best accuracy in all tests. On ArXiv classification, WERSA improves accuracy over vanilla attention by 1.2\\% (86.2\\% vs 85.0\\%) while cutting training time by 81\\% (296s vs 1554s) and FLOPS by 73.4\\% (26.2G vs 98.4G). Significantly, WERSA excels where vanilla and FlashAttention-2 fail: on ArXiv-128k's extremely lengthy sequences, it achieves best accuracy (79.1\\%) and AUC (0.979) among viable methods, operating on data that gives Out-Of-Memory errors to quadratic methods while being \\textbf{twice as fast} as Waveformer, its next-best competitor. By significantly reducing computational loads without compromising accuracy, WERSA makes possible more practical, more affordable, long-context models, in particular on low-resource hardware, for more sustainable and more scalable AI development.",
+      "identifiers": [
+        "SemanticScholar:90f70b1645d4ea354f5430567293015df5f69b96"
+      ],
+      "semantic_scholar_id": "90f70b1645d4ea354f5430567293015df5f69b96",
+      "canonical_id": "arXiv:2507.08637",
+      "arxiv_id": "2507.08637",
+      "doi": "10.48550/arXiv.2507.08637",
+      "authors": [
+        "Vincenzo Dentamaro"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 456,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Inducing Elasticity in Foundation Models: Post-Training Techniques for Adaptable Inference",
+      "source_url": "https://www.semanticscholar.org/paper/2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818"
+      ],
+      "semantic_scholar_id": "2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "canonical_id": "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "authors": [
+        "Aashiq Muhamed",
+        "Jia-Rui Liu",
+        "Mona T. Diab",
+        "Virginia Smith"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "E FFICIENT M ULTIMODAL S PATIAL R EASONING VIA D Y - NAMIC AND A SYMMETRIC R OUTING",
+      "source_url": "https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73"
+      ],
+      "semantic_scholar_id": "ea9209764ac8824da3c193560c3915b080579c73",
+      "canonical_id": "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73",
+      "authors": [
+        "Yixian Shen",
+        "Qingwei Bi",
+        "Zihan Wang",
+        "Zhiheng Yang",
+        "Changshuo Wang",
+        "Zhi Zhang",
+        "Prayag Tiwari",
+        "Andy D. Pimentel",
+        "Anuj Pathania"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Low-Bit FlashAttention Accelerated Operator Design Based on Triton",
+      "source_url": "https://doi.org/10.1109/ICCVW69036.2025.00315",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer architecture has been widely adopted across numerous models. As the core component of the Trans-former, the attention mechanism has a computational complexity of $\\mathrm{O}(\\mathrm{n}^{2})$ compared to linear transformations, making it a major computational bottleneck when handling long sequences. Although quantization has proven to be an ef-fective method for accelerating model inference, existing quantization approaches struggle to support ultra-low-bit formats for attention. To address this, we propose a Triton-based low-bit FlashAttention accelerator design. Specif-ically, this work leverages operator fusion techniques to merge the dequantization process with matrix multiplication, reducing memory access overhead. In addition, a mixed-precision quantization strategy is employed to miti-gate quantization error and preserve model accuracy. Compared to FlashAttention2, the kernel has a $2.4\\times \\text{speedup}$ ratio and an end-to-end inference $1.2\\times \\text{speedup}$. Exper-imental results demonstrate that the proposed kernel im-proves inference speed and memory efficiency while main-taining accuracy, offering a novel approach for deploying large models with low latency and resource consumption on edge devices. Our code is available at https:/github.com/Charles2530/lowbit_quant_fa2.",
+      "identifiers": [
+        "SemanticScholar:ac55bb5861c4c7639536ef5ed3006607701d0fd3"
+      ],
+      "semantic_scholar_id": "ac55bb5861c4c7639536ef5ed3006607701d0fd3",
+      "doi": "10.1109/ICCVW69036.2025.00315",
+      "canonical_id": "DOI:10.1109/ICCVW69036.2025.00315",
+      "authors": [
+        "Jin-Yang Du",
+        "Jin-Yang Guo",
+        "Yifu Ding"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 356,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2405.19885",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.19885",
+        "id:SemanticScholar:4f022613f233c45e19be774a38a6a499146c396f",
+        "id:arXiv:2405.19885",
+        "title:fourier controller networks for realtime decisionmaking in embodied learning",
+        "url:https://arxiv.org/abs/2405.19885"
+      ],
+      "record": {
+        "title": "Fourier Controller Networks for Real-Time Decision-Making in Embodied Learning",
+        "source_url": "https://arxiv.org/abs/2405.19885",
+        "year": 2024,
+        "published": "2024-05-30",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer has shown promise in reinforcement learning to model time-varying features for obtaining generalized low-level robot policies on diverse robotics datasets in embodied learning. However, it still suffers from the issues of low data efficiency and high inference latency. In this paper, we propose to investigate the task from a new perspective of the frequency domain. We first observe that the energy density in the frequency domain of a robot's trajectory is mainly concentrated in the low-frequency part. Then, we present the Fourier Controller Network (FCNet), a new network that uses Short-Time Fourier Transform (STFT) to extract and encode time-varying features through frequency domain interpolation. In order to do real-time decision-making, we further adopt FFT and Sliding DFT methods in the model architecture to achieve parallel training and efficient recurrent inference. Extensive results in both simulated (e.g., D4RL) and real-world environments (e.g., robot locomotion) demonstrate FCNet's substantial efficiency and effectiveness over existing methods such as Transformer, e.g., FCNet outperforms Transformer on multi-environmental robotics datasets of all types of sizes (from 1.9M to 120M). The project page and code can be found https://thkkk.github.io/fcnet.",
+        "identifiers": [
+          "SemanticScholar:4f022613f233c45e19be774a38a6a499146c396f"
+        ],
+        "semantic_scholar_id": "4f022613f233c45e19be774a38a6a499146c396f",
+        "canonical_id": "arXiv:2405.19885",
+        "arxiv_id": "2405.19885",
+        "doi": "10.48550/arXiv.2405.19885",
+        "authors": [
+          "Heng-Kai Tan",
+          "Songming Liu",
+          "Kai Ma",
+          "Chengyang Ying",
+          "Xingxing Zhang",
+          "Hang Su",
+          "Jun Zhu"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 863,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565",
+      "identity_tokens": [
+        "id:SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565",
+        "title:gptzip deep compression of finetuned large language models",
+        "url:https://www.semanticscholar.org/paper/c8408635982d36d55882ef3e95564ed85ec07565"
+      ],
+      "record": {
+        "title": "GPT-Zip: Deep Compression of Finetuned Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/c8408635982d36d55882ef3e95564ed85ec07565",
+        "year": 2023,
+        "published": null,
+        "venue": null,
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565"
+        ],
+        "semantic_scholar_id": "c8408635982d36d55882ef3e95564ed85ec07565",
+        "canonical_id": "SemanticScholar:c8408635982d36d55882ef3e95564ed85ec07565",
+        "authors": [
+          "Berivan Isik",
+          "Hermann Kumbong",
+          "Wan-Yi Ning",
+          "Xiaozhe Yao",
+          "Sanmi Koyejo",
+          "Ce Zhang"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.12216",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.12216",
+        "id:SemanticScholar:42019886c37c11cf96478d128cb6a8055a6b00fc",
+        "id:arXiv:2505.12216",
+        "title:oneforall pruning a universal model for customized compression of large language models",
+        "url:https://arxiv.org/abs/2505.12216"
+      ],
+      "record": {
+        "title": "One-for-All Pruning: A Universal Model for Customized Compression of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2505.12216",
+        "year": 2025,
+        "published": "2025-05-18",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing pruning methods for large language models (LLMs) focus on achieving high compression rates while maintaining model performance. Although these methods have demonstrated satisfactory performance in handling a single user's compression request, their processing time increases linearly with the number of requests, making them inefficient for real-world scenarios with multiple simultaneous requests. To address this limitation, we propose a Univeral Model for Customized Compression (UniCuCo) for LLMs, which introduces a StratNet that learns to map arbitrary requests to their optimal pruning strategy. The challenge in training StratNet lies in the high computational cost of evaluating pruning strategies and the non-differentiable nature of the pruning process, which hinders gradient backpropagation for StratNet updates. To overcome these challenges, we leverage a Gaussian process to approximate the evaluation process. Since the gradient of the Gaussian process is computable, we can use it to approximate the gradient of the non-differentiable pruning process, thereby enabling StratNet updates. Experimental results show that UniCuCo is 28 times faster than baselines in processing 64 requests, while maintaining comparable accuracy to baselines.",
+        "identifiers": [
+          "SemanticScholar:42019886c37c11cf96478d128cb6a8055a6b00fc"
+        ],
+        "semantic_scholar_id": "42019886c37c11cf96478d128cb6a8055a6b00fc",
+        "canonical_id": "arXiv:2505.12216",
+        "arxiv_id": "2505.12216",
+        "doi": "10.48550/arXiv.2505.12216",
+        "authors": [
+          "Rong-Guang Ye",
+          "Ming Tang"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 510,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.16333",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.16333",
+        "id:SemanticScholar:b24cf10e60ed3d57b57d7958bb3e9e5c7e348121",
+        "id:arXiv:2505.16333",
+        "title:understanding differential transformer unchains pretrained selfattentions",
+        "url:https://arxiv.org/abs/2505.16333"
+      ],
+      "record": {
+        "title": "Understanding Differential Transformer Unchains Pretrained Self-Attentions",
+        "source_url": "https://arxiv.org/abs/2505.16333",
+        "year": 2025,
+        "published": "2025-05-22",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Differential Transformer has recently gained significant attention for its impressive empirical performance, often attributed to its ability to perform noise canceled attention. However, precisely how differential attention achieves its empirical benefits remains poorly understood. Moreover, Differential Transformer architecture demands large-scale training from scratch, hindering utilization of open pretrained weights. In this work, we conduct an in-depth investigation of Differential Transformer, uncovering three key factors behind its success: (1) enhanced expressivity via negative attention, (2) reduced redundancy among attention heads, and (3) improved learning dynamics. Based on these findings, we propose DEX, a novel method to efficiently integrate the advantages of differential attention into pretrained language models. By reusing the softmax attention scores and adding a lightweight differential operation on the output value matrix, DEX effectively incorporates the key advantages of differential attention while remaining lightweight in both training and inference. Evaluations confirm that DEX substantially improves the pretrained LLMs across diverse benchmarks, achieving significant performance gains with minimal adaptation data (<0.01%).",
+        "identifiers": [
+          "SemanticScholar:b24cf10e60ed3d57b57d7958bb3e9e5c7e348121"
+        ],
+        "semantic_scholar_id": "b24cf10e60ed3d57b57d7958bb3e9e5c7e348121",
+        "canonical_id": "arXiv:2505.16333",
+        "arxiv_id": "2505.16333",
+        "doi": "10.48550/arXiv.2505.16333",
+        "authors": [
+          "Chaerin Kong",
+          "Jiho Jang",
+          "N. Kwak"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3587464",
+      "identity_tokens": [
+        "id:DOI:10.1145/3587464",
+        "id:SemanticScholar:ff34aeb5869f04e954780104866e0c55aba82901",
+        "title:odebert onestage deepsupervised earlyexiting bert for fast inference in user intent classification",
+        "url:https://doi.org/10.1145/3587464"
+      ],
+      "record": {
+        "title": "OdeBERT: One-stage Deep-supervised Early-exiting BERT for Fast Inference in User Intent Classification",
+        "source_url": "https://doi.org/10.1145/3587464",
+        "year": 2023,
+        "published": "2023-03-13",
+        "venue": "ACM Trans. Asian Low Resour. Lang. Inf. Process.",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "User intent classification is a vital task for analyzing users’ essential requirements from the users’ input query in information retrieval systems, question answering systems, and dialogue systems. Pre-trained language model Bidirectional Encoder Representation from Transformers (BERT) has been widely applied to the user intent classification task. However, BERT is compute intensive and time-consuming during inference and usually causes latency in real-time applications. To improve the inference efficiency of BERT for the user intent classification task, this article proposes a new network named one-stage deep-supervised early-exiting BERT as one-stage deep-supervised early-exiting BERT (OdeBERT). In addition, a deep supervision strategy is developed to incorporate the network with internal classifiers by one-stage joint training to improve the learning process of classifiers by extracting discriminative category features. Experiments are conducted on publicly available datasets, including ECDT, SNIPS, and FDQuestion. The results show that the OdeBERT can speed up original BERT 12 times faster at most with the same performance, outperforming state-of-the-art baseline methods.",
+        "identifiers": [
+          "SemanticScholar:ff34aeb5869f04e954780104866e0c55aba82901"
+        ],
+        "semantic_scholar_id": "ff34aeb5869f04e954780104866e0c55aba82901",
+        "doi": "10.1145/3587464",
+        "canonical_id": "DOI:10.1145/3587464",
+        "authors": [
+          "Yuanxia Liu",
+          "Tianyong Hao",
+          "Hai Liu",
+          "Yuanyuan Mu",
+          "Heng Weng",
+          "Fu-Lee Wang"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1307,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2209.00625",
+      "identity_tokens": [
+        "id:DOI:10.1145/3511808.3557139",
+        "id:SemanticScholar:2fd1194f6a217403388d640a823503b33cefac05",
+        "id:arXiv:2209.00625",
+        "title:swiftpruner reinforced evolutionary pruning for efficient ad relevance",
+        "url:https://arxiv.org/abs/2209.00625"
+      ],
+      "record": {
+        "title": "SwiftPruner: Reinforced Evolutionary Pruning for Efficient Ad Relevance",
+        "source_url": "https://arxiv.org/abs/2209.00625",
+        "year": 2022,
+        "published": "2022-08-30",
+        "venue": "International Conference on Information and Knowledge Management",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Ad relevance modeling plays a critical role in online advertising systems including Microsoft Bing. To leverage powerful transformers like BERT in this low-latency setting, many existing approaches perform ad-side computations offline. While efficient, these approaches are unable to serve cold start ads, resulting in poor relevance predictions for such ads. This work aims to design a new, low-latency BERT via structured pruning to empower real-time online inference for cold start ads relevance on a CPU platform. Our challenge is that previous methods typically prune all layers of the transformer to a high, uniform sparsity, thereby producing models which cannot achieve satisfactory inference speed with an acceptable accuracy. In this paper, we propose SwiftPruner - an efficient framework that leverages evolution-based search to automatically find the best-performing layer-wise sparse BERT model under the desired latency constraint. Different from existing evolution algorithms that conduct random mutations, we propose a reinforced mutator with a latency-aware multi-objective reward to conduct better mutations for efficiently searching the large space of layer-wise sparse models. Extensive experiments demonstrate that our method consistently achieves higher ROC AUC and lower latency than the uniform sparse baseline and state-of-the-art search methods. Remarkably, under our latency requirement of 1900us on CPU, SwiftPruner achieves a 0.86% higher AUC than the state-of-the-art uniform sparse baseline for BERT-Mini on a large scale real-world dataset. Online A/B testing shows that our model also achieves a significant 11.7% cut in the ratio of defective cold start ads with satisfactory real-time serving latency.",
+        "identifiers": [
+          "SemanticScholar:2fd1194f6a217403388d640a823503b33cefac05"
+        ],
+        "semantic_scholar_id": "2fd1194f6a217403388d640a823503b33cefac05",
+        "canonical_id": "arXiv:2209.00625",
+        "arxiv_id": "2209.00625",
+        "doi": "10.1145/3511808.3557139",
+        "authors": [
+          "L. Zhang",
+          "Youkow Homma",
+          "Yujing Wang",
+          "Min Wu",
+          "Mao Yang",
+          "Ruo-Fei Zhang",
+          "Ting Cao",
+          "Wei Shen"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1502,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.2139/ssrn.3985429",
+      "identity_tokens": [
+        "id:DOI:10.2139/ssrn.3985429",
+        "id:SemanticScholar:f1ba6d50fb1c8d6fe3d151eccaa4ecd8fbb0d6c3",
+        "title:greedy layer pruning decreasing inference time of transformer models",
+        "url:https://doi.org/10.2139/ssrn.3985429"
+      ],
+      "record": {
+        "title": "Greedy Layer Pruning: Decreasing Inference Time of Transformer Models",
+        "source_url": "https://doi.org/10.2139/ssrn.3985429",
+        "year": 2021,
+        "published": null,
+        "venue": "Social Science Research Network",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fine-tuning transformer models after unsupervised pre-training reaches a very high performance on many different NLP tasks. Unfortunately, transformers suffer from long inference times which greatly increases costs in production and is a limiting factor for the deployment into embedded devices. One possible solution is to use knowledge distillation, which solves this problem by transferring information from large teacher models to smaller student models, but as it needs an additional expensive pre-training phase, this solution is computationally expensive and can be ﬁnancially prohibitive for smaller academic research groups. Another solution is to use layer-wise pruning methods, which reach high compression rates for transformer models and avoids the computational load of the pre-training distillation stage. The price to pay is that the performance of layer-wise pruning algorithms is not on par with state-of-the-art knowledge distillation methods. In this paper, greedy layer pruning (GLP) is introduced to (1) outperform current state-of-the-art for layer-wise pruning (2) close the performance gap when compared to knowledge distillation, while (3) using only a modest budget. More precisely, with the methodology presented it is possible to prune and evaluate competitive models on the whole GLUE benchmark with a budget of just $300 . Our source code is available on GitHub 1 .",
+        "identifiers": [
+          "SemanticScholar:f1ba6d50fb1c8d6fe3d151eccaa4ecd8fbb0d6c3"
+        ],
+        "semantic_scholar_id": "f1ba6d50fb1c8d6fe3d151eccaa4ecd8fbb0d6c3",
+        "doi": "10.2139/ssrn.3985429",
+        "canonical_id": "DOI:10.2139/ssrn.3985429",
+        "authors": [
+          "David Peer",
+          "Sebastian Stabinger",
+          "Stefan Engl",
+          "A. Rodríguez-Sánchez"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1927,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.17905",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.17905",
+        "id:SemanticScholar:4e20af3bff98ae125b21d23a14b09de00ebcf909",
+        "id:arXiv:2501.17905",
+        "title:dress datadriven regularized structured streamlining for large language models",
+        "url:https://arxiv.org/abs/2501.17905"
+      ],
+      "record": {
+        "title": "DReSS: Data-driven Regularized Structured Streamlining for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2501.17905",
+        "year": 2025,
+        "published": "2025-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved significant progress across various domains, but their increasing scale results in high computational and memory costs. Recent studies have revealed that LLMs exhibit sparsity, providing the potential to reduce model size through pruning techniques. However, existing pruning methods typically follow a prune-then-finetune paradigm. Since the pruned components still contain valuable information, their direct removal often leads to irreversible performance degradation, imposing a substantial computational burden to recover performance during finetuning. In this paper, we propose a novel paradigm that first applies regularization, then prunes, and finally finetunes. Based on this paradigm, we introduce DReSS, a simple and effective Data-driven Regularized Structured Streamlining method for LLMs. By leveraging a small amount of data to regularize the components to be pruned, DReSS explicitly transfers the important information to the remaining parts of the model in advance. Compared to direct pruning, this can reduce the information loss caused by parameter removal, thereby enhancing its language modeling capabilities. Experimental results demonstrate that DReSS significantly outperforms existing pruning methods even under extreme pruning ratios, significantly reducing latency and increasing throughput.",
+        "identifiers": [
+          "SemanticScholar:4e20af3bff98ae125b21d23a14b09de00ebcf909"
+        ],
+        "semantic_scholar_id": "4e20af3bff98ae125b21d23a14b09de00ebcf909",
+        "canonical_id": "arXiv:2501.17905",
+        "arxiv_id": "2501.17905",
+        "doi": "10.48550/arXiv.2501.17905",
+        "authors": [
+          "Mingkuan Feng",
+          "Jinyang Wu",
+          "Shuai Zhang",
+          "Peng-Peng Shao",
+          "Ruihan Jin",
+          "Zheng-Qi Wen",
+          "Jianhua Tao",
+          "Feihu Che"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 619,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.15704",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcsvt.2026.3663658",
+        "id:SemanticScholar:d8d445db6f3901b4324d0d4c7c99f3eaaae4dfe5",
+        "id:arXiv:2509.15704",
+        "title:pyramid token pruning for highresolution large visionlanguage models via region token and instructionguided importance",
+        "url:https://arxiv.org/abs/2509.15704"
+      ],
+      "record": {
+        "title": "Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance",
+        "source_url": "https://arxiv.org/abs/2509.15704",
+        "year": 2025,
+        "published": "2025-09-19",
+        "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) have recently demonstrated strong multimodal understanding, yet their fine-grained visual perception is often constrained by low input resolutions. A common remedy is to partition high-resolution images into multiple sub-images for separate encoding, but this approach drastically inflates the number of visual tokens and introduces prohibitive inference overhead. To overcome this challenge, we propose Pyramid Token Pruning (PTP), a training-free strategy that hierarchically integrates bottom-up visual saliency at both region and token levels with top-down instruction-guided relevance. Inspired by human visual cognition, PTP selectively preserves more tokens from salient regions while further emphasizing those most relevant to task instructions. Extensive experiments on 13 diverse benchmarks show that PTP substantially reduces computational cost, memory usage, and inference latency, with negligible performance degradation.",
+        "identifiers": [
+          "SemanticScholar:d8d445db6f3901b4324d0d4c7c99f3eaaae4dfe5"
+        ],
+        "semantic_scholar_id": "d8d445db6f3901b4324d0d4c7c99f3eaaae4dfe5",
+        "canonical_id": "arXiv:2509.15704",
+        "arxiv_id": "2509.15704",
+        "doi": "10.1109/TCSVT.2026.3663658",
+        "authors": [
+          "Yuxuan Liang",
+          "Xu Li",
+          "Xiao-Lei Chen",
+          "Hao-Tian Chen",
+          "Yi Zheng",
+          "Zhe Liu",
+          "Rui Zhu",
+          "Bin Li",
+          "Xiang-Yang Xue"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 386,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.10914",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.10914",
+        "id:SemanticScholar:2e4595dc58fd02796ef4855f0bd42478157a75d4",
+        "id:arXiv:2410.10914",
+        "title:towards better multihead attention via channelwise sample permutation",
+        "url:https://arxiv.org/abs/2410.10914"
+      ],
+      "record": {
+        "title": "Towards Better Multi-head Attention via Channel-wise Sample Permutation",
+        "source_url": "https://arxiv.org/abs/2410.10914",
+        "year": 2024,
+        "published": "2024-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer plays a central role in many fundamental deep learning models, e.g., the ViT in computer vision and the BERT and GPT in natural language processing, whose effectiveness is mainly attributed to its multi-head attention (MHA) mechanism. In this study, we propose a simple and novel channel-wise sample permutation (CSP) operator, achieving a new structured MHA with fewer parameters and lower complexity. Given an input matrix, CSP circularly shifts the samples of different channels with various steps and then sorts grouped samples of each channel. This operator is equivalent to implicitly implementing cross-channel attention maps as permutation matrices, which achieves linear complexity and suppresses the risk of rank collapse when representing data. We replace the MHA of some representative models with CSP and test the CSP-based models in several discriminative tasks, including image classification and long sequence analysis. Experiments show that the CSP-based models achieve comparable or better performance with fewer parameters and lower computational costs than the classic Transformer and its state-of-the-art variants. The code is available at https://github.com/DaShenZi721/CSP.",
+        "identifiers": [
+          "SemanticScholar:2e4595dc58fd02796ef4855f0bd42478157a75d4"
+        ],
+        "semantic_scholar_id": "2e4595dc58fd02796ef4855f0bd42478157a75d4",
+        "canonical_id": "arXiv:2410.10914",
+        "arxiv_id": "2410.10914",
+        "doi": "10.48550/arXiv.2410.10914",
+        "authors": [
+          "Shen Yuan",
+          "Hong-Teng Xu"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 726,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/s10994-025-06768-3",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10994-025-06768-3",
+        "id:SemanticScholar:03ce7da423fa88fd8d9308c6efe49210ee63e8db",
+        "title:dropin efficient selfattention approximation method",
+        "url:https://doi.org/10.1007/s10994-025-06768-3"
+      ],
+      "record": {
+        "title": "Drop-in efficient self-attention approximation method",
+        "source_url": "https://doi.org/10.1007/s10994-025-06768-3",
+        "year": 2025,
+        "published": "2025-04-24",
+        "venue": "Machine-mediated learning",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have achieved state-of-the-art performance in most common tasks to which they have been applied. Those achievements are attributed to the Self-Attention mechanism at their core. Self-Attention is understood to map the relationship between tokens of any given sequence. This exhaustive mapping incurs massive costs in memory and inference time, as Self-Attention scales quadratically with regard to sequence length. Standard Self-Attention has required increasingly large compute and memory usage when applied to long input sequences because of this memory and time bottleneck. Efficient Transformers emerged as performant alternatives demonstrating good scalability and occasionally better tracking of long-range dependencies. Their efficiency gains are obtained through different methods, usually focusing on the linear scaling of the attention matrix through sparsification, approximation, or other methods. Among existing approaches, those using low-rank approximation present particular advantages because of their compatibility with standard Self-Attention-based models, allowing for weight transfers and other time-saving schemes. More recently, hardware-aware versions of Self-Attention (e.g., FlashAttention) have mitigated all memory bottlenecks and have alleviated its compute burden. Unfortunately, hardware-aware Self-Attentions have stricter hardware compatibility requirements making Efficient Transformers still relevant for use on older or less powerful hardware. Furthermore, some Efficient Transformers can even be applied in an hardware-aware manner to further improve training and inference speed. In this paper, we propose a novel linear approximation method for Self-Attention inspired by the CUR approximation method. This method, proposed in two versions (one leveraging FlashAttention), is conceived as a drop-in replacement for standard Self-Attention with weights compatibility. Our method compares favorably to standard Transformers’ and Efficient Transformers’ performances on varied tasks and demonstrates a significant decrease in memory footprint as well as competitive performance in training speed, even compared to similar methods.",
+        "identifiers": [
+          "SemanticScholar:03ce7da423fa88fd8d9308c6efe49210ee63e8db"
+        ],
+        "semantic_scholar_id": "03ce7da423fa88fd8d9308c6efe49210ee63e8db",
+        "doi": "10.1007/s10994-025-06768-3",
+        "canonical_id": "DOI:10.1007/s10994-025-06768-3",
+        "authors": [
+          "Damien François",
+          "Mathis Saillot",
+          "Jacques Klein",
+          "Tegawendé F. Bissyandé",
+          "A. Skupin"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 534,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.12359",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.12359",
+        "id:SemanticScholar:765c52396143ecbe7ce5dfde777c4cd288efaf9c",
+        "id:arXiv:2505.12359",
+        "title:star stagewise attentionguided token reduction for efficient large visionlanguage models inference",
+        "url:https://arxiv.org/abs/2505.12359"
+      ],
+      "record": {
+        "title": "STAR: Stage-Wise Attention-Guided Token Reduction for Efficient Large Vision-Language Models Inference",
+        "source_url": "https://arxiv.org/abs/2505.12359",
+        "year": 2025,
+        "published": "2025-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although large vision-language models (LVLMs) leverage rich visual token representations to achieve strong performance on multimodal tasks, these tokens also introduce significant computational overhead during inference. Existing training-free token pruning methods typically adopt a single-stage strategy, focusing either on visual self-attention or visual-textual cross-attention. However, such localized perspectives often overlook the broader information flow across the model, leading to substantial performance degradation, especially under high pruning ratios. In this work, we propose STAR (Stage-wise Attention-guided token Reduction), a training-free, plug-and-play framework that approaches token pruning from a global perspective. Instead of pruning at a single point, STAR performs attention-guided reduction in two complementary stages: an early-stage pruning based on visual self-attention to remove redundant low-level features, and a later-stage pruning guided by cross-modal attention to discard task-irrelevant tokens. This holistic approach allows STAR to significantly reduce computational cost while better preserving task-critical information. Extensive experiments across multiple LVLM architectures and benchmarks show that STAR achieves strong acceleration while maintaining comparable, and in some cases even improved performance.",
+        "identifiers": [
+          "SemanticScholar:765c52396143ecbe7ce5dfde777c4cd288efaf9c"
+        ],
+        "semantic_scholar_id": "765c52396143ecbe7ce5dfde777c4cd288efaf9c",
+        "canonical_id": "arXiv:2505.12359",
+        "arxiv_id": "2505.12359",
+        "doi": "10.48550/arXiv.2505.12359",
+        "authors": [
+          "Yi-Chen Guo",
+          "Hanze Li",
+          "Zong-Hao Zhang",
+          "Jin-Hao You",
+          "Kai Tang",
+          "Xian-De Huang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 510,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+      "identity_tokens": [
+        "id:SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+        "title:learned token pruning for efficient transformer inference",
+        "url:https://www.semanticscholar.org/paper/4fdaec07b7afbdee4a62c98d37a7c04c499de79a"
+      ],
+      "record": {
+        "title": "Learned Token Pruning for Efficient Transformer Inference",
+        "source_url": "https://www.semanticscholar.org/paper/4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+        "year": 2023,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a"
+        ],
+        "semantic_scholar_id": "4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+        "canonical_id": "SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a",
+        "authors": [
+          "Kim",
+          "Sheng Shen",
+          "David Thorsley",
+          "Amir Gholami",
+          "Woosuk Kwon",
+          "Joseph Hassoun",
+          "Kurt Keutzer"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.08637",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.08637",
+        "id:SemanticScholar:90f70b1645d4ea354f5430567293015df5f69b96",
+        "id:arXiv:2507.08637",
+        "title:scaling attention to very long sequences in linear time with waveletenhanced random spectral attention wersa",
+        "url:https://arxiv.org/abs/2507.08637"
+      ],
+      "record": {
+        "title": "Scaling Attention to Very Long Sequences in Linear Time with Wavelet-Enhanced Random Spectral Attention (WERSA)",
+        "source_url": "https://arxiv.org/abs/2507.08637",
+        "year": 2025,
+        "published": "2025-07-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models are computationally costly on long sequences since regular attention has quadratic $O(n^2)$ time complexity. We introduce Wavelet-Enhanced Random Spectral Attention (WERSA), a novel mechanism of linear $O(n)$ time complexity that is pivotal to enable successful long-sequence processing without the performance trade-off. WERSA merges content-adaptive random spectral features together with multi-resolution Haar wavelets and learnable parameters to selectively attend to informative scales of data while preserving linear efficiency. Large-scale comparisons \\textbf{on single GPU} and across various benchmarks (vision, NLP, hierarchical reasoning) and various attention mechanisms (like Multiheaded Attention, Flash-Attention-2, FNet, Linformer, Performer, Waveformer), reveal uniform advantages of WERSA. It achieves best accuracy in all tests. On ArXiv classification, WERSA improves accuracy over vanilla attention by 1.2\\% (86.2\\% vs 85.0\\%) while cutting training time by 81\\% (296s vs 1554s) and FLOPS by 73.4\\% (26.2G vs 98.4G). Significantly, WERSA excels where vanilla and FlashAttention-2 fail: on ArXiv-128k's extremely lengthy sequences, it achieves best accuracy (79.1\\%) and AUC (0.979) among viable methods, operating on data that gives Out-Of-Memory errors to quadratic methods while being \\textbf{twice as fast} as Waveformer, its next-best competitor. By significantly reducing computational loads without compromising accuracy, WERSA makes possible more practical, more affordable, long-context models, in particular on low-resource hardware, for more sustainable and more scalable AI development.",
+        "identifiers": [
+          "SemanticScholar:90f70b1645d4ea354f5430567293015df5f69b96"
+        ],
+        "semantic_scholar_id": "90f70b1645d4ea354f5430567293015df5f69b96",
+        "canonical_id": "arXiv:2507.08637",
+        "arxiv_id": "2507.08637",
+        "doi": "10.48550/arXiv.2507.08637",
+        "authors": [
+          "Vincenzo Dentamaro"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 456,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+      "identity_tokens": [
+        "id:SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+        "title:inducing elasticity in foundation models posttraining techniques for adaptable inference",
+        "url:https://www.semanticscholar.org/paper/2dc80f53c6a384c2993982fcb8e9bbff261a3818"
+      ],
+      "record": {
+        "title": "Inducing Elasticity in Foundation Models: Post-Training Techniques for Adaptable Inference",
+        "source_url": "https://www.semanticscholar.org/paper/2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818"
+        ],
+        "semantic_scholar_id": "2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+        "canonical_id": "SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818",
+        "authors": [
+          "Aashiq Muhamed",
+          "Jia-Rui Liu",
+          "Mona T. Diab",
+          "Virginia Smith"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73",
+      "identity_tokens": [
+        "id:SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73",
+        "title:e fficient m ultimodal s patial r easoning via d y namic and a symmetric r outing",
+        "url:https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73"
+      ],
+      "record": {
+        "title": "E FFICIENT M ULTIMODAL S PATIAL R EASONING VIA D Y - NAMIC AND A SYMMETRIC R OUTING",
+        "source_url": "https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73"
+        ],
+        "semantic_scholar_id": "ea9209764ac8824da3c193560c3915b080579c73",
+        "canonical_id": "SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73",
+        "authors": [
+          "Yixian Shen",
+          "Qingwei Bi",
+          "Zihan Wang",
+          "Zhiheng Yang",
+          "Changshuo Wang",
+          "Zhi Zhang",
+          "Prayag Tiwari",
+          "Andy D. Pimentel",
+          "Anuj Pathania"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccvw69036.2025.00315",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccvw69036.2025.00315",
+        "id:SemanticScholar:ac55bb5861c4c7639536ef5ed3006607701d0fd3",
+        "title:lowbit flashattention accelerated operator design based on triton",
+        "url:https://doi.org/10.1109/ICCVW69036.2025.00315"
+      ],
+      "record": {
+        "title": "Low-Bit FlashAttention Accelerated Operator Design Based on Triton",
+        "source_url": "https://doi.org/10.1109/ICCVW69036.2025.00315",
+        "year": 2025,
+        "published": "2025-10-19",
+        "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer architecture has been widely adopted across numerous models. As the core component of the Trans-former, the attention mechanism has a computational complexity of $\\mathrm{O}(\\mathrm{n}^{2})$ compared to linear transformations, making it a major computational bottleneck when handling long sequences. Although quantization has proven to be an ef-fective method for accelerating model inference, existing quantization approaches struggle to support ultra-low-bit formats for attention. To address this, we propose a Triton-based low-bit FlashAttention accelerator design. Specif-ically, this work leverages operator fusion techniques to merge the dequantization process with matrix multiplication, reducing memory access overhead. In addition, a mixed-precision quantization strategy is employed to miti-gate quantization error and preserve model accuracy. Compared to FlashAttention2, the kernel has a $2.4\\times \\text{speedup}$ ratio and an end-to-end inference $1.2\\times \\text{speedup}$. Exper-imental results demonstrate that the proposed kernel im-proves inference speed and memory efficiency while main-taining accuracy, offering a novel approach for deploying large models with low latency and resource consumption on edge devices. Our code is available at https:/github.com/Charles2530/lowbit_quant_fa2.",
+        "identifiers": [
+          "SemanticScholar:ac55bb5861c4c7639536ef5ed3006607701d0fd3"
+        ],
+        "semantic_scholar_id": "ac55bb5861c4c7639536ef5ed3006607701d0fd3",
+        "doi": "10.1109/ICCVW69036.2025.00315",
+        "canonical_id": "DOI:10.1109/ICCVW69036.2025.00315",
+        "authors": [
+          "Jin-Yang Du",
+          "Jin-Yang Guo",
+          "Yifu Ding"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 356,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:fcffd864a6bc78afe50d65161dc393a220b45c067067f0ec93b65c9e38babd76",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
