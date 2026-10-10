@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-r491-b26b28-4fdfbe8a-p02::provider-gap",
+  "reference_main_sha": "4fdfbe8acbed73ba85ba106e2fffd41dc035b92e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/075280-3538",
+      "identity_tokens": [
+        "SemanticScholar:af07b1b454f16ed351c893376c85be11d6dc2b5c",
+        "DOI:10.52202/075280-3538"
+      ],
+      "title": "Convolutional State Space Models for Long-Range Spatiotemporal Modeling",
+      "reason": "NeurIPS本論文に対応するappendix候補。ConvSSMのparallel scan/subquadratic計算とfast autoregressive generationは系列推論アーキテクチャへ転用可能。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/ff9783ec29688387d44779d67d06ef66-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T00:34:04Z",
+      "last_checked_at": "2026-10-10T00:34:18Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    }
+  ],
+  "parent_run_key": "codex-backfill-r491-b26b28-4fdfbe8a-p02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/codex-backfill-r491-b26b28-4fdfbe8a-p02--5348f7f8760047cf1d9ffae9efacd5557ff4e00c20f3c7168d592a64f585490a--codex-backfill-r491-b26b28-4fdfbe8a-p02.json",
+  "provider_gap_ids": [
+    "DOI:10.52202/075280-3538"
+  ]
+}
