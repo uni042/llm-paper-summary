@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T00:57:43.003539+00:00",
+  "generated_at": "2026-10-10T01:12:49.703919+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 144,
+  "count": 143,
   "worker_counts": {
     "scheduled-chat-00": 48,
     "scheduled-chat-30": 48,
-    "scheduled-chat-45": 48
+    "scheduled-chat-45": 47
   },
   "entries": [
     {
@@ -259,30 +259,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
-      "canonical_id": "arXiv:2410.07348",
-      "title": "MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts",
-      "file_bytes": 12241,
-      "source_sha256": "13080484ffd21bc5b5b777bbc49875b0d76108d84bf7cf8c0d66e3eb458c2558",
-      "source_git_blob_sha": "f9f6a6bbdd9b7c6e3d01fba579dc3c6e6363daf8",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.775285,
-      "quality_metrics": {
-        "body_chars": 2812,
-        "method_chars": 1669,
-        "evaluation_chars": 645,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 77.5% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.5% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
