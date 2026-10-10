@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T15:03:37+00:00",
-  "record_count": 11347,
+  "updated_at": "2026-10-10T15:15:50+00:00",
+  "record_count": 11355,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162187,6 +162187,122 @@
         "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
       ],
       "title": "Many Task Learning with Task Routing"
+    },
+    "arXiv:1709.02249": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.02249",
+      "identity_tokens": [
+        "arXiv:1709.02249"
+      ],
+      "reason": "This paper concerns learning robot demonstrations with mixture-density networks; its title states no LLM inference or serving-efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:15:48+00:00",
+      "last_checked_at": "2026-10-10T15:15:48+00:00",
+      "linked_from": [],
+      "title": "Uncertainty-Aware Learning from Demonstration Using Mixture Density Networks with Sampling-Free Variance Modeling"
+    },
+    "arXiv:2503.04957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.04957",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.04957",
+        "SemanticScholar:a4f49ce748c51ff05df6a971caf3070f631998c7",
+        "arXiv:2503.04957"
+      ],
+      "reason": "SafeArena evaluates misuse risks of autonomous web agents; its focus is agent safety and harmful-task behavior, not runtime or inference efficiency.",
+      "first_checked_at": "2026-10-10T15:15:48+00:00",
+      "last_checked_at": "2026-10-10T15:15:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "SafeArena: Evaluating the Safety of Autonomous Web Agents"
+    },
+    "arXiv:2403.18771": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18771",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.796",
+        "DOI:10.48550/arxiv.2403.18771",
+        "SemanticScholar:175060cb1e90cbd0f2036bc587ed8f76217f7deb",
+        "arXiv:2403.18771"
+      ],
+      "reason": "CheckEval decomposes LLM-as-judge criteria to improve text-generation evaluation reliability; it reports agreement quality rather than evaluation or serving cost.",
+      "first_checked_at": "2026-10-10T15:15:48+00:00",
+      "last_checked_at": "2026-10-10T15:15:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "CheckEval: A reliable LLM-as-a-Judge framework for evaluating text generation using checklists"
+    },
+    "arXiv:2307.11833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.11833",
+      "identity_tokens": [
+        "arXiv:2307.11833"
+      ],
+      "reason": "This paper applies a Transformer framework to physics-informed neural networks, with no stated LLM inference, serving, or efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:15:49+00:00",
+      "last_checked_at": "2026-10-10T15:15:49+00:00",
+      "linked_from": [],
+      "title": "PINNsFormer: A Transformer-Based Framework For Physics-Informed Neural Networks"
+    },
+    "arXiv:2304.02806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.02806",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2304.02806",
+        "SemanticScholar:7b97979ebc76d9709ad516ee86236f64c4950356",
+        "arXiv:2304.02806"
+      ],
+      "reason": "Graph Mixture of Experts targets diversity and generalization in graph neural networks; this is a graph-learning application, not LLM MoE inference.",
+      "first_checked_at": "2026-10-10T15:15:49+00:00",
+      "last_checked_at": "2026-10-10T15:15:49+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Graph Mixture of Experts: Learning on Large-Scale Graphs with Explicit Diversity Modeling"
+    },
+    "arXiv:2210.05359": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.05359",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2210.05359",
+        "SemanticScholar:2cb97b2bb6ab2eb17add9ffe69d5cbeaca2b29c8",
+        "arXiv:2210.05359"
+      ],
+      "reason": "Mind’s Eye augments language-model physical reasoning with simulator outputs to improve accuracy; it adds a domain-reasoning capability without claiming execution efficiency.",
+      "first_checked_at": "2026-10-10T15:15:49+00:00",
+      "last_checked_at": "2026-10-10T15:15:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Mind's Eye: Grounded Language Model Reasoning through Simulation"
+    },
+    "arXiv:2512.00818": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00818",
+      "identity_tokens": [
+        "arXiv:2512.00818"
+      ],
+      "reason": "This is a medical multimodal-reasoning benchmark, an application evaluation with no stated LLM inference or serving-efficiency method.",
+      "first_checked_at": "2026-10-10T15:15:50+00:00",
+      "last_checked_at": "2026-10-10T15:15:50+00:00",
+      "linked_from": [],
+      "title": "Med-CMR: A Fine-Grained Benchmark Integrating Visual Evidence and Clinical Logic for Medical Complex Multimodal Reasoning"
+    },
+    "arXiv:2511.21025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21025",
+      "identity_tokens": [
+        "arXiv:2511.21025"
+      ],
+      "reason": "This paper presents a caption-and-image question-answering benchmark; the title states no model inference, serving, or efficiency contribution.",
+      "first_checked_at": "2026-10-10T15:15:50+00:00",
+      "last_checked_at": "2026-10-10T15:15:50+00:00",
+      "linked_from": [],
+      "title": "CaptionQA: Is Your Caption as Useful as the Image Itself?"
     }
   }
 }

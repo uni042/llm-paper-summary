@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f071eb756234723-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.18771",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.18771",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.emnlp-main.796",
+      "DOI:10.48550/arxiv.2403.18771",
+      "SemanticScholar:175060cb1e90cbd0f2036bc587ed8f76217f7deb",
+      "arXiv:2403.18771"
+    ],
+    "reason": "CheckEval decomposes LLM-as-judge criteria to improve text-generation evaluation reliability; it reports agreement quality rather than evaluation or serving cost.",
+    "first_checked_at": "2026-10-10T15:15:48+00:00",
+    "last_checked_at": "2026-10-10T15:15:48+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "CheckEval: A reliable LLM-as-a-Judge framework for evaluating text generation using checklists"
+  },
+  "processed_at": "2026-10-10T15:15:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f071eb75623",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

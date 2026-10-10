@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T14:41:52+00:00",
-  "record_count": 4588,
+  "updated_at": "2026-10-10T15:15:47+00:00",
+  "record_count": 4590,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70195,6 +70195,40 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CellPLM: Pre-training of Cell Language Model Beyond Single Cells"
+    },
+    "arXiv:2601.08323": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08323",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.08323",
+        "SemanticScholar:6f7c447cd5fd3bc7b02fcd795297af305b06c344",
+        "arXiv:2601.08323"
+      ],
+      "reason": "AtomMem learns agent memory CRUD policies and improves long-context task performance, but the abstract gives no measured reduction in memory footprint, context tokens, or inference overhead.",
+      "first_checked_at": "2026-10-10T15:15:47+00:00",
+      "last_checked_at": "2026-10-10T15:15:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AtomMem : Learnable Dynamic Agentic Memory with Atomic Memory Operation"
+    },
+    "arXiv:2601.08808": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08808",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.08808",
+        "SemanticScholar:711d95689035c3d9b2a8436878590047a91d5e87",
+        "arXiv:2601.08808"
+      ],
+      "reason": "Multiplex Thinking reports shorter reasoning sequences through a soft token that samples K candidate tokens, but the abstract does not establish that the extra per-step sampling lowers total inference compute, latency, or resource use.",
+      "first_checked_at": "2026-10-10T15:15:47+00:00",
+      "last_checked_at": "2026-10-10T15:15:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge"
     }
   }
 }

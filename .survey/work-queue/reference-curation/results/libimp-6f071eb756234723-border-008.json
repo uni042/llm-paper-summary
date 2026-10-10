@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6f071eb756234723-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.08808",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.08808",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.08808",
+      "SemanticScholar:711d95689035c3d9b2a8436878590047a91d5e87",
+      "arXiv:2601.08808"
+    ],
+    "reason": "Multiplex Thinking reports shorter reasoning sequences through a soft token that samples K candidate tokens, but the abstract does not establish that the extra per-step sampling lowers total inference compute, latency, or resource use.",
+    "first_checked_at": "2026-10-10T15:15:47+00:00",
+    "last_checked_at": "2026-10-10T15:15:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge"
+  },
+  "processed_at": "2026-10-10T15:15:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f071eb75623",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
