@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T08:20:49.198065+00:00",
+  "generated_at": "2026-10-10T08:38:06.152608+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 121,
+  "count": 119,
   "worker_counts": {
     "scheduled-chat-00": 40,
-    "scheduled-chat-30": 40,
-    "scheduled-chat-45": 41
+    "scheduled-chat-30": 39,
+    "scheduled-chat-45": 40
   },
   "entries": [
     {
@@ -628,7 +628,7 @@
       "file_bytes": 12951,
       "source_sha256": "1a39482be8a17781d524aedea473180eb4ae9151bb7367c40d6fd27f2572db7c",
       "source_git_blob_sha": "4e30c7b5ce59d60d6b5bbae3beba2034f0178cac",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.990807,
@@ -2533,28 +2533,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.15997-ensuring-fair-llm-serving-amid-diverse-applications.md",
-      "canonical_id": "arXiv:2411.15997",
-      "title": "Ensuring Fair LLM Serving Amid Diverse Applications",
-      "file_bytes": 15202,
-      "source_sha256": "52f5c6e5515062138de3784f4f9ede43ddec70e3eda019920896a090982051fb",
-      "source_git_blob_sha": "29fe7fde7b2132b4f3fc981c1a6a8d96977ee494",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.986547,
-      "quality_metrics": {
-        "body_chars": 3364,
-        "method_chars": 1086,
-        "evaluation_chars": 110,
-        "limitation_chars": 286
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 110 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
       "canonical_id": "arXiv:2403.17312",
       "title": "ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching",
@@ -2572,28 +2550,6 @@
         "limitation_chars": 341
       },
       "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md",
-      "canonical_id": "arXiv:2412.20993",
-      "title": "Efficiently Serving LLM Reasoning Programs with Certaindex",
-      "file_bytes": 16312,
-      "source_sha256": "f437a824034c222fb2e9f06839d67cd161994e920b72db8ed48a525ea4358d68",
-      "source_git_blob_sha": "c8a1e1ffcb1658475d058be21166415b35dcde0a",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.915556,
-      "quality_metrics": {
-        "body_chars": 3199,
-        "method_chars": 984,
-        "evaluation_chars": 95,
-        "limitation_chars": 256
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 95 < 500"
-      ],
       "warnings": []
     },
     {
