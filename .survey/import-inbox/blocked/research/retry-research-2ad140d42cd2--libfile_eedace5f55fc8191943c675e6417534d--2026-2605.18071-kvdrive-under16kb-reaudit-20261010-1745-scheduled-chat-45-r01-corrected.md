@@ -67,6 +67,8 @@ references:
 references_checked_at: '2026-09-11'
 references_source: retained-existing-structured-identities
 references_total: 41
+last_audited: null
+audit_version: 0
 ---
 
 # KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference

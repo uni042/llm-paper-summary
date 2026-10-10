@@ -38,7 +38,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 - **2025-09 · [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)**  
   実装：[✓](https://github.com/DataStates/artifacts/blob/main/MLP-Offload) ・ リポジトリ内被引用：2  
-  最適化状態をGPU、CPU DRAM、ローカルNVMe、共有ストレージへ分散し、複数の読み書き経路を同時利用して、LLM事前学習の容量制約とI/O待ちを緩和する方式。
+  MLP-Offloadは、GPUに載らない大規模言語モデルを事前学習する際、最適化器状態（optimizer states）の退避先をCPUメモリとローカルSSDだけに限定せず、共有の並列ファイルシステム（PFS）まで統合して学習反復時間を短縮するシステムである。
 
 - **2025-05 · [ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates](2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeedExamples/tree/master/training/DeepSpeed-ZenFlow) ・ リポジトリ内被引用：2  

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e646427ec1447bee3ef55894f2f73276b28824da0f74e466cfbe45f39638f5f2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-80283112d719--libfile_d447430397348191bade368ac7bb9c18--2024-2406.08155-quantmoe-bench-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2406.08155",
+  "worker_completed_at": "2026-10-10T18:01:51+09:00",
+  "worker_run_key": "20261010-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6710,
+    "body_paragraphs": 35,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1126,
+    "limitation_chars": 603,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-10T09:57:05+00:00"
+}

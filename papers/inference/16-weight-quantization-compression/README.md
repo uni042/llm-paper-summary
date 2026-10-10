@@ -47,8 +47,8 @@
   超低ビットベクトル量子化と入力依存疎性を二種類の実行流へ合わせ、圧縮率を実際の推論高速化へ変換する加速器。
 
 - **2026-09 · [VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models](2026-2609.25376-vlaquantbench.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  事後量子化で重みや活性値を低精度化すればメモリと計算を減らせるが、開ループの再構成誤差だけでは実際のタスク成功率を予測しにくい。未校正W4A4のπ0.5では対象を126層から167層へ広げると成功率が7.0%から70.5%へ逆に回復し、単純な「量子化層が少ないほど安全」という直感が破れることを示した。
+  実装：[✓](https://github.com/jiuyixu25/VLAQuantBench) ・ リポジトリ内被引用：0  
+  VLAQuantBenchは、視覚・言語・行動モデル（Vision-Language-Action モデル、VLA）の学習後量子化（Post-学習 量子化、PTQ）を、重みの再構成誤差だけでなく、ロボットが環境を動かし続けた結果のタスク成功率で検証する評価基盤である。
 
 - **2026-09 · [Structured Transforms for Low-Overhead Quantization of Language Models](2026-2609.11687-structured-transforms-for-low-overhead-quantization-of-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

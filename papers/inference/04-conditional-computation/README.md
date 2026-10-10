@@ -74,7 +74,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2024-03 · [Not All Layers of LLMs Are Necessary During Inference](2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  「簡単な入力にも全層を使う」固定深さをやめ、中間層の出力が最終層と一致しそうならそこで止める。平均17.8%の層を省ける一方、壁時計高速化は最大1.30倍であり、層削減率と実時間短縮を分けて読む必要がある。
+  本論文は、デコーダ専用大規模言語モデルの各入力を必ず最終層まで通すことによる過剰計算を、入力単位の早期終了で減らすAdaInferを提案する。原著第3版の主評価では、Llama 2の7B・13BとOPT-13Bで層削減率は課題により約9〜43%、平均17.8%となる。
 
 ### 4年前（2022-11〜2023-10）
 
