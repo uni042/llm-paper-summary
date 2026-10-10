@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T18:48:04+00:00",
-  "record_count": 4599,
+  "updated_at": "2026-10-10T19:43:31+00:00",
+  "record_count": 4600,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -65298,9 +65298,9 @@
         "DOI:10.18653/v1/2020.acl-main.686",
         "arXiv:2005.14187"
       ],
-      "reason": "対象ハードウェアの実測遅延制約を使うニューラルアーキテクチャ探索でTransformer推論を直接高速化し、Raspberry Pi-4上で3倍の高速化と3.7倍の小型化を示すため推論効率との関連は強い。一方、最終評価は2020年のencoder-decoder機械翻訳Transformerであり、現行サーベイの中心である生成LLM推論・serving・KV cache等より前世代のNLP推論最適化なのでborderlineとした。",
+      "reason": "ACL 2020の全文を確認。可変エンコーダ・デコーダ注意と異種層の探索空間、重み共有SuperTransformer、ハードウェア遅延予測器、進化的探索を用いて機械翻訳モデルをRaspberry Pi/CPU/GPUに特化する。評価はWMT/IWSLT翻訳のBLEUと遅延であり、現行LLMの自己回帰デコード、KVキャッシュ、サービングの直接最適化ではない。ハードウェア認識型推論設計の先行研究として関連するが収録範囲の中心から外れるため微妙に分類する。",
       "first_checked_at": "2026-10-07T07:59:28+00:00",
-      "last_checked_at": "2026-10-07T07:59:28+00:00",
+      "last_checked_at": "2026-10-10T19:43:29+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing"
@@ -70359,6 +70359,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Generative Representational Instruction Tuning"
+    },
+    "arXiv:2204.00408": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.00408",
+      "identity_tokens": [
+        "arXiv:2204.00408"
+      ],
+      "reason": "GLUE・SQuAD上のタスク固有BERT型モデルの層・注意ヘッド・隠れユニットを共同で構造化枝刈りするCoFi。実際の推論速度改善は関連するが、現行の生成LLMやMoEサービングの直接評価ではない。モデル圧縮の歴史的先行研究として微妙。",
+      "first_checked_at": "2026-10-10T19:43:31+00:00",
+      "last_checked_at": "2026-10-10T19:43:31+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Structured Pruning Learns Compact and Accurate Models"
     }
   }
 }
