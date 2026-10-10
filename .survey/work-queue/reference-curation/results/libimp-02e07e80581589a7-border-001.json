@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-02e07e80581589a7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.17388",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.17388",
+    "identity_tokens": [
+      "arXiv:2511.17388"
+    ],
+    "reason": "The technique is transformer-architecture adjacent, but the primary abstract demonstrates task quality rather than an inference-efficiency mechanism or measured efficiency gain.",
+    "first_checked_at": "2026-10-10T05:26:22+00:00",
+    "last_checked_at": "2026-10-10T05:26:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Selective Rotary Position Embedding"
+  },
+  "processed_at": "2026-10-10T05:26:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-02e07e805815",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

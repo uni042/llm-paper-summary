@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T04:27:25+00:00",
-  "record_count": 4544,
+  "updated_at": "2026-10-10T05:26:22+00:00",
+  "record_count": 4545,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69484,6 +69484,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Linear Diffusion Networks"
+    },
+    "arXiv:2511.17388": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17388",
+      "identity_tokens": [
+        "arXiv:2511.17388"
+      ],
+      "reason": "The technique is transformer-architecture adjacent, but the primary abstract demonstrates task quality rather than an inference-efficiency mechanism or measured efficiency gain.",
+      "first_checked_at": "2026-10-10T05:26:22+00:00",
+      "last_checked_at": "2026-10-10T05:26:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Selective Rotary Position Embedding"
     }
   }
 }
