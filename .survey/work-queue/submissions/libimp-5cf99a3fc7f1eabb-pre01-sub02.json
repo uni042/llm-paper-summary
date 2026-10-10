@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ParallelFlow: Parallelizing Linear Transformers via Flow Discretization",
+      "source_url": "https://arxiv.org/abs/2504.00492",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a theoretical framework for analyzing linear attention models through matrix-valued state space models (SSMs). Our approach, Parallel Flows, provides a perspective that systematically decouples temporal dynamics from implementation constraints, enabling independent analysis of critical algorithmic components: chunking, parallelization, and information aggregation. Central to this framework is the reinterpretation of chunking procedures as computations of the flows governing system dynamics. This connection establishes a bridge to mathematical tools from rough path theory, opening the door to new insights into sequence modeling architectures. As a concrete application, we analyze DeltaNet in a generalized low-rank setting motivated by recent theoretical advances. Our methods allow us to design simple, streamlined generalizations of hardware-efficient algorithms present in the literature, and to provide completely different ones, inspired by rough paths techniques, with provably lower complexity. This dual contribution demonstrates how principled theoretical analysis can both explain existing practical methods and inspire fundamentally new computational approaches.",
+      "identifiers": [
+        "SemanticScholar:32eef52b5c895b59373e45746c5318b1640230bf"
+      ],
+      "semantic_scholar_id": "32eef52b5c895b59373e45746c5318b1640230bf",
+      "canonical_id": "arXiv:2504.00492",
+      "arxiv_id": "2504.00492",
+      "doi": "10.48550/arXiv.2504.00492",
+      "authors": [
+        "Nicola Muca Cirone",
+        "Cristopher Salvi"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 557,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ParallelFlowはlinear attentionをmatrix-valued state-space flowとして扱い、chunking/parallelizationを分析し、既存手法より低complexityのhardware-efficient algorithmsを導く。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Optimizing Transformers with Approximate Computing for Faster, Smaller and more Accurate NLP Models",
+      "source_url": "https://www.semanticscholar.org/paper/a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "year": 2020,
+      "published": "2020-10-07",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c"
+      ],
+      "semantic_scholar_id": "a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "canonical_id": "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c",
+      "authors": [
+        "Amrit Nagarajan",
+        "Sanchari Sen",
+        "Jacob R. Stevens",
+        "A. Raghunathan"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2194,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次OpenReview manuscriptはtask-specific Transformerのapproximate computing (block/head/weight pruning, quantization, attention approximation)でinference modelをより小さく高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "What comes after transformers? - A selective survey connecting ideas in deep learning",
+      "source_url": "https://arxiv.org/abs/2408.00386",
+      "year": 2024,
+      "published": "2024-08-01",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become the de-facto standard model in artificial intelligence since 2017 despite numerous shortcomings ranging from energy inefficiency to hallucinations. Research has made a lot of progress in improving elements of transformers, and, more generally, deep learning manifesting in many proposals for architectures, layers, optimization objectives, and optimization techniques. For researchers it is difficult to keep track of such developments on a broader level. We provide a comprehensive overview of the many important, recent works in these areas to those who already have a basic understanding of deep learning. Our focus differs from other works, as we target specifically novel, alternative potentially disruptive approaches to transformers as well as successful ideas of recent deep learning. We hope that such a holistic and unified treatment of influential, recent works and novel ideas helps researchers to form new connections between diverse areas of deep learning. We identify and discuss multiple patterns that summarize the key strategies for successful innovations over the last decade as well as works that can be seen as rising stars. Especially, we discuss attempts on how to improve on transformers covering (partially) proven methods such as state space models but also including far-out ideas in deep learning that seem promising despite not achieving state-of-the-art results. We also cover a discussion on recent state-of-the-art models such as OpenAI's GPT series and Meta's LLama models and, Google's Gemini model family.",
+      "identifiers": [
+        "SemanticScholar:5d1bfee024f90a8aa9d5d01c1ed1708dfed693f3"
+      ],
+      "semantic_scholar_id": "5d1bfee024f90a8aa9d5d01c1ed1708dfed693f3",
+      "canonical_id": "arXiv:2408.00386",
+      "arxiv_id": "2408.00386",
+      "doi": "10.48550/arXiv.2408.00386",
+      "authors": [
+        "Johannes Schneider"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 800,
+        "matched_prestigious_venue": null
+      },
+      "reason": "surveyはTransformerのenergy inefficiencyと代替architecture/efficiency ideasを概観し、SSM等を含む。直接の新規runtime手法ではないが、効率的なsequence model系統に接続。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast and Accurate FSA System Using ELBERT: An Efficient and Lightweight BERT",
+      "source_url": "https://arxiv.org/abs/2211.08842",
+      "year": 2022,
+      "published": "2022-11-16",
+      "venue": "IEEE Transactions on Signal Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The accuracy of many natural language processing (NLP) tasks has been significantly improved with the development of deep learning and Transformer-based pre-trained models like BERT. However, their large number of parameters and computations pose deployment challenges. For instance, while using BERT can improve predictions in financial sentiment analysis (FSA) tasks, it can also slow down processing, where throughput and accuracy are equally important for profitability. To address these issues, we first propose an efficient and lightweight BERT model called ELBERT, which incorporates a novel confidence-window-based (CWB) early exit mechanism. In addition, an innovative approach is proposed to accelerate text processing on the GPU platform, which addresses the challenge of effectively deploying the early exit mechanism with large input batch sizes. Using these advancements, we develop a fast and high-accuracy FSA system. Experimental results demonstrate that the proposed CWB early exit mechanism outperforms existing early exit methods on BERT in terms of accuracy, at the same computation cost. By leveraging this acceleration method, our FSA system can boost the processing throughput by nearly 40 times, enabling it to process over 1000 texts per second with sufficient accuracy. This processing rate is nearly twice as fast as FastBERT, providing modern trading systems with a more powerful text processing capability.",
+      "identifiers": [
+        "SemanticScholar:ba9aacf29cdfca1f593293e502dc7d2f0c351105"
+      ],
+      "semantic_scholar_id": "ba9aacf29cdfca1f593293e502dc7d2f0c351105",
+      "canonical_id": "arXiv:2211.08842",
+      "arxiv_id": "2211.08842",
+      "doi": "10.1109/TSP.2023.3322825",
+      "authors": [
+        "Si-Yuan Lu",
+        "Chen-Chen Zhou",
+        "Keli Xie",
+        "Jun Lin",
+        "Zhong-Feng Wang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1424,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ELBERTとconfidence-window early exitで金融sentiment用BERT処理をGPU上で高速化し、1000 texts/sec超のsystemを報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EcoTransformer: Attention without Multiplication",
+      "source_url": "https://arxiv.org/abs/2507.20096",
+      "year": 2025,
+      "published": "2025-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer, with its scaled dot-product attention mechanism, has become a foundational architecture in modern AI. However, this mechanism is computationally intensive and incurs substantial energy costs. We propose a new Transformer architecture EcoTransformer, in which the output context vector is constructed as the convolution of the values using a Laplacian kernel, where the distances are measured by the L1 metric between the queries and keys. Compared to dot-product based attention, the new attention score calculation is free of matrix multiplication. It performs on par with, or even surpasses, scaled dot-product attention in NLP, bioinformatics, and vision tasks, while consuming significantly less energy. (This version (v2) supersedes v1 and reflects the intended release and licensing.)",
+      "identifiers": [
+        "SemanticScholar:df142cbfabfc1a514c3f91e721be7cd5d3ebea1a"
+      ],
+      "semantic_scholar_id": "df142cbfabfc1a514c3f91e721be7cd5d3ebea1a",
+      "canonical_id": "arXiv:2507.20096",
+      "arxiv_id": "2507.20096",
+      "doi": "10.48550/arXiv.2507.20096",
+      "authors": [
+        "Xin Gao",
+        "Xing Xu",
+        "Shirin Amiraslani",
+        "Hong Xu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 440,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EcoTransformerはdot-product attentionをmultiplication-free Laplacian kernel attentionへ置き換え、NLP等の処理で演算・energyを削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5cf99a3fc7f1",
+    "round": "libimp-5cf99a3fc7f1eabb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5cf99a3fc7f1eabb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5cf99a3fc7f1eabb-pre01.json",
+    "receipt": "sha256:a3aae22855035d9f86e487caa6903050e488b5ad5baac9ddcde4bfe2146c16bf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5cf99a3fc7f1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

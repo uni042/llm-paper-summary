@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Modular Transformers: Compressing Transformers into Modularized Layers for Flexible Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2306.02379",
+      "year": 2023,
+      "published": "2023-06-04",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained Transformer models like T5 and BART have advanced the state of the art on a wide range of text generation tasks. Compressing these models into smaller ones has become critically important for practical use. Common neural network compression techniques such as knowledge distillation or quantization are limited to static compression where the compression ratio is fixed. In this paper, we introduce Modular Transformers, a modularized encoder-decoder framework for flexible sequence-to-sequence model compression. Modular Transformers train modularized layers that have the same function of two or more consecutive layers in the original model via module replacing and knowledge distillation. After training, the modularized layers can be flexibly assembled into sequence-to-sequence models that meet different performance-efficiency trade-offs. Experimental results show that after a single training phase, by simply varying the assembling strategy, Modular Transformers can achieve flexible compression ratios from 1.1x to 6x with little to moderate relative performance drop.",
+      "identifiers": [
+        "SemanticScholar:1a7763f30c97b5b052af36bcfe478f64dcb97986"
+      ],
+      "semantic_scholar_id": "1a7763f30c97b5b052af36bcfe478f64dcb97986",
+      "canonical_id": "arXiv:2306.02379",
+      "arxiv_id": "2306.02379",
+      "doi": "10.48550/arXiv.2306.02379",
+      "authors": [
+        "Wangchunshu Zhou",
+        "Ronan Le Bras",
+        "Yejin Choi"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1224,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Modular Transformersはencoder-decoder layersを置換可能なmoduleへ圧縮し、assemble方法に応じてsequence-to-sequenceモデルの性能/効率tradeoffを選べる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Call for Clarity in Beam Search: How It Works and When It Stops",
+      "source_url": "https://arxiv.org/abs/2204.05424",
+      "year": 2022,
+      "published": "2022-04-11",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Text generation with beam search has proven successful in a wide range of applications. We point out that, though largely overlooked in the literature, the commonly-used implementation of beam decoding (e.g., Hugging Face Transformers and fairseq) uses a first come, first served heuristic: it keeps a set of already completed sequences over time steps and stops when the size of this set reaches the beam size. Based on this finding, we introduce a patience factor, a simple modification to this beam decoding implementation, that generalizes the stopping criterion and provides flexibility to the depth of search. Empirical results demonstrate that adjusting this patience factor improves decoding performance of strong pretrained models on news text summarization and machine translation over diverse language pairs, with a negligible inference slowdown. Our approach only modifies one line of code and can be thus readily incorporated in any implementation. Further, we find that different versions of beam decoding result in large performance differences in summarization, demonstrating the need for clarity in specifying the beam search implementation in research work. Our code will be available upon publication.",
+      "identifiers": [
+        "SemanticScholar:f290bc1c70688b7985b7cca863e4670398875595"
+      ],
+      "semantic_scholar_id": "f290bc1c70688b7985b7cca863e4670398875595",
+      "canonical_id": "arXiv:2204.05424",
+      "arxiv_id": "2204.05424",
+      "doi": "10.63317/2c235hpjhnk8",
+      "authors": [
+        "Jungo Kasai",
+        "Keisuke Sakaguchi",
+        "Ronan Le Bras",
+        "Dragomir R. Radev",
+        "Yejin Choi",
+        "Noah A. Smith"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1643,
+        "matched_prestigious_venue": null
+      },
+      "reason": "beam decodingの停止基準へpatience factorを導入し、生成品質を改善しつつ推論速度の低下を僅少にすると報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LEAP: Learnable Pruning for Transformer-based Models",
+      "source_url": "https://arxiv.org/abs/2105.14636",
+      "year": 2021,
+      "published": "2021-05-30",
+      "venue": null,
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is an effective method to reduce the memory footprint and computational cost associated with large natural language processing models. However, current pruning algorithms either only focus on one pruning category, e.g., structured pruning and unstructured, or need extensive hyperparameter tuning in order to get reasonable accuracy performance. To address these challenges, we propose LEArnable Pruning (LEAP), an effective method to gradually prune the model based on thresholds learned by gradient descent. Different than previous learnable pruning methods, which utilize L 0 or L 1 penalty to indirectly affect the ﬁnal pruning ratio, LEAP introduces a novel regularization function, that directly interacts with the preset target pruning ratio. Moreover, in order to reduce hyperparameter tuning, a novel adaptive regularization coefﬁcient is deployed to control the regularization penalty adaptively. With the new regularization term and its associated adaptive regularization coefﬁcient, LEAP is able to be applied for different pruning granularity, including unstructured pruning, structured pruning, and hybrid pruning, with minimal hyperparameter tuning. We apply LEAP for BERT models on QQP/MNLI/SQuAD for different pruning settings. Our result shows that for all datasets, pruning granularity, and pruning ratios, LEAP achieves on-par or better results as compared to previous heavily hand-tuned methods.",
+      "identifiers": [
+        "SemanticScholar:5e8a892cc33a9fb9e701d5e10333e7b8545bf4a5"
+      ],
+      "semantic_scholar_id": "5e8a892cc33a9fb9e701d5e10333e7b8545bf4a5",
+      "canonical_id": "arXiv:2105.14636",
+      "arxiv_id": "2105.14636",
+      "authors": [
+        "Z. Yao",
+        "Xiaoxia Wu",
+        "Linjian Ma",
+        "Sheng Shen",
+        "K. Keutzer",
+        "Michael W. Mahoney",
+        "Yuxiong He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1959,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v1の題名・IDはselection rowと一致。要旨はhead/row/block-wise structured pruningをlearnable Top-k thresholdとadaptive regularizationで選び、BERTで計算量と推論時間を削減、最大約3.69x speedupを報告。Semantic Scholar IDは一次資料だけではaliasとして検証できないためcanonical IDに含めない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys",
+      "source_url": "https://doi.org/10.1109/ICASSP49357.2023.10096107",
+      "year": 2023,
+      "published": "2023-06-04",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pairwise dot product-based self-attention is key to the success of transformers which achieve state-of-the-art performance across a variety of applications in language and vision, but are costly to compute. It has been shown that most attention scores and keys in transformers are redundant and can be removed without loss of accuracy. In this paper, we develop a novel probabilistic framework for pruning attention scores and keys in transformers. We first formulate an admixture model of attention keys whose input data to be clustered are attention queries. We show that attention scores in self-attention correspond to the posterior distribution of this model when attention keys admit a uniform prior distribution. We then relax this uniform prior constraint and let the model learn these priors from data, resulting in a new Finite Admixture of Keys (FiAK). The learned priors are used for pruning away redundant attention scores and keys in the baseline transformers, improving the diversity of attention patterns that the models capture. We corroborate the efficiency of transformers pruned with FiAK on the ImageNet object classification and WikiText-103 language modeling tasks. Our experiments demonstrate that transformers pruned with FiAK yield similar or better accuracy than the baseline dense transformers while being much more efficient in terms of memory and computational cost.",
+      "identifiers": [
+        "SemanticScholar:a298d956dc3472541adc3d4bf2908755e5ff54d4"
+      ],
+      "semantic_scholar_id": "a298d956dc3472541adc3d4bf2908755e5ff54d4",
+      "doi": "10.1109/ICASSP49357.2023.10096107",
+      "canonical_id": "DOI:10.1109/ICASSP49357.2023.10096107",
+      "authors": [
+        "T. Nguyen",
+        "T. Nguyen",
+        "L. Bui",
+        "Hai Do",
+        "Duy Khuong Nguyen",
+        "Dung D. Le",
+        "Hung The Tran",
+        "Nhat Ho",
+        "S. Osher",
+        "Richard Baraniuk"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1224,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FiAKはattention query/keyの有限混合モデルから冗長attention score/keyをpruneし、language modelingを含む実験でmemory/computation efficiencyを示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Need a Small Specialized Language Model? Plan Early!",
+      "source_url": "https://arxiv.org/abs/2402.01093",
+      "year": 2024,
+      "published": "2024-02-02",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are versatile tools but are not suitable for small inference budgets. Small models have more efficient inference, but their lower capacity means that their performance can be good only if one limits their scope to a specialized domain. This paper explores how to get good specialized small language models using a large, generic, pretraining set and a limited amount of specialized data. We consider two scenarios, depending on whether (i) one can afford pretraining a model for each specialization task, or (ii) one wants to cheaply adapt a single pretrained model for each task. In the first scenario, we propose an effective solution based on importance sampling: we resample the pretraining set to imitate the specialization data and train a small model on it. In the second scenario, we propose a novel architecture, projected networks (PN). PN is a large network whose parameters can be linearly projected into a small network for specialization. For both scenarios, we demonstrate the empirical effectiveness of our solutions across various domains, training set sizes, and training budgets.",
+      "identifiers": [
+        "SemanticScholar:1a7103d169cede62cc7d579c7addf12d18c11668"
+      ],
+      "semantic_scholar_id": "1a7103d169cede62cc7d579c7addf12d18c11668",
+      "canonical_id": "arXiv:2402.01093",
+      "arxiv_id": "2402.01093",
+      "authors": [
+        "D. Grangier",
+        "Angelos Katharopoulos",
+        "Pierre Ablin",
+        "Awni Y. Hannun"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 981,
+        "matched_prestigious_venue": null
+      },
+      "reason": "小型specialized LMのimportance sampling/pretrainingとprojected networksによるtask adaptationを比較し、低inference budgetの実用性を扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5cf99a3fc7f1",
+    "round": "libimp-5cf99a3fc7f1eabb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5cf99a3fc7f1eabb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5cf99a3fc7f1eabb-pre01.json",
+    "receipt": "sha256:a3aae22855035d9f86e487caa6903050e488b5ad5baac9ddcde4bfe2146c16bf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5cf99a3fc7f1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Quantitative Review on Language Model Efficiency Research",
+      "source_url": "https://arxiv.org/abs/2306.01768",
+      "year": 2023,
+      "published": "2023-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models (LMs) are being scaled and becoming powerful. Improving their efficiency is one of the core research topics in neural information processing systems. Tay et al. (2022) provided a comprehensive overview of efficient Transformers that have become an indispensable staple in the field of NLP. However, in the section of\"On Evaluation\", they left an open question\"which fundamental efficient Transformer one should consider,\"answered by\"still a mystery\"because\"many research papers select their own benchmarks.\"Unfortunately, there was not quantitative analysis about the performances of Transformers on any benchmarks. Moreover, state space models (SSMs) have demonstrated their abilities of modeling long-range sequences with non-attention mechanisms, which were not discussed in the prior review. This article makes a meta analysis on the results from a set of papers on efficient Transformers as well as those on SSMs. It provides a quantitative review on LM efficiency research and gives suggestions for future research.",
+      "identifiers": [
+        "SemanticScholar:06e6f125b0f15affd38382135acf03efa28cf439"
+      ],
+      "semantic_scholar_id": "06e6f125b0f15affd38382135acf03efa28cf439",
+      "canonical_id": "arXiv:2306.01768",
+      "arxiv_id": "2306.01768",
+      "doi": "10.48550/arXiv.2306.01768",
+      "authors": [
+        "Meng Jiang",
+        "Hy Dang",
+        "Lingbo Tong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1231,
+        "matched_prestigious_venue": null
+      },
+      "reason": "本レビューはefficient TransformerとSSM研究の性能結果を定量比較し、language-model efficiency研究のbenchmarkingと研究課題を整理する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5cf99a3fc7f1",
+    "round": "libimp-5cf99a3fc7f1eabb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 16,
+    "round_submission_count": 4,
+    "round_submission_index": 4,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5cf99a3fc7f1eabb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5cf99a3fc7f1eabb-pre01.json",
+    "receipt": "sha256:a3aae22855035d9f86e487caa6903050e488b5ad5baac9ddcde4bfe2146c16bf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5cf99a3fc7f1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
