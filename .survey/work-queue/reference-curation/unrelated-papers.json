@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T13:34:59+00:00",
-  "record_count": 11294,
+  "updated_at": "2026-10-10T13:56:27+00:00",
+  "record_count": 11306,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -93355,9 +93355,9 @@
       "identity_tokens": [
         "arXiv:2502.12110"
       ],
-      "reason": "エージェントの長期記憶内容の生成・編成が主題で、推論サービングやKV/メモリ階層のシステム最適化ではない。",
+      "reason": "エージェントの過去経験をツェッテルカステン方式でノート化し、意味類似性でリンクを作り、既存ノートの文脈属性を進化させる外部知識管理手法。要旨が扱うmemoryはエージェントの意味記憶であり、LLM推論時のGPU/CPU階層メモリ、KVキャッシュ、重み配置ではない。評価もエージェント課題の性能改善が中心で、推論基盤の直接的な技術貢献を確認できない。",
       "first_checked_at": "2026-10-05T22:27:25+00:00",
-      "last_checked_at": "2026-10-06T12:12:52+00:00",
+      "last_checked_at": "2026-10-10T13:56:27+00:00",
       "linked_from": [],
       "title": "A-MEM: Agentic Memory for LLM Agents"
     },
@@ -115814,18 +115814,6 @@
       ],
       "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism"
     },
-    "DOI:10.18653/v1/d19-1633": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.18653/v1/d19-1633",
-      "identity_tokens": [
-        "DOI:10.18653/v1/d19-1633"
-      ],
-      "reason": "非自己回帰ニューラル機械翻訳の条件付きmasked LM復号であり、LLM推論システムを対象にしない。",
-      "first_checked_at": "2026-10-06T12:12:52+00:00",
-      "last_checked_at": "2026-10-06T12:12:52+00:00",
-      "linked_from": [],
-      "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models"
-    },
     "arXiv:1901.10430": {
       "classification": "unrelated",
       "canonical_id": "arXiv:1901.10430",
@@ -115881,11 +115869,11 @@
         "DOI:10.1126/science.abq1158",
         "arXiv:2203.07814"
       ],
-      "reason": "AlphaCodeは競技プログラミング問題に対するコード生成能力を主題とし、主要評価もCodeforcesでの解答品質・順位である。大規模samplingやfilteringは使うが、LLM推論runtime・memory・serving効率化を最終目的としていない。",
+      "reason": "競技プログラミング問題を解くコード生成の品質を主目的とし、大規模な候補プログラム生成と実行テストによる選別を使う。要旨で示される主要評価はCodeforcesの順位であり、LLM推論基盤のGPUメモリ、サービング、カーネル、遅延の改善を技術的主題としていない。生成サンプル数の増加は推論計算の節約ではなく品質向上のための探索である。",
       "first_checked_at": "2026-10-06T12:12:54+00:00",
-      "last_checked_at": "2026-10-07T22:08:50+00:00",
+      "last_checked_at": "2026-10-10T13:56:27+00:00",
       "linked_from": [],
-      "title": "Competition-level code generation with AlphaCode"
+      "title": "Competition-Level Code Generation with AlphaCode"
     },
     "arXiv:2501.14105": {
       "classification": "unrelated",
@@ -155050,19 +155038,6 @@
       "linked_from": [],
       "title": "Adaptive Keyframe Sampling for Long Video Understanding"
     },
-    "arXiv:2307.16449": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2307.16449",
-      "identity_tokens": [
-        "DOI:10.1109/cvpr52733.2024.01725",
-        "arXiv:2307.16449"
-      ],
-      "reason": "長動画理解MLLMの視覚token memory機構が主題で、最終適用先はlong-video understanding。汎用LLM推論サービング、KV cache、scheduler等の推論基盤ではない。",
-      "first_checked_at": "2026-10-07T21:58:33+00:00",
-      "last_checked_at": "2026-10-07T21:58:33+00:00",
-      "linked_from": [],
-      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding"
-    },
     "DOI:10.18653/v1/2020.acl-main.204": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2020.acl-main.204",
@@ -161425,6 +161400,180 @@
       "last_checked_at": "2026-10-10T13:34:59+00:00",
       "linked_from": [],
       "title": "What to Hide from Your Students: Attention-Guided Masked Image Modeling"
+    },
+    "arXiv:2212.01209": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.01209",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2212.01209",
+        "arXiv:2212.01209",
+        "semanticscholar:c97c1691f5ac8deba248c8bcde9cf9899a2bb552"
+      ],
+      "reason": "FECAM improves time-series forecasting metrics through frequency-aware channel attention but explicitly incurs a slight computational cost; the abstract does not support an efficiency benefit for inference or serving.",
+      "first_checked_at": "2026-10-10T13:56:23+00:00",
+      "last_checked_at": "2026-10-10T13:56:23+00:00",
+      "linked_from": [],
+      "title": "FECAM: Frequency Enhanced Channel Attention Mechanism for Time Series Forecasting"
+    },
+    "arXiv:2304.14340": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.14340",
+      "identity_tokens": [
+        "arXiv:2304.14340"
+      ],
+      "reason": "The title is a multi-sensor 3D object-detection application and states no inference-systems efficiency mechanism.",
+      "first_checked_at": "2026-10-10T13:56:23+00:00",
+      "last_checked_at": "2026-10-10T13:56:23+00:00",
+      "linked_from": [],
+      "title": "SparseFusion: Fusing Multi-Modal Sparse Representations for Multi-Sensor 3D Object Detection"
+    },
+    "arXiv:2305.00624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.00624",
+      "identity_tokens": [
+        "arXiv:2305.00624"
+      ],
+      "reason": "The title is a broad survey of diffusion models for time-series applications, not a specific inference-efficiency method.",
+      "first_checked_at": "2026-10-10T13:56:23+00:00",
+      "last_checked_at": "2026-10-10T13:56:23+00:00",
+      "linked_from": [],
+      "title": "Diffusion models for time-series applications: a survey"
+    },
+    "arXiv:2305.08192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.08192",
+      "identity_tokens": [
+        "arXiv:2305.08192"
+      ],
+      "reason": "The title is an adversarial-attack method, not an inference runtime or resource-efficiency contribution.",
+      "first_checked_at": "2026-10-10T13:56:24+00:00",
+      "last_checked_at": "2026-10-10T13:56:24+00:00",
+      "linked_from": [],
+      "title": "Diffusion Models for Imperceptible and Transferable Adversarial Attack"
+    },
+    "arXiv:2305.08455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.08455",
+      "identity_tokens": [
+        "arXiv:2305.08455"
+      ],
+      "reason": "The title identifies a document-understanding dataset and evaluation benchmark, not a model-inference or serving-efficiency method.",
+      "first_checked_at": "2026-10-10T13:56:24+00:00",
+      "last_checked_at": "2026-10-10T13:56:24+00:00",
+      "linked_from": [],
+      "title": "Document Understanding Dataset and Evaluation (DUDE)"
+    },
+    "arXiv:2305.12002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.12002",
+      "identity_tokens": [
+        "arXiv:2305.12002"
+      ],
+      "reason": "The title describes a domain-specific financial chat-model release, without a stated inference-efficiency or serving contribution.",
+      "first_checked_at": "2026-10-10T13:56:24+00:00",
+      "last_checked_at": "2026-10-10T13:56:24+00:00",
+      "linked_from": [],
+      "title": "XuanYuan 2.0: A Large Chinese Financial Chat Model with Hundreds of Billions Parameters"
+    },
+    "arXiv:2308.03274": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.03274",
+      "identity_tokens": [
+        "DOI:10.1145/3583780.3614851",
+        "arXiv:2308.03274",
+        "semanticscholar:35be6860b50c2a9b8ce6dee2d955669041cfbd78"
+      ],
+      "reason": "DSformer combines double sampling and temporal-variable attention for forecast accuracy; the abstract provides no measured reduction in computation, memory, latency, or model serving cost.",
+      "first_checked_at": "2026-10-10T13:56:24+00:00",
+      "last_checked_at": "2026-10-10T13:56:24+00:00",
+      "linked_from": [],
+      "title": "DSformer: A Double Sampling Transformer for Multivariate Time Series Long-term Prediction"
+    },
+    "arXiv:2401.05507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.05507",
+      "identity_tokens": [
+        "arXiv:2401.05507"
+      ],
+      "reason": "The title is a benchmark for data-analysis agents, with no stated model-serving or inference-efficiency method.",
+      "first_checked_at": "2026-10-10T13:56:24+00:00",
+      "last_checked_at": "2026-10-10T13:56:24+00:00",
+      "linked_from": [],
+      "title": "InfiAgent-DABench: Evaluating Agents on Data Analysis Tasks"
+    },
+    "arXiv:2402.05602": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05602",
+      "identity_tokens": [
+        "arXiv:2402.05602"
+      ],
+      "reason": "The title is a relevance-propagation explainability method for Transformers, not an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-10T13:56:25+00:00",
+      "last_checked_at": "2026-10-10T13:56:25+00:00",
+      "linked_from": [],
+      "title": "AttnLRP: Attention-Aware Layer-wise Relevance Propagation for Transformers"
+    },
+    "arXiv:2403.07300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.07300",
+      "identity_tokens": [
+        "arXiv:2403.07300"
+      ],
+      "reason": "The title explicitly describes cross-modal fine-tuning for time-series forecasting, a training adaptation rather than inference-system efficiency.",
+      "first_checked_at": "2026-10-10T13:56:25+00:00",
+      "last_checked_at": "2026-10-10T13:56:25+00:00",
+      "linked_from": [],
+      "title": "CALF: Aligning LLMs for Time Series Forecasting via Cross-modal Fine-Tuning"
+    },
+    "arXiv:2403.09157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09157",
+      "identity_tokens": [
+        "arXiv:2403.09157"
+      ],
+      "reason": "The title identifies medical-image segmentation as the application, with no stated inference-systems or transferable efficiency mechanism.",
+      "first_checked_at": "2026-10-10T13:56:25+00:00",
+      "last_checked_at": "2026-10-10T13:56:25+00:00",
+      "linked_from": [],
+      "title": "VM-UNET-V2 Rethinking Vision Mamba UNet for Medical Image Segmentation"
+    },
+    "arXiv:2404.03683": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03683",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.03683",
+        "arXiv:2404.03683",
+        "semanticscholar:b2688b3a0ddf190cd99b11b6bf589a6e071c5369"
+      ],
+      "reason": "Stream of Search trains language models to reason over symbolic-search traces and reports accuracy gains; no computational or runtime efficiency contribution is claimed.",
+      "first_checked_at": "2026-10-10T13:56:25+00:00",
+      "last_checked_at": "2026-10-10T13:56:25+00:00",
+      "linked_from": [],
+      "title": "Stream of Search (SoS): Learning to Search in Language"
+    },
+    "arXiv:2404.17790": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.17790",
+      "identity_tokens": [
+        "arXiv:2404.17790"
+      ],
+      "reason": "The title explicitly studies continual pre-training for language adaptation, a training objective rather than systems efficiency.",
+      "first_checked_at": "2026-10-10T13:56:25+00:00",
+      "last_checked_at": "2026-10-10T13:56:25+00:00",
+      "linked_from": [],
+      "title": "Continual Pre-Training for Cross-Lingual LLM Adaptation: Enhancing Japanese Language Capabilities"
+    },
+    "arXiv:2411.00816": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.00816",
+      "identity_tokens": [
+        "arXiv:2411.00816"
+      ],
+      "reason": "The title targets automated research and review quality, not model-serving efficiency or runtime systems.",
+      "first_checked_at": "2026-10-10T13:56:26+00:00",
+      "last_checked_at": "2026-10-10T13:56:26+00:00",
+      "linked_from": [],
+      "title": "CycleResearcher: Improving Automated Research via Automated Review"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-24ce3d56dae1d771-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.00624",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.00624",
+    "identity_tokens": [
+      "arXiv:2305.00624"
+    ],
+    "reason": "The title is a broad survey of diffusion models for time-series applications, not a specific inference-efficiency method.",
+    "first_checked_at": "2026-10-10T13:56:23+00:00",
+    "last_checked_at": "2026-10-10T13:56:23+00:00",
+    "linked_from": [],
+    "title": "Diffusion models for time-series applications: a survey"
+  },
+  "processed_at": "2026-10-10T13:56:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-24ce3d56dae1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
