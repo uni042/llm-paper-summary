@@ -269,7 +269,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 2年前（2024-11〜2025-10）
 
 - **2024-11 · [MoE-I²: Compressing Mixture of Experts Models through Inter-Expert Pruning and Intra-Expert Low-Rank Decomposition](2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md)**  
-  実装：[✓](https://github.com/xiaochengsky/MoEI-2) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/xiaochengsky/MoEI-2) ・ リポジトリ内被引用：31  
   MoEの冗長性を「専門家どうし」と「専門家内部」の二段階で削る。層ごとの感度に応じて削除数を変え、遺伝探索（Genetic Search）とブロック横断探索で削除専門家を選んだ後、残存専門家へ重要度に応じた低ランク分解を適用する。
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
@@ -310,7 +310,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2025-09 · [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  LExIは層ごとのTop-k削減による出力変化を合成入力で測り、影響の小さい層の専門家数を減らして重要層へ予算を回し、固定Top-kの計算を減らす。
+  重みを削除する枝刈りとは異なり、元の専門家集合は保持する。OLMoE-1B-7Bでは、専門家内部の50%枝刈りと同等の処理率に対し平均正答率が10%高い。
 
 - **2025-05 · [Faster MoE LLM Inference for Extremely Large Models](2025-2505.03531-faster-moe-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -387,7 +387,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   本研究は校正データで冗長な専門家を恒久削除し、実行時はルータ寄与の小さい第2専門家をトークン単位で省いて、Mixtralの常駐メモリとFFN計算を減らす。
 
 - **2024-10 · [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](2024-2410.12013-moe-pruner-router-hints.md)**  
-  実装：✓ ・ リポジトリ内被引用：38  
+  実装：✓ ・ リポジトリ内被引用：37  
   重み・入力活性・ルータ重みを組み合わせたMoE専用重要度でエキスパート 重みをone-shot枝刈りし、エキスパート-wise蒸留で50%疎性でも元性能の約99%まで回復する。
 
 - **2024-10 · [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md)**  
