@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T12:18:57.112472+00:00",
+  "generated_at": "2026-10-10T12:37:05.399942+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 55,
+  "count": 51,
   "worker_counts": {
-    "scheduled-chat-00": 18,
-    "scheduled-chat-30": 18,
-    "scheduled-chat-45": 19
+    "scheduled-chat-00": 17,
+    "scheduled-chat-30": 17,
+    "scheduled-chat-45": 17
   },
   "entries": [
     {
@@ -338,28 +338,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md",
-      "canonical_id": "arXiv:2609.26763",
-      "title": "SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services",
-      "file_bytes": 13121,
-      "source_sha256": "1033714312644f921186b5914f6d860fbb9ef4c4354d04f6a4e0c8d21770faf1",
-      "source_git_blob_sha": "808b58d27001b786ada736c97e852b61ed1f3915",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.943768,
-      "quality_metrics": {
-        "body_chars": 2879,
-        "method_chars": 1040,
-        "evaluation_chars": 467,
-        "limitation_chars": 286
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 467 < 500"
-      ],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md",
       "canonical_id": "arXiv:2608.21240",
       "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
@@ -417,26 +395,6 @@
         "method_chars": 1124,
         "evaluation_chars": 1303,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
-      "canonical_id": "arXiv:2310.04564",
-      "title": "ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models",
-      "file_bytes": 13343,
-      "source_sha256": "b39a05532357b480f27bf8c8832d0dc3c9b3f4748a919d76ef8ee13569a93944",
-      "source_git_blob_sha": "ec293cc9a11bbc45322c58ca3ea1432ecb8b8c49",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.806818,
-      "quality_metrics": {
-        "body_chars": 3526,
-        "method_chars": 1255,
-        "evaluation_chars": 897,
-        "limitation_chars": 403
       },
       "mechanical_failures": [],
       "warnings": []
@@ -577,30 +535,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
-      "canonical_id": "arXiv:2402.05109",
-      "title": "Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding",
-      "file_bytes": 13698,
-      "source_sha256": "a12c23f799c08d1c66c2a7314d0ab8bb3ef48035573e779b2d14e4df6e49d696",
-      "source_git_blob_sha": "121d49ccec71c4efd17f85ab04048eed47d4b908",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.763642,
-      "quality_metrics": {
-        "body_chars": 4186,
-        "method_chars": 1234,
-        "evaluation_chars": 1382,
-        "limitation_chars": 408
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.4% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.4% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md",
       "canonical_id": "arXiv:2510.23649",
       "title": "Efficient Low Rank Attention for Long-Context Inference in Large Language Models",
@@ -689,7 +623,7 @@
       "file_bytes": 13909,
       "source_sha256": "c439d18756b376a63bcbf59b67c9e313dca552332dacbb86b4aa7f46ecb8342f",
       "source_git_blob_sha": "f298151f47f602d15861a8b41ba2f0ab88a9614c",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.931134,
@@ -709,7 +643,7 @@
       "file_bytes": 13942,
       "source_sha256": "0faaddf4d21cbf5214b853f19b040ab7817fb2c92649383ce811f343c2691fe8",
       "source_git_blob_sha": "a24b911e04924c15d67e0b41e856362300ce80b2",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.987659,
@@ -878,26 +812,6 @@
       "warnings": [
         "日本語比率 73.1% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md",
-      "canonical_id": "arXiv:2605.15051",
-      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
-      "file_bytes": 14499,
-      "source_sha256": "1ef6ad264fbebb2cb0ae8cba1ac2eb6d76ca01c2cd983e560829f1eb7769dbb3",
-      "source_git_blob_sha": "bc2d8126aa285acdc06164a61fcccd5a8fca2c80",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.853659,
-      "quality_metrics": {
-        "body_chars": 4050,
-        "method_chars": 1034,
-        "evaluation_chars": 1205,
-        "limitation_chars": 243
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md",
