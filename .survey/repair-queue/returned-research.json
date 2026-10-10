@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-09T23:43:56+00:00",
+  "generated_at": "2026-10-09T23:58:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2367,37 +2367,9 @@
       "worker_run_key": "20261009-1755-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2407.18003",
-      "title": "Keep the Cost Down: A Review on Methods to Optimize LLM's KV Cache Consumption",
-      "source_url": "https://arxiv.org/abs/2407.18003",
-      "returned_at": "2026-10-09T23:39:59+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6046,
-        "body_paragraphs": 31,
-        "method_chars": 2656,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d2c61c2bb3288191b000e6e9782e02ed--2024-2407.18003-kv-cache-review-under16kb-reaudit-20261010-0330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d2c61c2bb3288191b000e6e9782e02ed--2024-2407.18003-kv-cache-review-under16kb-reaudit-20261010-0330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261010-0330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.29982",
-      "title": "Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference",
-      "source_url": "https://arxiv.org/abs/2606.29982",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-09T23:42:29+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2421,6 +2393,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a8cce1bf6b46--libfile_b4198e15d8ec819190c2c34c70da5f77--2026-2606.29982-beyond-uniform-experts-under16kb-reaudit-20261010-0800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a8cce1bf6b46--libfile_b4198e15d8ec819190c2c34c70da5f77--2026-2606.29982-beyond-uniform-experts-under16kb-reaudit-20261010-0800-scheduled-chat-00-.json",
       "worker_run_key": "20261010-0800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2407.18003",
+      "title": "Keep the Cost Down: A Review on Methods to Optimize LLM's KV Cache Consumption",
+      "source_url": "https://arxiv.org/abs/2407.18003",
+      "returned_at": "2026-10-09T23:58:10+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6046,
+        "body_paragraphs": 31,
+        "method_chars": 2656,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-70a36175ad82--libfile_d2c61c2bb3288191b000e6e9782e02ed--2024-2407.18003-kv-cache-review-under16kb-reaudit-20261010-0330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-70a36175ad82--libfile_d2c61c2bb3288191b000e6e9782e02ed--2024-2407.18003-kv-cache-review-under16kb-reaudit-20261010-0330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261010-0330-scheduled-chat-30/r01"
     }
   ]
 }
