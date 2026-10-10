@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T01:07:52+00:00",
+  "generated_at": "2026-10-10T02:46:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 123,
+  "count": 124,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2393,6 +2393,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7708d4bf7bfd--libfile_9031b2a2c39881918cf2384136bfc8be--2024-2407.18003-keep-cost-down-under16kb-reaudit-20261010-0930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-7708d4bf7bfd--libfile_9031b2a2c39881918cf2384136bfc8be--2024-2407.18003-keep-cost-down-under16kb-reaudit-20261010-0930-scheduled-chat-30-r01.json",
       "worker_run_key": "20261010-0930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.19775",
+      "title": "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles",
+      "source_url": "https://arxiv.org/abs/2605.19775",
+      "returned_at": "2026-10-10T02:45:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8674,
+        "body_paragraphs": 44,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 708,
+        "limitation_chars": 859,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ed922636938819194bc6f4502aa84d3--2026-2605.19775-understanding-inference-scaling-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8ed922636938819194bc6f4502aa84d3--2026-2605.19775-understanding-inference-scaling-under16kb-reaudit-20261010-1100-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261010-1100-scheduled-chat-00/r01"
     }
   ]
 }
