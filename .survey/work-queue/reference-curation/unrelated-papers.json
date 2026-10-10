@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T08:36:06+00:00",
-  "record_count": 11274,
+  "updated_at": "2026-10-10T09:21:19+00:00",
+  "record_count": 11278,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -161181,6 +161181,56 @@
       "last_checked_at": "2026-10-10T08:36:06+00:00",
       "linked_from": [],
       "title": "VCM: Vision Concept Modeling Based on Implicit Contrastive Learning with Vision-Language Instruction Fine-Tuning"
+    },
+    "DOI:10.18653/v1/2026.gem-main.7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.gem-main.7",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.gem-main.7",
+        "PRIMARY:https://aclanthology.org/2026.gem-main.7/"
+      ],
+      "reason": "The ACL paper studies transfer of attention, expert, and router components between post-trained MoE models to improve task performance; its abstract does not propose or measure inference-efficiency methods.",
+      "first_checked_at": "2026-10-10T09:21:18+00:00",
+      "last_checked_at": "2026-10-10T09:21:18+00:00",
+      "linked_from": [],
+      "title": "Component Transfer Can Exceed Full Model Performance: Investigating Post-Trained Mixture-of-Experts"
+    },
+    "arXiv:2210.03985": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.03985",
+      "identity_tokens": [
+        "PRIMARY:https://arxiv.org/abs/2210.03985",
+        "arXiv:2210.03985"
+      ],
+      "reason": "Bird-Eye Transformers adapts attention for text-generation quality and long-range context; the abstract provides no concrete reduction in inference compute, memory, or serving cost.",
+      "first_checked_at": "2026-10-10T09:21:19+00:00",
+      "last_checked_at": "2026-10-10T09:21:19+00:00",
+      "linked_from": [],
+      "title": "Bird-Eye Transformers for Text Generation Models"
+    },
+    "arXiv:2503.06794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.06794",
+      "identity_tokens": [
+        "arXiv:2503.06794"
+      ],
+      "reason": "The title is a large empirical study of hidden instability in vision-language models, a robustness/reliability analysis rather than inference-efficiency work.",
+      "first_checked_at": "2026-10-10T09:21:19+00:00",
+      "last_checked_at": "2026-10-10T09:21:19+00:00",
+      "linked_from": [],
+      "title": "Does Acceleration Cause Hidden Instability in Vision Language Models? Uncovering Instance-Level Divergence Through a Large-Scale Empirical Study"
+    },
+    "arXiv:2509.22745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.22745",
+      "identity_tokens": [
+        "arXiv:2509.22745"
+      ],
+      "reason": "The title concerns defending MoE LLMs against harmful fine-tuning through safety alignment, a safety-training task rather than inference systems.",
+      "first_checked_at": "2026-10-10T09:21:19+00:00",
+      "last_checked_at": "2026-10-10T09:21:19+00:00",
+      "linked_from": [],
+      "title": "Defending MoE LLMs against Harmful Fine-Tuning via Safety Routing Alignment"
     }
   }
 }
