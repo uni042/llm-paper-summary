@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-002da2a6db7d0b4c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.02622",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.02622",
+    "identity_tokens": [
+      "arXiv:2511.02622"
+    ],
+    "reason": "The title is a review of RNA structure prediction, outside the target LLM systems scope.",
+    "first_checked_at": "2026-10-10T18:46:39+00:00",
+    "last_checked_at": "2026-10-10T18:46:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Machine learning for RNA secondary structure prediction: a review of current methods and challenges"
+  },
+  "processed_at": "2026-10-10T18:46:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-002da2a6db7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

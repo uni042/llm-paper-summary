@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T15:55:34+00:00",
-  "record_count": 4591,
+  "updated_at": "2026-10-10T18:46:38+00:00",
+  "record_count": 4595,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70247,6 +70247,66 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Adaptive Information Control for Search-Augmented LLM Reasoning"
+    },
+    "DOI:10.1002/lpor.202501895": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/lpor.202501895",
+      "identity_tokens": [
+        "DOI:10.1002/lpor.202501895"
+      ],
+      "reason": "Primary publisher abstract endpoint https://onlinelibrary.wiley.com/doi/abs/10.1002/lpor.202501895 returned HTTP 403 Forbidden from 2026-10-10T15:08:27Z through 2026-10-10T15:08:27Z. Confirmed DOI/title identity through metadata only; primary abstract unavailable, so retained as borderline. See evidence trace: Primary publisher abstract URL returned HTTP 403 Forbidden (UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:27Z). DOI title/authors/date confirmed via Crossref metadata at https://api.crossref.org/works/10.1002/lpor.202501895, HTTP 200, UTC 2026-10-10T15:08:27Z to 2026-10-10T15:08:28Z; Crossref was not used as abstract or relevance evidence. No full text read.",
+      "first_checked_at": "2026-10-10T18:46:37+00:00",
+      "last_checked_at": "2026-10-10T18:46:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast High‐Fidelity Fourier Ptychographic Microscopy via Wavelet Transform and Linear Attention"
+    },
+    "arXiv:2402.16445": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.16445",
+      "identity_tokens": [
+        "arXiv:2402.16445"
+      ],
+      "reason": "The abstract describes protein-domain language modeling and hierarchical efficient decoding, but that decoding method is coupled to protein generation and transfer to general LLM serving is not shown; borderline.",
+      "first_checked_at": "2026-10-10T18:46:37+00:00",
+      "last_checked_at": "2026-10-10T18:46:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ProLLaMA: A Protein Large Language Model for Multi-Task Protein Language Processing"
+    },
+    "DOI:10.3390/s23156949": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/s23156949",
+      "identity_tokens": [
+        "DOI:10.3390/s23156949"
+      ],
+      "reason": "Primary publisher abstract endpoint https://www.mdpi.com/1424-8220/23/15/6949 returned HTTP 403 Forbidden from 2026-10-10T15:08:28Z through 2026-10-10T15:08:28Z. Confirmed DOI/title identity through metadata only; primary abstract unavailable, so retained as borderline. See evidence trace: Primary publisher abstract URL returned HTTP 403 Forbidden (UTC 2026-10-10T15:08:28Z to 2026-10-10T15:08:28Z). DOI title/authors/date confirmed via Crossref metadata at https://api.crossref.org/works/10.3390/s23156949, HTTP 200, UTC 2026-10-10T15:08:28Z to 2026-10-10T15:08:29Z; Crossref was not used as abstract or relevance evidence. No full text read.",
+      "first_checked_at": "2026-10-10T18:46:38+00:00",
+      "last_checked_at": "2026-10-10T18:46:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Visual Intelligence in Precision Agriculture: Exploring Plant Disease Detection via Efficient Vision Transformers"
+    },
+    "arXiv:2010.02432": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.02432",
+      "identity_tokens": [
+        "arXiv:2010.02432"
+      ],
+      "reason": "Studies adversarial slowdowns against multi-exit image-classification DNNs and measures latency amplification; transfer to LLM inference is untested, so borderline.",
+      "first_checked_at": "2026-10-10T18:46:38+00:00",
+      "last_checked_at": "2026-10-10T18:46:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Panda? No, It's a Sloth: Slowdown Attacks on Adaptive Multi-Exit Neural Network Inference"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-002da2a6db7d0b4c-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.16445",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.16445",
+    "identity_tokens": [
+      "arXiv:2402.16445"
+    ],
+    "reason": "The abstract describes protein-domain language modeling and hierarchical efficient decoding, but that decoding method is coupled to protein generation and transfer to general LLM serving is not shown; borderline.",
+    "first_checked_at": "2026-10-10T18:46:37+00:00",
+    "last_checked_at": "2026-10-10T18:46:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ProLLaMA: A Protein Large Language Model for Multi-Task Protein Language Processing"
+  },
+  "processed_at": "2026-10-10T18:46:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-002da2a6db7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
