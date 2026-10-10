@@ -240,7 +240,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 - **2026-09 · [Bridging LLM Serving and CXL-SSDs with Chunk-Aware KV Cache Management](2026-2609.26828-lm-cxd.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  GPUの高帯域メモリだけへKVキャッシュを置くと容量が足りず、NANDフラッシュへ退避すると容量は増えるが、従来のNVMe経路ではCPUキャッシュ競合、ホストDRAMへの一時配置、ブロック入出力の固定費が初回トークン時間を悪化させる。
+  LM-CXDは、CXL接続のNAND基盤記憶装置へKVチャンクの識別子と要求進捗を共有し、装置内DRAMをGPUから直接読める一時領域として使う。計算非同期先読みと層単位先読みを使い分け、標準CXL-SSDに対する初回トークン時間を最大4.03倍改善する。
 
 - **2026-08 · [OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching](2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
