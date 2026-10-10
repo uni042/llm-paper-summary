@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-10T16:42:19+00:00",
-  "last_run_key": "library-import-191ecf28271c",
-  "last_round": "libimp-191ecf28271c34ae-pre01",
+  "updated_at": "2026-10-10T18:51:30+00:00",
+  "last_run_key": "library-import-002da2a6db7d",
+  "last_round": "libimp-002da2a6db7d0b4c-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,41 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:20260923T233115JST-scheduled-chat-30-bwd-r3",
-      "precheck_request_id": "20260923T233115JST-scheduled-chat-30-bwd-r3",
-      "run_key": "scheduled-chat-30-20260923T233115JST-8c4f2a",
-      "round": "20260923T233115JST-scheduled-chat-30-bwd-r3",
-      "axis": "repository-wide structured references for LLM inference systems",
-      "query_summary": "構造化後方引用の次バッファを再評価し、拡散LLM推論系統に直接接続するDream 7Bを候補化した。",
-      "provider": "repository_references",
-      "source_url": "repository://structured-references",
-      "citation_direction": "backward",
-      "seed_canonical_id": null,
-      "candidate_count": 20,
-      "duplicate_filtered_count": 0,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 1,
-      "accepted_canonical_ids": [
-        "arXiv:2508.15487"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "continue selector after completed citation-first pair",
-      "source_submission": "work-queue/submissions/20260923T233115JST-scheduled-chat-30-bwd-r3-retry.json",
-      "source_submissions": [
-        "work-queue/submissions/20260923T233115JST-scheduled-chat-30-bwd-r3-retry.json"
-      ],
-      "round_submission_indices": [
-        1
-      ],
-      "round_submission_count": 1,
-      "round_accounted": true,
-      "novel_candidate_count": 20,
-      "post_final_dedupe_count": 20,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:20260923T233115JST-scheduled-chat-30-fwd-r5",
       "precheck_request_id": "20260923T233115JST-scheduled-chat-30-fwd-r5",
@@ -13634,6 +13599,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-002da2a6db7d0b4c-pre01",
+      "precheck_request_id": "libimp-002da2a6db7d0b4c-pre01",
+      "run_key": "library-import-002da2a6db7d",
+      "round": "libimp-002da2a6db7d0b4c-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-002da2a6db7d0b4c-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-002da2a6db7d0b4c-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -22005,16 +22004,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-191ecf28271c",
-      "rounds": 240,
-      "candidate_count": 1038,
+      "last_run_key": "library-import-002da2a6db7d",
+      "rounds": 241,
+      "candidate_count": 1040,
       "duplicate_filtered_count": 510,
-      "novel_candidate_count": 528,
+      "novel_candidate_count": 530,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 523,
-      "accepted_count": 523,
-      "duplicate_ratio": 0.4913294797687861,
-      "final_duplicate_ratio": 0.00946969696969697,
+      "post_final_dedupe_count": 525,
+      "accepted_count": 525,
+      "duplicate_ratio": 0.49038461538461536,
+      "final_duplicate_ratio": 0.009433962264150943,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
