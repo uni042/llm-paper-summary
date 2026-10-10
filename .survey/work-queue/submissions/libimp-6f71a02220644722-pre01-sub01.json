@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CodeSSM: Towards State Space Models for Code Understanding",
+      "source_url": "https://arxiv.org/abs/2505.01475",
+      "year": 2025,
+      "published": "2025-05-02",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although transformers dominate many code-specific tasks, they have significant limitations. This paper explores State Space Models (SSMs) as a promising alternative for code understanding tasks such as retrieval, classification, and clone detection. We introduce CodeSSM, the first SSM-based model trained on code corpora to assess its effectiveness. Our results demonstrate that SSMs are more sample-efficient and can extrapolate to longer contexts beyond the pretraining length. Extensive experiments show that SSMs offer a viable alternative to transformers, addressing several their limitations. Additionally, CodeSSM reduces memory usage by up to 64\\% compared to transformers at a context length of 2048, with greater savings as context length grows.",
+      "identifiers": [
+        "SemanticScholar:04c116b1c36a247322ff9b8384ff4dba1d8ec3a8"
+      ],
+      "semantic_scholar_id": "04c116b1c36a247322ff9b8384ff4dba1d8ec3a8",
+      "canonical_id": "arXiv:2505.01475",
+      "arxiv_id": "2505.01475",
+      "doi": "10.48550/arXiv.2505.01475",
+      "authors": [
+        "S. Verma",
+        "Abhinav Anand",
+        "Mira Mezini"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 526,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "CodeSSM applies state-space models to code understanding and reports up to 64% memory savings over Transformer alternatives as context grows; this is a concrete transferable long-sequence memory-efficiency result.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Synthetic Intuition: A System-1/System-2 Architecture for Fast and Slow Thinking in Large Language Models",
+      "source_url": "https://doi.org/10.1109/CCWC67433.2026.11393760",
+      "year": 2026,
+      "published": "2026-01-05",
+      "venue": "Computing and Communication Workshop and Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current large language models (LLMs) apply uniform computational resources to every token generation, regardless of task complexity-a fundamental inefficiency that contradicts human cognitive architecture. Inspired by Kahneman's dual-process theory, we propose Synthetic Intuition, a novel architecture that integrates a fast, intuitive System1 model with a deliberate, reasoning-oriented System-2 model. System-1, a lightweight transformer ($\\mathbf{3 5 0 M}$ parameters), handles routine token generation with high confidence, while System2 (7B parameters) is selectively activated when System-1 detects uncertainty or complex reasoning requirements. Our architecture achieves a $3.2 \\times$ speedup in inference while maintaining 97.3 % of the original model's performance on diverse benchmarks. On reasoning-intensive tasks (GSM8K, ARC-Challenge), our approach matches or exceeds baseline performance with 68 % reduced computational cost. We demonstrate that cognitive load can be dynamically allocated, opening new pathways for efficient and adaptive language model deployment.",
+      "identifiers": [
+        "SemanticScholar:85f6ec8bfbcf750bffe550b7274434bc77acf076"
+      ],
+      "semantic_scholar_id": "85f6ec8bfbcf750bffe550b7274434bc77acf076",
+      "doi": "10.1109/CCWC67433.2026.11393760",
+      "canonical_id": "DOI:10.1109/CCWC67433.2026.11393760",
+      "authors": [
+        "Jasmin Jarsania",
+        "V. Patel"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Synthetic Intuition separates routine generation on a small System-1 model from selective System-2 reasoning; the official IEEE abstract reports 3.2× inference speedup and 68% lower cost.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Theory of Inference Compute Scaling: Reasoning through Directed Stochastic Skill Search",
+      "source_url": "https://arxiv.org/abs/2507.00004",
+      "year": 2025,
+      "published": "2025-06-10",
+      "venue": "Philosophical transactions. Series A, Mathematical, physical, and engineering sciences",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) require considerable computation and energy resources during training and deployment. While scaling laws for training have guided much recent progress, inference costs represent a significant and growing component of the overall resource burden, particularly for reasoning models. Existing compute-optimality characterizations that consider model size, dataset size and inference tokens in isolation or fixed combinations may overlook more efficient operating points. We introduce directed stochastic skill search (DS3), a general framework that represents inference as stochastic traversal over a learnt skill graph. From a simplified yet expressive instantiation, we derive closed-form expressions for task success and compute cost across a wide range of inference strategies-including chain-of-thought (CoT) and tree-of-thought (ToT)-enabling comparisons by task difficulty and model capability. We extend a prior graph framework of LLM training to include inference and bridge DS3 with empirical scaling laws. We theoretically recover observed patterns, including linear accuracy scaling with log-compute, variation in preferred inference strategies by task and capability, emergent behaviour elicited by reasoning despite parameter plateaus and both best-of-N and majority voting (MV) captured within one framework. By characterizing training-inference interdependencies, our framework deepens theoretical understanding and supports principled algorithmic design and resource allocation. This article is part of the discussion meeting issue 'Bits, neurons and qubits for sustainable AI'.",
+      "identifiers": [
+        "SemanticScholar:20e63fdb3f271ecc66e1220195523459238bfeeb"
+      ],
+      "semantic_scholar_id": "20e63fdb3f271ecc66e1220195523459238bfeeb",
+      "canonical_id": "arXiv:2507.00004",
+      "arxiv_id": "2507.00004",
+      "doi": "10.48550/arXiv.2507.00004",
+      "authors": [
+        "Austin R. Ellis-Mohr",
+        "A. Nayak",
+        "L. Varshney"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper formalizes inference-compute scaling for LLM reasoning as directed stochastic skill search, comparing reasoning strategies and resource costs; compute allocation at inference is central to the work.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Deep is a Luxury We Don't Have",
+      "source_url": "https://arxiv.org/abs/2208.06066",
+      "year": 2022,
+      "published": "2022-08-11",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Medical images come in high resolutions. A high resolution is vital for finding malignant tissues at an early stage. Yet, this resolution presents a challenge in terms of modeling long range dependencies. Shallow transformers eliminate this problem, but they suffer from quadratic complexity. In this paper, we tackle this complexity by leveraging a linear self-attention approximation. Through this approximation, we propose an efficient vision model called HCT that stands for High resolution Convolutional Transformer. HCT brings transformers' merits to high resolution images at a significantly lower cost. We evaluate HCT using a high resolution mammography dataset. HCT is significantly superior to its CNN counterpart. Furthermore, we demonstrate HCT's fitness for medical images by evaluating its effective receptive field.Code available at https://bit.ly/3ykBhhf",
+      "identifiers": [
+        "SemanticScholar:c754a10e57accbf8729410654cc59e874a416293"
+      ],
+      "semantic_scholar_id": "c754a10e57accbf8729410654cc59e874a416293",
+      "canonical_id": "arXiv:2208.06066",
+      "arxiv_id": "2208.06066",
+      "doi": "10.48550/arXiv.2208.06066",
+      "authors": [
+        "Ahmed Taha",
+        "Yen Nhi Truong Vu",
+        "Brent Mombourquette",
+        "Thomas P. Matthews",
+        "Jason Su",
+        "Sadanand Singh"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1521,
+        "matched_prestigious_venue": null
+      },
+      "reason": "The paper replaces quadratic self-attention with linear self-attention for high-resolution mammography; the attention-complexity reduction is a transferable inference-compute method despite its medical-imaging evaluation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mixpert: Mitigating Multimodal Learning Conflicts with Efficient Mixture-of-Vision-Experts",
+      "source_url": "https://arxiv.org/abs/2505.24541",
+      "year": 2025,
+      "published": "2025-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) require a nuanced interpretation of complex image information, typically leveraging a vision encoder to perceive various visual scenarios. However, relying solely on a single vision encoder to handle diverse task domains proves difficult and inevitably leads to conflicts. Recent work enhances data perception by directly integrating multiple domain-specific vision encoders, yet this structure adds complexity and limits the potential for joint optimization. In this paper, we introduce Mixpert, an efficient mixture-of-vision-experts architecture that inherits the joint learning advantages from a single vision encoder while being restructured into a multi-expert paradigm for task-specific fine-tuning across different visual tasks. Additionally, we design a dynamic routing mechanism that allocates input images to the most suitable visual expert. Mixpert effectively alleviates domain conflicts encountered by a single vision encoder in multi-task learning with minimal additional computational cost, making it more efficient than multiple encoders. Furthermore, Mixpert integrates seamlessly into any MLLM, with experimental results demonstrating substantial performance gains across various tasks.",
+      "identifiers": [
+        "SemanticScholar:079d7ed3d33542a307124f8ca9bd105c1a08f0c1"
+      ],
+      "semantic_scholar_id": "079d7ed3d33542a307124f8ca9bd105c1a08f0c1",
+      "canonical_id": "arXiv:2505.24541",
+      "arxiv_id": "2505.24541",
+      "doi": "10.48550/arXiv.2505.24541",
+      "authors": [
+        "Xin He",
+        "Xumeng Han",
+        "Longhui Wei",
+        "Lingxi Xie",
+        "Qi Tian"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 498,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mixpert dynamically routes multimodal inputs among vision experts to mitigate modality conflicts while avoiding the cost of multiple full encoders; this reduced-computation expert routing is transferable to efficient multimodal LLM inference.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6f71a0222064",
+    "round": "libimp-6f71a02220644722-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6f71a02220644722-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6f71a02220644722-pre01.json",
+    "receipt": "sha256:c90cca7d623c31eebf8d63a2fd0a499d4539a050d073097c3ed322fdac3b0142"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6f71a0222064",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

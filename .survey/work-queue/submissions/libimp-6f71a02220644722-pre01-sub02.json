@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scorch: A Library for Sparse Deep Learning",
+      "source_url": "https://arxiv.org/abs/2405.16883",
+      "year": 2024,
+      "published": "2024-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth in the size of deep learning models strains the capabilities of traditional dense computation paradigms. Leveraging sparse computation has become increasingly popular for training and deploying large-scale models, but existing deep learning frameworks lack extensive support for sparse operations. To bridge this gap, we introduce Scorch, a library that seamlessly integrates efficient sparse tensor computation into the PyTorch ecosystem, with an initial focus on inference workloads on CPUs. Scorch provides a flexible and intuitive interface for sparse tensors, supporting diverse sparse data structures. Scorch introduces a compiler stack that automates key optimizations, including automatic loop ordering, tiling, and format inference. Combined with a runtime that adapts its execution to both dense and sparse data, Scorch delivers substantial speedups over hand-written PyTorch Sparse (torch.sparse) operations without sacrificing usability. More importantly, Scorch enables efficient computation of complex sparse operations that lack hand-optimized PyTorch implementations. This flexibility is crucial for exploring novel sparse architectures. We demonstrate Scorch's ease of use and performance gains on diverse deep learning models across multiple domains. With only minimal code changes, Scorch achieves 1.05-5.78x speedups over PyTorch Sparse on end-to-end tasks. Scorch's seamless integration and performance gains make it a valuable addition to the PyTorch ecosystem. We believe Scorch will enable wider exploration of sparsity as a tool for scaling deep learning and inform the development of other sparse libraries.",
+      "identifiers": [
+        "SemanticScholar:0c8dfb6e969a953b01356a0a9c1902fa12b3b95d"
+      ],
+      "semantic_scholar_id": "0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
+      "canonical_id": "arXiv:2405.16883",
+      "arxiv_id": "2405.16883",
+      "doi": "10.48550/arXiv.2405.16883",
+      "authors": [
+        "Bobby Yan",
+        "Alexander J. Root",
+        "T. Gale",
+        "David Broman",
+        "Fredrik Kjolstad"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 866,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Scorch is a sparse deep-learning library with a compiler/runtime stack for sparse CPU inference; its abstract reports 1.05–5.78× speedups on supported workloads.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Entropy-Based Block Pruning for Efficient Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.03794",
+      "year": 2025,
+      "published": "2025-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models continue to scale, their growing computational and storage demands pose significant challenges for real-world deployment. In this work, we investigate redundancy within Transformer-based models and propose an entropy-based pruning strategy to enhance efficiency while maintaining performance. Empirical analysis reveals that the entropy of hidden representations decreases in the early blocks but progressively increases across most subsequent blocks. This trend suggests that entropy serves as a more effective measure of information richness within computation blocks. Unlike cosine similarity, which primarily captures geometric relationships, entropy directly quantifies uncertainty and information content, making it a more reliable criterion for pruning. Extensive experiments demonstrate that our entropy-based pruning approach surpasses cosine similarity-based methods in reducing model size while preserving accuracy, offering a promising direction for efficient model deployment.",
+      "identifiers": [
+        "SemanticScholar:95c938312e9ac4e3da6c874061b3939140703e1d"
+      ],
+      "semantic_scholar_id": "95c938312e9ac4e3da6c874061b3939140703e1d",
+      "canonical_id": "arXiv:2504.03794",
+      "arxiv_id": "2504.03794",
+      "doi": "10.48550/arXiv.2504.03794",
+      "authors": [
+        "Liang-Wei Yang",
+        "Yuhui Xu",
+        "Jun-Tao Tan",
+        "Doyen Sahoo",
+        "S. Savarese",
+        "Cai-Ming Xiong",
+        "Huan Wang",
+        "Shelby Heinecke"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 554,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Entropy-Based Block Pruning selects LLM blocks for removal using entropy signals to reduce model size while preserving quality; the abstract directly supports efficient LLM deployment.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives",
+      "source_url": "https://arxiv.org/abs/2509.00599",
+      "year": 2025,
+      "published": "2025-08-30",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern machine learning accelerators are designed to efficiently execute deep neural networks, but emerging models increasingly rely on compound operations that introduce significant off-chip memory traffic challenges. As model sizes continue to grow, computation must be distributed across spatial clusters, which requires frequent and complex collective communication. Existing dataflow optimization frameworks and performance models lack the explicit modeling of these collective communication costs, limiting their applicability. To address this, we propose COMET, a framework that introduces a novel representation to explicitly model collective communication across spatial clusters, alongside latency and energy cost models for operation-level dependencies. By enabling collective-aware modeling, COMET allows for broader mapping exploration, achieving up to a $1.42 \\times$ speedup for GEMM-Softmax and $3.46 \\times$ for GEMM-LayerNorm and $1.82 \\times$ for self-attention compared to unfused baselines.",
+      "identifiers": [
+        "SemanticScholar:56d1b9457872bef0b5450ddd05885402055a1368"
+      ],
+      "semantic_scholar_id": "56d1b9457872bef0b5450ddd05885402055a1368",
+      "canonical_id": "arXiv:2509.00599",
+      "arxiv_id": "2509.00599",
+      "doi": "10.1109/ISPASS69572.2026.00074",
+      "authors": [
+        "Shubham Negi",
+        "M. Singhal",
+        "Aayush Ankit",
+        "S. Bhoja",
+        "Kaushik Roy"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 406,
+        "matched_prestigious_venue": null
+      },
+      "reason": "COMET models dataflows and explicit collectives for compound operations in LLMs and state-space models, targeting accelerator latency and energy; its hardware/dataflow analysis directly concerns inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GDKVM: Echocardiography Video Segmentation via Spatiotemporal Key-Value Memory with Gated Delta Rule",
+      "source_url": "https://arxiv.org/abs/2512.10252",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Accurate segmentation of cardiac chambers in echocardiography sequences is crucial for the quantitative analysis of cardiac function, aiding in clinical diagnosis and treatment. The imaging noise, artifacts, and the deformation and motion of the heart pose challenges to segmentation algorithms. While existing methods based on convolutional neural networks, Transformers and space-time memory networks, have improved segmentation accuracy, they often struggle with the trade-off between capturing long-range spatiotemporal dependencies and maintaining computational efficiency with fine-grained feature representation. In this paper, we introduce GDKVM, a novel architecture for echocardiography video segmentation. The model employs Linear Key-Value Association (LKVA) to effectively model inter-frame correlations, and introduces Gated Delta Rule (GDR) to efficiently store intermediate memory states. Key-Pixel Feature Fusion (KPFF) module is designed to integrate local and global features at multiple scales, enhancing robustness against boundary blurring and noise interference. We validated GDKVM on two mainstream echocardiography video datasets (CAMUS and EchoNet-Dynamic) and compared it with various state-of-the-art methods. Experimental results show that GDKVM outperforms existing approaches in terms of segmentation accuracy and robustness, while ensuring real-time performance. Codes are available at https://github.com/wangrui2025/GDKVM.",
+      "identifiers": [
+        "SemanticScholar:6b0ef9604e589b6a9e31dc6f207ae1bd618d4da0"
+      ],
+      "semantic_scholar_id": "6b0ef9604e589b6a9e31dc6f207ae1bd618d4da0",
+      "canonical_id": "arXiv:2512.10252",
+      "arxiv_id": "2512.10252",
+      "doi": "10.1109/ICCV51701.2025.01133",
+      "authors": [
+        "Rui Wang",
+        "Yimu Sun",
+        "Jingxing Guo",
+        "Huisi Wu",
+        "Jing Qin"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 356,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GDKVM uses spatiotemporal key-value memory and gated delta-rule updates to retain video context with linear-time inference; this recurrent memory mechanism is transferable to efficient sequence-state handling, although the evaluation is echocardiography segmentation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6f71a0222064",
+    "round": "libimp-6f71a02220644722-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6f71a02220644722-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6f71a02220644722-pre01.json",
+    "receipt": "sha256:c90cca7d623c31eebf8d63a2fd0a499d4539a050d073097c3ed322fdac3b0142"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6f71a0222064",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
