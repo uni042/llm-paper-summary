@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-10T07:04:33+00:00",
-  "record_count": 11256,
+  "updated_at": "2026-10-10T07:24:14+00:00",
+  "record_count": 11259,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -160940,6 +160940,61 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Accelerating Large Language Model Training with 4D Parallelism and Memory Consumption Estimator"
+    },
+    "arXiv:2211.11176": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.11176",
+      "identity_tokens": [
+        "arXiv:2211.11176"
+      ],
+      "reason": "The primary abstract applies graph and structured state-space models to biomedical signal classification benchmarks; it does not address LLM inference or deployment efficiency.",
+      "first_checked_at": "2026-10-10T07:24:13+00:00",
+      "last_checked_at": "2026-10-10T07:24:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Modeling Multivariate Biosignals With Graph Neural Networks and Structured State Space Models"
+    },
+    "arXiv:2503.10191": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10191",
+      "identity_tokens": [
+        "arXiv:2503.10191"
+      ],
+      "reason": "The primary abstract addresses adversarial robustness of Vision Transformers; its low-cost token tuning is a robustness method, not an LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-10T07:24:14+00:00",
+      "last_checked_at": "2026-10-10T07:24:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ],
+      "title": "Robustness Tokens: Towards Adversarial Robustness of Transformers"
+    },
+    "DOI:10.48550/arxiv.2405.15953": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2405.15953",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.15953",
+        "arXiv:2405.15953"
+      ],
+      "reason": "The official arXiv record verifies the DOI alias and a revised primary title, but the abstract places the work in computer vision and its evaluation is a Vision Transformer design; no LLM inference or serving evidence is given.",
+      "first_checked_at": "2026-10-10T07:24:14+00:00",
+      "last_checked_at": "2026-10-10T07:24:14+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Activator: GLU Activations as The Core Functions of a Vision Transformer"
     }
   }
 }

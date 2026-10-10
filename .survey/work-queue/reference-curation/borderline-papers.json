@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T07:04:31+00:00",
-  "record_count": 4558,
+  "updated_at": "2026-10-10T07:24:13+00:00",
+  "record_count": 4561,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -69756,6 +69756,63 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Efficient Long-Context Fine-Tuning of LLaMA 2 7B with QLoRA, Dynamic RoPE, and FlashAttention"
+    },
+    "DOI:10.1117/12.2684707": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.2684707",
+      "identity_tokens": [
+        "DOI:10.1117/12.2684707"
+      ],
+      "reason": "The candidate title suggests an optimized parallel causal product for linear Transformers, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1117/12.2684707. Exact retrieval failure: URL https://doi.org/10.1117/12.2684707 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1117/12.2684707 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "first_checked_at": "2026-10-10T07:24:12+00:00",
+      "last_checked_at": "2026-10-10T07:24:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimized parallel causal product for linear transformer"
+    },
+    "arXiv:2502.15130": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.15130",
+      "identity_tokens": [
+        "arXiv:2502.15130"
+      ],
+      "reason": "The paper's stated efficiency contribution is faster Mamba training through weight transfer/distillation, not an established LLM inference or serving gain.",
+      "first_checked_at": "2026-10-10T07:24:13+00:00",
+      "last_checked_at": "2026-10-10T07:24:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TransMamba: Fast Universal Architecture Adaption from Transformers to Mamba"
+    },
+    "arXiv:2403.08739": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.08739",
+      "identity_tokens": [
+        "arXiv:2403.08739"
+      ],
+      "reason": "The abstract concerns LLM parameter analysis and potential training/evaluation savings, but does not establish a deployable inference-efficiency method.",
+      "first_checked_at": "2026-10-10T07:24:13+00:00",
+      "last_checked_at": "2026-10-10T07:24:13+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Garden of Forking Paths: Observing Dynamic Parameters Distribution in Large Language Models"
     }
   }
 }

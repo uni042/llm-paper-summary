@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4d71940aba7f5f1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2403.08739",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2403.08739",
+    "identity_tokens": [
+      "arXiv:2403.08739"
+    ],
+    "reason": "The abstract concerns LLM parameter analysis and potential training/evaluation savings, but does not establish a deployable inference-efficiency method.",
+    "first_checked_at": "2026-10-10T07:24:13+00:00",
+    "last_checked_at": "2026-10-10T07:24:13+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Garden of Forking Paths: Observing Dynamic Parameters Distribution in Large Language Models"
+  },
+  "processed_at": "2026-10-10T07:24:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4d71940aba7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
