@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-b71-20261010-p03",
+  "reference_main_sha": "e36bcbf34927d88533c760716e86ad49856535ba",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1709.02249",
+      "title": "Uncertainty-Aware Learning from Demonstration Using Mixture Density Networks with Sampling-Free Variance Modeling",
+      "reason": "This paper concerns learning robot demonstrations with mixture-density networks; its title states no LLM inference or serving-efficiency contribution.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T09:22:28Z",
+      "last_checked_at": "2026-10-10T09:22:28Z",
+      "source_url": "https://arxiv.org/abs/1709.02249"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.04957",
+      "title": "SafeArena: Evaluating the Safety of Autonomous Web Agents",
+      "reason": "SafeArena evaluates misuse risks of autonomous web agents; its focus is agent safety and harmful-task behavior, not runtime or inference efficiency.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T14:11:41Z",
+      "last_checked_at": "2026-10-10T14:11:44Z",
+      "identity_tokens": [
+        "arXiv:2503.04957",
+        "DOI:10.48550/arxiv.2503.04957",
+        "SemanticScholar:a4f49ce748c51ff05df6a971caf3070f631998c7"
+      ],
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "source_url": "https://arxiv.org/abs/2503.04957"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18771",
+      "title": "CheckEval: A reliable LLM-as-a-Judge framework for evaluating text generation using checklists",
+      "reason": "CheckEval decomposes LLM-as-judge criteria to improve text-generation evaluation reliability; it reports agreement quality rather than evaluation or serving cost.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T14:11:41Z",
+      "last_checked_at": "2026-10-10T14:11:44Z",
+      "identity_tokens": [
+        "arXiv:2403.18771",
+        "DOI:10.18653/v1/2025.emnlp-main.796",
+        "SemanticScholar:175060cb1e90cbd0f2036bc587ed8f76217f7deb",
+        "DOI:10.48550/arXiv.2403.18771"
+      ],
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "source_url": "https://arxiv.org/abs/2403.18771"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.11833",
+      "title": "PINNsFormer: A Transformer-Based Framework For Physics-Informed Neural Networks",
+      "reason": "This paper applies a Transformer framework to physics-informed neural networks, with no stated LLM inference, serving, or efficiency contribution.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T09:22:28Z",
+      "last_checked_at": "2026-10-10T09:22:28Z",
+      "source_url": "https://arxiv.org/abs/2307.11833"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.02806",
+      "title": "Graph Mixture of Experts: Learning on Large-Scale Graphs with Explicit Diversity Modeling",
+      "reason": "Graph Mixture of Experts targets diversity and generalization in graph neural networks; this is a graph-learning application, not LLM MoE inference.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T14:11:41Z",
+      "last_checked_at": "2026-10-10T14:11:44Z",
+      "identity_tokens": [
+        "arXiv:2304.02806",
+        "DOI:10.48550/arxiv.2304.02806",
+        "SemanticScholar:7b97979ebc76d9709ad516ee86236f64c4950356"
+      ],
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "source_url": "https://arxiv.org/abs/2304.02806"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.05359",
+      "title": "Mind's Eye: Grounded Language Model Reasoning through Simulation",
+      "reason": "Mind’s Eye augments language-model physical reasoning with simulator outputs to improve accuracy; it adds a domain-reasoning capability without claiming execution efficiency.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T14:11:41Z",
+      "last_checked_at": "2026-10-10T14:11:44Z",
+      "identity_tokens": [
+        "arXiv:2210.05359",
+        "DOI:10.48550/arxiv.2210.05359",
+        "SemanticScholar:2cb97b2bb6ab2eb17add9ffe69d5cbeaca2b29c8"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "source_url": "https://arxiv.org/abs/2210.05359"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08323",
+      "title": "AtomMem : Learnable Dynamic Agentic Memory with Atomic Memory Operation",
+      "reason": "AtomMem learns agent memory CRUD policies and improves long-context task performance, but the abstract gives no measured reduction in memory footprint, context tokens, or inference overhead.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T14:11:41Z",
+      "last_checked_at": "2026-10-10T14:11:44Z",
+      "identity_tokens": [
+        "arXiv:2601.08323",
+        "DOI:10.48550/arxiv.2601.08323",
+        "SemanticScholar:6f7c447cd5fd3bc7b02fcd795297af305b06c344"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "source_url": "https://arxiv.org/abs/2601.08323"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08808",
+      "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
+      "reason": "Multiplex Thinking reports shorter reasoning sequences through a soft token that samples K candidate tokens, but the abstract does not establish that the extra per-step sampling lowers total inference compute, latency, or resource use.",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T14:11:41Z",
+      "last_checked_at": "2026-10-10T14:11:44Z",
+      "identity_tokens": [
+        "arXiv:2601.08808",
+        "DOI:10.48550/arxiv.2601.08808",
+        "SemanticScholar:711d95689035c3d9b2a8436878590047a91d5e87"
+      ],
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "source_url": "https://arxiv.org/abs/2601.08808"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00818",
+      "title": "Med-CMR: A Fine-Grained Benchmark Integrating Visual Evidence and Clinical Logic for Medical Complex Multimodal Reasoning",
+      "reason": "This is a medical multimodal-reasoning benchmark, an application evaluation with no stated LLM inference or serving-efficiency method.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T09:22:28Z",
+      "last_checked_at": "2026-10-10T09:22:28Z",
+      "source_url": "https://arxiv.org/abs/2512.00818"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21025",
+      "title": "CaptionQA: Is Your Caption as Useful as the Image Itself?",
+      "reason": "This paper presents a caption-and-image question-answering benchmark; the title states no model inference, serving, or efficiency contribution.",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T09:22:28Z",
+      "last_checked_at": "2026-10-10T09:22:28Z",
+      "source_url": "https://arxiv.org/abs/2511.21025"
+    }
+  ]
+}
+
