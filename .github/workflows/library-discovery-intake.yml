@@ -1,0 +1,186 @@
+name: Library Discovery fast intake
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/import-inbox/pending/discovery/**'
+      - '.survey/import-inbox/waiting/discovery/**'
+      - '.github/workflows/library-discovery-intake.yml'
+  workflow_dispatch:
+    inputs:
+      drain_generation:
+        description: 'Durable bounded continuation'
+        required: false
+        default: '0'
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: library-discovery-intake-main
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: \${{ github.token }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: '.survey/scripts/requirements.txt'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+      - name: Validate Discovery scripts
+        run: |
+          python -m py_compile \
+            .survey/scripts/process_library_import_inbox.py \
+            .survey/scripts/process_reference_relevance_requests.py \
+            .survey/scripts/queue_worker.py \
+            .survey/scripts/cleanup_import_inbox.py
+      - name: Process Discovery without Research or dashboard rebuilds
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-library-discovery[bot]'
+          git config user.email 'survey-library-discovery[bot]@users.noreply.github.com'
+
+          sync_main() {
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+          }
+          publish() {
+            local message="$1"
+            shift
+            git add -A -- "$@"
+            if git diff --cached --quiet; then return 0; fi
+            git commit -m "$message"
+            for push_attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                return 1
+              fi
+              if git push origin HEAD:main; then return 0; fi
+              echo "Discovery publish race after rebase: \${push_attempt}"
+              sleep $((push_attempt * 2))
+            done
+            return 1
+          }
+          advance() {
+            local label="$1"
+            for attempt in 1 2 3 4 5 6; do
+              sync_main
+              python .survey/scripts/process_library_import_inbox.py \
+                --repo-root . --skip-research --max-discovery-records 240
+              if publish "library-discovery: \${label} intake" \
+                  .survey/import-inbox \
+                  .survey/work-queue/discovery-precheck \
+                  .survey/work-queue/reference-curation \
+                  .survey/work-queue/submissions \
+                  .survey/work-queue/results; then return 0; fi
+              echo "Discovery intake recompute \${attempt}"
+            done
+            return 1
+          }
+
+          # Keep Library uploader names and payload schema unchanged.
+          cleanup_ok=0
+          for attempt in 1 2 3 4; do
+            sync_main
+            python .survey/scripts/cleanup_import_inbox.py --repo-root . --skip-research
+            if publish 'library-discovery: recover old retries' \
+                .survey/import-inbox .survey/work-queue; then
+              cleanup_ok=1
+              break
+            fi
+          done
+          [ "$cleanup_ok" -eq 1 ] || exit 1
+          advance 'prepare'
+
+          # The GITHUB_TOKEN write does not automatically chain-trigger precheck.
+          sync_main
+          unsettled=0
+          while IFS= read -r request; do
+            [ -n "$request" ] || continue
+            if [ ! -f ".survey/work-queue/discovery-precheck/results/$(basename "$request")" ]; then
+              unsettled=1
+              break
+            fi
+          done < <(find .survey/work-queue/discovery-precheck/requests \
+            -maxdepth 1 -type f -name 'libimp-*-pre*.json' 2>/dev/null | sort)
+          if [ "$unsettled" -eq 1 ]; then
+            active="$(gh run list --repo "$GITHUB_REPOSITORY" \
+              --workflow discovery-precheck.yml --limit 20 \
+              --json status --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "pending")] | length')"
+            if [ "\${active:-0}" -eq 0 ]; then
+              gh workflow run discovery-precheck.yml --repo "$GITHUB_REPOSITORY" --ref main
+            fi
+          fi
+
+          for attempt in 1 2 3 4; do
+            sync_main
+            set +e
+            python .survey/scripts/process_reference_relevance_requests.py \
+              --repo-root . --max-requests 240
+            relevance_rc=$?
+            set -e
+            if publish 'library-discovery: settle relevance requests' \
+                .survey/work-queue/reference-curation; then break; fi
+            if [ "$attempt" -eq 4 ]; then exit 1; fi
+          done
+
+          advance 'advance'
+          for attempt in 1 2 3 4; do
+            sync_main
+            python .survey/scripts/queue_worker.py \
+              --root .survey --max-submissions 64 --library-discovery-only \
+              > /tmp/library-discovery-submissions.json
+            if publish 'library-discovery: register verified candidates' \
+                .survey/work-queue .survey/survey-state papers README.md; then break; fi
+            if [ "$attempt" -eq 4 ]; then exit 1; fi
+          done
+          advance 'settle'
+
+          sync_main
+          count_dir() {
+            if [ -d "$1" ]; then
+              find "$1" -maxdepth 1 -type f -name '*.json' | wc -l
+            else echo 0; fi
+          }
+          pending="$(count_dir .survey/import-inbox/pending/discovery)"
+          waiting="$(count_dir .survey/import-inbox/waiting/discovery)"
+          generation="\${{ github.event.inputs.drain_generation || '0' }}"
+          if ! [[ "$generation" =~ ^[0-9]+$ ]]; then generation=0; fi
+          unsettled=0
+          while IFS= read -r request; do
+            [ -n "$request" ] || continue
+            if [ ! -f ".survey/work-queue/discovery-precheck/results/$(basename "$request")" ]; then
+              unsettled=1
+              break
+            fi
+          done < <(find .survey/work-queue/discovery-precheck/requests \
+            -maxdepth 1 -type f -name 'libimp-*-pre*.json' 2>/dev/null | sort)
+          echo "Discovery backlog: pending=\${pending}, waiting=\${waiting}, generation=\${generation}"
+          if [ $((pending + waiting)) -gt 0 ] && [ "$unsettled" -eq 0 ] && [ "$generation" -lt 96 ]; then
+            next_generation=$((generation + 1))
+            gh workflow run library-discovery-intake.yml \
+              --repo "$GITHUB_REPOSITORY" --ref main -f drain_generation="$next_generation"
+          elif [ "$unsettled" -eq 1 ]; then
+            echo 'Awaiting canonical precheck; its completion resumes this lane.'
+          else
+            echo 'Discovery intake settled or paused at its bounded generation limit.'
+          fi
