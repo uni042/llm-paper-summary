@@ -420,7 +420,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 - **2024-10 · [DySpec: Faster Speculative Decoding with Dynamic Token Tree Structure](2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  ドラフト確率を対象モデルの受理確率の代理にして投機木を実行時に動的構築し、限られた検証予算を高確率枝へ集中して固定木より長い受理系列と低遅延を狙う。
+  一覧用要約：DySpecは下書きモデルの確率分布から候補の受理見込みを近似し、受理後の子候補と拒否後の兄弟候補を優先度付きキューで動的に展開する。閾値付き層単位生成で下書き呼出しを抑え、Llama2-70BのCPUオフロード条件では対象モデル呼出し回数の削減により大きな速度改善を得る。
 
 - **2024-10 · [AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability](2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
