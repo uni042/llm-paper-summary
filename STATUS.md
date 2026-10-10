@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 11:37:53 JST**
+> 自動生成: **2026-10-10 11:47:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1008** |
 | 未claim Research job | **1008** |
-| 直近24hのResearch処理完了 | **184** |
-| 最終Research処理完了 | **10-10 10:30:00 JST** |
+| 直近24hのResearch処理完了 | **183** |
+| 最終Research処理完了 | **10-10 11:34:43 JST** |
 | 最終Discovery探索完了 | **10-10 10:43:20 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-10 11:37:47 JST（6秒前）** |
+| 最終maintenance完了 | **10-10 11:37:47 JST（9分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **45** |
+| 直近6hのResearch完了 | **47** |
 | 直近6hのDiscovery run | **5** |
 | 直近6hのDiscovery本文確認・分類 | **75** |
-| 最終Research完了 | **10-10 10:30:00 JST** |
+| 最終Research完了 | **10-10 11:34:43 JST** |
 | 最終Discovery完了 | **10-10 10:43:20 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-10 10:30:00 JST** / worker — / run 20261010-1030-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_7de879dc32148191924f93b6f8e264c0--2025-2503.21135-dynamo-under16kb-reaudit-20261010-1030-scheduled-chat-30-r01.json
+- Research: **10-10 11:34:43 JST** / worker — / run 20261010-1130-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_ab10704c53788191b3f2484e9fa5359d--2024-2401.06706-multi-candidate-speculative-decoding-under16kb-reaudit-20261010-1130-scheduled-chat-30-r01.json
 - Discovery: **10-10 10:43:20 JST** / worker codex-local / run codex-backfill-r491-b26b28-4fdfbe8a-p01
   - 本文確認・分類 **20件** / accept **16件** / unrelated+borderline **4件**
   - evidence: .survey/import-inbox/results/discovery/codex-backfill-r491-b26b28-4fdfbe8a-p01--158fa97c01dbec1ca17b384dc179509c4d4d6c467f5cf7b02dfd2cb3ef10c05f--codex-backfill-r491-b26b28-4fdfbe8a-p01.json
