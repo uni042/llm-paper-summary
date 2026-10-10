@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T02:49:03.146808+00:00",
+  "generated_at": "2026-10-10T03:56:47.177226+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 139,
+  "count": 138,
   "worker_counts": {
     "scheduled-chat-00": 46,
     "scheduled-chat-30": 46,
-    "scheduled-chat-45": 47
+    "scheduled-chat-45": 46
   },
   "entries": [
     {
@@ -430,26 +430,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 271 < 500"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
-      "canonical_id": "arXiv:2509.02753",
-      "title": "LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference",
-      "file_bytes": 12698,
-      "source_sha256": "475cc454f0311c929f4cba50899bfbe63688b99a7c12d6326981eefd8cffa710",
-      "source_git_blob_sha": "f6443ab6184f0b30abf889ee7c9541314bde017e",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.880971,
-      "quality_metrics": {
-        "body_chars": 2749,
-        "method_chars": 1720,
-        "evaluation_chars": 569,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     },
     {
