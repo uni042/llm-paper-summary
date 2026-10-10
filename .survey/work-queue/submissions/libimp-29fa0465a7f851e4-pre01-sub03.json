@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FlashNorm: Fast Normalization for Transformers",
+      "source_url": "https://arxiv.org/abs/2407.09577",
+      "year": 2024,
+      "published": "2024-07-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Normalization layers are ubiquitous in large language models (LLMs) yet represent a compute bottleneck: on hardware with distinct vector and matrix execution units, the RMS calculation blocks the subsequent matrix multiplication, preventing parallel execution. We present FlashNorm, an exact reformulation of RMSNorm followed by a linear layer that (i) eliminates the normalization weights by folding them into the subsequent linear layer, and (ii) defers the scalar RMS normalization to the output of the matrix multiplication, enabling the two operations to execute in parallel. Additionally, by the scale invariance of RMS, an RMSNorm followed by a linear layer followed by another RMSNorm allows the first RMSNorm to be eliminated entirely -- a mathematically identical simplification that removes the pre-attention RMSNorm in models using QKV-normalization (e.g., Gemma~4) and in MLA-models with latent normalization (e.g., DeepSeek-V2, Mistral Small 4, and OpenMythos). The same techniques extend to LayerNorm, Dynamic Tanh (DyT), feed-forward networks with GLU variants, and RoPE-based attention. On an NVIDIA T4 GPU, FlashNorm achieves 33 - 35% lower latency on the norm-then-project operation in the compute-bound (prefill) regime at SmolLM2-135M scale, and 12 - 14% at Llama-7B scale. We verify zero-loss weight folding on three models. Beyond inference speed, FlashNorm simplifies model implementations by reducing parameter tensor count. Watch our explainer video https://youtu.be/GEuJv34_XgU?si and see https://github.com/OpenMachine-ai/transformer-tricks for code.",
+      "identifiers": [
+        "SemanticScholar:4e1e9afef123398f8c2e9f3606782d6d20339299"
+      ],
+      "semantic_scholar_id": "4e1e9afef123398f8c2e9f3606782d6d20339299",
+      "canonical_id": "arXiv:2407.09577",
+      "arxiv_id": "2407.09577",
+      "authors": [
+        "Nils Graef",
+        "Filip Makraduli",
+        "Andrew Wasielewski",
+        "M. Clapp"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 820,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FlashNorm fuses or eliminates normalization work in Transformer inference, addressing a normalization bottleneck; the official arXiv abstract reports lower LLM latency, including Llama-7B results.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-29fa0465a7f8",
+    "round": "libimp-29fa0465a7f851e4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-29fa0465a7f851e4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-29fa0465a7f851e4-pre01.json",
+    "receipt": "sha256:922b9ff513b18429cc80d3dfb7153d08d87904ad1f36696c4ab2f0e4255caf96"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-29fa0465a7f8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

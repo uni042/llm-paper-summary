@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation",
+      "source_url": "https://arxiv.org/abs/2401.11504",
+      "year": 2024,
+      "published": "2024-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 41,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long text generation, such as novel writing and discourse-level translation with extremely long contexts, presents significant challenges to current language models. Existing methods mainly focus on extending the model's context window through strategies like length extrapolation. However, these approaches demand substantial hardware resources during the training and/or inference phases. Our proposed method, Temp-Lora, introduces an alternative concept. Instead of relying on the KV cache to store all context information, we embeds this information directly into a temporary Lora module. In the process of long text generation, this module is progressively trained with text generated previously. This approach not only efficiently preserves contextual knowledge but also prevents any permanent alteration to the model's parameters given that the module is discarded post-generation. Extensive experiments on the PG19 language modeling benchmark and the GuoFeng discourse-level translation benchmark validate the effectiveness of Temp-Lora. Our results show that: 1) Temp-Lora substantially enhances generation quality for long text, as indicated by a 13.2% decrease in perplexity (PPL) on a subset of PG19, and a 29.3% decrease in PPL along with a 113.2% increase in BLEU score on a subset of GuoFeng, 2) Temp-Lora is compatible with and enhances most existing long text generation methods, and 3) Temp-Lora can greatly reduce computational costs by shortening the context window. For example, we can ensure a moderate improvement in generation quality (a decrease of 3.8% in PPL) while enabling a 51.5% memory usage reduction and a 60.0% decrease in latency for inference.",
+      "identifiers": [
+        "SemanticScholar:5215a3cfd67fdc6eb0201822dd0004bd4b830f91"
+      ],
+      "semantic_scholar_id": "5215a3cfd67fdc6eb0201822dd0004bd4b830f91",
+      "canonical_id": "arXiv:2401.11504",
+      "arxiv_id": "2401.11504",
+      "doi": "10.48550/arXiv.2401.11504",
+      "authors": [
+        "Yan Wang",
+        "D. Ma",
+        "Deng Cai"
+      ],
+      "priority": 41,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 41,
+        "citation_count": 41,
+        "total": 41,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 993,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Temp-LoRA stores long-context information in temporary low-rank adapters instead of retaining the full KV cache; the abstract reports lower memory and latency for long-text generation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Exploring the Practicality of Generative Retrieval on Dynamic Corpora",
+      "source_url": "https://arxiv.org/abs/2305.18952",
+      "year": 2023,
+      "published": "2023-05-27",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Benchmarking the performance of information retrieval (IR) is mostly conducted with a fixed set of documents (static corpora). However, in realistic scenarios, this is rarely the case and the documents to be retrieved are constantly updated and added. In this paper, we focus on Generative Retrievals (GR), which apply autoregressive language models to IR problems, and explore their adaptability and robustness in dynamic scenarios. We also conduct an extensive evaluation of computational and memory efficiency, crucial factors for real-world deployment of IR systems handling vast and ever-changing document collections. Our results on the StreamingQA benchmark demonstrate that GR is more adaptable to evolving knowledge (4–11%), robust in learning knowledge with temporal information, and efficient in terms of inference FLOPs (x2), indexing time (x6), and storage footprint (x4) compared to Dual Encoders (DE), which are commonly used in retrieval systems. Our paper highlights the potential of GR for future use in practical IR systems within dynamic environments.",
+      "identifiers": [
+        "SemanticScholar:5e52c1c4fc90870df11efd1348f54bc56407d773"
+      ],
+      "semantic_scholar_id": "5e52c1c4fc90870df11efd1348f54bc56407d773",
+      "canonical_id": "arXiv:2305.18952",
+      "arxiv_id": "2305.18952",
+      "doi": "10.18653/v1/2024.emnlp-main.755",
+      "authors": [
+        "Chaeeun Kim",
+        "Soyoung Yoon",
+        "Hyunji Lee",
+        "Joel Jang",
+        "Sohee Yang",
+        "Minjoon Seo"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1232,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Generative retrieval for dynamic corpora uses a language model to retrieve documents and reports lower inference FLOPs, faster indexing, and lower storage than dual-encoder retrieval; it directly studies inference efficiency.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SparseCoder: Advancing source code analysis with sparse attention and learned token pruning",
+      "source_url": "https://arxiv.org/abs/2310.07109",
+      "year": 2023,
+      "published": "2023-10-11",
+      "venue": "Empirical Software Engineering",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As software projects rapidly evolve, software artifacts become more complex and defects behind them get harder to identify. The emerging Transformer-based approaches, though achieving remarkable performance, struggle with long code sequences due to their self-attention mechanism, which scales quadratically with the sequence length. This paper introduces SparseCoder, an innovative approach incorporating sparse attention and learned token pruning (LTP) method (adapted from natural language processing) to address this limitation. Compared to previous state-of-the-art models (CodeBERT, RoBERTa and CodeT5), our experiments demonstrate that SparseCoder can handle significantly longer input sequences – at least twice as long, within the limits of our hardware resources and data statistics. Additionally, SparseCoder is four times faster than other methods measured in runtime, achieving a 50% reduction in floating point operations per second (FLOPs) with a negligible performance drop of less than 1% compared to Transformers using sparse attention (Sparse Atten). Plotting FLOPs of model inference against token lengths reveals that SparseCoder scales linearly, whereas other methods, including the current state-of-the-art model CodeT5, scale quadratically. Moreover, SparseCoder enhances interpretability by visualizing non-trivial tokens layer-wise.",
+      "identifiers": [
+        "SemanticScholar:c3e9318b38662c942752b922b0df47fdd9f4de48"
+      ],
+      "semantic_scholar_id": "c3e9318b38662c942752b922b0df47fdd9f4de48",
+      "canonical_id": "arXiv:2310.07109",
+      "arxiv_id": "2310.07109",
+      "doi": "10.1007/s10664-024-10558-1",
+      "authors": [
+        "Xueqi Yang",
+        "Mariusz H. Jakubowski",
+        "Li Kang",
+        "Hao-Ran Yu",
+        "Tim Menzies"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1095,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SparseCoder combines sparse attention and learned token pruning for code analysis; the abstract reports faster execution and fewer inference FLOPs, a transferable sequence-sparsity technique.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CAT: Circular-Convolutional Attention for Sub-Quadratic Transformers",
+      "source_url": "https://arxiv.org/abs/2504.06704",
+      "year": 2025,
+      "published": "2025-04-09",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have driven remarkable breakthroughs in natural language processing and computer vision, yet their standard attention mechanism still imposes O(N^2) complexity, hindering scalability to longer sequences. We introduce Circular-convolutional ATtention (CAT), a Fourier-based approach that efficiently applies circular convolutions to reduce complexity without sacrificing representational power. CAT achieves O(NlogN) computations, requires fewer learnable parameters by streamlining fully connected layers, and introduces no additional heavy operations, resulting in consistent accuracy improvements and about a 10% speedup in naive PyTorch implementations. Based on the Engineering-Isomorphic Transformers (EITs) framework, CAT's design not only offers practical efficiency and ease of implementation, but also provides insights to guide the development of future high-performance Transformer architectures. Finally, our ablation studies highlight the key conditions underlying CAT's success, shedding light on broader principles for scalable attention mechanisms.",
+      "identifiers": [
+        "SemanticScholar:b501df63ce56e1f62ed7c99ca1301a28de83bc4f"
+      ],
+      "semantic_scholar_id": "b501df63ce56e1f62ed7c99ca1301a28de83bc4f",
+      "canonical_id": "arXiv:2504.06704",
+      "arxiv_id": "2504.06704",
+      "doi": "10.48550/arXiv.2504.06704",
+      "authors": [
+        "Yoshihiro Yamada"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 549,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "CAT replaces quadratic Transformer attention with circular-convolutional attention of O(N log N) complexity and reports lower runtime; this is a transferable sequence-computation optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling In-Context Demonstrations with Structured Attention",
+      "source_url": "https://arxiv.org/abs/2307.02690",
+      "year": 2023,
+      "published": "2023-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The recent surge of large language models (LLMs) highlights their ability to perform in-context learning, i.e.,\"learning\"to perform a task from a few demonstrations in the context without any parameter updates. However, their capabilities of in-context learning are limited by the model architecture: 1) the use of demonstrations is constrained by a maximum sentence length due to positional embeddings; 2) the quadratic complexity of attention hinders users from using more demonstrations efficiently; 3) LLMs are shown to be sensitive to the order of the demonstrations. In this work, we tackle these challenges by proposing a better architectural design for in-context learning. We propose SAICL (Structured Attention for In-Context Learning), which replaces the full-attention by a structured attention mechanism designed for in-context learning, and removes unnecessary dependencies between individual demonstrations, while making the model invariant to the permutation of demonstrations. We evaluate SAICL in a meta-training framework and show that SAICL achieves comparable or better performance than full attention while obtaining up to 3.4x inference speed-up. SAICL also consistently outperforms a strong Fusion-in-Decoder (FiD) baseline which processes each demonstration independently. Finally, thanks to its linear nature, we demonstrate that SAICL can easily scale to hundreds of demonstrations with continuous performance gains with scaling.",
+      "identifiers": [
+        "SemanticScholar:e89b4ef0f0282327085078058557c04812aa4d35"
+      ],
+      "semantic_scholar_id": "e89b4ef0f0282327085078058557c04812aa4d35",
+      "canonical_id": "arXiv:2307.02690",
+      "arxiv_id": "2307.02690",
+      "doi": "10.48550/arXiv.2307.02690",
+      "authors": [
+        "Tianle Cai",
+        "Kaixuan Huang",
+        "Jason Lee",
+        "Mengdi Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Structured Attention removes dependencies between in-context demonstrations and reports up to 3.4× faster inference while scaling to hundreds of demonstrations; this is a direct attention/inference optimization.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-29fa0465a7f8",
+    "round": "libimp-29fa0465a7f851e4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-29fa0465a7f851e4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-29fa0465a7f851e4-pre01.json",
+    "receipt": "sha256:922b9ff513b18429cc80d3dfb7153d08d87904ad1f36696c4ab2f0e4255caf96"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-29fa0465a7f8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
