@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T16:51:16.155102+00:00",
+  "generated_at": "2026-10-10T17:53:44.617468+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 46,
+  "count": 42,
   "worker_counts": {
-    "scheduled-chat-00": 16,
-    "scheduled-chat-30": 15,
-    "scheduled-chat-45": 15
+    "scheduled-chat-00": 14,
+    "scheduled-chat-30": 14,
+    "scheduled-chat-45": 14
   },
   "entries": [
     {
@@ -342,7 +342,7 @@
       "file_bytes": 13316,
       "source_sha256": "8c684f64099b9d591888c61c5cb0410316b34f20a5c68d6bc0f7e4b1b896e9f5",
       "source_git_blob_sha": "dd8c6f685f25eb56fcf3a4e8fca53318ce34c9cd",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.961887,
@@ -379,26 +379,6 @@
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/15-inference-simulation-emulation/2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md",
-      "canonical_id": "arXiv:2503.16893",
-      "title": "Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation",
-      "file_bytes": 13508,
-      "source_sha256": "54cb7bdb026fc67a859027fa77375a919ae3325fe270b5e1f70ad3f86260bde7",
-      "source_git_blob_sha": "19c3cfd99d3be9a4e93cbe47c8dfcfcc6f92cbd3",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.823221,
-      "quality_metrics": {
-        "body_chars": 3799,
-        "method_chars": 1372,
-        "evaluation_chars": 528,
-        "limitation_chars": 386
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md",
@@ -441,30 +421,6 @@
         "16KB未満再監査: 評価説明量 447 < 500"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md",
-      "canonical_id": "arXiv:2501.08192",
-      "title": "PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving",
-      "file_bytes": 13538,
-      "source_sha256": "db83534e1820b83861ea2ab7539b8aa146274cdab240d0c7deee9f7d89319990",
-      "source_git_blob_sha": "0769c0bb7ba2d941c7c1500a1ea083d13619c1dc",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.781339,
-      "quality_metrics": {
-        "body_chars": 3307,
-        "method_chars": 741,
-        "evaluation_chars": 830,
-        "limitation_chars": 349
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.1% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.1% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md",
@@ -553,26 +509,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md",
-      "canonical_id": "arXiv:2604.26968",
-      "title": "Predictive Multi-Tier Memory Management for KV Cache in Large-Scale GPU Inference",
-      "file_bytes": 13942,
-      "source_sha256": "0faaddf4d21cbf5214b853f19b040ab7817fb2c92649383ce811f343c2691fe8",
-      "source_git_blob_sha": "a24b911e04924c15d67e0b41e856362300ce80b2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.987659,
-      "quality_metrics": {
-        "body_chars": 3018,
-        "method_chars": 1052,
-        "evaluation_chars": 585,
-        "limitation_chars": 222
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
       "canonical_id": "arXiv:2606.26650",
       "title": "CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs",
@@ -622,33 +558,13 @@
       ]
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
-      "canonical_id": "arXiv:2404.09526",
-      "title": "LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism",
-      "file_bytes": 14160,
-      "source_sha256": "577753ef315af9a8abe85526d3662ea3c878f4e6d04c0a166e8b0b675b4d4720",
-      "source_git_blob_sha": "b929fc6f7d3b252e1f2cdb68d0a70c3de11c3aca",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.85773,
-      "quality_metrics": {
-        "body_chars": 4479,
-        "method_chars": 1494,
-        "evaluation_chars": 1222,
-        "limitation_chars": 327
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
       "canonical_id": "arXiv:2001.04451",
       "title": "Reformer: The Efficient Transformer",
       "file_bytes": 14180,
       "source_sha256": "93847e9e0c238c9230ead74f6fe64f03d25be0a87ea80760dc22ea7207a6ae2c",
       "source_git_blob_sha": "84af61f394e8531e25b34f2d4605d1fd3b9b6869",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.708178,
