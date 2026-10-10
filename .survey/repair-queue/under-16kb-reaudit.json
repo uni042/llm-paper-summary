@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-10T12:37:05.399942+00:00",
+  "generated_at": "2026-10-10T13:57:57.939496+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 51,
+  "count": 49,
   "worker_counts": {
-    "scheduled-chat-00": 17,
+    "scheduled-chat-00": 16,
     "scheduled-chat-30": 17,
-    "scheduled-chat-45": 17
+    "scheduled-chat-45": 16
   },
   "entries": [
     {
@@ -577,26 +577,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
-      "canonical_id": "arXiv:2401.15024",
-      "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
-      "file_bytes": 13856,
-      "source_sha256": "8e21f8c219a592c37926bb4319851dd2480f7360bead8d204aa63c27b99a4a12",
-      "source_git_blob_sha": "ebc32552be37cd8d6f9ef1323c12bc0d816eebe2",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.911492,
-      "quality_metrics": {
-        "body_chars": 3476,
-        "method_chars": 1041,
-        "evaluation_chars": 529,
-        "limitation_chars": 383
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
       "canonical_id": "arXiv:2402.10631",
       "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
@@ -612,26 +592,6 @@
         "method_chars": 1113,
         "evaluation_chars": 1567,
         "limitation_chars": 425
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
-      "canonical_id": "arXiv:2406.03243",
-      "title": "Llumnix: Dynamic Scheduling for Large Language Model Serving",
-      "file_bytes": 13909,
-      "source_sha256": "c439d18756b376a63bcbf59b67c9e313dca552332dacbb86b4aa7f46ecb8342f",
-      "source_git_blob_sha": "f298151f47f602d15861a8b41ba2f0ab88a9614c",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.931134,
-      "quality_metrics": {
-        "body_chars": 3552,
-        "method_chars": 1111,
-        "evaluation_chars": 510,
-        "limitation_chars": 300
       },
       "mechanical_failures": [],
       "warnings": []
@@ -708,7 +668,7 @@
       "file_bytes": 14135,
       "source_sha256": "71e0d27ced2c324289880889a5f54280283c2f57b747bfafa61b5cd042caccd4",
       "source_git_blob_sha": "f3e41f9e299620fcde5836eeddee7be59a7c06ce",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.726862,
