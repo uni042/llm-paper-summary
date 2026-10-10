@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-backfill-b45-p03",
+  "reference_main_sha": "49b0db5f48a3423b3a8e7ef85341001ea6a83a88",
+  "record_count": 8,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.04239",
+      "identity_tokens": [
+        "arxiv:2402.04239"
+      ],
+      "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers",
+      "reason": "Clustered self-attention with surrogate tokens lowers sequence-length compute and memory complexity for efficient Transformers.",
+      "source_url": "https://arxiv.org/abs/2402.04239",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:50Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.2684707",
+      "identity_tokens": [
+        "doi:10.1117/12.2684707"
+      ],
+      "title": "Optimized parallel causal product for linear transformer",
+      "reason": "The candidate title suggests an optimized parallel causal product for linear Transformers, but no primary abstract was retrievable. Primary URL: https://doi.org/10.1117/12.2684707. Exact retrieval failure: URL https://doi.org/10.1117/12.2684707 is not accessible via this tool. source_unavailable; abstract_not_read; body_not_read. Recorded primary-source failure (verbatim): Exact browser failure: URL https://doi.org/10.1117/12.2684707 is not accessible via this tool. Candidate bibliographic fields are preserved from the packet; abstract was not read.",
+      "source_url": "https://doi.org/10.1117/12.2684707",
+      "body_check": "source_unavailable; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:24Z",
+      "last_checked_at": "2026-10-10T06:21:26Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.17980",
+      "identity_tokens": [
+        "arxiv:2410.17980"
+      ],
+      "title": "Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study",
+      "reason": "A numerically stable, FlashAttention-adapted implementation targets scalable attention runtime while retaining competitive length generalization and downstream results.",
+      "source_url": "https://arxiv.org/abs/2410.17980",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:50Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.07096-sparse-universal-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.11176",
+      "identity_tokens": [
+        "arXiv:2211.11176"
+      ],
+      "title": "Modeling Multivariate Biosignals With Graph Neural Networks and Structured State Space Models",
+      "reason": "The primary abstract applies graph and structured state-space models to biomedical signal classification benchmarks; it does not address LLM inference or deployment efficiency.",
+      "source_url": "https://arxiv.org/abs/2211.11176",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:28:31Z",
+      "last_checked_at": "2026-10-10T06:28:33Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.15130",
+      "identity_tokens": [
+        "arxiv:2502.15130"
+      ],
+      "title": "TransMamba: Fast Universal Architecture Adaption from Transformers to Mamba",
+      "reason": "The paper's stated efficiency contribution is faster Mamba training through weight transfer/distillation, not an established LLM inference or serving gain.",
+      "source_url": "https://arxiv.org/abs/2502.15130",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:50Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10191",
+      "identity_tokens": [
+        "arXiv:2503.10191"
+      ],
+      "title": "Robustness Tokens: Towards Adversarial Robustness of Transformers",
+      "reason": "The primary abstract addresses adversarial robustness of Vision Transformers; its low-cost token tuning is a robustness method, not an LLM inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2503.10191",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:28:31Z",
+      "last_checked_at": "2026-10-10T06:28:33Z",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.08739",
+      "identity_tokens": [
+        "arxiv:2403.08739"
+      ],
+      "title": "The Garden of Forking Paths: Observing Dynamic Parameters Distribution in Large Language Models",
+      "reason": "The abstract concerns LLM parameter analysis and potential training/evaluation savings, but does not establish a deployable inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2403.08739",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:21:50Z",
+      "last_checked_at": "2026-10-10T06:22:11Z",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2405.15953",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2405.15953"
+      ],
+      "title": "Activator: GLU Activations as The Core Functions of a Vision Transformer",
+      "reason": "The official arXiv record verifies the DOI alias and a revised primary title, but the abstract places the work in computer vision and its evaluation is a Vision Transformer design; no LLM inference or serving evidence is given.",
+      "source_url": "https://arxiv.org/abs/2405.15953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-10T06:28:31Z",
+      "last_checked_at": "2026-10-10T06:28:33Z",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ]
+    }
+  ]
+}
