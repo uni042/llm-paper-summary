@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-10T12:35:39+00:00",
+  "generated_at": "2026-10-10T14:49:50+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 125,
+  "count": 126,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -2445,6 +2445,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e7e75bf4ebc8--libfile_9a81e4bec2d88191a0d82cb27ef68342--2024-2405.11299-cap-principle-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e7e75bf4ebc8--libfile_9a81e4bec2d88191a0d82cb27ef68342--2024-2405.11299-cap-principle-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.json",
       "worker_run_key": "20261010-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2409.17422",
+      "title": "Discovering the Gems in Early Layers: Accelerating Long-Context LLMs with 1000x Input Token Reduction",
+      "source_url": "https://arxiv.org/abs/2409.17422",
+      "returned_at": "2026-10-10T14:48:53+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6428,
+        "body_paragraphs": 38,
+        "method_chars": 1701,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 948,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_217026d79d388191bff9d4e7318b048a--2024-2409.17422-gemfilter-under16kb-reaudit-20261010-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_217026d79d388191bff9d4e7318b048a--2024-2409.17422-gemfilter-under16kb-reaudit-20261010-2330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261010-2330-scheduled-chat-30/r01"
     }
   ]
 }
