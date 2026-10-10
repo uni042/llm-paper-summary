@@ -61,7 +61,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 6年前（2020-11〜2021-10）
 
 - **2021-09 · [Scalable and Efficient MoE Training for Multitask Multilingual Models](2021-2109.10465-scalable-efficient-moe-training.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：21  
   専門家並列とZeRO/CPUオフロード等の多次元並列を統合してMoEを3.5兆パラメータ超へ拡張し、ランダムトークン選択や専門家枝刈りで学習・推論効率も改善するDeepSpeed MoE。
 
 ### 7年前（2019-11〜2020-10）

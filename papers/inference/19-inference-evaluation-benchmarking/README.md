@@ -81,16 +81,16 @@
   Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
 - **2024-04 · [Toward Inference-optimal Mixture-of-Expert Large Language Models](2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：5  
   MoEのスケーリング則へ推論費用を組み込み、専門家数を増やした「損失最適」構成より、小さなMoEを多くのデータで学習する構成が配信費用まで含めて有利になる領域を示す。
-
-- **2024-02 · [A Comprehensive Evaluation of Quantization Strategies for Large Language Models](2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md)**  
-  実装：[✓](https://github.com/cordercorder/quant_eval) ・ リポジトリ内被引用：5  
-  量子化は重みや活性値を少ないビット数で表し、GPUメモリ容量とデータ転送量を減らす代表的なLLM圧縮手法である。結果として、4ビット量子化は多くの条件で非量子化モデルに近い下流性能を維持する。
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
+
+- **2024-02 · [A Comprehensive Evaluation of Quantization Strategies for Large Language Models](2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md)**  
+  実装：[✓](https://github.com/cordercorder/quant_eval) ・ リポジトリ内被引用：4  
+  量子化は重みや活性値を少ないビット数で表し、GPUメモリ容量とデータ転送量を減らす代表的なLLM圧縮手法である。結果として、4ビット量子化は多くの条件で非量子化モデルに近い下流性能を維持する。
 
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
   実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：2  
