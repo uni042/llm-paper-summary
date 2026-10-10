@@ -295,7 +295,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 2年前（2024-11〜2025-10）
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
-  実装：✓ ・ リポジトリ内被引用：41  
+  実装：✓ ・ リポジトリ内被引用：42  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
 - **2025-02 · [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)**  
@@ -405,7 +405,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：95  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
@@ -425,7 +425,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Fiddlerはキャッシュミスした専門家をGPUへ転送するか、活性値だけCPUへ送りCPUで計算するかを実行時に選び、MoEの重み転送待ちを減らす。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：38  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-03 · [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
