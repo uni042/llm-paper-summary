@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 16:58:44 JST**
+> 自動生成: **2026-10-10 17:09:50 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1084** |
 | 未claim Research job | **1084** |
-| 直近24hのResearch処理完了 | **159** |
-| 最終Research処理完了 | **10-10 16:30:00 JST** |
+| 直近24hのResearch処理完了 | **157** |
+| 最終Research処理完了 | **10-10 17:03:00 JST** |
 | 最終Discovery探索完了 | **10-10 16:53:31 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-10 11:37:47 JST（5時間20分前）** |
+| 最終maintenance完了 | **10-10 11:37:47 JST（5時間32分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **15** |
-| 直近6hのDiscovery run | **6** |
-| 直近6hのDiscovery本文確認・分類 | **107** |
-| 最終Research完了 | **10-10 16:30:00 JST** |
+| 直近6hのResearch完了 | **16** |
+| 直近6hのDiscovery run | **7** |
+| 直近6hのDiscovery本文確認・分類 | **127** |
+| 最終Research完了 | **10-10 17:03:00 JST** |
 | 最終Discovery完了 | **10-10 16:53:31 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-10 16:30:00 JST** / worker — / run 20261010-1630-scheduled-chat-30/r01 / 成果 **3件**
-  - evidence: .survey/import-inbox/results/research/libfile_22442ea6a4f881919004573a2c38e64e--2024-2404.19737-multi-token-prediction-under16kb-reaudit-20261010-1630-scheduled-chat-30-r01.json
+- Research: **10-10 17:03:00 JST** / worker — / run 20261010-1700-scheduled-chat-00/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/libfile_ce5a200c4650819180c0c2d5bdc71edd--2024-2403.19708-cachedattention-under16kb-reaudit-20261010-1700-scheduled-chat-00-r01.json
 - Discovery: **10-10 16:53:31 JST** / worker codex-local / run codex-backfill-b50-b51-20261010-p01
   - 本文確認・分類 **20件** / accept **12件** / unrelated+borderline **8件**
   - evidence: .survey/import-inbox/results/discovery/codex-backfill-aggregate-20261010-r2--8df0a6b2312448e84ab9b48f5a9eea09b9433850c647650fa7266aae916867f7--codex-backfill-b50-b51-20261010-p01.json
@@ -157,10 +157,10 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **2828ファイル / 13827件** |
-| Codex成果の取り込み待機中 | **0ファイル / 0件** |
-| └ 待機中のaccept | **0件** |
-| └ 待機中のunrelated | **0件** |
-| └ 待機中のborderline | **0件** |
+| Codex成果の取り込み待機中 | **1ファイル / 20件** |
+| └ 待機中のaccept | **8件** |
+| └ 待機中のunrelated | **6件** |
+| └ 待機中のborderline | **6件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
 - 最終Codex分類・受渡し証拠: **10-10 16:53:31 JST** / results / codex-backfill-b50-b51-20261010-p01
