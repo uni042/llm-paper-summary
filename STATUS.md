@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-10 15:32:44 JST**
+> 自動生成: **2026-10-10 15:38:13 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1052** |
 | 直近24hのResearch処理完了 | **163** |
 | 最終Research処理完了 | **10-10 14:30:41 JST** |
-| 最終Discovery探索完了 | **10-10 14:35:32 JST** |
+| 最終Discovery探索完了 | **10-10 15:28:52 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -52,29 +52,29 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **119965** |
-| 処理済み | **18274** |
-| 未処理Discovery候補 | **101691** |
+| 処理済み | **18286** |
+| 未処理Discovery候補 | **101679** |
 | 収録済み | **1758** |
 | Research / Audit候補へ昇格済み | **900** |
-| 無関係として除外 | **11155** |
-| 微妙として除外 | **4461** |
+| 無関係として除外 | **11159** |
+| 微妙として除外 | **4469** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **101691** |
+| 未処理候補（フィルタ前） | **101679** |
 | 機械規則による暫定隔離 | **1885** |
 | 拡張機械規則による追加隔離 | **1124** |
-| 機械規則通過後 | **98682** |
-| 系統内前方引用スコアによる選抜保留 | **93747** |
-| 暫定隔離合計 | **96756** |
-| **読解可能候補（隔離後）** | **4935** |
-| 前方引用が同一系統で2本以上の候補 | **12043** |
-| 前方引用が同一系統で3本以上の候補 | **5868** |
+| 機械規則通過後 | **98670** |
+| 系統内前方引用スコアによる選抜保留 | **93736** |
+| 暫定隔離合計 | **96745** |
+| **読解可能候補（隔離後）** | **4934** |
+| 前方引用が同一系統で2本以上の候補 | **12031** |
+| 前方引用が同一系統で3本以上の候補 | **5856** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4935件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **4934件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -89,7 +89,7 @@
 
 - 消化率: **15.2%**
 - 現在の生在庫: 後方references **50029件** / 前方引用 **53347件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **102883件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **102872件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-10 11:37:47 JST（3時間54分前）** |
+| 最終maintenance完了 | **10-10 11:37:47 JST（4時間0分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **14** |
-| 直近6hのDiscovery run | **3** |
-| 直近6hのDiscovery本文確認・分類 | **59** |
+| 直近6hのResearch完了 | **13** |
+| 直近6hのDiscovery run | **4** |
+| 直近6hのDiscovery本文確認・分類 | **79** |
 | 最終Research完了 | **10-10 14:30:41 JST** |
-| 最終Discovery完了 | **10-10 14:35:32 JST** |
+| 最終Discovery完了 | **10-10 15:28:52 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-10 14:30:41 JST** / worker — / run 20261010-1430-scheduled-chat-30/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_f3f5bde7c4448191ba5f4eaf07ed6c69--2024-2401.14361-moe-infinity-under16kb-reaudit-20261010-1430-scheduled-chat-30-r01.json
-- Discovery: **10-10 14:35:32 JST** / worker codex-backfill / run codex-backfill-r492-b35-p05
-  - 本文確認・分類 **19件** / accept **18件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r492-b35-p05--ff8cd26f0c554a60f30272659ffa2479b6b76f3f7b8e0c710f5dabfb1b0acb2b--codex-backfill-r492-b35-p05.json
+- Discovery: **10-10 15:28:52 JST** / worker codex-local / run codex-backfill-b45-p01
+  - 本文確認・分類 **20件** / accept **8件** / unrelated+borderline **12件**
+  - evidence: .survey/import-inbox/waiting/discovery/b45--48cf18c5d2f816dfbb9eaf9b87a75f03328307883f383981199b83cbc9405da9--codex-backfill-b45-p01.json
 
 ### Codex探索成果の反映状況
 
@@ -157,14 +157,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **2824ファイル / 13759件** |
-| Codex成果の取り込み待機中 | **0ファイル / 0件** |
-| └ 待機中のaccept | **0件** |
-| └ 待機中のunrelated | **0件** |
-| └ 待機中のborderline | **0件** |
+| Codex成果の取り込み待機中 | **1ファイル / 20件** |
+| └ 待機中のaccept | **8件** |
+| └ 待機中のunrelated | **4件** |
+| └ 待機中のborderline | **8件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-10 14:35:32 JST** / results / codex-backfill-r492-b35-p05
-  - evidence: .survey/import-inbox/results/discovery/codex-backfill-r492-b35-p05--ff8cd26f0c554a60f30272659ffa2479b6b76f3f7b8e0c710f5dabfb1b0acb2b--codex-backfill-r492-b35-p05.json
+- 最終Codex分類・受渡し証拠: **10-10 15:28:52 JST** / waiting / codex-backfill-b45-p01
+  - evidence: .survey/import-inbox/waiting/discovery/b45--48cf18c5d2f816dfbb9eaf9b87a75f03328307883f383981199b83cbc9405da9--codex-backfill-b45-p01.json
 
 
 ## 件数サマリー（旧immutable transport診断）
