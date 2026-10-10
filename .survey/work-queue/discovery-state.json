@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-10T13:41:30+00:00",
-  "last_run_key": "library-import-ccd23c553668",
-  "last_round": "libimp-ccd23c55366846aa-pre01",
+  "updated_at": "2026-10-10T14:06:42+00:00",
+  "last_run_key": "library-import-24ce3d56dae1",
+  "last_round": "libimp-24ce3d56dae1d771-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,27 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "20260921T0802JST-auto",
-      "round": "auto-forward-vllm-04-retry",
-      "axis": "forward-citation-vllm",
-      "query_summary": null,
-      "provider": "semantic_scholar",
-      "source_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2309.06180/citations?fields=paperId,title,abstract,year,venue,externalIds,url,publicationDate&limit=100",
-      "citation_direction": "forward",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/20260921T0808JST-auto-discovery-forward-vllm-04-retry.json"
-    },
     {
       "round_identity": "precheck:adhoc-20260923T232013JST-worker-923191-backward-01",
       "precheck_request_id": "adhoc-20260923T232013JST-worker-923191-backward-01",
@@ -13650,6 +13629,42 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-24ce3d56dae1d771-pre01",
+      "precheck_request_id": "libimp-24ce3d56dae1d771-pre01",
+      "run_key": "library-import-24ce3d56dae1",
+      "round": "libimp-24ce3d56dae1d771-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-24ce3d56dae1d771-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-24ce3d56dae1d771-pre01-sub01.json",
+        "work-queue/submissions/libimp-24ce3d56dae1d771-pre01-sub02.json"
+      ],
+      "round_submission_indices": [
+        1,
+        2
+      ],
+      "round_submission_count": 2,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -22021,16 +22036,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-ccd23c553668",
-      "rounds": 233,
-      "candidate_count": 1017,
-      "duplicate_filtered_count": 505,
-      "novel_candidate_count": 512,
+      "last_run_key": "library-import-24ce3d56dae1",
+      "rounds": 234,
+      "candidate_count": 1023,
+      "duplicate_filtered_count": 510,
+      "novel_candidate_count": 513,
       "final_duplicate_filtered_count": 5,
-      "post_final_dedupe_count": 507,
-      "accepted_count": 507,
-      "duplicate_ratio": 0.49655850540806296,
-      "final_duplicate_ratio": 0.009765625,
+      "post_final_dedupe_count": 508,
+      "accepted_count": 508,
+      "duplicate_ratio": 0.49853372434017595,
+      "final_duplicate_ratio": 0.009746588693957114,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
