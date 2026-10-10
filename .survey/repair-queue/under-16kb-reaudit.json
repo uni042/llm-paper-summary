@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-10T08:11:21.294199+00:00",
+  "generated_at": "2026-10-10T08:20:49.198065+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 123,
+  "count": 121,
   "worker_counts": {
-    "scheduled-chat-00": 41,
-    "scheduled-chat-30": 41,
+    "scheduled-chat-00": 40,
+    "scheduled-chat-30": 40,
     "scheduled-chat-45": 41
   },
   "entries": [
@@ -474,26 +474,6 @@
       "warnings": []
     },
     {
-      "path": "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md",
-      "canonical_id": "arXiv:2310.09443",
-      "title": "G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations",
-      "file_bytes": 12769,
-      "source_sha256": "e81cc9278c122b977624f857f7f254ebd81d77cb062dfd021c3f052c7e0bbca6",
-      "source_git_blob_sha": "a50f8f69ff8b3b78d55497b25b5aeef5efdeeda7",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.822569,
-      "quality_metrics": {
-        "body_chars": 2816,
-        "method_chars": 1134,
-        "evaluation_chars": 985,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/05-speculative-decoding-moe/2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md",
       "canonical_id": "arXiv:2410.18351",
       "title": "AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability",
@@ -574,26 +554,6 @@
         "body_chars": 2986,
         "method_chars": 1492,
         "evaluation_chars": 739,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
-      "canonical_id": "arXiv:2308.12066",
-      "title": "Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference",
-      "file_bytes": 12860,
-      "source_sha256": "499a7a6bd077fd03f287a35e76f827d7678a65ace32307bdd44201e17f675f64",
-      "source_git_blob_sha": "968fb12bc056130e12a94dc533eec29b73bc149b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.922882,
-      "quality_metrics": {
-        "body_chars": 3065,
-        "method_chars": 1416,
-        "evaluation_chars": 706,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
