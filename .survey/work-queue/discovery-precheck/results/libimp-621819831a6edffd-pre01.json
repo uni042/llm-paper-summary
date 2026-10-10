@@ -1,0 +1,937 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-621819831a6edffd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-621819831a6e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2110.04711",
+    "arXiv:2111.15588",
+    "arXiv:2210.15541",
+    "arXiv:2301.09262",
+    "arXiv:2305.16340",
+    "arXiv:2310.09512",
+    "arXiv:2402.15096",
+    "arXiv:2506.09342",
+    "arXiv:2506.09613",
+    "arXiv:2508.01261"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e5b757f7aa31f27898c1beda7a28afbbd5071bbf",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-10T07:06:41.121063+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2110.04711",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2111.15588",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2210.15541",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2301.09262",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.16340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.09512",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.15096",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.09342",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.09613",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.01261",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Transformers meet Stochastic Block Models: Attention with Data-Adaptive Sparsity and Cost",
+      "source_url": "https://arxiv.org/abs/2210.15541",
+      "year": 2022,
+      "published": "2022-10-27",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To overcome the quadratic cost of self-attention, recent works have proposed various sparse attention modules, most of which fall under one of two groups: 1) sparse attention under a hand-crafted patterns and 2) full attention followed by a sparse variant of softmax such as $\\alpha$-entmax. Unfortunately, the first group lacks adaptability to data while the second still requires quadratic cost in training. In this work, we propose SBM-Transformer, a model that resolves both problems by endowing each attention head with a mixed-membership Stochastic Block Model (SBM). Then, each attention head data-adaptively samples a bipartite graph, the adjacency of which is used as an attention mask for each input. During backpropagation, a straight-through estimator is used to flow gradients beyond the discrete sampling step and adjust the probabilities of sampled edges based on the predictive loss. The forward and backward cost are thus linear to the number of edges, which each attention head can also choose flexibly based on the input. By assessing the distribution of graphs, we theoretically show that SBM-Transformer is a universal approximator for arbitrary sequence-to-sequence functions in expectation. Empirical evaluations under the LRA and GLUE benchmarks demonstrate that our model outperforms previous efficient variants as well as the original Transformer with full attention. Our implementation can be found in https://github.com/sc782/SBM-Transformer .",
+      "identifiers": [
+        "SemanticScholar:50790468a774f3ecd663e79932e6da4e813048aa"
+      ],
+      "semantic_scholar_id": "50790468a774f3ecd663e79932e6da4e813048aa",
+      "canonical_id": "arXiv:2210.15541",
+      "arxiv_id": "2210.15541",
+      "doi": "10.48550/arXiv.2210.15541",
+      "authors": [
+        "Sungjun Cho",
+        "Seonwoo Min",
+        "Jinwoo Kim",
+        "Moontae Lee",
+        "Honglak Lee",
+        "Seunghoon Hong"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1444,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "SuperShaper: Task-Agnostic Super Pre-training of BERT Models with Variable Hidden Dimensions",
+      "source_url": "https://arxiv.org/abs/2110.04711",
+      "year": 2021,
+      "published": "2021-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Task-agnostic pre-training followed by task-specific fine-tuning is a default approach to train NLU models. Such models need to be deployed on devices across the cloud and the edge with varying resource and accuracy constraints. For a given task, repeating pre-training and fine-tuning across tens of devices is prohibitively expensive. We propose SuperShaper, a task agnostic pre-training approach which simultaneously pre-trains a large number of Transformer models by varying shapes, i.e., by varying the hidden dimensions across layers. This is enabled by a backbone network with linear bottleneck matrices around each Transformer layer which are sliced to generate differently shaped sub-networks. In spite of its simple design space and efficient implementation, SuperShaper discovers networks that effectively trade-off accuracy and model size: Discovered networks are more accurate than a range of hand-crafted and automatically searched networks on GLUE benchmarks. Further, we find two critical advantages of shape as a design variable for Neural Architecture Search (NAS): (a) heuristics of good shapes can be derived and networks found with these heuristics match and even improve on carefully searched networks across a range of parameter counts, and (b) the latency of networks across multiple CPUs and GPUs are insensitive to the shape and thus enable device-agnostic search. In summary, SuperShaper radically simplifies NAS for language models and discovers networks that generalize across tasks, parameter constraints, and devices.",
+      "identifiers": [
+        "SemanticScholar:17aff1f49a8a6788aae224bb7efb4bea8a1300e4"
+      ],
+      "semantic_scholar_id": "17aff1f49a8a6788aae224bb7efb4bea8a1300e4",
+      "canonical_id": "arXiv:2110.04711",
+      "arxiv_id": "2110.04711",
+      "authors": [
+        "Vinod Ganesan",
+        "Gowtham Ramesh",
+        "Pratyush Kumar"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1826,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Segmented Recurrent Transformer: An Efficient Sequence-to-Sequence Model",
+      "source_url": "https://arxiv.org/abs/2305.16340",
+      "year": 2023,
+      "published": "2023-05-24",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have shown dominant performance across a range of domains including language and vision. However, their computational cost grows quadratically with the sequence length, making their usage prohibitive for resource-constrained applications. To counter this, our approach is to divide the whole sequence into segments and apply attention to the individual segments. We propose a segmented recurrent transformer (SRformer) that combines segmented (local) attention with recurrent attention. The loss caused by reducing the attention window length is compensated by aggregating information across segments with recurrent attention. SRformer leverages Recurrent Accumulate-and-Fire (RAF) neurons' inherent memory to update the cumulative product of keys and values. The segmented attention and lightweight RAF neurons ensure the efficiency of the proposed transformer. Such an approach leads to models with sequential processing capability at a lower computation/memory cost. We apply the proposed method to T5 and BART transformers. The modified models are tested on summarization datasets including CNN-dailymail, XSUM, ArXiv, and MediaSUM. Notably, using segmented inputs of varied sizes, the proposed model achieves $6-22\\%$ higher ROUGE1 scores than a segmented transformer and outperforms other recurrent transformer approaches. Furthermore, compared to full attention, the proposed model reduces the computational complexity of cross attention by around $40\\%$.",
+      "identifiers": [
+        "SemanticScholar:b7a4a942502a7b34baa498cc34fe6c138779d7a8"
+      ],
+      "semantic_scholar_id": "b7a4a942502a7b34baa498cc34fe6c138779d7a8",
+      "canonical_id": "arXiv:2305.16340",
+      "arxiv_id": "2305.16340",
+      "doi": "10.48550/arXiv.2305.16340",
+      "authors": [
+        "Yinghan Long",
+        "Sayeed Shafayet Chowdhury",
+        "Kaushik Roy"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1235,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "MEMO : Accelerating Transformers with Memoization on Big Memory Systems",
+      "source_url": "https://arxiv.org/abs/2301.09262",
+      "year": 2023,
+      "published": "2023-01-23",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models gain popularity because of their superior inference accuracy and inference throughput. However, the transformer is computation-intensive, causing a long inference time. The existing works on transformer inference acceleration have limitations caused by either the modification of transformer architectures or the need of specialized hardware. In this paper, we identify the opportunities of using memoization to accelerate the self-attention mechanism in transformers without the above limitations. Built upon a unique observation that there is rich similarity in attention computation across inference sequences, we build a memoization database that leverages the emerging big memory system. We introduce a novel embedding technique to find semantically similar inputs to identify computation similarity. We also introduce a series of techniques such as memory mapping and selective memoization to avoid memory copy and unnecessary overhead. We enable 22% inference-latency reduction on average (up to 68%) with negligible loss in inference accuracy.",
+      "identifiers": [
+        "SemanticScholar:caf6f975ecbe1552271cb8fe7464e07c90847d76"
+      ],
+      "semantic_scholar_id": "caf6f975ecbe1552271cb8fe7464e07c90847d76",
+      "canonical_id": "arXiv:2301.09262",
+      "arxiv_id": "2301.09262",
+      "doi": "10.48550/arXiv.2301.09262",
+      "authors": [
+        "Yuan Feng",
+        "Hyeran Jeon",
+        "F. Blagojevic",
+        "Cyril Guyot",
+        "Qing Li",
+        "Dong Li"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1356,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot",
+      "source_url": "https://arxiv.org/abs/2506.09613",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space language models such as Mamba match Transformer quality while permitting linear complexity inference, yet still comprise billions of parameters that hinder deployment. Existing one-shot pruning methods are tailored to attention blocks and fail to account for the time-shared and discretized state-transition matrix at the heart of the selective state-space module (SSM). In this paper, we introduce SparseSSM, the first training-free pruning framework that extends the classic optimal brain surgeon (OBS) framework to state space architectures. Our layer-wise algorithm (i) derives an approximate second-order saliency score that aggregates Hessian-trace information across time steps, (ii) incorporates a component sensitivity analysis to guide feed-forward network (FFN) pruning, which also sheds light on where redundancy resides in mamba architecture, (iii) can be easily extended to semi-structured and structured sparsity. Empirically, we prune 50% of SSM weights without fine-tuning and observe no zero-shot accuracy loss, achieving the current state-of-the-art pruning algorithm for Mamba-based LLMs.",
+      "identifiers": [
+        "SemanticScholar:032c52fb3a21b567a11e1bb2c9f7df94c9a0c239"
+      ],
+      "semantic_scholar_id": "032c52fb3a21b567a11e1bb2c9f7df94c9a0c239",
+      "canonical_id": "arXiv:2506.09613",
+      "arxiv_id": "2506.09613",
+      "doi": "10.48550/arXiv.2506.09613",
+      "authors": [
+        "Kai-Wen Tuo",
+        "Huan Wang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multimodal Transformer with a Low-Computational-Cost Guarantee",
+      "source_url": "https://arxiv.org/abs/2402.15096",
+      "year": 2024,
+      "published": "2024-02-23",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have significantly improved performance across a range of multimodal understanding tasks, such as visual question answering [1], [2] and action recognition [3], [4], [5]. However, multimodal Transformers significantly suffer from a quadratic complexity of the multi-head attention with the input sequence length, especially as the number of modalities increases. To address this, we introduce Low-Cost Multimodal Transformer (LoCoMT), a novel multimodal attention mechanism that aims to reduce computational cost during training and inference with minimal performance loss. Specifically, by assigning different multimodal attention patterns to each attention head, LoCoMT can flexibly control multimodal signals and theoretically ensures a reduced computational cost compared to existing multimodal Transformer variants. Experimental results on two multimodal datasets, namely Audioset and MedVidCL demonstrate that LoCoMT not only reduces GFLOPs but also matches or even outperforms established models.",
+      "identifiers": [
+        "SemanticScholar:1323e1be0cafb8aeb3ec6d1789cc34b51a2b4a32"
+      ],
+      "semantic_scholar_id": "1323e1be0cafb8aeb3ec6d1789cc34b51a2b4a32",
+      "canonical_id": "arXiv:2402.15096",
+      "arxiv_id": "2402.15096",
+      "doi": "10.1109/ICASSP48485.2024.10447954",
+      "authors": [
+        "Sungjin Park",
+        "Edward Choi"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 960,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models",
+      "source_url": "https://arxiv.org/abs/2508.01261",
+      "year": 2025,
+      "published": "2025-08-02",
+      "venue": "Proceedings of the First BabyLM Workshop",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present MoE-MLA-RoPE, a novel architecture combination that combines Mixture of Experts (MoE) with Multi-head Latent Attention (MLA) and Rotary Position Embeddings (RoPE) for efficient language modeling. Our approach addresses the fundamental trade-off between model capacity and computational efficiency through three key innovations: (1) fine-grained expert routing with 64 micro-experts and top-$k$ selection, enabling flexible specialization through 3.6 * 10^7 possible expert combinations; (2) shared expert isolation that dedicates 2 always active experts for common patterns while routing to 6 of 62 specialized experts; and (3) gradient-conflict-free load balancing that maintains expert utilization without interfering with primary loss optimization. Extensive experiments on models ranging from 17M to 202M parameters demonstrate that MoE-MLA-RoPE with compression ratio r=d/2 achieves 68% KV cache memory reduction and 3.2x inference speedup while maintaining competitive perplexity (0.8% degradation). Compared to the parameters with 53.9M parameters, MoE-MLA-RoPE improves the validation loss by 6.9% over the vanilla transformers while using 42% fewer active parameters per forward pass. FLOP-matched experiments reveal even larger gains: 11.1% improvement with 3.2x inference acceleration. Automated evaluation using GPT-4 as a judge confirms quality improvements in generation, with higher scores on coherence (8.1/10), creativity (7.9/10) and grammatical correctness (8.2/10). Our results establish that architectural novelty, not parameter scaling, defines the efficiency frontier for resource-constrained language model deployment.",
+      "identifiers": [
+        "SemanticScholar:6e68aaa134bdcf37d1d141fd38f9b1ee0842d645"
+      ],
+      "semantic_scholar_id": "6e68aaa134bdcf37d1d141fd38f9b1ee0842d645",
+      "canonical_id": "arXiv:2508.01261",
+      "arxiv_id": "2508.01261",
+      "doi": "10.48550/arXiv.2508.01261",
+      "authors": [
+        "Sushant Mehta",
+        "R. Dandekar",
+        "R. Dandekar",
+        "Sreedath Panat"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 434,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Latent Multi-Head Attention for Small Language Models",
+      "source_url": "https://arxiv.org/abs/2506.09342",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present the first comprehensive study of latent multi-head attention (MLA) for small language models, revealing interesting efficiency-quality trade-offs. Training 30M-parameter GPT models on 100,000 synthetic stories, we benchmark three architectural variants: standard multi-head attention (MHA), MLA, and MLA with rotary positional embeddings (MLA+RoPE). Our key finding is that MLA+RoPE with half-rank latent dimensions (r = d/2) achieves a 45% KV-cache memory reduction while incurring only a 0.3% increase in validation loss (essentially matching MHA quality)- a Pareto improvement for memory constrained deployment. We further show that RoPE is crucial for MLA in small models: without it, MLA underperforms vanilla attention by 3-5%, but with RoPE, it surpasses vanilla by 2%. Inference benchmarks on NVIDIA A100 GPUs reveal that MLA with r=d/2 achieves a 1.4 times speedup over full-rank MLA while maintaining the memory savings. GPT-4 evaluations corroborate perplexity results, with ours achieving the highest quality scores (7.4/10) across grammar, creativity, and consistency metrics. Code and models will be released upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:cef8c13aba2b3074b7506c32bd85e8587a4e5c12"
+      ],
+      "semantic_scholar_id": "cef8c13aba2b3074b7506c32bd85e8587a4e5c12",
+      "canonical_id": "arXiv:2506.09342",
+      "arxiv_id": "2506.09342",
+      "doi": "10.48550/arXiv.2506.09342",
+      "authors": [
+        "Sushant Mehta",
+        "R. Dandekar",
+        "R. Dandekar",
+        "Sreedath Panat"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SimpleTRON: Simple Transformer with O(N) Complexity",
+      "source_url": "https://arxiv.org/abs/2111.15588",
+      "year": 2021,
+      "published": "2021-11-23",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose that the dot product pairwise matching attention layer, which is widely used in Transformer-based models, is redundant for the model performance. Attention, in its original formulation, has to be seen rather as a human-level tool to explore and/or visualize relevancy scores in sequential data. However, the way how it is constructed leads to significant computational complexity. Instead, we present SimpleTRON: Simple Transformer with O(N) Complexity, a simple and fast alternative without any approximation that, unlike other approximation models, does not have any architecture-related overhead and therefore can be seen as a purely linear Transformer-like model. This architecture, to the best of our knowledge, outperforms existing sub-quadratic attention approximation models on several tasks from the Long-Range Arena benchmark. Moreover, we show, that SimpleTRON can benefit from weight transfer from pretrained large language models, as its parameters can be fully transferable.",
+      "identifiers": [
+        "SemanticScholar:298dd7d9c83d695d580d3a5e4afc8eb87b25359a"
+      ],
+      "semantic_scholar_id": "298dd7d9c83d695d580d3a5e4afc8eb87b25359a",
+      "canonical_id": "arXiv:2111.15588",
+      "arxiv_id": "2111.15588",
+      "authors": [
+        "Uladzislau Yorsh",
+        "Alexander Kovalenko",
+        "Vojtvech Vanvcura",
+        "Daniel Vavsata",
+        "Pavel Kord'ik",
+        "T. Mikolov"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1782,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attentive Multi-Layer Perceptron for Non-autoregressive Generation",
+      "source_url": "https://arxiv.org/abs/2310.09512",
+      "year": 2023,
+      "published": "2023-10-14",
+      "venue": "ECML/PKDD",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive~(AR) generation almost dominates sequence generation for its efficacy. Recently, non-autoregressive~(NAR) generation gains increasing popularity for its efficiency and growing efficacy. However, its efficiency is still bottlenecked by quadratic complexity in sequence lengths, which is prohibitive for scaling to long sequence generation and few works have been done to mitigate this problem. In this paper, we propose a novel MLP variant, \\textbf{A}ttentive \\textbf{M}ulti-\\textbf{L}ayer \\textbf{P}erceptron~(AMLP), to produce a generation model with linear time and space complexity. Different from classic MLP with static and learnable projection matrices, AMLP leverages adaptive projections computed from inputs in an attentive mode. The sample-aware adaptive projections enable communications among tokens in a sequence, and model the measurement between the query and key space. Furthermore, we marry AMLP with popular NAR models, deriving a highly efficient NAR-AMLP architecture with linear time and space complexity. Empirical results show that such marriage architecture surpasses competitive efficient NAR models, by a significant margin on text-to-speech synthesis and machine translation. We also test AMLP's self- and cross-attention ability separately with extensive ablation experiments, and find them comparable or even superior to the other efficient models. The efficiency analysis further shows that AMLP extremely reduces the memory cost against vanilla non-autoregressive models for long sequences.",
+      "identifiers": [
+        "SemanticScholar:8ebdf9e8fd61b9255bd39dacdd0878f8c0d68c43"
+      ],
+      "semantic_scholar_id": "8ebdf9e8fd61b9255bd39dacdd0878f8c0d68c43",
+      "canonical_id": "arXiv:2310.09512",
+      "arxiv_id": "2310.09512",
+      "doi": "10.1007/978-3-031-43415-0_36",
+      "authors": [
+        "Shu-Yang Jiang",
+        "Jinchao Zhang",
+        "Jiangtao Feng",
+        "Lin Zheng",
+        "Lingpeng Kong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1092,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2210.15541",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2210.15541",
+        "id:SemanticScholar:50790468a774f3ecd663e79932e6da4e813048aa",
+        "id:arXiv:2210.15541",
+        "title:transformers meet stochastic block models attention with dataadaptive sparsity and cost",
+        "url:https://arxiv.org/abs/2210.15541"
+      ],
+      "record": {
+        "title": "Transformers meet Stochastic Block Models: Attention with Data-Adaptive Sparsity and Cost",
+        "source_url": "https://arxiv.org/abs/2210.15541",
+        "year": 2022,
+        "published": "2022-10-27",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To overcome the quadratic cost of self-attention, recent works have proposed various sparse attention modules, most of which fall under one of two groups: 1) sparse attention under a hand-crafted patterns and 2) full attention followed by a sparse variant of softmax such as $\\alpha$-entmax. Unfortunately, the first group lacks adaptability to data while the second still requires quadratic cost in training. In this work, we propose SBM-Transformer, a model that resolves both problems by endowing each attention head with a mixed-membership Stochastic Block Model (SBM). Then, each attention head data-adaptively samples a bipartite graph, the adjacency of which is used as an attention mask for each input. During backpropagation, a straight-through estimator is used to flow gradients beyond the discrete sampling step and adjust the probabilities of sampled edges based on the predictive loss. The forward and backward cost are thus linear to the number of edges, which each attention head can also choose flexibly based on the input. By assessing the distribution of graphs, we theoretically show that SBM-Transformer is a universal approximator for arbitrary sequence-to-sequence functions in expectation. Empirical evaluations under the LRA and GLUE benchmarks demonstrate that our model outperforms previous efficient variants as well as the original Transformer with full attention. Our implementation can be found in https://github.com/sc782/SBM-Transformer .",
+        "identifiers": [
+          "SemanticScholar:50790468a774f3ecd663e79932e6da4e813048aa"
+        ],
+        "semantic_scholar_id": "50790468a774f3ecd663e79932e6da4e813048aa",
+        "canonical_id": "arXiv:2210.15541",
+        "arxiv_id": "2210.15541",
+        "doi": "10.48550/arXiv.2210.15541",
+        "authors": [
+          "Sungjun Cho",
+          "Seonwoo Min",
+          "Jinwoo Kim",
+          "Moontae Lee",
+          "Honglak Lee",
+          "Seunghoon Hong"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1444,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2110.04711",
+      "identity_tokens": [
+        "id:SemanticScholar:17aff1f49a8a6788aae224bb7efb4bea8a1300e4",
+        "id:arXiv:2110.04711",
+        "title:supershaper taskagnostic super pretraining of bert models with variable hidden dimensions",
+        "url:https://arxiv.org/abs/2110.04711"
+      ],
+      "record": {
+        "title": "SuperShaper: Task-Agnostic Super Pre-training of BERT Models with Variable Hidden Dimensions",
+        "source_url": "https://arxiv.org/abs/2110.04711",
+        "year": 2021,
+        "published": "2021-10-10",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Task-agnostic pre-training followed by task-specific fine-tuning is a default approach to train NLU models. Such models need to be deployed on devices across the cloud and the edge with varying resource and accuracy constraints. For a given task, repeating pre-training and fine-tuning across tens of devices is prohibitively expensive. We propose SuperShaper, a task agnostic pre-training approach which simultaneously pre-trains a large number of Transformer models by varying shapes, i.e., by varying the hidden dimensions across layers. This is enabled by a backbone network with linear bottleneck matrices around each Transformer layer which are sliced to generate differently shaped sub-networks. In spite of its simple design space and efficient implementation, SuperShaper discovers networks that effectively trade-off accuracy and model size: Discovered networks are more accurate than a range of hand-crafted and automatically searched networks on GLUE benchmarks. Further, we find two critical advantages of shape as a design variable for Neural Architecture Search (NAS): (a) heuristics of good shapes can be derived and networks found with these heuristics match and even improve on carefully searched networks across a range of parameter counts, and (b) the latency of networks across multiple CPUs and GPUs are insensitive to the shape and thus enable device-agnostic search. In summary, SuperShaper radically simplifies NAS for language models and discovers networks that generalize across tasks, parameter constraints, and devices.",
+        "identifiers": [
+          "SemanticScholar:17aff1f49a8a6788aae224bb7efb4bea8a1300e4"
+        ],
+        "semantic_scholar_id": "17aff1f49a8a6788aae224bb7efb4bea8a1300e4",
+        "canonical_id": "arXiv:2110.04711",
+        "arxiv_id": "2110.04711",
+        "authors": [
+          "Vinod Ganesan",
+          "Gowtham Ramesh",
+          "Pratyush Kumar"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1826,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.16340",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.16340",
+        "id:SemanticScholar:b7a4a942502a7b34baa498cc34fe6c138779d7a8",
+        "id:arXiv:2305.16340",
+        "title:segmented recurrent transformer an efficient sequencetosequence model",
+        "url:https://arxiv.org/abs/2305.16340"
+      ],
+      "record": {
+        "title": "Segmented Recurrent Transformer: An Efficient Sequence-to-Sequence Model",
+        "source_url": "https://arxiv.org/abs/2305.16340",
+        "year": 2023,
+        "published": "2023-05-24",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have shown dominant performance across a range of domains including language and vision. However, their computational cost grows quadratically with the sequence length, making their usage prohibitive for resource-constrained applications. To counter this, our approach is to divide the whole sequence into segments and apply attention to the individual segments. We propose a segmented recurrent transformer (SRformer) that combines segmented (local) attention with recurrent attention. The loss caused by reducing the attention window length is compensated by aggregating information across segments with recurrent attention. SRformer leverages Recurrent Accumulate-and-Fire (RAF) neurons' inherent memory to update the cumulative product of keys and values. The segmented attention and lightweight RAF neurons ensure the efficiency of the proposed transformer. Such an approach leads to models with sequential processing capability at a lower computation/memory cost. We apply the proposed method to T5 and BART transformers. The modified models are tested on summarization datasets including CNN-dailymail, XSUM, ArXiv, and MediaSUM. Notably, using segmented inputs of varied sizes, the proposed model achieves $6-22\\%$ higher ROUGE1 scores than a segmented transformer and outperforms other recurrent transformer approaches. Furthermore, compared to full attention, the proposed model reduces the computational complexity of cross attention by around $40\\%$.",
+        "identifiers": [
+          "SemanticScholar:b7a4a942502a7b34baa498cc34fe6c138779d7a8"
+        ],
+        "semantic_scholar_id": "b7a4a942502a7b34baa498cc34fe6c138779d7a8",
+        "canonical_id": "arXiv:2305.16340",
+        "arxiv_id": "2305.16340",
+        "doi": "10.48550/arXiv.2305.16340",
+        "authors": [
+          "Yinghan Long",
+          "Sayeed Shafayet Chowdhury",
+          "Kaushik Roy"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1235,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2301.09262",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2301.09262",
+        "id:SemanticScholar:caf6f975ecbe1552271cb8fe7464e07c90847d76",
+        "id:arXiv:2301.09262",
+        "title:memo accelerating transformers with memoization on big memory systems",
+        "url:https://arxiv.org/abs/2301.09262"
+      ],
+      "record": {
+        "title": "MEMO : Accelerating Transformers with Memoization on Big Memory Systems",
+        "source_url": "https://arxiv.org/abs/2301.09262",
+        "year": 2023,
+        "published": "2023-01-23",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models gain popularity because of their superior inference accuracy and inference throughput. However, the transformer is computation-intensive, causing a long inference time. The existing works on transformer inference acceleration have limitations caused by either the modification of transformer architectures or the need of specialized hardware. In this paper, we identify the opportunities of using memoization to accelerate the self-attention mechanism in transformers without the above limitations. Built upon a unique observation that there is rich similarity in attention computation across inference sequences, we build a memoization database that leverages the emerging big memory system. We introduce a novel embedding technique to find semantically similar inputs to identify computation similarity. We also introduce a series of techniques such as memory mapping and selective memoization to avoid memory copy and unnecessary overhead. We enable 22% inference-latency reduction on average (up to 68%) with negligible loss in inference accuracy.",
+        "identifiers": [
+          "SemanticScholar:caf6f975ecbe1552271cb8fe7464e07c90847d76"
+        ],
+        "semantic_scholar_id": "caf6f975ecbe1552271cb8fe7464e07c90847d76",
+        "canonical_id": "arXiv:2301.09262",
+        "arxiv_id": "2301.09262",
+        "doi": "10.48550/arXiv.2301.09262",
+        "authors": [
+          "Yuan Feng",
+          "Hyeran Jeon",
+          "F. Blagojevic",
+          "Cyril Guyot",
+          "Qing Li",
+          "Dong Li"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1356,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.09613",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.09613",
+        "id:SemanticScholar:032c52fb3a21b567a11e1bb2c9f7df94c9a0c239",
+        "id:arXiv:2506.09613",
+        "title:sparsessm efficient selective structured state space models can be pruned in oneshot",
+        "url:https://arxiv.org/abs/2506.09613"
+      ],
+      "record": {
+        "title": "SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot",
+        "source_url": "https://arxiv.org/abs/2506.09613",
+        "year": 2025,
+        "published": "2025-06-11",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State-space language models such as Mamba match Transformer quality while permitting linear complexity inference, yet still comprise billions of parameters that hinder deployment. Existing one-shot pruning methods are tailored to attention blocks and fail to account for the time-shared and discretized state-transition matrix at the heart of the selective state-space module (SSM). In this paper, we introduce SparseSSM, the first training-free pruning framework that extends the classic optimal brain surgeon (OBS) framework to state space architectures. Our layer-wise algorithm (i) derives an approximate second-order saliency score that aggregates Hessian-trace information across time steps, (ii) incorporates a component sensitivity analysis to guide feed-forward network (FFN) pruning, which also sheds light on where redundancy resides in mamba architecture, (iii) can be easily extended to semi-structured and structured sparsity. Empirically, we prune 50% of SSM weights without fine-tuning and observe no zero-shot accuracy loss, achieving the current state-of-the-art pruning algorithm for Mamba-based LLMs.",
+        "identifiers": [
+          "SemanticScholar:032c52fb3a21b567a11e1bb2c9f7df94c9a0c239"
+        ],
+        "semantic_scholar_id": "032c52fb3a21b567a11e1bb2c9f7df94c9a0c239",
+        "canonical_id": "arXiv:2506.09613",
+        "arxiv_id": "2506.09613",
+        "doi": "10.48550/arXiv.2506.09613",
+        "authors": [
+          "Kai-Wen Tuo",
+          "Huan Wang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 486,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.15096",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp48485.2024.10447954",
+        "id:SemanticScholar:1323e1be0cafb8aeb3ec6d1789cc34b51a2b4a32",
+        "id:arXiv:2402.15096",
+        "title:multimodal transformer with a lowcomputationalcost guarantee",
+        "url:https://arxiv.org/abs/2402.15096"
+      ],
+      "record": {
+        "title": "Multimodal Transformer with a Low-Computational-Cost Guarantee",
+        "source_url": "https://arxiv.org/abs/2402.15096",
+        "year": 2024,
+        "published": "2024-02-23",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have significantly improved performance across a range of multimodal understanding tasks, such as visual question answering [1], [2] and action recognition [3], [4], [5]. However, multimodal Transformers significantly suffer from a quadratic complexity of the multi-head attention with the input sequence length, especially as the number of modalities increases. To address this, we introduce Low-Cost Multimodal Transformer (LoCoMT), a novel multimodal attention mechanism that aims to reduce computational cost during training and inference with minimal performance loss. Specifically, by assigning different multimodal attention patterns to each attention head, LoCoMT can flexibly control multimodal signals and theoretically ensures a reduced computational cost compared to existing multimodal Transformer variants. Experimental results on two multimodal datasets, namely Audioset and MedVidCL demonstrate that LoCoMT not only reduces GFLOPs but also matches or even outperforms established models.",
+        "identifiers": [
+          "SemanticScholar:1323e1be0cafb8aeb3ec6d1789cc34b51a2b4a32"
+        ],
+        "semantic_scholar_id": "1323e1be0cafb8aeb3ec6d1789cc34b51a2b4a32",
+        "canonical_id": "arXiv:2402.15096",
+        "arxiv_id": "2402.15096",
+        "doi": "10.1109/ICASSP48485.2024.10447954",
+        "authors": [
+          "Sungjin Park",
+          "Edward Choi"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 960,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.01261",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.01261",
+        "id:SemanticScholar:6e68aaa134bdcf37d1d141fd38f9b1ee0842d645",
+        "id:arXiv:2508.01261",
+        "title:unifying mixture of experts and multihead latent attention for efficient language models",
+        "url:https://arxiv.org/abs/2508.01261"
+      ],
+      "record": {
+        "title": "Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models",
+        "source_url": "https://arxiv.org/abs/2508.01261",
+        "year": 2025,
+        "published": "2025-08-02",
+        "venue": "Proceedings of the First BabyLM Workshop",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present MoE-MLA-RoPE, a novel architecture combination that combines Mixture of Experts (MoE) with Multi-head Latent Attention (MLA) and Rotary Position Embeddings (RoPE) for efficient language modeling. Our approach addresses the fundamental trade-off between model capacity and computational efficiency through three key innovations: (1) fine-grained expert routing with 64 micro-experts and top-$k$ selection, enabling flexible specialization through 3.6 * 10^7 possible expert combinations; (2) shared expert isolation that dedicates 2 always active experts for common patterns while routing to 6 of 62 specialized experts; and (3) gradient-conflict-free load balancing that maintains expert utilization without interfering with primary loss optimization. Extensive experiments on models ranging from 17M to 202M parameters demonstrate that MoE-MLA-RoPE with compression ratio r=d/2 achieves 68% KV cache memory reduction and 3.2x inference speedup while maintaining competitive perplexity (0.8% degradation). Compared to the parameters with 53.9M parameters, MoE-MLA-RoPE improves the validation loss by 6.9% over the vanilla transformers while using 42% fewer active parameters per forward pass. FLOP-matched experiments reveal even larger gains: 11.1% improvement with 3.2x inference acceleration. Automated evaluation using GPT-4 as a judge confirms quality improvements in generation, with higher scores on coherence (8.1/10), creativity (7.9/10) and grammatical correctness (8.2/10). Our results establish that architectural novelty, not parameter scaling, defines the efficiency frontier for resource-constrained language model deployment.",
+        "identifiers": [
+          "SemanticScholar:6e68aaa134bdcf37d1d141fd38f9b1ee0842d645"
+        ],
+        "semantic_scholar_id": "6e68aaa134bdcf37d1d141fd38f9b1ee0842d645",
+        "canonical_id": "arXiv:2508.01261",
+        "arxiv_id": "2508.01261",
+        "doi": "10.48550/arXiv.2508.01261",
+        "authors": [
+          "Sushant Mehta",
+          "R. Dandekar",
+          "R. Dandekar",
+          "Sreedath Panat"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 434,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.09342",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.09342",
+        "id:SemanticScholar:cef8c13aba2b3074b7506c32bd85e8587a4e5c12",
+        "id:arXiv:2506.09342",
+        "title:latent multihead attention for small language models",
+        "url:https://arxiv.org/abs/2506.09342"
+      ],
+      "record": {
+        "title": "Latent Multi-Head Attention for Small Language Models",
+        "source_url": "https://arxiv.org/abs/2506.09342",
+        "year": 2025,
+        "published": "2025-06-11",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present the first comprehensive study of latent multi-head attention (MLA) for small language models, revealing interesting efficiency-quality trade-offs. Training 30M-parameter GPT models on 100,000 synthetic stories, we benchmark three architectural variants: standard multi-head attention (MHA), MLA, and MLA with rotary positional embeddings (MLA+RoPE). Our key finding is that MLA+RoPE with half-rank latent dimensions (r = d/2) achieves a 45% KV-cache memory reduction while incurring only a 0.3% increase in validation loss (essentially matching MHA quality)- a Pareto improvement for memory constrained deployment. We further show that RoPE is crucial for MLA in small models: without it, MLA underperforms vanilla attention by 3-5%, but with RoPE, it surpasses vanilla by 2%. Inference benchmarks on NVIDIA A100 GPUs reveal that MLA with r=d/2 achieves a 1.4 times speedup over full-rank MLA while maintaining the memory savings. GPT-4 evaluations corroborate perplexity results, with ours achieving the highest quality scores (7.4/10) across grammar, creativity, and consistency metrics. Code and models will be released upon acceptance.",
+        "identifiers": [
+          "SemanticScholar:cef8c13aba2b3074b7506c32bd85e8587a4e5c12"
+        ],
+        "semantic_scholar_id": "cef8c13aba2b3074b7506c32bd85e8587a4e5c12",
+        "canonical_id": "arXiv:2506.09342",
+        "arxiv_id": "2506.09342",
+        "doi": "10.48550/arXiv.2506.09342",
+        "authors": [
+          "Sushant Mehta",
+          "R. Dandekar",
+          "R. Dandekar",
+          "Sreedath Panat"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 486,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2111.15588",
+      "identity_tokens": [
+        "id:SemanticScholar:298dd7d9c83d695d580d3a5e4afc8eb87b25359a",
+        "id:arXiv:2111.15588",
+        "title:simpletron simple transformer with on complexity",
+        "url:https://arxiv.org/abs/2111.15588"
+      ],
+      "record": {
+        "title": "SimpleTRON: Simple Transformer with O(N) Complexity",
+        "source_url": "https://arxiv.org/abs/2111.15588",
+        "year": 2021,
+        "published": "2021-11-23",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we propose that the dot product pairwise matching attention layer, which is widely used in Transformer-based models, is redundant for the model performance. Attention, in its original formulation, has to be seen rather as a human-level tool to explore and/or visualize relevancy scores in sequential data. However, the way how it is constructed leads to significant computational complexity. Instead, we present SimpleTRON: Simple Transformer with O(N) Complexity, a simple and fast alternative without any approximation that, unlike other approximation models, does not have any architecture-related overhead and therefore can be seen as a purely linear Transformer-like model. This architecture, to the best of our knowledge, outperforms existing sub-quadratic attention approximation models on several tasks from the Long-Range Arena benchmark. Moreover, we show, that SimpleTRON can benefit from weight transfer from pretrained large language models, as its parameters can be fully transferable.",
+        "identifiers": [
+          "SemanticScholar:298dd7d9c83d695d580d3a5e4afc8eb87b25359a"
+        ],
+        "semantic_scholar_id": "298dd7d9c83d695d580d3a5e4afc8eb87b25359a",
+        "canonical_id": "arXiv:2111.15588",
+        "arxiv_id": "2111.15588",
+        "authors": [
+          "Uladzislau Yorsh",
+          "Alexander Kovalenko",
+          "Vojtvech Vanvcura",
+          "Daniel Vavsata",
+          "Pavel Kord'ik",
+          "T. Mikolov"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1782,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.09512",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-43415-0_36",
+        "id:SemanticScholar:8ebdf9e8fd61b9255bd39dacdd0878f8c0d68c43",
+        "id:arXiv:2310.09512",
+        "title:attentive multilayer perceptron for nonautoregressive generation",
+        "url:https://arxiv.org/abs/2310.09512"
+      ],
+      "record": {
+        "title": "Attentive Multi-Layer Perceptron for Non-autoregressive Generation",
+        "source_url": "https://arxiv.org/abs/2310.09512",
+        "year": 2023,
+        "published": "2023-10-14",
+        "venue": "ECML/PKDD",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive~(AR) generation almost dominates sequence generation for its efficacy. Recently, non-autoregressive~(NAR) generation gains increasing popularity for its efficiency and growing efficacy. However, its efficiency is still bottlenecked by quadratic complexity in sequence lengths, which is prohibitive for scaling to long sequence generation and few works have been done to mitigate this problem. In this paper, we propose a novel MLP variant, \\textbf{A}ttentive \\textbf{M}ulti-\\textbf{L}ayer \\textbf{P}erceptron~(AMLP), to produce a generation model with linear time and space complexity. Different from classic MLP with static and learnable projection matrices, AMLP leverages adaptive projections computed from inputs in an attentive mode. The sample-aware adaptive projections enable communications among tokens in a sequence, and model the measurement between the query and key space. Furthermore, we marry AMLP with popular NAR models, deriving a highly efficient NAR-AMLP architecture with linear time and space complexity. Empirical results show that such marriage architecture surpasses competitive efficient NAR models, by a significant margin on text-to-speech synthesis and machine translation. We also test AMLP's self- and cross-attention ability separately with extensive ablation experiments, and find them comparable or even superior to the other efficient models. The efficiency analysis further shows that AMLP extremely reduces the memory cost against vanilla non-autoregressive models for long sequences.",
+        "identifiers": [
+          "SemanticScholar:8ebdf9e8fd61b9255bd39dacdd0878f8c0d68c43"
+        ],
+        "semantic_scholar_id": "8ebdf9e8fd61b9255bd39dacdd0878f8c0d68c43",
+        "canonical_id": "arXiv:2310.09512",
+        "arxiv_id": "2310.09512",
+        "doi": "10.1007/978-3-031-43415-0_36",
+        "authors": [
+          "Shu-Yang Jiang",
+          "Jinchao Zhang",
+          "Jiangtao Feng",
+          "Lin Zheng",
+          "Lingpeng Kong"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1092,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:914bea3b56ec8ae1a1b1863242ce621838c4f88a557dc2fe8bf5971446e372fa",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
