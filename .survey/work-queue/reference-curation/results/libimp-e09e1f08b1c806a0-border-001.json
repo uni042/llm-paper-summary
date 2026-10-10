@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e09e1f08b1c806a0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.09906",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.09906",
+    "identity_tokens": [
+      "arXiv:2402.09906"
+    ],
+    "reason": "主たる貢献は生成と埋込みを単一モデルで扱う指示学習GRITと、その埋込み・生成品質である。要旨には検索モデルと生成モデルを統合して長文書RAGを60%以上高速化するシステム上の結果も含まれる。推論速度の評価は関連するが、学習手法が主であり、推論ランタイムの配置・KV管理・オフロードに関する独立した手法ではないため境界扱い。",
+    "first_checked_at": "2026-10-10T18:48:04+00:00",
+    "last_checked_at": "2026-10-10T18:48:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Generative Representational Instruction Tuning"
+  },
+  "processed_at": "2026-10-10T18:48:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e09e1f08b1c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

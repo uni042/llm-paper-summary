@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d934c6b04417e793-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2004.11886",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2004.11886",
+    "identity_tokens": [
+      "arXiv:2004.11886"
+    ],
+    "reason": "一次要旨は、局所畳込みヘッドと長距離自己注意ヘッドを分担させるLSRAを使った軽量Transformerを提案し、機械翻訳・要約・言語モデルで演算回数とBLEU・パープレキシティを比較する。モデルの推論計算量削減という直接の関連性はあるが、評価対象は2020年のモバイルNLPモデルであり、大規模自己回帰LLMのKVキャッシュ、サービング、オフロード、生成トークン性能を検証していないため現行サーベイでは境界扱い。",
+    "first_checked_at": "2026-10-10T18:48:04+00:00",
+    "last_checked_at": "2026-10-10T18:48:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Lite Transformer with Long-Short Range Attention"
+  },
+  "processed_at": "2026-10-10T18:48:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d934c6b04417",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

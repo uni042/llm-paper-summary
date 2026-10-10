@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-10T18:46:38+00:00",
-  "record_count": 4595,
+  "updated_at": "2026-10-10T18:48:04+00:00",
+  "record_count": 4599,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70307,6 +70307,58 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A Panda? No, It's a Sloth: Slowdown Attacks on Adaptive Multi-Exit Neural Network Inference"
+    },
+    "arXiv:2205.08084": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "arXiv:2205.08084"
+      ],
+      "reason": "主題は多用途の産業推薦モデルであり、推薦精度と複数タスクの統合を中心に評価する。一方で要旨には推論時間・モデルサイズを削減する早期終了、重み共有、枝刈り、遅延相互作用を明記し、モバイル配備にも言及する。LLMサービング・GPUメモリ管理を直接研究した論文ではないが、推論効率の構成要素を含むため無関係とは断定せず境界扱い。",
+      "first_checked_at": "2026-10-10T18:48:01+00:00",
+      "last_checked_at": "2026-10-10T18:48:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+    },
+    "arXiv:2312.06742": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.06742",
+      "identity_tokens": [
+        "arXiv:2312.06742"
+      ],
+      "reason": "視覚エンコーダから言語モデルへ渡す視覚トークン数を柔軟に制御し、局所情報を保つ投影器を提案する。トークン削減とマルチモーダルLLM効率に直接関係するが、中心的な評価は視覚理解ベンチマークの精度と投影器構成であり、推論サービング基盤やGPUメモリ・転送の独立したシステム改善を直接示したものか要旨のみでは確定しないため境界扱い。",
+      "first_checked_at": "2026-10-10T18:48:02+00:00",
+      "last_checked_at": "2026-10-10T18:48:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Honeybee: Locality-enhanced Projector for Multimodal LLM"
+    },
+    "arXiv:2004.11886": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2004.11886",
+      "identity_tokens": [
+        "arXiv:2004.11886"
+      ],
+      "reason": "一次要旨は、局所畳込みヘッドと長距離自己注意ヘッドを分担させるLSRAを使った軽量Transformerを提案し、機械翻訳・要約・言語モデルで演算回数とBLEU・パープレキシティを比較する。モデルの推論計算量削減という直接の関連性はあるが、評価対象は2020年のモバイルNLPモデルであり、大規模自己回帰LLMのKVキャッシュ、サービング、オフロード、生成トークン性能を検証していないため現行サーベイでは境界扱い。",
+      "first_checked_at": "2026-10-10T18:48:04+00:00",
+      "last_checked_at": "2026-10-10T18:48:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Lite Transformer with Long-Short Range Attention"
+    },
+    "arXiv:2402.09906": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.09906",
+      "identity_tokens": [
+        "arXiv:2402.09906"
+      ],
+      "reason": "主たる貢献は生成と埋込みを単一モデルで扱う指示学習GRITと、その埋込み・生成品質である。要旨には検索モデルと生成モデルを統合して長文書RAGを60%以上高速化するシステム上の結果も含まれる。推論速度の評価は関連するが、学習手法が主であり、推論ランタイムの配置・KV管理・オフロードに関する独立した手法ではないため境界扱い。",
+      "first_checked_at": "2026-10-10T18:48:04+00:00",
+      "last_checked_at": "2026-10-10T18:48:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Generative Representational Instruction Tuning"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0961164a8897ca23-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2205.08084",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2205.08084",
+    "identity_tokens": [
+      "arXiv:2205.08084"
+    ],
+    "reason": "主題は多用途の産業推薦モデルであり、推薦精度と複数タスクの統合を中心に評価する。一方で要旨には推論時間・モデルサイズを削減する早期終了、重み共有、枝刈り、遅延相互作用を明記し、モバイル配備にも言及する。LLMサービング・GPUメモリ管理を直接研究した論文ではないが、推論効率の構成要素を含むため無関係とは断定せず境界扱い。",
+    "first_checked_at": "2026-10-10T18:48:01+00:00",
+    "last_checked_at": "2026-10-10T18:48:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+  },
+  "processed_at": "2026-10-10T18:48:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0961164a8897",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
