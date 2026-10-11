@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction",
+      "source_url": "https://arxiv.org/abs/2605.05532",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper evaluates whether a domain trained Small Language Model (SLM) can outperform frontier Large Language Models on structured contract extraction at radically lower cost. We test Olava Extract, a self hosted legal domain Mixture of Experts model, against five frontier models. Olava Extract achieved the strongest aggregate performance in the study, with a macro F1 of 0.812 and a micro F1 of 0.842, while reducing inference cost by 78% to 97% compared with the frontier models tested. It also achieved the highest precision scores, producing fewer hallucinated and unsupported extractions, an important distinction in legal workflows where hallucinations create operational risk and downstream review burden. The findings shows that high performing, human comparable legal AI no longer requires the largest externally hosted models. More broadly, they challenge the assumption that commercially valuable enterprise AI capability must remain tied to ever larger models, massive infrastructure expenditure, and centrally hosted providers.",
+      "identifiers": [
+        "SemanticScholar:caa75f25c95bc5429674fbfdbaf653b37f8f72ae"
+      ],
+      "semantic_scholar_id": "caa75f25c95bc5429674fbfdbaf653b37f8f72ae",
+      "canonical_id": "arXiv:2605.05532",
+      "arxiv_id": "2605.05532",
+      "doi": "10.48550/arXiv.2605.05532",
+      "authors": [
+        "Nicole Lincoln",
+        "Nick Whitehouse",
+        "Jaron Mar",
+        "Rivindu Perera"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Olava Extractのdomain-trained SLMはfrontier LLMよりstructured contract extractionで比較され、abstractは78%–97%の推論cost減と同等以上のqualityを報告する。低cost LLM deploymentに直接関係。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bada7b8565ef",
+    "round": "libimp-bada7b8565efe629-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bada7b8565efe629-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bada7b8565efe629-pre01.json",
+    "receipt": "sha256:d3ebde7938708f1471485a2bf44545a49927dc2cd0f2e07e4be331f468641895"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bada7b8565ef",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
