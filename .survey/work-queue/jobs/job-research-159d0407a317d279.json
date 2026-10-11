@@ -35,10 +35,15 @@
   "selection_reason": "attention演算を8-bit量子化して長系列Transformer推論を高速化する専用kernel/quantization方式。FlashAttention2比約2.1x、xformers比約2.7x OPSで、LLMを含むend-to-end metric損失ほぼなしのため直接対象。",
   "semantic_scholar_id": "373d7bc9a5ad68f915ccf9c763ecdd308f204633",
   "source_url": "https://arxiv.org/abs/2410.02367",
-  "status": "ready",
+  "status": "superseded",
   "title": "SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T09:53:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md",
+  "represented_canonical_id": "arXiv:2410.02367",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
