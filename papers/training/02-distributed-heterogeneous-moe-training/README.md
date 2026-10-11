@@ -30,13 +30,13 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 
 ### 2年前（2024-11〜2025-10）
 
+- **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：3  
+  一方、大規模な分散学習では、専門家の重みを保持するためのGPUメモリ、トークンを担当専門家へ運ぶ全対全通信、注意機構のテンソル・文脈並列化が競合する。
+
 - **2025-04 · [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   SYMIは、混合専門家（Mixture-of-Experts; MoE）モデルの学習中に、特定の専門家へトークンが集中しても、毎反復の専門家複製数を変更して負荷を吸収できる分散学習システムである。著者らはDeepSpeedを基盤に実装し、A100 80GBを16枚備えるAzureクラスタで評価した。
-
-- **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：2  
-  一方、大規模な分散学習では、専門家の重みを保持するためのGPUメモリ、トークンを担当専門家へ運ぶ全対全通信、注意機構のテンソル・文脈並列化が競合する。
 
 - **2025-04 · [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -67,6 +67,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 7年前（2019-11〜2020-10）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：200  
+  実装：✓ ・ リポジトリ内被引用：201  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->

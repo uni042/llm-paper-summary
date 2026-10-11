@@ -479,6 +479,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [ZeRO-Offload: Democratizing Billion-Scale Model Training](2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：6  
   ZeRO-Offloadは、巨大モデルの学習時に必要な状態をCPUとGPUへ分担させ、GPUメモリの制約を緩和しながら、低速なホスト–デバイス転送を抑える方式である。著者らはNVIDIA V100 32GB単体で130億パラメータのGPT型モデルを学習可能にし、標準PyTorchの14億に比べ9倍超の規模へ拡大した。
 <!-- survey:auto:end -->
