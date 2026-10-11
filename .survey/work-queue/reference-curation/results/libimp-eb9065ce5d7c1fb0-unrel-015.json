@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb9065ce5d7c1fb0-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.28277",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.28277",
+    "identity_tokens": [
+      "arXiv:2605.28277"
+    ],
+    "reason": "LLM多言語空間推論能力の診断benchmarkで、runtimeやefficiencyの研究ではない。",
+    "first_checked_at": "2026-10-11T05:37:05+00:00",
+    "last_checked_at": "2026-10-11T05:37:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Do LLMs Build World Models From Text? A Multilingual Diagnostic of Spatial Reasoning"
+  },
+  "processed_at": "2026-10-11T05:37:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb9065ce5d7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb9065ce5d7c1fb0-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.30256",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.30256",
+    "identity_tokens": [
+      "arXiv:2605.30256"
+    ],
+    "reason": "全二重AV会話agentの品質benchmarkで、推論システム効率は評価しない。",
+    "first_checked_at": "2026-10-11T05:37:05+00:00",
+    "last_checked_at": "2026-10-11T05:37:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+    ],
+    "title": "VideoFDB: Evaluating Full-Duplex Vision-Speech Capabilities in Conversational Agents"
+  },
+  "processed_at": "2026-10-11T05:37:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb9065ce5d7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
