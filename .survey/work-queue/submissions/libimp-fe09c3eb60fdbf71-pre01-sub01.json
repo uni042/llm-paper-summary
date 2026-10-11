@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scaling up GANs for Text-to-Image Synthesis",
+      "source_url": "https://arxiv.org/abs/2303.05511",
+      "year": 2023,
+      "published": "2023-03-09",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 710,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The recent success of text-to-image synthesis has taken the world by storm and captured the general public's imagination. From a technical standpoint, it also marked a drastic change in the favored architecture to design generative image models. GANs used to be the de facto choice, with techniques like StyleGAN. With DALL.E 2, autoregressive and diffusion models became the new standard for large-scale generative models overnight. This rapid shift raises a fundamental question: can we scale up GANs to benefit from large datasets like LAION? We find that naïvely increasing the capacity of the StyleGan architecture quickly becomes unstable. We introduce GigaGAN, a new GAN architecture that far exceeds this limit, demonstrating GANs as a viable option for text-to-image synthesis. GigaGAN offers three major advantages. First, it is orders of magnitude faster at inference time, taking only 0.13 seconds to synthesize a 512px image. Second, it can synthesize high-resolution images, for example, 16-megapixel images in 3.66 seconds. Finally, GigaGAN supports various latent space editing applications such as latent interpolation, style mixing, and vector arithmetic operations.",
+      "identifiers": [
+        "SemanticScholar:0930fe943d7d9b5bb943613d87c4ca92850dd43a"
+      ],
+      "semantic_scholar_id": "0930fe943d7d9b5bb943613d87c4ca92850dd43a",
+      "canonical_id": "arXiv:2303.05511",
+      "arxiv_id": "2303.05511",
+      "doi": "10.1109/CVPR52729.2023.00976",
+      "authors": [
+        "Minguk Kang",
+        "Jun-Yan Zhu",
+        "Richard Zhang",
+        "Jaesik Park",
+        "Eli Shechtman",
+        "Sylvain Paris",
+        "Taesung Park"
+      ],
+      "priority": 710,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 710,
+        "citation_count": 710,
+        "total": 710,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1312,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GigaGAN reports 512px generation in 0.13 seconds and orders-of-magnitude faster inference, a concrete generative-model runtime improvement.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MetaFormer Baselines for Vision",
+      "source_url": "https://arxiv.org/abs/2210.13452",
+      "year": 2022,
+      "published": "2022-10-24",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "citation_count": 385,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "MetaFormer, the abstracted architecture of Transformer, has been found to play a significant role in achieving competitive performance. In this paper, we further explore the capacity of MetaFormer, again, by migrating our focus away from the token mixer design: we introduce several baseline models under MetaFormer using the most basic or common mixers, and demonstrate their gratifying performance. We summarize our observations as follows: <list list-type=\"ordered\"> <list-item><label>1)</label><p><italic>MetaFormer ensures solid lower bound of performance:</italic> By merely adopting identity mapping as the token mixer, the MetaFormer model, termed <italic>IdentityFormer</italic>, achieves <inline-formula><tex-math notation=\"LaTeX\">$> $</tex-math><alternatives><mml:math><mml:mo>></mml:mo></mml:math><inline-graphic xlink:href=\"wang-ieq1-3329173.gif\"/></alternatives></inline-formula>80% accuracy on ImageNet-1 K.</p></list-item> <list-item><label>2)</label><p><italic>MetaFormer works well with arbitrary token mixers:</italic> When specifying the token mixer as even a random matrix to mix tokens, the resulting model <italic>RandFormer</italic> yields an accuracy of <inline-formula><tex-math notation=\"LaTeX\">$> $</tex-math><alternatives><mml:math><mml:mo>></mml:mo></mml:math><inline-graphic xlink:href=\"wang-ieq2-3329173.gif\"/></alternatives></inline-formula>81%, outperforming IdentityFormer. Rest assured of MetaFormer's results when new token mixers are adopted.</p></list-item> <list-item><label>3)</label><p><italic>MetaFormer effortlessly offers state-of-the-art results:</italic> With just conventional token mixers dated back five years ago, the models instantiated from MetaFormer already beat state of the art.</p></list-item> </list> <list list-type=\"ordered\"> <list-item><label>a)</label><p><italic>ConvFormer outperforms ConvNeXt:</italic> Taking the common depthwise separable convolutions as the token mixer, the model termed <italic>ConvFormer</italic>, which can be regarded as pure CNNs, outperforms the strong CNN model ConvNeXt.</p></list-item> <list-item><label>b)</label><p><italic>CAFormer sets new record on ImageNet-1 K:</italic> By simply applying depthwise separable convolutions as token mixer in the bottom stages and vanilla self-attention in the top stages, the resulting model <italic>CAFormer</italic> sets a new record on ImageNet-1 K: it achieves an accuracy of 85.5% at <inline-formula><tex-math notation=\"LaTeX\">$224 \\times 224$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>224</mml:mn><mml:mo>×</mml:mo><mml:mn>224</mml:mn></mml:mrow></mml:math><inline-graphic xlink:href=\"wang-ieq3-3329173.gif\"/></alternatives></inline-formula> resolution, under normal supervised training without external data or distillation.</p></list-item> </list> In our expedition to probe MetaFormer, we also find that a new activation, <italic>StarReLU</italic>, reduces 71% FLOPs of activation compared with commonly-used GELU yet achieves better performance. Specifically, StarReLU is a variant of Squared ReLU dedicated to alleviating distribution shift. We expect StarReLU to find great potential in MetaFormer-like models alongside other neural networks.",
+      "identifiers": [
+        "SemanticScholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
+      ],
+      "semantic_scholar_id": "fc4cbc7a75f5a3bbca59db5513231555f078fe78",
+      "canonical_id": "arXiv:2210.13452",
+      "arxiv_id": "2210.13452",
+      "doi": "10.1109/TPAMI.2023.3329173",
+      "authors": [
+        "Weihao Yu",
+        "Chen-Yang Si",
+        "Pan Zhou",
+        "Romy Mi Luo",
+        "Yichen Zhou",
+        "Jiashi Feng",
+        "Shui-Cheng Yan",
+        "Xinchao Wang"
+      ],
+      "priority": 385,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 385,
+        "citation_count": 385,
+        "total": 385,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1448,
+        "matched_prestigious_venue": null
+      },
+      "reason": "StarReLU reduces activation FLOPs by 71% and is proposed for other neural networks, directly addressing model compute.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds",
+      "source_url": "https://arxiv.org/abs/2203.10314",
+      "year": 2022,
+      "published": "2022-03-19",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 240,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has demonstrated promising performance in many 2D vision tasks. However, it is cumbersome to compute the self-attention on large-scale point cloud data because point cloud is a long sequence and unevenly distributed in 3D space. To solve this issue, existing methods usually compute self-attention locally by grouping the points into clusters of the same size, or perform convolutional self-attention on a discretized representation. However, the former results in stochastic point dropout, while the latter typically has narrow attention fields. In this paper, we propose a novel voxel-based architecture, namely Voxel Set Transformer (VoxSeT), to detect 3D objects from point clouds by means of set-to-set translation. VoxSeT is built upon a voxel-based set attention (VSA) module, which reduces the self-attention in each voxel by two cross-attentions and models features in a hidden space induced by a group of latent codes. With the VSA module, VoxSeT can manage voxelized point clusters with arbitrary size in a wide range, and process them in parallel with linear complexity. The proposed VoxSeT integrates the high performance of transformer with the efficiency of voxel-based model, which can be used as a good alternative to the convolutional and point-based backbones. VoxSeT reports competitive results on the KITTI and Waymo detection benchmarks. The source codes can be found at https://github.com/skyhehe123/VoxSeT.",
+      "identifiers": [
+        "SemanticScholar:8a8eacd96dbf53a9bf54239815b752941ab967aa"
+      ],
+      "semantic_scholar_id": "8a8eacd96dbf53a9bf54239815b752941ab967aa",
+      "canonical_id": "arXiv:2203.10314",
+      "arxiv_id": "2203.10314",
+      "doi": "10.1109/CVPR52688.2022.00823",
+      "authors": [
+        "Chen-Hang He",
+        "Ruihuang Li",
+        "Shuai Li",
+        "Lei Zhang"
+      ],
+      "priority": 240,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 240,
+        "citation_count": 240,
+        "total": 240,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1667,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VoxSeT introduces parallel linear-complexity set attention for point-cloud transformers, reducing attention computation.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training",
+      "source_url": "https://arxiv.org/abs/2311.17049",
+      "year": 2023,
+      "published": "2023-11-28",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 152,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Contrastive pretraining of image-text foundation models, such as CLIP, demonstrated excellent zero-shot performance and improved robustness on a wide range of downstream tasks. However, these models utilize large transformer-based encoders with significant memory and latency overhead which pose challenges for deployment on mobile devices. In this work, we introduce MobileCLIP - a new family of efficient image-text models optimized for runtime performance along with a novel and efficient training approach, namely multi-modal reinforced training. The proposed training approach leverages knowledge transfer from an image captioning model and an ensemble of strong CLIP encoders to improve the accuracy of efficient moels. Our approach avoids train-time compute overhead by storing the additional knowledge in a reinforced dataset. MobileCLIP sets a new state-of-the-art latency-accuracy tradeoff for zero-shot classification and retrieval tasks on several datasets. Our MobileCLIP-S2 variant is 2.3× faster while more accurate compared to previous best CLIP model based on ViT-B/16. We further demonstrate the effectiveness of our multi-modal reinforced training by training a CLIP model based on ViT-B/16 image backbone and achieving +2.9% average performance improvement on 38 evaluation benchmarks compared to the previous best. Moreover, we show that the proposed approach achieves 10×-1000 × improved learning efficiency when compared with non-reinforced CLIP training. Code and models are available at https://github.com/apple/ml-mobileclip",
+      "identifiers": [
+        "SemanticScholar:bf5b43c986660ccacab97b54a76da33d9b722ea8"
+      ],
+      "semantic_scholar_id": "bf5b43c986660ccacab97b54a76da33d9b722ea8",
+      "canonical_id": "arXiv:2311.17049",
+      "arxiv_id": "2311.17049",
+      "doi": "10.1109/CVPR52733.2024.01511",
+      "authors": [
+        "Pavan Kumar Anasosalu Vasu",
+        "Hadi Pouransari",
+        "Fartash Faghri",
+        "Raviteja Vemulapalli",
+        "O. Tuzel"
+      ],
+      "priority": 152,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 152,
+        "citation_count": 152,
+        "total": 152,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1048,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MobileCLIP explicitly targets image-text model latency and memory overhead for mobile runtime.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling",
+      "source_url": "https://arxiv.org/abs/2512.05665",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 34,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Interleaved reasoning paradigms enhance Multimodal Large Language Models (MLLMs) with visual feedback but are hindered by the prohibitive computational cost of re-encoding pixel-dense images. A promising alternative, latent visual reasoning, circumvents this bottleneck yet faces limitations: methods either fail to capture intermediate state evolution due to single-step, non-interleaved structures, or sacrifice precise perceptual modeling by over-compressing features. We introduce Interleaved Latent Visual Reasoning (ILVR), a framework that unifies dynamic state evolution with precise perceptual modeling. ILVR interleaves textual generation with latent visual representations that act as specific, evolving cues for subsequent reasoning. Specifically, we employ a self-supervision strategy where a momentum teacher model selectively distills relevant features from ground-truth intermediate images into sparse supervision targets. This adaptive selection mechanism guides the model to autonomously generate context-aware visual signals. Extensive experiments on multimodal reasoning benchmarks demonstrate that ILVR outperforms existing approaches, effectively bridging the gap between fine-grained perception and sequential multimodal reasoning. The code is available at https://github.com/XD111ds/ILVR.",
+      "identifiers": [
+        "SemanticScholar:5f293b51143db304435c5724c33a8e0fb064b75f"
+      ],
+      "semantic_scholar_id": "5f293b51143db304435c5724c33a8e0fb064b75f",
+      "canonical_id": "arXiv:2512.05665",
+      "arxiv_id": "2512.05665",
+      "doi": "10.48550/arXiv.2512.05665",
+      "authors": [
+        "Shuai Dong",
+        "Siyuan Wang",
+        "Xing-Yu Liu",
+        "Cheng-Lin Li",
+        "Hao-Wen Hou",
+        "Zhong-Yu Wei"
+      ],
+      "priority": 144,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 34,
+        "citation_count": 34,
+        "total": 144,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 310,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ILVR targets pixel-dense image re-encoding cost in MLLMs through latent visual reasoning and selective perceptual modeling.",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fe09c3eb60fd",
+    "round": "libimp-fe09c3eb60fdbf71-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fe09c3eb60fdbf71-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fe09c3eb60fdbf71-pre01.json",
+    "receipt": "sha256:ee1a94cd2d40ffa663b8c8d0bb82e14595ddd726a8c250433f06f2e276ce52c0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fe09c3eb60fd",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
