@@ -35,10 +35,15 @@
   "selection_reason": "MLLMのvisual token数を576から1へ圧縮するmodality pre-fusionでLLM backboneの計算を直接削減する。FLOPs 77%削減、40ms未満latency、24GB GPUで10,000+ video frames処理を報告し、マルチモーダルLLM推論効率の直接対象。",
   "semantic_scholar_id": "8839700fe75a6e78f12cd73bcafed4c54cfcd19b",
   "source_url": "https://arxiv.org/abs/2501.03895",
-  "status": "ready",
+  "status": "superseded",
   "title": "LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-11T14:42:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+  "represented_canonical_id": "arXiv:2501.03895",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

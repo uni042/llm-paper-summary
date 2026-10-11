@@ -32,6 +32,8 @@ worker_completed_at: '2026-10-11T22:59:04+09:00'
 worker_run_key: '20261011-2256-scheduled-chat-00/r01'
 reference_main_sha: 'b43856283143fc448957c15328cd8757c5cc903b'
 worklist_rank: 50
+last_audited: null
+audit_version: 0
 ---
 
 # SONIC：多ターン対話の構造を利用する学習型KVキャッシュ圧縮
