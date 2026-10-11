@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T15:54:07+00:00",
+  "generated_at": "2026-10-11T16:56:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 89,
+  "count": 87,
   "entries": [
     {
       "canonical_id": "arXiv:2311.14652",
@@ -79,23 +79,6 @@
       "worker_run_key": "20261003-0531-scheduled-chat-30"
     },
     {
-      "canonical_id": "arXiv:2402.02446",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:16:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.title が空",
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6b0abf702d4c8191b6a747f52bdcc78c--lqer-2402.02446.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6b0abf702d4c8191b6a747f52bdcc78c--lqer-2402.02446.json",
-      "worker_run_key": "20261003-0934-scheduled-chat-30"
-    },
-    {
       "canonical_id": "OpenReview:EQgEMAD4kv",
       "title": null,
       "source_url": null,
@@ -110,22 +93,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_75fa35b664248191b40a9cc4d25a1be9--2025-cake-kv-cache.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_75fa35b664248191b40a9cc4d25a1be9--2025-cake-kv-cache.json",
       "worker_run_key": "20261003-0645-scheduled-chat-45"
-    },
-    {
-      "canonical_id": "arXiv:2402.10076",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:20:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_810e593b480c8191814f8009380e2a06--2024-2402.10076-quick.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_810e593b480c8191814f8009380e2a06--2024-2402.10076-quick.json",
-      "worker_run_key": "20261003-0128-scheduled-chat-30"
     },
     {
       "canonical_id": "arXiv:2507.15465",
@@ -208,22 +175,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d2c7976fcde08191bd856ffca3cff03e--lln-attention-2311.13541.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d2c7976fcde08191bd856ffca3cff03e--lln-attention-2311.13541.json",
       "worker_run_key": "20261003-0934-scheduled-chat-30"
-    },
-    {
-      "canonical_id": "arXiv:2402.13499",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-03T02:45:08+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "frontmatter.source が空"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d4781c96afa481919dc33725be77cdaa--2024-2402.13499-hopper-benchmark.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_d4781c96afa481919dc33725be77cdaa--2024-2402.13499-hopper-benchmark.json",
-      "worker_run_key": "20261003-0630-scheduled-chat-30"
     },
     {
       "canonical_id": "arXiv:2509.09420",
@@ -1802,6 +1753,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fed447fe4466--libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fed447fe4466--libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.13519",
+      "title": "ToolSpec: Accelerating Tool Calling via Schema-Aware and Retrieval-Augmented Speculative Decoding",
+      "source_url": "https://arxiv.org/html/2604.13519v2",
+      "returned_at": "2026-10-11T16:54:53+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5347,
+        "body_paragraphs": 26,
+        "method_chars": 1678,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 770,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a139b3d1fa9c819195e060c610960802--2026-2604.13519-toolspec-research-20261012-0058-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a139b3d1fa9c819195e060c610960802--2026-2604.13519-toolspec-research-20261012-0058-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-0058-scheduled-chat-00/r01"
     }
   ]
 }

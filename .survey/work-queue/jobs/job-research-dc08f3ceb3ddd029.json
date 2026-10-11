@@ -33,10 +33,15 @@
   "selection_reason": "量子化重みの逆量子化とTensor Core入力配置のデータ移動を融合・削減するGPUカーネルで、LLM推論を直接高速化する。",
   "semantic_scholar_id": "71d026f884a0f8f735ed3a76280251441e1706b6",
   "source_url": "https://arxiv.org/abs/2402.10076",
-  "status": "ready",
+  "status": "superseded",
   "title": "QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T16:56:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2402.10076-quick-quantization-aware-interleaving-and-conflict-free-kernel-for-effic.md",
+  "represented_canonical_id": "arXiv:2402.10076",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
