@@ -35,10 +35,15 @@
   "selection_reason": "LLMのfunction callingをPlanner、Task Fetching Unit、Executorへ分解し、独立functionを並列実行してagentic workflowのcritical pathを短縮する。ReAct比でlatency最大3.7倍、cost最大6.7倍改善しaccuracyも約9%向上しており、agentic inference orchestrationの実行効率を直接改善するため対象内。",
   "semantic_scholar_id": "36f71673d9337b432babc51da77ef38b2070b5ed",
   "source_url": "https://arxiv.org/abs/2312.04511",
-  "status": "ready",
+  "status": "superseded",
   "title": "An LLM Compiler for Parallel Function Calling",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-11T13:34:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md",
+  "represented_canonical_id": "arXiv:2312.04511",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

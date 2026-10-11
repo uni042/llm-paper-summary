@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T13:26:44+00:00",
+  "generated_at": "2026-10-11T13:34:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -928,22 +928,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-db5ca9f425c1--libfile_9780444fdf908191ba8eed1e897b311b--2603.24517-avo.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-db5ca9f425c1--libfile_9780444fdf908191ba8eed1e897b311b--2603.24517-avo.json",
       "worker_run_key": "20261006-2030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.14191",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T13:07:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 60.8% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f0ee8acbf6a2--libfile_bc31b5347d00819183ef7a39c174fbcf--2608.14191-aatc.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f0ee8acbf6a2--libfile_bc31b5347d00819183ef7a39c174fbcf--2608.14191-aatc.json",
-      "worker_run_key": "20261006-1130-scheduled-chat-30/r03"
     },
     {
       "canonical_id": "arXiv:2602.22603",
@@ -1884,33 +1868,6 @@
       "worker_run_key": "20261011-0530-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2203.14680",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T07:52:04+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4072,
-        "body_paragraphs": 22,
-        "method_chars": 1986,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 624,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5fb7250fb890--libfile_565bcbebb890819190e44f15ba32085d--2022-2203.14680-ffn-concepts-early-exit-research-20261011-1605-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5fb7250fb890--libfile_565bcbebb890819190e44f15ba32085d--2022-2203.14680-ffn-concepts-early-exit-research-20261011-1605-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-1605-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.04719",
       "title": null,
       "source_url": null,
@@ -1963,6 +1920,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fe426f30cd0a--libfile_aa0338eac6d081919ac0f359689315b0--2023-2305.17126-latm-functional-cache-quality-repair-20261011-1645-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fe426f30cd0a--libfile_aa0338eac6d081919ac0f359689315b0--2023-2305.17126-latm-functional-cache-quality-repair-20261011-1645-scheduled-chat-45-r01.json",
       "worker_run_key": "20261011-1645-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2203.14680",
+      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
+      "source_url": "https://arxiv.org/html/2203.14680v3",
+      "returned_at": "2026-10-11T13:31:40+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 329 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4072,
+        "body_paragraphs": 22,
+        "method_chars": 1986,
+        "method_paragraphs": 10,
+        "evaluation_chars": 329,
+        "limitation_chars": 624,
+        "insufficiency_flags": [
+          "評価説明量 329 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_81a6f9bf3e188191a095c5120bc12443--2022-2203.14680-ffn-concepts-quality-repair-20261011-1645-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_81a6f9bf3e188191a095c5120bc12443--2022-2203.14680-ffn-concepts-quality-repair-20261011-1645-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261011-1645-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.14191",
+      "title": "KV Cache Compression Through the Lens of Transform Coding",
+      "source_url": "https://arxiv.org/abs/2608.14191",
+      "returned_at": "2026-10-11T13:33:05+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5581,
+        "body_paragraphs": 33,
+        "method_chars": 1193,
+        "method_paragraphs": 7,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ab7f4334dc8081919c081bc177384c7b--2026-2608.14191-aatc-returned-research-repair-20261011-2030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ab7f4334dc8081919c081bc177384c7b--2026-2608.14191-aatc-returned-research-repair-20261011-2030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-2030-scheduled-chat-30/r01"
     }
   ]
 }

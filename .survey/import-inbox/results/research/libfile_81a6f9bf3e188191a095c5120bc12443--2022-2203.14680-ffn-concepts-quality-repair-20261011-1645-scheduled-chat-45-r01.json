@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4a591db07ff45102d39980838b7f3177d439ff82633085903a3d8c8c0b249feb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_81a6f9bf3e188191a095c5120bc12443--2022-2203.14680-ffn-concepts-quality-repair-20261011-1645-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2203.14680",
+  "worker_completed_at": "2026-10-11T16:48:00+09:00",
+  "worker_run_key": "20261011-1645-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4072,
+    "body_paragraphs": 22,
+    "method_chars": 1986,
+    "method_paragraphs": 10,
+    "evaluation_chars": 329,
+    "limitation_chars": 624,
+    "insufficiency_flags": [
+      "評価説明量 329 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 329 < 500"
+  ],
+  "processed_at": "2026-10-11T13:31:40+00:00"
+}

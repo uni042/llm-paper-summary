@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（18本）
+## 自動生成の論文一覧（19本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -107,4 +107,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-09 · [TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation](2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md)**  
   実装：[✓](https://github.com/liyaxuanliyaxuan/TinyVLA) ・ リポジトリ内被引用：1  
   提案手法は、画像・言語の意味理解を約4.2億〜13億パラメータの小型マルチモーダル基盤モデルへ、連続行動の生成を拡散方策（diffusion policy）復号器へ分担させる。実機のFranka単腕ロボット5タスクでは、最大構成TinyVLA-Hの平均成功率が94.0%、OpenVLAが68.3%であり、差は25.7パーセントポイントだった。
+
+### 9年前（2017-11〜2018-10）
+
+- **2017-12 · [Ray: A Distributed Framework for Emerging AI Applications](2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md)**  
+  実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：2  
+  Rayは、強化学習で頻繁に現れる「多数の環境を並列に動かす」「学習器で方策を更新する」「更新した方策を低遅延で実行する」という異質な仕事を、別々の分散基盤へ切り分けずに一つの実行系へ載せるための研究である。提案の中核は、状態を持たない遠隔関数を「タスク」、状態を保持する遠隔オブジェクトを「アクター」として同じ動的依存グラフへ埋め込むことである。
 <!-- survey:auto:end -->
