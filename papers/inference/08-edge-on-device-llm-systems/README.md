@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（34本）
+## 自動生成の論文一覧（35本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -27,6 +27,10 @@
   NPUMoEは、Apple NPUで動的な専門家選択を固定容量のグループと共有計算グラフへ変換し、頻出群を常駐させて小粒度実行とCPU同期を減らす方式。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-09 · [TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching](2026-2609.21172-tierkv-long-context-on-device-llms-via-predictive-multi-tier-kv-caching.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  サーバーGPUと異なりスマートフォンはOSや他アプリとDRAMを共有し、メモリ上限を超えるとプロセスが強制終了される場合がある。TierKVは、キャッシュを正確なFP16形式の階層0、低ランク圧縮したDRAM内の階層1、フラッシュへ退避した階層2に分ける。
 
 - **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（42本）
+## 自動生成の論文一覧（43本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -166,6 +166,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   数十台の装置にまたがる複製を丸ごと増やす方式は容量を大きな単位でしか増減できず、追加のために全重みを読み直す時間もかかる。拡張操作の所要時間は最速の比較方式の約0.11倍であり、最良条件では約9倍短い。
+
+- **2025-09 · [HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing](2025-2509.09420-hd-moe-hybrid-and-dynamic-parallelism-for-mixture-of-expert-llms-with-3d.md)**  
+  実装：[✓](https://github.com/angerybob/HD-MoE) ・ リポジトリ内被引用：3  
+  推論時には直近の専門家選択を用いて次層の負荷を予測し、過負荷になりそうな専門家を限られた時間内に事前配信し、追加通信を増やさない範囲でトークンを空いた節点へ振り分ける。
 
 - **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
