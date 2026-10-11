@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-1030-scheduled-chat-30/r01/relevance-052",
+  "reference_main_sha": "6bd57ba0de26351c33cf8a261517947063e2f459",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04359",
+      "identity_tokens": [
+        "arxiv:2601.04359",
+        "2601.04359"
+      ],
+      "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache",
+      "reason": "一次要旨を確認。PackCacheは自動回帰型の動画生成で、条件画像・テキストを意味アンカーとして残し、過去フレームへの注意の時間減衰と三次元位置埋め込みを使って動画フレームのKVキャッシュを圧縮する。48フレームの動画生成を1.7～2.2倍高速化するが、評価対象は画像・動画トークンの生成であり、LLMのテキスト生成、LLMサービング、MoE、GPU/CPUオフロードの直接的な実装・性能評価を示さない。KV削除という技術的隣接性はあるが現行LLM推論サーベイの対象外とする。",
+      "source_url": "https://arxiv.org/abs/2601.04359",
+      "body_check": "abstract_screen_only; body_not_read; arXiv一次要旨で動画生成の対象と48フレーム実験を確認。",
+      "first_checked_at": "2026-10-11T10:35:02+09:00",
+      "last_checked_at": "2026-10-11T10:35:02+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 52,
+      "research_job_id": null
+    }
+  ]
+}
