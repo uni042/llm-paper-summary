@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T12:48:29+00:00",
-  "record_count": 4647,
+  "updated_at": "2026-10-11T13:05:07+00:00",
+  "record_count": 4651,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71048,6 +71048,58 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Accelerated Sparse Neural Training: A Provable and Efficient Method to Find N:M Transposable Masks"
+    },
+    "arXiv:2512.09487": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.09487",
+      "identity_tokens": [
+        "arXiv:2512.09487"
+      ],
+      "reason": "本文の節3は強化学習によって文章検索・グラフ検索・回答の選択方策を獲得する二段階学習を主題とする。節4では検索時間を報酬に加えると7Bモデルの平均検索回数が2.70から2.25へ減り、回答F1は59.5から60.6へ改善する。ただし改善対象は検索方策と回答品質であり、GPU推論カーネル、LLMサービングの要求スケジューラ、KVキャッシュやモデルオフロードの最適化ではない。推論時の外部検索回数という資源指標との接点はあるため完全無関係ではなく境界候補とする。",
+      "first_checked_at": "2026-10-11T13:05:05+00:00",
+      "last_checked_at": "2026-10-11T13:05:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning"
+    },
+    "arXiv:2305.14152": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.14152",
+      "identity_tokens": [
+        "arXiv:2305.14152"
+      ],
+      "reason": "PEQAは低ビット整数の重み行列を凍結し、量子化尺度のみを更新してタスク適応する方式。主な実験はWikitext2・PennTreeBank・Alpacaの微調整後品質と学習時メモリであり、推論速度は量子化形式維持による間接的な利点。現在の学習単独研究凍結方針では境界候補。",
+      "first_checked_at": "2026-10-11T13:05:06+00:00",
+      "last_checked_at": "2026-10-11T13:05:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization"
+    },
+    "arXiv:2601.02535": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.02535",
+      "identity_tokens": [
+        "arXiv:2601.02535"
+      ],
+      "reason": "論文の主目的は複数生成文から品質の高い代表文を選ぶ推論時の出力選択であり、GPU/CPU資源配置やLLMサービングの実行制御ではない。節2ではn-gram類似度グラフとスペクトル分割による代表選択、節3では100トークン間隔の早期候補枝刈りを提案する。生成回数や追加判定モデルの費用を削減する接点はあるが、主実験はCNN/DailyMail・HumanEval・Math-500の出力品質評価であり、実機のGPU推論遅延・スループット・KVメモリを中心に測定していないため境界候補。",
+      "first_checked_at": "2026-10-11T13:05:07+00:00",
+      "last_checked_at": "2026-10-11T13:05:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ModeX: Evaluator-Free Best-of-N Selection for Open-Ended Generation"
+    },
+    "arXiv:2512.24617": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24617",
+      "identity_tokens": [
+        "arXiv:2512.24617"
+      ],
+      "reason": "本文の節3〜4は潜在概念境界の学習、概念列への圧縮、因果的な交差注意による復元を扱い、節6〜8は圧縮比・モデル幅の学習時スケーリング則と同一推論FLOPsでの正答率改善を主に評価する。節4.1〜4.3には概念複製とFlashAttention VarLenのカーネル比較（Flex Attention比1.26〜1.73倍）という推論実装の直接的接点もあるが、中心は新しい言語モデル構造・学習安定化・品質評価であり、既存LLMの推論サービングやメモリ階層を直接改善するシステム研究とは区別する。",
+      "first_checked_at": "2026-10-11T13:05:07+00:00",
+      "last_checked_at": "2026-10-11T13:05:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space"
     }
   }
 }
