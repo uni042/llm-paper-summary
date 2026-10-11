@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea1a198aa4f7f41e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.17465",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.17465",
+    "identity_tokens": [
+      "arXiv:2411.17465"
+    ],
+    "reason": "画面操作エージェントを主対象とし、Qwen2-VL-2Bを画面上の要素定位と操作系列に適合させる研究。画面パッチのRGB連結成分に基づく視覚トークン選択は自己注意の計算削減に直接関係するため無関係とは断定できない。一方、原著図9の1.5倍は学習速度であり、推論時に選択を有効にするとScreenspotの定位精度は70.4から64.9へ低下する。汎用LLM推論サーバーの速度・メモリ最適化を主要な最終評価とする研究ではないため境界候補。",
+    "first_checked_at": "2026-10-11T03:46:34+00:00",
+    "last_checked_at": "2026-10-11T03:46:34+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
+  },
+  "processed_at": "2026-10-11T03:46:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea1a198aa4f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

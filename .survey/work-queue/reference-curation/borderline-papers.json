@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T03:32:19+00:00",
-  "record_count": 4619,
+  "updated_at": "2026-10-11T03:46:34+00:00",
+  "record_count": 4620,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70636,6 +70636,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Agent Contracts: A Formal Framework for Resource-Bounded Autonomous AI Systems"
+    },
+    "arXiv:2411.17465": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17465",
+      "identity_tokens": [
+        "arXiv:2411.17465"
+      ],
+      "reason": "画面操作エージェントを主対象とし、Qwen2-VL-2Bを画面上の要素定位と操作系列に適合させる研究。画面パッチのRGB連結成分に基づく視覚トークン選択は自己注意の計算削減に直接関係するため無関係とは断定できない。一方、原著図9の1.5倍は学習速度であり、推論時に選択を有効にするとScreenspotの定位精度は70.4から64.9へ低下する。汎用LLM推論サーバーの速度・メモリ最適化を主要な最終評価とする研究ではないため境界候補。",
+      "first_checked_at": "2026-10-11T03:46:34+00:00",
+      "last_checked_at": "2026-10-11T03:46:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent"
     }
   }
 }
