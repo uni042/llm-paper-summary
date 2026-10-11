@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T15:49:55+00:00",
-  "record_count": 4656,
+  "updated_at": "2026-10-11T17:49:18+00:00",
+  "record_count": 4657,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70716,9 +70716,9 @@
       "identity_tokens": [
         "arXiv:2608.26005"
       ],
-      "reason": "一次要旨では、音声対話モデルの情報記憶と感情・人格記憶を分離した二系統の検索・更新と、音声ストリーミング中の記憶入出力を提案する。検索134ミリ秒という実時間性を示すが、中心的評価は記憶検索精度・人物属性・対話品質であり、LLM推論エンジンの階層メモリ、KVキャッシュ、MoE、GPUサービング最適化とは直接一致しない。対話エージェント記憶の周辺システムとして境界候補とする。",
+      "reason": "一次要旨で確認できる主貢献は、音声言語モデルの対話に対して情報記憶と感情・人物像記憶を並列に構築し、検索精度・個人化・感情応答を改善する記憶アーキテクチャである。検索遅延134msと音声区間検出待ち時間への収容、記憶バックエンドを交換できる分離配備という実行システム上の接点はある。一方、KVキャッシュ、GPUメモリ階層、推論カーネル、バッチ処理、MoE、量子化等の直接最適化ではなく、記憶の意味品質・対話体験を主評価とするため、現行サーベイでは境界候補とする。",
       "first_checked_at": "2026-10-11T05:42:40+00:00",
-      "last_checked_at": "2026-10-11T05:42:40+00:00",
+      "last_checked_at": "2026-10-11T17:49:18+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction"
@@ -71169,6 +71169,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space"
+    },
+    "arXiv:2607.01444": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01444",
+      "identity_tokens": [
+        "arXiv:2607.01444"
+      ],
+      "reason": "原著の一次要旨では4種類の混合専門家モデル、6種類の専門家枝刈り手法と複数の枝刈り率を比較し、生物医学領域での品質・事実信頼性および一般領域への転移低下を調べる。専門家削減は推論時のモデル常駐メモリ削減に接続するため無関係とはしない。一方、主貢献は特定領域の精度・幻覚リスクの比較評価であり、新規の推論サービング方式、枝刈りカーネル、実行時配置・通信最適化の提案ではない。システム技術の直接貢献が境界的なのでborderlineとする。",
+      "first_checked_at": "2026-10-11T17:49:18+00:00",
+      "last_checked_at": "2026-10-11T17:49:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain"
     }
   }
 }
