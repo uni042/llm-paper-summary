@@ -64,6 +64,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：4  
   BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
 
+- **2026-01 · [Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference](2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md)**  
+  実装：[✓](https://github.com/microsoft/sutradhara) ・ リポジトリ内被引用：4  
+  Sutradharaは、ツール利用型エージェントの性能問題を「LLM推論エンジン単体の高速化」ではなく、エージェントを制御するオーケストレータと推論エンジンの協調設計として扱う。著者らが6,000件の生産相当エージェント要求を分析すると、ツール実行はFTRの中央値で約32%、90パーセンタイルで61%、99パーセンタイルで85%を占める。
+
 - **2025-11 · [SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation](2025-swiftkv.md)**  
   実装：[✓](https://github.com/snowflakedb/arctictraining ; https://github.com/snowflakedb/arcticinference) ・ リポジトリ内被引用：4  
   後半層の入力トークン計算を省き中間層出力からKVだけを生成する軽量蒸留方式で、プリフィル計算を25〜50%削減し処理量を最大2倍にする。
@@ -103,10 +107,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices](2026-2603.04428-persistent-q4-agent-kv-cache.md)**  
   実装：[✓](https://github.com/yshk-mxim/agent-memory) ・ リポジトリ内被引用：3  
   複数エージェントのKVをQ4ブロックとしてSSDへ永続化し、再プリフィルせず注意機構へ直接復元することで、固定KV容量あたり約4倍の文脈を保持し先頭トークン遅延を最大136倍短縮する。
-
-- **2026-01 · [Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference](2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md)**  
-  実装：[✓](https://github.com/microsoft/sutradhara) ・ リポジトリ内被引用：3  
-  Sutradharaは、ツール利用型エージェントの性能問題を「LLM推論エンジン単体の高速化」ではなく、エージェントを制御するオーケストレータと推論エンジンの協調設計として扱う。著者らが6,000件の生産相当エージェント要求を分析すると、ツール実行はFTRの中央値で約32%、90パーセンタイルで61%、99パーセンタイルで85%を占める。
 
 - **2025-11 · [Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA](2025-2512.17910-activated-lora-cross-model-kv-reuse.md)**  
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：3  
@@ -313,7 +313,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-11〜2025-10）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：103  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  

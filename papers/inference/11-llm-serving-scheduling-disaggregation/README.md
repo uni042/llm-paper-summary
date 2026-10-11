@@ -799,7 +799,7 @@
   同じシステム指示や過去の会話が次の要求でも現れる場合、その部分の鍵・値キャッシュ（KV キャッシュ）を再利用すれば、既に行った注意計算を省ける。遅延制約を守る要求容量が基準方式より59～498%増え、分散キャッシュの命中率が局所キャッシュ比で最大2.36倍、事前入力処理のGPU計算時間が最大48%減った。
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：46  
+  実装：✓ ・ リポジトリ内被引用：47  
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
@@ -818,6 +818,10 @@
   実装：[✓](https://github.com/shashwatj07/SageServe) ・ リポジトリ内被引用：18  
   対話型と非対話型の要求を統合GPUプールで共有し、地域間ルーティング、需要予測、整数線形計画、遅延実行を異なる時間尺度で連携させる。Office 365の本番トレースでSLOを維持しつつGPU時間を最大25%削減した。
 
+- **2025-04 · [SLOs-Serve: Optimized Serving of Multi-SLO LLMs](2025-2504.08784-slos-serve-multi-slo-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  段階別SLOを動的計画法で扱い、チャンク化プリフィル・投機的デコード・入場制御・レプリカルーティングを統合してGPU当たり容量を平均2.2倍改善する。
+
 - **2025-04 · [semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage](2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
   入力処理と逐次生成の計算をSM単位で分離しつつ高帯域メモリを共有し、完全分離方式のKV転送と保存容量の偏りを除いてエンドツーエンド遅延を最大2.58倍改善する。
@@ -825,10 +829,6 @@
 - **2025-10 · [Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market](2025-3731569.3764815-aegaeon-gpu-pooling.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   トークン単位の先取り自動スケーリングと高速モデル切替で多数LLMをGPUプールへ集約し、実運用でGPU数を82%削減したマルチモデル推論基盤。
-
-- **2025-04 · [SLOs-Serve: Optimized Serving of Multi-SLO LLMs](2025-2504.08784-slos-serve-multi-slo-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  段階別SLOを動的計画法で扱い、チャンク化プリフィル・投機的デコード・入場制御・レプリカルーティングを統合してGPU当たり容量を平均2.2倍改善する。
 
 - **2025-08 · [Strata: Hierarchical Context Caching for Long Context Language Model Serving](2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serv.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
@@ -1113,7 +1113,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：427  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：428  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1125,7 +1125,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：325  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：326  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -1148,17 +1148,17 @@
   実装：[✓](https://github.com/ServerlessLLM/ServerlessLLM) ・ リポジトリ内被引用：72  
   要求到着時にモデルをGPUへ読み込むサーバーレス環境で、チェックポイントをGPU近くのSSD / DRAMへキャッシュし、高速読み込み器とモデル所在地を考慮した要求配置、生成途中要求の移動を組み合わせてモデル起動待ちを短縮するシステム。
 
-- **2023-12 · [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)**  
-  実装：[✓](https://github.com/Ying1123/VTC-artifact) ・ リポジトリ内被引用：68  
-  仮想 トークン Counter（VTC）は、要求数ではなくクライアントごとに実際に処理した入力・出力トークンをサービス量として数え、累積サービス量が少ないクライアントから新しい要求を実行バッチへ入れる。空きGPUを意図的に遊ばせず、公平性と高い利用率を両立することを狙う。
-
 - **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
-  実装：✓ ・ リポジトリ内被引用：67  
+  実装：✓ ・ リポジトリ内被引用：68  
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
-  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：67  
+  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：68  
   複数の言語モデル呼出しから成るアプリケーションの入力・出力の関係を、意味変数という抽象化で推論提供側へ公開する。これにより要求間の依存関係、同一接頭部の再利用、アプリケーション全体の完了時間を考慮した要求配置を可能にする。単一要求の速度ではなく、複数要求を組み合わせた作業の完了時間を最適化する研究である。
+
+- **2023-12 · [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)**  
+  実装：[✓](https://github.com/Ying1123/VTC-artifact) ・ リポジトリ内被引用：68  
+  仮想 トークン Counter（VTC）は、要求数ではなくクライアントごとに実際に処理した入力・出力トークンをサービス量として数え、累積サービス量が少ないクライアントから新しい要求を実行バッチへ入れる。空きGPUを意図的に遊ばせず、公平性と高い利用率を両立することを狙う。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  
   実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：67  
@@ -1287,7 +1287,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：897  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：898  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -1313,13 +1313,13 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：432  
+  実装：✓ ・ リポジトリ内被引用：433  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 ### 6年前（2020-11〜2021-10）
 
 - **2020-11 · [Serving DNNs like Clockwork: Performance Predictability from the Bottom Up](2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   Clockworkは、深層ニューラルネットワーク（DNN）のオンライン推論で、平均速度ではなく要求ごとの締切と尾部遅延を中心に設計した分散モデル提供システムである。
 
 ### 7年前（2019-11〜2020-10）

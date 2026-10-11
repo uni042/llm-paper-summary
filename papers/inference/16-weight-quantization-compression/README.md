@@ -122,6 +122,10 @@
   実装：✓ ・ リポジトリ内被引用：10  
   4ビット浮動小数点（floating point; FP）の指数部構成とクリップ範囲を層ごとに探索し、活性値の大きなチャネル間分散はチャネル別指数バイアスを重みへ事前吸収して処理する。LLaMA-13Bの埋め込み・重み・活性値を4/4/4ビットにして、6つの常識推論タスク平均63.1を維持する。
 
+- **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
+  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：9  
+  層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
+
 - **2024-03 · [AffineQuant: Affine Transformation Quantization for Large Language Models](2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   スカラーの拡大縮小や平行移動に限られていた等価変換を、可逆な行列によるアフィン変換へ拡張する。変換を量子化前の重みへ掛け、逆変換を活性値側へ入れることで元の線形演算を保ったまま量子化しやすい座標系を学習し、LLaMA2-7BのW4A4でC4パープレキシティをOmniQuantの18.02から15.76へ改善する。
@@ -129,10 +133,6 @@
 - **2024-01 · [SliM-LLM: Salience-Driven Mixed-Precision Quantization for Large Language Models](2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   要素単位で重要重みだけ高精度に残すのではなく、重要度が空間的にまとまる性質を使ってグループ単位で1/2/3ビットを割り当てる。さらに各グループ内部の少数の重要要素を量子化器校正で重く扱い、LLaMA-7Bの2ビット級でWikiText2パープレキシティ14.58を達成する。
-
-- **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
-  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：8  
-  層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
 
 - **2024-07 · [Compact Language Models via Pruning and Knowledge Distillation](2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md)**  
   実装：[✓](https://github.com/NVlabs/Minitron) ・ リポジトリ内被引用：6  
@@ -177,7 +177,7 @@
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
-  実装：✓ ・ リポジトリ内被引用：49  
+  実装：✓ ・ リポジトリ内被引用：50  
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-10 · [Atom: Low-bit Quantization for Efficient and Accurate LLM Serving](2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md)**  
@@ -203,6 +203,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：228  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：229  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 <!-- survey:auto:end -->
