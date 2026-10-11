@@ -35,10 +35,15 @@
   "selection_reason": "softmax attentionの二次計算量を避けるため、非負性とcosine距離再重み付けを用いる線形attentionを提案する。因果・cross attentionの双方を線形化し、長系列で時間・空間計算量を削減するTransformer推論効率化へ直接関係するためaccept。",
   "semantic_scholar_id": "c49ac1f916d6d2edeb187e6619c8d23acd95eb21",
   "source_url": "https://arxiv.org/abs/2202.08791",
-  "status": "ready",
+  "status": "superseded",
   "title": "cosFormer: Rethinking Softmax in Attention",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-11T05:04:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md",
+  "represented_canonical_id": "arXiv:2202.08791",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

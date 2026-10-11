@@ -35,10 +35,15 @@
   "selection_reason": "Transformer encoderのself-attentionをparameter-free Fourier mixingへ置換し、FFTのO(N log N)性と小memory footprintで推論を直接高速化する。BERT-Base比で8×V100 GPUのinference 82ms→46ms（1.8x）、TPU 32ms→23ms（1.4x）を報告し、長系列でもefficient Transformer群より高速なため対象。",
   "semantic_scholar_id": "1f133158a8973fb33fea188f20517cd7e69bfe7f",
   "source_url": "https://arxiv.org/abs/2105.03824",
-  "status": "ready",
+  "status": "superseded",
   "title": "FNet: Mixing Tokens with Fourier Transforms",
   "type": "research",
   "venue": "North American Chapter of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-11T05:04:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md",
+  "represented_canonical_id": "arXiv:2105.03824",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

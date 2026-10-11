@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T04:57:54+00:00",
+  "generated_at": "2026-10-11T05:04:41+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 114,
+  "count": 113,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -1008,22 +1008,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-eb89f5a968d8--libfile_382eb759f810819192b16fd9d535ff6f--2601.19139-vllm-mlx.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-eb89f5a968d8--libfile_382eb759f810819192b16fd9d535ff6f--2601.19139-vllm-mlx.json",
       "worker_run_key": "20261006-1400-scheduled-chat-00/r02"
-    },
-    {
-      "canonical_id": "arXiv:2202.08791",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T13:07:40+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 62.5% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-44cf86c7d00a--libfile_32e5ebcf1c7c819192fc5c32429bd8e8--2202.08791-cosformer.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-44cf86c7d00a--libfile_32e5ebcf1c7c819192fc5c32429bd8e8--2202.08791-cosformer.json",
-      "worker_run_key": "20261006-1530-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2603.24517",
@@ -2213,8 +2197,8 @@
       "canonical_id": "arXiv:2501.03895",
       "title": "LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token",
       "source_url": "https://arxiv.org/abs/2501.03895",
-      "returned_at": "2026-10-11T04:55:46+00:00",
-      "return_count": 3,
+      "returned_at": "2026-10-11T05:04:06+00:00",
+      "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2232,8 +2216,8 @@
           "評価説明量 333 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_927e973ec6c08191904c365de41c80ba--2025-2501.03895-llava-mini-research-20261011-0530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_927e973ec6c08191904c365de41c80ba--2025-2501.03895-llava-mini-research-20261011-0530-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-486e980fcebb--libfile_927e973ec6c08191904c365de41c80ba--2025-2501.03895-llava-mini-research-20261011-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-486e980fcebb--libfile_927e973ec6c08191904c365de41c80ba--2025-2501.03895-llava-mini-research-20261011-0530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-0530-scheduled-chat-30/r01"
     }
   ]

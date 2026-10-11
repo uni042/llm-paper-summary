@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（418本）
+## 自動生成の論文一覧（420本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1545,8 +1545,12 @@
   FLASHは、注意計算を系列長に対して線形に近づける方式が、理論計算量を減らしても実機で速くならず、強いTransformerを比較対象にすると品質が落ちるという問題に取り組む。
 
 - **2021-12 · [LongT5: Efficient Text-To-Text Transformer for Long Sequences](2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md)**  
-  実装：[✓](https://github.com/google-research/longt5) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/google-research/longt5) ・ リポジトリ内被引用：9  
   T5のエンコーダを長文向けに置き換え、各層でブロック集約した大域トークンを一時的に作る注意機構を提案する。重要文生成による事前学習と組み合わせ、要約・質問応答で長い入力の情報を利用する。論文の主な評価はモデル品質と学習時の計算費用であり、デコード専用の推論サービング実験とは区別する。
+
+- **2022-07 · [FNet: Mixing Tokens with Fourier Transforms](2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md)**  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/f_net) ・ リポジトリ内被引用：4  
+  標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-04 · [A Fast Post-Training Pruning Framework for Transformers](2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md)**  
   実装：[✓](https://github.com/WoosukKwon/retraining-free-pruning) ・ リポジトリ内被引用：4  
@@ -1555,6 +1559,10 @@
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
   UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応型 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
+
+- **2022-02 · [cosFormer: Rethinking Softmax in Attention](2022-2202.08791-cosformer-rethinking-softmax-in-attention.md)**  
+  実装：[✓](https://github.com/OpenNLPLab/cosFormer) ・ リポジトリ内被引用：2  
+  cosFormerはソフトマックスの関数形をそのまま近似するのでなく、注意係数が非負であることと、関連性の高い位置へ重みを集中させることを抽出して設計する。
 
 ### 6年前（2020-11〜2021-10）
 
@@ -1639,7 +1647,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：107  
+  実装：✓ ・ リポジトリ内被引用：108  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [ブロック並列 Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
