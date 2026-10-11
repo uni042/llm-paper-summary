@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-11T02:57:07.107910+00:00",
+  "generated_at": "2026-10-11T03:04:52.872349+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 36,
+  "count": 27,
   "worker_counts": {
-    "scheduled-chat-00": 12,
-    "scheduled-chat-30": 12,
-    "scheduled-chat-45": 12
+    "scheduled-chat-00": 9,
+    "scheduled-chat-30": 9,
+    "scheduled-chat-45": 9
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -124,28 +124,6 @@
       },
       "mechanical_failures": [
         "16KB未満再監査: 評価説明量 270 < 500"
-      ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2505.19645-moesd-unveiling-speculative-decodings-potential-for-accelerating-moe-inference.md",
-      "canonical_id": "arXiv:2505.19645",
-      "title": "MoESD: Unveil Speculative Decoding's Potential for Accelerating Sparse MoE",
-      "file_bytes": 12828,
-      "source_sha256": "50c66a45968eb6aaf1ef458c2bf11d0bda4c974b2374b429efe7ac73bc99f953",
-      "source_git_blob_sha": "4a4c5a5ddd15d79ba00a9ad8cf8c180a0db58468",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.995961,
-      "quality_metrics": {
-        "body_chars": 2594,
-        "method_chars": 727,
-        "evaluation_chars": 197,
-        "limitation_chars": 209
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 197 < 500"
       ],
       "warnings": []
     },
@@ -254,26 +232,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md",
-      "canonical_id": "arXiv:2608.21240",
-      "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
-      "file_bytes": 13137,
-      "source_sha256": "551d7ba3feaca3463f68502a3724e48e4943922919c99aa4784a6fbab6b55f80",
-      "source_git_blob_sha": "af720a76727ebffce25c35bafcdf964ba587b251",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.853726,
-      "quality_metrics": {
-        "body_chars": 3886,
-        "method_chars": 1253,
-        "evaluation_chars": 692,
-        "limitation_chars": 345
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.05061-kvpop-key-value-cache-compression-with-predictive-online-pruning.md",
       "canonical_id": "arXiv:2607.05061",
       "title": "KVpop：将来注意を用いた予測型オンラインKVキャッシュ枝刈り",
@@ -347,7 +305,7 @@
       "file_bytes": 13512,
       "source_sha256": "6a34fe511c6182487837a6cdad656711d9e88c56b4cda533d9639093e989dd9f",
       "source_git_blob_sha": "374b08f9db3de3351ba1d24645c0f2b07aa09e99",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 1.0,
@@ -407,26 +365,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2603.06199-flashprefill-instantaneous-pattern-discovery-and-thresholding-for-ultra-.md",
-      "canonical_id": "arXiv:2603.06199",
-      "title": "FlashPrefill: Instantaneous Pattern Discovery and Thresholding for Ultra-Fast Long-Context Prefilling",
-      "file_bytes": 13814,
-      "source_sha256": "86f966ad48ceb9d2813f27bb252b10f6972bd084e33035ddfa5d74b1402133d3",
-      "source_git_blob_sha": "c4ace02920280dc4f4e688af29c1baa85972eddd",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.804085,
-      "quality_metrics": {
-        "body_chars": 4212,
-        "method_chars": 1316,
-        "evaluation_chars": 1240,
-        "limitation_chars": 403
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md",
       "canonical_id": "arXiv:2402.10631",
       "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
@@ -469,30 +407,6 @@
       ],
       "warnings": [
         "日本語比率 70.1% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
-      "canonical_id": "arXiv:2001.04451",
-      "title": "Reformer: The Efficient Transformer",
-      "file_bytes": 14180,
-      "source_sha256": "93847e9e0c238c9230ead74f6fe64f03d25be0a87ea80760dc22ea7207a6ae2c",
-      "source_git_blob_sha": "84af61f394e8531e25b34f2d4605d1fd3b9b6869",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.708178,
-      "quality_metrics": {
-        "body_chars": 4653,
-        "method_chars": 1468,
-        "evaluation_chars": 1346,
-        "limitation_chars": 490
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 70.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 70.8% < 警告基準 80%"
       ]
     },
     {
@@ -555,51 +469,6 @@
         "method_chars": 771,
         "evaluation_chars": 1222,
         "limitation_chars": 391
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
-      "canonical_id": "arXiv:2312.11462",
-      "title": "Cascade Speculative Drafting for Even Faster LLM Inference",
-      "file_bytes": 14563,
-      "source_sha256": "08e4efa64f1ab1c757e5bf4ccd4167f64ec8901429a55ea34bc9d3d18d8228fb",
-      "source_git_blob_sha": "6ddf3911c5e6a1888abdde042e9245e94b5f4d72",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.700151,
-      "quality_metrics": {
-        "body_chars": 4233,
-        "method_chars": 1403,
-        "evaluation_chars": 367,
-        "limitation_chars": 377
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 評価説明量 367 < 500",
-        "16KB未満再監査: 日本語比率 70.0% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 70.0% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
-      "canonical_id": "arXiv:2411.01142",
-      "title": "NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference",
-      "file_bytes": 14575,
-      "source_sha256": "4603b840d894c44a89def9be1916652a7a7d377867609a393652f043e1b2ce2e",
-      "source_git_blob_sha": "4e176cde10e2006123d724ca1718cd3114a18faf",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.868819,
-      "quality_metrics": {
-        "body_chars": 3783,
-        "method_chars": 1047,
-        "evaluation_chars": 698,
-        "limitation_chars": 227
       },
       "mechanical_failures": [],
       "warnings": []
@@ -689,46 +558,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2025-2502.12216-tactic-adaptive-sparse-attention.md",
-      "canonical_id": "arXiv:2502.12216",
-      "title": "Tactic: Adaptive Sparse Attention with Clustering and Distribution Fitting for Long-Context LLMs",
-      "file_bytes": 14885,
-      "source_sha256": "8d2abb6ae2eee3fe4e4f7bd80ad2ef4424dab48c346446ac6043464f71f62554",
-      "source_git_blob_sha": "b393f95b98d2ecf149212b3359f172682e7411db",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.893357,
-      "quality_metrics": {
-        "body_chars": 3929,
-        "method_chars": 1343,
-        "evaluation_chars": 804,
-        "limitation_chars": 249
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
-      "canonical_id": "arXiv:2503.04697",
-      "title": "L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning",
-      "file_bytes": 14896,
-      "source_sha256": "5bdbd940034500222b5a6b4e40e555b6e7cbb5877ad0f4ae6e80e635868eaeee",
-      "source_git_blob_sha": "b5107126a5456b56be046aab6a86516b633435d6",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.954288,
-      "quality_metrics": {
-        "body_chars": 4392,
-        "method_chars": 1031,
-        "evaluation_chars": 1607,
-        "limitation_chars": 458
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md",
       "canonical_id": "arXiv:2609.21672",
       "title": "Accelerating Dense LLMs via L0-regularized Mixture-of-Experts",
@@ -744,26 +573,6 @@
         "method_chars": 1322,
         "evaluation_chars": 1313,
         "limitation_chars": 437
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
-      "canonical_id": "DOI:10.1109/HPCA53966.2022.00082",
-      "title": "TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer",
-      "file_bytes": 15113,
-      "source_sha256": "ba7814c44293c9f2325e06dafe0b7a261984c35bba96597eed22bfedc373a705",
-      "source_git_blob_sha": "63440b8bb9efae19bd439e386da0e024ec5e6c83",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.932575,
-      "quality_metrics": {
-        "body_chars": 4901,
-        "method_chars": 1357,
-        "evaluation_chars": 1756,
-        "limitation_chars": 397
       },
       "mechanical_failures": [],
       "warnings": []
