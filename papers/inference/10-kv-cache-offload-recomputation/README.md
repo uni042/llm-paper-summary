@@ -344,6 +344,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：11  
   関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。
 
+- **2025-03 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  多輪会話の履歴KV再計算と長プロンプトによるFCFS ヘッド-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のスループットを報告する。
+
 - **2025-10 · [CacheClip: Accelerating RAG with Effective KV Cache Reuse](2025-2510.10129-cacheclip-rag-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   問い合わせごとに補助モデルの注意から再計算する文書位置を選び、連結したKVキャッシュのチャンク間情報を回復するRAGプリフィル方式。L20上の16K入力では全注意比3.33倍速く、品質との調整に再計算率を使う。
@@ -351,10 +355,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-03 · [SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs](2025-2503.16163-specache-speculative-kv-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   SpeCacheは16-bit KV正本をCPUに残し、GPUには重要位置の低ビット索引と少数の正確KVだけを置く。次トークンの参照先を予測して一段先読みし、容量と転送待ちを減らす方式。
-
-- **2025-03 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  多輪会話の履歴KV再計算と長プロンプトによるFCFS ヘッド-of-line blockingを、GPU/DRAM/SSDの多段KV保持と飢餓なし要求reorderingで同時に解くFlashGen。2×A100のShareGPT評価でOPT-30B 1.63倍、Llama-2 70B 2.85倍のスループットを報告する。
 
 - **2024-11 · [Do Large Language Models Need a Content Delivery Network?](2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md)**  
   実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：6  
