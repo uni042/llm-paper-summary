@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T02:50:04+00:00",
-  "record_count": 4614,
+  "updated_at": "2026-10-11T02:51:21+00:00",
+  "record_count": 4617,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70567,6 +70567,45 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "A^3: Accelerating Attention Mechanisms in Neural Networks with Approximation"
+    },
+    "arXiv:2006.02464": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.02464",
+      "identity_tokens": [
+        "arXiv:2006.02464"
+      ],
+      "reason": "原著20ページを確認。中央制御器がモデル重みのGPUロード（LOAD）とDNN実行（INFER）の開始時刻・締切を決め、ワーカーの暗黙の選択を排除して尾部遅延を抑えるモデルサービング研究である。ResNet50やその他の固定形状DNN、TVMコンパイルモデル、V100 GPUでの検証が主で、自己回帰LLMの出力長変動、KVキャッシュ成長、トークン単位バッチングは直接評価されていない。LLMサービングの設計思想に関係する基礎研究だが、現行LLM推論システムの直接評価ではないため境界扱い。",
+      "first_checked_at": "2026-10-11T02:51:19+00:00",
+      "last_checked_at": "2026-10-11T02:51:19+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up"
+    },
+    "arXiv:2212.10511": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.10511",
+      "identity_tokens": [
+        "arXiv:2212.10511"
+      ],
+      "reason": "PopQAの事実知識問題でパラメータ内知識と検索拡張の正確さを比較し、実体の人気度に応じて検索を必要時だけ実行する適応検索を提案する。要旨には推論費用削減が明示されるため完全に無関係ではないが、主たる寄与は知識の正確さと検索の選択方策であり、LLMランタイムのKV管理、オフロード、GPU実行、サービング基盤の最適化を直接実装・評価したものとは確認できない。推論システム収録には境界的。",
+      "first_checked_at": "2026-10-11T02:51:20+00:00",
+      "last_checked_at": "2026-10-11T02:51:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories"
+    },
+    "arXiv:2004.07320": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2004.07320",
+      "identity_tokens": [
+        "arXiv:2004.07320"
+      ],
+      "reason": "訓練中に毎回異なる重み部分集合を量子化し、非量子化部分へ勾配を通すことで強い重み圧縮を可能にする学習手法。RoBERTaの14MB化など最終モデルの推論メモリに関係するが、要旨の中心は訓練時の量子化雑音とモデル精度であり、生成LLMの推論カーネル・KV管理・サービングを直接測っていない。モデル圧縮としての関連性があるため境界扱い。",
+      "first_checked_at": "2026-10-11T02:51:21+00:00",
+      "last_checked_at": "2026-10-11T02:51:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Training with Quantization Noise for Extreme Model Compression"
     }
   }
 }

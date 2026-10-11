@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c36dcdb380c6b86f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2004.07320",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2004.07320",
+    "identity_tokens": [
+      "arXiv:2004.07320"
+    ],
+    "reason": "訓練中に毎回異なる重み部分集合を量子化し、非量子化部分へ勾配を通すことで強い重み圧縮を可能にする学習手法。RoBERTaの14MB化など最終モデルの推論メモリに関係するが、要旨の中心は訓練時の量子化雑音とモデル精度であり、生成LLMの推論カーネル・KV管理・サービングを直接測っていない。モデル圧縮としての関連性があるため境界扱い。",
+    "first_checked_at": "2026-10-11T02:51:21+00:00",
+    "last_checked_at": "2026-10-11T02:51:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Training with Quantization Noise for Extreme Model Compression"
+  },
+  "processed_at": "2026-10-11T02:51:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c36dcdb380c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
