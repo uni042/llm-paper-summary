@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T08:49:39+00:00",
+  "updated_at": "2026-10-11T10:43:45+00:00",
   "record_count": 11488,
   "records": {
     "arXiv:2303.08774": {
@@ -163101,9 +163101,9 @@
       "identity_tokens": [
         "DOI:10.1145/3452296.3472904"
       ],
-      "reason": "題名に明示された対象は分散深層学習の疎な集合通信の高速化であり、LLM推論・サービング・推論時メモリ階層への適用が題名から確認できない。現行の学習専用最適化凍結規則により先行除外する。",
+      "reason": "タイトル上の主題は、一般的な分散深層学習を高速化する疎な集団通信（collective communication）である。LLM推論、KVキャッシュ、推論サービング、推論カーネルの最終適用先を示しておらず、現行の学習単独研究の凍結方針では収録対象外と判断。本文・要旨を確認していないタイトル先行判定である。",
       "first_checked_at": "2026-10-11T00:44:46+00:00",
-      "last_checked_at": "2026-10-11T00:44:46+00:00",
+      "last_checked_at": "2026-10-11T10:43:44+00:00",
       "linked_from": [],
       "title": "Efficient sparse collective communication and its application to accelerate distributed deep learning"
     },
@@ -163313,11 +163313,11 @@
       "identity_tokens": [
         "arXiv:2204.13767"
       ],
-      "reason": "題名が多変量時系列予測のための三角形注意機構を対象としており、生成型LLMの推論基盤、モデルサービング、KVキャッシュ、量子化、MoE推論ではないことが明白なため、本文読解前のタイトル先行除外とする。Researchの5件ノルマには算入しない。",
+      "reason": "一次要旨で、三角形に縮小する変数別注意機構を用いた多変量時系列の長期予測であることを確認。対象は予測対象変数ごとの時系列依存性と時系列予測精度であり、LLMの推論・学習基盤やサービング最適化への適用・評価がない。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-11T02:48:44+00:00",
+      "last_checked_at": "2026-10-11T10:43:45+00:00",
       "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
