@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-2330-scheduled-chat-30/r01",
+  "reference_main_sha": "f74abcfb4be2acf60b3bb06c5ceda93bc8417f6b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.10314",
+      "identity_tokens": [
+        "arxiv:2203.10314"
+      ],
+      "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds",
+      "reason": "LiDAR点群の三次元物体検出向けにボクセル集合注意を導入する視覚認識モデルの研究。計算量削減の記述はあるが、適用先は点群検出でありLLMの推論・学習システムではない。KITTIとWaymoの物体検出精度を評価する。",
+      "source_url": "https://arxiv.org/abs/2203.10314",
+      "body_check": "abstract_screen_only; body_not_read; arXiv abstract confirms primary task and evaluation are outside the LLM inference/training systems survey.",
+      "first_checked_at": "2026-10-11T23:37:21+09:00",
+      "last_checked_at": "2026-10-11T23:37:21+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 13
+    }
+  ]
+}
