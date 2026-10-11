@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデル向け制約付き復号を有限オートマトン上の厳密推論として実装し、sampling depthを系列長に対して線形から対数へ削減する。Dream-7B/LLaDA-8Bで5%未満のwall-clock overheadで制約を保証する推論手法。",
   "semantic_scholar_id": "bbe806821339d0a1bd592b5cf1fcde0f4fa859bd",
   "source_url": "https://arxiv.org/abs/2607.07026",
-  "status": "ready",
+  "status": "superseded",
   "title": "Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-11T18:52:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.07026-constrained-decoding-for-diffusion-language-models-via-efficient-inferen.md",
+  "represented_canonical_id": "arXiv:2607.07026",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

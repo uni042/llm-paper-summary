@@ -35,10 +35,15 @@
   "selection_reason": "Qwen3-OmniはThinker-Talker MoEでreal-time speechを生成し、Talkerの重いblock-wise diffusionをlightweight causal ConvNetへ置換してfirst codec frameからstreaming可能にする。cold-start理論end-to-end first-packet latency 234 msを報告し、multimodal LLMの推論latency低減を直接扱うため対象内。",
   "semantic_scholar_id": "edfa18a4dd07afe54d18bab5c0dd3e24596ef9ef",
   "source_url": "https://arxiv.org/abs/2509.17765",
-  "status": "ready",
+  "status": "superseded",
   "title": "Qwen3-Omni Technical Report",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-11T18:52:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md",
+  "represented_canonical_id": "arXiv:2509.17765",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
