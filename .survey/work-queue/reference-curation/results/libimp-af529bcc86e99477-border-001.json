@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af529bcc86e99477-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2002.10941",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2002.10941",
+    "identity_tokens": [
+      "DOI:10.1109/hpca47549.2020.00035",
+      "arXiv:2002.10941"
+    ],
+    "reason": "2020年HPCAの注意演算専用ASICと近似探索の研究。評価の中心はMemN2N、KV-MemN2N、BERT等の汎用注意機構で、現行の大規模言語モデルのデコード、KVキャッシュ運用、分散サービングの直接評価ではない。注意機構のハードウェア最適化という系譜上は関連するため、収録を即断せず微妙に分類する。",
+    "first_checked_at": "2026-10-11T02:50:03+00:00",
+    "last_checked_at": "2026-10-11T02:50:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A^3: Accelerating Attention Mechanisms in Neural Networks with Approximation"
+  },
+  "processed_at": "2026-10-11T02:50:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af529bcc86e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edad683562939a62-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2002.11985",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2002.11985",
+    "identity_tokens": [
+      "arXiv:2002.11985"
+    ],
+    "reason": "BERTの量子化・枝刈り・蒸留などを体系化した2021年TACLのレビュー論文。モデル圧縮の技術史として関連するが、独自のLLM推論システム実装や評価を提示する一次手法論文ではなく、現在の収録主題と直接一致しない。",
+    "first_checked_at": "2026-10-05T02:07:09+00:00",
+    "last_checked_at": "2026-10-11T02:50:04+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT"
+  },
+  "processed_at": "2026-10-11T02:50:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edad68356293",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

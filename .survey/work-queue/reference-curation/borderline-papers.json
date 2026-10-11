@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T02:48:44+00:00",
-  "record_count": 4611,
+  "updated_at": "2026-10-11T02:50:04+00:00",
+  "record_count": 4614,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -9098,12 +9098,13 @@
       "identity_tokens": [
         "arXiv:2002.11985"
       ],
-      "reason": "Decoder extensions are mentioned but detailed methods and measurements are BERT encoder-focused.",
+      "reason": "BERTの量子化・枝刈り・蒸留などを体系化した2021年TACLのレビュー論文。モデル圧縮の技術史として関連するが、独自のLLM推論システム実装や評価を提示する一次手法論文ではなく、現在の収録主題と直接一致しない。",
       "first_checked_at": "2026-10-05T02:07:09+00:00",
-      "last_checked_at": "2026-10-05T02:07:09+00:00",
+      "last_checked_at": "2026-10-11T02:50:04+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
       ],
+      "borderline_recheck_count": 0,
       "title": "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT"
     },
     "DOI:10.1145/3724420": {
@@ -70526,6 +70527,46 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents"
+    },
+    "arXiv:2006.03236": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.03236",
+      "identity_tokens": [
+        "arXiv:2006.03236"
+      ],
+      "reason": "2020年NeurIPSの系列圧縮型Transformer。著者要旨では系列全体を一つの表現へ集約する分類・読解等に向けて中間層のトークン長を短縮し、必要に応じ復元用デコーダを使う。LLMの自己回帰生成時KVキャッシュ、モデルサービング、推論基盤の実装・評価ではないため、歴史的な系列圧縮手法として関連はあるが現在の収録範囲では微妙。",
+      "first_checked_at": "2026-10-11T02:50:02+00:00",
+      "last_checked_at": "2026-10-11T02:50:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing"
+    },
+    "arXiv:2408.16725": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.16725",
+      "identity_tokens": [
+        "arXiv:2408.16725"
+      ],
+      "reason": "音声対話の低遅延を目標とし、テキスト・音声トークンの並列復号やバッチ並列を導入するため推論アルゴリズムに接点がある。ただし研究の主眼は音声対応のモデル設計・学習データと対話品質であり、汎用LLM推論サービング、KVキャッシュ、オフロード、カーネル等のシステム性能の直接比較は著者要旨から確認できない。本文再確認待ちの微妙。",
+      "first_checked_at": "2026-10-11T02:50:02+00:00",
+      "last_checked_at": "2026-10-11T02:50:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming"
+    },
+    "arXiv:2002.10941": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2002.10941",
+      "identity_tokens": [
+        "DOI:10.1109/hpca47549.2020.00035",
+        "arXiv:2002.10941"
+      ],
+      "reason": "2020年HPCAの注意演算専用ASICと近似探索の研究。評価の中心はMemN2N、KV-MemN2N、BERT等の汎用注意機構で、現行の大規模言語モデルのデコード、KVキャッシュ運用、分散サービングの直接評価ではない。注意機構のハードウェア最適化という系譜上は関連するため、収録を即断せず微妙に分類する。",
+      "first_checked_at": "2026-10-11T02:50:03+00:00",
+      "last_checked_at": "2026-10-11T02:50:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A^3: Accelerating Attention Mechanisms in Neural Networks with Approximation"
     }
   }
 }
