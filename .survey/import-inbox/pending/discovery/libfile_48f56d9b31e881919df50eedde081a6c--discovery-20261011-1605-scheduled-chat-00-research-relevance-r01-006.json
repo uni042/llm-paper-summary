@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1605-scheduled-chat-00/r01",
+  "reference_main_sha": "2b8df26df5166daa68dcf3f458f0836bf3d3d3e9",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": [
+        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945"
+      ],
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation",
+      "reason": "論文タイトルが示す主題は、汎用オペレーティングシステムにおけるハードウェア資源の分離・分散である。LLM推論、LLMモデル、推論用メモリ階層やサービング方式の固有研究を示さないため、サーベイの収録対象から除外する。一般的な分散資源管理の背景文献としては有用でも、対象技術の直接研究とは区別する。",
+      "source_url": "https://www.semanticscholar.org/paper/7945684818786fcb32cf92bace2566d7d6bc8945",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read; general distributed operating system",
+      "first_checked_at": "2026-10-11T16:05:00+09:00",
+      "last_checked_at": "2026-10-11T16:05:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 6
+    }
+  ]
+}
