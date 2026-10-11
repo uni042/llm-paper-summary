@@ -759,7 +759,7 @@
   本論文は、長文脈を固定容量の状態へ圧縮する線形再帰言語モデルが、記憶の保持と更新を両立しにくい問題を扱う。
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：24  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -787,7 +787,7 @@
   生成ループを細粒度APIへ分解し、Wasm inferletがKV・復号・入出力を直接制御しつつ適応一括処理でGPU効率を維持するプログラマブルLLMサービング基盤。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
-  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：10  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
@@ -1204,6 +1204,10 @@
   実装：[✓](https://github.com/alipay/PainlessInferenceAcceleration) ・ リポジトリ内被引用：7  
   Lookaheadは、この空きを利用して過去の生成履歴から複数の継続候補を構成し、一回の対象モデル計算で複数トークンを確定する推論高速化方式である。
 
+- **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
+  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：6  
+  RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
+
 - **2024-06 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
   実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：6  
   大規模言語モデルの推論アクセラレータを設計するとき、演算器数、オンチップメモリ容量、外部メモリ帯域、チップ面積、装置間接続、並列配置を変えるたびにRTL実装や実機試作を行うのは現実的ではない。実機検証ではNVIDIA A100、AMD MI210、Google TPUv3を使い、演算子遅延の平均誤差10.9%、LLM推論全体の平均遅延誤差4.1%を報告する。
@@ -1227,10 +1231,6 @@
 - **2024-10 · [MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal Projection](2024-2410.14731-matryoshkakv-adaptive-kv-compression-via-trainable-orthogonal-projection.md)**  
   実装：[✓](https://github.com/The-kamisato/MatryoshkaKV-cache) ・ リポジトリ内被引用：5  
   MatryoshkaKVは、事前学習済み大規模言語モデル（LLM）の鍵値キャッシュ（KVキャッシュ）について、トークン数や注意ヘッド数を減らす代わりに各ヘッドが保存する特徴次元を縮小する方式である。単純な主成分分析（PCA）による次元削減は中程度の圧縮では有効だが、元のキャッシュ容量の半分以下にすると生成品質が急落する。
-
-- **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
-  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：5  
-  RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2024-04 · [HGRN2: Gated Linear RNNs with State Expansion](2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md)**  
   実装：[✓](https://github.com/OpenNLPLab/HGRN2) ・ リポジトリ内被引用：5  
@@ -1530,6 +1530,10 @@
   実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：8  
   文書が長いほど参照すべきキーと値の数が増え、推論時のメモリ使用量と注意計算が膨らむ。長文専用の注意構造へモデルを変更する方式は再事前学習や追加の位置埋め込み学習を要する場合がある。
 
+- **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
+  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：6  
+  従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
+
 - **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
   実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：6  
   大規模言語モデル（LLM）で多段階推論の精度を上げる自己整合性（自己整合性）は、同じ質問に対して複数の思考連鎖を標本化し、最終回答を多数決する方式である。最大7.9倍の節約は個別条件の値であり、全条件平均ではない。
@@ -1545,10 +1549,6 @@
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
   実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：5  
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
-
-- **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
-  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：5  
-  従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
 
 - **2023-05 · [LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning](2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md)**  
   実装：[✓](https://github.com/aim-uofa/LoRAPrune) ・ リポジトリ内被引用：5  
