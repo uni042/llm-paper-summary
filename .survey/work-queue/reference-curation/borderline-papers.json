@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T13:06:23+00:00",
-  "record_count": 4653,
+  "updated_at": "2026-10-11T14:27:36+00:00",
+  "record_count": 4654,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71126,6 +71126,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling"
+    },
+    "arXiv:2511.00413": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00413",
+      "identity_tokens": [
+        "arXiv:2511.00413"
+      ],
+      "reason": "一次要旨は、ツール呼出しなどで分岐したエージェント軌跡の共有接頭辞をDFSで直列化し、順伝播・逆伝播の重複を削減する学習処理を提案する。密モデルとMoEの教師あり微調整・強化学習で最大6.2倍の学習高速化を報告するが、推論サービング、実行時キャッシュ、GPU推論カーネルへの具体的な最終適用は一次要旨で確認できない。現行サーベイでは学習単独高速化が凍結範囲のためResearch対象にせず、技術的関連性がある境界候補として保存する。",
+      "first_checked_at": "2026-10-11T14:27:36+00:00",
+      "last_checked_at": "2026-10-11T14:27:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse"
     }
   }
 }
