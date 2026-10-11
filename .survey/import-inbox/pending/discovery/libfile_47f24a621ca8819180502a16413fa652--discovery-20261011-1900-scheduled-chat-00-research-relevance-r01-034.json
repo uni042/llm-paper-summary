@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1900-scheduled-chat-00/r01/relevance-34",
+  "reference_main_sha": "d88730e7270f4ff62b77c65a43b8060ce9435122",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3452296.3472904",
+      "identity_tokens": [
+        "DOI:10.1145/3452296.3472904",
+        "doi:10.1145/3452296.3472904"
+      ],
+      "title": "Efficient sparse collective communication and its application to accelerate distributed deep learning",
+      "reason": "タイトル上の主題は、一般的な分散深層学習を高速化する疎な集団通信（collective communication）である。LLM推論、KVキャッシュ、推論サービング、推論カーネルの最終適用先を示しておらず、現行の学習単独研究の凍結方針では収録対象外と判断。本文・要旨を確認していないタイトル先行判定である。",
+      "source_url": "https://doi.org/10.1145/3452296.3472904",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-11T19:05:22+09:00",
+      "last_checked_at": "2026-10-11T19:05:22+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 34
+    }
+  ]
+}
