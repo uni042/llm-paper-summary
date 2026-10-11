@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding",
+      "source_url": "https://arxiv.org/abs/2605.12396",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large multi-node GPU jobs often become limited by the number of bytes injected into the inter-node network path. Compression can reduce this traffic, but existing compression-assisted collective libraries either sit outside NCCL’s GPU-centric execution model or mainly rely on quantization alone. We present NCCLZ, a compression-enabled extension to NCCL that decouples lossy quantization from lossless entropy coding. NCCLZ performs approximation once before communication by converting tensors into integer symbols, and then applies lossless byte reduction inside NCCL’s communication pipeline. This placement keeps numerical approximation explicit, avoids repeated lossy recompression during reductions, and preserves NCCL’s native pipelined execution model. NCCLZ combines a runtime selector with slot-aware framing and pipelined staging to choose among raw transmission, fixed-length packing, and GPU Huffman coding. Initial results on Polaris show up to 9.65× compression ratio and up to 4.79× higher end-to-end AllReduce throughput than baseline NCCL on representative scientific and training tensors.",
+      "identifiers": [
+        "SemanticScholar:34218995c994cba7b20ffd108491b09428fac252"
+      ],
+      "semantic_scholar_id": "34218995c994cba7b20ffd108491b09428fac252",
+      "canonical_id": "arXiv:2605.12396",
+      "arxiv_id": "2605.12396",
+      "doi": "10.1145/3806645.3820073",
+      "authors": [
+        "Jia-Min Wang",
+        "Zhi-Jing Ye",
+        "Xiao-Dong Yu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NCCLZはquantizationとentropy codingでGPU collective通信を圧縮・重畳し、distributed GPU workloadの通信時間を短縮する機構。LLM推論の分散実行基盤に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CANTANTE: Optimizing Agentic Systems via Contrastive Credit Attribution",
+      "source_url": "https://arxiv.org/abs/2605.13295",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based multi-agent systems have demonstrated strong performance across complex real-world tasks, such as software engineering, predictive modeling, and retrieval-augmented generation. Yet automating their configuration remains a structural challenge, as scores are available only at the system level, whereas the parameters governing agent behavior are local. We argue that optimizing these systems is fundamentally a credit-assignment problem. We therefore introduce CANTANTE, a framework that decomposes system-level rewards into per-agent update signals by contrasting rollouts of multiple joint configurations on the same query. We instantiate it for prompt optimization, treating agent prompts as learnable system parameters. We evaluate CANTANTE against GEPA and MIPROv2 on programming (MBPP), mathematical reasoning (GSM8K), and multi-hop question answering (HotpotQA). Across these benchmarks, CANTANTE achieves the best average rank among all evaluated optimizers and consistently outperforms unoptimized prompts. It improves over the strongest baseline by +18.9 percentage points on MBPP and +12.5 percentage points on GSM8K, while incurring a lower inference cost. It remains within one standard deviation of the strongest baseline on HotpotQA. Crucially, our credit correlation analysis confirms that the attributer produces meaningful per-agent signals rather than echoing the global system score.",
+      "identifiers": [
+        "SemanticScholar:0f87d697d9d3eb7a5d97227eeaeb7517a01ef149"
+      ],
+      "semantic_scholar_id": "0f87d697d9d3eb7a5d97227eeaeb7517a01ef149",
+      "canonical_id": "arXiv:2605.13295",
+      "arxiv_id": "2605.13295",
+      "doi": "10.48550/arXiv.2605.13295",
+      "authors": [
+        "Tom Zehle"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CANTANTEはmulti-agent LLMのprompt configurationをcontrastive credit attributionで最適化し、強いbaselineより低いinference costを明示する。agentic LLM systemの実行コストに直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ac5e71d44f6",
+    "round": "libimp-4ac5e71d44f673ea-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ac5e71d44f673ea-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ac5e71d44f673ea-pre01.json",
+    "receipt": "sha256:490d30ec5385933d055b7b72fd405fd4a7356267caa9f5477ec0d71358c5e227"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ac5e71d44f6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
