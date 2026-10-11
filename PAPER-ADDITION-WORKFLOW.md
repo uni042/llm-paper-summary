@@ -1,6 +1,6 @@
 # 論文探索・読解・GitHub登録
 
-更新: 2026-10-10。正本はこのフォルダ、対象repoは `uni042/llm-paper-summary`。工程別の詳細は [PAPER-ADDITION-DETAILS.md](PAPER-ADDITION-DETAILS.md)、ローカル補助CLIは [AUTOMATION-TOOLS.md](AUTOMATION-TOOLS.md)。この手順は探索・読解・登録に必要な範囲に絞る。
+更新: 2026-10-11。正本はこのフォルダ、対象repoは `uni042/llm-paper-summary`。工程別の詳細は PAPER-ADDITION-DETAILS.md (`PAPER-ADDITION-DETAILS.md`)、ローカル補助CLIは AUTOMATION-TOOLS.md (`AUTOMATION-TOOLS.md`)。この手順は探索・読解・登録に必要な範囲に絞る。
 
 ## 探索モード
 
@@ -13,6 +13,8 @@
 - unrelated: LLMを使うだけの異分野応用、能力/生成品質評価、安全性・社会的影響、画像/音声等の独立応用、学習単独の高速化など、対象システム効率との具体的な接続が一次資料から確認できないもの。
 - 新しさ、被引用数、venueは優先度には使えるが、関連性の証拠にしない。テンプレート理由は禁止し、各論文の提案機構・改善対象・適用先に結び付けて理由を書く。
 - 安定ID（arXiv/DOI等）、一次資料の題名・要旨・書誌、研究対象、提案技術、改善対象を確認する。一次要旨を取得できない候補は、確認済みID・題名・一次URLと取得失敗理由を残してborderlineへ記録する。ID・題名自体が不確かなidentity_unresolvedは未解決として別管理し、正式分類件数へ含めない。
+- arXivの題名・要旨をbrowser/search経由で読む場合は、使ったversionと提出時刻を確認し、recordの確認時刻と照合する。unversioned pageのcached resultが古い版を示すことがある。後版がscreen時刻以前に公開済みならその版を一次根拠として使い、screen後の公開なら当時の版と後版を区別する。版の時系列を確認できなければ結論を急がず、根拠版と不確実性を記録する。B94 `arXiv:2603.18104`では、screen後に取得されたcached v5表示をv6（screen前に公開済み）で訂正した。詳細は `reports/20261010-main-57470d7-worklist-5000/b94-version-adjudication.md`。
+- DOI論文を取得不能としてborderlineにする前に、Crossref等またはDOI解決先で登録出版社を確認し、その出版社の公式論文ページを試す。別出版社・別プラットフォームへの誤った経路の失敗を、一次資料取得不能の根拠にしない。Crossref等の書誌metadataはidentity・題名の照合には使えるが、要旨を代替しない。公式出版社ページの内容をbrowser/search retrieval経由で得た場合も、確認済みID・題名・出典URLに結び付いた要旨セクションのまとまった本文を判読できればabstract screenに使い、その取得経路を記録する。題名・metadataや要旨外の断片だけでは取得成功とせず、出版社の要旨を取得できなければ具体的な失敗理由付きborderlineを維持する。実例: B90のDOI `10.26599/bdma.2025.9020019` はIEEE Xploreの失敗を記録していたが、登録出版社Tsinghua University PressのSciOpen公式ページには一次要旨があり、要旨screen後に`unrelated`へ訂正した。B91では公式出版社結果に表示された要旨を確認できたMDPI 2件・IEEE Xplore 1件をabstract screenし、要旨セクションを取得できなかった4件をborderlineのまま残した（詳細は `reports/20261010-main-57470d7-worklist-5000/b91-primary-screening-report.md` と `b91-unavailable-review.md`）。
 - 本文未読で一次要旨を読めたrecordでは body_check: "abstract_screen_only; body_not_read" を記録する。一次要旨を取得できず本文も読めなかったborderlineでは body_check: "source_unavailable; abstract_not_read; body_not_read" とし、確認済み書誌・一次URL・具体的取得失敗をreasonに残す。明白な対象外だけをタイトル段階で除外する場合は body_check: "title_screen_only; abstract_not_read; body_not_read" とし、理由も題名に示された明白な対象外に限定する。本文で見たような評価・機構を記述しない。
 - linked_from / identity_tokens は確認済みの情報だけを記録する。未確認関連付け、安定ID、日時、実験結果を捏造しない。
 
@@ -20,7 +22,7 @@
 
 - 作業前に最新main SHAを固定し、同一SHAのSTATUS.md、processor/precheck scripts、関連Actionsの実行設定、対象成果を確認する。GitHub側の古い手順書（worker-router、import-inbox README等）は参照しない。実行規約はこのローカル契約とユーザーの最新指示を使う。古いcloneやmain取得失敗から候補・重複・空queueを推定しない。
 - 既存batchではR312〜R336の暫定screenを再評価する。items[] / results[] の両形式を読む。accept_for_readingは暫定推奨、identity_unresolvedは再照合、clear_out_of_scopeは根拠を確認して原則unrelatedとする。要旨証拠・原本・出典・履歴を保持し、汎用理由は一次要旨に戻って論文固有の根拠へ直す。
-- 同一論文の統合ではcanonical ID、別名ID、identity tokens、題名を使い、衝突を未解決として明示する。既存paper、Research job、relevance台帳との重複は最新main側の正式precheckに委ねる。ローカル重複helperは同じ論文を二重にbatch投入しないために使い、正式採否の代用にしない。
+- 同一論文の統合ではcanonical ID、別名ID、identity tokensを照合し、衝突を未解決として明示する。題名一致だけでは重複とせず、追加確認用auditに残す。既存paper、Research job、relevance台帳との重複は最新main側の正式precheckに委ねる。ローカル重複helperは同じ論文を二重にbatch投入しないために使い、正式採否の代用にしない。具体的なselector監査欄は PAPER-SELECTION-FLOW.md (`PAPER-SELECTION-FLOW.md`) を参照。
 - 新規探索は50候補を1担当者が1batchで扱う。rootは割当前に題名・要旨をざっと見て、明白な無関係だけ根拠付きunrelated_listに記録して担当から外す。系統との接点や対象技術への可能性が残る候補は広く残す。agentの結果とroot除外を同一batchへ統合し、rootが全件検証する。
 
 ### 正規Discovery JSONと段階投入
@@ -34,6 +36,7 @@
 - survey-orchestrator.yml と library-import.yml の正規Actionsへ任せる。precheck result/request、Discovery submission、Research job、relevance台帳、STATUSを手作業で生成せず、正式routeを迂回しない。受付済みはResearch job化や最終paper収録と区別する。
 - 実行時は、最初のlibrary-import runがpending→waitingとprecheck requestを作成して正常終了し、公式precheck gate後の継続runがsubmission・receipt・Research jobを完了する場合がある。最初のrun終了だけで停滞と判断せず、Actionsの自動継続を追跡する。receipt名は`<run_key>--<payload_sha256>--<run_key>.json`のようにhash付きになることがあるため、`<run_key>.json`だけを問い合わせず、pending時の正確なhash付きbasenameをresults/discoveryで照合する。手動でprecheck・submission・job・receiptを作らない。
 - 受け入れ経路が明らかに停止した場合は、Actionsのrun/job状態・最終更新時刻・直近commitを確認して根拠をcheckpointし、6.1 Sol（reasoning low）へ最小限の再現情報と関連実装を渡して原因切り分けと範囲を絞った修繕を依頼する。修繕後はrootが差分と作用範囲を確認し、関連するfocused checkを実行してから正規経路を再開する。単に長時間実行中という表示だけでは停止と判定せず、既存の実行上限・過去の通常所要時間と比較する。
+- 停止判定では `run.updated_at` だけを進捗時計にしない。実際のUTC観測時刻とrun/jobの開始時刻を記録し、job内のactive step・step開始時刻・完了済みstepの増加を再取得して比較する。stepが前進中ならrun更新欄が古くても停止扱いしない。前進しない場合は宣言timeoutと同種runの通常所要時間も照合してから6.1へ依頼する。heartbeatの時刻とローカル実行環境の時計が食い違った実例があるため、Actions経過時間は実際のUTCとstep時刻から算出する。
 - 各batchでDiscovery schema検査/root検査、exact readback後にmain SHA、件数、receipt結果をcheckpointする。screen結果・一次要旨証拠・判定履歴は保持する。削除できるのは完全readback済みのupload artifact copyだけで、唯一の証跡を削除しない。
 - **成功確認済みの実行例（2026-10-10）**: `codex-backfill-r492-b35-p05` は `stage_upload.py stage/emit` のUTF-8 bytesをContents APIでcreate-only登録し、作成commit固定のbase64 readbackをstage emitと照合した。通常のimporterが生成したreceiptは `imported`、source SHA-256 `ff8cd26f0c554a60f30272659ffa2479b6b76f3f7b8e0c710f5dabfb1b0acb2b`、19 records、18 accept/submit、provider gap 0。4件の正規submissionでResearch job 18件を確認し、STATUS候補数は親mainの1,034から1,052へ増加した。この実績は送信成功だけでなく、下流receipt・job・STATUSまで追跡できた例である。原稿・stage manifestは `reports/20261010-main-0a9fb-worklist-5000/codex-backfill-r492-b35-p05.json` と `reports/20261010-staged-codex-backfill-r492-b35-p05-d240/`、receiptは `repository/.survey/import-inbox/results/discovery/codex-backfill-r492-b35-p05--ff8cd26f0c554a60f30272659ffa2479b6b76f3f7b8e0c710f5dabfb1b0acb2b--codex-backfill-r492-b35-p05.json` を参照する。これは同じ正規routeの実証記録であり、後続batchのreadback・precheck・Research job・receipt確認を省略する根拠にはしない。
 - `tools/validate_abstract_screen.py` は旧provisional-screen形式専用であり、正規 `discovery_run` を検証しない。旧screen enumや本文確認前提がabstract-only Discovery契約と衝突した場合、そのvalidatorのFAILをDiscovery JSONへ無理に適合させず、根拠を偽らずにcanonical schema・全件identity/disposition・本文未読表記・取得不能borderline・未解決分離をroot検査し、診断をscreen証跡へ残す。validatorの移行・統合は別の明示タスクで扱う。
@@ -46,7 +49,7 @@
 
 ## 作業順
 
-候補選定・補充は [PAPER-SELECTION-FLOW.md](PAPER-SELECTION-FLOW.md) に従う。探索候補は50件を1 batchとして扱い、rootがローカルpaper/draft/report/batchとの重複を除き、題名・要旨のquick skimで明白な対象外だけを根拠付き`unrelated_list`に先行記録する。残りを1人の担当へ順番に渡し、事前除外分も同じbatch resultへ統合してGitHubへ登録する。GitHubのpending/waiting/blocked件数とmain SHAは各batch後に記録し、累計処理数と一緒にユーザーへ報告するが、待機列の増減を次batch開始条件にしない。作業者は常に1人とし、screening時にGitHub側状態を候補ごとに照合せず、最終precheck/importへ任せる。
+候補選定・補充は PAPER-SELECTION-FLOW.md (`PAPER-SELECTION-FLOW.md`) に従う。探索候補は50件を1 batchとして扱い、rootがローカルpaper/draft/report/batchとの重複を除き、題名・要旨のquick skimで明白な対象外だけを根拠付き`unrelated_list`に先行記録する。残りを1人の担当へ順番に渡し、事前除外分も同じbatch resultへ統合してGitHubへ登録する。GitHubのpending/waiting/blocked件数とmain SHAは各batch後に記録し、累計処理数と一緒にユーザーへ報告するが、待機列の増減を次batch開始条件にしない。作業者は常に1人とし、screening時にGitHub側状態を候補ごとに照合せず、最終precheck/importへ任せる。
 
 探索の採用閾値は広く取る。既存の論文系統（既存paperからのlinked/related paper family）に加わる可能性がそこそこある候補は、本文評価の完成度や効果の強さが未確定でもscreeningで落とさずDiscoveryの`accept`として読解ゲートへ送る。特にLLM推論の計算量・メモリ・レイテンシ・スループット・KV cache・quantization・offload・servingを直接改善する具体的手法、または既存論文系統との妥当なつながりが要旨上うかがえるものを広く残す。これは探索候補として読解へ通す判定であり、最終収録や有効性の承認ではない。読解担当は一次本文の手法・実験・限界と系統とのつながりを確認し、明確に対象外なら`unrelated`、関係が弱い/本文取得不能/解決困難なら理由付き`borderline`へ最終分類する。要旨だけで技術的成功を断定しない。保留だけの最終状態を残さない。
 
@@ -54,18 +57,18 @@
 
 50件batchを担当へ渡す前に、rootが候補一覧の題名・要旨をざっと確認する。対象との接点が明らかにない候補だけを事前に`unrelated_list`へ記録し、一次要旨など判定根拠を短く残して、担当への一次資料確認依頼から外す。既存論文系統との接点、推論効率への具体的な寄与、または少しでも関連可能性が残る候補は外さず担当へ渡す。事前除外した候補も元の50件batch結果へ統合し、root validatorを通したうえで、他の分類済み結果とともにGitHubのDiscovery artifactへ登録する。候補を未記録のまま捨てない。
 
-決定的で反復可能な機械作業（ローカル重複照合、候補選別、schema/件数確認、集計、file/hash確認、定型packet生成）は、手作業の繰り返しより再利用可能なread-onlyまたは安全な補助scriptを優先する。論文のscope適合性、証拠の十分さ、曖昧さの dispositionなど意味判断が必要な工程はLLMが担当する。scriptの出力は該当する受け入れ条件に沿って確認し、GitHub/API・削除・外部状態変更を含む作用は既存の明示的な承認境界を維持する。新規scriptは [AUTOMATION-TOOLS.md](AUTOMATION-TOOLS.md) に用途と制約を記録する。
+決定的で反復可能な機械作業（ローカル重複照合、候補選別、schema/件数確認、集計、file/hash確認、定型packet生成）は、手作業の繰り返しより再利用可能なread-onlyまたは安全な補助scriptを優先する。論文のscope適合性、証拠の十分さ、曖昧さの dispositionなど意味判断が必要な工程はLLMが担当する。scriptの出力は該当する受け入れ条件に沿って確認し、GitHub/API・削除・外部状態変更を含む作用は既存の明示的な承認境界を維持する。新規scriptは AUTOMATION-TOOLS.md (`AUTOMATION-TOOLS.md`) に用途と制約を記録する。
 
-直接依頼のCodexは [CODEX-PAPER-ROUTE.md](CODEX-PAPER-ROUTE.md) とローカル詳細契約を使う。GitHub側のrouter、README、workflow手順書を実行時にfetch/readしない。必要な実行条件はCodex専用execution_contract、品質項目はローカル詳細契約と論文templateに揃える。GitHubは最新状態・原稿・監査code/config等の入力データ取得と許可された保存のために使い、手順書読取へのfallbackはしない。
+直接依頼のCodexは CODEX-PAPER-ROUTE.md (`CODEX-PAPER-ROUTE.md`) とローカル詳細契約を使う。GitHub側のrouter、README、workflow手順書を実行時にfetch/readしない。必要な実行条件はCodex専用execution_contract、品質項目はローカル詳細契約と論文templateに揃える。GitHubは最新状態・原稿・監査code/config等の入力データ取得と許可された保存のために使い、手順書読取へのfallbackはしない。
 
-2026-10-05に専用generatorの19件focused test、identity3件・claim2件の回帰、外側brief/identity補助6件、および取得時最新mainでのCLI生成/checkが成功。実データの手順文書read禁止検証と正式状態不変も確認した。[検証記録](reports/20261005-codex-route-final.md)を参照。GitHubへのコード公開・Actions実行は未実施で、現在はローカル隔離checkoutを使う。
+2026-10-05に専用generatorの19件focused test、identity3件・claim2件の回帰、外側brief/identity補助6件、および取得時最新mainでのCLI生成/checkが成功。実データの手順文書read禁止検証と正式状態不変も確認した。検証記録 (`reports/20261005-codex-route-final.md`)を参照。GitHubへのコード公開・Actions実行は未実施で、現在はローカル隔離checkoutを使う。
 
-ローカルResearchは [RESEARCH-BATCH-FLOW.md](RESEARCH-BATCH-FLOW.md) の小batchを通常経路とする。rootが候補と監査環境をまとめて確定し、1担当へ通常3本（少なくとも2本）を1回の契約で渡して既存agentを再利用する。人数を埋めるために1人1本へ分割しない。残り1本・長大論文・取得blocker・使用枠不足だけは理由付きで個別に切り分ける。完成分の随時返却と一括機械監査を組み合わせ、一次読解と意味reviewは論文別に維持する。Scheduled ChatのLibrary契約はこのCodex専用経路の対象外。
+ローカルResearchは RESEARCH-BATCH-FLOW.md (`RESEARCH-BATCH-FLOW.md`) の小batchを通常経路とする。rootが候補と監査環境をまとめて確定し、1担当へ通常3本（少なくとも2本）を1回の契約で渡して既存agentを再利用する。人数を埋めるために1人1本へ分割しない。残り1本・長大論文・取得blocker・使用枠不足だけは理由付きで個別に切り分ける。完成分の随時返却と一括機械監査を組み合わせ、一次読解と意味reviewは論文別に維持する。Scheduled ChatのLibrary契約はこのCodex専用経路の対象外。
 
 1. Git状態と5時間/週次使用枠を確認し、既存のdirty成果を保持する。最新main SHAを固定し、同じSHAのSTATUS・正規候補・identity・job/claim/inbox状態をCodex packetへまとめる。手順はこのローカル契約とexecution_contractを使い、GitHub手順書は読まない。未取得・404・古いcloneを「候補なし」と解釈しない。
 2. 同じSHAのSTATUS「収録候補論文数」が600超ならResearch、600以下ならDiscovery。指標の欠落・取得不能は理由付きDiscoveryとし、別の実効値を推測しない。packetは完全な正規poolから候補windowを生成し、候補ID・一次資料URL・参照元と未解決点/final dispositionを保持する。手動で旧worklistを使うfallbackでは全ページを確認する。保存済み候補はID/hashで照合し、既処理分の再取得を避ける。
 3. Discoveryは一次資料の題名・要旨・書誌と安定IDを確認し、論文固有の根拠でaccept/borderline/unrelatedへ最終分類する。本文読解は必須にしない。要旨上、LLM推論・実行基盤への具体的な寄与や既存系統との接点がある候補は広くaccept側へ残し、Researchの本文読解へ送る。本文未読は`abstract_screen_only; body_not_read`、明白な題名除外のみは`title_screen_only; abstract_not_read; body_not_read`と記録する。一次要旨取得不能は確認済みID・題名・一次URLと取得失敗理由付きborderlineへ記録する。identity自体が不確かな場合は未解決として別管理し、正式分類・候補数へ含めない。borderlineは境界的な関連性または取得不能の理由を明記する。Research担当は一次本文の該当節・評価・限界を確認して最終収録を判断する。未確認の機構・評価・書誌を補わない。
-4. 成果を1回分のimmutable Research MarkdownまたはDiscovery JSONに完成させる。Discoveryはschema_version 2、artifact_type `discovery_run`、一意なrun_key、参照main SHA、全recordの最終分類と根拠を含める。手順は [詳細](PAPER-ADDITION-DETAILS.md) を参照。
+4. 成果を1回分のimmutable Research MarkdownまたはDiscovery JSONに完成させる。Discoveryはschema_version 2、artifact_type `discovery_run`、一意なrun_key、参照main SHA、全recordの最終分類と根拠を含める。手順は 詳細 (`PAPER-ADDITION-DETAILS.md`) を参照。
    R312〜R336のbackfillでは`results[]`と`items[]`を再評価し、一次要旨とidentityを確認した正式分類だけを1 artifact最大20件で送る。旧`tools/watch_discovery_uploads.py prepare`は本文確認前提・取得不能のborderline変換を含むため、この新契約の変換には使用しない。暫定acceptを機械的に正式acceptへ変換せず、identity未解決を別台帳に残す。取得不能のborderlineは確認済みidentityと取得失敗理由を保持する。ready artifactは不変とし、source/result hashと判定証拠を保持する。
 5. upload用artifactをUTF-8 BOMなし・LFへ正規化し、再監査後の原本SHAを確定する。PowerShellのテキスト出力末尾が本文へ混入しないよう原本bytesを保ってGitHub Contents APIで `.survey/import-inbox/pending/research/` または `pending/discovery/` に新規登録する。名前はrun_keyと原本SHAから一意にする。同じpathの異なる内容を上書きしない。既存ファイルの有無を先に確認する。
    backfillでは接続済みGitHub connectorのContents APIを使い、検査済み原本をcreate-onlyで送る。旧watcherの自動変換や監視を併用して同じ候補を二重投入しない。credentialをscript・引数・logへ保存しない。
@@ -86,7 +89,7 @@
 
 ## 変えない品質・安全条件
 
-- 対象範囲と除外条件は [詳細](PAPER-ADDITION-DETAILS.md) に従う。一次資料、paper固有の機構・評価・限界、identity alias確認を省略しない。
+- 対象範囲と除外条件は 詳細 (`PAPER-ADDITION-DETAILS.md`) に従う。一次資料、paper固有の機構・評価・限界、identity alias確認を省略しない。
 - GitHubの最新mainが正本。ローカルcloneや検索結果だけで重複や不存在を断定しない。
 - create-only upload、固定SHAのreadback、hash一致を維持する。Contents API成功応答だけでは保存確認としない。
 - 既存paperの修正は新規uploadと混ぜず、依頼された対象・目的・差分に限定する。
@@ -118,13 +121,13 @@
 
 ## 単純作業をまとめる補助工程
 
-- 複数原稿の正規化・hash計算・unique path組立は `tools/stage_upload.py stage` で元原稿と別copyへまとめる。本文を含まないmanifestで確認し、正規化copyを監査・reviewする。送信時は `emit` のbase64を復元し、UTF-8 decode/encodeの往復でbytes一致を確かめた文字列だけをContents APIへ渡す。create-only前に最新mainで宛先404を確認し、作成後は固定commitのbase64 readbackをstage emitのbase64と照合する（ASCII空白・TAB・CR/LFの行折返しだけ除去）。JSON再serializationや内容正規化はしない。詳細は [UPLOAD-STAGING.md](UPLOAD-STAGING.md)。2026-10-10にB45-p01/p02/p03すべてでこの方法のcreate-only upload、固定commit exact readback、公式receipt/precheck/submission/Research job/STATUSのterminal gatesを確認した。実例とhash・part別証拠は [B45 upload記録](reports/20261010-main-be057-worklist-5000/b45-upload-record.md)。p03を含む3 partすべてがterminal gateを通過してから次batchへ進む。成功応答やwaitingだけをimport完了と扱わず、各partのreceipt・precheck・submission・Research job・STATUSを確認する。処理効率・節約率は未計測。
+- 複数原稿の正規化・hash計算・unique path組立は `tools/stage_upload.py stage` で元原稿と別copyへまとめる。本文を含まないmanifestで確認し、正規化copyを監査・reviewする。送信時は `emit` のbase64を復元し、UTF-8 decode/encodeの往復でbytes一致を確かめた文字列だけをContents APIへ渡す。create-only前に最新mainで宛先404を確認し、作成後は固定commitのbase64 readbackをstage emitのbase64と照合する（ASCII空白・TAB・CR/LFの行折返しだけ除去）。JSON再serializationや内容正規化はしない。詳細は UPLOAD-STAGING.md (`UPLOAD-STAGING.md`)。2026-10-10にB45-p01/p02/p03すべてでこの方法のcreate-only upload、固定commit exact readback、公式receipt/precheck/submission/Research job/STATUSのterminal gatesを確認した。実例とhash・part別証拠は B45 upload記録 (`reports/20261010-main-be057-worklist-5000/b45-upload-record.md`)。p03を含む3 partすべてがterminal gateを通過してから次batchへ進む。成功応答やwaitingだけをimport完了と扱わず、各partのreceipt・precheck・submission・Research job・STATUSを確認する。処理効率・節約率は未計測。
 - **2026-10-10 B50/B51 p03の完全通過例**: 原稿SHA-256 08ebded08f4fb5ea53b822778a3c3beaa306909ff52cfe4bde869d3a878a82fa、create-only commit 8e4f29f3a978054a7ef03e9e78837597e9ba38de。uploadからprecheck resultまで10分36秒、imported receiptまで23分19秒、STATUS再生まで25分49秒だった。receiptは20 records（9 accept / 11 relevance）、provider gap 0、precheckは9/9 allowed・duplicate / unresolved 0、通常Actionsのsubmission 2件は5+4件・最終duplicate 0・Research job 9件がすべてready。receipt後のSTATUS再生commitは37bb99bbb77a7f8498b26eaefd51900c1ca5462f。実際の経過は成果直結の証拠であり、短縮効果とはみなさない。source hash付きreceipt、precheck、submission結果、ID別Research job状態、直後のSTATUS反映まで揃ったため、後続partへ進む正規受け入れ例として記録する。
 - 不変な原稿の再監査は `audit_drafts.py --reuse` の原本hash・監査コード・設定・環境fingerprintの条件を満たす場合だけ再利用する。正規化でhashが変われば再監査する。
-- 先行する調査根拠は [効率調査記録](reports/20261004-processing-efficiency.md) に保持する。権限エラーの再試行抑制は未反映の提案で、定期ワーカー設定は変更していない。
+- 先行する調査根拠は 効率調査記録 (`reports/20261004-processing-efficiency.md`) に保持する。権限エラーの再試行抑制は未反映の提案で、定期ワーカー設定は変更していない。
 - 固定SHA共有と小batchの実行契約は上記Research batchフローへ具体化した。`research-batch-run.example.json`を実際のcandidate packetとsnapshotへ置換して`generate_briefs.py`に渡す。根拠のないjob/claim確認や旧cloneへのfallbackを省略の代わりに使わない。権限エラー対策と定期ワーカー設定は未変更。
 
-- 2026-10-08にGitHub接続障害を切り分け、通常sandboxのDNS失敗に対して、接続済みGitHub connectorと承認審査を通した `require_escalated` の公開repo読取・fetchが成功することを確認した。接続失敗時は [Codex接続復旧手順](CODEX-PAPER-ROUTE.md#github接続が拒否される場合) を使う。これは上記の旧「権限エラー対策未変更」を接続手順について更新するもので、定期ワーカー設定・global sandbox設定・upload契約は変更しない。
+- 2026-10-08にGitHub接続障害を切り分け、通常sandboxのDNS失敗に対して、接続済みGitHub connectorと承認審査を通した `require_escalated` の公開repo読取・fetchが成功することを確認した。接続失敗時は Codex接続復旧手順 (`CODEX-PAPER-ROUTE.md#github接続が拒否される場合`) を使う。これは上記の旧「権限エラー対策未変更」を接続手順について更新するもので、定期ワーカー設定・global sandbox設定・upload契約は変更しない。
 - **2026-10-10の待機並行screen検証**: B63 p02 (20 records)のContents API create-onlyから19分16秒後、source SHA一致のimported receipt (6 accept / 14 relevance / provider gap 0)を確認した。6件precheckは全件allowed・unresolved 0、正規submission 2件は5+1、重複0、生成したResearch jobs 6件はすべてready、直後STATUSは候補1119・整合性異常0。受け入れ待機中にB69/B70を順番にローカルscreenし、76 delegated candidatesの一次資料判定と成果物stageを進め、後続uploadは先行gate完了まで保留した。取得不能abstract 1件/3件も確認済みID・題名・一次URL・失敗理由付きborderlineで保持した。待機中のローカル探索継続が実行可能なことを確認したが、この1回からupload待ち時間の短縮効果は主張しない。
 
 
@@ -143,6 +146,13 @@
 - runが終了し、別のdashboard runが動いておらず、失敗理由がretry上限までの`fetch first`競合であれば、最新mainへの公式`workflow_dispatch`を1回だけ実行できる。先のrunがactiveの間は重ねてdispatchしない。再度競合失敗したら連続再実行せず、書込競合を監査して復旧方針を決める。
 - 受け入れ完了はrun成功だけで判定せず、最新mainのSTATUS生成時刻、候補/job件数の増分、該当job状態、整合性異常0、`consistency: passed`をreadbackで確かめる。これらを確認してから次のpartを送る。
 - 実例: B72 p01の5件はreceipt/precheck/submission後に全Research jobがreadyだった一方、最初のSTATUS publishは4回のpush競合で失敗した。最新main `9a3557a74`への公式dispatchは成功し、main `2b73edad1`でSTATUSが00:45 JSTに更新、未claim job 1,126→1,131、整合性異常0、consistency passedを確認した。履歴は`reports/20261010-main-57470d7-worklist-5000/upload-record.md`。
+
+## Actions writer gateの対象（2026-10-11確認）
+
+- 候補poolやSTATUSのsnapshotを取る前は、GitHub Actions全体のterminal化を待つのではなく、対象データを書き換え得るworkflowを種類別に確認する。candidate-priority / forward-citation pool writerとSTATUS dashboardがactiveならsnapshotを延期し、latest mainを再取得する。import/receipt/precheck/submissionの進行中成果があれば次のpartのprecheck前に照合する。
+- 長時間のscheduler watchdogは、workflow定義とstep状態を読んで役割を判定する。例として `survey-scheduler-watchdog.yml` は70分job内で10分tickを6回行い、後継watchdogをdispatchする常時運転設計である。これは候補pool writerやSTATUS dashboardではないため、それだけを理由にローカル探索やmain snapshotを永久に止めない。ただし各tick後に起動したorchestratorやpool/STATUS writerをActions一覧で確認し、実際のwriterがactiveなら止める。
+- 「受け入れ停止」は、active gateが変化しないstep、terminal失敗、またはreceipt/precheck/submission/Research job/STATUSの矛盾など具体的な証拠で判断する。単に長いworkflowが `in_progress` という理由だけでは停止・修繕と断定しない。明確なacceptance stallに限り、`gpt-6.1-sol` のread-only監査役へ該当run/job/step・直近の耐久証拠・正確な問いを渡してblocker分類と安全な復旧条件を確認する。実装、外部作用、委譲判断、再dispatchはSolが保持する。
+- 実例: run `38082933351` は2026-10-10 20:14 UTC開始でstepが長時間 `in_progress` だったが、該当workflowの正本は70分・6回tick・後継dispatchを宣言していた。これは正常なwatchdog動作であり、同時に走るSTATUS dashboard `38082957187` がterminal successするまでだけSTATUS更新競合を避けた。dashboard成功後のmain `f418865b3fc5686fe0ee3a5cb2380e3f4bc46355` は `STATUS.md` のみを変更した。Actions job logs endpointは404だったため、step/run状態とworkflow定義を根拠にした。
 
 ## 2026-10-10 B72 p03 end-to-end accepted example
 
