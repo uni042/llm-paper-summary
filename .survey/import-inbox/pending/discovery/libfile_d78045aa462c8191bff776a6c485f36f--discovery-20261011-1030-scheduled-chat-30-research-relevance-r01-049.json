@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-1030-scheduled-chat-30/r01/relevance-049",
+  "reference_main_sha": "6bd57ba0de26351c33cf8a261517947063e2f459",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.06025",
+      "identity_tokens": [
+        "arxiv:2602.06025",
+        "2602.06025"
+      ],
+      "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+      "reason": "原著本文の§3～6を確認。BudgetMemは過去の会話・文書から質問依存のエージェント記憶を抽出する処理を、フィルタ・実体・時間・話題・要約のモジュールに分け、各段階のLow/Mid/High予算を強化学習ルータで選ぶ。費用は主として各モジュールのLLMトークン料金で評価し、LoCoMo・LongMemEval・HotpotQAの回答品質と記憶抽出費用の交換条件を測る。推論時の計算予算制御やモデル容量別ルーティングには関連するが、主要貢献はエージェントの意味記憶構築と回答品質であり、GPU推論カーネル、KVキャッシュ、サービングスケジューラ、CPU/GPUオフロードの実装・性能評価を主対象としないため、現行の推論システムサーベイでは境界とする。",
+      "source_url": "https://arxiv.org/html/2602.06025",
+      "body_check": "research_fulltext_relevance_review: v3本文の§3問題定義、§4モジュール別予算ルータと強化学習、§5～6の記憶抽出費用・LoCoMo/LongMemEval/HotpotQA評価を確認。",
+      "first_checked_at": "2026-10-11T10:33:53+09:00",
+      "last_checked_at": "2026-10-11T10:33:53+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 49,
+      "research_job_id": null
+    }
+  ]
+}
