@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1692d11722cd29bd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.05665",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.05665",
+    "identity_tokens": [
+      "arXiv:2512.05665"
+    ],
+    "reason": "ILVRはマルチモーダル推論中の画像再符号化を避け、潜在視覚状態をテキスト生成と交互に扱う。計算費用の問題に触れるが、主要な貢献と評価は視覚推論品質・中間知覚表現の学習であり、LLM推論サービングのメモリ階層・カーネル・実測処理量最適化ではない。",
+    "first_checked_at": "2026-10-11T11:49:06+00:00",
+    "last_checked_at": "2026-10-11T11:49:06+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Interleaved Latent Visual Reasoning with Selective Perceptual Modeling"
+  },
+  "processed_at": "2026-10-11T11:49:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1692d11722cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
