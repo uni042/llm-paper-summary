@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c6bd2de7b36e2d46da248fdb3a5d49f21ea2c5570cc58d922447743809a0f77e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f5867ef036d--libfile_295c5cde2fb4819195b8acd3e30f2ee3--2023-2312.04927-zoology-research-20261011-1756-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2312.04927",
+  "worker_completed_at": "2026-10-11T18:04:00+09:00",
+  "worker_run_key": "20261011-1756-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5300,
+    "body_paragraphs": 26,
+    "method_chars": 2052,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-11T15:07:42+00:00"
+}

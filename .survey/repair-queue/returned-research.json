@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T15:02:31+00:00",
+  "generated_at": "2026-10-11T15:07:45+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1606,58 +1606,6 @@
       "worker_run_key": "20261011-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2601.04719",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T14:31:22+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2601.04719-gpu-accelerated-int8-quantization-for-kv-cache-compression-in-large-lang.md と 27 段落 / 6082文字 (100.0%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6880,
-        "body_paragraphs": 34,
-        "method_chars": 1822,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1765,
-        "limitation_chars": 852,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_066eb620b2588191912a353976663165--2026-2601.04719-int8-kv-cache-repair-20261011-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_066eb620b2588191912a353976663165--2026-2601.04719-int8-kv-cache-repair-20261011-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261011-2230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2601.21927",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T14:32:04+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 328 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7462,
-        "body_paragraphs": 36,
-        "method_chars": 2884,
-        "method_paragraphs": 13,
-        "evaluation_chars": 328,
-        "limitation_chars": 878,
-        "insufficiency_flags": [
-          "評価説明量 328 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_42d667dc4aac8191a0d1b17275891c4a--2026-2601.21927-sonic-research-20261011-2256-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_42d667dc4aac8191a0d1b17275891c4a--2026-2601.21927-sonic-research-20261011-2256-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-2256-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2502.11494",
       "title": null,
       "source_url": null,
@@ -1684,61 +1632,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_72abf029205c8191946d133bd8bbca14--2025-2502.11494-dart-visual-token-reduction-research-20261011-1900-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-1900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2312.04927",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T14:39:27+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5300,
-        "body_paragraphs": 26,
-        "method_chars": 2052,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_295c5cde2fb4819195b8acd3e30f2ee3--2023-2312.04927-zoology-research-20261011-1756-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_295c5cde2fb4819195b8acd3e30f2ee3--2023-2312.04927-zoology-research-20261011-1756-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-1756-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.23765",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-11T14:48:32+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6252,
-        "body_paragraphs": 35,
-        "method_chars": 2303,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 803,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261011-2330-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2403.00579",
@@ -1797,36 +1690,9 @@
       "worker_run_key": "20261011-1726-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2412.04468",
-      "title": "NVILA: Efficient Frontier Visual Language Models",
-      "source_url": "https://arxiv.org/html/2412.04468v3",
-      "returned_at": "2026-10-11T15:00:37+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4343,
-        "body_paragraphs": 21,
-        "method_chars": 2184,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 669,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e42e2fc32000819196ce2b8bd51ee319--2024-2412.04468-nvila-efficiency-research-20261011-1605-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e42e2fc32000819196ce2b8bd51ee319--2024-2412.04468-nvila-efficiency-research-20261011-1605-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261011-1605-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2110.02861",
-      "title": "8-bit Optimizers via Block-wise Quantization",
-      "source_url": "https://arxiv.org/pdf/2110.02861",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T15:01:21+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1853,8 +1719,8 @@
     },
     {
       "canonical_id": "arXiv:2104.04473",
-      "title": "Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM",
-      "source_url": "https://arxiv.org/pdf/2104.04473",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T15:01:22+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1878,6 +1744,140 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0cfd7af371e9--libfile_beba52501eec81918e88b66cc40f49d9--2021-2104.04473-megatron-lm-ptdp-research-20261011-1700-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-0cfd7af371e9--libfile_beba52501eec81918e88b66cc40f49d9--2021-2104.04473-megatron-lm-ptdp-research-20261011-1700-scheduled-chat-00-r01.json",
       "worker_run_key": "20261011-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.23765",
+      "title": "WISERouter: LLM Routing with Workload Budget Constraint",
+      "source_url": "https://arxiv.org/abs/2607.23765",
+      "returned_at": "2026-10-11T15:07:41+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6252,
+        "body_paragraphs": 35,
+        "method_chars": 2303,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 803,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-15d9f100adfe--libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-15d9f100adfe--libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-2330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2312.04927",
+      "title": "Zoology: Measuring and Improving Recall in Efficient Language Models",
+      "source_url": "https://arxiv.org/html/2312.04927v1",
+      "returned_at": "2026-10-11T15:07:42+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5300,
+        "body_paragraphs": 26,
+        "method_chars": 2052,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f5867ef036d--libfile_295c5cde2fb4819195b8acd3e30f2ee3--2023-2312.04927-zoology-research-20261011-1756-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f5867ef036d--libfile_295c5cde2fb4819195b8acd3e30f2ee3--2023-2312.04927-zoology-research-20261011-1756-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1756-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.04468",
+      "title": "NVILA: Efficient Frontier Visual Language Models",
+      "source_url": "https://arxiv.org/html/2412.04468v3",
+      "returned_at": "2026-10-11T15:07:43+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4343,
+        "body_paragraphs": 21,
+        "method_chars": 2184,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 669,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6c76ea4dc9f2--libfile_e42e2fc32000819196ce2b8bd51ee319--2024-2412.04468-nvila-efficiency-research-20261011-1605-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6c76ea4dc9f2--libfile_e42e2fc32000819196ce2b8bd51ee319--2024-2412.04468-nvila-efficiency-research-20261011-1605-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1605-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.04719",
+      "title": "GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2601.04719",
+      "returned_at": "2026-10-11T15:07:44+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2601.04719-gpu-accelerated-int8-quantization-for-kv-cache-compression-in-large-lang.md と 27 段落 / 6082文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6880,
+        "body_paragraphs": 34,
+        "method_chars": 1822,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1765,
+        "limitation_chars": 852,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d8a3cb835549--libfile_066eb620b2588191912a353976663165--2026-2601.04719-int8-kv-cache-repair-20261011-2230-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d8a3cb835549--libfile_066eb620b2588191912a353976663165--2026-2601.04719-int8-kv-cache-repair-20261011-2230-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-2230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.21927",
+      "title": "SONIC: Segmented Optimized Nexus for Information Compression in Key-Value Caching",
+      "source_url": "https://arxiv.org/abs/2601.21927",
+      "returned_at": "2026-10-11T15:07:44+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 328 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7462,
+        "body_paragraphs": 36,
+        "method_chars": 2884,
+        "method_paragraphs": 13,
+        "evaluation_chars": 328,
+        "limitation_chars": 878,
+        "insufficiency_flags": [
+          "評価説明量 328 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d9ae36cc9be6--libfile_42d667dc4aac8191a0d1b17275891c4a--2026-2601.21927-sonic-research-20261011-2256-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d9ae36cc9be6--libfile_42d667dc4aac8191a0d1b17275891c4a--2026-2601.21927-sonic-research-20261011-2256-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-2256-scheduled-chat-00/r01"
     }
   ]
 }
