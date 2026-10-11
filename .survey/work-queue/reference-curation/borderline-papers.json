@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T18:49:06+00:00",
-  "record_count": 4658,
+  "updated_at": "2026-10-11T19:34:58+00:00",
+  "record_count": 4662,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71195,6 +71195,73 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion"
+    },
+    "DOI:10.1109/menacomm69507.2026.11532795": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/menacomm69507.2026.11532795",
+      "identity_tokens": [
+        "DOI:10.1109/menacomm69507.2026.11532795",
+        "PRIMARY:https://ieeexplore.ieee.org/document/11532795"
+      ],
+      "reason": "open-weight foundation modelsのsystematic review。題名から対象技術との接点はあるが、abstract未取得のため効率・serving整理の有無を判定できない。抽象的なsurveyという理由だけで無関係にしない。 Primary abstract retrieval evidence: official publisher URL https://ieeexplore.ieee.org/document/11532795; Crossref REST metadata returned IEEE, the exact registered title, and the matching IEEE Xplore record identifier. Browser attempt at https://ieeexplore.ieee.org/document/11532795 on 2026-10-11T04:42:52Z: Browser retrieval returned the IEEE Xplore JavaScript/robot-check interstitial; no abstract was exposed.",
+      "first_checked_at": "2026-10-11T19:34:57+00:00",
+      "last_checked_at": "2026-10-11T19:34:57+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring Open-Weight Foundation Models: A Systematic Review from Transformers to Multimodal AI"
+    },
+    "DOI:10.1109/menacomm69507.2026.11532937": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/menacomm69507.2026.11532937",
+      "identity_tokens": [
+        "DOI:10.1109/menacomm69507.2026.11532937",
+        "PRIMARY:https://ieeexplore.ieee.org/document/11532937"
+      ],
+      "reason": "Sovereign foundation modelsのefficiency/cultural alignment/data sovereignty tradeoffを扱う題名で、foundation-model deploymentとの接点があり得る。abstract未取得のためefficiencyが推論基盤の技術か政策的議論か確定できない。 Primary abstract retrieval evidence: official publisher URL https://ieeexplore.ieee.org/document/11532937; Crossref REST metadata returned IEEE, the exact registered title, and the matching IEEE Xplore record identifier. Browser attempt at https://ieeexplore.ieee.org/document/11532937 on 2026-10-11T04:42:52Z: Browser retrieval returned the exact tool error: `URL https://ieeexplore.ieee.org/document/11532937 is not accessible via this tool.` No abstract was obtained.",
+      "first_checked_at": "2026-10-11T19:34:57+00:00",
+      "last_checked_at": "2026-10-11T19:34:57+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward Sovereign Foundation Models for the Mena Region: Balancing Efficiency, Cultural Alignment, and Data Sovereignty"
+    },
+    "arXiv:2605.11192": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11192",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.11192",
+        "PRIMARY:https://arxiv.org/abs/2605.11192v1",
+        "arXiv:2605.11192"
+      ],
+      "reason": "LATTEは固定learnable latent tokensを量子化して低bitrate audioを圧縮するcompact tokenizer。音声token/inference表現効率との接点はあるが、LLM/audio servingへの接続はabstractで示されない。",
+      "first_checked_at": "2026-10-11T19:34:57+00:00",
+      "last_checked_at": "2026-10-11T19:34:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring Token-Space Manipulation in Latent Audio Tokenizers"
+    },
+    "arXiv:2605.05737": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05737",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.05737",
+        "PRIMARY:https://arxiv.org/abs/2605.05737v1",
+        "arXiv:2605.05737"
+      ],
+      "reason": "ReFlectはmodel-agnostic・training-freeのinference-time harnessとしてLLM error detection/recoveryを実行するagent system。task success向上は示すが、推論cost/latency効率の測定がなくsystems connectionは限定的。",
+      "first_checked_at": "2026-10-11T19:34:58+00:00",
+      "last_checked_at": "2026-10-11T19:34:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReFlect: An Effective Harness System for Complex Long-Horizon LLM Reasoning"
     }
   }
 }
