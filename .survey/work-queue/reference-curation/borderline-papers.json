@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T02:51:21+00:00",
-  "record_count": 4617,
+  "updated_at": "2026-10-11T03:32:19+00:00",
+  "record_count": 4619,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70606,6 +70606,36 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Training with Quantization Noise for Extreme Model Compression"
+    },
+    "arXiv:2511.14096": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.14096",
+      "identity_tokens": [
+        "arXiv:2511.14096"
+      ],
+      "reason": "NeuroPathは知識グラフの静的索引、意味経路の逐次追跡、途中推論を使った二次検索を組み合わせ、多段質問応答の検索再現率を改善する。本文の第3・4節で、主要評価はMuSiQue・2Wiki・HotpotQAの検索Recall@2/@5と回答精度であり、反復型RAG比22.8%のトークン削減も報告する。一方、KVキャッシュ、推論スケジューラ、GPU実行、サービングの処理率・遅延改善を主要機構として扱っていないため、推論システムサーベイの直接収録には境界的。",
+      "first_checked_at": "2026-10-11T03:32:18+00:00",
+      "last_checked_at": "2026-10-11T03:32:18+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-30.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval"
+    },
+    "arXiv:2601.08815": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08815",
+      "identity_tokens": [
+        "arXiv:2601.08815"
+      ],
+      "reason": "Agent Contractsは入出力仕様、トークン/API呼出し/時間の予算、成功条件を契約として形式化し、親子エージェントの予算保存則と実行停止を規定する。本文第4〜8節では複数呼出し間の監視と委譲を検証し、反復コードレビューでトークン34,606から3,461への削減を示すが、成功率60.0%から52.9%への差もある。単一LLM呼出し中の強制制御はできず、主題はエージェント運用統治であって推論カーネル・メモリ階層・GPUサービングではないため境界的。",
+      "first_checked_at": "2026-10-11T03:32:19+00:00",
+      "last_checked_at": "2026-10-11T03:32:19+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-30.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agent Contracts: A Formal Framework for Resource-Bounded Autonomous AI Systems"
     }
   }
 }

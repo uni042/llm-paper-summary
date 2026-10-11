@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-077a7d59f16953d4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.14096",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.14096",
+    "identity_tokens": [
+      "arXiv:2511.14096"
+    ],
+    "reason": "NeuroPathは知識グラフの静的索引、意味経路の逐次追跡、途中推論を使った二次検索を組み合わせ、多段質問応答の検索再現率を改善する。本文の第3・4節で、主要評価はMuSiQue・2Wiki・HotpotQAの検索Recall@2/@5と回答精度であり、反復型RAG比22.8%のトークン削減も報告する。一方、KVキャッシュ、推論スケジューラ、GPU実行、サービングの処理率・遅延改善を主要機構として扱っていないため、推論システムサーベイの直接収録には境界的。",
+    "first_checked_at": "2026-10-11T03:32:18+00:00",
+    "last_checked_at": "2026-10-11T03:32:18+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-30.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval"
+  },
+  "processed_at": "2026-10-11T03:32:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-077a7d59f169",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
