@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ac5e71d44f673ea-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.12313",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.12313",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.12313",
+      "PRIMARY:https://arxiv.org/abs/2605.12313v1",
+      "arXiv:2605.12313"
+    ],
+    "reason": "MedHopQAのmulti-hop medical QA track/participating systemsを記述するbenchmark paperで、medical QA性能評価が対象。serving efficiencyへの具体的接続なし。",
+    "first_checked_at": "2026-10-11T07:45:43+00:00",
+    "last_checked_at": "2026-10-11T07:45:43+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Overview of the MedHopQA track at BioCreative IX: track description, participation and evaluation of systems for multi-hop medical question answering"
+  },
+  "processed_at": "2026-10-11T07:45:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ac5e71d44f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

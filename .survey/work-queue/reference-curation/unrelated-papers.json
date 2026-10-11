@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T06:51:25+00:00",
-  "record_count": 11468,
+  "updated_at": "2026-10-11T07:45:45+00:00",
+  "record_count": 11487,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163914,6 +163914,290 @@
         "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md"
       ],
       "title": "JavisGPT: A Unified Multi-modal LLM for Sounding-Video Comprehension and Generation"
+    },
+    "arXiv:2508.19828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19828",
+      "identity_tokens": [
+        "arXiv:2508.19828"
+      ],
+      "reason": "強化学習によるLLMエージェントの記憶利用・管理が主題であり、GPU推論やKVキャッシュなどの計算機メモリ管理を対象としない。推論システムサーベイの直接対象外。",
+      "first_checked_at": "2026-10-11T07:45:37+00:00",
+      "last_checked_at": "2026-10-11T07:45:37+00:00",
+      "linked_from": [],
+      "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning"
+    },
+    "arXiv:2205.08084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "arXiv:2205.08084"
+      ],
+      "reason": "タイトルの主題は生成型事前学習言語モデルを推薦システムとして利用する応用であり、LLMの推論サービング、計算カーネル、KVキャッシュ、モデル圧縮等のシステム最適化ではない。推薦品質を主目的とする研究のため対象外。",
+      "first_checked_at": "2026-10-11T07:45:37+00:00",
+      "last_checked_at": "2026-10-11T07:45:37+00:00",
+      "linked_from": [],
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
+    },
+    "DOI:10.1109/tip.2026.3715328": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3715328",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3715328",
+        "PRIMARY:https://portal.fis.tum.de/en/publications/efficient-all-in-one-image-restoration-with-adaptive-frequency-en/"
+      ],
+      "reason": "AdaptIRの適応周波数強調・軽量畳み込みbackboneで画像復元計算量を抑える画像処理論文。改善対象は画像復元モデルで、LLM推論基盤との具体的接続はない。",
+      "first_checked_at": "2026-10-11T07:45:39+00:00",
+      "last_checked_at": "2026-10-11T07:45:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Efficient All-in-One Image Restoration With Adaptive Frequency Enhancement"
+    },
+    "DOI:10.1109/tip.2026.3695655": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3695655",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3695655",
+        "PRIMARY:https://doi.org/10.1109/TIP.2026.3695655"
+      ],
+      "reason": "題名がmulti-task dense predictionを示し、対象は画素単位のvision prediction。LLM inference/serving効率との接続がないため、一次書誌題名でtitle-screenした。",
+      "first_checked_at": "2026-10-11T07:45:39+00:00",
+      "last_checked_at": "2026-10-11T07:45:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Exploiting Cross-Task Synergy via Frequency-Driven Hierarchical Learning for Multi-Task Dense Prediction"
+    },
+    "arXiv:2605.14591": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14591",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14591",
+        "PRIMARY:https://arxiv.org/abs/2605.14591v2",
+        "arXiv:2605.14591"
+      ],
+      "reason": "Zero-Runは固定member/non-member集合を使う事後的な差分プライバシー監査で、主眼はmembership inferenceのdistribution-shift補正とprivacy evaluation。推論効率を改善しない。",
+      "first_checked_at": "2026-10-11T07:45:39+00:00",
+      "last_checked_at": "2026-10-11T07:45:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Privacy Auditing with Zero (0) Training Run"
+    },
+    "arXiv:2605.14790": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14790",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14790",
+        "PRIMARY:https://arxiv.org/abs/2605.14790v1",
+        "arXiv:2605.14790"
+      ],
+      "reason": "GoRはcitation-evolution graphを用いてidea-generation用LLMをsupervised fine-tuningし、評価は生成品質。学習data/quality研究でserving効率への具体的寄与がない。",
+      "first_checked_at": "2026-10-11T07:45:40+00:00",
+      "last_checked_at": "2026-10-11T07:45:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Graphs of Research: Citation Evolution Graphs as Supervision for Research Idea Generation"
+    },
+    "DOI:10.48550/arxiv.2605.14475": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2605.14475",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14475",
+        "PRIMARY:https://arxiv.org/abs/2605.14475v2",
+        "arXiv:2605.14475"
+      ],
+      "reason": "GeoVistaは高解像度リモートセンシング画像の視覚的証拠を探索するvision-language perceptionで、改善対象はremote-sensing理解性能。LLM system efficiencyへの接続がない。",
+      "first_checked_at": "2026-10-11T07:45:40+00:00",
+      "last_checked_at": "2026-10-11T07:45:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "GeoVista: Visually Grounded Active Perception for Ultra-High-Resolution Remote Sensing Understanding"
+    },
+    "arXiv:2605.12999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12999",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.12999",
+        "PRIMARY:https://arxiv.org/abs/2605.12999v1",
+        "arXiv:2605.12999"
+      ],
+      "reason": "Mambaの次時刻神経spike予測でmouse行動をdecodeし50 ms計測周期内に収めるBCI研究。適用先は神経科学の閉ループdecodingで、LLM推論系の効率技術ではない。",
+      "first_checked_at": "2026-10-11T07:45:40+00:00",
+      "last_checked_at": "2026-10-11T07:45:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Implicit Behavioral Decoding from Next-Step Spike Forecasts at Population Scale"
+    },
+    "arXiv:2605.13624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13624",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.bea-1.60",
+        "PRIMARY:https://arxiv.org/abs/2605.13624v1",
+        "arXiv:2605.13624"
+      ],
+      "reason": "単一LLMの複数候補をedit-level多数決し文法訂正の過剰修正を抑えるtask-specific quality手法。推論costを下げる根拠はなく、むしろ複数候補を用いる。",
+      "first_checked_at": "2026-10-11T07:45:41+00:00",
+      "last_checked_at": "2026-10-11T07:45:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Edit-level Majority Voting Mitigates Over-Correction in LLM-based Grammatical Error Correction"
+    },
+    "arXiv:2605.30400": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30400",
+      "identity_tokens": [
+        "DOI:10.1016/j.xpro.2026.104533",
+        "PRIMARY:https://arxiv.org/abs/2605.30400v1",
+        "arXiv:2605.30400"
+      ],
+      "reason": "ChatGPT biomedical association generationのRAG・cross-model majority-voting評価protocolで、対象は医療情報の信頼性検証。inference system efficiencyを扱わない。",
+      "first_checked_at": "2026-10-11T07:45:41+00:00",
+      "last_checked_at": "2026-10-11T07:45:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Protocol for evaluating ChatGPT in biomedical association generation and verification using a RAG-enabled, cross-model majority voting workflow"
+    },
+    "DOI:10.1109/cscwd68734.2026.11582729": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cscwd68734.2026.11582729",
+      "identity_tokens": [
+        "DOI:10.1109/cscwd68734.2026.11582729",
+        "PRIMARY:https://doi.org/10.1109/CSCWD68734.2026.11582729"
+      ],
+      "reason": "題名がLLMでcybersecurity detection rulesを評価するapplication/frameworkを示す。LLMを使うsecurity-rule evaluationで、推論効率技術ではないため一次書誌題名でtitle-screenした。",
+      "first_checked_at": "2026-10-11T07:45:41+00:00",
+      "last_checked_at": "2026-10-11T07:45:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Can Large Language Models Evaluate Cybersecurity Detection Rules? Framework and Empirical Analysis"
+    },
+    "DOI:10.1109/tpami.2026.3693108": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2026.3693108",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3693108",
+        "PRIMARY:https://scholars.hkbu.edu.hk/en/publications/instance-dependent-early-stopping-for-adaptive-data-pruning/"
+      ],
+      "reason": "Instance-Dependent Early Stoppingは既に学習済み例をbackpropagationから除くtraining-data pruningで、abstractではLLM supervised fine-tuningの計算削減も扱う。推論時ではなくtraining-only efficiencyのため対象外。",
+      "first_checked_at": "2026-10-11T07:45:42+00:00",
+      "last_checked_at": "2026-10-11T07:45:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Instance-Dependent Early Stopping for Adaptive Data Pruning"
+    },
+    "DOI:10.48550/arxiv.2605.14040": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2605.14040",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14040",
+        "PRIMARY:https://arxiv.org/abs/2605.14040v2",
+        "arXiv:2605.14040"
+      ],
+      "reason": "Physics-R1は視覚物理推論向けcorpus・reward verifier・benchmark judgeを監査しRL training recipeを示す。training/evaluation qualityが主題で、serving efficiencyを改善しない。",
+      "first_checked_at": "2026-10-11T07:45:42+00:00",
+      "last_checked_at": "2026-10-11T07:45:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "title": "Physics-R1: An Audited Olympiad Corpus and Recipe for Visual Physics Reasoning"
+    },
+    "arXiv:2605.11653": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11653",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.11653",
+        "PRIMARY:https://arxiv.org/abs/2605.11653v2",
+        "arXiv:2605.11653"
+      ],
+      "reason": "binomial multibit watermarkのstateful encoderと評価はLLM生成文のwatermark robustness/accuracyが対象で、推論基盤性能の改善ではない。",
+      "first_checked_at": "2026-10-11T07:45:42+00:00",
+      "last_checked_at": "2026-10-11T07:45:42+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Every Bit, Everywhere, All at Once: A Binomial Multibit LLM Watermark"
+    },
+    "arXiv:2605.12147": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12147",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.12147",
+        "PRIMARY:https://arxiv.org/abs/2605.12147v1",
+        "arXiv:2605.12147"
+      ],
+      "reason": "PrivacySIMはLLMによる個人privacy行動simulationのaccuracyを測るbenchmarkで、privacy simulation quality評価に限られる。",
+      "first_checked_at": "2026-10-11T07:45:43+00:00",
+      "last_checked_at": "2026-10-11T07:45:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "PrivacySIM: Evaluating LLM Simulation of User Privacy Behavior"
+    },
+    "arXiv:2605.12289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12289",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.12289",
+        "PRIMARY:https://arxiv.org/abs/2605.12289v1",
+        "arXiv:2605.12289"
+      ],
+      "reason": "PriorZeroはLLM priorsをRL world-model planningへ注入しexploration efficiencyとtask returnを改善するが、ここでの効率は探索/意思決定でありLLM推論の計算・memory・latency効率ではない。",
+      "first_checked_at": "2026-10-11T07:45:43+00:00",
+      "last_checked_at": "2026-10-11T07:45:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "PriorZero: Bridging Language Priors and World Models for Decision Making"
+    },
+    "arXiv:2605.12313": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12313",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.12313",
+        "PRIMARY:https://arxiv.org/abs/2605.12313v1",
+        "arXiv:2605.12313"
+      ],
+      "reason": "MedHopQAのmulti-hop medical QA track/participating systemsを記述するbenchmark paperで、medical QA性能評価が対象。serving efficiencyへの具体的接続なし。",
+      "first_checked_at": "2026-10-11T07:45:43+00:00",
+      "last_checked_at": "2026-10-11T07:45:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Overview of the MedHopQA track at BioCreative IX: track description, participation and evaluation of systems for multi-hop medical question answering"
+    },
+    "arXiv:2008.05000": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.05000",
+      "identity_tokens": [
+        "arXiv:2008.05000"
+      ],
+      "reason": "グラフニューラルネットワークの量子化学習が主題で、LLM・Transformer・LLM推論システムを対象としていない。タイトルによる明白な無関係候補。",
+      "first_checked_at": "2026-10-11T07:45:44+00:00",
+      "last_checked_at": "2026-10-11T07:45:44+00:00",
+      "linked_from": [],
+      "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
+    },
+    "arXiv:2509.25140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25140",
+      "identity_tokens": [
+        "arXiv:2509.25140"
+      ],
+      "reason": "LLMエージェントが推論履歴を記憶して自己改善する手法であり、タイトルからはLLM推論のハードウェア・サービング・メモリ階層・計算効率を直接扱う研究ではない。エージェントの行動・記憶学習の課題として対象外。",
+      "first_checked_at": "2026-10-11T07:45:45+00:00",
+      "last_checked_at": "2026-10-11T07:45:45+00:00",
+      "linked_from": [],
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
     }
   }
 }

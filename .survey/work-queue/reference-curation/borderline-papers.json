@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T06:51:28+00:00",
-  "record_count": 4637,
+  "updated_at": "2026-10-11T07:45:45+00:00",
+  "record_count": 4639,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -31541,9 +31541,9 @@
       "identity_tokens": [
         "arXiv:2002.08307"
       ],
-      "reason": "BERTの重み枝刈りを事前学習段階で行い、30–40%程度のpruningではtransfer性能を損なわないことを分析する。モデル圧縮は推論配備に関連するが、主目的・評価はtransfer learningへの影響で、推論latency・memory・throughputのsystem実測がないためborderline。",
+      "reason": "本文の§2〜§5を確認。BERT-Baseの重みの大きさに基づく枝刈りを30〜90%まで実施し、GLUEの転移学習への影響を測る。30〜40%の重み除去は精度を保つが、中心的な研究質問は事前学習情報の転移と微調整前後の枝刈り可能性であり、自己回帰LLM推論のサービング性能・速度・メモリ転送の実測最適化ではない。圧縮技術として関連するが、現在のLLM推論システム収録では境界的。",
       "first_checked_at": "2026-10-05T16:34:20+00:00",
-      "last_checked_at": "2026-10-05T16:34:20+00:00",
+      "last_checked_at": "2026-10-11T07:45:45+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning"
@@ -70310,19 +70310,6 @@
       "borderline_recheck_count": 0,
       "title": "A Panda? No, It's a Sloth: Slowdown Attacks on Adaptive Multi-Exit Neural Network Inference"
     },
-    "arXiv:2205.08084": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2205.08084",
-      "identity_tokens": [
-        "arXiv:2205.08084"
-      ],
-      "reason": "主題は多用途の産業推薦モデルであり、推薦精度と複数タスクの統合を中心に評価する。一方で要旨には推論時間・モデルサイズを削減する早期終了、重み共有、枝刈り、遅延相互作用を明記し、モバイル配備にも言及する。LLMサービング・GPUメモリ管理を直接研究した論文ではないが、推論効率の構成要素を含むため無関係とは断定せず境界扱い。",
-      "first_checked_at": "2026-10-10T18:48:01+00:00",
-      "last_checked_at": "2026-10-10T18:48:01+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"
-    },
     "arXiv:2312.06742": {
       "classification": "borderline",
       "canonical_id": "arXiv:2312.06742",
@@ -70902,6 +70889,56 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
+    },
+    "DOI:10.1109/les.2025.3595439": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/les.2025.3595439",
+      "identity_tokens": [
+        "DOI:10.1109/les.2025.3595439",
+        "PRIMARY:https://ieeexplore.ieee.org/document/11111706"
+      ],
+      "reason": "題名はCNN向けearly-exitとselective predictionの組み合わせを示す。adaptive inferenceとの接点はあるが、題名だけではLLM推論基盤・servingとの接続を確定できず、一次要旨も取得できなかったためborderlineとする。 Primary abstract retrieval evidence: official publisher URL https://ieeexplore.ieee.org/document/11111706; Crossref REST metadata resolved the DOI to IEEE and the exact registered title, and links this DOI to the exact IEEE Xplore record URL. Browser attempt at https://ieeexplore.ieee.org/document/11111706 on 2026-10-11T04:42:52Z: Browser retrieval returned the IEEE Xplore JavaScript/robot-check interstitial; no abstract was exposed.",
+      "first_checked_at": "2026-10-11T07:45:38+00:00",
+      "last_checked_at": "2026-10-11T07:45:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Combining Early Exit and Selective Prediction for Convolutional Neural Networks"
+    },
+    "arXiv:2605.14598": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14598",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14598",
+        "PRIMARY:https://arxiv.org/abs/2605.14598v2",
+        "arXiv:2605.14598"
+      ],
+      "reason": "DSSPはrobot manipulation policyで全履歴をSSM contextへ圧縮しGPU memory overheadとmodel sizeを抑えると報告する。効率化機構はあるが、適用先はロボット方策でLLM servingとの接続が限定的。",
+      "first_checked_at": "2026-10-11T07:45:38+00:00",
+      "last_checked_at": "2026-10-11T07:45:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DSSP: Diffusion State Space Policy with Full-History Encoding"
+    },
+    "arXiv:2607.18256": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18256",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.18256",
+        "PRIMARY:https://arxiv.org/abs/2607.18256v1",
+        "arXiv:2607.18256"
+      ],
+      "reason": "PEARLはLLM・Python実行・数理最適化solverを組み合わせる反復agent systemで、solver feedbackにより検証済みsolve率を上げる。tool-integrated実行系として接点はあるがabstractはcost/latency改善を示さない。",
+      "first_checked_at": "2026-10-11T07:45:38+00:00",
+      "last_checked_at": "2026-10-11T07:45:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PEARL: Solver-in-the-Loop Interactive Optimization Modeling from Natural Language"
     }
   }
 }
