@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "codex-local-b112-p03-20261011-092860f5",
+  "reference_main_sha": "bf22b4e21eb2ff41633a63a20372ab9f48d805b1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20258",
+      "identity_tokens": [
+        "arXiv:2605.20258"
+      ],
+      "title": "It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs",
+      "reason": "LLM privacy/utility alignmentのself-distillation trainingで、serving/inference efficiencyは主題でない。",
+      "source_url": "https://arxiv.org/abs/2605.20258v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:24:17Z",
+      "last_checked_at": "2026-10-11T03:24:17Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10115-026-02788-0",
+      "identity_tokens": [
+        "DOI:10.1007/s10115-026-02788-0"
+      ],
+      "title": "SeekNew: an intent-aware next point-of-interest recommendation model based on multi-relational heterogeneous graph",
+      "reason": "POI recommendation用heterogeneous graph/intent modelで、LLM inference systemとの関連がない。",
+      "source_url": "https://link.springer.com/article/10.1007/s10115-026-02788-0",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:21:26Z",
+      "last_checked_at": "2026-10-11T03:21:26Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11554-026-01900-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11554-026-01900-5"
+      ],
+      "title": "MDAB-UNet: a lightweight and efficient improved UNet architecture for remote sensing image segmentation",
+      "reason": "remote-sensing segmentation向け軽量UNetのmodel size/FLOPs/edge inference評価。vision task特化でLLM systemsへの接続がない。",
+      "source_url": "https://link.springer.com/article/10.1007/s11554-026-01900-5",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:21:26Z",
+      "last_checked_at": "2026-10-11T03:21:26Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17281",
+      "identity_tokens": [
+        "arXiv:2605.17281"
+      ],
+      "title": "ContractBench: Can LLM Agents Preserve Observation Contracts?",
+      "reason": "LLM agentのAPI artifact有効期限・byte integrity benchmarkで運用信頼性は扱うがinference efficiencyとの関係は薄い。",
+      "source_url": "https://arxiv.org/abs/2605.17281v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:24:17Z",
+      "last_checked_at": "2026-10-11T03:24:17Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17311",
+      "identity_tokens": [
+        "arXiv:2605.17311"
+      ],
+      "title": "SpecSem-Net: Integrating Spectral and Semantic Features for Robust AI-generated Video Detection",
+      "reason": "AI生成動画検出用vision architectureで、LLM inference systemsと異なる。",
+      "source_url": "https://arxiv.org/abs/2605.17311v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:24:17Z",
+      "last_checked_at": "2026-10-11T03:24:17Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17443",
+      "identity_tokens": [
+        "arXiv:2605.17443"
+      ],
+      "title": "Analyzing Error Propagation in Korean Spoken QA with ASR-LLM Cascades",
+      "reason": "Korean spoken QAでのASR-LLM error propagation/direct audio比較が主題で、serving efficiencyを扱わない。",
+      "source_url": "https://arxiv.org/abs/2605.17443v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:24:17Z",
+      "last_checked_at": "2026-10-11T03:24:17Z",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-00854-9",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00854-9"
+      ],
+      "title": "AmTGBiM: A Mamba-based model for long-term traffic flow prediction combining adaptive masked spatial transformer and dynamic graph attention",
+      "reason": "Mamba traffic-flow modelの低memory・計算効率化だが交通予測task特化でLLM servingとの関係がない。",
+      "source_url": "https://link.springer.com/article/10.1007/s44443-026-00854-9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:21:26Z",
+      "last_checked_at": "2026-10-11T03:21:26Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.15556",
+      "identity_tokens": [
+        "arXiv:2605.15556"
+      ],
+      "title": "TopoClaw: A Human-Centric and Topology-Aware Agent Operating System",
+      "reason": "TopoClawはLLM agent lifecycle/memory/schedulingとcross-device action placementを扱うAgent OS architectureでruntime/systems lineageに直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.15556v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:24:18Z",
+      "last_checked_at": "2026-10-11T03:24:18Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2403.16971-aios-llm-agent-operating-system.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15608",
+      "identity_tokens": [
+        "arXiv:2605.15608"
+      ],
+      "title": "Transformer-like Inference from Optimal Control",
+      "reason": "optimal controlからTransformer型explicit inference algorithmを導く理論研究。推論architectureには直接触れるが実装効率・serving評価がなくborderline。",
+      "source_url": "https://arxiv.org/abs/2605.15608v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:24:18Z",
+      "last_checked_at": "2026-10-11T03:24:18Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17131",
+      "identity_tokens": [
+        "arXiv:2605.17131"
+      ],
+      "title": "A Systematic Survey on Deep Learning Architectures for Point Cloud Classification and Segmentation",
+      "reason": "point-cloud classification/segmentation architecture surveyで、LLM inference/servingとは無関係。",
+      "source_url": "https://arxiv.org/abs/2605.17131v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T03:24:18Z",
+      "last_checked_at": "2026-10-11T03:24:18Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
