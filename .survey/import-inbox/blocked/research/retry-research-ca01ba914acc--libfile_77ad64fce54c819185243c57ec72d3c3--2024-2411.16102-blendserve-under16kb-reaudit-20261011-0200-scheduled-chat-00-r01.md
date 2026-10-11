@@ -173,6 +173,8 @@ quality_body_chars: 5687
 quality_method_chars: 1600
 quality_eval_chars: 1646
 quality_limitation_chars: 522
+last_audited: null
+audit_version: 0
 ---
 
 # BlendServe: Optimizing Offline Inference with Resource-Aware Batching

@@ -35,10 +35,15 @@
   "selection_reason": "モバイルNLP向けにLong-Short Range Attention (LSRA)を設計し、attentionとconvolutionへ長距離・局所文脈を分担させて推論計算量を削減する。本文はmobile inferenceを明示し、500M Mult-Adds制約、Transformer base比2.5倍の計算削減、pruning/quantization併用18.2倍model-size圧縮を評価するため対象内。",
   "semantic_scholar_id": "8af925f4edf45131b5b6fed8aa655089d58692fa",
   "source_url": "https://arxiv.org/abs/2004.11886",
-  "status": "ready",
+  "status": "superseded",
   "title": "Lite Transformer with Long-Short Range Attention",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-11T04:08:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md",
+  "represented_canonical_id": "arXiv:2004.11886",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

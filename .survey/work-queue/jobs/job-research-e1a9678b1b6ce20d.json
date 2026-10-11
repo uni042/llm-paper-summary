@@ -35,10 +35,15 @@
   "selection_reason": "AdamWの二次モーメントvをパラメータ単位で持たず、ヘッセ行列の最小密ブロックごとに勾配二乗平均の移動平均を1個だけ保持する学習用最適化器。LLM学習時の最適化器状態メモリを約50%削減し、Llama 2-7BのA800 80GB×2で学習スループット49.6%向上・壁時計時間33%削減を報告する。GPU間通信とオフロード費用の削減が主目的のため学習システム対象。",
   "semantic_scholar_id": "43c424a74e1f6774a056f451c9b21ee62aa9772f",
   "source_url": "https://arxiv.org/abs/2406.16793",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adam-mini: Use Fewer Learning Rates To Gain More",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T04:08:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md",
+  "represented_canonical_id": "arXiv:2406.16793",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

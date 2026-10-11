@@ -33,10 +33,15 @@
   "selection_reason": "DistServeが参照するmodel-serving基盤で、予測可能な実行時間を利用した分散serving、tail latency/SLO、request isolationを実装評価している。LLM専用ではないが、LLM serving scheduler・SLO設計の基礎系統として関連が明確。",
   "semantic_scholar_id": "c52ad09fac69f320e53f4e167bca9fc668434dce",
   "source_url": "https://arxiv.org/abs/2006.02464",
-  "status": "ready",
+  "status": "superseded",
   "title": "Serving DNNs like Clockwork: Performance Predictability from the Bottom Up",
   "type": "research",
   "venue": "USENIX Symposium on Operating Systems Design and Implementation",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-11T04:08:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md",
+  "represented_canonical_id": "arXiv:2006.02464",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
