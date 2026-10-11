@@ -35,10 +35,15 @@
   "selection_reason": "複数LLMから入力/taskに適したmodelをrouterで選び、全候補を実行せず適切なLLMへroutingする方式。model selectionによりcost/latencyを抑え得るinference routingとして対象。",
   "semantic_scholar_id": "50176544c46b3226a05e7946f6e36ac31c68faf7",
   "source_url": "https://arxiv.org/abs/2309.15789",
-  "status": "ready",
+  "status": "superseded",
   "title": "Large Language Model Routing with Benchmark Datasets",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-11T11:52:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md",
+  "represented_canonical_id": "arXiv:2309.15789",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

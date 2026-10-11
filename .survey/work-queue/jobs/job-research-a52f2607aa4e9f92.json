@@ -35,10 +35,15 @@
   "selection_reason": "CoTが不要に長くtoken costを増やす問題に対し、問題ごとのreasoning complexityからtoken budgetを動的推定しpromptで推論長を制御する。少量の性能低下でreasoning token costを削減するtest-time compute制御を直接扱うため対象内。",
   "semantic_scholar_id": "3bbf541c2a3ce0ffaed3703cd486f0e1b2febb27",
   "source_url": "https://arxiv.org/abs/2412.18547",
-  "status": "ready",
+  "status": "superseded",
   "title": "Token-Budget-Aware LLM Reasoning",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-11T11:52:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+  "represented_canonical_id": "arXiv:2412.18547",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
