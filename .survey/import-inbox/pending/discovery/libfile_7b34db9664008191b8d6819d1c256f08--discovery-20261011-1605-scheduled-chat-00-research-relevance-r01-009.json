@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1605-scheduled-chat-00/r01",
+  "reference_main_sha": "2b8df26df5166daa68dcf3f458f0836bf3d3d3e9",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.08084",
+      "identity_tokens": [
+        "arXiv:2205.08084"
+      ],
+      "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems",
+      "reason": "タイトルの主題は生成型事前学習言語モデルを推薦システムとして利用する応用であり、LLMの推論サービング、計算カーネル、KVキャッシュ、モデル圧縮等のシステム最適化ではない。推薦品質を主目的とする研究のため対象外。",
+      "source_url": "https://arxiv.org/abs/2205.08084",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read; recommender application",
+      "first_checked_at": "2026-10-11T16:05:00+09:00",
+      "last_checked_at": "2026-10-11T16:05:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
