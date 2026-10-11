@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-2330-scheduled-chat-30/r01",
+  "reference_main_sha": "f74abcfb4be2acf60b3bb06c5ceda93bc8417f6b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arxiv:2402.12289"
+      ],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+      "reason": "自動運転の状況認識・計画とVLMを従来の運転パイプラインへ組み込むDriveVLM-Dualが主題。評価はnuScenes、SUP-AD、実車での運転能力であり、LLM推論エンジンや資源管理の性能を測るものではない。",
+      "source_url": "https://arxiv.org/abs/2402.12289",
+      "body_check": "abstract_screen_only; body_not_read; arXiv abstract confirms primary task and evaluation are outside the LLM inference/training systems survey.",
+      "first_checked_at": "2026-10-11T23:37:21+09:00",
+      "last_checked_at": "2026-10-11T23:37:21+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 4
+    }
+  ]
+}
