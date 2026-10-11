@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T05:37:06+00:00",
-  "record_count": 11442,
+  "updated_at": "2026-10-11T05:58:41+00:00",
+  "record_count": 11452,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163544,6 +163544,146 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
       "title": "Poison with Style: A Practical Poisoning Attack on Code Large Language Models"
+    },
+    "arXiv:2605.24371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.24371",
+      "identity_tokens": [
+        "arXiv:2605.24371"
+      ],
+      "reason": "CT画像報告生成とworld-state modelingが主題で、LLM inference system efficiencyとの具体的接続がない。",
+      "first_checked_at": "2026-10-11T05:58:38+00:00",
+      "last_checked_at": "2026-10-11T05:58:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SliceWorld: A Predictive and Controllable World-State Model for CT Report Generation"
+    },
+    "arXiv:2605.24172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.24172",
+      "identity_tokens": [
+        "arXiv:2605.24172"
+      ],
+      "reason": "患者・医療者messageのontology-based分類・adaptationで、inference/serving efficiencyは扱わない。",
+      "first_checked_at": "2026-10-11T05:58:38+00:00",
+      "last_checked_at": "2026-10-11T05:58:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "EPPC-OASIS: Ontology-Aware Adaptation and Structured Inference Refinement for Electronic Patient-Provider Communication Mining in Secure Messages"
+    },
+    "arXiv:2605.22031": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22031",
+      "identity_tokens": [
+        "arXiv:2605.22031"
+      ],
+      "reason": "Mambaを用いるMRI画像再構成手法で、医用画像モデルのaccuracy/computeに関する特化研究。",
+      "first_checked_at": "2026-10-11T05:58:39+00:00",
+      "last_checked_at": "2026-10-11T05:58:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SO-Mamba: State-Ownership Mamba for Unrolled MRI Reconstruction"
+    },
+    "arXiv:2605.21622": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21622",
+      "identity_tokens": [
+        "arXiv:2605.21622"
+      ],
+      "reason": "設計者選好を反映するtopology optimization agent frameworkで、LLM servingやinference efficiency研究ではない。",
+      "first_checked_at": "2026-10-11T05:58:39+00:00",
+      "last_checked_at": "2026-10-11T05:58:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "TO-Agents: A Multi-Agent AI Framework for Subjective Preference-Guided Topology Optimization"
+    },
+    "DOI:10.1007/s42979-026-05040-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s42979-026-05040-2",
+      "identity_tokens": [
+        "DOI:10.1007/s42979-026-05040-2"
+      ],
+      "reason": "LLM表形式road fatality predictionでのdata serializationと予測性能の応用研究で、serving efficiencyが主題でない。",
+      "first_checked_at": "2026-10-11T05:58:39+00:00",
+      "last_checked_at": "2026-10-11T05:58:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "On the Representation of Tabular Data for Explainable LLM-Based Road Fatality Prediction"
+    },
+    "DOI:10.3389/fnbot.2026.1779125": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fnbot.2026.1779125",
+      "identity_tokens": [
+        "DOI:10.3389/fnbot.2026.1779125"
+      ],
+      "reason": "Mambaを含むexoskeleton motion prediction/controlの応用で、LLM systemsとは別のtask-specific robotics研究。",
+      "first_checked_at": "2026-10-11T05:58:40+00:00",
+      "last_checked_at": "2026-10-11T05:58:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Active physical human-exoskeleton interaction based on motion intention adaptive recognition and synchronous tracking"
+    },
+    "arXiv:2605.19227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19227",
+      "identity_tokens": [
+        "arXiv:2605.19227"
+      ],
+      "reason": "unified autoregressive modelへのmultimodal backdoor attackで、推論効率を扱わないsecurity論文。",
+      "first_checked_at": "2026-10-11T05:58:40+00:00",
+      "last_checked_at": "2026-10-11T05:58:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Token by Token, Compromised: Backdoor Vulnerabilities in Unified Autoregressive Models"
+    },
+    "arXiv:2605.19484": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19484",
+      "identity_tokens": [
+        "arXiv:2605.19484"
+      ],
+      "reason": "映像編集GUI agentのbenchmarkで、能力を測定しserving/inference efficiencyは扱わない。",
+      "first_checked_at": "2026-10-11T05:58:40+00:00",
+      "last_checked_at": "2026-10-11T05:58:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "CutVerse: A Compositional GUI Agents Benchmark for Media Post-Production Editing"
+    },
+    "arXiv:2605.17957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17957",
+      "identity_tokens": [
+        "arXiv:2605.17957"
+      ],
+      "reason": "codegenのcontext-aware pretrainingとbenchmarkが主題で、inference serving/efficiencyの仕組みを示さない。",
+      "first_checked_at": "2026-10-11T05:58:41+00:00",
+      "last_checked_at": "2026-10-11T05:58:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md"
+      ],
+      "title": "Contextualized Code Pretraining for Code Generation"
+    },
+    "arXiv:2605.18104": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18104",
+      "identity_tokens": [
+        "arXiv:2605.18104"
+      ],
+      "reason": "MLLM safety representationを推論時補正するが主目的はsafetyでありsystems efficiencyを扱わない。",
+      "first_checked_at": "2026-10-11T05:58:41+00:00",
+      "last_checked_at": "2026-10-11T05:58:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Safety Geometry Collapse in Multimodal LLMs and Adaptive Drift Correction"
     }
   }
 }

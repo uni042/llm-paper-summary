@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T05:42:40+00:00",
-  "record_count": 4626,
+  "updated_at": "2026-10-11T05:58:38+00:00",
+  "record_count": 4630,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70735,6 +70735,66 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction"
+    },
+    "DOI:10.65109/orjt7684": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.65109/orjt7684",
+      "identity_tokens": [
+        "DOI:10.65109/orjt7684"
+      ],
+      "reason": "公式AAMAS要旨では産業機械保全向けのoffline inverse reinforcement learningによる異常検知とmulti-sensorのstate estimationが中心。LLM推論・servingとの具体的な接点は要旨で確認できず、既存のstate-space系統との接点を考慮してborderline。",
+      "first_checked_at": "2026-10-11T05:58:37+00:00",
+      "last_checked_at": "2026-10-11T05:58:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Fault Detection to Agency: A Framework for Industrial Autonomy"
+    },
+    "DOI:10.3390/foods15111859": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/foods15111859",
+      "identity_tokens": [
+        "DOI:10.3390/foods15111859"
+      ],
+      "reason": "primary publisher abstractを取得できず、packet DOI/titleを保持したまま判定保留。 Primary-source URL https://doi.org/10.3390/foods15111859 failed: Primary DOI https://doi.org/10.3390/foods15111859 redirected to https://www.mdpi.com/2304-8158/15/11/1859; direct request returned HTTP 403 and browser fetch HTTP 429 Too Many Requests; abstract unavailable.",
+      "first_checked_at": "2026-10-11T05:58:37+00:00",
+      "last_checked_at": "2026-10-11T05:58:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Curvelet Decomposition-Based Tri-Branch Coupling Network for Hyperspectral Unsound Maize Seeds Identification"
+    },
+    "DOI:10.3390/make8060142": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/make8060142",
+      "identity_tokens": [
+        "DOI:10.3390/make8060142"
+      ],
+      "reason": "primary publisher abstractを取得できず、packet DOI/titleを保持したまま判定保留。 Primary-source URL https://doi.org/10.3390/make8060142 failed: Primary DOI https://doi.org/10.3390/make8060142 redirected to https://www.mdpi.com/2504-4990/8/6/142; direct request returned HTTP 403 and browser fetch HTTP 429 Too Many Requests; abstract unavailable.",
+      "first_checked_at": "2026-10-11T05:58:37+00:00",
+      "last_checked_at": "2026-10-11T05:58:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Wavelet-Guided Mamba-Attention Network for Boundary-Aware Colorectal Polyp Segmentation"
+    },
+    "arXiv:2605.19758": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.19758",
+      "identity_tokens": [
+        "arXiv:2605.19758"
+      ],
+      "reason": "固定parameter budgetの軽量synthetic benchmarkでMamba/Transformer等のsequence能力を迅速比較。低計算costのarchitecture screeningは関係するが実推論効率測定・servingとは異なりborderline。",
+      "first_checked_at": "2026-10-11T05:58:38+00:00",
+      "last_checked_at": "2026-10-11T05:58:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CogScale: Scalable Benchmark for Sequence Processing"
     }
   }
 }
