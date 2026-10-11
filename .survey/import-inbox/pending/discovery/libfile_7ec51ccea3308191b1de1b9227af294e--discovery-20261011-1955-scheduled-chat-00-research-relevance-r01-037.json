@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1955-scheduled-chat-00/r01",
+  "reference_main_sha": "c502d13432fb448564f470da620b7c76d27236ad",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.08543",
+      "identity_tokens": [
+        "arXiv:2306.08543"
+      ],
+      "title": "MiniLLM: On-Policy Distillation of Large Language Models",
+      "reason": "MiniLLMは教師LLMから小型学生モデルへ知識を移すため、逆向きKLとオンポリシー最適化を提案する。小型化は将来の推論費用に間接的に寄与するが、主要な比較は生成品質、露出バイアス、較正、長文生成能力であり、推論システムや実測レイテンシの直接最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2306.08543",
+      "body_check": "abstract_screen_only; body_not_read; arXiv v6要旨で逆向きKLとオンポリシー蒸留、120M–13Bの学生モデル品質評価を確認。",
+      "first_checked_at": "2026-10-11T19:55:08+09:00",
+      "last_checked_at": "2026-10-11T19:55:08+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 37
+    }
+  ]
+}
