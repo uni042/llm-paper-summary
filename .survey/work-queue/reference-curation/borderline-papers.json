@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T10:43:47+00:00",
-  "record_count": 4642,
+  "updated_at": "2026-10-11T11:47:11+00:00",
+  "record_count": 4644,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -70978,6 +70978,37 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
+    },
+    "DOI:10.1109/tcsvt.2025.3588203": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3588203",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3588203"
+      ],
+      "reason": "PIVFusion introduces the lightweight adaptive sparse Transformer block (ASTBlock), combining sparse/dense attention and feed-forward redundancy removal to improve computational efficiency in infrared/visible image fusion. This provides a concrete but limited efficiency-method connection; the demonstrated task and downstream evaluations are vision fusion/detection, with no LLM inference result, so applicability to the target system remains unclear.",
+      "first_checked_at": "2026-10-11T11:47:11+00:00",
+      "last_checked_at": "2026-10-11T11:47:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Perceptual Transform Fusion of Infrared and Visible Images"
+    },
+    "arXiv:2601.09413": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09413",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.09413",
+        "arXiv:2601.09413"
+      ],
+      "reason": "Speech-Hands learns when to consult external audio perception, but latency/cost savings are not reported.",
+      "first_checked_at": "2026-10-11T11:47:11+00:00",
+      "last_checked_at": "2026-10-11T11:47:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speech-Hands: A Self-Reflection Voice Agentic Approach to Speech Recognition and Audio Reasoning with Omni Perception"
     }
   }
 }

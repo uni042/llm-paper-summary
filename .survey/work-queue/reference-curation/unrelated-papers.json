@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T10:43:45+00:00",
-  "record_count": 11488,
+  "updated_at": "2026-10-11T11:47:13+00:00",
+  "record_count": 11501,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164211,6 +164211,200 @@
       "last_checked_at": "2026-10-11T08:49:39+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
+    },
+    "arXiv:2603.10067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.10067",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.10067",
+        "arXiv:2603.10067"
+      ],
+      "reason": "HTMuon modifies the optimizer for LLM pretraining, so the contribution is training-only.",
+      "first_checked_at": "2026-10-11T11:47:11+00:00",
+      "last_checked_at": "2026-10-11T11:47:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+      ],
+      "title": "HTMuon: Improving Muon via Heavy-Tailed Spectral Correction"
+    },
+    "arXiv:2601.16547": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.16547",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.16547",
+        "arXiv:2601.16547"
+      ],
+      "reason": "CORD is an audio/text cross-modal distillation framework for training alignment.",
+      "first_checked_at": "2026-10-11T11:47:11+00:00",
+      "last_checked_at": "2026-10-11T11:47:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md"
+      ],
+      "title": "CORD: Bridging the Audio-Text Reasoning Gap via Weighted On-policy Cross-modal Distillation"
+    },
+    "arXiv:2601.22664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22664",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.22664",
+        "arXiv:2601.22664"
+      ],
+      "reason": "R2M addresses reward alignment under RLHF policy shifts, not inference serving efficiency.",
+      "first_checked_at": "2026-10-11T11:47:11+00:00",
+      "last_checked_at": "2026-10-11T11:47:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "title": "Real-Time Aligned Reward Model beyond Semantics"
+    },
+    "arXiv:2606.17526": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17526",
+      "identity_tokens": [
+        "DOI:10.52202/085713-0691",
+        "arXiv:2606.17526"
+      ],
+      "reason": "MGUP controls parameter updates during stochastic optimization and focuses on training convergence.",
+      "first_checked_at": "2026-10-11T11:47:12+00:00",
+      "last_checked_at": "2026-10-11T11:47:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+      ],
+      "title": "MGUP: A Momentum-Gradient Alignment Update Policy for Stochastic Optimization"
+    },
+    "arXiv:2601.23255": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.23255",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.23255",
+        "arXiv:2601.23255"
+      ],
+      "reason": "The paper develops an audio-language jailbreak attack to expose security weaknesses.",
+      "first_checked_at": "2026-10-11T11:47:12+00:00",
+      "last_checked_at": "2026-10-11T11:47:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md"
+      ],
+      "title": "Now You Hear Me: Audio Narrative Attacks Against Large Audio-Language Models"
+    },
+    "arXiv:2604.06756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06756",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.06756",
+        "arXiv:2604.06756"
+      ],
+      "reason": "The study measures how reasoning traces affect LLM judge factuality, without an efficiency mechanism.",
+      "first_checked_at": "2026-10-11T11:47:12+00:00",
+      "last_checked_at": "2026-10-11T11:47:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "title": "How Long Reasoning Chains Influence LLMs' Judgment of Answer Factuality"
+    },
+    "arXiv:2511.03634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.03634",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.03634",
+        "arXiv:2511.03634"
+      ],
+      "reason": "nanoTabPFN is a lightweight educational reimplementation for readability/adaptability; runtime savings are not claimed.",
+      "first_checked_at": "2026-10-11T11:47:12+00:00",
+      "last_checked_at": "2026-10-11T11:47:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+      ],
+      "title": "nanoTabPFN: A Lightweight and Educational Reimplementation of TabPFN"
+    },
+    "arXiv:2604.17358": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17358",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.17358",
+        "arXiv:2604.17358"
+      ],
+      "reason": "This work improves voice-assistant interruption robustness through data/evaluation, not inference efficiency.",
+      "first_checked_at": "2026-10-11T11:47:12+00:00",
+      "last_checked_at": "2026-10-11T11:47:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md"
+      ],
+      "title": "Still Between Us? Evaluating and Improving Voice Assistant Robustness to Third-Party Interruptions"
+    },
+    "arXiv:2601.02170": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02170",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.02170",
+        "arXiv:2601.02170"
+      ],
+      "reason": "Streaming hallucination detection provides real-time evidence but does not reduce generation cost or improve serving throughput.",
+      "first_checked_at": "2026-10-11T11:47:13+00:00",
+      "last_checked_at": "2026-10-11T11:47:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "title": "Streaming Hallucination Detection in Long Chain-of-Thought Reasoning"
+    },
+    "arXiv:2002.09518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.09518",
+      "identity_tokens": [
+        "arXiv:2002.09518"
+      ],
+      "reason": "MemGNN is an efficient memory layer for graph pooling; the abstract gives no LLM inference connection.",
+      "first_checked_at": "2026-10-11T11:47:13+00:00",
+      "last_checked_at": "2026-10-11T11:47:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md"
+      ],
+      "title": "Memory-Based Graph Networks"
+    },
+    "arXiv:2602.17080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17080",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.17080",
+        "arXiv:2602.17080"
+      ],
+      "reason": "NAMO optimizes stochastic training updates, including GPT-2 pretraining, rather than serving.",
+      "first_checked_at": "2026-10-11T11:47:13+00:00",
+      "last_checked_at": "2026-10-11T11:47:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md"
+      ],
+      "title": "Adam Improves Muon: Adaptive Moment Estimation with Orthogonalized Momentum"
+    },
+    "arXiv:2511.01670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01670",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.01670",
+        "arXiv:2511.01670"
+      ],
+      "reason": "SeaLLMs-Audio focuses on multilingual audio-language capabilities and training, with no runtime-efficiency method.",
+      "first_checked_at": "2026-10-11T11:47:13+00:00",
+      "last_checked_at": "2026-10-11T11:47:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md"
+      ],
+      "title": "SeaLLMs-Audio: Large Audio-Language Models for Southeast Asia"
+    },
+    "arXiv:2604.05397": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05397",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.05397",
+        "arXiv:2604.05397"
+      ],
+      "reason": "This work studies multi-turn confidence calibration and reliability, not runtime cost or serving performance.",
+      "first_checked_at": "2026-10-11T11:47:13+00:00",
+      "last_checked_at": "2026-10-11T11:47:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ],
+      "title": "Confidence Should Be Calibrated More Than One Turn Deep"
     }
   }
 }

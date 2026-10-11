@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d06879874349b832-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.05397",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.05397",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.05397",
+      "arXiv:2604.05397"
+    ],
+    "reason": "This work studies multi-turn confidence calibration and reliability, not runtime cost or serving performance.",
+    "first_checked_at": "2026-10-11T11:47:13+00:00",
+    "last_checked_at": "2026-10-11T11:47:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+    ],
+    "title": "Confidence Should Be Calibrated More Than One Turn Deep"
+  },
+  "processed_at": "2026-10-11T11:47:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d06879874349",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
