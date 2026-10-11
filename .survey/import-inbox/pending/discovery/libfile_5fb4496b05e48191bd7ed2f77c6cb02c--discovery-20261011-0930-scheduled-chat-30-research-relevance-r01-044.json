@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261011-0930-scheduled-chat-30/r01/relevance-044",
+  "reference_main_sha": "d4462132fd879f4720a16e5defd6c9b409beff5c",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24517",
+      "identity_tokens": [
+        "arxiv:2603.24517"
+      ],
+      "title": "AVO: Agentic Variation Operators for Autonomous Evolutionary Search",
+      "reason": "題名の主要貢献は自律的進化探索のためのエージェント型変異演算子であり、LLM推論器・KVキャッシュ・MoE・サービングの性能最適化ではないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2603.24517",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-11T09:34:03+09:00",
+      "last_checked_at": "2026-10-11T09:34:03+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 44
+    }
+  ]
+}
