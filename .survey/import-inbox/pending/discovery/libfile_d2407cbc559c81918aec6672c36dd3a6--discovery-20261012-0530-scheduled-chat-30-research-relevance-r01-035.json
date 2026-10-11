@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261012-0530-scheduled-chat-30/r01/relevance-035",
+  "reference_main_sha": "41005c40964dd66998ed72aa718ecab7ff506781",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18496",
+      "identity_tokens": [
+        "arxiv:2601.18496",
+        "doi:10.48550/arxiv.2601.18496",
+        "semanticscholar:651de358537e09001f21efd2c800c7f7631167b6"
+      ],
+      "title": "DEEPMED: Building a Medical DeepResearch Agent via Multi-hop Med-Search Data and Turn-Controlled Agentic Training & Inference",
+      "reason": "医療質問応答のために複数段の医療検索データ合成、難易度に応じたツール呼出し回数への罰則、推論中の仮説検証モニタを組み合わせ、7種の医療ベンチマークで基盤モデルより平均9.79%改善したとする。呼出し回数抑制と文脈劣化の防止には推論運用上の接点があるが、提案の主眼は医療推論の正答率と証拠利用の改善であり、一般的なLLMサービング基盤・GPUメモリ階層・カーネル実行技術の性能改善を評価していないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2601.18496",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-12T05:33:41+09:00",
+      "last_checked_at": "2026-10-12T05:33:41+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 35,
+      "research_job_id": "job-research-e84c61bf18096d83"
+    }
+  ]
+}
