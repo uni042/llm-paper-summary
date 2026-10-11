@@ -35,10 +35,15 @@
   "selection_reason": "MatFormerはTransformerのFFNに入れ子の幅を持たせ、単一の普遍モデルから精度と計算量の異なるサブモデルを追加学習なしで抽出する。一次資料§3.4は制約ごとのモデル選択と動的なsubmodel抽出を推論時用途として説明し、§4.1.1・表2は850M MatLMの393Mドラフト/850M検証器によるspeculative decodingで推論時間短縮を評価するため、LLM推論効率の対象に含める。",
   "semantic_scholar_id": "eac59779da7262968a9043985e7cd933c00247a5",
   "source_url": "https://arxiv.org/abs/2310.07707",
-  "status": "ready",
+  "status": "superseded",
   "title": "MatFormer: Nested Transformer for Elastic Inference",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-11T10:48:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md",
+  "represented_canonical_id": "arXiv:2310.07707",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

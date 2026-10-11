@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T09:53:47+00:00",
+  "generated_at": "2026-10-11T10:48:13+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 113,
+  "count": 112,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -896,22 +896,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ac864e749f20--libfile_6ca3db0888c481919ecf70d0d77e751b--2606.13126-minipic.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ac864e749f20--libfile_6ca3db0888c481919ecf70d0d77e751b--2606.13126-minipic.json",
       "worker_run_key": "20261006-2000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2310.07707",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-06T12:50:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 65.9% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c339c8c1f568--libfile_c0b505b52dc0819192e5e7036d607673--2310.07707-matformer.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c339c8c1f568--libfile_c0b505b52dc0819192e5e7036d607673--2310.07707-matformer.json",
-      "worker_run_key": "20261006-1100-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.06675",
