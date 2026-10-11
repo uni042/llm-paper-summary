@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261011-1455-scheduled-chat-00/r01/research-prescreen-rank001",
+  "reference_main_sha": "1fadda6c344d6807a99e52da72cbac7c9a8b0593",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1909.08053",
+      "identity_tokens": ["arXiv:1909.08053"],
+      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+      "reason": "原著の一次要旨が掲げる主目的は巨大Transformerの分散学習であり、層内の行列分割と通信演算をPyTorchに追加して8.3Bモデルを512 GPUで学習し、15.1 PFLOPS・76%スケーリング効率を測る。現行サーベイの通常Researchでは学習専用高速化を凍結範囲としている。一方、層内テンソル並列の構成は分散LLM推論の重み分割と通信設計にも直接転用可能な基礎技術なので、完全な無関係とは断定せずborderlineに保留する。論文の主評価は学習性能であり、オンライン推論のトークン遅延・同時要求処理・KVキャッシュ性能を直接測定した成果ではない。",
+      "source_url": "https://arxiv.org/abs/1909.08053",
+      "body_check": "abstract_screen_only; body_not_read; primary arXiv abstract confirms intra-layer model parallel training with 512 GPUs and 15.1 PFLOPS, not a serving benchmark",
+      "first_checked_at": "2026-10-11T14:55:00+09:00",
+      "last_checked_at": "2026-10-11T14:55:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 1
+    }
+  ]
+}
