@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（193本）
+## 自動生成の論文一覧（194本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -348,6 +348,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference](2026-2608.24063-viscache-visual-kv-cache-pruning-for-efficient-vision-large-language-mod.md)**  
   実装：[✓](https://github.com/Wlklk/VisCache) ・ リポジトリ内被引用：0  
   前段で質問に関係する多様なフレームを残し、後段で層ごとの重要度と鍵・値の役割の違いを利用して圧縮する。論文の試作では、Qwen2.5-VLの3Bと32Bを使い、視覚KVの保持率28%で複数の動画理解課題の平均精度を比較方式より高く保ち、保持率19%でも大きく破綻しない結果を示す。
+
+- **2026-08 · [SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference](2026-2608.28911-semkv-semantic-mixed-precision-kv-cache-quantization-guided-by-the-quali.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重要度の低いトークンを消す方式も、長文脈の回答に必要な証拠を失う恐れがある。SemKVは境界より安全側の2.322ビットと2.585ビットをトークンごとに混ぜ、平均2.39コードビット、充填とメタデータを含む実効2.65ビットで、FP16比6.0倍のKV保存量削減を実測した。
 
 - **2026-08 · [ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents](2608.19662.md)**  
   実装：[✓](https://github.com/EIT-NLP/ReCache) ・ リポジトリ内被引用：0  
