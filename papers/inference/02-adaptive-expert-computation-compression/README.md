@@ -224,7 +224,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2026-06 · [Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference](2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  CAEEはルータ寄与と転送・実行コストを見て、層全体を待たせる遅いデバイスの低寄与専門家を省き、その重みを実行済み専門家へ再配分して分散MoEを高速化する。
+  本研究は、混合専門家（Mixture of エキスパート、MoE）言語モデルの推論で、ルータが選んだ専門家をすべて実行することが、ハードウェアの費用対効果という観点では最適とは限らない問題を扱う。一方、ルータが割り当てた重みが小さい専門家であっても、転送するパラメータ量は他の専門家とほぼ変わらない。
 
 - **2026-05 · [Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution](2026-2605.08575-intra-expert-activation-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
