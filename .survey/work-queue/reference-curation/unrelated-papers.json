@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T01:32:15+00:00",
-  "record_count": 11428,
+  "updated_at": "2026-10-11T01:52:00+00:00",
+  "record_count": 11429,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -163352,6 +163352,18 @@
         "papers/inference/99-other-inference-systems/2020-2004.07320-training-with-quantization-noise-for-extreme-model-compression.md"
       ],
       "title": "SGI: Structured 2D Gaussians for Efficient and Compact Large Image Representation"
+    },
+    "arXiv:2601.04359": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04359",
+      "identity_tokens": [
+        "arXiv:2601.04359"
+      ],
+      "reason": "一次要旨を確認。PackCacheは自動回帰型の動画生成で、条件画像・テキストを意味アンカーとして残し、過去フレームへの注意の時間減衰と三次元位置埋め込みを使って動画フレームのKVキャッシュを圧縮する。48フレームの動画生成を1.7～2.2倍高速化するが、評価対象は画像・動画トークンの生成であり、LLMのテキスト生成、LLMサービング、MoE、GPU/CPUオフロードの直接的な実装・性能評価を示さない。KV削除という技術的隣接性はあるが現行LLM推論サーベイの対象外とする。",
+      "first_checked_at": "2026-10-11T01:52:00+00:00",
+      "last_checked_at": "2026-10-11T01:52:00+00:00",
+      "linked_from": [],
+      "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a2d72652ac9bde2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.06025",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.06025",
+    "identity_tokens": [
+      "arXiv:2602.06025"
+    ],
+    "reason": "原著本文の§3～6を確認。BudgetMemは過去の会話・文書から質問依存のエージェント記憶を抽出する処理を、フィルタ・実体・時間・話題・要約のモジュールに分け、各段階のLow/Mid/High予算を強化学習ルータで選ぶ。費用は主として各モジュールのLLMトークン料金で評価し、LoCoMo・LongMemEval・HotpotQAの回答品質と記憶抽出費用の交換条件を測る。推論時の計算予算制御やモデル容量別ルーティングには関連するが、主要貢献はエージェントの意味記憶構築と回答品質であり、GPU推論カーネル、KVキャッシュ、サービングスケジューラ、CPU/GPUオフロードの実装・性能評価を主対象としないため、現行の推論システムサーベイでは境界とする。",
+    "first_checked_at": "2026-10-11T01:51:58+00:00",
+    "last_checked_at": "2026-10-11T01:51:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory"
+  },
+  "processed_at": "2026-10-11T01:51:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a2d72652ac9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
