@@ -118,7 +118,7 @@
 
 - **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Beyondは、長文脈・多要求の大規模言語モデル（LLM）推論でキー・値キャッシュ（KV キャッシュ）がGPUの高帯域メモリ（HBM）を超えたとき、CPU DRAMを単なる退避先として使うのではなく、CPU側のメモリ帯域と演算能力も注意計算へ参加させるCPU–GPU協調ランタイムである。
+  Beyondは、長文脈の大規模言語モデル（LLM）でキー・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域メモリ（HBM）からあふれた際、中央処理装置（CPU）の主記憶を単なる退避場所にせず、CPU側でも注意計算を実行する仕組みである。
 
 - **2026-07 · [RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention](2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md)**  
   実装：[✓](https://github.com/santosardr/riskernel) ・ リポジトリ内被引用：0  
