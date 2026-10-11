@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-11T20:41:06+00:00",
-  "record_count": 4663,
+  "updated_at": "2026-10-11T21:30:17+00:00",
+  "record_count": 4667,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71279,6 +71279,82 @@
       ],
       "borderline_recheck_count": 0,
       "title": "ARISE: A Repository-level Graph Representation and Toolset for Agentic Fault Localization and Program Repair"
+    },
+    "arXiv:2605.18882": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18882",
+      "identity_tokens": [
+        "arXiv:2605.18882",
+        "id:DOI:10.48550/arxiv.2605.18882",
+        "id:SemanticScholar:783af671f93e225a9a6ab80ec16a4e0587c4cc79",
+        "id:arXiv:2605.18882",
+        "url:https://arxiv.org/abs/2605.18882"
+      ],
+      "reason": "The work identifies and steers excess tool invocation, a plausible source of avoidable agent calls, but reports decision accuracy rather than runtime, token, or cost savings; the efficiency link remains weak.",
+      "first_checked_at": "2026-10-11T21:30:16+00:00",
+      "last_checked_at": "2026-10-11T21:30:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.08584-ministral-3.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "To Call or Not to Call: Diagnosing Intrinsic Over-Calling Bias in LLM Agents"
+    },
+    "arXiv:2605.12421": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12421",
+      "identity_tokens": [
+        "arXiv:2605.12421",
+        "id:DOI:10.48550/arxiv.2605.12421",
+        "id:SemanticScholar:ec834f0c1637313d022ec2b51d8354f5a5d3f812",
+        "id:arXiv:2605.12421",
+        "url:https://arxiv.org/abs/2605.12421"
+      ],
+      "reason": "This studies runtime effects of search-optimization prompts for LLM-generated combinatorial solvers, but reports only small/inconsistent gains and no inference/serving optimization; the link is weak.",
+      "first_checked_at": "2026-10-11T21:30:16+00:00",
+      "last_checked_at": "2026-10-11T21:30:16+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Formalize, Don't Optimize: The Heuristic Trap in LLM-Generated Combinatorial Solvers"
+    },
+    "arXiv:2605.10064": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10064",
+      "identity_tokens": [
+        "arXiv:2605.10064",
+        "id:DOI:10.48550/arxiv.2605.10064",
+        "id:SemanticScholar:27baebd9fb8679df5ba59e9529d1ccc30825bc1d",
+        "id:arXiv:2605.10064",
+        "url:https://arxiv.org/abs/2605.10064"
+      ],
+      "reason": "MAGE uses evolving graphs, retrieval, and routing for frozen-backbone agents, but reports reasoning quality without concrete inference cost, latency, or memory-efficiency results.",
+      "first_checked_at": "2026-10-11T21:30:17+00:00",
+      "last_checked_at": "2026-10-11T21:30:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MAGE: Multi-Agent Self-Evolution with Co-Evolutionary Knowledge Graphs"
+    },
+    "arXiv:2605.03675": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.03675",
+      "identity_tokens": [
+        "arXiv:2605.03675",
+        "id:DOI:10.48550/arxiv.2605.03675",
+        "id:SemanticScholar:cc7ee03fce480c3e6d0688c91057780ce8338b3c",
+        "id:arXiv:2605.03675",
+        "url:https://arxiv.org/abs/2605.03675"
+      ],
+      "reason": "MEMTIER proposes tiered memory and weighted retrieval, but says performance gains remain pending; its efficiency impact is not established.",
+      "first_checked_at": "2026-10-11T21:30:17+00:00",
+      "last_checked_at": "2026-10-11T21:30:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MEMTIER: Tiered Memory Architecture and Retrieval Bottleneck Analysis for Long-Running Autonomous AI Agents"
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-292e10a07dc965b7-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.08762",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.08762",
+    "identity_tokens": [
+      "arXiv:2605.08762",
+      "id:DOI:10.48550/arxiv.2605.08762",
+      "id:SemanticScholar:e04da705de6d63c38420135b001cc39c18ef4ef6",
+      "id:arXiv:2605.08762",
+      "url:https://arxiv.org/abs/2605.08762"
+    ],
+    "reason": "Omni-DeepSearch is a multimodal search benchmark; it diagnoses capability rather than proposing efficiency.",
+    "first_checked_at": "2026-10-11T21:30:21+00:00",
+    "last_checked_at": "2026-10-11T21:30:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+    ],
+    "title": "Omni-DeepSearch: A Benchmark for Audio-Driven Omni-Modal Deep Search"
+  },
+  "processed_at": "2026-10-11T21:30:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-292e10a07dc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
