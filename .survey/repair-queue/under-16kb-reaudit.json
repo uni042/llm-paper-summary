@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-11T05:00:06.351194+00:00",
+  "generated_at": "2026-10-11T13:11:11.194102+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 14,
+  "count": 13,
   "worker_counts": {
     "scheduled-chat-00": 5,
     "scheduled-chat-30": 4,
-    "scheduled-chat-45": 5
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -84,26 +84,6 @@
       "warnings": [
         "日本語比率 73.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md",
-      "canonical_id": "arXiv:2606.29982",
-      "title": "Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference",
-      "file_bytes": 11794,
-      "source_sha256": "d14129f225ab7bf3a818d05c5001497909d242c492d33e5cdf501882b45d9d63",
-      "source_git_blob_sha": "0782eb1ad447f7bb6e46e0c154b28cac45bb36fd",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.817834,
-      "quality_metrics": {
-        "body_chars": 2676,
-        "method_chars": 1278,
-        "evaluation_chars": 746,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
