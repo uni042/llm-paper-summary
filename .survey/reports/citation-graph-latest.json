@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T02:43:29+00:00",
-  "paper_count": 1771,
-  "edge_count": 21214,
+  "generated_at": "2026-10-11T02:49:52+00:00",
+  "paper_count": 1772,
+  "edge_count": 21221,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md": 22,
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 335,
@@ -1337,8 +1337,9 @@
     "papers/inference/19-inference-evaluation-benchmarking/2026-2609.19657-prefixbench-h100-prefix-reuse-ttft.md": 0,
     "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md": 161,
     "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md": 7,
-    "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md": 34,
+    "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md": 35,
     "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md": 33,
+    "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md": 6,
     "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md": 9,
     "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md": 104,
     "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md": 13,
@@ -1899,6 +1900,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md",
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
       "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
       "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
@@ -18276,6 +18278,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+      "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md",
       "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
     ],
     "papers/inference/12-moe-parallelism-communication/2025-2509.25041-grace-moe-grouping-and-replication-with-locality-aware-routing-for-efficient-distributed-moe-inference.md": [
@@ -21380,6 +21383,9 @@
     "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md": [
       "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
     ],
+    "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md": [
+      "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+    ],
     "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md": [
       "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
     ],
@@ -21399,6 +21405,7 @@
     ],
     "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md": [],
     "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md": [
+      "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md",
       "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
       "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md",
       "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
@@ -23557,6 +23564,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md",
       "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md",
       "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
     ],
     "papers/inference/99-other-inference-systems/2025-2506.17615-equarx-quantized-allreduce-xla.md": [
@@ -26365,6 +26373,7 @@
     ],
     "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md": [
       "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+      "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md",
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
       "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
       "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
@@ -26452,6 +26461,7 @@
       "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md"
     ],
     "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md": [
+      "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md",
       "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
       "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
       "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
