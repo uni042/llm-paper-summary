@@ -1,0 +1,394 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "b134-canonical-local-builder",
+  "run_key": "b134-canonical-part-01-20261012",
+  "reference_main_sha": "3e224e693434859bcea127929798e85d11684f51",
+  "local_only": true,
+  "current_main_checked": false,
+  "batch_checked_at": "2026-10-11T20:19:07Z",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28426",
+      "identity_tokens": [
+        "id:DOI:10.1145/3806645.3816236",
+        "id:SemanticScholar:dd67dd8c9508fdfb1f4e6d0661d99d04ae746d18",
+        "id:arXiv:2605.28426",
+        "url:https://arxiv.org/abs/2605.28426"
+      ],
+      "title": "Fault Tolerance of Accelerated Asynchronous Fixed-Point Iterations on Flexible Computing Infrastructure",
+      "reason": "The abstract accelerates Jacobi, Bellman value iteration, and Hartree-Fock on distributed infrastructure; it targets numerical/HPC solvers rather than LLM inference or serving.",
+      "source_url": "http://arxiv.org/abs/2605.28426v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27668",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27668",
+        "id:SemanticScholar:f88d7394c49076815ccb0ac7c5755afc6fa18a68",
+        "id:arXiv:2605.27668",
+        "url:https://arxiv.org/abs/2605.27668"
+      ],
+      "title": "Aligning LLMs with Human Uncertainty: A Beta-Bernoulli Calibrator for LLM Forecasting",
+      "reason": "The Beta-Bernoulli calibrator improves forecast calibration and uncertainty; its contribution is prediction quality, not inference-system efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.27668v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.25409",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25409",
+        "id:SemanticScholar:4728b2a3bb15a8fe1d31b4bc9b0ba334aefd08eb",
+        "id:arXiv:2605.25409",
+        "url:https://arxiv.org/abs/2605.25409"
+      ],
+      "title": "MTLLFM: Multimodal-Temporal Laughter Localization: UR-FUNNY-Temporal and SMILE-Temporal Benchmarks with an Adaptive Multimodal Fusion Model",
+      "reason": "This contributes laughter data and an audio/video detection model; that application is outside LLM system efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.25409v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22905",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22905",
+        "id:SemanticScholar:e89c583978bb68ef5a1ed4b8b72b99ea4e24d5ec",
+        "id:arXiv:2605.22905",
+        "url:https://arxiv.org/abs/2605.22905"
+      ],
+      "title": "EVE-Agent: Evidence-Verifiable Self-Evolving Agents",
+      "reason": "EVE-Agent adds evidence spans to self-generated search-agent training examples; the contribution is correctness and auditability, not inference efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.22905v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2605.22411",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22411",
+        "id:SemanticScholar:5b149c3067134efe007f36c74295652b0b1f0bd7",
+        "id:arXiv:2605.22411",
+        "url:https://doi.org/10.48550/arXiv.2605.22411"
+      ],
+      "title": "DeferMem: Query-Time Evidence Distillation via Reinforcement Learning for Long-Term Agent Memory",
+      "reason": "DeferMem retrieves broad history segments and distills query-conditioned evidence at runtime; it reports faster memory operations and no commercial API tokens, directly linking memory design to agent inference cost.",
+      "source_url": "http://arxiv.org/abs/2605.22411v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.20084",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.20084",
+        "id:SemanticScholar:1b4771a0316468d91585ce99d7a43b1b96bdbd14",
+        "id:arXiv:2605.20084",
+        "url:https://arxiv.org/abs/2605.20084"
+      ],
+      "title": "BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation",
+      "reason": "BalanceRAG escalates uncertain model-only answers to retrieval and calibrates retrieval usage; it explicitly reduces unnecessary RAG calls while controlling error.",
+      "source_url": "http://arxiv.org/abs/2605.20084v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20150",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.20150",
+        "id:SemanticScholar:d6daf000130a78f9d6afc121d58cbcf26f18ef27",
+        "id:arXiv:2605.20150",
+        "url:https://arxiv.org/abs/2605.20150"
+      ],
+      "title": "TideGS: Scalable Training of Over One Billion 3D Gaussian Splatting Primitives via Out-of-Core Optimization",
+      "reason": "TideGS trains 3D Gaussian Splatting with out-of-core streaming; its target is non-LLM graphics training.",
+      "source_url": "http://arxiv.org/abs/2605.20150v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18882",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18882",
+        "id:SemanticScholar:783af671f93e225a9a6ab80ec16a4e0587c4cc79",
+        "id:arXiv:2605.18882",
+        "url:https://arxiv.org/abs/2605.18882"
+      ],
+      "title": "To Call or Not to Call: Diagnosing Intrinsic Over-Calling Bias in LLM Agents",
+      "reason": "The work identifies and steers excess tool invocation, a plausible source of avoidable agent calls, but reports decision accuracy rather than runtime, token, or cost savings; the efficiency link remains weak.",
+      "source_url": "http://arxiv.org/abs/2605.18882v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.08584-ministral-3.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14277",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.14277",
+        "id:SemanticScholar:4c99fc309ea8ad73e8b77f980947f584867decce",
+        "id:arXiv:2605.14277",
+        "url:https://arxiv.org/abs/2605.14277"
+      ],
+      "title": "Parallelizing Counterfactual Regret Minimization",
+      "reason": "This parallelizes game-solving algorithms for imperfect-information games, not LLM inference systems.",
+      "source_url": "http://arxiv.org/abs/2605.14277v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.15077",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15077",
+        "id:SemanticScholar:199ef50b5e41f6528618919181b00be65a5fe989",
+        "id:arXiv:2605.15077",
+        "url:https://arxiv.org/abs/2605.15077"
+      ],
+      "title": "Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs",
+      "reason": "AsyncFC overlaps LLM decoding with tool execution and parallelizes independent calls, reducing end-to-end agent latency without model changes.",
+      "source_url": "http://arxiv.org/abs/2605.15077v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15343",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15343",
+        "id:SemanticScholar:d3cc112edcbf0b1a612bf580e1300095348f1c52",
+        "id:arXiv:2605.15343",
+        "url:https://arxiv.org/abs/2605.15343"
+      ],
+      "title": "Belief Engine: Configurable and Inspectable Stance Dynamics in Multi-Agent LLM Deliberation",
+      "reason": "Belief Engine makes stance changes in simulated deliberation inspectable; this studies social reasoning behavior, not system efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.15343v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23975",
+      "identity_tokens": [
+        "id:DOI:10.21437/interspeech.2026-110",
+        "id:SemanticScholar:dff1ba474bb6686d977712c510075b1e2dd12ce0",
+        "id:arXiv:2605.23975",
+        "url:https://arxiv.org/abs/2605.23975"
+      ],
+      "title": "Direct Preference Optimization for English-Mandarin Code-Switching Speech Recognition in Audio LLMs",
+      "reason": "DPO training improves code-switching speech transcription quality; it does not improve inference-system efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.23975v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12179",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.12179",
+        "id:SemanticScholar:0ef2c2faff0bc5fd7f9a04ea488c5860269f71cb",
+        "id:arXiv:2605.12179",
+        "url:https://arxiv.org/abs/2605.12179"
+      ],
+      "title": "SyncDPO: Enhancing Temporal Synchronization in Video-Audio Joint Generation via Preference Learning",
+      "reason": "SyncDPO improves audio-video generation alignment through preference training, not system efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.12179v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12421",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.12421",
+        "id:SemanticScholar:ec834f0c1637313d022ec2b51d8354f5a5d3f812",
+        "id:arXiv:2605.12421",
+        "url:https://arxiv.org/abs/2605.12421"
+      ],
+      "title": "Formalize, Don't Optimize: The Heuristic Trap in LLM-Generated Combinatorial Solvers",
+      "reason": "This studies runtime effects of search-optimization prompts for LLM-generated combinatorial solvers, but reports only small/inconsistent gains and no inference/serving optimization; the link is weak.",
+      "source_url": "http://arxiv.org/abs/2605.12421v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10064",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.10064",
+        "id:SemanticScholar:27baebd9fb8679df5ba59e9529d1ccc30825bc1d",
+        "id:arXiv:2605.10064",
+        "url:https://arxiv.org/abs/2605.10064"
+      ],
+      "title": "MAGE: Multi-Agent Self-Evolution with Co-Evolutionary Knowledge Graphs",
+      "reason": "MAGE uses evolving graphs, retrieval, and routing for frozen-backbone agents, but reports reasoning quality without concrete inference cost, latency, or memory-efficiency results.",
+      "source_url": "http://arxiv.org/abs/2605.10064v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18792",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18792",
+        "id:SemanticScholar:adfa867f286dddcb20b4e989f32d6209ec3559a5",
+        "id:arXiv:2605.18792",
+        "url:https://arxiv.org/abs/2605.18792"
+      ],
+      "title": "Trust or Abstain? A Self-Aware RAG Approach",
+      "reason": "SABER improves RAG answer selection and abstention quality using multi-trace inference; it does not claim fewer calls or lower inference cost.",
+      "source_url": "http://arxiv.org/abs/2605.18792v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08762",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08762",
+        "id:SemanticScholar:e04da705de6d63c38420135b001cc39c18ef4ef6",
+        "id:arXiv:2605.08762",
+        "url:https://arxiv.org/abs/2605.08762"
+      ],
+      "title": "Omni-DeepSearch: A Benchmark for Audio-Driven Omni-Modal Deep Search",
+      "reason": "Omni-DeepSearch is a multimodal search benchmark; it diagnoses capability rather than proposing efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.08762v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16364",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.16364",
+        "id:SemanticScholar:c8804acf966104e0a099186a1bcf540fa719b07c",
+        "id:arXiv:2605.16364",
+        "url:https://arxiv.org/abs/2605.16364"
+      ],
+      "title": "WASIL: In-the-Wild Arabic Spoken Interactions with LLMs",
+      "reason": "WASIL releases spoken-interaction data and response evaluation; it does not propose inference efficiency.",
+      "source_url": "http://arxiv.org/abs/2605.16364v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06320",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06320",
+        "id:SemanticScholar:3e09844a8e2cc52c260f404071efe7367c831572",
+        "id:arXiv:2605.06320",
+        "url:https://arxiv.org/abs/2605.06320"
+      ],
+      "title": "Improving the Efficiency of Language Agent Teams with Adaptive Task Graphs",
+      "reason": "LATTE coordinates teams with an evolving task graph and reports lower token use, wall-clock time, communication, and redundant operations at comparable accuracy.",
+      "source_url": "http://arxiv.org/abs/2605.06320v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.03675",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.03675",
+        "id:SemanticScholar:cc7ee03fce480c3e6d0688c91057780ce8338b3c",
+        "id:arXiv:2605.03675",
+        "url:https://arxiv.org/abs/2605.03675"
+      ],
+      "title": "MEMTIER: Tiered Memory Architecture and Retrieval Bottleneck Analysis for Long-Running Autonomous AI Agents",
+      "reason": "MEMTIER proposes tiered memory and weighted retrieval, but says performance gains remain pending; its efficiency impact is not established.",
+      "source_url": "http://arxiv.org/abs/2605.03675v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-11T20:19:07Z",
+      "last_checked_at": "2026-10-11T20:19:07Z",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ]
+    }
+  ]
+}
