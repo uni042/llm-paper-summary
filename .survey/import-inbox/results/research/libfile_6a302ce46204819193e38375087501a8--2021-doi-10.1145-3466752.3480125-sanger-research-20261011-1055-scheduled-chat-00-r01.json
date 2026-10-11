@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "3372d52d8dc5b4b16a35de76670cb8f7ec8acf6e00edffcb2f3e7b7ce83b93fb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6a302ce46204819193e38375087501a8--2021-doi-10.1145-3466752.3480125-sanger-research-20261011-1055-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1145/3466752.3480125",
+  "worker_completed_at": "2026-10-11T10:58:56+09:00",
+  "worker_run_key": "20261011-1055-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4517,
+    "body_paragraphs": 24,
+    "method_chars": 1437,
+    "method_paragraphs": 7,
+    "evaluation_chars": 156,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 156 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 156 < 500"
+  ],
+  "processed_at": "2026-10-11T02:44:36+00:00"
+}
