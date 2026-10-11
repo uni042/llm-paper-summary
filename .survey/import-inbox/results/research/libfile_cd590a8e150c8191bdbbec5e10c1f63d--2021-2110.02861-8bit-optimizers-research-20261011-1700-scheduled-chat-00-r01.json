@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "da5bf88b70481727b3e854cf10e2919f5add30a06a4e439236cf5a1b51e59bfe",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd590a8e150c8191bdbbec5e10c1f63d--2021-2110.02861-8bit-optimizers-research-20261011-1700-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2110.02861",
+  "worker_completed_at": "2026-10-11T17:08:02+09:00",
+  "worker_run_key": "20261011-1700-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6100,
+    "body_paragraphs": 30,
+    "method_chars": 2228,
+    "method_paragraphs": 11,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-11T14:54:31+00:00"
+}

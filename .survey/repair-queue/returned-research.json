@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-11T14:49:31+00:00",
+  "generated_at": "2026-10-11T14:55:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 94,
+  "count": 95,
   "entries": [
     {
       "canonical_id": "arXiv:2606.24506",
@@ -528,22 +528,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_3282cf9e48148191ab1c3fc01d22bcfe--2026-talaria.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_3282cf9e48148191ab1c3fc01d22bcfe--2026-talaria.json",
       "worker_run_key": "20261004-0700-scheduled-chat-00/r02"
-    },
-    {
-      "canonical_id": "arXiv:2608.28444",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-04T03:03:14+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "日本語比率 68.6% < 70%"
-      ],
-      "quality_metrics": null,
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6f1a876c4e00819188a498ccab121e3e--2026-2608.28444-sliding-window-beats-linear-attention.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6f1a876c4e00819188a498ccab121e3e--2026-2608.28444-sliding-window-beats-linear-attention.json",
-      "worker_run_key": "20261004-1000-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.19207",
@@ -1131,37 +1115,6 @@
       "worker_run_key": "20261007-1657-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2403.00579",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T13:22:45+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 本文説明量 1368 < 2200",
-        "説明不足トリガー: 手法説明量 337 < 700",
-        "説明不足トリガー: 評価説明量 241 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 1368,
-        "body_paragraphs": 11,
-        "method_chars": 337,
-        "method_paragraphs": 3,
-        "evaluation_chars": 241,
-        "limitation_chars": 146,
-        "insufficiency_flags": [
-          "本文説明量 1368 < 2200",
-          "手法説明量 337 < 700",
-          "評価説明量 241 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dfb8c9521e788191b0e213d5af8edaf8--2024-2403.00579-neupims.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_dfb8c9521e788191b0e213d5af8edaf8--2024-2403.00579-neupims.json",
-      "worker_run_key": "20261007-1657-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2311.01282",
       "title": null,
       "source_url": null,
@@ -1459,35 +1412,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a322f7afd082--libfile_b82530221664819199274d4fa3934c4a--2026-2609.11716-why-ptq-works-repair-20261008-1111-scheduled-chat-00.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a322f7afd082--libfile_b82530221664819199274d4fa3934c4a--2026-2609.11716-why-ptq-works-repair-20261008-1111-scheduled-chat-00.json",
       "worker_run_key": "20261008-1111-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.14557",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-08T15:23:09+00:00",
-      "return_count": 7,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 本文説明量 1952 < 2200",
-        "説明不足トリガー: 評価説明量 318 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 1952,
-        "body_paragraphs": 16,
-        "method_chars": 715,
-        "method_paragraphs": 6,
-        "evaluation_chars": 318,
-        "limitation_chars": 165,
-        "insufficiency_flags": [
-          "本文説明量 1952 < 2200",
-          "評価説明量 318 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d72f03df873e--libfile_a64a08d4cd508191ac3799717806e948--2025-2510.14557-mx-plus-repair.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d72f03df873e--libfile_a64a08d4cd508191ac3799717806e948--2025-2510.14557-mx-plus-repair.json",
-      "worker_run_key": "20261008-0325-scheduled-chat-30/repair-r01"
     },
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -1850,8 +1774,8 @@
     },
     {
       "canonical_id": "arXiv:2607.23765",
-      "title": "WISERouter: LLM Routing with Workload Budget Constraint",
-      "source_url": "https://arxiv.org/abs/2607.23765",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-11T14:48:32+00:00",
       "return_count": 5,
       "assigned_worker": "scheduled-chat-30",
@@ -1874,6 +1798,118 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a1bf80903470819193cf9e11e5b8a86e--2026-2607.23765-wiserouter-returned-repair-20261011-2330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261011-2330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.00579",
+      "title": "NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing",
+      "source_url": "https://arxiv.org/html/2403.00579v3",
+      "returned_at": "2026-10-11T14:53:53+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 154 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6727,
+        "body_paragraphs": 35,
+        "method_chars": 2662,
+        "method_paragraphs": 14,
+        "evaluation_chars": 154,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 154 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ba6632bb9fbc819196d514897f03b92b--2024-2403.00579-neupims-research-20261011-1756-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ba6632bb9fbc819196d514897f03b92b--2024-2403.00579-neupims-research-20261011-1756-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1756-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2104.04473",
+      "title": "Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM",
+      "source_url": "https://arxiv.org/pdf/2104.04473",
+      "returned_at": "2026-10-11T14:53:54+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7331,
+        "body_paragraphs": 33,
+        "method_chars": 3096,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_beba52501eec81918e88b66cc40f49d9--2021-2104.04473-megatron-lm-ptdp-research-20261011-1700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_beba52501eec81918e88b66cc40f49d9--2021-2104.04473-megatron-lm-ptdp-research-20261011-1700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2110.02861",
+      "title": "8-bit Optimizers via Block-wise Quantization",
+      "source_url": "https://arxiv.org/pdf/2110.02861",
+      "returned_at": "2026-10-11T14:54:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6100,
+        "body_paragraphs": 30,
+        "method_chars": 2228,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd590a8e150c8191bdbbec5e10c1f63d--2021-2110.02861-8bit-optimizers-research-20261011-1700-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cd590a8e150c8191bdbbec5e10c1f63d--2021-2110.02861-8bit-optimizers-research-20261011-1700-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261011-1700-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28444",
+      "title": "Sliding-window beats linear attention",
+      "source_url": "https://arxiv.org/abs/2608.28444",
+      "returned_at": "2026-10-11T14:54:31+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4159,
+        "body_paragraphs": 23,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1454,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cc5c8f4175188191b88e8a27095fb366--2026-2608.28444-swa-v2-quality-repair-20261011-1726-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cc5c8f4175188191b88e8a27095fb366--2026-2608.28444-swa-v2-quality-repair-20261011-1726-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261011-1726-scheduled-chat-30/r01"
     }
   ]
 }
