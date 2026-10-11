@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-11T11:49:07+00:00",
-  "record_count": 11500,
+  "updated_at": "2026-10-11T12:48:30+00:00",
+  "record_count": 11501,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164390,6 +164390,18 @@
         "papers/inference/99-other-inference-systems/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md"
       ],
       "title": "Confidence Should Be Calibrated More Than One Turn Deep"
+    },
+    "arXiv:2512.22234": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22234",
+      "identity_tokens": [
+        "arXiv:2512.22234"
+      ],
+      "reason": "タイトルが明示する研究対象は拡散言語モデルの学習後訓練（post-training）フレームワークであり、推論時の実行カーネル、KVキャッシュ、モデルオフロード、サービング、推論要求のスケジューリングではない。現行の学習単独研究凍結方針に従い、タイトル先行走査で対象外とした。本文・要旨は未読であるため、技術的な副次的推論高速化の有無まで断定していない。",
+      "first_checked_at": "2026-10-11T12:48:30+00:00",
+      "last_checked_at": "2026-10-11T12:48:30+00:00",
+      "linked_from": [],
+      "title": "DiRL: An Efficient Post-Training Framework for Diffusion Language Models"
     }
   }
 }
