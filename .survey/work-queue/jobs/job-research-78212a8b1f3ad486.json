@@ -35,10 +35,15 @@
   "selection_reason": "self-attentionをlightweight/dynamic convolutionへ置換し、context長に対する演算量を二次から線形へ落とす生成language architecture。機械翻訳・language modeling・abstractive summarizationでstrong self-attention modelを上回り、より単純で効率的なsequence inferenceを狙うため対象内。",
   "semantic_scholar_id": "fea820b7d953d32069e189af2961c28fd213470b",
   "source_url": "https://arxiv.org/abs/1901.10430",
-  "status": "ready",
+  "status": "superseded",
   "title": "Pay Less Attention with Lightweight and Dynamic Convolutions",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-11T04:57:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md",
+  "represented_canonical_id": "arXiv:1901.10430",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

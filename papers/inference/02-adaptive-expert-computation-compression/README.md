@@ -22,7 +22,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2026-07 · [PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Fine-Grained Expert Merging and Bit-packed Inference](2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/PuzzleMoE) ・ リポジトリ内被引用：4  
-  エキスパート 削除は容量を大きく減らせるが削除エキスパート固有の知識を失い、エキスパート単位・テンソル単位の統合は異なるエキスパートを粗く平均するため、高い圧縮率ほど専門化を壊しやすい。
+  混合専門家モデルの重みを要素ごとに共有・固有成分へ分け、復元用のマスクと符号をBF16指数部へ格納することで、圧縮容量の節約をGPUでの実行速度へ結び付ける。
 
 - **2026-04 · [REAM: Merging Improves Pruning of Experts in LLMs](2026-2604.04356-ream-router-weighted-expert-merging.md)**  
   実装：[✓](https://github.com/SamsungSAILMontreal/ream) ・ リポジトリ内被引用：4  

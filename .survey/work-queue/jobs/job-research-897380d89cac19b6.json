@@ -35,10 +35,15 @@
   "selection_reason": "Product Key Memoryで巨大な構造化memoryを疎アクセスし、計算量をほぼ増やさず最大10億parameter規模のcapacityを追加する。Transformer FFNの一部をPKMへ置換した言語モデルで、24層baselineより12層PKMモデルが高品質かつ推論約2倍高速であり、推論時のcapacity-compute trade-offを直接改善するため対象。",
   "semantic_scholar_id": "bf442ab269074665a68e4dbbe19e4efc97862541",
   "source_url": "https://arxiv.org/abs/1907.05242",
-  "status": "ready",
+  "status": "superseded",
   "title": "Large Memory Layers with Product Keys",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-11T04:57:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md",
+  "represented_canonical_id": "arXiv:1907.05242",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
