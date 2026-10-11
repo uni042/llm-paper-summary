@@ -351,7 +351,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   EAGLE-2は、既存のEAGLEで用いる小型の下書きモデルをそのまま使いながら、投機的復号（投機的復号）で検証する候補木の形を入力文脈に応じて変える手法である。代表的な温度0のVicuna 7B・MT-benchでは通常生成比3.62倍、既存EAGLEは2.90倍であり、平均受理長はそれぞれ4.98と3.94トークンである。
 
 - **2023-11 · [REST: Retrieval-Based Speculative Decoding](2023-2311.08252-rest-retrieval-speculative-decoding.md)**  
-  実装：[✓](https://github.com/FasterDecoding/REST) ・ リポジトリ内被引用：45  
+  実装：[✓](https://github.com/FasterDecoding/REST) ・ リポジトリ内被引用：46  
   RESTは、現在文脈末尾と一致する過去トークン列を接尾辞索引から検索し、その続き候補を木構造へ集約して対象LLMで一括検証し、ドラフトモデルなしで反復的なコードの対象重み読出しを減らす。
 
 - **2024-07 · [Online Speculative Decoding](2023-2310.07177-online-speculative-decoding.md)**  
@@ -461,7 +461,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：187  
+  実装：✓ ・ リポジトリ内被引用：188  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
